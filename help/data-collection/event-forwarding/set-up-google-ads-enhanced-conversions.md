@@ -8,13 +8,13 @@ doc-type: Feature Video
 last-substantial-update: 2022-11-15T00:00:00Z
 kt: 11493
 thumbnail: 3411365.jpeg
-source-git-commit: 682b420cca5a72eb33fa512b3b45585946ef05fb
+exl-id: 48f59810-c745-45de-8e10-7c6b9009bafc
+source-git-commit: 46fbc379fa3dcc84105ee3ef7f6ec2ed44565940
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 0%
 
 ---
-
 
 # Konfigurera Google Ads med förbättrad konvertering
 

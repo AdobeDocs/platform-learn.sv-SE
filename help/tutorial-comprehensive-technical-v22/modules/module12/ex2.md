@@ -1,0 +1,282 @@
+---
+title: Importera och analysera Google Analytics-data i Adobe Experience Platform med BigQuery Source Connector - Skapa din första fråga i BigQuery
+description: Importera och analysera Google Analytics-data i Adobe Experience Platform med BigQuery Source Connector - Skapa din första fråga i BigQuery
+kt: 5342
+audience: Data Engineer, Data Architect, Data Analyst
+doc-type: tutorial
+activity: develop
+exl-id: 73154afc-c3e3-420c-9471-5bb106dbfd02
+source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+workflow-type: tm+mt
+source-wordcount: '521'
+ht-degree: 1%
+
+---
+
+# 12.2 Skapa din första fråga i BigQuery
+
+## Mål
+
+- Utforska användargränssnittet för BigQuery
+- Skapa en SQL-fråga i BigQuery
+- Spara SQL-frågans resultat i en datauppsättning i BigQuery
+
+## Kontext
+
+När Google Analytics-data är i BigQuery kapslas alla dimensioner, mått och andra variabler. Google Analytics data läses in dagligen till olika tabeller. Det innebär att det är mycket svårt och inte bra att försöka koppla tabeller från Google Analytics i BigQuery till Adobe Experience Platform direkt.
+
+Lösningen på det här problemet är att omvandla data från Google Analytics till ett läsbart format för att underlätta intaget till Adobe Experience Platform.
+
+## 12.2.1 Skapa en datauppsättning för att spara nya BigQuery-tabeller
+
+Gå till [BigQuery Console](https://console.cloud.google.com/bigquery).
+
+![demo](./images/ex3/1.png)
+
+I **Utforskaren** visas ditt projekt-ID. Klicka på ditt projekt-ID (klicka inte på **bigquery-public-data** datauppsättning).
+
+![demo](./images/ex3/2.png)
+
+Du ser att det inte finns någon datauppsättning än, så vi skapar en nu.
+Klicka **SKAPA DATAUPPSÄTTNING**.
+
+![demo](./images/ex3/4.png)
+
+Till höger på skärmen ser du **Skapa datauppsättning** -menyn.
+
+![demo](./images/ex3/5.png)
+
+För **Datauppsättnings-ID** använder du namnkonventionen nedan. Lämna standardinställningarna för de andra fälten.
+
+| Namngivning | Exempel |
+| ----------------- | ------------- | 
+| `--demoProfileLdap--_BigQueryDataSets` | vangeluw_BigQueryDataSets |
+
+![demo](./images/ex3/6.png)
+
+Klicka på **Skapa datauppsättning**.
+
+![demo](./images/ex3/7.png)
+
+Sedan är du tillbaka i BigQuery-konsolen när datauppsättningen har skapats.
+
+![demo](./images/ex3/8.png)
+
+## 12.2.2 Skapa din första SQL BigQuery
+
+Därefter skapar du din första fråga i BigQuery. Målet med den här frågan är att ta exempeldata för Google Analytics och omvandla dem så att de kan importeras i Adobe Experience Platform. Gå till **REDIGERARE** -fliken.
+
+![demo](./images/ex3/9.png)
+
+Kopiera följande SQL-fråga och klistra in den i den frågeredigeraren. Du kan läsa frågan och förstå Google Analytics BigQuery-syntaxen.
+
+
+```sql
+SELECT
+  CONCAT(fullVisitorId, CAST(hitTime AS String), '-', hitNumber) AS _id,
+  TIMESTAMP(DATETIME(Year_Current, Month_Current, Day_Current, Hour, Minutes, Seconds)) AS timeStamp,
+  fullVisitorId as GA_ID,
+  -- Fake CUSTOMER ID
+  CONCAT('3E-D4-',fullVisitorId, '-1W-93F' ) as customerID,
+  Page,
+  Landing_Page,
+  Exit_Page,
+  Device,
+  Browser,
+  MarketingChannel,
+  TrafficSource,
+  TrafficMedium,
+  -- Enhanced Ecommerce
+  TransactionID,
+  CASE
+      WHEN EcommerceActionType = '2' THEN 'Product_Detail_Views'
+      WHEN EcommerceActionType = '3' THEN 'Adds_To_Cart'
+      WHEN EcommerceActionType = '4' THEN 'Product_Removes_From_Cart'
+      WHEN EcommerceActionType = '5' THEN 'Product_Checkouts'
+      WHEN EcommerceActionType = '6' THEN 'Product_Refunds'
+    ELSE
+    NULL
+  END
+     AS Ecommerce_Action_Type,
+  -- Entrances (metric)
+  SUM(CASE
+      WHEN isEntrance = TRUE THEN 1
+    ELSE
+    0
+  END
+    ) AS Entries,
+    
+--Pageviews (metric)
+    COUNT(*) AS Pageviews,
+    
+ -- Exits 
+    SUM(
+    IF
+      (isExit IS NOT NULL,
+        1,
+        0)) AS Exits,
+        
+ --Bounces
+   SUM(CASE
+      WHEN isExit = TRUE AND isEntrance = TRUE THEN 1
+    ELSE
+    0
+  END
+    ) AS Bounces,
+        
+  -- Unique Purchases (metric)
+  COUNT(DISTINCT TransactionID) AS Unique_Purchases,
+  -- Product Detail Views (metric)
+  COUNT(CASE
+      WHEN EcommerceActionType = '2' THEN fullVisitorId
+    ELSE
+    NULL
+  END
+    ) AS Product_Detail_Views,
+  -- Product Adds To Cart (metric)
+  COUNT(CASE
+      WHEN EcommerceActionType = '3' THEN fullVisitorId
+    ELSE
+    NULL
+  END
+    ) AS Adds_To_Cart,
+  -- Product Removes From Cart (metric)
+  COUNT(CASE
+      WHEN EcommerceActionType = '4' THEN fullVisitorId
+    ELSE
+    NULL
+  END
+    ) AS Product_Removes_From_Cart,
+  -- Product Checkouts (metric)
+  COUNT(CASE
+      WHEN EcommerceActionType = '5' THEN fullVisitorId
+    ELSE
+    NULL
+  END
+    ) AS Product_Checkouts,
+  -- Product Refunds (metric)
+  COUNT(CASE
+      WHEN EcommerceActionType = '7' THEN fullVisitorId
+    ELSE
+    NULL
+  END
+    ) AS Product_Refunds
+  FROM (
+  SELECT
+    -- Landing Page (dimension)
+    CASE
+      WHEN hits.isEntrance = TRUE THEN hits.page.pageTitle
+    ELSE NULL
+  END
+    AS Landing_page,
+    
+        -- Exit Page (dimension)
+    CASE
+      WHEN hits.isExit = TRUE THEN hits.page.pageTitle
+    ELSE
+    NULL
+  END
+    AS Exit_page,
+    
+    hits.page.pageTitle AS Page,
+    hits.isEntrance,
+    hits.isExit,
+    hits.hitNumber as hitNumber,
+    hits.time as hitTime,
+    date as Fecha,
+    fullVisitorId,
+    visitStartTime,
+    device.deviceCategory AS Device,
+    device.browser AS Browser,
+    channelGrouping AS MarketingChannel,
+    trafficSource.source AS TrafficSource,
+    trafficSource.medium AS TrafficMedium,
+    hits.transaction.transactionId AS TransactionID,
+    CAST(EXTRACT(YEAR FROM CURRENT_DATE()) AS INT64) AS Year_Current,
+    CAST(EXTRACT(MONTH FROM CURRENT_DATE()) AS INT64) AS Month_Current,
+     CAST(EXTRACT(DAY FROM CURRENT_DATE()) AS INT64) AS Day_Current,
+    CAST(EXTRACT(DAY FROM DATE_SUB(CURRENT_DATE(),INTERVAL 1 DAY)) AS INT64) AS Day_Current_Before,
+    CAST(FORMAT_DATE('%Y', PARSE_DATE("%Y%m%d", date)) AS INT64) AS Year,
+  CAST(FORMAT_DATE('%m', PARSE_DATE("%Y%m%d",date)) AS INT64) AS Month,
+  CAST(FORMAT_DATE('%d', PARSE_DATE("%Y%m%d",date)) AS INT64) AS Day,
+    CAST(EXTRACT (hour FROM TIMESTAMP_SECONDS(hits.time)) AS INT64) AS Hour,
+  CAST(EXTRACT (minute FROM TIMESTAMP_SECONDS(hits.time)) AS INT64) AS Minutes,
+  CAST(EXTRACT (second FROM TIMESTAMP_SECONDS(hits.time)) AS INT64) AS SecondS,
+    hits.eCommerceAction.action_type AS EcommerceActionType
+  
+  FROM
+    `bigquery-public-data.google_analytics_sample.ga_sessions_*`,
+     UNNEST(hits) AS hits
+  WHERE
+    _table_suffix BETWEEN '20170101'
+    AND '20170331'
+    AND totals.visits = 1
+    AND hits.type = 'PAGE'
+    )
+    
+GROUP BY
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14
+    
+  ORDER BY 2 DESC
+```
+
+När du är klar klickar du på **Kör** för att köra frågan:
+
+![demo](./images/ex3/10.png)
+
+Det kan ta några minuter att köra frågan.
+
+När frågan är klar visas följande utdata i dialogrutan **Frågeresultat**.
+
+![demo](./images/ex3/12.png)
+
+## 12.2.3 Spara resultatet av BigQuery SQL-frågan
+
+Nästa steg är att spara frågans utdata genom att klicka på **SPARA RESULTAT** -knappen.
+
+![demo](./images/ex3/13.png)
+
+Som plats för dina utdata väljer du **BigQuery-tabell**.
+
+![demo](./images/ex3/14.png)
+
+Då visas en ny popup där **Projektnamn** och **Namn på datauppsättning** är förifyllda. Datauppsättningsnamnet ska vara den datauppsättning som du skapade i början av den här övningen, med den här namnkonventionen:
+
+| Namngivning | Exempel |
+| ----------------- | ------------- | 
+| `--demoProfileLdap--_BigQueryDataSets` | `vangeluw_BigQueryDataSets` |
+
+Nu måste du ange ett tabellnamn. Använd den här namnkonventionen:
+
+| Namngivning | Exempel |
+| ----------------- |------------- | 
+| `--demoProfileLdap--_GAdataTableBigQuery` | `vangeluw_GAdataTableBigQuery` |
+
+![demo](./images/ex3/16.png)
+
+Klicka **SPARA**.
+
+Det kan ta en stund innan data är klara i tabellen som du har skapat. Uppdatera webbläsaren efter några minuter. I datauppsättningen bör du sedan se `--demoProfileLdap--_GAdataTableBigquery` tabell under **Utforskaren** i ditt BigQuery-projekt.
+
+![demo](./images/ex3/19.png)
+
+Nu kan du fortsätta med nästa övning där du kopplar tabellen till Adobe Experience Platform.
+
+Nästa steg: [12.3 Anslut GCP och BigQuery till Adobe Experience Platform](./ex3.md)
+
+[Gå tillbaka till modul 12](./customer-journey-analytics-bigquery-gcp.md)
+
+[Gå tillbaka till Alla moduler](./../../overview.md)
