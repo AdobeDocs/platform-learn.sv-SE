@@ -1,0 +1,13 @@
+{
+    "ignorePatterns": [
+        {
+            "pattern": "^.*example.com"
+        },
+        {
+            "pattern": "^.*example-end.com"
+        },
+        {
+            "pattern": "^.*linkedin.com"
+        }                 
+    ]
+}
