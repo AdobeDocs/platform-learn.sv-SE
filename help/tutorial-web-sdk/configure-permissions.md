@@ -3,9 +3,9 @@ title: Konfigurera behörigheter för självstudiekursen
 description: Lär dig hur du begär åtkomst till Experience Platform Web SDK och konfigurerar behörigheten som krävs för att slutföra självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Access Control
 exl-id: d7c4f2c3-cf3c-4587-88f8-82113d250084
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 7377d87394d52bc9ed1f35f071a57bc341d5f969
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '415'
 ht-degree: 2%
 
 ---
@@ -16,14 +16,14 @@ Lär dig hur du begär åtkomst till Experience Platform Web SDK och konfigurera
 
 ## Datainsamling
 
-* Har behörighet att **[!UICONTROL Utveckla]**, **[!UICONTROL Redigera]**, **[!UICONTROL Godkänn]**, **[!UICONTROL Publicera]**, **[!UICONTROL Hantera tillägg]** och **[!UICONTROL Hantera miljöer]** taggegenskaper. Mer information om taggbehörigheter finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html).
+* Har behörighet att **[!UICONTROL Utveckla]**, **[!UICONTROL Redigera]**, **[!UICONTROL Godkänn]**, **[!UICONTROL Publicera]**, **[!UICONTROL Hantera tillägg]**, **[!UICONTROL Hantera miljöer]** och **[!UICONTROL Hantera egenskaper]**. Mer information om taggbehörigheter finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html).
 * Om du ska slutföra den valfria lektionen om vidarebefordran av händelser, ska du ha en produktlicens som innehåller vidarebefordran av edge-material och behörighetsobjekt **[!UICONTROL Plattformar]** > **[!UICONTROL Edge]**
 
 ## Experience Platform
 
 Dessa funktioner bör vara tillgängliga för alla Experience Cloud-kunder, även om du inte är kund till en plattformsbaserad applikation som CDP i realtid.
 
-* Åtkomst till **standardproduktion** sandlåda.
+* Åtkomst till **standardproduktion**, **&quot;Prod&quot;** sandlåda (.
 * Åtkomst till **[!UICONTROL Hantera scheman]** och **[!UICONTROL Visa scheman]** under **[!UICONTROL Datamodellering]**
 * Åtkomst till **[!UICONTROL Hantera identitetsnamnutrymmen]** och **[!UICONTROL Visa identitetsnamnutrymmen]** under **[!UICONTROL Identity Management]**
 * Åtkomst till **[!UICONTROL Hantera datastreams]** och **[!UICONTROL Visa datastreams]** under **[!UICONTROL Datainsamling]**

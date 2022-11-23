@@ -3,9 +3,9 @@ title: Konfigurera ett datastream
 description: Lär dig hur du aktiverar ett datastream och konfigurerar Experience Cloud-lösningar. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Datastreams
 exl-id: ca28374a-9fe0-44de-a7ac-0aa046712515
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 762195148f7594e30b361546941dfcd8076ab7b1
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '450'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Nu kan du skapa en datastream som anger för Platform Edge Network var data som 
 
    >[!NOTE]
    >
-   >Om du använder ett plattformsbaserat program som CDP i realtid rekommenderar vi att du använder en utvecklingssandlåda för den här självstudiekursen.
+   >Om du använder ett plattformsbaserat program som CDP i realtid rekommenderar vi att du använder en utvecklingssandlåda för den här självstudiekursen. Om du inte gör det använder du **[!UICONTROL Prod]** sandlåda.
 
 1. Gå till **[!UICONTROL Datastreams]** i den vänstra navigeringen
 1. Välj **[!UICONTROL Ny datastream]** till höger på skärmen.

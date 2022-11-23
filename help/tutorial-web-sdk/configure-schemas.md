@@ -3,10 +3,10 @@ title: Skapa ett XDM-schema för webbdata
 description: Lär dig hur du skapar ett XDM-schema för webbdata i gränssnittet för datainsamling. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Schemas
 exl-id: 2858ce03-4f95-43ac-966c-1b647b33ef16
-source-git-commit: f493b0d53bba223f78683551a1a43e25bf43ee8d
+source-git-commit: fc0567823039f8a2005aa64a3f10c5a2564cbf64
 workflow-type: tm+mt
-source-wordcount: '1080'
-ht-degree: 1%
+source-wordcount: '1125'
+ht-degree: 0%
 
 ---
 
@@ -47,7 +47,7 @@ I den här övningen skapar du ett XDM-schema med de rekommenderade baslinjefäl
 
    >[!NOTE]
    >
-   >Om du använder ett plattformsbaserat program som CDP i realtid rekommenderar vi att du använder en utvecklingssandlåda för den här självstudiekursen.
+   >Om du använder ett plattformsbaserat program som CDP i realtid rekommenderar vi att du använder en utvecklingssandlåda för den här självstudiekursen. Om du inte gör det använder du **[!UICONTROL Prod]** sandlåda.
 
 1. Gå till **[!UICONTROL Scheman]** i den vänstra navigeringen
 1. Välj **[!UICONTROL Skapa schema]** överst till höger
@@ -63,10 +63,10 @@ När det är möjligt bör du använda befintliga fältgrupper och följa en pro
 
 >[!TIP]
 > 
->I den här övningen lägger du till de rekommenderade fördefinierade fältgrupperna för insamling av webbdata: _**[!UICONTROL AEP Web SDK ExperienceEvent Mixin]**_ och _**[!UICONTROL Consumer Experience Event]**_.
+>I den här övningen lägger du till de rekommenderade fördefinierade fältgrupperna för insamling av webbdata: _**[!UICONTROL AEP Web SDK ExperienceEvent]**_ och _**[!UICONTROL Consumer Experience Event]**_.
 
-1. Behåll **[!UICONTROL Använd befintlig fältgrupp]** alternativknapp markerad
-1. Sök efter [!UICONTROL `AEP Web SDK ExperienceEvent Mixin`]
+1. I **[!UICONTROL Fältgrupper]** avsnitt, markera **[!UICONTROL Lägg till]**
+1. Sök efter [!UICONTROL `AEP Web SDK ExperienceEvent`]
 1. Markera rutan
 1. Sök efter [!UICONTROL `Consumer Experience Event`]
 1. Markera rutan
@@ -83,7 +83,7 @@ När fältgrupperna är markerade är du redo att namnge schemat. En vanlig namn
 
 ![Webbhändelsedata för Luma](assets/schema-luma-web-event-data.png)
 
-Observera att du har tillgång till de mest använda nyckelvärdepar som krävs för datainsamling på webben i båda fältgrupperna. När du klickar på något av fältgruppsnamnen markeras vilka nyckelvärdepar som tillhör det. I exemplet nedan ser du vilka grupper som tillhör **[!UICONTROL Consumer Experience Event]**.
+Observera att du har tillgång till de mest använda nyckelvärdepar som krävs för datainsamling på webben i båda fältgrupperna. The [!UICONTROL visningsnamn] av varje fält visas för marknadsförarna i segmentbygggränssnittet i plattformsbaserade program och du kan ändra visningsnamnet för standardfält efter behov. Du kan också ta bort fält som du inte vill ha. När du klickar på något av fältgruppsnamnen markeras vilka nyckelvärdepar som tillhör det. I exemplet nedan ser du vilka grupper som tillhör **[!UICONTROL Consumer Experience Event]**.
 
 ![Fältgrupper för schema](assets/schema-consumer-experience-event.jpg)
 
