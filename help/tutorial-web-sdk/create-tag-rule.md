@@ -3,9 +3,9 @@ title: Skapa en taggregel
 description: Lär dig hur du skickar en händelse till Platform Edge Network med ditt XDM-objekt med hjälp av en taggregel. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Tags
 exl-id: e06bad06-3ee3-475f-9b10-f0825a48a312
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 7b978e1d98aa539c98b7f11ae33432729ac33bea
 workflow-type: tm+mt
-source-wordcount: '777'
+source-wordcount: '849'
 ht-degree: 0%
 
 ---
@@ -53,6 +53,8 @@ där
 
 
 ## Skapa märkordsregel
+
+I taggar används regler för att utföra åtgärder (brandanrop) under olika förhållanden. Du använder den första regeln för att skicka XDM-objektet till Edge Network med Web SDK:n [!UICONTROL Skicka händelse] åtgärd. Senare i den här självstudien skickar du olika versioner av XDM-objektet baserat på vilken typ av sida besökaren är på. Därför kommer du att använda regelvillkor för att exkludera de andra sidtyperna.
 
 Så här skapar du en taggregel:
 
