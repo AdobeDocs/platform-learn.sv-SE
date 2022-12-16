@@ -3,9 +3,9 @@ title: Konfigurera Adobe Analytics med Experience Platform Web SDK
 description: Lär dig hur du konfigurerar Adobe Analytics med Experience Platform Web SDK. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 solution: Data Collection, Analytics
 exl-id: de86b936-0a47-4ade-8ca7-834c6ed0f041
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: eb635ea8befa6a908df5bed1c05b48deaf164cb6
 workflow-type: tm+mt
-source-wordcount: '3500'
+source-wordcount: '3554'
 ht-degree: 0%
 
 ---
@@ -121,7 +121,7 @@ Hämta sedan in ytterligare data från Luma-datalagret och skicka dem till Platf
 
 ### Skapa dataelement för e-handel
 
-Under lektionen Skapa dataelement kan du [skapade JavaScript-dataelement](create-data-elements.md#create-data-elements-to-capture-the-data-layer) som fångade innehåll och identitetsinformation. Nu ska du skapa ytterligare dataelement för att hämta in e-handelsdata. På grund av [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html){target=&quot;_blank&quot;} använder olika datalagerstrukturer för produktinformationssidor och produkter i kundvagnen. Du måste skapa dataelement för varje scenario. Använd följande kodfragment:
+Under lektionen Skapa dataelement kan du [skapade JavaScript-dataelement](create-data-elements.md#create-data-elements-to-capture-the-data-layer) som fångade innehåll och identitetsinformation. Nu ska du skapa ytterligare dataelement för att hämta in e-handelsdata. På grund av [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html){target=&quot;_blank&quot;} använder olika datalagerstrukturer för produktinformationssidor och produkter i kundvagnen. Du måste skapa dataelement för varje scenario. Du måste skapa vissa anpassade kodelement för att kunna hämta det du behöver från Luma-datalagret, som kanske inte behövs när du implementerar på din egen webbplats. I så fall måste du slingra dig igenom en mängd olika varukorgsartiklar för att få information om varje produkt. Använd följande kodfragment:
 
 1. Öppna taggegenskapen som du använder för självstudiekursen
 1. Gå till **[!UICONTROL Dataelement]**
