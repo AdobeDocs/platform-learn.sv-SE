@@ -2,7 +2,7 @@
 title: Skapa ett XDM-schema
 description: Lär dig hur du skapar ett XDM-schema för mobilappshändelser.
 exl-id: c6b0d030-437a-4afe-b7d5-5a7831877983
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
 workflow-type: tm+mt
 source-wordcount: '1297'
 ht-degree: 0%
@@ -53,7 +53,7 @@ I den här lektionen kommer du att:
 
    >[!NOTE]
    >
-   > Kunder som använder plattformsbaserade program som CDP i realtid bör använda en utvecklingssandlåda för den här kursen. Andra kunder använder standardproduktionssandlådan.
+   > Kunder som använder plattformsbaserade program som Real-Time CDP bör använda en utvecklingssandlåda för den här självstudiekursen. Andra kunder använder standardproduktionssandlådan.
 
 
 1. Välj **[!UICONTROL Scheman]** under **[!UICONTROL Datahantering]**.

@@ -2,7 +2,7 @@
 title: Skicka data till Adobe Experience Platform
 description: Lär dig hur du skickar data till Adobe Experience Platform.
 exl-id: fdd2c90e-8246-4d75-a6db-df3ef31946c4
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
 workflow-type: tm+mt
 source-wordcount: '844'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Lär dig hur du skickar data till Adobe Experience Platform.
 
-Den här valfria lektionen gäller alla kunder som har Real-time Customer Data Platform (CDP i realtid), Journey Optimizer och Customer Journey Analytics. Experience Platform, som är grunden för Experience Cloud-produkterna, är ett öppet system som omvandlar alla era data - Adobe och icke-Adobe - till stabila kundprofiler som uppdateras i realtid och använder AI-baserade insikter för att hjälpa er att leverera rätt upplevelse i alla kanaler.
+Den här valfria lektionen gäller alla kunder som har Real-time Customer Data Platform (Real-Time CDP), Journey Optimizer och Customer Journey Analytics. Experience Platform, som är grunden för Experience Cloud-produkterna, är ett öppet system som omvandlar alla era data - Adobe och icke-Adobe - till stabila kundprofiler som uppdateras i realtid och använder AI-baserade insikter för att hjälpa er att leverera rätt upplevelse i alla kanaler.
 
 The [event](events.md), [livscykel](lifecycle-data.md)och [identity](identity.md) data som du har samlat in och skickat till Platform Edge Network i tidigare lektioner vidarebefordras till de tjänster som konfigurerats i ditt datastam, inklusive Adobe Experience Platform.
 
@@ -79,7 +79,7 @@ Ett robustare verktyg för datavalidering är plattformens [frågetjänst](https
 
 ## Aktivera kundprofil i realtid
 
-Med Experience Platform kundprofil i realtid kan ni skapa en helhetsbild av varje enskild kund som kombinerar data från flera kanaler, inklusive online-, offline-, CRM- och tredjepartsdata. Med hjälp av en profil kan ni sammanställa olika kunddata i en enhetlig vy som ger ett användbart, tidsstämplat konto för varje kundinteraktion.
+Med Experience Platform Real-Time Customer Profile kan ni skapa en helhetsbild av varje enskild kund som kombinerar data från flera kanaler, inklusive online-, offline-, CRM- och tredjepartsdata. Med hjälp av en profil kan ni sammanställa olika kunddata i en enhetlig vy som ger ett användbart, tidsstämplat konto för varje kundinteraktion.
 
 ### Aktivera schemat
 

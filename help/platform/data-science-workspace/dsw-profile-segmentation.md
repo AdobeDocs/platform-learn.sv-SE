@@ -6,7 +6,7 @@ feature: Data Science Workspace
 kt: 7296
 thumbnail: 333711.jpg
 exl-id: 9a909023-47d2-474a-a562-b60799094b89
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 0%

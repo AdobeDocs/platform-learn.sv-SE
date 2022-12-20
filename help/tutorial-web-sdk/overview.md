@@ -3,7 +3,7 @@ title: Implementera Adobe Experience Cloud med Web SDK, genomgång
 description: Lär dig hur du implementerar Experience Cloud-program med Adobe Experience Platform Web SDK.
 recommendations: catalog, noDisplay
 exl-id: cf0ff74b-e81e-4f6d-ab7d-6c70e9b52d78
-source-git-commit: 6488faee86a53585bdbf03e069c4d6cf7e81d096
+source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
 workflow-type: tm+mt
 source-wordcount: '417'
 ht-degree: 1%

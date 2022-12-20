@@ -7,7 +7,7 @@ kt: 4348
 thumbnail: 4348-overview.jpg
 recommendations: catalog, noDisplay
 exl-id: fabbc591-840b-40dc-89af-305626a16338
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
 workflow-type: tm+mt
 source-wordcount: '761'
 ht-degree: 1%
@@ -48,7 +48,7 @@ Adobe Experience Platform är en teknisk plattform som hjälper er att uppnå er
 ## Krav
 
 * Du har slutfört [Introduktion till Adobe Experience Platform-kurs](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2020.1) på Experience League och känner till plattformsfunktionerna
-* Du har tillgång till ett konto som etablerats med Adobe Experience Platform (eller ett plattformsbaserat program som CDP eller Journey Optimizer i realtid) och Data Collection (tidigare Launch).
+* Du har tillgång till ett konto som etablerats med Adobe Experience Platform (eller ett plattformsbaserat program som Real-Time CDP eller Journey Optimizer) och Data Collection (tidigare Launch).
 * Du är systemadministratör för det kontot eller kan ha en [konfigurera användarbehörigheter](configure-permissions.md) för dig.
 
 ## Använda den här självstudiekursen

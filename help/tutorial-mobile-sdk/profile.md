@@ -2,7 +2,7 @@
 title: Profil
 description: Lär dig hur du samlar in profildata i en mobilapp.
 exl-id: 97717611-04d9-45e3-a443-ea220a13b57c
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
 workflow-type: tm+mt
 source-wordcount: '441'
 ht-degree: 1%

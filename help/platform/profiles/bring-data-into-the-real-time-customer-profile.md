@@ -1,12 +1,12 @@
 ---
 title: Lägg in data i kundprofilen i realtid
-description: Kundprofil i realtid genomsyrar personalisering i flera kanaler i stor skala genom varje fas av kundresan. Batch- eller direktuppspelningsdata kan aktiveras för kundprofilen i realtid genom att både schemat och motsvarande datauppsättning aktiveras.
+description: Kundprofilen i realtid genomsyrar personalisering i flera kanaler i stor skala genom varje fas av kundresan. Batch- eller direktuppspelningsdata kan aktiveras för kundprofilen i realtid genom att både schemat och motsvarande datauppsättning aktiveras.
 role: Data Architect, Data Engineer
 feature: Profiles
 kt: 2702
 thumbnail: 27301.jpg
 exl-id: fc7aad9e-8eaf-4101-b41e-a0d9b127f8be
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 0%

@@ -1,6 +1,6 @@
 ---
 title: Aktivera kundprofiler i realtid
-seo-title: Enable Real-time Customer Profiles | Getting Started with Adobe Experience Platform for Data Architects and Data Engineers
+seo-title: Enable Real-Time Customer Profiles | Getting Started with Adobe Experience Platform for Data Architects and Data Engineers
 breadcrumb-title: Aktivera kundprofiler i realtid
 description: I den här lektionen ska du aktivera dina scheman och datauppsättningar för kundprofiler i realtid.
 role: Data Architect
@@ -8,10 +8,10 @@ feature: Profiles
 kt: 4348
 thumbnail: 4348-enable-profiles.jpg
 exl-id: b05f1af1-a599-42f2-8546-77453a578b92
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
 workflow-type: tm+mt
 source-wordcount: '1123'
-ht-degree: 1%
+ht-degree: 0%
 
 ---
 
@@ -47,7 +47,7 @@ I [Konfigurera behörigheter](configure-permissions.md) lektionen anger du alla 
 * Developer-role access to the `Luma Tutorial Platform` product profile (for API)
 -->
 
-## Aktivera scheman för kundprofil i realtid med användargränssnittet i plattformen
+## Aktivera scheman för kundprofil i realtid med plattformens användargränssnitt
 
 Låt oss börja med den enkla uppgiften att aktivera ett schema:
 
@@ -118,7 +118,7 @@ Du bör kunna se i användargränssnittet att alla fem scheman är aktiverade f�
 ![Alla scheman är aktiverade](assets/profile-allSchemasEnabled.png)
 
 
-## Aktivera datauppsättningar för kundprofil i realtid med hjälp av användargränssnittet i plattformen
+## Aktivera datauppsättningar för kundprofil i realtid med användargränssnittet i plattformen
 
 Datauppsättningarna måste även aktiveras för profilen, och processen är ännu enklare:
 
@@ -187,7 +187,7 @@ Du kan också bekräfta att användargränssnittet visar vilken datauppsättning
 
 ## Ytterligare resurser
 
-* [Dokumentation om realtidskundprofil](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=sv)
+* [Kundprofildokumentation i realtid](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=sv)
 * [API-referens för kundprofil i realtid](https://www.adobe.io/experience-platform-apis/references/profile/)
 
 

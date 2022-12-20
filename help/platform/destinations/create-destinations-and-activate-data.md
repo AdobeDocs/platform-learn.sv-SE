@@ -7,7 +7,7 @@ feature: Destinations
 kt: 3798
 thumbnail: 29710.jpg
 exl-id: 53e23177-0131-44a4-9828-e54e4f279d91
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 2d4f4f933650ef1a0ac98d47b28d0d750ae0e908
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%

@@ -7,7 +7,7 @@ role: Data Architect
 kt: 9258
 thumbnail: 338241.jpg
 exl-id: bbb47887-f982-4831-8002-6d1fa539a39b
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 2d4f4f933650ef1a0ac98d47b28d0d750ae0e908
 workflow-type: tm+mt
 source-wordcount: '109'
 ht-degree: 5%
@@ -22,6 +22,6 @@ Lär dig hur du skapar scheman för dina affärsdata med Real-time Customer Data
 
 >[!INFO]
 >
-> Den här videon är en del av en kurs, [Komma igång med CDP, B2B Edition för marknadsförare i realtid](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.rtcdp.b2b), kan köpas kostnadsfritt på Experience League!
+> Den här videon är en del av en kurs, [Komma igång med Real-Time CDP, B2B Edition för marknadsförare](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.rtcdp.b2b), kan köpas kostnadsfritt på Experience League!
 
 Mer information finns på [schemadokumentation](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=sv).

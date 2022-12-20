@@ -2,7 +2,7 @@
 title: Skapa ett datastream
 description: Skapa ett datastream
 exl-id: 4a33a7f3-8bd8-4d28-9ae4-a0609444485f
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 0%
@@ -34,7 +34,7 @@ På nästa skärm kan du lägga till vilka Adobe-produkter och -tjänster som sk
 
 Företagen har vanligtvis en kampanjväg för alla webbplatsuppdateringar. Någon på företaget (en marknadsförare eller tekniker, beroende på ändringarna) testar vanligtvis sina ändringar i en utvecklingsmiljö som bara den personen använder. När de känner sig bekväma med ändringarna befordras ändringarna till en staging-miljö där de får ytterligare testning. Äntligen publiceras ändringarna på produktionens webbplats. Datastreams stöder det här kampanjmönstret.
 
-Om du stöder plattformsbaserade program som CDP, Journey Optimizer eller Customer Journey Analytics i realtid måste ytterligare datastreams skapas i de separata plattformssandlådor som motsvarar dessa miljöer.
+Om du stöder plattformsbaserade program som Real-Time CDP, Journey Optimizer eller Customer Journey Analytics måste ytterligare datastreams skapas i de separata plattformssandlådor som motsvarar dessa miljöer.
 
 Om du inte är en plattformskund kan du skapa flera datastreams i en enda sandlåda och använda funktionen för datastream-kopiering för att duplicera inställningar.
 

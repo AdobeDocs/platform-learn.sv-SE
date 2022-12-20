@@ -2,7 +2,7 @@
 title: Strömma data till Adobe Experience Platform med Web SDK
 description: Lär dig hur du direktuppspelar webbdata till Adobe Experience Platform med Web SDK. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 exl-id: 4d749ffa-e1c0-4498-9b12-12949807b369
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
 workflow-type: tm+mt
 source-wordcount: '1608'
 ht-degree: 0%
@@ -156,7 +156,7 @@ För att bekräfta att data har landat i plattformens datasjön är ett snabbt a
 
 ## Aktivera datauppsättningen och schemat för kundprofil i realtid
 
-Nästa steg är att aktivera datauppsättningen och schemat för kundprofil i realtid. Dataströmning från Web SDK kommer att vara en av många datakällor som flödar på Platform och du vill koppla webbdata till andra datakällor för att skapa 360-graders kundprofiler. Titta på den här korta videon om du vill veta mer om kundprofilen i realtid:
+Nästa steg är att aktivera datauppsättningen och schemat för kundprofilen i realtid. Dataströmning från Web SDK kommer att vara en av många datakällor som flödar på Platform och du vill koppla webbdata till andra datakällor för att skapa 360-graders kundprofiler. Titta på den här korta videon om du vill veta mer om kundprofilen i realtid:
 
 >[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12&learn=on&captions=eng)
 
@@ -235,7 +235,7 @@ Först måste du generera fler exempeldata. Upprepa stegen tidigare i den här l
 
    ![Kundprofil](assets/experience-platform-validate-dataset-custProfile.png)
 
-Du har nu aktiverat Platform Web SDK för Experience Platform (och CDP i realtid! Och Customer Journey Analytics! Och Journey Optimizer!)!
+Du har nu aktiverat Platform Web SDK för Experience Platform (och Real-Time CDP! Och Customer Journey Analytics! Och Journey Optimizer!)!
 
 
 [Nästa: ](setup-analytics.md)

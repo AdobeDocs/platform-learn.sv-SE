@@ -3,7 +3,7 @@ title: Konfigurera Adobe Analytics med Experience Platform Web SDK
 description: Lär dig hur du konfigurerar Adobe Analytics med Experience Platform Web SDK. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 solution: Data Collection, Analytics
 exl-id: de86b936-0a47-4ade-8ca7-834c6ed0f041
-source-git-commit: eb635ea8befa6a908df5bed1c05b48deaf164cb6
+source-git-commit: 17b87daf399b11fb698d34bd6f1b93fa8cbaa1d4
 workflow-type: tm+mt
 source-wordcount: '3554'
 ht-degree: 0%
@@ -564,7 +564,7 @@ I den här övningen mappar du en XDM-variabel till ett utkast så att du kan vi
    ![Produktvyer i realtid](assets/analytics-real-time-prodView.png)
 
    **Inköp**
-   ![Köp i realtid](assets/analytics-real-time-purchase.png)
+   ![Realtidsköp](assets/analytics-real-time-purchase.png)
 
 1. I arbetsytans användargränssnitt skapar du en tabell som visar hela e-handelsflödet för den produkt du har köpt
 

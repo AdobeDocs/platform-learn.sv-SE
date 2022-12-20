@@ -8,7 +8,7 @@ feature: Queries
 kt: 4348
 thumbnail: 4348-run-queries.jpg
 exl-id: a37531cb-96ad-4547-86af-84f7ed65f019
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 2%
@@ -20,7 +20,7 @@ ht-degree: 2%
 <!-- 15 min-->
 I den här lektionen får du lära dig hur du ställer in, skriver och kör frågor för att validera data som du har kapslat.
 
-Adobe Experience Platform Query Service hjälper dig att förstå dina data genom att du kan använda standard-SQL för att fråga efter data i Platform. Med hjälp av frågetjänsten kan du ansluta alla datauppsättningar i datasjön och samla in frågeresultaten som en ny datauppsättning som kan användas för rapportering, maskininlärning eller för förtäring i kundprofilen i realtid.
+Adobe Experience Platform Query Service hjälper dig att förstå dina data genom att du kan använda standard-SQL för att fråga efter data i Platform. Med hjälp av frågetjänsten kan du ansluta till valfri datauppsättning i datasjön och samla in frågeresultaten som en ny datauppsättning för användning vid rapportering, maskininlärning eller för förtäring i realtidskundprofil.
 
 **Dataarkitekturer** och **Datatekniker** måste använda frågetjänsten utanför den här självstudiekursen.
 

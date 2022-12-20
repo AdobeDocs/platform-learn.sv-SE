@@ -4,7 +4,7 @@ breadcrumb-title: Självstudiekurser
 user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
 workflow-type: tm+mt
 source-wordcount: '987'
 ht-degree: 3%
@@ -184,7 +184,7 @@ ht-degree: 3%
    + [Självstudiekurser för Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics-learn/tutorials/overview.html){target=&quot;_blank&quot;}
    + [Självstudiekurser för Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration-learn/tutorials/overview.html){target=&quot;_blank&quot;}
    + [Självstudiekurser för offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/decision-management-configuration/introduction-to-offer-decisioning.html){target=&quot;_blank&quot;}
-   + CDP-självstudiekurser i realtid{#rtcdp}
+   + Real-Time CDP självstudiekurser{#rtcdp}
       + [Översikt](/help/platform/rtcdp/understanding-the-real-time-customer-data-platform.md)
       + [Översikt över B2B Edition](/help/platform/rtcdp/b2b-overview.md)
       + [Komplett demo](/help/platform/rtcdp/demo.md)

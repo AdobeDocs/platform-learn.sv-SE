@@ -8,7 +8,7 @@ feature: Profiles
 kt: 4348
 thumbnail: 4348-map-identities.jpg
 exl-id: e17ffabc-049c-42ff-bf0a-8cc31d665dfa
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
 workflow-type: tm+mt
 source-wordcount: '954'
 ht-degree: 1%
@@ -124,7 +124,7 @@ Nu när vi har våra namnutrymmen är nästa steg att uppdatera våra scheman f�
 
 ### Etikettera XDM-fält för primär identitet
 
-Varje schema som används med kundprofil i realtid måste ha en primär identitet angiven. Och varje inskickad post måste ha ett värde för det fältet.
+Alla scheman som används med kundprofilen i realtid måste ha en primär identitet angiven. Och varje inskickad post måste ha ett värde för det fältet.
 
 Låt oss lägga till en primär identitet i `Luma Loyalty Schema`:
 

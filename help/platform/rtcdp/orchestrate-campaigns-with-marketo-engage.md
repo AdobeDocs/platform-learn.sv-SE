@@ -6,7 +6,7 @@ role: User
 kt: 9263
 thumbnail: 338254.jpg
 exl-id: 1e5b951a-2b14-4e28-a2f2-818db7a8b376
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 2d4f4f933650ef1a0ac98d47b28d0d750ae0e908
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
@@ -21,6 +21,6 @@ Lär dig att samordna B2B-kampanjer med Marketo Engage och Real-time Customer Da
 
 >[!INFO]
 >
-> Den här videon är en del av en kurs, [Komma igång med CDP, B2B Edition för marknadsförare i realtid](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.rtcdp.b2b), kan köpas kostnadsfritt på Experience League!
+> Den här videon är en del av en kurs, [Komma igång med Real-Time CDP, B2B Edition för marknadsförare](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.rtcdp.b2b), kan köpas kostnadsfritt på Experience League!
 
-Mer information finns på [Dokumentation för CDP B2B Edition i realtid](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/b2b-overview.html).
+Mer information finns på [Dokumentation för Real-Time CDP B2B Edition](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/b2b-overview.html).

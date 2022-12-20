@@ -3,7 +3,7 @@ title: Implementera Adobe Experience Cloud i självstudiekursen om mobilappar
 description: Lär dig hur du implementerar Adobe Experience Cloud mobilappar. I den här självstudiekursen får du hjälp med att implementera Experience Cloud-program i ett exempel på en Swift-app.
 recommendation: noDisplay,catalog
 exl-id: daff4214-d515-4fad-a224-f7589b685b55
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
 workflow-type: tm+mt
 source-wordcount: '648'
 ht-degree: 1%
@@ -61,7 +61,7 @@ I den här lektionen antas du ha ett Adobe-ID och de behörigheter som krävs f�
    * **[!UICONTROL Identity Management]**—behörighetsobjekt för att hantera och visa identitetsnamnutrymmen.
    * **[!UICONTROL Datainsamling]**—behörighetsobjekt för att hantera och visa dataströmmar.
 
-   * Om du använder en plattformsbaserad applikation som CDP, Journey Optimizer eller Customer Journey Analytics i realtid bör du också ha:
+   * Om du använder ett plattformsbaserat program som Real-Time CDP, Journey Optimizer eller Customer Journey Analytics bör du även ha:
       * **[!UICONTROL Datahantering]**—behörighetsobjekt som ska hantera och visa datauppsättningar för att slutföra _valfria plattformsövningar_ (kräver en licens för ett plattformsbaserat program).
       * En utveckling **sandlåda** som du kan använda för den här självstudiekursen.
 * För Adobe Analytics måste du veta vilken **rapportsviter** du kan använda för att slutföra den här självstudiekursen.

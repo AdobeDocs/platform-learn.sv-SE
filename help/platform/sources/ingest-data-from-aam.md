@@ -1,12 +1,12 @@
 ---
 title: Infoga data med Adobe Audience Manager dataanslutning
-description: När du konfigurerar om processer och personal för att gå från Adobe Audience Manager till Real-time Customer Data Platform kan du använda Audience Manager Data Connector för att plocka in egenskaper och segment från AAM i plattformen, kombinera dem med andra avancerade data (inklusive PII) och skicka dem till målpartners. Den här videon visar hur du konfigurerar AAM Data Connector för CDP i realtid.
+description: När du konfigurerar om processer och personal för att gå från Adobe Audience Manager till Real-time Customer Data Platform kan du använda Audience Manager Data Connector för att plocka in egenskaper och segment från AAM i plattformen, kombinera dem med andra avancerade data (inklusive PII) och skicka dem till målpartners. Den här videon visar hur du konfigurerar AAM Data Connector for Real-Time CDP.
 role: Data Engineer, Data Architect
 feature: Sources
 thumbnail: 331214.jpg
 kt: 7111
 exl-id: 43688e44-c0ea-4107-ba74-1e630990f732
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
 workflow-type: tm+mt
 source-wordcount: '318'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Infoga data med Adobe Audience Manager dataanslutning
 
-När du konfigurerar om processer och personal så att de går från Adobe Audience Manager till Real-time Customer Data Platform (CDP i realtid) kan du använda Audience Manager dataanslutning för att ta in egenskaper och segment från AAM i plattformen, kombinera dem med andra omfattande data (inklusive PII) och skicka dem till målpartners. Den här videon visar hur du konfigurerar AAM för CDP i realtid.
+När du konfigurerar om dina processer och din personal så att de går från Adobe Audience Manager till Real-time Customer Data Platform (Real-Time CDP) kan du använda dataanslutningen Audience Manager för att plocka in egenskaper och segment från AAM i plattformen, kombinera dem med andra avancerade data (inklusive PII) och skicka dem till målpartners. I den här videon får du hjälp med att konfigurera AAM för Real-Time CDP.
 
 >[!VIDEO](https://video.tv.adobe.com/v/331214/?quality=12&learn=on)
 

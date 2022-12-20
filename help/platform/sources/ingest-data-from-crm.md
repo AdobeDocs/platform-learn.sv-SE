@@ -6,7 +6,7 @@ feature: Sources
 kt: 3826
 thumbnail: 29711.jpg
 exl-id: 2a0caa84-dca6-4ba9-9ebf-bdf38dfc3cb2
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%
