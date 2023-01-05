@@ -2,9 +2,9 @@
 title: Återge VEC-aktiviteter | Migrera mål från at.js 2.x till Web SDK
 description: Lär dig hur du hämtar och använder funktioner för visuell upplevelsedisposition med en Web SDK-implementering av Adobe Target.
 feature: Visual Experience Composer (VEC),Implement Client-side,APIs/SDKs,at.js,AEP Web SDK, Web SDK,Implementation
-source-git-commit: dad7a1b01c4313d6409ce07d01a6520ed83f5e89
+source-git-commit: 72eaefe62bc84c81bee4930218854ec1d83e99ab
 workflow-type: tm+mt
-source-wordcount: '1130'
+source-wordcount: '885'
 ht-degree: 0%
 
 ---
@@ -183,27 +183,6 @@ Implementeringen av grundplattformen Web SDK är nu klar. Vår grundläggande ex
 >[!TIP]
 >
 > När du använder taggfunktionen (tidigare Launch) för att implementera Web SDK ersätter taggarna embed-koden grundkoden för Platform Web SDK, Platform Web SDK inläst asynkront och Configure Platform Web SDK ovan. Kommandot sendEvent görs i en regel med [!UICONTROL Skicka händelse] åtgärdstyp med [!UICONTROL Återge beslut om visuell personalisering] markerat alternativ.
-
-## Bygga aktiviteter med webbläsartillägget Visual Editing Helper
-
-Med webbläsartillägget Adobe Experience Cloud Visual Editing Helper för Google Chrome kan du läsa in webbplatser tillförlitligt i Adobe Target Visual Experience Composer (VEC) för att snabbt skapa och skapa QA-webbupplevelser.
-
-Webbläsartillägget Visuell redigeringshjälp fungerar med webbplatser som använder at.js eller Platform Web SDK.
-
->[!IMPORTANT]
->
->Det nya tillägget Hjälp för visuell redigering ersätter det tidigare [Webbläsartillägg för målets VEC-hjälp](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html). Om det äldre VEC Helper-tillägget är installerat bör det tas bort eller inaktiveras innan tillägget Visuell redigeringshjälp används.
-
-### Hämta och installera hjälpen för visuell redigering
-
-1. Navigera till [Webbläsartillägget Adobe Experience Cloud Visual Editing Helper i Chrome Web Store](https://chrome.google.com/webstore/detail/adobe-experience-cloud-vi/kgmjjkfjacffaebgpkpcllakjifppnca).
-1. Klicka på Lägg till i **Krom** > **Lägg till tillägg**.
-1. Öppna VEC i Target.
-1. Om du vill använda tillägget klickar du på ikonen för tillägget Visuell redigeringshjälp för webbläsare ( ikonen för tillägget Visual Editing ) i webbläsarens verktygsfält när du är i VEC- eller QA-läge.
-
-Hjälp för visuell redigering aktiveras automatiskt när en webbplats öppnas i Target VEC som stöder redigering. Tillägget har inga villkorsinställningar. Tillägget hanterar alla inställningar automatiskt, inklusive inställningarna för cookies för samma plats.
-
-Mer information om [Hjälptillägg för visuell redigering](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension.html) och [felsöka Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/troubleshoot-composer.html).
 
 Lär dig hur du begär och [återge formulärbaserade målaktiviteter](render-form-based-activities.md).
 
