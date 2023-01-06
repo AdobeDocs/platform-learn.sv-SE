@@ -2,9 +2,9 @@
 title: Återge VEC-aktiviteter | Migrera mål från at.js 2.x till Web SDK
 description: Lär dig hur du hämtar och använder funktioner för visuell upplevelsedisposition med en Web SDK-implementering av Adobe Target.
 feature: Visual Experience Composer (VEC),Implement Client-side,APIs/SDKs,at.js,AEP Web SDK, Web SDK,Implementation
-source-git-commit: 72eaefe62bc84c81bee4930218854ec1d83e99ab
+source-git-commit: 7e6aa296429844552ad164ba209a504ddc908571
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '883'
 ht-degree: 0%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Målaktiviteter ställs in med Visual Experience Composer (VEC) eller den formulärbaserade dispositionen. Platform Web SDK kan hämta och använda VEC-baserade aktiviteter på sidan precis som at.js. För den här delen av migreringen kommer du att:
 
-* Installera webbläsartillägget Visual Editing Helper, om det behövs
+* Installera webbläsartillägget Visual Editing Helper
 * Kör en `sendEvent` ringa till Platform Web SDK för att begära aktiviteter.
 * Uppdatera alla referenser från implementeringen av at.js som använder `getOffers()` köra ett mål `pageLoad` begäran.
 

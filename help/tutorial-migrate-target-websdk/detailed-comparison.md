@@ -1,9 +1,9 @@
 ---
 title: Jämförelse mellan at.js 2.x och Web SDK | Migrera mål från at.js 2.x till Web SDK
 description: Läs om skillnaderna mellan at.js 2.x och Platform Web SDK, inklusive funktioner, inställningar och dataflöde.
-source-git-commit: dad7a1b01c4313d6409ce07d01a6520ed83f5e89
+source-git-commit: f690664b187c5b09f1243ce46877da6fad38efa3
 workflow-type: tm+mt
-source-wordcount: '2138'
+source-wordcount: '2164'
 ht-degree: 3%
 
 ---
@@ -44,7 +44,7 @@ Om du inte har använt Platform Web SDK tidigare behöver du inte bekymra dig. O
 | Omdirigeringserbjudanden | Stöds | Stöds. Omdirigering från en sida med Platform Web SDK till en sida med at.js (och i motsatt riktning) stöds emellertid inte. |
 | Beslut på enheten | Stöds | Stöds inte för närvarande |
 | Förhämta kartor | Stöds | Stöds delvis. Kontakta kundsupport om du vill aktivera den här funktionen eftersom den ändrar förhämtningsbeteendet för aktiviteten. |
-| Anpassade händelser | Stöds | Stöds delvis via [övervaka kopplingar](https://github.com/adobe/alloy/wiki/Monitoring-Hooks) |
+| Anpassade händelser | Stöds | Stöds inte. Se [allmän färdplan](https://github.com/orgs/adobe/projects/18/views/1?pane=item&amp;itemId=17372355{target=&quot;_blank&quot;}) för aktuell status. |
 | Svarstoken | Stöds | Stöds. Se [dokumentation för dedikerad svarstoken](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) för kodexempel och skillnader mellan at.js och Platform Web SDK |
 | Dataleverantörer | Stöds | Stöds inte. Anpassad kod kan användas för att utlösa en Platform Web SDK `sendEvent` efter att data har hämtats från en annan provider. |
 
@@ -79,7 +79,7 @@ Många at.js-funktioner har en likvärdig metod med Platform Web SDK som beskriv
 | `trackEvent()` och `sendNotifications()` | Använd `sendEvent` kommando med [specifik `eventType`](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/web-sdk-atjs-comparison.html#how-to-track-events) set:<br><br>`decisioning.propositionDisplay` signalerar återgivning av en aktivitet<br><br>`decisioning.propositionInteract` signalerar en användarinteraktion med en aktivitet, som ett musklick. |
 | `targetGlobalSettings()` | Ingen direkt motsvarighet. Se [Jämförelse av målinställningar](detailed-comparison.md) om du vill ha mer information. |
 | `targetPageParams()` och `targetPageParamsAll()` | Alla data som skickas i `xdm` alternativ för `sendEvent` kommandot är mappat till Target-parametrar för mbox. Eftersom mbox-parametrar namnges med serialiserad punktnotation kan du behöva uppdatera befintliga målgrupper och aktiviteter för att kunna använda de nya mbox-parameternamnen när du migrerar till Platform Web SDK. <br><br>Data som skickas som en del av `data.__adobe.target` i `sendEvent` kommandot är mappat till [Målprofil och Recommendations-specifika parametrar](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html#single-profile-update). |
-| at.js, anpassade händelser | Stöds inte. Men [svarstoken](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html) exponeras som en del av `propositions` som svar på `sendEvent` ring. |
+| at.js, anpassade händelser | Stöds inte. Se [allmän färdplan](https://github.com/orgs/adobe/projects/18/views/1?pane=item&amp;itemId=17372355{target=&quot;_blank&quot;}) för aktuell status. [Svarstoken](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html) exponeras som en del av `propositions` som svar på `sendEvent` ring. |
 
 ## at.js-inställningar och motsvarigheter till Platform Web SDK
 
