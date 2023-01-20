@@ -5,10 +5,9 @@ kt: 5342
 audience: Data Engineer, Data Architect, Data Analyst
 doc-type: tutorial
 activity: develop
-exl-id: 051b5b91-56c4-414e-a4c4-74aa67219551
-source-git-commit: ead28f5631fc430c41e8c756b23dc69ffe19510e
+source-git-commit: b44d2a7ad44dd113889a7f996d7e33da46402b4a
 workflow-type: tm+mt
-source-wordcount: '1500'
+source-wordcount: '1497'
 ht-degree: 0%
 
 ---
@@ -31,7 +30,7 @@ Låt oss använda projektet som du skapade i [4.4 Dataförberedelser i Analysis 
 
 Öppna ditt projekt `yourLastName - Omnichannel Analysis`.
 
-När ditt projekt är öppet och datavyn `yourLastName - Omnichannel Analysis` är du redo att börja skapa dina första visualiseringar.
+När ditt projekt är öppet och datavyn `CJA Bootcamp - Omnichannel Data View` är du redo att börja skapa dina första visualiseringar.
 
 ![demo](./images/prodataView1.png)
 
@@ -41,7 +40,7 @@ Först och främst måste vi välja rätt datum för att analysera data. Gå til
 
 >[!IMPORTANT]
 >
->Välj ett datumintervall som **Den här veckan** eller **Den här månaden**. De senaste tillgängliga uppgifterna inhämtades den 19 september 2022.
+>De senast tillgängliga data har importerats 2022-09-19. Välj ett datumintervall som innehåller det här datumet.
 
 ![demo](./images/pro1.png)
 
@@ -77,9 +76,9 @@ Klicka på **Lås markering** och markera **Markerade objekt** om du vill låsa 
 
 ![demo](./images/pro7b.png)
 
-## De fem vanligaste produkterna som visas
+## Viktiga 4 produkter
 
-Vilka är de fem främsta produkterna?
+Vilka är de fyra främsta produkterna?
 
 Kom ihåg att spara projekt då och då.
 
@@ -88,7 +87,7 @@ Kom ihåg att spara projekt då och då.
 | Windows | Ctrl+S |
 | Mac | Kommando + S |
 
-Vi börjar hitta de fem bästa produkterna som visas. På den vänstra menyn hittar du **Produktnamn** - Dimension.
+Vi börjar hitta de fyra bästa produkterna som visas. På den vänstra menyn hittar du **Produktnamn** - Dimension.
 
 ![demo](./images/pro8.png)
 
@@ -102,7 +101,7 @@ Försök sedan att dela upp en av produkterna efter varumärkesnamn. Sök efter 
 
 ![demo](./images/pro13.png)
 
-Gör sedan en uppdelning med användaragenten. Sök efter **Användaragent** och dra det under varumärkesnamnet.
+Gör sedan en uppdelning med lojalitetsnivån. Sök efter **Lojalitetsnivå** och dra det under varumärkesnamnet.
 
 ![demo](./images/pro15.png)
 
@@ -114,7 +113,7 @@ Slutligen kan du lägga till fler visualiseringar. På vänster sida, under visu
 
 ![demo](./images/pro18.png)
 
-I tabellen väljer du sedan de första 5 **Användaragent**  rader från den uppdelning vi gjorde under **Google Pixel XL 32 GB svart smarttelefon** > **Citi Signal**. Håll ned **CTRL** eller **Kommando** (på Mac).
+I tabellen väljer du sedan 3 **Lojalitetsnivå**  rader från den uppdelning vi gjorde under **Google Pixel XL 32 GB svart smarttelefon** > **Citi Signal**. Håll ned **CTRL** eller **Kommando** (på Mac).
 
 ![demo](./images/pro20.png)
 
@@ -154,7 +153,7 @@ Klicka på visualiseringen **Utfall**.
 
 Välj samma datumintervall som i föregående övning.
 
-![demo](./images/prodatef.png)
+![demo](./images/pro1.png)
 
 Du kommer då att se det här.
 
@@ -216,7 +215,7 @@ Då ser du det här:
 
 Välj samma datumintervall som i föregående övning.
 
-![demo](./images/pro0b.png)
+![demo](./images/pro1.png)
 
 Hitta dimensionen **Sidnamn** under komponenterna till vänster:
 
@@ -297,7 +296,7 @@ Lägg nu till en ny tom panel genom att klicka på **+ Lägg till tom panel**.
 
 Välj samma datumintervall som i föregående övning.
 
-![demo](./images/pro24d.png)
+![demo](./images/pro1.png)
 
 Klicka på **Frihandsregister**.
 

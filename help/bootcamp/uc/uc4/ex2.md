@@ -5,10 +5,9 @@ kt: 5342
 audience: Data Engineer, Data Architect, Data Analyst
 doc-type: tutorial
 activity: develop
-exl-id: 47e02021-019c-4ea4-a7a8-003deef7c9e5
-source-git-commit: ead28f5631fc430c41e8c756b23dc69ffe19510e
+source-git-commit: f63a92b9477b47edbf6a3fee162299491399ea56
 workflow-type: tm+mt
-source-wordcount: '677'
+source-wordcount: '674'
 ht-degree: 0%
 
 ---
@@ -60,7 +59,7 @@ Sök efter datauppsättningen `Demo System - Event Dataset for Website (Global v
 
 ![demo](./images/cja7.png)
 
-Sök och markera kryssrutorna för `Demo System - Event Dataset for Voice Assistants (Global v1.1)` och `Demo System - Event Dataset for Call Center (Global v1.1)`.
+Sök och markera kryssrutorna för `Demo System - Profile Dataset for Loyalty (Global v1.1)` och `Demo System - Event Dataset for Call Center (Global v1.1)`.
 
 Du får den här då. Klicka på **Nästa**.
 
@@ -84,7 +83,7 @@ Du kan dock fortfarande påverka vilken identifierare som ska användas för att
 
 Som vi nämnt kan du ange olika person-ID:n för varje datauppsättning. På så sätt kan du samla olika datauppsättningar från flera ursprung i CJA. Tänk dig att ta in NPS-data eller enkätdata som skulle vara mycket intressant och till hjälp för att förstå sammanhanget och varför något har hänt.
 
-Namnet på fältet för person-ID är inte viktigt, så länge som värdet i fälten för person-ID motsvarar det. Säg att vi har `email` i en enda datauppsättning och `emailAddress` i en annan datauppsättning som definieras som person-ID. If `delaigle@adobe.com` är samma värde för fältet Person-ID för båda datauppsättningarna. CJA kan sammanfoga data.
+Namnet på fältet för person-ID är inte viktigt, så länge som värdet i fälten för person-ID motsvarar det. Om till exempel person-ID:t är `email` i en enda datauppsättning och `emailAddress` i en annan, och `dnb-bootcamp@adobe.com` är samma värde för fältet Person-ID i båda datauppsättningarna. CJA kan sammanfoga data.
 
 För närvarande finns det några andra begränsningar som att knyta det anonyma beteendet till kända. Läs Frågor och svar här: [Vanliga frågor](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-faq.html).
 
@@ -107,7 +106,7 @@ När du har sytt ihop de tre datauppsättningarna är vi redo att fortsätta.
 | datauppsättning | Person-ID |
 | ----------------- |-------------| 
 | Demo System - händelsedatauppsättning för webbplats (Global v1.1) | e-post |
-| Demonstrationssystem - händelsedatauppsättning för röstassistenter (Global v1.1) | e-post |
+| Demonstrationssystem - profildatauppsättning för lojalitet (Global v1.1) | e-post |
 | Demo System - händelsedatauppsättning för callcenter (Global v1.1) | e-post |
 
 Du måste också se till att följande alternativ är aktiverade för varje datauppsättning:

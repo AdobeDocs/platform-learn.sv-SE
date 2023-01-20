@@ -6,9 +6,9 @@ audience: Data Engineer, Data Architect, Data Analyst
 doc-type: tutorial
 activity: develop
 exl-id: 6a9fc1a4-9a6a-43f2-9393-815f9dc2cb4e
-source-git-commit: ead28f5631fc430c41e8c756b23dc69ffe19510e
+source-git-commit: bc872b4fe440106475668eeb790242e1862875aa
 workflow-type: tm+mt
-source-wordcount: '754'
+source-wordcount: '755'
 ht-degree: 7%
 
 ---
@@ -48,9 +48,7 @@ Då ser du ett tomt projekt.
 
 ![demo](./images/premptyprojects.png)
 
-Kontrollera först att du har valt rätt datavy i skärmens övre högra hörn. I det här exemplet är datavyn som ska väljas `vangeluwe - Omnichannel Data View`.
-
-![demo](./images/prdv.png)
+Kontrollera först att du har valt rätt datavy i skärmens övre högra hörn. I det här exemplet är datavyn som ska väljas `CJA Bootcamp - Omnichannel Data View`.
 
 Sedan sparar du projektet och ger det ett namn. Du kan använda följande kommando för att spara:
 
@@ -113,7 +111,7 @@ Konverteringsgraden anges vanligtvis i procent. Låt oss ändra formatet så att
 
 | Titel | Beskrivning |
 | ----------------- |-------------| 
-| Konverteringsgrad | Konverteringsgrad |
+| yourLastName - konverteringsgrad | yourLastName - konverteringsgrad |
 
 Du kommer att ha något liknande på din skärm:
 

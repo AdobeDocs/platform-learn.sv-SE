@@ -5,10 +5,9 @@ kt: 5342
 audience: Data Engineer, Data Architect, Data Analyst
 doc-type: tutorial
 activity: develop
-exl-id: e634876c-2b1c-4f7f-99e5-1940f6c87d80
-source-git-commit: ead28f5631fc430c41e8c756b23dc69ffe19510e
+source-git-commit: 402e032fe150745893528ffbd6a01533f30fb5d6
 workflow-type: tm+mt
-source-wordcount: '1608'
+source-wordcount: '1615'
 ht-degree: 1%
 
 ---
@@ -175,6 +174,8 @@ Därefter måste du konfigurera många Dimensioner och mått enligt tabellen ned
 | Transaktions-ID | Transaktions-ID |  |
 | URL (web.webPageDetails.URL) | URL |  |
 | Användaragent | Användaragent | Senaste, session |
+| nivå | Lojalitetsnivå |  |
+| punkter | Kundens livstidsvärde |  |
 
 ### METRIK
 
@@ -278,7 +279,7 @@ Du bör omdirigeras till den här skärmen:
 
 ![demo](./images/8-v2.png)
 
-På den här fliken kan du ändra några viktiga inställningar för att ändra hur data bearbetas. Vi börjar med att ställa in **Tidsgräns för session** till 30 min Tack vare varje upplevelsehändelses tidsstämpel kan du utöka begreppet session över alla kanaler. Vad händer till exempel om en kund ringer callcenter efter att ha besökt webbplatsen? Med anpassade tidsgränser för sessioner får du stor flexibilitet när det gäller att bestämma vad en session är och hur den sessionen ska sammanfoga data.
+På den här fliken kan du ändra några viktiga inställningar för att ändra hur data bearbetas. Vi börjar med att ställa in **Tidsgräns för session** till 30 min Tack vare varje upplevelsehändelses tidsstämpel kan du utöka begreppet session över alla kanaler. Vad händer till exempel om en kund ringer callcenter efter att ha besökt webbplatsen? Med anpassade tidsgränser för sessioner kan du bestämma vad en session är och hur den sessionen ska sammanfoga data.
 
 ![demo](./images/ext8.png)
 

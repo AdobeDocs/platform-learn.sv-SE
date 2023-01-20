@@ -3,9 +3,9 @@ title: Experience Makers Bootcamp
 description: Startpunkt för deltagarna i Experience Makers Bootcamp
 doc-type: multipage-overview
 exl-id: 400bd9f1-229c-4016-b06b-8fc033f7dbf2
-source-git-commit: ead28f5631fc430c41e8c756b23dc69ffe19510e
+source-git-commit: f2af156bd09ed90e5f65e3e7730a20a7e799dccb
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '716'
 ht-degree: 0%
 
 ---
@@ -28,41 +28,45 @@ Personalisering i stor skala börjar med att förstå vad som kan förbättras, 
 
 10.00-10.30: Kickoff &amp; introduktioner
 
-10.30-11.15: Whiteboard-session: &quot;Personalisering, friktionsjakt, vattentäta skott, Adobe POV&quot;
+10.30-11.00: &quot;Demo av kundresan - konst av möjligheterna&quot;
 
-11.15 - 11.30: Brytning
+11.00 - 11.45: Whiteboard-session: &quot;Personalisering, friktionsjakt, vattentäta skott, Adobe POV&quot;
 
-11.30-12.00: &quot;Demo av kundresan - konst av möjligheterna&quot;
+11.45 - 12.00: Brytning
 
-12.00-12.45: Whiteboard-session: &quot;Uppdelning av lösningsarkitektur&quot;
+12.00-13.00: Whiteboard-session: &quot;Uppdelning av lösningsarkitektur&quot;
 
-12.45 - 13.45: Brytning
+13.00 - 14.00: Lunch
 
-13.45 - 15.00: Användarflöde 1: Praktisk övning i förvärvet
+14.00 - 15.30: Användarflöde 1: Praktisk övning i förvärvet
 
 15.00-15.15: Brytning
 
 15.15-17.00: Användarflöde 2: Praktisk övning för registrering och introduktion
 
+18.00-19.00: Upplev &quot;Cocktail Making Competition&quot;
+
+19.00-22.00: Smaklig middag
+
 ### Dag 2
 
-08.00-09.30: Frukostsession: &quot;Introduktion till kundresebaserad leverans, teamstruktur, eftersläpning vid leverans&quot;
+09.00-09.30: &quot;Introduktion till kundresebaserad leverans, teamstruktur, eftersläpning vid leverans&quot;
 
 09.30-09.45: Brytning
 
-09.45-11.15: Användarflöde 3: &quot;Blanda fysiska och digitala&quot; handövningar
+09.45-11.15: Användarflöde 4: Praktisk övning i kundanalys
 
 11.15 - 11.30: Brytning
 
-11.30-12.30: Användarflöde 3 forts
+11.30-12.30: &quot;Introduktion till kundresebaserad leverans, teamstruktur, eftersläpning vid leverans&quot;
 
 12.30-13.30: Lunch
 
-13.30-14.30: Användarflöde 4: Praktisk övning i kundanalys
+13.30-14.30: Personalisering i stor skala - Så här gör du
 
 14.30-15.00: Sammanfattning, sammanfattning och nästa steg
 
-15:30: Avgång
+15.00: Avslutning
 
 ## Förutsättningar
 
