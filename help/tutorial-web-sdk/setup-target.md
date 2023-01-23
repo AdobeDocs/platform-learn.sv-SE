@@ -3,9 +3,9 @@ title: Konfigurera Adobe Target med Platform Web SDK
 description: Lär dig implementera Adobe Target med Platform Web SDK. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 solution: Data Collection, Target
 exl-id: 9084f572-5fec-4a26-8906-6d6dd1106d36
-source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
+source-git-commit: edbc433e9bd72dfa9b9025063fc90c7fdc2c2774
 workflow-type: tm+mt
-source-wordcount: '3783'
+source-wordcount: '3779'
 ht-degree: 0%
 
 ---
@@ -117,7 +117,7 @@ Målet måste vara aktiverat i datastream-konfigurationen innan målaktiviteter 
 
 Så här konfigurerar du Target i datastream:
 
-1. Gå till [Datainsamling](https://experience.adobe.com/#/data-collection)Gränssnittet {target=&quot;blank&quot;}
+1. Gå till [Datainsamling](https://experience.adobe.com/#/data-collection){target="blank"} gränssnitt
 1. Välj **[!UICONTROL Datastreams]**
 1. Markera tidigare skapade `Luma Web SDK` datastream
 
@@ -184,7 +184,7 @@ Först måste du förstå den terminologi som används i Target- och tagg-gräns
 
 Visuella personaliseringsbeslut från Target levereras av Platform Web SDK, om Target är aktiverat i datastream. Men _de återges inte automatiskt_. Du måste ändra den globala sidans inläsningsregel för att aktivera automatisk återgivning.
 
-1. I [Datainsamling](https://experience.adobe.com/#/data-collection){target=&quot;blank&quot;} öppnar du taggegenskapen som du använder för den här självstudiekursen
+1. I [Datainsamling](https://experience.adobe.com/#/data-collection){target="blank"} -gränssnittet, öppna taggegenskapen som du använder för den här självstudiekursen
 1. Öppna `all pages - library load - AA & AT` regel
 1. Välj `Adobe Experience Platform Web SDK - Send event` åtgärd
 1. Aktivera **[!UICONTROL Återge beslut om visuell personalisering]** med kryssrutan
@@ -334,7 +334,7 @@ Nu när du har konfigurerat Platform Web SDK för att begära innehåll för `ho
    // Send a "display" event 
    alloy("sendEvent", {
       xdm: {
-         eventType: "display",
+         eventType: "propositionDisplay",
          _experience: {
             decisioning: {
                propositions: [
