@@ -1,0 +1,112 @@
+---
+title: Experience Makers Bootcamp - Brasilien
+description: Startpunkt för deltagarna i Experience Makers Bootcamp
+doc-type: multipage-overview
+source-git-commit: 75a878ba596078e6d013b65062606931402302dd
+workflow-type: tm+mt
+source-wordcount: '707'
+ht-degree: 0%
+
+---
+
+# Experience Makers Bootcamp
+
+## Översikt
+
+Portugisiska: Många organisationer är inte medvetna om den friktion som finns i kundresan, vilket är en följd av en isolerad och fragmenterad strategi när det gäller att samordna kundkommunikationen. Data, profil och innehåll måste vara perfekt anpassade för att utforma och leverera enastående kundupplevelser.
+
+Delta i det här bootlägret och lär dig hur en plattformsbaserad strategi kan hjälpa er att få de insikter ni behöver för att identifiera och ta bort friktionspunkter för att förbättra kundresan.
+
+Personalisering i stor skala börjar med att förstå vad som kan förbättras, och en realtidsbild av kunden är avgörande för detta. Insikter leder till handling, vilket leder till fler insikter. Adobe unika plattformsbaserade strategi ger er verktyg som inte bara driver på den tekniska utvecklingen, utan även påverkar er organisation, ert team och er förmåga att leverera en helhetsbild av kunderna istället för en kanalspecifik kundupplevelse.
+
+>[!VIDEO](https://video.tv.adobe.com/v/344962?quality=12&enable=on)
+
+## Dagordning
+
+### Dag 1
+
+10.00-10.30: Kickoff &amp; introduktioner
+
+10.30-11.15: Whiteboard-session: &quot;Personalisering, friktionsjakt, vattentäta skott, Adobe POV&quot;
+
+11.15 - 11.30: Brytning
+
+11.30-12.00: &quot;Demo av kundresan - konst av möjligheterna&quot;
+
+12.00-12.45: Whiteboard-session: &quot;Uppdelning av lösningsarkitektur&quot;
+
+12.45 - 13.45: Brytning
+
+13.45 - 15.00: Användarflöde 1: Praktisk övning i förvärvet
+
+15.00-15.15: Brytning
+
+15.15-17.00: Användarflöde 2: Praktisk övning för registrering och introduktion
+
+### Dag 2
+
+08.00-09.30: Frukostsession: &quot;Introduktion till kundresebaserad leverans, teamstruktur, eftersläpning vid leverans&quot;
+
+09.30-09.45: Brytning
+
+09.45-11.15: Användarflöde 3: &quot;Blanda fysiska och digitala&quot; handövningar
+
+11.15 - 11.30: Brytning
+
+11.30-12.30: Användarflöde 3 forts
+
+12.30-13.30: Lunch
+
+13.30-14.30: Användarflöde 4: Praktisk övning i kundanalys
+
+14.30-15.00: Sammanfattning, sammanfattning och nästa steg
+
+15:30: Avgång
+
+## Förutsättningar
+
+- Tillgång till Adobe Experience Platform: [https://experience.adobe.com/platform](https://experience.adobe.com/platform)
+- Åtkomst till Adobe Experience Platform Data Collection: [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/)
+- Åtkomst till Bootlägers webbplats på [https://bootcamp.aepdemo.net](https://bootcamp.aepdemo.net)
+
+>[!IMPORTANT]
+>
+>Den här självstudiekursen har skapats för att underlätta ett visst workshop-format. Den använder specifika system och konton som du kanske inte har tillgång till. Även om ni inte har tillgång till dem tror vi att ni fortfarande kan lära er mycket genom att läsa igenom detta mycket detaljerade innehåll. Om du deltar i något av seminarierna och behöver dina inloggningsuppgifter, kontakta din Adobe-representant som kommer att ge dig den information som krävs.
+
+## Arkitektur
+
+Innan du börjar med övningarna bör du ta en titt på arkitekturen som ligger bakom kursen. Det här Bootlägret kommer att innehålla ett antal funktioner och funktioner runt om i Adobe Experience Platform och kommer även att innehålla en rad integreringar från olika källor och destinationer. För att du ska förstå arkitekturen bakom den här självstudiekursen och den övergripande placeringen av Adobe Experience Platform i företagets ekosystem börjar du med att titta på arkitekturvideon och diagrammet.
+
+Gå till [Arkitektur](https://experienceleague.adobe.com/docs/platform-learn/comprehensive-technical-tutorial-v22/architecture.html?lang=en).
+
+## Videor
+
+Huvudmålet för vårt Experience Makers Bootcamp är att hjälpa organisationer att förstå vad personalisering i stor skala innebär och hur det skiljer sig mycket från vad de flesta organisationer gör idag. För att kunna leverera enhetliga, kontextuella och realtidsbaserade kundupplevelser i en flerkanalsvärld behöver ni ett plattformsbaserat synsätt där ni bara definierar allt en gång och återanvänder det överallt. I bootlägret tar vi dig på en verklig resa som kombinerar kundinteraktioner på webbplatser, i mobilappar, i callcenter och offline-butiker för att visa vad personalisering i stor skala verkligen betyder, på ett praktiskt sätt.
+
+>[!VIDEO](https://video.tv.adobe.com/v/345446?quality=12&enable=on)
+
+Flera andra videofilmer har skapats som visar olika delar av bootlägret och kraftfulla integreringar mellan Adobe Experience Platform och andra program än Adobe. Klicka på länken nedan om du vill visa en översikt över dessa videofilmer.
+
+Gå till [Videor](https://experienceleague.adobe.com/docs/platform-learn/comprehensive-technical-tutorial-v22/videos.html?lang=en).
+
+## YouTube
+
+Du kan hitta ytterligare intressanta videoklipp [på vår YouTube-kanal](https://www.youtube.com/channel/UCUKG2dkZ9pYuZUPebQ21jUw).
+
+## Användarflöden
+
+[1. Förvärv](./uc/uc1/uc1.md)
+
+I det här användarflödet kommer du att förstå alla element du behöver för att implementera kundfokuserade användningsfall för okända, oautentiserade användare tillsammans med kända, autentiserade användare med Real-Time CDP.
+
+[2. Registrering och introduktion](./uc/uc2/uc2.md)
+
+I det här användarflödet kommer du att förstå alla element du behöver för att implementera användningsfall för registrering och introduktion med hjälp av Real-Time CDP och Adobe Journey Optimizer.
+
+[3. Blanda fysiska och digitala](./uc/uc3/uc3.md)
+
+I det här användarflödet kan ni personalisera kundupplevelsen i både online- och offlinekanaler på ett konsekvent sätt genom att använda Real-Time CDP och Adobe Journey Optimizer.
+
+[4. Kundreseanalys](./uc/uc4/uc4.md)
+
+I det här användarflödet kommer du att bekanta dig med Customer Journey Analytics och få insikt i hur kunderna utvecklas från en kanal till en annan, från online till offline till callcenter och mycket mer.
