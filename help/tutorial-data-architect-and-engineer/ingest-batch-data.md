@@ -8,9 +8,9 @@ feature: Data Ingestion
 kt: 4348
 thumbnail: 4348-ingest-batch-data.jpg
 exl-id: fc7db637-e191-4cc7-9eec-29f4922ae127
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 6a501b3ee36bc2be21816547e01efa0a862a63ba
 workflow-type: tm+mt
-source-wordcount: '2529'
+source-wordcount: '2553'
 ht-degree: 0%
 
 ---
@@ -289,6 +289,7 @@ Många av källorna har ett liknande konfigurationsarbetsflöde där du:
 
 1. Du bör ha laddat ned och packat upp [luma-data.zip](assets/luma-data.zip) i `Luma Tutorial Assets` mapp.
 1. Öppna `luma-offline-purchases.json` i en textredigerare och ersätta alla förekomster av `_techmarketingdemos` med ditt eget understreck-tenant-id, som du ser i dina scheman
+1. Uppdatera alla tidsstämplar så att händelserna inträffar den senaste månaden (t.ex. sök efter `"timestamp":"2022-06` och ersätta år och månad)
 1. Välj önskad molnlagringsleverantör och kontrollera att den är tillgänglig i [!UICONTROL Källor] katalog
 1. Överför `luma-offline-purchases.json` till en plats hos den molnlagringsleverantör du föredrar
 

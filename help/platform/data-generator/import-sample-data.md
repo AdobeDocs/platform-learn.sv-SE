@@ -6,9 +6,9 @@ feature: API
 kt: 7349
 thumbnail: 7349.jpg
 exl-id: da94f4bd-0686-4d6a-a158-506f2e401b4e
-source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
+source-git-commit: 6a501b3ee36bc2be21816547e01efa0a862a63ba
 workflow-type: tm+mt
-source-wordcount: '1620'
+source-wordcount: '1650'
 ht-degree: 0%
 
 ---
@@ -50,6 +50,7 @@ Kontrollera att du har hämtat [Postman](https://www.postman.com/downloads/) pro
 
 1. Flytta `platform-utils-main.zip` till önskad plats på datorn och packa upp den.
 1. I `luma-data` mapp, öppna alla `json` filer i en textredigerare och ersätta alla förekomster av `_techmarketingdemos` med ditt eget klient-ID, föregånget av ett understreck.
+1. Öppna `luma-offline-purchases.json` i en textredigerare och uppdatera alla tidsstämplar så att händelserna inträffar den senaste månaden (t.ex. sök efter `"timestamp":"2022-06` och ersätta år och månad)
 1. Observera platsen för den uppzippade mappen, som du behöver den senare när du konfigurerar `FILE_PATH` Postman miljövariabel:
 
    >[!NOTE]
