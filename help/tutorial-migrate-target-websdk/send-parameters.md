@@ -1,9 +1,9 @@
 ---
 title: Skicka parametrar | Migrera mål från at.js 2.x till Web SDK
 description: Lär dig hur du skickar mbox-, profile- och enhetsparametrar till Adobe Target med Experience Platform Web SDK.
-source-git-commit: dad7a1b01c4313d6409ce07d01a6520ed83f5e89
+source-git-commit: 43740912bc5a941aa21c5f38ed2c1aac74abffbc
 workflow-type: tm+mt
-source-wordcount: '1104'
+source-wordcount: '1294'
 ht-degree: 0%
 
 ---
@@ -11,6 +11,10 @@ ht-degree: 0%
 # Skicka parametrar till Target med Platform Web SDK
 
 Målimplementeringarna skiljer sig åt på olika webbplatser på grund av webbplatsens arkitektur, affärskrav och vilka funktioner som används. De flesta Target-implementeringar omfattar att skicka olika parametrar för sammanhangsberoende information, målgrupper och innehållsrekommendationer.
+
+>[!WARNING]
+>
+> Implementeringar av Platform Web SDK som påbörjats efter 1 oktober 2022 kan behöva använda [tillfällig lösning](prefetch-workaround.md) för att skicka de parametrar som beskrivs på den här sidan.
 
 Vi använder en enkel produktinformationssida och en orderbekräftelsesida för att visa skillnaderna mellan biblioteken när parametrar skickas till Target.
 
@@ -57,17 +61,17 @@ Produktinformation:
 </html>
 ```
 
-<!--
 
-Order Confirmation:
+
+Orderbekräftelse:
 
 ```HTML
 <!doctype html>
 <html>
 <head>
   <title>Order Confirmation</title>-->
-<!--Target parameters -->
-<!--  <script>
+  <!--Target parameters -->
+  <script>
     targetPageParams = function() {
       return {
         // Property token
@@ -80,9 +84,9 @@ Order Confirmation:
         "mbox3rdPartyId": "TT8675309",
       };
     };
-  </script>-->
-<!--Target at.js library loaded asynchonously-->
-<!--  <script src="/libraries/at.js" async></script>
+  </script>
+  <!--Target at.js library loaded asynchonously-->
+  <script src="/libraries/at.js" async></script>
 </head>
 <body>
   <h1 id="title">Order Confirmation</h1>
@@ -90,7 +94,6 @@ Order Confirmation:
 </body>
 </html>
 ```
--->
 
 
 ## Sammanfattning av parametermappning
@@ -125,15 +128,12 @@ Tabellen nedan visar hur exempelparametrarna skulle ommappas med Platform Web SD
 | `cartIds` | `data.__adobe.target.cartIds` | Används för Target-s kundvagnsbaserade rekommendationsalgoritmer. |
 | `excludedIds` | `data.__adobe.target.excludedIds` | Används för att förhindra att specifika enhets-ID returneras i en rekommendationsdesign. |
 | `mbox3rdPartyId` | Anges i identityMap. Se [Synkronisera profiler med ett kund-ID](#synching-profiles-with-a-customer-id) | Används för synkronisering av målprofiler mellan enheter och kundattribut. Namnutrymmet som ska användas för kund-ID:t måste anges i [Målkonfiguration för datastream](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/using-mbox-3rdpartyid.html). |
+| `orderId` | `xdm.commerce.order.purchaseID` | Används för att identifiera en unik order för målkonverteringsspårning. |
+| `orderTotal` | `xdm.commerce.order.priceTotal` | Används för att spåra ordersummor för målkonverterings- och optimeringsmål. |
+| `productPurchasedId` | `data.__adobe.target.productPurchasedId` <br>ELLER<br> `xdm.productListItems[0-n].SKU` | Används för spårning av målkonvertering och rekommendationsalgoritmer. Se [enhetsparametrar](#entity-parameters) för mer information. |
+| `mboxPageValue` | `data.__adobe.target.mboxPageValue` | Används för [egen poängsättning](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/capture-score.html) verksamhetsmål. |
 
 {style=&quot;table-layout:auto&quot;}
-
-<!--
-| `orderId` | `xdm.commerce.order.purchaseID` | Used for identifying a unique order for Target conversion tracking. | 
-| `orderTotal` | `xdm.commerce.order.priceTotal` | Used for tracking order totals for Target conversion and optimization goals. | 
-| `productPurchasedId` | `data.__adobe.target.productPurchasedId` <br>OR<br> `xdm.productListItems[0-n].SKU` | Used for Target conversion tracking and recommendations algorithms. Refer to the [entity parameters](#entity-parameters) section below for details. | 
-| `mboxPageValue` | `data.__adobe.target.mboxPageValue` | Used for the [custom scoring](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/capture-score.html) activity goal. | -->
-
 
 ## Egna parametrar
 
@@ -245,12 +245,12 @@ Alla [enhetsparametrar](https://experienceleague.adobe.com/docs/target/using/rec
 >
 >Om `commerce` fältgruppen används och `productListItems` -arrayen ingår i XDM-nyttolasten och sedan den första `SKU` värdet i den här arrayen mappas till `entity.id` för att öka en produktvy.
 
-<!-- 
-## Purchase parameters
 
-Purchase parameters are passed on an order confirmation page after a successful order and are used for Target conversion and optimization goals. With a Platform Web SDK implementation, these parameters and are automatically mapped from XDM data passed as part of the `commerce` field group.
+## Inköpsparametrar
 
-at.js example using `targetPageParams()`:
+Inköpsparametrar skickas till en orderbekräftelsesida efter en lyckad beställning och används för målkonverterings- och optimeringsmål. Med en plattformsbaserad Web SDK-implementering mappas dessa parametrar och automatiskt från XDM-data som skickas som en del av `commerce` fältgrupp.
+
+at.js-exempel med `targetPageParams()`:
 
 ```JavaScript
 targetPageParams = function() {
@@ -262,9 +262,9 @@ targetPageParams = function() {
 };
 ```
 
-Purchase information is passed to Target when the `commerce` field group has `puchases.value` set to `1`. The order ID and order total are automatically mapped from the `order` object. If the `productListItems` array is present, then the `SKU` values are use for `productPurchasedId`.
+Inköpsinformation skickas till Target när `commerce` fältgruppen har `puchases.value` ange till `1`. Orderns-ID och ordersumman mappas automatiskt från `order` -objekt. Om `productListItems` arrayen finns, sedan `SKU` värden används för `productPurchasedId`.
 
-Platform Web SDK example using `sendEvent` command:
+Exempel på SDK för plattformar med `sendEvent` kommando:
 
 ```JavaScript
 alloy("sendEvent", {
@@ -289,9 +289,8 @@ alloy("sendEvent", {
 
 >[!NOTE]
 >
->The `productPurchasedId` value can also be passed as a comma-separated list of entity IDs under the `data` object.
+>The `productPurchasedId` värdet kan också skickas som en kommaavgränsad lista med enhets-ID:n under `data` -objekt.
 
--->
 
 ## Synkronisera profiler med ett kund-ID
 
@@ -413,8 +412,8 @@ Produktinformation:
 </html>
 ```
 
-<!--
-Order Confirmation:
+
+Orderbekräftelse:
 
 ```HTML
 <!doctype html>
@@ -422,9 +421,9 @@ Order Confirmation:
 <head>
   <title>Order Confirmation</title>
 
--->
-<!--Prehiding snippet for Target with asynchronous Web SDK deployment-->
-<!--
+
+  <!--Prehiding snippet for Target with asynchronous Web SDK deployment-->
+
   <script>
     !function(e,a,n,t){var i=e.head;if(i){
     if (a) return;
@@ -432,21 +431,20 @@ Order Confirmation:
     o.id="alloy-prehiding",o.innerText=n,i.appendChild(o),setTimeout(function(){o.parentNode&&o.parentNode.removeChild(o)},t)}}
     (document, document.location.href.indexOf("mboxEdit") !== -1, ".body { opacity: 0 !important }", 3000);
   </script>
--->
-<!--Platform Web SDK base code-->
-<!--
+
+  <!--Platform Web SDK base code-->
+
   <script>
     !function(n,o){o.forEach(function(o){n[o]||((n.__alloyNS=n.__alloyNS||
     []).push(o),n[o]=function(){var u=arguments;return new Promise(
     function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
     (window,["alloy"]);
   </script>
--->
-<!--Platform Web SDK loaded asynchonously. Change the src to use the latest supported version.-->
-<!--  <script src="https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js" async></script>
--->
-<!--Configure Platform Web SDK and send event-->
-<!--  <script>
+  <!--Platform Web SDK loaded asynchonously. Change the src to use the latest supported version.-->
+  <script src="https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js" async></script>
+
+  <!--Configure Platform Web SDK and send event-->
+  <script>
     alloy("configure", {
       "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
       "orgId":"ADB3LETTERSANDNUMBERS@AdobeOrg"
@@ -483,7 +481,6 @@ Order Confirmation:
 </body>
 </html>
 ```
--->
 
 Lär dig sedan hur du [spåra konverteringshändelser för mål](track-events.md) med Platform Web SDK.
 
