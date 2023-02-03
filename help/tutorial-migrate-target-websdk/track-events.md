@@ -1,9 +1,9 @@
 ---
 title: Spåra händelser | Migrera mål från at.js 2.x till Web SDK
 description: Lär dig spåra konverteringshändelser för Adobe Target med Experience Platform Web SDK.
-source-git-commit: 43740912bc5a941aa21c5f38ed2c1aac74abffbc
+source-git-commit: 8209b13b745dbea418003b133a6834825947950e
 workflow-type: tm+mt
-source-wordcount: '681'
+source-wordcount: '654'
 ht-degree: 0%
 
 ---
@@ -16,10 +16,6 @@ Konverteringshändelser för Target kan spåras med Platform Web SDK som liknar 
 * Automatiskt spårade händelser som inte kräver någon konfiguration
 * Inköpskonverteringshändelser som ska justeras för implementering av plattformens Web SDK
 * Konverteringshändelser som inte är köpta och som kräver koduppdateringar
-
->[!WARNING]
->
-> Implementeringar av Platform Web SDK som påbörjats efter 1 oktober 2022 kan behöva använda [tillfällig lösning](prefetch-workaround.md) för att kunna spåra några av de händelser som beskrivs på den här sidan.
 
 ## Jämförelse av målspårning
 

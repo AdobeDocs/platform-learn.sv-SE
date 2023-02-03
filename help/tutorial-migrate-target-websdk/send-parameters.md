@@ -1,9 +1,9 @@
 ---
 title: Skicka parametrar | Migrera mål från at.js 2.x till Web SDK
 description: Lär dig hur du skickar mbox-, profile- och enhetsparametrar till Adobe Target med Experience Platform Web SDK.
-source-git-commit: 43740912bc5a941aa21c5f38ed2c1aac74abffbc
+source-git-commit: 8209b13b745dbea418003b133a6834825947950e
 workflow-type: tm+mt
-source-wordcount: '1294'
+source-wordcount: '1269'
 ht-degree: 0%
 
 ---
@@ -11,10 +11,6 @@ ht-degree: 0%
 # Skicka parametrar till Target med Platform Web SDK
 
 Målimplementeringarna skiljer sig åt på olika webbplatser på grund av webbplatsens arkitektur, affärskrav och vilka funktioner som används. De flesta Target-implementeringar omfattar att skicka olika parametrar för sammanhangsberoende information, målgrupper och innehållsrekommendationer.
-
->[!WARNING]
->
-> Implementeringar av Platform Web SDK som påbörjats efter 1 oktober 2022 kan behöva använda [tillfällig lösning](prefetch-workaround.md) för att skicka de parametrar som beskrivs på den här sidan.
 
 Vi använder en enkel produktinformationssida och en orderbekräftelsesida för att visa skillnaderna mellan biblioteken när parametrar skickas till Target.
 
