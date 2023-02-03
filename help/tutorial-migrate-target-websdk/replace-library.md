@@ -1,9 +1,9 @@
 ---
 title: Ersätta biblioteket | Migrera mål från at.js 2.x till Web SDK
 description: Lär dig hur du migrerar en Adobe Target-implementering från at.js 2.x till Adobe Experience Platform Web SDK. Ämnen som omfattar biblioteksöversikt, implementeringsskillnader och andra viktiga hänvisningar.
-source-git-commit: dad7a1b01c4313d6409ce07d01a6520ed83f5e89
+source-git-commit: 8d41e5d6434dabff0443e932be842b37553d72a9
 workflow-type: tm+mt
-source-wordcount: '1642'
+source-wordcount: '1708'
 ht-degree: 0%
 
 ---
@@ -207,6 +207,12 @@ Om du vill veta mer om hur Platform Web SDK kan hantera flimmer kan du läsa hj�
 
 Platform Web SDK måste konfigureras för varje sidinläsning. The `configure` -kommandot måste alltid vara det första SDK-kommandot som anropas. I följande exempel antas att hela webbplatsen uppgraderas till Platform Web SDK i en enda distribution:
 
+>[!BEGINTABS]
+
+>[!TAB JavaScript]
+
+The `edgeConfigId` är [!UICONTROL Datastream-ID]
+
 ```JavaScript
 alloy("configure", {
   "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
@@ -214,7 +220,19 @@ alloy("configure", {
 });
 ```
 
+>[!TAB taggar]
+
+I taggitimeringar fylls många fält i automatiskt eller kan väljas i listrutor. Observera att en annan plattform [!UICONTROL sandlådor] och [!UICONTROL datastreams] kan väljas för varje miljö. Datastream ändras baserat på statusen för taggbiblioteket i publiceringsprocessen.
+
+![konfigurera tillägget för Web SDK-taggen](assets/tags-config.png)
+>[!ENDTABS]
+
 Om du planerar att migrera från at.js till Platform Web SDK sida för sida krävs följande konfigurationsalternativ:
+
+
+>[!BEGINTABS]
+
+>[!TAB JavaScript]
 
 ```JavaScript
 alloy("configure", {
@@ -224,6 +242,11 @@ alloy("configure", {
   "idMigrationEnabled":true
 });
 ```
+
+>[!TAB taggar]
+
+![konfigurera migreringsalternativ för Web SDK-taggtillägg](assets/tags-config-migration.png)
+>[!ENDTABS]
 
 De alternativ för konfiguration som är relaterade till Target beskrivs nedan:
 
