@@ -5,85 +5,85 @@ kt: 5342
 audience: Data Engineer, Data Architect, Marketer
 doc-type: tutorial
 activity: develop
-source-git-commit: 75a878ba596078e6d013b65062606931402302dd
+source-git-commit: 9cc01c7d3018319137f915e103bce9dc39b0d472
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '516'
 ht-degree: 2%
 
 ---
 
-# 1.3 Skapa ett segment - användargränssnitt
+# 1.3 Krim um segmento - UI
 
-I den här övningen skapar du ett segment genom att använda Adobe Experience Platform Segment Builder.
+Neste övício, você irá criar um segmento usando o Construtor de Segmentos da Adobe Experience Platform.
 
-## Artikel
+## História
 
-Gå till [Adobe Experience Platform](https://experience.adobe.com/platform). När du loggat in kommer du till Adobe Experience Platform hemsida.
+Åtkomst [Adobe Experience Platform](https://experience.adobe.com/platform). Depois de fazer inloggning, você irá acessar a página inicial da Adobe Experience Platform.
 
-![Dataintag](./images/home.png)
+![Datainmatning](./images/home.png)
 
-Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``Bootcamp``. Du kan göra detta genom att klicka på texten **[!UICONTROL Produktionsprodukt]** i den blå linjen ovanför skärmen. När du har valt lämplig [!UICONTROL sandlåda]kommer du att se skärmändringen och nu är du med på din [!UICONTROL sandlåda].
+Antes de continuar, você preca selecionar um **sandlåda**. O nome do sandbox a ser seleconado é ``Bootcamp``. É beível fazer isso clicando no texto **[!UICONTROL Produktionsprodukt]** na linha azul na parte superior da tela. Depois de selecionar o sandbox apropriado, você verá a tela mudando e agora você está em seu [!UICONTROL sandlåda] dedikat.
 
-![Dataintag](./images/sb1.png)
+![Datainmatning](./images/sb1.png)
 
-På menyn till vänster går du till **Segment**. På den här sidan visas en översikt över alla befintliga segment. Klicka på **+ Skapa segment** för att börja skapa ett nytt segment.
+Ingen meny à esquerda, acesse **Segment**. Nesta página, você tem uma visão geral de todos os segmentos exist. Clique no botão + Criar segmento para começar a criar um novo segmento.
 
 ![Segmentering](./images/menuseg.png)
 
-När du väl är i segmentbyggaren märker du omedelbart **Attribut** menyalternativ och **Individuell XDM-profil** referens.
+Quando estiver no novo construtor de segmentos, você irá perceber imediatamente a opção de menu **Attribut** e a referência do **Individuell XDM-profil**.
 
 ![Segmentering](./images/segmentationui.png)
 
-Eftersom XDM är det språk som används i upplevelseverksamheten är XDM även grunden för segmentbyggaren. Alla data som är inkapslade i Platform ska mappas mot XDM, och som sådana blir alla data en del av samma datamodell oavsett varifrån dessa data kommer. Detta ger en stor fördel när du skapar segment, eftersom ni från det här segmentbyggargränssnittet kan kombinera data från vilket ursprung som helst i samma arbetsflöde. Segment som byggts i Segment Builder kan skickas till lösningar som Adobe Target, Adobe Campaign och Adobe Audience Manager för aktivering.
+Como o XDM é a linguagem que alimenta o setor de experience ência, o XDM também é a base para o construtor de segmentos. Todos os dados ingeridos na plataforma devem ser mapeados em relação ao XDM e, portanto, todos os dados se tornam parte do mesmo modelo de dados, independent entemente da origem desses dados. Isso oferece uma grande vantagem ao criar segmentos, pois a part dessa interface do usuário do construtor de segmento, é posiível combinar dados de qualquer origem no mesmo fluxo de trabalho. Os segmentos criados no Construtor de segmentos podem ser enviados para soluções como Adobe Target, Adobe Campaign e Adobe Audience Manager para ativação.
 
-Nu måste ni skapa ett segment av alla kunder som har tittat på produkten **Real-Time CDP**.
+Agora você preca criar um segmento de todos os clientes que visualizaram o produto **Real-Time CDP**.
 
-Om du vill bygga ut det här segmentet måste du lägga till en Experience Event. Du kan hitta alla Experience Events genom att klicka på **Händelser** ikonen i **Fält** menyraden.
+Para construir este segmento, você preca adicionar um Evento de experience ência. Você pode encontrar todos os Eventos de Experience ência clicando no ícone **Händelser** na barra de menu **Fält**.
 
 ![Segmentering](./images/findee.png)
 
-Nu ska vi se den översta nivån, **XDM ExperienceEvents** nod. Klicka på **XDM ExperienceEvent**.
+Em seguida, você verá o nó **XDM ExperienceEvents** do nível superior. Clique em **XDM ExperienceEvent**.
 
 ![Segmentering](./images/see.png)
 
-Gå till **Produktlisteobjekt**.
+Åtkomst **Produktlisteobjekt**.
 
 ![Segmentering](./images/plitems.png)
 
-Välj **Namn** och dra och släpp **Namn** objekt från den vänstra menyn på segmentbyggarbetsytan i **Händelser** -avsnitt. Då ser du det här:
+Markering **Namn** e arablonsolte o objeto **Namn** do menu à esquerda na tela do construtor de segmentos na seção **Händelser**. Em seguida, o seguinte será exibido:
 
 ![Segmentering](./images/eewebpdtlname.png)
 
-Jämförelseparametern ska vara **är lika med** och i indatafältet anger du **CDP i realtid**.
+O parâmetro de Comparação deve ser **är lika med** e, no campo de entrada, insira **CDP i realtid**.
 
 ![Segmentering](./images/pv.png)
 
-Varje gång du lägger till ett element i segmentverktyget kan du klicka på **Uppdatera offert** för att få en ny uppskattning av populationen i ditt segment.
+Sempre que adicionar um elemento ao construtor de segmentos, você pode clicar no botão **Uppdatera offert** para obter uma nova estimativa da população em seu segmento.
 
 ![Segmentering](./images/refreshest.png)
 
-Som **Utvärderingsmetod**, markera **Edge**.
+Para **Utvärderingsmetod**, selecione **Edge**.
 
 ![Segmentering](./images/evedge.png)
 
-Till sist ger vi segmentet ett namn och sparar det.
+Por fim, vamos dar um nome ao seu segmento e salvá-lo.
 
-Använd följande som namnkonvention:
+Como modelo de nomenklatura, använd:
 
 - `yourLastName - Interest in Real-Time CDP`
 
-Klicka sedan på **Spara och stäng** för att spara segmentet.
+Em seguida, clique no botão **Spara och stäng** para salvar seu segmento.
 
 ![Segmentering](./images/segmentname.png)
 
-Du kommer nu tillbaka till sidan för segmentöversikt där du får en förhandsgranskning av kundprofiler som är kvalificerade för ditt segment.
+Agora você irá retornar à página de visão geral do segmento, onde verá uma visualização de amostra dos perfis de clientes que se Qualificam para o seu segmento.
 
 ![Segmentering](./images/savedsegment.png)
 
-Du kan nu fortsätta med nästa övning och använda ditt segment med Adobe Target.
+Agora você pode continuar no próximo övício e usar seu segmento com o Adobe Target.
 
-Nästa steg: [1.4 Vidta åtgärder: skicka segmentet till Adobe Target](./ex4.md)
+Próxima etapa: [1.4 Ação: envie seu segmento para o Adobe Target](./ex4.md)
 
-[Gå tillbaka till användarflöde 1](./uc1.md)
+[Retornar para Fluxo de Usuário 1](./uc1.md)
 
-[Gå tillbaka till Alla moduler](../../overview.md)
+[Retornar para Todos os Módulos](../../overview.md)

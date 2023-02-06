@@ -2,111 +2,109 @@
 title: Experience Makers Bootcamp - Brasilien
 description: Startpunkt för deltagarna i Experience Makers Bootcamp
 doc-type: multipage-overview
-source-git-commit: 75a878ba596078e6d013b65062606931402302dd
+source-git-commit: 020e9fb8a1d02b93e4e95a4274806c7926c02757
 workflow-type: tm+mt
-source-wordcount: '707'
+source-wordcount: '775'
 ht-degree: 0%
 
 ---
 
 # Experience Makers Bootcamp
 
-## Översikt
+## Visão Geral
 
-Portugisiska: Många organisationer är inte medvetna om den friktion som finns i kundresan, vilket är en följd av en isolerad och fragmenterad strategi när det gäller att samordna kundkommunikationen. Data, profil och innehåll måste vara perfekt anpassade för att utforma och leverera enastående kundupplevelser.
+Muitas empresas não estão cientes do atrito que existe na jnada dos seus clientes, följdência de uma abordagem fragmentada e não integrada ao orqueeller a comunicação com o cliente. Dados, perfil e conteúdo precam estar perfe itamente alinhaos para projetar e oferecer experience ências excepcionais ao CONSmidor.
 
-Delta i det här bootlägret och lär dig hur en plattformsbaserad strategi kan hjälpa er att få de insikter ni behöver för att identifiera och ta bort friktionspunkter för att förbättra kundresan.
+Delta avste Bootläger para aprender como uma abordagem baseada em plataforma pode ajudar na obtenção dos insights necessary ários para identificar e remover pontos de atrito para aprimorar a journnada do seu cliente.
 
-Personalisering i stor skala börjar med att förstå vad som kan förbättras, och en realtidsbild av kunden är avgörande för detta. Insikter leder till handling, vilket leder till fler insikter. Adobe unika plattformsbaserade strategi ger er verktyg som inte bara driver på den tekniska utvecklingen, utan även påverkar er organisation, ert team och er förmåga att leverera en helhetsbild av kunderna istället för en kanalspecifik kundupplevelse.
+A personalização em escala começa com a compreensão do que pode ser aprimorado e, para isso, uma visão em tempo real do seu cliente é é essencial. Insikterna levam à ação, o que leva a mais insights. A abordagem exclusiva da Adobe focada na plataforma fornece as ferramentas para, além de impulsionar os avanços tecnológicos, impactar sua organização, sua equipe e sua dispidade de oferecer uma experience ência holística ao cliente em vez de uma experience ência do cliente especíecíecífica por canal.
 
 >[!VIDEO](https://video.tv.adobe.com/v/344962?quality=12&enable=on)
 
 ## Dagordning
 
-### Dag 1
+### Dia 1
 
-10.00-10.30: Kickoff &amp; introduktioner
+9.00 - 10.00: Café da manhă &amp; Networking
 
-10.30-11.15: Whiteboard-session: &quot;Personalisering, friktionsjakt, vattentäta skott, Adobe POV&quot;
+10.00-10.30: Boas-vindas &#x200B;
 
-11.15 - 11.30: Brytning
+10.30-11.00: Jornada do cliente: &quot;Art of the possible &quot; (sessão em inglês) &#x200B;
 
-11.30-12.00: &quot;Demo av kundresan - konst av möjligheterna&quot;
+11.00 - 12.00: Personalização exponencial vs. Ecossistemas em silos (sessão em inglês) &#x200B;
 
-12.00-12.45: Whiteboard-session: &quot;Uppdelning av lösningsarkitektur&quot;
+12.00-13.30: Almoço e-&#x200B;
 
-12.45 - 13.45: Brytning
+13.30-14.30: Arquitetura de solução (sessão em inglês) &#x200B;
 
-13.45 - 15.00: Användarflöde 1: Praktisk övning i förvärvet
+14.30-16.00: Gör det själv: Aquisição &#x200B;
 
-15.00-15.15: Brytning
+16.00-16.15: Bryttid
 
-15.15-17.00: Användarflöde 2: Praktisk övning för registrering och introduktion
+16.15 - 18.00: Gör det själv: Cadastro &amp; onboarding &#x200B;
 
-### Dag 2
 
-08.00-09.30: Frukostsession: &quot;Introduktion till kundresebaserad leverans, teamstruktur, eftersläpning vid leverans&quot;
+### Dia 2
 
-09.30-09.45: Brytning
+09.00-10.00: Café da manhă &amp; Networking
 
-09.45-11.15: Användarflöde 3: &quot;Blanda fysiska och digitala&quot; handövningar
+10.00 - 10.45: Introdução: janda do cliente, estrutura de times e backlog
 
-11.15 - 11.30: Brytning
+10.45 - 12.00: Gör det själv: Consoliando on online e o offline
 
-11.30-12.30: Användarflöde 3 forts
+12.00-13.40: Almoço e-&#x200B;
 
-12.30-13.30: Lunch
+13.45 - 14.45: Gör det själv: Análise de jnadas - fidelizando e retendo clientes
 
-13.30-14.30: Användarflöde 4: Praktisk övning i kundanalys
+14.45 - 16.00: Conclusões e próximos passos
 
-14.30-15.00: Sammanfattning, sammanfattning och nästa steg
+16.00 - 19.00: Användarflöde 4: Nätverksbyggande och lyckad timme
 
-15:30: Avgång
 
-## Förutsättningar
+## Pré-reksitos
 
-- Tillgång till Adobe Experience Platform: [https://experience.adobe.com/platform](https://experience.adobe.com/platform)
-- Åtkomst till Adobe Experience Platform Data Collection: [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/)
-- Åtkomst till Bootlägers webbplats på [https://bootcamp.aepdemo.net](https://bootcamp.aepdemo.net)
+- Acesso à Adobe Experience Platform: [https://experience.adobe.com/platform](https://experience.adobe.com/platform)
+- Acesso à coleta de dados da Adobe Experience Platform: [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/)
+- Acesso aos webbplats do bootläger em [https://bootcamp.aepdemo.net](https://bootcamp.aepdemo.net)
 
 >[!IMPORTANT]
 >
->Den här självstudiekursen har skapats för att underlätta ett visst workshop-format. Den använder specifika system och konton som du kanske inte har tillgång till. Även om ni inte har tillgång till dem tror vi att ni fortfarande kan lära er mycket genom att läsa igenom detta mycket detaljerade innehåll. Om du deltar i något av seminarierna och behöver dina inloggningsuppgifter, kontakta din Adobe-representant som kommer att ge dig den information som krävs.
+>Självstudiekursen foi criado para förenkltar um formo específico de workshop. Sistemas e contas específicos aos quais você pode não ter acesso são utilizados neste tutorial. Mesmo sem acesso, você ainda pode aprender muito com a leitura deste conteúdo details. Se você é um deltagante de um dos workshops e precise a das credenciais de acesso, entre em contato com seu representante da Adobe para receber as informações necessary árias. .
 
-## Arkitektur
+## Arquitetura
 
-Innan du börjar med övningarna bör du ta en titt på arkitekturen som ligger bakom kursen. Det här Bootlägret kommer att innehålla ett antal funktioner och funktioner runt om i Adobe Experience Platform och kommer även att innehålla en rad integreringar från olika källor och destinationer. För att du ska förstå arkitekturen bakom den här självstudiekursen och den övergripande placeringen av Adobe Experience Platform i företagets ekosystem börjar du med att titta på arkitekturvideon och diagrammet.
+Antes de começar os övícios práticos, consulte a arquitetura por trás deste tutorial. Este bootcamp irá detaljhar vários recursos e funcionalidades da Adobe Experience Platform e discutir múltiplas integrações em várias fontes e destinos. Para compreender de format adekvat ada a arquitetura por trás deste tutorial e o posicionamento geral da Adobe Experience Platform no seu ecossistema corporativo, comece reviando o vídeo e o chart a da arquitetura.
 
-Gå till [Arkitektur](https://experienceleague.adobe.com/docs/platform-learn/comprehensive-technical-tutorial-v22/architecture.html?lang=en).
+Acessar [Arquitetura](https://experienceleague.adobe.com/docs/platform-learn/comprehensive-technical-tutorial-v22/architecture.html?lang=pt-BR).
 
-## Videor
+## Vídeos
 
-Huvudmålet för vårt Experience Makers Bootcamp är att hjälpa organisationer att förstå vad personalisering i stor skala innebär och hur det skiljer sig mycket från vad de flesta organisationer gör idag. För att kunna leverera enhetliga, kontextuella och realtidsbaserade kundupplevelser i en flerkanalsvärld behöver ni ett plattformsbaserat synsätt där ni bara definierar allt en gång och återanvänder det överallt. I bootlägret tar vi dig på en verklig resa som kombinerar kundinteraktioner på webbplatser, i mobilappar, i callcenter och offline-butiker för att visa vad personalisering i stor skala verkligen betyder, på ett praktiskt sätt.
+O objectivo Principal do nosso bootcamp para Experience Makers é ajudar as empresas a compreender o que signifika personalização em escala e como isso é muito diferente do que a Maioria das empresas fazem atualmente. Para oferecer experience ências do cliente que sejam consistent, contextuais e em tempo real em um mundo omnichannel, você preca de uma mentalidade que coloque a plataforma em primeiro lugar, onde tudo é defindo apenas uma vez e reutilizado em todos lugares. Inget Bootcamp, levamos você em uma jnada real que comina interações com o cliente no site, no aplicativo móvel, no call center e no ambiente offline da loja para mosher o que a personalização em escala realmente signifika, de maneira prática.
 
 >[!VIDEO](https://video.tv.adobe.com/v/345446?quality=12&enable=on)
 
-Flera andra videofilmer har skapats som visar olika delar av bootlägret och kraftfulla integreringar mellan Adobe Experience Platform och andra program än Adobe. Klicka på länken nedan om du vill visa en översikt över dessa videofilmer.
+Vários outros vídeos foram criados para demonstrar elementos do Bootläger e integrações poderosas entre a Adobe Experience Platform e aplicativos que não são da Adobe. Klicka inte på någon länk för abaixo para encontrar uma visão geral desses vídeos.
 
-Gå till [Videor](https://experienceleague.adobe.com/docs/platform-learn/comprehensive-technical-tutorial-v22/videos.html?lang=en).
+Åtkomst: [Vídeos](https://experienceleague.adobe.com/docs/platform-learn/comprehensive-technical-tutorial-v22/videos.html?lang=pt-BR).
 
 ## YouTube
 
-Du kan hitta ytterligare intressanta videoklipp [på vår YouTube-kanal](https://www.youtube.com/channel/UCUKG2dkZ9pYuZUPebQ21jUw).
+É kapível encontrar vídeos interessantes adicionais [em nosso canal do YouTube](https://www.youtube.com/channel/UCUKG2dkZ9pYuZUPebQ21jUw).
 
 ## Användarflöden
 
-[1. Förvärv](./uc/uc1/uc1.md)
+[1. Aquisição](./uc/uc1/uc1.md)
 
-I det här användarflödet kommer du att förstå alla element du behöver för att implementera kundfokuserade användningsfall för okända, oautentiserade användare tillsammans med kända, autentiserade användare med Real-Time CDP.
+Neste User Flow, você irá compreender todos os essários para Implementar casos de uso com foco em aquisição para usuários desconhecidos e não autenticados, em conjunto com usuários autenticados e conhecidos usando a Real-Time CDP.
 
-[2. Registrering och introduktion](./uc/uc2/uc2.md)
+[2. Cadastro e onboarding](./uc/uc2/uc2.md)
 
-I det här användarflödet kommer du att förstå alla element du behöver för att implementera användningsfall för registrering och introduktion med hjälp av Real-Time CDP och Adobe Journey Optimizer.
+Neste User Flow, você irá compreender todos os elementos necessary ários para Implementar casos de uso de cadastro e onboarding usando a Real-Time CDP e o Adobe Journey Optimizer.
 
-[3. Blanda fysiska och digitala](./uc/uc3/uc3.md)
+[3. Kombinação do físico e do digital ](./uc/uc3/uc3.md)
 
-I det här användarflödet kan ni personalisera kundupplevelsen i både online- och offlinekanaler på ett konsekvent sätt genom att använda Real-Time CDP och Adobe Journey Optimizer.
+Nesse User Flow, você irá personalizar a experience ência do cliente nos canais online e offline de maneira consistent, usando a Real-Time CDP e o Adobe Journey Optimizer.
 
 [4. Kundreseanalys](./uc/uc4/uc4.md)
 
-I det här användarflödet kommer du att bekanta dig med Customer Journey Analytics och få insikt i hur kunderna utvecklas från en kanal till en annan, från online till offline till callcenter och mycket mer.
+Neste User Flow, você irá se familjarizar com o Customer Journey Analytics e obter informações sobre como os clientes estão evoluindo de um canal para outro, do online para o offline, para o call center e muito mais.

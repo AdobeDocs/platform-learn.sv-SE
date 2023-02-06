@@ -5,69 +5,69 @@ kt: 5342
 audience: Data Engineer, Data Architect, Marketer
 doc-type: tutorial
 activity: develop
-source-git-commit: 75a878ba596078e6d013b65062606931402302dd
+source-git-commit: 9cc01c7d3018319137f915e103bce9dc39b0d472
 workflow-type: tm+mt
-source-wordcount: '510'
-ht-degree: 0%
+source-wordcount: '534'
+ht-degree: 1%
 
 ---
 
-# 1.2 Visualisera din egen kundprofil i realtid - användargränssnitt
+# 1.2 Visualize seu próprio perfil de cliente em tempo real - UI
 
-I den här övningen loggar du in på Adobe Experience Platform och visar din egen kundprofil i realtid i användargränssnittet.
+Neste övício, você irá fazer login na Adobe Experience Platform e visualizar seu próprio Perfil de cliente em tempo real na UI.
 
-## Artikel
+## História
 
-I kundprofilen i realtid visas alla profildata tillsammans med händelsedata samt befintliga segmentmedlemskap. De data som visas kan komma var som helst, från Adobe-program och externa lösningar. Det här är den mest kraftfulla vyn i Adobe Experience Platform, det verkliga upplevelsesystemet.
+Ingen Perfil do cliente em tempo real, todos os dados do perfil são exibidos juntamente com os dados do even to, além das associações de segmentos existentes. Os dados mostrados podem vir de qualquer lugar, de aplicativos da Adobe e soluções externas. Essa é a exibição mais poderosa da Adobe Experience Platform, o verdadeiro local do sistema de upplevelência.
 
-## 1.2.1 Använda kundprofilvyn i Adobe Experience Platform
+## 1.2.1 Använda en visualização do perfil do cliente na Adobe Experience Platform
 
-Gå till [Adobe Experience Platform](https://experience.adobe.com/platform). När du loggat in kommer du till Adobe Experience Platform hemsida.
+Åtkomst [Adobe Experience Platform](https://experience.adobe.com/platform). Depois de fazer inloggning, você irá acessar a página inicial da Adobe Experience Platform.
 
-![Dataintag](./images/home.png)
+![Datainmatning](./images/home.png)
 
-Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``Bootcamp``. Du kan göra detta genom att klicka på texten **[!UICONTROL Produktionsprodukt]** i den blå linjen ovanför skärmen. När du har valt lämplig [!UICONTROL sandlåda]kommer du att se skärmändringen och nu är du med på din [!UICONTROL sandlåda].
+Antes de continuar, você preca selecionar um **sandlåda**. O nome do sandbox a ser selecionado é Bootcamp. É beível fazer isso clicando no texto **[!UICONTROL Produktionsprodukt]** na linha azul na parte superior da tela. Depois de selecionar o sandbox apropriado, você verá a tela mudando e agora você está em seu [!UICONTROL sandlåda] dedikat.
 
-![Dataintag](./images/sb1.png)
+![Datainmatning](./images/sb1.png)
 
-Gå till den vänstra menyn **Profiler** och till **Bläddra**.
+Ingen meny à esquerda, acesse **Profiler** e **Bläddra**.
 
 ![Kundprofil](./images/homemenu.png)
 
-På panelen Profilvisningsprogram på webbplatsen finns en översikt över identiteten. Alla identiteter är länkade till ett namnutrymme.
+Inga smärtor Visualizador de perfil no seu site, você pode encontrar a visão geral da identidade. Cada identidade está vinculada a um namespace.
 
 ![Kundprofil](./images/identities.png)
 
-På profilvisarpanelen ser du den här identiteten:
+Inga smärtor Visualizador de perfil, agora você pode ver esta identidade:
 
 | Namnutrymme | Identitet |
 |:-------------:| :---------------:|
 | Experience Cloud ID (ECID) | 19428085896177382402834560825640259081 |
 
-Med Adobe Experience Platform är alla ID:n lika viktiga. Tidigare var ECID det viktigaste ID:t i Adobe-kontexten och alla andra ID:n länkades till ECID i en hierarkisk relation. I Adobe Experience Platform är detta inte längre fallet och varje ID kan betraktas som en primär identifierare.
+Coma Adobe Experience Platform, todos os IDs são igualmente viktiga. Anteriormente, o ECID era o ID mais importante no contexto da Adobe e todos os outros IDs estavam vinculados ao ECID em uma relação hierárquica. Com a Adobe Experience Platform, isso mudou e cada ID pode ser Consiado um identificador primário.
 
-Vanligtvis beror den primära identifieraren på sammanhanget. Om du frågar ditt samtalscenter, **Vilket är det viktigaste ID:t?** de kommer antagligen att svara, **telefonnumret!** Men om ni frågar CRM-teamet får de svar **E-postadressen!**  Adobe Experience Platform förstår detta och hanterar det åt dig. Alla program, oavsett om de är ett program från Adobe eller ett program som inte är Adobe, kommer att tala med Adobe Experience Platform genom att hänvisa till det ID som de anser vara primärt. Och det fungerar bara.
+Normalmente, o identificador primário depende do contexto. Se você perguntar ao seu Call Center: **Qual é o ID mais importante?** Eles provavelmente responderão: **o número de fax!** Mas se você perguntar à sua equipe de CRM, eles responderão: **o endereço de e-mail!** A Adobe Experience Platform entende essa komplexidade e gerencia isso para você. Cada aplicativo, seja um aplicativo da Adobe ou não, se comunicará com a Adobe Experience Platform referenindo-se ao ID que Consiam Principal. E Simplesmente funciona.
 
-För fältet **Namnutrymme för identitet**, markera **ECID** och för fältet **Identitetsvärde** Ange det ECID som du hittar på panelen Profilvisningsprogram på webbplatsen för bootlägret. Klicka **Visa**. Då visas din profil i listan. Klicka på **Profil-ID** för att öppna din profil.
+Para eller campo **Namnutrymme för identitet**, selecione **ECID** e para o campo **Identitetsvärde** insira o ECID que você pode encontrar no smärtel Visualizador de perfil do site do Bootcamp. Clique em **Visa**. Você verá seu perfil na lista. Klick nej **Profil-ID** para abrir seu perfil.
 
 ![Kundprofil](./images/popupecid.png)
 
-Nu ser du en översikt över några viktiga **Profilattribut** av er kundprofil.
+Agora você tem uma visão geral de algun **Atributos de perfil** Importantes do seu perfil de cliente.
 
 ![Kundprofil](./images/profile.png)
 
-Gå till **Händelser**, där du kan se poster för varje upplevelsehändelse som är länkad till din profil.
+Åtkomst **Händelser**, ond você pode ver as entradas de cada even to de experience ência vinculado ao seu Perfil.
 
 ![Kundprofil](./images/profileee.png)
 
-Till sist går du till menyalternativet **Segmentmedlemskap**. Nu visas alla segment som är kvalificerade för den här profilen.
+Por fim, acesse a opção de menu **Segmentmedlemskap**. Agora você verá todos os segmentos que se Qualificam para este perfil.
 
 ![Kundprofil](./images/profileseg.png)
 
-Nu ska vi skapa ett nytt segment som gör att ni kan personalisera kundupplevelsen för en anonym eller välkänd kund.
+Agora vamos criar um novo segmento que permitirá que você personalize a experience ência do cliente para um cliente anônimo ou conhecido.
 
-Nästa steg: [1.3 Skapa ett segment - användargränssnitt](./ex3.md)
+Próxima etapa: [1.3 Krim um segmento - UI](./ex3.md)
 
-[Gå tillbaka till användarflöde 1](./uc1.md)
+[Retornar para Fluxo de Usuário 1](./uc1.md)
 
-[Gå tillbaka till Alla moduler](../../overview.md)
+[Retornar para Todos os Módulos](../../overview.md)

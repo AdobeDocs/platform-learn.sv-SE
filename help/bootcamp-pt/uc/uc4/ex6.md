@@ -5,31 +5,30 @@ kt: 5342
 audience: Data Engineer, Data Architect, Data Analyst
 doc-type: tutorial
 activity: develop
-source-git-commit: 75a878ba596078e6d013b65062606931402302dd
+source-git-commit: 9cc01c7d3018319137f915e103bce9dc39b0d472
 workflow-type: tm+mt
-source-wordcount: '95'
+source-wordcount: '97'
 ht-degree: 0%
 
 ---
 
-# 4.6 Från insikter till handling
+# 4.6 Dos insights à ação
 
-## Mål
+## Objetivos
 
-- Förstå hur ni skapar en målgrupp utifrån en insikt som samlats in i Customer Journey Analytics
-- Använd den målgruppen i Real-Time CDP och Adobe Journey Optimizer
+- Entenda como criar um público com base em uma visão coletada no Customer Journey Analytics
+- Använd esse público no CDP em tempo real e no Adobe Journey Optimizer
 
-## 4.6.1 Skapa en målgrupp och publicera den
+## 4.6.1 Crie uma audiência e publique-a
 
-I ditt projekt har du skapat ett filter med namnet
+Em seu projeto, você criou um filtro.
 
-## 4.6.2 Använda er målgrupp som en del av ett segment
+## 4.6.2 Använd sua audiência como parte de um segmento
 
+## 4.6.2 Använd seu segmento na Real-Time CDP em tempo real
 
-## 4.6.2 Använda ditt segment i Real-Time CDP
-
-## 4.6.3 Använda ditt segment i Adobe Journey Optimizer
+## 4.6.3 Använda menysegment i Adobe Journey Optimizer
 
 [Gå tillbaka till användarflöde 4](./uc4.md)
 
-[Gå tillbaka till Alla moduler](./../../overview.md)
+[Voltar para todos os módulos](./../../overview.md)

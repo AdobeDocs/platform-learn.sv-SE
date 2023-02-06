@@ -5,181 +5,183 @@ kt: 5342
 audience: developer
 doc-type: tutorial
 activity: develop
-source-git-commit: 75a878ba596078e6d013b65062606931402302dd
+source-git-commit: 9cc01c7d3018319137f915e103bce9dc39b0d472
 workflow-type: tm+mt
-source-wordcount: '919'
-ht-degree: 0%
+source-wordcount: '984'
+ht-degree: 3%
 
 ---
 
-# 2.3 Skapa din resa och ditt e-postmeddelande
+# 2.3 Krim sua janda e mensagem de e-mail
 
-I den här övningen konfigurerar du den resa som behöver utlösas när någon skapar ett konto på demowebbplatsen.
+Neste övício, você irá configurar a jnada que preca ser acionada quando alguém criar uma conta no site de demonstração.
 
-Logga in på Adobe Journey Optimizer genom att gå till [Adobe Experience Cloud](https://experience.adobe.com). Klicka **Journey Optimizer**.
+Faça-inloggning på Adobe Journey Optimizer acessando a [Adobe Experience Cloud](https://experience.adobe.com). Clique em **Journey Optimizer**.
 
 ![ACOP](./images/acophome.png)
 
-Du omdirigeras till **Startsida**  i Journey Optimizer. Kontrollera först att du använder rätt sandlåda. Sandlådan som ska användas anropas `Bootcamp`. Om du vill ändra från en sandlåda till en annan klickar du på **Prod** och välj sandlådan i listan. I det här exemplet heter sandlådan **Bootläger**. Då är du i **Startsida** vy över din sandlåda `Bootcamp`.
+Você será redirecionado para a visualização da **Startsida**  ingen Journey Optimizer. Primeiro, verifique se você está usando o sandbox correto. O nome do sandbox que deve ser usado `Bootcamp`. Para alternar de um sandbox para outro, clique em **Prod** Vi väljer sandlådelista. Neste exemplo, nome do sandbox é **Bootläger**. Você estará na visualização da **Startsida** do seu, sandlåda `Bootcamp`.
 
 ![ACOP](./images/acoptriglp.png)
 
-## 2.3.1 Skapa din resa
+## 2.3.1 Brott mot en sua jnada
 
-Klicka på **Resor**. Klicka på **Skapa resa** för att skapa en ny resa.
+Ingen meny à esquerda, clique em **Resor**. Em seguida, clique em **Skapa resa** para criar uma nova journnada.
 
 ![ACOP](./images/createjourney.png)
 
-Då ser du en tom skärm.
+Você verá uma tela de husnada vazia.
 
 ![ACOP](./images/journeyempty.png)
 
-I föregående övning skapade du en ny **Händelse**. Du namngav den så här `yourLastNameAccountCreationEvent` och ersatt `yourLastName` med ditt efternamn. Detta var resultatet av händelseskapandet:
+Ingen övício anterior, você criou um novo **Händelse**. Você nomeo o even to `yourLastNameAccountCreationEvent` e substituiu `yourLastName` bl.a. sobrenome. Este foi o resultado da criação do Evento:
 
 ![ACOP](./images/eventdone.png)
 
-Du måste nu ta det här evenemanget som början på den här resan. Du kan göra detta genom att gå till vänster på skärmen och söka efter händelsen i listan med händelser.
+Agora você deve Consiar este even to como o o início desta Jornada. Você pode fazer isso indo para o lado esquerdo da tela e procurando pelo seu even to na lista de eventos.
 
 ![ACOP](./images/eventlist.png)
 
-Markera händelsen, dra och släpp den på arbetsytan på resan. Din resa ser nu ut så här:
+Markera en seu even to, arablone solte o even to na tela de Jornada. Sua Jornada agora deve ser semelhante ao seguinte:
 
 ![ACOP](./images/journeyevent.png)
 
-Som det andra steget på resan måste du lägga till en kort **Vänta** steg. Gå till vänster på skärmen till vänster **Orchestration** för att hitta det här. Du kommer att använda profilattribut och måste se till att de är ifyllda i kundprofilen i realtid.
+Como segunda etapa da hunada, você deve adicionar uma etapa curta de **Vänta**. Vá para o lado esquerdo da tela até a seção **Orchestration** para encontrar isso. Você usará atributos de perfil e precará garantir que eles sejam preenchidos no Perfil do Cliente em tempo real.
 
 ![ACOP](./images/journeywait.png)
 
-Din resa ser nu ut så här. Till höger på skärmen måste du konfigurera väntetiden. Ställ in den på 1 minut. Detta ger mycket tid för profilattributen att vara tillgängliga när händelsen har utlösts.
+Sua janda agora deve ser semelhante ao seguinte. Ingen lado direito da tela você preca configurar o tempo de espera. Definiera en gemensam minuto. Isso dará bastante tempo para que os atributos do perfil estejam disoníveis após o skilo do even to.
 
 ![ACOP](./images/journeywait1.png)
 
-Klicka **OK** för att spara ändringarna.
+Clique em **OK** para salvar suas alternações.
 
-Som det tredje steget på resan måste du lägga till en **E-post** åtgärd. Gå till skärmens vänstra sida för att **Åtgärder** väljer du **E-post** och sedan dra och släppa det på den andra noden på din resa. Nu ser du det här.
+Como terceira etapa da husnada, você deve adicionar uma ação **E-post**. Vá para o lado esquerdo da tela para **Åtgärder**, selecione a ação **E-post** e arablone solte a ação no segundo nó da sua jnada. Agora o seguinte será exibido.
 
 ![ACOP](./images/journeyactions.png)
 
 Ange **Kategori** till **Marknadsföring** och välj en e-postyta som gör att du kan skicka e-post. I det här fallet är e-postytan som ska väljas **E-post**. Se till att kryssrutorna för **Klicka på e-post** och **e-post öppnas** båda är aktiverade.
 
+Definiera en **Kategori** como **Marknadsföring** e selecione uma superfície de e-mail que behörighetita o envio de e-mail. Nesse caso, a superfície e-mail a ser selecionada é E-mail. Certifique-se de que as caixas de seleção **Klicka på e-post** e **e-post öppnas** estejam marcadas.
+
 ![ACOP](./images/journeyactions1.png)
 
-Nästa steg är att skapa ett meddelande. Det gör du genom att klicka **Redigera innehåll**.
+En próximo etapa é criar sua mensagem. Para isso, clique em **Redigera innehåll**.
 
 ![ACOP](./images/journeyactions2.png)
 
-## 2.3.2 Skapa ett meddelande
+## 2.3.2 Krim a sua mensagem
 
-Klicka på **Redigera innehåll**.
+Para criar sua mensagem, clique em **Redigera innehåll**.
 
 ![ACOP](./images/journeyactions2.png)
 
-Nu ser du det här.
+O seguinte será exibido.
 
 ![ACOP](./images/journeyactions3.png)
 
-Klicka på **Subject line** textfält.
+Clique no campo de texto **Subject line**.
 
 ![Journey Optimizer](./images/msg5.png)
 
-Börja skriva i textområdet **Hej**
+Na área de texto, comece **Olá**
 
 ![Journey Optimizer](./images/msg6.png)
 
-Ämnesraden är inte färdig än. Därefter måste du ta in en personaliseringstoken för fältet **Förnamn** som lagras under `profile.person.name.firstName`. Bläddra nedåt i den vänstra menyn för att hitta **Person** och klicka på pilen för att gå en nivå längre.
+En linha de assunto ainda não está prta. Em seguida, você preca trazer o token de personalização para o **Förnamn** que está armazenado em `profile.person.name.firstName`. Ingen meny à esquerda, role para baixo para encontrar o elemento **Person** e clique na seta para ir um nível mais profundamento.
 
 ![Journey Optimizer](./images/msg7.png)
 
-Nu hittar du **Fullständigt namn** och klicka på pilen för att gå en nivå längre.
+Agora encontre o elemento **Fullständigt namn** e clique na seta para ir um nível mais profundamento.
 
 ![Journey Optimizer](./images/msg8.png)
 
-Till sist hittar du **Förnamn** och klicka på **+** signera bredvid den. Sedan visas personaliseringstoken i textfältet.
+Por fim, localize o campo **Förnamn** e clique no símbolo **+**  aao lado dele. Você verá o token de personalização aparecer no campo de texto.
 
 ![Journey Optimizer](./images/msg9.png)
 
-Lägg sedan till texten **, tack för att du registrerar dig!**. Klicka **Spara**.
+Em seguida, adicione o texto, **agraDecember a sua inscrição!** Clique em Salvar. . Clique em **Spara**.
 
 ![Journey Optimizer](./images/msg10.png)
 
-Du kommer då tillbaka hit. Klicka **E-postdesigner** för att skapa e-postens innehåll.
+Então, você irá retornar para esta tela. Clique em **E-postdesigner**  para criar o conteúdo do e-mail.
 
 ![Journey Optimizer](./images/msg11.png)
 
-På nästa skärm får du tre olika metoder för att ange e-postens innehåll:
+Na próxima tela, será solyckado que você forneça o conteúdo do e-mail através de 3 métodos diferentes:
 
-- **Designa från grunden**: Börja med en tom arbetsyta och använd WYSIWYG-redigeraren för att dra och släppa struktur och innehållskomponenter för att visuellt bygga upp e-postmeddelandets innehåll.
-- **Koda din egen**: Skapa en egen e-postmall genom att koda den med HTML
-- **Importera HTML**: Importera en befintlig HTML-mall som du kan redigera.
+- **Designa från grunden**: Comece com uma tela em branco e use o editor WYSIWYG para arrastar e soltar a estrutura e os components de conteúdo para criar visualmente o conteúdo e mail.
+- **Koda din egen**: Crie seu próprio modelo de e-mail kodificando usando HTML
+- **Importera HTML**: Importe um modelo HTML existente, que você poderá editar.
 
-Klicka **Importera HTML**.
+Clique em **Importera HTML**.
 
 ![Journey Optimizer](./images/msg12.png)
 
-Dra och släpp filen **mailmallebootcamp.html** som du kan ladda ned [här](../../assets/html/mailtemplatebootcamp.html.zip). Klicka på Importera.
+Arablonsolte o arquivo **mailmallebootcamp.html**, que você pode baixa [här](../../assets/html/mailtemplatebootcamp.html.zip). Clique em Importar.
 
 ![Journey Optimizer](./images/msg13.png)
 
-Du kommer då att se den här standardmallen för e-post:
+Você verá este modelo de e-mail padrão:
 
 ![Journey Optimizer](./images/msg14.png)
 
-Låt oss personalisera e-postmeddelandet. Klicka bredvid texten **Hej** och klicka sedan på **Lägg till personalisering** ikon.
+Vamos personalizar o e-mail. Clique ao lado do texto **Olá** e, em seguida, clique no ícone **Lägg till personalisering**.
 
 ![Journey Optimizer](./images/msg35.png)
 
-Nästa steg är att ta fram **Förnamn** personaliseringstoken som lagras under `profile.person.name.firstName`. På menyn hittar du **Person** -element, gå ned till **Fullständigt namn** och sedan klicka på **+** om du vill lägga till fältet Förnamn i uttrycksredigeraren.
+Em seguida, você preca trazer o token de personalização **Förnamn** que está armazenado em `profile.person.name.firstName`. Ingen meny, lokalisera eller element **Person**, faça uma busca detail hada no elemento **Fullständigt namn** e clique no ícone **+** para adicionar o campo **Förnamn** ao editor de expressão.
 
-Klicka **Spara**.
+Clique em **Spara**.
 
 ![Journey Optimizer](./images/msg36.png)
 
-Nu kommer du att märka hur personaliseringsfältet har lagts till i texten.
+Agora você verá como o campo de personalização foi adicionado ao seu texto.
 
 ![Journey Optimizer](./images/msg37.png)
 
-Klicka **Spara** för att spara meddelandet.
+Clique em **Spara** para salvar sua mensagem.
 
 ![Journey Optimizer](./images/msg55.png)
 
-Gå tillbaka till meddelandekontrollpanelen genom att klicka på **pil** bredvid texten på ämnesraden i det övre vänstra hörnet.
+Retorne para o smärtel de mensagens clicando na seta ao lado do texto da linha de assunto no canto superior esquerdo.
 
 ![Journey Optimizer](./images/msg56.png)
 
-Du har nu skapat e-postmeddelandet med din registrering. Klicka på pilen i det övre vänstra hörnet för att gå tillbaka till din resa.
+Agora você final a criação do seu e-mail de cadastro. Clique na seta no canto superior esquerdo para retornar à sua husnada.
 
 ![Journey Optimizer](./images/msg57.png)
 
-Klicka **OK**.
+Clique em **OK**.
 
 ![Journey Optimizer](./images/msg57a.png)
 
-## 2.3.3 Publicera din resa
+## 2.3.3 Publicera en sua jnada
 
-Du måste fortfarande ge din resa ett namn. Du kan göra det genom att klicka på **Egenskaper** i skärmens övre högra hörn.
+Você ainda preca dar um Nome à sua jnada. Você pode fazer isso clicando no ícone **Egenskaper** ingen canto superior direito da tela.
 
 ![ACOP](./images/journeyname.png)
 
-Du kan sedan ange resans namn här. Använd `yourLastName - Account Creation Journey`. Klicka **OK** för att spara ändringarna.
+Você ainda preca dar um Nome à sua jnada. Você pode fazer isso clicando no ícone `yourLastName - Account Creation Journey`. Clique em **OK** para salvar as mudanças.
 
 ![ACOP](./images/journeyname1.png)
 
-Nu kan du publicera din resa genom att klicka **Publicera**.
+Agora você pode publicar sua jnada clicando em **Publicera**.
 
 ![ACOP](./images/publishjourney.png)
 
-Klicka **Publicera** igen.
+Clique em **Publicera**  novamente.
 
 ![ACOP](./images/publish1.png)
 
-Då visas ett grönt bekräftelsefält som anger att din resa nu är publicerad.
+Você verá uma barra de bekräftmação verde informando que sua jnada agora está Publicada.
 
 ![ACOP](./images/published.png)
 
-Du har nu avslutat den här övningen.
+Você terminou este övício.
 
-Nästa steg: [2.4 Testa din resa](./ex4.md)
+Próxima etapa: [2.4 Testa sua janda](./ex4.md)
 
-[Gå tillbaka till användarflöde 2](./uc2.md)
+[Retornar para Fluxo de Usuário 2](./uc2.md)
 
-[Gå tillbaka till Alla moduler](../../overview.md)
+[Retornar para Todos os Módulos](../../overview.md)

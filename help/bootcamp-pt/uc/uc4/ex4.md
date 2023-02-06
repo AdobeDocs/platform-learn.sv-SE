@@ -5,106 +5,105 @@ kt: 5342
 audience: Data Engineer, Data Architect, Data Analyst
 doc-type: tutorial
 activity: develop
-source-git-commit: 75a878ba596078e6d013b65062606931402302dd
+source-git-commit: 9cc01c7d3018319137f915e103bce9dc39b0d472
 workflow-type: tm+mt
-source-wordcount: '756'
-ht-degree: 7%
+source-wordcount: '793'
+ht-degree: 0%
 
 ---
 
-# 4.4 Dataförberedelser i Analysis Workspace
+# 4.4 Preparação de dados em Customer Journey Analytics
 
-## Mål
+## Objetivos
 
-- Förstå Analysis Workspace gränssnitt i CJA
-- Förstå koncepten för dataförberedelser i Analysis Workspace
-- Lär dig hur du utför databeräkningar
+- Entenda a UO do Analysis Workspace no CJA
+- Entenda os conceitos de preparação de dados no Analysis Workspace
+- Aprenda a fazer cálculos de dados
 
-## 4.4.1 Analysis Workspace-gränssnitt i CJA
+## 4.4.1 Gränssnittet gör Analysis Workspace inget CJA
 
-Med Analysis Workspace slipper ni alla de vanliga begränsningarna i en Analytics-rapport. Det utgör en robust och flexibel arbetsyta för att skapa anpassade analysprojekt. Dra och släpp valfritt antal datatabeller, visualiseringar och komponenter (mått, mått, mätvärden, segment och tidsdetaljer) till ett projekt. Skapa snabbt uppdelningar och segment, skapa kohorter för analys, skapa aviseringar, jämför segment, kör flödes- och bortfallsanalyser samt strukturera och schemalägg rapporter för delning med alla i företaget.
+O Analysis Workspace remove todas as limitações típicas de um único relório do Analytics. Ele fornece uma tela robusta e flexível para criar projetos de analytics personalizados. Arablone solte qualquer número de tabelas de dados, visualizações e components (dimensões, métricas, segmentos e granularidades de tempo) para um projeto. Criação instantânea de avarias e segmentos, criação de cortes para análise, criação de alertas, Comparação de segmentos, análise de fluxo e de falhas e relatórios de curadoria e dagamento para compartilhar com qualquer pessoa em seu negócio.
 
-Customer Journey Analytics lägger den här lösningen ovanpå plattformsdata. Vi rekommenderar starkt att du tittar på den här fyrminutersvideon med en översikt:
+O Customer Journey Analytics traz essa solução além dos dados da plataforma. É altamente recomendável assistir a este vídeo de visão geral de quatro minutes:
 
 >[!VIDEO](https://video.tv.adobe.com/v/35109?quality=12&learn=on)
 
-Om du inte har använt Analysis Workspace tidigare rekommenderar vi att du tittar på den här videon:
+Se você nunca usou o Analysis Workspace antes, recomendamos este vídeo:
 
 >[!VIDEO](https://video.tv.adobe.com/v/26266?quality=12&learn=on)
 
-### Skapa ditt projekt
+### Crie Seu Projeto
 
-Nu är det dags att skapa ditt första CJA-projekt. Gå till projektfliken i CJA.
-Klicka **Skapa nytt**.
+Agora é hora de criar seu primeiro projeto do CJA. Vá para a aba de projetos dentro do CJA. Clique em **Skapa nytt**.
 
 ![demo](./images/prmenu.png)
 
-Du kommer då att se det här. Välj **Tomt projekt** och sedan klicka **Skapa**.
+Em seguida, você verá a tela abaixo. Markering **Tomt projekt** então clique em **Skapa**.
 
 ![demo](./images/prmenu1.png)
 
-Då ser du ett tomt projekt.
+Você verá um projeto vazio.
 
 ![demo](./images/premptyprojects.png)
 
-Kontrollera först att du har valt rätt datavy i skärmens övre högra hörn. I det här exemplet är datavyn som ska väljas `vangeluwe - Omnichannel Data View`.
+Primeiro, certifique-se de selecionar a Visualização de dados correta no canto superior direito da tela. Neste exemplo, a Visualização de dados a ser selecionada é `vangeluwe - Omnichannel Data View`.
 
 ![demo](./images/prdv.png)
 
-Sedan sparar du projektet och ger det ett namn. Du kan använda följande kommando för att spara:
+Em seguida, você irá salvar seu projeto e dar um nome a ele. Você pode usar o seguinte comando para salvar:
 
 | OS | Kort klipp |
 | ----------------- |-------------| 
 | Windows | Ctrl+S |
 | Mac | Kommando + S |
 
-Den här popup-rutan visas:
+Popup-fönstret Você verá este:
 
 ![demo](./images/prsave.png)
 
-Använd den här namnkonventionen:
+Använd este modelo de nomenklatura:
 
 | Namn | Beskrivning |
 | ----------------- |-------------| 
 | `yourLastName - Omnichannel Analysis` | `yourLastName - Omnichannel Analysis` |
 
-Klicka på **Spara**.
+Em seguida, clique em **Spara**.
 
 ![demo](./images/prsave2.png)
 
-## 4.4.2 Beräknade värden
+## 4.4.2 Métricas calculadas
 
-Även om vi har organiserat alla komponenter i datavyn måste du fortfarande anpassa några av dem, så att företagsanvändare är redo att börja analysera. Under alla analyser kan du också skapa beräknade mätvärden för att gå djupare på insikterna.
+Embora tenhamos organizado todos os Componentes na Visualização de dados, você ainda deve adaptar algun stjärtar que os usuários de negócios estejam prtos para iniciar suas análises. Além disso, durante qualquer processo de analytics, você pode criar métricas calculadas para aprogrundläggande ar a descoberta de insights.
 
-Som exempel skapar vi en **Konverteringsgrad** med **Inköp** mått/händelse definierades i datavyn.
+Como exemplo, criaremos uma Taxa de conversão calculada usando a métrica/even to Compras que definimos na Visualização de dados.
 
-### Konverteringsgrad
+## Taxa de conversão
 
-Låt oss börja öppna verktyget för beräknade mätvärden. Klicka på **+** för att skapa dina första beräknade mätvärden i Analysis Workspace.
+Vamos começar a abrir o construtor de métricas calculadas. Clique em **+** para criar sua primeira Métrica calculada no Analysis Workspace.
 
 ![demo](./images/pradd.png)
 
-The **Beräknad metrisk Builder** visas:
+O **Beräknad metrisk Builder** irá aparecer:
 
 ![demo](./images/prbuilder.png)
 
-Hitta **Inköp** i listan med mått på den vänstra menyn. Under **Mått** klicka **Visa alla**
+Encontre **Inköp** na lista de métricas no menu do lado esquerdo. FM **Mått** klippa **Visa alla**
 
 ![demo](./images/calcbuildercr1.png)
 
-Dra och släpp **Inköp** mått i den beräknade måttdefinitionen.
+Agora arablone solte a métrica **Inköp** na definção da métrica calculada.
 
 ![demo](./images/calcbuildercr2.png)
 
-Normalt innebär konverteringsgraden **Konverteringar/sessioner**. Låt oss göra samma beräkning i den beräknade arbetsytan för metrisk definition. Hitta **Sessioner** mätvärden och dra och släpp dem i definitionsverktyget, under **Inköp** -händelse.
+Normalmente, taxa de conversão signifika **Konverteringar/sessioner**. Então, vamos fazer o mesmo cálculo na tela de definção de métrica calculada. Encontre a métrica **Sessioner** e arablone solte-a no criador de definção, no even to **Inköp**.
 
 ![demo](./images/calcbuildercr3.png)
 
-Observera att divisionsoperatorn väljs automatiskt.
+Observera que o operador de divisão é selecionado automcamente.
 
 ![demo](./images/calcbuildercr4.png)
 
-Konverteringsgraden anges vanligtvis i procent. Låt oss ändra formatet så att det blir procenttal och även välja 2 decimaler.
+En taxa de conversão é comumente representada em porcentagem. Então, vamos mudar o formo para porcentagem e selecionar 2 casas decimais.
 
 ![demo](./images/calcbuildercr5.png)
 
@@ -114,46 +113,46 @@ Konverteringsgraden anges vanligtvis i procent. Låt oss ändra formatet så att
 | ----------------- |-------------| 
 | Konverteringsgrad | Konverteringsgrad |
 
-Du kommer att ha något liknande på din skärm:
+Por fim, alterne o nome e a descrição da métrica calculada:
 
 ![demo](./images/calcbuildercr6.png)
 
-Glöm inte att **Spara** Beräknade mått.
+Não se esqueça de **Salvar** en Métrica Calada.
 
 ![demo](./images/pr9.png)
 
-## 4.4.3 Beräknade Dimensioner: Filter (segmentering) och datumintervall
+## 4.4.3 Dimensões calculadas: Filtros (segmentação) e intervalos de data
 
-### Filter: Beräknade Dimensioner
+### Filtreringar: Dimensões calculadas
 
-Beräkningar ska inte vara enbart för Metrics. Innan du börjar någon analys är det också intressant att skapa **Beräknade Dimensioner**. Detta innebar i stort sett **segment** i Adobe Analytics. I Customer Journey Analytics anropas dessa segment **Filter**.
+Os cálculos não devem ser apenas para métricas. Antes de iniciar qualquer análise, também é interessante criar algumas **Beräknade Dimensioner**. Isso signifika, essencialmente, **segment** ingen Adobe Analytics. Ingen Customer Journey Analytics, segmenterar são chamados de **Filter**.
 
 ![demo](./images/prfilters.png)
 
-Genom att skapa filter kan företagsanvändare påbörja analysen med några värdefulla beräknade mått. Detta automatiserar vissa uppgifter och hjälper till vid implementeringen. Här är några exempel:
+A criação de filtros ajudará os usuários de negócios a iniciar o analytics com algumas dimensões calculadas valiosas. Isso irá automzar algumas tarefas, além de ajudar na parte de adoção. Abaixo estão algun:
 
-1. Egna media, betalmedia,
-2. Nya eller återkommande besök
-3. Kunder med övergiven kundvagn
+1. Mídia Própria, Mídia Paga
+2. Visitas novas x recorrentes
+3. Clientes com carrinho
 
-Dessa filter kan skapas före eller under analysdelen (som du gör i nästa övning).
+Esses filtros podem ser criados antes ou durante a parte de análise (o que você fará no próximo övício).
 
-### Datumintervall: Dimensioner för beräknad tid
+### Intervalos de data: Dimensões de tempo calculadas
 
-Dimensioner är en annan typ av beräknade dimensioner. Vissa har redan skapats, men du kan även skapa egna anpassade Dimensioner för tid i dataförberedelsefasen.
+As dimensões de tempo são outro tipo de dimensões calculadas. Algun já foram criados, mas você também pode criar suas próprias Dimensões de tempo personalizadas na fase de preparação de dados.
 
-Dessa Dimensioner för beräknad tid hjälper analytiker och affärsanvändare att komma ihåg viktiga datum och använda dem för att filtrera och ändra rapporteringstiden. Typiska frågor och tvivel som kommer till vår kännedom när vi analyserar:
+Essas Dimensões de tempo calculado ajudarão analistas e usuários de negócios a lembrar data as importantes e usá-las para filtrar e alterar o tempo de relório. Perguntas e dúvidas típicas quando fazemos análises:
 
-- När var Black Friday förra året? 21-29?
-- När ledde vi den TV-kampanjen i december?
-- Från och med när gjorde vi 2018 års sommarförsäljning? Jag vill jämföra det med 2019. Förresten, vet du de exakta dagarna 2019?
+- Quando foi a Black Friday do ano passado? Entre os dias 21 e 29?
+- Quando veiculamos aquela campanha de TV em dezembro?
+- De quando a quando fizemos as vendas de verão de 2018? Quero Comparar com 2019. En propósito, você sabe os dias exatos em 2019?
 
 ![demo](./images/timedimensions.png)
 
-Du har nu slutfört dataförberedelsen med CJA Analysis Workspace.
+Agora você final o övício de preparação de dados usando o Analysis Workspace do CJA.
 
-Nästa steg: [4.5 Visualisering med Customer Journey Analytics](./ex5.md)
+Próxima etapa: [4.5 Visualização usando Customer Journey Analytics](./ex5.md)
 
-[Gå tillbaka till användarflöde 4](./uc4.md)
+[Retornar para Fluxo de Usuário 4](./uc4.md)
 
-[Gå tillbaka till Alla moduler](./../../overview.md)
+[Retornar para Todos os Módulos](./../../overview.md)

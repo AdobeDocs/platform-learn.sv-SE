@@ -5,103 +5,104 @@ kt: 5342
 audience: Data Engineer, Data Architect, Data Analyst
 doc-type: tutorial
 activity: develop
-source-git-commit: 75a878ba596078e6d013b65062606931402302dd
+source-git-commit: 9cc01c7d3018319137f915e103bce9dc39b0d472
 workflow-type: tm+mt
-source-wordcount: '679'
+source-wordcount: '701'
 ht-degree: 0%
 
 ---
 
-# 4.2 Ansluta Adobe Experience Platform-datauppsättningar i Customer Journey Analytics
+# 4.2 Conecte datasets da Adobe Experience Platform no Customer Journey Analytics
 
-## Mål
+## Objetivos
 
-- Förstå användargränssnittet för dataanslutning
-- Använd Adobe Experience Platform-data i CJA
-- Förstå person-ID och datasammanfogning
-- Lär dig mer om dataströmning i Customer Journey Analytics
+- Compreenda a UI da conexão de dados
+- Traga os dados da Adobe Experience Platform para o CJA
+- Entenda a ID da pessoa e a compilação de dados
+- Aprenda o conceito de streaming de dados no Customer Journey
 
-## 4.2.1 Anslutning
+## 4.2.1 Conexão
 
-Gå till [analytics.adobe.com](https://analytics.adobe.com) för att få tillgång till Customer Journey Analytics.
+Åtkomst [analytics.adobe.com](https://analytics.adobe.com) para acessar på Customer Journey Analytics.
 
-På Customer Journey Analytics-hemsidan går du till **Anslutningar**.
+Na página inicial do Customer Journey Analytics, acesse **Anslutningar**.
 
 ![demo](./images/cja2.png)
 
-Här ser du alla olika anslutningar mellan CJA och Platform. Dessa anslutningar har samma mål som rapporteringsprogram i Adobe Analytics. Insamlingen av data är dock helt annorlunda. Alla data kommer från Adobe Experience Platform datamängder.
+Aqui você pode ver todas as diferentes conexões feitas entre o CJA e a Plataforma. Essas conexões têm o mesmo objekttivo dos conjuntos de relórios no Adobe Analytics. Ingen entanto, en coleta dos dados é complete diferente. Todos os dados vêm de datasets da Adobe Experience Platform.
 
-Låt oss skapa din första anslutning. Klicka **Skapa ny anslutning**.
+Vamos criar sua primeira conexão. Clique em **Skapa ny anslutning**.
 
 ![demo](./images/cja4.png)
 
-Då ser du **Skapa anslutning** Gränssnitt.
+Você verá a UI **Skapa anslutning** Gränssnitt.
 
 ![demo](./images/cja5.png)
 
-Nu kan du ge anslutningen ett namn.
+Agora você pode dar um nome à sua conexão.
 
-Använd den här namnkonventionen: `yourLastName – Omnichannel Data Connection`.
+Använd este modelo de nomenklatura: `yourLastName – Omnichannel Data Connection`.
 
 Exempel: `vangeluw - Omnichannel Data Connection`
 
-Du måste också välja rätt sandlåda att använda. Välj sandlådan som ska vara `Bootcamp`. I det här exemplet är den sandlåda som ska användas **Bootläger**. Du måste också ange **Genomsnittligt antal dagliga händelser** till **mindre än 1 miljon**.
+Você também deve selecionar o sandbox correto para usar. Ingen meny-sandlåda, selektiv seu-sandlåda, que deve-användare `Bootcamp`. Neste exemplo, o sandbox a ser usado é o **Bootläger**. E você também deve definition o **Genomsnittligt antal dagliga händelser** till **mindre än 1 miljon**.
 
 ![demo](./images/cjasb.png)
 
-När du har valt sandlådan kan du börja lägga till datauppsättningar i den här anslutningen. Klicka **Lägg till datauppsättningar**.
+Após selecionar seu sandbox, você pode começar a adicionar datasets a esta conexão. Clique em **Lägg till datauppsättningar**.
 
 ![demo](./images/cjasb1.png)
 
-## 4.2.2 Välj Adobe Experience Platform-datauppsättningar
+## 4.2.2 Välja ut datauppsättningar som Adobe Experience Platform
 
-Sök efter datauppsättningen `Demo System - Event Dataset for Website (Global v1.1)`. Klicka **+** för att lägga till datauppsättningen i den här anslutningen.
+Datauppsättning i detalj `Demo System - Event Dataset for Website (Global v1.1)`. Clique em **+** para adicionar o dataset a esta conexão.
 
 ![demo](./images/cja7.png)
 
-Sök och markera kryssrutorna för `Demo System - Event Dataset for Voice Assistants (Global v1.1)` och `Demo System - Event Dataset for Call Center (Global v1.1)`.
+Agora pesquise e marque as caixas de seleção `Demo System - Event Dataset for Voice Assistants (Global v1.1)` och `Demo System - Event Dataset for Call Center (Global v1.1)`.
 
-Du får den här då. Klicka på **Nästa**.
+Em seguida, você verá a tela abaixo. Clique em **Nästa**.
 
 ![demo](./images/cja9.png)
 
-## 4.2.3 Person-ID och datatitlar
+## 4.2.3 ID da pessoa e compilação de dados
 
-### Person-ID
+### ID da pessoa
 
-Målet är nu att gå med i dessa datauppsättningar. För varje datamängd som du har valt visas ett fält med namnet **Person-ID**. Varje datauppsättning har ett eget fält för person-ID.
+O objectivo agora é juntar esses datasets. Para cada dataset selecionado, você verá um campo chamado **Person-ID**. Cada dataset tem seu próprio campo de ID de pessoa.
 
 ![demo](./images/cja11.png)
 
-Som du ser har de flesta automatiskt valt person-ID. Detta beror på att en primär identifierare har valts i alla scheman i Adobe Experience Platform. Här följer till exempel schemat för `Demo System - Event Schema for Call Center (Global v1.1)`, där du ser att den primära identifieraren är inställd på `phoneNumber`.
+Como você pode ver, a majstjärtar o ID da pessoa selecionado automcamente. Isso ocorre porque um identificador pal é selecionado em cada esquema na Adobe Experience Platform. Como exemplo, aqui está o esquema para `Demo System - Event Schema for Call Center (Global v1.1)`, ond você pode ver que o Identificador Primário está defindo como `phoneNumber`.
 
 ![demo](./images/cja13.png)
 
-Du kan dock fortfarande påverka vilken identifierare som ska användas för att sammanfoga datauppsättningar för din anslutning. Du kan använda valfri identifierare som är konfigurerad i det schema som är länkat till din datauppsättning. Klicka på listrutan för att utforska de ID:n som finns på varje datauppsättning.
+Inga entanto, você ainda pode influenciar qual identificador será usado para compilar datasets para sua conexão. Você pode usar qualquer identificador configurado no esquema vinculado ao seu dataset. Klicka på ingen meny suspenso para explorar os IDs DISoníveis em cada dataset.
 
 ![demo](./images/cja14.png)
 
-Som vi nämnt kan du ange olika person-ID:n för varje datauppsättning. På så sätt kan du samla olika datauppsättningar från flera ursprung i CJA. Tänk dig att ta in NPS-data eller enkätdata som skulle vara mycket intressant och till hjälp för att förstå sammanhanget och varför något har hänt.
+Conforme mencionado, você pode definition diferentes IDs de pessoa para cada dataset. Isso allow ite reunir diferentes datasets de múltiplas origens no CJA. Imagine trazer NPS ou dados de pesquisa que seriam muito interessantes e úteis para compreender o contexto e o motivo de um acontecimento.
 
-Namnet på fältet för person-ID är inte viktigt, så länge som värdet i fälten för person-ID motsvarar det. Säg att vi har `email` i en enda datauppsättning och `emailAddress` i en annan datauppsättning som definieras som person-ID. If `delaigle@adobe.com` är samma värde för fältet Person-ID för båda datauppsättningarna. CJA kan sammanfoga data.
+O nome do campo ID da pessoa não é importante, desde que o valor nos campos ID da pessoa korda. Digamos que temos `email` em um dataset e `emailAddress` em outro dataset definition do como ID da pessoa. Se `delaigle@adobe.com` tiver o mesmo valor para o campo ID da pessoa em ambos os datasets, o CJA poderá compilar os dados.
 
-För närvarande finns det några andra begränsningar som att knyta det anonyma beteendet till kända. Läs Frågor och svar här: [Vanliga frågor](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-faq.html).
+Atualmente, existem algumas outras limitações, como compilar o comportamento anônimo para conhecido. Consulte as perguntas frequency entes aqui: [Vanliga frågor](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-faq.html).
 
-### Ställa in data med användar-ID
 
-Nu när du förstår konceptet med att sy ihop datauppsättningar med person-ID:t väljer vi `email` som ditt person-ID för varje datauppsättning.
+### Compilando os dados usando o ID da pessoa
+
+Agora que você compreende o conceito de compilar datasets usando o ID da pessoa, vamos escolher `email` como ID da pessoa para cada dataset.
 
 ![demo](./images/cja15.png)
 
-Gå till varje datauppsättning för att uppdatera person-ID:t.
+Acesse cada dataset para atualizar o ID da pessoa.
 
 ![demo](./images/cja12a.png)
 
-Fyll i fältet Person-ID och välj `email` i listrutan.
+Agora preencha o campo ID da pessoa escolhendo o `email` en lista suspensa.
 
 ![demo](./images/cja17.png)
 
-När du har sytt ihop de tre datauppsättningarna är vi redo att fortsätta.
+Depois de compilar os três datasets, estamos prtos para continuar.
 
 | datauppsättning | Person-ID |
 | ----------------- |-------------| 
@@ -109,22 +110,21 @@ När du har sytt ihop de tre datauppsättningarna är vi redo att fortsätta.
 | Demonstrationssystem - händelsedatauppsättning för röstassistenter (Global v1.1) | e-post |
 | Demo System - händelsedatauppsättning för callcenter (Global v1.1) | e-post |
 
-Du måste också se till att följande alternativ är aktiverade för varje datauppsättning:
+Você também preca garantir que, para cada dataset, essas opções estejam habilitadas:
 
-- Importera alla nya data
-- Fyll i alla befintliga data
+- Importar todos os novos dados
+- Preencher gör så att det inte finns några fler
 
-Klicka **Lägg till datauppsättningar**.
+Clique em **Lägg till datauppsättningar**.
 
 ![demo](./images/cja16.png)
 
-Klicka **Spara** och gå till nästa övning.
-När du har skapat **Anslutning** det kan ta några timmar innan dina data är tillgängliga i CJA.
+Clique em **Spara** e vá para o próximo övício. Depois de criar sua **Anslutning**, pode levar algumas horas até que seus dados estejam disoníveis no CJA.
 
 ![demo](./images/cja20.png)
 
-Nästa steg: [4.3 Skapa en datavy](./ex3.md)
+Próxima etapa: [4.3 Crie uma Visualização de Dados](./ex3.md)
 
-[Gå tillbaka till användarflöde 4](./uc4.md)
+[Retornar para Fluxo de Usuário 4](./uc4.md)
 
-[Gå tillbaka till Alla moduler](./../../overview.md)
+[Retornar para Todos os Módulos](./../../overview.md)

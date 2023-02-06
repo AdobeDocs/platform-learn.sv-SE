@@ -5,57 +5,57 @@ kt: 5342
 audience: Data Architect, Orchestration Engineer, Marketer
 doc-type: tutorial
 activity: develop
-source-git-commit: 75a878ba596078e6d013b65062606931402302dd
+source-git-commit: 9cc01c7d3018319137f915e103bce9dc39b0d472
 workflow-type: tm+mt
-source-wordcount: '283'
-ht-degree: 2%
+source-wordcount: '293'
+ht-degree: 1%
 
 ---
 
-# 1.5 Vidta åtgärder: skicka segmentet till Facebook
+# 1.5 Ação: envie seu segmento para o Facebook
 
-Gå till [Adobe Experience Platform](https://experience.adobe.com/platform). När du loggat in kommer du till Adobe Experience Platform hemsida.
+Åtkomst [Adobe Experience Platform](https://experience.adobe.com/platform). Depois de fazer inloggning, você irá acessar a página inicial da Adobe Experience Platform.
 
-![Dataintag](./images/home.png)
+![Datainmatning](./images/home.png)
 
-Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``Bootcamp``. Du kan göra detta genom att klicka på texten **[!UICONTROL Produktionsprodukt]** i den blå linjen ovanför skärmen. När du har valt lämplig [!UICONTROL sandlåda]kommer du att se skärmändringen och nu är du med på din [!UICONTROL sandlåda].
+Antes de continuar, você preca selecionar um **sandlåda**. O nome do sandbox a ser selecionado é Bootcamp. É beível fazer isso clicando no texto **[!UICONTROL Produktionsprodukt]** na linha azul na parte superior da tela. Depois de selecionar o sandbox apropriado, você verá a tela mudando e agora você está em seu [!UICONTROL sandlåda] dedikat.
 
-![Dataintag](./images/sb1.png)
+![Datainmatning](./images/sb1.png)
 
-Gå till den vänstra menyn **Destinationer** och sedan gå till **Katalog**. Då ser du **Målkatalog**. I **Destinationer**, klicka **Aktivera segment** på **Facebook Custom Audience** kort.
+Ingen meny à esquerda, vá para **Destinationer** e, em seguida, vá para **Katalog**. Você verá o **Målkatalog**. FM **Destinationer**, clique em **Aktivera segment** no cartão **Facebook Custom Audience**.
 
 ![RTCDP](./images/rtcdpgoogleseg.png)
 
-Välj mål **bootcamp-facebook** och klicka **Nästa**.
+Markera **bootcamp-facebook** e clique em **Nästa**.
 
 ![RTCDP](./images/rtcdpcreatedest2.png)
 
-I listan med tillgängliga segment väljer du det segment som du skapade i föregående övning. Klicka på **Nästa**.
+Na lista de segmentos display oníveis, selecione o segmento que você criou no övício anterior. Clique em **Nästa**.
 
 ![RTCDP](./images/rtcdpcreatedest3.png)
 
-På **Mappning** se till att **Använd omformning** kryssrutan är aktiverad. Klicka på **Nästa**.
+Na página **Mappning**, verifique se a caixa de seleção **Använd omformning** está marcada. Clique em **Nästa**.
 
 ![RTCDP](./images/rtcdpcreatedest4a.png)
 
-På **Segmentschema** väljer du **Målgruppens ursprung** och ange **Direkt från kunderna**. Klicka på **Nästa**.
+Na página **Segmentschema**, välj en **Målgruppens ursprung** e defina como **Direkt från kunderna**. Clique em **Nästa**.
 
 ![RTCDP](./images/rtcdpcreatedest4.png)
 
-Till sist **Granska** sida, klicka **Slutför**.
+Por fim, na página **Granska**, clique em **Slutför**.
 
 ![RTCDP](./images/rtcdpcreatedest5.png)
 
-Ditt segment är nu länkat till Facebook anpassade målgrupper. Varje gång en kund kvalificerar sig för det här segmentet skickas en signal till Facebook på serversidan för att inkludera den kunden i Custom Audience på Facebook sida.
+Seu segmento agora está vinculado aos Públicos Personalizados do Facebook. Sempre que um cliente se Qualificar para esse segmento, um sinal será enviado ao lado do servidor (server-side) do Facebook para includes esse cliente no Público Personalizado no lado do Facebook.
 
-I Facebook hittar du ditt segment från Adobe Experience Platform under Anpassade målgrupper:
+No Facebook, você encontrará seu segmento da Adobe Experience Platform em Públicos Personalizados:
 
 ![RTCDP](./images/rtcdpcreatedest5b.png)
 
-Nu kan du se hur din anpassade målgrupp visas i Facebook:
+Agora você pode ver seu público personalizado aparecer no Facebook:
 
 ![RTCDP](./images/rtcdpcreatedest5a.png)
 
-[Gå tillbaka till användarflöde 1](./uc1.md)
+[Retornar para Fluxo de Usuário 1](./uc1.md)
 
-[Gå tillbaka till Alla moduler](../../overview.md)
+[Retornar para Todos os Módulos](../../overview.md)

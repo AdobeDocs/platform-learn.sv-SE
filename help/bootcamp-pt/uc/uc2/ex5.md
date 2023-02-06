@@ -5,88 +5,89 @@ kt: 5342
 audience: developer
 doc-type: tutorial
 activity: develop
-source-git-commit: 75a878ba596078e6d013b65062606931402302dd
+source-git-commit: 9cc01c7d3018319137f915e103bce9dc39b0d472
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '269'
 ht-degree: 0%
 
 ---
 
-# 2.5 Installera och använda mobilappen
+# 2.5 Instale e use of aplicativo móvel
 
 
-## Installera mobilappen
+## Instale of aplicativo móvel
 
-Innan du installerar programmet måste du aktivera **Spårning** på din iOS-enhet. Om du vill göra det går du till **Inställningar** > **Integritet och säkerhet** > **Spårning** och se till att alternativet **Tillåt att appar begär att spåras**.
+Antes de installar o aplicativo, é necessary ário habilitar Rastreamento no seu disposivo iOS. Para isso, acesse Configurações > Privacidade e segurança > Rastreamento e confirm a opção Permitir que os aplicativos solicitem o rastreamento.
 
 ![DSN](./../uc3/images/app4.png)
 
-Gå till Apple App Store och sök efter `aepmobile-bootcamp`. Klicka **Installera** eller **Hämta**.
+Öppna ett App Store da Apple e pesquise `aepmobile-bootcamp`.\
+Clique em **Instalar** Du **Hämta**.
 
 ![DSN](./../uc3/images/app1.png)
 
-När appen är installerad klickar du på **Öppna**.
+Depois que o aplicativo estiver installado, clique em **Abrir**.
 
 ![DSN](./../uc3/images/app2.png)
 
-Klicka **OK**.
+Clique em **OK**.
 
 ![DSN](./../uc3/images/app9.png)
 
-Klicka **Tillåt**.
+Clique em **Permitir**.
 
 ![DSN](./../uc3/images/app3.png)
 
-Klicka **Jag håller med**.
+Clique em **Concordo**.
 
 ![DSN](./../uc3/images/app7.png)
 
-Klicka **Tillåt när appen används**.
+Clique em **Permitir enquanto uso o app**.
 
 ![DSN](./../uc3/images/app8.png)
 
-Klicka **Tillåt**.
+Clique em **Permitir**.
 
 ![DSN](./../uc3/images/app5.png)
 
-Du är nu med i appen, på hemsidan, redo att gå igenom kundresan.
+Agora você está no aplicativo, na página inicial, pronto(a) para verificar toda a tjandnada do cliente.
 
 ![DSN](./../uc3/images/app12.png)
 
-## Kundreseflöde
+## Fluxo da husnada do cliente
 
-Först och främst måste du logga in. Klicka **Inloggning**.
+Primeiramente, é required ário fazer to login. Clique em **Inloggning**.
 
 ![DSN](./../uc3/images/app13.png)
 
-När du skapat ditt konto i de tidigare övningarna såg du detta på webbplatsen. Du måste nu återanvända e-postadressen för kontot som du skapade i appen för att logga in.
+Depois de criar sua conta nos övícios anteriores, isso é exibido no site. Agora é necessary ário reutilizar o endereço de e-mail da conta que você criou no aplicativo para fazer o login.
 
 ![Demo](./../uc3/images/pv1.png)
 
-Ange den e-postadress du använde på webbplatsen här och klicka på **Inloggning**.
+Digite o endereço de e-mail que você usou no site e clique em **Inloggning**.
 
 ![DSN](./../uc3/images/app14.png)
 
-Du får då en bekräftelse på att du är inloggad och du får ett push-meddelande.
+Você receberá uma bekräftmação de que está conectado e receberá uma notificação push.
 
 ![DSN](./../uc3/images/app15.png)
 
-Gå tillbaka till startsidan i appen så visas fler funktioner.
+Retorne para a página inicial do aplicativo e os recursos adicionais irão aparecer.
 
 ![DSN](./../uc3/images/app17.png)
 
-Gå till **Produkter**. Klicka på valfri produkt, i det här exemplet **Kaffe att gå**.
+Åtkomst **Produkter**. Clique em qualquer produto, neste example: **Kaffe att gå**.
 
 ![DSN](./images/app19.png)
 
-Du kommer att se **Kaffe att gå** produktsida i appen. Klicka **Köp**.
+Você verá a página do produto **Kaffe att gå** ingen aplicativo. Clique em **Köp**.
 
 ![DSN](./images/app20.png)
 
-Du är nu klar med övningen och redo för nästa övning.
+Agora você terminou este övício e está pronto para as próximas atividades.
 
-Nästa steg: [2.6 Personalisering i call center](./ex6.md)
+Próxima etapa: [ 2.6 Personalização no call center](./ex6.md)
 
-[Gå tillbaka till användarflöde 2](./uc2.md)
+[Retornar para Fluxo de Usuário 2](./uc2.md)
 
-[Gå tillbaka till Alla moduler](../../overview.md)
+[Retornar para Todos os Módulos](../../overview.md)

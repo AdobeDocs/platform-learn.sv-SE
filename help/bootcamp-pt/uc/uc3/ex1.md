@@ -5,34 +5,36 @@ kt: 5342
 audience: Data Engineer, Data Architect, Marketer
 doc-type: tutorial
 activity: develop
-source-git-commit: 75a878ba596078e6d013b65062606931402302dd
+source-git-commit: 9cc01c7d3018319137f915e103bce9dc39b0d472
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '601'
 ht-degree: 0%
 
 ---
 
-# 3.1 Använda mobilappen och utlösa en fyndighetsinmatning
+# 3.1 Användning av aplicativo móvel e acione um beacon
 
-## Installera mobilappen
+## Instale of aplicativo móvel
 
 Innan du installerar programmet måste du aktivera **Spårning** på din iOS-enhet. Om du vill göra det går du till **Inställningar** > **Integritet och säkerhet** > **Spårning** och se till att alternativet **Tillåt att appar begär att spåras**.
 
+Antes de installar o aplicativo, é necessary ário habilitar **Rastreamento** ingen disposivo iOS. Para isso, acesse **Configurações** > **Privacidade e segurança** > **Rastreamento** e verifique a opção **Permitir que os aplicativos solicitem o rastreamento**.
+
 ![DSN](./../uc3/images/app4.png)
 
-Gå till Apple App Store och sök efter `aepmobile-bootcamp`. Klicka **Installera** eller **Hämta**.
+Öppna ett App Store da Apple e pesquise `aepmobile-bootcamp`. Clique em **Instalar** Du **Hämta**.
 
 ![DSN](./../uc3/images/app1.png)
 
-När appen är installerad klickar du på **Öppna**.
+Depois que o aplicativo estiver installado, clique em **Öppna**.
 
 ![DSN](./../uc3/images/app2.png)
 
-Klicka **OK**.
+Clique em **OK**.
 
 ![DSN](./../uc3/images/app9.png)
 
-Klicka **Tillåt**.
+Clique em **Permitir**.
 
 ![DSN](./../uc3/images/app3.png)
 
@@ -40,92 +42,93 @@ Klicka **Jag håller med**.
 
 ![DSN](./../uc3/images/app7.png)
 
-Klicka **Tillåt när appen används**.
+Clique em **Permitir enquanto usa o aplicativo**.
 
 ![DSN](./../uc3/images/app8.png)
 
-Klicka **Tillåt**.
+Clique em **Permitir**.
 
 ![DSN](./../uc3/images/app5.png)
 
-Du är nu med i appen, på hemsidan, redo att gå igenom kundresan.
+Agora você está no aplicativo, na página inicial, pronto(a) para verificar toda a tjandnada do cliente.
 
 ![DSN](./../uc3/images/app12.png)
 
-## Kundreseflöde
+## Fluxo da husnada do cliente
 
-Först och främst måste du logga in. Klicka **Inloggning**.
+Primeiramente, é required ário fazer to login. Clique em **Inloggning**.
 
 ![DSN](./images/app13.png)
 
-När du skapat ditt konto i de tidigare övningarna såg du detta på webbplatsen. Du måste nu återanvända e-postadressen för kontot som du skapade i appen för att logga in.
+Depois de criar sua conta nos övícios anteriores, isso é exibido no site. Agora é necessary ário reutilizar o endereço de e-mail da conta que você criou no aplicativo para fazer o login.
 
 ![Demo](./images/pv1.png)
 
-Ange den e-postadress du använde på webbplatsen här och klicka på **Inloggning**.
+Digite o endereço de e-mail que você usou no site e clique em **Inloggning**.
 
 ![DSN](./images/app14.png)
 
-Du får då en bekräftelse på att du är inloggad och du får ett push-meddelande.
+Você receberá uma bekräftmação de que está conectado e receberá uma notificação push.
 
 ![DSN](./images/app15.png)
 
-Gå tillbaka till startsidan i appen så visas fler funktioner.
+Retorne para a página inicial do aplicativo e os recursos adicionais irão aparecer.
 
 ![DSN](./images/app17.png)
 
-Först, gå till **Produkter**. Klicka på valfri produkt, i det här exemplet **Kaffe att gå**.
+Primeiro, acesse **Produkter**. Clique em qualquer produto, neste example: **Kaffe att gå**.
 
 ![DSN](./images/app19.png)
 
-Du kommer att se **Kaffe att gå** produktsida i appen.
+Você verá a página do produto **Kaffe att gå** ingen aplicativo.
 
 ![DSN](./images/app20.png)
 
-Du simulerar nu en händelse för att lägga in en signal i en offlinebutik. Målet med att simulera detta är att personalisera kundupplevelsen på butiksskärmar. För att visualisera butiksupplevelsen har en sida skapats som dynamiskt visar den information som är relevant för kunden som just har kommit in i butiken.
+Agora você irá simular um even to de entrada de sinalização (beacon) em um local de armazenamento offline. O object tivo da simulação é personalizar a experience ência do cliente nas telas da loja. Para visualizar a experience ência na loja, foi criada uma página que mostrará de forma dinâmica as informações relevantes para o cliente ao entrar na loja.
 
-Öppna den här webbsidan på datorn innan du fortsätter: [https://bootcamp.aepdemo.net/content/aep-bootcamp-experience/language-masters/en/screen.html](https://bootcamp.aepdemo.net/content/aep-bootcamp-experience/language-masters/en/screen.html)
+Antes de continuar, abra esta página da Web em seu compador: [https://bootcamp.aepdemo.net/content/aep-bootcamp-experience/language-masters/en/screen.html](https://bootcamp.aepdemo.net/content/aep-bootcamp-experience/language-masters/en/screen.html)
 
-Då ser du det här:
+Em seguida, a tela abaixo será exibida:
 
 ![DSN](./images/screen1.png)
 
-Gå sedan tillbaka till hemsidan. Klicka på **beacon** ikon.
+Em seguida, retorne para a página inicial. Clique no ícone do **beacon**.
 
 ![DSN](./images/app23.png)
 
 Du kommer då att se det här. Välj först **Bootcamp Screen Beacon** och klicka sedan på **entry** -knappen. På så sätt kan du simulera ett fynd.
+Após essa etapa, o seguinte será exibido. Primeiro, selecione **Bootcamp Screen Beacon** e clique no botão de **entrada**. Isso permitirá que você simule uma entrada de sinalização com beacon.
 
 ![DSN](./images/app21.png)
 
-Titta nu på butiksskärmen. Där visas den senaste produkten du visade inom fem sekunder.
+Agora confira a tela da loja. Você verá o último produto visualizado aparecer nessa tela em 5 segundos.
 
 ![DSN](./images/screen2.png)
 
-Gå sedan tillbaka till **Produkter**. Klicka på valfri produkt, i det här exemplet **Strandfilt Tan**.
+Em seguida, retorne para **Produkter**. Clique em qualquer produto, neste example: **Strandfilt Tan**.
 
 ![DSN](./images/app22.png)
 
-Gå sedan tillbaka till hemsidan. Klicka på **beacon** ikon.
+Em seguida, retorne para a página inicial. Clique no ícone do **beacon**.
 
 ![DSN](./images/app23.png)
 
-Du kommer då att se det här. Välj först **Bootcamp Screen Beacon** och klicka sedan på **entry** igen. På så sätt kan du simulera ett fynd.
+Fyrkant, selecone **Bootcamp Screen Beacon** e clique no botão de **Entrada** novamente. Isso permitirá que você simule uma entrada de sinalização (beacon).
 
 ![DSN](./images/app21.png)
 
-Titta nu på butiksskärmen igen. Där visas den senaste produkten du visade inom fem sekunder.
+Agora, confira a tela da loja novamente. Você verá o último produto visualizado aparecer nessa tela em 5 segundos.
 
 ![DSN](./images/screen3.png)
 
-Nu ska vi också titta på din profilvisare på webbplatsen. Där finns många händelser som lagts till för att visa att all interaktion med en kund samlas in och lagras i Adobe Experience Platform.
+Agora, vamos verificar também o seu Visualizador de Perfil no site. Você verá muitos eventos que foram adicionados, para moedereller que qualquer interação com um cliente é coletada e armazenada na Adobe Experience Platform.
 
 ![DSN](./images/screen4.png)
 
-I nästa övning kommer du att konfigurera och testa din egen neoningresa.
+Nr. próximos övícios, você irá configurar e testar sua própria husnada de entrada do beacon.
 
-Nästa steg: [3.2 Skapa en aktivitet](./ex2.md)
+Próxima etapa: [3.2 Kriminalvårdsöar till och med](./ex2.md)
 
-[Gå tillbaka till användarflöde 3](./uc3.md)
+[Retornar para Fluxo de Usuário 3](./uc3.md)
 
-[Gå tillbaka till Alla moduler](../../overview.md)
+[Retornar para Todos os Módulos](../../overview.md)

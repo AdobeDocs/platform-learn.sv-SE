@@ -5,54 +5,54 @@ kt: 5342
 audience: developer
 doc-type: tutorial
 activity: develop
-source-git-commit: 75a878ba596078e6d013b65062606931402302dd
+source-git-commit: 9cc01c7d3018319137f915e103bce9dc39b0d472
 workflow-type: tm+mt
-source-wordcount: '203'
+source-wordcount: '194'
 ht-degree: 0%
 
 ---
 
-# 3.4 Testa din resa
+# 3.4 Testa sua janda
 
-Om du vill testa din resa måste du använda händelse-ID:t för händelsen som du skapade i övning 3.2, som ser ut så här.
+Para testar sua jnada, você deve usar o eventID criado no övício 3.2, que deve ser semelhante ao seguinte.
 
 ![ACOP](./images/payloadeventID.png)
 
-Händelse-ID är det som måste skickas till Adobe Experience Platform för att utlösa resan. I det här exemplet är eventID:
+O eventID é o que precise a ser enviado à Adobe Experience Platform para acionar a jnada. Neste exemplo, o eventID é:
 `e76c0bf0c77c3517e5b6f4c457a0754ebaf5f1f6b9357d74e0d8e13ae517c3d5`.
 
-Öppna mobilappen och gå till hemsidan. Klicka på **Inställningar** ikon.
+Abra o aplicativo móvel e vá para a página inicial. Clique no ícone de **Configuração**.
 
 ![DSN](./images/appsett.png)
 
-Klistra in ditt eventID i fältet **Beacon EventID** och klicka **Spara**.
+Cole seu eventID no campo **Beacon EventID** e clique em **Spara**.
 
 ![DSN](./images/beacon1.png)
 
-Öppna den här webbsidan på datorn innan du fortsätter: [https://bootcamp.aepdemo.net/content/aep-bootcamp-experience/language-masters/en/screen.html](https://bootcamp.aepdemo.net/content/aep-bootcamp-experience/language-masters/en/screen.html)
+Antes de continuar, abra esta página da Web em seu compador: [https://bootcamp.aepdemo.net/content/aep-bootcamp-experience/language-masters/en/screen.html](https://bootcamp.aepdemo.net/content/aep-bootcamp-experience/language-masters/en/screen.html)
 
-Då ser du det här:
+Em seguida, será exibida a tela:
 
 ![DSN](./images/screen1.png)
 
-Gå sedan tillbaka till hemsidan. Klicka på **beacon** ikon.
+Retorne para a página inicial. Clique no ícone do **beacon**.
 
 ![DSN](./images/app23.png)
 
-Du kommer då att se det här. Välj först **Bootcamp Screen Beacon** och klicka sedan på **entry** -knappen. På så sätt kan du simulera ett fynd.
+Primeiro, selecione **Bootcamp Screen Beacon** e clique no botão de **entrada** -knappen. Isso permitirá que você simule uma entrada do beacon.
 
 ![DSN](./images/app21.png)
 
-Titta nu på butiksskärmen. Där visas den senaste produkten du visade inom fem sekunder.
+Agora confira a tela da loja. Você verá o último produto visualizado aparecer nessa tela em 5 segundos.
 
 ![DSN](./images/beacon3.png)
 
-Du har också fått ditt push-meddelande.
+Você também terá recebido sua notificação push.
 
 ![DSN](./images/beacon2.png)
 
-Du har nu avslutat den här övningen.
+Você terminou este övício.
 
-[Gå tillbaka till användarflöde 3](./uc3.md)
+[Retornar para Fluxo de Usuário 3](./uc3.md)
 
-[Gå tillbaka till Alla moduler](../../overview.md)
+[Retornar para Todos os Módulos](../../overview.md)

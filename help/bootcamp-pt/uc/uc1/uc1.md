@@ -5,47 +5,47 @@ kt: 5342
 audience: Data Engineer, Data Architect
 doc-type: tutorial
 activity: develop
-source-git-commit: 75a878ba596078e6d013b65062606931402302dd
+source-git-commit: 020e9fb8a1d02b93e4e95a4274806c7926c02757
 workflow-type: tm+mt
-source-wordcount: '217'
+source-wordcount: '224'
 ht-degree: 0%
 
 ---
 
-# 1. Förvärv
+# 1. Aquisição
 
-## Utbildningsmål
+## Objetivos de aprendizado
 
-## Förutsättningar
+## Pré-reksitos
 
-- Tillgång till Adobe Experience Platform: [https://experience.adobe.com/platform](https://experience.adobe.com/platform)
-- Åtkomst till Adobe Experience Platform Data Collection: [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/)
-- Tillgång till demowebbplatsen
+- Acesso à Adobe Experience Platform: [https://experience.adobe.com/platform](https://experience.adobe.com/platform)
+- Acesso à coleta de dados da Adobe Experience Platform: [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/)
+- Acesso ao site de demonstração
 
 >[!IMPORTANT]
 >
->Den här självstudiekursen har skapats för att underlätta ett visst Bootläger-format. Den använder specifika system och konton som du kanske inte har tillgång till. Även om ni inte har tillgång till dem tror vi att ni fortfarande kan lära er mycket genom att läsa igenom detta mycket detaljerade innehåll. Om du deltar i något av bootlägren och behöver dina inloggningsuppgifter, kontaktar du din Adobe-representant som ger dig den information som krävs.
+>Självstudiekursen foi criado para förenkltar um formo específico de Bootcamp. Sistemas e contas específicos aos quais você pode não ter acesso são utilizados neste tutorial. Mesmo sem acesso, você ainda pode aprender muito com a leitura deste conteúdo details. Se você é um deltagante de um Bootläger e preca das credenciais de acesso, entre em contato com seu representante da Adobe para receber as informações necessary árias.
 
-## Utövningar
+## Exercícios
 
-[1.1 Besök webbplatsen](./ex1.md)
+[1.1 Webbplats](./ex1.md)
 
-I den här övningen följer du ett manus och går igenom webbplatsen.
+Neste övício, você irá seguir um roteiro e percorrer o site.
 
-[1.2 Visualisera din egen kundprofil i realtid - användargränssnitt](./ex2.md)
+[1.2 Visualize seu próprio perfil de cliente em tempo real - UI](./ex2.md)
 
-I den här övningen loggar du in på Adobe Experience Platform och visar din egen kundprofil i realtid i användargränssnittet.
+Neste övício, você irá fazer login na Adobe Experience Platform e visualizar seu próprio Perfil de cliente em tempo real na UI.
 
-[1.3 Skapa ett segment - användargränssnitt](./ex3.md)
+[1.3 Krim um segmento - UI](./ex3.md)
 
-I den här övningen skapar du ett segment genom att använda Adobe Experience Platform Segment Builder.
+Neste övício, você irá criar um segmento usando o Construtor de Segmentos da Adobe Experience Platform.
 
-[1.4 Vidta åtgärder: skicka segmentet till Adobe Target](./ex4.md)
+[1.4 Ação: envie seu segmento para o Adobe Target](./ex4.md)
 
-Använd det segment du skapat i övning 1.1 för att konfigurera en Experience Targeting Activity i Adobe Target.
+Använd o segmento construído no övício 1.1 para configurar uma Atividade de segmentação por experience ência no Adobe Target.
 
-[1.5 Vidta åtgärder: skicka segmentet till Facebook](./ex5.md)
+[1.5 Ação: envie seu segmento para o Facebook](./ex5.md)
 
-Koppla segmentet du skapat i övning 1.1 till Facebook.
+Conecte o segmento que você criou no övício 1.1 ao destino Facebook.
 
-[Gå tillbaka till Alla moduler](../../overview.md)
+[Retornar para Todos os módulos](../../overview.md)

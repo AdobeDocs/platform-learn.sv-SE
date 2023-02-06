@@ -5,264 +5,262 @@ kt: 5342
 audience: Data Engineer, Data Architect, Data Analyst
 doc-type: tutorial
 activity: develop
-source-git-commit: 75a878ba596078e6d013b65062606931402302dd
+source-git-commit: 020e9fb8a1d02b93e4e95a4274806c7926c02757
 workflow-type: tm+mt
-source-wordcount: '1502'
+source-wordcount: '1579'
 ht-degree: 0%
 
 ---
 
-# 4.5 Visualisering med Customer Journey Analytics
+# 4.5 Visualização usando o Customer Journey Analytics
 
-## Mål
+## Objetivos
 
-- Förstå Analysis Workspace användargränssnitt
-- Lär dig något som gör Analysis Workspace så annorlunda.
-- Lär dig hur du analyserar i CJA med Analysis Workspace
+- Entenda a UI do Analysis Workspace
+- Conheça algun recursos que tornam o Analysis Workspace tão diferente.
+- Aprenda a analisar no CJA usando o Analysis Workspace
 
 ## Kontext
 
-I den här övningen kommer du att använda Analysis Workspace i CJA för att analysera produktvyer, produkttrattar, urn osv.
+Neste övício, você usará o Analysis Workspace no CJA para analisar visualizações de produtos, funis de produtos, rotatividade osv.
 
-Låt oss använda projektet som du skapade i [4.4 Dataförberedelser i Analysis Workspace](./ex4.md)så gå till [https://analytics.adobe.com](https://analytics.adobe.com).
+Vamos usar o projeto que você criou em  [4.4 Preparação de dados no Analysis Workspace](./ex4.md), então acesse [https://analytics.adobe.com](https://analytics.adobe.com).
 
 ![demo](./images/prohome.png)
 
-Öppna ditt projekt `yourLastName - Omnichannel Analysis`.
+Abra seu projeto `yourLastName - Omnichannel Analysis`.
 
-När ditt projekt är öppet och datavyn `yourLastName - Omnichannel Analysis` är du redo att börja skapa dina första visualiseringar.
+Com seu projeto aberto e Visualização de dados `yourLastName - Omnichannel Analysis` selecionado, você está pronto para começar a construir suas primeiras visualizações.
 
 ![demo](./images/prodataView1.png)
 
-## Hur många produktvisningar har vi dagligen?
+## Quantas visualizações de produtos temos diariamente?
 
-Först och främst måste vi välja rätt datum för att analysera data. Gå till kalenderlistrutan till höger på arbetsytan. Klicka på den och välj ett datumintervall.
+Em primeiro lugar, precamos selecionar as data as certas para analisar os dados. Gå till Menu suspenso do calendário no lado direito da tela. Clique nele e selecione o intervalo de data as aplicável.
 
 >[!IMPORTANT]
 >
->Välj ett datumintervall som **Den här veckan** eller **Den här månaden**. De senaste tillgängliga uppgifterna inhämtades den 19 september 2022.
+>Selecione um intervalo de data como **Den här veckan** Du **Den här månaden**. Os dados DISoníveis mais recentes foram absorvidos em 19 de setembro de 2022.
 
 ![demo](./images/pro1.png)
-
-På den vänstra menyn (komponentområdet) hittar du beräkningsmåttet **Produktvyer**. Markera den och dra och släpp den på arbetsytan högst upp till höger i frihandstabellen.
+Ingen meny do lado esquerdo (área de components), encontre as métricas calculadas **Produktvyer**. Selecione-as e arbela solte na tela, no canto superior direito da tabela de format livre.
 
 ![demo](./images/pro2.png)
 
-Dimensionen automatiskt **Dag** läggs till för att skapa din första tabell. Nu kan du se hur din fråga besvaras direkt.
+Automaticamente a dimensão **Dag** será adicionada para criar sua primeira tabela. Agora você pode ver sua pergunta respondida imediatamente.
 
 ![demo](./images/pro3.png)
 
-Högerklicka sedan på sammanfattningen.
+Em seguida, clique com o botão direito do mouse no resumo da métrica.
 
 ![demo](./images/pro4.png)
 
-Klicka på **Visualisera** och sedan markera **Linje** som visualisering.
+Clique em **Visualisera** e selecione **Linje** como visualização.
 
 ![demo](./images/pro5.png)
 
-Du ser dina produkter per dag.
+Você verá as suas visualizações de produto por dia.
 
 ![demo](./images/pro6.png)
 
-Du kan ändra tidsintervallet till dag genom att klicka på **Inställningar** inom visualiseringen.
+Você pode alterar o escopo de tempo para o dia clicando em **Inställningar** na visualização.
 
 ![demo](./images/pro7.png)
 
-Klicka på punkten bredvid **Linje** till **Hantera datakällan**.
+Clique no ponto ao lado de **Linje** e **Hantera datakällan**.
 
 ![demo](./images/pro7a.png)
 
-Klicka på **Lås markering** och markera **Markerade objekt** om du vill låsa den här visualiseringen så att den alltid visar en tidslinje med produktvyer.
+Em seguida, clique em **Lås markering** e selecione **Markerade objekt** para bloquear esta visualização para que ela sempre exiba uma linha do tempo de Visualizações de produtos.
 
 ![demo](./images/pro7b.png)
 
-## De fem vanligaste produkterna som visas
+## 5 produtos mais vibest
 
-Vilka är de fem främsta produkterna?
+Quais são os 5 products mais vibest?
 
-Kom ihåg att spara projekt då och då.
+Lembre-se de salvar o projeto de tempos em tempos.
 
 | OS | Kort klipp |
 | ----------------- |-------------| 
 | Windows | Ctrl+S |
 | Mac | Kommando + S |
 
-Vi börjar hitta de fem bästa produkterna som visas. På den vänstra menyn hittar du **Produktnamn** - Dimension.
+Vamos começar a encontrar os 5 produtos mais vibest. Ingen meny do lado esquerdo, encontre o Nome do produto - Dimensão.
 
 ![demo](./images/pro8.png)
 
-Dra och släpp **Produktnamn** som ersätter **Dag** dimension:
+Agora arablonsolte **Produktnamn** para substituir a dimensão **Dag**:
 
-Detta blir resultatet
+Este será o resultatado.
 
 ![demo](./images/pro10a.png)
 
-Försök sedan att dela upp en av produkterna efter varumärkesnamn. Sök efter **brandName** och dra den under förnamnet.
+Em seguida, tente dividir um dos produtos por Nome da marca. Pesquise **brandName** e arablonpara baixo do primeiro nome do produto.
 
 ![demo](./images/pro13.png)
 
-Gör sedan en uppdelning med användaragenten. Sök efter **Användaragent** och dra det under varumärkesnamnet.
+Em seguida, faça um detaljhamento usando o Agente de usuário. Pesquise **Användaragent** e arablono para baixo do nome da marca.
 
 ![demo](./images/pro15.png)
 
-Då ser du det här:
+Em seguida, será exibida a tela abaixo:
 
 ![demo](./images/pro15a.png)
 
-Slutligen kan du lägga till fler visualiseringar. På vänster sida, under visualiseringar, söker du efter `Donut`. Ta `Donut`, dra och släpp det på arbetsytan under **Linje** visualisering.
+Por fim, você pode adicionar mais visualizações. No lado esquerdo, em visualizações, pesquise `Donut`. Pegue `Donut`, arsucce solte na tela sob a visualização **Linje** 
 
 ![demo](./images/pro18.png)
 
 I tabellen väljer du sedan de första 5 **Användaragent**  rader från den uppdelning vi gjorde under **Google Pixel XL 32 GB svart smarttelefon** > **Citi Signal**. Håll ned **CTRL** eller **Kommando** (på Mac).
 
+Em seguida, na Tabela, selecione as primeiras 5 linhas de **Användaragent** do details hamento que fizemos em **Google Pixel XL 32 GB svart smarttelefon** > **Citi Signal**. Ao selecionar as 5 linhas, segure of botão **CTRL** (inga Windows) eller botão **Kommando** (ingen Mac).
+
 ![demo](./images/pro20.png)
 
-Du kommer att se att mundiagrammet ändras:
+Você verá o gráfico de donut alternado:
 
 ![demo](./images/pro21.png)
 
-Du kan till och med anpassa designen så att den blir mer läsbar genom att göra båda **Linje** diagram och **Munk** ett diagram mindre så att de får plats intill varandra:
+Você pode até adaptar o design para ser mais legível, tornando o gráfico de **Linje** e o gráfico de **Munk** um pouco menor para que sejam exibidos lado a lado:
 
 ![demo](./images/pro22.png)
 
-Klicka på punkten bredvid **Munk** till **Hantera datakällan**.
-Klicka på **Lås markering** om du vill låsa den här visualiseringen så att den alltid visar en tidslinje med produktvyer.
+Clique no ponto ao lado de *Munk** para **Hantera datakällan**. Em seguida, clique em **Lås markering** para bloquear essa visualização para que ela sempre exiba uma linha do tempo de Visualizações de produto.
 
 ![demo](./images/pro22b.png)
 
-Läs mer om visualiseringar med Analysis Workspace här:
+Saiba mais sobre visualizações usando o Analysis Workspace em:
 
 - [https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/visualizations/freeform-analysis-visualizations.html](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/visualizations/freeform-analysis-visualizations.html)
 - [https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/visualizations/t-sync-visualization.html](https://experienceleague.adobe.com/docs/analytics/analyze/analysis-workspace/visualizations/t-sync-visualization.html)
 
-## Produktinteraktionstru, från visning till köp
+## Funil de interação do produto, da visualização à compra
 
-Det finns många sätt att lösa denna fråga. En av dem är att använda produktinteraktionstyp och använda den på frihandsritbord. Ett annat sätt är att använda en **Bortfallsvisualisering**. Låt oss använda den sista som vi vill visualisera och analysera samtidigt.
+Befintliga multimediaformat de resolver esta questão. Uma dela é usar o Tipo de Interação de Produto e usá-lo em uma tabela de formato livre. Outra forma é usar uma **Bortfallsvisualisering**. Vamos usar o último, pois queremos visualizar e analisar ao mesmo tempo.
 
-Stäng den aktuella panelen genom att klicka här:
+Feche o smärtan atual clicando aqui:
 
 ![demo](./images/pro23.png)
 
-Lägg nu till en ny tom panel genom att klicka på **+ Lägg till tom panel**.
+Agora adicione um novo smärte em branco clicando em **+ Lägg till tom panel**.
 
 ![demo](./images/pro24.png)
 
-Klicka på visualiseringen **Utfall**.
+Clique na visualização de **Utfall**.
 
 ![demo](./images/pro25.png)
 
-Välj samma datumintervall som i föregående övning.
+Selecione o mesmo intervalo de data do övício anterior.
 
 ![demo](./images/prodatef.png)
 
-Du kommer då att se det här.
+Em seguida, você verá:
 
 ![demo](./images/prodatefa.png)
 
-Hitta dimensionen **Händelsetyp** under komponenterna till vänster:
+Encontre a dimensão **Händelsetyp** nos components no lado esquerdo:
 
 ![demo](./images/pro26.png)
 
-Klicka på pilen för att öppna dimensionen:
+Clique na seta para abrir a dimensão:
 
 ![demo](./images/pro27.png)
 
-Du kommer att se alla tillgängliga händelsetyper.
+Você verá todos os Tipos de eventos DISoníveis.
 
 ![demo](./images/pro28.png)
 
-Markera objektet **commerce.productViews** och dra och släpp det på **Lägg till kontaktpunkt** fält inuti **Bortfallsvisualisering**.
+Markera ett objekt **commerce.productViews** e arablone solte-o no campo **Lägg till kontaktpunkt** dentro da **Bortfallsvisualisering**.
 
 ![demo](./images/pro29.png)
 
-Gör likadant med **commerce.productListAdds** och **commerce.purchase** och släpp dem på **Lägg till kontaktpunkt** fält inuti **Bortfallsvisualisering**. Din visualisering ser nu ut så här:
+Faça o mesmo com **commerce.productListAdds** och **commerce.purchase** e solte-os no campo **Lägg till kontaktpunkt** dentro da  **Bortfallsvisualisering**. Sua visualização agora deve ser semelhante ao seguinte:
 
 ![demo](./images/props1.png)
 
-Du kan göra många saker här. Några exempel: jämföra steg för steg eller jämföra dem efter lojalitet. Men om vi vill analysera intressanta saker som varför kunderna inte köper efter att ha lagt till en artikel i kundvagnen kan vi använda det bästa verktyget i CJA: högerklicka.
+Você pode fazer muitas coisas aqui. Exempel: Comparar ao longo do tempo, Comparar cada passo por disposivo ou Comparar por fidelidade. No entanto, se quisermos analisar coisas interessantes como porque os clientes não compram depois de adicionar um item ao carrinho, podemos usar a melhor ferramenta do CJA: clicar com o botão direito.
 
-Högerklicka på kontaktytan **commerce.productListAdds**. Klicka sedan på **Brytningsbortfall vid den här kontaktytan**.
+Clique com o botão direito do mouse no touchpoint **commerce.productListAdds**. Em seguida, clique em **Brytningsbortfall vid den här kontaktytan**.
 
 ![demo](./images/pro32.png)
 
-En ny friformstabell kommer att skapas för att analysera vad personerna gjorde om de inte köpte något.
+Uma nova tabela de formato livre será criada para analisar o que as pessoas fizeram se não compraram.
 
 ![demo](./images/pro33.png)
 
-Ändra **Händelsetyp** av **Sidnamn**, i den nya frihandstabellen, för att se vilka sidor de ska gå i stället för bekräftelsesidan.
+Ändra o **Händelsetyp** av **Sidnamn**, na nova tabela de formo livre, para ver em quais páginas eles estão indo, em vez da Página de bekräftmação de compra.
 
 ![demo](./images/pro34.png)
 
-## Vad gör folk på webbplatsen innan de kommer till sidan Avbryt tjänst?
+## O que as pessoas fazem no site antes de acessar a página Cancelar serviço?
 
-Det finns många sätt att utföra den här analysen. Låt oss använda flödesanalysen för att starta identifieringsdelen.
+Novamente, há muitas formas de realizar essa análise. Vamos usar a análise de fluxo para iniciar parte da descoberta.
 
-Stäng den aktuella panelen genom att klicka här:
+Feche o smärtan atual clicando aqui:
 
 ![demo](./images/pro0.png)
 
-Lägg nu till en ny tom panel genom att klicka på **+ Lägg till tom panel**.
+Agora adicione um novo smärte em branco clicando em **+ Lägg till tom panel**.
 
 ![demo](./images/pro0a.png)
 
-Klicka på visualiseringen **Flöde**.
+Clique na visualização **Flöde**.
 
 ![demo](./images/pro35.png)
 
-Då ser du det här:
+Em seguida, será exibido:
 
 ![demo](./images/pro351.png)
 
-Välj samma datumintervall som i föregående övning.
+Selecione o mesmo intervalo de data do övício anterior.
 
 ![demo](./images/pro0b.png)
 
-Hitta dimensionen **Sidnamn** under komponenterna till vänster:
+Encontre a dimensão **Sidnamn** nos components no lado esquerdo:
 
 ![demo](./images/pro36.png)
 
-Klicka på pilen för att öppna dimensionen:
+Clique na seta para abrir a dimensão:
 
 ![demo](./images/pro37.png)
 
-Alla sidor visas. Sök efter sidnamnet: **Avbryt tjänst**.
-Dra och släpp **Avbryt tjänst** till Flödesvisualisering i mittfältet:
+Você encontrará todas as páginas view. Encontre o nome da página: **Avbryt tjänst**.
+Arraysolte **Avbryt tjänst** na Visualização de fluxo no campo do meio:
 
 ![demo](./images/pro38.png)
 
-Då ser du det här:
+Em seguida, será exibido:
 
 ![demo](./images/pro40.png)
 
-Nu ska vi analysera om kunder som besökt **Avbryt tjänst** på webbplatsen kallas även callcenter och vad resultatet blev.
+Vamos agora analisar se os clientes que visitaram a página C **Avbryt tjänst** ingen webbplats também ligaram para o call center e qual foi o resultado.
 
-Under dimensionerna går du tillbaka och letar upp **Samtalsinteraktionstyp**.
-Dra och släpp **Samtalsinteraktionstyp** att ersätta den första interaktionen till höger i dialogrutan **Flödesvisualisering**.
+Nas dimensões, retorne e encontre Tipo de interação de chamada. Arraysolte **Samtalsinteraktionstyp** para substituir a primeira interação à direita em **Flödesvisualisering**.
 
 ![demo](./images/pro43.png)
 
-Nu ser du supportbiljetten till de kunder som ringde till callcentret efter att ha besökt **Avbryt tjänst** sida.
+Agora você visualiza o tickets de suporte dos clientes que ligaram para a central de atendimento depois de visitar a página **Avbryt tjänst**.
 
 ![demo](./images/pro44.png)
 
-Sök sedan efter **Ring**.  Dra och släpp den för att ersätta den första interaktionen till höger i **Flödesvisualisering**.
+Em seguida, nas dimensões, procure **Ring**. Arablone solte para substituir a primeira interação à direita na visualização de fluxo.
 
 ![demo](./images/pro46.png)
 
-Då ser du det här:
+Em seguida, será exibido:
 
 ![demo](./images/flow.png)
 
-Som du ser har vi gjort en flerkanalsanalys med hjälp av Flödesvisualisering. Tack vare att vi har kommit fram till att vissa kunder som funderade på att säga upp sin tjänst hade en positiv känsla efter att ha ringt callcenter. Har vi ändrat oss med en befordran?
+Como pode ver, exutamos uma análise omnichannel usando a visualização de fluxo. Graças a isso, descobrimos que algun clientes que estavam pensando em cancelar o serviço tiveram uma avaliação positiva depois de ligar para o call center. Talvez tenhamos mudado de ideia com uma promoção?
 
+## Qual é o desempenho dos clientes com um contato de Call center Positivo em relação aos Principais KPIs?
 
-## Hur fungerar kunder med en positiv Callcenter-kontakt jämfört med nyckeltal?
-
-Låt oss först segmentera data för att bara få användare med **positiv** samtal. I CJA kallas segment för filter. Gå till filter i komponentområdet (till vänster) och klicka på **+**.
+Primeiramente, vamos segmentar os dados para obter apenas usuários com chamadas **positiv**. Ingen CJA, os Segmentos são chamados de Filtros. Acesse para filtros na área de components (no lado esquerdo) e clique em **+**.
 
 ![demo](./images/pro58.png)
 
-I filterverktyget ger du filtret ett namn
+Dentro do Construtor de filtro, dê um nome ao filtro
 
 | Namn | Beskrivning |
 | ----------------- |-------------| 
@@ -270,59 +268,58 @@ I filterverktyget ger du filtret ett namn
 
 ![demo](./images/pro47.png)
 
-Under komponenterna (i Filter Builder) hittar du **Ring** och dra och släpp det i filterverktyget.
+Nej-komponenter (dentro do Construtor de filtro), encontre **Ring** e arablonsolte na Definição do construtor de filtro.
 
 ![demo](./images/pro48.png)
 
-Välj nu **positiv** som värde för filtret.
+Agora selecione **positiv** como valor para o filtro.
 
 ![demo](./images/pro49.png)
 
-Ändra omfånget som ska **Person** nivå.
+Altere o escopo para o nível **Person**.
 
 ![demo](./images/pro50.png)
 
-Klicka bara på **Spara**.
+Para finalizar, basta clicar em **Spara**.
 
 ![demo](./images/pro51.png)
 
-Du kommer då tillbaka hit. Stäng den föregående panelen om du inte är klar ännu.
+Então, você irá retornar para esta tela. Se ainda não retornou, feche o smärtel anterior.
 
 ![demo](./images/pro0c.png)
 
-Lägg nu till en ny tom panel genom att klicka på **+ Lägg till tom panel**.
+Agora adicione um novo smärte em branco clicando em **+ Lägg till tom panel**.
 
 ![demo](./images/pro24c.png)
 
-Välj samma datumintervall som i föregående övning.
+Selecione o mesmo intervalo de data do övício anterior.
 
 ![demo](./images/pro24d.png)
 
-Klicka på **Frihandsregister**.
+Clique em **Frihandsregister**.
 
 ![demo](./images/pro52.png)
 
-Dra och släpp det filter du just skapat.
+Agora arablone solte o filtro que você acabou de criar.
 
 ![demo](./images/pro53.png)
 
-Det är dags att lägga till lite statistik. Börja med **Produktvyer**. Dra och släpp i frihandstabellen. Du kan även ta bort **Händelser** mätvärden.
+Hora de adicionar algumas métricas. Comece com **Produktvyer**. Arrappe solte na tabela de forma livre. Você também pode excluir a métrica **Händelser**.
 
 ![demo](./images/pro54.png)
 
-Gör likadant med **Folk**,  **Lägg i kundvagnen** och **Inköp**. Du får ett bord som det här.
+Faça o mesmo com **Folk**, **Lägg i kundvagnen** e **Inköp**. Você vai acabar com uma tabela como a seguinte.
 
 ![demo](./images/pro55.png)
 
-Tack vare den första flödesanalysen kom en ny fråga i minnet. Därför bestämde vi oss för att skapa den här tabellen och kontrollera några nyckeltal mot ett segment för att svara på den frågan. Som du ser går det mycket snabbare att få insikter än att använda SQL eller andra BI-lösningar.
+Graças à primeira análise de fluxo, uma nova pergunta surgiu. Então decidimos criar esta tabela e verificar algun KPIs em segmento para responder a essa pergunta. Como você pode ver, o tempo de insight é muito mais rápido que usar SQL ou usar outras soluções de BI.
 
-## Customer Journey Analytics och Analysis Workspace recap
+## Rekapitulação do Analysis Workspace e do Customer Journey Analytics
 
-Som ni har lärt er i labbet sammanfogar Analysis Workspace data från alla kanaler för att analysera hela kundresan. Tänk också på att du kan hämta in data till samma arbetsyta som inte är sammansatt med resan.
-Det kan vara mycket användbart att föra in data som inte är kopplade till varandra i analysen för att ge resan ett sammanhang. Några exempel är exempelvis NPS-data, undersökningar, Facebook Ads-händelser eller offlineinteraktioner (ej identifierad).
+Como você aprendeu neste laboratório, o Analysis Workspace reúne dados de todos os canais para analisar a jnada complete do cliente. Além disso, lembre-se de que você pode trazer dados para o mesmo workspace que não está vinculado à jornada. Pode ser muito útil trazer dados desconectados para sua análise para contextualizar a hunada. Algun är exempel på koisas como dados NPS, pesquisas, eventos de anúncios do Facebook ou interações offline (não identificadas).
 
-Nästa steg: [4.6 Från insikter till handling](./ex6.md)
+Próxima etapa: [4.6 De insights a ação](./ex6.md)
 
-[Gå tillbaka till användarflöde 4](./uc4.md)
+[Retornar para Fluxo de Usuário 4](./uc4.md)
 
-[Gå tillbaka till Alla moduler](./../../overview.md)
+[Retornar para Todos os Módulos](./../../overview.md)

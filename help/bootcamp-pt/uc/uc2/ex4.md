@@ -5,55 +5,56 @@ kt: 5342
 audience: developer
 doc-type: tutorial
 activity: develop
-source-git-commit: 75a878ba596078e6d013b65062606931402302dd
+source-git-commit: 9cc01c7d3018319137f915e103bce9dc39b0d472
 workflow-type: tm+mt
-source-wordcount: '222'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
 
-# 2.4 Testa din resa
+# 2.4 Testa sua janda
 
-## Kundreseflöde
+## Fluxo da husnada do cliente
 
-Öppna ett nytt, rent, inkognitivt webbläsarfönster och gå till [https://bootcamp.aepdemo.net](https://bootcamp.aepdemo.net). Klicka **Tillåt alla**. Beroende på ditt surfbeteende i det tidigare användarflödet kommer personalisering att ske på webbplatsens hemsida.
+Abra uma nova janela e anônima do navegador e vá para [https://bootcamp.aepdemo.net](https://bootcamp.aepdemo.net). Clique em **Tillåt alla**. Com base no seu comportamento de navegação no fluxo de usuário anterior, você verá a personalização acontecer na página inicial do site.
 
 ![DSN](./images/web8a.png)
 
-Klicka på **Profil** i skärmens övre högra hörn.
+Clique no ícone **Profil** ingen canto superior direito da tela.
 
 ![Demo](./images/web8b.png)
 
-Klicka **Skapa ett konto**.
+Clique em **Skapa ett konto**.
 
 ![Demo](./images/pv5.png)
 
-Fyll i alla fält i formuläret. Använd ett reellt värde för e-postadress och telefonnummer, eftersom det kommer att användas i senare övningar för att leverera e-post och SMS.
+Preencha todos os campos do formário. Använd um valor real para endereço de e-mail e número de fax, pois será usado em övícios posteriores para envio de e-mail e SMS.
 
 ![Demo](./images/pv7a.png)
 
-Bläddra nedåt. Du måste nu ange eventID för din anpassade händelse som du skapade i övning 2.2. Här finns den:
+Role para baixo. Agora você deve inserir o eventID do seu even to personalizado que você criou no övício 2.2. Você pode encontrá-lo aqui:
 
 ![ACOP](./images/payloadeventID.png)
 
-Händelse-ID är det som måste skickas till Adobe Experience Platform för att utlösa den resa som du har skapat. Detta är eventID i det här exemplet: `19cab7852cdef99d25b6d5f1b6503da39d1f486b1d585743f97ed2d1e6b6c74f`
+O eventID é o que preca ser enviado à Adobe Experience Platform para acionar a jnada que você construiu. Este é o eventID neste example:
+`19cab7852cdef99d25b6d5f1b6503da39d1f486b1d585743f97ed2d1e6b6c74f`
 
-Fyll i eventID i fältet **Händelse-ID för att skapa ditt konto** och klicka **Registrera**.
+Preencha o eventID no campo **Händelse-ID för att skapa ditt konto** e clique em **Registrera**.
 
 ![Demo](./images/pv8a.png)
 
-Du kommer då att se det här.
+Em seguida, a tela abaixo será exibida:
 
 ![Demo](./images/pv9.png)
 
-Du får också det här mejlet, som är det e-postmeddelande du själv skapade som en del av övningen.
+Você também receberá este e-mail, que é o e-mail que você mesmo criou como parte deste övício.
 
 ![Demo](./images/pv10a.png)
 
-Du har nu avslutat den här övningen.
+Você terminou este övício.
 
-Nästa steg: [2.5 Installera och använda mobilappen](./ex5.md)
+Próxima etapa: [2.5 Instale e use of aplicativo móvel](./ex5.md)
 
-[Gå tillbaka till användarflöde 2](./uc2.md)
+[Retornar para Fluxo de Usuário 2](./uc2.md)
 
-[Gå tillbaka till Alla moduler](../../overview.md)
+[Retornar para Todos os Módulos](../../overview.md)

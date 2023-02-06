@@ -5,43 +5,43 @@ kt: 5342
 audience: Data Engineer, Data Architect
 doc-type: tutorial
 activity: develop
-source-git-commit: 75a878ba596078e6d013b65062606931402302dd
+source-git-commit: 020e9fb8a1d02b93e4e95a4274806c7926c02757
 workflow-type: tm+mt
-source-wordcount: '209'
+source-wordcount: '205'
 ht-degree: 0%
 
 ---
 
-# 3. Blanda fysiska och digitala
+# 3. Retornar para Todos os Módulos
 
-## Utbildningsmål
+## Objetivos de aprendizado
 
-## Förutsättningar
+## Pré-reksitos
 
-- Tillgång till Adobe Experience Platform: [https://experience.adobe.com/platform](https://experience.adobe.com/platform)
-- Åtkomst till Adobe Experience Platform Data Collection: [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/)
-- Tillgång till demowebbplatsen
+- Acesso à Adobe Experience Platform:  [https://experience.adobe.com/platform](https://experience.adobe.com/platform)
+- Acesso à coleta de dados da Adobe Experience Platform: [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/)
+- Acesso ao site de demonstração
 
 >[!IMPORTANT]
 >
->Den här självstudiekursen har skapats för att underlätta ett visst Bootläger-format. Den använder specifika system och konton som du kanske inte har tillgång till. Även om ni inte har tillgång till dem tror vi att ni fortfarande kan lära er mycket genom att läsa igenom detta mycket detaljerade innehåll. Om du deltar i något av bootlägren och behöver dina inloggningsuppgifter, kontaktar du din Adobe-representant som ger dig den information som krävs.
+>Självstudiekursen foi criado para förenkltar um formo específico de bootcamp. Sistemas e contas específicos aos quais você pode não ter acesso são utilizados neste tutorial. Mesmo sem acesso, você ainda pode aprender muito com a leitura deste conteúdo details. Se você é um deltagante de um bootläger e preca das credenciais de acesso, entre em contato com seu representante da Adobe para receber as informações necessary árias.
 
-## Utövningar
+## Exercícios
 
-[3.1 Använda mobilappen och utlösa en fyndighetsinmatning](./ex1.md)
+[3.1 Användning av aplicativo móvel e acione sinalizador beacon](./ex1.md)
 
-I den här övningen får du lära dig att konfigurera en händelse.
+Neste övício, você irá aprender como configurar um even to.
 
-[3.2 Skapa en aktivitet](./ex2.md)
+[3.2 Kriminalvårdsöar till och med](./ex2.md)
 
-I den här övningen får du lära dig att konfigurera en händelse.
+Neste övício, você irá aprender como configurar um even to.
 
-[3.3 Skapa din resa och skicka push-meddelanden](./ex3.md)
+[3.3 Krim sua jnada e notificação push](./ex3.md)
 
-I den här övningen får du lära dig hur du konfigurerar en resa och ett push-meddelande och hur du länkar händelsen och meddelandet till den resan.
+Neste övício, você irá aprender como configurar uma jnada e uma notificação push e como vincular seu even to e mensagem para a tjnada.
 
-[3.4 Testa din resa](./ex4.md)
+[3.4 Testa sua janda](./ex4.md)
 
-I den här övningen får du lära dig hur du konfigurerar en resa och hur du länkar händelsen och meddelandet till den resan.
+Neste övício, você irá aprender como configurar uma jnada e como vincular seu even to e mensagem para a jnada.
 
-[Gå tillbaka till Alla moduler](../../overview.md)
+[Retornar para Todos os Módulos](../../overview.md)

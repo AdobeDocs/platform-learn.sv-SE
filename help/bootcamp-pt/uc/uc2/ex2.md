@@ -5,93 +5,93 @@ kt: 5342
 audience: developer
 doc-type: tutorial
 activity: develop
-source-git-commit: 75a878ba596078e6d013b65062606931402302dd
+source-git-commit: 9cc01c7d3018319137f915e103bce9dc39b0d472
 workflow-type: tm+mt
-source-wordcount: '445'
+source-wordcount: '463'
 ht-degree: 0%
 
 ---
 
-# 2.2 Skapa en aktivitet
+# 2.2 Kriminalvårdsdagen
 
-Logga in på Adobe Journey Optimizer genom att gå till [Adobe Experience Cloud](https://experience.adobe.com). Klicka **Journey Optimizer**.
+Faça-inloggning på Adobe Journey Optimizer acessando a [Adobe Experience Cloud](https://experience.adobe.com). Clique em **Journey Optimizer**.
 
 ![ACOP](./images/acophome.png)
 
-Du omdirigeras till **Startsida**  i Journey Optimizer. Kontrollera först att du använder rätt sandlåda. Sandlådan som ska användas anropas `Bootcamp`. Om du vill ändra från en sandlåda till en annan klickar du på **Prod** och välj sandlådan i listan. I det här exemplet heter sandlådan **Bootläger**. Då är du i **Startsida** vy över din sandlåda `Bootcamp`.
+Você será redirecionado para a visualização da **Startsida** ingen Journey Optimizer. Primeiro, verifique se você está usando o sandbox correto. O nome do sandbox que deve ser usado `Bootcamp`. Para alternar de um sandbox para outro, clique em Prod e selecione o sandbox na list. Neste exemplo, nome do sandbox é **Bootläger**. Você estará na visualização da **Startsida** do seu, sandlåda `Bootcamp`.
 
 ![ACOP](./images/acoptriglp.png)
 
-Bläddra nedåt i den vänstra menyn och klicka på **Konfigurationer**. Klicka sedan på **Hantera** knapp under **Händelser**.
+Ingen meny à esquerda, role para baixo e clique em **Konfigurationer**. Em seguida, clique no botão **Hantera** abaixo de **Händelser**.
 
 ![ACOP](./images/acopmenu.png)
 
-Därefter visas en översikt över alla tillgängliga händelser. Klicka **Skapa händelse** för att börja skapa en egen händelse.
+Você verá uma visão geral de todos os eventos DISoníveis. Clique em **Skapa händelse** para começar a criar seu próprio even to.
 
 ![ACOP](./images/emptyevent.png)
 
-Ett nytt, tomt händelsefönster öppnas sedan.
+Uma nova janela de even to vazia irá aparecer.
 
 ![ACOP](./images/emptyevent1.png)
 
-Först och främst ger du evenemanget ett namn som detta: `yourLastNameAccountCreationEvent` och lägg till en beskrivning som denna `Account Creation Event`.
+Em primeiro lugar, dê um nome ao seu even to como, por example: `yourLastNameAccountCreationEvent` e adicione uma descrição como, por example: `Account Creation Event`.
 
 ![ACOP](./images/eventdescription.png)
 
-Kontrollera sedan att **Typ** är inställd på **Unitary** och för **Typ av händelse-ID** markering, markera **Systemgenererat**.
+Em seguida, certifique-se de que **Typ** está defindo como **Unitary** e, para a seleção de **Typ av händelse-ID**, selecione **Systemgenererat**.
 
 ![ACOP](./images/eventidtype.png)
 
-Nästa steg är schemavalet. Ett schema förbereddes för den här övningen. Använd schemat `Demo System - Event Schema for Website (Global v1.1) v.1`.
+Ett etapa seguinte é a seleção do schema. UM schema foi preparado para este övício. Använd till schema `Demo System - Event Schema for Website (Global v1.1) v.1`.
 
 ![ACOP](./images/eventschema.png)
 
-När du har valt schemat visas ett antal fält i **Fält** -avsnitt. Nu ska du hovra över **Fält** så visas tre popup-fönster med ikoner. Klicka på **Redigera** ikon.
+Depois de selecionar o Schema, você verá vários campos sendo selecionados na seção **Fält**. Agora você deve passar o mouse sobre a seção **Fält** e três ícones pop-up serão exibidos. Clique no ícone **Redigera**.
 
 ![ACOP](./images/eventpayload.png)
 
-Du får se en **Fält** fönsterpopup, där du måste markera några av de fält som vi behöver för att anpassa e-postmeddelandet.  Vi väljer andra profilattribut senare med de data som redan finns i Adobe Experience Platform.
+Você verá uma janela pop-up de **Fält**, ond você deve selecionar algun dos campos que precamos para personalizar o e-mail. Escolheremos outros atributos de perfil posteriormente, utilizando os dados já existentes na Adobe Experience Platform.
 
 ![ACOP](./images/eventfields.png)
 
-I objektet `_experienceplatform.demoEnvironment`måste du markera fälten **brandLogo** och **brandName**.
+Inget objekt `_experienceplatform.demoEnvironment`, pcertifique-se de selecionar os campos **brandLogo** e **brandName**.
 
 ![ACOP](./images/eventpayloadbr.png)
 
-I objektet `_experienceplatform.identification.core`måste du markera fältet **e-post**.
+Inget objekt `_experienceplatform.identification.core`, certifique-se de selecionar o campo **e-post**.
 
 ![ACOP](./images/eventpayloadbrid.png)
 
-Klicka **OK** för att spara ändringarna.
+Clique em **OK** till para salvar suas alternações.
 
 ![ACOP](./images/saveok.png)
 
-Du borde se det här då. Klicka **Spara** ännu en gång för att spara ändringarna.
+Em seguida, a tela abaixo deve ser exibida. Clique em **Spara**  mais uma vez para salvar suas alternações...
 
 ![ACOP](./images/eventsave.png)
 
-Din händelse är nu konfigurerad och sparad.
+Till och med agora está configurado e salvo.
 
 ![ACOP](./images/eventdone.png)
 
-Klicka på aktiviteten igen för att öppna **Redigera händelse** skärm igen. Hovra över **Fält** igen för att se de tre ikonerna igen. Klicka på **Visa nyttolast** ikon.
+Clique no seu even to novamente para abrir mais uma vez a tela **Redigera händelse**. Passera till musobjekt **Fält** para ver os 3 ícones outra vez. Clique no ícone **Visa nyttolast**.
 
 ![ACOP](./images/viewevent.png)
 
-Nu visas ett exempel på den förväntade nyttolasten.
-Händelsen har ett unikt ID för Orchestration-händelse som du kan hitta genom att rulla nedåt i nyttolasten tills du ser `_experience.campaign.orchestration.eventID`.
+Agora você verá um exemplo da carga útil esperada.
+Seu even to tem um eventID de orquestração único, que você pode encontrar rolando para baixo nessa carga útil (nyttload) até visualiza `_experience.campaign.orchestration.eventID`.
 
 ![ACOP](./images/payloadeventID.png)
 
-Händelse-ID:t är det som måste skickas till Adobe Experience Platform för att utlösa den resa som du ska bygga i någon av de kommande övningarna. Kom ihåg detta eventID, som du kanske behöver det senare.
+O eventID é o que deve ser enviado à Adobe Experience Platform para acionar a jnada que você construirá em um dos próximos övícios. Lembre-se deste eventID, você pode precise dele posteriormente.
 `"eventID": "19cab7852cdef99d25b6d5f1b6503da39d1f486b1d585743f97ed2d1e6b6c74f"`
 
-Klicka **OK**, följt av att klicka **Avbryt**.
+Clique em **OK** e, em seguida, clique em **Avbryt**.
 
-Du har nu avslutat den här övningen.
+Agora você terminou este övício.
 
-Nästa steg: [2.3 Skapa ett e-postmeddelande](./ex3.md)
+Próxima etapa: [ 2.3 Crie sua mensagem de e-mail](./ex3.md)
 
-[Gå tillbaka till användarflöde 2](./uc2.md)
+[Retornar para Fluxo de Usuário 2](./uc2.md)
 
-[Gå tillbaka till Alla moduler](../../overview.md)
+[Retornar para Todos os Módulos](../../overview.md)

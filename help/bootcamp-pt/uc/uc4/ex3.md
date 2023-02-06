@@ -5,55 +5,54 @@ kt: 5342
 audience: Data Engineer, Data Architect, Data Analyst
 doc-type: tutorial
 activity: develop
-source-git-commit: 75a878ba596078e6d013b65062606931402302dd
+source-git-commit: 072179998d19c32589280defdb257a86d8728fea
 workflow-type: tm+mt
-source-wordcount: '1610'
+source-wordcount: '1655'
 ht-degree: 1%
 
 ---
 
-# 4.3 Skapa en datavy
+# 4.3 Crie uma Visualização de Dados
 
-## Mål
+## Objetivos
 
-- Förstå användargränssnittet för datavy
-- Förstå grundläggande inställningar för besöksdefinition
-- Förstå attribuering och beständighet i en datavy
+- Entenda a UI de Visualização de Dados
+- Compreenda as configurações básicas de definção de visita
+- Compreenda a atribuição e a Persistência em uma Visualização de
 
-## 4.3.1 Datavy
+## 4.3.1 Visualização de Dados
 
-När anslutningen är klar kan du nu gå vidare och påverka visualiseringen. En skillnad mellan Adobe Analytics och CJA är att CJA behöver en datavy för att rensa och förbereda data före visualisering.
+Agora, com sua conexão slutída, é kapível progredir para influenciar a visualização. Uma diferença entre o Adobe Analytics e o CJA é que o CJA precise a de uma visualização de dados para limpar e preparar os dados antes da visualização.
 
-En datavy liknar begreppet Virtual Report Suites i Adobe Analytics, där du definierar kontextmedvetna besöksdefinitioner, filtrering och även hur komponenterna anropas.
+Uma Visualização de Dados é semelhante ao conceito de Virtual Report Suites no Adobe Analytics, ond você estabelece as definções de visita com conheimento de contexto, filtragem e também como os components são chamados.
 
-Du behöver minst en datavy per anslutning. Men för vissa fall är det bra att ha flera datavyer för samma anslutning, med målet att ge olika insikter till olika team.
-Om ni vill att ert företag ska bli datadrivet bör ni anpassa hur data ska visas i varje team. Några exempel:
+Será necessary ário, no mínimo, uma Visualização de Dados por conexão. No entanto, para algun casos de uso, é ótimo ter múltiplas Visualizações de Dados para a mesma conexão, com o objectivo de fornecer insights diferentes para equipes distintas. Se você deseja que sua empresa seja orientada por dados, deve adaptar a format como os dados são vibest em cada equipe. Exempel:
 
-- UX-värden endast för UX-designteamet
-- Använd samma namn för KPI:er och Metrics för Google Analytics som för Customer Journey Analytics så att de digitala analysteamen bara kan tala ett språk.
-- Datavy filtrerad för att exempelvis visa data för en marknad, ett varumärke eller endast för mobila enheter.
+- Métricas de UX apenas para a equipe de UX Design
+- Använd os mesmos nomes para KPIs e métricas para o Google Analytics e para o Customer Journey Analytics, para que a equipe de análise digital fale apenas 1 idioma.
+- Visualização de Dados filtrada para moetter, por exemplo, dados para apenas um mercado, ou uma marca, ou apenas para Disposivos móveis.
 
-På **Anslutningar** markerar du kryssrutan framför den anslutning du just skapade. Klicka **Skapa datavy**.
+Na tela de **Anslutningar** marque a caixa de seleção da conexão que você acabou de criar. Clique em  **Skapa datavy**.
 
 ![demo](./images/exta.png)
 
-Du omdirigeras till **Skapa datavy** arbetsflöde.
+Você será redirecionado para o fluxo de trabalho **Skapa datavy** arbetsflöde.
 
 ![demo](./images/0-v2.png)
 
-## 4.3.2 Datavy Definition
+## 4.3.2 Definição de Visualização de Dados
 
-Nu kan du konfigurera de grundläggande definitionerna för din datavy.
+Agora você pode configurar as definções básicas para sua Visualização de dados.
 
 ![demo](./images/0-v2.png)
 
-The **Anslutning** du skapade i föregående övning är redan markerad. Din anslutning har ett namn `yourLastName – Omnichannel Data Connection`.
+A **Anslutning** que você criou no övício anterior já está selecionada. Sua conexão se chama `yourLastName – Omnichannel Data Connection`.
 
 ![demo](./images/ext5.png)
 
-Ge sedan datavyn ett namn enligt den här namnkonventionen: `yourLastName – Omnichannel Data View`.
+Em seguida, dê um nome à sua Visualização de Dados seguindo este modelo de nomenklclatura: `yourLastName – Omnichannel Data View`.
 
-Ange samma värde för beskrivningen: `yourLastName – Omnichannel Data View`.
+Insira o mesmo valor para a descrição: `yourLastName – Omnichannel Data View`.
 
 | Namn | Beskrivning |
 | ----------------- |-------------| 
@@ -61,75 +60,75 @@ Ange samma värde för beskrivningen: `yourLastName – Omnichannel Data View`.
 
 ![demo](./images/1-v2.png)
 
-För **Tidszon** väljer du tidszon **Berlin, Stockholm, Rom, Bern, Bryssel, Wien, Amsterdam GMT+01:00**. Det här är en intressant situation eftersom vissa företag är verksamma i olika länder och i olika geografiska områden. Genom att tilldela rätt tidszon för varje land undviks typiska datafel, som att tro att majoriteten av människorna i Peru till exempel köper T-shirts klockan 04:00.
+Para **Tidszon**, selecione o fuso horário **Berlim, Estocolmo, Roma, Berna, Bruxelas, Viena, Amsterdam GMT+01:00**. Este é um cenário realmente interessante, pois algumas empresas operam em diferentes países e geografias. Alocar o fuso horário certo para cada país evitará erros típicos de dados, como, por example, acreditar que a Maioria das pessoas compra camisetas à 4h no Peru.
 
 ![demo](./images/ext7.png)
 
-Du kan också ändra huvudmåttsnamnet (person, session och händelse). Detta är inte obligatoriskt, men vissa kunder gillar att använda Personer, Besök och träffar i stället för Person, Session och Events (standardnamnkonvention från Customer Journey Analytics).
+Você também pode modificar a nomenklclatura das métricas Principais (Pessoa, Sessão e Evento). Isso não é obrigatório, mas algun clientes gostam de usar Pessoas, Visitas e Acessos em vez de Pessoa, Sessão e Eventos (kallção de nomenklclatura padrão do Customer Journey Analytics).
 
-Du bör nu ha följande inställningar konfigurerade:
+Agora você deve ter as seguintes configurações definidas:
 
 ![demo](./images/1-v2.png)
 
-Klicka **Spara och fortsätt**.
+Clique em **Spara och fortsätt**.
 
 ![demo](./images/12-v2.png)
 
-## 4.3.3 Datavy Components
+## 4.3.3 Components da Visualização de Dados
 
-I den här övningen ska du konfigurera de komponenter du behöver för att analysera data och visualisera dem med Analysis Workspace. I det här användargränssnittet finns det tre huvudområden:
+Neste övício, você irá configurar os components necessary ários para analisar os dados e visualizá-los usando o Analysis Workspace. Nesta IE, há três áreas Principais:
 
-- Vänster sida: Tillgängliga komponenter från markerade datauppsättningar
-- Mitten: Tillagda komponenter i datavyn
-- Höger sida: Komponentinställningar
+- Lado esquerdo: Komponenter disoníveis dos datasets selecionados
+- Media: Komponenter adicionados à Visualização de Dados
+- Lado direito: Configurações do component
 
 ![demo](./images/2-v2.png)
 
 >[!IMPORTANT]
 >
->Om du inte kan hitta ett specifikt mått eller dimension kontrollerar du om fältet `Contains data` tas bort från datavyn. Om inte, ta bort det fältet.
+>Se você não encontrar uma métrica ou dimensão específica, verifique se o campo `Contains data` foi removido de sua visualização de dados. Caso contrário, exklua esse campo.
 >
 >![demo](./images/2-v2a.png)
 
-Nu måste du dra och släppa de komponenter du behöver för analysen till **Komponenter har lagts till**. För att göra detta måste du markera komponenterna i den vänstra menyn och dra och släppa dem på arbetsytan i mitten.
+Agora você preca arrastar e soltar os components necessary ários para a análise nos **Komponenter har lagts till**. Para isso, você deve selecionar os components no menu à esquerda e arrastá-los e soltá-los na tela no meio.
 
-Låt oss börja med den första komponenten: **Namn (web.webPageDetails.name)**. Sök efter den här komponenten och dra och släpp den på arbetsytan.
+Vamos começar com o primeiro component: **Namn (web.webPageDetails.name)**. Pesquise esse component e arablono e solte-o na tela.
 
 ![demo](./images/3-v2.png)
 
-Den här komponenten är sidnamnet, som du kan härleda när du läser schemafältet `(web.webPageDetails.name)`.
+Esse component é o nome da página, como você pode derivar da leitura do campo do schema `(web.webPageDetails.name)`.
 
-Med **Namn** eftersom namnet inte är den bästa namnkonventionen för en affärsanvändare som snabbt kan förstå den här dimensionen.
+Ingen entanto, usar **Namn** como o nome não é a melhor Kallção de nomenklclatura para um usuário corporativo compreender rapidamente essa dimensão.
 
-Låt oss ändra namnet till **Sidnamn**. Klicka på komponenten och byt namn på den i **Komponentinställningar** område.
+Vamos mudar o nome para **Sidnamn**. Clique no component e o renomeie na área **Komponentinställningar**.
 
 ![demo](./images/3-0-v2.png)
 
-Något som verkligen är viktigt är **Upprepningsinställningar**. Begreppet evar och prop finns inte i CJA, men inställningarna för persistence gör att liknande beteende kan användas.
+As Configurações de persistência são **Upprepningsinställningar**. Os conceitos de eVars e prop não existem no CJA, mas as configurações de Persistência possibilitam um comportamento semelhante.
 
 ![demo](./images/3-0-v21.png)
 
-Om du inte ändrar de här inställningarna tolkar CJA dimensionen som en **Prop** (träffnivå). Vi kan också ändra Persistence för att göra dimensionen till en **eVar** (bevara värdet under hela resan).
+Se você não alterar essas configurações o CJA irá interpretar a dimensão como um **Prop** (nível de ocorrência). Além disso, podemos alterar a Persistência para tornar a dimensão uma **eVar** (Perstir o valor ao longo da ejnada).
 
-Om du inte är bekant med eVars och Props kan du [läsa mer om dem i dokumentationen](https://experienceleague.adobe.com/docs/analytics/landing/an-key-concepts.html).
+Se você não estiver Famarizado com eVars e Props [leia mais sobre isso na dokumentação](https://experienceleague.adobe.com/docs/analytics/landing/an-key-concepts.html)..
 
-Låt oss lämna sidnamnet som en propp. Därför behöver du inte ändra några **Beständiga inställningar**.
+Vamos deixar o Nome da Página como Prop. Dessa format, você não preca alterar nenhuma **Beständiga inställningar**.
 
 | Komponentnamn att söka efter | Nytt namn | Beständiga inställningar |
 | ----------------- |-------------| --------------------| 
 | Namn (web.webPageDetails.name) | Sidnamn |  |
 
-Välj sedan dimensionen **phoneNumber** och släpp det på arbetsytan. Det nya namnet ska vara **Telefonnummer**.
+Em seguida, escolha a dimensão **phoneNumber** e solte-a na tela. O novo nome deve **Telefonnummer**.
 
 ![demo](./images/3-1-v2.png)
 
-Äntligen ändrar vi inställningarna för Upprepning eftersom mobilnumret ska finnas kvar på användarnivå.
+Por fim, vamos alterar as Configurações de persistência, pois o Número do Celular deve persistir no nível do usuário.
 
-Om du vill ändra Persistence rullar du ned på den högra menyn och öppnar dialogrutan **Persistence** tab:
+Para alterar a Persistência, role para baixo no menu à direita e abra a aba **Persistence**:
 
 ![demo](./images/5-v2.png)
 
-Markera kryssrutan för att ändra inställningarna för beständighet. Välj **Senaste** och **Person (rapporteringsfönstret)** eftersom vi bara bryr oss om den personens sista mobilnummer. Om kunden inte fyller i mobilen vid framtida besök kommer ni fortfarande att se det här värdet fyllas i.
+Marque a caixa de seleção para modificar as configurações de persistência. Markering **Senaste** e o escopo **Person (rapporteringsfönstret)**, pois nos preocupamos apenas com o último número de celular da pessoa. Se o cliente não preencher o celular em visitas futuras, você ainda verá esse valor preenchido.
 
 ![demo](./images/6-v2.png)
 
@@ -137,11 +136,11 @@ Markera kryssrutan för att ändra inställningarna för beständighet. Välj **
 | ----------------- |-------------| --------------------| 
 | phoneNumber | Telefonnummer | Senaste, person (rapportfönster) |
 
-Nästa komponent är `web.webPageDetails.pageViews.value`.
+O próximo Componente `web.webPageDetails.pageViews.value`.
 
-På den vänstra menyn söker du efter `web.webPageDetails.pageViews.value`. Dra och släpp mätvärdena på arbetsytan.
+Ingen meny à esquerda, pesquise `web.webPageDetails.pageViews.value`. Arablone solte essa métrica na tela.
 
-Ändra namnet som ska **Sidvyer** under **Komponentinställningar**.
+Altere o nome para **Sidvyer** under **Komponentinställningar**.
 
 | Komponentnamn att söka efter | Nytt namn | Attributinställningar |
 | ----------------- |-------------| --------------------| 
@@ -149,14 +148,13 @@ På den vänstra menyn söker du efter `web.webPageDetails.pageViews.value`. Dra
 
 ![demo](./images/7-v2.png)
 
-För attribueringsinställningarna lämnas detta tomt.
+Para as configurações de atribuição, deixaremos em branco.
 
-Obs! Du kan även ändra inställningarna för persistence för mått i Analysis Workspace. I vissa fall kan du välja att ställa in den här för att undvika att företagsanvändare behöver tänka på vilken som är den bästa persistensmodellen.
+Observação: Som configurações de persistência nas métricas também podem ser alternadas no Analysis Workspace. Em algun casos, você pode optar por configurá-las aqui para evitar que os usuários de negócios tenham que pensar qual é o melhor modelo de persistência.
 
-Därefter måste du konfigurera många Dimensioner och mått enligt tabellen nedan.
+Em seguida, você terá que configurar várias Dimensões e Métricas, conforme Indicado na tabela abaixo.
 
-### Dimensioner
-
+### DIMENSÖ
 
 | Komponentnamn att söka efter | Nytt namn | Beständiga inställningar |
 | ----------------- |-------------| --------------------| 
@@ -175,39 +173,38 @@ Därefter måste du konfigurera många Dimensioner och mått enligt tabellen ned
 | URL (web.webPageDetails.URL) | URL |  |
 | Användaragent | Användaragent | Senaste, session |
 
-### METRIK
+### MÉTRICA
 
 | Komponentnamn att söka efter | Nytt namn | Attributinställningar |
 | ----------------- |-------------| --------------------| 
 | Kvantitet | Kvantitet |  |
 | commerce.order.priceTotal | Intäkter |  |
 
-Din konfiguration bör sedan se ut så här:
+Sua configuração deve ser semelhante ao seguinte:
 
 ![demo](./images/11-v2.png)
 
-Glöm inte att **Spara** din datavy. Så klicka **Spara** nu.
+Não se esqueça de Salvar sua Visualização de Dados. Então clique em **Spara**.
 
 ![demo](./images/12-v2s.png)
 
-## 4.3.4 Beräknade värden
+## 4.3.4 Métricas calculadas
 
-Även om vi har organiserat alla komponenter i datavyn måste du fortfarande anpassa några av dem, så att företagsanvändare är redo att börja analysera.
+Embora tenhamos organizado todos os Componentes na Visualização de dados, você ainda deve adaptar algun stjärtar que os usuários de negócios estejam prtos para iniciar suas análises.
 
-Om du kommer ihåg det har vi inte särskilt fört in Metrics, som Add to Cart, Product View eller Purchases, i datavyn.
-Men vi har en dimension som heter: **Händelsetyp**. Låt oss härleda de här interaktionstyperna genom att skapa 3 beräknade värden.
+Se você se lembra, não trouxemos especificamente Métricas como Adicionar ao Carrinho, Visualização do produto ou Compras para a Visualização de dados. Ingen entanto, temos uma dimensão chamada: **Händelsetyp**. Então, vamos derivar esses tipos de interação criando 3 métricas calculadas.
 
-Låt oss börja med första måttet: **Produktvyer**.
+Vamos começar com a primeira Métrica: **Produktvyer**.
 
-Till vänster kan du söka **Händelsetyp** och välj dimensionen. Dra och släpp den sedan i **Inkluderade komponenter** arbetsyta.
+Ingen lado esquerdo, pesquise **Händelsetyp** Välj en dimensão. Em seguida, arboxo e solte-o na tela **Inkluderade komponenter**.
 
 ![demo](./images/calcmetr1.png)
 
-Klicka för att välja det nya måttet **Händelsetyp**.
+Clique para selecionar a nova métrica **Händelsetyp**.
 
 ![demo](./images/calcmetr2.png)
 
-Ändra nu komponentnamnet och beskrivningen till följande värden:
+Agora alterne o nome e a descrição do component para os seguintes valores:
 
 | Komponentnamn | Komponentbeskrivning |
 | ----------------- |-------------| 
@@ -215,31 +212,31 @@ Klicka för att välja det nya måttet **Händelsetyp**.
 
 ![demo](./images/calcmetr3.png)
 
-Endast tillåtet **Produktvyer** händelser. Det gör du genom att rulla nedåt på **Komponentinställningar** tills du ser **Inkludera exkluderade värden**. Se till att aktivera alternativet **Ange inkluderings-/exkluderingsvärden**.
+Agora vamos contar apenas eventos de **Produktvyer**. Para fazer isso, role para baixo em **Komponentinställningar** até ver Valores de **Inkludera exkluderade värden**. Certifique-se de habilitar a opção **Ange inkluderings-/exkluderingsvärden**.
 
 ![demo](./images/calcmetr4.png)
 
-Som vi bara vill räkna **Produktvyer**, specificera **commerce.productViews** enligt kriterierna.
+Como queremos contar apenas **Produktvyer**, especifique **commerce.productViews** nos critérios.
 
 ![demo](./images/calcmetr5.png)
 
-Ditt beräknade mätvärde är nu klart!
+Agora a sua métrica calculada está prta!
 
-Upprepa sedan samma process för **Lägg i kundvagnen** och **Inköp** händelser.
+Em seguida, repita o mesmo processo para os eventos **Lägg i kundvagnen** e **Inköp**.
 
 ### Lägg i kundvagnen
 
-Dra och släpp samma dimension först **Händelsetyp**.
+Primeiro, arradin solte a mesma dimensão **Händelsetyp**.
 
 ![demo](./images/calcmetr1.png)
 
-Du kommer att se en popup-varning för ett duplicerat fält när vi använder samma variabel. Klicka på **Lägg till ändå**:
+Você verá um alerta pop-up de um Campo Duplicado, pois estamos usando a mesma variável. Clique em **Lägg till ändå**:
 
 ![demo](./images/calcmetr6.png)
 
-Nu följer du samma process som vi gjorde för mätbara produktvyer:
-- Ändra först namn och beskrivning.
-- Lägg slutligen till **commerce.productListAdds** som villkor för att endast räkna Lägg i kundvagn
+Agora, siga o mesmo processo que fizemos para a métrica Visualizações de produto:
+- Primeiro alterne o nome e a descrição.
+- Por fim, adicione **commerce.productListAdds** como critério para contar apenas Add to Cart
 
 | Namn | Beskrivning | Kriterier |
 | ----------------- |-------------| -------------|
@@ -249,17 +246,17 @@ Nu följer du samma process som vi gjorde för mätbara produktvyer:
 
 ### Inköp
 
-Dra och släpp samma dimension först **Händelsetyp** som vi gjorde för båda tidigare mätvärden.
+Primeiro, arradin solte a mesma dimensão **Händelsetyp** como fizemos para as duas métricas anteriores.
 
 ![demo](./images/calcmetr1.png)
 
-Du kommer att se en popup-varning för ett duplicerat fält när vi använder samma variabel. Klicka på **Lägg till ändå**:
+Você verá um alerta pop-up de um Campo Duplicado, pois estamos usando a mesma variável. Clique em **Lägg till ändå**:
 
 ![demo](./images/calcmetr7.png)
 
-Nu följer du samma process som vi gjorde för måtten Produktvyer och Lägg i kundvagnen:
-- Ändra först namn och beskrivning.
-- Lägg slutligen till **commerce.purchase** som villkor för att endast räkna inköp
+Agora, siga o mesmo processo que fizemos para as métricas Product Views e Add to cart:
+- Primeiro alterne o nome e a descrição.
+- Por fim, adicione **commerce.purchase** como critérios para conabilizar apenas as Compras
 
 | Namn | Beskrivning | Kriterier |
 | ----------------- |-------------| -------------|
@@ -267,36 +264,36 @@ Nu följer du samma process som vi gjorde för måtten Produktvyer och Lägg i k
 
 ![demo](./images/calcmetr7a.png)
 
-Din slutliga konfiguration bör sedan se ut ungefär så här. Klicka **Spara och fortsätt**.
+Sua configuração final deve ser semelhante ao seguinte. Clique em **Spara och fortsätt**.
 
 ![demo](./images/calcmetr8.png)
 
-## 4.3.5 Datavy Settings
+## 4.3.5 Components da Configuração de Dados
 
-Du bör omdirigeras till den här skärmen:
+Você deve ser redireccionado para esta tela:
 
 ![demo](./images/8-v2.png)
 
-På den här fliken kan du ändra några viktiga inställningar för att ändra hur data bearbetas. Vi börjar med att ställa in **Tidsgräns för session** till 30 min Tack vare varje upplevelsehändelses tidsstämpel kan du utöka begreppet session över alla kanaler. Vad händer till exempel om en kund ringer callcenter efter att ha besökt webbplatsen? Med anpassade tidsgränser för sessioner får du stor flexibilitet när det gäller att bestämma vad en session är och hur den sessionen ska sammanfoga data.
+Nesta aba, você pode modificar algumas configurações importantes para alterar a forma como os dados são processados. Vamos começar definindo o **Tidsgräns för session** com 30 min. Graças ao registro de data e hora de cada even to de experience ência, você pode estender o conceito de uma sessão em todos os canais. Por example, o que acontece se um cliente ligar para o call center depois de visitar o site? Usando Tempos Limite de Sessão personalizados, você tem muita Fledade para decidir o que é uma sessão e como essa sessão irá mesclar os dados.
 
 ![demo](./images/ext8.png)
 
-På den här fliken kan du ändra andra saker, t.ex. filtrera data genom att använda ett segment/filter. Du behöver inte göra det i den här övningen.
+Nesta aba você pode modificar outras coisas como filtrar os dados usando um segmento/filtro. Você não precará fazer isso neste övício.
 
 ![demo](./images/10-v2.png)
 
-När du är klar klickar du **Spara och avsluta**.
+Quando-terminal, clique em **Spara och avsluta**.
 
 ![demo](./images/13-v2.png)
 
 >[!NOTE]
 >
->Du kan när som helst gå tillbaka till den här datavyn och ändra inställningar och komponenter. Ändringarna påverkar hur historiska data visas.
+>Você pode voltar a esta Visualização de dados posteriormente e alterar as configurações e os components a qualquer momento. Som alternativ ações afetarão a forma como os dados históricos são mostrados.
 
-Nu kan du fortsätta med visualiserings- och analysdelen!
+Agora você pode continuar com a parte de visualização e análise!
 
-Nästa steg: [4.4 Dataförberedelse i Customer Journey Analytics](./ex4.md)
+Próxima etapa: [4.4 Preparação de dados em Customer Journey Analytics](./ex4.md)
 
-[Gå tillbaka till användarflöde 4](./uc4.md)
+[Retornar para Fluxo de Usuário 4](./uc4.md)
 
-[Gå tillbaka till Alla moduler](./../../overview.md)
+[Retornar para Todos os Módulos](./../../overview.md)

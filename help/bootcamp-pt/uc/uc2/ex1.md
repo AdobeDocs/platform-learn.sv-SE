@@ -5,69 +5,69 @@ kt: 5342
 audience: Data Engineer, Data Architect, Marketer
 doc-type: tutorial
 activity: develop
-source-git-commit: 75a878ba596078e6d013b65062606931402302dd
+source-git-commit: 9cc01c7d3018319137f915e103bce9dc39b0d472
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '368'
 ht-degree: 0%
 
 ---
 
-# 2.1 Besök webbplatsen och skapa ett konto
+# 2.1 Webbplats e cria sua conta
 
-## Kontext
+## Sammanhang
 
-Resan från okänd till känd är en av de viktigaste ämnena bland varumärken nuförtiden, liksom kundresan från förvärv till lojalitet.
+A husnada do desconhecido ao conhecido é um dos tópicos mais importantes para as marcas atualmente, assim como a jnada do cliente, da aquisição à retenção.
 
-Adobe Experience Platform spelar en mycket viktig roll på den här resan. Platform är hjärnan för kommunikation, **upplevelsesystem**.
+En Adobe Experience Platform desempenha um papel importante nessa jnada. A plataforma é o cérebro da comunicação, o **upplevelsesystem**.
 
-Plattform är en miljö där ordet kund är bredare än bara de kända kunderna. En okänd besökare på webbplatsen är också en kund ur plattformens perspektiv, och som sådan skickas även allt beteende som en okänd besökare till Platform. Tack vare den metoden kan ett varumärke, när besökaren till slut blir en känd kund, även visualisera det som hände före det ögonblicket. Detta bidrar till att optimera attribuering och upplevelser.
+Plataforma é um ambiente em que a palavra cliente engloba mais do que clientes conhecidos. UM visitante desconhecido no site também é um cliente do ponto de vista da Plataforma e, como tal, todo o comportamento de um visitante desconhecido também é enviado à Plataforma. Graças a essa abordagem, quando esse visitante se torna um cliente conhecido, uma marca também pode visualizar o que aconteceu antes daquele momento. Isso ajuda a part de uma perspectiva de otimização de atribuição e experience ência.
 
-## Kundreseflöde
+## Fluxo da husnada do cliente
 
-Gå till [https://bootcamp.aepdemo.net](https://bootcamp.aepdemo.net). Klicka **Tillåt alla**. Beroende på ditt surfbeteende i det tidigare användarflödet kommer personalisering att ske på webbplatsens hemsida.
+Åtkomst [https://bootcamp.aepdemo.net](https://bootcamp.aepdemo.net). Clique em **Tillåt alla**. Com base no seu comportamento de navegação no fluxo de usuário anterior, você verá a personalização acontecer na página inicial do site.
 
 ![DSN](./images/web8.png)
 
-Klicka på logotypikonen för Adobe i det övre vänstra hörnet av skärmen för att öppna profilvisningsprogrammet. Ta en titt på panelen Profilvisningsprogram och kundprofilen i realtid med **Experience Cloud ID** som primär identifierare för den okända kunden.
+Clique no ícone do logotipo da Adobe no canto superior esquerdo da tela para abrir o Visualizador de perfil. Verifique o smärtel do Visualizador de perfil e no Perfil do cliente em tempo real com o **Experience Cloud ID** como o identificador primário para este cliente que ainda é desconhecido.
 
 ![Demo](./images/pv1.png)
 
-Ni kan också se alla upplevelsehändelser som samlats in baserat på kundens beteende.
+Você também pode ver todos os Eventos de experience ência coletados com base no comportamento do cliente.
 
 ![Demo](./images/pv3.png)
 
-Klicka på **Profil** i skärmens övre högra hörn.
+Clique no ícone **Profil** ingen canto superior direito da tela.
 
 ![Demo](./images/pv4.png)
 
-Klicka **Skapa ett konto**.
+Clique em **Skapa ett konto**.
 
 ![Demo](./images/pv5.png)
 
-Fyll i alla fält i formuläret. Använd ett reellt värde för e-postadress och telefonnummer, eftersom det kommer att användas i senare övningar för att leverera e-post och SMS.
+Preencha todos os campos do formário. Använd um valor real para endereço de e-mail e número de fax, pois será usado em övícios posteriores para envio de e-mail e SMS.
 
 ![Demo](./images/pv7.png)
 
-Bläddra nedåt och klicka **Registrera**.
+Role para baixo e clique em **Registrera**.
 
 ![Demo](./images/pv8.png)
 
-Du kommer då att se det här.
+Em seguida, o seguinte será exibido.
 
 ![Demo](./images/pv9.png)
 
-Du får även det här e-postmeddelandet:
+Você também receberá o seguinte e-mail:
 
 ![Demo](./images/pv10.png)
 
-Några minuter senare kommer du också att få det här mejlet:
+E algun minutos depois, você também receberá o seguinte e-mail:
 
 ![Demo](./images/pv11.png)
 
-Låt oss se hur den här introduktionsresan konfigurerades härnäst.
+Vamos ger en segur como essa jornada de onboarding foi configurada.
 
-Nästa steg: [2.2 Skapa en aktivitet](./ex2.md)
+Próxima etapa [2.2 Kriminalvårdsdagen](./ex2.md)
 
-[Gå tillbaka till användarflöde 2](./uc2.md)
+[Retornar para Fluxo de Usuário 2](./uc2.md)
 
-[Gå tillbaka till Alla moduler](../../overview.md)
+[Retornar para Todos os Módulos](../../overview.md)

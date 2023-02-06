@@ -5,137 +5,137 @@ kt: 5342
 audience: developer
 doc-type: tutorial
 activity: develop
-source-git-commit: 75a878ba596078e6d013b65062606931402302dd
+source-git-commit: 020e9fb8a1d02b93e4e95a4274806c7926c02757
 workflow-type: tm+mt
-source-wordcount: '834'
-ht-degree: 0%
+source-wordcount: '842'
+ht-degree: 1%
 
 ---
 
-# 3.3 Skapa din resa och skicka push-meddelanden
+# 3.3 Krim sua jnada e notificação push
 
-I den här övningen ska du konfigurera den resa och det meddelande som ska utlösas när någon går in i en sändare med mobilappen.
+Neste övício, você irá configurar a jnada e a mensagem que preca ser acionada quando alguém inserir uma sinalização (beacon) usando o aplicativo móvel.
 
-Logga in på Adobe Journey Optimizer genom att gå till [Adobe Experience Cloud](https://experience.adobe.com). Klicka **Journey Optimizer**.
+Faça-inloggning på Adobe Journey Optimizer acessando a [Adobe Experience Cloud](https://experience.adobe.com). Clique em **Journey Optimizer**.
 
 ![ACOP](./images/acophome.png)
 
-Du omdirigeras till **Startsida**  i Journey Optimizer. Kontrollera först att du använder rätt sandlåda. Sandlådan som ska användas anropas `Bootcamp`. Om du vill ändra från en sandlåda till en annan klickar du på **Prod** och välj sandlådan i listan. I det här exemplet heter sandlådan **Bootläger**. Då är du i **Startsida** vy över din sandlåda `Bootcamp`.
+Você será redirecionado para a visualização da **Startsida** ingen Journey Optimizer. Primeiro, verifique se você está usando o sandbox correto. O nome do sandbox que deve ser usado `Bootcamp`. Para alternar de um sandbox para outro, clique em **Prod** Vi väljer sandlådelista. Neste exemplo, nome do sandbox é **Bootläger**. Você estará na visualização da **Startsida**  do seu, sandlåda `Bootcamp`.
 
 ![ACOP](./images/acoptriglp.png)
 
-## 3.3.1 Skapa din resa
+## 3.3.1 Brott mot en sua jnada
 
-Klicka på **Resor**. Klicka på **Skapa resa** för att skapa en ny resa.
+Ingen meny à esquerda, clique em **Resor**. Em seguida, clique em **Skapa resa** para criar uma nova journnada.
 
 ![ACOP](./images/createjourney.png)
 
-Då ser du en tom skärm.
+Você verá uma tela de husnada vazia.
 
 ![ACOP](./images/journeyempty.png)
 
-I föregående övning skapade du en ny **Händelse**. Du namngav den så här `yourLastNameBeaconEntryEvent` och ersatt `yourLastName` med ditt efternamn. Detta var resultatet av händelseskapandet:
+Ingen övício anterior, você criou um novo **Händelse**. Você nomeo o even to `yourLastNameBeaconEntryEvent` e substituiu `yourLastName` bl.a. sobrenome. Este foi o resultado da criação do Evento:
 
 ![ACOP](./images/eventdone.png)
 
-Du måste nu ta det här evenemanget som början på den här resan. Du kan göra detta genom att gå till vänster på skärmen och söka efter händelsen i listan med händelser.
+Agora você deve Consiar este even to como o o início desta Jornada. Você pode fazer isso indo para o lado esquerdo da tela e procurando pelo seu even to na lista de eventos.
 
 ![ACOP](./images/eventlist.png)
 
-Markera händelsen, dra och släpp den på arbetsytan för resan. Din resa ser nu ut så här. Klicka **OK** för att spara ändringarna.
+Markera en seu even to, arablone solte o even to na tela de jnada. Sua janda agora deve ser semelhante ao seguinte. Clique em **OK** para salvar suas alternações.
 
 ![ACOP](./images/journeyevent.png)
 
-Som det andra steget på resan måste du lägga till en **Push** åtgärd. Gå till skärmens vänstra sida för att **Åtgärder** väljer du **Push** och sedan dra och släppa det på den andra noden på din resa.
+Como segunda etapa da husnada, você deve adicionar uma ação **Push**. Vá para o lado esquerdo da tela para **Åtgärder**, selecione a ação **Push** e arablone solte a ação no segundo nó da sua jnada.
 
 ![ACOP](./images/journeyactions.png)
 
-Till höger på skärmen måste du nu skapa ett push-meddelande.
+Ingen lado direito da tela, agora você deve criar sua notificação push.
 
-Ange **Kategori** till **Marknadsföring** och välj en push-yta som gör att du kan skicka push-meddelanden. I det här fallet är den push-yta som ska markeras **mmeeewis-app-mobile-bootcamp**.
+Definiera en **Kategori** como **Marknadsföring** e selecione uma superfície push que behörighetite enviar notificações push. Nesse caso, a superfície push a ser selecionada é **mmeeewis-app-mobile-bootcamp**.
 
 ![ACOP](./images/journeyactions1.png)
 
-## 3.3.2 Skapa ett meddelande
+## 3.3.2 Krim a sua mensagem
 
-Klicka **Redigera innehåll**.
+Clique em **Redigera innehåll**.
 
 ![ACOP](./images/emptymsg.png)
 
-Då ser du det här:
+Em seguida, a tela abaixo será exibida:
 
 ![ACOP](./images/emailmsglist.png)
 
-Låt oss definiera innehållet i push-meddelandet.
+Vamos definition o conteúdo da notificação push.
 
-Klicka på **Titel** textfält.
+Clique no campo de texto **Titel**.
 
 ![Journey Optimizer](./images/msg5.png)
 
-Börja skriva i textområdet **Hej**. Klicka på personaliseringsikonen.
+Na área de texto, comece **Olá**. Clique no ícone de personalização.
 
 ![Journey Optimizer](./images/msg6.png)
 
-Du måste nu ta in en personaliseringstoken för fältet **Förnamn** som lagras under `profile.person.name.firstName`. Välj **Profilattribut**, bläddra nedåt/navigera för att hitta **Person** och klicka på pilen för att gå en nivå längre tills du når fältet `profile.person.name.firstName`. Klicka på **+** om du vill lägga till fältet på arbetsytan. Klicka **Spara**.
+Agora você preca trazer o token de personalização para o campo **Förnamn** que está armazenado em `profile.person.name.firstName`. Ingen meny à esquerda, selecione **Profilattribut**, role para baixo/navegue para encontrar o elemento **Person** e clique na seta para avançar um nível até chegar ao campo `profile.person.name.firstName`. Clique no ícone **+** para adicionar o campo à tela. Clique em **Spara**.
 
 ![Journey Optimizer](./images/msg7.png)
 
-Du kommer då tillbaka hit. Klicka på ikonen för anpassning bredvid fältet **Brödtext**.
+Então, você irá retornar para esta tela. Clique no ícone de personalização ao lado do campo **Brödtext**.
 
 ![Journey Optimizer](./images/msg11.png)
 
-Skriv i textområdet `Welcome at the `.
+Na área de texto, escreva `Bem-vindo(a)`.
 
 ![Journey Optimizer](./images/msg12.png)
 
-Klicka på **Sammanhangsberoende attribut** och sedan **Journey Orchestration**.
+Em seguida, clique em  **Sammanhangsberoende attribut** och sedan **Journey Orchestration**.
 
 ![ACOP](./images/jomsg3.png)
 
-Klicka **Händelser**.
+Clique em **Händelser**.
 
 ![ACOP](./images/jomsg4.png)
 
-Klicka på namnet på din händelse som ska se ut så här: **yourLastNameBeaconEntryEvent**.
+Clique no nome do seu even to, que deve ser semelhante ao seguinte: **yourLastNameBeaconEntryEvent**.
 
 ![ACOP](./images/jomsg5.png)
 
-Klicka **Montera kontext**.
+Clique em **Montera kontext**.
 
 ![ACOP](./images/jomsg6.png)
 
-Klicka **POI-interaktion**.
+Clique em **POI-interaktion**.
 
 ![ACOP](./images/jomsg7.png)
 
-Klicka **POI-detalj**.
+Clique em **POI-detalj**.
 
 ![ACOP](./images/jomsg8.png)
 
-Klicka på **+** ikon på **POI-namn**.
-Du kommer då att se det här. Klicka **Spara**.
+Klick nej **+** icon no **POI-namn**.
+Em seguida, o seguinte será exibido. Clique em **Spara**.
 
 ![ACOP](./images/jomsg9.png)
 
-Meddelandet är nu klart. Klicka på pilen i det övre vänstra hörnet för att gå tillbaka till din resa.
+Sua mensagem agora está prta. Clique na seta no canto superior esquerdo para retornar à sua husnada.
 
 ![ACOP](./images/jomsg11.png)
 
-Klicka **OK**.
+Clique em **OK**.
 
 ![ACOP](./images/jomsg14.png)
 
-## 3.3.2 Skicka ett meddelande till en skärm
+## 3.3.2 Envie uma mensagem para uma tela
 
-Som det tredje steget på resan måste du lägga till en **sendMessageToScreen** åtgärd. Gå till skärmens vänstra sida för att **Åtgärder** väljer du **sendMessageToScreen** och sedan dra och släppa det på den tredje noden på din resa. Du kommer då att se det här.
+Como terceira etapa da husnada, você deve adicionar uma ação  **sendMessageToScreen** åtgärd. Vá para o lado esquerdo da tela para **Åtgärder**, selecione a ação **sendMessageToScreen** e arablone solte a ação no terceiro nó da sua jnada. Em seguida, você verá a tela abaixo.
 
 ![ACOP](./images/jomsg15.png)
 
-The **sendMessageToScreen** är en anpassad åtgärd som publicerar ett meddelande till slutpunkten som används av butiksskärmen. The **sendMessageToScreen** förväntas ett antal variabler som ska definieras. Du kan se dessa variabler genom att rulla nedåt tills du ser dem **Åtgärdsparametrar**.
+**sendMessageToScreen** é uma ação personalizada que irá publicar uma mensagem no ponto de extremidade usado pela exibição na loja. A ação **sendMessageToScreen** espera que múltiplas variáveis sejam definidas. Você pode visualizar essas variáveis rolando para baixo até ver **Åtgärdsparametrar**.
 
 ![ACOP](./images/jomsg16.png)
 
-Du måste nu ange värden för varje åtgärdsparameter. Följ den här tabellen för att förstå vilka värden som krävs var.
+Agora você preca definr os valores para cada parâmetro de ação. Siga esta tabela para entender quais valores são necessary ários e onde.
 
 | Parameter | value |
 |:-------------:| :---------------:|
@@ -151,29 +151,29 @@ Du måste nu ange värden för varje åtgärdsparameter. Följ den här tabellen
 
 {style=&quot;table-layout:auto&quot;}
 
-Klicka på **Redigera** ikon.
+Para definition esses valores, clique no ícone **Redigera**.
 
 ![ACOP](./images/jomsg17.png)
 
-Nästa, välj **Avancerat läge**.
+Fyrkant, selecone **Avancerat läge**.
 
 ![ACOP](./images/jomsg18.png)
 
-Klistra sedan in värdet baserat på tabellen ovan. Klicka **OK**.
+Em seguida, cole o valor com base na tabela acima. Clique em **OK**.
 
 ![ACOP](./images/jomsg19.png)
 
-Upprepa den här processen om du vill lägga till värden för varje fält.
+Repita esse processo para adicionar valores para cada campo.
 
 >[!IMPORTANT]
 >
->För fältet ECID finns en referens till händelsen `yourLastNameBeaconEntryEvent`. Se till att ersätta `yourLastName` efter ditt efternamn.
+>Para o campo ECID, há uma referência ao even to`yourLastNameBeaconEntryEvent`. Lembre-se de substituir  `yourLastName` bl.a. sobrenome.
 
-Slutresultatet ska se ut så här:
+O resulado final deve ser semelhante ao seguinte:
 
 ![ACOP](./images/jomsg20.png)
 
-Bläddra uppåt och klicka **OK**.
+Role para cima e clique em **OK**.
 
 ![ACOP](./images/jomsg21.png)
 
@@ -181,28 +181,28 @@ Du måste fortfarande ge din resa ett namn. Du kan göra det genom att klicka p�
 
 ![ACOP](./images/journeyname.png)
 
-Du kan sedan ange resans namn här. Använd `yourLastName - Beacon Entry Journey`. Klicka **OK** för att spara ändringarna.
+Você pode inserir o nome da jnada aqui. Använd `yourLastName - Beacon Entry Journey`. Clique em **OK** para salvar suas alternações.
 
 ![ACOP](./images/journeyname1.png)
 
-Nu kan du publicera din resa genom att klicka **Publicera**.
+Agora você pode publicar sua jnada clicando em **Publicera**.
 
 ![ACOP](./images/publishjourney.png)
 
-Klicka **Publicera** igen.
+Clique em **Publicera** novamente.
 
 ![ACOP](./images/publish1.png)
 
-Då visas ett grönt bekräftelsefält som anger att din resa nu är publicerad.
+Você verá uma barra de bekräftmação verde informando que sua jnada agora está Publicada.
 
 ![ACOP](./images/published.png)
 
-Din resa är nu live och kan utlösas.
+Sua janda agora está ativa e pode ser acionada.
 
-Du har nu avslutat den här övningen.
+Você terminou este övício.
 
-Nästa steg: [3.4 Testa din resa](./ex4.md)
+Próxima etapa: [3.4 Testa sua janda](./ex4.md)
 
-[Gå tillbaka till användarflöde 3](./uc3.md)
+[Retornar para Fluxo de Usuário 3](./uc3.md)
 
-[Gå tillbaka till Alla moduler](../../overview.md)
+[Retornar para Todos os Módulos](../../overview.md)

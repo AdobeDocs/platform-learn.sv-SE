@@ -5,67 +5,67 @@ kt: 5342
 audience: Data Engineer, Data Architect
 doc-type: tutorial
 activity: develop
-source-git-commit: 75a878ba596078e6d013b65062606931402302dd
+source-git-commit: 020e9fb8a1d02b93e4e95a4274806c7926c02757
 workflow-type: tm+mt
-source-wordcount: '390'
+source-wordcount: '429'
 ht-degree: 0%
 
 ---
 
 # 4. Kundreseanalys
 
-I det här användarflödet får du en praktisk upplevelse av programtjänsten Customer Journey Analytics.
+Neste fluxo de usuário, você terá upplevelência prática com o serviço de aplicativo Customer Journey Analytics.
 
-Customer Journey Analytics tillhandahåller en verktygslåda till affärsintelligens och datavetenskap för sammanfogning och analys av data över flera kanaler (online och offline). Funktionerna i Customer Journey Analytics ger sammanhang och tydlighet till komplexa flerkanalskundresor. Den tillhandahållna kontexten genererar användbara insikter om hur ni kan ta bort smärtor från kundkonverteringsprocessen och leverera positiva upplevelser i de ögonblick som betyder mest.
+O Customer Journey Analytics fornece uma interface em que os times de Analytics, Negócios e Tecnologia conseguem unir todos os dados da companhia e analisar a jornada cross channel (online e offline) do cliente de ponta a ponta. O Customer Journey Analytics é capaz de fornecer contexto e clareza para as jnadas de cliente multicanal complex. O contexto fornecido gera uma visão acionável em cima das dificuldades no processo de conversão e possibilita upplevelências relevant e personalizadas nos pontos mais relevant.
 
-Titta på den här videon för att förstå värde, kundresa och konfigurationsprocess:
+Assista a este vídeo para compreender o valor, a livnada do cliente e o processo de configuração:
 
 >[!VIDEO](https://video.tv.adobe.com/v/327188?quality=12&learn=on)
 
-Mer information om Customer Journey Analytics finns [här](https://spark.adobe.com/page/t62eiRu9l6iWJ/).
+Mais informações sobre o Customer Journey Analytics podem ser enkontradas [aqui](https://spark.adobe.com/page/t62eiRu9l6iWJ/).
 
-## Utbildningsmål
+## Objetivos de aprendizado
 
-- Bekanta dig med användargränssnittet i Customer Journey Analytics
-- Använd Adobe Experience Platform datauppsättningar i Customer Journey Analytics
-- Förstå person-ID:t och datasammanfogning i Customer Journey Analytics
-- Förstå begreppen för en dataanslutning och en datavy
-- Använda Analysis Workspace med Adobe Experience Platform datauppsättningar
+- Familiarize-se com a UI do Customer Journey Analytics
+- Traga os datasets da Adobe Experience Platform para o Customer Journey Analytics
+- Entenda o ID da pessoa e a junção de dados no Customer Journey Analytics
+- Entenda os conceitos de uma conexão de dados e uma visualização de dados
+- Använd Analysis Workspace com datamängder da Adobe Experience Platform
 
-## Förutsättningar
+## Pré-reksitos
 
-- Viss kunskap om Analysis Workspace är att föredra, men är inte nödvändig
-- Tillgång till Adobe Experience Platform: [https://experience.adobe.com/platform](https://experience.adobe.com/platform)
-- Åtkomst till programtjänsten Customer Journey Analytics
+- É preferível que haja certa familjaridade com o Analysis Workspace, mas não é obrigatório
+- Acesso à Adobe Experience Platform: [https://experience.adobe.com/platform](https://experience.adobe.com/platform)
+- Acesso ao serviço de aplicativo de Customer Journey Analytics
 
 >[!IMPORTANT]
 >
->Den här självstudiekursen har skapats för att underlätta ett visst Bootläger-format. Den använder specifika system och konton som du kanske inte har tillgång till. Även om ni inte har tillgång till dem tror vi att ni fortfarande kan lära er mycket genom att läsa igenom detta mycket detaljerade innehåll. Om du deltar i något av bootlägren och behöver dina inloggningsuppgifter, kontaktar du din Adobe-representant som ger dig den information som krävs.
+>Självstudiekursen foi criado para förenkltar um formo específico de Bootcamp. Sistemas e contas específicos aos quais você pode não ter acesso são utilizados neste tutorial. Mesmo sem acesso, você ainda pode aprender muito com a leitura deste conteúdo details. Se você é um deltagante de um Bootläger e preca das credenciais de acesso, entre em contato com seu representante da Adobe para receber as informações necessary árias.
 
-## Utövningar
+## Exercícios
 
 [4.1 Customer Journey Analytics 101](./ex1.md)
 
-Lär dig allt om koncepten i Customer Journey Analytics.
+Saiba tudo sobre os conceitos do Customer Journey Analytics.
 
-[4.2 Ansluta Adobe Experience Platform datauppsättningar i Customer Journey Analytics](./ex2.md)
+[4.2 Conecte datasets da Adobe Experience Platform no Customer Journey Analytics](./ex2.md)
 
-Lär dig hur du använder flera datauppsättningar från Adobe Experience Platform till Customer Journey Analytics.
+Saiba como consulmir múltiplos datasets da Adobe Experience Platform no Customer Journey Analytics.
 
-[4.3 Skapa en datavy](./ex3.md)
+[4.3 Crie uma Visualização de Dados](./ex3.md)
 
-Lär dig hur du konfigurerar en datavy i Customer Journey Analytics.
+Saiba como configurar uma visualização de dados no Customer Journey Analytics.
 
-[4.4 Dataförberedelse i Customer Journey Analytics](./ex4.md)
+[4.4 Preparação de dados em Customer Journey Analytics](./ex4.md)
 
-Lär dig hur du förbereder vissa data innan du fortsätter med analysen.
+Aprenda como fazer alguma preparação de dados antes de continuar com a análise.
 
-[4.5 Visualisering med Customer Journey Analytics](./ex5.md)
+[4.5 Visualização usando Customer Journey Analytics](./ex5.md)
 
-Lär dig visualisera Adobe Experience Platform-data med Customer Journey Analytics.
+Saiba como visualizar os dados da Adobe Experience Platform usando o Customer Journey Analytics.
 
-[4.6 Från insikter till handling](./ex6.md)
+[4.6 De insights a ação](./ex6.md)
 
-Lär dig hur ni kan förverkliga era insikter i form av en målgrupp med hjälp av Real-Time CPD och Adobe Journey Optimizer.
+Aprenda como usar seus insights na forma de um público em ação usando o CPD em tempo real e o Adobe Journey Optimizer.
 
-[Gå tillbaka till Alla moduler](../../overview.md)
+[Retornar para Todos os Módulos](../../overview.md)

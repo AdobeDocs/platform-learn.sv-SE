@@ -5,87 +5,87 @@ kt: 5342
 audience: developer
 doc-type: tutorial
 activity: develop
-source-git-commit: 75a878ba596078e6d013b65062606931402302dd
+source-git-commit: 9cc01c7d3018319137f915e103bce9dc39b0d472
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '559'
 ht-degree: 0%
 
 ---
 
-# 2.6 Personalisering i call center
+# 2.6 Personalização no call center
 
 Som redan har nämnts flera gånger under bootlägret är personalisering av kundupplevelsen något som bör ske över alla kanaler. Ett callcenter är ofta ganska frånkopplat från resten av kundresan och det leder ofta till frustrerande kundupplevelser, men det behöver inte vara det. Låt oss visa dig ett exempel på hur callcentret enkelt kan anslutas till Adobe Experience Platform i realtid.
 
-## Kundens reseflöde
+## Fluxo da husnada do cliente
 
-När du använde mobilappen tidigare köpte du en produkt genom att klicka på **Köp** -knappen.
+Ingen övício anterior, usando o aplicativo móvel, você comprou um produto clicando no botão **Köp**.
 
 ![DSN](./images/app20.png)
 
-Låt oss anta att du har en fråga om status för din beställning, vad skulle du göra? Vanligtvis ringer du callcenter.
+Vamos supor que você tenha uma pergunta sobre o status do seu pedido, o que você faria? Normalmente, você ligaria para o call center.
 
-Innan du ringer till callcentret måste du känna till **Förmåns-ID**. Du hittar ditt lojalitets-ID i profilvisningsprogrammet för webbplatsen.
+Antes de ligar para o call center, você just a saber seu **Förmåns-ID**. Você pode encontrar seu ID de fidelidade no Visualizador de Perfil do site.
 
 ![DSN](./images/cc1.png)
 
-I det här fallet **Förmåns-ID** är **5863105**. Som en del av vår anpassade implementering av funktionen call center i demomiljön måste du lägga till ett prefix i din **Förmåns-ID**. Prefixet är **11373**, så det lojalitets-ID som ska användas i det här exemplet är **11373 5863105**.
+Nesse caso, o **Förmåns-ID** é **5863105**. Como parte de nossa implação personalizada do recurso de call center no ambiente de demonstração, você deve adicionar um prefixo ao seu **Förmåns-ID**. O prefixo é **11373**, portanto, o ID de fidelidade a ser usado neste exemplo é **11373 5863105**.
 
-Låt oss göra det nu. Använd telefonen och ring numret **+1 (323) 745-1670**.
+Vamos fazer isso agora. Använd seu fax e ligue para o número **+1 (323) 745-1670**.
 
 ![DSN](./images/cc2.png)
 
-Du ombeds ange ditt lojalitets-ID följt av **#**. Ange ditt lojalitets-ID.
+Será soLawado que você insira seu ID de fidelidade, seguido de **#**. Digite seu ID de fidelidade.
 
 ![DSN](./images/cc3.png)
 
-Då hör du **Hej, förnamn**. Förnamnet hämtas från kundprofilen i realtid i Adobe Experience Platform. Du har sedan tre valmöjligheter. Trycknummer **1**, **Orderstatus**.
+Você ouvirá **Hej, sön nome**, nome. Esse nome é pensiondo Perfil do Cliente em tempo real na Adobe Experience Platform. Você tem 3 escolhas. Pressione o número **1**, **Orderstatus**.
 
 ![DSN](./images/cc4.png)
 
-När du har hört din orderstatus kan du välja att trycka **1** för att gå tillbaka till huvudmenyn, annars trycker du på 2. Tryck **2**.
+Depois de ouvir o status do seu pedido, você terá a opção de pressionar **1** para voltar ao menu main ou pressionar 2. Pressione **2**.
 
 ![DSN](./images/cc5.png)
 
-Du ombeds sedan betygsätta din samtalscenterupplevelse genom att välja ett nummer mellan 1 och 5, där 1 är lågt och 5 är högt. Gör ditt val.
+Em seguida, será soadvokado que você avalie sua experience ência de call center, selecionando um número entre 1 e 5, sendo 1 baixo e 5 alto. Faça a a sua escolha.
 
 ![DSN](./images/cc6.png)
 
-Ditt samtal till callcenter avslutas nu.
+Sua chamada para o call center será encerrada.
 
-Gå till [Adobe Experience Platform](https://experience.adobe.com/platform). När du loggat in kommer du till Adobe Experience Platform hemsida.
+Åtkomst [Adobe Experience Platform](https://experience.adobe.com/platform). Depois de fazer inloggning, você irá acessar a página inicial da Adobe Experience Platform.
 
-![Dataintag](./images/home.png)
+![Datainmatning](./images/home.png)
 
-Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``Bootcamp``. Du kan göra detta genom att klicka på texten **[!UICONTROL Produktionsprodukt]** i den blå linjen ovanför skärmen. När du har valt lämplig [!UICONTROL sandlåda]kommer du att se skärmändringen och nu är du med på din [!UICONTROL sandlåda].
+Antes de continuar, você preca selecionar um **sandlåda**. O nome do sandbox a ser seleconado é ``Bootcamp``. É beível fazer isso clicando no texto **[!UICONTROL Produktionsprodukt]** na linha azul na parte superior da tela. Depois de selecionar o [!UICONTROL sandlåda] apropriado, você verá a tela mudando e agora você está em seu [!UICONTROL sandlåda] dedikat.
 
-![Dataintag](./images/sb1.png)
+![Datainmatning](./images/sb1.png)
 
-Gå till den vänstra menyn **Profiler** och till **Bläddra**.
+Ingen meny à esquerda, acesse **Profiler** e **Bläddra**.
 
 ![Kundprofil](./images/homemenu.png)
 
-Välj **Namnutrymme för identitet** **E-post** och ange e-postadressen till kundprofilen. Klicka **Visa**. Klicka för att öppna din profil.
+Markera **Namnutrymme för identitet** **E-post** e insira o endereço de e-mail do seu perfil de cliente. Clique em **Visa**. Clique para abrir seu perfil.
 
 ![DSN](./images/cc7.png)
 
-Du kommer att se din kundprofil igen. Gå till **Händelser**.
+Você verá seu perfil de cliente novamente. Åtkomst **Händelser**.
 
 ![DSN](./images/cc8.png)
 
-Under händelser visas 2 händelser med eventType för **callCenter**. Den första händelsen är ett resultat av ditt svar på frågan **Betygsätt hur nöjd du är med ditt samtal**.
+Em eventos, você verá 2 eventos com um eventType de **callCenter**. O primeiro even to é o resultatado da sua resposta à pergunta Avalie o seu n **Betygsätt hur nöjd du är med ditt samtal**.
 
 ![DSN](./images/cc9.png)
 
-Bläddra ned en bit så ser du händelsen som spelades in när du valde alternativet att kontrollera **Orderstatus**.
+Role um pouco para baixo e você verá o evento que foi registrado quando você selecionou a opção de verificar o **Orderstatus**.
 
 ![DSN](./images/cc10.png)
 
-Gå till **Segmentmedlemskap**. Nu kommer du att se att två segment kvalificerar sig för din profil, i realtid, baserat på den interaktion du hade via callcenter. Dessa segmentmedlemskap kan och bör sedan användas för att påverka vad kommunikation och personalisering händer i andra kanaler.
+Åtkomst **Segmentmedlemskap**. Agora você verá que 2 segment se Qualificam em seu perfil, em tempo real, com base nas interações que você teve meio do call center. Essas associações de segmento podem e devem ser usadas para impactar qual comunicação e personalização acontece em qualquer outro canal.
 
 ![DSN](./images/cc11.png)
 
-Du har nu avslutat den här övningen.
+Você terminou este övício.
 
-[Gå tillbaka till användarflöde 2](./uc2.md)
+[Retornar para Fluxo de Usuário 2](./uc2.md)
 
-[Gå tillbaka till Alla moduler](../../overview.md)
+[Retornar para Todos os Módulos](../../overview.md)
