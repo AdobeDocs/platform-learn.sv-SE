@@ -2,9 +2,9 @@
 title: Experience Makers Bootcamp - Brasilien
 description: Startpunkt för deltagarna i Experience Makers Bootcamp
 doc-type: multipage-overview
-source-git-commit: 020e9fb8a1d02b93e4e95a4274806c7926c02757
+source-git-commit: 5d824244766135cd4998feab48be7f6a69c42a70
 workflow-type: tm+mt
-source-wordcount: '775'
+source-wordcount: '777'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 0%
 
 Muitas empresas não estão cientes do atrito que existe na jnada dos seus clientes, följdência de uma abordagem fragmentada e não integrada ao orqueeller a comunicação com o cliente. Dados, perfil e conteúdo precam estar perfe itamente alinhaos para projetar e oferecer experience ências excepcionais ao CONSmidor.
 
-Delta avste Bootläger para aprender como uma abordagem baseada em plataforma pode ajudar na obtenção dos insights necessary ários para identificar e remover pontos de atrito para aprimorar a journnada do seu cliente.
+Delta avste Bootläger para aprender como uma abordagem baseada em Experience Platform pode ajudar na obtenção dos insights necessary ários para identificar e remover pontos de atrito para aprimorar a journnada do seu cliente.
 
-A personalização em escala começa com a compreensão do que pode ser aprimorado e, para isso, uma visão em tempo real do seu cliente é é essencial. Insikterna levam à ação, o que leva a mais insights. A abordagem exclusiva da Adobe focada na plataforma fornece as ferramentas para, além de impulsionar os avanços tecnológicos, impactar sua organização, sua equipe e sua dispidade de oferecer uma experience ência holística ao cliente em vez de uma experience ência do cliente especíecíecífica por canal.
+A personalização em escala começa com a compreensão do que pode ser aprimorado e, para isso, uma visão em tempo real do seu cliente é é essencial. Insikterna levam à ação, o que leva a mais insights. A abordagem exclusiva da Adobe focada na Experience Platform fornece as ferramentas para, além de impulsionar os avanços tecnológicos, impactar sua organização, sua equipe e sua dispidade de oferecer uma experience ência holística ao cliente em vez de uma livência do cliente específicficfiction en porträttkanal.
 
 >[!VIDEO](https://video.tv.adobe.com/v/344962?quality=12&enable=on)
 

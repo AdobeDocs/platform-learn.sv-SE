@@ -5,9 +5,9 @@ kt: 5342
 audience: Data Engineer, Data Architect, Marketer
 doc-type: tutorial
 activity: develop
-source-git-commit: 9cc01c7d3018319137f915e103bce9dc39b0d472
+source-git-commit: 5d824244766135cd4998feab48be7f6a69c42a70
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '542'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,7 @@ ht-degree: 0%
 
 ## Instale of aplicativo móvel
 
-Innan du installerar programmet måste du aktivera **Spårning** på din iOS-enhet. Om du vill göra det går du till **Inställningar** > **Integritet och säkerhet** > **Spårning** och se till att alternativet **Tillåt att appar begär att spåras**.
-
-Antes de installar o aplicativo, é necessary ário habilitar **Rastreamento** ingen disposivo iOS. Para isso, acesse **Configurações** > **Privacidade e segurança** > **Rastreamento** e verifique a opção **Permitir que os aplicativos solicitem o rastreamento**.
+Antes de installar o aplicativo, é necessary ário habilitar o **Rastreamento** ingen disposivo iOS. Para isso, acesse **Configurações** > **Privacidade e segurança** > **Rastreamento** e verifique a opção **Permitir que os aplicativos solicitem o rastreamento**.
 
 ![DSN](./../uc3/images/app4.png)
 
@@ -26,7 +24,7 @@ Antes de installar o aplicativo, é necessary ário habilitar **Rastreamento**
 
 ![DSN](./../uc3/images/app1.png)
 
-Depois que o aplicativo estiver installado, clique em **Öppna**.
+Depois que o aplicativo estiver installado, clique em **Abrir**.
 
 ![DSN](./../uc3/images/app2.png)
 
@@ -84,7 +82,7 @@ Você verá a página do produto **Kaffe att gå** ingen aplicativo.
 
 ![DSN](./images/app20.png)
 
-Agora você irá simular um even to de entrada de sinalização (beacon) em um local de armazenamento offline. O object tivo da simulação é personalizar a experience ência do cliente nas telas da loja. Para visualizar a experience ência na loja, foi criada uma página que mostrará de forma dinâmica as informações relevantes para o cliente ao entrar na loja.
+Agora você irá simular um even to de entrada de sinalização (beacon) em uma loja offline. O object tivo da simulação é personalizar a experience ência do cliente nas telas da loja. Para visualizar a experience ência na loja, foi criada uma página que mostrará de forma dinâmica as informações relevantes para o cliente ao entrar na loja.
 
 Antes de continuar, abra esta página da Web em seu compador: [https://bootcamp.aepdemo.net/content/aep-bootcamp-experience/language-masters/en/screen.html](https://bootcamp.aepdemo.net/content/aep-bootcamp-experience/language-masters/en/screen.html)
 
@@ -96,7 +94,6 @@ Em seguida, retorne para a página inicial. Clique no ícone do **beacon**.
 
 ![DSN](./images/app23.png)
 
-Du kommer då att se det här. Välj först **Bootcamp Screen Beacon** och klicka sedan på **entry** -knappen. På så sätt kan du simulera ett fynd.
 Após essa etapa, o seguinte será exibido. Primeiro, selecione **Bootcamp Screen Beacon** e clique no botão de **entrada**. Isso permitirá que você simule uma entrada de sinalização com beacon.
 
 ![DSN](./images/app21.png)

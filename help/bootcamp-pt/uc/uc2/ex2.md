@@ -5,7 +5,7 @@ kt: 5342
 audience: developer
 doc-type: tutorial
 activity: develop
-source-git-commit: 9cc01c7d3018319137f915e103bce9dc39b0d472
+source-git-commit: 5d824244766135cd4998feab48be7f6a69c42a70
 workflow-type: tm+mt
 source-wordcount: '463'
 ht-degree: 0%
@@ -34,7 +34,7 @@ Uma nova janela de even to vazia irá aparecer.
 
 ![ACOP](./images/emptyevent1.png)
 
-Em primeiro lugar, dê um nome ao seu even to como, por example: `yourLastNameAccountCreationEvent` e adicione uma descrição como, por example: `Account Creation Event`.
+Em primeiro lugar, dê um nome ao seu even to como, por example: `seuSobrenomeAccountCreationEvent` e adicione uma descrição como, por example: `Account Creation Event`.
 
 ![ACOP](./images/eventdescription.png)
 
@@ -79,7 +79,7 @@ Clique no seu even to novamente para abrir mais uma vez a tela **Redigera hän
 ![ACOP](./images/viewevent.png)
 
 Agora você verá um exemplo da carga útil esperada.
-Seu even to tem um eventID de orquestração único, que você pode encontrar rolando para baixo nessa carga útil (nyttload) até visualiza `_experience.campaign.orchestration.eventID`.
+Seu even to tem um eventID de orquestração único, que você pode encontrar rolando para baixo nessa carga útil (nyttload) até visualizar `_experience.campaign.orchestration.eventID`.
 
 ![ACOP](./images/payloadeventID.png)
 

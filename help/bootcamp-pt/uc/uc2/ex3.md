@@ -5,9 +5,9 @@ kt: 5342
 audience: developer
 doc-type: tutorial
 activity: develop
-source-git-commit: 9cc01c7d3018319137f915e103bce9dc39b0d472
+source-git-commit: 5d824244766135cd4998feab48be7f6a69c42a70
 workflow-type: tm+mt
-source-wordcount: '984'
+source-wordcount: '934'
 ht-degree: 3%
 
 ---
@@ -34,7 +34,7 @@ Você verá uma tela de husnada vazia.
 
 ![ACOP](./images/journeyempty.png)
 
-Ingen övício anterior, você criou um novo **Händelse**. Você nomeo o even to `yourLastNameAccountCreationEvent` e substituiu `yourLastName` bl.a. sobrenome. Este foi o resultado da criação do Evento:
+Ingen övício anterior, você criou um novo **Händelse**. Você nomeo o even to `seuSobrenomeAccountCreationEvent` e substituiu `seuSobrenome` bl.a. sobrenome. Este foi o resultado da criação do Evento:
 
 ![ACOP](./images/eventdone.png)
 
@@ -60,9 +60,7 @@ Como terceira etapa da husnada, você deve adicionar uma ação **E-post**. Vá 
 
 ![ACOP](./images/journeyactions.png)
 
-Ange **Kategori** till **Marknadsföring** och välj en e-postyta som gör att du kan skicka e-post. I det här fallet är e-postytan som ska väljas **E-post**. Se till att kryssrutorna för **Klicka på e-post** och **e-post öppnas** båda är aktiverade.
-
-Definiera en **Kategori** como **Marknadsföring** e selecione uma superfície de e-mail que behörighetita o envio de e-mail. Nesse caso, a superfície e-mail a ser selecionada é E-mail. Certifique-se de que as caixas de seleção **Klicka på e-post** e **e-post öppnas** estejam marcadas.
+Definiera en **Kategori** como **Marknadsföring** e selecone uma **e-postyta** que behörighetita o envio de e-mail. Nesse caso, a **e-postyta** en ser selecionada é E-mail. Certifique-se de que as caixas de seleção **Klicka på e-post** e **e-post öppnas** estejam marcadas.
 
 ![ACOP](./images/journeyactions1.png)
 
@@ -88,11 +86,11 @@ Na área de texto, comece **Olá**
 
 ![Journey Optimizer](./images/msg6.png)
 
-En linha de assunto ainda não está prta. Em seguida, você preca trazer o token de personalização para o **Förnamn** que está armazenado em `profile.person.name.firstName`. Ingen meny à esquerda, role para baixo para encontrar o elemento **Person** e clique na seta para ir um nível mais profundamento.
+En linha de assunto ainda não está prta. Em seguida, você preca trazer o token de personalização para o **Förnamn** que está armazenado em `profile.person.name.firstName`. Ingen meny à esquerda, role para baixo para encontrar o elemento **Person** e clique na seta para visualizar mais campos
 
 ![Journey Optimizer](./images/msg7.png)
 
-Agora encontre o elemento **Fullständigt namn** e clique na seta para ir um nível mais profundamento.
+Agora encontre o elemento **Fullständigt namn** e clique na seta para visualizar mais campos.
 
 ![Journey Optimizer](./images/msg8.png)
 
@@ -100,7 +98,7 @@ Por fim, localize o campo **Förnamn** e clique no símbolo **+**  aao lado de
 
 ![Journey Optimizer](./images/msg9.png)
 
-Em seguida, adicione o texto, **agraDecember a sua inscrição!** Clique em Salvar. . Clique em **Spara**.
+Em seguida, adicione o texto, **agraDecember a sua inscrição!**. Clique em **Spara**.
 
 ![Journey Optimizer](./images/msg10.png)
 
@@ -118,7 +116,7 @@ Clique em **Importera HTML**.
 
 ![Journey Optimizer](./images/msg12.png)
 
-Arablonsolte o arquivo **mailmallebootcamp.html**, que você pode baixa [här](../../assets/html/mailtemplatebootcamp.html.zip). Clique em Importar.
+Arablonsolte o arquivo **mailmallebootcamp.html**, que você pode baixa [aqui](../../assets/html/mailtemplatebootcamp.html.zip). Clique em Importar.
 
 ![Journey Optimizer](./images/msg13.png)
 
@@ -130,7 +128,7 @@ Vamos personalizar o e-mail. Clique ao lado do texto **Olá** e, em seguida, cli
 
 ![Journey Optimizer](./images/msg35.png)
 
-Em seguida, você preca trazer o token de personalização **Förnamn** que está armazenado em `profile.person.name.firstName`. Ingen meny, lokalisera eller element **Person**, faça uma busca detail hada no elemento **Fullständigt namn** e clique no ícone **+** para adicionar o campo **Förnamn** ao editor de expressão.
+Em seguida, você preca trazer o token de personalização **Förnamn** que está armazenado em `profile.person.name.firstName`. Ingen meny, lokalisera eller element **Person**, faça uma busca detail hada no elemento **Fullständigt namn** e clique no ícone **+** para adicionar o campo **Förnamn** En redigerare.
 
 Clique em **Spara**.
 
@@ -162,7 +160,7 @@ Você ainda preca dar um Nome à sua jnada. Você pode fazer isso clicando no í
 
 ![ACOP](./images/journeyname.png)
 
-Você ainda preca dar um Nome à sua jnada. Você pode fazer isso clicando no ícone `yourLastName - Account Creation Journey`. Clique em **OK** para salvar as mudanças.
+Você pode fazer isso clicando no item clicer no item &quot;Name&quot; e inserindo o seguinte nome `yourLastName - Account Creation Journey`. Clique em **OK** para salvar as mudanças.
 
 ![ACOP](./images/journeyname1.png)
 
