@@ -3,10 +3,10 @@ title: Konfigurera behörigheter för självstudiekursen
 description: Lär dig hur du begär åtkomst till Experience Platform Web SDK och konfigurerar behörigheten som krävs för att slutföra självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Access Control
 exl-id: d7c4f2c3-cf3c-4587-88f8-82113d250084
-source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
+source-git-commit: 4eaa7ae1cf4c4c1478484eaeb877733a43c6fdf5
 workflow-type: tm+mt
-source-wordcount: '415'
-ht-degree: 2%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -23,7 +23,7 @@ Lär dig hur du begär åtkomst till Experience Platform Web SDK och konfigurera
 
 Dessa funktioner bör vara tillgängliga för alla Experience Cloud-kunder, även om du inte är kund till en plattformsbaserad applikation som Real-Time CDP.
 
-* Åtkomst till **standardproduktion**, **&quot;Prod&quot;** sandlåda (.
+* Åtkomst till **standardproduktion**, **&quot;Prod&quot;** sandlåda.
 * Åtkomst till **[!UICONTROL Hantera scheman]** och **[!UICONTROL Visa scheman]** under **[!UICONTROL Datamodellering]**
 * Åtkomst till **[!UICONTROL Hantera identitetsnamnutrymmen]** och **[!UICONTROL Visa identitetsnamnutrymmen]** under **[!UICONTROL Identity Management]**
 * Åtkomst till **[!UICONTROL Hantera datastreams]** och **[!UICONTROL Visa datastreams]** under **[!UICONTROL Datainsamling]**
