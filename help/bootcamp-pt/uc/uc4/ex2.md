@@ -5,9 +5,9 @@ kt: 5342
 audience: Data Engineer, Data Architect, Data Analyst
 doc-type: tutorial
 activity: develop
-source-git-commit: 9cc01c7d3018319137f915e103bce9dc39b0d472
+source-git-commit: 3272d288185415b4604fe48f18c19f8f06e6dce0
 workflow-type: tm+mt
-source-wordcount: '701'
+source-wordcount: '718'
 ht-degree: 0%
 
 ---
@@ -114,6 +114,8 @@ Você também preca garantir que, para cada dataset, essas opções estejam habi
 
 - Importar todos os novos dados
 - Preencher gör så att det inte finns några fler
+- Preencher tipo de fonte de dados com &quot;Others&quot;
+- Preencher a descrição com o mesmo nome do Dataset
 
 Clique em **Lägg till datauppsättningar**.
 

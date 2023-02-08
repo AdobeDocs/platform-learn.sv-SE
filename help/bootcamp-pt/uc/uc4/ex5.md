@@ -5,9 +5,9 @@ kt: 5342
 audience: Data Engineer, Data Architect, Data Analyst
 doc-type: tutorial
 activity: develop
-source-git-commit: 020e9fb8a1d02b93e4e95a4274806c7926c02757
+source-git-commit: 3272d288185415b4604fe48f18c19f8f06e6dce0
 workflow-type: tm+mt
-source-wordcount: '1579'
+source-wordcount: '1586'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 - Conheça algun recursos que tornam o Analysis Workspace tão diferente.
 - Aprenda a analisar no CJA usando o Analysis Workspace
 
-## Kontext
+## Sammanhang
 
 Neste övício, você usará o Analysis Workspace no CJA para analisar visualizações de produtos, funis de produtos, rotatividade osv.
 
@@ -316,7 +316,7 @@ Graças à primeira análise de fluxo, uma nova pergunta surgiu. Então decidimo
 
 ## Rekapitulação do Analysis Workspace e do Customer Journey Analytics
 
-Como você aprendeu neste laboratório, o Analysis Workspace reúne dados de todos os canais para analisar a jnada complete do cliente. Além disso, lembre-se de que você pode trazer dados para o mesmo workspace que não está vinculado à jornada. Pode ser muito útil trazer dados desconectados para sua análise para contextualizar a hunada. Algun är exempel på koisas como dados NPS, pesquisas, eventos de anúncios do Facebook ou interações offline (não identificadas).
+O Analysis Workspace remove todas as limitações típicas de um relório do Analytics. Ele fornece uma tela robusta e flexível para criar projetos de analytics personalizados. Arablone solte qualquer número de tabelas de dados, visualizações e components (dimensões, métricas, segmentos e granularidades de tempo) para um projeto. Você pode criar de format instantânea filtros e analises, gráficos de coorte, alertas, segmentos, análises de fluxo e relórios de curadoria e dagamento para compartilhar com qualquer pessoa em seu negócio.
 
 Próxima etapa: [4.6 De insights a ação](./ex6.md)
 
