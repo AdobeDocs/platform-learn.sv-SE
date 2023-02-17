@@ -4,33 +4,16 @@ description: Läs om Adobe Experience Platform
 doc-type: overview-page
 mini-toc-levels: 1
 exl-id: 5f84b0b4-b100-45dc-bcac-2dcc127c87f3
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 73313bf0b2f9a0f539c8b52bda2d9bd66bed65d1
 workflow-type: tm+mt
-source-wordcount: '192'
-ht-degree: 2%
+source-wordcount: '164'
+ht-degree: 1%
 
 ---
 
 # Adobe Experience Platform självstudiekurser
 
 Adobe Experience Platform är det mest kraftfulla, flexibla och öppna systemet på marknaden för att bygga och hantera kompletta lösningar som ger en bättre kundupplevelse. Med Experience Platform kan organisationer centralisera och standardisera kunddata och innehåll från alla system och tillämpa datavetenskap och maskininlärning för att dramatiskt förbättra utformningen och leveransen av avancerade, personaliserade upplevelser. Använd dessa videoklipp och självstudiekurser för att lära dig Experience Platform.
-
-
-<div id="whats-new-section">
-
-## Nyheter
-
-* **[Konfigurera attributbaserad åtkomstkontroll (video)](admin/configure-attribute-based-access-control.md)**
-
-   *Begränsa åtkomst till specifika resurser*
-* **[Översikt över datahygien (video)](/help/platform/data-hygiene/overview.md)**
-
-   *Förbättra era rutiner för minimering av data*
-* **[Ta bort datauppsättningar (video)](/help/platform/data-hygiene/delete-datasets.md)**
-
-   *Ange time-to-live för datauppsättningar*
-
-</div>
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
