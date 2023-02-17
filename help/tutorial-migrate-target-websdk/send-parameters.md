@@ -1,7 +1,7 @@
 ---
 title: Skicka parametrar | Migrera mål från at.js 2.x till Web SDK
 description: Lär dig hur du skickar mbox-, profile- och enhetsparametrar till Adobe Target med Experience Platform Web SDK.
-source-git-commit: 8209b13b745dbea418003b133a6834825947950e
+source-git-commit: cc958fdbf438943ba4fd5ca8974a8408b2bf624f
 workflow-type: tm+mt
 source-wordcount: '1269'
 ht-degree: 0%
@@ -225,7 +225,7 @@ alloy("sendEvent", {
     "__adobe": {
       "target": {
         "entity.id": "SKU-00001-LARGE",
-        "entity.categoryId": "clothing,shirts"
+        "entity.categoryId": "clothing,shirts",
         "entity.customEntity": "some value",
         "cartIds": "SKU-00002,SKU-00003",
         "excludedIds": "SKU-00001-SMALL"
