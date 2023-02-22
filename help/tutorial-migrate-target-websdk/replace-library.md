@@ -1,9 +1,9 @@
 ---
 title: Ersätta biblioteket | Migrera mål från at.js 2.x till Web SDK
 description: Lär dig hur du migrerar en Adobe Target-implementering från at.js 2.x till Adobe Experience Platform Web SDK. Ämnen som omfattar biblioteksöversikt, implementeringsskillnader och andra viktiga hänvisningar.
-source-git-commit: 8d41e5d6434dabff0443e932be842b37553d72a9
+source-git-commit: 51958a425c946fc806d38209ac4b0b4fa17945e8
 workflow-type: tm+mt
-source-wordcount: '1708'
+source-wordcount: '1715'
 ht-degree: 0%
 
 ---
@@ -63,6 +63,8 @@ Anta en enkel målinsimplementering med at.js:
 * Ett eller flera hjälpbibliotek från tredje part vars funktioner kan användas i Target-aktiviteter (till exempel jQuery)
 * Ett fördolt kodfragment som minskar flimret
 * Målet-biblioteket at.js läses in asynkront med standardinställningar för att automatiskt begära och återge aktiviteter:
+
++++Se exempelkod för HTML i en at.js
 
 ```HTML
 <!doctype html>
@@ -126,6 +128,8 @@ Anta en enkel målinsimplementering med at.js:
 </body>
 </html>
 ```
+
++++
 
 Om du vill uppgradera Target till att använda Platform Web SDK måste du först ta bort at.js:
 
@@ -220,7 +224,7 @@ alloy("configure", {
 });
 ```
 
->[!TAB taggar]
+>[!TAB Taggar]
 
 I taggitimeringar fylls många fält i automatiskt eller kan väljas i listrutor. Observera att en annan plattform [!UICONTROL sandlådor] och [!UICONTROL datastreams] kan väljas för varje miljö. Datastream ändras baserat på statusen för taggbiblioteket i publiceringsprocessen.
 
