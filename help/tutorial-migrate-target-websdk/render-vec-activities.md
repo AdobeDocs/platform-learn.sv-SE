@@ -2,9 +2,9 @@
 title: Återge VEC-aktiviteter | Migrera mål från at.js 2.x till Web SDK
 description: Lär dig hur du hämtar och använder funktioner för visuell upplevelsedisposition med en Web SDK-implementering av Adobe Target.
 feature: Visual Experience Composer (VEC),Implement Client-side,APIs/SDKs,at.js,AEP Web SDK, Web SDK,Implementation
-source-git-commit: 7e6aa296429844552ad164ba209a504ddc908571
+source-git-commit: 63edfc214c678a976fbec20e87e76d33180e61f1
 workflow-type: tm+mt
-source-wordcount: '883'
+source-wordcount: '812'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Webbläsartillägget Visuell redigeringshjälp fungerar med webbplatser som anv�
 1. Navigera till [Webbläsartillägget Adobe Experience Cloud Visual Editing Helper i Chrome Web Store](https://chrome.google.com/webstore/detail/adobe-experience-cloud-vi/kgmjjkfjacffaebgpkpcllakjifppnca).
 1. Klicka på Lägg till i **Krom** > **Lägg till tillägg**.
 1. Öppna VEC i Target.
-1. Om du vill använda tillägget klickar du på ikonen för tillägget Visuell redigeringshjälp ![Ikon för tillägg för visuell redigering](assets/VEC-Helper.png) i webbläsarens verktygsfält när du är i VEC- eller QA-läge.
+1. Om du vill använda tillägget klickar du på ikonen för tillägget Visuell redigeringshjälp ![Ikon för tillägg för visuell redigering](assets/VEC-Helper.png){zoomable=&quot;yes&quot;} i webbläsarens verktygsfält i Chrome när du är i VEC- eller QA-läge.
 
 Hjälpprogrammet för visuell redigering aktiveras automatiskt när en webbplats öppnas i Target VEC för att underlätta redigeringen. Tillägget har inga villkorsinställningar. Tillägget hanterar alla inställningar automatiskt, inklusive inställningarna för cookies för samma plats.
 
@@ -44,25 +44,35 @@ När Platform Web SDK har konfigurerats på sidan kan du begära innehåll från
 
 Om din at.js-implementering har `pageLoadEnabled` inställning inställd på `true` som möjliggör automatisk återgivning av VEC-baserade aktiviteter, så skulle du utföra följande `sendEvent` med Platform Web SDK:
 
+>[!BEGINTABS]
+
+>[!TAB JavaScript]
+
 ```Javascript
 alloy("sendEvent", {
   "renderDecisions": true
 });
 ```
 
->[!TIP]
->
-> När du använder taggfunktionen (tidigare Launch) för att implementera Web SDK kan sendEvent-kommandon för VEC-aktiviteter implementeras i en regel med [!UICONTROL Skicka händelse] åtgärdstyp med [!UICONTROL Återge beslut om visuell personalisering] markerat alternativ.
+>[!TAB Taggar]
 
-När Platform Web SDK återger en aktivitet på sidan med `renderDecisions` ange till `true`, utlöses ett extra varningsanrop automatiskt för att öka ett intryck och tilldela besökaren till aktiviteten. Det här anropet använder en händelsetyp med värdet `decisioning.propositionDisplay`.
+I -taggar använder du [!UICONTROL Skicka händelse] åtgärdstyp med [!UICONTROL Återge beslut om visuell personalisering] valt alternativ:
 
-![Anrop till Platform Web SDK som ökar ett målintryck](assets/target-impression-call.png)
+![Skicka en händelse med återgivningsanpassningar inställda på true i taggar](assets/vec-sendEvent-renderTrue.png){zoomable=&quot;yes&quot;}
+
+>[!ENDTABS]
+
+<!--
+When the Platform Web SDK renders an activity to the page with `renderDecisions` set to `true`, an additional notification call fires automatically to increment an impression and attribute the visitor to the activity. This call uses an event type with the value `decisioning.propositionDisplay`.
+
+![Platform Web SDK call incrementing a Target impression](assets/target-impression-call.png){zoomable="yes"}
+-->
 
 ## Begär och tillämpa innehåll på begäran
 
-Vissa Target at.js-implementeringar kan ha `pageLoadEnabled` ange till `false` och i stället använder du `getOffers()` funktion för att köra en `pageLoad` begäran. Den här typen av konfiguration används om implementeringen kräver ytterligare bearbetning av `getOffers()` innan du lägger till innehåll på sidan eller begär innehåll för flera platser i ett enda samtal.
+Vissa Target-implementeringar kräver viss anpassad bearbetning av VEC-erbjudanden innan de kan användas på sidan. Eller så begär de flera platser i ett enda samtal. I en at.js-implementering kan detta göras genom att ställa in `pageLoadEnabled` till `false` och använder `getOffers()` funktion för att köra en `pageLoad` begäran.
 
-Följande kod använder `getOffers()` och `applyOffers()` att tillämpa VEC-baserade aktiviteter på begäran i stället för automatiskt vid biblioteksladdning.
++++ at.js-exempel med `getOffers()` och `applyOffers()` återge VEC-baserade aktiviteter manuellt
 
 ```JavaScript
 adobe.target.getOffers({
@@ -75,7 +85,11 @@ adobe.target.getOffers({
 then(response => adobe.target.applyOffers({ response: response }));
 ```
 
-Platform Web SDK har ingen specifik `pageLoad` -händelse. Alla förfrågningar om Target-innehåll styrs med `decisionScopes` med `sendEvent` -kommando. The `__view__` syftet med `pageLoad` begäran. motsvarande Platform Web SDK `sendEvent` metoden skulle vara:
++++
+
+Platform Web SDK har ingen specifik `pageLoad` -händelse. Alla förfrågningar om Target-innehåll styrs med `decisionScopes` med `sendEvent` -kommando. The `__view__` syftet med `pageLoad` begäran.
+
++++ motsvarande Platform Web SDK `sendEvent` metod:
 
 1. Kör en `sendEvent` som innehåller `__view__` beslutsområde
 1. Använd det returnerade innehållet på sidan med `applyPropositions` kommando
@@ -110,6 +124,8 @@ alloy("sendEvent", {
 });
 ```
 
++++
+
 >[!NOTE]
 >
 >Det går att [återge ändringar manuellt](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html#manually-rendering-content) i Visual Experience Composer. Manuell återgivning av VEC-baserade ändringar är inte vanligt. Kontrollera om din at.js-implementering använder `getOffers()` funktion för att manuellt köra ett mål `pageLoad` begära utan att använda `applyOffers()` för att använda innehållet på sidan.
@@ -118,7 +134,9 @@ Med Platform Web SDK får utvecklarna stor flexibilitet när det gäller att beg
 
 ## Implementeringsexempel
 
-Implementeringen av grundplattformen Web SDK är nu klar. Vår grundläggande exempelsida med automatisk återgivning av Target-innehåll aktiverad bör se ut så här:
+Implementeringen av grundplattformen Web SDK är nu klar.
+
+Exempelsida +++Web SDK med automatisk rendering av målinnehåll:
 
 ```HTML
 <!doctype html>
@@ -179,6 +197,8 @@ Implementeringen av grundplattformen Web SDK är nu klar. Vår grundläggande ex
 </body>
 </html>
 ```
+
++++
 
 >[!TIP]
 >

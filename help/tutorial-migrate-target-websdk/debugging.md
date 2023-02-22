@@ -1,10 +1,10 @@
 ---
 title: Felsök | Migrera mål från at.js 2.x till Web SDK
 description: Lär dig hur du felsöker en Adobe Target-implementering med Adobe Experience Platform Web SDK. Avsnitten omfattar felsökningsalternativ, webbläsartillägg och skillnader mellan at.js och Platform Web SDK.
-source-git-commit: dad7a1b01c4313d6409ce07d01a6520ed83f5e89
+source-git-commit: 63edfc214c678a976fbec20e87e76d33180e61f1
 workflow-type: tm+mt
-source-wordcount: '1524'
-ht-degree: 1%
+source-wordcount: '1534'
+ht-degree: 2%
 
 ---
 
@@ -35,7 +35,7 @@ Du kan köra Platform Debugger på valfri webbsida och tillägget har tillgång 
 Adobe Experience Platform Debugger kan installeras i webbläsarna Google Chrome och Mozilla Firefox. Följ lämplig länk nedan för att installera tillägget i den webbläsare du föredrar:
 
 - [Krom](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
-- [Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
+- [Firefox](https://addons.mozilla.org/sv-SE/firefox/addon/adobe-experience-platform-dbg/)
 
 När du har installerat Chrome-tillägget eller Firefox-tillägget visas en ikon (![](assets/start-icon.jpg)) läggs till i tilläggsfältet. Med den här ikonen öppnar du tillägget.
 
@@ -120,7 +120,7 @@ Så här visar du spårningar för Platform Web SDK Target med Adobe Experience 
 1. Läs in sidan igen så fylls loggen i med detaljerad information om gränsnätverkets interaktioner
 1. Fokusera på loggposterna som börjar med &quot;Målspår&quot; i beskrivningen och välj **[!UICONTROL Visa]** för att se information om målspårning
 
-![Visa målspår med Adobe Experience Platform Debugger](assets/target-trace-debugger.png)
+![Visa målspår med Adobe Experience Platform Debugger](assets/target-trace-debugger.png){zoomable=&quot;yes&quot;}
 
 Efter markering **[!UICONTROL Visa]** visas en övertäckning som gör att du kan se följande information om begäran:
 
@@ -142,7 +142,7 @@ Målspårningsinformationen kan visas både i webbläsartillägget Adobe Experie
 1. Välj en loggpost med typen `com.adobe.target.trace`
 1. Expandera informationen om nyttolasten och visa informationen under `context > targetTrace`
 
-![Visa målspår med Assurance](assets/target-trace-assurance.png)
+![Visa målspår med Assurance](assets/target-trace-assurance.png){zoomable=&quot;yes&quot;}
 
 ## Undersök nätverksbegäran och svar
 
@@ -150,7 +150,7 @@ Nyttolasten och svaret på begäran för Platform Web SDK `sendEvent` Anrop skil
 
 ### Nyttolast för innehållsbegäran
 
-![Målspecifika element för plattformens SDK-nyttolast](assets/target-payload.png)
+![Målspecifika element för plattformens SDK-nyttolast](assets/target-payload.png){zoomable=&quot;yes&quot;}
 
 - Profil, entitet och andra icke-mbox-parametrar skickas i händelsearrayen under `data.__adobe.target`
 - Beslutsomfattningarna finns i händelsearrayen under `query.personalization.decisionScopes`
@@ -158,7 +158,7 @@ Nyttolasten och svaret på begäran för Platform Web SDK `sendEvent` Anrop skil
 
 ### Innehållssvarets brödtext
 
-![Målspecifika element i svarsbrödtexten för Platform Web SDK](assets/target-response.png)
+![Målspecifika element i svarsbrödtexten för Platform Web SDK](assets/target-response.png){zoomable=&quot;yes&quot;}
 
 - Platform Web SDK returnerar åtgärder för alla Adobe-program under `handle` object
 - The `personalization:decisions` åtgärd innebär ett svar från mål eller offer decisioning
@@ -169,7 +169,7 @@ Nyttolasten och svaret på begäran för Platform Web SDK `sendEvent` Anrop skil
 
 ### Sprid händelsens nyttolast
 
-![Exempel på propositionshändelse för mål](assets/target-proposition-event.png)
+![Exempel på propositionshändelse för mål](assets/target-proposition-event.png){zoomable=&quot;yes&quot;}
 
 - Målspecifika SDK-händelser är antingen `decisioning.propositionDisplay` för ett intryck eller `decisioning.propositionInteract` för en interaktion, till exempel ett klick
 - Information om händelsen proposition finns i arrayen events under `xdm._experience.decisioning`

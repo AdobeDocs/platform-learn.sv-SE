@@ -1,9 +1,9 @@
 ---
 title: Skicka parametrar | Migrera mål från at.js 2.x till Web SDK
 description: Lär dig hur du skickar mbox-, profile- och enhetsparametrar till Adobe Target med Experience Platform Web SDK.
-source-git-commit: 10dbc8ecbfee511a97e64cb571c43dbf05e3076c
+source-git-commit: 63edfc214c678a976fbec20e87e76d33180e61f1
 workflow-type: tm+mt
-source-wordcount: '1663'
+source-wordcount: '1652'
 ht-degree: 0%
 
 ---
@@ -124,7 +124,7 @@ Tabellen nedan visar hur exempelparametrarna skulle ommappas med Platform Web SD
 | `entity.customEntity` | `data.__adobe.target.entity.customEntity` | Anpassade enhetsparametrar används för att uppdatera Recommendations produktkatalog. Dessa anpassade parametrar måste skickas som en del av `data` -objekt. |
 | `cartIds` | `data.__adobe.target.cartIds` | Används för Target-s kundvagnsbaserade rekommendationsalgoritmer. |
 | `excludedIds` | `data.__adobe.target.excludedIds` | Används för att förhindra att specifika enhets-ID returneras i en rekommendationsdesign. |
-| `mbox3rdPartyId` | Anges i identityMap. Se [Synkronisera profiler med ett kund-ID](#synching-profiles-with-a-customer-id) | Används för synkronisering av målprofiler mellan enheter och kundattribut. Namnutrymmet som ska användas för kund-ID:t måste anges i [Målkonfiguration för datastream](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/using-mbox-3rdpartyid.html). |
+| `mbox3rdPartyId` | Anges i identityMap. | Används för synkronisering av målprofiler mellan enheter och kundattribut. Namnutrymmet som ska användas för kund-ID:t måste anges i [Målkonfiguration för datastream](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/using-mbox-3rdpartyid.html). |
 | `orderId` | `xdm.commerce.order.purchaseID` | Används för att identifiera en unik order för målkonverteringsspårning. |
 | `orderTotal` | `xdm.commerce.order.priceTotal` | Används för att spåra ordersummor för målkonverterings- och optimeringsmål. |
 | `productPurchasedId` | `data.__adobe.target.productPurchasedId` <br>ELLER<br> `xdm.productListItems[0-n].SKU` | Används för spårning av målkonvertering och rekommendationsalgoritmer. Se [enhetsparametrar](#entity-parameters) för mer information. |
@@ -134,7 +134,7 @@ Tabellen nedan visar hur exempelparametrarna skulle ommappas med Platform Web SD
 
 ## Egna parametrar
 
-Alla anpassade mbox-parametrar måste skickas som XDM-data med `sendEvent` -kommando. Det är viktigt att se till att XDM-schemat innehåller alla datapunkter som krävs för målinsimplementeringen.
+Egna mbox-parametrar måste skickas som XDM-data med `sendEvent` -kommando. Det är viktigt att se till att XDM-schemat innehåller alla fält som krävs för målitimplementeringen.
 
 at.js-exempel med `targetPageParams()`:
 
@@ -359,7 +359,7 @@ Och lägg sedan in [!UICONTROL XDM-objekt] i [!UICONTROL Skicka händelse] [!UIC
 >The `productPurchasedId` värdet kan också skickas som en kommaavgränsad lista med enhets-ID:n under `data` -objekt.
 
 
-## Synkronisera profiler med ett kund-ID
+## Kund-ID (mbox3rdPartyId)
 
 Target tillåter profilsynkronisering mellan enheter och system med ett enda kund-ID. Med at.js kan detta anges som `mbox3rdPartyId` i Target-begäran eller som det första kund-ID som skickas till Experience Cloud Identity Service. Till skillnad från at.js kan du med en implementering av Platform Web SDK ange vilket kund-ID som ska användas som `mbox3rdPartyId` om det finns flera. Om ditt företag till exempel har ett globalt kund-ID och separata kund-ID för olika affärsområden, kan du konfigurera vilket ID Target som ska användas.
 
@@ -411,7 +411,7 @@ The [!UICONTROL XDM-objekt] ingår sedan i [!UICONTROL Skicka händelse] åtgär
 
 ![Inkludera ett XDM-objektdataelement i en Send-händelse](assets/params-tags-sendEvent-xdm.png){zoomable=&quot;yes&quot;}
 
-I din datastreams Adobe Target-tjänst måste du ange [!UICONTROL Namnområde för tredje parts ID-mål] till samma namnutrymme som används i [!UICONTROL Identitetskarta] dataelement
+I din datastreams Adobe Target-tjänst måste du ange [!UICONTROL Namnområde för tredje parts ID-mål] till samma namnutrymme som används i [!UICONTROL Identitetskarta] dataelement:
 ![Ange namnutrymmet för mål-ID för tredje part i datastream](assets/params-tags-customerIdNamespaceInDatastream.png){zoomable=&quot;yes&quot;}
 
 >[!ENDTABS]

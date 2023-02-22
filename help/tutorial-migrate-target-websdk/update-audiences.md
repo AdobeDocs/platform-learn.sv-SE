@@ -1,9 +1,9 @@
 ---
 title: Uppdatera målgrupper och profilskript | Migrera mål från at.js 2.x till Web SDK
 description: Lär dig hur du uppdaterar Adobe Target målgrupper och profilskript för kompatibilitet med Experience Platform Web SDK.
-source-git-commit: 8209b13b745dbea418003b133a6834825947950e
+source-git-commit: 63edfc214c678a976fbec20e87e76d33180e61f1
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '497'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ Alla målgrupper som använder anpassade mbox-parametrar bör uppdateras så att
 
 Ett sätt att säkerställa kompatibilitet med både at.js och Platform Web SDK är att uppdatera alla relevanta målgrupper så att `OR` villkor används, vilket visas nedan:
 
-![Så här uppdaterar du en målgrupp för plattformskompatibilitet för Web SDK](assets/target-audience-update.png)
+![Så här uppdaterar du en målgrupp för plattformskompatibilitet för Web SDK](assets/target-audience-update.png){zoomable=&quot;yes&quot;}
 
 ## Redigera profilskript
 

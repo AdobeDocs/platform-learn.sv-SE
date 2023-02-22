@@ -1,9 +1,9 @@
 ---
 title: Migrera mål från at.js 2.x till Web SDK
 description: Lär dig hur du migrerar en Adobe Target-implementering från at.js 2.x till Adobe Experience Platform Web SDK. Ämnen som omfattar biblioteksöversikt, implementeringsskillnader och andra viktiga hänvisningar.
-source-git-commit: dad7a1b01c4313d6409ce07d01a6520ed83f5e89
+source-git-commit: 63edfc214c678a976fbec20e87e76d33180e61f1
 workflow-type: tm+mt
-source-wordcount: '404'
+source-wordcount: '411'
 ht-degree: 1%
 
 ---
@@ -19,7 +19,8 @@ I vissa målinriktade implementeringar kan regionala mrutor (som nu kallas omfå
 
 Aktiviteter som skapats med Target formulärbaserade disposition och som levereras till regionala mrutor kan inte återges automatiskt av Platform Web SDK. På liknande sätt som at.js måste erbjudanden som levereras till specifika målplatser återges på begäran.
 
-at.js Exempel med `getOffer()` och `applyOffer()`:
+
++++at.js Exempel med `getOffer()` och `applyOffer()`:
 
 1. Kör `getOffer()` för att begära ett erbjudande om en plats
 1. Kör `applyOffer()` för att återge erbjudandet till en angiven väljare
@@ -45,7 +46,9 @@ adobe.target.getOffer({
 });
 ```
 
-motsvarigheten till SDK för plattformen med `applyPropositions` kommando:
++++
+
++++Platform Web SDK-motsvarigheten med `applyPropositions` kommando:
 
 1. Kör `sendEvent` för att begära erbjudanden (erbjudanden) för en eller flera platser (omfattningar)
 1. Kör `applyPropositions` -kommando med metadataobjekt som innehåller instruktioner för hur innehållet ska tillämpas på sidan för varje omfång
@@ -86,6 +89,8 @@ alloy("sendEvent", {
 });
 ```
 
++++
+
 Platform Web SDK ger större kontroll vid användning av formulärbaserade aktiviteter på sidan med `applyPropositions` kommando med `actionType` anges:
 
 | `actionType` | Beskrivning | at.js `applyOffer()` | Platform Web SDK `applyPropositions` |
@@ -99,6 +104,8 @@ Se [dedikerad dokumentation](https://experienceleague.adobe.com/docs/experience-
 ## Implementeringsexempel
 
 Exemplsidan nedan bygger på implementeringen som beskrivs i föregående avsnitt, men lägger bara till ytterligare omfång i `sendEvent` -kommando.
+
++++Platform Web SDK-exempel med flera omfattningar
 
 ```HTML
 <!doctype html>

@@ -1,9 +1,9 @@
 ---
 title: Ersätta biblioteket | Migrera mål från at.js 2.x till Web SDK
 description: Lär dig hur du migrerar en Adobe Target-implementering från at.js 2.x till Adobe Experience Platform Web SDK. Ämnen som omfattar biblioteksöversikt, implementeringsskillnader och andra viktiga hänvisningar.
-source-git-commit: 51958a425c946fc806d38209ac4b0b4fa17945e8
+source-git-commit: 63edfc214c678a976fbec20e87e76d33180e61f1
 workflow-type: tm+mt
-source-wordcount: '1715'
+source-wordcount: '1646'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ Anta en enkel målinsimplementering med at.js:
 * Ett fördolt kodfragment som minskar flimret
 * Målet-biblioteket at.js läses in asynkront med standardinställningar för att automatiskt begära och återge aktiviteter:
 
-+++Se exempelkod för HTML i en at.js
++++at.js exempel på en implementering på en HTML-sida
 
 ```HTML
 <!doctype html>
@@ -201,21 +201,17 @@ Adobe rekommenderar att du implementerar Platform Web SDK asynkront för bästa 
 
 Föregående stil för synkrona implementeringar kan konfigureras med [`prehidingStyle`](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#prehidingStyle) alternativ. Konfiguration av Platform Web SDK beskrivs i nästa avsnitt.
 
->[!TIP]
->
-> När du använder taggfunktionen (tidigare Launch) för att implementera Web SDK kan du redigera det dolda formatet i tilläggskonfigurationen för Adobe Experience Platform Web SDK.
-
 Om du vill veta mer om hur Platform Web SDK kan hantera flimmer kan du läsa hjälpavsnittet:  [hantera flimmer för personaliserade upplevelser](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/manage-flicker.html)
 
 ## Konfigurera Platform Web SDK
 
-Platform Web SDK måste konfigureras för varje sidinläsning. The `configure` -kommandot måste alltid vara det första SDK-kommandot som anropas. I följande exempel antas att hela webbplatsen uppgraderas till Platform Web SDK i en enda distribution:
+Platform Web SDK måste konfigureras för varje sidinläsning. I följande exempel antas att hela webbplatsen uppgraderas till Platform Web SDK i en enda distribution:
 
 >[!BEGINTABS]
 
 >[!TAB JavaScript]
 
-The `edgeConfigId` är [!UICONTROL Datastream-ID]
+The `configure` -kommandot måste alltid vara det första SDK-kommandot som anropas. The `edgeConfigId` är [!UICONTROL Datastream-ID]
 
 ```JavaScript
 alloy("configure", {
@@ -228,7 +224,7 @@ alloy("configure", {
 
 I taggitimeringar fylls många fält i automatiskt eller kan väljas i listrutor. Observera att en annan plattform [!UICONTROL sandlådor] och [!UICONTROL datastreams] kan väljas för varje miljö. Datastream ändras baserat på statusen för taggbiblioteket i publiceringsprocessen.
 
-![konfigurera tillägget för Web SDK-taggen](assets/tags-config.png)
+![konfigurera tillägget för Web SDK-taggen](assets/tags-config.png){zoomable=&quot;yes&quot;}
 >[!ENDTABS]
 
 Om du planerar att migrera från at.js till Platform Web SDK sida för sida krävs följande konfigurationsalternativ:
@@ -247,9 +243,9 @@ alloy("configure", {
 });
 ```
 
->[!TAB taggar]
+>[!TAB Taggar]
 
-![konfigurera migreringsalternativ för Web SDK-taggtillägg](assets/tags-config-migration.png)
+![konfigurera migreringsalternativ för Web SDK-taggtillägg](assets/tags-config-migration.png){zoomable=&quot;yes&quot;}
 >[!ENDTABS]
 
 De alternativ för konfiguration som är relaterade till Target beskrivs nedan:
@@ -263,19 +259,15 @@ De alternativ för konfiguration som är relaterade till Target beskrivs nedan:
 | `thirdPartyCookiesEnabled` | Aktiverar inställningen av cookies från tredje part från Adobe. SDK:n kan behålla besökar-ID:t i ett tredjepartssammanhang för att samma besökar-ID ska kunna användas på olika platser. Använd det här alternativet om du har flera platser, Men ibland är det här alternativet inte önskvärt av sekretesskäl. | `true` |
 | `prehidingStyle` | Används för att skapa en CSS-formatdefinition som döljer innehållsområden på webbsidan när anpassat innehåll läses in från servern. Detta används endast med synkrona distributioner av SDK. | `body { opacity: 0 !important }` |
 
->[!NOTE]
->
->`thirdPartyCookiesEnabled` kan anges till `true` för att upprätthålla en konsekvent målbesökarprofil över flera domäner. Det här alternativet bör anges till `false` eller utelämnas såvida inte beständighet krävs för besökarprofilen i flera domäner.
-
->[!TIP]
->
-> När du använder taggfunktionen (tidigare Launch) för att implementera Web SDK kan dessa konfigurationer hanteras i tilläggskonfigurationen för Adobe Experience Platform Web SDK.
-
 En fullständig lista med alternativ finns i [konfigurera Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html) guide.
 
 ## Implementeringsexempel
 
 När Platform Web SDK är rätt på plats ser exempelsidan ut så här.
+
+>[!BEGINTABS]
+
+>[!TAB JavaScript]
 
 ```HTML
 <!doctype html>
@@ -332,9 +324,61 @@ När Platform Web SDK är rätt på plats ser exempelsidan ut så här.
 </html>
 ```
 
->[!TIP]
->
-> När du använder taggfunktionen (tidigare Launch) för att implementera Web SDK ersätter taggarna embed-koden grundkoden för Platform Web SDK, Platform Web SDK inläst asynkront och Configure Platform Web SDK ovan.
+>[!TAB Taggar]
+
+Sidkod:
+
+```HTML
+<!doctype html>
+<html>
+<head>
+  <title>Example page</title>
+  <!--Data Layer to enable rich data collection and targeting-->
+  <script>
+    var digitalData = { 
+      // Data layer information goes here
+    };
+  </script>
+
+  <!--Third party libraries that may be used by Target offers and modifications-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+  <!--Prehiding snippet for Target with asynchronous Web SDK deployment-->
+  <script>
+    !function(e,a,n,t){var i=e.head;if(i){
+    if (a) return;
+    var o=e.createElement("style");
+    o.id="alloy-prehiding",o.innerText=n,i.appendChild(o),setTimeout(function(){o.parentNode&&o.parentNode.removeChild(o)},t)}}
+    (document, document.location.href.indexOf("mboxEdit") !== -1, ".body { opacity: 0 !important }", 3000);
+  </script>
+
+    <!--Tags Header Embed Code: REPLACE WITH THE INSTALL CODE FROM YOUR OWN DEVELOPMENT ENVIRONMENT-->
+    <script src="//assets.adobedtm.com/launch-EN93497c30fdf0424eb678d5f4ffac66dc.min.js" async></script>
+    <!--/Tags Header Embed Code-->
+</head>
+<body>
+  <h1 id="title">Home Page</h1><br><br>
+  <p id="bodyText">Navigation</p><br><br>
+  <a id="home" class="navigationLink" href="#">Home</a><br>
+  <a id="pageA" class="navigationLink" href="#">Page A</a><br>
+  <a id="pageB" class="navigationLink" href="#">Page B</a><br>
+  <a id="pageC" class="navigationLink" href="#">Page C</a><br>
+  <div id="homepage-hero">Homepage Hero Banner Content</div>
+</body>
+</html>
+```
+
+Lägg till Adobe Experience Platform Web SDK-tillägget i taggar:
+
+![Lägg till Adobe Experience Platform Web SDK-tillägget](assets/library-tags-addExtension.png){zoomable=&quot;yes&quot;}
+
+Och lägg till de önskade konfigurationerna:
+![konfigurera migreringsalternativ för Web SDK-taggtillägg](assets/tags-config-migration.png){zoomable=&quot;yes&quot;}
+
+
+>[!ENDTABS]
+
+
 
 Det är viktigt att komma ihåg att inget nätverksanrop utförs till Adobe Edge-nätverket om du bara inkluderar och konfigurerar Platform Web SDK-biblioteket så som visas ovan.
 
