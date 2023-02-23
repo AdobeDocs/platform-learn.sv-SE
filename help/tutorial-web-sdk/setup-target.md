@@ -3,9 +3,9 @@ title: Konfigurera Adobe Target med Platform Web SDK
 description: Lär dig implementera Adobe Target med Platform Web SDK. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 solution: Data Collection, Target
 exl-id: 9084f572-5fec-4a26-8906-6d6dd1106d36
-source-git-commit: edbc433e9bd72dfa9b9025063fc90c7fdc2c2774
+source-git-commit: 13f2c87d7c4cfe21f04a945b9e11dc64e9bf6e0c
 workflow-type: tm+mt
-source-wordcount: '3779'
+source-wordcount: '3801'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,7 @@ ht-degree: 0%
 Lär dig implementera Adobe Target med Platform Web SDK. Lär dig hur du levererar upplevelser och hur du skickar ytterligare parametrar till Target.
 
 [Adobe Target](https://experienceleague.adobe.com/docs/target/using/target-home.html) är den Adobe Experience Cloud-applikation som innehåller allt ni behöver för att skräddarsy och personalisera kundupplevelsen, så att ni kan maximera intäkterna på era webbplatser, mobilsajter, appar och andra digitala kanaler.
+
 
 ## Utbildningsmål
 
@@ -27,6 +28,10 @@ När lektionen är klar kan du:
 * Skicka anpassade data till Target, t.ex. profil- och enhetsparametrar
 * Validera en målinriktad implementering med Platform Web SDK
 
+>[!TIP]
+>
+>Se vår [Migrera mål från at.js 2.x till Platform Web SDK](/help/tutorial-migrate-target-websdk/introduction.md) självstudiekurs om hur du steg för steg migrerar din befintliga at.js-implementering.
+
 
 ## Förutsättningar
 
@@ -37,7 +42,7 @@ För att slutföra lektionerna i det här avsnittet måste du först:
 * Installera [Hjälptillägg för Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) om du använder webbläsaren Google Chrome.
 * Lär dig hur du ställer in aktiviteter i Target. Om du behöver en uppdaterare kan du använda följande självstudiekurser och guider för den här lektionen:
    * [Använda hjälptillägget för Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html)
-   * [Använda Visual Experience Composer](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer.html)
+   * [Använd Visual Experience Composer](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer.html)
    * [Använda den formulärbaserade Experience Composer](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-form-based-experience-composer.html)
    * [Skapa aktiviteter för målinriktad upplevelse](https://experienceleague.adobe.com/docs/target-learn/tutorials/activities/create-experience-targeting-activities.html)
 
@@ -248,7 +253,7 @@ Om du ställer in en aktivitet bör du se hur innehållet återges på sidan. Me
 
    ![Nätverksanrop i Adobe Experience Platform Debugger](assets/target-debugger-network.png)
 
-1. Observera att det finns nycklar under `query` > `personalization` och  `decisionScopes` har värdet `__view__`. Detta omfång motsvarar Target’s&quot;global mbox&quot;. Detta Platform Web SDK-anrop begärde beslut från Target.
+1. Observera att det finns nycklar under `query` > `personalization` och  `decisionScopes` har värdet `__view__`. Detta omfång motsvarar Target&quot;global mbox&quot;. Detta Platform Web SDK-anrop begärde beslut från Target.
 
    ![__visa__ DecisionScope-begäran](assets/target-debugger-view-scope.png)
 
