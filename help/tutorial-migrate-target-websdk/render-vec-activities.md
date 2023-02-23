@@ -2,9 +2,9 @@
 title: Återge VEC-aktiviteter | Migrera mål från at.js 2.x till Web SDK
 description: Lär dig hur du hämtar och använder funktioner för visuell upplevelsedisposition med en Web SDK-implementering av Adobe Target.
 feature: Visual Experience Composer (VEC),Implement Client-side,APIs/SDKs,at.js,AEP Web SDK, Web SDK,Implementation
-source-git-commit: 63edfc214c678a976fbec20e87e76d33180e61f1
+source-git-commit: 287ebcb275c4fca574dbd6cdf7e07ba4268bddb5
 workflow-type: tm+mt
-source-wordcount: '812'
+source-wordcount: '824'
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ alloy("sendEvent", {
 
 I -taggar använder du [!UICONTROL Skicka händelse] åtgärdstyp med [!UICONTROL Återge beslut om visuell personalisering] valt alternativ:
 
-![Skicka en händelse med återgivningsanpassningar inställda på true i taggar](assets/vec-sendEvent-renderTrue.png){zoomable=&quot;yes&quot;}
+![Skicka en händelse med Render-beslut för visuell personalisering markerade i taggar](assets/vec-sendEvent-renderTrue.png){zoomable=&quot;yes&quot;}
 
 >[!ENDTABS]
 
@@ -136,7 +136,11 @@ Med Platform Web SDK får utvecklarna stor flexibilitet när det gäller att beg
 
 Implementeringen av grundplattformen Web SDK är nu klar.
 
-Exempelsida +++Web SDK med automatisk rendering av målinnehåll:
+>[!BEGINTABS]
+
+>[!TAB JavaScript]
+
+JavaScript-exempel med automatisk målinnehållsrendering:
 
 ```HTML
 <!doctype html>
@@ -198,14 +202,65 @@ Exempelsida +++Web SDK med automatisk rendering av målinnehåll:
 </html>
 ```
 
-+++
 
->[!TIP]
->
-> När du använder taggfunktionen (tidigare Launch) för att implementera Web SDK ersätter taggarna embed-koden grundkoden för Platform Web SDK, Platform Web SDK inläst asynkront och Configure Platform Web SDK ovan. Kommandot sendEvent görs i en regel med [!UICONTROL Skicka händelse] åtgärdstyp med [!UICONTROL Återge beslut om visuell personalisering] markerat alternativ.
+>[!TAB Taggar]
+
+Exempelsida för taggar med automatisk återgivning av målinnehåll:
+
+
+```HTML
+<!doctype html>
+<html>
+<head>
+  <title>Example page</title>
+  <!--Data Layer to enable rich data collection and targeting-->
+  <script>
+    var digitalData = { 
+      // Data layer information goes here
+    };
+  </script>
+
+  <!--Third party libraries that may be used by Target offers and modifications-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+  <!--Prehiding snippet for Target with asynchronous Web SDK deployment-->
+  <script>
+    !function(e,a,n,t){var i=e.head;if(i){
+    if (a) return;
+    var o=e.createElement("style");
+    o.id="alloy-prehiding",o.innerText=n,i.appendChild(o),setTimeout(function(){o.parentNode&&o.parentNode.removeChild(o)},t)}}
+    (document, document.location.href.indexOf("mboxEdit") !== -1, ".body { opacity: 0 !important }", 3000);
+  </script>
+
+    <!--Tags Header Embed Code: REPLACE WITH THE INSTALL CODE FROM YOUR OWN ENVIRONMENT-->
+    <script src="//assets.adobedtm.com/launch-EN93497c30fdf0424eb678d5f4ffac66dc.min.js" async></script>
+</head>
+<body>
+  <h1 id="title">Home Page</h1><br><br>
+  <p id="bodyText">Navigation</p><br><br>
+  <a id="home" class="navigationLink" href="#">Home</a><br>
+  <a id="pageA" class="navigationLink" href="#">Page A</a><br>
+  <a id="pageB" class="navigationLink" href="#">Page B</a><br>
+  <a id="pageC" class="navigationLink" href="#">Page C</a><br>
+  <div id="homepage-hero">Homepage Hero Banner Content</div>
+</body>
+</html>
+```
+
+Lägg till Adobe Experience Platform Web SDK-tillägget i taggar:
+
+![Lägg till Adobe Experience Platform Web SDK-tillägget](assets/library-tags-addExtension.png){zoomable=&quot;yes&quot;}
+
+Lägg till önskade konfigurationer:
+![konfigurera migreringsalternativ för Web SDK-taggtillägg](assets/tags-config-migration.png){zoomable=&quot;yes&quot;}
+
+Skapa en regel med en [!UICONTROL Skicka händelse] åtgärd och [!UICONTROL Återge beslut om visuell personalisering] markerat:
+![Skicka en händelse med återgivningsanpassningar markerade i taggar](assets/vec-sendEvent-renderTrue.png){zoomable=&quot;yes&quot;}
+
+>[!ENDTABS]
 
 Lär dig hur du begär och [återge formulärbaserade målaktiviteter](render-form-based-activities.md).
 
 >[!NOTE]
 >
->Vi vill hjälpa dig att lyckas med målmigreringen från at.js till Web SDK. Om du stöter på problem med din migrering eller känner att det saknas viktig information i den här guiden ber vi dig att meddela oss genom att publicera i [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996).
+>Vi vill hjälpa dig att lyckas med målmigreringen från at.js till Web SDK. Om du stöter på problem med din migrering eller känner att det saknas viktig information i den här guiden ber vi dig att meddela oss genom att publicera i [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-target-from-at-js-to-web-sdk/m-p/575587#M463).

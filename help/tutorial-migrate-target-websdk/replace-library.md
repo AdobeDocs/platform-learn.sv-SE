@@ -1,9 +1,9 @@
 ---
 title: Ersätta biblioteket | Migrera mål från at.js 2.x till Web SDK
 description: Lär dig hur du migrerar en Adobe Target-implementering från at.js 2.x till Adobe Experience Platform Web SDK. Ämnen som omfattar biblioteksöversikt, implementeringsskillnader och andra viktiga hänvisningar.
-source-git-commit: 63edfc214c678a976fbec20e87e76d33180e61f1
+source-git-commit: ac5cee1888b39e5ba0134c850c378737e142f1d4
 workflow-type: tm+mt
-source-wordcount: '1646'
+source-wordcount: '1654'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ Lär dig hur du ersätter din Adobe Target-implementering på sidan för att mig
 * Granska inställningarna för måladministration och notera ditt IMS-organisations-ID
 * Ersätt at.js-biblioteket med Platform Web SDK
 * Uppdatera det föregående fragmentet för synkrona biblioteksimplementeringar
-* Konfigurera Platform Web SDK på sidan
+* Konfigurera Platform Web SDK
 
 >[!NOTE]
 >
@@ -64,7 +64,7 @@ Anta en enkel målinsimplementering med at.js:
 * Ett fördolt kodfragment som minskar flimret
 * Målet-biblioteket at.js läses in asynkront med standardinställningar för att automatiskt begära och återge aktiviteter:
 
-+++at.js exempel på en implementering på en HTML-sida
++++at.js, exempelimplementering på en HTML-sida
 
 ```HTML
 <!doctype html>
@@ -138,7 +138,11 @@ Om du vill uppgradera Target till att använda Platform Web SDK måste du först
 <script src="/libraries/at.js" async></script>
 ```
 
-Ersätt med den version av Platform Web SDK (alloy.js) som stöds för närvarande:
+Och ersätt med antingen ett JavaScript-bibliotek eller med taggarna inbäddad kod och Adobe Experience Platform Web SDK-tillägget:
+
+>[!BEGINTABS]
+
+>[!TAB JavaScript]
 
 ```HTML
 <!--Platform Web SDK base code-->
@@ -152,12 +156,21 @@ Ersätt med den version av Platform Web SDK (alloy.js) som stöds för närvaran
 <script src="https://cdn1.adoberesources.net/alloy/2.13.1/alloy.min.js" async></script>
 ```
 
+>[!TAB Taggar]
+
+```HTML
+<!--Tags Header Embed Code: REPLACE WITH THE INSTALL CODE FROM YOUR OWN ENVIRONMENT-->
+<script src="//assets.adobedtm.com/launch-EN93497c30fdf0424eb678d5f4ffac66dc.min.js" async></script>
+```
+
+Lägg till Adobe Experience Platform Web SDK-tillägget i taggegenskapen:
+
+![Lägg till Adobe Experience Platform Web SDK-tillägget](assets/library-tags-addExtension.png){zoomable=&quot;yes&quot;}
+
+
+>[!ENDTABS]
+
 Den fördefinierade fristående versionen kräver en &quot;baskod&quot; som läggs till direkt på sidan och som skapar en global funktion med namnet alloy. Använd den här funktionen för att interagera med SDK:n. Om du vill ge den globala funktionen ett annat namn ändrar du `alloy` namn.
-
->[!TIP]
->
-> När du använder taggfunktionen (tidigare Launch) för att implementera Web SDK läggs biblioteket alloy.js till i taggbiblioteket genom att lägga till tillägget Adobe Experience Platform Web SDK.
-
 
 Se [Installera Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html) dokumentation för mer information och distributionsalternativ.
 
@@ -168,9 +181,9 @@ Implementeringen av Platform Web SDK kan kräva ett predhide-fragment beroende p
 
 ### Asynkron implementering
 
-Precis som med at.js, kan det hända att sidan slutför återgivningen innan Target har utfört en innehållsväxling om Platform Web SDK-biblioteket läses in asynkront. Det här beteendet kan leda till det som kallas&quot;flimmer&quot;, där standardinnehållet visas kort innan det ersätts av det anpassade innehåll som anges av Target. Om du vill undvika den här flimret rekommenderar Adobe att du lägger till ett särskilt preddolt fragment omedelbart före den asynkrona plattformsskriptreferensen för Web SDK.
+Precis som med at.js, kan det hända att sidan slutför återgivningen innan Target har utfört en innehållsväxling om Platform Web SDK-biblioteket läses in asynkront. Det här beteendet kan leda till det som kallas&quot;flimmer&quot;, där standardinnehållet visas kort innan det ersätts av det anpassade innehåll som anges av Target. Om du vill undvika denna flimmer rekommenderar Adobe att du lägger till ett särskilt preddolt kodfragment omedelbart före den asynkrona Platform Web SDK-skriptreferensen eller taggarna bäddar in kod.
 
-Om implementeringen är asynkron, som i exemplet ovan, ska du ersätta fragmentet at.js med versionen nedan som är kompatibel med SDK för plattformen:
+Om implementeringen är asynkron, som exemplen ovan, ska du ersätta fragmentet at.js med versionen nedan som är kompatibel med plattformens Web SDK:
 
 ```HTML
 <!--Prehiding snippet for Target with asynchronous Web SDK deployment-->
@@ -191,13 +204,13 @@ Beteendet för att dölja är styrt av två konfigurationer i slutet av fragment
 
 * `3000` anger timeout i millisekunder för predhide. Om inget svar från Target tas emot före timeout, tas den föregående dolda formattaggen bort. Det bör vara sällsynt att denna tidsgräns uppnås.
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >Var noga med att använda rätt fragment för Platform Web SDK eftersom den använder ett annat format-ID för `alloy-prehiding`. Om fragmentet för at.js före döljning används kanske det inte fungerar som det ska.
 
 ### Synkron implementering
 
-Adobe rekommenderar att du implementerar Platform Web SDK asynkront för bästa totala sidprestanda. Om biblioteket däremot läses in synkront behövs inte det föregående dolda fragmentet. I stället anges det fördolda formatet i konfigurationen för Platform Web SDK.
+Adobe rekommenderar att du implementerar Platform Web SDK asynkront för bästa totala sidprestanda. Om alloy.js-biblioteket eller taggarna bäddar in kod synkront behöver du inte skriva ut predhide-fragmentet. I stället anges det fördolda formatet i konfigurationen för Platform Web SDK.
 
 Föregående stil för synkrona implementeringar kan konfigureras med [`prehidingStyle`](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#prehidingStyle) alternativ. Konfiguration av Platform Web SDK beskrivs i nästa avsnitt.
 
@@ -246,6 +259,7 @@ alloy("configure", {
 >[!TAB Taggar]
 
 ![konfigurera migreringsalternativ för Web SDK-taggtillägg](assets/tags-config-migration.png){zoomable=&quot;yes&quot;}
+
 >[!ENDTABS]
 
 De alternativ för konfiguration som är relaterade till Target beskrivs nedan:
@@ -352,9 +366,8 @@ Sidkod:
     (document, document.location.href.indexOf("mboxEdit") !== -1, ".body { opacity: 0 !important }", 3000);
   </script>
 
-    <!--Tags Header Embed Code: REPLACE WITH THE INSTALL CODE FROM YOUR OWN DEVELOPMENT ENVIRONMENT-->
+    <!--Tags Header Embed Code: REPLACE WITH THE INSTALL CODE FROM YOUR OWN ENVIRONMENT-->
     <script src="//assets.adobedtm.com/launch-EN93497c30fdf0424eb678d5f4ffac66dc.min.js" async></script>
-    <!--/Tags Header Embed Code-->
 </head>
 <body>
   <h1 id="title">Home Page</h1><br><br>
@@ -386,4 +399,4 @@ Lär dig sedan hur du [begära och tillämpa VEC-baserad verksamhet](render-vec-
 
 >[!NOTE]
 >
->Vi vill hjälpa dig att lyckas med målmigreringen från at.js till Web SDK. Om du stöter på problem med din migrering eller känner att det saknas viktig information i den här guiden ber vi dig att meddela oss genom att publicera i [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996).
+>Vi vill hjälpa dig att lyckas med målmigreringen från at.js till Web SDK. Om du stöter på problem med din migrering eller känner att det saknas viktig information i den här guiden ber vi dig att meddela oss genom att publicera i [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-target-from-at-js-to-web-sdk/m-p/575587#M463).

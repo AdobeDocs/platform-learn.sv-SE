@@ -1,9 +1,9 @@
 ---
 title: Skicka parametrar | Migrera mål från at.js 2.x till Web SDK
 description: Lär dig hur du skickar mbox-, profile- och enhetsparametrar till Adobe Target med Experience Platform Web SDK.
-source-git-commit: 63edfc214c678a976fbec20e87e76d33180e61f1
+source-git-commit: 287ebcb275c4fca574dbd6cdf7e07ba4268bddb5
 workflow-type: tm+mt
-source-wordcount: '1652'
+source-wordcount: '1646'
 ht-degree: 0%
 
 ---
@@ -97,19 +97,16 @@ Anta följande två exempelsidor med at.js:
 
 Målparametrarna för de här sidorna skickas annorlunda med Platform Web SDK. Det finns flera sätt att skicka parametrar till Target med at.js:
 
-- Använd `targetPageParams()` funktion för sidans load-händelse
+- Använd `targetPageParams()` funktion för sidans load-händelse (används i exemplen på den här sidan)
 - Använd `targetPageParamsAll()` funktion för alla Target-begäranden på sidan
 - Skicka parametrar direkt med `getOffer()` funktion för en enda plats
 - Skicka parametrar direkt med `getOffers()` funktion för en eller flera platser
 
-I de här exemplen `targetPageParams()` -metoden används.
 
-Platform Web SDK är ett enda konsekvent sätt att skicka data utan behov av extra funktioner. Alla parametrar måste skickas i nyttolasten med `sendEvent` -kommando.
+Platform Web SDK är ett enda konsekvent sätt att skicka data utan behov av extra funktioner. Alla parametrar måste skickas i nyttolasten med `sendEvent` Kommando och faller under två kategorier:
 
-Parametrar som skickas med Platform Web SDK `sendEvent` nyttolasten faller under två kategorier:
-
-1. Mappas automatiskt från `xdm` object
-1. Manuellt skickad med `data.__adobe.target` object
+- Mappas automatiskt från `xdm` object
+- Manuellt skickad med `data.__adobe.target` object
 
 Tabellen nedan visar hur exempelparametrarna skulle ommappas med Platform Web SDK:
 
@@ -124,7 +121,7 @@ Tabellen nedan visar hur exempelparametrarna skulle ommappas med Platform Web SD
 | `entity.customEntity` | `data.__adobe.target.entity.customEntity` | Anpassade enhetsparametrar används för att uppdatera Recommendations produktkatalog. Dessa anpassade parametrar måste skickas som en del av `data` -objekt. |
 | `cartIds` | `data.__adobe.target.cartIds` | Används för Target-s kundvagnsbaserade rekommendationsalgoritmer. |
 | `excludedIds` | `data.__adobe.target.excludedIds` | Används för att förhindra att specifika enhets-ID returneras i en rekommendationsdesign. |
-| `mbox3rdPartyId` | Anges i identityMap. | Används för synkronisering av målprofiler mellan enheter och kundattribut. Namnutrymmet som ska användas för kund-ID:t måste anges i [Målkonfiguration för datastream](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/using-mbox-3rdpartyid.html). |
+| `mbox3rdPartyId` | Ange i dialogrutan `xdm.identityMap` object | Används för synkronisering av målprofiler mellan enheter och kundattribut. Namnutrymmet som ska användas för kund-ID:t måste anges i [Målkonfiguration för datastream](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/using-mbox-3rdpartyid.html). |
 | `orderId` | `xdm.commerce.order.purchaseID` | Används för att identifiera en unik order för målkonverteringsspårning. |
 | `orderTotal` | `xdm.commerce.order.priceTotal` | Används för att spåra ordersummor för målkonverterings- och optimeringsmål. |
 | `productPurchasedId` | `data.__adobe.target.productPurchasedId` <br>ELLER<br> `xdm.productListItems[0-n].SKU` | Används för spårning av målkonvertering och rekommendationsalgoritmer. Se [enhetsparametrar](#entity-parameters) för mer information. |
@@ -233,7 +230,7 @@ Ta sedan med dataobjektet i [!UICONTROL Skicka händelse] [!UICONTROL åtgärd] 
 
 ## Enhetsparametrar
 
-Enhetsparametrar används för att skicka beteendedata och kompletterande kataloginformation för Target Recommendations. Precis som profilparametrar måste alla enhetsparametrar skickas under `data.__adobe.target` objekt i Platform Web SDK `sendEvent` kommandots nyttolast.
+Enhetsparametrar används för att skicka beteendedata och kompletterande kataloginformation för Target Recommendations. Alla [enhetsparametrar](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html) som stöds av at.js stöds även av Platform Web SDK. Precis som för profilparametrar ska alla enhetsparametrar skickas under `data.__adobe.target` objekt i Platform Web SDK `sendEvent` kommandots nyttolast.
 
 Entitetsparametrar för ett specifikt objekt måste föregås av `entity.` för korrekt datainhämtning. Den reserverade `cartIds` och `excludedIds` parametrar för rekommendationsalgoritmer ska inte prefixas och värdet för var och en måste innehålla en kommaavgränsad lista med enhets-ID:n.
 
@@ -284,12 +281,6 @@ Ta sedan med dataobjektet i [!UICONTROL Skicka händelse] [!UICONTROL åtgärd] 
 ![Inkludera ett dataobjekt i en Skicka-händelse](assets/params-tags-sendEvent-withData.png){zoomable=&quot;yes&quot;}
 
 >[!ENDTABS]
-
-
-
-
-
-Alla [enhetsparametrar](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html) som stöds av at.js stöds även av Platform Web SDK.
 
 >[!NOTE]
 >
@@ -576,4 +567,4 @@ Lär dig sedan hur du [spåra konverteringshändelser för mål](track-events.md
 
 >[!NOTE]
 >
->Vi vill hjälpa dig att lyckas med målmigreringen från at.js till Web SDK. Om du stöter på problem med din migrering eller känner att det saknas viktig information i den här guiden ber vi dig att meddela oss genom att publicera i [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996).
+>Vi vill hjälpa dig att lyckas med målmigreringen från at.js till Web SDK. Om du stöter på problem med din migrering eller känner att det saknas viktig information i den här guiden ber vi dig att meddela oss genom att publicera i [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-target-from-at-js-to-web-sdk/m-p/575587#M463).
