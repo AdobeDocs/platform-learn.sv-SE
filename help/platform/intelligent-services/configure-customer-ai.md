@@ -1,22 +1,22 @@
 ---
-title: Konfigurera kund-AI
-description: Lär dig hur du skapar en instans av kundens AI för att förutsäga kundbeteende.
-role: User
-solution: Intelligent Services
+title: Konfigurera AI för kundbenägenhet
+description: Lär dig hur du skapar en instans av Kund-AI för att förutsäga kundbeteende.
+solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
+role: User
 kt: 4172
 thumbnail: 32665.jpg
 exl-id: 84600a0f-ec10-484d-ae36-766fc6f8ca16
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: e2bc058bac9dc5f95587655420ef254e896eba3b
 workflow-type: tm+mt
 source-wordcount: '116'
-ht-degree: 0%
+ht-degree: 27%
 
 ---
 
-# Konfigurera kund-AI
+# Konfigurera AI för kundbenägenhet
 
-Lär dig hur du skapar en instans av kundens AI för att förutsäga kundbeteende.
+Lär dig hur du skapar en instans av Kund-AI för att förutsäga kundbeteende.
 
 >[!TIP]
 >

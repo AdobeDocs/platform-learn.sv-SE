@@ -1,22 +1,22 @@
 ---
-title: Använd AI-poäng och -insikter från kunder
-description: Lär dig hur ni använder AI-poängen och insikterna för att konvertera och behålla kunder.
-role: User
-solution: Intelligent Services
+title: Använd poäng och insikter från AI för kundbenägenhet
+description: Lär dig hur du använder benägenhetspoäng och insikter från Kund-AI för att få och behålla kunder.
+solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
+role: User
 kt: 4171
 thumbnail: 32666.jpg
 exl-id: f3f628ef-223a-48d9-979e-86f038268923
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: e2bc058bac9dc5f95587655420ef254e896eba3b
 workflow-type: tm+mt
 source-wordcount: '83'
-ht-degree: 0%
+ht-degree: 50%
 
 ---
 
-# Använd AI-poäng och -insikter från kunder
+# Använd poäng och insikter från AI för kundbenägenhet
 
-Lär dig hur ni använder AI-poängen och insikterna för att konvertera och behålla kunder.
+Lär dig hur du använder benägenhetspoäng och insikter från Kund-AI för att få och behålla kunder.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32666?quality=12&learn=on)
 

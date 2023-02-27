@@ -1,22 +1,21 @@
 ---
-title: Konfigurera Attribution AI
-description: Lär dig hur du skapar en instans av Attribution AI för att förstå effekten av era marknadsföringskanaler och kampanjer.
-role: User
-solution: Intelligent Services
+title: Konfigurera AI för attribuering
+description: Lär dig hur du skapar en instans av Attribution AI för att förstå effekten av dina marknadsföringskanaler och kampanjer.
 feature: Attribution AI
+role: User
 kt: 4174
 thumbnail: 32668.jpg
 exl-id: ea64175d-c2b4-4fcb-bbac-9ef30416f868
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: e2bc058bac9dc5f95587655420ef254e896eba3b
 workflow-type: tm+mt
 source-wordcount: '85'
-ht-degree: 0%
+ht-degree: 51%
 
 ---
 
-# Konfigurera Attribution AI
+# Konfigurera AI för attribuering
 
-Lär dig hur du skapar en instans av Attribution AI för att förstå effekten av era marknadsföringskanaler och kampanjer.
+Lär dig hur du skapar en instans av Attribution AI för att förstå effekten av dina marknadsföringskanaler och kampanjer.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32668?quality=12&learn=on)
 

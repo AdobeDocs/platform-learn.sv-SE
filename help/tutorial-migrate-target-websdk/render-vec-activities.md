@@ -1,9 +1,9 @@
 ---
 title: Återge VEC-aktiviteter | Migrera mål från at.js 2.x till Web SDK
 description: Lär dig hur du hämtar och använder funktioner för visuell upplevelsedisposition med en Web SDK-implementering av Adobe Target.
-source-git-commit: 4b695b4578f0e725fc3fe1e455aa4886b9cc0669
+source-git-commit: ca2fade972a2f7f84134ee4ef9c0f24c5ab1c5c6
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '830'
 ht-degree: 0%
 
 ---
@@ -22,10 +22,6 @@ Med webbläsartillägget Adobe Experience Cloud Visual Editing Helper för Googl
 
 Webbläsartillägget Visuell redigeringshjälp fungerar med webbplatser som använder at.js eller Platform Web SDK.
 
->[!IMPORTANT]
->
->Det nya tillägget Hjälp för visuell redigering ersätter det tidigare [Webbläsartillägg för målets VEC-hjälp](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html). Om det äldre VEC Helper-tillägget är installerat bör det tas bort eller inaktiveras innan tillägget Visuell redigeringshjälp används.
-
 ### Hämta och installera hjälpen för visuell redigering
 
 1. Navigera till [Webbläsartillägget Adobe Experience Cloud Visual Editing Helper i Chrome Web Store](https://chrome.google.com/webstore/detail/adobe-experience-cloud-vi/kgmjjkfjacffaebgpkpcllakjifppnca).
@@ -36,6 +32,10 @@ Webbläsartillägget Visuell redigeringshjälp fungerar med webbplatser som anv�
 Hjälpprogrammet för visuell redigering aktiveras automatiskt när en webbplats öppnas i Target VEC för att underlätta redigeringen. Tillägget har inga villkorsinställningar. Tillägget hanterar alla inställningar automatiskt, inklusive inställningarna för cookies för samma plats.
 
 Mer information om [Hjälptillägg för visuell redigering](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension.html) och [felsöka Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/troubleshoot-composer.html).
+
+>[!IMPORTANT]
+>
+>Den nya [Hjälptillägg för visuell redigering](https://chrome.google.com/webstore/detail/adobe-experience-cloud-vi/kgmjjkfjacffaebgpkpcllakjifppnca) ersätter föregående [Webbläsartillägg för målets VEC-hjälp](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html). Om det äldre VEC Helper-tillägget är installerat bör det tas bort eller inaktiveras innan tillägget Visuell redigeringshjälp används.
 
 ## Begär och tillämpa innehåll automatiskt
 

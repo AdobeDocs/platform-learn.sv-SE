@@ -1,22 +1,22 @@
 ---
 title: Introduktion till intelligenta tjänster
-description: En introduktion på hög nivå till Intelligent Services, som ger marknadsföringsanalytiker och yrkesverksamma möjlighet att utnyttja kraften i Artificial Intelligence och Machine Learning i kundupplevelsefall utan datavetenskap.
-role: User
-solution: Intelligent Services
+description: En introduktion på hög nivå till Intelligent Services, som ger marknadsföringsanalytiker och yrkesverksamma möjlighet att utnyttja kraften i artificiell intelligens och maskininlärning i användningsfall av kundupplevelse utan datavetenskap.
+solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI, Attribution AI
+role: User
 kt: 4170
 thumbnail: 32654.jpg
 exl-id: 23e15df2-1bf2-4c19-a5d5-9cfb2f7b0bd8
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: e2bc058bac9dc5f95587655420ef254e896eba3b
 workflow-type: tm+mt
 source-wordcount: '110'
-ht-degree: 0%
+ht-degree: 56%
 
 ---
 
 # Introduktion till intelligenta tjänster
 
-En introduktion på hög nivå till Intelligent Services, som ger marknadsföringsanalytiker och yrkesverksamma möjlighet att utnyttja kraften i Artificial Intelligence och Machine Learning i kundupplevelsefall utan datavetenskap.
+En introduktion på hög nivå till Intelligent Services, som ger marknadsföringsanalytiker och yrkesverksamma möjlighet att utnyttja kraften i artificiell intelligens och maskininlärning i användningsfall av kundupplevelse utan datavetenskap.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32654?quality=12&learn=on)
 
