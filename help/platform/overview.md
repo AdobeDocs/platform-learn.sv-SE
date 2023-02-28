@@ -4,7 +4,7 @@ description: Läs om Adobe Experience Platform
 doc-type: overview-page
 mini-toc-levels: 1
 exl-id: 5f84b0b4-b100-45dc-bcac-2dcc127c87f3
-source-git-commit: 73313bf0b2f9a0f539c8b52bda2d9bd66bed65d1
+source-git-commit: dcd7219ad6073727f66a8d1f30e67ce98f1b8a73
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 1%
@@ -26,7 +26,7 @@ Adobe Experience Platform är det mest kraftfulla, flexibla och öppna systemet 
 
 ## Personalval
 
-<table style="margin-top: 0">
+<table style="margin-top: 0 !important">
 <tr>
   <td>
     <a href="intro-to-platform/a-customer-experience-powered-by-experience-platform.md">
