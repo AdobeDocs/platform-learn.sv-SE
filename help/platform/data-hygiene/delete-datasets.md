@@ -1,5 +1,5 @@
 ---
-title: Ta bort datauppsättningar
+title: Schemalägg borttagning av datauppsättning
 description: Lär dig hur du tar bort datauppsättningar med hjälp av funktionen Adobe Experience Platform Data Hygiene.
 role: Data Engineer, Data Architect
 feature: Data Hygiene
@@ -7,16 +7,16 @@ kt: 10697
 thumbnail: 345065.jpeg
 last-substantial-update: 2022-07-27T00:00:00Z
 exl-id: 7764de70-e0c1-48a8-8d1f-a5426f8d580a
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: cd30d8f4bf37e8a3d087adf4092051d704049034
 workflow-type: tm+mt
-source-wordcount: '80'
+source-wordcount: '83'
 ht-degree: 0%
 
 ---
 
-# Ta bort datauppsättningar
+# Schemalägg borttagning av datauppsättning
 
-Lär dig hur du tar bort datauppsättningar med hjälp av funktionen Adobe Experience Platform Data Hygiene.
+Lär dig hur du schemalägger borttagningar av datauppsättningar med hjälp av funktionen Adobe Experience Platform Data Hygiene.
 
 Om du tar bort en datauppsättning kan datafördelare och datatekniker ange ett förfallodatum för en datauppsättning. Mer information finns på [dokumentation om datthygien](https://experienceleague.adobe.com/docs/experience-platform/hygiene/home.html).
 
