@@ -3,10 +3,11 @@ title: Infoga data med Adobe Analytics källanslutning
 description: Med Adobe Analytics Source Connector kan ni enkelt strömma, mappa och filtrera data från Adobe Analytics till Adobe Experience Platform kundprofil och Experience Data Lake i realtid.
 role: Data Engineer, Data Architect
 feature: Sources
+last-substantial-update: 2023-02-23T00:00:00Z
 kt: 3824
 thumbnail: 29687.jpg
 exl-id: b5fb1df4-b05d-426f-bdee-43e0de6bf0d6
-source-git-commit: 8c69b521b85df3baa7e1e14b91b30861453c066e
+source-git-commit: 19d4b68a17dd6d9c3a62f15e01293f351ac1da5e
 workflow-type: tm+mt
 source-wordcount: '150'
 ht-degree: 0%
