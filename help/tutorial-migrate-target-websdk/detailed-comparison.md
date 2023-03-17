@@ -1,9 +1,9 @@
 ---
 title: Jämförelse mellan at.js 2.x och Web SDK | Migrera mål från at.js 2.x till Web SDK
 description: Läs om skillnaderna mellan at.js 2.x och Platform Web SDK, inklusive funktioner, inställningar och dataflöde.
-source-git-commit: 287ebcb275c4fca574dbd6cdf7e07ba4268bddb5
+source-git-commit: 28a88e6865211d7d39c18bd48b95070ae0ba259b
 workflow-type: tm+mt
-source-wordcount: '2157'
+source-wordcount: '2159'
 ht-degree: 3%
 
 ---
@@ -43,7 +43,7 @@ Om du inte har använt Platform Web SDK tidigare behöver du inte bekymra dig. O
 | Fjärrerbjudanden | Stöds | Stöds |
 | Omdirigeringserbjudanden | Stöds | Stöds. Omdirigering från en sida med Platform Web SDK till en sida med at.js (och i motsatt riktning) stöds emellertid inte. |
 | Beslut på enheten | Stöds | Stöds inte för närvarande |
-| Förhämta kartor | Stöds | Aktiveras som standard i alla nya migreringar som påbörjas efter 1 oktober 2022 |
+| Förhämta kartor | Stöds för anpassade omfattningar och SPA VEC | Stöds för närvarande inte för vanlig VEC |
 | Anpassade händelser | Stöds | Stöds inte. Se [allmän färdplan](https://github.com/orgs/adobe/projects/18/views/1?pane=item&amp;itemId=17372355{target="_blank"}) för aktuell status. |
 | Svarstoken | Stöds | Stöds. Se [dokumentation för dedikerad svarstoken](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) för kodexempel och skillnader mellan at.js och Platform Web SDK |
 | Dataleverantörer | Stöds | Stöds inte. Anpassad kod kan användas för att utlösa en Platform Web SDK `sendEvent` efter att data har hämtats från en annan provider. |
