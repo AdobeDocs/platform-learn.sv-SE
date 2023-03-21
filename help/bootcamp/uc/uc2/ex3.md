@@ -6,10 +6,10 @@ audience: developer
 doc-type: tutorial
 activity: develop
 exl-id: 138a70fa-fe50-4585-b47f-150db4770c3d
-source-git-commit: ead28f5631fc430c41e8c756b23dc69ffe19510e
+source-git-commit: f018e3aae714879de0cccb3a47b1f2242b57abc1
 workflow-type: tm+mt
-source-wordcount: '917'
-ht-degree: 0%
+source-wordcount: '938'
+ht-degree: 3%
 
 ---
 
@@ -113,11 +113,11 @@ På nästa skärm får du tre olika metoder för att ange e-postens innehåll:
 - **Koda din egen**: Skapa en egen e-postmall genom att koda den med HTML
 - **Importera HTML**: Importera en befintlig HTML-mall som du kan redigera.
 
-Klicka **Importera HTML**.
+Klicka **Importera HTML**. Du kan också klicka **Sparade mallar** och välj en mall **Bootcamp - e-postmall**.
 
 ![Journey Optimizer](./images/msg12.png)
 
-Dra och släpp filen **mailmallebootcamp.html** som du kan ladda ned [här](../../assets/html/mailtemplatebootcamp.html.zip). Klicka på Importera.
+Om du valde **Importera HTML** kan du nu dra och släppa filen **mailmallebootcamp.html** som du kan ladda ned [här](../../assets/html/mailtemplatebootcamp.html.zip). Klicka på Importera.
 
 ![Journey Optimizer](./images/msg13.png)
 

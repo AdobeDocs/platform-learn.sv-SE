@@ -3,10 +3,10 @@ title: Experience Makers Bootcamp
 description: Startpunkt för deltagarna i Experience Makers Bootcamp
 doc-type: multipage-overview
 exl-id: 400bd9f1-229c-4016-b06b-8fc033f7dbf2
-source-git-commit: 9658437fec6208e2688fc7857f13adcc52660caa
+source-git-commit: 3a16967ead0bf86daaf69cf920586318a5866492
 workflow-type: tm+mt
 source-wordcount: '716'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -26,47 +26,12 @@ Personalisering i stor skala börjar med att förstå vad som kan förbättras, 
 
 ### Dag 1
 
-10.00-10.30: Kickoff &amp; introduktioner
 
-10.30-11.00: &quot;Demo av kundresan - konst av möjligheterna&quot;
-
-11.00 - 11.45: Whiteboard-session: &quot;Personalisering, friktionsjakt, vattentäta skott, Adobe POV&quot;
-
-11.45 - 12.00: Brytning
-
-12.00-13.00: Whiteboard-session: &quot;Uppdelning av lösningsarkitektur&quot;
-
-13.00 - 14.00: Lunch
-
-14.00 - 15.30: Användarflöde 1: Praktisk övning i förvärvet
-
-15.30-15.45: Brytning
-
-15.45 - 17.00: Användarflöde 2: Praktisk övning för registrering och introduktion
-
-18.00-19.00: Upplev &quot;Cocktail Making Competition&quot;
-
-19.00-22.00: Smaklig middag
+10:00: Kickoff 10:30: Demo om kundresan: Art of the possible 11:00: 1-1-personalisering, friktionsjakt, vattentäta skott, Adobe POV (whiteboard) 11:45: Bryt 12:00: Uppdelning av lösningsarkitektur (whiteboard) 13:00: Lunch 14:00: Användarflöde 1 Registrering och introduktion - genomgång (varför hur) 15:30: Bryt 16:00: Användarflöde 2 Blanda fysiskt och digitalt - genomgång och händer-på/djupdykning 18:00: Bryt 18:30: Gå till restaurang 19:00: Middag
 
 ### Dag 2
 
-09.00-09.30: &quot;Introduktion till kundresebaserad leverans, teamstruktur, eftersläpning vid leverans&quot;
-
-09.30-09.45: Brytning
-
-09.45-11.15: Användarflöde 4: Praktisk övning i kundanalys
-
-11.15 - 11.30: Brytning
-
-11.30-12.30: &quot;Introduktion till kundresebaserad leverans, teamstruktur, eftersläpning vid leverans&quot;
-
-12.30-13.30: Lunch
-
-13.30-14.30: Personalisering i stor skala - Så här gör du
-
-14.30-15.00: Sammanfattning, sammanfattning och nästa steg
-
-15.00: Avslutning
+08:00: Frukost 08:30: Introduktion till användarbaserad leverans på resa, teamstruktur, eftersläpning i leverans 09.45: Användarflöde 3 Blanda fysiskt och digitalt - Genomgång med övning 11.15: Bryt 11.30: Sammanfattning av användarflöden - (vad-var-när) 12:00: Grupp Presentations 12.30: Lunch 13.30: Användarflöde 4: Kundanalys - på djupet 14.30: Sammanfattning, sammanfattning och nästa steg 15.00: Drinks &amp; ADRESS
 
 ## Förutsättningar
 
