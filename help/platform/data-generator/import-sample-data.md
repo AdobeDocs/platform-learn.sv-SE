@@ -6,9 +6,9 @@ feature: API
 kt: 7349
 thumbnail: 7349.jpg
 exl-id: da94f4bd-0686-4d6a-a158-506f2e401b4e
-source-git-commit: 6a501b3ee36bc2be21816547e01efa0a862a63ba
+source-git-commit: a04bd682ff8d16981700598d9eef8db94c0ea568
 workflow-type: tm+mt
-source-wordcount: '1650'
+source-wordcount: '1752'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Den här självstudiekursen fokuserar på ett fiktivt detaljhandelsmärke som ka
 
 >[!NOTE]
 >
->Slutresultatet av den här självstudiekursen är en sandlåda som innehåller samma exempeldata som [Komma igång med självstudiekursen Adobe Experience Platform for Data Architects and Data Engineers](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/overview.html).
+>Slutresultatet av den här självstudiekursen är en sandlåda som innehåller liknande data som [Komma igång med självstudiekursen Adobe Experience Platform for Data Architects and Data Engineers](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/overview.html). Den uppdaterades i april 2023 för att stödja [Journey Optimizer utmaningar](https://experienceleague.adobe.com/docs/journey-optimizer-learn/challenges/introduction-and-prerequisites.html).
 
 
 ## Förutsättningar
@@ -49,8 +49,8 @@ Kontrollera att du har hämtat [Postman](https://www.postman.com/downloads/) pro
    >Användardata i [platform-utils-main.zip](../assets/data-generator/platform-utils-main.zip) filen är fiktiv och ska endast användas som exempel.
 
 1. Flytta `platform-utils-main.zip` till önskad plats på datorn och packa upp den.
-1. I `luma-data` mapp, öppna alla `json` filer i en textredigerare och ersätta alla förekomster av `_techmarketingdemos` med ditt eget klient-ID, föregånget av ett understreck.
-1. Öppna `luma-offline-purchases.json` i en textredigerare och uppdatera alla tidsstämplar så att händelserna inträffar den senaste månaden (t.ex. sök efter `"timestamp":"2022-06` och ersätta år och månad)
+1. I `luma-data` mapp, öppna alla `json` filer i en textredigerare och ersätta alla förekomster av `_yourOrganizationID` med ditt eget klient-ID, föregånget av ett understreck.
+1. Öppna `luma-offline-purchases.json` och `luma-web-events.json` i en textredigerare och uppdatera alla tidsstämplar så att händelserna inträffar den senaste månaden (t.ex. sök efter `"timestamp":"2022-11` och ersätta år och månad)
 1. Observera platsen för den uppzippade mappen, som du behöver den senare när du konfigurerar `FILE_PATH` Postman miljövariabel:
 
    >[!NOTE]
@@ -113,6 +113,9 @@ Därefter måste du importera samlingarna till Postman.
    * `2-Luma-CRM-Data.postman_collection.json`
    * `3-Luma-Product-Catalog.postman_collection.json`
    * `4-Luma-Offline-Purchase-Events.postman_collection.json`
+   * `5-Luma-Product-Inventory-Events.postman_collection.json`
+   * `6-Luma-Test-Profiles.postman_collection.json`
+   * `7-Luma-Web-Events.postman_collection.json`
 
    ![Import av samlingar](../assets/data-generator/images/collection-files.png)
 
@@ -158,6 +161,11 @@ Nu kan du förbereda och importera data till din plattformssandlåda. De Postman
    * `3-Luma-Product-Catalog.postman_collection.json` skapar ett schema och en ifylld datauppsättning för produktkataloginformation. Schemat är baserat på en anpassad produktkatalogklass och använder en anpassad produktkatalogfältgrupp.
    * `4-Luma-Offline-Purchase-Events.postman_collection.json` skapar ett schema och en ifylld datamängd för kunders offlineköp. Schemat är baserat på XDM ExperienceEvent-klassen och består av en anpassad identitet och fältgrupper för Commerce Details.
 
+   * `5-Luma-Product-Inventory-Events.postman_collection.json` skapar ett schema och en ifylld datauppsättning för händelser som rör produkter som kommer in och ut ur lagret. Schemat baseras på en anpassad affärshändelseklass och en anpassad fältgrupp.
+   * `6-Luma-Test-Profiles.postman_collection.json` skapar ett schema och en ifylld datauppsättning med testprofiler som ska användas i Adobe Journey Optimizer
+   * `7-Luma-Web-Events.postman_collection.json` skapar ett schema och en ifylld datauppsättning med enkla historiska webbdata.
+
+
 ## Validering
 
 Exempeldata har utformats så att kundprofiler i realtid som kombinerar data från flera system byggs när samlingarna har körts. Ett bra exempel på detta är den första posten i datamängderna för lojalitet, CRM och offlineköp. Slå upp den profilen för att bekräfta att data har importerats. I [Adobe Experience Platform](https://platform.adobe.com/):
@@ -173,6 +181,8 @@ Genom att bläddra bland data i **[!UICONTROL Attribut]** och **[!UICONTROL Hän
 ![Händelsedata från offlineinköpshändelsefilen](../assets/data-generator/images/validation-profile-events.png)
 
 ## Nästa steg
+
+Om du vill veta mer om Adobe Journey Optimizer innehåller den här sandlådan allt du behöver för att ta [Journey Optimizer utmaningar](https://experienceleague.adobe.com/docs/journey-optimizer-learn/challenges/introduction-and-prerequisites.html)
 
 Om du vill veta mer om sammanfogningsprinciper, datastyrning, frågetjänst och segmentbyggaren går du till [lektion 11 i självstudiekursen Getting Started for Data Architects and Data Engineers](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/create-merge-policies.html?lang=en). I de tidigare lektionerna av den här andra självstudiekursen kan du manuellt skapa allt som just fyllts i av de här Postman-kollektionerna - du kommer snabbt igång!
 
