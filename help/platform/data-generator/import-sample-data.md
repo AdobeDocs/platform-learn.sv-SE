@@ -6,9 +6,9 @@ feature: API
 kt: 7349
 thumbnail: 7349.jpg
 exl-id: da94f4bd-0686-4d6a-a158-506f2e401b4e
-source-git-commit: a04bd682ff8d16981700598d9eef8db94c0ea568
+source-git-commit: d5988bd8e6d31b183e2a264bea4fb05cd90ef1a7
 workflow-type: tm+mt
-source-wordcount: '1752'
+source-wordcount: '1832'
 ht-degree: 0%
 
 ---
@@ -160,7 +160,6 @@ Nu kan du förbereda och importera data till din plattformssandlåda. De Postman
    * `2-Luma-CRM-Data.postman_collection.json` skapar ett schema och en ifylld datauppsättning för kundens CRM-data. Schemat är baserat på klassen XDM Individual Profile som omfattar Demografisk information, personlig kontaktinformation, inställningsinformation och en anpassad identitetsfältgrupp.
    * `3-Luma-Product-Catalog.postman_collection.json` skapar ett schema och en ifylld datauppsättning för produktkataloginformation. Schemat är baserat på en anpassad produktkatalogklass och använder en anpassad produktkatalogfältgrupp.
    * `4-Luma-Offline-Purchase-Events.postman_collection.json` skapar ett schema och en ifylld datamängd för kunders offlineköp. Schemat är baserat på XDM ExperienceEvent-klassen och består av en anpassad identitet och fältgrupper för Commerce Details.
-
    * `5-Luma-Product-Inventory-Events.postman_collection.json` skapar ett schema och en ifylld datauppsättning för händelser som rör produkter som kommer in och ut ur lagret. Schemat baseras på en anpassad affärshändelseklass och en anpassad fältgrupp.
    * `6-Luma-Test-Profiles.postman_collection.json` skapar ett schema och en ifylld datauppsättning med testprofiler som ska användas i Adobe Journey Optimizer
    * `7-Luma-Web-Events.postman_collection.json` skapar ett schema och en ifylld datauppsättning med enkla historiska webbdata.
@@ -173,7 +172,12 @@ Exempeldata har utformats så att kundprofiler i realtid som kombinerar data fr�
 1. Gå till **[!UICONTROL Profiler]** > **[!UICONTROL Bläddra]**
 1. Välj `Luma Loyalty Id` som **[!UICONTROL Namnutrymme för identitet]**
 1. Sök efter `5625458` som **[!UICONTROL Identitetsvärde]**
-1. Öppna `Danny Wright` profil
+1. Öppna `Daniel Wright` profil
+
+>[!TIP]
+>
+>Om du inte ser profilen kan du kontrollera [!UICONTROL Datauppsättningar] för att bekräfta att alla datauppsättningar har skapats och importerats. Om det ser bra ut kan du vänta i femton minuter och se om profilen är tillgänglig i visningsprogrammet.  Om det uppstår problem med dataimporten kontrollerar du felmeddelandena för att försöka hitta problemet. Du kan även försöka aktivera feldiagnostik på [!UICONTROL Datauppsättningar] och dra och släpp JSON-datafilen för att importera data igen.
+
 
 ![Öppna en profil](../assets/data-generator/images/validation-profile-open.png)
 
