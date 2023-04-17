@@ -6,9 +6,9 @@ description: I den här lektionen ska du konfigurera Adobe Experience Platform a
 role: Data Architect, Data Engineer
 kt: 4348
 exl-id: 73abe4bd-57cb-4acf-98f6-253b01fd79ff
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 13ecb084c5b107d48b8b7e4d2844b8c108e98bfe
 workflow-type: tm+mt
-source-wordcount: '455'
+source-wordcount: '426'
 ht-degree: 0%
 
 ---
@@ -50,9 +50,5 @@ De viktigaste resurserna:
 * [Självstudiekurser för Experience Platform](https://experienceleague.adobe.com/docs/platform-learn/comprehensive-technical-tutorial/overview.html)
 * [Dokumentation om Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/home.html)
 * [Experience League-kurser](https://experienceleague.adobe.com/#dashboard/learning)
-
-Här är en annan självstudiekurs där du kan läsa mer om anslutningar till tredjepartsprogram:
-
-* [Omfattande teknisk självstudiekurs för Adobe Experience Platform](https://experienceleague.adobe.com/docs/platform-learn/comprehensive-technical-tutorial-v21/overview.html)
 
 Tack för ditt arbete och lycka till på din resa med Adobe Experience Platform!
