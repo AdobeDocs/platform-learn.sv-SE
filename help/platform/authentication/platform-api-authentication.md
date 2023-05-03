@@ -1,6 +1,6 @@
 ---
-title: Autentisera och få åtkomst till Experience Platform API:er
-description: Lär dig hur du får tillgång till Adobe Experience Platform API:er.
+title: Autentisera och få åtkomst till Experience Platform-API:er
+description: Lär dig hur du får tillgång till Adobe Experience Platform-API:er.
 role: Developer
 feature: API
 kt: 3688
@@ -9,7 +9,7 @@ exl-id: c1774670-436e-46dd-9c9b-177bfee5f749
 source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
 workflow-type: tm+mt
 source-wordcount: '377'
-ht-degree: 1%
+ht-degree: 5%
 
 ---
 

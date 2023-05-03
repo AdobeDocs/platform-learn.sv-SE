@@ -1,6 +1,6 @@
 ---
 title: Översikt över källor
-description: Lär dig hur du enkelt kan importera data från Adobe, förstahandsprogram och tredjepartsprogram till plattformens kundprofil och datasjön i realtid.
+description: Lär dig hur du enkelt kan importera data från Adobe, förstahandsprogram och tredjepartsprogram till Platforms kundprofil och datasjö i realtid.
 role: Data Engineer, Data Architect
 feature: Sources
 kt: 3800
@@ -9,7 +9,7 @@ exl-id: e38d643a-27ea-49f4-87c4-eccdb860ea92
 source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
 workflow-type: tm+mt
 source-wordcount: '100'
-ht-degree: 6%
+ht-degree: 26%
 
 ---
 

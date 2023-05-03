@@ -1,6 +1,6 @@
 ---
 title: Översikt över scheman och XDM (Experience Data Model)
-description: Läs om Experience Data Model (XDM), standarddatamodellen för att beskriva kundupplevelser.
+description: Lär dig om Experience Data Model (XDM), standarddatamodellen för att beskriva kundupplevelser.
 role: Data Architect, Data Engineer
 feature: Schemas
 kt: 2696
@@ -9,7 +9,7 @@ exl-id: f517ada0-c106-45f0-96ea-3b3cc8bd03ba
 source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
 workflow-type: tm+mt
 source-wordcount: '121'
-ht-degree: 4%
+ht-degree: 16%
 
 ---
 
