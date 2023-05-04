@@ -4,9 +4,9 @@ breadcrumb-title: Självstudiekurser
 user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
-source-git-commit: ef085f3bdfe385d072551bbafa1ae39e847b147d
+source-git-commit: 6a41de42497c142913ec80b978db27d8a6e638c0
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '925'
 ht-degree: 8%
 
 ---
@@ -26,6 +26,12 @@ ht-degree: 8%
    + [Grundläggande arkitektur](/help/platform/intro-to-platform/basic-architecture.md)
    + [Använda användargränssnittet för plattformen](/help/platform/intro-to-platform/interface-tour.md)
    + [Roller och projektfaser](/help/platform/intro-to-platform/roles-and-project-phases.md)
++ Introduktion till Real-Time CDP {#rtcdp}
+   + [Översikt](/help/platform/rtcdp/understanding-the-real-time-customer-data-platform.md)
+   + [Komplett demo](/help/platform/rtcdp/demo.md)
+   + [Arbetsflöde](/help/platform/rtcdp/understanding-the-real-time-customer-data-platform-user-interface.md)
+   + [Översikt över B2B Edition](/help/platform/rtcdp/b2b-overview.md)
+   + [Samordna kampanjer med Marketo Engage](/help/platform/rtcdp/orchestrate-campaigns-with-marketo-engage.md)
 + [Komma igång: Dataarkitekter och datatekniker](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/overview.html){target="_blank"}
 + [Autentisera till Experience Platform API:er](/help/platform/authentication/platform-api-authentication.md)
 + [Importera exempeldata till Experience Platform](/help/platform/data-generator/import-sample-data.md)
@@ -46,13 +52,14 @@ ht-degree: 8%
    + [Skapa dataanvändningsprofiler](/help/platform/governance/create-data-usage-policies.md)
    + [Använd principer för dataanvändning](/help/platform/governance/enforce-data-usage-policies.md)
    + [Tvinga samtycke](/help/platform/governance/enforce-consent.md)
+   + [Integrera med IAB Transparency och Consent Framework 2.0](/help/platform/governance/integrate-with-iab-transparency-and-consent-framework-2.md)
 + Datahygien {#data-hygiene}
    + [Ta bort datauppsättningar](/help/platform/data-hygiene/delete-datasets.md)
 + Datainmatning {#data-ingestion}
    + [Översikt](/help/platform/data-ingestion/understanding-data-ingestion.md)
    + [Översikt över batchöverföring](/help/platform/data-ingestion/batch-ingestion-overview.md)
    + [Skapa och fylla i en datauppsättning](/help/platform/data-ingestion/create-datasets-and-ingest-data.md)
-   + [Mappa en CSV-fil till XDM](https://experienceleague.adobe.com/docs/experience-platform/ingestion/tutorials/map-a-csv-file.html){target="_blank"}
+   + [Mappa en CSV-fil till XDM](https://experienceleague.adobe.com/docs/experience-platform/ingestion/tutorials/map-csv/existing-schema.html){target="_blank"}
    + [Översikt över källor](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/overview.html)
    + [Importera data från Adobe Analytics](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html)
    + [Inkommande data från Audience Manager](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-aam.html)
@@ -90,12 +97,25 @@ ht-degree: 8%
    + [Konfigurera Marketo-målet](/help/platform/destinations/configure-the-marketo-destination.md)
    + [Konfigurera filbaserat molnlagringsutrymme eller e-postmarknadsföringsmål](/help/platform/destinations/configuring-file-based-cloud-storage-or-email-marketing-destinations.md)
    + [Konfigurera ett socialt mål](/help/platform/destinations/configure-a-social-destination.md)
-   + [Nästa steg i personaliseringen med Adobe Target](https://experienceleague.adobe.com/docs/platform-learn/tutorials/experience-cloud/next-hit-personalization.html)
+   + Adobe Target och anpassad personalisering{#target}
+      + [Nästa steg i personaliseringen med Adobe Target](https://experienceleague.adobe.com/docs/platform-learn/tutorials/experience-cloud/next-hit-personalization.html)
+      + [Konfigurera Adobe Target-målet](/help/platform/destinations/target/configure-the-target-destination.md)
+      + [Aktivera segment och profilattribut](/help/platform/destinations/target/activate-segments-and-profile-attributes.md)
    + [Aktivera data i webbinarium som inte är Adobe](/help/platform/destinations/activate-data-to-non-adobe-applications.md)
 + Identiteter {#identities}
    + [Översikt över identitets- och identitetsdiagram](/help/platform/identities/understanding-identity-and-identity-graphs.md)
    + [Märk, importera och verifiera identitetsdata](/help/platform/identities/label-ingest-and-verify-identity-data.md)
    + [Visa identitetsdiagram](/help/platform/identities/view-identity-graphs.md)
++ Intelligenta tjänster {#intelligent-services}
+   + [Översikt](/help/platform/intelligent-services/introduction-to-intelligent-services.md)
+   + [Översikt över AI för attribuering](/help/platform/intelligent-services/introduction-to-attribution-ai.md)
+   + [Attribution AI](/help/platform/intelligent-services/business-value-of-attribution-ai.md)
+   + [Konfigurera AI för attribuering](/help/platform/intelligent-services/configure-attribution-ai.md)
+   + [Använd poäng och insikter från AI för attribuering](/help/platform/intelligent-services/use-attribution-ai-scores-and-insights.md)
+   + [Översikt över AI för kundbenägenhet](/help/platform/intelligent-services/introduction-to-customer-ai.md)
+   + [Kundens AI-värde](/help/platform/intelligent-services/business-value-of-customer-ai.md)
+   + [Konfigurera AI för kundbenägenhet](/help/platform/intelligent-services/configure-customer-ai.md)
+   + [Använd poäng och insikter från AI för kundbenägenhet](/help/platform/intelligent-services/use-customer-ai-scores-and-insights.md)
 + Övervakning {#monitoring}
    + [Övervaka datainmatning](/help/platform/monitoring/monitoring-dashboard.md)
    + [Aktivera bildskärmssegment](/help/platform/monitoring/monitoring-the-success-of-segment-activation.md)
@@ -178,28 +198,7 @@ ht-degree: 8%
    + [Infoga data från databaser](/help/platform/sources/ingest-data-from-databases.md)
    + [Strömma data med HTTP API](/help/platform/sources/streaming-ingestion-http-api.md)
    + [Direktuppspela data med hjälp av källanslutningar](/help/platform/sources/streaming-ingestion-source-connector.md)
-+ Programtjänster {#application-services}
-   + [Självstudiekurser för Customer Journey Analytics](https://experienceleague.adobe.com/docs/customer-journey-analytics-learn/tutorials/overview.html){target="_blank"}
-   + [Självstudiekurser för Journey Orchestration](https://experienceleague.adobe.com/docs/journey-orchestration-learn/tutorials/overview.html){target="_blank"}
-   + [Självstudiekurser för offer decisioning](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/decision-management-configuration/introduction-to-offer-decisioning.html){target="_blank"}
-   + Real-Time CDP självstudiekurser{#rtcdp}
-      + [Översikt](/help/platform/rtcdp/understanding-the-real-time-customer-data-platform.md)
-      + [Översikt över B2B Edition](/help/platform/rtcdp/b2b-overview.md)
-      + [Komplett demo](/help/platform/rtcdp/demo.md)
-      + [Arbetsflöde](/help/platform/rtcdp/understanding-the-real-time-customer-data-platform-user-interface.md)
-      + [Samordna kampanjer med Marketo Engage](/help/platform/rtcdp/orchestrate-campaigns-with-marketo-engage.md)
-      + [Integrera med IAB Transparency och Consent Framework 2.0](/help/platform/rtcdp/integrate-with-iab-transparency-and-consent-framework-2.md)
-      + [Använd dataanvändningsprinciper](https://experienceleague.adobe.com/docs/platform-learn/tutorials/data-governance/enforce-data-usage-policies.html)
-+ Intelligenta tjänster {#intelligent-services}
-   + [Översikt](/help/platform/intelligent-services/introduction-to-intelligent-services.md)
-   + [Översikt över AI för attribuering](/help/platform/intelligent-services/introduction-to-attribution-ai.md)
-   + [Attribution AI](/help/platform/intelligent-services/business-value-of-attribution-ai.md)
-   + [Konfigurera AI för attribuering](/help/platform/intelligent-services/configure-attribution-ai.md)
-   + [Använd poäng och insikter från AI för attribuering](/help/platform/intelligent-services/use-attribution-ai-scores-and-insights.md)
-   + [Översikt över AI för kundbenägenhet](/help/platform/intelligent-services/introduction-to-customer-ai.md)
-   + [Kundens AI-värde](/help/platform/intelligent-services/business-value-of-customer-ai.md)
-   + [Konfigurera AI för kundbenägenhet](/help/platform/intelligent-services/configure-customer-ai.md)
-   + [Använd poäng och insikter från AI för kundbenägenhet](/help/platform/intelligent-services/use-customer-ai-scores-and-insights.md)
+
 + Integrering med Experience Cloud {#experience-cloud}
    + [Magento](/help/platform/experience-cloud/business-value-of-platform-and-magento.md)
    + [Samordna kampanjer med Marketo Engage](https://experienceleague.adobe.com/docs/platform-learn/tutorials/application-services/rtcdp/orchestrate-campaigns-with-marketo-engage.html)
