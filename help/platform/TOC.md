@@ -4,9 +4,9 @@ breadcrumb-title: Självstudiekurser
 user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
-source-git-commit: 6a41de42497c142913ec80b978db27d8a6e638c0
+source-git-commit: aa6ffcb3ecdb1e8a3c1450d62d0c090a0a49d720
 workflow-type: tm+mt
-source-wordcount: '925'
+source-wordcount: '931'
 ht-degree: 8%
 
 ---
@@ -101,6 +101,7 @@ ht-degree: 8%
       + [Nästa steg i personaliseringen med Adobe Target](https://experienceleague.adobe.com/docs/platform-learn/tutorials/experience-cloud/next-hit-personalization.html)
       + [Konfigurera Adobe Target-målet](/help/platform/destinations/target/configure-the-target-destination.md)
       + [Aktivera segment och profilattribut](/help/platform/destinations/target/activate-segments-and-profile-attributes.md)
+      + [Använda Real-Time CDP-segment i Target](/help/platform/destinations/target/use-rtcdp-segments-in-target.md)
    + [Aktivera data i webbinarium som inte är Adobe](/help/platform/destinations/activate-data-to-non-adobe-applications.md)
 + Identiteter {#identities}
    + [Översikt över identitets- och identitetsdiagram](/help/platform/identities/understanding-identity-and-identity-graphs.md)
