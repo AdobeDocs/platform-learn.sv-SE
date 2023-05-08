@@ -4,9 +4,9 @@ breadcrumb-title: Självstudiekurser
 user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
-source-git-commit: aa6ffcb3ecdb1e8a3c1450d62d0c090a0a49d720
+source-git-commit: 1ff4dd53ab63666df1975b9f4c957da841f0820d
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '932'
 ht-degree: 8%
 
 ---
@@ -98,7 +98,7 @@ ht-degree: 8%
    + [Konfigurera filbaserat molnlagringsutrymme eller e-postmarknadsföringsmål](/help/platform/destinations/configuring-file-based-cloud-storage-or-email-marketing-destinations.md)
    + [Konfigurera ett socialt mål](/help/platform/destinations/configure-a-social-destination.md)
    + Adobe Target och anpassad personalisering{#target}
-      + [Nästa steg i personaliseringen med Adobe Target](https://experienceleague.adobe.com/docs/platform-learn/tutorials/experience-cloud/next-hit-personalization.html)
+      + [Nästa steg i personaliseringen med Adobe Target](/help/platform/destinations/target/next-hit-personalization.md)
       + [Konfigurera Adobe Target-målet](/help/platform/destinations/target/configure-the-target-destination.md)
       + [Aktivera segment och profilattribut](/help/platform/destinations/target/activate-segments-and-profile-attributes.md)
       + [Använda Real-Time CDP-segment i Target](/help/platform/destinations/target/use-rtcdp-segments-in-target.md)
@@ -199,11 +199,10 @@ ht-degree: 8%
    + [Infoga data från databaser](/help/platform/sources/ingest-data-from-databases.md)
    + [Strömma data med HTTP API](/help/platform/sources/streaming-ingestion-http-api.md)
    + [Direktuppspela data med hjälp av källanslutningar](/help/platform/sources/streaming-ingestion-source-connector.md)
-
+   + [Nästa steg i personaliseringen med Adobe Target](https://experienceleague.adobe.com/docs/platform-learn/tutorials/destinations/target/next-hit-personalization.html)
 + Integrering med Experience Cloud {#experience-cloud}
    + [Magento](/help/platform/experience-cloud/business-value-of-platform-and-magento.md)
    + [Samordna kampanjer med Marketo Engage](https://experienceleague.adobe.com/docs/platform-learn/tutorials/application-services/rtcdp/orchestrate-campaigns-with-marketo-engage.html)
-   + [Nästa steg i personaliseringen med Adobe Target](/help/platform/experience-cloud/next-hit-personalization.md)
 + Branschtrender {#industry}
    + [Framtiden för datahantering och den föränderliga miljön](/help/platform/industry/the-future-of-data-management-and-the-changing-environment.md)
    + [En tabell med två perceptioner - varumärken jämfört med konsumenter](/help/platform/industry/brands-vs-consumers.md)

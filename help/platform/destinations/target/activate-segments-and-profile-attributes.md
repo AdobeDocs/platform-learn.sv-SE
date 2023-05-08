@@ -1,15 +1,15 @@
 ---
 title: Hur delar jag segment och profilattribut från Adobe CDP i realtid till Adobe Target?
-description: Beskrivning saknas
+description: Lär dig hur du delar segment och profilattribut från Adobe Real-time Customer Data Platform till Adobe Target för att visa personaliserat innehåll i realtid på dina webbplatser, mobilappar och andra digitala resurser.
 feature: Destinations
 role: User
 level: Intermediate
 doc-type: Feature Video
 last-substantial-update: 2023-05-03T00:00:00Z
 jira: KT-13140
-source-git-commit: fc6d129f473e4d26f57980bb239f95462c3f3cc9
+source-git-commit: 0931e2305d8013e469aee2b015befb3d06614784
 workflow-type: tm+mt
-source-wordcount: '116'
+source-wordcount: '145'
 ht-degree: 0%
 
 ---
