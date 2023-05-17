@@ -5,9 +5,9 @@ feature: Web SDK, Tags
 role: Developer, Data Engineer
 doc-type: tutorial
 exl-id: bee792c3-17b7-41fb-a422-289ca018097d
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 951987c5c360aca005c78a976a6090d088f36455
 workflow-type: tm+mt
-source-wordcount: '3347'
+source-wordcount: '3323'
 ht-degree: 0%
 
 ---
@@ -27,17 +27,17 @@ Många juridiska sekretessbestämmelser har infört krav på aktivt och specifik
 
 I den här självstudiekursen visas hur du implementerar och aktiverar data som inhämtats från en CMP (Consent Management Platform) med plattformstillägget för Web SDK i datainsamling. Vi gör detta med hjälp av båda Adobe-standarderna och IAB TCF 2.0-medgivandestandarden, med OneTrust eller SourcePoint som exempel på CMP.
 
-I den här självstudiekursen används tillägget Platform Web SDK för att skicka data om samtycke till plattformen. En översikt över Web SDK finns på [den här sidan](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=en).
+I den här självstudiekursen används tillägget Platform Web SDK för att skicka data om samtycke till plattformen. En översikt över Web SDK finns på [den här sidan](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html).
 
 ## Förutsättningar
 
-Förutsättningarna för att använda Web SDK finns i listan [här](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/prerequisite.html?lang=en#fundamentals).
+Förutsättningarna för att använda Web SDK finns i listan [här](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/prerequisite.html#fundamentals).
 
-På den sidan finns det ett krav på en&quot;händelsedatauppsättning&quot; och, precis som den låter, är detta en datauppsättning som innehåller data för upplevelsehändelser. Om du vill skicka medgivandeinformation med händelser, [Fältgrupp för sekretessdetaljer](https://github.com/adobe/xdm/blob/master/docs/reference/field groups/experience-event/experienceevent-privacy.schema.md) måste läggas till i Experience Event-schemat:
+På den sidan finns det ett krav på en&quot;händelsedatauppsättning&quot; och, precis som den låter, är detta en datauppsättning som innehåller data för upplevelsehändelser. Om du vill skicka medgivandeinformation med händelser, [Information om IAB TCF 2.0-samtycke](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/iab/dataset.html) fältgruppen måste läggas till i Experience Event-schemat:
 
 ![](./images/event-schema.png)
 
-För standard v2.0 för plattformsgodkännande behöver vi även tillgång till Adobe Experience Profile för att skapa ett XDM-schema och en enskild datauppsättning. En självstudiekurs om hur du skapar scheman finns på [Skapa ett schema med Schemaredigeraren](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=en#tutorials) och det finns information om den obligatoriska fältgruppen Inställningsdetaljer i [XDM-dokumentation](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/overview.html?lang=en).
+För standard v2.0 för plattformsgodkännande behöver vi även tillgång till Adobe Experience Platform för att skapa ett enskilt XDM-profilschema och datauppsättning. En självstudiekurs om hur du skapar scheman finns på [Skapa ett schema med Schemaredigeraren](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html#tutorials) och om du vill visa fältgruppen för samtycke och inställningsinformation går du till [Konfigurera en datauppsättning för inhämtning av samtycke och inställningsdata](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/dataset.html).
 
 I den här självstudien förutsätts att du har tillgång till datainsamling och har skapat en taggegenskap på klientsidan med tillägget Web SDK installerat och ett arbetsbibliotek som skapats och byggts för utveckling. Dessa ämnen är detaljerade och demonstrerade i följande dokument:
 
@@ -53,13 +53,13 @@ Om du vill implementera IAB TCF-exemplet med en CMP på din egen webbplats behö
 
 >[!NOTE]
 >
->1.0-standarden fasas ut till förmån för v2.0. Med standarden 2.0 kan du lägga till ytterligare data om samtycke som kan användas för att manuellt tillämpa medgivandeinställningar. Skärmbilderna nedan för plattformens SDK-tillägg är från versionen [2.4.0](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=en#version-2.4.0) för det tillägg som är kompatibelt med antingen v1.0 eller v2.0 i Adobe Consent Standard.
+>1.0-standarden fasas ut till förmån för v2.0. Med standarden 2.0 kan du lägga till ytterligare data om samtycke som kan användas för att manuellt tillämpa medgivandeinställningar. Skärmbilderna nedan för plattformens SDK-tillägg är från versionen [2.4.0](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html#version-2.4.0) för det tillägg som är kompatibelt med antingen v1.0 eller v2.0 i Adobe Consent Standard.
 
 Mer information om dessa standarder finns i [Stöd för kundernas samtycke](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html).
 
 ### Steg 1: Konfigurera samtycke i Web SDK-tillägget
 
-När vi har installerat tillägget Platform Web SDK i en taggegenskap kan vi konfigurera alternativen för att adressera medgivandedata på skärmen för tilläggskonfiguration:
+När vi har installerat tillägget Platform Web SDK i en Tags-egenskap kan vi konfigurera alternativen för att adressera medgivandedata på skärmen för tilläggskonfiguration:
 
 ![](./images/pending.png)
 
@@ -90,7 +90,7 @@ I det här exemplet väljer vi alternativet Väntar och väljer **Spara** för a
 
 ### Steg 2: Inställningar för kommunikation av samtycke
 
-Nu när vi har angett standardbeteendet för SDK kan vi använda taggar för att skicka en besökares uttryckliga medgivandeinställningar till Platform. Det är enkelt att implementera data för samtycke med Adobe 1.0- eller 2.0-standarden med åtgärden setConsent i Web SDK i taggreglerna.
+Nu när vi har angett standardbeteendet för SDK kan vi använda taggar för att skicka en besökares uttryckliga medgivandeinställningar till Platform. Att skicka medgivandedata med Adobe 1.0 eller 2.0-standarden kan enkelt implementeras med `setConsent` Web SDK-åtgärd i dina taggar.
 
 #### Ställa in samtycke med plattformsgodkännande Standard 1.0
 
@@ -106,17 +106,17 @@ I det här exemplet väljer vi&quot;In&quot; för att ange att besökaren har go
 
 Obs! När en webbplatsbesökare har avanmält sig kan du inte ange användarnas samtycke i SDK.
 
-Dina taggregler kan aktiveras av flera olika inbyggda eller anpassade [händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/core/overview.html?lang=en) som kan användas för att skicka denna information om samtycke vid lämplig tidpunkt under en besökssession. I exemplet ovan använde vi händelsen loaded för fönstret för att utlösa regeln. I ett senare avsnitt kommer vi att använda en medgivandeinställningshändelse från en CMP för att utlösa en Set Consent-åtgärd. Du kan använda åtgärden Ange samtycke i en regel som aktiveras av en händelse som du föredrar som anger en inställning för deltagande.
+Dina taggregler kan aktiveras av flera olika inbyggda eller anpassade [händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/core/overview.html) som kan användas för att skicka denna information om samtycke vid lämplig tidpunkt under en besökssession. I exemplet ovan använde vi händelsen loaded för fönstret för att utlösa regeln. I ett senare avsnitt kommer vi att använda en medgivandeinställningshändelse från en CMP för att utlösa en Set Consent-åtgärd. Du kan använda åtgärden Ange samtycke i en regel som aktiveras av en händelse som du föredrar som anger en inställning för deltagande.
 
 #### Ställa in samtycke med plattformsgodkännande Standard 2.0
 
-Version 2.0 av standarden för plattformsgodkännande fungerar med [XDM](https://experienceleague.adobe.com/docs/platform-learn/tutorials/schemas/schemas-and-experience-data-model.html) data. Du måste också lägga till en fältgrupp för sekretessinformation i ditt profilschema i Platform. Se [Samtyckesbearbetning i plattform](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/overview.html) om du vill ha mer information om standardversionen 2.0 av Adobe och den här fältgruppen.
+Version 2.0 av standarden för plattformsgodkännande fungerar med [XDM](https://experienceleague.adobe.com/docs/platform-learn/tutorials/schemas/schemas-and-experience-data-model.html) data. Du måste också lägga till fältgruppen för samtycke och inställningsinformation i ditt profilschema i plattformen. Se [Samtyckesbearbetning i plattform](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/overview.html) om du vill ha mer information om standardversionen 2.0 av Adobe och den här fältgruppen.
 
 Vi skapar ett anpassat kodelement för att skicka data till egenskaperna collect och metadata för det innehållsobjekt som visas i schemat nedan:
 
 ![](./images/collect-metadata.png)
 
-Den här fältgruppen för inställningsinformation innehåller fält för [XDM-datatyp för innehåll och inställningar](https://experienceleague.adobe.com/docs/experience-platform/xdm/data-types/consents.html?lang=en#prerequisites) som kommer att innehålla de data för medgivandepreferenser som vi skickar till Platform med plattformens SDK-tillägg i vår regelåtgärd. För närvarande är de enda nödvändiga egenskaperna för att implementera Platform Consent Standard 2.0 insamlingsvärdet (val) och tidsvärdet för metadata, som markeras ovan med rött.
+Fältgruppen Innehåll och inställningsdetaljer innehåller fält för [XDM-datatyp för innehåll och inställningar](https://experienceleague.adobe.com/docs/experience-platform/xdm/data-types/consents.html#prerequisites) som kommer att innehålla de data för medgivandepreferenser som vi skickar till Platform med plattformens SDK-tillägg i vår regelåtgärd. För närvarande är de enda nödvändiga egenskaperna för att implementera Platform Consent Standard 2.0 insamlingsvärdet (val) och tidsvärdet för metadata, som markeras ovan med rött.
 
 Låt oss skapa ett dataelement för dessa data. Välj Dataelement och den blå knappen Lägg till dataelement. Låt oss ringa detta &quot;xdm-medgivande 2.0&quot; och använda Core-tillägget, vi väljer en anpassad kodtyp. Du kan ange eller kopiera och klistra in följande data i det anpassade kodredigeringsfönstret:
 
@@ -149,11 +149,11 @@ Vi har nu två regler, en för varje standard för plattformsgodkännande. I pra
 
 Du kan läsa mer om version 2.0 av IAB Transparency and Consent Framework på [IAB Europe webbplats](https://iabeurope.eu/transparency-consent-framework/).
 
-Om du vill ange data för medgivandeinställningen med den här standarden måste vi lägga till fältgruppen Sekretessinformation i vårt Experience Event-schema i plattformen:
+Om du vill ange data för medgivandeinställningen med den här standarden måste vi lägga till schemafältgruppen IAB TCF 2.0 Consent Details i vårt Experience Event-schema i plattformen:
 
 ![](./images/consentStrings.png)
 
-Den här fältgruppen innehåller de medgivandefält som krävs av IAB TCF 2.0-standarden. Mer information om scheman och fältgrupper finns i [XDM - systemöversikt](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=en).
+Den här fältgruppen innehåller de medgivandefält som krävs av IAB TCF 2.0-standarden. Mer information om scheman och fältgrupper finns i [XDM - systemöversikt](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=sv).
 
 ### Steg 1: Skapa ett dataelement för samtycke
 
@@ -173,9 +173,9 @@ Vi ställer in alla medgivandeSträngar enligt följande:
 * **`containsPersonalData`**:  `False` (väljs från knappen Välj värde)
 * **`gdprApplies`**:  `%IAB TCF Consent GDPR%`
 
-MedgivandeStandard och medgivandeStandardVersion är båda bara textsträngar för den standard vi använder, som är IAB TCF version 2.0. MedgivandeStringValue refererar till ett dataelement med namnet&quot;IAB TCF Consent String&quot;. Procenttecknen som omger texten anger namnet på ett dataelement, och vi tittar på det om en stund. Egenskapen containsPersonalData anger om IAB TCF 2.0-medgivandesträngen innehåller några personuppgifter med antingen &quot;True&quot; eller &quot;False&quot;. Fältet gdprApplies anger antingen &quot;true&quot; för GDPR gäller, &quot;false&quot; för GDPR gäller inte, eller &quot;undefined&quot; för okänd om GDPR gäller. För närvarande kommer Web SDK att behandla &quot;undefined&quot; som &quot;true&quot;, så medgivandedata som skickas med &quot;gdprApplies: undefined&quot; behandlas som om besökaren befinner sig i ett område där GDPR gäller.
+The `consentStandard` och `consentStandardVersion` båda fälten är bara textsträngar för den standard vi använder, som är IAB TCF version 2.0. The `consentStringValue` refererar till ett dataelement med namnet&quot;IAB TCF Consent String&quot;. Procenttecknen som omger texten anger namnet på ett dataelement, och vi tittar på det om en stund. The `containsPersonalData` anger om IAB TCF 2.0-medgivandesträngen innehåller några personuppgifter med antingen &quot;True&quot; eller &quot;False&quot;. The `gdprApplies` anges antingen &quot;true&quot; för GDPR gäller, &quot;false&quot; för GDPR gäller inte eller &quot;undefined&quot; för unknown whether GDPR gäller. För närvarande kommer Web SDK att behandla &quot;undefined&quot; som &quot;true&quot;, så medgivandedata som skickas med &quot;gdprApplies: undefined&quot; behandlas som om besökaren befinner sig i ett område där GDPR gäller.
 
-Se [godkännandedokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/iab-tcf/with-launch.html?lang=en#getting-started) om du vill ha mer information om dessa egenskaper och om IAB TCF 2.0 i -taggar.
+Se [godkännandedokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/iab-tcf/with-launch.html#getting-started) om du vill ha mer information om dessa egenskaper och om IAB TCF 2.0 i -taggar.
 
 ### Steg 2: Skapa en regel för att ange samtycke med IAB TCF 2.0-standarden
 
@@ -207,9 +207,9 @@ function addEventListener() {
 addEventListener();
 ```
 
-Den här koden skapar och kör helt enkelt funktionen addEventListener. Funktionen kontrollerar om fönstret finns.__tcfapi-objektet finns och om det gör det lägger det till en händelseavlyssnare enligt specifikationerna i API:t. Du kan läsa mer om dessa specifikationer i [IAB-repo](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework) på GitHub. Om händelseavlyssnaren har lagts till och webbplatsbesökaren har slutfört sina val för samtycke och inställningar, anger koden anpassade variabler för tcData tcString och indikatorn för GDPR-regioner. Om du vill veta mer om IAB TCF kan du läsa IAB [webbplats](https://iabeurope.eu/transparency-consent-framework/) och [GitHub-repo](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework) för teknisk information. När du har angett dessa värden kör koden den utlösarfunktion som aktiverar den här regeln för körning.
+Den här koden skapar och kör helt enkelt en funktion som kallas `addEventListener`. Funktionen kontrollerar om `window.__tcfapi` -objektet finns, och om det gör det lägger det till en händelseavlyssnare enligt specifikationerna i API:t. Du kan läsa mer om dessa specifikationer i [IAB-repo](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework) på GitHub. Om händelseavlyssnaren har lagts till och webbplatsbesökaren har slutfört sina val för samtycke och inställningar, anger koden anpassade variabler för `tcData.tcString`och indikatorn för GDPR-regioner. Om du vill veta mer om IAB TCF kan du läsa IAB [webbplats](https://iabeurope.eu/transparency-consent-framework/) och [GitHub-repo](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework) för teknisk information. När du har angett dessa värden kör koden den utlösarfunktion som aktiverar den här regeln för körning.
 
-Om fönstret.__tcfapi-objektet fanns inte första gången funktionen kördes kommer funktionen att söka efter det igen var 100:e millisekund, så händelseavlyssnaren kan läggas till. Den sista kodraden kör helt enkelt funktionen addEventListener som definieras i kodraderna ovanför den.
+Om `window.__tcfapi` -objektet fanns inte första gången funktionen kördes kommer funktionen att söka efter det igen var 100:e millisekund, så händelseavlyssnaren kan läggas till. Den sista kodraden kör helt enkelt `addEventListener` -funktionen som definieras i kodraderna ovanför den.
 
 Sammanfattningsvis har vi skapat en funktion som kontrollerar om en besökare på webbplatsen har gett sitt samtycke med hjälp av en CMP-banner (eller anpassad). När inställningen för samtycke är angiven skapar koden två anpassade variabler (anpassade kodelement) som kan användas i vår regelåtgärd. När du har klistrat in ovanstående kod i det anpassade kodredigeringsfönstret för händelsen väljer du den blå knappen Spara för att spara regelhändelsen.
 
@@ -219,9 +219,9 @@ Nu ställer vi in åtgärden Ange medgivningsregel för att använda dessa värd
 
 Välj Lägg till i avsnittet Åtgärder. Välj Platform Web SDK i listrutan under Tillägg. Välj Ange samtycke under Åtgärdstyp. Låt oss namnge den här åtgärden setConsent.
 
-Välj Fyll i ett formulär i åtgärdskonfigurationen under Samtycksinformation. I Standard väljer du IAB TCF och i Version anger du 2.0. För värdet använder vi den anpassade variabeln från vår händelse och anger %IAB TCF-medgivandesträng% som kommer från [tcData](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/IAB%20Tech%20Lab%20-%20CMP%20API%20v2.md#tcdata) som vi tog med i vår anpassade funktion för händelsen rule ovan.
+Välj Fyll i ett formulär i åtgärdskonfigurationen under Samtycksinformation. I Standard väljer du IAB TCF och i Version anger du 2.0. För värdet använder vi den anpassade variabeln från vår händelse och anger `%IAB TCF Consent String%` som kommer från [tcData](https://github.com/InteractiveAdvertisingBureau/GDPR-Transparency-and-Consent-Framework/blob/master/TCFv2/IAB%20Tech%20Lab%20-%20CMP%20API%20v2.md#tcdata) som vi tog med i vår anpassade funktion för händelsen rule ovan.
 
-Under GDPR Applies kommer vi att använda den andra anpassade variabeln från vår händelse och ange %IAB TCF-medgivande GDPR% som också kommer från de tcData som vi har hämtat i vår anpassade funktion för regelhändelsen ovan. Om du vet att GDPR definitivt kommer att eller inte kommer att gälla för besökare på den här webbplatsen kan du välja Ja eller Nej, beroende på vad som är tillämpligt, i stället för att använda den anpassade variabeln (dataelementet). Du kan också använda villkorsstyrd logik i ett dataelement för att kontrollera om GDPR gäller och returnera rätt värde.
+Under GDPR Applies kommer vi att använda den andra anpassade variabeln från vår event och ange `%IAB TCF Consent GDPR%` som också kommer från `tcData` som vi tog med i vår anpassade funktion för händelsen rule ovan. Om du vet att GDPR definitivt kommer att eller inte kommer att gälla för besökare på den här webbplatsen kan du välja Ja eller Nej, beroende på vad som är tillämpligt, i stället för att använda den anpassade variabeln (dataelementet). Du kan också använda villkorsstyrd logik i ett dataelement för att kontrollera om GDPR gäller och returnera rätt värde.
 
 Under GDPR innehåller personuppgifter väljer du alternativet att ange om uppgifterna för den här användaren innehåller personuppgifter eller inte. Ett dataelement här ska vara true eller false.
 
@@ -231,7 +231,7 @@ Välj den blå knappen Spara för att spara funktionsmakrot och den blå knappen
 
 ### Steg 3: Spara i bibliotek och bygge
 
-Om du använder [arbetsbibliotek](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/add-data-elements-rules.html?lang=en#use-the-working-library-feature) har du redan sparat dessa ändringar och byggt ditt utvecklingsbibliotek:
+Om du använder [arbetsbibliotek](https://experienceleague.adobe.com/docs/launch-learn/implement-in-websites-with-launch/configure-tags/launch-data-elements-rules.html?lang=en#use-the-working-library-feature) har du redan sparat dessa ändringar och byggt ditt utvecklingsbibliotek:
 
 ![](./images/save-library.png)
 
