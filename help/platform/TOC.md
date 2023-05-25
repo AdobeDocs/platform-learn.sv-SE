@@ -4,9 +4,9 @@ breadcrumb-title: Självstudiekurser
 user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
-source-git-commit: bc55e75f7bfdde878f4e95bfb1fdd02fca9018b5
+source-git-commit: 13a1983f0706686d53c9d218cde0b583bd44578d
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '938'
 ht-degree: 8%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 8%
 + Datastyrning {#data-governance}
    + [Översikt](/help/platform/governance/understanding-data-governance.md)
    + [Komplett demo](/help/platform/governance/introduction-to-data-governance.md)
-   + [Klassificera data med styrningsetiketter](/help/platform/governance/classify-data-using-governance-labels.md)
+   + [Klassificera data med etiketter](/help/platform/governance/classify-data-using-labels.md)
    + [Skapa dataanvändningsprofiler](/help/platform/governance/create-data-usage-policies.md)
    + [Använd principer för dataanvändning](/help/platform/governance/enforce-data-usage-policies.md)
    + [Tvinga samtycke](/help/platform/governance/enforce-consent.md)
