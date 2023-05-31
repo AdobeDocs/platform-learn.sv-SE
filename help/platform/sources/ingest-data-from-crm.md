@@ -7,9 +7,9 @@ kt: 3826, 13272
 thumbnail: 29711.jpg
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: 2a0caa84-dca6-4ba9-9ebf-bdf38dfc3cb2
-source-git-commit: ddacac4554be54f16b533b95baba652bacc5eb1e
+source-git-commit: 17be24fe619139056a69190b98610644387ca18f
 workflow-type: tm+mt
-source-wordcount: '231'
+source-wordcount: '208'
 ht-degree: 0%
 
 ---
@@ -29,10 +29,6 @@ Lär dig hur du konfigurerar källkopplingen för Salesforce CRM med standardarb
 Lär dig hur du konfigurerar källkopplingen för Salesforce CRM med hjälp av mallarbetsflödet. Det här arbetsflödet genererar automatiskt de resurser som behövs för att importera Salesforce-data baserat på mallar. Du sparar tid direkt och resurserna kan anpassas efter dina behov. Det här arbetsflödet stöds inte för alla CRM-källanslutningar.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3419422?quality=12&learn=on)
-
->[!INFO]
->
-> Den här videon är en del av en kurs [Datainmatning för datatekniker](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-D-1-2020.1.dataingestion), kan köpas kostnadsfritt på Experience League!
 
 Mer information finns i följande dokumentation:
 * [Salesforce skapar en anslutningsdokumentation](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/crm/salesforce.html).

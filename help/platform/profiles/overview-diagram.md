@@ -6,10 +6,10 @@ feature: Profiles
 kt: 4943
 thumbnail: 33600.jpg
 exl-id: 1cff5492-82bb-484c-a96a-3417288d4766
-source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
+source-git-commit: 17be24fe619139056a69190b98610644387ca18f
 workflow-type: tm+mt
-source-wordcount: '90'
-ht-degree: 6%
+source-wordcount: '64'
+ht-degree: 9%
 
 ---
 
@@ -18,10 +18,6 @@ ht-degree: 6%
 I den här videon får du en översikt som visar hur Adobe Experience Platform kundprofil kan användas i realtid.
 
 >[!VIDEO](https://video.tv.adobe.com/v/33600?quality=12&learn=on)
-
->[!INFO]
->
-> Den här videon är en del av en kurs [Getting Started with Adobe Experience Platform for Data Engineers](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-D-1-2020.2), kan köpas kostnadsfritt på Experience League!
 
 Mer information finns på [Kundprofildokumentation i realtid](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=sv).
 

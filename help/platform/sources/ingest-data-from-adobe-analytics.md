@@ -7,9 +7,9 @@ last-substantial-update: 2023-02-23T00:00:00Z
 kt: 3824
 thumbnail: 29687.jpg
 exl-id: b5fb1df4-b05d-426f-bdee-43e0de6bf0d6
-source-git-commit: 19d4b68a17dd6d9c3a62f15e01293f351ac1da5e
+source-git-commit: 17be24fe619139056a69190b98610644387ca18f
 workflow-type: tm+mt
-source-wordcount: '150'
+source-wordcount: '127'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,3 @@ ht-degree: 0%
 Med Adobe Analytics Source Connector kan ni enkelt strömma, mappa och filtrera data från Adobe Analytics till Adobe Experience Platform kundprofil och Experience Data Lake i realtid. Lär dig hur du kan använda funktioner för att förbereda data för att skapa semantiska och beräknade fält för att förbättra användarupplevelsen i segmentbyggaren och plattformsapplikationer. Korsregionala rapporteringsprogram stöds för den här kopplingen. Mer detaljerad produktdokumentation finns i [Skapa en Adobe Analytics-källanslutning i användargränssnittet](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/adobe-applications/analytics.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/29687?quality=12&learn=on)
-
->[!INFO]
->
-> Den här videon är en del av en kurs [Datainmatning för datatekniker](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-D-1-2020.1.dataingestion), kan köpas kostnadsfritt på Experience League!

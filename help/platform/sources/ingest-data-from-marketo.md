@@ -8,9 +8,9 @@ kt: 9259, 13303
 last-substantial-update: 2023-05-24T00:00:00Z
 thumbnail: 338250.jpg
 exl-id: cc432fcf-2ff3-48bc-8053-7a6d1f643869
-source-git-commit: ddacac4554be54f16b533b95baba652bacc5eb1e
+source-git-commit: 17be24fe619139056a69190b98610644387ca18f
 workflow-type: tm+mt
-source-wordcount: '191'
+source-wordcount: '162'
 ht-degree: 0%
 
 ---
@@ -30,10 +30,6 @@ Lär dig hur du konfigurerar källkopplingen för Marketo med hjälp av mallarbe
 Lär dig hur du konfigurerar källkopplingen för Marketo med standardarbetsflödet. Standardarbetsflödet kräver att scheman och identitetsnamnutrymmen skapas i förväg.
 
 >[!VIDEO](https://video.tv.adobe.com/v/338250?quality=12&learn=on)
-
->[!INFO]
->
-> Den här videon är en del av en kurs, [Komma igång med Real-Time CDP, B2B Edition för marknadsförare](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.rtcdp.b2b), kan köpas kostnadsfritt på Experience League!
 
 Mer information finns i följande dokumentation:
 * [Marketo Engage källanslutningsdokumentation](https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/adobe-applications/marketo/marketo.html).

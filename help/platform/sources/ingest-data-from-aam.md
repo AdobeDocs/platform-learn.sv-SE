@@ -6,9 +6,9 @@ feature: Sources
 thumbnail: 331214.jpg
 kt: 7111
 exl-id: 43688e44-c0ea-4107-ba74-1e630990f732
-source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
+source-git-commit: 17be24fe619139056a69190b98610644387ca18f
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '295'
 ht-degree: 0%
 
 ---
@@ -24,9 +24,5 @@ När du konfigurerar om dina processer och din personal så att de går från Ad
 >I videon ovan visas ett alternativ för att välja ALLA segment och/eller egenskaper. Vi rekommenderar inte att du använder det här alternativet om du inte har ett begränsat antal segment med ett visst antal unika besökare i dessa segment. Om du placerar ett stort antal besökarprofiler i&quot;alla segment&quot; eller&quot;alla egenskaper&quot; kan profiltjänsten i Real-Time CDP bubblas, vilket kan ha en stor effekt på priset för programmet (eftersom antalet profiler påverkar kostnaden för programmet). Vi rekommenderar därför att du i stället för att välja&quot;all&quot; väljer specifika segment som ska överföras till Real-Time CDP.
 >
 >Titta på [28 april 2022-avsnittet av Experience League LIVE](https://experienceleague.adobe.com/docs/experience-league-live-events/events/episodes/exl-live-episode-04-28-22.html) där detta diskuteras i detalj.
-
->[!INFO]
->
-> Den här videon är en del av en kurs [Datainmatning för datatekniker](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-D-1-2020.1.dataingestion), kan köpas kostnadsfritt på Experience League!
 
 Mer information finns i [Audience Manager källanslutningsdokumentation](https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/adobe-applications/audience-manager.html).

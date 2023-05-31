@@ -6,9 +6,9 @@ feature: Data Science Workspace
 kt: 7291
 thumbnail: 333595.jpg
 exl-id: 149909cf-8294-45ed-b854-b9db5582858e
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 17be24fe619139056a69190b98610644387ca18f
 workflow-type: tm+mt
-source-wordcount: '161'
+source-wordcount: '134'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,5 @@ Lär dig hur du skapar, utbildar, utvärderar och publicerar en modell med ett r
 I Adobe Experience Platform Data Science Workspace skapas en maskininlärningsmodell genom att ett befintligt recept som är lämpligt för modellens avsikt läggs till. Modellen är sedan utbildad och utvärderad för att optimera dess driftseffektivitet och effekt genom att finjustera de tillhörande hyperparametrarna. Recept kan återanvändas, vilket innebär att flera modeller kan skapas och skräddarsys för specifika ändamål med ett enda recept.
 
 >[!VIDEO](https://video.tv.adobe.com/v/333595)
-
->[!INFO]
->
-> Den här videon är en del av en kurs, [Getting Started with Data Science Workspace for Data Scientists](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2021.1.dsw), kan köpas kostnadsfritt på Experience League!
 
 Mer information finns på [Dokumentation för Data Science Workspace](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/home.html).

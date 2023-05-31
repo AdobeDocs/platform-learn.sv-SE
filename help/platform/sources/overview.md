@@ -6,10 +6,10 @@ feature: Sources
 kt: 3800
 thumbnail: 29694.jpg
 exl-id: e38d643a-27ea-49f4-87c4-eccdb860ea92
-source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
+source-git-commit: 17be24fe619139056a69190b98610644387ca18f
 workflow-type: tm+mt
-source-wordcount: '100'
-ht-degree: 26%
+source-wordcount: '77'
+ht-degree: 33%
 
 ---
 
@@ -18,9 +18,5 @@ ht-degree: 26%
 Lär dig hur du använder källor, eller källanslutningar, i Adobe Experience Platform gränssnitt. Källor är enkelt konfigurerbara integreringar som gör att du kan importera data från Adobe, första part och tredjepartsprogram till plattformens kundprofil i realtid och datasjön.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29694?quality=12&learn=on)
-
->[!INFO]
->
-> Den här videon är en del av en kurs [Datainmatning för datatekniker](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-D-1-2020.1.dataingestion), kan köpas kostnadsfritt på Experience League!
 
 Mer information finns i [källdokumentation](https://experienceleague.adobe.com/docs/experience-platform/sources/home.htmll?lang=sv).
