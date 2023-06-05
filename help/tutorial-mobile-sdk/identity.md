@@ -2,10 +2,10 @@
 title: Identitet
 description: Lär dig hur du samlar in identitetsdata i en mobilapp.
 exl-id: cbcd1708-29e6-4d74-be7a-f75c917ba2fa
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: b2e1bf08d9fb145ba63263dfa078c96258342708
 workflow-type: tm+mt
-source-wordcount: '593'
-ht-degree: 0%
+source-wordcount: '591'
+ht-degree: 1%
 
 ---
 
@@ -15,7 +15,7 @@ Lär dig hur du samlar in identitetsdata i en mobilapp.
 
 Adobe Experience Platform identitetstjänst hjälper er att få en bättre bild av era kunder och deras beteenden genom att överbrygga identiteter mellan olika enheter och system, så att ni kan leverera slagkraftiga, personliga digitala upplevelser i realtid. Identitetsfält och namnutrymmen är den kombination som förenar olika datakällor för att skapa en 360-graders kundprofil i realtid.
 
-Läs mer om [Identitetstillägg](https://aep-sdks.gitbook.io/docs/foundation-extensions/identity-for-edge-network) och [identitetstjänst](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html?lang=en) i dokumentationen.
+Läs mer om [Identitetstillägg](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/) och [identitetstjänst](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html?lang=sv) i dokumentationen.
 
 ## Förutsättningar
 

@@ -3,9 +3,9 @@ title: Konfigurera en egenskap för vidarebefordring av händelser
 description: Lär dig hur du använder händelsevidarebefordringsegenskap med Experience Platform Web SDK-data. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Event Forwarding
 exl-id: 5a306609-2c63-42c1-8beb-efa412b8efe4
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: b2e1bf08d9fb145ba63263dfa078c96258342708
 workflow-type: tm+mt
-source-wordcount: '1888'
+source-wordcount: '1887'
 ht-degree: 0%
 
 ---
@@ -19,8 +19,8 @@ Vidarebefordran av händelser är en ny typ av egenskap som är tillgänglig i d
 Om du vill använda händelsevidarebefordran i Adobe Experience Platform måste data skickas till Adobe Experience Platform Edge Network först med ett eller flera av följande tre alternativ:
 
 * [Webb-SDK för Adobe Experience Platform](overview.md)
-* [Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/)
-<!--* [Server-to-Server API](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=en)-->
+* [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)
+   <!--* [Server-to-Server API](https://experienceleague.adobe.com/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s.html?lang=en)-->
 
 
 >[!NOTE]
@@ -84,7 +84,7 @@ För att händelsevidarebefordran ska kunna använda data som du skickar till Ed
 
 Så här konfigurerar du Target i datastream:
 
-1. Gå till [Datainsamling](https://experience.adobe.com/#/data-collection)Gränssnittet {target=&quot;blank&quot;}
+1. Gå till [Datainsamling](https://experience.adobe.com/#/data-collection){target="blank"} gränssnitt
 1. Välj **[!UICONTROL Datastreams]**
 1. Markera tidigare skapade `Luma Web SDK` datastream
 
@@ -285,7 +285,7 @@ Om du inte har länkat egenskaperna för vidarebefordran av mellanlagrings- och 
 
 Nu kan du validera din egenskap för vidarebefordran av händelser med hjälp av Platform Debugger och Webhook.site:
 
-1. Följ stegen för att [växla taggbibliotek](validate-with-debugger.md#use-the-experience-platform-debugger-to-map-to-your-tag-property) på [Luma Demo-webbplats](https://luma.enablementadobe.com/content/luma/us/en/men.html) till Web SDK-taggegenskapen som du mappade till för händelsevidarebefordran i datastream.
+1. Följ stegen för att [växla taggbibliotek](validate-with-debugger.md#use-the-experience-platform-debugger-to-map-to-your-tag-property) på [Luma Demo-webbplats](https://luma.enablementadobe.com/content/luma/us/en/men.html) till taggegenskapen Web SDK som du mappade egenskapen för vidarebefordran av händelser till i datastream.
 
 1. Innan du läser in sidan igen öppnar du felsökaren i Experience Platform **[!UICONTROL Loggar]** från vänster navigering
 

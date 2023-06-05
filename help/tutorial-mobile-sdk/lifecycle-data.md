@@ -2,7 +2,7 @@
 title: Livscykeldata
 description: Lär dig hur du samlar in livscykeldata i en mobilapp.
 exl-id: 75b2dbaa-2f84-4b95-83f6-2f38a4f1d438
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: b2e1bf08d9fb145ba63263dfa078c96258342708
 workflow-type: tm+mt
 source-wordcount: '490'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Lär dig hur du samlar in livscykeldata i en mobilapp.
 
-Med Adobe Experience Platform Mobile SDK Lifecycle kan du samla in livscykeldata från din mobilapp. Adobe Experience Platform Edge Network-tillägget skickar dessa livscykeldata till Platform Edge Network, där de sedan vidarebefordras till andra program och tjänster enligt din datastream-konfiguration. Läs mer om [Livscykeltillägg](https://aep-sdks.gitbook.io/docs/foundation-extensions/lifecycle-for-edge-network) i produktdokumentationen.
+Med Adobe Experience Platform Mobile SDK Lifecycle kan du samla in livscykeldata från din mobilapp. Adobe Experience Platform Edge Network-tillägget skickar dessa livscykeldata till Platform Edge Network, där de sedan vidarebefordras till andra program och tjänster enligt din datastream-konfiguration. Läs mer om [Livscykeltillägg](https://developer.adobe.com/client-sdks/documentation/lifecycle-for-edge-network/) i produktdokumentationen.
 
 
 ## Förutsättningar
@@ -69,7 +69,7 @@ Nu kan du uppdatera `AppDelegate.swift` för att registrera livscykelhändelser:
 
 >[!NOTE]
 >
->iOS 13 och senare finns i [dokumentation](https://aep-sdks.gitbook.io/docs/foundation-extensions/mobile-core/lifecycle#register-lifecycle-with-mobile-core-and-add-appropriate-start-pause-calls) för något annorlunda kod.
+>iOS 13 och senare finns i [dokumentation](https://developer.adobe.com/client-sdks/documentation/mobile-core/lifecycle/#register-lifecycle-with-mobile-core-and-add-appropriate-startpause-calls) för något annorlunda kod.
 
 ## Validera med Assurance
 
@@ -82,7 +82,7 @@ Nu kan du uppdatera `AppDelegate.swift` för att registrera livscykelhändelser:
 
 ## Vidarebefordra data till plattforms-Edge Network
 
-I den föregående övningen skickas för- och bakgrundshändelserna till Mobile SDK. Om du vill skicka dessa händelser till Platform Edge Network följer du de steg som anges [här](https://aep-sdks.gitbook.io/docs/foundation-extensions/lifecycle-for-edge-network#configure-a-rule-to-forward-lifecycle-metrics-to-platform). När händelserna har skickats till Platform Edge Network vidarebefordras de till andra program och tjänster enligt din datastream-konfiguration.
+I den föregående övningen skickas för- och bakgrundshändelserna till Mobile SDK. Om du vill skicka dessa händelser till Platform Edge Network följer du de steg som anges [här](https://developer.adobe.com/client-sdks/documentation/lifecycle-for-edge-network/#configure-a-rule-to-forward-lifecycle-metrics-to-platform). När händelserna har skickats till Platform Edge Network vidarebefordras de till andra program och tjänster enligt din datastream-konfiguration.
 
 När du har lagt till regeln för att skicka livscykelhändelser till Platform Edge Network bör du se `Application Close (Background)` och `Application Launch (Foreground)` händelser som innehåller XDM-data i Assurance.
 

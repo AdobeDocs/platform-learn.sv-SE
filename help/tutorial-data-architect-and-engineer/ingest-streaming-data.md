@@ -8,9 +8,9 @@ feature: Data Ingestion
 kt: 4348
 thumbnail: 4348-ingest-streaming-data.jpg
 exl-id: 09c24673-af8b-40ab-b894-b4d76ea5b112
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: b2e1bf08d9fb145ba63263dfa078c96258342708
 workflow-type: tm+mt
-source-wordcount: '3344'
+source-wordcount: '3346'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Innan du börjar övningarna ska du titta på dessa två korta videoklipp för a
 
 >[!NOTE]
 >
->Den här självstudiekursen fokuserar på direktuppspelning från webbplatser med Web SDK, men du kan även direktuppspela data med [Adobe Mobile SDK](https://aep-sdks.gitbook.io/), [Apache Kafka Connect](https://github.com/adobe/experience-platform-streaming-connect)och andra mekanismer.
+>Den här självstudiekursen fokuserar på direktuppspelning från webbplatser med Web SDK, men du kan även direktuppspela data med [Adobe Mobile SDK](https://developer.adobe.com/client-sdks/documentation/), [Apache Kafka Connect](https://github.com/adobe/experience-platform-streaming-connect)och andra mekanismer.
 
 ## Behörigheter krävs
 
@@ -252,7 +252,7 @@ Som du kan se på [!UICONTROL Publiceringsflöde] på skärmen finns det mycket 
 
 Felsökaren Experience Platform är ett tillägg för webbläsarna Chrome och Firefox som gör att du kan se Adobe-tekniken som används på dina webbsidor. Ladda ned den version du föredrar:
 
-* [Firefox-tillägg](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
+* [Firefox-tillägg](https://addons.mozilla.org/sv-SE/firefox/addon/adobe-experience-platform-dbg/)
 * [Kromtillägg](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
 Om du aldrig har använt Felsökning tidigare - och den här är en annan än den tidigare Adobe Experience Cloud Debugger - kan du titta på den här översiktsvideon med fem minuter:
@@ -324,7 +324,7 @@ Du kan också bekräfta att den nya profilen visas:
 1. Välj **[!UICONTROL Profil-ID]** för att öppna profilen
    ![Hitta och öppna profilen](assets/websdk-platform-openProfile.png)
 1. Välj **[!UICONTROL Händelser]** för att se de sidor du visade
-   ![Profilhändelser](assets/websdk-platform-profileEvents.png)
+   ![Profilhändelser](assets/websdk-platform-profileEvents.png)\
    <!--![](assets/websdk-platform-confirmProfile.png)-->
 
 ## Lägg till anpassade data till händelsen
@@ -457,7 +457,7 @@ Så här verifierar du att CRM-ID:t nu skickas av Web SDK:
 
 ## Ytterligare resurser
 
-* [Implementera Adobe Experience Cloud med Web SDK](/help/tutorial-web-sdk/overview.md)
+* [Implementera Adobe Experience Cloud med webb-SDK](/help/tutorial-web-sdk/overview.md)
 * [Direktuppspelningsdokumentation](https://experienceleague.adobe.com/docs/experience-platform/ingestion/streaming/overview.html?lang=sv)
 * [API-referens för direktuppspelning](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Streaming-Ingestion)
 

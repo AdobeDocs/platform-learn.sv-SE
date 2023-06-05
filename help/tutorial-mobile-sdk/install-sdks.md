@@ -2,9 +2,9 @@
 title: Installera Adobe Experience Platform Mobile SDKs
 description: Lär dig hur du implementerar Adobe Experience Platform Mobile SDK i en mobilapp.
 exl-id: 98d6f59e-b8a3-4c63-ae7c-8aa11e948f59
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: b2e1bf08d9fb145ba63263dfa078c96258342708
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '573'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ Lär dig hur du implementerar Adobe Experience Platform Mobile SDK i en mobilapp
 
 * Taggbiblioteket med tilläggen som beskrivs i [föregående lektion](configure-tags.md).
 * Fil-ID för utvecklingsmiljö från [Instruktioner för mobilinstallation](configure-tags.md#generate-sdk-install-instructions).
-* Nedladdad, tom [exempelapp](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App){target=&quot;_blank&quot;}.
-* Upplevelse med [XCode](https://developer.apple.com/xcode/){target=&quot;_blank&quot;}.
-* Grundläggande [kommandorad](https://en.wikipedia.org/wiki/Command-line_interface){target=&quot;_blank&quot;} kunskap.
+* Nedladdad, tom [exempelapp](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App){target="_blank"}.
+* Upplevelse med [XCode](https://developer.apple.com/xcode/){target="_blank"}.
+* Grundläggande [kommandorad](https://en.wikipedia.org/wiki/Command-line_interface){target="_blank"} kunskap.
 
 ## Utbildningsmål
 
@@ -142,7 +142,7 @@ Koden ovan gör följande:
 
 * Registrerar nödvändiga tillägg.
 * Konfigurerar MobileCore och andra tillägg så att taggegenskapskonfigurationen används.
-* Aktiverar felsökningsloggning. Mer information och alternativ finns i [Mobile SDK-dokumentation](https://aep-sdks.gitbook.io/docs/getting-started/enable-debug-logging).
+* Aktiverar felsökningsloggning. Mer information och alternativ finns i [Mobile SDK-dokumentation](https://developer.adobe.com/client-sdks/documentation/getting-started/enable-debug-logging/).
 
 >[!IMPORTANT]
 >I en produktionsapp måste du växla AppId baserat på den aktuella miljön (dev/stag/prod).

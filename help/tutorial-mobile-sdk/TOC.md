@@ -1,14 +1,14 @@
 ---
-user-guide-title: Implementera självstudiekursen om Experience Cloud i mobilappar
-breadcrumb-title: Självstudiekurs om mobilappar
-user-guide-description: Lär dig hur du implementerar Adobe Experience Cloud-program i mobilappar med Experience Platform Mobile SDK.
+user-guide-title: Implementera självstudiekursen om Experience Cloud i mobila appar
+breadcrumb-title: Självstudiekurs om mobila appar
+user-guide-description: Lär dig hur du implementerar Adobe Experience Cloud-program i mobila appar med Experience Platform Mobile SDK.
 solution: Data Collection
 kt: 6987
-recommendation: noDisplay,noCatalog
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+recommendations: noDisplay,noCatalog
+source-git-commit: 4bccc95ff94e9377b65771268e82b1900c003fc1
 workflow-type: tm+mt
 source-wordcount: '69'
-ht-degree: 11%
+ht-degree: 53%
 
 ---
 

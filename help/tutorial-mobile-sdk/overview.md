@@ -1,11 +1,11 @@
 ---
 title: Implementera Adobe Experience Cloud i självstudiekursen om mobilappar
 description: Lär dig hur du implementerar Adobe Experience Cloud mobilappar. I den här självstudiekursen får du hjälp med att implementera Experience Cloud-program i ett exempel på en Swift-app.
-recommendation: noDisplay,catalog
+recommendations: noDisplay,catalog
 exl-id: daff4214-d515-4fad-a224-f7589b685b55
-source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
+source-git-commit: 4bccc95ff94e9377b65771268e82b1900c003fc1
 workflow-type: tm+mt
-source-wordcount: '648'
+source-wordcount: '643'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 Lär dig hur du implementerar Adobe Experience Cloud-program i din mobilapp med Adobe Experience Platform Mobile SDK.
 
-Experience Platform Mobile SDK är en SDK på klientsidan som gör att kunder i Adobe Experience Cloud kan interagera med både Adobe-program och tredjepartstjänster via Adobe Experience Platform Edge Network. Se [Dokumentation för Adobe Experience Platform Mobile SDK](https://aep-sdks.gitbook.io/docs/) för mer detaljerad information.
+Experience Platform Mobile SDK är en SDK på klientsidan som gör att kunder i Adobe Experience Cloud kan interagera med både Adobe-program och tredjepartstjänster via Adobe Experience Platform Edge Network. Se [Dokumentation för Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) för mer detaljerad information.
 
 ![bygginställningar](assets/data-collection-mobile-sdk.png)
 
@@ -55,7 +55,7 @@ I den här lektionen antas du ha ett Adobe-ID och de behörigheter som krävs f�
    * **[!UICONTROL Egendomsrättigheter]**—behörighetsobjekt till **[!UICONTROL Utveckla]**, **[!UICONTROL Godkänn]**, **[!UICONTROL Publicera]**, **[!UICONTROL Hantera tillägg]** och **[!UICONTROL Hantera miljöer]**.
    * **[!UICONTROL Företagsrättigheter]**—behörighetsobjekt till **[!UICONTROL Hantera egenskaper]** och, om du slutför den valfria push-meddelandelektionen, **[!UICONTROL Hantera appkonfigurationer]**
 
-      Mer information om taggbehörigheter finns i [Användarbehörigheter för taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html?lang=en){target=&quot;_blank&quot;} i produktdokumentationen.
+      Mer information om taggbehörigheter finns i [Användarbehörigheter för taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html?lang=en){target="_blank"} i produktdokumentationen.
 * I Experience Platform måste du ha:
    * **[!UICONTROL Datamodellering]**—behörighetsobjekt för att hantera och visa scheman.
    * **[!UICONTROL Identity Management]**—behörighetsobjekt för att hantera och visa identitetsnamnutrymmen.
@@ -74,8 +74,8 @@ Du måste också känna till [!DNL Swift]. Du behöver inte vara expert för att
 
 Det finns två versioner av exempelappen att hämta.
 
-1. [Tom](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App){target=&quot;_blank&quot;} - version utan Experience Cloud-kod för att slutföra övningarna i den här självstudiekursen
-1. [Fullt implementerad](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App){target=&quot;_blank&quot;} - version med fullständig Experience Cloud-implementering för referens.
+1. [Tom](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App){target="_blank"} - version utan Experience Cloud-kod för att slutföra övningarna i kursen
+1. [Fullt implementerad](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App){target="_blank"} - version med fullständig Experience Cloud-implementering som referens.
 
 Kom så börjar vi!
 

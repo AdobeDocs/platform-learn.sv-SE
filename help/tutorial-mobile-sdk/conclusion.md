@@ -3,10 +3,10 @@ title: Slutsats och nästa steg
 description: Så här gör du när du är klar med självstudiekursen
 recommendations: display,noCatalog
 exl-id: 69db6cf3-0d5d-4864-aac2-e5e1aea4c02e
-source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
+source-git-commit: b2e1bf08d9fb145ba63263dfa078c96258342708
 workflow-type: tm+mt
 source-wordcount: '523'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -41,7 +41,7 @@ Och det finns alltid mer att lära sig! Här följer några förslag på annat i
 * **Utlösa en resa i Journey Optimizer**. De händelser du implementerade i Luma-appen kan användas för att utlösa resor. Läs mer om detta [videosjälvstudiekurs](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-journeys/use-case-transactional-journey.html).
 * **Connect Customer Journey Analytics**. Om du skapade [Plattformsdatauppsättning](platform.md)kan du ansluta datauppsättningen till Customer Journey Analytics. Läs mer om detta [videosjälvstudiekurs](https://experienceleague.adobe.com/docs/customer-journey-analytics-learn/tutorials/connecting-customer-journey-analytics-to-data-sources-in-platform.html)
 * **Aktivera Audience Manager** Gör det möjligt för Audience Manager i era datastream att skicka era XDM Experience Events och börja bygga segment baserat på mobilappsengagemang.
-* **Implementera Adobe Target**. Målet stöds ännu inte med den datastream-konfiguration som är länkad till en mobil egenskap, men kan implementeras med [Adobe Target-tillägg](https://aep-sdks.gitbook.io/docs/using-mobile-extensions/adobe-target).
+* **Implementera Adobe Target**. Target stöds nu med datastream-konfigurationer som är länkade till en mobil egenskap och kan implementeras med [Adobe Journey Optimizer - Beslutstillägg](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/).
 * **Bygg ett segment i plattformen**. Om du har aktiverat [schema och datauppsättning för kundprofil i realtid](platform.md)kan ni skapa segment baserat på era mobilappshändelser, kombinera dem med data från andra källor och sedan skicka dessa segment till destinationer i Real-time Customer Data Platform. Läs mer om segmentbyggaren i det här [videosjälvstudiekurs](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html).
 * **Implementera Platform Web SDK**. Nu när du har bemästrat en SDK, lär du dig en annan! Adobe Experience Platform Web SDK är den JavaScript SDK som används för att driva Experience Cloud och tredjepartstjänster på webbplatser. Det finns en liknande [praktisk självstudiekurs för Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html). Fyll i båda och se profilerna sammanfogas mellan olika enheter!
 * **Läs mer om Experience Platform**. Läs mer om hur du importerar data från andra källor och kombinerar det med dina SDK-data för mobilen i [Getting Started with Adobe Experience Platform for Data Architects and Data Engineers](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/overview.html)

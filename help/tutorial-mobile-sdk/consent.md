@@ -2,7 +2,7 @@
 title: Godkännande
 description: Lär dig hur du implementerar samtycke i en mobilapp.
 exl-id: 08042569-e16e-4ed9-9b5a-864d8b7f0216
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: b2e1bf08d9fb145ba63263dfa078c96258342708
 workflow-type: tm+mt
 source-wordcount: '373'
 ht-degree: 1%
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 Lär dig hur du implementerar samtycke i en mobilapp.
 
-Med mobiltillägget Adobe Experience Platform Consent kan du samla in medgivandeinställningar från din mobilapp när du använder Adobe Experience Platform Mobile SDK och Edge Network-tillägget. Läs mer om [Godkänn tillägg](https://aep-sdks.gitbook.io/docs/foundation-extensions/consent-for-edge-network)i dokumentationen.
+Med mobiltillägget Adobe Experience Platform Consent kan du samla in medgivandeinställningar från din mobilapp när du använder Adobe Experience Platform Mobile SDK och Edge Network-tillägget. Läs mer om [Godkänn tillägg](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/)i dokumentationen.
 
 ## Förutsättningar
 

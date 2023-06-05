@@ -2,7 +2,7 @@
 title: Konfigurera en taggegenskap
 description: Lär dig hur du konfigurerar en taggegenskap i [!UICONTROL Datainsamling] gränssnitt.
 exl-id: 0c4b00cc-34e3-4d08-945e-3fd2bc1b6ccf
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: b2e1bf08d9fb145ba63263dfa078c96258342708
 workflow-type: tm+mt
 source-wordcount: '715'
 ht-degree: 1%
@@ -33,7 +33,7 @@ I den här lektionen kommer du att:
 ## Inledande konfiguration
 
 1. Skapa en ny mobil taggegenskap:
-   1. I [Gränssnitt för datainsamling](https://experience.adobe.com/data-collection/){target=&quot;_blank&quot;}, välj **[!UICONTROL Taggar]** i den vänstra navigeringen
+   1. I [Gränssnitt för datainsamling](https://experience.adobe.com/data-collection/){target="_blank"}, markera **[!UICONTROL Taggar]** i den vänstra navigeringen
    1. Välj **[!UICONTROL Ny egenskap]**
 
       ![skapa en taggegenskap](assets/mobile-tags-new-property.png).
@@ -45,7 +45,7 @@ I den här lektionen kommer du att:
 
       >[!NOTE]
       >
-      > Standardinställningar för godkännande av kantbaserade SDK-implementeringar för mobiler, som den du gör i den här självstudiekursen, kommer från [!UICONTROL Godkänn tillägg] och inte [!UICONTROL Integritet] inställning i taggegenskapskonfigurationen. Du kommer att lägga till och konfigurera tillägget för samtycke senare i den här lektionen. Mer information finns på [dokumentationen](https://aep-sdks.gitbook.io/docs/resources/privacy-and-gdpr).
+      > Standardinställningar för godkännande av kantbaserade SDK-implementeringar för mobiler, som den du gör i den här självstudiekursen, kommer från [!UICONTROL Godkänn tillägg] och inte [!UICONTROL Integritet] inställning i taggegenskapskonfigurationen. Du kommer att lägga till och konfigurera tillägget för samtycke senare i den här lektionen. Mer information finns på [dokumentationen](https://developer.adobe.com/client-sdks/documentation/privacy-and-gdpr/).
 
 
 1. Öppna den nya egenskapen
@@ -81,7 +81,7 @@ I den här lektionen kommer du att:
 
 1. Installera **Godkännande** tillägg.
 
-   I den här självstudiekursen väljer du **[!UICONTROL Väntande]**. Läs mer om tillägget för samtycke i [dokumentationen](https://aep-sdks.gitbook.io/docs/foundation-extensions/consent-for-edge-network).
+   I den här självstudiekursen väljer du **[!UICONTROL Väntande]**. Läs mer om tillägget för samtycke i [dokumentationen](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/).
 
    ![inställningar för samtycke](assets/mobile-tags-extension-consent.png)
 
@@ -110,14 +110,14 @@ I den här lektionen kommer du att:
 
 1. Installationsanvisningarna ger dig en bra startpunkt för implementeringen.
 
-   Ytterligare information finns [här](https://aep-sdks.gitbook.io/docs/getting-started/get-the-sdk).
+   Ytterligare information finns [här](https://developer.adobe.com/client-sdks/documentation/getting-started/get-the-sdk/).
 
    * **[!UICONTROL Miljöfil-ID]**: Detta unika ID pekar på din utvecklingsmiljö, observera detta värde. Produktion/mellanlagring/utveckling har olika ID-värden.
    * **[!UICONTROL Podfile]**: CocoaPods används för att hantera SDK-versioner och -nedladdningar. Läs mer i [dokumentation](https://cocoapods.org/).
    * **[!UICONTROL Initieringskod]**: Det här kodblocket visar hur du importerar de SDK:er som krävs och registrerar tilläggen vid start.
 
 >[!NOTE]
->Installationsanvisningarna ska betraktas som en startpunkt och inte som slutgiltig dokumentation. De senaste SDK-versionerna och kodexemplen finns i den officiella [dokumentation](https://aep-sdks.gitbook.io/docs/).
+>Installationsanvisningarna ska betraktas som en startpunkt och inte som slutgiltig dokumentation. De senaste SDK-versionerna och kodexemplen finns i den officiella [dokumentation](https://developer.adobe.com/client-sdks/documentation/).
 
 ## Arkitektur för mobila taggar
 
