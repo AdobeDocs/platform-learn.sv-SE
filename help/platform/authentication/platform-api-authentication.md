@@ -5,50 +5,50 @@ role: Developer
 feature: API
 kt: 3688
 thumbnail: 28832.jpeg
+last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: c1774670-436e-46dd-9c9b-177bfee5f749
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 60f509ef55ce121f572466a8f13953dba982a0ce
 workflow-type: tm+mt
-source-wordcount: '377'
-ht-degree: 5%
+source-wordcount: '260'
+ht-degree: 7%
 
 ---
 
 # Autentisera och få åtkomst [!DNL Experience Platform] API:er
 
-För att kunna anropa Adobe Experience Platform API:er måste du först få tillgång till ett Experience Platform-utvecklarkonto.
+Om du vill göra förfrågningar till Adobe Experience Platform API:er måste du ha ett Experience Platform-utvecklarkonto.
 
-Stegvisa instruktioner om hur du får tillgång till ett utvecklarkonto finns på [Självstudiekurs om autentisering med Experience Platform API](https://www.adobe.com/go/platform-api-authentication-en).
+## Skapa ett projekt i Adobe Developer Console och exportera en Postman-miljö
 
-## Skapa och exportera Experience Platform API till Postman
-
-[Postman](https://www.getpostman.com/) är ett verktyg som gör att utvecklare snabbt och enkelt kan interagera med Adobe Experience Platform API:er.
+[[!DNL Postman]](https://www.postman.com/) är ett verktyg som gör att utvecklare snabbt och enkelt kan interagera med Adobe Experience Platform API:er.
 
 Adobe Developer Console&#39;s **Exportinformation för Postman** är ett enkelt sätt att exportera all kontoinformation som behövs för att få åtkomst till och interagera med ett Experience Platform-API i en enda Postman-miljöfil, vilket eliminerar behovet av att kopiera och klistra in värden från Adobe Developer Console i Postman.
 
 >[!VIDEO](https://video.tv.adobe.com/v/28832/?quality=12&learn=on)
 
+>[!IMPORTANT]
+>
+>När du har skapat API-autentiseringsuppgifterna måste en systemadministratör på ditt företag associera autentiseringsuppgifterna med en Experience Platform-roll.
+
+
 ## Generera en åtkomsttoken med Postman
 
-Använd [Adobe Identity Management Service API:er](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims) för att få en Access Token för åtkomst till Adobe Experience Platform API:er för icke-produktionsanvändning
+Använd [Adobe Identity Management Service API:er](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims) för att få en Access Token för att få tillgång till Adobe Experience Platform API:er.
 
 >[!VIDEO](https://video.tv.adobe.com/v/29698/?quality=12&learn=on)
 
->[!WARNING]
->
-> Som noterades i Postman-samlingen för generering av token för Adobe I/O Access är de angivna genereringsmetoderna lämpliga för icke-produktionsbruk. Lokal signering läser in ett JavaScript-bibliotek från en tredjepartsvärd och fjärrsignering skickar den privata nyckeln till en webbtjänst som ägs och drivs av Adobe. Även om Adobe inte lagrar den här privata nyckeln bör produktionsnycklar aldrig delas med någon.
 
-## Interagera med Adobe I/O API:er med Postman
+## Interagera med Experience Platform API:er med Postman
 
-Utforska interaktion med Adobe I/O API:er med [Adobe-medföljande Experience Platform API Postman-samlingar](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform), som bygger på [Miljövariabler för Adobe I/O](#export-adobe-io-integration-details-to-postman) och [genererad åtkomsttoken](#generate-an-access-token-with-postman).
+Upptäck interaktionen med Adobe Experience Platform API:er med [Adobe-medföljande Experience Platform API Postman-samlingar](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform), som bygger på [Miljövariabler för Adobe Developer Console](#export-adobe-io-integration-details-to-postman) och [genererad åtkomsttoken](#generate-an-access-token-with-postman).
 
 >[!VIDEO](https://video.tv.adobe.com/v/29704/?quality=12&learn=on)
 
-Observera att Postman-samlingar som tillhandahålls av Adobe kanske inte finns för alla Adobe I/O API:er, men de [Experience Platform API Postman-samlingar](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform) kan användas som guide för hur du definierar egna Postman-samlingar för dessa användningsområden.
 
 ## Ytterligare resurser
 
-* [Adobe I/O Console](https://console.adobe.io)
+* [Adobe Developer Console](https://developer.adobe.com/console/home)
 * [Adobe Experience Platform Postman Samples](https://github.com/adobe/experience-platform-postman-samples)
-   * [Generering av Adobe I/O Access-token för Postman Collection](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims)
-   * [Adobe Experience Platform API:er Postman Collections](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform)
-* [Ladda ned Postman](https://www.getpostman.com/)
+   * [Identity Management System Postman Collection för generering av åtkomsttoken](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims)
+   * [Adobe Experience Platform API Postman Collections](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform)
+* [Ladda ned Postman](https://www.postman.com/)

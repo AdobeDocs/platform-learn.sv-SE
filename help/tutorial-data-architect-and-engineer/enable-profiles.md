@@ -8,9 +8,9 @@ feature: Profiles
 kt: 4348
 thumbnail: 4348-enable-profiles.jpg
 exl-id: b05f1af1-a599-42f2-8546-77453a578b92
-source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
+source-git-commit: 0b13a4fa625cd29cc98c319b81fcb2a278b7b19a
 workflow-type: tm+mt
-source-wordcount: '1123'
+source-wordcount: '1103'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,6 @@ Låt oss börja med den enkla uppgiften att aktivera ett schema:
    > 1. Återställ data
 
 
-
    ![Växla profil](assets/profile-loyalty-enableSchema.png)
 
 Lätt, eller hur? Upprepa stegen ovan för dessa andra scheman:
@@ -86,7 +85,7 @@ Nu är det dags att aktivera `Luma CRM Schema` med API:t. Om du vill hoppa över
 Först hämtar vi `meta:altId` i `Luma CRM Schema`:
 
 1. Öppna [!DNL Postman]
-1. Om du inte har gjort någon begäran de senaste 24 timmarna har din auktoriseringstoken antagligen gått ut. Öppna förfrågan **[!DNL Adobe I/O Access Token Generation > Local Signing (Non-production use-only) > IMS: JWT Generate + Auth via User Token]** och markera **Skicka** att begära nya JWT- och Access-token, precis som i [!DNL Postman] lektion.
+1. Öppna begäran om du inte har någon åtkomsttoken **[!DNL OAuth: Request Access Token]** och markera **Skicka** för att begära en ny åtkomsttoken, precis som i [!DNL Postman] lektion.
 1. Öppna förfrågan **[!DNL Schema Registry API > Schemas > Retrieve a list of schemas within the specified container.]**
 1. Välj **Skicka** knapp
 1. Du borde få 200 svar
@@ -147,7 +146,7 @@ Nu ska du aktivera en datauppsättning för profil med API:t. Även om du vill a
 Först måste vi skaffa `id` i `Luma CRM Dataset`:
 
 1. Öppna [!DNL Postman]
-1. Om du inte har gjort någon begäran de senaste 24 timmarna har din auktoriseringstoken antagligen gått ut. Öppna förfrågan **[!DNL Adobe I/O Access Token Generation > Local Signing (Non-production use-only) > IMS: JWT Generate + Auth via User Token]** och markera **Skicka** att begära nya JWT- och Access-token, precis som i [!DNL Postman] lektion.
+1. Öppna begäran om du inte har någon åtkomsttoken **[!DNL OAuth: Request Access Token]** och markera **Skicka** för att begära en ny åtkomsttoken, precis som i [!DNL Postman] lektion.
 1. Öppna förfrågan **[!DNL Catalog Service API > Datasets > Retrieve a list of datasets.]**
 1. Välj **Skicka** knapp
 1. Du borde få 200 svar

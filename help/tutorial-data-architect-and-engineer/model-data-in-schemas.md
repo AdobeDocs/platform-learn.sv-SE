@@ -8,9 +8,9 @@ feature: Schemas
 kt: 4348
 thumbnail: 4348-model-data-in-schemas.jpg
 exl-id: 317f1c39-7f76-4074-a246-ef19f044cb85
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 0b13a4fa625cd29cc98c319b81fcb2a278b7b19a
 workflow-type: tm+mt
-source-wordcount: '2497'
+source-wordcount: '2485'
 ht-degree: 0%
 
 ---
@@ -122,7 +122,6 @@ Fältgrupper måste skapas i schemaarbetsflödet. Så här skapar du fältgruppe
 1. Använd `Luma Identity profile field group` som **[!UICONTROL Visningsnamn]**
 1. Använd `system identifiers for XDM Individual Profile class` som **[!UICONTROL Beskrivning]**
 1. Välj **[!UICONTROL Lägg till fältgrupper]**
-
    ![Lägg till en ny fältgrupp](assets/schemas-loyalty-nameFieldGroup.png)
 
 Den nya, tomma fältgruppen läggs till i ditt schema. The **[!UICONTROL +]** -knappar kan användas för att lägga till nya fält på valfri plats i hierarkin. I det här fallet vill vi lägga till fält på rotnivå:
@@ -177,11 +176,10 @@ Nu ska vi skapa ett schema med API:t.
 > 1. Ge den ett namn `Luma CRM Schema`
 > 1. Använd följande fältgrupper: Demografiska detaljer, personliga kontaktuppgifter och fältgruppen Luma Identity
 
-
 Först skapar vi det tomma schemat:
 
 1. Öppna [!DNL Postman]
-1. Om du inte har gjort någon begäran de senaste 24 timmarna har din auktoriseringstoken antagligen gått ut. Öppna förfrågan **[!DNL Adobe I/O Access Token Generation > Local Signing (Non-production use-only) > IMS: JWT Generate + Auth via User Token]** och markera **Skicka** för att begära nya JWT- och Access-token.
+1. Öppna begäran om du inte har någon åtkomsttoken **[!DNL OAuth: Request Access Token]** och markera **Skicka** för att begära en ny åtkomsttoken.
 1. Öppna dina miljövariabler och ändra värdet för **CONTAINER_ID** från `global` till `tenant`. Kom ihåg att du måste använda `tenant` när du vill interagera med egna anpassade element i plattformen, till exempel skapa ett schema.
 1. Välj **Spara**
    ![Ändra CONTAINER_ID till klient](assets/schemas-crm-changeContainerId.png)
@@ -218,10 +216,9 @@ Först skapar vi det tomma schemat:
 >
 > Vanliga problem med det här samtalet och troliga korrigeringar:
 >
-> * Ingen auth-token: Kör **IMS: JWT Generera + Auth via användartoken** anrop för att generera nya tokens
+> * Ingen auth-token: Kör **OAuth: Åtkomsttoken för begäran** begäran om att generera en ny token
 > * `401: Not Authorized to PUT/POST/PATCH/DELETE for this path : /global/schemas/`: Uppdatera **CONTAINER_ID** miljövariabel från `global` till `tenant`
 > * `403: PALM Access Denied. POST access is denied for this resource from access control`: Verifiera dina användarbehörigheter i Admin Console
-
 
 ### Lägg till standardfältgrupper
 
@@ -277,7 +274,6 @@ Nu lägger vi till `Luma Identity profile field group` till schemat. Först mås
    ```
 
 1. Välj **Skicka**
-
    ![Lägga till identitetsfältgruppen](assets/schemas-crm-addIdentityMixin.png)
 
 Kontrollera att fältgruppen har lagts till i schemat genom att kontrollera både API-svaret och gränssnittet.

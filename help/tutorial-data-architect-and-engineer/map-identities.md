@@ -8,9 +8,9 @@ feature: Profiles
 kt: 4348
 thumbnail: 4348-map-identities.jpg
 exl-id: e17ffabc-049c-42ff-bf0a-8cc31d665dfa
-source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
+source-git-commit: 0b13a4fa625cd29cc98c319b81fcb2a278b7b19a
 workflow-type: tm+mt
-source-wordcount: '954'
+source-wordcount: '944'
 ht-degree: 1%
 
 ---
@@ -92,12 +92,11 @@ Vi skapar CRM-namnområdet via API.
 > 1. Som **[!UICONTROL Identitetssymbol]**, använda `lumaCrmId`
 > 1. Som **[!UICONTROL Typ]**, använd olika enheter
 
-
 Låt oss skapa identitetsnamnutrymmet `Luma CRM Id`:
 
 1. Hämta [Identitetstjänst.postman_collection.json](https://raw.githubusercontent.com/adobe/experience-platform-postman-samples/master/apis/experience-platform/Identity%20Service.postman_collection.json) till `Luma Tutorial Assets` mapp
 1. Importera samlingen till [!DNL Postman]
-1. Om du inte har gjort någon begäran de senaste 24 timmarna har din auktoriseringstoken antagligen gått ut. Öppna förfrågan **[!DNL Adobe I/O Access Token Generation > Local Signing (Non-production use-only) > IMS: JWT Generate + Auth via User Token]** och markera **Skicka** för att begära nya JWT- och Access-token.
+1. Öppna begäran om du inte har någon åtkomsttoken **[!DNL OAuth: Request Access Token]** och markera **Skicka** för att begära en ny åtkomsttoken.
 1. Välj begäran **[!UICONTROL Identitetstjänst] > [!UICONTROL Identitetsnamnutrymme] > [!UICONTROL Skapa ett nytt identitetsnamnutrymme].**
 1. Klistra in följande som [!DNL Body] av begäran:
 

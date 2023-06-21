@@ -8,9 +8,9 @@ feature: Data Ingestion
 kt: 4348
 thumbnail: 4348-ingest-batch-data.jpg
 exl-id: fc7db637-e191-4cc7-9eec-29f4922ae127
-source-git-commit: 13ecb084c5b107d48b8b7e4d2844b8c108e98bfe
+source-git-commit: 0b13a4fa625cd29cc98c319b81fcb2a278b7b19a
 workflow-type: tm+mt
-source-wordcount: '2538'
+source-wordcount: '2528'
 ht-degree: 0%
 
 ---
@@ -81,7 +81,6 @@ Börja med att hämta exempeldata och anpassa dem för din klientorganisation:
 >* Om du aktiverar feldiagnostik genereras data om inmatningen av data, som du sedan kan granska med hjälp av API:t för dataåtkomst. Läs mer om det i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/data-access/home.html).
 >* Delvis intag gör att du kan importera data som innehåller fel, upp till ett visst tröskelvärde som du kan ange. Läs mer om det i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/ingestion/batch/partial.html)
 
-
 ### Validera data
 
 Det finns några sätt att bekräfta att data har importerats.
@@ -103,7 +102,6 @@ Så här bekräftar du att data landats i profilen (det kan ta några minuter in
 1. Välj `Luma Loyalty Id` namespace
 1. Ange sedan en av `loyaltyId` värden från datauppsättningen,  `5625458`
 1. Välj **[!UICONTROL Visa]**
-
    ![Bekräfta en profil från datauppsättningen](assets/ingestion-loyalty-profile.png)
 
 #### Validera med dataöverföringshändelser
@@ -137,7 +135,7 @@ Nu ska vi ladda upp data med API:t.
 Först hämtar vi ID:t för datauppsättnings-ID:t för den datauppsättning som vi vill importera data till:
 
 1. Öppna [!DNL Postman]
-1. Om du inte har gjort någon begäran de senaste 24 timmarna har din auktoriseringstoken antagligen gått ut. Öppna förfrågan **[!DNL Adobe I/O Access Token Generation > Local Signing (Non-production use-only) > IMS: JWT Generate + Auth via User Token]** och markera **Skicka** att begära nya JWT- och Access-token, precis som i [!DNL Postman] lektion.
+1. Öppna begäran om du inte har någon åtkomsttoken **[!DNL OAuth: Request Access Token]** och markera **Skicka** för att begära en ny åtkomsttoken, precis som i [!DNL Postman] lektion.
 1. Öppna dina miljövariabler och kontrollera värdet för **CONTAINER_ID** är fortfarande `tenant`
 1. Öppna förfrågan **[!DNL Catalog Service API > Datasets > Retrieve a list of datasets.]** och markera **Skicka**
 1. Du borde skaffa en `200 OK` svar
@@ -337,7 +335,7 @@ Adobe samarbetar med flera ETL-leverantörer för att stödja datainhämtning ti
 
 * [Utveckla ETL-integreringar för Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/etl/home.html)
 * [Informatica Adobe Experience Platform Connector page on Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101570.informatica-adobe-experience-cloud-connector.html)
-* [Informativ dokumentation om Adobe Experience Platform Connector ](https://docs.informatica.com/integration-cloud/cloud-data-integration-connectors/current-version/adobe-experience-platform-connector/preface.html)
+* [Informativ dokumentation om Adobe Experience Platform Connector](https://docs.informatica.com/integration-cloud/cloud-data-integration-connectors/current-version/adobe-experience-platform-connector/preface.html)
 * [[!DNL Snaplogic] Adobe Experience Platform Snap Pack](https://www.snaplogic.com/resources/videos/august-2020-aep)
 
 ## Ytterligare resurser

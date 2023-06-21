@@ -8,10 +8,10 @@ feature: Sandboxes
 kt: 4348
 thumbnail: 4348-create-a-sandbox.jpg
 exl-id: a04afada-52a1-4812-8fa2-14be72e68614
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 35242a037bc79f18e90399c47e47064634d26a37
 workflow-type: tm+mt
-source-wordcount: '453'
-ht-degree: 0%
+source-wordcount: '404'
+ht-degree: 1%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 I den här lektionen ska du skapa en sandlåda för utvecklingsmiljö som du använder för resten av självstudiekursen.
 
-Sandlådor har isolerade miljöer där du kan testa funktioner utan att blanda resurser och data med produktionsmiljön. Mer information finns i [dokumentation för sandlådor](https://experienceleague.adobe.com/docs/experience-platform/sandbox/home.html).
+Sandlådor har isolerade miljöer där du kan testa funktioner utan att blanda resurser och data med produktionsmiljön. Mer information finns i [dokumentation för sandlådor](https://experienceleague.adobe.com/docs/experience-platform/sandbox/home.html?lang=sv).
 
 **Dataarkitekturer** och **Datatekniker** måste skapa sandlådor utanför den här självstudiekursen.
 
@@ -64,27 +64,17 @@ Vänta tills sandlådan är[!UICONTROL Aktiv]&quot; innan man fortsätter med n�
 
 ## Lägg till den nya sandlådan i produktprofilen
 
-När sandlådan är aktiv måste du inkludera den i din produktprofil för att kunna använda den. Så här lägger du till den i din produktprofil:
+När sandlådan är aktiv måste du inkludera den i din roll för att kunna använda den. Så här lägger du till den i din roll (kräver behörighet som systemadministratör eller produktadministratör):
 
-1. På en separat flik i webbläsaren loggar du in på [Admin Console](https://adminconsole.adobe.com)
-1. Gå till **[!UICONTROL Produkter > Adobe Experience Platform]**
-1. Öppna `Luma Tutorial Platform` profil
-
-   ![Välj produktprofil](assets/sandbox-selectProfile.png)
-
-1. Gå till **[!UICONTROL Behörigheter]** tab
-
+1. Gå till [!UICONTROL Behörigheter] screen
+1. Öppna `Luma Tutorial Platform` roll
+1. _Ta bort_ den `Prod` sandlåda från rollen
+1. Lägg till `Luma Tutorial` sandlåda
+1. Välj **[!UICONTROL Spara]**
 1. På [!UICONTROL Sandlådor] rad, markera **[!UICONTROL Redigera]**
 
-   ![Välj Redigera](assets/sandbox-selectSandboxes.png)
+   ![Lägg till Luma-självstudiekursen](assets/sandbox-addLumaTutorial.png)
 
-1. _Ta bort_ den **[!UICONTROL Prod]** sandlåda som du tilldelade profilen ursprungligen
-1. Välj **[!UICONTROL +]** ikon för att lägga till den nya `Luma Tutorial` sandlåda till höger kolumn
-1. Välj **[!UICONTROL Spara]** för att spara de uppdaterade behörigheterna
-
-   ![Flytta sandlådan till den andra kolumnen](assets/sandbox-addLumaTutorial.png)
-
-1. Gå tillbaka till webbläsarfliken med Experience Platform
 1. Läs in sidan igen (eller Skift-läs in igen) och du bör nu antingen vara i `Luma Tutorial` sandlådan eller den ska visas i din sandlådelistruta
 1. Växla till `Luma Tutorial` sandlåda om du inte redan finns i den
 
