@@ -4,10 +4,10 @@ description: När du skickar ut segmentprofiler till aktiveringspartners är det
 feature: Monitoring
 role: User
 level: Beginner
-kt: 10450
+jira: KT-10450
 thumbnail: 343248.jpg
 exl-id: 425c8876-db9e-4fc3-9ce4-208c560244da
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '104'
 ht-degree: 0%

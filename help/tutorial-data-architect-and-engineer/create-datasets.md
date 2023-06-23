@@ -5,10 +5,10 @@ breadcrumb-title: Skapa datauppsättningar
 description: I den här lektionen ska du skapa datauppsättningar som tar emot dina data.
 role: Data Architect, Data Engineer
 feature: Data Management
-kt: 4348
+jira: KT-4348
 thumbnail: 4348-create-datasets.jpg
 exl-id: 80227af7-4976-4fd2-b1d4-b26bc4626fa0
-source-git-commit: 0b13a4fa625cd29cc98c319b81fcb2a278b7b19a
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 0%

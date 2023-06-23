@@ -1,12 +1,12 @@
 ---
 title: Bootcamp - Journey Optimizer Create your event
 description: Bootcamp - Journey Optimizer Create your event
-kt: 5342
+jira: KT-5342
 audience: developer
 doc-type: tutorial
 activity: develop
 exl-id: 89db40ab-d4c5-4310-aca6-cb64828e7bc9
-source-git-commit: ead28f5631fc430c41e8c756b23dc69ffe19510e
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '443'
 ht-degree: 0%

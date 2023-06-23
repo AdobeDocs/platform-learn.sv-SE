@@ -4,10 +4,10 @@ description: Lär dig hur du använder benägenhetspoäng och insikter från Kun
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI
 role: User
-kt: 4171
+jira: KT-4171
 thumbnail: 32666.jpg
 exl-id: f3f628ef-223a-48d9-979e-86f038268923
-source-git-commit: 17be24fe619139056a69190b98610644387ca18f
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 72%

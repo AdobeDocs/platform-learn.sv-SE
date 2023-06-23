@@ -2,9 +2,9 @@
 title: Välj ett värdalternativ för ditt taggbibliotek (tidigare Starta bibliotek)
 description: Lär dig hur du väljer det bästa värdalternativet för ditt taggbibliotek.
 feature: Tags
-kt: 3526
+jira: KT-3526
 exl-id: adc00363-7490-44ab-95e2-46f9f630021c
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '42'
 ht-degree: 0%

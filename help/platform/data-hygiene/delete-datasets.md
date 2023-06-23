@@ -3,11 +3,11 @@ title: Schemalägg borttagning av datauppsättning
 description: Lär dig hur du tar bort datauppsättningar med hjälp av funktionen Adobe Experience Platform Data Hygiene.
 role: Data Engineer, Data Architect
 feature: Data Hygiene
-kt: 10697
+jira: KT-10697
 thumbnail: 345065.jpeg
 last-substantial-update: 2022-07-27T00:00:00Z
 exl-id: 7764de70-e0c1-48a8-8d1f-a5426f8d580a
-source-git-commit: 042f0fa0380e6816777d4a2e4fffdf6575e5c05e
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '95'
 ht-degree: 0%

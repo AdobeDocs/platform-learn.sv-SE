@@ -4,9 +4,9 @@ seo-title: Conclusion | Getting Started with Adobe Experience Platform for Data 
 breadcrumb-title: Slutsats
 description: I den här lektionen ska du konfigurera Adobe Experience Platform användarbehörigheter med Adobe Admin Console.
 role: Data Architect, Data Engineer
-kt: 4348
+jira: KT-4348
 exl-id: 73abe4bd-57cb-4acf-98f6-253b01fd79ff
-source-git-commit: 13ecb084c5b107d48b8b7e4d2844b8c108e98bfe
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '426'
 ht-degree: 0%

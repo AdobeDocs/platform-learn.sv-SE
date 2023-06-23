@@ -5,10 +5,10 @@ breadcrumb-title: Kör frågor
 description: I den här lektionen får du lära dig hur du ställer in, skriver och kör frågor för att validera data som du har kapslat.
 role: Data Architect, Data Engineer
 feature: Queries
-kt: 4348
+jira: KT-4348
 thumbnail: 4348-run-queries.jpg
 exl-id: a37531cb-96ad-4547-86af-84f7ed65f019
-source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 2%

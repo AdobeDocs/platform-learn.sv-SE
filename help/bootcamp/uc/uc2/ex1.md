@@ -1,12 +1,12 @@
 ---
 title: Bootcamp - Besök webbplatsen och skapa ditt konto
 description: Bootcamp - Besök webbplatsen och skapa ditt konto
-kt: 5342
+jira: KT-5342
 audience: Data Engineer, Data Architect, Marketer
 doc-type: tutorial
 activity: develop
 exl-id: a56cedba-3ac4-4a9b-aeb8-8036c527a878
-source-git-commit: ead28f5631fc430c41e8c756b23dc69ffe19510e
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '347'
 ht-degree: 0%

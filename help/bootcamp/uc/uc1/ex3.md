@@ -1,15 +1,15 @@
 ---
 title: Bootcamp - kundprofil i realtid - Skapa ett segment - användargränssnitt
 description: Bootcamp - kundprofil i realtid - Skapa ett segment - användargränssnitt
-kt: 5342
+jira: KT-5342
 audience: Data Engineer, Data Architect, Marketer
 doc-type: tutorial
 activity: develop
 exl-id: 37d4a5e8-e2bc-4c8c-a74f-09f74ea79962
-source-git-commit: ead28f5631fc430c41e8c756b23dc69ffe19510e
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '496'
-ht-degree: 2%
+ht-degree: 3%
 
 ---
 
@@ -21,11 +21,11 @@ I den här övningen skapar du ett segment genom att använda Adobe Experience P
 
 Gå till [Adobe Experience Platform](https://experience.adobe.com/platform). När du loggat in kommer du till Adobe Experience Platform hemsida.
 
-![Dataintag](./images/home.png)
+![Datainmatning](./images/home.png)
 
 Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``Bootcamp``. Du kan göra detta genom att klicka på texten **[!UICONTROL Produktionsprodukt]** i den blå linjen ovanför skärmen. När du har valt lämplig [!UICONTROL sandlåda]kommer du att se skärmändringen och nu är du med på din [!UICONTROL sandlåda].
 
-![Dataintag](./images/sb1.png)
+![Datainmatning](./images/sb1.png)
 
 På menyn till vänster går du till **Segment**. På den här sidan visas en översikt över alla befintliga segment. Klicka på **+ Skapa segment** för att börja skapa ett nytt segment.
 

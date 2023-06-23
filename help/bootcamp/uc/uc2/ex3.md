@@ -1,12 +1,12 @@
 ---
 title: Bootcamp - Journey Optimizer Skapa din resa och ditt e-postmeddelande
 description: Bootcamp - Journey Optimizer Skapa din resa och ditt e-postmeddelande
-kt: 5342
+jira: KT-5342
 audience: developer
 doc-type: tutorial
 activity: develop
 exl-id: 138a70fa-fe50-4585-b47f-150db4770c3d
-source-git-commit: f018e3aae714879de0cccb3a47b1f2242b57abc1
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '938'
 ht-degree: 3%

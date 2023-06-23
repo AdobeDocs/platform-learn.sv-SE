@@ -1,11 +1,12 @@
 ---
 title: Bootcamp - Blending physical and digital - Use the mobile app and trigger a beacon entry - Brazil
 description: Bootcamp - Blending physical and digital - Use the mobile app and trigger a beacon entry - Brazil
-kt: 5342
+jira: KT-5342
 audience: Data Engineer, Data Architect, Marketer
 doc-type: tutorial
 activity: develop
-source-git-commit: 5d824244766135cd4998feab48be7f6a69c42a70
+exl-id: 14bfbebe-6df3-4a0e-875c-b4c0d016f8da
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '542'
 ht-degree: 0%

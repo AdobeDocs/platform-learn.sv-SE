@@ -3,10 +3,10 @@ title: Adobe Experience Platform Debugger - översikt
 description: Lär dig hur tillägget Adobe Experience Platform Debugger Chrome och Firefox-tillägget hjälper dig att felsöka dina webbimplementeringar av webb-SDK för Adobe Experience Platform, Adobe Analytics, Adobe Target, Adobe Audience Manager, taggar med mera.
 landing-page-description: Felsök webbimplementeringarna av programmen webb-SDK för Adobe Experience Platform och Experience Cloud.
 short-description: Felsök webbimplementeringarna av programmen webb-SDK för Adobe Experience Platform och Experience Cloud.
-kt: 4723
+jira: KT-4723
 thumbnail: 32156.jpg
 exl-id: 9ce0b5db-9f00-4b59-8655-09cd59b3d5df
-source-git-commit: 8c602618cee3b0167d4d864b24b936d719d730a6
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 58%
@@ -15,7 +15,7 @@ ht-degree: 58%
 
 # Adobe Experience Platform Debugger - översikt
 
-Läs om hur Adobe Experience Platform Debugger [Kromtillägg](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) och [Firefox-tillägg](https://addons.mozilla.org/sv-SE/firefox/addon/adobe-experience-platform-dbg/) hjälper dig att felsöka dina webbimplementeringar av Adobe Experience Platform Web SDK, Adobe Analytics, Adobe Target, Adobe Audience Manager, taggar med mera.
+Se hur Adobe Experience Platform Debugger [Kromtillägg](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) och [Firefox-tillägg](https://addons.mozilla.org/sv-SE/firefox/addon/adobe-experience-platform-dbg/) hjälper dig att felsöka dina webbimplementeringar av Adobe Experience Platform Web SDK, Adobe Analytics, Adobe Target, Adobe Audience Manager, taggar med mera.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32156?quality=12&learn=on)
 

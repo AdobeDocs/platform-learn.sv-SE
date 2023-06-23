@@ -9,8 +9,8 @@ role: Developer
 level: Intermediate,Experienced
 doc-type: tutorial
 recommendations: catalog,noDisplay
-kt: 11159
-source-git-commit: 4b695b4578f0e725fc3fe1e455aa4886b9cc0669
+jira: KT-11159
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '88'
 ht-degree: 5%

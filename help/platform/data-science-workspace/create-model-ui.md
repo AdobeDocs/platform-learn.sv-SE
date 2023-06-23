@@ -3,10 +3,10 @@ title: Skapa och publicera en tränad modell
 description: Lär dig hur du skapar, utbildar, utvärderar och publicerar en modell med ett recept som skapats med JupyterLab Recipe Builder-anteckningsboken.
 role: User
 feature: Data Science Workspace
-kt: 7291
+jira: KT-7291
 thumbnail: 333595.jpg
 exl-id: 149909cf-8294-45ed-b854-b9db5582858e
-source-git-commit: 17be24fe619139056a69190b98610644387ca18f
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '134'
 ht-degree: 0%

@@ -4,11 +4,11 @@ description: Lär dig hur du importerar data från Marketo Engage med hjälp av 
 solution: Real-time Customer Data Platform
 feature: Sources
 role: Data Engineer, Data Architect
-kt: 9259, 13303
+jira: KT-9259, 13303
 last-substantial-update: 2023-05-24T00:00:00Z
 thumbnail: 338250.jpg
 exl-id: cc432fcf-2ff3-48bc-8053-7a6d1f643869
-source-git-commit: 17be24fe619139056a69190b98610644387ca18f
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '162'
 ht-degree: 0%

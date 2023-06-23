@@ -5,10 +5,10 @@ breadcrumb-title: Skapa segment
 description: I den här lektionen ska vi skapa några segment baserat på profildata som vi har inhämtat i tidigare lektioner.
 role: Data Architect
 feature: Data Governance
-kt: 4348
+jira: KT-4348
 thumbnail: 4348-build-segments.jpg
 exl-id: cd05e814-1ea7-48ba-adf6-1a71504c623e
-source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '904'
 ht-degree: 0%
@@ -67,7 +67,6 @@ I den här övningen kommer vi att skapa ett segment för kunder som har köpt s
 1. Dra **[!UICONTROL Inköp]** händelsetyp på arbetsytan _två gånger_
 1. Markera klockikonen mellan de två **[!UICONTROL Inköp]** och välj&quot;inom 30 dagar&quot;
 1. Bekräfta att segmentdefinitionen nu är läsbar **&quot;Inkludera målgrupper som har minst en Inköpshändelse och som inom 30 dagar har minst en Inköpshändelse&quot;**
-
    ![Två köp inom 30 dagar](assets/segment-twoPurchases.png)
 1. Ändra nu händelsefiltret till `sku`
 1. Dra SKU-fältet till den andra köphändelsen

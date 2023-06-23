@@ -4,10 +4,10 @@ description: Se en demonstration av hur Real-time CDP används för att samla in
 solution: Real-time Customer Data Platform
 role: User
 feature: Destinations
-kt: 5291
+jira: KT-5291
 thumbnail: 34558.jpg
 exl-id: 1e766a0f-7b4f-4c3d-a908-5cb4cba8b334
-source-git-commit: 2d4f4f933650ef1a0ac98d47b28d0d750ae0e908
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 40%

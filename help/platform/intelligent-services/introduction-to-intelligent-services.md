@@ -4,10 +4,10 @@ description: En introduktion på hög nivå till Intelligent Services, som ger m
 solution: Experience Platform, Real-time Customer Data Platform
 feature: Customer AI, Attribution AI
 role: User
-kt: 4170
+jira: KT-4170
 thumbnail: 32654.jpg
 exl-id: 23e15df2-1bf2-4c19-a5d5-9cfb2f7b0bd8
-source-git-commit: 17be24fe619139056a69190b98610644387ca18f
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '85'
 ht-degree: 72%

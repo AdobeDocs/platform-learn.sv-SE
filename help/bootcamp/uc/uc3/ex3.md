@@ -1,15 +1,15 @@
 ---
 title: Bootcamp - Mixing physical and digital - Journey Optimizer Create your travel and push notification
 description: Bootcamp - Mixing physical and digital - Journey Optimizer Create your travel and push notification
-kt: 5342
+jira: KT-5342
 audience: developer
 doc-type: tutorial
 activity: develop
 exl-id: be8c23ec-c5f8-4abc-849f-994446072a84
-source-git-commit: ead28f5631fc430c41e8c756b23dc69ffe19510e
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
-source-wordcount: '834'
-ht-degree: 0%
+source-wordcount: '831'
+ht-degree: 1%
 
 ---
 
@@ -150,7 +150,7 @@ Du måste nu ange värden för varje åtgärdsparameter. Följ den här tabellen
 | ACTIVITYID | `''` |
 | PLACEMENTID | `''` |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 Klicka på **Redigera** ikon.
 

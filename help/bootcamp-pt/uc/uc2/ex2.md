@@ -1,11 +1,12 @@
 ---
 title: Bootcamp - Journey Optimizer Create your event - Brazil
 description: Bootcamp - Journey Optimizer Create your event - Brazil
-kt: 5342
+jira: KT-5342
 audience: developer
 doc-type: tutorial
 activity: develop
-source-git-commit: 5d824244766135cd4998feab48be7f6a69c42a70
+exl-id: 1b9d7a35-cddf-4f4a-ad0a-95723b00c278
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '463'
 ht-degree: 0%

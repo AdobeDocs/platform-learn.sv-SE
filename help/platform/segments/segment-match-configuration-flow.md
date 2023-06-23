@@ -4,10 +4,10 @@ description: När ett segment har delats med en datapartner kan du utforska och 
 feature: Segments
 role: User
 level: Intermediate
-kt: 10248
+jira: KT-10248
 thumbnail: 342336.jpeg
 exl-id: 0f73c316-ed55-4a33-9603-a58e90dd205a
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 10%

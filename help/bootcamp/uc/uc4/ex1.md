@@ -1,12 +1,12 @@
 ---
 title: Bootcamp - Customer Journey Analytics - Customer Journey Analytics 101
 description: Bootcamp - Customer Journey Analytics - Customer Journey Analytics 101
-kt: 5342
+jira: KT-5342
 audience: Data Engineer, Data Architect, Data Analyst
 doc-type: tutorial
 activity: develop
 exl-id: 587be8bc-8ebe-4f30-99d8-ba88ce40caf7
-source-git-commit: ead28f5631fc430c41e8c756b23dc69ffe19510e
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '876'
 ht-degree: 0%
@@ -75,11 +75,11 @@ Logga in på Adobe Experience Platform genom att gå till denna URL: [https://ex
 
 När du loggat in kommer du till Adobe Experience Platform hemsida.
 
-![Dataintag](../uc1/images/home.png)
+![Datainmatning](../uc1/images/home.png)
 
 Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``Bootcamp``. Du kan göra detta genom att klicka på texten **[!UICONTROL Prod]** i skärmens övre högra hörn. När du har valt rätt sandlåda ser du skärmändringen och nu befinner du dig i din dedikerade sandlåda.
 
-![Dataintag](../uc1/images/sb1.png)
+![Datainmatning](../uc1/images/sb1.png)
 
 Ta en titt på dessa scheman och datauppsättningar i Adobe Experience Platform.
 

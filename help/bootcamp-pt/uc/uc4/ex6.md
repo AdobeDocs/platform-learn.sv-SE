@@ -1,11 +1,12 @@
 ---
 title: Bootcamp - Customer Journey Analytics - From insights to action - Brazil
 description: Bootcamp - Customer Journey Analytics - From insights to action - Brazil
-kt: 5342
+jira: KT-5342
 audience: Data Engineer, Data Architect, Data Analyst
 doc-type: tutorial
 activity: develop
-source-git-commit: febeba3596d3f98b2352c5ef8688ee011d25c9fe
+exl-id: 28b87e21-3168-447e-9a93-a6ae7e969657
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '443'
 ht-degree: 0%

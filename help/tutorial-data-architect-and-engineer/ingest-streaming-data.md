@@ -5,10 +5,10 @@ breadcrumb-title: Infoga strömmande data
 description: I den här lektionen strömmar du data till Experience Platform med Web SDK.
 role: Data Engineer
 feature: Data Ingestion
-kt: 4348
+jira: KT-4348
 thumbnail: 4348-ingest-streaming-data.jpg
 exl-id: 09c24673-af8b-40ab-b894-b4d76ea5b112
-source-git-commit: b2e1bf08d9fb145ba63263dfa078c96258342708
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '3346'
 ht-degree: 0%
@@ -82,7 +82,6 @@ Först konfigurerar vi datastream. En dataström talar om för Adobe Edge nätve
 Skapa [!UICONTROL datastream]:
 
 1. Logga in på [Experience Platform datainsamlingsgränssnitt](https://experience.adobe.com/launch/)
-
    <!--when will the edge config go live?-->
 
 1. Välj **[!UICONTROL Datastreams]** i den vänstra navigeringen
@@ -103,7 +102,6 @@ På nästa skärm anger du var du vill skicka data. Så här skickar du data til
 1. För **[!UICONTROL Händelsedatauppsättning]**, markera `Luma Web Events Dataset`
 1. Om du använder andra Adobe-program kan du utforska de andra avsnitten och se vilken information som krävs i Edge Configuration för dessa andra lösningar. Kom ihåg att Web SDK utvecklades inte bara för att strömma data till Experience Platform, utan även för att ersätta alla tidigare JavaScript-bibliotek som används av andra Adobe-program. Edge Configuration används för att ange kontoinformationen för varje program som du vill skicka data till.
 1. Välj **[!UICONTROL Spara]**
-
    ![Konfigurera dataströmmen och spara](assets/websdk-edgeConfig-addEnvironment.png)
 
 När Edge Configuration har sparats visas tre miljöer för utveckling, mellanlagring och produktion. Ytterligare utvecklingsmiljöer kan läggas till:
@@ -124,7 +122,6 @@ Så här skapar du en egenskap:
 1. Som **[!UICONTROL Namn]**, ange `Luma Platform Tutorial` (lägg till ditt namn i slutet om flera personer från ditt företag använder den här självstudiekursen)
 1. Som **[!UICONTROL Domäner]**, ange `enablementadobe.com` (förklaras senare)
 1. Välj **[!UICONTROL Spara]**
-
    ![Egenskapsinformation](assets/websdk-property-propertyDetails.png)
 
 <!--
@@ -281,7 +278,6 @@ Felsökaren i Experience Platform har en cool funktion som gör att du kan ersä
 1. Gå till **[!UICONTROL Starta]** i den vänstra navigeringen
 1. Välj fliken Konfiguration
 1. Till höger om där den visar dig **[!UICONTROL Sidinbäddningskoder]**&#x200B;öppnar du **[!UICONTROL Åtgärder]** och markera **[!UICONTROL Ersätt]**
-
    ![Välj Åtgärder > Ersätt](assets/websdk-debugger-replaceLibrary.png)
 1. Eftersom du är autentiserad kommer felsökaren att hämta in de tillgängliga egenskaperna och miljöerna för Launch. Välj `Luma Platform Tutorial` property
 1. Välj `Development` miljö
@@ -364,7 +360,6 @@ På **[!UICONTROL Dataelement]** sida:
 1. Välj `web.webPageDetails.name` fält
 1. Som **[!UICONTROL Värde]**, markerar du ikonen för att öppna ett modalt val av dataelement och väljer `Page Name` dataelement
 1. Välj **[!UICONTROL Spara i bibliotek]**
-
    ![Mappa sidnamnet till XDM-objektets dataelement](assets/websdk-property-dataElement-createXDMObject.png)
 
 Samma process används för att mappa ytterligare anpassade data på webbplatsen till XDM-fält.

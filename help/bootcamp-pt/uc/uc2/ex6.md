@@ -1,11 +1,12 @@
 ---
 title: Bootcamp - Personalization in the call center - Brazil
 description: Bootcamp - Personalization in the call center - Brazil
-kt: 5342
+jira: KT-5342
 audience: developer
 doc-type: tutorial
 activity: develop
-source-git-commit: 5d824244766135cd4998feab48be7f6a69c42a70
+exl-id: 7acf778b-042f-4deb-9406-ddcf63daacda
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '557'
 ht-degree: 0%

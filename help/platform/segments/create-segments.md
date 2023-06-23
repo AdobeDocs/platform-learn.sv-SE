@@ -3,10 +3,10 @@ title: Skapa segment
 description: Lär dig hur du skapar segment i Adobe Experience Platform.
 role: User
 feature: Segments
-kt: 2704
+jira: KT-2704
 thumbnail: 27254.jpg
 exl-id: 5d2a8b17-baf9-4c52-9ebc-7f058ab0e64d
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 0%

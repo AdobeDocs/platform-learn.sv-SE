@@ -1,12 +1,12 @@
 ---
 title: Bootcamp - Personalisering i callcenter
 description: Bootcamp - Personalisering i callcenter
-kt: 5342
+jira: KT-5342
 audience: developer
 doc-type: tutorial
 activity: develop
 exl-id: f7697673-38f9-41f6-ac4d-2561db2ece67
-source-git-commit: ead28f5631fc430c41e8c756b23dc69ffe19510e
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '546'
 ht-degree: 0%
@@ -55,11 +55,11 @@ Ditt samtal till callcenter avslutas nu.
 
 Gå till [Adobe Experience Platform](https://experience.adobe.com/platform). När du loggat in kommer du till Adobe Experience Platform hemsida.
 
-![Dataintag](./images/home.png)
+![Datainmatning](./images/home.png)
 
 Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``Bootcamp``. Du kan göra detta genom att klicka på texten **[!UICONTROL Produktionsprodukt]** i den blå linjen ovanför skärmen. När du har valt lämplig [!UICONTROL sandlåda]kommer du att se skärmändringen och nu är du med på din [!UICONTROL sandlåda].
 
-![Dataintag](./images/sb1.png)
+![Datainmatning](./images/sb1.png)
 
 Gå till den vänstra menyn **Profiler** och till **Bläddra**.
 

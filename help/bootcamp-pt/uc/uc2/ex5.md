@@ -1,11 +1,12 @@
 ---
 title: Bootcamp - Install & use mobile app - Brazil
 description: Bootcamp - Install & use mobile app - Brazil
-kt: 5342
+jira: KT-5342
 audience: developer
 doc-type: tutorial
 activity: develop
-source-git-commit: 9cc01c7d3018319137f915e103bce9dc39b0d472
+exl-id: e3b920b1-e5e6-4fcc-b707-29c5943acec8
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '269'
 ht-degree: 0%

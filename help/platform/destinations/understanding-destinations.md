@@ -4,10 +4,10 @@ description: I den här videon definieras de två typerna av mål och tankstreck
 solution: Real-time Customer Data Platform
 role: User
 feature: Destinations
-kt: 3797
+jira: KT-3797
 thumbnail: 29707.jpg
 exl-id: d6e78ec2-f9e0-4794-b585-9bebef9b036b
-source-git-commit: 2d4f4f933650ef1a0ac98d47b28d0d750ae0e908
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '95'
 ht-degree: 2%

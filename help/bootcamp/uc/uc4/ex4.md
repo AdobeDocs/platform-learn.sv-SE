@@ -1,12 +1,12 @@
 ---
 title: Bootläger - Customer Journey Analytics - Dataförberedelse i Analysis Workspace
 description: Bootläger - Customer Journey Analytics - Dataförberedelse i Analysis Workspace
-kt: 5342
+jira: KT-5342
 audience: Data Engineer, Data Architect, Data Analyst
 doc-type: tutorial
 activity: develop
 exl-id: 6a9fc1a4-9a6a-43f2-9393-815f9dc2cb4e
-source-git-commit: bc872b4fe440106475668eeb790242e1862875aa
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '755'
 ht-degree: 7%

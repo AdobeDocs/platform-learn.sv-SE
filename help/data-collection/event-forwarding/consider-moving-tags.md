@@ -3,11 +3,11 @@ title: Överväg att flytta leverantörstaggar till händelsevidarebefordran
 description: Lär dig hur du utvärderar en leverantörstagg på klientsidan för datadistribution på serversidan.
 feature: Event Forwarding, Tags, Integrations
 solution: Data Collection
-kt: 9921
+jira: KT-9921
 level: Intermediate, Experienced
 role: Admin, Developer, Architect
 exl-id: f8fd351a-435c-4cc1-b987-ed2ead20d4d6
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '1369'
 ht-degree: 1%
@@ -45,7 +45,7 @@ I vårt exempel spårar vi konverteringar med Facebook pixel när besökarna int
 
 ### Data {#data}
 
-Vad händer med data för vår användning när den befintliga taggen på klientsidan körs eller körs på vår webbplats? Kan vi samla in de data vi behöver i klienten, utan leverantörstaggen, så att vi kan skicka dem till händelsevidarebefordran? När du använder [taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html) eller andra tagghanteringssystem, är de flesta data för besökarinteraktion tillgängliga för insamling och distribution. Men finns de data vi behöver för vår användning tillgängliga när vi behöver dem, där vi behöver dem och i det format vi behöver dem - utan leverantörstaggen på klientsidan? Här är några andra datafrågor att tänka på:
+Vad händer med data för vår användning när den befintliga taggen på klientsidan körs eller körs på vår webbplats? Kan vi samla in de data vi behöver i klienten, utan leverantörstaggen, så att vi kan skicka dem till händelsevidarebefordran? När du använder [taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv) eller andra tagghanteringssystem, är de flesta data för besökarinteraktion tillgängliga för insamling och distribution. Men finns de data vi behöver för vår användning tillgängliga när vi behöver dem, där vi behöver dem och i det format vi behöver dem - utan leverantörstaggen på klientsidan? Här är några andra datafrågor att tänka på:
 
 - Krävs det ett användar-ID för varje leverantör för varje händelse?
 - Om så är fallet, hur kan de samlas in eller genereras utan klientsidestaggen?
@@ -102,6 +102,6 @@ Det är enklare att undersöka och testa leverantörs-API-slutpunkter med verkty
 
 I den här artikeln finns en serie steg för att utvärdera en leverantörs klientsidestagg och eventuellt flytta den på serversidan i en egenskap för vidarebefordring av händelser. Mer information om relaterade ämnen finns i följande länkar:
 
-- [Tagghantering](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html) i Adobe Experience Platform
+- [Tagghantering](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv) i Adobe Experience Platform
 - [Vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) för bearbetning på serversidan
 - [Uppdateringar om terminologi](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) datainsamling

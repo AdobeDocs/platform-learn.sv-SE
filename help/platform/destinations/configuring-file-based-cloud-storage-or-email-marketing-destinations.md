@@ -4,10 +4,10 @@ description: Få tips under genomgången av konfigurationen av ett filbaserat m�
 solution: Real-time Customer Data Platform
 role: User
 feature: Destinations
-kt: 6624
+jira: KT-6624
 thumbnail: 328175.jpg
 exl-id: fda985ad-5d56-4e61-871f-2f29a2e79b17
-source-git-commit: 2d4f4f933650ef1a0ac98d47b28d0d750ae0e908
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '158'
 ht-degree: 0%

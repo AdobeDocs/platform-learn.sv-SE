@@ -4,9 +4,9 @@ description: När du konfigurerar om processer och personal för att gå från A
 role: Data Engineer, Data Architect
 feature: Sources
 thumbnail: 331214.jpg
-kt: 7111
+jira: KT-7111
 exl-id: 43688e44-c0ea-4107-ba74-1e630990f732
-source-git-commit: 17be24fe619139056a69190b98610644387ca18f
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '295'
 ht-degree: 0%

@@ -1,11 +1,12 @@
 ---
 title: Bootcamp - Real-time Customer Profile - From unknown to known on the website - Brazil
 description: Bootcamp - Real-time Customer Profile - From unknown to known on the website - Brazil
-kt: 5342
+jira: KT-5342
 audience: Data Engineer, Data Architect, Marketer
 doc-type: tutorial
 activity: develop
-source-git-commit: 9cc01c7d3018319137f915e103bce9dc39b0d472
+exl-id: 853a69d2-5dac-413d-bb40-ef29604a26ae
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '410'
 ht-degree: 0%

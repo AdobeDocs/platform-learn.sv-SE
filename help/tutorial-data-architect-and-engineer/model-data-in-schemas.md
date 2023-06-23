@@ -5,10 +5,10 @@ breadcrumb-title: Modelldata i scheman
 description: I den här lektionen ska du modellera Lumas data i scheman. Det här är en av de längsta lektionerna i självstudiekursen, så ta ett glas vatten och slipp!
 role: Data Architect
 feature: Schemas
-kt: 4348
+jira: KT-4348
 thumbnail: 4348-model-data-in-schemas.jpg
 exl-id: 317f1c39-7f76-4074-a246-ef19f044cb85
-source-git-commit: 0b13a4fa625cd29cc98c319b81fcb2a278b7b19a
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '2485'
 ht-degree: 0%

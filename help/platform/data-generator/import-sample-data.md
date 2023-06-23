@@ -3,11 +3,11 @@ title: Importera exempeldata till Adobe Experience Platform
 description: Lär dig hur du konfigurerar en sandlådemiljö i Experience Platform med exempeldata.
 role: Developer
 feature: API
-kt: 7349
+jira: KT-7349
 thumbnail: 7349.jpg
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: da94f4bd-0686-4d6a-a158-506f2e401b4e
-source-git-commit: 60f509ef55ce121f572466a8f13953dba982a0ce
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '1831'
 ht-degree: 0%

@@ -6,9 +6,9 @@ role: User
 level: Beginner
 doc-type: feature video
 thumbnail: 333305.jpg
-kt: 7892
+jira: KT-7892
 exl-id: b7b5111c-4e30-4a69-bde1-d75df03fbf86
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '92'
 ht-degree: 0%

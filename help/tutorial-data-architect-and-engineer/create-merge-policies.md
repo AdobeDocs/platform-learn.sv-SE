@@ -5,13 +5,13 @@ breadcrumb-title: Skapa sammanfogningsprinciper
 description: I den här lektionen ska du skapa sammanfogningsprinciper som avgör hur data sammanfogas i profiler.
 role: Data Architect, Data Engineer
 feature: Profiles
-kt: 4348
+jira: KT-4348
 audience: data architect
 doc-type: tutorial
 activity: implement
 thumbnail: 4348-create-merge-policies.jpg
 exl-id: ec862bb2-7aa2-4157-94eb-f5af3a94295f
-source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '996'
 ht-degree: 0%
@@ -73,8 +73,8 @@ Och om du inte gillar den standardprincipen för sammanslagning? Vad händer om 
 1. Dra och släppa `Luma Loyalty Dataset` och `Luma CRM Dataset` till **[!UICONTROL Datauppsättning]** -panelen.
 1. Se till att `Luma Loyalty Dataset` ligger överst genom att dra och släppa det ovanför `Luma CRM Dataset`
 1. Välj **[!UICONTROL Spara]** knapp
-<!--do i need to explain Private Graph? Is that GA?-->
-![Kopplingsprincip](assets/mergepolicies-newPolicy.png)
+   <!--do i need to explain Private Graph? Is that GA?-->
+   ![Kopplingsprincip](assets/mergepolicies-newPolicy.png)
 
 ## Validera sammanfogningsprincipen
 

@@ -1,11 +1,12 @@
 ---
 title: Bootcamp - Journey Optimizer Create your travel and email message - Brazil
 description: Bootcamp - Journey Optimizer Create your travel and email message - Brazil
-kt: 5342
+jira: KT-5342
 audience: developer
 doc-type: tutorial
 activity: develop
-source-git-commit: 5d824244766135cd4998feab48be7f6a69c42a70
+exl-id: d486d1aa-7b8e-4301-91e6-4c84fba0c72a
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '934'
 ht-degree: 3%

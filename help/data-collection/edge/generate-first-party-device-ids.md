@@ -2,10 +2,10 @@
 title: Generera enhets-ID:n från första part
 description: Lär dig hur du skapar enhets-ID:n från första part
 feature: Web SDK
-kt: 9728
+jira: KT-9728
 thumbnail: KT-9728.jpeg
 exl-id: 2e3c1f71-e224-4631-b680-a05ecd4c01e7
-source-git-commit: 0c3edbeaa5cb46f159a3efe72c108dfd2235f04b
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 1%

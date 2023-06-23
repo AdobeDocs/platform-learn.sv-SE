@@ -1,18 +1,18 @@
 ---
-user-guide-title: Implementera Adobe Experience Cloud med Web SDK, genomgång
-breadcrumb-title: Självstudiekurs om Web SDK
+user-guide-title: Självstudiekurs om att implementera Adobe Experience Cloud med webb-SDK
+breadcrumb-title: Självstudiekurs om webb-SDK
 solution: Data Collection
-kt: 6953
+jira: KT-6953
 recommendations: noDisplay,noCatalog
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '81'
-ht-degree: 4%
+ht-degree: 30%
 
 ---
 
 
-# Implementera Adobe Experience Cloud med Web SDK, självstudiekurs. {#implement-web-sdk}
+# Självstudiekurs om att implementera Adobe Experience Cloud med webb-SDK. {#implement-web-sdk}
 
 + [Översikt över självstudiekursen](overview.md)
 + Inledande konfiguration {#initial-configuration}

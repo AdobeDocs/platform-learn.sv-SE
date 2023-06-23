@@ -1,11 +1,12 @@
 ---
 title: Bootläger - Customer Journey Analytics - Visualisering med Customer Journey Analytics - Brasilien
 description: Bootläger - Customer Journey Analytics - Visualisering med Customer Journey Analytics - Brasilien
-kt: 5342
+jira: KT-5342
 audience: Data Engineer, Data Architect, Data Analyst
 doc-type: tutorial
 activity: develop
-source-git-commit: 3272d288185415b4604fe48f18c19f8f06e6dce0
+exl-id: eb5eac54-22d8-428b-acac-16570f75085e
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '1586'
 ht-degree: 0%

@@ -3,10 +3,10 @@ title: Konfigurera AI för attribuering
 description: Lär dig hur du skapar en instans av Attribution AI för att förstå effekten av dina marknadsföringskanaler och kampanjer.
 feature: Attribution AI
 role: User
-kt: 4174
+jira: KT-4174
 thumbnail: 32668.jpg
 exl-id: ea64175d-c2b4-4fcb-bbac-9ef30416f868
-source-git-commit: 17be24fe619139056a69190b98610644387ca18f
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '60'
 ht-degree: 73%

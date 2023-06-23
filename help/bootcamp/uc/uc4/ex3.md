@@ -1,11 +1,12 @@
 ---
 title: Bootcamp - Customer Journey Analytics - Skapa en datavy
 description: Customer Journey Analytics - Skapa en datavy
-kt: 5342
+jira: KT-5342
 audience: Data Engineer, Data Architect, Data Analyst
 doc-type: tutorial
 activity: develop
-source-git-commit: 402e032fe150745893528ffbd6a01533f30fb5d6
+exl-id: e634876c-2b1c-4f7f-99e5-1940f6c87d80
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '1615'
 ht-degree: 1%
@@ -117,7 +118,7 @@ Låt oss lämna sidnamnet som en propp. Därför behöver du inte ändra några 
 
 | Komponentnamn att söka efter | Nytt namn | Beständiga inställningar |
 | ----------------- |-------------| --------------------| 
-| Namn (web.webPageDetails.name) | Sidnamn |  |
+| Namn (web.webPageDetails.name) | Sidnamn |          |
 
 Välj sedan dimensionen **phoneNumber** och släpp det på arbetsytan. Det nya namnet ska vara **Telefonnummer**.
 
@@ -145,7 +146,7 @@ På den vänstra menyn söker du efter `web.webPageDetails.pageViews.value`. Dra
 
 | Komponentnamn att söka efter | Nytt namn | Attributinställningar |
 | ----------------- |-------------| --------------------| 
-| web.webPageDetails.pageViews.value | Sidvisningar |  |
+| web.webPageDetails.pageViews.value | Sidvisningar |         |
 
 ![demo](./images/7-v2.png)
 
@@ -161,28 +162,28 @@ Därefter måste du konfigurera många Dimensioner och mått enligt tabellen ned
 | Komponentnamn att söka efter | Nytt namn | Beständiga inställningar |
 | ----------------- |-------------| --------------------| 
 | brandName | Märkesnamn | Senaste, session |
-| kallkänsla | Ring |  |
-| call ID | Samtalsinteraktionstyp |  |
+| kallkänsla | Ring |          |
+| call ID | Samtalsinteraktionstyp |          |
 | callTopic | Ämne för samtal | Senaste, session |
 | ecid | ECID | Senaste, person (rapportfönster) |
 | e-post | E-post-ID | Senaste, person (rapportfönster) |
-| Betalningstyp | Betalningstyp |  |
+| Betalningstyp | Betalningstyp |          |
 | Metod för produkttillägg | Metod för produkttillägg | Senaste, session |
-| Händelsetyp | Händelsetyp |  |
-| Namn (productListItems.name) | Produktnamn |  |
+| Händelsetyp | Händelsetyp |         |
+| Namn (productListItems.name) | Produktnamn |         |
 | SKU | SKU (session) | Senaste, session |
-| Transaktions-ID | Transaktions-ID |  |
-| URL (web.webPageDetails.URL) | URL |  |
+| Transaktions-ID | Transaktions-ID |         |
+| URL (web.webPageDetails.URL) | URL |         |
 | Användaragent | Användaragent | Senaste, session |
-| nivå | Lojalitetsnivå |  |
-| punkter | Kundens livstidsvärde |  |
+| nivå | Lojalitetsnivå |          |
+| punkter | Kundens livstidsvärde |          |
 
 ### METRIK
 
 | Komponentnamn att söka efter | Nytt namn | Attributinställningar |
 | ----------------- |-------------| --------------------| 
-| Kvantitet | Kvantitet |  |
-| commerce.order.priceTotal | Intäkter |  |
+| Kvantitet | Kvantitet |          |
+| commerce.order.priceTotal | Intäkter |         |
 
 Din konfiguration bör sedan se ut så här:
 

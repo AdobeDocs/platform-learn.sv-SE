@@ -4,10 +4,10 @@ description: Lär dig hur du konfigurerar Marketo-destinationen i Adobe Experien
 solution: Real-time Customer Data Platform
 feature: Destinations
 role: User, Admin
-kt: 9262
+jira: KT-9262
 thumbnail: 338248.jpg
 exl-id: 7e7e2647-0eb8-4f37-8a91-a506c9c2abb9
-source-git-commit: 17be24fe619139056a69190b98610644387ca18f
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '69'
 ht-degree: 0%

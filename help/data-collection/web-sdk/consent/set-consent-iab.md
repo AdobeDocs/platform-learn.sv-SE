@@ -3,9 +3,9 @@ title: Ange samtycke med IAB TCF 2.0-standarden
 description: Lär dig hur du använder Adobe Experience Platform Web SDK för att ange medgivandevärden enligt IAB TCF 2.0-standarden.
 feature: Web SDK, Tags
 role: Developer, Data Engineer
-kt: 7572
+jira: KT-7572
 exl-id: 341a4e01-02a9-4e21-b3d6-b2657d75c233
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '78'
 ht-degree: 0%

@@ -5,9 +5,9 @@ feature: Data Governance
 role: User, Developer, Data Engineer, Architect, Data Architect, Admin, Leader
 level: Beginner, Intermediate, Experienced
 thumbnail: 336938.jpg
-kt: 8864
+jira: KT-8864
 exl-id: d0e1235d-a1a0-4da9-a209-92bc8c2b9d4f
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '120'
 ht-degree: 0%

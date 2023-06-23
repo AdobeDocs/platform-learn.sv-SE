@@ -4,14 +4,14 @@ description: Testa implementeringen
 role: Developer
 level: Intermediate
 recommendations: noDisplay,noCatalog
-kt: 10447
+jira: KT-10447
 hide: true
 hidefromtoc: true
 exl-id: e2213c23-d395-4c57-8c6c-0319cd0fb0ac
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '575'
-ht-degree: 0%
+ht-degree: 2%
 
 ---
 
@@ -72,10 +72,10 @@ Du kan behöva vänta några minuter, men snart ska du se indikationer på att d
 
 ![Inmatning av datauppsättning](../../assets/implementation-strategy/dataset-ingestion.png)
 
-## Använda Adobe Experience Platform Debugger-tillägget
+## Använda tillägget Adobe Experience Platform Debugger
 
-Mer information om hur implementeringen fungerar både i webbläsaren och på Adobe-servrar finns i webbläsartillägget Adobe Experience Platform Debugger!
+Mer information om hur implementeringen fungerar både i webbläsaren och på Adobe-servrar finns i Adobe Experience Platform Debugger!
 
-[Adobe Experience Platform Debugger extension for Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
+[Adobe Experience Platform Debugger-tillägg för Chrome](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
-[Adobe Experience Platform Debugger extension for Firefox](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
+[Adobe Experience Platform Debugger-tillägg för Firefox](https://addons.mozilla.org/sv-SE/firefox/addon/adobe-experience-platform-dbg/)

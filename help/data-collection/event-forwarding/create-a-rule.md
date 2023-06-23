@@ -2,10 +2,10 @@
 title: Skapa en regel för vidarebefordran av händelser
 description: Lär dig hur du skapar en regel för vidarebefordran av händelser i datainsamling.
 feature: Event Forwarding, Tags
-kt: 6423
+jira: KT-6423
 thumbnail: 331942.jpeg
 exl-id: 35c76ce1-c7c0-47cc-bed8-86ab7656c824
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 0%
@@ -23,7 +23,6 @@ Lär dig hur du skapar en regel för vidarebefordran av händelser i datainsamli
 > * platforma launchen (klientsidan) är nu **[!DNL tags]**
 > * platform launch Server Side is now **[!DNL event forwarding]**
 > * Edge-konfigurationer är nu **[!DNL datastreams]**
-
 
 >[!VIDEO](https://video.tv.adobe.com/v/331942?quality=12&learn=on)
 

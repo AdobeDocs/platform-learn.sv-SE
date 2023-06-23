@@ -3,10 +3,10 @@ title: Översikt över unionens scheman
 description: Kundprofilen i realtid genomsyrar personalisering i flera kanaler i stor skala genom varje fas av kundresan. Batch- eller direktuppspelningsdata kan aktiveras för kundprofilen i realtid genom att både schemat och motsvarande datauppsättning aktiveras.
 role: Data Architect, Data Engineer
 feature: Profiles
-kt: 6754
+jira: KT-6754
 thumbnail: 329940.jpg
 exl-id: 6e6512c2-2d8e-4b56-b8b8-d318b98f3627
-source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '111'
 ht-degree: 0%

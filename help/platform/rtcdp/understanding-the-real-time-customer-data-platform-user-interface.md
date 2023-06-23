@@ -4,10 +4,10 @@ description: Lär dig navigera i användargränssnittet för Real-time Customer 
 solution: Real-time Customer Data Platform
 role: User
 feature: Destinations
-kt: 3989
+jira: KT-3989
 thumbnail: 29762.jpg
 exl-id: bc9fdedd-ce95-4bd2-8b14-30fd74604ea8
-source-git-commit: 2d4f4f933650ef1a0ac98d47b28d0d750ae0e908
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '89'
 ht-degree: 69%

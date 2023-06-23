@@ -1,12 +1,12 @@
 ---
 title: Bootcamp - Blanda fysiska och digitala
 description: Bootcamp - Blanda fysiska och digitala
-kt: 5342
+jira: KT-5342
 audience: Data Engineer, Data Architect
 doc-type: tutorial
 activity: develop
 exl-id: 46861546-6483-4997-98b7-1d3addef65dd
-source-git-commit: ead28f5631fc430c41e8c756b23dc69ffe19510e
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '207'
 ht-degree: 0%

@@ -5,10 +5,10 @@ breadcrumb-title: Använd ramverket för datastyrning
 description: I den här lektionen kommer du att använda ramverket för datastyrning på data som du har inhämtat till din sandlåda.
 role: Data Architect
 feature: Data Governance
-kt: 4348
+jira: KT-4348
 thumbnail: 4348-apply-data-governance-framework.jpg
 exl-id: 3cc3c794-5ffd-41bf-95d8-be5bca2e3a0f
-source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 1%

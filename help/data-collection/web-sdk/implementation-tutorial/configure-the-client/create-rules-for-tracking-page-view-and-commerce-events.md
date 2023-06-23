@@ -4,11 +4,11 @@ description: Skapa regler för spårning av sidvy och e-handelshändelser
 role: Developer
 level: Intermediate
 recommendations: noDisplay,noCatalog
-kt: 10447
+jira: KT-10447
 hide: true
 hidefromtoc: true
 exl-id: 2dd02462-ddb5-4f67-8b0f-4a5bf5f7d655
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
 workflow-type: tm+mt
 source-wordcount: '510'
 ht-degree: 0%
