@@ -8,9 +8,9 @@ thumbnail: 4348-overview.jpg
 recommendations: catalog, noDisplay
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: fabbc591-840b-40dc-89af-305626a16338
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: e640a7e5c3a5f745462aa0d4e9d5f5c0b34ca8d7
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '777'
 ht-degree: 1%
 
 ---
@@ -73,5 +73,10 @@ Plattformen är byggd för API. Det finns gränssnittsarbetsflöden för alla st
 ### Tredjepartstekniker
 
 Även om du kommer att använda flera olika tekniker i den här självstudiekursen finns du nästan bara kvar i Adobe ekosystem. I er egen plattformsimplementering är det troligt att ni integrerar Platform med specifika tredjepartstekniker. För att den här självstudiekursen ska vara relevant för alla kunder använder vi en mer generisk implementering.
+
+## Självstudiekursuppdateringar
+
+* Juni 2023: Uppdaterat för att inkludera ett nytt behörighetsarbetsflöde och för att använda API-autentiseringsuppgifter för OAuth Server-till-Server
+
 
 Låt oss gå vidare till den första lektionen -[konfigurera behörigheter](configure-permissions.md).
