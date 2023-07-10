@@ -3,7 +3,7 @@ title: Lägg till Adobe Target med taggar
 description: Lär dig hur du implementerar Adobe Target med taggar med at.js, en sidinläsningsbegäran, parametrar, en orderbegäran och anpassad sidhuvud-/sidfotskod. Den här lektionen är en del av självstudiekursen Implementera Experience Cloud på webbplatser.
 solution: Data Collection, Target
 exl-id: aa22e51a-67c2-4b54-b582-6f34f8c68aee
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
 workflow-type: tm+mt
 source-wordcount: '4445'
 ht-degree: 0%
@@ -23,7 +23,6 @@ I den här lektionen ska vi implementera [Adobe Target-tillägg](https://experie
 > * platforma launchen (klientsidan) är nu **[!DNL tags]**
 > * platform launch Server Side is now **[!DNL event forwarding]**
 > * Edge-konfigurationer är nu **[!DNL datastreams]**
-
 
 ## Utbildningsmål
 
@@ -388,7 +387,6 @@ Här är en valfri övning om du är en Target Premium-kund och vill implementer
    ![Klicka på Behåll ändringar](images/target-addATProperty-keepChanges.png)
 
 1. Klicka **[!UICONTROL Spara i bibliotek och bygge]**
-
    ![Klicka på Spara och skapa i bibliotek](images/target-addATProperty-save.png)
 
 >[!WARNING]
@@ -566,7 +564,7 @@ För närvarande är anpassade parametrar som skickas med at.js 2.x-begäranden 
 
 Det finns sällsynta tillfällen när du behöver göra andra Target-begäranden än sidinläsning och beställningsbekräftelsebegäran. Ibland definieras inte viktiga data som du vill använda för personalisering på sidan före taggens inbäddningskoder. De kan vara hårdkodade längst ned på sidan eller returneras från en asynkron API-begäran. Dessa data kan skickas till Target med en extra begäran, men det är inte optimalt att använda denna begäran för innehållsleverans eftersom sidan redan är synlig. Dessa data kan användas för att förbättra besökarprofilen för senare bruk (med hjälp av profilparametrar) eller för att fylla i Recommendations-katalogen.
 
-I dessa fall använder du åtgärden Anpassad kod i Core-tillägget för att utlösa en begäran med [getOffer()](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/functions-overview/adobe-target-getoffer.html)/[applyOffer()](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/functions-overview/adobe-target-applyoffer.html) och [trackEvent()](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/functions-overview/adobe-target-trackevent.html) metoder. Det här liknar det du just gjorde i [Begäran om orderbekräftelse](#order-confirmation-request) motion, men du använder bara ett annat begärandenamn och kommer inte att använda de särskilda orderparametrarna. Var noga med att använda **[!UICONTROL Läs in mål]** åtgärd innan du gör Target-begäranden från anpassad kod.
+I dessa fall använder du åtgärden Anpassad kod i Core-tillägget för att utlösa en begäran med [getOffer()](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/adobe-target-getoffer.html)/[applyOffer()](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/adobe-target-applyoffer.html) och [trackEvent()](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html) metoder. Det här liknar det du just gjorde i [Begäran om orderbekräftelse](#order-confirmation-request) motion, men du använder bara ett annat begärandenamn och kommer inte att använda de särskilda orderparametrarna. Var noga med att använda **[!UICONTROL Läs in mål]** åtgärd innan du gör Target-begäranden från anpassad kod.
 
 ## Bibliotekshuvud och bibliotekets sidfot
 

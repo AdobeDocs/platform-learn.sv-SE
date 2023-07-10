@@ -2,10 +2,12 @@
 title: Skapa en egenskap för vidarebefordran av händelser
 description: Lär dig hur du skapar en händelsevidarebefordringsegenskap i datainsamling.
 feature: Event Forwarding
+role: Data Engineer
+level: Intermediate
 jira: KT-6420
 thumbnail: 331938.jpeg
 exl-id: 63a578d3-1220-4588-b289-7310f4905d52
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 0%

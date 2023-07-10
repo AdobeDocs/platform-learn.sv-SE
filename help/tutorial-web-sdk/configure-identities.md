@@ -1,11 +1,11 @@
 ---
 title: Konfigurera ett identitetsnamnutrymme
 description: Lär dig hur du konfigurerar identitetsnamnutrymmen som ska användas med Adobe Experience Platform Web SDK. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
-feature: Identities
+feature: Web SDK,Tags,Identities
 exl-id: 7719dff4-6b30-4fa0-acae-7491c3208f15
-source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
+source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '693'
 ht-degree: 1%
 
 ---
@@ -50,7 +50,7 @@ Titta på den här korta videon om du vill veta mer om din identitet i Adobe Exp
 
 Skapa nu ett namnutrymme för Luma CRM-ID:
 
-1. Öppna [Gränssnitt för datainsamling](https://launch.adobe.com/){target=&quot;_blank&quot;}
+1. Öppna [Gränssnitt för datainsamling](https://launch.adobe.com/){target="_blank"}
 1. Välj den sandlåda som du använder för självstudiekursen
 
    >[!NOTE]

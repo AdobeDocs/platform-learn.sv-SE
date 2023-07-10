@@ -1,8 +1,10 @@
 ---
 title: Skicka data till Adobe Experience Platform
 description: Lär dig hur du skickar data till Adobe Experience Platform.
+solution: Data Collection,Experience Platform
+feature: Mobile SDK,Data Ingestion
 exl-id: fdd2c90e-8246-4d75-a6db-df3ef31946c4
-source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
+source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
 workflow-type: tm+mt
 source-wordcount: '844'
 ht-degree: 0%

@@ -2,10 +2,12 @@
 title: Konfigurera ett datastream för vidarebefordran av händelser
 description: Lär dig hur du konfigurerar ett datastream för vidarebefordran av händelser.
 feature: Event Forwarding, Datastreams
+role: Data Engineer
+level: Intermediate
 jira: KT-6421
 thumbnail: 331939.jpeg
 exl-id: 20e30a36-3d56-4d15-acb7-b1bd560bb94d
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%

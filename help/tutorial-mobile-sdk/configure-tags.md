@@ -1,8 +1,9 @@
 ---
 title: Konfigurera en taggegenskap
 description: Lär dig hur du konfigurerar en taggegenskap i [!UICONTROL Datainsamling] gränssnitt.
+feature: Mobile SDK,Tags
 exl-id: 0c4b00cc-34e3-4d08-945e-3fd2bc1b6ccf
-source-git-commit: b2e1bf08d9fb145ba63263dfa078c96258342708
+source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
 workflow-type: tm+mt
 source-wordcount: '715'
 ht-degree: 1%
@@ -35,7 +36,6 @@ I den här lektionen kommer du att:
 1. Skapa en ny mobil taggegenskap:
    1. I [Gränssnitt för datainsamling](https://experience.adobe.com/data-collection/){target="_blank"}, markera **[!UICONTROL Taggar]** i den vänstra navigeringen
    1. Välj **[!UICONTROL Ny egenskap]**
-
       ![skapa en taggegenskap](assets/mobile-tags-new-property.png).
    1. För **[!UICONTROL Namn]**, ange `Mobile SDK Course`.
    1. För **[!UICONTROL Plattform]**, markera **[!UICONTROL Mobil]**.

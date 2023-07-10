@@ -8,9 +8,9 @@ feature: Data Ingestion
 jira: KT-4348
 thumbnail: 4348-ingest-streaming-data.jpg
 exl-id: 09c24673-af8b-40ab-b894-b4d76ea5b112
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
 workflow-type: tm+mt
-source-wordcount: '3346'
+source-wordcount: '3344'
 ht-degree: 0%
 
 ---
@@ -30,6 +30,7 @@ Det finns två huvudsakliga uppgifter vi måste utföra i gränssnittet för dat
 **Datatekniker** måste kunna importera strömmande data utanför den här självstudiekursen. När du implementerar Adobe Experience Platform SDK för webb eller mobiler är det oftast en webb- eller mobilutvecklare som arbetar med att skapa datalager och taggegenskapskonfigurationen.
 
 Innan du börjar övningarna ska du titta på dessa två korta videoklipp för att lära dig mer om strömmande data och Web SDK:
+
 >[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
 
 >[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
@@ -454,7 +455,7 @@ Så här verifierar du att CRM-ID:t nu skickas av Web SDK:
 
 * [Implementera Adobe Experience Cloud med webb-SDK](/help/tutorial-web-sdk/overview.md)
 * [Direktuppspelningsdokumentation](https://experienceleague.adobe.com/docs/experience-platform/ingestion/streaming/overview.html?lang=sv)
-* [API-referens för direktuppspelning](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Streaming-Ingestion)
+* [API-referens för direktuppspelning](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
 
 Bra jobbat! Det var mycket information om Web SDK och Launch. Det är mycket mer involverat i en fullfjädrad implementering, men det är grunderna som hjälper dig att komma igång och se resultaten i Platform.
 

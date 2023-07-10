@@ -1,8 +1,9 @@
 ---
 title: Ställ in försäkring
 description: Lär dig hur du implementerar tillägget Assurance i en mobilapp.
+feature: Mobile SDK,Assurance
 exl-id: e15774b2-2f52-400f-9313-bb4338a88918
-source-git-commit: b2e1bf08d9fb145ba63263dfa078c96258342708
+source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
 workflow-type: tm+mt
 source-wordcount: '585'
 ht-degree: 0%
@@ -90,9 +91,9 @@ Assurance fungerar genom att öppna en URL, antingen via webbläsare eller QR-ko
    ![stiftstappen](assets/mobile-assurance-enter-pin.png)
 1. Om anslutningen lyckades visas händelser i webbgränssnittet för försäkringen och en flytande säkerhetsikon i appen.
    * Löpande säkerhetsikon.
-      ![modal](assets/mobile-assurance-modal.png)
+     ![modal](assets/mobile-assurance-modal.png)
    * Experience Cloud event som kommer igenom i webbgränssnittet.
-      ![säkringshändelser](assets/mobile-assurance-events.png)
+     ![säkringshändelser](assets/mobile-assurance-events.png)
 
 Om du stöter på några problem kan du läsa [teknisk](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/){target="_blank"} and [general documentation](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html){target="_blank"}.
 

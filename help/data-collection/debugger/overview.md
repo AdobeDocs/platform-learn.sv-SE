@@ -3,10 +3,13 @@ title: Adobe Experience Platform Debugger - översikt
 description: Lär dig hur tillägget Adobe Experience Platform Debugger Chrome och Firefox-tillägget hjälper dig att felsöka dina webbimplementeringar av webb-SDK för Adobe Experience Platform, Adobe Analytics, Adobe Target, Adobe Audience Manager, taggar med mera.
 landing-page-description: Felsök webbimplementeringarna av programmen webb-SDK för Adobe Experience Platform och Experience Cloud.
 short-description: Felsök webbimplementeringarna av programmen webb-SDK för Adobe Experience Platform och Experience Cloud.
+feature: Debugger
+role: Data Engineer
+level: Beginner
 jira: KT-4723
 thumbnail: 32156.jpg
 exl-id: 9ce0b5db-9f00-4b59-8655-09cd59b3d5df
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 58%

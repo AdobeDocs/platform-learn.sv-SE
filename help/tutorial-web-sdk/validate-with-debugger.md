@@ -1,12 +1,12 @@
 ---
 title: Validera Web SDK-implementeringar med Experience Platform Debugger
 description: Lär dig hur du validerar implementeringen av din Platform Web SDK med Adobe Experience Platform Debugger. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
-feature: Debugger
+feature: Web SDK,Tags,Debugger
 exl-id: 150bb1b1-4523-4b44-bd4e-6cabc468fc04
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
 workflow-type: tm+mt
-source-wordcount: '1075'
-ht-degree: 0%
+source-wordcount: '1073'
+ht-degree: 1%
 
 ---
 
@@ -16,7 +16,7 @@ Lär dig hur du validerar implementeringen av din Platform Web SDK med Adobe Exp
 
 Felsökaren Experience Platform är ett tillägg för webbläsarna Chrome och Firefox som gör att du kan se Adobe-tekniken som används på dina webbsidor. Ladda ned den version du föredrar:
 
-* [Firefox-tillägg](https://addons.mozilla.org/en-US/firefox/addon/adobe-experience-platform-dbg/)
+* [Firefox-tillägg](https://addons.mozilla.org/sv-SE/firefox/addon/adobe-experience-platform-dbg/)
 * [Kromtillägg](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
 Om du aldrig har använt felsökningsfunktionen tidigare - och den här är en annan än den tidigare Adobe Experience Cloud Debugger - kan du titta på den här översiktsvideon med fem minuter:
@@ -36,7 +36,7 @@ När lektionen är klar kan du använda felsökaren för att:
 
 ## Förutsättningar
 
-Du känner till datainsamlingstaggar och [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html){target=&quot;_blank&quot;} och har slutfört följande tidigare lektioner i självstudien:
+Du känner till datainsamlingstaggar och [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"} och har avslutat följande lektioner i självstudiekursen:
 
 * [Konfigurera behörigheter](configure-permissions.md)
 * [Konfigurera ett XDM-schema](configure-schemas.md)

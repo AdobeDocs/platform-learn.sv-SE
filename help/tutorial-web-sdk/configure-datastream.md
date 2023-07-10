@@ -1,11 +1,11 @@
 ---
 title: Konfigurera ett datastream
 description: Lär dig hur du aktiverar ett datastream och konfigurerar Experience Cloud-lösningar. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
-feature: Datastreams
+feature: Web SDK,Tags,Datastreams
 exl-id: ca28374a-9fe0-44de-a7ac-0aa046712515
-source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
+source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
 workflow-type: tm+mt
-source-wordcount: '450'
+source-wordcount: '448'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Nu kan du skapa en datastream som anger för Platform Edge Network var data som 
 
 **Så här skapar du ett datastream:**
 
-1. Öppna [Gränssnitt för datainsamling](https://launch.adobe.com/){target=&quot;_blank&quot;}
+1. Öppna [Gränssnitt för datainsamling](https://launch.adobe.com/){target="_blank"}
 1. Kontrollera att du befinner dig i rätt sandlåda
 
    >[!NOTE]

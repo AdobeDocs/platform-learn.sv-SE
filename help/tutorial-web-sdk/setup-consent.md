@@ -1,8 +1,9 @@
 ---
 title: Konfigurera samtycke med Platform Web SDK
 description: Lär dig hur du konfigurerar sekretessinställningarna för taggtillägget Experience Platform Web SDK. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
+feature: Web SDK,Tags,Consent
 exl-id: 502a7467-3699-4b2b-93bf-6b6069ea2090
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
 workflow-type: tm+mt
 source-wordcount: '1624'
 ht-degree: 0%
@@ -33,10 +34,9 @@ Du bör känna till taggarna och stegen för att skapa regler, dataelement, bygg
 Innan du börjar konfigurera sekretessinställningarna och skapar regler för samtycke, måste du se till att du har injicerat ditt skript för plattformar för samtyckeshantering på webbplatsen och fungerar som det ska. En CMP kan läsas in direkt i källkoden med hjälp av webbplatsutvecklare eller läsas in med hjälp av själva taggar. Den här lektionen visar det senare tillvägagångssättet.
 >[!NOTE]
 > 
->1. En plattform för hantering av samtycke (CMP) används av organisationer för att lagligen dokumentera och hantera besökarens val av samtycke innan besökarens data samlas in, delas eller säljs från onlinekällor som webbplatser och appar.
+>1. En plattform för hantering av samtycke (CMP) används av organisationer för att lagligen dokumentera och hantera besökares val av samtycke innan besökarens data samlas in, delas eller säljs från onlinekällor som webbplatser och appar.
 >
 >2. Det rekommenderade sättet att injicera en CMP är direkt via källkoden före tagghanteringsskriptet.
-
 
 ### Konfigurera Klaro
 

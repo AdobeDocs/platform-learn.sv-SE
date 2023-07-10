@@ -1,11 +1,11 @@
 ---
 title: Skapa ett XDM-schema för webbdata
 description: Lär dig hur du skapar ett XDM-schema för webbdata i gränssnittet för datainsamling. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
-feature: Schemas
+feature: Web SDK,Tags,Schemas
 exl-id: 2858ce03-4f95-43ac-966c-1b647b33ef16
-source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
+source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
 workflow-type: tm+mt
-source-wordcount: '1125'
+source-wordcount: '1121'
 ht-degree: 0%
 
 ---
@@ -40,9 +40,9 @@ Alla nödvändiga etablerings- och användarbehörigheter för datainsamling och
 
 XDM-scheman är standardsättet att beskriva data i Experience Platform, vilket gör att alla data som överensstämmer med scheman kan återanvändas i en organisation utan konflikter, eller till och med delas mellan flera organisationer. Mer information finns i [Grunderna för schemakomposition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en).
 
-I den här övningen skapar du ett XDM-schema med de rekommenderade baslinjefältgrupperna för att hämta webbhändelsedata på [Luma Demo Site](https://luma.enablementadobe.com/content/luma/us/en.html){target=&quot;_blank&quot;}:
+I den här övningen skapar du ett XDM-schema med de rekommenderade baslinjefältgrupperna för att hämta webbhändelsedata på [Luma Demo Site](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"}:
 
-1. Öppna [Gränssnitt för datainsamling](https://launch.adobe.com/){target=&quot;_blank&quot;}
+1. Öppna [Gränssnitt för datainsamling](https://launch.adobe.com/){target="_blank"}
 1. Kontrollera att du befinner dig i rätt sandlåda
 
    >[!NOTE]

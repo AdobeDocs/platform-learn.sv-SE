@@ -8,9 +8,9 @@ feature: Data Ingestion
 jira: KT-4348
 thumbnail: 4348-ingest-batch-data.jpg
 exl-id: fc7db637-e191-4cc7-9eec-29f4922ae127
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
 workflow-type: tm+mt
-source-wordcount: '2528'
+source-wordcount: '2526'
 ht-degree: 0%
 
 ---
@@ -25,6 +25,7 @@ Genom att lägga in data i grupp kan du samtidigt importera en stor mängd data 
 **Datatekniker** måste importera batchdata utanför den här självstudiekursen.
 
 Innan du börjar övningarna ska du titta på den här korta videon för att lära dig mer om datainhämtning:
+
 >[!VIDEO](https://video.tv.adobe.com/v/27106?quality=12&learn=on)
 
 
@@ -341,6 +342,6 @@ Adobe samarbetar med flera ETL-leverantörer för att stödja datainhämtning ti
 ## Ytterligare resurser
 
 * [Dokumentation för batchförbrukning](https://experienceleague.adobe.com/docs/experience-platform/ingestion/batch/overview.html)
-* [API-referens för gruppinmatning](https://www.adobe.io/experience-platform-apis/references/data-ingestion/#tag/Batch-Ingestion)
+* [API-referens för gruppinmatning](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
 
 Nu ska vi [strömma data med Web SDK](ingest-streaming-data.md)

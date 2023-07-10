@@ -1,12 +1,12 @@
 ---
 title: Använd era kunddata för att leverera strömmande upplevelser
 description: Lär dig hur du minskar påverkan av data av låg kvalitet, minskar time to value och multiplicerar avkastningen genom att använda samma data för många olika användningsområden.
-role: Data Engineer, Data Architect, Developer
 feature: Queries
+role: Data Engineer, Data Architect, Developer
 jira: KT-10323
 thumbnail: 342533.jpeg
 exl-id: 30574cc5-66fa-4ab8-83ed-7af710294dbf
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 3%

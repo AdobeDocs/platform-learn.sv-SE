@@ -1,16 +1,16 @@
 ---
-title: Självstudiekurser för datainsamling
+title: Självstudiekurser om datainsamling
 description: Instruktionsvideor och självstudiekurser som gör dig till en kraftfull användare av datainsamling
-mini-toc-levels: 1
+mini-toc-levels: 0
 exl-id: 2d153ef8-7fba-40da-b34a-cad9b24c902c
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
 workflow-type: tm+mt
 source-wordcount: '212'
-ht-degree: 1%
+ht-degree: 8%
 
 ---
 
-# Självstudiekurser för datainsamling
+# Självstudiekurser om datainsamling
 
 Datainsamling är nästa generation av funktioner för hantering av webbplatstaggar och SDK för mobiler från Adobe. Datainsamling ger kunderna ett enkelt sätt att driftsätta och hantera de analys-, marknadsförings- och annonslösningar som behövs för att skapa relevanta kundupplevelser. Använd dessa videor och självstudiekurser för att lära dig den här viktiga tekniken.
 
@@ -19,14 +19,11 @@ Datainsamling är nästa generation av funktioner för hantering av webbplatstag
 ## Nyheter
 
 * **[Översikt över server-API (video)](server-api/overview.md)**
-
-   *Skicka data med ett säkert, autentiserat server-API.*
+  *Skicka data med ett säkert, autentiserat server-API.*
 * **[Implementera Adobe Experience Cloud i mobilappar (självstudiekurs)](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/overview.html)**
-
-   *Implementera Experience Cloud-applikationer med Mobile SDK.*
+  *Implementera Experience Cloud-applikationer med Mobile SDK.*
 * **[Flytta taggar på klientsidan (självstudiekurs)](event-forwarding/consider-moving-tags.md)**
-
-   *Överväg att flytta taggar på klientsidan till händelsevidarebefordran.*
+  *Överväg att flytta taggar på klientsidan till händelsevidarebefordran.*
 
 </div>
 
@@ -45,7 +42,7 @@ Datainsamling är nästa generation av funktioner för hantering av webbplatstag
 <tr>
   <td>
     <a href="https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html" target="_blank">
-      <img alt="Implementera Adobe Experience Cloud med Web SDK" src="assets/thumb_websdk.png" />
+      <img alt="Implementera Adobe Experience Cloud med webb-SDK" src="assets/thumb_websdk.png" />
     </a>
     <div>
       <a href="https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html" target="_blank">

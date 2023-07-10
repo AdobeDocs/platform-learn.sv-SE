@@ -1,8 +1,11 @@
 ---
 title: Adobe Journey Optimizer push-meddelanden
 description: Lär dig hur du skapar push-meddelanden till en mobilapp med Platform Mobile SDK och Adobe Journey Optimizer.
+solution: Data Collection,Journey Optimizer
+feature-set: Journey Optimizer
+feature: Push
 exl-id: e8e920d5-fd36-48b7-9185-a34231c0d336
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
 workflow-type: tm+mt
 source-wordcount: '881'
 ht-degree: 0%
@@ -95,6 +98,7 @@ Ytterligare dokumentation kan [hittades här](https://help.apple.com/developer-a
 
 >[!NOTE]
 >Kontakta kundtjänst om du inte ser&quot;CJM Push Tracking Experience Event Dataset&quot; som ett alternativ.
+>
 
 ## Implementera Adobe Journey Optimizer i appen
 
