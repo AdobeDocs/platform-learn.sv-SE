@@ -3,9 +3,9 @@ title: Skapa dataelement
 description: Lär dig hur du skapar ett XDM-objekt och mappar dataelement till det i taggar. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Tags
 exl-id: d662ec46-de9b-44ba-974a-f81dfc842e68
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 9b112881a3b062cbd56502b3644c701c82380735
 workflow-type: tm+mt
-source-wordcount: '1228'
+source-wordcount: '1163'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ När lektionen är slut kan du:
 
 ## Förutsättningar
 
-Du har en förståelse för vad ett datalager är, och vet hur det [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html)datalagret {target=&quot;_blank&quot;} och du kan referera till dataelement i taggar. Du måste ha utfört följande steg i självstudiekursen
+Du har en förståelse för vad ett datalager är, och vet hur det [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"} datalager och veta hur du refererar till dataelement i taggar. Du måste ha utfört följande steg i självstudiekursen
 
 * [Konfigurera behörigheter](configure-permissions.md)
 * [Konfigurera ett XDM-schema](configure-schemas.md)
@@ -61,7 +61,7 @@ Du har en förståelse för vad ett datalager är, och vet hur det [Luma demo si
 
 ## Skapa dataelement för att hämta datalagret
 
-Innan du börjar skapa XDM-objektet skapar du följande uppsättning dataelement som ska mappas till [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html){target=&quot;_blank&quot;} datalager:
+Innan du börjar skapa XDM-objektet skapar du följande uppsättning dataelement som ska mappas till [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"} datalager:
 
 1. Gå till **[!UICONTROL Dataelement]** och markera **[!UICONTROL Lägg till dataelement]** (eller **[!UICONTROL Skapa nytt dataelement]** om det inte finns några befintliga dataelement i taggegenskapen)
 
@@ -81,16 +81,16 @@ Innan du börjar skapa XDM-objektet skapar du följande uppsättning dataelement
 Följ de här stegen för att skapa ytterligare fyra dataelement:
 
 * **`page.pageInfo.server`**  mappad till
-   `digitalData.page.pageInfo.server`
+  `digitalData.page.pageInfo.server`
 
 * **`page.pageInfo.hierarchie1`**  mappad till
-   `digitalData.page.pageInfo.hierarchie1`
+  `digitalData.page.pageInfo.hierarchie1`
 
 * **`user.profile.attributes.username`**  mappad till
-   `digitalData.user.0.profile.0.attributes.username`
+  `digitalData.user.0.profile.0.attributes.username`
 
 * **`user.profile.attributes.loggedIn`** mappad till
-   `digitalData.user.0.profile.0.attributes.loggedIn`
+  `digitalData.user.0.profile.0.attributes.loggedIn`
 
 * **`cart.orderId`** mappad till `digitalData.cart.orderId` (du kommer att använda detta under [Konfigurationsanalys](setup-analytics.md) lektion)
 
@@ -135,10 +135,6 @@ Sedan kan du skapa dataelementet för identitetskartan:
 1. Välj **[!UICONTROL Spara]**
 
    ![Gränssnitt för datainsamling](assets/identity-id-namespace.png)
-
->[!WARNING]
->
->Den primära identiteten krävs i alla poster som skickas till Adobe Experience Platform. Som standard används Experience Cloud-ID (ECID) som den primära identiteten för Platform Web SDK. Du vill aldrig använda något liknande `Luma CRM ID` som en primär identitet med Web SDK, eftersom den bara finns efter att användaren autentiserar sig och därför inte är tillgänglig i alla poster.
 
 <!--
 1. Once the data element is configured in **[!UICONTROL Data Collection interface]**, it can be tested on the Luma web property like any other Data Element. Enter the following script in the browser developer console
@@ -208,10 +204,10 @@ I slutet av dessa steg bör du skapa följande dataelement:
 -----------------------------|-------------------------------
 | `cart.orderId` | `identityMap.loginID` |
 | `page.pageInfo.hierarchie1` | `xdm.content` |
-| `page.pageInfo.pageName` |  |
-| `page.pageInfo.server` |  |
-| `user.profile.attributes.loggedIn` |  |
-| `user.profile.attributes.username` |  |
+| `page.pageInfo.pageName` | |
+| `page.pageInfo.server` | |
+| `user.profile.attributes.loggedIn` | |
+| `user.profile.attributes.username` | |
 
 Med dessa dataelement på plats är du redo att börja skicka data till Platform Edge Network via XDM-objektet genom att skapa en regel i taggar.
 
