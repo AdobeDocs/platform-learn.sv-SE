@@ -4,10 +4,10 @@ breadcrumb-title: Självstudiekurser
 user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
-source-git-commit: 8bd3dd0cddcc7daec1b1af582b28e2dd844cc7ae
+source-git-commit: 88a876834089348a2eb0be92ca2bd03e91d49caf
 workflow-type: tm+mt
-source-wordcount: '943'
-ht-degree: 8%
+source-wordcount: '955'
+ht-degree: 7%
 
 ---
 
@@ -41,6 +41,26 @@ ht-degree: 8%
    + [Konfigurera attributbaserad åtkomstkontroll](/help/platform/admin/configure-attribute-based-access-control.md)
    + [Admin Console](/help/platform/admin/admin-console.md)
    + [Hantera produktprofiler](/help/platform/admin/managing-product-profiles.md)
++ Målgrupper och segmentering {#audiences}
+   + [Introduktion till Audience Portal and Composition](audiences/introduction-to-audience-portal-and-composition.md)
+   + [Överför målgrupper](audiences/upload-audiences.md)
+   + [Översikt över verktyget Skapa målgruppsregel](audiences/audience-rule-builder-overview.md)
+   + [Skapa målgrupper](audiences/create-audiences.md)
+   + [Skapa innehållsbaserade målgrupper](audiences/create-content-based-audiences.md)
+   + [Skapa konverteringsmålgrupper](audiences/create-conversion-audiences.md)
+   + [Skapa målgrupper från befintliga målgrupper](audiences/create-audiences-from-existing-audiences.md)
+   + [Skapa sekventiella målgrupper](audiences/create-sequential-audiences.md)
+   + [Skapa dynamiska målgrupper](audiences/create-dynamic-audiences.md)
+   + [Skapa målgrupper med flera enheter](audiences/create-multi-entity-audiences.md)
+   + [Skapa målgrupper med B2B-data](audiences/create-audiences-with-b2b-data.md)
+   + [Demo av direktuppspelningssegmentering](/help/platform/audiences/streaming-segmentation-demo.md)
+   + [Utvärdera en målgruppsregel](https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/evaluate-a-segment.html){target="_blank"}
+   + [Skapa en datauppsättning för att exportera data](https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-dataset-export-segment.html){target="_blank"}
+   + [Anslutningsinställningar för segmentmatchning](/help/platform/segments/segment-match-connection-setup.md)
+   + [Datastyrning för segmentmatchning](/help/platform/segments/segment-match-data-governance.md)
+   + [Konfigurationsflöde för segmentmatchning](/help/platform/segments/segment-match-configuration-flow.md)
+   + [Segmentmatchning - insikter före delning](/help/platform/segments/segment-match-pre-share-insights.md)
+   + [Mottagningsdata för segmentmatchning](/help/platform/segments/segment-match-receiving-data.md)
 + [Granskningsloggar](/help/platform/governance/audit-logs.md)
 + [Datainsamling](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html){target="_blank"}
 + Kontrollpaneler {#dashboards}
@@ -173,24 +193,6 @@ ht-degree: 8%
    + [Kopiera scheman mellan sandlådor](/help/platform/schemas/copy-schemas-between-sandboxes.md)
    + [Uppdatera scheman](/help/platform/schemas/update-schemas.md)
    + [Skapa ett ad hoc-schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/ad-hoc.html){target="_blank"}
-+ Segment {#segments}
-   + [Översikt över segmentbyggaren](/help/platform/segments/segment-builder-overview.md)
-   + [Skapa segment](/help/platform/segments/create-segments.md)
-   + [Skapa innehållsbaserade segment](/help/platform/segments/create-content-based-segments.md)
-   + [Skapa konverteringssegment](/help/platform/segments/create-conversion-segments.md)
-   + [Skapa segment från befintliga segment](/help/platform/segments/create-segments-from-existing-segments.md)
-   + [Skapa sekventiella segment](/help/platform/segments/create-sequential-segments.md)
-   + [Skapa dynamiska segment](/help/platform/segments/create-dynamic-segments.md)
-   + [Skapa segment med flera enheter](/help/platform/segments/create-multi-entity-segments.md)
-   + [Skapa segment med B2B-data](/help/platform/segments/create-segments-with-b2b-data.md)
-   + [Demo av direktuppspelningssegmentering](/help/platform/segments/streaming-segmentation-demo.md)
-   + [Utvärdera ett segment](https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/evaluate-a-segment.html){target="_blank"}
-   + [Skapa en datauppsättning för att exportera data](https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-dataset-export-segment.html){target="_blank"}
-   + [Anslutningsinställningar för segmentmatchning](/help/platform/segments/segment-match-connection-setup.md)
-   + [Datastyrning för segmentmatchning](/help/platform/segments/segment-match-data-governance.md)
-   + [Konfigurationsflöde för segmentmatchning](/help/platform/segments/segment-match-configuration-flow.md)
-   + [Segmentmatchning - insikter före delning](/help/platform/segments/segment-match-pre-share-insights.md)
-   + [Mottagningsdata för segmentmatchning](/help/platform/segments/segment-match-receiving-data.md)
 + Källor {#sources}
    + [Översikt över källor](/help/platform/sources/overview.md)
    + [Importera data från Adobe Analytics](/help/platform/sources/ingest-data-from-adobe-analytics.md)
