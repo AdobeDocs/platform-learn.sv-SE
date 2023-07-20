@@ -1,13 +1,13 @@
 ---
 title: Skapa destinationer och aktivera data i Adobe Real-time Customer Data Platform (RTCDP)
 description: Lär dig hur du skapar mål och aktiverar data i Adobe Real-time Customer Data Platform
-solution: Real-time Customer Data Platform
+solution: Real-Time Customer Data Platform
 role: User
 feature: Destinations
 jira: KT-3798
 thumbnail: 29710.jpg
 exl-id: 53e23177-0131-44a4-9828-e54e4f279d91
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 19656b66225e827769d01e65fd52504b33a4b649
 workflow-type: tm+mt
 source-wordcount: '98'
 ht-degree: 0%

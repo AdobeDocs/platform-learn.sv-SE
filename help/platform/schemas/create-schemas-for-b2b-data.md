@@ -1,13 +1,13 @@
 ---
 title: Skapa scheman för B2B
 description: Lär dig hur du skapar scheman för dina affärsdata med Real-time Customer Data Platform, B2B Edition.
-solution: Real-time Customer Data Platform
+solution: Real-Time Customer Data Platform
 feature: Schemas
 role: Data Architect
 jira: KT-9258
 thumbnail: 338241.jpg
 exl-id: bbb47887-f982-4831-8002-6d1fa539a39b
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 19656b66225e827769d01e65fd52504b33a4b649
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 7%
