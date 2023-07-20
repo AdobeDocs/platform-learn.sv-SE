@@ -4,10 +4,10 @@ breadcrumb-title: Självstudiekurser
 user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
-source-git-commit: 88a876834089348a2eb0be92ca2bd03e91d49caf
+source-git-commit: 9d27093463ecf1af8ed90412475e4fd34d231265
 workflow-type: tm+mt
-source-wordcount: '955'
-ht-degree: 7%
+source-wordcount: '978'
+ht-degree: 8%
 
 ---
 
@@ -205,8 +205,11 @@ ht-degree: 7%
    + [Direktuppspela data med hjälp av källanslutningar](/help/platform/sources/streaming-ingestion-source-connector.md)
    + [Nästa steg i personaliseringen med Adobe Target](https://experienceleague.adobe.com/docs/platform-learn/tutorials/destinations/target/next-hit-personalization.html)
 + Integrering med Experience Cloud {#experience-cloud}
-   + [Magento](/help/platform/experience-cloud/business-value-of-platform-and-magento.md)
-   + [Samordna kampanjer med Marketo Engage](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/orchestrate-campaigns-with-marketo-engage.html)
+   + [Analyser](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html)
+   + [Audience Manager](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-aam.html)
+   + [Commerce](/help/platform/experience-cloud/business-value-of-platform-and-commerce.md)
+   + [Marketo Engage](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/orchestrate-campaigns-with-marketo-engage.html)
+   + [Target](https://experienceleague.adobe.com/docs/platform-learn/tutorials/destinations/target/next-hit-personalization.html)
 + Branschtrender {#industry}
    + [Framtiden för datahantering och den föränderliga miljön](/help/platform/industry/the-future-of-data-management-and-the-changing-environment.md)
    + [En tabell med två perceptioner - varumärken jämfört med konsumenter](/help/platform/industry/brands-vs-consumers.md)
