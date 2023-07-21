@@ -5,8 +5,9 @@ jira: KT-5342
 audience: developer
 doc-type: tutorial
 activity: develop
+feature: Mobile SDK
 exl-id: e3b920b1-e5e6-4fcc-b707-29c5943acec8
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 3c86f9b19cecf92c9a324fb6fcfcefaebf82177f
 workflow-type: tm+mt
 source-wordcount: '269'
 ht-degree: 0%

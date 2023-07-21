@@ -5,8 +5,11 @@ jira: KT-5342
 audience: Data Engineer, Data Architect, Marketer
 doc-type: tutorial
 activity: develop
+solution: Journey Optimizer, Experience Platform
+feature-set: Journey Optimizer, Experience Platform
+feature: Events, Journeys, Profiles, Identities
 exl-id: c71f6789-25cd-4fac-b026-e981744dbe95
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 3c86f9b19cecf92c9a324fb6fcfcefaebf82177f
 workflow-type: tm+mt
 source-wordcount: '368'
 ht-degree: 0%

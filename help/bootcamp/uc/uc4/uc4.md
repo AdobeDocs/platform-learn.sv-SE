@@ -5,8 +5,11 @@ jira: KT-5342
 audience: Data Engineer, Data Architect
 doc-type: tutorial
 activity: develop
+solution: Customer Journey Analytics
+feature-set: Customer Journey Analytics
+feature: Connections, Data Views, Workspace Basics, Calculated Metrics, Visualizations, Audiences
 exl-id: cd4b423c-cd0b-44cf-8ac7-23c25876457c
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 3c86f9b19cecf92c9a324fb6fcfcefaebf82177f
 workflow-type: tm+mt
 source-wordcount: '388'
 ht-degree: 0%

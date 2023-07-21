@@ -5,8 +5,9 @@ jira: KT-5342
 audience: Data Engineer, Data Architect, Marketer
 doc-type: tutorial
 activity: develop
+feature: Mobile SDK
 exl-id: c33c973b-db8a-49ce-bd6c-a6c4fbe579a0
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 3c86f9b19cecf92c9a324fb6fcfcefaebf82177f
 workflow-type: tm+mt
 source-wordcount: '533'
 ht-degree: 0%

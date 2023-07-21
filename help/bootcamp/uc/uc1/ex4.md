@@ -5,8 +5,10 @@ jira: KT-5342
 audience: Data Architect, Orchestration Engineer, Marketer
 doc-type: tutorial
 activity: develop
+solution: Experience Platform, Target
+feature: Segments, Integrations
 exl-id: 6a76c2ab-96b7-4626-a6d3-afd555220b1e
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: ee5c0af17c12f1d90774a3a4150c9788e2368e39
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 1%

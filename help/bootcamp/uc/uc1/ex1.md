@@ -5,8 +5,9 @@ jira: KT-5342
 audience: Data Engineer, Data Architect, Marketer
 doc-type: tutorial
 activity: develop
+feature: Profiles
 exl-id: 32a084a3-4c04-4367-947e-f7151fdad73b
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 3c86f9b19cecf92c9a324fb6fcfcefaebf82177f
 workflow-type: tm+mt
 source-wordcount: '415'
 ht-degree: 0%

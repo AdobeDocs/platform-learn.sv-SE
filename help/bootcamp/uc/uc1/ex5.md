@@ -5,8 +5,9 @@ jira: KT-5342
 audience: Data Architect, Orchestration Engineer, Marketer
 doc-type: tutorial
 activity: develop
+feature: Destinations
 exl-id: 31f46e37-f1c0-4730-8520-1ccd98df6501
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 3c86f9b19cecf92c9a324fb6fcfcefaebf82177f
 workflow-type: tm+mt
 source-wordcount: '281'
 ht-degree: 3%

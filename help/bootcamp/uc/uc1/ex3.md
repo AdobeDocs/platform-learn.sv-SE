@@ -5,8 +5,9 @@ jira: KT-5342
 audience: Data Engineer, Data Architect, Marketer
 doc-type: tutorial
 activity: develop
+feature: Segments
 exl-id: 37d4a5e8-e2bc-4c8c-a74f-09f74ea79962
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: ee5c0af17c12f1d90774a3a4150c9788e2368e39
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 3%
