@@ -3,9 +3,9 @@ title: Skapa dataelement
 description: Lär dig hur du skapar ett XDM-objekt och mappar dataelement till det i taggar. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Tags
 exl-id: d662ec46-de9b-44ba-974a-f81dfc842e68
-source-git-commit: e1c7ab68d0292edaaa3a93ae8da8cd49d8b4874c
+source-git-commit: fe03ee89bfccd0105b45383c84403b6a3d230235
 workflow-type: tm+mt
-source-wordcount: '1206'
+source-wordcount: '1202'
 ht-degree: 0%
 
 ---
@@ -141,7 +141,7 @@ Sedan kan du skapa dataelementet för identitetskartan:
 >
 > Adobe rekommenderar att du skickar identiteter som representerar en person, till exempel `Luma CRM Id`, som [!UICONTROL primär] identitet.
 >
-> Om identitetskartan innehåller personidentifieraren (t.ex. Luma CRM-ID) blir personidentifieraren [!UICONTROL primär] identitet. I annat fall blir ECID [!UICONTROL primär] identitet.
+> Om identitetskartan innehåller personidentifieraren (t.ex. `Luma CRM Id`) blir personidentifieraren [!UICONTROL primär] identitet. I annat fall `ECID` blir [!UICONTROL primär] identitet.
 
 
 
