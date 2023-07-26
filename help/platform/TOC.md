@@ -4,9 +4,9 @@ breadcrumb-title: Självstudiekurser
 user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
-source-git-commit: 9d27093463ecf1af8ed90412475e4fd34d231265
+source-git-commit: b0d1506f538e39a519351e0325cec0f0e5ee9121
 workflow-type: tm+mt
-source-wordcount: '978'
+source-wordcount: '975'
 ht-degree: 8%
 
 ---
@@ -17,14 +17,14 @@ ht-degree: 8%
 + [Platform Tutorials](/help/platform/overview.md)
 + Introduktion till plattform {#intro-to-platform}
    + [En kundupplevelse som bygger på Experience Platform](/help/platform/intro-to-platform/a-customer-experience-powered-by-experience-platform.md)
-   + [Bakom kulisserna: En kundupplevelse som bygger på Experience Platform](/help/platform/intro-to-platform/behind-the-scenes-a-customer-experience-powered-by-experience-platform.md)
+   + [Bakom kulisserna: En kundupplevelse som drivs av Experience Platform](/help/platform/intro-to-platform/behind-the-scenes-a-customer-experience-powered-by-experience-platform.md)
    + [Översikt över Experience Platform](/help/platform/intro-to-platform/overview.md)
    + [Viktiga möjligheter](/help/platform/intro-to-platform/key-capabilities.md)
    + [Program och intelligenta tjänster](/help/platform/intro-to-platform/application-and-intelligent-services.md)
    + [Integrering med Experience Cloud-program](/help/platform/intro-to-platform/integrations-with-experience-cloud-applications.md)
    + [Viktiga användningsexempel](/help/platform/intro-to-platform/key-use-cases.md)
    + [Grundläggande arkitektur](/help/platform/intro-to-platform/basic-architecture.md)
-   + [Använda användargränssnittet för plattformen](/help/platform/intro-to-platform/interface-tour.md)
+   + [Användargränssnitt](/help/platform/intro-to-platform/interface-tour.md)
    + [Roller och projektfaser](/help/platform/intro-to-platform/roles-and-project-phases.md)
 + Introduktion till Real-Time CDP {#rtcdp}
    + [Översikt](/help/platform/rtcdp/understanding-the-real-time-customer-data-platform.md)
@@ -36,7 +36,7 @@ ht-degree: 8%
 + [Autentisera till Experience Platform API:er](/help/platform/authentication/platform-api-authentication.md)
 + [Importera exempeldata till Experience Platform](/help/platform/data-generator/import-sample-data.md)
 + Administrering {#admin}
-   + [Använd varningar](/help/platform/admin/use-alerts.md)
+   + [Använda varningar](/help/platform/admin/use-alerts.md)
    + [Använda sandlådor](/help/platform/admin/use-sandboxes.md)
    + [Konfigurera attributbaserad åtkomstkontroll](/help/platform/admin/configure-attribute-based-access-control.md)
    + [Admin Console](/help/platform/admin/admin-console.md)
@@ -69,7 +69,7 @@ ht-degree: 8%
    + [Översikt](/help/platform/governance/understanding-data-governance.md)
    + [Komplett demo](/help/platform/governance/introduction-to-data-governance.md)
    + [Klassificera data med etiketter](/help/platform/governance/classify-data-using-labels.md)
-   + [Skapa dataanvändningsprofiler](/help/platform/governance/create-data-usage-policies.md)
+   + [Skapa dataanvändningsprinciper](/help/platform/governance/create-data-usage-policies.md)
    + [Använd principer för dataanvändning](/help/platform/governance/enforce-data-usage-policies.md)
    + [Tvinga samtycke](/help/platform/governance/enforce-consent.md)
    + [Integrera med IAB Transparency och Consent Framework 2.0](/help/platform/governance/integrate-with-iab-transparency-and-consent-framework-2.md)
@@ -82,7 +82,7 @@ ht-degree: 8%
    + [Mappa en CSV-fil till XDM](https://experienceleague.adobe.com/docs/experience-platform/ingestion/tutorials/map-csv/existing-schema.html){target="_blank"}
    + [Översikt över källor](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/overview.html)
    + [Importera data från Adobe Analytics](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html)
-   + [Inkommande data från Audience Manager](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-aam.html)
+   + [Ingrediera data från Audience Manager](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-aam.html)
    + [Importera data från molnlagring](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-cloud-storage.html)
    + [Importera data från CRM](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-crm.html)
    + [Infoga data från databaser](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-databases.html)
@@ -90,7 +90,7 @@ ht-degree: 8%
    + [Strömma data med HTTP API](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/streaming-ingestion-http-api.html)
    + [Direktuppspela data med hjälp av källanslutningar](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/streaming-ingestion-source-connector.html)
    + [Självstudiekurser för Web SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html){target="_blank"}
-   + [Självstudiekurser för mobil SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html){target="_blank"}
+   + [SDK-självstudiekurser för mobiler](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html){target="_blank"}
 + Arbetsyta för datavetenskap {#data-science-workspace}
    + [Översikt](/help/platform/data-science-workspace/understanding-data-science-workspace.md)
    + [Arkitektur](data-science-workspace/architecture-overview.md)
@@ -115,7 +115,7 @@ ht-degree: 8%
    + [Integrera med Google kundmatchning](/help/platform/destinations/integrate-with-google-customer-match.md)
    + [Konfigurera Azure Blob-målet](/help/platform/destinations/configure-the-azure-blob-destination.md)
    + [Konfigurera Marketo-målet](/help/platform/destinations/configure-the-marketo-destination.md)
-   + [Konfigurera filbaserat molnlagringsutrymme eller e-postmarknadsföringsmål](/help/platform/destinations/configuring-file-based-cloud-storage-or-email-marketing-destinations.md)
+   + [Konfigurera filbaserad molnlagring eller e-postmarknadsföring](/help/platform/destinations/configuring-file-based-cloud-storage-or-email-marketing-destinations.md)
    + [Konfigurera ett socialt mål](/help/platform/destinations/configure-a-social-destination.md)
    + Adobe Target och anpassad personalisering{#target}
       + [Nästa steg i personaliseringen med Adobe Target](/help/platform/destinations/target/next-hit-personalization.md)
@@ -144,7 +144,7 @@ ht-degree: 8%
    + [Övervaka dataflöden](/help/platform/monitoring/data-monitoring.md)
 + Profiler {#profiles}
    + [Förstå kundprofil i realtid](/help/platform/profiles/understanding-the-real-time-customer-profile.md)
-   + [Profilöversikt](/help/platform/profiles/overview-diagram.md)
+   + [Profilöversikt - diagram](/help/platform/profiles/overview-diagram.md)
    + [Använd data i profil](/help/platform/profiles/bring-data-into-the-real-time-customer-profile.md)
    + [Anpassa profilvydetaljer](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/profile-customization.html){target="_blank"}
    + [Visa kontoprofiler](/help/platform/profiles/view-account-profiles.md)
@@ -169,13 +169,13 @@ ht-degree: 8%
    + [API för frågetjänst](/help/platform/queries/query-service-api.md)
    + [Utforska data](/help/platform/queries/explore-data.md)
    + [Förbered data](/help/platform/queries/prepare-data.md)
-   + [Adobe-definierade funktioner](/help/platform/queries/adobe-defined-functions.md)
+   + [Funktioner som definieras av Adobe](/help/platform/queries/adobe-defined-functions.md)
    + [Mönster för dataanvändning](/help/platform/queries/understanding-data-usage-patterns-with-query-service.md)
    + [Kör frågor](/help/platform/queries/run-queries.md)
    + [Generera datauppsättningar från frågeresultat](https://experienceleague.adobe.com/docs/experience-platform/query/ui/create-datasets.html){target="_blank"}
    + [Tableau](/help/platform/queries/psql-client-tableau.md)
    + [Analysera och visualisera data](/help/platform/queries/analyze-and-visualize.md)
-   + [Skapa instrumentpaneler med BI-verktyg](/help/platform/queries/understanding-the-value-of-dashboards-built-with-query-service.md)
+   + [Bygg instrumentpaneler med BI-verktyg](/help/platform/queries/understanding-the-value-of-dashboards-built-with-query-service.md)
    + [Ladda upp era kunddata](/help/platform/queries/recharge-your-customer-data.md)
    + [Anslut klienter till frågetjänsten](https://experienceleague.adobe.com/docs/experience-platform/query/clients/overview.html){target="_blank"}
 + Scheman {#schemas}
@@ -196,7 +196,7 @@ ht-degree: 8%
 + Källor {#sources}
    + [Översikt över källor](/help/platform/sources/overview.md)
    + [Importera data från Adobe Analytics](/help/platform/sources/ingest-data-from-adobe-analytics.md)
-   + [Inkommande data från Audience Manager](/help/platform/sources/ingest-data-from-aam.md)
+   + [Ingrediera data från Audience Manager](/help/platform/sources/ingest-data-from-aam.md)
    + [Importera data från Marketo](/help/platform/sources/ingest-data-from-marketo.md)
    + [Importera data från molnlagring](/help/platform/sources/ingest-data-from-cloud-storage.md)
    + [Importera data från CRM](/help/platform/sources/ingest-data-from-crm.md)
