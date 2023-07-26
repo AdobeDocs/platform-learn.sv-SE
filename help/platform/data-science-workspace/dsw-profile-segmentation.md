@@ -1,12 +1,13 @@
 ---
 title: Använd maskininlärningsresultat vid segmentering
 description: Läs om hur utdata från datavetenskapen kan användas i kundprofiler och segmentering i realtid.
-role: User
 feature: Data Science Workspace
+role: User
+level: Beginner
 jira: KT-7296
 thumbnail: 333711.jpg
 exl-id: 9a909023-47d2-474a-a562-b60799094b89
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
 workflow-type: tm+mt
 source-wordcount: '60'
 ht-degree: 0%

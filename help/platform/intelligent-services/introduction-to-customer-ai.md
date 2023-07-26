@@ -4,10 +4,11 @@ description: En översikt på hög nivå över hur marknadsförare kan använda 
 solution: Experience Platform, Real-Time Customer Data Platform
 feature: Customer AI
 role: User
+level: Beginner
 jira: KT-4807
 thumbnail: 32664.jpg
 exl-id: a6a9302f-b9dd-4201-a81e-5c8a2f58b82d
-source-git-commit: 19656b66225e827769d01e65fd52504b33a4b649
+source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
 workflow-type: tm+mt
 source-wordcount: '52'
 ht-degree: 0%

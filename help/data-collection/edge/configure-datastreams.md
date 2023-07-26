@@ -1,11 +1,11 @@
 ---
 title: Konfigurera dataströmmar
 description: Lär dig hur du skapar och konfigurerar dataströmmar
-feature: Web SDK
+feature: Datastreams
 jira: KT-9762
 thumbnail: 340825.jpeg
 exl-id: 890a2129-1c17-43d1-9568-ce8025470306
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: ac07d62cf4bfb6a9a8b383bbfae093304d008b5f
 workflow-type: tm+mt
 source-wordcount: '38'
 ht-degree: 28%

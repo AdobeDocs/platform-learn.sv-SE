@@ -2,15 +2,15 @@
 user-guide-title: Migrera mål från at.js 2.x till Web SDK
 breadcrumb-title: Migrera mål från at.js 2.x till Web SDK
 user-guide-description: En praktisk självstudiekurs för Target-kunder om hur ni kan migrera från en at.js till Web SDK-implementering.
-feature-set: Target,Experience Platform
 solution: Target,Data Collection,Experience Platform
+feature-set: Target,Experience Platform
 feature: Implement Client-side,APIs/SDKs,at.js,AEP Web SDK, Web SDK,Implementation
-role: Developer
+role: Data Engineer, Developer
 level: Intermediate,Experienced
 doc-type: tutorial
 recommendations: catalog,noDisplay
 jira: KT-11159
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
 workflow-type: tm+mt
 source-wordcount: '88'
 ht-degree: 5%
@@ -20,7 +20,7 @@ ht-degree: 5%
 
 # Migrera mål från at.js 2.x till Platform Web SDK {#migrate-target-to-websdk}
 
-+ [Introduktion till självstudiekurser](introduction.md)
++ [Introduktion till självstudier](introduction.md)
 
 + [Migreringsöversikt](migration-overview.md)
 

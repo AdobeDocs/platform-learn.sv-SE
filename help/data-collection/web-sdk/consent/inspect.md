@@ -1,11 +1,11 @@
 ---
 title: Inspect och validera godkännandesignaler
-description: Lär dig hur du validerar att inställningarna för samtycke används på rätt sätt på dina data i Adobe Experience Platform.
+description: Lär dig hur du validerar att inställningarna för samtycke används korrekt på dina data i Adobe Experience Platform.
 feature: Web SDK, Tags
-role: Developer, Data Engineer
+level: Intermediate
 jira: KT-7571
 exl-id: d7534d2d-6a64-4189-bc35-0de8c6c8bf5a
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: ac07d62cf4bfb6a9a8b383bbfae093304d008b5f
 workflow-type: tm+mt
 source-wordcount: '70'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Inspect och validera godkännandesignaler
 
-Lär dig hur du validerar att inställningarna för samtycke används på rätt sätt på dina data i Adobe Experience Platform.
+Lär dig hur du validerar att inställningarna för samtycke används korrekt på dina data i Adobe Experience Platform.
 
 
 >[!NOTE]

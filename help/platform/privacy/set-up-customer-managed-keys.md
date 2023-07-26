@@ -2,13 +2,13 @@
 title: Konfigurera kundhanterade nycklar (CMK)
 description: Hantera kryptering av data i vila med dina egna krypteringsnycklar.
 feature: Privacy
-role: Admin, Data Architect
+role: Admin, Data Architect, Data Engineer, Developer
 level: Experienced
-last-substantial-update: 2022-11-01T00:00:00Z
 jira: KT-11382
 thumbnail: 3410673.jpeg
+last-substantial-update: 2022-11-01T00:00:00Z
 exl-id: 04cb1aeb-3260-4259-bb02-8392d9d787a2
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
 workflow-type: tm+mt
 source-wordcount: '100'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # Konfigurera kundhanterade nycklar (CMK)
 
-Hantera kryptering av data i vila med dina egna krypteringsnycklar. Mer information finns på [kundhanterad nyckeldokumentation](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/customer-managed-keys.html).
+Hantera kryptering av data i vila med dina egna krypteringsnycklar. Mer information finns på [kundhanterad dokumentation om nycklar](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/customer-managed-keys.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3410673/?quality=12&learn=on)
 

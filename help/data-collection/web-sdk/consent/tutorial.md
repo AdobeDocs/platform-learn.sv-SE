@@ -2,10 +2,10 @@
 title: Implementera samtycke med en plattform för hantering av samtycke (CMP)
 description: Lär dig hur du implementerar och aktiverar data för samtycke som hämtats från en CMP (Consent Management Platform) med Adobe Experience Platform Web SDK-tillägget i datainsamling.
 feature: Web SDK, Tags
-role: Developer, Data Engineer
+level: Intermediate
 doc-type: tutorial
 exl-id: bee792c3-17b7-41fb-a422-289ca018097d
-source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
+source-git-commit: ac07d62cf4bfb6a9a8b383bbfae093304d008b5f
 workflow-type: tm+mt
 source-wordcount: '3321'
 ht-degree: 0%
@@ -20,8 +20,8 @@ Många juridiska sekretessbestämmelser har infört krav på aktivt och specifik
 >
 >Adobe Experience Platform Launch håller på att integreras i Adobe Experience Platform som en serie datainsamlingstekniker. Flera terminologiska förändringar har introducerats i gränssnittet som du bör vara medveten om när du använder det här innehållet:
 >
-> * platforma launchen (klientsidan) är nu **[[!DNL tags]](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv)**
-> * platform launch Server Side is now **[[!DNL event forwarding]](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)**
+> * Platforma launchen (klientsidan) är nu **[[!DNL tags]](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv)**
+> * Platform launch Server Side is now **[[!DNL event forwarding]](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)**
 > * Edge-konfigurationer är nu **[[!DNL datastreams]](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html)**
 
 I den här självstudiekursen visas hur du implementerar och aktiverar data som inhämtats från en CMP (Consent Management Platform) med plattformstillägget för Web SDK i datainsamling. Vi gör detta med hjälp av båda Adobe-standarderna och IAB TCF 2.0-medgivandestandarden, med OneTrust eller SourcePoint som exempel på CMP.
@@ -44,7 +44,7 @@ I den här självstudien förutsätts att du har tillgång till datainsamling oc
 * [Översikt över bibliotek](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html)
 * [Översikt över publicering](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/overview.html)
 
-Vi kommer också att använda [Felsökning för plattform](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) Chrome-tillägg för att inspektera och validera implementeringen.
+Vi använder också [Felsökning för plattform](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) Chrome-tillägg för att inspektera och validera implementeringen.
 
 Om du vill implementera IAB TCF-exemplet med en CMP på din egen webbplats behöver du tillgång till en CMP som OneTrust eller SourcePoint för att generera de data som de tillhandahåller. Du kan också följa med och se resultaten nedan.
 
@@ -71,23 +71,23 @@ Avsnittet Sekretess anger medgivandenivån för SDK om användaren inte tidigare
 
 Om standardinställningen för samtycke är &quot;In&quot;, anger detta för SDK att den inte ska vänta på uttryckligt medgivande och att den ska samla in de händelser som inträffar innan användaren ger sitt medgivande. Dessa inställningar hanteras och lagras vanligtvis i en CMP.
 
-Om standardinställningen för samtycke är &quot;Ut&quot;, anger detta för SDK att den inte ska samla in några händelser som inträffar innan användarens inställningar för anmälan har angetts. Besöksaktivitet som inträffar innan inställningen för samtycke har angetts inkluderas inte i data som skickas av SDK när samtycke har angetts. Om du till exempel bläddrar och visar en webbsida innan du väljer bannern för samtycke och den här inställningen &quot;Ut&quot; används, skickas inte rullningsaktiviteten och visningstiden om användaren senare ger ett uttryckligt medgivande för datainsamling.
+Om standardinställningen för samtycke är &quot;Ut&quot;, anger detta för SDK att den inte ska samla in några händelser som inträffar innan användarens inställningar för anmälan har angetts. Besöksaktivitet som inträffar innan inställningen för samtycke har angetts inkluderas inte i data som skickas av SDK när samtycke har angetts. Om du till exempel bläddrar och visar en webbsida innan du väljer medgivandebanderollen, och den här inställningen &quot;Ut&quot; används, skickas inte rullningsaktiviteten och visningstiden om användaren senare ger ett uttryckligt medgivande för datainsamling.
 
 Om standardinställningen för samtycke är Väntande kommer SDK att ställa in alla händelser som inträffar innan användaren ger sitt medgivande, så händelserna kan skickas efter att inställningarna för medgivande har angetts och efter att SDK initialt har konfigurerats under ett besök.
 
-Med den här inställningen &quot;Väntande&quot; kommer ett försök att köra kommandon som kräver användarens inställningar för deltagande (till exempel händelsekommandot) att resultera i att kommandot köas i SDK. Dessa kommandon bearbetas inte förrän du har meddelat användarens inställningar för deltagande till SDK.
+Med den här inställningen &quot;Väntande&quot; kommer ett försök att köra kommandon som kräver användarens inställningar för deltagande (till exempel händelsekommandot) att resultera i att kommandot köas i SDK:n. Dessa kommandon bearbetas inte förrän du har meddelat användarens inställningar för deltagande till SDK:n.
 
 När en CMP samlar in användarens inställningar kan vi meddela dessa inställningar till SDK:n. I ett senare avsnitt nedan får vi se hur vi får tillgång till denna anmälningsinformation och använder den med Web SDK-tillägget.
 
 &quot;Tillhandahålls av dataelement&quot; ger oss åtkomst till ett dataelement som innehåller eventuella medgivandeinställningsdata som samlats in av en anpassad kod eller en CMP på din webbplats, eller i ditt datalager. Ett dataelement som används för detta ändamål ska resultera i&quot;in&quot;,&quot;ut&quot; eller&quot;pending&quot;.
 
-Observera: den här konfigurationsinställningen för SDK bevaras inte för användarprofiler, utan är specifik för att ställa in SDK:s beteende innan besökaren uttryckligen anger medgivandeinställningarna.
+Obs! Den här konfigurationsinställningen för SDK bevaras inte för användarprofiler, den är specifik för att ställa in SDK:s beteende innan besökaren anger explicit samtycke.
 
 Mer information om hur du konfigurerar Web SDK-tillägget finns i [SDK-tillägg för plattform - översikt](https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-extension-configuration.html?lang=en#configure-the-extension) och [Stöd för kundernas samtycke](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html).
 
 I det här exemplet väljer vi alternativet Väntar och väljer **Spara** för att spara konfigurationsinställningarna.
 
-### Steg 2: Inställningar för kommunikation av samtycke
+### Steg 2: Kommunicera i Inställningar för samtycke
 
 Nu när vi har angett standardbeteendet för SDK kan vi använda taggar för att skicka en besökares uttryckliga medgivandeinställningar till Platform. Att skicka medgivandedata med Adobe 1.0 eller 2.0-standarden kan enkelt implementeras med `setConsent` Web SDK-åtgärd i dina taggar.
 
@@ -103,19 +103,19 @@ Vi kan välja att skicka&quot;In&quot;,&quot;Ut&quot; eller&quot;Tillhandahålls
 
 I det här exemplet väljer vi&quot;In&quot; för att ange att besökaren har godkänt att Web SDK skickar data till Platform. Välj den blå knappen &quot;Behåll ändringar&quot; om du vill spara den här åtgärden och sedan &quot;Spara&quot; om du vill spara regeln.
 
-Obs! När en webbplatsbesökare har avanmält sig kan du inte ange användarnas samtycke i SDK.
+Obs! När en webbplatsbesökare har avanmält sig kan du inte ange användarens samtycke i SDK.
 
 Dina taggregler kan aktiveras av flera olika inbyggda eller anpassade [händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/core/overview.html) som kan användas för att skicka denna information om samtycke vid lämplig tidpunkt under en besökssession. I exemplet ovan använde vi händelsen loaded för fönstret för att utlösa regeln. I ett senare avsnitt kommer vi att använda en medgivandeinställningshändelse från en CMP för att utlösa en Set Consent-åtgärd. Du kan använda åtgärden Ange samtycke i en regel som aktiveras av en händelse som du föredrar som anger en inställning för deltagande.
 
 #### Ställa in samtycke med plattformsgodkännande Standard 2.0
 
-Version 2.0 av standarden för plattformsgodkännande fungerar med [XDM](https://experienceleague.adobe.com/docs/platform-learn/tutorials/schemas/schemas-and-experience-data-model.html) data. Du måste också lägga till fältgruppen för samtycke och inställningsinformation i ditt profilschema i plattformen. Se [Samtyckesbearbetning i plattform](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/overview.html) om du vill ha mer information om standardversionen 2.0 av Adobe och den här fältgruppen.
+Version 2.0 av standarden för plattformsgodkännande fungerar med [XML](https://experienceleague.adobe.com/docs/platform-learn/tutorials/schemas/schemas-and-experience-data-model.html) data. Du måste också lägga till fältgruppen för samtycke och inställningsinformation i ditt profilschema i plattformen. Se [Samtyckesbearbetning i plattform](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/overview.html) om du vill ha mer information om standardversionen 2.0 av Adobe och den här fältgruppen.
 
 Vi skapar ett anpassat kodelement för att skicka data till egenskaperna collect och metadata för det innehållsobjekt som visas i schemat nedan:
 
 ![](./images/collect-metadata.png)
 
-Fältgruppen Innehåll och inställningsdetaljer innehåller fält för [XDM-datatyp för innehåll och inställningar](https://experienceleague.adobe.com/docs/experience-platform/xdm/data-types/consents.html#prerequisites) som kommer att innehålla de data för medgivandepreferenser som vi skickar till Platform med plattformens SDK-tillägg i vår regelåtgärd. För närvarande är de enda nödvändiga egenskaperna för att implementera Platform Consent Standard 2.0 insamlingsvärdet (val) och tidsvärdet för metadata, som markeras ovan med rött.
+Fältgruppen Innehåll och Inställningsinformation innehåller fält för [XDM-datatyp för innehåll och inställningar](https://experienceleague.adobe.com/docs/experience-platform/xdm/data-types/consents.html#prerequisites) som kommer att innehålla de data för medgivandepreferenser som vi skickar till Platform med plattformens SDK-tillägg i vår regelåtgärd. För närvarande är de enda nödvändiga egenskaperna för att implementera Platform Consent Standard 2.0 insamlingsvärdet (val) och tidsvärdet för metadata, som markeras ovan med rött.
 
 Låt oss skapa ett dataelement för dessa data. Välj Dataelement och den blå knappen Lägg till dataelement. Låt oss ringa detta &quot;xdm-medgivande 2.0&quot; och använda Core-tillägget, vi väljer en anpassad kodtyp. Du kan ange eller kopiera och klistra in följande data i det anpassade kodredigeringsfönstret:
 
@@ -132,7 +132,7 @@ return {
 }
 ```
 
-Tidsfältet ska ange när användaren senast uppdaterade sina medgivandeinställningar. Vi skapar en tidsstämpel här som exempel med en standardmetod i JavaScript-objektet Date. Välj Spara för att spara den anpassade koden och välj Spara igen för att spara dataelementet.
+Tidsfältet ska ange när användaren senast uppdaterade sina medgivandeinställningar. Vi skapar en tidsstämpel här som ett exempel med en standardmetod i JavaScript-objektet Date. Välj Spara för att spara den anpassade koden och välj Spara igen för att spara dataelementet.
 
 Sedan väljer vi Regler och sedan den blå knappen Lägg till regel och skriver namnet&quot;setConsent onLoad - Consent 2.0&quot;. Låt oss välja händelsen Fönsterinläst som regelutlösare och sedan välja Lägg till under Åtgärder. Välj plattformens SDK-tillägg och välj Ange medgivande för åtgärdstypen. Standard ska vara Adobe och version 2.0 ska vara. För Värde använder vi det dataelement vi nyss skapade som innehåller de insamlings- och tidsvärden vi måste skicka till Platform:
 
@@ -172,15 +172,15 @@ Vi ställer in alla medgivandeSträngar enligt följande:
 * **`containsPersonalData`**:  `False` (väljs från knappen Välj värde)
 * **`gdprApplies`**:  `%IAB TCF Consent GDPR%`
 
-The `consentStandard` och `consentStandardVersion` båda fälten är bara textsträngar för den standard vi använder, som är IAB TCF version 2.0. The `consentStringValue` refererar till ett dataelement med namnet&quot;IAB TCF Consent String&quot;. Procenttecknen som omger texten anger namnet på ett dataelement, och vi tittar på det om en stund. The `containsPersonalData` anger om IAB TCF 2.0-medgivandesträngen innehåller några personuppgifter med antingen &quot;True&quot; eller &quot;False&quot;. The `gdprApplies` anges antingen &quot;true&quot; för GDPR gäller, &quot;false&quot; för GDPR gäller inte eller &quot;undefined&quot; för unknown whether GDPR gäller. För närvarande kommer Web SDK att behandla &quot;undefined&quot; som &quot;true&quot;, så medgivandedata som skickas med &quot;gdprApplies: undefined&quot; behandlas som om besökaren befinner sig i ett område där GDPR gäller.
+The `consentStandard` och `consentStandardVersion` båda fälten är bara textsträngar för den standard vi använder, som är IAB TCF version 2.0. The `consentStringValue` refererar till ett dataelement med namnet&quot;IAB TCF Consent String&quot;. Procenttecknen som omger texten anger namnet på ett dataelement, och vi tittar på det om en stund. The `containsPersonalData` anger om IAB TCF 2.0-medgivandesträngen innehåller några personuppgifter med antingen &quot;True&quot; eller &quot;False&quot;. The `gdprApplies` anges antingen &quot;true&quot; för GDPR gäller, &quot;false&quot; för GDPR gäller inte eller &quot;undefined&quot; för unknown whether GDPR gäller. För närvarande kommer Web SDK att behandla&quot;undefined&quot; som&quot;true&quot;, vilket innebär att data om samtycke som skickas med&quot;gdprApplies: undefined&quot; kommer att behandlas som om besökaren befinner sig i ett område där GDPR gäller.
 
 Se [godkännandedokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/iab-tcf/with-launch.html#getting-started) om du vill ha mer information om dessa egenskaper och om IAB TCF 2.0 i -taggar.
 
-### Steg 2: Skapa en regel för att ange samtycke med IAB TCF 2.0-standarden
+### Steg 2: Skapa en regel för att ställa in samtycke med IAB TCF 2.0-standarden
 
 Därefter skapar vi en regel för att ange samtycke med Web SDK när data för godkännande för den här standarden anges eller ändras av en webbplatsbesökare. I den här regeln ska vi också se hur vi kan hämta in dessa godkännandeändringssignaler från en CMP som [OneTrust](https://www.onetrust.com/products/cookie-consent/) eller [Källpunkt](https://www.sourcepoint.com/cmp/).
 
-#### Lägg till en regelhändelse
+#### Lägga till en regelhändelse
 
 Välj avsnittet Regler i plattformstaggegenskapen och klicka sedan på den blå knappen Lägg till regel. Vi namnger regeln setConsent - IAB och väljer Lägg till under Händelser. Vi ger händelsen namnet tcfapi addEventListener och väljer Öppna redigerare för att öppna den anpassade kodredigeraren.
 
@@ -228,7 +228,7 @@ Under GDPR innehåller personuppgifter väljer du alternativet att ange om uppgi
 
 Välj den blå knappen Spara för att spara funktionsmakrot och den blå knappen Spara (eller Spara i bibliotek) för att spara regeln. Nu har du implementerat dataelementet och regeln i taggar för att ange samtycke med hjälp av Web SDK-tillägget med IAB TCF 2.0-medgivandestandarden.
 
-### Steg 3: Spara i bibliotek och bygge
+### Steg 3: Spara i bibliotek och bygg
 
 Om du använder [arbetsbibliotek](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/add-data-elements-rules.html#use-the-working-library-feature) har du redan sparat dessa ändringar och byggt ditt utvecklingsbibliotek:
 
@@ -258,7 +258,7 @@ OneTrust, SourcePoint och andra CMP som implementerar IAB TCF 2.0-standarden kom
 
 ## Skicka data om samtycke med upplevelsehändelser
 
-Du kanske har märkt att vi inte refererade till dataelementet &quot;xdm-medgivandeStrings&quot; som vi skapade tidigare i ett dataelementfält i någon av våra regler. Det här dataelementet är avsett att användas när du behöver skicka medgivandedata med en Experience Event.
+Du kanske har lagt märke till att vi inte refererade till dataelementet&quot;xdm-medgivandeStrings&quot; som vi skapade tidigare i ett dataelementfält i någon av våra regler. Det här dataelementet är avsett att användas när du behöver skicka medgivandedata med en Experience Event.
 
 ![](./images/consentStrings-data-element.png)
 

@@ -4,7 +4,8 @@ breadcrumb-title: Självstudiekurser om datainsamling
 user-guide-description: Instruktionsvideor och självstudiekurser som gör dig till en privilegierad användare av datainsamling i Experience Platform.
 solution: Data Collection,Experience Platform
 doc-type: video
-source-git-commit: 286a5570d33d1d812d1a54c28e1ea4f68f00b988
+role: Developer, Data Engineer
+source-git-commit: ac07d62cf4bfb6a9a8b383bbfae093304d008b5f
 workflow-type: tm+mt
 source-wordcount: '239'
 ht-degree: 17%
@@ -22,7 +23,7 @@ ht-degree: 17%
    + [Lägga till och konfigurera tillägg](tags/add-and-configure-extensions.md)
    + [Skapa dataelement](tags/create-data-elements.md)
    + [Skapa regler](tags/build-rules.md)
-   + [Bygga och publicera ett bibliotek](tags/build-and-publish-a-library.md)
+   + [Skapa och publicera ett bibliotek](tags/build-and-publish-a-library.md)
    + [Användare och behörigheter](tags/users-and-permissions.md)
    + [Implementera webbplatser med Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html){target="_blank"}
    + [Implementera webbplatser med SDK:er för lösningar](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/overview.html){target="_blank"}

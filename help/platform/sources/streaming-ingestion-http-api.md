@@ -1,12 +1,13 @@
 ---
 title: Infoga data med slutpunkten för HTTP API för direktuppspelning
 description: I den här videon visas hur du direktuppspelar data till Adobe Experience Platform i realtid med HTTP API-slutpunkten.
-role: Data Engineer, Data Architect
 feature: Sources
+role: Data Engineer, Data Architect, Developer
+level: Intermediate
 jira: KT-6686
 thumbnail: 331028.jpg
 exl-id: 2f9c3f6f-169a-431f-b697-a5ed86c274f5
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
 workflow-type: tm+mt
 source-wordcount: '115'
 ht-degree: 1%

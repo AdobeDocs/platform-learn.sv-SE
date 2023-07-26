@@ -2,14 +2,13 @@
 title: Konfigurera Google förbättrade konverteringar
 description: Förbättra konverteringsdata för Google med hashkodade data från första part med hjälp av händelsevidarebefordran och API:t för Google Ads.
 feature: Event Forwarding
-role: Data Engineer
 level: Experienced
 doc-type: Feature Video
 last-substantial-update: 2022-11-15T00:00:00Z
 jira: KT-11493
 thumbnail: 3411365.jpeg
 exl-id: 48f59810-c745-45de-8e10-7c6b9009bafc
-source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
+source-git-commit: ac07d62cf4bfb6a9a8b383bbfae093304d008b5f
 workflow-type: tm+mt
 source-wordcount: '58'
 ht-degree: 0%

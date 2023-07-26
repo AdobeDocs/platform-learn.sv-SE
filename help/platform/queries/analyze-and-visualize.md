@@ -2,11 +2,12 @@
 title: Analysera och visualisera flerkanalsinsikter i Tableau med hjälp av frågetjänsten
 description: Lär dig hur du kan använda Adobe Experience Platform Query Service med externa datavisualiseringsverktyg med hjälp av ett exempel på bortfallsanalys.
 feature: Queries
-role: Data Engineer
+role: Data Engineer, Developer
+level: Intermediate
 jira: KT-10191
 thumbnail: 342115.jpeg
 exl-id: d39d4bc5-550f-4cb2-875d-2e81a6f4c2b8
-source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
+source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 8%

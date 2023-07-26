@@ -1,13 +1,14 @@
 ---
 title: Autentisera och få åtkomst till Experience Platform-API:er
 description: Lär dig hur du får tillgång till Adobe Experience Platform-API:er.
-role: Developer
 feature: API
+role: Developer
+level: Beginner
 jira: KT-3688
 thumbnail: 28832.jpeg
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: c1774670-436e-46dd-9c9b-177bfee5f749
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
 workflow-type: tm+mt
 source-wordcount: '334'
 ht-degree: 5%

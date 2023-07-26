@@ -1,12 +1,13 @@
 ---
 title: Översikt Diagram över kundprofil i realtid
 description: I den här videon får du en översikt som visar hur Adobe Experience Platform kundprofil kan användas i realtid.
-role: Data Architect, Data Engineer
 feature: Profiles
+role: Data Engineer, Data Architect, Developer, User
+level: Beginner
 jira: KT-4943
 thumbnail: 33600.jpg
 exl-id: 1cff5492-82bb-484c-a96a-3417288d4766
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
 workflow-type: tm+mt
 source-wordcount: '64'
 ht-degree: 9%

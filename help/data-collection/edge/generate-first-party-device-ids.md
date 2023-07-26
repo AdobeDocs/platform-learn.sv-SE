@@ -2,10 +2,11 @@
 title: Generera enhets-ID:n från första part
 description: Lär dig hur du skapar enhets-ID:n från första part
 feature: Web SDK
+level: Experienced
 jira: KT-9728
 thumbnail: KT-9728.jpeg
 exl-id: 2e3c1f71-e224-4631-b680-a05ecd4c01e7
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: ac07d62cf4bfb6a9a8b383bbfae093304d008b5f
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 1%
@@ -14,7 +15,7 @@ ht-degree: 1%
 
 # Generera enhets-ID:n från första part
 
-Adobe Experience Cloud-program har traditionellt genererat cookies för att lagra enhets-ID med hjälp av olika tekniker, bland annat:
+Adobe Experience Cloud-program har traditionellt genererat cookies för att lagra enhets-ID med olika tekniker, bland annat:
 
 1. cookies från tredje part
 1. cookies från första part som anges av en Adobe-server med hjälp av domännamnets CNAME-konfiguration
@@ -33,11 +34,11 @@ Här är ett kort exempel på hur funktionen fungerar:
 1. Experience Platform Edge Network tar emot FPID och använder det för att generera ett Experience Cloud ID (ECID).
 1. SDK-svaret för plattformen skickar ECID tillbaka till slutanvändarens webbläsare.
 1. Om `idMigrationEnabled=true`används JavaScript för att lagra ECID som `AMCV_` cookie i slutanvändarens webbläsare.
-1. I händelse av `AMCV_` cookie förfaller, processen upprepas själv. Så länge samma enhets-ID finns tillgängligt får du ett nytt `AMCV_` cookie skapas med samma ECID-värde som tidigare.
+1. I händelsen `AMCV_` cookie förfaller, processen upprepas själv. Så länge samma enhets-ID finns tillgängligt får du ett nytt `AMCV_` cookie skapas med samma ECID-värde som tidigare.
 
 >[!NOTE]
 >
->The `idMigrationEnabled` behöver inte anges till `true` för att använda FPID. Med `idMigrationEnabled=false` du kanske inte ser `AMCV_` cookie och måste söka efter ECID-värdet i nätverkssvaret.
+>The `idMigrationEnabled` behöver inte anges till `true` för att använda FPID. Med `idMigrationEnabled=false` du kanske inte ser en `AMCV_` cookie och måste söka efter ECID-värdet i nätverkssvaret.
 
 
 I den här självstudiekursen används ett specifikt exempel med skriptspråket PHP för att visa hur du:
@@ -74,7 +75,7 @@ När följande funktion anropas genereras ett slumpmässigt UUID version-4:
 
 ## Skriv UUIDv4-värde till en cookie
 
-Följande kod skickar en begäran till funktionen ovan om att generera ett UUID. Sedan anges cookie-flaggorna som din organisation har bestämt. Om en cookie redan har genererats förlängs giltigheten.
+Följande kod skickar en begäran till funktionen ovan om att generera ett UUID. Sedan anges de cookie-flaggor som din organisation har bestämt. Om en cookie redan har genererats förlängs giltigheten.
 
 ```
 <?php

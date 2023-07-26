@@ -2,12 +2,11 @@
 title: Översikt över vidarebefordran av händelser
 description: Lär dig hur vidarebefordran av händelser centraliserar datainsamlingen, minskar mängden kod som krävs i dina webb- och mobila appar och strömmar data till lösningar utanför Adobe via Adobe Experience Platform Edge Network.
 feature: Event Forwarding
-role: Data Engineer
 level: Beginner
 jira: KT-6419
 thumbnail: 331937.jpeg
 exl-id: bd1a7414-b232-4ae3-98e8-b0ec1c60361b
-source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
+source-git-commit: ac07d62cf4bfb6a9a8b383bbfae093304d008b5f
 workflow-type: tm+mt
 source-wordcount: '137'
 ht-degree: 45%
@@ -22,8 +21,8 @@ Lär dig hur vidarebefordran av händelser centraliserar datainsamlingen, minska
 >
 >Adobe Experience Platform Launch håller på att integreras i Adobe Experience Platform som en serie datainsamlingstekniker. Flera terminologiska förändringar har introducerats i gränssnittet som du bör vara medveten om när du använder det här innehållet:
 >
-> * platforma launchen (klientsidan) är nu **[!DNL tags]**
-> * platform launch Server Side is now **[!DNL event forwarding]**
+> * Platforma launchen (klientsidan) är nu **[!DNL tags]**
+> * Platform launch Server Side is now **[!DNL event forwarding]**
 > * Edge-konfigurationer är nu **[!DNL datastreams]**
 
 >[!VIDEO](https://video.tv.adobe.com/v/331937?quality=12&learn=on)

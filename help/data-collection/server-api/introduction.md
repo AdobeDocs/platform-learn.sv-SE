@@ -6,11 +6,11 @@ doc-type: article
 feature-set: Experience Platform
 feature: Server API,API,Data Collection,Integrations
 level: Beginner
-role: User,Developer
+role: User, Data Engineer, Developer
 solution: Data Collection
 topic: Integrations
 exl-id: 9607e641-b0d5-49c1-b319-32ed0720e715
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: ac07d62cf4bfb6a9a8b383bbfae093304d008b5f
 workflow-type: tm+mt
 source-wordcount: '2087'
 ht-degree: 0%
@@ -29,7 +29,7 @@ I slutet av den här artikeln bör du ha en tydlig förståelse för dessa grund
 
 >[!NOTE]
 >
-> Det finns många API:er, men fokus här ligger på webb- och webbläsarAPI:er: när ett program interagerar med ett annat via Internet.
+> Även om det finns många API:er kommer fokus här att ligga på webb- och webbläsarAPI:er: i princip när ett program interagerar med ett annat via Internet.
 
 ## API - termer och begrepp
 
@@ -55,7 +55,7 @@ Den här adressen, URL:en, har specifika delar som är mycket relevanta för web
 
 **Schema**
 
-The `scheme` ovan kallas även `protocol` med webb-API:er och det är vanligtvis `http` eller `https`. HTTP- eller HyperText Transfer Protocol är hur resurser som webbsidor överförs från en webbserver till en webbläsare. HTTPS är den säkra versionen, där överföringen sker via Internet med säkerhet som är avsedd att förhindra störningar av resursen som överförs. Det är vanligt att visa en liten låsikon i webbläsarens adressfält när du visar en sida via HTTPS.
+The `scheme` ovan kallas även `protocol` med webb-API:er och det är vanligtvis antingen `http` eller `https`. HTTP- eller HyperText Transfer Protocol är hur resurser som webbsidor överförs från en webbserver till en webbläsare. HTTPS är den säkra versionen, där överföringen sker via Internet med säkerhet som är avsedd att förhindra störningar av resursen som överförs. Det är vanligt att visa en liten låsikon i webbläsarens adressfält när du visar en sida via HTTPS.
 
 För webb-API:er sker överföringen av dessa resurser via HTTP-begäranden, med andra ord via HTTP.
 
@@ -63,7 +63,7 @@ För webb-API:er sker överföringen av dessa resurser via HTTP-begäranden, med
 
 The `business.adobe.com` är värddatorn för resursen som begärs. När du klickar på vår exempellänk använder webbläsaren den här delen av URL:en för att hitta servern där sidan finns. Det är inte alltid exakt likadant som webbservern, men på en grundläggande nivå kan vi tänka på det som den server där webbläsaren kommer att få den begärda sidan.
 
-Domännamn är en del av domännamnssystemet, som kallas DNS. De flesta tänker på `adobe.com` eller `example.com` som ett &quot;domännamn&quot;, men det finns delar som är relevanta för API:er. `www.adobe.com` och `business.adobe.com` kan kallas domännamn, men `www.` och `business.` -delar kallas underdomäner. API:er interagerar ofta med en URL som innehåller en underdomän som `api.example.com` eller `sub.www.example.com`.
+Domännamn är en del av domännamnssystemet, som kallas DNS. De flesta tänker på `adobe.com` eller `example.com` som ett &quot;domännamn&quot;, men det finns delar som är relevanta för API:er. `www.adobe.com` och `business.adobe.com` kan kallas domännamn, men `www.` och `business.` kallas underdomäner. API:er interagerar ofta med en URL som innehåller en underdomän som `api.example.com` eller `sub.www.example.com`.
 
 Det är mycket vanligt att se termen _värd_ referera till ett fullständigt domännamn inklusive alla underdomäner som `business.adobe.com`. Det är också vanligt att se villkoren _domän_ eller _domännamn_ när du refererar till en värd utan underdomän som `adobe.com`. Det är inte viktigt att memorera de specifika villkoren för varje del och variant av en värd här. Men det är viktigt att vara medveten om att dessa termer används ofta, så att ni kan klargöra alla relevanta detaljer för ert företag och era diskussioner.
 
@@ -71,7 +71,7 @@ Det är mycket vanligt att se termen _värd_ referera till ett fullständigt dom
 
 Origin är en annan term som du bör vara medveten om att den är närbesläktad med delar av en URL. På en grundläggande nivå är ett ursprung ungefär `scheme` plus `host` plus `domain` gilla `https://business.adobe.com`. Olika värden representerar ofta olika ursprung, som `https://business.adobe.com` och `http://business.adobe.com` är inte av samma ursprung eftersom de har olika system. `https://www.adobe.com` och `https://business.adobe.com` är inte heller samma ursprung i många användningsområden på grund av de olika underdomänerna.
 
-**Bana**
+**Sökväg**
 
 Den sista biten i URL-exemplet ovan är `path` till resursen - sidan i vårt exempel. The `/products/experience-platform/` representerar vanligtvis mappar eller kataloger på webbservern. På samma sätt som vi har mappar eller kataloger på våra datorer för dokument och foton har vi också mappar på webbservrar för att ordna innehåll. Och slutligen `/adobe-experience-platform.html` part är namnet på filen, webbsidan.
 
@@ -91,7 +91,7 @@ Förutom när det gäller tid på dygnet, vädret eller personaliserat innehåll
 
 Webbläsar-API:er gör att programmerare kan interagera med webbläsarens funktioner direkt. Med Battery API kan programvaran kontrollera batteristatus för en enhet så att den kan varna dig vid behov. Med Clipboard API kan du kopiera eller klistra in programvara med enhetens urklipp. Med fullskärms-API:t kan programmet visa alternativet att utöka vyn till hela skärmen på enheten, som YouTube.
 
-Adobe Experience Platform Data Access API är ett webb-API som gör att programmerare kan få åtkomst till och hämta datauppsättningsfiler från Adobe Experience Platform så att de kan använda kundprofildata i sina egna program. Det är mycket vanligt att API:er som detta är en del av en programautomatiseringsprocess där programvara programmeras för att utföra en sekvens av steg med hjälp av flera API:er i kombination. Detta kan ofta vara en betydande kostnadsbesparing jämfört med att manuellt utföra samma steg.
+Adobe Experience Platform Data Access API är ett webb-API som gör att programmerare kan få åtkomst till och hämta datauppsättningsfiler från Adobe Experience Platform så att de kan använda kundprofildata i sina egna program. Det är mycket vanligt att API:er som detta är en del av en programautomatiseringsprocess där programvara programmeras för att utföra en sekvens med olika API:er i kombination. Detta kan ofta vara en betydande kostnadsbesparing jämfört med att manuellt utföra samma steg.
 
 ## API-slutpunkter
 
@@ -103,7 +103,7 @@ På samma sätt som webbläsaren hämtar en sida på en viss URL, hämtar API-be
 
 ## HTTP-begärandemetoder
 
-Nu bör det vara tydligt att webb-API:er begär resurser som webbsidor eller datauppsättningar. Precis som de flesta programvarubegrepp följer dessa HTTP-begäranden repeterbara mönster. En begäran skickas från ett program till ett annat program som utvärderar begäran och sedan svarar: webbläsaren begär en sida från en webbserver och svarar med sidinnehållet.
+Nu bör det vara tydligt att webb-API:er begär resurser som webbsidor eller datauppsättningar. Precis som de flesta programvarubegrepp följer dessa HTTP-begäranden repeterbara mönster. En begäran skickas från ett programvaruprogram till ett annat program som utvärderar begäran och sedan svarar: webbläsaren begär en sida från en webbserver och svarar med sidinnehållet.
 
 Hela processen från begäran till svar omfattar många mindre och mycket detaljerade steg, men förfrågningsmetoderna är enkla. Begärandemetoder definierar den åtgärd som begärs.
 
@@ -133,7 +133,7 @@ Det finns flera andra, men det här är en lista över de vanligaste metoderna n
 
 Nu när du har de grundläggande villkoren, begreppen och stegen som ingår i API:erna kan vi titta på en exempelbegäran om API i praktiken.
 
-Sidan från webbläsarexemplet har URL:en `https://business.adobe.com/products/experience-platform/adobe-experience-platform.html`. När du klickar på länken Adobe Experience Platform skapas en `GET` begäran för den här sidan. Eftersom vi har webbläsaren att göra jobbet åt oss behöver vi bara klicka, men om en programmerare vill att det ska ske i ett programvaruprogram måste de ange all information som krävs för att API-begäran ska lyckas.
+Sidan från webbläsarexemplet har URL:en `https://business.adobe.com/products/experience-platform/adobe-experience-platform.html`. När någon klickar på länken till Adobe Experience Platform skapas en `GET` begäran för den här sidan. Eftersom vi har webbläsaren att göra jobbet åt oss behöver vi bara klicka, men om en programmerare vill att det ska ske i ett programvaruprogram måste de ange all information som krävs för att API-begäran ska lyckas.
 
 Så här kan det se ut i koden:
 
@@ -165,4 +165,4 @@ fetch(
 I koden ovan kan du se `URL` webbläsaren begär, och längst ned finns `method: "GET"` begärandemetod. De andra kodraderna är också en del av begäran, men ligger utanför artikelns omfång.
 
 
-*[API]: Programmeringsgränssnitt *[URL]: Uniform Resource Locator *[HTTP]: HyperText Transfer Protocol *[DNS]: Domännamnssystem
+*[API]: Application Programming Interface *[URL]: Uniform Resource Locator *[HTTP]: HyperText Transfer Protocol *[DNS]: Domännamnssystem

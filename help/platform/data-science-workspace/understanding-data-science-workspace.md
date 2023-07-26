@@ -1,19 +1,20 @@
 ---
-title: Översikt över arbetsytan Datavetenskap
+title: Översikt över arbetsytan Data Science
 description: Visionen med maskininlärning på Adobe Experience Platform är att demokratisera datavetenskapen genom att använda expertkunskapen hos Adobe-produkter, kunder och partners för att skapa ett ekosystem av intelligenta tjänster för att driva nästa generation av kundupplevelser. Data Science Workspace gör det enkelt att få tillgång till flerkanaliga data, bygga modeller, driftsätta modeller med en enda klicksdistribution och konsumera modellinsikter genom att dela dem via kundprofiler i realtid. Den här videon ger en översikt över vad Data Science Workspace är och det värde det ger företag.
-role: User
 feature: Data Science Workspace
+role: User
+level: Beginner
 jira: KT-3137
 thumbnail: 30567.jpg
 exl-id: 9e67c041-50d4-4358-8200-6effaebc1b05
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
 workflow-type: tm+mt
 source-wordcount: '198'
 ht-degree: 0%
 
 ---
 
-# Översikt över arbetsytan Datavetenskap
+# Översikt över arbetsytan Data Science
 
 Visionen med maskininlärning på Adobe Experience Platform är att demokratisera datavetenskapen genom att använda expertkunskapen hos Adobe-produkter, kunder och partners för att skapa ett ekosystem av intelligenta tjänster för att driva nästa generation av kundupplevelser. Data Science Workspace gör det enkelt att få tillgång till flerkanaliga data, bygga modeller, driftsätta modeller med en enda klicksdistribution och konsumera modellinsikter genom att dela dem via kundprofiler i realtid. Den här videon ger en översikt över vad Data Science Workspace är och det värde det ger företag.
 

@@ -1,19 +1,20 @@
 ---
-title: Anslut tabell till frågetjänst
+title: Koppla tabell till frågetjänst
 description: Lär dig hur du ansluter till frågetjänsten från en mängd olika klientprogram på datorn som stöder PostgreSQL-protokoll och hur du använder PostgreSQL-verktyg och drivrutiner för att ansluta till och skriva frågor.
 feature: Queries
-role: Data Engineer
+role: Data Engineer, Developer
+level: Intermediate
 jira: KT-7688
 thumbnail: 333702.jpg
 exl-id: c81e669e-af61-4b6b-8eb6-a516731b6529
-source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
+source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
 workflow-type: tm+mt
 source-wordcount: '87'
 ht-degree: 6%
 
 ---
 
-# Anslut tabell till frågetjänst
+# Koppla tabell till frågetjänst
 
 Lär dig hur du ansluter till frågetjänsten från en mängd olika klientprogram på datorn som stöder PostgreSQL-protokoll och hur du använder PostgreSQL-verktyg och drivrutiner för att ansluta till och skriva frågor.
 

@@ -1,12 +1,13 @@
 ---
 title: Planera din datamodell
 description: Gör det här innan du börjar skapa scheman i Adobe Experience Platform.
-role: Data Architect
 feature: Schemas
+role: Data Architect, Developer
+level: Beginner
 jira: KT-7932
 thumbnail: 333478.jpg
 exl-id: f3912973-0f15-4113-8706-6a36b6d24c17
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 8%

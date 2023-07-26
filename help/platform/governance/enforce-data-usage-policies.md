@@ -1,12 +1,13 @@
 ---
 title: Använd principer för dataanvändning
 description: Lär dig hur du tillämpar dataanvändningsprinciper när du aktiverar en målgrupp till ett mål. Lär dig hur du lägger till marknadsföringsåtgärder till destinationer, hur du analyserar en policyöverträdelse under aktiveringen och hur du använder datalinjen för att förstå och åtgärda regelöverträdelser.
-role: Data Architect, User
 feature: Data Governance
+role: User, Developer, Data Architect, Admin
+level: Beginner
 jira: KT-4380
 thumbnail: 33631.jpg
 exl-id: 9372f240-73a0-4262-8c23-122007786ea5
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 0%

@@ -3,11 +3,11 @@ user-guide-title: Självstudiekurs om att implementera Adobe Experience Cloud me
 breadcrumb-title: Självstudiekurs om webb-SDK
 solution: Data Collection
 feature: Web SDK,Tags
-role: Data Engineer
+role: Data Engineer, Developer
 level: Beginner,Intermediate
 jira: KT-6953
 recommendations: noDisplay,noCatalog
-source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
+source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
 workflow-type: tm+mt
 source-wordcount: '81'
 ht-degree: 30%
@@ -24,8 +24,8 @@ ht-degree: 30%
    + [Konfigurera ett identitetsnamnutrymme](configure-identities.md)
    + [Konfigurera ett datastream](configure-datastream.md)
 
-+ Tagginställningar {#tags-configuration}
-   + [Installera Web SDK-tillägg](install-web-sdk.md)
++ Märkordskonfiguration {#tags-configuration}
+   + [Installera SDK-tillägg för webben](install-web-sdk.md)
    + [Skapa dataelement](create-data-elements.md)
    + [Skapa en taggregel](create-tag-rule.md)
    + [Validera med felsökning](validate-with-debugger.md)

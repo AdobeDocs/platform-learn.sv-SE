@@ -5,11 +5,11 @@ feature: Privacy
 role: User, Developer, Data Engineer, Architect, Data Architect, Admin, Leader
 level: Beginner, Intermediate, Experienced
 doc-type: Event
-thumbnail: 332062.jpg
 jira: KT-7334
+thumbnail: 332062.jpg
 type: Event
 exl-id: 00664b18-f230-44b8-a963-7ef0298ea39b
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 0%

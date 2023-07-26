@@ -1,19 +1,20 @@
 ---
-title: Skapa dataanvändningsprofiler
+title: Skapa dataanvändningsprinciper
 description: Lär dig hur du skapar och hanterar dataanvändningsprinciper i Adobe Experience Platform användargränssnitt. Med dataanvändningsprinciper kan du begränsa dataanvändningen för specifika ändamål baserat på dataetikettering.
-role: Data Architect
 feature: Data Governance
+role: Data Architect, Admin
+level: Beginner
 jira: KT-4347
 thumbnail: 32977.jpg
 exl-id: 7bcab1e1-6344-48bd-8622-309c9dc17df9
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 0%
 
 ---
 
-# Skapa dataanvändningsprofiler
+# Skapa dataanvändningsprinciper
 
 Lär dig hur du skapar och hanterar dataanvändningsprinciper i Adobe Experience Platform användargränssnitt. Med dataanvändningsprinciper kan du begränsa dataanvändningen för specifika ändamål baserat på dataetikettering. Om du vill veta mer om API-baserade metoder kan du läsa [skapa dataanvändningsprinciper med API](https://experienceleague.adobe.com/docs/experience-platform/data-governance/policies/create.html).
 

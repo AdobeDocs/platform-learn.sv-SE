@@ -1,13 +1,14 @@
 ---
 title: Infoga data med CRM-källkopplingar
 description: Lär dig hur enkelt det är att batchimportera data från CRM-källor till Adobe Experience Platform kundprofil i realtid och datasjön sömlöst.
-role: Data Engineer, Data Architect
 feature: Sources
-jira: KT-3826, 13272
+role: Data Engineer, Data Architect, Developer
+level: Intermediate
+jira: KT-3826, KT-13272
 thumbnail: 29711.jpg
 last-substantial-update: 2023-05-24T00:00:00Z
 exl-id: 2a0caa84-dca6-4ba9-9ebf-bdf38dfc3cb2
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
 workflow-type: tm+mt
 source-wordcount: '208'
 ht-degree: 0%
@@ -32,5 +33,5 @@ Lär dig hur du konfigurerar källkopplingen för Salesforce CRM med hjälp av m
 
 Mer information finns i följande dokumentation:
 * [Salesforce skapar en anslutningsdokumentation](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/crm/salesforce.html).
-* [Skapa ett källdataflöde med hjälp av mallar i användargränssnittet](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/templates.html#).
+* [Skapa ett källdataflöde med mallar i användargränssnittet](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/templates.html#).
 

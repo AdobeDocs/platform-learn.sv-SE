@@ -2,12 +2,13 @@
 title: Konfigurera filbaserat molnlagringsutrymme eller e-postmarknadsföringsmål
 description: Få tips under genomgången av konfigurationen av ett filbaserat mål i Adobe Real-Time CDP. Detta gäller molnlagringsdestinationer (t.ex. S3 eller SFTP) och även e-postmarknadsföringsdestinationer.
 solution: Real-Time Customer Data Platform
-role: User
 feature: Destinations
+role: User, Admin
+level: Intermediate
 jira: KT-6624
 thumbnail: 328175.jpg
 exl-id: fda985ad-5d56-4e61-871f-2f29a2e79b17
-source-git-commit: 19656b66225e827769d01e65fd52504b33a4b649
+source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
 workflow-type: tm+mt
 source-wordcount: '158'
 ht-degree: 0%

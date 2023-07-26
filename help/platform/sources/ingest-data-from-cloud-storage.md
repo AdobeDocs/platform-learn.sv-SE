@@ -1,12 +1,13 @@
 ---
 title: Infoga data med hjälp av källanslutningar för molnlagring
 description: Den här videon visar hur enkelt det är att batchimportera data från molnlagringstjänster till Adobe Experience Platform kundprofil och datalinje i realtid, på ett smidigt och skalbart sätt.
-role: Data Engineer, Data Architect
 feature: Sources
+role: Data Engineer, Data Architect, Developer
+level: Intermediate
 jira: KT-3827
 thumbnail: 29695.jpg
 exl-id: 406b4545-8977-43fa-85b2-2069bba9f15a
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
 workflow-type: tm+mt
 source-wordcount: '116'
 ht-degree: 0%

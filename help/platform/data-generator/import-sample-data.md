@@ -1,13 +1,14 @@
 ---
 title: Importera exempeldata till Adobe Experience Platform
 description: Lär dig hur du konfigurerar en sandlådemiljö i Experience Platform med exempeldata.
-role: Developer
 feature: API
+role: Developer
+level: Experienced
 jira: KT-7349
 thumbnail: 7349.jpg
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: da94f4bd-0686-4d6a-a158-506f2e401b4e
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
 workflow-type: tm+mt
 source-wordcount: '1831'
 ht-degree: 0%
@@ -22,11 +23,11 @@ Lär dig hur du konfigurerar en sandlådemiljö i Experience Platform med exempe
 
 Experience Platform-användare måste ofta gå igenom en serie steg som omfattar att identifiera fältgrupper, skapa scheman, förbereda data, skapa datauppsättningar och sedan importera data innan de kan utforska de marknadsföringsfunktioner som erbjuds av Experience Platform. Den här självstudiekursen automatiserar några av stegen så att du kan hämta data till en plattformssandlåda så snabbt som möjligt.
 
-Den här självstudiekursen fokuserar på ett fiktivt detaljhandelsmärke som kallas Luma. De investerar i Adobe Experience Platform för att kombinera lojalitet, CRM, produktkatalog och offlineköp i kundprofiler i realtid och aktivera profilerna för att ta marknadsföringen till nästa nivå. Vi har genererat exempeldata för Luma, och i resten av den här självstudiekursen kommer du att importera dessa data till någon av dina Experience Platform sandlådemiljöer.
+Den här självstudiekursen fokuserar på ett fiktivt varumärke som kallas Luma. De investerar i Adobe Experience Platform för att kombinera lojalitet, CRM, produktkatalog och offlineköp i kundprofiler i realtid och aktivera profilerna för att ta marknadsföringen till nästa nivå. Vi har genererat exempeldata för Luma, och i resten av den här självstudiekursen kommer du att importera dessa data till någon av dina Experience Platform sandlådemiljöer.
 
 >[!NOTE]
 >
->Slutresultatet av den här självstudiekursen är en sandlåda som innehåller liknande data som [Komma igång med självstudiekursen Adobe Experience Platform for Data Architects and Data Engineers](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/overview.html). Den uppdaterades i april 2023 för att stödja [Journey Optimizer utmaningar](https://experienceleague.adobe.com/docs/journey-optimizer-learn/challenges/introduction-and-prerequisites.html). Den uppdaterades i juni 2023 för att ändra autentiseringsmetoden till OAuth.
+>Slutresultatet av den här självstudiekursen är en sandlåda som innehåller liknande data som [Komma igång med självstudiekursen Adobe Experience Platform for Data Architects and Data Engineers](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/overview.html). Den uppdaterades i april 2023 för att stödja [Utmaningar inom Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer-learn/challenges/introduction-and-prerequisites.html). Den uppdaterades i juni 2023 för att ändra autentiseringsmetoden till OAuth.
 
 
 ## Förutsättningar
@@ -46,7 +47,7 @@ Innan du följer instruktionerna kontrollerar du att du har hämtat [Postman](ht
 
    >[!NOTE]
    >
-   >Användardata i [platform-utils-main.zip](../assets/data-generator/platform-utils-main.zip) filen är fiktiv och ska endast användas som exempel.
+   >Användardata i [platform-utils-main.zip](../assets/data-generator/platform-utils-main.zip) filen är fiktiv och ska endast användas för demonstrationssyften.
 
 1. Flytta `platform-utils-main.zip` till önskad plats på datorn och packa upp den.
 1. I `luma-data` mapp, öppna alla `json` filer i en textredigerare och ersätta alla förekomster av `_yourTenantId` med ditt eget klient-ID, föregånget av ett understreck.
@@ -63,11 +64,11 @@ Innan du följer instruktionerna kontrollerar du att du har hämtat [Postman](ht
    > 
    > ![Sökväg till Windows-fil](../assets/data-generator/images/windows-file-path.png)
 
-1. Öppna [!DNL Postman] och skapa en arbetsyta från **Arbetsytor** nedrullningsbar meny:\
+1. Öppna [!DNL Postman] och skapa en arbetsyta från **Arbetsytor** listrutemeny:\
    ![Skapa arbetsyta](../assets/data-generator/images/create-workspace.png)
-1. Ange **Namn** och valfria **Sammanfattning** för arbetsytan och klicka **Skapa arbetsyta**. [!DNL Postman] kommer att växla till den nya arbetsytan när du skapar den.
+1. Ange en **Namn** och valfria **Sammanfattning** för arbetsytan och klicka **Skapa arbetsyta**. [!DNL Postman] kommer att växla till den nya arbetsytan när du skapar den.
    ![Spara arbetsyta](../assets/data-generator/images/save-workspace.png)
-1. Justera några inställningar för att köra [!DNL Postman] samlingar på den här arbetsytan. I sidhuvudet på [!DNL Postman], klicka på kugghjulsikonen och välj **Inställningar** för att öppna inställningarna spärrade. Du kan också använda kortkommandot (CMD/CTRL + ,) för att öppna modala bilder.
+1. Justera några inställningar för att köra [!DNL Postman] samlingar på den här arbetsytan. I sidhuvudet på [!DNL Postman], klicka på kugghjulsikonen och välj **Inställningar** om du vill öppna inställningarna spärrade. Du kan också använda kortkommandot (CMD/CTRL + ,) för att öppna modala bilder.
 1. Under `General` uppdaterar du timeout för begäran i ms till `5000 ms` och aktivera `allow reading file outside this directory`
    ![Inställningar](../assets/data-generator/images/settings.png)
 
@@ -75,7 +76,7 @@ Innan du följer instruktionerna kontrollerar du att du har hämtat [Postman](ht
    > Om filer läses in från en arbetskatalog kommer de att köras smidigt på olika enheter om samma filer lagras på andra enheter. Om du vill köra filer från en plats utanför arbetskatalogen måste en inställning aktiveras för att ange samma metod. Om `FILE_PATH` är inte detsamma som [!DNL Postman]I arbetskatalogsökvägen ska det här alternativet aktiveras.
 
 1. Stäng **Inställningar** -panelen.
-1. Välj **Miljö** och sedan markera **Importera**:
+1. Välj **Miljö** och sedan **Importera**:
    ![Miljöimport](../assets/data-generator/images/env-import.png)
 1. Importera den hämtade JSON-miljöfilen, `DataInExperiencePlatform.postman_environment`
 1. I Postman väljer du din miljö i den övre högra listrutan och klickar på ögonikonen för att visa miljövariablerna:
@@ -158,7 +159,7 @@ Nu kan du förbereda och importera data till din plattformssandlåda. De Postman
 1. Upprepa steg 1-3 för att köra de andra samlingarna:
    * `2-Luma-CRM-Data.postman_collection.json` skapar ett schema och en ifylld datauppsättning för kundens CRM-data. Schemat är baserat på klassen XDM Individual Profile som omfattar Demografisk information, personlig kontaktinformation, inställningsinformation och en anpassad identitetsfältgrupp.
    * `3-Luma-Product-Catalog.postman_collection.json` skapar ett schema och en ifylld datauppsättning för produktkataloginformation. Schemat är baserat på en anpassad produktkatalogklass och använder en anpassad produktkatalogfältgrupp.
-   * `4-Luma-Offline-Purchase-Events.postman_collection.json` skapar ett schema och en ifylld datamängd för kunders offlineköp. Schemat är baserat på XDM ExperienceEvent-klassen och består av en anpassad identitet och fältgrupper för Commerce Details.
+   * `4-Luma-Offline-Purchase-Events.postman_collection.json` skapar ett schema och en ifylld datamängd för kunders offlineköpshändelsedata. Schemat är baserat på XDM ExperienceEvent-klassen och består av en anpassad identitet och fältgrupper för Commerce Details.
    * `5-Luma-Product-Inventory-Events.postman_collection.json` skapar ett schema och en ifylld datauppsättning för händelser som rör produkter som kommer in och ut ur lagret. Schemat baseras på en anpassad affärshändelseklass och en anpassad fältgrupp.
    * `6-Luma-Test-Profiles.postman_collection.json` skapar ett schema och en ifylld datauppsättning med testprofiler som ska användas i Adobe Journey Optimizer
    * `7-Luma-Web-Events.postman_collection.json` skapar ett schema och en ifylld datauppsättning med enkla historiska webbdata.
@@ -185,7 +186,7 @@ Genom att bläddra bland data i **[!UICONTROL Attribut]** och **[!UICONTROL Hän
 
 ## Nästa steg
 
-Om du vill veta mer om Adobe Journey Optimizer innehåller den här sandlådan allt du behöver för att ta [Journey Optimizer utmaningar](https://experienceleague.adobe.com/docs/journey-optimizer-learn/challenges/introduction-and-prerequisites.html)
+Om du vill veta mer om Adobe Journey Optimizer innehåller den här sandlådan allt du behöver för att ta [Utmaningar inom Journey Optimizer](https://experienceleague.adobe.com/docs/journey-optimizer-learn/challenges/introduction-and-prerequisites.html)
 
 Om du vill veta mer om sammanfogningsprinciper, datastyrning, frågetjänst och segmentbyggaren går du till [lektion 11 i självstudiekursen Getting Started for Data Architects and Data Engineers](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/create-merge-policies.html?lang=en). I de tidigare lektionerna av den här andra självstudiekursen kan du manuellt skapa allt som just fyllts i av de här Postman-kollektionerna - du kommer snabbt igång!
 

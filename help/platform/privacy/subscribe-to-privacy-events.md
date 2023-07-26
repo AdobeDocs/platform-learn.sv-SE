@@ -1,12 +1,13 @@
 ---
 title: Prenumerera på sekretesshändelser
-description: Lär dig hur du prenumererar på sekretessaktiviteter för att automatisera jobbstatusbaserade arbetsflöden.
-role: Data Engineer, Data Architect
+description: Lär dig hur du prenumererar på Integritetshändelser för att automatisera jobbstatusbaserade arbetsflöden.
 feature: Privacy
+role: Data Engineer, Data Architect, Developer
+level: Beginner
 jira: KT-7721
 thumbnail: 336073.png
 exl-id: f1bc3e84-0b4b-40d0-83a5-f0f76a71f81d
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 13%
@@ -20,4 +21,4 @@ Lär dig hur du prenumererar på Integritetshändelser för att automatisera job
 
 >[!VIDEO](https://video.tv.adobe.com/v/336073?quality=12&learn=on)
 
-Mer information finns på [Dokumentation för Privacy Service](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=sv)
+Mer information finns på [Privacy Service - dokumentation](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=sv)

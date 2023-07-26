@@ -1,12 +1,13 @@
 ---
 title: Skapa dynamiska målgrupper
 description: Dynamiska målgrupper är en avancerad segmenteringsfunktion i Adobe Experience Platform som löser de skalbarhetsproblem som marknadsförare traditionellt möter när de skapar målgrupper för marknadsföringskampanjer.
-role: User
 feature: Segments
+role: User
+level: Intermediate
 jira: KT-2705
 thumbnail: 27428.jpg
 exl-id: 5e3b7d65-10e6-418f-98ab-99a3ac47e839
-source-git-commit: f1930db43c5e6fbfd4fe3daf116049fa09fcfb8b
+source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
 workflow-type: tm+mt
 source-wordcount: '95'
 ht-degree: 0%

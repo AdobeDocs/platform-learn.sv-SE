@@ -1,12 +1,13 @@
 ---
 title: Infoga data med hjälp av en datakällkoppling
 description: I den här videon går vi igenom hur du utför en batchimport av data från en datakälla till Adobe Experience Platform kundprofil i realtid och Experience Data Lake på ett smidigt och skalbart sätt.
-role: Data Engineer
 feature: Sources
+role: Data Engineer, Data Architect, Developer
+level: Intermediate
 jira: KT-6546
 thumbnail: 329317.jpg
 exl-id: c881e088-9569-4342-8f27-3815f187b217
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
 workflow-type: tm+mt
 source-wordcount: '122'
 ht-degree: 0%
