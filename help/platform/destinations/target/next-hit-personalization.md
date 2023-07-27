@@ -1,16 +1,19 @@
 ---
 title: Vad är nästa succé med personalisering med Real-Time CDP och Adobe Target?
 description: Läs om hur du personaliserar vid nästa träff med Real-time Customer Data Platform (CDP) och Adobe Target.
-role: User
 solution: Real-Time Customer Data Platform,Target
 feature-set: Experience Platform,Target
 feature: Integrations,Segments,Web SDK,Destinations,Datastreams,Audiences,Experience Targeting
+topic: Integrations
+badgeIntegration: label="Integrering" type="positive"
+role: User
+level: Beginner
 jira: KT-9629
 thumbnail: 340091.jpg
 exl-id: 08568a37-1450-4fdc-ba58-37ea026028c7
-source-git-commit: 19656b66225e827769d01e65fd52504b33a4b649
+source-git-commit: bcf6079bc2e05c8c59bcc1b020ac15d1db6a02f2
 workflow-type: tm+mt
-source-wordcount: '101'
+source-wordcount: '102'
 ht-degree: 0%
 
 ---

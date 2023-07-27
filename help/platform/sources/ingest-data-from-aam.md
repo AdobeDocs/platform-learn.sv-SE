@@ -2,14 +2,16 @@
 title: Infoga data med Adobe Audience Manager dataanslutning
 description: När du konfigurerar om processer och personal för att gå från Adobe Audience Manager till Real-time Customer Data Platform kan du använda Audience Manager Data Connector för att plocka in egenskaper och segment från AAM i plattformen, kombinera dem med andra avancerade data (inklusive PII) och skicka dem till målpartners. Den här videon visar hur du konfigurerar AAM Data Connector for Real-Time CDP.
 feature: Sources
+topic: Integrations
+badgeIntegration: label="Integrering" type="positive"
 role: Data Engineer, Data Architect, Developer
 level: Intermediate
 thumbnail: 331214.jpg
 jira: KT-7111
 exl-id: 43688e44-c0ea-4107-ba74-1e630990f732
-source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
+source-git-commit: bcf6079bc2e05c8c59bcc1b020ac15d1db6a02f2
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '296'
 ht-degree: 0%
 
 ---

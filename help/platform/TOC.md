@@ -4,9 +4,9 @@ breadcrumb-title: Självstudiekurser
 user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
-source-git-commit: eb2940e28607313b385e721a6f7185baa644b9c1
+source-git-commit: 6969ffb934783dc5e9b448ad28738b56084114cf
 workflow-type: tm+mt
-source-wordcount: '970'
+source-wordcount: '969'
 ht-degree: 8%
 
 ---
@@ -217,4 +217,3 @@ ht-degree: 8%
    + [Utvecklar ditt högteknologiska målgruppscenter](/help/platform/industry/evolving-your-audience-center-of-excellence.md)
    + [Skapa bättre upplevelser med kundprofiler](/help/platform/industry/building-better-experiences-with-customer-profiles.md)
    + [Datasamarbete i förstahandskontexten](/help/platform/industry/data-collaboration-in-the-first-party-data-context.md)
-   + [Översätt](translate.md)
