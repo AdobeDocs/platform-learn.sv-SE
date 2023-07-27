@@ -4,9 +4,9 @@ breadcrumb-title: Självstudiekurser
 user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
-source-git-commit: 839fc42ebad3b9091e8f9bdebd66f7d7afdebaa8
+source-git-commit: eb2940e28607313b385e721a6f7185baa644b9c1
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '970'
 ht-degree: 8%
 
 ---
@@ -178,6 +178,7 @@ ht-degree: 8%
    + [Bygg instrumentpaneler med BI-verktyg](/help/platform/queries/understanding-the-value-of-dashboards-built-with-query-service.md)
    + [Ladda upp era kunddata](/help/platform/queries/recharge-your-customer-data.md)
    + [Anslut klienter till frågetjänsten](https://experienceleague.adobe.com/docs/experience-platform/query/clients/overview.html){target="_blank"}
+   + [Validera data i dataletten](/help/platform/queries/validate-data-in-the-datalake.md)
 + Scheman {#schemas}
    + [Översikt](/help/platform/schemas/schemas-and-experience-data-model.md)
    + [Byggblock](/help/platform/schemas/schema-building-blocks.md)
