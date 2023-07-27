@@ -4,9 +4,9 @@ breadcrumb-title: Självstudiekurser
 user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
-source-git-commit: b0d1506f538e39a519351e0325cec0f0e5ee9121
+source-git-commit: 839fc42ebad3b9091e8f9bdebd66f7d7afdebaa8
 workflow-type: tm+mt
-source-wordcount: '975'
+source-wordcount: '965'
 ht-degree: 8%
 
 ---
@@ -203,7 +203,7 @@ ht-degree: 8%
    + [Infoga data från databaser](/help/platform/sources/ingest-data-from-databases.md)
    + [Strömma data med HTTP API](/help/platform/sources/streaming-ingestion-http-api.md)
    + [Direktuppspela data med hjälp av källanslutningar](/help/platform/sources/streaming-ingestion-source-connector.md)
-   + [Nästa steg i personaliseringen med Adobe Target](https://experienceleague.adobe.com/docs/platform-learn/tutorials/destinations/target/next-hit-personalization.html)
+   + [Felsökning: SFTP Connector](/help/platform/sources/troubleshoot-sftp-connector.md)
 + Integrering med Experience Cloud {#experience-cloud}
    + [Analyser](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html)
    + [Audience Manager](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-aam.html)
