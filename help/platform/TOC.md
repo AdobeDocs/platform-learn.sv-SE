@@ -4,7 +4,7 @@ breadcrumb-title: Självstudiekurser
 user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
-source-git-commit: 8441913e61137d97e25dc098bb1cdbdec6a1282e
+source-git-commit: 78b5ee6e1bcda449d8adf453088ddba6f0e42f36
 workflow-type: tm+mt
 source-wordcount: '989'
 ht-degree: 8%
@@ -143,10 +143,10 @@ ht-degree: 8%
    + [Aktivera bildskärmssegment](/help/platform/monitoring/monitoring-the-success-of-segment-activation.md)
    + [Övervaka dataflöden](/help/platform/monitoring/data-monitoring.md)
 + Stöd för partnerdata {#partner-data-support}
-   + [Översikt över stöd för partnerdata](/platform/partner-data-support/partner-data-support-overview.md)
-   + [Stöd för prospektering utanför webbplatsen](/platform/partner-data-support/offsite-prospecting-partner-data.md)
-   + [Lägg till partnerattribut i profiler](/platform/partner-data-support/partner-enrichment-partner-data.md)
-   + [Anpassa webbplatsen för okända besökare](/platform/partner-data-support/unknown-visitor-personalization-partner-data.md)
+   + [Översikt över stöd för partnerdata](/help/platform/partner-data-support/partner-data-support-overview.md)
+   + [Stöd för prospektering utanför webbplatsen](/help/platform/partner-data-support/offsite-prospecting-partner-data.md)
+   + [Lägg till partnerattribut i profiler](/help/platform/partner-data-support/partner-enrichment-partner-data.md)
+   + [Anpassa webbplatsen för okända besökare](/help/platform/partner-data-support/unknown-visitor-personalization-partner-data.md)
 + Profiler {#profiles}
    + [Förstå kundprofil i realtid](/help/platform/profiles/understanding-the-real-time-customer-profile.md)
    + [Profilöversikt - diagram](/help/platform/profiles/overview-diagram.md)
