@@ -4,9 +4,9 @@ description: Lär dig konfigurera en taggegenskap i [!UICONTROL Datainsamling] g
 feature: Mobile SDK,Tags
 hide: true
 hidefromtoc: true
-source-git-commit: ca83bbb571dc10804adcac446e2dba4fda5a2f1d
+source-git-commit: a7d20a6de8eb9bae62494ff5e71f47ed672e4681
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '1015'
 ht-degree: 1%
 
 ---
@@ -23,7 +23,7 @@ Du måste ha behörighet att skapa en taggegenskap för att kunna slutföra lekt
 
 >[!NOTE]
 >
-> Platforma launchen (klientsidan) är nu [taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=en)
+> Platforma launchen (klientsidan) är nu [Taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=en)
 
 ## Utbildningsmål
 
@@ -136,7 +136,12 @@ Ditt bibliotek byggs för de nya tilläggen och konfigurationerna. Ett lyckat by
 
    Installationsanvisningarna ger dig en bra startpunkt för implementeringen. Ytterligare information finns [här](https://developer.adobe.com/client-sdks/documentation/getting-started/get-the-sdk/).
 
-1. Välj **[!UICONTROL Swift]** flik nedan **[!UICONTROL Lägg till initieringskod]**. Det här kodblocket visar hur du importerar de SDK:er som krävs och registrerar tilläggen vid start.
+   >[!INFO]
+   >
+   >För resten av kursen ska du **not** Använd instruktionerna för CocoaPods, men använd i stället en SPM-baserad konfiguration (Swift Package Manager).
+   >
+
+1. Välj **[!UICONTROL Swift]** flik nedan **[!UICONTROL Lägg till initieringskod]**. Det här kodblocket visar hur du importerar de SDK:er som krävs och registrerar tilläggen vid start. Detta beskrivs närmare i [Installera SDK:er](install-sdks.md).
 
 1. Kopiera ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) den **[!UICONTROL Miljöfil-ID]** och lagra dem där du behöver dem senare. Detta unika ID pekar på din utvecklingsmiljö. Varje miljö (produktion, mellanlagring, utveckling) har ett eget unikt ID-värde.
 
@@ -146,14 +151,9 @@ Ditt bibliotek byggs för de nya tilläggen och konfigurationerna. Ett lyckat by
 >
 >Installationsanvisningarna ska betraktas som en startpunkt och inte som slutgiltig dokumentation. De senaste SDK-versionerna och kodexemplen finns i den officiella [dokumentation](https://developer.adobe.com/client-sdks/documentation/).
 
->[!INFO]
->
->För resten av kursen är du **not** med CocoaPods-instruktionerna, men titta på en systemspecifik Swift-paketbaserad konfiguration.
-
-
 ## Arkitektur för mobila taggar
 
-Om du känner till webbversionen av taggar, tidigare Launch, är det viktigt att förstå skillnaderna på mobilen.
+Om du är bekant med webbversionen av taggar, tidigare Launch, är det viktigt att förstå skillnaderna på mobilen.
 
 * På webben återges en taggegenskap i JavaScript som sedan (vanligtvis) finns i molnet. JavaScript-filen refereras direkt på webbplatsen.
 
