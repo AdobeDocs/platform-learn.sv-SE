@@ -4,7 +4,7 @@ description: Lär dig hur du skapar meddelanden i appen till en mobilapp med Pla
 solution: Data Collection,Journey Optimizer
 feature-set: Journey Optimizer
 hide: true
-source-git-commit: 4fa65f2e39d3fa7b8b77f5d06d51f10235474b36
+source-git-commit: c3c12d63762f439faa9c45d27e66468455774b43
 workflow-type: tm+mt
 source-wordcount: '994'
 ht-degree: 0%
@@ -73,11 +73,11 @@ I den här självstudiekursen kommer du att använda de generiska och tilläggso
 1. Bläddra nedåt till **[!UICONTROL Åtgärd]** och markera **[!UICONTROL Redigera innehåll]**.
 1. I **[!UICONTROL Meddelande i appen]** skärm:
    1. Välj **[!UICONTROL Modal]** som **[!UICONTROL Meddelandelayout]**.
-   1. Retur `https://luma.enablementadobe.com/content/dam/luma/en/logos/Luma_Logo.png` for **[!UICONTROL Media-URL]**.
-   1. Ange en **[!UICONTROL Sidhuvud]**, till exempel `Welcome to this Luma In-App Message` och ange **[!UICONTROL Brödtext]**, till exempel `Triggered by pushing that button in the app...`.
-   1. Retur **[!UICONTROL Avvisa]** som **[!UICONTROL Knapp 1 text (primär)]**.
-   1. Observera hur förhandsgranskningen uppdateras.
-   1. Välj **[!UICONTROL Granska för aktivering]**.
+   2. Retur `https://luma.enablementadobe.com/content/dam/luma/en/logos/Luma_Logo.png` for **[!UICONTROL Media-URL]**.
+   3. Ange en **[!UICONTROL Sidhuvud]**, till exempel `Welcome to this Luma In-App Message` och ange **[!UICONTROL Brödtext]**, till exempel `Triggered by pushing that button in the app...`.
+   4. Retur **[!UICONTROL Avvisa]** som **[!UICONTROL Knapp 1 text (primär)]**.
+   5. Observera hur förhandsgranskningen uppdateras.
+   6. Välj **[!UICONTROL Granska för aktivering]**.
       ![Redigerare i appen](assets/ajo-in-app-editor.png)
 1. I **[!UICONTROL Granska för att aktivera (Luma - Meddelandekampanj i appen)]** skärm, välja ![Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) i **[!UICONTROL Schema]** platta.
    ![Välj Schema för granskning](assets/ajo-review-select-schedule.png)
@@ -88,7 +88,7 @@ I den här självstudiekursen kommer du att använda de generiska och tilläggso
    1. Klicka **[!UICONTROL Klar]**.
       ![Utlösarlogik](assets/ajo-trigger-logic.png)
 
-   Du har definierat en spårningsåtgärd, där **[!UICONTROL Åtgärd]** är lika med `in-app` och **[!UICONTROL Kontextdata]** med funktionsmakrot är ett nyckelvärdepar med `showMessage = true`.
+   Du har definierat en spårningsåtgärd, där **[!UICONTROL Åtgärd]** är lika med `in-app` och **[!UICONTROL Kontextdata]** med funktionsmakrot är ett nyckelvärdepar med `"showMessage" : "true"`.
 
 1. Tillbaka i **[!UICONTROL Luma - kampanj för meddelanden i appen]** skärm, välja **[!UICONTROL Granska för aktivering]**.
 1. I **[!UICONTROL Granska för att aktivera (Luma - Meddelandekampanj i appen)]** skärm, välja **[!UICONTROL Aktivera]**.
@@ -103,14 +103,14 @@ Du har alla ingredienser på plats för att skicka ett meddelande i appen. Det s
 1. Gå till Luma > Luma > Utils > MobileSDK i Xcode Project navigator och hitta `func sendTrackAction(action: String, data: [String: Any]?)` och lägg till följande kod som anropar `MobileCore.track` funktion, baserat på parametrarna `action` och `data`.
 
 
-   ```
+   ```swift
    // send trackAction event
    MobileCore.track(action: action, data: data)
    ```
 
-1. Gå till Luma > Luma > Vyer > Allmänt > ConfigView i Xcode Project Navigator. Sök efter koden för knappen Meddelande i appen och lägg till följande kod:
+1. Gå till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Allmänt]** > **[!UICONTROL ConfigView]** i Xcode Project Navigator. Sök efter koden för knappen Meddelande i appen och lägg till följande kod:
 
-   ```
+   ```swift
    Task {
        AEPService.shared.sendTrackAction(action: "in-app", data: ["showMessage": "true"])
    }
