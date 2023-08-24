@@ -5,7 +5,7 @@ solution: Data Collection,Journey Optimizer
 feature-set: Journey Optimizer
 feature: Push
 hide: true
-source-git-commit: e119e2bdce524c834cdaf43ed9eb9d26948b0ac6
+source-git-commit: 2f9298a140c7bd483c8c533427f0e90d90d14af0
 workflow-type: tm+mt
 source-wordcount: '1899'
 ht-degree: 0%
@@ -97,8 +97,8 @@ Ytterligare dokumentation kan [hittades här](https://help.apple.com/developer-a
 1. I **[!UICONTROL Installera tillägg]** dialog
    1. Välj en miljö, till exempel **[!UICONTROL Utveckling]**.
    1. Välj **[!UICONTROL AJO Push Tracking Experience, händelsedatauppsättning]** datauppsättning från **[!UICONTROL Händelsedatauppsättning]** listruta.
-      ![Inställningar för AJO-tillägg](assets/push-tags-ajo.png)
    1. Välj **[!UICONTROL Spara i bibliotek och bygge]**.
+      ![Inställningar för AJO-tillägg](assets/push-tags-ajo.png)
 
 >[!NOTE]
 >
@@ -189,7 +189,7 @@ Om du vill skapa ett eget push-meddelande måste du definiera en händelse i Jou
    1. Ange en **[!UICONTROL Beskrivning]**, till exempel `Test event to trigger push notifications in Luma app`.
 
    1. Välj det händelseschema för mobilappsupplevelsen som du skapade tidigare i [Skapa ett XDM-schema](create-schema.md) från **[!UICONTROL Schema]** lista, till exempel **[!UICONTROL Luma Mobile App Event Schema v.1]**.
-   1. Välj ![Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) bredvid fältlistan.
+   1. Välj ![Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) bredvid **[!UICONTROL Fält]** lista.
 
       ![Redigera händelsesteg 1](assets/ajo-edit-event1.png)
 

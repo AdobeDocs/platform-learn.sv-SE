@@ -4,7 +4,7 @@ description: Lär dig hur du skapar meddelanden i appen till en mobilapp med Pla
 solution: Data Collection,Journey Optimizer
 feature-set: Journey Optimizer
 hide: true
-source-git-commit: c3c12d63762f439faa9c45d27e66468455774b43
+source-git-commit: 7de7c7e13ea6d02f1193620e0cc35299e07d59e5
 workflow-type: tm+mt
 source-wordcount: '994'
 ht-degree: 0%
@@ -123,6 +123,7 @@ Du har alla ingredienser på plats för att skicka ett meddelande i appen. Det s
 1. Gå till **[!UICONTROL Inställningar]** -fliken.
 
 1. Tryck **[!UICONTROL Meddelande i appen]**. Meddelandet visas i appen.
+
    <img src="assets/ajo-in-app-message.png" width="300" />
 
 
