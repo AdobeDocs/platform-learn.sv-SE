@@ -3,10 +3,9 @@ title: Analysmappning
 description: Lär dig hur du samlar in data för Adobe Analytics i en mobilapp.
 solution: Data Collection,Experience Platform,Analytics
 hide: true
-hidefromtoc: true
-source-git-commit: ca83bbb571dc10804adcac446e2dba4fda5a2f1d
+source-git-commit: e119e2bdce524c834cdaf43ed9eb9d26948b0ac6
 workflow-type: tm+mt
-source-wordcount: '638'
+source-wordcount: '653'
 ht-degree: 1%
 
 ---
@@ -174,9 +173,9 @@ a.x._techmarketingdemos.appinformationa.appstatedetails.screenname
 
 Så här ser en bearbetningsregel ut när den här informationen används:
 
-* Du skriver över värdet för `App Screen Name (eVar2)` (1) med värdet av `a.x._techmarketingdemo.appinformation.appstatedetails.screenname` (2) om `a.x._techmarketingdemo.appinformation.appstatedetails.screenname` är inställt.
+* Du **[!UICONTROL Skriv över värde för]** (1) **[!UICONTROL Programskärmens namn (eVar2)]** (2) med värdet av **[!UICONTROL a.x._techmarketingdemo.appinformation.appstatedetails.screenname]** (3) om **[!UICONTROL a.x._techmarketingdemo.appinformation.appstatedetails.screenname]** (4) **[!UICONTROL är inställt]** (5)
 
-* Du anger `Add to Wishlist (Event 3)` till `a.x.commerce.saveForLaters.value(Context)` if `a.x.commerce.saveForLaters.value(Context)` är inställt.
+* Du **[!UICONTROL Ange händelse]** (6) **[!UICONTROL Lägg till i önskelista (händelse 3)]** (7) till **[!UICONTROL a.x.commerce.saveForLaters.value(Context)]** (8) om **[!UICONTROL a.x.commerce.saveForLaters.value(Context)]** (9) **[!UICONTROL är inställt]** (10)
 
 ![regler för analysbearbetning](assets/analytics-processing-rules.png)
 

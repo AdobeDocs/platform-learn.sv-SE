@@ -4,8 +4,7 @@ description: Lär dig skicka data till Adobe Experience Platform.
 solution: Data Collection,Experience Platform
 feature: Mobile SDK,Data Ingestion
 hide: true
-hidefromtoc: true
-source-git-commit: ca83bbb571dc10804adcac446e2dba4fda5a2f1d
+source-git-commit: e119e2bdce524c834cdaf43ed9eb9d26948b0ac6
 workflow-type: tm+mt
 source-wordcount: '919'
 ht-degree: 0%

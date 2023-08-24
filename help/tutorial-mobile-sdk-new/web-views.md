@@ -3,13 +3,13 @@ title: Hantera WebViews
 description: Lär dig hur du hanterar datainsamling med WebViews i en mobilapp.
 jira: KT-6987
 hide: true
-hidefromtoc: true
-source-git-commit: ca83bbb571dc10804adcac446e2dba4fda5a2f1d
+source-git-commit: e119e2bdce524c834cdaf43ed9eb9d26948b0ac6
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '445'
 ht-degree: 0%
 
 ---
+
 
 # Hantera WebViews
 
@@ -36,35 +36,30 @@ JavaScript-tillägget för tjänsten Experience Cloud ID i WebView extraherar EC
 
 ## Implementering
 
-I Luma-exempelappen hittar du **[!UICONTROL TermsOfServiceSheet]** (i **[!UICONTROL Info]** och leta upp följande kod i `SwiftUIWebViewModel` klass:
+Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Info]** > **[!UICONTROL TermsOfServiceSheet]** och letar upp `func loadUrl()` funktionen i `final class SwiftUIWebViewModel: ObservableObject` klassen. Lägg till följande anrop för att hantera webbvyn:
 
-```swift {highlight="6-22"}
-    func loadUrl() {
-        let url = Bundle.main.url(forResource: "tou", withExtension: "html")
-        if var urlString = url?.absoluteString {
-            // Adobe Experience Platform - Handle Web View
-            AEPEdgeIdentity.Identity.getUrlVariables {(urlVariables, error) in
-                if let error = error {
-                    print("Error with Webview", error)
-                    return;
-                }
-                
-                if let urlVariables: String = urlVariables {
-                    urlString.append("?" + urlVariables)
-                    guard let url = URL(string: urlString) else {
-                        return
-                    }
-                    DispatchQueue.main.async {
-                        self.webView.load(URLRequest(url: url))
-                    }
-                }
-                Logger.aepMobileSDK.info("Successfully retrieved urlVariables for WebView, final URL: \(urlString)")
-            }
+```swift
+// Adobe Experience Platform - Handle Web View
+AEPEdgeIdentity.Identity.getUrlVariables {(urlVariables, error) in
+    if let error = error {
+        print("Error with Webview", error)
+        return;
+    }
+    
+    if let urlVariables: String = urlVariables {
+        urlString.append("?" + urlVariables)
+        guard let url = URL(string: urlString) else {
+            return
+        }
+        DispatchQueue.main.async {
+            self.webView.load(URLRequest(url: url))
         }
     }
+    Logger.aepMobileSDK.info("Successfully retrieved urlVariables for WebView, final URL: \(urlString)")
+}
 ```
 
-Den viktigaste delen av koden är `AEPEdgeIdentity.Identity.getUrlVariables` stängning (markerat). I slutet anges variablerna för URL:en så att de innehåller all relevant information, som ECID, osv. I exemplet använder du en lokal fil, men samma koncept gäller för fjärrsidor.
+The `AEPEdgeIdentity.Identity.getUrlVariables` API ställer in variablerna så att URL:en innehåller all relevant information, som ECID, med mera. I exemplet använder du en lokal fil, men samma koncept gäller för fjärrsidor.
 
 Du kan läsa mer om `Identity.getUrlVariables` API i [Referenshandbok för API:t för Edge Network Extension](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables).
 

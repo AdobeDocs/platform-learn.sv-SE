@@ -2,11 +2,10 @@
 title: Profil
 description: Lär dig hur du samlar in profildata i en mobilapp.
 hide: true
-hidefromtoc: true
-source-git-commit: ca83bbb571dc10804adcac446e2dba4fda5a2f1d
+source-git-commit: e119e2bdce524c834cdaf43ed9eb9d26948b0ac6
 workflow-type: tm+mt
-source-wordcount: '582'
-ht-degree: 0%
+source-wordcount: '591'
+ht-degree: 1%
 
 ---
 
@@ -40,39 +39,19 @@ I den här lektionen kommer du att:
 * Hämta användarattribut.
 
 
-## Ange och uppdatera
+## Ange och uppdatera användarattribut
 
 Det skulle vara praktiskt för målgruppsanpassning och/eller personalisering att snabbt veta om en användare har köpt appen tidigare. Låt oss konfigurera det i Luma-appen.
 
-1. Navigera till **[!UICONTROL ProductView]** (in **[!UICONTROL Vyer]** > **[!UICONTROL Produkter]**) i Xcode Luma-appprojektet och hitta `updateUserAttributes` (med knappen Köp):
+1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Utils]** >  **[!UICONTROL MobileSDK]** och hitta `func updateUserAttribute(attributeName: String, attributeValue: String)` funktion. Lägg till följande kod:
 
-   ```swift {highlight="8-9"}
-   Button {
-       Task {
-           if ATTrackingManager.trackingAuthorizationStatus == .authorized {
-               // Send purchase commerce experience event
-               MobileSDK.shared.sendCommerceExperienceEvent(commerceEventType: "purchases", product: product)
-               // Update attributes
-               MobileSDK.shared.updateUserAttributes(attributeName: "isPaidUser", attributeValue: "yes")
-           }
-       }
-       showPurchaseDialog.toggle()
-   } label: {
-       Label("", systemImage: "creditcard")
-   }
-   .alert(isPresented: $showPurchaseDialog, content: {
-       Alert(title: Text( "Purchases"), message: Text("The selected item is purchased…"))
-   })
-   ```
-
-2. Navigera till **[!UICONTROL MobileSDK]** och hitta `updateUserAttributes` funktion. Lägg till följande markerade kod:
-
-   ```swift {highlight="2-4"}
-   func updateUserAttributes(attributeName: String, attributeValue: String) {
-       var profileMap = [String: Any]()
-       profileMap[attributeName] = attributeValue
-       UserProfile.updateUserAttributes(attributeDict: profileMap)
-   }
+   ```swift
+   // Create a profile map
+   var profileMap = [String: Any]()
+   // Add attributes to profile map
+   profileMap[attributeName] = attributeValue
+   // Use profile map to update user attributes
+   UserProfile.updateUserAttributes(attributeDict: profileMap)
    ```
 
    Den här koden:
@@ -83,27 +62,29 @@ Det skulle vara praktiskt för målgruppsanpassning och/eller personalisering at
 
    1. Använder `profileMap` ordlista som ett värde för `attributeDict` parametern för `UserProfile.updateUserAttributes` API-anrop.
 
+1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Produkter]** > **[!UICONTROL ProductView]** i Xcode Project navigator och sök efter `updateUserAttributes` (inom koden för köpet) <img src="assets/purchase.png" width="15" /> knapp):
 
-Ytterligare `updateUserAttributes` dokumentation finns [här](https://developer.adobe.com/client-sdks/documentation/profile/api-reference/#updateuserattribute).
+   ```swift
+   // Update attributes
+   MobileSDK.shared.updateUserAttributes(attributeName: "isPaidUser", attributeValue: "yes")
+   ```
 
-## Hämta
+Ytterligare dokumentation finns [här](https://developer.adobe.com/client-sdks/documentation/profile/api-reference/#updateuserattribute).
+
+## Hämta användarattribut
 
 När du har uppdaterat en användares attribut är det tillgängligt för andra Adobe SDK:er, men du kan även hämta attribut explicit.
 
-1. Navigera till **[!UICONTROL HomeView]** (in **[!UICONTROL Vyer]** > **[!UICONTROL Allmänt]**) och hitta `.onAppear` modifierare. Lägg till följande kod:
+1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > Allmänt > **[!UICONTROL HomeView]** i Xcode Project navigator och hitta `.onAppear` modifierare. Lägg till följande kod:
 
-   ```swift {highlight="3-11"}
-   .onAppear {
-       // Track view screen
-       MobileSDK.shared.sendTrackScreenEvent(stateName: "luma: content: ios: us: en: home")
-       // Get attributes
-       UserProfile.getUserAttributes(attributeNames: ["isPaidUser"]) { attributes, error in
-           if attributes?["isPaidUser"] as! String == "yes" {
-               showBadgeForUser = true
-           }
-           else {
-               showBadgeForUser = false
-           }
+   ```swift
+   // Get attributes
+   UserProfile.getUserAttributes(attributeNames: ["isPaidUser"]) { attributes, error in
+       if attributes?["isPaidUser"] as! String == "yes" {
+           showBadgeForUser = true
+       }
+       else {
+           showBadgeForUser = false
        }
    }
    ```
@@ -111,9 +92,9 @@ När du har uppdaterat en användares attribut är det tillgängligt för andra 
    Den här koden:
 
    1. Anropar `UserProfile.getUserAttributes` stängning med `iPaidUser` attributnamn som enskilt element i `attributeNames` array.
-   1. Kontrollerar sedan värdet för `isPaidUser` och när `yes`, placerar ett märke på personikonen i det övre högra hörnet.
+   1. Kontrollerar sedan värdet för `isPaidUser` och när `yes`, placerar ett märke på <img src="assets/paiduser.png" width="20" /> i verktygsfältet längst upp till höger.
 
-Ytterligare `getUserAttributes` dokumentation finns [här](https://developer.adobe.com/client-sdks/documentation/profile/api-reference/#getuserattributes).
+Ytterligare dokumentation finns [här](https://developer.adobe.com/client-sdks/documentation/profile/api-reference/#getuserattributes).
 
 ## Validera med Assurance
 
@@ -124,23 +105,23 @@ Ytterligare `getUserAttributes` dokumentation finns [här](https://developer.ado
 
    1. Flytta Assurance-ikonen åt vänster.
    1. Välj **[!UICONTROL Startsida]** i tabbfältet.
-   1. Om du vill öppna inloggningsbladet väljer du **[!UICONTROL Inloggning]** -knappen.
-   1. Välj **[!UICONTROL A|]** knapp .
+   1. Om du vill öppna inloggningsbladet väljer du <img src="assets/login.png" width="15" /> -knappen.
+   1. Välj <img src="assets/insert.png" width="15" /> knapp .
    1. Välj **[!UICONTROL Inloggning]**.
    1. Välj **[!UICONTROL Produkter]** i tabbfältet.
    1. Välj en produkt.
-   1. Välj **[!UICONTROL Spara senare]**.
-   1. Välj **[!UICONTROL Lägg i kundvagnen]**.
-   1. Välj **[!UICONTROL Inköp]**.
-   1. Återgå till **[!UICONTROL Startsida]** skärm. En uppdaterad inloggningsknapp visas.
+   1. Välj <img src="assets/saveforlater.png" width="15" />.
+   1. Välj <img src="assets/addtocart.png" width="20" />.
+   1. Välj <img src="assets/purchase.png" width="15" />.
+   1. Återgå till **[!UICONTROL Startsida]** skärm. Uppdaterade värden för **[!UICONTROL E-post]** och **[!UICONTROL CRM-ID]**.
 
       <img src="./assets/mobile-app-events-1.png" width="200"> <img src="./assets/mobile-app-events-2.png" width="200"> <img src="./assets/mobile-app-events-3.png" width="200"> <img src="./assets/personbadges.png" width="200">
 
-1. Du borde se en **[!UICONTROL UserProfileUpdate]** och **[!UICONTROL getUserAttributes]** händelser i försäkringsgränssnittet med den uppdaterade `profileMap` värde.
+1. I försäkringsgränssnittet bör du se en **[!UICONTROL UserProfileUpdate]** och **[!UICONTROL getUserAttributes]** händelser med uppdaterade `profileMap` värde.
    ![validera profil](assets/profile-validate.png)
 
 >[!SUCCESS]
 >
->Du har nu konfigurerat din app för att uppdatera profilattribut i Edge Network och (när den har konfigurerats) med Adobe Experience Platform.<br/>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
+>Du har nu konfigurerat din app för att uppdatera profilattribut i Edge Network och (när den har konfigurerats) med Adobe Experience Platform.<br/>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 
 Nästa: **[Mappa data till Adobe Analytics](analytics.md)**

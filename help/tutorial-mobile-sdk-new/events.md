@@ -2,11 +2,10 @@
 title: Händelser
 description: Lär dig hur du samlar in händelsedata i en mobilapp.
 hide: true
-hidefromtoc: true
-source-git-commit: ca83bbb571dc10804adcac446e2dba4fda5a2f1d
+source-git-commit: e119e2bdce524c834cdaf43ed9eb9d26948b0ac6
 workflow-type: tm+mt
-source-wordcount: '1121'
-ht-degree: 0%
+source-wordcount: '1156'
+ht-degree: 1%
 
 ---
 
@@ -63,7 +62,7 @@ För standardfältgrupperna ser processen ut så här:
 
 * Om du vill konstruera ett objekt som innehåller händelsedata för upplevelsen i din app använder du kod som:
 
-  ```swift {highlight="2-8"}
+  ```swift
   var xdmData: [String: Any] = [
       "eventType": "commerce.productViews",
       "commerce": [
@@ -79,14 +78,14 @@ För standardfältgrupperna ser processen ut så här:
    * `commerce.productViews.id`: ett strängvärde som representerar SKU:n för produkten
    * `commerce.productViews.value`: Ange händelsens numeriska värde. Om det är ett booleskt värde (eller &quot;Räknare&quot; i Adobe Analytics) är värdet alltid 1. Om det är en numerisk händelse eller valutakändelse kan värdet vara > 1.
 
-* Identifiera eventuella ytterligare data som är associerade med händelsen för e-handelsproduktvyn i ditt schema. I det här exemplet inkluderar du `productListItems` som är en standarduppsättning med fält som används för e-handelsrelaterade händelser:
+* Identifiera eventuella ytterligare data som är associerade med händelsen för e-handelsproduktvyn i ditt schema. I det här exemplet inkluderar du **[!UICONTROL productListItem]** som är en standarduppsättning med fält som används för e-handelsrelaterade händelser:
 
   ![schema för produktlisteobjekt](assets/datacollection-prodListItems-schema.png)
-   * Observera att `productListItems` är en matris så att flera produkter kan anges.
+   * Observera att **[!UICONTROL productListItems]** är en matris så att flera produkter kan anges.
 
 * Om du vill lägga till dessa data expanderar du `xdmData` objekt som ska innehålla tilläggsdata:
 
-```swift {highlight="9-16"}
+```swift
 var xdmData: [String: Any] = [
     "eventType": "commerce.productViews",
         "commerce": [
@@ -106,119 +105,84 @@ var xdmData: [String: Any] = [
 ]
 ```
 
-* Sedan använder du datastrukturen för att skapa en `ExperienceEvent`:
+* Nu kan du använda den här datastrukturen för att skapa en `ExperienceEvent`:
 
   ```swift
   let productViewEvent = ExperienceEvent(xdm: xdmData)
   ```
 
-* Och skicka händelsen och data till Platform Edge Network med API:t sendEvent:
+* Och skicka händelsen och data till Platform Edge Network med `sendEvent` API:
 
   ```swift
   Edge.sendEvent(experienceEvent: productViewEvent)
   ```
 
-Nu ska vi implementera koden i Xcode-projektet.
-Du har olika affärsproduktrelaterade åtgärder (visa, lägg till i kundvagn, spara för senare, köp) i din app och du vill skicka händelser baserat på de här åtgärderna som utförts av användaren.
+Du kommer nu att implementera den här koden i ditt Xcode-projekt.
+Du har olika affärsproduktrelaterade åtgärder i din app och du vill skicka händelser baserat på de åtgärder som användaren har utfört:
 
-1. Om du vill strukturera skickade upplevelsehändelser går du till `MobileSDK`och lägg till följande i `sendCommerceExperienceEvent` funktion. Den här funktionen tar händelsen och produkten för e-handelsupplevelsen som parametrar:
+* vy: inträffar när användare visar en viss produkt,
+* lägg till i kundvagn: när användaren trycker <img src="assets/addtocart.png" width="20" /> i en produktinformationsskärm
+* spara för senare: när användaren trycker <img src="assets/saveforlater.png" width="15" /> i produktinformationsfönstret,
+* köpare: när användaren trycker på <img src="assets/purchase.png" width="20" /> i produktinformationsfönstret.
 
-   ```swift {highlight="2-22"}
-   func sendCommerceExperienceEvent(commerceEventType: String, product: Product) {
-     let xdmData: [String: Any] = [
-         "eventType": "commerce." + commerceEventType,
-         "commerce": [
-             commerceEventType: [
-                 "id": product.sku,
-                 "value": 1
-             ]
-         ],
-         "productListItems": [
-             [
-                 "name": product.name,
-                 "priceTotal": product.price,
-                 "SKU": product.sku
-             ]
-         ]
-     ]
+Så här strukturerar du skickade upplevelsehändelser:
+
+1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project Navigator och lägg till följande i `func sendCommerceExperienceEvent(commerceEventType: String, product: Product)` funktion. Den här funktionen tar händelsen och produkten för e-handelsupplevelsen som parametrar:
+
+   ```swift
+   let xdmData: [String: Any] = [
+       "eventType": "commerce." + commerceEventType,
+       "commerce": [
+           commerceEventType: [
+               "id": product.sku,
+               "value": 1
+           ]
+       ],
+       "productListItems": [
+           [
+               "name": product.name,
+               "priceTotal": product.price,
+               "SKU": product.sku
+           ]
+       ]
+   ]
    
-     Logger.viewCycle.info("About to send commerce experience event of type  \(commerceEventType)..."
-     let commerceExperienceEvent = ExperienceEvent(xdm: xdmData)
-     Edge.sendEvent(experienceEvent: commerceExperienceEvent)
-   }
+   Logger.viewCycle.info("About to send commerce experience event of type  \(commerceEventType)..."
+   let commerceExperienceEvent = ExperienceEvent(xdm: xdmData)
+   Edge.sendEvent(experienceEvent: commerceExperienceEvent)
    ```
 
-1. I `ProductView` lägga till olika anrop till `sendCommerceExperienceEvent` funktion:
+1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Produkter]** > **[!UICONTROL ProductView]** och lägga till olika samtal till `sendCommerceExperienceEvent` funktion:
 
-   1. På `.task` modifierare i `ATTrackingManager.trackingAuthorizationStatus` stängning. The `.task` modifieraren anropas när produktvyn initieras och visas, så du vill skicka en produktvyhändelse vid det tillfället.
+   1. På `.task` modifierare, i `ATTrackingManager.trackingAuthorizationStatus` stängning. Detta `.task` modifieraren anropas när produktvyn initieras och visas, så du vill skicka en produktvyhändelse vid det tillfället.
 
-      ```swift {highlight="4-5"}
-      .task {
-          if ATTrackingManager.trackingAuthorizationStatus == .authorized {
-               // Send commerce experience event
-              MobileSDK.shared.sendCommerceExperienceEvent(commerceEventType: "productView", product: product)
-          }
-      }
+      ```swift
+      // Send commerce experience event
+      MobileSDK.shared.sendCommerceExperienceEvent(commerceEventType: "productView", product: product)
       ```
 
-   1. För var och en av knapparna (Sparad för senare, Lägg till i kundvagn och Köp) i verktygsfältet, som finns i produktvyn, lägger du till det relevanta samtalet.
+   1. För varje knapp (<img src="assets/saveforlater.png" width="15" />, <img src="assets/addtocart.png" width="20" /> och  <img src="assets/purchase.png" width="20" />) i verktygsfältet lägger du till samtalet i `ATTrackingManager.trackingAuthorizationStatus == .authorized` stängning:
 
-      * För Spara för senare/Lägg till i önskelista:
+      1. För <img src="assets/saveforlater.png" width="15" />:
 
-        ```swift {highlight="5-6"}
-        Button {
-            Task {
-                if ATTrackingManager.trackingAuthorizationStatus == .authorized {
-                // Send saveForLater commerce experience event
-                    MobileSDK.shared.sendCommerceExperienceEvent(commerceEventType: "saveForLaters", product: product)
-                }
-            }
-            showSaveForLaterDialog.toggle()
-        } label: {
-            Label("", systemImage: "heart")
-        }
-        .alert(isPresented: $showSaveForLaterDialog, content: {
-            Alert(title: Text( "Saved for later"), message: Text("The selected item is saved to your wishlist…"))
-        })
-        ```
+         ```swift
+         // Send saveForLater commerce experience event
+         MobileSDK.shared.sendCommerceExperienceEvent(commerceEventType: "saveForLaters", product: product)
+         ```
 
-      * För Lägg till i kundvagnen:
+      1. För <img src="assets/addtocart.png" width="20" />:
 
-        ```swift {highlight="5-6"}
-        Button {
-            Task {
-                if ATTrackingManager.trackingAuthorizationStatus == .authorized {
-                    // Send productListAdds commerce experience event
-                    MobileSDK.shared.sendCommerceExperienceEvent(commerceEventType: "productListAdds", product: product)
-                }
-            }
-            showAddToCartDialog.toggle()
-        } label: {
-                Label("", systemImage: "cart.badge.plus")
-        }
-        alert(isPresented: $showAddToCartDialog, content: {
-            Alert(title: Text( "Added to basket"), message: Text("The selected item is added to your basket…"))
-        })
-        ```
+         ```swift
+         // Send productListAdds commerce experience event
+         MobileSDK.shared.sendCommerceExperienceEvent(commerceEventType: "productListAdds", product: product)
+         ```
 
-      * Köp:
+      1. För <img src="assets/purchase.png" width="20" />:
 
-        ```swift {highlight="5-6"}
-        Button {
-            Task {
-                if ATTrackingManager.trackingAuthorizationStatus == .authorized {
-                    // Send purchase commerce experience event
-                    MobileSDK.shared.sendCommerceExperienceEvent(commerceEventType: "purchases", product: product)
-                }
-            }
-            showPurchaseDialog.toggle()
-        } label: {
-            Label("", systemImage: "creditcard")
-        }
-        .alert(isPresented: $showPurchaseDialog, content: {
-            Alert(title: Text( "Purchases"), message: Text("The selected item is purchased…"))
-        })
-        ```
+         ```swift
+         // Send purchase commerce experience event
+         MobileSDK.shared.sendCommerceExperienceEvent(commerceEventType: "purchases", product: product)
+         ```
 
 ### Anpassade fältgrupper
 
@@ -231,9 +195,9 @@ Tänk dig att du vill spåra skärmvisningar och interaktioner i själva appen. 
 
   >[!NOTE]
   >
-  >  Standardfältgrupper börjar alltid i objektroten.
+  >* Standardfältgrupper börjar alltid i objektroten.
   >
-  >  Anpassade fältgrupper börjar alltid under ett objekt som är unikt för din Experience Cloud-organisation, `_techmarketingdemos` i detta exempel.
+  >* Anpassade fältgrupper börjar alltid under ett objekt som är unikt för din Experience Cloud-organisation, `_techmarketingdemos` i detta exempel.
 
   För programinteraktionshändelsen skapar du ett objekt som:
 
@@ -273,7 +237,7 @@ Tänk dig att du vill spåra skärmvisningar och interaktioner i själva appen. 
   ```
 
 
-* Sedan skapar datastrukturen en `ExperienceEvent`.
+* Nu kan du använda den här datastrukturen för att skapa en `ExperienceEvent`.
 
   ```swift
   let event = ExperienceEvent(xdm: xdmData)
@@ -288,34 +252,31 @@ Tänk dig att du vill spåra skärmvisningar och interaktioner i själva appen. 
 
 Här kan du implementera koden i Xcode-projektet.
 
-1. För enkelhetens skull definierar du två funktioner i `MobileSDK`.
+1. För enkelhetens skull definierar du två funktioner i **[!UICONTROL MobileSDK]**. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project Navigator.
 
-   Ett för appinteraktioner. Lägg till den markerade koden i `sendAppInteractionEvent(actionName)` function in **[!UICONTROL MobileSDK]**:
+   1. Ett för appinteraktioner. Lägg till den här koden i `func sendAppInteractionEvent(actionName: String)` funktion:
 
-   ```swift {highlight="2-16"}
-   func sendAppInteractionEvent(actionName: String) {
-        let xdmData: [String: Any] = [
-           "eventType": "application.interaction",
-           tenant : [
-               "appInformation": [
-                   "appInteraction": [
-                       "name": actionName,
-                       "appAction": [
-                           "value": 1
-                       ]
-                   ]
-               ]
-           ]
-       ]
-       let appInteractionEvent = ExperienceEvent(xdm: xdmData)
-       Edge.sendEvent(experienceEvent: appInteractionEvent)
-   }
-   ```
+      ```swift
+      let xdmData: [String: Any] = [
+          "eventType": "application.interaction",
+          tenant : [
+              "appInformation": [
+                  "appInteraction": [
+                      "name": actionName,
+                      "appAction": [
+                          "value": 1
+                      ]
+                  ]
+              ]
+          ]
+      ]
+      let appInteractionEvent = ExperienceEvent(xdm: xdmData)
+      Edge.sendEvent(experienceEvent: appInteractionEvent)
+      ```
 
-   Och en för skärmspårning. Lägg till den markerade koden i `sendTrackScreenEvent(stateName)` function in **[!UICONTROL MobileSDK]**:
+   1. Och en för skärmspårning. Lägg till den här koden i `func sendTrackScreenEvent(stateName: String) ` funktion:
 
-   ```swift {highlight="2-17"}
-   func sendTrackScreenEvent(stateName: String) {
+      ```swift
       let xdmData: [String: Any] = [
           "eventType": "application.scene",
           tenant : [
@@ -332,40 +293,24 @@ Här kan du implementera koden i Xcode-projektet.
       ]
       let trackScreenEvent = ExperienceEvent(xdm: xdmData)
       Edge.sendEvent(experienceEvent: trackScreenEvent)
-   }
-   ```
+      ```
 
-1. Navigera till **[!UICONTROL LoginSheet]**.
+1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Allmänt]** > **[!UICONTROL LoginSheet]**.
 
-   * Lägg till följande markerade kod i avslutningsknappen Inloggning:
+   1. Lägg till följande markerade kod i avslutningsknappen Inloggning:
 
-     ```swift {highlight="3"}
-     Button("Login") {                               
-        // Send app interaction event
-        MobileSDK.shared.sendAppInteractionEvent(actionName: "login")
-        dismiss()
-     }
-     .disabled(currentEmailId.isValidEmail == false)
-     .buttonStyle(.bordered)
-     ```
+      ```swift
+      // Send app interaction event
+      MobileSDK.shared.sendAppInteractionEvent(actionName: "login")
+      dismiss()
+      ```
 
-   * Lägg till följande markerade kod i `onAppear` modifierare:
+   1. Lägg till följande markerade kod i `onAppear` modifierare:
 
-     ```swift {highlight="13"}
-     .onAppear {
-        Task {
-            if currentEmailId == "testUser@gmail.com" || currentEmailId.isValidEmail == false {
-                // still allow to log in
-                disableLogin = false
-            }
-            else {
-                disableLogin = true
-            }
-        }
-        // Send track screen event
-        MobileSDK.shared.sendTrackScreenEvent(stateName: "luma: content: ios: us: en: login")
-     }
-     ```
+      ```swift
+      // Send track screen event
+      MobileSDK.shared.sendTrackScreenEvent(stateName: "luma: content: ios: us: en: login")
+      ```
 
 ### Validering
 
@@ -374,19 +319,19 @@ Här kan du implementera koden i Xcode-projektet.
 
    1. Flytta Assurance-ikonen åt vänster.
    1. Välj **[!UICONTROL Startsida]** i tabbfältet.
-   1. Välj **[!UICONTROL Inloggning]** för att öppna inloggningsbladet.
-   1. Välj **[!UICONTROL A|]** om du vill infoga ett slumpmässigt e-postmeddelande och ett kund-ID.
+   1. Markera <img src="assets/login.png" width="15" /> för att öppna inloggningsbladet.
+   1. Markera <img src="assets/insert.png" width="15" /> om du vill infoga ett slumpmässigt e-postmeddelande och ett kund-ID.
    1. Välj **[!UICONTROL Inloggning]**.
    1. Välj **[!UICONTROL Produkter]** i tabbfältet.
    1. Välj en produkt.
-   1. Välj **[!UICONTROL Spara senare]**.
-   1. Välj **[!UICONTROL Lägg i kundvagnen]**.
-   1. Välj **[!UICONTROL Inköp]**.
+   1. Välj <img src="assets/saveforlater.png" width="15" />.
+   1. Välj <img src="assets/addtocart.png" width="20" />.
+   1. Välj <img src="assets/purchase.png" width="15" />.
 
       <img src="./assets/mobile-app-events-1.png" width="200"> <img src="./assets/mobile-app-events-2.png" width="200"> <img src="./assets/mobile-app-events-3.png" width="200">
 
 
-1. Leta efter **[!UICONTROL hitReceived]** händelser från **[!UICONTROL com.adobe.edge.konductor]** leverantör.
+1. I Assurance-gränssnittet letar du efter **[!UICONTROL hitReceived]** händelser från **[!UICONTROL com.adobe.edge.konductor]** leverantör.
 1. Markera händelsen och granska XDM-data i **[!UICONTROL meddelanden]** -objekt.
    ![validering av datainsamling](assets/datacollection-validation.png)
 
@@ -396,8 +341,8 @@ Här kan du implementera koden i Xcode-projektet.
 Nu bör du ha alla verktyg du behöver för att börja lägga till datainsamling i Luma-appen. Du kan lägga till mer information om hur användaren interagerar med dina produkter och du kan lägga till fler appinteraktioner och uppringningsanrop till din app:
 
 * Implementera beställning, utcheckning, tom varukorg och andra funktioner i appen och lägg till relevanta händelser om handelsupplevelser i den här funktionen.
-* Upprepa samtalet till `sendAppInteractionEvent` med rätt parameter för att spåra andra appinteraktioner i appen av användaren.
-* Upprepa samtalet till `sendTrackScreenEvent` med rätt parameter för att spåra varje skärm som visas av användaren i appen.
+* Upprepa samtalet till `sendAppInteractionEvent` med rätt parameter för att spåra användarens övriga appinteraktioner.
+* Upprepa samtalet till `sendTrackScreenEvent` med rätt parameter för att spåra skärmar som visas av användaren i appen.
 
 >[!TIP]
 >

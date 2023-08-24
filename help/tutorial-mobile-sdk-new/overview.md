@@ -3,8 +3,7 @@ title: Implementera Adobe Experience Cloud i självstudiekursen om mobilappar
 description: Lär dig hur du implementerar Adobe Experience Cloud mobilappar. Den här självstudiekursen vägleder dig genom en implementering av Experience Cloud-program i ett exempel på en Swift-app.
 recommendations: noDisplay,catalog
 hide: true
-hidefromtoc: true
-source-git-commit: ca83bbb571dc10804adcac446e2dba4fda5a2f1d
+source-git-commit: e119e2bdce524c834cdaf43ed9eb9d26948b0ac6
 workflow-type: tm+mt
 source-wordcount: '646'
 ht-degree: 1%

@@ -3,10 +3,9 @@ title: Godkännande
 description: Lär dig hur du implementerar samtycke i en mobilapp.
 feature: Mobile SDK,Consent
 hide: true
-hidefromtoc: true
-source-git-commit: ca83bbb571dc10804adcac446e2dba4fda5a2f1d
+source-git-commit: e119e2bdce524c834cdaf43ed9eb9d26948b0ac6
 workflow-type: tm+mt
-source-wordcount: '524'
+source-wordcount: '534'
 ht-degree: 0%
 
 ---
@@ -37,7 +36,7 @@ Om du vill börja samla in data måste du få användarens samtycke. I den här 
 
 1. Du vill bara fråga användaren en gång. Så du vill kombinera det mobila SDK-medgivandet med de behörigheter som krävs för att spåra med Apple [App Tracking Transparency Framework](https://developer.apple.com/documentation/apptrackingtransparency). I den här appen antar du när användaren godkänner spårning att användaren också samtycker till att samla in händelser.
 
-1. Navigera till `MobileSDK`, som är en allmän statisk struktur i vilken alla API-anrop till Adobe Experience Platform SDK paketeras för enkel återanvändning.
+1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project Navigator.
 
    Lägg till den här koden i `updateConsent` funktion.
 
@@ -48,17 +47,17 @@ Om du vill börja samla in data måste du få användarens samtycke. I den här 
    MobileCore.updateConfigurationWith(configDict: currentConsents)
    ```
 
-1. Navigera till `DisclaimerView.swift`, som är den vy som visas när du har installerat eller installerat om programmet och startat programmet för första gången. Användaren uppmanas att godkänna spårning per Apple [App Tracking Transparency Framework](https://developer.apple.com/documentation/apptrackingtransparency). Om användaren godkänner det uppdaterar du även medgivandet.
+1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Allmänt]** > **[!UICONTROL AnsvarsfriskrivningVisa]** i Xcodes projektnavigerare, som är den vy som visas när du har installerat eller installerat om programmet och startat programmet för första gången. Användaren uppmanas att godkänna spårning per Apple [App Tracking Transparency Framework](https://developer.apple.com/documentation/apptrackingtransparency). Om användaren godkänner det uppdaterar du även medgivandet.
 
    Lägg till följande kod i `ATTrackingManager.requestTrackingAuthorization { status in` stängning.
 
-   ```swift {highlight="3,6"}
+   ```swift
    if status == .authorized {
-       // Set consent to yes
-       MobileSDK.shared.updateConsent(value: "y")
+         // Set consent to yes
+         MobileSDK.shared.updateConsent(value: "y")
    }
    else {
-       MobileSDK.shared.updateConsent(value: "n")
+         MobileSDK.shared.updateConsent(value: "n")
    }
    ```
 
@@ -66,28 +65,26 @@ Om du vill börja samla in data måste du få användarens samtycke. I den här 
 
 Tillägget för mobilen Consent undertrycker/häver automatiskt / tillåter spårning baserat på det aktuella medgivandevärdet. Du kan även komma åt det aktuella medgivandetillståndet själv:
 
-1. Navigera till `MobileSDK.swift`.
+1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Utils]** > **[!UICONTROL MobileSDK]** i Xcodes projektnavigator.
 
    Lägg till följande kod i `getConsents` funktion:
 
    ```swift
    Consent.getConsents { consents, error in
-            guard error == nil, let consents = consents else { return }
-            guard let jsonData = try? JSONSerialization.data(withJSONObject: consents, options: .prettyPrinted) else { return }
-            guard let jsonStr = String(data: jsonData, encoding: .utf8) else { return }
-            Logger.aepMobileSDK.info("Consent getConsents: \(jsonStr)")
-        }
+      guard error == nil, let consents = consents else { return }
+      guard let jsonData = try? JSONSerialization.data(withJSONObject: consents, options: .prettyPrinted) else { return }
+      guard let jsonStr = String(data: jsonData, encoding: .utf8) else { return }
+      Logger.aepMobileSDK.info("Consent getConsents: \(jsonStr)")
+   }
    ```
 
-2. Navigera till **[!UICONTROL HomeView]**.
+2. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Allmänt]** > **[!UICONTROL HomeView]** i Xcodes projektnavigator.
 
-   Lägg till följande markerade kod i `.task` modifierare:
+   Lägg till följande kod i `.task` modifierare:
 
-   ```swift {highlight="3"}
-   .task {
-        // Ask status of consents
-        MobileSDK.shared.getConsents()   
-   }
+   ```swift
+   // Ask status of consents
+   MobileSDK.shared.getConsents()   
    ```
 
 I exemplet ovan loggar du bara medgivandestatus till konsolen i Xcode. I ett verkligt scenario kan du använda det för att ändra vilka menyer eller alternativ som visas för användaren.

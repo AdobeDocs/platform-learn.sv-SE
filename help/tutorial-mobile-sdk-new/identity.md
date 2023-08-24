@@ -3,10 +3,9 @@ title: Identitet
 description: Lär dig hur du samlar in identitetsdata i en mobilapp.
 feature: Mobile SDK,Identities
 hide: true
-hidefromtoc: true
-source-git-commit: ca83bbb571dc10804adcac446e2dba4fda5a2f1d
+source-git-commit: e119e2bdce524c834cdaf43ed9eb9d26948b0ac6
 workflow-type: tm+mt
-source-wordcount: '626'
+source-wordcount: '653'
 ht-degree: 1%
 
 ---
@@ -52,35 +51,20 @@ Identitetsnamnutrymmen är komponenter i [Identitetstjänst](https://experiencel
 
 Du vill uppdatera både standardidentiteten (e-post) och den anpassade identiteten (Luma CRM ID) när användaren loggar in i programmet.
 
-1. Navigera till **[!UICONTROL LoginSheet]** (in **[!UICONTROL Vyer]** > **[!UICONTROL Allmänt]**) i Xcode Luma-appprojektet och hitta `updateIdentities`:
+1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project navigator och hitta `func updateIdentities(emailAddress: String, crmId: String)` funktionsimplementering. Lägg till följande kod i funktionen.
 
-   ```swift {highlight="3,4"}
-   Button("Login") {
-       // call updaeIdentities
-       MobileSDK.shared.updateIdentities(emailAddress: currentEmailId, crmId: currentCRMId)
+   ```swift
+   // Set up identity map
+   let identityMap: IdentityMap = IdentityMap()
    
-       // Send app interaction event
-       MobileSDK.shared.sendAppInteractionEvent(actionName: "login")
-       dismiss()
-   }
-   .disabled(currentEmailId.isValidEmail == false)
-   .buttonStyle(.bordered)
-   ```
-
-1. Navigera till `updateIdentities` funktionsimplementering i **[!UICONTROL MobileSDK]** (in **[!UICONTROL Utils]**) i Xcode Luma-appprojektet. Lägg till följande markerade kod i funktionen.
-
-   ```swift {highlight="2-12"}
-   func updateIdentities(emailAddress: String, crmId: String) {
-       let identityMap: IdentityMap = IdentityMap()
-       // Add identity items
-       let emailIdentity = IdentityItem(id: emailAddress, authenticatedState: AuthenticatedState.authenticated)
-       let crmIdentity = IdentityItem(id: crmId, authenticatedState: AuthenticatedState.authenticated)
-       identityMap.add(item:emailIdentity, withNamespace: "Email")
-       identityMap.add(item: crmIdentity, withNamespace: "lumaCRMId")
+   // Add identity items to identity map
+   let emailIdentity = IdentityItem(id: emailAddress, authenticatedState: AuthenticatedState.authenticated)
+   let crmIdentity = IdentityItem(id: crmId, authenticatedState: AuthenticatedState.authenticated)
+   identityMap.add(item:emailIdentity, withNamespace: "Email")
+   identityMap.add(item: crmIdentity, withNamespace: "lumaCRMId")
    
-       // Update identities
-       Identity.updateIdentities(with: identityMap)
-   }
+   // Update identities
+   Identity.updateIdentities(with: identityMap)
    ```
 
    Den här koden:
@@ -111,6 +95,13 @@ Du vill uppdatera både standardidentiteten (e-post) och den anpassade identitet
       Identity.updateIdentities(with: identityMap) 
       ```
 
+1. Navigera till **[!UICONTROL Luma]** **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Allmänt]** > **[!UICONTROL LoginSheet]** i Xcode Project navigator och hitta koden som ska köras när du väljer **[!UICONTROL Inloggning]** -knappen. Lägg till följande kod:
+
+   ```swift
+   // call updaeIdentities
+   MobileSDK.shared.updateIdentities(emailAddress: currentEmailId, crmId: currentCRMId)                             
+   ```
+
 
 >[!NOTE]
 >
@@ -121,27 +112,22 @@ Du vill uppdatera både standardidentiteten (e-post) och den anpassade identitet
 
 Du kan använda `removeIdentity` för att ta bort identiteten från den lagrade identitetsmappningen på klientsidan. Identitetstillägget slutar skicka identifieraren till Edge Network. Om du använder detta API tas inte identifieraren bort från användarprofildiagrammet eller identitetsdiagrammet på serversidan.
 
-1. Navigera till **[!UICONTROL LoginSheet]** (in **[!UICONTROL Vyer]** > **[!UICONTROL Allmänt]**) i Xcode Luma-appprojektet och hitta `removeIdentities`:
+1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Allmänt]** > **[!UICONTROL MobileSDK]** i Xcode Project navigator och lägg till följande kod i `func removeIdentities(emailAddress: String, crmId: String)` funktion:
 
-   ```swift {highlight="3"}
-   Button("Logout", role: .destructive) {
-       // call removeIdentities
-       MobileSDK.shared.removeIdentities(emailAddress: currentEmailId, crmId: currentCRMId)
-       dismiss()                   
-   }
-   .buttonStyle(.bordered)
+   ```swift
+   Identity.removeIdentity(item: IdentityItem(id: emailAddress), withNamespace: "Email")
+   Identity.removeIdentity(item: IdentityItem(id: crmId), withNamespace: "lumaCRMId")
+   // reset email and CRM Id to their defaults
+   currentEmailId = "testUser@gmail.com"
+   currentCRMId = "112ca06ed53d3db37e4cea49cc45b71e"
    ```
 
-1. Lägg till följande kod i `removeIdentities` function in `MobileSDK`:
+1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Allmänt]** > **[!UICONTROL LoginSheet]** i Xcode Project navigator och hitta koden som ska köras när du väljer **[!UICONTROL Utloggning]** -knappen. Lägg till följande kod:
 
-   ```swift {highlight="2-8"}
-   func removeIdentities(emailAddress: String, crmId: String) {
-       Identity.removeIdentity(item: IdentityItem(id: emailAddress), withNamespace: "Email")
-       Identity.removeIdentity(item: IdentityItem(id: crmId), withNamespace: "lumaCRMId")
-       // reset email and CRM Id to their defaults
-       currentEmailId = "testUser@gmail.com"
-       currentCRMId = "112ca06ed53d3db37e4cea49cc45b71e"
-   }
+   ```swift
+   // call removeIdentities
+   MobileSDK.shared.removeIdentities(emailAddress: currentEmailId, crmId: currentCRMId)
+   dismiss()                   
    ```
 
 
@@ -150,9 +136,9 @@ Du kan använda `removeIdentity` för att ta bort identiteten från den lagrade 
 1. Granska [installationsanvisningar](assurance.md) och koppla simulatorn eller enheten till Assurance.
 1. I Luma-appen
    1. Välj **[!UICONTROL Startsida]** -fliken.
-   1. Välj **[!UICONTROL Inloggning]** ikonen längst upp till höger.
+   1. Markera <img src="assets/login.png" width="15" /> ikonen längst upp till höger.
    1. Ange en e-postadress och ett CRM-ID, eller
-   1. Välj A| om du vill generera ett slumpmässigt **[!UICONTROL E-post]** och **[!UICONTROL CRM-ID]**.
+   1. Välj <img src="assets/insert.png" width="15" /> till slumpmässigt generera en **[!UICONTROL E-post]** och **[!UICONTROL CRM-ID]**.
    1. Välj **[!UICONTROL Inloggning]**.
 
       <img src="./assets/identity1.png" width="300"> <img src="./assets/identity2.png" width="300">

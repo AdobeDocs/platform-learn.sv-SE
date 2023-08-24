@@ -8,10 +8,10 @@ role: Developer
 level: Beginner,Intermediate
 jira: KT-6987
 recommendations: noDisplay,noCatalog
-source-git-commit: 080b559eeeb7011f2fa915ff662ce93edf94b103
+source-git-commit: b2e2a961b2aab16312768e67e6eb697d6b38962d
 workflow-type: tm+mt
-source-wordcount: '69'
-ht-degree: 53%
+source-wordcount: '71'
+ht-degree: 52%
 
 ---
 
@@ -35,5 +35,8 @@ ht-degree: 53%
 + Experience Cloud{#experience-cloud}
    + [Analytics ](analytics.md)
    + [Experience Platform](platform.md)
-   + [Journey Optimizer push-meddelanden](journey-optimizer-push.md)
+   + Journey Optimer{#journey-optimizer}
+      + [Push-meddelanden](journey-optimizer-push.md)
+      + [Meddelanden i appen](journey-optimizer-inapp.md)
 + [Slutsats](conclusion.md)
+

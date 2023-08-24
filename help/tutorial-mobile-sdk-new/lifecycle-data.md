@@ -2,10 +2,9 @@
 title: Livscykeldata
 description: Lär dig hur du samlar in livscykeldata i en mobilapp.
 hide: true
-hidefromtoc: true
-source-git-commit: ca83bbb571dc10804adcac446e2dba4fda5a2f1d
+source-git-commit: e119e2bdce524c834cdaf43ed9eb9d26948b0ac6
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '612'
 ht-degree: 0%
 
 ---
@@ -51,23 +50,22 @@ The Consumer Experience Event field group you added in the [previous lesson](cre
 
 ## Implementeringsändringar
 
-Nu kan du uppdatera `SceneDelegate` för att registrera livscykelhändelser:
+Nu kan du uppdatera projektet för att registrera livscykelhändelserna.
 
-1. Om appen återupptas från ett bakgrundsläge när den startas kan iOS ringa `sceneWillEnterForeground:` delegeringsmetod och här vill du aktivera en start-händelse för livscykel. Lägg till den markerade koden:
+1. Navigera till Luma > Luma > SceneDelegate i Xcode Project navigator.
 
-   ```swift {highlight="3"}
-   func sceneWillEnterForeground(_ scene: UIScene) {
-      // When in foreground start lifecycle data collection
-      MobileCore.lifecycleStart(additionalContextData: nil)
-   }
+1. Om appen återupptas från ett bakgrundsläge när den startas kan iOS ringa `sceneWillEnterForeground:` delegeringsmetod och här vill du aktivera en start-händelse för livscykel. Lägg till koden i `func sceneWillEnterForeground(_ scene: UIScene)`:
+
+   ```swift
+   // When in foreground start lifecycle data collection
+   MobileCore.lifecycleStart(additionalContextData: nil)
    ```
 
-1. När appen placeras i bakgrunden vill du pausa insamling av livscykeldata från appens `sceneDidEnterBackground:` delegeringsmetod. Lägg till den markerade koden:
+1. När appen placeras i bakgrunden vill du pausa datainsamlingen i livscykeln från appens `sceneDidEnterBackground:` delegeringsmetod. Lägg till koden i  `func sceneDidEnterBackground(_ scene: UIScene)`:
 
-   ```swift {highlight="3"}
-   func sceneDidEnterBackground(_ scene: UIScene) {
-      // When in background pause lifecycle data collection
-      MobileCore.lifecyclePause()
+   ```swift
+   // When in background pause lifecycle data collection
+   MobileCore.lifecyclePause()
    }
    ```
 
