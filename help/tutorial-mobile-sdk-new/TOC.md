@@ -8,9 +8,9 @@ role: Developer
 level: Beginner,Intermediate
 jira: KT-6987
 recommendations: noDisplay,noCatalog
-source-git-commit: b2e2a961b2aab16312768e67e6eb697d6b38962d
+source-git-commit: a48c1eedbb3e75d9ebdcf1262cab493e4a097d72
 workflow-type: tm+mt
-source-wordcount: '71'
+source-wordcount: '73'
 ht-degree: 52%
 
 ---
@@ -38,5 +38,7 @@ ht-degree: 52%
    + Journey Optimer{#journey-optimizer}
       + [Push-meddelanden](journey-optimizer-push.md)
       + [Meddelanden i appen](journey-optimizer-inapp.md)
+      + [Erbjudanden](journey-optimizer-offers.md)
+   + [Target](target.md)
 + [Slutsats](conclusion.md)
 

@@ -5,9 +5,9 @@ solution: Data Collection,Journey Optimizer
 feature-set: Journey Optimizer
 feature: Push
 hide: true
-source-git-commit: 2f9298a140c7bd483c8c533427f0e90d90d14af0
+source-git-commit: 35b38e7491a3751d21afe4a7b998e5dc2292ba27
 workflow-type: tm+mt
-source-wordcount: '1899'
+source-wordcount: '2005'
 ht-degree: 0%
 
 ---
@@ -36,9 +36,9 @@ Med Journey Optimizer kan ni skapa resor och skicka meddelanden till riktade må
 
 ## Utbildningsmål
 
-I den här lektionen kommer du att:
+I den här lektionen ska du
 
-* Registrera program-ID med Apple Push Notification service (APN).
+* Registrera program-ID med Apple Push Notification-tjänsten (APN).
 * Skapa en **[!UICONTROL Appyta]** i AJO.
 * Uppdatera dina **[!UICONTROL schema]** för att inkludera push-meddelandefält.
 * Installera och konfigurera **[!UICONTROL Adobe Journey Optimizer]** taggtillägg.
@@ -81,8 +81,8 @@ Ytterligare dokumentation kan [hittades här](https://help.apple.com/developer-a
 1. Ange mobilappens paket-ID i fältet Program-ID (iOS Bundle-ID). Om du följer med i Luma-appen är värdet `com.adobe.luma.tutorial.swiftui`.
 1. Aktivera **[!UICONTROL Push-autentiseringsuppgifter]** för att lägga till dina inloggningsuppgifter.
 1. Dra och släpp `.p8` **Autentiseringsnyckel för push-meddelanden i Apple** -fil.
-1. Ange **[!UICONTROL Nyckel-ID]**, en sträng med 10 tecken som tilldelas när `p8` auth key. Den finns under **[!UICONTROL Tangenter]** tabba in **Certifikat, identifierare och profiler** på Apple Developer Portal.
-1. Ange **[!UICONTROL Team-ID]**. Team-ID är ett värde som finns under **medlemskap** eller högst upp på Apple Developer Portal-sidorna.
+1. Ange **[!UICONTROL Nyckel-ID]**, en sträng med 10 tecken som tilldelas när `p8` auth key. Den finns under **[!UICONTROL Tangenter]** i **Certifikat, identifierare och profiler** på Apple Developer Portal.
+1. Ange **[!UICONTROL Team-ID]**. Team-ID är ett värde som finns under **medlemskap** eller högst upp på Apple Developer Portal-sidan.
 1. Välj **[!UICONTROL Spara]**.
 
    ![appytans konfiguration](assets/push-app-surface-config.png)
@@ -105,7 +105,7 @@ Ytterligare dokumentation kan [hittades här](https://help.apple.com/developer-a
 >Om du inte ser `AJO Push Tracking Experience Event Dataset` som ett alternativ, kontakta kundtjänst.
 >
 
-## Implementera Adobe Journey Optimizer i appen
+## Implementera Journey Optimizer i appen
 
 Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara konfigurationen. Därefter måste du installera och registrera SDK för meddelanden. Om de här stegen inte är tydliga går du igenom [Installera SDK:er](install-sdks.md) -avsnitt.
 
@@ -175,6 +175,20 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 
 Om du vill skapa ett eget push-meddelande måste du definiera en händelse i Journey Optimizer som utlöser en resa som tar hand om att skicka ett push-meddelande.
 
+### Uppdatera schema
+
+Du kommer att definiera en ny händelsetyp som ännu inte är tillgänglig som en del av listan över händelser som definieras i ditt schema.
+
+1. I användargränssnittet för Journey Optimizer väljer du **[!UICONTROL Scheman]** från den vänstra listen.
+1. Välj **[!UICONTROL Bläddra]** i tabbfältet.
+1. Välj ditt schema, till exempel **[!UICONTROL Luma Mobile App Event Schema]** för att öppna den.
+1. I schemaredigeraren:
+   1. Välj **[!UICONTROL eventType]** fält.
+   1. I **[!UICONTROL Fältegenskaper]** bläddra nedåt för att se en lista över möjliga värden för händelsetypen. Välj **[!UICONTROL Lägg till rad]** och lägga till `application.test` som **[!UICONTROL VÄRDE]** och **[!UICONTROL Testhändelse för push-meddelande]** som `DISPLAY NAME`.
+   1. Välj **[!UICONTROL Använd]**.
+   1. Välj **[!UICONTROL Spara]**.
+      ![Lägg till värde till händelsetyper](assets/ajo-update-schema-eventtype-enum.png)
+
 ### Definiera en händelse
 
 1. I användargränssnittet för Journey Optimizer väljer du **[!UICONTROL Konfigurationer]** från den vänstra listen.
@@ -193,7 +207,7 @@ Om du vill skapa ett eget push-meddelande måste du definiera en händelse i Jou
 
       ![Redigera händelsesteg 1](assets/ajo-edit-event1.png)
 
-      I **[!UICONTROL Fält]** kontrollerar du att följande fält är markerade (ovanpå de standardfält som alltid är markerade (_id, id och tidsstämpel)). Du kan växla mellan **[!UICONTROL Markerad]**, **[!UICONTROL Alla]** och **[!UICONTROL Primär]** eller använder ![Sök](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Search_18_N.svg) fält.
+      I **[!UICONTROL Fält]** kontrollerar du att följande fält är markerade (ovanpå de standardfält som alltid är markerade (**[!UICONTROL _id]**, **[!UICONTROL id]** och **[!UICONTROL tidsstämpel]**). Du kan växla mellan **[!UICONTROL Markerad]**, **[!UICONTROL Alla]** och **[!UICONTROL Primär]** eller använder ![Sök](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Search_18_N.svg) fält.
 
       * **[!UICONTROL Identifierat program (id)]**,
       * **[!UICONTROL Händelsetyp (eventType)]**,
@@ -205,9 +219,8 @@ Om du vill skapa ett eget push-meddelande måste du definiera en händelse i Jou
 
    1. Välj ![Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) bredvid **[!UICONTROL Händelse-id-villkor]** fält.
 
-      1. I **[!UICONTROL Lägg till ett händelse-id-villkor]** dialogruta, dra och släppa **[!UICONTROL Programidentifierare (id)]** under **[!UICONTROL Program (program)]** till **[!UICONTROL Dra och släpp ett element här]**.
-      1. I povern anger du din källidentifierare från Xcode, till exempel `com.adobe.luma.tutorial.swiftui` i fältet intill **[!UICONTROL lika med]**.
-      1. Klicka **[!UICONTROL OK]**.
+      1. I **[!UICONTROL Lägg till ett händelse-id-villkor]** dialogruta, dra och släppa **[!UICONTROL Händelsetyp (eventType)]** till **[!UICONTROL Dra och släpp ett element här]**.
+      1. Bläddra nedåt i poverteraren och välj **[!UICONTROL application.test]**. Bläddra sedan uppåt och uppåt och välj **[!UICONTROL OK]**.
       1. Klicka **[!UICONTROL OK]**.
          ![Redigera händelsevillkor](assets/ajo-edit-condition.png)
 
@@ -306,7 +319,7 @@ Den här gången har den upplevelsehändelse du ska skicka inte skapats för att
 
    Den här koden skapar en `testPushPayload` -instans med de parametrar som har angetts för funktionen (`applicationId` och `eventType`) och sedan anrop `sendExperienceEvent` när nyttolasten konverteras till ett lexikon. Den här koden, som nu även tar hänsyn till asynkrona aspekter av att anropa Adobe Experience Platform SDK genom att använda Swift-modellen för samtidighet baserat på `await` och `async`.
 
-1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Allmänt]** > **[!UICONTROL ConfigView]** i Xcode Project Navigator. I definitionen för knappen Push Notification (Push-meddelande) lägger du till följande kod för att skicka händelsenyttolasten för testpush-meddelanden för att utlösa din resa när användaren trycker på knappen.
+1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Allmänt]** > **[!UICONTROL ConfigView]** i Xcode Project-navigatorn. I definitionen för knappen Push Notification (Push-meddelande) lägger du till följande kod för att skicka händelsenyttolasten för testpush-meddelanden för att utlösa din resa när användaren trycker på knappen.
 
    ```swift
    // Setting parameters and calling function to send push notification

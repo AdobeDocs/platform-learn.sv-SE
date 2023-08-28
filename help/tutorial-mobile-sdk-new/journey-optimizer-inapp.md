@@ -4,9 +4,9 @@ description: Lär dig hur du skapar meddelanden i appen till en mobilapp med Pla
 solution: Data Collection,Journey Optimizer
 feature-set: Journey Optimizer
 hide: true
-source-git-commit: 7de7c7e13ea6d02f1193620e0cc35299e07d59e5
+source-git-commit: 35b38e7491a3751d21afe4a7b998e5dc2292ba27
 workflow-type: tm+mt
-source-wordcount: '994'
+source-wordcount: '1070'
 ht-degree: 0%
 
 ---
@@ -26,13 +26,27 @@ Med Journey Optimizer kan ni skapa resor och skicka meddelanden i appen till rik
 
 * App med SDK:er har installerats och konfigurerats.
 * Åtkomst till Adobe Journey Optimizer och tillräcklig behörighet enligt beskrivningen [här](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configuration-message/push-config/push-configuration.html?lang=en). Du behöver även tillräcklig behörighet för följande Adobe Journey Optimizer-funktioner.
-   * Skapa en kampanj.
+   * Hantera en kampanj.
 * Betalat Apple-utvecklarkonto med tillräcklig behörighet för att skapa certifikat, identifierare och nycklar.
 * Fysisk iOS-enhet eller simulator för testning.
-* [Registrerat program-ID med APN](journey-optimizer-push.md#register-app-id-with-apn)
+* [Registrerat program-ID med Apple push-meddelandetjänst](journey-optimizer-push.md#register-app-id-with-apn)
 * [Dina push-autentiseringsuppgifter för appen har lagts till i datainsamlingen](journey-optimizer-push.md#add-your-app-push-credentials-in-data-collection)
 * [Tillägget Adobe Journey Optimizer-taggar har installerats](journey-optimizer-push.md#install-adobe-journey-optimizer-tags-extension)
 * [Implementerat Adobe Journey Optimizer i appen](journey-optimizer-push.md#implement-adobe-journey-optimizer-in-the-app)
+
+
+## Utbildningsmål
+
+I den här lektionen ska du
+
+* Registrera program-ID med Apple Push Notification-tjänsten (APN).
+* Skapa en **[!UICONTROL Appyta]** i AJO.
+* Uppdatera dina **[!UICONTROL schema]** för att inkludera push-meddelandefält.
+* Installera och konfigurera **[!UICONTROL Adobe Journey Optimizer]** taggtillägg.
+* Uppdatera programmet så att det innehåller AJO-taggtillägget.
+* Validera inställningar i Assurance.
+* Definiera er egen kampanj och upplevelse av meddelanden i appen i Journey Optimizer.
+* Skicka ditt eget meddelande i appen inifrån appen.
 
 
 ## Validera med Assurance
@@ -146,4 +160,4 @@ Nu bör du ha alla verktyg du behöver för att börja lägga till push-meddelan
 >
 >Du har nu aktiverat appen för meddelanden i appen och lagt till en meddelandekampanj i appen med Adobe Journey Optimizer och Adobe Journey Optimizer-tillägget för Adobe Experience Platform Mobile SDK.<br/>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 
-Nästa: **[Slutsats och nästa steg](conclusion.md)**
+Nästa: **[Visa erbjudanden med Journey Optimizer](journey-optimizer-offers.md)**
