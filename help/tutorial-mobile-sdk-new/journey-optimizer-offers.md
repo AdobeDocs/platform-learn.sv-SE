@@ -5,9 +5,9 @@ solution: Data Collection,Journey Optimizer
 feature-set: Journey Optimizer
 feature: Push
 hide: true
-source-git-commit: 35b38e7491a3751d21afe4a7b998e5dc2292ba27
+source-git-commit: 78cbdc441a470448a0bc91ec4d1670ebbf251a8d
 workflow-type: tm+mt
-source-wordcount: '2305'
+source-wordcount: '2309'
 ht-degree: 0%
 
 ---
@@ -40,8 +40,8 @@ I den här lektionen ska du
 * Uppdatera taggegenskapen med tillägget Journey Optimizer - Decisioning.
 * Uppdatera ditt schema för att hämta offerthändelser.
 * Validera inställningar i Assurance.
-* Skapa ett enkelt A/B-test i Target.
-* Uppdatera programmet så att det inkluderar tillägget Optimera.
+* Skapa ett offertbeslut baserat på erbjudanden från Journey Optimizer - Beslutshantering.
+* Uppdatera appen så att den innehåller tillägget Optimizer.
 * Implementera erbjudanden från Beslutshantering i appen.
 
 
@@ -283,7 +283,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 
    * ställer in en XDM-ordlista `xdmData`, som innehåller ECID för att identifiera den profil som du måste presentera erbjudandena för.
    * definierar `decisionScope`, ett objekt som bestämmer placering, vilken samling som ska användas, rankningsformel och regler för behörighet, enligt definitionen i användargränssnittet för Journey Optimizer - Beslutshantering.
-   * anropar två API:er: [`Optimizer.clearCachePropositions`](https://support.apple.com/en-ie/guide/mac-help/mchlp1015/mac)  och [`Optimizer.updatePropositions`](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/api-reference/#updatepropositions).   Dessa funktioner rensar alla cachelagrade offerter och uppdaterar propositionerna för den här profilen. Luma-appen använder en konfigurationsfil (`decisions.json`) som hämtar scopeparametrarna, baserat på följande JSON-format:
+   * anropar två API:er: [`Optimize.clearCachePropositions`](https://support.apple.com/en-ie/guide/mac-help/mchlp1015/mac)  och [`Optimize.updatePropositions`](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/api-reference/#updatepropositions).   Dessa funktioner rensar alla cachelagrade offerter och uppdaterar propositionerna för den här profilen. Luma-appen använder en konfigurationsfil (`decisions.json`) som hämtar scopeparametrarna, baserat på följande JSON-format:
 
      ```swift
      "scopes": [
@@ -298,7 +298,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 
      Du kan dock använda vilken implementeringsmetod som helst för att se till att optimerings-API:erna får rätt parametrar (`activityId`, `placementId` och `itemCount`), för att skapa en giltig [`DecisionScope`](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/api-reference/#decisionscope) -objekt för implementeringen.
 
-1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Personalisering]** > **[!UICONTROL EdgeOffersView]** i Xcode Project-navigatorn. Hitta `func getPropositionOD(activityId: String, placementId: String, itemCount: Int) async` och inspektera koden för den här funktionen. Den viktigaste delen av funktionen är  [`Optimizer.getPropositions`](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/api-reference/#getpropositions) API-anrop, som
+1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Personalisering]** > **[!UICONTROL EdgeOffersView]** i Xcode Project-navigatorn. Hitta `func getPropositionOD(activityId: String, placementId: String, itemCount: Int) async` och inspektera koden för den här funktionen. Den viktigaste delen av funktionen är  [`Optimize.getPropositions`](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/api-reference/#getpropositions) API-anrop, som
 
    * hämtar förslagen för den aktuella profilen baserat på beslutsomfånget (som du har definierat i Journey Optimizer - Beslutshantering) och
    * ångrar resultatet i innehåll som kan visas på rätt sätt i programmet.
