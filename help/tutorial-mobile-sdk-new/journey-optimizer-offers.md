@@ -3,18 +3,18 @@ title: Adobe Journey Optimizer erbjuder
 description: Lär dig skapa och visa erbjudanden med Platform Mobile SDK och Adobe Journey Optimizer Decision Management.
 solution: Data Collection,Journey Optimizer
 feature-set: Journey Optimizer
-feature: Push
+feature: Offers
 hide: true
-source-git-commit: 78cbdc441a470448a0bc91ec4d1670ebbf251a8d
+source-git-commit: 5f0fa0b524cd4a12aaab8c8c0cd560a31003fbd8
 workflow-type: tm+mt
-source-wordcount: '2309'
+source-wordcount: '2344'
 ht-degree: 0%
 
 ---
 
-# Adobe Journey Optimizer erbjuder
+# Journey Optimizer erbjuder
 
-Lär dig hur du visar erbjudanden från Adobe Journey Optimizer Decision Management i dina mobilappar med Platform Mobile SDK.
+Lär dig hur du visar erbjudanden från Journey Optimizer Decision Management i dina mobilappar med Platform Mobile SDK.
 
 Med Journey Optimizer Decision Management kan ni leverera det bästa erbjudandet och upplevelsen till era kunder via alla kontaktytor vid rätt tidpunkt. När ni väl utformat er målgrupp kan ni inrikta er på personaliserade erbjudanden.
 
@@ -23,13 +23,13 @@ Beslutshantering förenklar personaliseringen med ett centralt bibliotek med mar
 
 >[!NOTE]
 >
->Den här lektionen är valfri och gäller endast för användare av Adobe Journey Optimizers som vill använda beslutsstyrningsfunktionen för att visa erbjudanden i en mobilapp.
+>Den här lektionen är valfri och gäller endast för användare av reseveransoptimering som vill använda beslutsstyrningsfunktionen för att visa erbjudanden i en mobilapp.
 
 
 ## Förutsättningar
 
 * App med SDK:er har installerats och konfigurerats.
-* Tillgång till Adobe Journey Optimizer - Beslutshantering med rätt behörighet att hantera erbjudanden och beslut enligt beskrivningen [här](https://experienceleague.adobe.com/docs/journey-optimizer/using/access-control/privacy/high-low-permissions.html?lang=en#decisions-permissions).
+* Tillgång till Journey Optimizer - Beslutshantering med rätt behörighet att hantera erbjudanden och beslut enligt beskrivningen [här](https://experienceleague.adobe.com/docs/journey-optimizer/using/access-control/privacy/high-low-permissions.html?lang=en#decisions-permissions).
 
 
 ## Utbildningsmål
@@ -45,9 +45,15 @@ I den här lektionen ska du
 * Implementera erbjudanden från Beslutshantering i appen.
 
 
-## Uppdatera Edge-konfiguration
+## Konfigurera din app
 
-För att säkerställa att data som skickas från din mobilapp till Edge Network vidarebefordras till Adobe Journey Optimizer - Beslutshantering måste du uppdatera Experience Edge-konfigurationen.
+>[!TIP]
+>
+>Om du redan har konfigurerat ditt program som en del av [Konfigurera A/B-tester med Target](target.md) självstudiekurs, du kan hoppa över [Installera Adobe Journey Optimizer - Decisioning-taggtillägg](#install-adobe-journey-optimizer---decisioning-tags-extension) och [Uppdatera ditt schema](#update-your-schema).
+
+### Uppdatera Edge-konfiguration
+
+För att säkerställa att data som skickas från din mobilapp till Edge Network vidarebefordras till Journey Optimizer - Beslutshantering måste du uppdatera Experience Edge-konfigurationen.
 
 1. I gränssnittet för datainsamling väljer du **[!UICONTROL Datastreams]** och välj till exempel din datastream **[!UICONTROL Mobilappen Luma]**.
 1. Välj ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_MoreSmallList_18_N.svg) for **[!UICONTROL Experience Platform]** och markera ![Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) **[!UICONTROL Redigera]** på snabbmenyn.
@@ -57,7 +63,7 @@ För att säkerställa att data som skickas från din mobilapp till Edge Network
    ![AEP-konfiguration för datastream](assets/datastream-aep-configuration.png)
 
 
-## Installera Adobe Journey Optimizer - Decisioning-taggtillägg
+### Installera Journey Optimizer - Decisioning-taggtillägg
 
 1. Navigera till **[!UICONTROL Taggar]** och hitta din mobila taggegenskap och öppna egenskapen.
 1. Välj **[!UICONTROL Tillägg]**.
@@ -68,7 +74,7 @@ För att säkerställa att data som skickas från din mobilapp till Edge Network
    ![Lägg till beslutstillägg](assets/tag-add-decisioning-extension.png)
 
 
-## Uppdatera ditt schema
+### Uppdatera ditt schema
 
 1. Navigera till användargränssnittet för datainsamling och välj **[!UICONTROL Scheman]** från den vänstra listen.
 1. Välj **[!UICONTROL Bläddra]** i det övre fältet.
@@ -97,7 +103,7 @@ Så här validerar du inställningarna i Assurance:
 1. Välj **[!UICONTROL Skapa erbjudande]**.
 1. I **[!UICONTROL Nytt erbjudande]** dialogruta, välja **[!UICONTROL Personligt erbjudande]** och klicka **[!UICONTROL Nästa]**.
 1. I **[!UICONTROL Information]** steg för **[!UICONTROL Skapa nytt personaliserat erbjudande]**:
-   1. Ange en **[!UICONTROL Namn]** för erbjudandet, till exempel `Luma - Juno Jacket`och ange **[!UICONTROL Startdatum och -tid]** och **[!UICONTROL Slutdatum och sluttid]**. Dessa datum avgör om erbjudandet beaktas vid begäran om nästa bästa erbjudande.
+   1. Ange en **[!UICONTROL Namn]** för erbjudandet, till exempel `Luma - Juno Jacket`och ange **[!UICONTROL Startdatum och -tid]** och **[!UICONTROL Slutdatum och sluttid]**. Utanför dessa datum väljs inte erbjudandet av beslutsmotorn.
    1. Välj **[!UICONTROL Nästa]**.
       ![Erbjudanden - information](assets/ajo-offers-details.png)
 
@@ -132,24 +138,24 @@ Så här validerar du inställningarna i Assurance:
 
 1. Upprepa steg 3-8 för att skapa ytterligare fyra erbjudanden med olika namn och innehåll. Alla andra konfigurationsvärden, till exempel Startdatum och -tid eller Prioritet, liknar det första erbjudandet du skapade. Du kan snabbt skapa dubbletter och redigera erbjudanden.
 
-1. I Journey Optimizer UI väljer du ![Erbjudanden](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Offers_18_N.svg) **[!UICONTROL Erbjudanden]** Välj Erbjudanden i det övre fältet i den vänstra listen.
-1. Markera raden i erbjudandet som du skapade.
-1. I den högra rutan väljer du ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_MoreSmall_18_N.svg) **[!UICONTROL Fler åtgärder]** och på snabbmenyn väljer ![Duplicera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Duplicate_18_N.svg) **[!UICONTROL Duplicera]**.
+   1. I Journey Optimizer UI väljer du ![Erbjudanden](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Offers_18_N.svg) **[!UICONTROL Erbjudanden]** Välj Erbjudanden i det övre fältet i den vänstra listen.
+   1. Markera raden i erbjudandet som du skapade.
+   1. I den högra rutan väljer du ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_MoreSmall_18_N.svg) **[!UICONTROL Fler åtgärder]** och på snabbmenyn väljer ![Duplicera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Duplicate_18_N.svg) **[!UICONTROL Duplicera]**.
 
-   Använd tabellen nedan för att definiera de fyra erbjudandena.
+      Använd tabellen nedan för att definiera de fyra andra erbjudandena.
 
-   | Namn på erbjudande | Erbjud innehåll |
-   |---|---|
-   | Luma - vattenflaskan har fastnat | `{ "title": "Affirm Water Bottle", "text": "You'll stay hydrated with ease with the Affirm Water Bottle by your side or in hand. Measurements on the outside help you keep track of how much you're drinking, while the screw-top lid prevents spills. A metal carabiner clip allows you to attach it to the outside of a backpack or bag for easy access.", "image": "https://luma.enablementadobe.com/content/dam/luma/en/products/gear/fitness-equipment/ug06-lb-0.jpg" }` |
-   | Luma - Önskat träningsträd | `{ "title": "Desiree Fitness Tee", "text": "When you're too far to turn back, thank yourself for choosing the Desiree Fitness Tee. Its ultra-lightweight, ultra-breathable fabric wicks sweat away from your body and helps keeps you cool for the distance.", "image": "https://luma.enablementadobe.com/content/dam/luma/en/products/women/tops/tees/ws05-yellow_main.jpg" }` |
-   | Luma - Adrienne Trek Jacket | `{ "title": "Adrienne Trek Jacket", "text": "You're ready for a cross-country jog or a coffee on the patio in the Adrienne Trek Jacket. Its style is unique with stand collar and drawstrings, and it fits like a jacket should.", "image": "https://luma.enablementadobe.com/content/dam/luma/en/products/women/tops/jackets/wj08-gray_main.jpg" }` |
-   | Luma - Aero Daily Fitness Tee | `{ "title": "Adrienne Trek Jacket", "text": "You're ready for a cross-country jog or a coffee on the patio in the Adrienne Trek Jacket. Its style is unique with stand collar and drawstrings, and it fits like a jacket should.", "image": "https://luma.enablementadobe.com/content/dam/luma/en/products/women/tops/jackets/wj08-gray_main.jpg" }` |
+      | Namn på erbjudande | Erbjud innehåll |
+      |---|---|
+      | Luma - vattenflaskan har fastnat | `{ "title": "Affirm Water Bottle", "text": "You'll stay hydrated with ease with the Affirm Water Bottle by your side or in hand. Measurements on the outside help you keep track of how much you're drinking, while the screw-top lid prevents spills. A metal carabiner clip allows you to attach it to the outside of a backpack or bag for easy access.", "image": "https://luma.enablementadobe.com/content/dam/luma/en/products/gear/fitness-equipment/ug06-lb-0.jpg" }` |
+      | Luma - Önskat träningsträd | `{ "title": "Desiree Fitness Tee", "text": "When you're too far to turn back, thank yourself for choosing the Desiree Fitness Tee. Its ultra-lightweight, ultra-breathable fabric wicks sweat away from your body and helps keeps you cool for the distance.", "image": "https://luma.enablementadobe.com/content/dam/luma/en/products/women/tops/tees/ws05-yellow_main.jpg" }` |
+      | Luma - Adrienne Trek Jacket | `{ "title": "Adrienne Trek Jacket", "text": "You're ready for a cross-country jog or a coffee on the patio in the Adrienne Trek Jacket. Its style is unique with stand collar and drawstrings, and it fits like a jacket should.", "image": "https://luma.enablementadobe.com/content/dam/luma/en/products/women/tops/jackets/wj08-gray_main.jpg" }` |
+      | Luma - Aero Daily Fitness Tee | `{ "title": "Adrienne Trek Jacket", "text": "You're ready for a cross-country jog or a coffee on the patio in the Adrienne Trek Jacket. Its style is unique with stand collar and drawstrings, and it fits like a jacket should.", "image": "https://luma.enablementadobe.com/content/dam/luma/en/products/women/tops/jackets/wj08-gray_main.jpg" }` |
 
-   {style="table-layout:fixed"}
+      {style="table-layout:fixed"}
 
-1. Som sista steg måste du skapa ett reserverbjudande, som är ett erbjudande som alltid kan returneras om profilen inte uppfyller kraven för något av de personaliserade erbjudandena.
-   1. Välj Skapa erbjudande.
-   1. I **[!UICONTROL Information]** steg för **[!UICONTROL Skapa nytt personaliserat erbjudande]** skärm:
+1. Som sista steg måste ni skapa ett reserverbjudande, som är ett erbjudande som skickas till kunderna om de inte är berättigade till andra erbjudanden.
+   1. Välj **[!UICONTROL Skapa erbjudande]**.
+   1. I **[!UICONTROL Information]** steg för **[!UICONTROL Skapa nytt personaliserat erbjudande]**:
    1. Ange en **[!UICONTROL Namn]** för erbjudandet, till exempel `Luma - Fallback Offer`och ange **[!UICONTROL Startdatum och -tid]** och **[!UICONTROL Slutdatum och sluttid]**.
    1. Välj **[!UICONTROL Nästa]**.
 
@@ -204,7 +210,7 @@ Ett utvärderingskriterium är en kombination av
 * regler för behörighet: erbjudandet gäller t.ex. endast en viss målgrupp,
 * rangordningsmetod: när det finns flera erbjudanden att välja mellan, vilken metod använder du för att rangordna dem (t.ex. efter erbjudandeprioritet, med en formel eller en AI-modell).
 
-Se [Viktiga steg för att skapa och hantera erbjudanden](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/get-started-decision/key-steps.html?lang=en) om du bättre vill förstå hur placeringar, regler, rankningar, erbjudanden, representationer, samlingar, beslut och så vidare interagerar. Den här självstudiekursen fokuserar på att använda resultatet av ett beslut snarare än på flexibiliteten när det gäller att definiera ett beslut.
+Se [Viktiga steg för att skapa och hantera erbjudanden](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/get-started-decision/key-steps.html?lang=en) om du bättre vill förstå hur placeringar, regler, rankningar, erbjudanden, representationer, samlingar, beslut och så vidare, interagerar och relaterar till varandra. Den här självstudiekursen handlar enbart om att använda resultatet av ett beslut i stället för att vara flexibel när det gäller att definiera ett beslut.
 
 1. I användargränssnittet för Journey Optimizer väljer du **[!UICONTROL Erbjudanden]** från den vänstra listen.
 1. Välj **[!UICONTROL Beslut]** i det övre fältet.
@@ -214,7 +220,7 @@ Se [Viktiga steg för att skapa och hantera erbjudanden](https://experienceleagu
    1. Välj **[!UICONTROL Nästa]**.
 
 1. I **[!UICONTROL Lägg till beslutsomfattningar]** steg för **[!UICONTROL Skapa ett nytt offertbeslut]**:
-   1. Välj**[!UICONTROL  Mobile JSON]** från **[!UICONTROL Placement]** lista.
+   1. Välj **[!UICONTROL Mobile JSON]** från **[!UICONTROL Placement]** lista.
    1. I **[!UICONTROL Utvärderingskriterier]** platta, markera ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Lägg till]**.
       1. I **[!UICONTROL Lägg till erbjudandesamling]** väljer du din erbjudandesamling. Till exempel: **[!UICONTROL Luma - Mobile App Collection]**.
       1. Välj **[!UICONTROL Lägg till]**.
@@ -237,12 +243,13 @@ Ditt beslut om erbjudandet, som består av en uppsättning erbjudanden, är nu k
 1. Välj t.ex. ditt beslut **[!UICONTROL Luma - beslut om mobilappar]**.
 1. I **[!UICONTROL Beslutsomfattningar]** platta, markera ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) **[!UICONTROL Kopiera]**.
 1. Välj **[!UICONTROL Beslutets omfattning]**.
+   ![Kopiera beslutsomfattning](assets/ajo-copy-decisionscope.png)
 1. Använd en textredigerare för att klistra in beslutsomfånget för senare bruk. Beslutsomfånget har följande JSON-format.
 
    ```json
    {
-       "xdm:activityId":"xcore:offer-activity:177cdaa5e1fd589d",
-       "xdm:placementId":"xcore:offer-placement:13a3b264ce69bb14"
+       "xdm:activityId":"xcore:offer-activity:xxxxxxxxxxxxxxx",
+       "xdm:placementId":"xcore:offer-placement:xxxxxxxxxxxxxxx"
    }
    ```
 
@@ -252,12 +259,12 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 
 >[!NOTE]
 >
->Om du har slutfört [Installera SDK:er](install-sdks.md) är SDK redan installerat och du kan hoppa till steg 7.
+>Om du har slutfört [Installera SDK:er](install-sdks.md) är SDK redan installerat och du kan hoppa över det här steget.
 >
 
 1. I Xcode kontrollerar du att [AEP-optimering](https://github.com/adobe/aepsdk-messaging-ios.git) läggs till i listan över paket i paketberoenden. Se [Swift Package Manager](install-sdks.md#swift-package-manager).
-1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL AppDelegate]**.
-1. Säkerställ `AEPMessaging` är en del av din lista över importer.
+1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL AppDelegate]** i Xcode Project-navigatorn.
+1. Säkerställ `AEPOptimize` är en del av din lista över importer.
 
    `import AEPOptimize`
 
@@ -282,7 +289,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project-navigatorn. Hitta `func updatePropositionOD(ecid: String, activityId: String, placementId: String, itemCount: Int) async` funktion. Inspect som
 
    * ställer in en XDM-ordlista `xdmData`, som innehåller ECID för att identifiera den profil som du måste presentera erbjudandena för.
-   * definierar `decisionScope`, ett objekt som bestämmer placering, vilken samling som ska användas, rankningsformel och regler för behörighet, enligt definitionen i användargränssnittet för Journey Optimizer - Beslutshantering.
+   * definierar `decisionScope`, ett objekt som baseras på det beslut du har definierat i användargränssnittet för beslutshantering i Journey Optimizer och definieras med hjälp av det kopierade beslutsomfånget från [Skapa ett beslut](#create-a-decision).
    * anropar två API:er: [`Optimize.clearCachePropositions`](https://support.apple.com/en-ie/guide/mac-help/mchlp1015/mac)  och [`Optimize.updatePropositions`](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/api-reference/#updatepropositions).   Dessa funktioner rensar alla cachelagrade offerter och uppdaterar propositionerna för den här profilen. Luma-appen använder en konfigurationsfil (`decisions.json`) som hämtar scopeparametrarna, baserat på följande JSON-format:
 
      ```swift
@@ -296,7 +303,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
      ]
      ```
 
-     Du kan dock använda vilken implementeringsmetod som helst för att se till att optimerings-API:erna får rätt parametrar (`activityId`, `placementId` och `itemCount`), för att skapa en giltig [`DecisionScope`](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/api-reference/#decisionscope) -objekt för implementeringen.
+     Du kan dock använda vilken implementeringsmetod som helst för att se till att Optimera-API:erna får rätt parametrar (`activityId`, `placementId` och `itemCount`), för att skapa en giltig [`DecisionScope`](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/api-reference/#decisionscope) -objekt för implementeringen.
 
 1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Personalisering]** > **[!UICONTROL EdgeOffersView]** i Xcode Project-navigatorn. Hitta `func getPropositionOD(activityId: String, placementId: String, itemCount: Int) async` och inspektera koden för den här funktionen. Den viktigaste delen av funktionen är  [`Optimize.getPropositions`](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/api-reference/#getpropositions) API-anrop, som
 
@@ -335,15 +342,16 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 
 1. Välj **[!UICONTROL Edge Personalization]**.
 
-1. Bläddra högst upp så visas två slumpmässiga erbjudanden som du har definierat i din erbjudandesamling i **[!UICONTROL BESLUT LUMA - BESLUT OM MOBILAPP]** platta.
+1. Bläddra högst upp så visas två slumpmässiga erbjudanden från samlingen som du har definierat i **[!UICONTROL BESLUT LUMA - BESLUT OM MOBILAPP]** platta.
 
    <img src="assets/ajo-app-offers.png" width="300">
 
-   Erbjudandena är slumpmässiga, eftersom ni har gett alla erbjudanden samma prioritet och rangordnas efter prioritet.
+   Anbuden är slumpmässiga eftersom ni har gett alla erbjudanden samma prioritet och rangordningen för beslutet baseras på prioritet.
+
 
 ## Validera implementering i Assurance
 
-Så här validerar du A/B-testet i Assurance:
+Så här validerar du erbjudandeimplementeringen i Assurance:
 
 1. Gå till försäkringsgränssnittet.
 1. Välj **[!UICONTROL Konfigurera]** i vänster rand och välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) nästa **[!UICONTROL Granska och simulera]** under **[!UICONTROL ADOBE JOURNEY OPTIMIZER AVGÖRANDE]**.
@@ -354,7 +362,7 @@ Så här validerar du A/B-testet i Assurance:
 
 1. Du kan utforska **[!UICONTROL Simulera]** och **[!UICONTROL Händelselista]** om du vill ha mer funktionalitet kan du kontrollera hur du har konfigurerat Journey Optimizer Decision Management.
 
-## Implementera i din app
+## Nästa steg
 
 Nu bör du ha alla verktyg du behöver för att börja lägga till fler funktioner i implementeringen av Journey Optimizer - Beslutshantering. Exempel:
 
@@ -364,6 +372,6 @@ Nu bör du ha alla verktyg du behöver för att börja lägga till fler funktion
 
 >[!SUCCESS]
 >
->Du har nu aktiverat appen för att visa erbjudandet med tillägget Adobe Journey Optimizer - Decisioning för Adobe Experience Platform Mobile SDK.<br/>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
+>Du har aktiverat appen för att visa erbjudanden med tillägget Journey Optimizer - Decisioning för Experience Platform Mobile SDK.<br/>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 
 Nästa: **[Utför A/B-tester med mål](target.md)**
