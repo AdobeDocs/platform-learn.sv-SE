@@ -1,5 +1,5 @@
 ---
-title: Lägg till partnerattribut i förstahandsprofiler i [!DNL Real-time CDP]
+title: Lägg till partnerattribut i förstahandsprofiler i [!DNL Real-Time CDP]
 description: Lär dig hur du lägger till partnerattribut i dina förstahandsprofiler för att utöka räckvidden genom ytterligare kanaler i [!DNL Real-Time CDP].
 feature: Integrations
 topic: Integrations
@@ -8,14 +8,14 @@ level: Intermediate
 jira: KT-13830
 thumbnail: 3423075.jpg
 last-substantial-update: 2023-08-23T00:00:00Z
-source-git-commit: 8441913e61137d97e25dc098bb1cdbdec6a1282e
+source-git-commit: 2b4f50e114f07da72048fa863c551eaa3223f4cd
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 0%
 
 ---
 
-# Lägg till partnerattribut i förstahandsprofiler i [!DNL Real-time CDP]
+# Lägg till partnerattribut i förstahandsprofiler i [!DNL Real-Time CDP]
 
 Lär dig hur du lägger till partnerattribut i dina förstahandsprofiler för att utöka räckvidden genom ytterligare kanaler i [!DNL Real-Time CDP].
 
