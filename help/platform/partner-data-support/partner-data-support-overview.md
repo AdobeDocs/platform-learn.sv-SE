@@ -1,5 +1,5 @@
 ---
-title: Översikt över stöd för partnerdata i CDP i realtid
+title: Översikt över datastöd för partners i Real-Time CDP
 description: Se hur [!DNL Real-Time Customer Data Platform] har stöd för fullkanalsmarknadsföring med partnerdata för databerikning från första part och prospektering eftersom cookies från tredje part fortfarande är inaktuella. 
 feature: Integrations
 topic: Integrations
@@ -8,14 +8,14 @@ level: Beginner
 jira: KT-13805
 thumbnail: 3422855.jpg
 last-substantial-update: 2023-08-23T00:00:00Z
-source-git-commit: 8441913e61137d97e25dc098bb1cdbdec6a1282e
+source-git-commit: 1f68f72cc4e640cff16670e259982276668c9193
 workflow-type: tm+mt
 source-wordcount: '62'
 ht-degree: 0%
 
 ---
 
-# Översikt över stöd för partnerdata i [!DNL Real-time CDP]
+# Översikt över stöd för partnerdata i [!DNL Real-Time CDP]
 
 Se hur [!DNL Real-Time Customer Data Platform] har stöd för fullkanalsmarknadsföring med partnerdata för databerikning från första part och prospektering eftersom cookies från tredje part fortfarande är inaktuella. 
 
