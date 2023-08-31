@@ -5,9 +5,9 @@ solution: Data Collection,Target
 feature-set: Target
 feature: A/B Tests
 hide: true
-source-git-commit: 78cbdc441a470448a0bc91ec4d1670ebbf251a8d
+source-git-commit: 593dcce7d1216652bb0439985ec3e7a45fc811de
 workflow-type: tm+mt
-source-wordcount: '1394'
+source-wordcount: '1418'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,11 @@ Lär dig hur du utför A/B-tester i dina mobilappar med Platform Mobile SDK och 
 
 Target innehåller allt som ni behöver för att skräddarsy och personalisera kundernas upplevelser. Target hjälper er att maximera intäkterna från era webbplatser och mobilsajter, appar, sociala medier och andra digitala kanaler. Fokus i den här självstudiekursen ligger på A/B-testfunktionen i Target. Se [Översikt över A/B-test](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=en) för mer information.
 
-Innan du kan utföra A/B-tester med Target Premium måste du se till att rätt konfigurationer och integreringar finns på plats.
+Innan du kan utföra A/B-tester med Target måste du se till att rätt konfigurationer och integreringar finns på plats.
 
 >[!NOTE]
 >
->Den här lektionen är valfri och gäller endast för Adobe Target Premium-användare som vill utföra A/B-tester.
+>Den här lektionen är valfri och gäller endast för Adobe Target-användare som vill utföra A/B-tester.
 
 
 ## Förutsättningar
@@ -47,7 +47,13 @@ I den här lektionen ska du
 * Validera implementering i Assurance.
 
 
-## Uppdatera Edge-konfiguration
+## Konfigurera din app
+
+>[!TIP]
+>
+>Om du redan har konfigurerat ditt program som en del av [Journey Optimizer erbjuder](journey-optimizer-offers.md) självstudiekurs,
+
+### Uppdatera Edge-konfiguration
 
 För att säkerställa att data som skickas från din mobilapp till Edge Network vidarebefordras till Adobe Target måste du uppdatera Experience Edge-konfigurationen.
 
@@ -62,7 +68,7 @@ För att säkerställa att data som skickas från din mobilapp till Edge Network
    ![Lägg till mål i datastream](assets/edge-datastream-target.png)
 
 
-## Installera Adobe Journey Optimizer - Decisioning-taggtillägg
+### Installera Adobe Journey Optimizer - Decisioning-taggtillägg
 
 1. Navigera till **[!UICONTROL Taggar]** och hitta din mobila taggegenskap och öppna egenskapen.
 1. Välj **[!UICONTROL Tillägg]**.
@@ -73,7 +79,7 @@ För att säkerställa att data som skickas från din mobilapp till Edge Network
    ![Lägg till beslutstillägg](assets/tag-add-decisioning-extension.png)
 
 
-## Uppdatera ditt schema
+### Uppdatera ditt schema
 
 1. Navigera till användargränssnittet för datainsamling och välj Scheman i den vänstra listen.
 1. Välj **[!UICONTROL Bläddra]** i det övre fältet.
@@ -84,7 +90,7 @@ För att säkerställa att data som skickas från din mobilapp till Edge Network
 1. om du vill spara ändringarna i ditt schema väljer du **[!UICONTROL Spara]** .
 
 
-## Validera inställningar i Assurance
+### Validera inställningar i Assurance
 
 Så här validerar du inställningarna i Assurance:
 
@@ -161,12 +167,12 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 
 >[!NOTE]
 >
->Om du har slutfört [Installera SDK:er](install-sdks.md) är SDK redan installerat och du kan hoppa till steg 7.
+>Om du har slutfört [Installera SDK:er](install-sdks.md) är SDK redan installerat och du kan hoppa över det här steget.
 >
 
 1. I Xcode kontrollerar du att [AEP-optimering](https://github.com/adobe/aepsdk-messaging-ios.git) läggs till i listan över paket i paketberoenden. Se [Swift Package Manager](install-sdks.md#swift-package-manager).
-1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL AppDelegate]**.
-1. Säkerställ `AEPMessaging` är en del av din lista över importer.
+1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL AppDelegate]** i Xcode Project-navigatorn.
+1. Säkerställ `AEPOptimize` är en del av din lista över importer.
 
    `import AEPOptimize`
 
@@ -239,17 +245,17 @@ Så här validerar du A/B-testet i Assurance:
 1. Välj **[!UICONTROL Konfigurera]** i vänster rand och välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) nästa **[!UICONTROL Granska och simulera]** under **[!UICONTROL ADOBE JOURNEY OPTIMIZER AVGÖRANDE]**.
 1. Välj **[!UICONTROL Spara]**.
 1. Välj **[!UICONTROL Granska och simulera]** till vänster. Både datastream-konfigurationen valideras och SDK-inställningen i ditt program.
-1. Välj **[!UICONTROL Begäranden]** i det övre fältet. Dina Target-begäranden visas.
+1. Välj **[!UICONTROL Begäranden]** i det övre fältet. Du ser **[!UICONTROL Mål]** förfrågningar.
    ![Validering av AJO-beslut](assets/assurance-decisioning-requests.png)
 
 1. Du kan utforska flikarna Simulera och Händelselista för ytterligare funktionalitet som kontrollerar konfigurationen för Target-erbjudanden.
 
-## Implementera i din app
+## Nästa steg
 
-Nu bör du ha alla verktyg för att börja lägga till fler A/B-tester eller andra Target-aktiviteter, där det är relevant och tillämpligt, i Luma-appen.
+Nu bör du ha alla verktyg för att börja lägga till fler A/B-tester eller andra Target-aktiviteter (som Experience Targeting, Multivariate Test), där det är relevant och tillämpligt, i Luma-appen.
 
 >[!SUCCESS]
 >
->Du har nu aktiverat appen för A/B-tester och visat resultatet av ett A/B-test med Adobe Target och tillägget Adobe Journey Optimizer - Decisioning för Adobe Experience Platform Mobile SDK.<br/>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
+>Du har aktiverat appen för A/B-tester och visat resultatet av ett A/B-test med Adobe Target och tillägget Adobe Journey Optimizer - Decisioning för Adobe Experience Platform Mobile SDK.<br/>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 
 Nästa: **[Slutsats och nästa steg](conclusion.md)**
