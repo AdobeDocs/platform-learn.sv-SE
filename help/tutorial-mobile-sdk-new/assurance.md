@@ -3,9 +3,9 @@ title: Ställ in försäkring
 description: Lär dig hur du implementerar tillägget Assurance i en mobilapp.
 feature: Mobile SDK,Assurance
 hide: true
-source-git-commit: e119e2bdce524c834cdaf43ed9eb9d26948b0ac6
+source-git-commit: e364d70375f687b9c50691efd04a1db757fee364
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '738'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ I den här lektionen kommer du att:
 
 Bekräfta att din organisation har åtkomst till Assurance genom att utföra följande steg:
 
-1. Besök [https://experience.adobe.com/assurance](https://experience.adobe.com/assurance{target="_blank"}).
+1. Besök [https://experience.adobe.com/assurance](https://experience.adobe.com/assurance){target="_blank"}.
 1. Logga in med dina Adobe ID-uppgifter för Experience Cloud.
 1. Om du ser **[!UICONTROL Sessioner]** så får du åtkomst. Om du ser åtkomstsidan (beta) väljer du **[!UICONTROL Registrera]** för att registrera.
 
@@ -56,7 +56,7 @@ Förutom det allmänna [SDK-installation](install-sdks.md), som du slutförde i 
    }
    ```
 
-Mer information finns [här](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/api-reference/{target="_blank"}).
+Mer information finns [här](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/api-reference/){target="_blank"}.
 
 ## Signering
 
@@ -81,7 +81,7 @@ Innan du kör programmet för första gången i Xcode måste du uppdatera signer
 
    ![försäkrings-URL](assets/assurance-url-type.png)
 
-Mer information om URL-scheman i iOS finns i [Apple dokumentation](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app{target="_blank"}).
+Mer information om URL-scheman i iOS finns i [Apple dokumentation](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app){target="_blank"}.
 
 Assurance fungerar genom att öppna en URL, antingen via webbläsaren eller QR-koden. Den URL:en börjar med den bas-URL som öppnar appen och innehåller ytterligare parametrar. Dessa unika parametrar används för att ansluta sessionen.
 
@@ -129,7 +129,7 @@ Assurance fungerar genom att öppna en URL, antingen via webbläsaren eller QR-k
 
      ![säkringshändelser](assets/assurance-events.png)
 
-Om du stöter på några problem kan du läsa [teknisk](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/{target="_blank"}) och [allmän dokumentation](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html{target="_blank"}).
+Om du stöter på några problem kan du läsa [teknisk](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/){target="_blank"} and [general documentation](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html){target="_blank"}.
 
 >[!SUCCESS]
 >
