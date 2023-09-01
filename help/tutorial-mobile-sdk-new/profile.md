@@ -2,9 +2,9 @@
 title: Profil
 description: Lär dig hur du samlar in profildata i en mobilapp.
 hide: true
-source-git-commit: e119e2bdce524c834cdaf43ed9eb9d26948b0ac6
+source-git-commit: 4101425bd97e271fa6cc15157a7be435c034e764
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '594'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ I den här lektionen kommer du att:
 
 Det skulle vara praktiskt för målgruppsanpassning och/eller personalisering att snabbt veta om en användare har köpt appen tidigare. Låt oss konfigurera det i Luma-appen.
 
-1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Utils]** >  **[!UICONTROL MobileSDK]** och hitta `func updateUserAttribute(attributeName: String, attributeValue: String)` funktion. Lägg till följande kod:
+1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Utils]** >  **[!UICONTROL MobileSDK]** i Xcode Project navigator och hitta `func updateUserAttribute(attributeName: String, attributeValue: String)` funktion. Lägg till följande kod:
 
    ```swift
    // Create a profile map
@@ -62,7 +62,7 @@ Det skulle vara praktiskt för målgruppsanpassning och/eller personalisering at
 
    1. Använder `profileMap` ordlista som ett värde för `attributeDict` parametern för `UserProfile.updateUserAttributes` API-anrop.
 
-1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Produkter]** > **[!UICONTROL ProductView]** i Xcode Project navigator och sök efter `updateUserAttributes` (inom koden för köpet) <img src="assets/purchase.png" width="15" /> knapp):
+1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Produkter]** > **[!UICONTROL ProductView]** i Xcode Project navigator och hitta anropet till `updateUserAttributes` (inom koden för köpet) <img src="assets/purchase.png" width="15" /> knapp):
 
    ```swift
    // Update attributes
@@ -113,9 +113,13 @@ Ytterligare dokumentation finns [här](https://developer.adobe.com/client-sdks/d
    1. Välj <img src="assets/saveforlater.png" width="15" />.
    1. Välj <img src="assets/addtocart.png" width="20" />.
    1. Välj <img src="assets/purchase.png" width="15" />.
-   1. Återgå till **[!UICONTROL Startsida]** skärm. Uppdaterade värden för **[!UICONTROL E-post]** och **[!UICONTROL CRM-ID]**.
 
-      <img src="./assets/mobile-app-events-1.png" width="200"> <img src="./assets/mobile-app-events-2.png" width="200"> <img src="./assets/mobile-app-events-3.png" width="200"> <img src="./assets/personbadges.png" width="200">
+      <img src="./assets/mobile-app-events-1.png" width="200"> <img src="./assets/mobile-app-events-2.png" width="200"> <img src="./assets/mobile-app-events-3.png" width="200">
+   1. Återgå till **[!UICONTROL Startsida]** skärm. Du bör se ett märke tillagt <img src="assets/person-badge-icon.png" width="15" />.
+
+      <img src="./assets/personbadges.png" width="200">
+
+
 
 1. I försäkringsgränssnittet bör du se en **[!UICONTROL UserProfileUpdate]** och **[!UICONTROL getUserAttributes]** händelser med uppdaterade `profileMap` värde.
    ![validera profil](assets/profile-validate.png)

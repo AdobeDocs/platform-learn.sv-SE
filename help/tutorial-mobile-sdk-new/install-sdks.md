@@ -2,9 +2,9 @@
 title: Installera Adobe Experience Platform Mobile SDKs
 description: Lär dig hur du implementerar Adobe Experience Platform Mobile SDK i en mobilapp.
 hide: true
-source-git-commit: e119e2bdce524c834cdaf43ed9eb9d26948b0ac6
+source-git-commit: 6cc58d3d40112b14b1c1b8664c5e7aeb0880b59c
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '928'
 ht-degree: 0%
 
 ---
@@ -17,8 +17,8 @@ Lär dig hur du implementerar Adobe Experience Platform Mobile SDK i en mobilapp
 
 * Taggbiblioteket med tilläggen som beskrivs i [föregående lektion](configure-tags.md).
 * Fil-ID för utvecklingsmiljö från [Instruktioner för mobilinstallation](configure-tags.md#generate-sdk-install-instructions).
-* Nedladdad, tom [exempelapp](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App{target="_blank"}).
-* Upplev [XCode](https://developer.apple.com/xcode/{target="_blank"}).
+* Nedladdad, tom [exempelapp](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App){target="_blank"}.
+* Upplev [XCode](https://developer.apple.com/xcode/){target="_blank"}.
 
 ## Utbildningsmål
 
@@ -80,7 +80,7 @@ Gör på samma sätt för **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UI
 
 ## Uppdatera AppDelegate
 
-Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **AppDelegate** i Xcode Project Navigator.
+Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **AppDelegate** i Xcode Project-navigatorn.
 
 1. Ange `@AppStorage` värde för `environmentFileId` till det fil-ID för utvecklingsmiljön som du hämtade från taggar i steg 6 i [Generera installationsanvisningar för SDK](configure-tags.md#generate-sdk-install-instructions).
 

@@ -3,9 +3,9 @@ title: Identitet
 description: Lär dig hur du samlar in identitetsdata i en mobilapp.
 feature: Mobile SDK,Identities
 hide: true
-source-git-commit: e119e2bdce524c834cdaf43ed9eb9d26948b0ac6
+source-git-commit: 4101425bd97e271fa6cc15157a7be435c034e764
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '656'
 ht-degree: 1%
 
 ---
@@ -144,7 +144,7 @@ Du kan använda `removeIdentity` för att ta bort identiteten från den lagrade 
       <img src="./assets/identity1.png" width="300"> <img src="./assets/identity2.png" width="300">
 
 
-1. Leta i webbgränssnittet för Assurance efter **[!UICONTROL Edge Identity Update Identities]**event från **[!UICONTROL com.adobe.griffon.mobile]** leverantör.
+1. Leta i webbgränssnittet för Assurance efter **[!UICONTROL Edge Identity Update Identities]** -händelsen från **[!UICONTROL com.adobe.griffon.mobile]** leverantör.
 1. Markera händelsen och granska data i **[!UICONTROL ACPExtensionEventData]** -objekt. Du bör se de identiteter som du har uppdaterat.
    ![validera identitetsuppdatering](assets/identity-validate-assurance.png)
 

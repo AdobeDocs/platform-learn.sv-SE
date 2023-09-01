@@ -3,9 +3,9 @@ title: Implementera Adobe Experience Cloud i självstudiekursen om mobilappar
 description: Lär dig hur du implementerar Adobe Experience Cloud mobilappar. Den här självstudiekursen vägleder dig genom en implementering av Experience Cloud-program i ett exempel på en Swift-app.
 recommendations: noDisplay,catalog
 hide: true
-source-git-commit: e119e2bdce524c834cdaf43ed9eb9d26948b0ac6
+source-git-commit: 4101425bd97e271fa6cc15157a7be435c034e764
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '659'
 ht-degree: 1%
 
 ---
@@ -39,6 +39,10 @@ När du är klar med självstudiekursen kan du:
    * [Profil](profile.md)
    * [Adobe Experience Platform](platform.md)
    * [Skicka meddelanden med Journey Optimizer](journey-optimizer-push.md)
+   * [Meddelanden i appar med Journey Optimizer](journey-optimizer-inapp.md)
+   * [Erbjudanden med Journey Optimizer](journey-optimizer-offers.md)
+   * [A/B-tester med Target](target.md)
+
 * skicka Experience Cloud-parametrar korrekt till en [webbvy](web-views.md).
 * Validera implementeringen med [Adobe Experience Platform Assurance](assurance.md).
 
@@ -74,12 +78,12 @@ Du måste också känna till [!DNL Swift]. Du behöver inte vara expert för att
 
 Det finns två versioner av exempelappen att hämta.
 
-1. [Tom](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App{target="_blank"}): en version utan Experience Cloud-kod för att slutföra övningarna i kursen
-1. [Fullt implementerad](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App{target="_blank"}): en version med fullständig Experience Cloud-implementering som referens.
+1. [Tom](https://git.corp.adobe.com/rmaur/Luma{target="_blank"}): en version utan Experience Cloud-kod för att slutföra övningarna i kursen
+1. [Fullt implementerad](https://git.corp.adobe.com/Luma{target="_blank"}): en version med fullständig Experience Cloud-implementering som referens.
 
 Kom så börjar vi!
 
->[!NOTE]
+>[!SUCCESS]
 >
 >Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 

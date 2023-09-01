@@ -2,9 +2,9 @@
 title: Livscykeldata
 description: Lär dig hur du samlar in livscykeldata i en mobilapp.
 hide: true
-source-git-commit: e119e2bdce524c834cdaf43ed9eb9d26948b0ac6
+source-git-commit: 4101425bd97e271fa6cc15157a7be435c034e764
 workflow-type: tm+mt
-source-wordcount: '612'
+source-wordcount: '594'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ The Consumer Experience Event field group you added in the [previous lesson](cre
 
 Nu kan du uppdatera projektet för att registrera livscykelhändelserna.
 
-1. Navigera till Luma > Luma > SceneDelegate i Xcode Project navigator.
+1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL SceneDelegate]** i Xcode Project-navigatorn.
 
 1. Om appen återupptas från ett bakgrundsläge när den startas kan iOS ringa `sceneWillEnterForeground:` delegeringsmetod och här vill du aktivera en start-händelse för livscykel. Lägg till koden i `func sceneWillEnterForeground(_ scene: UIScene)`:
 
@@ -87,24 +87,23 @@ I föregående övning skickas för- och bakgrundshändelserna till Adobe Experi
 1. Välj **[!UICONTROL Inledande bygge]** som det bibliotek som ska användas.
 1. Välj **[!UICONTROL Skapa ny regel]**.
    ![Skapa ny regel](assets/rules-create-new.png)
-1. I [!UICONTROL Skapa regel] skärm, ange `Application Status` for **[!UICONTROL Namn]**.
+1. I **[!UICONTROL Skapa regel]** skärm, ange `Application Status` for **[!UICONTROL Namn]**.
 1. Välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Lägg till]** nedan **[!UICONTROL HÄNDELSER]**.
    ![Dialogrutan Skapa regel](assets/rule-create-name.png)
-1. I [!UICONTROL Händelsekonfiguration] steg:
+1. I **[!UICONTROL Händelsekonfiguration]** steg:
    1. Välj **[!UICONTROL Mobile Core]** som **[!UICONTROL Tillägg]**.
    1. Välj **[!UICONTROL Förgrund]** som **[!UICONTROL Händelsetyp]**.
    1. Välj **[!UICONTROL Behåll ändringar]**.
       ![Regelhändelsekonfiguration](assets/rule-event-configuration.png)
-1. Gå tillbaka till skärmen Skapa regel och välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Lägg till]** nästa **[!UICONTROL Mobile Core - förgrund]**.
+1. Tillbaka i **[!UICONTROL Skapa regel]** skärm, välja ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Lägg till]** nästa **[!UICONTROL Mobile Core - förgrund]**.
    ![Konfiguration av nästa händelse](assets/rule-event-configuration-next.png)
-1. I [!UICONTROL Händelsekonfiguration] steg:
+1. I **[!UICONTROL Händelsekonfiguration]** steg:
    1. Välj **[!UICONTROL Mobile Core]** som **[!UICONTROL Tillägg]**.
    1. Välj **[!UICONTROL Bakgrund]** som **[!UICONTROL Händelsetyp]**.
    1. Välj **[!UICONTROL Behåll ändringar]**.
       ![Regelhändelsekonfiguration](assets/rule-event-configuration-background.png)
-1. Gå tillbaka till skärmen Skapa regel och välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Lägg till]** nedan **[!UICONTROL ÅTGÄRDER]**.
-   ![Lägg till åtgärd i regel](assets/rule-action-button.png)
-1. I [!UICONTROL Åtgärdskonfiguration] steg:
+      ![Lägg till åtgärd i regel](assets/rule-action-button.png)
+1. I **[!UICONTROL Åtgärdskonfiguration]** steg:
    1. Välj **[!UICONTROL Adobe Experience Edge Network]** som **[!UICONTROL Tillägg]**.
    1. Välj **[!UICONTROL Vidarebefordra händelse till Edge Network]** som **[!UICONTROL Åtgärdstyp]**.
    1. Välj **[!UICONTROL Behåll ändringar]**.
