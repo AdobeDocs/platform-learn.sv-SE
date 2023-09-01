@@ -5,9 +5,9 @@ solution: Data Collection,Journey Optimizer
 feature-set: Journey Optimizer
 feature: In App
 hide: true
-source-git-commit: 5f0fa0b524cd4a12aaab8c8c0cd560a31003fbd8
+source-git-commit: c31dd74cf8ff9c0856b29e82d9c8be2ad027df4a
 workflow-type: tm+mt
-source-wordcount: '1607'
+source-wordcount: '1605'
 ht-degree: 0%
 
 ---
@@ -48,11 +48,11 @@ I den här lektionen ska du
 * Definiera er egen kampanj och upplevelse av meddelanden i appen i Journey Optimizer.
 * Skicka ditt eget meddelande i appen inifrån appen.
 
-## Konfigurera din app
+## Inställningar
 
 >[!TIP]
 >
->Om du redan har konfigurerat ditt program som en del av [Journey Optimizer push-meddelanden](journey-optimizer-push.md) kan du hoppa över det här avsnittet.
+>Om du har konfigurerat miljön redan som en del av [Journey Optimizer push-meddelanden](journey-optimizer-push.md) kan du hoppa över det här avsnittet.
 
 ### Registrera program-ID med APNS
 

@@ -5,9 +5,9 @@ solution: Data Collection,Journey Optimizer
 feature-set: Journey Optimizer
 feature: Offers
 hide: true
-source-git-commit: 5f0fa0b524cd4a12aaab8c8c0cd560a31003fbd8
+source-git-commit: c31dd74cf8ff9c0856b29e82d9c8be2ad027df4a
 workflow-type: tm+mt
-source-wordcount: '2344'
+source-wordcount: '2342'
 ht-degree: 0%
 
 ---
@@ -45,11 +45,11 @@ I den här lektionen ska du
 * Implementera erbjudanden från Beslutshantering i appen.
 
 
-## Konfigurera din app
+## Inställningar
 
 >[!TIP]
 >
->Om du redan har konfigurerat ditt program som en del av [Konfigurera A/B-tester med Target](target.md) självstudiekurs, du kan hoppa över [Installera Adobe Journey Optimizer - Decisioning-taggtillägg](#install-adobe-journey-optimizer---decisioning-tags-extension) och [Uppdatera ditt schema](#update-your-schema).
+>Om du har konfigurerat miljön redan som en del av [Konfigurera A/B-tester med Target](target.md) självstudiekurs, du kan hoppa över [Installera Adobe Journey Optimizer - Decisioning-taggtillägg](#install-adobe-journey-optimizer---decisioning-tags-extension) och [Uppdatera ditt schema](#update-your-schema).
 
 ### Uppdatera Edge-konfiguration
 
@@ -368,7 +368,7 @@ Nu bör du ha alla verktyg du behöver för att börja lägga till fler funktion
 
 * tillämpa olika parametrar för erbjudandena (till exempel prioritet, capping)
 * samla profilattribut i appen (se [Profil](profile.md)) och använd dessa profilattribut för att bygga målgrupper. Använd sedan dessa målgrupper som en del av reglerna för behörighet i ditt beslut.
-* kombinera mer än ett beslutsomfång
+* kombinera mer än ett beslutsomfång.
 
 >[!SUCCESS]
 >

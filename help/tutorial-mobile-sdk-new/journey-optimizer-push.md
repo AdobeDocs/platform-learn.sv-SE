@@ -5,9 +5,9 @@ solution: Data Collection,Journey Optimizer
 feature-set: Journey Optimizer
 feature: Push
 hide: true
-source-git-commit: 593dcce7d1216652bb0439985ec3e7a45fc811de
+source-git-commit: c31dd74cf8ff9c0856b29e82d9c8be2ad027df4a
 workflow-type: tm+mt
-source-wordcount: '2175'
+source-wordcount: '2173'
 ht-degree: 0%
 
 ---
@@ -49,11 +49,11 @@ I den här lektionen ska du
 * Skicka ditt eget push-meddelande inifrån appen.
 
 
-## Konfigurera din app
+## Inställningar
 
 >[!TIP]
 >
->Om du redan har konfigurerat ditt program som en del av [Journey Optimizer-meddelanden i appen](journey-optimizer-inapp.md) kan du hoppa över det här avsnittet.
+>Om du har konfigurerat miljön redan som en del av [Journey Optimizer-meddelanden i appen](journey-optimizer-inapp.md) kan du hoppa över det här avsnittet.
 
 ### Registrera program-ID med APNS
 
