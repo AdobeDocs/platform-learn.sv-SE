@@ -2,10 +2,10 @@
 title: Profil
 description: Lär dig hur du samlar in profildata i en mobilapp.
 hide: true
-source-git-commit: c31dd74cf8ff9c0856b29e82d9c8be2ad027df4a
+source-git-commit: 1b09f81b364fe8cfa9d5d1ac801d7781d1786259
 workflow-type: tm+mt
-source-wordcount: '592'
-ht-degree: 1%
+source-wordcount: '612'
+ht-degree: 0%
 
 ---
 
@@ -41,16 +41,14 @@ I den här lektionen kommer du att:
 
 ## Ange och uppdatera användarattribut
 
-Det skulle vara praktiskt för målgruppsanpassning och/eller personalisering att snabbt veta om en användare har köpt appen tidigare. Låt oss konfigurera det i Luma-appen.
+Det kan vara bra att ha som mål och/eller personalisering i appen för att snabbt veta om en användare har köpt något tidigare eller nyligen. Låt oss konfigurera det i Luma-appen.
 
 1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Utils]** >  **[!UICONTROL MobileSDK]** i Xcode Project navigator och hitta `func updateUserAttribute(attributeName: String, attributeValue: String)` funktion. Lägg till följande kod:
 
    ```swift
-   // Create a profile map
+   // Create a profile map, add attributes to the map and update profile using the map
    var profileMap = [String: Any]()
-   // Add attributes to profile map
    profileMap[attributeName] = attributeValue
-   // Use profile map to update user attributes
    UserProfile.updateUserAttributes(attributeDict: profileMap)
    ```
 
@@ -60,22 +58,21 @@ Det skulle vara praktiskt för målgruppsanpassning och/eller personalisering at
 
    1. Lägger till ett element i ordlistan med `attributeName` (till exempel `isPaidUser`), och `attributeValue` (till exempel `yes`).
 
-   1. Använder `profileMap` ordlista som ett värde för `attributeDict` parametern för `UserProfile.updateUserAttributes` API-anrop.
+   1. Använder `profileMap` ordlista som ett värde för `attributeDict` parametern för [`UserProfile.updateUserAttributes`](https://developer.adobe.com/client-sdks/documentation/profile/api-reference/#updateuserattributes) API-anrop.
 
-1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Produkter]** > **[!UICONTROL ProductView]** i Xcode Project navigator och hitta anropet till `updateUserAttributes` (inom koden för köpet) <img src="assets/purchase.png" width="15" /> knapp):
+1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Produkter]** > **[!UICONTROL ProductView]** i Xcode Project navigator och hitta anropet till `updateUserAttributes` (inom koden för köpet) <img src="assets/purchase.png" width="15" /> -knapp). Lägg till följande kod:
 
    ```swift
    // Update attributes
    MobileSDK.shared.updateUserAttributes(attributeName: "isPaidUser", attributeValue: "yes")
    ```
 
-Ytterligare dokumentation finns [här](https://developer.adobe.com/client-sdks/documentation/profile/api-reference/#updateuserattribute).
 
 ## Hämta användarattribut
 
-När du har uppdaterat en användares attribut är det tillgängligt för andra Adobe SDK:er, men du kan även hämta attribut explicit.
+När du har uppdaterat en användares attribut är det tillgängligt för andra Adobe SDK:er, men du kan även hämta attribut explicit, så att appen fungerar som du vill.
 
-1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > Allmänt > **[!UICONTROL HomeView]** i Xcode Project navigator och hitta `.onAppear` modifierare. Lägg till följande kod:
+1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Allmänt]** > **[!UICONTROL HomeView]** i Xcode Project navigator och hitta `.onAppear` modifierare. Lägg till följande kod:
 
    ```swift
    // Get attributes
@@ -91,7 +88,7 @@ När du har uppdaterat en användares attribut är det tillgängligt för andra 
 
    Den här koden:
 
-   1. Anropar `UserProfile.getUserAttributes` stängning med `iPaidUser` attributnamn som enskilt element i `attributeNames` array.
+   1. Anropar [`UserProfile.getUserAttributes`](https://developer.adobe.com/client-sdks/documentation/profile/api-reference/#getuserattributes) API med `iPaidUser` attributnamn som enskilt element i `attributeNames` array.
    1. Kontrollerar sedan värdet för `isPaidUser` och när `yes`, placerar ett märke på <img src="assets/paiduser.png" width="20" /> i verktygsfältet längst upp till höger.
 
 Ytterligare dokumentation finns [här](https://developer.adobe.com/client-sdks/documentation/profile/api-reference/#getuserattributes).
@@ -106,18 +103,25 @@ Ytterligare dokumentation finns [här](https://developer.adobe.com/client-sdks/d
    1. Flytta Assurance-ikonen åt vänster.
    1. Välj **[!UICONTROL Startsida]** i tabbfältet.
    1. Om du vill öppna inloggningsbladet väljer du <img src="assets/login.png" width="15" /> -knappen.
+
+      <img src="./assets/mobile-app-events-1.png" width="300">
+
    1. Välj <img src="assets/insert.png" width="15" /> knapp .
    1. Välj **[!UICONTROL Inloggning]**.
+
+      <img src="./assets/mobile-app-events-2.png" width="300">
+
    1. Välj **[!UICONTROL Produkter]** i tabbfältet.
    1. Välj en produkt.
    1. Välj <img src="assets/saveforlater.png" width="15" />.
    1. Välj <img src="assets/addtocart.png" width="20" />.
    1. Välj <img src="assets/purchase.png" width="15" />.
 
-      <img src="./assets/mobile-app-events-1.png" width="200"> <img src="./assets/mobile-app-events-2.png" width="200"> <img src="./assets/mobile-app-events-3.png" width="200">
+      <img src="./assets/mobile-app-events-3.png" width="300">
+
    1. Återgå till **[!UICONTROL Startsida]** skärm. Du bör se ett märke tillagt <img src="assets/person-badge-icon.png" width="15" />.
 
-      <img src="./assets/personbadges.png" width="200">
+      <img src="./assets/personbadges.png" width="300">
 
 
 

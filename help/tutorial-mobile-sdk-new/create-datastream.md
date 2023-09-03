@@ -3,9 +3,9 @@ title: Konfigurera ett datastream
 description: Lär dig hur du skapar ett datastream i Experience Platform.
 feature: Mobile SDK,Datastreams
 hide: true
-source-git-commit: 7de7c7e13ea6d02f1193620e0cc35299e07d59e5
+source-git-commit: 1b09f81b364fe8cfa9d5d1ac801d7781d1786259
 workflow-type: tm+mt
-source-wordcount: '552'
+source-wordcount: '546'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ En datastream är en konfiguration på serversidan på Platform Edge Network. Da
 
 ## Förutsättningar
 
-Om du vill skapa en datastream måste din organisation ha etablerats för den här funktionen i gränssnittet för datainsamling (tidigare [!UICONTROL Starta]) och du måste ha användarbehörighet för [!UICONTROL Experience Platform] > [!UICONTROL Datainsamling] > **[!UICONTROL Hantera datastreams]** och **[!UICONTROL Visa datastreams]**.
+Om du vill skapa en datastream måste din organisation ha etablerats för den här funktionen i gränssnittet för datainsamling (tidigare [!UICONTROL Starta]) och du måste ha användarbehörighet för att hantera och visa datastölar.
 
 ## Utbildningsmål
 
@@ -74,7 +74,7 @@ Du kanske också vill aktivera tjänsten Adobe Experience Platform.
 
 1. Aktivera tjänsten genom att växla **[!UICONTROL Aktiverad]** på.
 
-1. Välj **[!UICONTROL Händelsedatauppsättning]** som du skapade som en del av [Skapa en datauppsättning](platform.md#create-a-dataset) instruktion, till exempel **Luma Mobile App Event-datauppsättning**
+1. Välj **[!UICONTROL Händelsedatauppsättning]** som du skapade som en del av [Skapa en datauppsättning](platform.md#create-a-dataset) instruktioner, till exempel **Luma Mobile App Event-datauppsättning**
 
 1. Välj **[!UICONTROL Spara]**.
 
@@ -88,7 +88,7 @@ Du kanske också vill aktivera tjänsten Adobe Experience Platform.
 >
 >Genom att aktivera varje tjänst som din organisation använder ser du till att data som samlas in i mobilappen kan användas överallt. Mer information om datastream-inställningar finns i dokumentationen [här](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html#adobe-experience-platform-settings).
 
-När du implementerar Platform Mobile SDK i din egen app bör du skapa tre datastreams som kan kopplas till dina tre taggmiljöer (utveckling, scen och produktion). Om du använder Platform Mobile SDK med plattformsbaserade program som Adobe Real-time Customer Data Platform eller Adobe Journey Optimizer måste du se till att skapa dessa dataströmmar i rätt plattformssandlåda.
+När du implementerar Platform Mobile SDK i din egen app bör du skapa tre datastreams som kan kopplas till dina tre taggmiljöer (utveckling, scen och produktion). Om du använder Platform Mobile SDK med plattformsbaserade program som Adobe Real-time Customer Data Platform eller Adobe Journey Optimizer måste du se till att skapa dessa datastölar i rätt sandlåda.
 
 >[!SUCCESS]
 >

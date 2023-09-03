@@ -3,7 +3,7 @@ title: Konfigurera en taggegenskap
 description: Lär dig konfigurera en taggegenskap i [!UICONTROL Datainsamling] gränssnitt.
 feature: Mobile SDK,Tags
 hide: true
-source-git-commit: e119e2bdce524c834cdaf43ed9eb9d26948b0ac6
+source-git-commit: 1b09f81b364fe8cfa9d5d1ac801d7781d1786259
 workflow-type: tm+mt
 source-wordcount: '1015'
 ht-degree: 1%
@@ -129,7 +129,7 @@ Ditt bibliotek byggs för de nya tilläggen och konfigurationerna. Ett lyckat by
 
    ![miljöer, startskärm](assets/tags-environments.png)
 
-1. I [!UICONTROL Instruktioner för mobilinstallation] väljer du **[!UICONTROL iOS]** -fliken.
+1. I **[!UICONTROL Instruktioner för mobilinstallation]** väljer du **[!UICONTROL iOS]** -fliken.
 
 1. Du kan kopiera ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) instruktionerna för att konfigurera projektet med CocoaPods. CocoaPods används för att hantera SDK-versioner och -nedladdningar. Läs mer i [dokumentation](https://cocoapods.org/).
 

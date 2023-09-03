@@ -2,9 +2,9 @@
 title: Platser
 description: Lär dig hur du använder platsens geopositioneringstjänst i din mobilapp.
 hide: true
-source-git-commit: c31dd74cf8ff9c0856b29e82d9c8be2ad027df4a
+source-git-commit: 371d71f06796c0f7825217a2ebd87d72ae7e8639
 workflow-type: tm+mt
-source-wordcount: '1731'
+source-wordcount: '1754'
 ht-degree: 0%
 
 ---
@@ -88,8 +88,8 @@ Du definierar några intressepunkter i tjänsten Platser.
 1. Navigera till **[!UICONTROL Taggar]** och hitta din mobila taggegenskap och öppna egenskapen.
 1. Välj **[!UICONTROL Tillägg]**.
 1. Välj **[!UICONTROL Katalog]**.
-1. Sök efter **[!UICONTROL Adobe Journey Optimizer - beslut]** tillägg.
-1. Installera tillägget. Tillägget kräver ingen ytterligare konfiguration.
+1. Sök efter **[!UICONTROL Platser]** tillägg.
+1. Installera tillägget.
 
    ![Lägg till beslutstillägg](assets/tag-places-extension.png)
 
@@ -116,7 +116,7 @@ Verifiera om ditt schema, enligt definitionen i [Skapa schema](create-schema.md)
 
 ### Uppdatera din tagg
 
-Tillägget Platser innehåller funktioner för att övervaka geopositioneringshändelser och gör att du kan utlösa åtgärder som baseras på dessa händelser. Du kan använda den här funktionen för att minimera API-kodningen som du måste implementera i appen.
+Tillägget Platser för taggar innehåller funktioner för att övervaka geopositioneringshändelser och gör att du kan utlösa åtgärder som baseras på dessa händelser. Du kan använda den här funktionen för att minimera API-kodningen som du måste implementera i appen.
 
 **Dataelement**
 
@@ -128,7 +128,7 @@ Först skapar du flera dataelement.
 1. I **[!UICONTROL Skapa dataelement]** screen, ange ett namn, till exempel `Name - Entered`.
 1. Välj **[!UICONTROL Platser]** från **[!UICONTROL Tillägg]** lista.
 1. Välj **[!UICONTROL Namn]** från **[!UICONTROL Dataelementtyp]** lista.
-1. Välj **[!UICONTROL Aktuell POI]**under **[!UICONTROL MÅL]**.
+1. Välj **[!UICONTROL Aktuell POI]** under **[!UICONTROL MÅL]**.
 1. Välj **[!UICONTROL Spara i bibliotek]**.
    ![Dataelement](assets/tags-create-data-element.png)
 
@@ -148,9 +148,9 @@ Först skapar du flera dataelement.
 
 **Regler**
 
-Nu ska du definiera regler för dessa dataelement.
+Därefter ska du definiera regler som ska användas med dessa dataelement.
 
-1. Välj **[!UICONTROL Regler]** från den vänstra listen.
+1. I taggegenskapen. välj **[!UICONTROL Regler]** från den vänstra listen.
 1. Välj **[!UICONTROL Lägg till regel]**.
 1. I **[!UICONTROL Skapa regel]** på skärmen, ange ett namn för regeln, till exempel `POI - Entry`.
 1. Välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) under **[!UICONTROL HÄNDELSER]**.
@@ -158,7 +158,7 @@ Nu ska du definiera regler för dessa dataelement.
    1. Välj **[!UICONTROL Behåll ändringar]**.
       ![Tagg-händelse](assets/tags-event-mobile-core.png).
 1. Välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) under **[!UICONTROL ÅTGÄRDER]**.
-   1. Välj **[!UICONTROL Mobile Core]** från **[!UICONTROL Tillägg]** lista, välj **[!UICONTROL Bifoga data]** från **[!UICONTROL Åtgärdstyp]** lista. Den här åtgärden kopplar nyttolastdata.
+   1. Välj **[!UICONTROL Mobile Core]** från **[!UICONTROL Tillägg]** lista, välj **[!UICONTROL Bifoga data]** från **[!UICONTROL Åtgärdstyp]** listan. Den här åtgärden kopplar nyttolastdata.
    1. I **[!UICONTROL JSON-nyttolast]**, klistra in följande nyttolast:
 
       ```json
@@ -183,7 +183,7 @@ Nu ska du definiera regler för dessa dataelement.
       }
       ```
 
-      The `{%% ... %%}` Du kan också enkelt infoga värden genom att välja ![Data](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Data_18_N.svg) bredvid dialogrutan och välja ett dataelement från dialogrutan.
+      Du kan också infoga `{%% ... %%}` platshållarvärden för dataelement i JSON genom att välja ![Data](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Data_18_N.svg). I en popup-dialogruta kan du välja valfritt dataelement som du har skapat.
 
    1. Välj **[!UICONTROL Behåll ändringar]**.
       ![Tagg, åtgärd](assets/tags-action-mobile-core.png)
@@ -249,7 +249,7 @@ För att säkerställa att alla ändringar i taggen publiceras
 Så här validerar du inställningarna i Assurance:
 
 1. Gå till försäkringsgränssnittet.
-1. Om den inte redan finns i den vänstra listen. välj **[!UICONTROL Konfigurera]** i vänster rand och välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) nästa **[!UICONTROL Händelser]** och **[!UICONTROL Karta och simulera]** under **[!UICONTROL PLATSTJÄNST]**.
+1. Om den inte redan är tillgänglig i den vänstra listen väljer du **[!UICONTROL Konfigurera]** i vänster rand och välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) nästa **[!UICONTROL Händelser]** och **[!UICONTROL Karta och simulera]** under **[!UICONTROL PLATSTJÄNST]**.
 1. Välj **[!UICONTROL Spara]**.
 1. Välj **[!UICONTROL Karta och simulera]** till vänster.
 1. Välj en av POI:erna som definieras i tjänsten Platser och välj sedan i popup-fönstret ![Kugghjul](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Gears_18_N.svg) **[!UICONTROL Simulera anmälningshändelse]**.
@@ -291,12 +291,21 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
    ]
    ```
 
-1. Navigera till Luma > Luma > Utils > MobileSDK i Xcode-projektnavigeraren och hitta den asynkrona funktionen processRegionEvent(regionEvent: PlacesRegionEvent, forRegion region: CLRegion). Den här funktionen är en wrapper runt [`Places.processRegionEvent`](https://developer.adobe.com/client-sdks/documentation/places/api-reference/#processregionevent) API.
-1. Navigera till Luma > Luma > Vyer > Plats > GeofenceSheet i Xcodes projektnavigerare.
+1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project navigator och hitta `func processRegionEvent(regionEvent: PlacesRegionEvent, forRegion region: CLRegion) async` function.Lägg till följande kod:
+
+   ```swift
+   // Process geolocation event
+   Places.processRegionEvent(regionEvent, forRegion: region)
+   ```
+
+   Detta [`Places.processRegionEvent`](https://developer.adobe.com/client-sdks/documentation/places/api-reference/#processregionevent) API kommunicerar geopositioneringsinformationen med platstjänsten.
+
+1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Plats]** > **[!UICONTROL GeofenceSheet]** i Xcodes projektnavigator.
 
    1. Ange följande kod för anmälningsknappen
 
    ```swift
+   // Simulate geofence entry event
    Task {
        await MobileSDK.shared.processRegionEvent(regionEvent: .entry, forRegion: region)
    }
@@ -305,12 +314,13 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
    1. Ange följande kod för knappen Avsluta:
 
    ```swift
+   // Simulate geofence exit event
    Task {
        await MobileSDK.shared.processRegionEvent(regionEvent: .exit, forRegion: region)
    }
    ```
 
-Det handlar inte bara om självstudiekursen för att förklara hur positionshanteraren implementeras i iOS.
+Det handlar inte bara om självstudiekursen som förklarar hur positionshanteraren implementeras i iOS.
 
 
 ## Validera med din app
@@ -321,13 +331,13 @@ Det handlar inte bara om självstudiekursen för att förklara hur positionshant
 
 1. Flytta runt kartan för att säkerställa att den blå cirkeln i mitten ligger ovanpå en av dina POI:n, till exempel London.
 
-1. Tryck på den blå <img src="assets/geobutton.png" width="20" /> tills du ser kategorin och namnet längst ned till höger.
+1. Tryck på <img src="assets/geobutton.png" width="20" /> tills du ser kategorin och namnet längst ned till höger.
 
-1. Tryck på etiketten för POI, som öppnar bladet Nearby POI.
+1. Tryck på etiketten för POI, som öppnar dialogrutan **[!UICONTROL Nearby POI]** blad.
 
    <img src="assets/appgeolocation.png" width="300" />
 
-1. Tryck på knapparna Ingång eller Avsluta för att simulera geopositioneringshändelser från appen.
+1. Tryck på **[!UICONTROL Post]** eller **[!UICONTROL Avsluta]** knappar för att simulera geofence entry- och geofence exit-händelser i programmet.
 
    <img src="assets/appentryexit.png" width="300" />
 
@@ -337,9 +347,11 @@ Det handlar inte bara om självstudiekursen för att förklara hur positionshant
 
 ## Nästa steg
 
-Nu bör du ha alla verktyg som behövs för att börja lägga till fler funktioner i geopositioneringsfunktionerna i appen. När du har vidarebefordrat händelserna till Edge Network och via din datastream till Experience Platform bör du se upplevelsehändelserna som visas för profilen som används i appen. Dessa upplevelsehändelser kan användas för att utlösa resor i Journey Optimizer (se [push-meddelande](journey-optimizer-inapp.md) och [meddelanden i appen](journey-optimizer-push.md) med Journey Optimizer). Det vanliga exemplet med att skicka ett push-meddelande till din appanvändare när någon kommer in på en fysisk lagringsplats.
+Nu bör du ha alla verktyg som behövs för att börja lägga till fler funktioner i geopositioneringsfunktionerna i appen. När du har konfigurerat appen för [Experience Platform](platform.md)ska du se upplevelsehändelserna som visas för profilen som används i appen.
 
-Du har sett en implementering av funktionalitet för din app, som huvudsakligen styrs av platstjänsten och dataelement och regler som du definierade i taggegenskapen. Du kan också implementera samma funktioner direkt i programmet med [`Edge.sendEvent`](https://developer.adobe.com/client-sdks/documentation/edge-network/api-reference/#sendevent) API (se [Händelser](events.md) för mer information) med en XDM-nyttolast som innehåller ett populerat placeContext-objekt.
+I Journey Optimizer-delen av den här självstudiekursen ser du att upplevelsehändelser kan användas för att utlösa resor (se [push-meddelande](journey-optimizer-inapp.md) och [meddelanden i appen](journey-optimizer-push.md) med Journey Optimizer). Det vanliga exemplet med att skicka ett push-meddelande till en appanvändare med en produktbefordran när den användaren fyller i en fysisk butik.
+
+Du har sett en implementering av funktionalitet för din app, som till största delen styrs av tjänsten Platser samt dataelement och regler som du har definierat i taggegenskapen. Därför bör du minimera koden i appen. Du kan också implementera samma funktioner direkt i programmet med [`Edge.sendEvent`](https://developer.adobe.com/client-sdks/documentation/edge-network/api-reference/#sendevent) API (se [Händelser](events.md) för mer information) med en XDM-nyttolast som innehåller en ifylld `placeContext` -objekt.
 
 >[!SUCCESS]
 >

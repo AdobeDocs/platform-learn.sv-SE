@@ -3,9 +3,9 @@ title: Analysmappning
 description: Lär dig hur du samlar in data för Adobe Analytics i en mobilapp.
 solution: Data Collection,Experience Platform,Analytics
 hide: true
-source-git-commit: e119e2bdce524c834cdaf43ed9eb9d26948b0ac6
+source-git-commit: 371d71f06796c0f7825217a2ebd87d72ae7e8639
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '641'
 ht-degree: 1%
 
 ---
@@ -35,7 +35,7 @@ Många av XDM-standardfälten mappas automatiskt till analysvariabler. Se hela l
 
 ### Exempel 1 - s.products
 
-Ett bra exempel är [variabeln products](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/products.html?lang=en) som inte kan fyllas med bearbetningsregler. Med en XDM-implementering skickas alla nödvändiga data i productListItems och s.products fylls i automatiskt via Analytics-mappning.
+Ett bra exempel är [variabeln products](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/products.html?lang=en) som inte kan fyllas med bearbetningsregler. Med en XDM-implementering skickar du alla nödvändiga data i `productListItems` och `s.products` fylls i automatiskt via Analytics-mappning.
 
 Det här objektet:
 
@@ -56,7 +56,7 @@ Det här objektet:
 ]
 ```
 
-Detta ger följande resultat:
+resulterar i
 
 ```
 s.products = ";Yoga Mat;1;49.99,;Water Bottle,3,30.00"
@@ -65,6 +65,7 @@ s.products = ";Yoga Mat;1;49.99,;Water Bottle,3,30.00"
 >[!NOTE]
 >
 >För närvarande `productListItems[N].SKU` ignoreras av automatisk mappning.
+
 
 ### Exempel 2 - scAdd
 
@@ -80,7 +81,7 @@ Det här objektet:
 }
 ```
 
-Detta ger följande resultat:
+resulterar i
 
 ```
 s.events = "scAdd"
@@ -97,7 +98,7 @@ Det här objektet:
 }
 ```
 
-Detta ger följande resultat:
+resulterar i
 
 ```
 s.events = "scAdd:321435"
@@ -105,7 +106,7 @@ s.events = "scAdd:321435"
 
 ## Validera med Assurance
 
-Använda [Verktyget Assurance QA](assurance.md) du kan bekräfta att du skickar en ExperienceEvent, att XDM-data är korrekta och att Analytics-mappningen sker som förväntat. Exempel:
+Använda [Säkerhet](assurance.md) du kan bekräfta att du skickar en upplevelsehändelse, att XDM-data är korrekta och att Analytics-mappningen sker som förväntat. Exempel:
 
 1. Skicka händelsen productListAdds.
 
@@ -157,10 +158,10 @@ a.x.[xdm path]
 Exempel:
 
 ```
-//Standard Field
+// Standard Field
 a.x.commerce.saveforlaters.value
 
-//Custom Field
+// Custom Field
 a.x._techmarketingdemos.appinformationa.appstatedetails.screenname
 ```
 

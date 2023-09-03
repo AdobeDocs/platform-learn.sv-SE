@@ -3,9 +3,9 @@ title: Implementera Adobe Experience Cloud i självstudiekursen om mobilappar
 description: Lär dig hur du implementerar Adobe Experience Cloud mobilappar. Den här självstudiekursen vägleder dig genom en implementering av Experience Cloud-program i ett exempel på en Swift-app.
 recommendations: noDisplay,catalog
 hide: true
-source-git-commit: 4101425bd97e271fa6cc15157a7be435c034e764
+source-git-commit: 1b09f81b364fe8cfa9d5d1ac801d7781d1786259
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '725'
 ht-degree: 1%
 
 ---
@@ -30,6 +30,8 @@ När du är klar med självstudiekursen kan du:
 * Konfigurera en mobil taggegenskap.
 * Konfigurera en Experience Platform-datauppsättning (valfritt).
 * Installera och implementera taggtillägg i en app.
+* skicka Experience Cloud-parametrar korrekt till en [webbvy](web-views.md).
+* Validera implementeringen med [Adobe Experience Platform Assurance](assurance.md).
 * Lägg till följande Adobe Experience Cloud-program/tillägg:
    * [Adobe Experience Platform Edge (XDM)](events.md)
    * [Samling av livscykeldata](lifecycle-data.md)
@@ -37,14 +39,14 @@ När du är klar med självstudiekursen kan du:
    * [Godkännande](consent.md)
    * [Identitet](identity.md)
    * [Profil](profile.md)
+   * [Platser](places.md)
+   * [Analytics ](analytics.md)
    * [Adobe Experience Platform](platform.md)
    * [Skicka meddelanden med Journey Optimizer](journey-optimizer-push.md)
    * [Meddelanden i appar med Journey Optimizer](journey-optimizer-inapp.md)
    * [Erbjudanden med Journey Optimizer](journey-optimizer-offers.md)
    * [A/B-tester med Target](target.md)
 
-* skicka Experience Cloud-parametrar korrekt till en [webbvy](web-views.md).
-* Validera implementeringen med [Adobe Experience Platform Assurance](assurance.md).
 
 >[!NOTE]
 >
@@ -72,14 +74,18 @@ I den här lektionen antas du ha ett Adobe-ID och de behörigheter som krävs f�
 
 Alla Experience Cloud-kunder bör ha tillgång till de funktioner som krävs för att driftsätta Mobile SDK.
 
-Du måste också känna till [!DNL Swift]. Du behöver inte vara expert för att slutföra lektionerna, men du får ut mer av lektionerna om du enkelt kan läsa och förstå koden.
+>[!NOTE]
+>
+>Du kommer att använda iOS som plattform [!DNL Swift] som programmeringsspråk, [!DNL SwiftUI] som gränssnittets ramverk och [!DNL Xcode] som den integrerade utvecklingsmiljön. Många av de implementeringskoncept som beskrivs liknar dock andra utvecklingsplattformar. Vi antar att du är ganska bekant med [!DNL Swift] och [!DNL SwiftUI]. Du behöver inte vara expert för att slutföra lektionerna, men du får ut mer av lektionerna om du enkelt kan läsa och förstå koden.
+
 
 ## Hämta Luma-appen
 
-Det finns två versioner av exempelappen att hämta.
+Det finns två versioner av exempelappen att hämta. Båda versionerna kan hämtas/klonas från [Github](https://git.corp.adobe.com/rmaur/Luma). Du hittar två mappar:
 
-1. [Tom](https://git.corp.adobe.com/rmaur/Luma{target="_blank"}): en version utan Experience Cloud-kod för att slutföra övningarna i kursen
-1. [Fullt implementerad](https://git.corp.adobe.com/Luma{target="_blank"}): en version med fullständig Experience Cloud-implementering som referens.
+
+1. [Starta](https://git.corp.adobe.com/rmaur/Luma{target="_blank"}): ett projekt utan kod eller med platshållarkod för merparten av SDK-koden för Experience Platform Mobile som du behöver använda för att slutföra övningarna i den här kursen.
+1. [Slutför](https://git.corp.adobe.com/Luma{target="_blank"}): en version med fullständig implementering för referens.
 
 Kom så börjar vi!
 

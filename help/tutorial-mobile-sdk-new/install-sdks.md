@@ -2,9 +2,9 @@
 title: Installera Adobe Experience Platform Mobile SDKs
 description: Lär dig hur du implementerar Adobe Experience Platform Mobile SDK i en mobilapp.
 hide: true
-source-git-commit: 6cc58d3d40112b14b1c1b8664c5e7aeb0880b59c
+source-git-commit: 1b09f81b364fe8cfa9d5d1ac801d7781d1786259
 workflow-type: tm+mt
-source-wordcount: '928'
+source-wordcount: '943'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,9 @@ Lär dig hur du implementerar Adobe Experience Platform Mobile SDK i en mobilapp
 
 ## Förutsättningar
 
-* Taggbiblioteket med tilläggen som beskrivs i [föregående lektion](configure-tags.md).
+* Ett taggbibliotek med tilläggen som beskrivs i [föregående lektion](configure-tags.md).
 * Fil-ID för utvecklingsmiljö från [Instruktioner för mobilinstallation](configure-tags.md#generate-sdk-install-instructions).
-* Nedladdad, tom [exempelapp](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App){target="_blank"}.
+* Tomma filer har hämtats [exempelapp](https://git.corp.adobe.com/rmaur/Luma){target="_blank"}.
 * Upplev [XCode](https://developer.apple.com/xcode/){target="_blank"}.
 
 ## Utbildningsmål
@@ -44,10 +44,10 @@ I Xcode använder du **[!UICONTROL Fil]** > **[!UICONTROL Lägg till paket...]**
 | [AEP Edge Identity](https://github.com/adobe/aepsdk-edgeidentity-ios.git) | Med mobiltillägget AEP Edge Identity kan du hantera användaridentitetsdata från ett mobilprogram när du använder Adobe Experience Platform SDK och Edge Network-tillägget. |
 | [AEP Edge-samtycke](https://github.com/adobe/aepsdk-edgeconsent-ios.git) | Med mobiltillägget AEP Consent Collection kan du samla in medgivandeinställningar från mobilprogrammet när du använder Adobe Experience Platform SDK och Edge Network-tillägget. |
 | [AEP-användarprofil](https://github.com/adobe/aepsdk-userprofile-ios.git) | Adobe Experience Platform User Profile Mobile Extension är ett tillägg för hantering av användarprofiler för Adobe Experience Platform SDK. |
-| [AEP-platser](https://github.com/adobe/aepsdk-places-ios) | Tillägget Adobe Experience Platform Places är ett tillägg till Adobe Experience Platform Swift SDK. Med tillägget AEPPlaces kan du spåra geopositioneringshändelser enligt definitionen i användargränssnittet för Adobe Platser och i startreglerna för Adobe. |
-| [AEP Messaging](https://github.com/adobe/aepsdk-messaging-ios.git) | Tillägget AEP Messaging är ett tillägg till Adobe Experience Platform Swift SDK. Med AEP Messaging-tillägget kan du skicka push-meddelandetokens och skicka vidare klickningsfeedback till Adobe Experience Platform. |
+| [AEP-platser](https://github.com/adobe/aepsdk-places-ios) | Med tillägget AEPPlaces kan du spåra geopositioneringshändelser enligt definitionen i Adobe Platser-användargränssnittet och i Adobe Data Collection-taggregler. |
+| [AEP Messaging](https://github.com/adobe/aepsdk-messaging-ios.git) | Med AEP Messaging-tillägget kan du skicka push-meddelandetokens och skicka vidare klickningsfeedback till Adobe Experience Platform. |
 | [AEP-optimering](https://github.com/adobe/aepsdk-optimize-ios) | Tillägget AEP Optimize innehåller API:er som möjliggör personalisering i realtid i Adobe Experience Platform Mobile SDK:er med Adobe Target eller Adobe Journey Optimizer Offer decisioning. Den kräver `AEPCore` och `AEPEdge` tillägg för att skicka personaliseringsfrågehändelser till Experience Edge-nätverket. |
-| [AEP Assurance](https://github.com/adobe/aepsdk-assurance-ios.git) | Assurance (alias project Griffon) är en ny, innovativ produkt som hjälper er att inspektera, granska, simulera och validera hur ni samlar in data eller levererar upplevelser i er mobilapp. |
+| [AEP Assurance](https://github.com/adobe/aepsdk-assurance-ios.git) | Assurance (alias project Griffon) är en ny, innovativ produkt som hjälper er att inspektera, granska, simulera och validera hur ni samlar in data eller levererar upplevelser i er mobilapp. Det här tillägget aktiverar din app för Assurance. |
 
 
 När du har installerat alla paket, din Xcode **[!UICONTROL Paketberoenden]** ska se ut så här:
@@ -57,7 +57,7 @@ När du har installerat alla paket, din Xcode **[!UICONTROL Paketberoenden]** sk
 
 ## Importera tillägg
 
-I Xcode navigerar du till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL AppDelegate]** och lägg till följande importer.
+I Xcode navigerar du till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL AppDelegate]** och se till att följande importer ingår i den här källfilen.
 
 ```swift
 // import AEP MobileSDK libraries
@@ -91,6 +91,7 @@ Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **AppDelegate** i 
 1. Lägg till följande kod i `application(_, didFinishLaunchingWithOptions)` funktion.
 
    ```swift
+   // Define extensions
    let extensions = [
        AEPIdentity.Identity.self,
        Lifecycle.self,
@@ -105,6 +106,7 @@ Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **AppDelegate** i 
        Assurance.self
    ]
    
+   // Register extensions
    MobileCore.registerExtensions(extensions, {
        // Use the environment file id assigned to this application via Adobe Experience Platform Data Collection
        Logger.aepMobileSDK.info("Luma - using mobile config: \(self.environmentFileId)")
@@ -120,10 +122,6 @@ Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **AppDelegate** i 
    
        // assume unknown, adapt to your needs.
        MobileCore.setPrivacyStatus(.unknown)
-   
-       // update version and build
-       Logger.configuration.info("Luma - Updating version and build number...")
-       SettingsBundleHelper.setVersionAndBuildNumber()
    })
    ```
 
@@ -132,6 +130,8 @@ Koden ovan gör följande:
 1. Registrerar nödvändiga tillägg.
 1. Konfigurerar MobileCore och andra tillägg så att taggegenskapskonfigurationen används.
 1. Aktiverar felsökningsloggning. Mer information och alternativ finns i [Dokumentation för Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/getting-started/enable-debug-logging/).
+1. Startar livscykelövervakning. Se [Livscykel](lifecycle-data.md) i självstudiekursen för mer information.
+1. Anger okänt standardsamtycke. Se [Godkännande](consent.md) i självstudiekursen för mer information.
 
 >[!IMPORTANT]
 >

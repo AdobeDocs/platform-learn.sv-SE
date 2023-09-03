@@ -3,9 +3,9 @@ title: Ställ in försäkring
 description: Lär dig hur du implementerar tillägget Assurance i en mobilapp.
 feature: Mobile SDK,Assurance
 hide: true
-source-git-commit: e364d70375f687b9c50691efd04a1db757fee364
+source-git-commit: 1b09f81b364fe8cfa9d5d1ac801d7781d1786259
 workflow-type: tm+mt
-source-wordcount: '738'
+source-wordcount: '765'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ I den här lektionen kommer du att:
 Bekräfta att din organisation har åtkomst till Assurance genom att utföra följande steg:
 
 1. Besök [https://experience.adobe.com/assurance](https://experience.adobe.com/assurance){target="_blank"}.
-1. Logga in med dina Adobe ID-uppgifter för Experience Cloud.
+1. Logga in med dina Adobe ID-inloggningsuppgifter för Experience Cloud.
 1. Om du ser **[!UICONTROL Sessioner]** så får du åtkomst. Om du ser åtkomstsidan (beta) väljer du **[!UICONTROL Registrera]** för att registrera.
 
 ## Implementera
@@ -56,6 +56,8 @@ Förutom det allmänna [SDK-installation](install-sdks.md), som du slutförde i 
    }
    ```
 
+   Den här koden startar en säkringssession när appen finns i bakgrunden och öppnas via en djuplänk.
+
 Mer information finns [här](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/api-reference/){target="_blank"}.
 
 ## Signering
@@ -63,21 +65,21 @@ Mer information finns [här](https://developer.adobe.com/client-sdks/documentati
 Innan du kör programmet för första gången i Xcode måste du uppdatera signeringen.
 
 1. Öppna projektet i Xcode.
-1. Välj **[!UICONTROL Luma]** i Navigator.
+1. Välj **[!UICONTROL Luma]** i projektnavigatorn.
 1. Välj **[!UICONTROL Luma]** mål.
 1. Välj **Signering och funktioner** -fliken.
-1. Konfigurera **[!UICONTROL Hantera signering automatiskt]**, **[!UICONTROL Team]** och **[!UICONTROL Paketidentifierare]**.
+1. Konfigurera **[!UICONTROL Hantera signering automatiskt]**, **[!UICONTROL Team]** och **[!UICONTROL Paketidentifierare]** eller använd dina specifika Apple-utvecklingskonfigurationer.
 
    ![Xcode-signeringsfunktioner](assets/xcode-signing-capabilities.png)
 
 ## Konfigurera en bas-URL
 
 1. Gå till projektet i Xcode.
-1. Välj **[!UICONTROL Luma]** i Navigator.
+1. Välj **[!UICONTROL Luma]** i projektnavigatorn.
 1. Välj **[!UICONTROL Luma]** mål.
 1. Välj **Info** -fliken.
 1. Bläddra nedåt till om du vill lägga till en bas-URL **URL-typer** och väljer **+** -knappen.
-1. Ange **Identifierare** till den paketidentifierare som du konfigurerade i [Signering](#signing) (till exempel `com.adobe.luma.tutorial.swiftui`) och **URL-scheman** till `lumatutorialswiftui`.
+1. Ange **Identifierare** till den paketidentifierare som du konfigurerade i [Signering](#signing) (till exempel `com.adobe.luma.tutorial.swiftui`) och ange en **URL-scheman**, till exempel `lumatutorialswiftui`.
 
    ![försäkrings-URL](assets/assurance-url-type.png)
 
@@ -106,7 +108,7 @@ Assurance fungerar genom att öppna en URL, antingen via webbläsaren eller QR-k
    Om du använder en simulator:
 
    1. Välj **[!UICONTROL Kopiera länk]**.
-   1. Kopiera den djupa länken med kopian ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) och använd länken till att öppna appen med Safari i simulatorn.
+   1. Kopiera den djupa länken med ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg)  och använd länken till att öppna appen med Safari i simulatorn.
       ![Länk till Assurance-kopia](assets/assurance-copy-link.png)
 
 1. När appen läses in visas en modal dialogruta där du ombeds ange den PIN-kod som visas i steg 7.
@@ -119,15 +121,15 @@ Assurance fungerar genom att öppna en URL, antingen via webbläsaren eller QR-k
 1. Om anslutningen lyckades ser du:
    * En säkerhetsikon visas ovanpå din app.
 
-   <img src="assets/assurance-modal.png" width="300">
+     <img src="assets/assurance-modal.png" width="300">
 
-   * Uppdateringar från Experience Cloud i det webbaserade gränssnittet för Assurance, som visar:
+   * Uppdateringar från Experience Cloud i försäkringsgränssnittet som visar:
 
       1. Experience Events kommer från appen.
       1. Information om en markerad händelse.
       1. Enheten och tidslinjen.
 
-     ![säkringshändelser](assets/assurance-events.png)
+         ![säkringshändelser](assets/assurance-events.png)
 
 Om du stöter på några problem kan du läsa [teknisk](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/){target="_blank"} and [general documentation](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html){target="_blank"}.
 

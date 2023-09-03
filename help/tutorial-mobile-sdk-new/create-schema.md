@@ -3,9 +3,9 @@ title: Skapa ett XDM-schema
 description: Lär dig hur du skapar ett XDM-schema för mobilappshändelser.
 feature: Mobile SDK,Schemas
 hide: true
-source-git-commit: e119e2bdce524c834cdaf43ed9eb9d26948b0ac6
+source-git-commit: 1b09f81b364fe8cfa9d5d1ac801d7781d1786259
 workflow-type: tm+mt
-source-wordcount: '1414'
+source-wordcount: '1416'
 ht-degree: 0%
 
 ---
@@ -100,7 +100,7 @@ I utbildningssyfte använder du fördefinierade och anpassade fältgrupper.
 
    ![Välja ExperienceEvent i listrutan](assets/schema-create.png)
 
-1. Välj ![Plus](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **Lägg till** nästa [!UICONTROL Fältgrupper].
+1. Välj ![Plus](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **Lägg till** nästa **[!UICONTROL Fältgrupper]**.
 
    ![Lägg till fältgrupp](assets/add-field-group.png)
 
@@ -116,7 +116,7 @@ I utbildningssyfte använder du fördefinierade och anpassade fältgrupper.
 
    Du kommer tillbaka till huvudfönstret för schemakomposition där du kan se alla tillgängliga fält.
 
-1. Ge schemat ett namn genom att välja **[!UICONTROL Namnlöst schema]** överst till vänster och sedan en **[!UICONTROL Visningsnamn]** &amp; **[!UICONTROL Beskrivning]**, till exempel `Luma Mobile App Event Schema` och `Schema for Luma mobile app experience events.`
+1. Ge schemat ett namn genom att välja **[!UICONTROL Namnlöst schema]** från **[!UICONTROL Disposition]** ruta (under **[!UICONTROL Schema]**) och ger **[!UICONTROL Visningsnamn]** &amp; **[!UICONTROL Beskrivning]**, till exempel `Luma Mobile App Event Schema` och `Schema for Luma mobile app experience events.`
 
 1. Välj **[!UICONTROL Spara]**.
 
@@ -125,8 +125,8 @@ I utbildningssyfte använder du fördefinierade och anpassade fältgrupper.
 >[!NOTE]
 >
 >Tänk på att du inte behöver använda alla fält i en grupp. Om det är till hjälp kan du tänka dig ett schema som ett tomt datalager. I appen fyller du i relevanta värden vid rätt tidpunkt.
->
->The `Consumer Experience Event` har en datatyp som kallas `Web information`som beskriver händelser som sidvisning och länkklick. Just nu finns det ingen paritet för mobilappar med den här funktionen, så du kommer att skapa en egen.
+
+The [!UICONTROL Consumer Experience Event] fältgruppen har en datatyp som heter [!UICONTROL Webbinformation]som beskriver händelser som sidvisning och länkklick. Just nu finns det ingen paritet för mobilappar med den här funktionen, så du kommer att skapa en egen.
 
 ## Skapa en anpassad datatyp
 
@@ -152,9 +152,8 @@ Börja med att skapa en anpassad datatyp som beskriver de två händelserna:
 
 1. Om du vill lägga till ett fält väljer du ![Plus](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) -knappen.
 
-   Det här fältet är ett behållarobjekt för programinteraktion.
 
-1. Skapa en kamelväska **[!UICONTROL Fältnamn]** `appInteraction`, **[!UICONTROL Visningsnamn]** `App Interaction`och markera `Object` från **[!UICONTROL Typ]** lista.
+1. Det här fältet är ett behållarobjekt för programinteraktion. Ange därför ett fodral **[!UICONTROL Fältnamn]** `appInteraction`, **[!UICONTROL Visningsnamn]** `App Interaction`och markera `Object` från **[!UICONTROL Typ]** lista.
 
 1. Välj **[!UICONTROL Använd]**.
 
@@ -180,7 +179,7 @@ Börja med att skapa en anpassad datatyp som beskriver de två händelserna:
 
 1. Rulla längst ned på den högra listen och välj **[!UICONTROL Använd]**.
 
-1. Skapa en `appStateDetails` objekt som innehåller **[!UICONTROL Mät]** fältet anropades `screenView` och två **[!UICONTROL Sträng]** fält anropade `screenName` och `screenType` följer samma steg som när du skapade **[!UICONTROL appInteraction]** -objekt.
+1. Skapa en `appStateDetails` objekt som innehåller **[!UICONTROL Mät]** fältet anropades `screenView` och två **[!UICONTROL Sträng]** fält anropade `screenName` och `screenType`följer du samma steg som när du skapade **[!UICONTROL appInteraction]** -objekt.
 
 1. Välj **[!UICONTROL Spara]**.
 
@@ -196,7 +195,7 @@ Lägg nu till en anpassad fältgrupp med din anpassade datatyp:
 
    ![Lägger till ny fältgrupp](assets/schema-fieldgroup-add.png)
 
-1. Skapa en anpassad fältgrupp genom att välja **[!UICONTROL Skapa ny fältgrupp]** alternativknapp nära överkanten.
+1. Välj **[!UICONTROL Skapa ny fältgrupp]**.
 
 1. Ange en **[!UICONTROL Visningsnamn]** och **[!UICONTROL Beskrivning]**, till exempel `App Interactions` och `Fields for app interactions`.
 
@@ -210,7 +209,7 @@ Lägg nu till en anpassad fältgrupp med din anpassade datatyp:
 
 1. Ange en **[!UICONTROL Fältnamn]** av `appInformation`, a **[!UICONTROL Visningsnamn]** av `App Information`och en **[!UICONTROL Typ]** av `App Information`.
 
-1. Välj **[!UICONTROL Appinteraktioner]** från **[!UICONTROL Typ]** som är den datatyp du skapade i föregående övning.
+1. Välj **[!UICONTROL Appinteraktioner]** från **[!UICONTROL Typ]** som är den anpassade datatypen som du skapade i föregående övning.
 
 1. Välj **[!UICONTROL Använd]**.
 
@@ -220,7 +219,7 @@ Lägg nu till en anpassad fältgrupp med din anpassade datatyp:
 
 >[!NOTE]
 >
->Anpassade fältgrupper placeras alltid under din Experience Cloud-organisationsidentifierare. Så `_techmarketingdemos` ersätts med din organisations unika värde.
+>Anpassade fältgrupper placeras alltid under din Experience Cloud-organisationsidentifierare. Så `_techmarketingdemos`, som används i skärmbilderna, ersätts med din organisations unika värde.
 
 
 >[!SUCCESS]
