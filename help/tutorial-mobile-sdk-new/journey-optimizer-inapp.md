@@ -5,16 +5,16 @@ solution: Data Collection,Journey Optimizer
 feature-set: Journey Optimizer
 feature: In App
 hide: true
-source-git-commit: c31dd74cf8ff9c0856b29e82d9c8be2ad027df4a
+source-git-commit: 56323387deae4a977a6410f9b69db951be37059f
 workflow-type: tm+mt
-source-wordcount: '1605'
+source-wordcount: '1569'
 ht-degree: 0%
 
 ---
 
 # Journey Optimizer-meddelanden i appen
 
-Lär dig hur du skapar meddelanden i appen för mobilappar med Platform Mobile SDK och Journey Optimizer.
+Lär dig skapa meddelanden i appen för mobilappar med Experience Platform Mobile SDK och Journey Optimizer.
 
 Med Journey Optimizer kan ni skapa kampanjer för att skicka meddelanden i appen till riktade målgrupper. Innan du skickar meddelanden i appen med Journey Optimizer måste du se till att rätt konfigurationer och integreringar finns på plats. Om du vill veta mer om dataflödet för meddelanden i programmet i Journey Optimizer kan du läsa [dokumentationen](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/inapp-configuration.html?lang=en).
 
@@ -145,17 +145,8 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
    ]
    ```
 
-1. Lägg till `MobileCore.setPushIdentifier` till `func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data)` funktion.
 
-   ```swift
-   // Send push token to Experience Platform
-   MobileCore.setPushIdentifier(deviceToken)
-   ```
-
-   Den här funktionen hämtar enhetstoken som är unik för den enhet som appen är installerad på. Ställer sedan in token för leverans av push-meddelanden med den konfiguration som du har konfigurerat och som är beroende av Apple Push Notification-tjänst (APN:er).
-
-
-## Validera inställningssäkring
+## Validera inställningar med Assurance
 
 1. Granska [installationsanvisningar](assurance.md) -avsnitt.
 1. Installera appen på den fysiska enheten eller i simulatorn.
@@ -166,8 +157,8 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 1. Välj **[!UICONTROL Spara]**.
    ![spara](assets/assurance-in-app-config.png)
 1. Välj **[!UICONTROL Meddelanden i appen]** från vänster navigering.
-1. Välj **[!UICONTROL Validering]** -fliken.
-1. Bekräfta att inga fel visas.
+1. Välj **[!UICONTROL Validering]** -fliken. Bekräfta att inga fel visas.
+
    ![Validering i appen](assets/assurance-in-app-validate.png)
 
 
@@ -193,7 +184,7 @@ I den här självstudiekursen kommer du att använda de generiska och tilläggso
 1. Bläddra nedåt till **[!UICONTROL Åtgärd]** och markera **[!UICONTROL Redigera innehåll]**.
 1. I **[!UICONTROL Meddelande i appen]** skärm:
    1. Välj **[!UICONTROL Modal]** som **[!UICONTROL Meddelandelayout]**.
-   2. Retur `https://luma.enablementadobe.com/content/dam/luma/en/logos/Luma_Logo.png` for **[!UICONTROL Media-URL]**.
+   2. Retur `https://luma.enablementadobe.com/content/dam/luma/en/logos/Luma_Logo.png` för **[!UICONTROL Media-URL]**.
    3. Ange en **[!UICONTROL Sidhuvud]**, till exempel `Welcome to this Luma In-App Message` och ange **[!UICONTROL Brödtext]**, till exempel `Triggered by pushing that button in the app...`.
    4. Retur **[!UICONTROL Avvisa]** som **[!UICONTROL Knapp 1 text (primär)]**.
    5. Observera hur förhandsgranskningen uppdateras.
@@ -216,21 +207,22 @@ I den här självstudiekursen kommer du att använda de generiska och tilläggso
    ![Kampanjlista](assets/ajo-campaign-list.png)
 
 
-## Startar meddelandet i appen
+## Utlös meddelandet i appen
 
 Du har alla ingredienser på plats för att skicka ett meddelande i appen. Det som återstår är hur du utlöser det här meddelandet i appen i din app.
 
-1. Gå till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project-navigatorn. Hitta `func sendTrackAction(action: String, data: [String: Any]?)` och lägg till följande kod som anropar `MobileCore.track` funktion, baserat på parametrarna `action` och `data`.
+1. Gå till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project-navigatorn. Hitta `func sendTrackAction(action: String, data: [String: Any]?)` och lägg till följande kod som anropar [`MobileCore.track`](https://developer.adobe.com/client-sdks/documentation/mobile-core/api-reference/#trackaction) funktion, baserat på parametrarna `action` och `data`.
 
 
    ```swift
-   // send trackAction event
+   // Send trackAction event
    MobileCore.track(action: action, data: data)
    ```
 
 1. Gå till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Allmänt]** > **[!UICONTROL ConfigView]** i Xcode Project Navigator. Sök efter koden för knappen Meddelande i appen och lägg till följande kod:
 
    ```swift
+   // Setting parameters and calling function to send in-app message
    Task {
        AEPService.shared.sendTrackAction(action: "in-app", data: ["showMessage": "true"])
    }

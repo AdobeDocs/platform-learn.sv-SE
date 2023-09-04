@@ -5,16 +5,16 @@ solution: Data Collection,Journey Optimizer
 feature-set: Journey Optimizer
 feature: Offers
 hide: true
-source-git-commit: c31dd74cf8ff9c0856b29e82d9c8be2ad027df4a
+source-git-commit: 56323387deae4a977a6410f9b69db951be37059f
 workflow-type: tm+mt
-source-wordcount: '2342'
+source-wordcount: '2368'
 ht-degree: 0%
 
 ---
 
 # Journey Optimizer erbjuder
 
-Lär dig hur du visar erbjudanden från Journey Optimizer Decision Management i dina mobilappar med Platform Mobile SDK.
+Lär dig hur du visar erbjudanden från Journey Optimizer Decision Management i dina mobilappar med Experience Platform Mobile SDK.
 
 Med Journey Optimizer Decision Management kan ni leverera det bästa erbjudandet och upplevelsen till era kunder via alla kontaktytor vid rätt tidpunkt. När ni väl utformat er målgrupp kan ni inrikta er på personaliserade erbjudanden.
 
@@ -23,7 +23,7 @@ Beslutshantering förenklar personaliseringen med ett centralt bibliotek med mar
 
 >[!NOTE]
 >
->Den här lektionen är valfri och gäller endast för användare av reseveransoptimering som vill använda beslutsstyrningsfunktionen för att visa erbjudanden i en mobilapp.
+>Den här lektionen är valfri och gäller endast för Journey Optimizer-användare som vill använda beslutsstyrningsfunktionen för att visa erbjudanden i en mobilapp.
 
 
 ## Förutsättningar
@@ -92,7 +92,7 @@ Så här validerar du inställningarna i Assurance:
 1. Gå till försäkringsgränssnittet.
 1. Välj **[!UICONTROL Konfigurera]** i vänster rand och välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) nästa **[!UICONTROL Validera inställningar]** under **[!UICONTROL ADOBE JOURNEY OPTIMIZER AVGÖRANDE]**.
 1. Välj **[!UICONTROL Spara]**.
-1. Välj **[!UICONTROL Validera inställningar]** till vänster. Både datastream-konfigurationen valideras och SDK-inställningen i ditt program.
+1. Välj **[!UICONTROL Validera inställningar]** till vänster. Både datastream-konfigurationen och SDK-konfigurationen i ditt program valideras.
    ![Validering av AJO-beslut](assets/ajo-decisioning-validation.png)
 
 
@@ -144,7 +144,7 @@ Så här validerar du inställningarna i Assurance:
 
       Använd tabellen nedan för att definiera de fyra andra erbjudandena.
 
-      | Namn på erbjudande | Erbjud innehåll |
+      | Namn på erbjudande | Erbjud innehåll i JSON |
       |---|---|
       | Luma - vattenflaskan har fastnat | `{ "title": "Affirm Water Bottle", "text": "You'll stay hydrated with ease with the Affirm Water Bottle by your side or in hand. Measurements on the outside help you keep track of how much you're drinking, while the screw-top lid prevents spills. A metal carabiner clip allows you to attach it to the outside of a backpack or bag for easy access.", "image": "https://luma.enablementadobe.com/content/dam/luma/en/products/gear/fitness-equipment/ug06-lb-0.jpg" }` |
       | Luma - Önskat träningsträd | `{ "title": "Desiree Fitness Tee", "text": "When you're too far to turn back, thank yourself for choosing the Desiree Fitness Tee. Its ultra-lightweight, ultra-breathable fabric wicks sweat away from your body and helps keeps you cool for the distance.", "image": "https://luma.enablementadobe.com/content/dam/luma/en/products/women/tops/tees/ws05-yellow_main.jpg" }` |
@@ -192,10 +192,11 @@ För att kunna presentera ett erbjudande för din mobilappsanvändare måste du 
 1. I användargränssnittet för Journey Optimizer väljer du **[!UICONTROL Erbjudanden]** från den vänstra listen.
 1. Välj **[!UICONTROL Samlingar]** i det övre fältet.
 1. Välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Skapa samling]**.
-1. I **[!UICONTROL Ny samling]** modal, ange en **[!UICONTROL Namn]** för din samling, till exempel `Luma - Mobile App Collection`, markera **[!UICONTROL Skapa statisk samling]** och klicka **[!UICONTROL Nästa]**.
-1. I **[!UICONTROL Luma - Mobile App Collection]**markerar du de erbjudanden du vill inkludera i samlingen. I den här självstudiekursen väljer du fem erbjudanden du skapat.
-   ![Erbjudanden - samling](assets/ajo-collection-offersselected.png)
+1. I **[!UICONTROL Ny samling]** dialogruta, ange **[!UICONTROL Namn]** för din samling, till exempel `Luma - Mobile App Collection`, markera **[!UICONTROL Skapa statisk samling]** och klicka **[!UICONTROL Nästa]**.
+1. I **[!UICONTROL Luma - Mobile App Collection]** markerar du de erbjudanden du vill inkludera i samlingen. I den här självstudiekursen väljer du fem erbjudanden du skapat. Du kan enkelt filtrera listan med hjälp av sökfältet, till exempel genom att skriva **[!UICONTROL Luma]**.
 1. Välj **[!UICONTROL Spara]**.
+
+   ![Erbjudanden - samling](assets/ajo-collection-offersselected.png)
 
 
 ## Skapa ett beslut
@@ -206,11 +207,11 @@ Ett beslutsomfång är en kombination av en specifik placering (till exempel HTM
 
 Ett utvärderingskriterium är en kombination av
 
-* Erbjudandeinsamling.
-* regler för behörighet: erbjudandet gäller t.ex. endast en viss målgrupp,
-* rangordningsmetod: när det finns flera erbjudanden att välja mellan, vilken metod använder du för att rangordna dem (t.ex. efter erbjudandeprioritet, med en formel eller en AI-modell).
+* en erbjudandesamling,
+* regler för behörighet: Erbjudandet gäller t.ex. endast en viss målgrupp.
+* en rangordningsmetod: när det finns flera erbjudanden att välja mellan, vilken metod använder du för att rangordna dem (t.ex. efter erbjudandeprioritet, med en formel eller en AI-modell).
 
-Se [Viktiga steg för att skapa och hantera erbjudanden](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/get-started-decision/key-steps.html?lang=en) om du bättre vill förstå hur placeringar, regler, rankningar, erbjudanden, representationer, samlingar, beslut och så vidare, interagerar och relaterar till varandra. Den här självstudiekursen handlar enbart om att använda resultatet av ett beslut i stället för att vara flexibel när det gäller att definiera ett beslut.
+Se [Viktiga steg för att skapa och hantera erbjudanden](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioning/get-started-decision/key-steps.html?lang=en) om du bättre vill förstå hur placeringar, regler, rankningar, erbjudanden, representationer, samlingar, beslut och så vidare, interagerar och relaterar till varandra. Den här självstudiekursen är endast inriktad på att använda resultatet av ett beslut snarare än på flexibiliteten i att definiera beslut inom Journey Optimizer - Beslutshantering.
 
 1. I användargränssnittet för Journey Optimizer väljer du **[!UICONTROL Erbjudanden]** från den vänstra listen.
 1. Välj **[!UICONTROL Beslut]** i det övre fältet.
@@ -286,24 +287,38 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
    ]
    ```
 
-1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project-navigatorn. Hitta `func updatePropositionOD(ecid: String, activityId: String, placementId: String, itemCount: Int) async` funktion. Inspect som
+1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project-navigatorn. Hitta `func updatePropositionOD(ecid: String, activityId: String, placementId: String, itemCount: Int) async` funktion. Lägg till följande kod:
+
+   ```swift
+   // set up the XDM dictionary, define decision scope and call update proposition API
+   Task {  
+      let ecid = ["ECID" : ["id" : ecid, "primary" : true] as [String : Any]]
+      let identityMap = ["identityMap" : ecid]
+      let xdmData = ["xdm" : identityMap]
+      let decisionScope = DecisionScope(activityId: activityId, placementId: placementId, itemCount: UInt(itemCount))
+      Optimize.clearCachedPropositions()
+      Optimize.updatePropositions(for: [decisionScope], withXdm: xdmData)
+   }
+   ```
+
+   Den här funktionen:
 
    * ställer in en XDM-ordlista `xdmData`, som innehåller ECID för att identifiera den profil som du måste presentera erbjudandena för.
-   * definierar `decisionScope`, ett objekt som baseras på det beslut du har definierat i användargränssnittet för beslutshantering i Journey Optimizer och definieras med hjälp av det kopierade beslutsomfånget från [Skapa ett beslut](#create-a-decision).
-   * anropar två API:er: [`Optimize.clearCachePropositions`](https://support.apple.com/en-ie/guide/mac-help/mchlp1015/mac)  och [`Optimize.updatePropositions`](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/api-reference/#updatepropositions).   Dessa funktioner rensar alla cachelagrade offerter och uppdaterar propositionerna för den här profilen. Luma-appen använder en konfigurationsfil (`decisions.json`) som hämtar scopeparametrarna, baserat på följande JSON-format:
+   * definierar `decisionScope`, ett objekt som baseras på det beslut du har definierat i användargränssnittet för beslutshantering i Journey Optimizer och definieras med hjälp av det kopierade beslutsomfånget från [Skapa ett beslut](#create-a-decision).  Luma-appen använder en konfigurationsfil (`decisions.json`) som hämtar scopeparametrarna, baserat på följande JSON-format:
 
      ```swift
      "scopes": [
          {
-             "name": "luma - Mobile App Decision",
-             "activityId": "xcore:offer-activity:177cdaa5e1fd589d",
-             "placementId": "xcore:offer-placement:13a3b264ce69bb14",
+             "name": "name of the scope",
+             "activityId": "xcore:offer-activity:xxxxxxxxxxxxxxx",
+             "placementId": "xcore:offer-placement:xxxxxxxxxxxxxxx",
              "itemCount": 2
          }
      ]
      ```
 
      Du kan dock använda vilken implementeringsmetod som helst för att se till att Optimera-API:erna får rätt parametrar (`activityId`, `placementId` och `itemCount`), för att skapa en giltig [`DecisionScope`](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/api-reference/#decisionscope) -objekt för implementeringen.
+   * anropar två API:er: [`Optimize.clearCachePropositions`](https://support.apple.com/en-ie/guide/mac-help/mchlp1015/mac)  och [`Optimize.updatePropositions`](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/api-reference/#updatepropositions).  Dessa funktioner rensar alla cachelagrade offerter och uppdaterar propositionerna för den här profilen.
 
 1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Personalisering]** > **[!UICONTROL EdgeOffersView]** i Xcode Project-navigatorn. Hitta `func getPropositionOD(activityId: String, placementId: String, itemCount: Int) async` och inspektera koden för den här funktionen. Den viktigaste delen av funktionen är  [`Optimize.getPropositions`](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/api-reference/#getpropositions) API-anrop, som
 
@@ -313,22 +328,24 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 1. Fortfarande i **[!UICONTROL EdgeOffersView]**, hittar du `func updatePropositions(activityId: String, placementId: String, itemCount: Int) async` och lägga till följande kod:
 
    ```swift
-       Task {
-           await self.updatePropositionOD(
-               ecid: currentEcid,
-               activityId: activityId,
-               placementId: placementId,
-               itemCount: itemCount
-           )
-       }
-       try? await Task.sleep(seconds: 2.0)
-       Task {
-           await self.getPropositionOD(
-               activityId: activityId,
-               placementId: placementId,
-               itemCount: itemCount
-           )
-       }
+   // Update and then get propositions
+   Logger.viewCycle.info("EdgeOffersView - updatePropopsitions - Activity Id: \(activityId)")
+   Task {
+      await self.updatePropositionOD(
+          ecid: currentEcid,
+          activityId: activityId,
+          placementId: placementId,
+          itemCount: itemCount
+     )
+   }
+   try? await Task.sleep(seconds: 2.0)
+   Task {
+      await self.getPropositionOD(
+          activityId: activityId,
+          placementId: placementId,
+          itemCount: itemCount
+      )
+   }
    ```
 
    Med den här koden kan du uppdatera förslagen och sedan hämta resultaten med de funktioner som beskrivs i steg 5 och 6.

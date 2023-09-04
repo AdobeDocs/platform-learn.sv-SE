@@ -3,10 +3,10 @@ title: Konfigurera ett datastream
 description: Lär dig hur du skapar ett datastream i Experience Platform.
 feature: Mobile SDK,Datastreams
 hide: true
-source-git-commit: 1b09f81b364fe8cfa9d5d1ac801d7781d1786259
+source-git-commit: 56323387deae4a977a6410f9b69db951be37059f
 workflow-type: tm+mt
-source-wordcount: '546'
-ht-degree: 0%
+source-wordcount: '551'
+ht-degree: 1%
 
 ---
 
@@ -50,6 +50,8 @@ Datastreams kan skapas i [!UICONTROL Datainsamling] -gränssnittet med [!UICONTR
 
 Därefter kopplar du dina Experience Cloud-tjänster till din datastream. När Platform Mobile SDK skickar data till Edge Network skickar datastream data till dessa tjänster:
 
+### Adobe Analytics
+
 1. Välj **[!UICONTROL Lägg till tjänst]**.
 
 1. Lägg till **[!UICONTROL Adobe Analytics]** från [!UICONTROL Tjänst] lista,
@@ -61,6 +63,9 @@ Därefter kopplar du dina Experience Cloud-tjänster till din datastream. När P
 1. Välj **[!UICONTROL Spara]**.
 
    ![Lägg till Adobe Analytics som datastream-tjänst](assets/datastream-service-aa.png)
+
+
+### Adobe Experience Platform
 
 Du kanske också vill aktivera tjänsten Adobe Experience Platform.
 

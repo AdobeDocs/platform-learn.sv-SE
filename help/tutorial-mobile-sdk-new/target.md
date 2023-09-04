@@ -5,9 +5,9 @@ solution: Data Collection,Target
 feature-set: Target
 feature: A/B Tests
 hide: true
-source-git-commit: 593dcce7d1216652bb0439985ec3e7a45fc811de
+source-git-commit: 56323387deae4a977a6410f9b69db951be37059f
 workflow-type: tm+mt
-source-wordcount: '1418'
+source-wordcount: '1434'
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ I den här lektionen ska du
 
 >[!TIP]
 >
->Om du redan har konfigurerat ditt program som en del av [Journey Optimizer erbjuder](journey-optimizer-offers.md) självstudiekurs,
+>Om du redan har konfigurerat ditt program som en del av [Journey Optimizer erbjuder](journey-optimizer-offers.md) självstudiekurs, du kan hoppa över [Installera Adobe Journey Optimizer - Decisioning-taggtillägg](#install-adobe-journey-optimizer---decisioning-tags-extension) och [Uppdatera ditt schema](#update-your-schema).
 
 ### Uppdatera Edge-konfiguration
 
@@ -61,7 +61,7 @@ För att säkerställa att data som skickas från din mobilapp till Edge Network
 1. Välj **[!UICONTROL Lägg till tjänst]** och markera **[!UICONTROL Adobe Target]** från **[!UICONTROL Tjänst]** lista.
 1. Ange mål **[!UICONTROL Egenskapstoken]** värde som du vill använda för den här integreringen.
 
-   Du hittar dina egenskaper i målgränssnittet i **[!UICONTROL Administration]** > **[!UICONTROL Egenskaper]**. Välj ![Code](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Code_18_N.svg) för att visa egenskapstoken för den egenskap som du vill använda. Egenskapstoken har ett format som `"at_property": "xxxxxxxx-xxxx-xxxxx-xxxx-xxxxxxxxxxxx"`; du behöver bara ange värdet `xxxxxxxx-xxxx-xxxxx-xxxx-xxxxxxxxxxxx`.
+   Du hittar dina egenskaper i målgränssnittet i **[!UICONTROL Administration]** > **[!UICONTROL Egenskaper]**. Välj ![Code](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Code_18_N.svg) för att visa egenskapstoken för den egenskap som du vill använda. Egenskapstoken har ett format som `"at_property": "xxxxxxxx-xxxx-xxxxx-xxxx-xxxxxxxxxxxx"`; du får bara ange värdet `xxxxxxxx-xxxx-xxxxx-xxxx-xxxxxxxxxxxx`.
 
 1. Välj **[!UICONTROL Spara]**.
 
@@ -104,13 +104,13 @@ Så här validerar du inställningarna i Assurance:
 
 1. I målgränssnittet väljer du **[!UICONTROL Verksamhet]** i det övre fältet.
 1. Välj **[!UICONTROL Skapa aktivitet]** och **[!UICONTROL A/B-test]** på snabbmenyn.
-1. I **[!UICONTROL Skapa A/B-testaktivitet]** modal, välj **[!UICONTROL Mobil]** som **[!UICONTROL Typ]** väljer du en arbetsyta på **[!UICONTROL Välj arbetsyta]** och välj din egenskap i listan **[!UICONTROL Välj egenskap]** lista.
+1. I **[!UICONTROL Skapa A/B-testaktivitet]** dialogruta, välja **[!UICONTROL Mobil]** som **[!UICONTROL Typ]** väljer du en arbetsyta på **[!UICONTROL Välj arbetsyta]** och välj din egenskap i listan **[!UICONTROL Välj egenskap]** lista.
 1. Välj **[!UICONTROL Skapa]**.
    ![Skapa målaktivitet](assets/target-create-activity1.png)
 
 1. I **[!UICONTROL Namnlös aktivitet]** på skärmen **[!UICONTROL Erfarenheter]** steg:
 
-   1. Retur `luma-mobileapp-abtest` in **[!UICONTROL Välj plats]** under L**[!UICONTROL OMRÅDE 1]**.
+   1. Retur `luma-mobileapp-abtest` in **[!UICONTROL Välj plats]** under **[!UICONTROL PLATS 1]**.
    1. Välj ![Chrevron nedåt](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ChevronDown_18_N.svg) nästa **[!UICONTROL Standardinnehåll]** och markera **[!UICONTROL Skapa JSON-erbjudande]** på snabbmenyn.
    1. Kopiera följande JSON till **[!UICONTROL Ange ett giltigt JSON-objekt]**.
 
@@ -194,9 +194,23 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
    ]
    ```
 
-1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project-navigatorn. Hitta ` func updatePropositionAT(ecid: String, location: String) async` funktion. Inspect koden som konfigurerar
-   * en XDM-ordlista `xdmData`som innehåller ECID för att identifiera den profil som du måste presentera A/B-testet för, och
-   * den `decisionScope`, en array med platser där A/B-testet ska presenteras.
+1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project-navigatorn. Hitta ` func updatePropositionAT(ecid: String, location: String) async` funktion. Lägg till följande kod:
+
+   ```swift
+   Task {
+       let ecid = ["ECID" : ["id" : ecid, "primary" : true] as [String : Any]]
+       let identityMap = ["identityMap" : ecid]
+       let xdmData = ["xdm" : identityMap]
+       let decisionScope = DecisionScope(name: location)
+       Optimize.clearCachedPropositions()
+       Optimize.updatePropositions(for: [decisionScope], withXdm: xdmData)
+   }
+   ```
+
+   Den här funktionen
+
+   * ställer in en XDM-ordlista `xdmData`som innehåller ECID för att identifiera den profil som du måste presentera A/B-testet för, och
+   * definierar en `decisionScope`, en array med platser där A/B-testet ska presenteras.
 
    Sedan anropar funktionen två API:er: [`Optimize.clearCachePropositions`](https://support.apple.com/en-ie/guide/mac-help/mchlp1015/mac)  och [`Optimize.updatePropositions`](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/api-reference/#updatepropositions). Dessa funktioner rensar alla cachelagrade offerter och uppdaterar propositionerna för den här profilen.
 

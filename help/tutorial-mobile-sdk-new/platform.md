@@ -4,9 +4,9 @@ description: Lär dig skicka data till Adobe Experience Platform.
 solution: Data Collection,Experience Platform
 feature: Mobile SDK,Data Ingestion
 hide: true
-source-git-commit: e119e2bdce524c834cdaf43ed9eb9d26948b0ac6
+source-git-commit: 56323387deae4a977a6410f9b69db951be37059f
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '963'
 ht-degree: 0%
 
 ---
@@ -51,21 +51,20 @@ Alla data som har inhämtats till Adobe Experience Platform lagras i datasjön s
 1. Välj **[!UICONTROL Skapa datauppsättning från schema]**.
    ![startsida för datauppsättning](assets/dataset-create.png)
 
-1. Sök efter ditt schema
-
-1. Välj ditt schema.
+1. Sök efter ditt schema. till exempel använda `Luma Mobile` i sökfältet.
+1. Välj ditt schema, till exempel **[!UICONTROL Luma Mobile App Event Schema]**.
 
 1. Välj **[!UICONTROL Nästa]**.
    ![konfigurera datauppsättning](assets/dataset-configure.png)
 
-1. Ange en **[!UICONTROL Namn]** och **[!UICONTROL Beskrivning]**.
+1. Ange en **[!UICONTROL Namn]**, till exempel `Luma Mobile App Events Dataset` och **[!UICONTROL Beskrivning]**.
 
 1. Välj **[!UICONTROL Slutför]**.
    ![datauppsättningens slut](assets/dataset-finish.png)
 
 ## Uppdatera datastream
 
-När du har skapat datauppsättningen ska du se till att [uppdatera din datastream](create-datastream.md) för att lägga till Adobe Experience Platform. Den här uppdateringen säkerställer dataflöden till plattformen.
+När du har skapat datauppsättningen ska du se till att [uppdatera din datastream](create-datastream.md#adobe-experience-platform) för att lägga till Adobe Experience Platform. Den här uppdateringen säkerställer dataflöden till plattformen.
 
 ## Validera data i datauppsättningen
 
@@ -88,23 +87,23 @@ Med Experience Platform Real-Time Customer Profile kan ni skapa en helhetsbild a
 
 ### Aktivera schemat
 
-1. Öppna ditt schema
-1. Aktivera **[!UICONTROL Profil]**
-1. Välj **[!UICONTROL Data för det här schemat kommer att innehålla en primär identitet i identityMap-fältet.]** i den modala dialogrutan
-1. **[!UICONTROL Spara]** schemat
+1. Öppna schemat, till exempel **[!UICONTROL Luma Mobile App Event Schema]**.
+1. Aktivera **[!UICONTROL Profil]**.
+1. Välj **[!UICONTROL Data för det här schemat kommer att innehålla en primär identitet i identityMap-fältet.]** i dialogrutan.
+1. **[!UICONTROL Spara]** schemat.
 
    ![aktivera schemat för profilen](assets/platform-profile-schema.png)
 
 ### Aktivera datauppsättningen
 
-1. Öppna din datauppsättning
-1. Aktivera **[!UICONTROL Profil]**
+1. Öppna datauppsättningen, till exempel **[!UICONTROL Luma Mobile App Event-datauppsättning]**.
+1. Aktivera **[!UICONTROL Profil]**.
 
    ![aktivera datauppsättningen för profilen](assets/platform-profile-dataset.png)
 
 ### Validera data i profilen
 
-Öppna appen och navigera till skärmar där du spårar händelser. Logga in på Luma-appen och gör ett köp.
+Öppna appen och navigera till skärmar där du spårar händelser, till exempel: logga in på Luma-appen och gör ett köp.
 
 Använd Assurance för att hitta en av identiteterna som skickas i identityMap (Email, lumaCrmId eller ECID), till exempel CRM-ID:t.
 
@@ -112,9 +111,9 @@ Använd Assurance för att hitta en av identiteterna som skickas i identityMap (
 
 I plattformsgränssnittet
 
-1. Navigera till **[!UICONTROL Profiler]** > **[!UICONTROL Bläddra]**,
+1. Navigera till **[!UICONTROL Profiler]** och markera **[!UICONTROL Bläddra]** i det övre fältet.
 1. Ange identitetsinformation som du just har gripit, till exempel `Luma CRM ID` for **[!UICONTROL Namnutrymme för identitet]** och det värde du kopierade för **[!UICONTROL Identitetsvärde]**. Välj sedan **[!UICONTROL Visa]**.
-1. Om du vill visa information väljer du profilen .
+1. Om du vill visa information väljer du profilen.
 
 ![söka efter ett identitetsvärde](assets/platform-profile-lookup.png)
 
@@ -128,7 +127,7 @@ På **[!UICONTROL Händelser]** kan du se de händelser som samlats in från din
 
 Från profilinformationsskärmen:
 
-1. Om du vill visa identitetsdiagrammet klickar du på länken eller navigerar till **[!UICONTROL Identiteter]** > **[!UICONTROL Identitetsdiagram]**
+1. Om du vill visa identitetsdiagrammet klickar du på länken eller navigerar till **[!UICONTROL Identiteter]** väljer **[!UICONTROL Identitetsdiagram]** i det övre fältet.
 1. Om du vill söka efter identitetsvärdet anger du `Luma CRM ID` som **[!UICONTROL Namnutrymme för identitet]** och det kopierade värdet som **[!UICONTROL Identitetsvärde]**. Välj sedan **[!UICONTROL Visa]**.
 
    Den här visualiseringen visar alla identiteter som är sammankopplade i en profil och deras ursprung. Här är ett exempel på ett identitetsdiagram som består av data som samlats in från den här självstudiekursen för Mobile SDK (datakälla 2) och [Web SDK, genomgång](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html) (datakälla 1):

@@ -5,16 +5,16 @@ solution: Data Collection,Journey Optimizer
 feature-set: Journey Optimizer
 feature: Push
 hide: true
-source-git-commit: c31dd74cf8ff9c0856b29e82d9c8be2ad027df4a
+source-git-commit: 56323387deae4a977a6410f9b69db951be37059f
 workflow-type: tm+mt
-source-wordcount: '2173'
+source-wordcount: '2199'
 ht-degree: 0%
 
 ---
 
 # Journey Optimizer push-meddelanden
 
-Lär dig skapa push-meddelanden för mobilappar med Platform Mobile SDK och Journey Optimizer.
+Lär dig skapa push-meddelanden för mobilappar med Experience Platform Mobile SDK och Journey Optimizer.
 
 Med Journey Optimizer kan ni skapa resor och skicka meddelanden till riktade målgrupper. Innan du skickar push-meddelanden med Journey Optimizer måste du se till att rätt konfigurationer och integreringar finns på plats. Om du vill veta mer om dataflödet för push-meddelanden i Journey Optimizer kan du läsa [dokumentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configuration-message/push-config/push-gs.html).
 
@@ -28,7 +28,7 @@ Med Journey Optimizer kan ni skapa resor och skicka meddelanden till riktade må
 * Programmet har skapats och körts med SDK:er installerade och konfigurerade.
 * Åtkomst till Journey Optimizer och tillräcklig behörighet enligt beskrivningen [här](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configuration-message/push-config/push-configuration.html?lang=en). Du behöver även tillräcklig behörighet för följande Journey Optimizer-funktioner.
    * Skapa en appyta.
-   * Skapa en resa
+   * Skapa en resa.
    * Skapa ett meddelande.
    * Skapa meddelandeförinställningar.
 * Betalat Apple-utvecklarkonto med tillräcklig behörighet för att skapa certifikat, identifierare och nycklar.
@@ -38,8 +38,8 @@ Med Journey Optimizer kan ni skapa resor och skicka meddelanden till riktade må
 
 I den här lektionen ska du
 
-* Registrera program-ID med Apple Push Notification service (APNS).
-* Skapa en appyta i AJO.
+* Registrera program-ID med Apple Push Notification-tjänsten (APN:er).
+* Skapa en appyta i Journey Optimizer.
 * Uppdatera ditt schema så att det inkluderar push-meddelandefält.
 * Installera och konfigurera taggtillägget för Journey Optimizer.
 * Uppdatera appen så att den innehåller taggtillägget Journey Optimizer.
@@ -110,7 +110,7 @@ För att din app ska fungera med Journey Optimizer måste du uppdatera din tagge
 
 >[!NOTE]
 >
->Om du inte ser `AJO Push Tracking Experience Event Dataset` som ett alternativ, kontakta kundtjänst.
+>Om du inte ser **[!UICONTROL AJO Push Tracking Experience, händelsedatauppsättning]** som ett alternativ, kontakta kundtjänst.
 >
 
 ### Implementera Journey Optimizer i appen
@@ -146,16 +146,18 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
    ]
    ```
 
-1. Lägg till `MobileCore.setPushIdentifier` till `func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data)` funktion.
+### Registrera enhetstoken för push-meddelanden
+
+1. Lägg till [`MobileCore.setPushIdentifier`](https://developer.adobe.com/client-sdks/documentation/mobile-core/api-reference/#setpushidentifier) API till `func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data)` funktion.
 
    ```swift
-   // Send push token to Experience Platform
+   // Send push token to Mobile SDK
    MobileCore.setPushIdentifier(deviceToken)
    ```
 
    Den här funktionen hämtar enhetstoken som är unik för den enhet som appen är installerad på. Ställer sedan in token för leverans av push-meddelanden med den konfiguration som du har konfigurerat och som är beroende av Apple Push Notification-tjänst (APN:er).
 
-## Validera inställningssäkring
+## Validera inställningar med Assurance
 
 1. Granska [installationsanvisningar](assurance.md) -avsnitt.
 1. Installera appen på den fysiska enheten eller i simulatorn.
@@ -238,7 +240,7 @@ Med händelser i Journey Optimizer kan du utlösa resor åt gången för att ski
    1. Välj **[!UICONTROL Spara]**.
       ![Redigera händelsesteg 2](assets/ajo-edit-event2.png)
 
-Du har just skapat en händelsekonfiguration som baseras på det händelseschema för mobilappsupplevelser som du skapade tidigare som en del av den här självstudien. Den här händelsekonfigurationen filtrerar inkommande upplevelsehändelser med hjälp av din mobilappsidentifierare, så du ser till att endast händelser som initieras från din mobilapp utlöser den resa du kommer att bygga i nästa steg. I ett verkligt scenario kanske du vill skicka push-meddelanden från en extern tjänst, men samma koncept gäller: från det externa programmet skickar du en upplevelsehändelse till Experience Platform som innehåller specifika fält som du kan använda för att tillämpa villkor på innan dessa händelser utlöser en resa.
+Du har just skapat en händelsekonfiguration som baseras på det händelseschema för mobilappsupplevelser som du skapade tidigare som en del av den här självstudien. Den här händelsekonfigurationen kommer att filtrera inkommande upplevelsehändelser med din specifika händelsetyp (`application.test`), så att du bara ser till att händelser av den typen som initieras från din mobilapp utlöser den resa du bygger i nästa steg. I ett verkligt scenario kanske du vill skicka push-meddelanden från en extern tjänst, men samma koncept gäller: från det externa programmet skickar du en upplevelsehändelse till Experience Platform som innehåller specifika fält som du kan använda för att tillämpa villkor på innan dessa händelser utlöser en resa.
 
 ### Skapa resan
 
@@ -278,9 +280,9 @@ Nästa steg är att skapa den resa som utlöser sändningen av push-meddelandet 
 
 ## Utlöser push-meddelandet
 
-Du har alla ingredienser på plats för att skicka ett push-meddelande. Det som återstår är hur detta push-meddelande ska utlösas. Det är alltså detsamma som du har sett tidigare: skicka bara en upplevelsehändelse med rätt nyttolast (som i ![Händelser](events.md)).
+Du har alla ingredienser på plats för att skicka ett push-meddelande. Det som återstår är hur detta push-meddelande ska utlösas. Det är alltså detsamma som du har sett tidigare: skicka bara en upplevelsehändelse med rätt nyttolast (som i [Händelser](events.md)).
 
-Den här gången har den upplevelsehändelse du ska skicka inte skapats för att skapa en enkel XDM-ordlista. Du kommer att använda en struktur som representerar nyttolasten för push-meddelanden. Att definiera en dedikerad datatyp är ett annat sätt att implementera händelsenyttolaster för att skapa upplevelser i ditt program.
+Den här gången har den upplevelsehändelse du ska skicka inte skapats för att skapa en enkel XDM-ordlista. Du kommer att använda en `struct` som representerar en nyttolast för push-meddelanden. Att definiera en dedikerad datatyp är ett annat sätt att implementera händelsenyttolaster för att skapa upplevelser i ditt program.
 
 1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Modell]** > **[!UICONTROL XML]** > **[!UICONTROL TestPushPayload]** i Xcode Project navigator och kontrollera koden.
 
@@ -313,6 +315,7 @@ Den här gången har den upplevelsehändelse du ska skicka inte skapats för att
 1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project navigator och lägg till följande kod i `func sendTestPushEvent(applicationId: String, eventType: String)`:
 
    ```swift
+   // Create payload and send experience event
    Task {
        let testPushPayload = TestPushPayload(
            application: Application(
@@ -333,9 +336,11 @@ Den här gången har den upplevelsehändelse du ska skicka inte skapats för att
 
    ```swift
    // Setting parameters and calling function to send push notification
-   let eventType = "mobileapp.testpush"
-   let applicationId = Bundle.main.bundleIdentifier ?? "No bundle id found"
-   await MobileSDK.shared.sendTestPushEvent(applicationId: applicationId, eventType: eventType)   
+   Task {
+       let eventType = testPushEventType
+       let applicationId = Bundle.main.bundleIdentifier ?? "No bundle id found"
+       await MobileSDK.shared.sendTestPushEvent(applicationId: applicationId, eventType: eventType)
+   }
    ```
 
 
@@ -346,6 +351,7 @@ Den här gången har den upplevelsehändelse du ska skicka inte skapats för att
 1. Gå till **[!UICONTROL Inställningar]** -fliken.
 
 1. Tryck **[!UICONTROL Push-meddelande]**. Push-meddelandet visas i din app.
+
    <img src="assets/ajo-test-push.png" width="300" />
 
 
