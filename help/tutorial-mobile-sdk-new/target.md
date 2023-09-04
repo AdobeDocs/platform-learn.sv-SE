@@ -5,9 +5,9 @@ solution: Data Collection,Target
 feature-set: Target
 feature: A/B Tests
 hide: true
-source-git-commit: 56323387deae4a977a6410f9b69db951be37059f
+source-git-commit: 7435a2758bdd8340416b70faf8337e33167a7193
 workflow-type: tm+mt
-source-wordcount: '1434'
+source-wordcount: '1433'
 ht-degree: 0%
 
 ---
@@ -218,7 +218,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
    * hämtar förslagen för den aktuella profilen baserat på beslutsomfånget (som är den plats du har definierat i A/B-testet) och
    * ångrar resultatet i innehåll som kan visas på rätt sätt i programmet.
 
-1. Fortfarande i **[!UICONTROL TargetOffersView]**, hittar du`unc updatePropositions(location: String) async` och lägga till följande kod:
+1. Fortfarande i **[!UICONTROL TargetOffersView]**, hittar du `func updatePropositions(location: String) async` och lägga till följande kod:
 
    ```swift
        Task {
