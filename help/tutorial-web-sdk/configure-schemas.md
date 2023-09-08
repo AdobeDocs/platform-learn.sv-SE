@@ -1,11 +1,11 @@
 ---
 title: Skapa ett XDM-schema för webbdata
-description: Lär dig hur du skapar ett XDM-schema för webbdata i gränssnittet för datainsamling. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
+description: Lär dig hur du skapar ett XDM-schema för webbdata i gränssnittet för datainsamling. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Tags,Schemas
 exl-id: 2858ce03-4f95-43ac-966c-1b647b33ef16
-source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
+source-git-commit: 3b57d20410dda5dc44dfbb806f6637b0fd4f4f04
 workflow-type: tm+mt
-source-wordcount: '1121'
+source-wordcount: '1122'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ I den här övningen skapar du ett XDM-schema med de rekommenderade baslinjefäl
    >
    >Om du använder ett plattformsbaserat program som Real-Time CDP rekommenderar vi att du använder en utvecklingssandlåda för den här självstudiekursen. Om du inte gör det använder du **[!UICONTROL Prod]** sandlåda.
 
-1. Gå till **[!UICONTROL Scheman]** i den vänstra navigeringen
+1. Gå till **[!UICONTROL Scheman]** till vänster navigering
 1. Välj **[!UICONTROL Skapa schema]** överst till höger
 1. Välj **[!UICONTROL XDM ExperienceEvent]**
 
@@ -76,7 +76,7 @@ När det är möjligt bör du använda befintliga fältgrupper och följa en pro
 
 När fältgrupperna är markerade är du redo att namnge schemat. En vanlig namnkonvention för XDM-scheman är att namnge schemat efter datakällan:
 
-1. I[!UICONTROL Disposition**] väljer du `Untitled schema name`
+1. I **[!UICONTROL Disposition**] väljer du `Untitled schema name`
 1. I **[!UICONTROL Schemaegenskaper]** panelen, ange **[!UICONTROL Visningsnamn]** `Luma Web Event Data`
 1. Markera något utanför **[!UICONTROL Visningsnamn]** fält för att aktivera **[!UICONTROL Spara]** option
 1. Välj **[!UICONTROL Spara]**
@@ -106,7 +106,7 @@ Det är ett måste-ha-objekt för alla webbrelaterade datainsamlingar eftersom d
 >Den här inställningen diskuteras mer under [Konfigurera Experience Platform](setup-experience-platform.md) lektion.
 >![Profilschema](assets/schema-profile.png)
 
-Nu kan du referera till det här schemat när du lägger till Web SDK-tillägget för din taggegenskap.
+Nu kan du referera till det här schemat när du lägger till Web SDK-tillägget i taggegenskapen.
 
 
 [Nästa: ](configure-identities.md)
