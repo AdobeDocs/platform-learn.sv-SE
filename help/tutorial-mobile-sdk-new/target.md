@@ -5,9 +5,9 @@ solution: Data Collection,Target
 feature-set: Target
 feature: A/B Tests
 hide: true
-source-git-commit: 7435a2758bdd8340416b70faf8337e33167a7193
+source-git-commit: 2e70022313faac2b6d965a838c03fc6f55806506
 workflow-type: tm+mt
-source-wordcount: '1433'
+source-wordcount: '1519'
 ht-degree: 0%
 
 ---
@@ -214,29 +214,27 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 
    Sedan anropar funktionen två API:er: [`Optimize.clearCachePropositions`](https://support.apple.com/en-ie/guide/mac-help/mchlp1015/mac)  och [`Optimize.updatePropositions`](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/api-reference/#updatepropositions). Dessa funktioner rensar alla cachelagrade offerter och uppdaterar propositionerna för den här profilen.
 
-1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Personalisering]** > **[!UICONTROL TargetOffersView]** i Xcode Project-navigatorn. Hitta `func getPropositionAT(location: String) async` och inspektera koden för den här funktionen. Den viktigaste delen av funktionen är  [`Optimize.getPropositions`](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/api-reference/#getpropositions) API-anrop, som
-   * hämtar förslagen för den aktuella profilen baserat på beslutsomfånget (som är den plats du har definierat i A/B-testet) och
-   * ångrar resultatet i innehåll som kan visas på rätt sätt i programmet.
+1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Personalisering]** > **[!UICONTROL TargetOffersView]** i Xcode Project-navigatorn. Hitta `func onPropositionsUpdateAT(location: String) async {` och inspektera koden för den här funktionen. Den viktigaste delen av funktionen är  [`Optimize.onPropositionsUpdate`](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/api-reference/#onpropositionsupdate) API-anrop, som
+   * hämtar förslagen för den aktuella profilen baserat på beslutsomfånget (den plats du har definierat i A/B-testet),
+   * hämtar erbjudandet från erbjudandet,
+   * frigör innehållet i erbjudandet så att det kan visas korrekt i appen, och
+   * utlöser `displayed()` åtgärd för erbjudandet som skickar tillbaka en händelse till Edge Network som talar om att erbjudandet visas.
 
-1. Fortfarande i **[!UICONTROL TargetOffersView]**, hittar du `func updatePropositions(location: String) async` och lägga till följande kod:
+1. Fortfarande i **[!UICONTROL TargetOffersView]** lägger du till följande kod i `.onFirstAppear` modifierare. Den här koden ser till att callback-funktionen för uppdatering av erbjudanden registreras endast en gång.
 
    ```swift
-       Task {
-           await self.updatePropositionAT(
-               ecid: currentEcid,
-               location: location
-           )
-       }
-       try? await Task.sleep(seconds: 2.0)
-       Task {
-           await self.getPropositionAT(
-               location: location
-           )
-       }
+   // Invoke callback for offer updates
+   Task {
+       await self.onPropositionsUpdateAT(location: location)
+   }
    ```
 
-   Med den här koden kan du uppdatera förslagen och sedan hämta resultaten med de funktioner som beskrivs i steg 5 och 6.
+1. Fortfarande i **[!UICONTROL TargetOffersView]** lägger du till följande kod i `.task` modifierare. Den här koden uppdaterar erbjudandena när vyn uppdateras.
 
+   ```swift
+   // Clear and update offers
+   await self.updatePropositionsAT(ecid: currentEcid, location: location)
+   ```
 
 ## Validera med appen
 
@@ -262,11 +260,11 @@ Så här validerar du A/B-testet i Assurance:
 1. Välj **[!UICONTROL Begäranden]** i det övre fältet. Du ser **[!UICONTROL Mål]** förfrågningar.
    ![Validering av AJO-beslut](assets/assurance-decisioning-requests.png)
 
-1. Du kan utforska flikarna Simulera och Händelselista för ytterligare funktionalitet som kontrollerar konfigurationen för Target-erbjudanden.
+1. Du kan utforska **[!UICONTROL Simulera]** och **[!UICONTROL Händelselista]** om du vill ha mer funktionalitet i att kontrollera din konfiguration för Target-erbjudanden.
 
 ## Nästa steg
 
-Nu bör du ha alla verktyg för att börja lägga till fler A/B-tester eller andra Target-aktiviteter (som Experience Targeting, Multivariate Test), där det är relevant och tillämpligt, i Luma-appen.
+Nu bör du ha alla verktyg för att börja lägga till fler A/B-tester eller andra Target-aktiviteter (som Experience Targeting, Multivariate Test), där det är relevant och tillämpligt, i Luma-appen. Det finns mer detaljerad information i [Github repo for the Optimize extension](https://github.com/adobe/aepsdk-optimize-ios) där du också kan hitta en länk till en dedikerad [självstudiekurs](https://opensource.adobe.com/aepsdk-optimize-ios/#/tutorials/README) om hur ni håller reda på Adobe Target erbjudanden.
 
 >[!SUCCESS]
 >
