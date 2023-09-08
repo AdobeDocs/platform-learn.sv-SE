@@ -3,7 +3,7 @@ title: Implementera Adobe Experience Cloud i självstudiekursen om mobilappar
 description: Lär dig hur du implementerar Adobe Experience Cloud mobilappar. Den här självstudiekursen vägleder dig genom en implementering av Experience Cloud-program i ett exempel på en Swift-app.
 recommendations: noDisplay,catalog
 hide: true
-source-git-commit: 1b09f81b364fe8cfa9d5d1ac801d7781d1786259
+source-git-commit: 4f4bb2fdb1db4d9af8466c4e6d8c61e094bf6a1c
 workflow-type: tm+mt
 source-wordcount: '725'
 ht-degree: 1%
@@ -84,8 +84,8 @@ Alla Experience Cloud-kunder bör ha tillgång till de funktioner som krävs fö
 Det finns två versioner av exempelappen att hämta. Båda versionerna kan hämtas/klonas från [Github](https://git.corp.adobe.com/rmaur/Luma). Du hittar två mappar:
 
 
-1. [Starta](https://git.corp.adobe.com/rmaur/Luma{target="_blank"}): ett projekt utan kod eller med platshållarkod för merparten av SDK-koden för Experience Platform Mobile som du behöver använda för att slutföra övningarna i den här kursen.
-1. [Slutför](https://git.corp.adobe.com/Luma{target="_blank"}): en version med fullständig implementering för referens.
+1. [Starta](https://git.corp.adobe.com/rmaur/Luma){target="_blank"}: ett projekt utan kod eller med platshållarkod för merparten av SDK-koden för Experience Platform Mobile som du behöver använda för att slutföra övningarna i den här kursen.
+1. [Slutför](https://git.corp.adobe.com/Luma){target="_blank"}: en version med fullständig implementering för referens.
 
 Kom så börjar vi!
 
