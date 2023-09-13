@@ -8,7 +8,7 @@ feature: Sandboxes
 jira: KT-4348
 thumbnail: 4348-create-a-sandbox.jpg
 exl-id: a04afada-52a1-4812-8fa2-14be72e68614
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: fc1c25d9fa4e78dfabb33bc9cb4a2e3779d940c9
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 1%
@@ -44,7 +44,7 @@ I [Konfigurera behörigheter](configure-permissions.md) lektionen anger du alla 
 Låt oss skapa en sandlåda:
 
 1. Logga in på [Adobe Experience Platform](https://experience.adobe.com/platform) gränssnitt
-1. Gå till **[!UICONTROL Sandlådor]** i den vänstra navigeringen
+1. Gå till **[!UICONTROL Sandlådor]** till vänster navigering
 1. Välj **[!UICONTROL Skapa sandlåda]** överst till höger
    ![Välj sandlådan Skapa](assets/sandbox-createSandbox.png)
 
@@ -62,20 +62,20 @@ Det tar ca 30 sekunder att skapa sandlådor. Under tiden skapas en[!UICONTROL Sk
 
 Vänta tills sandlådan är[!UICONTROL Aktiv]&quot; innan man fortsätter med nästa övning.
 
-## Lägg till den nya sandlådan i produktprofilen
+## Lägg till den nya sandlådan i din roll
 
 När sandlådan är aktiv måste du inkludera den i din roll för att kunna använda den. Så här lägger du till den i din roll (kräver behörighet som systemadministratör eller produktadministratör):
 
 1. Gå till [!UICONTROL Behörigheter] screen
 1. Öppna `Luma Tutorial Platform` roll
-1. _Ta bort_ den `Prod` sandlåda från rollen
+1. Valfritt _ta bort_ den `Prod` sandlåda från rollen
 1. Lägg till `Luma Tutorial` sandlåda
 1. Välj **[!UICONTROL Spara]**
 1. På [!UICONTROL Sandlådor] rad, markera **[!UICONTROL Redigera]**
 
    ![Lägg till Luma-självstudiekursen](assets/sandbox-addLumaTutorial.png)
 
-1. Läs in sidan igen (eller Skift-läs in igen) och du bör nu antingen vara i `Luma Tutorial` sandlådan eller den ska visas i din sandlådelistruta
+1. Läs in sidan igen (eller Skift-läs in igen) och du bör nu antingen vara i `Luma Tutorial` sandlådan eller den ska visas i din sandlåda
 1. Växla till `Luma Tutorial` sandlåda om du inte redan finns i den
 
    ![Bekräfta sandlåda](assets/sandbox-confirmDropdown.png)
