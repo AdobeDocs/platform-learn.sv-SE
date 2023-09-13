@@ -8,7 +8,7 @@ feature: Sandboxes
 jira: KT-4348
 thumbnail: 4348-create-a-sandbox.jpg
 exl-id: a04afada-52a1-4812-8fa2-14be72e68614
-source-git-commit: fc1c25d9fa4e78dfabb33bc9cb4a2e3779d940c9
+source-git-commit: fdb6a49caa29d98d73524fd0887d25641ef67780
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 1%
@@ -62,7 +62,7 @@ Det tar ca 30 sekunder att skapa sandlådor. Under tiden skapas en[!UICONTROL Sk
 
 Vänta tills sandlådan är[!UICONTROL Aktiv]&quot; innan man fortsätter med nästa övning.
 
-## Lägg till den nya sandlådan i din roll
+## Lägg till den nya sandlådan i rollen
 
 När sandlådan är aktiv måste du inkludera den i din roll för att kunna använda den. Så här lägger du till den i din roll (kräver behörighet som systemadministratör eller produktadministratör):
 
