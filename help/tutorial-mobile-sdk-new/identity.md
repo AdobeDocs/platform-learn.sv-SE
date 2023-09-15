@@ -3,9 +3,9 @@ title: Identitet
 description: Lär dig hur du samlar in identitetsdata i en mobilapp.
 feature: Mobile SDK,Identities
 hide: true
-source-git-commit: 1b09f81b364fe8cfa9d5d1ac801d7781d1786259
+source-git-commit: b3cf168fc9b20ea78df0f8863a6395e9a45ed832
 workflow-type: tm+mt
-source-wordcount: '666'
+source-wordcount: '681'
 ht-degree: 1%
 
 ---
@@ -108,7 +108,7 @@ Du vill uppdatera både standardidentiteten (e-post) och den anpassade identitet
 
 ## Ta bort en identitet
 
-Du kan använda [`Identity.removeIdentity`](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#removeidentity) API för att ta bort identiteten från den lagrade identitetskartan på klientsidan. Identitetstillägget slutar skicka identifieraren till Edge Network. Om du använder detta API tas inte identifieraren bort från användarprofildiagrammet eller identitetsdiagrammet på serversidan.
+Du kan använda [`Identity.removeIdentity`](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#removeidentity) API för att ta bort identiteten från den lagrade identitetskartan på klientsidan. Identitetstillägget slutar skicka identifieraren till Edge Network. Om du använder detta API tas inte identifieraren bort från serversidans identitetsdiagram. Se [Visa identitetsdiagram](https://experienceleague.adobe.com/docs/platform-learn/tutorials/identities/view-identity-graphs.html?lang=en) om du vill ha mer information om identitetsdiagram.
 
 1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Allmänt]** > **[!UICONTROL MobileSDK]** i Xcode Project navigator och lägg till följande kod i `func removeIdentities(emailAddress: String, crmId: String)` funktion:
 
@@ -150,7 +150,7 @@ Du kan använda [`Identity.removeIdentity`](https://developer.adobe.com/client-s
 
 ## Validera med identitetsdiagram
 
-När du är klar med stegen i [Experience Platform lektion](platform.md)kan du bekräfta infångningen i visningsprogrammet för plattformsidentitetsdiagram:
+När du är klar med stegen i [Experience Platform lektion](platform.md)kan du bekräfta identitetsfångsten i visningsprogrammet för plattformsidentitetsdiagram:
 
 1. Välj **[!UICONTROL Identiteter]** i användargränssnittet för datainsamling.
 1. Välj **[!UICONTROL Identitetsdiagram]** i det övre fältet.

@@ -3,9 +3,9 @@ title: Konfigurera en taggegenskap
 description: Lär dig konfigurera en taggegenskap i [!UICONTROL Datainsamling] gränssnitt.
 feature: Mobile SDK,Tags
 hide: true
-source-git-commit: 1b09f81b364fe8cfa9d5d1ac801d7781d1786259
+source-git-commit: b3cf168fc9b20ea78df0f8863a6395e9a45ed832
 workflow-type: tm+mt
-source-wordcount: '1015'
+source-wordcount: '1095'
 ht-degree: 1%
 
 ---
@@ -45,7 +45,7 @@ I den här lektionen kommer du att:
 
       >[!NOTE]
       >
-      > Standardinställningar för godkännande av kantbaserade SDK-implementeringar för mobiler, som den du gör i den här självstudiekursen, kommer från [!UICONTROL Godkänn tillägg] och inte [!UICONTROL Integritet] inställning i taggegenskapskonfigurationen. Du lägger till och konfigurerar tillägget för samtycke senare i den här lektionen. Mer information finns på [dokumentationen](https://developer.adobe.com/client-sdks/documentation/privacy-and-gdpr/).
+      > Standardinställningar för samtycke för de kantbaserade SDK-implementeringarna för mobiler, som den du gör i den här lektionen, kommer från [!UICONTROL Godkänn tillägg] och inte [!UICONTROL Integritet] inställning i taggegenskapskonfigurationen. Du lägger till och konfigurerar tillägget för samtycke senare i den här lektionen. Mer information finns på [dokumentationen](https://developer.adobe.com/client-sdks/documentation/privacy-and-gdpr/).
 
 
 1. Öppna den nya egenskapen.
@@ -112,13 +112,13 @@ I den här lektionen kommer du att:
 
    1. I **[!UICONTROL Datastreams]** välj **[!UICONTROL Datastream]** som du skapade i [föregående steg](create-datastream.md) för varje miljö, till exempel **[!UICONTROL Mobilappen Luma]**.
 
-   1. Ange **[!UICONTROL Edge Network-domän]** inom **[!UICONTROL Domänkonfiguration]**. Edge Network-domänen är namnet på din sandlåda, följt av `data.adobedc.net`, till exempel `techmarketingdemos.data.adobedc.net`.
+   1. Ange **[!UICONTROL Edge Network-domän]** inom **[!UICONTROL Domänkonfiguration]**. Edge Network-domänen är namnet på din organisation, följt av `data.adobedc.net`, till exempel `techmarketingdemos.data.adobedc.net`.
 
    1. Från **[!UICONTROL Spara i bibliotek]** meny, välja **[!UICONTROL Spara i bibliotek och bygge]**.
 
       ![inställningar för Edge-nätverk](assets/tags-extension-edge.png)
 
-Ditt bibliotek byggs för de nya tilläggen och konfigurationerna. Ett lyckat bygge indikeras av en <span style="color:green">●</span> i **[!UICONTROL Inledande bygge]** -knappen.
+Ditt bibliotek är byggt för de nya tilläggen och konfigurationerna. Ett lyckat bygge indikeras av en <span style="color:green">●</span> i **[!UICONTROL Inledande bygge]** -knappen.
 
 
 ## Generera installationsanvisningar för SDK
@@ -131,7 +131,7 @@ Ditt bibliotek byggs för de nya tilläggen och konfigurationerna. Ett lyckat by
 
 1. I **[!UICONTROL Instruktioner för mobilinstallation]** väljer du **[!UICONTROL iOS]** -fliken.
 
-1. Du kan kopiera ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) instruktionerna för att konfigurera projektet med CocoaPods. CocoaPods används för att hantera SDK-versioner och -nedladdningar. Läs mer i [dokumentation](https://cocoapods.org/).
+1. Du kan kopiera ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) instruktionerna för att konfigurera projektet med CocoaPods. CocoaPods används för att hantera SDK-versioner och -nedladdningar. Läs mer i [Cocoapods dokumentation](https://cocoapods.org/). Om du använder Android som utvecklingsplattform är Gradle verktyget för att hantera SDK-version, hämtningsbara filer och beroenden. Läs mer i [Dokumentation för grafik](https://gradle.org/)
 
    Installationsanvisningarna ger dig en bra startpunkt för implementeringen. Ytterligare information finns [här](https://developer.adobe.com/client-sdks/documentation/getting-started/get-the-sdk/).
 
@@ -156,7 +156,7 @@ Om du är bekant med webbversionen av taggar, tidigare Launch, är det viktigt a
 
 * På webben återges en taggegenskap i JavaScript som sedan (vanligtvis) finns i molnet. JavaScript-filen refereras direkt på webbplatsen.
 
-* I en mobil taggegenskap återges regler och konfigurationer i JSON-filer som lagras i molnet. JSON-filerna hämtas och läses av tillägget Mobile Core i mobilappen. Tillägg är separata SDK:er som fungerar tillsammans. Om du lägger till ett tillägg i taggegenskapen måste du även uppdatera appen. Om du ändrar en tilläggsinställning eller skapar en regel återspeglas dessa ändringar i appen när du har publicerat det uppdaterade taggbiblioteket.
+* I en mobil taggegenskap återges regler och konfigurationer i JSON-filer som lagras i molnet. JSON-filerna hämtas och läses av tillägget Mobile Core i mobilappen. Tillägg är separata SDK:er som fungerar tillsammans. Om du lägger till ett tillägg i taggegenskapen måste du även uppdatera appen. Om du ändrar en tilläggsinställning eller skapar en regel återspeglas dessa ändringar i appen när du har publicerat det uppdaterade taggbiblioteket. Tack vare den flexibiliteten kan du ändra inställningar (till exempel Adobe Analytics-rapportens suide id) eller till och med ändra appens beteende (med dataelement och regler, som du kommer att se i senare lektioner) utan att behöva ändra koden i appen och måste skicka appen till appbutiken igen.
 
 >[!SUCCESS]
 >

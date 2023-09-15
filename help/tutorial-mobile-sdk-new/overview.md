@@ -3,9 +3,9 @@ title: Implementera Adobe Experience Cloud i självstudiekursen om mobilappar
 description: Lär dig hur du implementerar Adobe Experience Cloud mobilappar. Den här självstudiekursen vägleder dig genom en implementering av Experience Cloud-program i ett exempel på en Swift-app.
 recommendations: noDisplay,catalog
 hide: true
-source-git-commit: 4f4bb2fdb1db4d9af8466c4e6d8c61e094bf6a1c
+source-git-commit: ae1e05b3f93efd5f2a9b48dc10761dbe7a84fb1e
 workflow-type: tm+mt
-source-wordcount: '725'
+source-wordcount: '873'
 ht-degree: 1%
 
 ---
@@ -16,7 +16,7 @@ Lär dig hur du implementerar Adobe Experience Cloud-program i din mobilapp med 
 
 Experience Platform Mobile SDK är en SDK på klientsidan som gör att kunder i Adobe Experience Cloud kan interagera med både Adobe-program och tredjepartstjänster via Adobe Experience Platform Edge Network. Se [Dokumentation för Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) för mer detaljerad information.
 
-![bygginställningar](assets/data-collection-mobile-sdk.png)
+![Arkitektur](assets/architecture.png)
 
 
 Den här självstudiekursen vägleder dig genom implementeringen av Platform Mobile SDK i ett exempel på en app för återförsäljning som kallas Luma. The [Luma-app](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App) har funktioner som gör att du kan bygga en realistisk implementering. När du är klar med den här självstudiekursen bör du vara redo att börja implementera alla marknadsföringslösningar via Experience Platform Mobile SDK i dina egna mobilappar.
@@ -35,7 +35,6 @@ När du är klar med självstudiekursen kan du:
 * Lägg till följande Adobe Experience Cloud-program/tillägg:
    * [Adobe Experience Platform Edge (XDM)](events.md)
    * [Samling av livscykeldata](lifecycle-data.md)
-   * [Adobe Analytics via XDM](analytics.md)
    * [Godkännande](consent.md)
    * [Identitet](identity.md)
    * [Profil](profile.md)
@@ -43,7 +42,7 @@ När du är klar med självstudiekursen kan du:
    * [Analytics ](analytics.md)
    * [Adobe Experience Platform](platform.md)
    * [Skicka meddelanden med Journey Optimizer](journey-optimizer-push.md)
-   * [Meddelanden i appar med Journey Optimizer](journey-optimizer-inapp.md)
+   * [Meddelanden i appen med Journey Optimizer](journey-optimizer-inapp.md)
    * [Erbjudanden med Journey Optimizer](journey-optimizer-offers.md)
    * [A/B-tester med Target](target.md)
 
@@ -70,13 +69,19 @@ I den här lektionen antas du ha ett Adobe-ID och de behörigheter som krävs f�
    * Om du använder ett plattformsbaserat program som Real-Time CDP, Journey Optimizer eller Customer Journey Analytics bör du även ha:
       * **[!UICONTROL Datahantering]**—behörighetsobjekt som ska hantera och visa datauppsättningar för att slutföra _valfria plattformsövningar_ (kräver en licens för ett plattformsbaserat program).
       * En utveckling **sandlåda** som du kan använda för den här självstudiekursen.
+
 * För Adobe Analytics måste du veta vilken **rapportsviter** du kan använda för att slutföra den här självstudiekursen.
+
+* För Adobe Target måste du ha behörighet, korrekt konfigurerad **roller**, **arbetsytor** och **egenskaper** enligt beskrivning [här](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=en).
+
+* För Adobe Journey Optimizer måste du ha tillräcklig behörighet för att konfigurera **push-meddelandetjänst** och skapa en **appyta**, a **resa**, a **message** och **meddelandeförinställningar**. För Beslutshantering behöver du rätt behörighet för att **hantera erbjudanden** och **beslut** enligt beskrivning [här](https://experienceleague.adobe.com/docs/journey-optimizer/using/access-control/privacy/high-low-permissions.html?lang=en#decisions-permissions).
 
 Alla Experience Cloud-kunder bör ha tillgång till de funktioner som krävs för att driftsätta Mobile SDK.
 
+
 >[!NOTE]
 >
->Du kommer att använda iOS som plattform [!DNL Swift] som programmeringsspråk, [!DNL SwiftUI] som gränssnittets ramverk och [!DNL Xcode] som den integrerade utvecklingsmiljön. Många av de implementeringskoncept som beskrivs liknar dock andra utvecklingsplattformar. Vi antar att du är ganska bekant med [!DNL Swift] och [!DNL SwiftUI]. Du behöver inte vara expert för att slutföra lektionerna, men du får ut mer av lektionerna om du enkelt kan läsa och förstå koden.
+>I den här självstudiekursen skapar du scheman, datauppsättningar, identiteter osv. Om du går igenom den här självstudiekursen med flera personer i en och samma sandlåda, eller om du använder ett delat konto, bör du överväga att lägga till eller föregå en identifiering som en del av namnkonventionen när du skapar dessa objekt. Lägg till exempel ` - <your name or initials>` till namnet på det objekt som du ska skapa.
 
 
 ## Hämta Luma-appen
@@ -86,6 +91,11 @@ Det finns två versioner av exempelappen att hämta. Båda versionerna kan hämt
 
 1. [Starta](https://git.corp.adobe.com/rmaur/Luma){target="_blank"}: ett projekt utan kod eller med platshållarkod för merparten av SDK-koden för Experience Platform Mobile som du behöver använda för att slutföra övningarna i den här kursen.
 1. [Slutför](https://git.corp.adobe.com/Luma){target="_blank"}: en version med fullständig implementering för referens.
+
+>[!NOTE]
+>
+>Du kommer att använda iOS som plattform [!DNL Swift] som programmeringsspråk, [!DNL SwiftUI] som gränssnittets ramverk och [!DNL Xcode] som den integrerade utvecklingsmiljön. Många av de implementeringskoncept som beskrivs liknar dock andra utvecklingsplattformar. Och många har redan slutfört den här självstudiekursen så lite som till ingen tidigare erfarenhet av iOS/Swift(UI). Du behöver inte vara expert för att slutföra lektionerna, men du får ut mer av lektionerna om du enkelt kan läsa och förstå koden.
+
 
 Kom så börjar vi!
 

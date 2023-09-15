@@ -3,9 +3,9 @@ title: Skapa ett XDM-schema
 description: Lär dig hur du skapar ett XDM-schema för mobilappshändelser.
 feature: Mobile SDK,Schemas
 hide: true
-source-git-commit: 1b09f81b364fe8cfa9d5d1ac801d7781d1786259
+source-git-commit: b3cf168fc9b20ea78df0f8863a6395e9a45ed832
 workflow-type: tm+mt
-source-wordcount: '1416'
+source-wordcount: '1473'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Standardisering och interoperabilitet är viktiga begrepp bakom Adobe Experience
 
 ## Vad är XDM-scheman?
 
-XDM är en öppet dokumenterad specifikation som utformats för att förbättra möjligheterna med digitala upplevelser. Det innehåller gemensamma strukturer och definitioner som gör att alla program kan kommunicera med plattformstjänster. Genom att följa XDM-standarder kan alla kundupplevelsedata införlivas i en gemensam representation som kan ge insikter på ett snabbare och mer integrerat sätt. Ni kan få värdefulla insikter från kundåtgärder, definiera kundmålgrupper genom segment och uttrycka kundattribut i personaliseringssyfte.
+XDM är en öppet dokumenterad specifikation som utformats för att förbättra möjligheterna med digitala upplevelser. Det innehåller gemensamma strukturer och definitioner som gör att alla program kan kommunicera med plattformstjänster. Genom att följa XDM-standarder kan alla kundupplevelsedata införlivas i en gemensam representation som kan ge insikter på ett snabbare och mer integrerat sätt. Ni får värdefulla insikter från kundåtgärder, kan definiera kundmålgrupper genom segment och använda kundattribut i personaliseringssyfte.
 
 Experience Platform använder scheman för att beskriva datastrukturen på ett konsekvent och återanvändbart sätt. Genom att definiera data på ett enhetligt sätt i olika system blir det enklare att behålla sin betydelse och därmed få värde av data.
 
@@ -118,13 +118,18 @@ I utbildningssyfte använder du fördefinierade och anpassade fältgrupper.
 
 1. Ge schemat ett namn genom att välja **[!UICONTROL Namnlöst schema]** från **[!UICONTROL Disposition]** ruta (under **[!UICONTROL Schema]**) och ger **[!UICONTROL Visningsnamn]** &amp; **[!UICONTROL Beskrivning]**, till exempel `Luma Mobile App Event Schema` och `Schema for Luma mobile app experience events.`
 
+   >[!NOTE]
+   >
+   >Om du går igenom den här självstudiekursen med flera personer i en och samma sandlåda, eller om du använder ett delat konto, bör du överväga att lägga till eller föregå en identifiering som en del av namnkonventionen. Använd till exempel `Luma Mobile App Event Schema - Joe Smith` istället för `Luma Mobile App Event Schema`. Se även anteckningen i [Ökning](overview.md).
+
+
 1. Välj **[!UICONTROL Spara]**.
 
    ![Markering används](assets/schema-name-save.png)
 
 >[!NOTE]
 >
->Tänk på att du inte behöver använda alla fält i en grupp. Om det är till hjälp kan du tänka dig ett schema som ett tomt datalager. I appen fyller du i relevanta värden vid rätt tidpunkt.
+>Tänk på att du inte behöver använda alla fält i en grupp. Du kan även ta bort fält om det gör att schemat blir kortfattat och begripligt. Om det är till hjälp kan du tänka dig ett schema som ett tomt datalager. I appen fyller du i relevanta värden vid rätt tidpunkt.
 
 The [!UICONTROL Consumer Experience Event] fältgruppen har en datatyp som heter [!UICONTROL Webbinformation]som beskriver händelser som sidvisning och länkklick. Just nu finns det ingen paritet för mobilappar med den här funktionen, så du kommer att skapa en egen.
 

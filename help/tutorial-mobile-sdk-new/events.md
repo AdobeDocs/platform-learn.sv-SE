@@ -2,10 +2,10 @@
 title: Händelser
 description: Lär dig hur du samlar in händelsedata i en mobilapp.
 hide: true
-source-git-commit: 371d71f06796c0f7825217a2ebd87d72ae7e8639
+source-git-commit: b3cf168fc9b20ea78df0f8863a6395e9a45ed832
 workflow-type: tm+mt
-source-wordcount: '1310'
-ht-degree: 1%
+source-wordcount: '1321'
+ht-degree: 0%
 
 ---
 
@@ -78,7 +78,7 @@ För standardfältgrupperna ser processen ut så här:
    * `commerce.productViews.id`: ett strängvärde som representerar SKU:n för produkten
    * `commerce.productViews.value`: händelsens numeriska eller booleska värde. Om det är ett booleskt värde (eller &quot;Räknare&quot; i Adobe Analytics) är värdet alltid 1. Om det är en numerisk händelse eller valutakändelse kan värdet vara > 1.
 
-* Identifiera eventuella ytterligare data som är associerade med händelsen för e-handelsproduktvyn i ditt schema. I det här exemplet inkluderar du **[!UICONTROL productListItem]** som är en standarduppsättning med fält som används för e-handelsrelaterade händelser:
+* Identifiera eventuella ytterligare data som är associerade med händelsen för e-handelsproduktvyn i ditt schema. I det här exemplet inkluderar du **[!UICONTROL productListItems]** som är en standarduppsättning med fält som används för alla e-handelsrelaterade händelser:
 
   ![schema för produktlisteobjekt](assets/datacollection-prodListItems-schema.png)
    * Observera att **[!UICONTROL productListItems]** är en matris så att flera produkter kan anges.
@@ -189,6 +189,11 @@ Om du vill implementera sändning av e-handelsrelaterade upplevelsehändelser p�
          // Send purchases commerce experience event
          MobileSDK.shared.sendCommerceExperienceEvent(commerceEventType: "purchases", product: product)
          ```
+
+>[!TIP]
+>
+>Om du utvecklar för Android ska du använda karta (`java.util.Map`) som det grundläggande gränssnittet för att konstruera XDM-nyttolasten.
+
 
 ### Anpassade fältgrupper
 
@@ -339,15 +344,7 @@ Här kan du implementera koden i Xcode-projektet.
 1. Kör programmet, logga in och interagera med en produkt.
 
    1. Flytta Assurance-ikonen åt vänster.
-   1. Välj **[!UICONTROL Startsida]** i tabbfältet.
-   1. Markera <img src="assets/login.png" width="15" /> för att öppna inloggningsbladet.
-
-      <img src="./assets/mobile-app-events-1.png" width="300">
-
-   1. Markera <img src="assets/insert.png" width="15" /> om du vill infoga ett slumpmässigt e-postmeddelande och ett kund-ID.
-   1. Välj **[!UICONTROL Inloggning]**.
-
-      <img src="./assets/mobile-app-events-2.png" width="300">
+   1. Välj **[!UICONTROL Startsida]** i flikfältet och verifiera att en **[!UICONTROL ECID]**, **[!UICONTROL E-post]** och **[!UICONTROL CRM-ID]** på hemskärmen.
    1. Välj **[!UICONTROL Produkter]** i tabbfältet.
    1. Välj en produkt.
    1. Välj <img src="assets/saveforlater.png" width="15" />.

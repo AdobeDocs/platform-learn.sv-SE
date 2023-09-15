@@ -3,7 +3,7 @@ title: Analysmappning
 description: Lär dig hur du samlar in data för Adobe Analytics i en mobilapp.
 solution: Data Collection,Experience Platform,Analytics
 hide: true
-source-git-commit: 371d71f06796c0f7825217a2ebd87d72ae7e8639
+source-git-commit: ae1e05b3f93efd5f2a9b48dc10761dbe7a84fb1e
 workflow-type: tm+mt
 source-wordcount: '641'
 ht-degree: 1%
@@ -15,6 +15,8 @@ ht-degree: 1%
 Lär dig hur du mappar mobildata till Adobe Analytics.
 
 The [event](events.md) data som du har samlat in och skickat till Platform Edge Network i tidigare lektioner vidarebefordras till de tjänster som konfigurerats i ditt datastam, inklusive Adobe Analytics. Du mappar data till rätt variabler i rapportsviten.
+
+![Arkitektur](assets/architecture-aa.png)
 
 ## Förutsättningar
 

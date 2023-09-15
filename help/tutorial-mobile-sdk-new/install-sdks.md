@@ -2,9 +2,9 @@
 title: Installera Adobe Experience Platform Mobile SDKs
 description: Lär dig hur du implementerar Adobe Experience Platform Mobile SDK i en mobilapp.
 hide: true
-source-git-commit: 1b09f81b364fe8cfa9d5d1ac801d7781d1786259
+source-git-commit: b3cf168fc9b20ea78df0f8863a6395e9a45ed832
 workflow-type: tm+mt
-source-wordcount: '943'
+source-wordcount: '946'
 ht-degree: 0%
 
 ---
@@ -18,13 +18,13 @@ Lär dig hur du implementerar Adobe Experience Platform Mobile SDK i en mobilapp
 * Ett taggbibliotek med tilläggen som beskrivs i [föregående lektion](configure-tags.md).
 * Fil-ID för utvecklingsmiljö från [Instruktioner för mobilinstallation](configure-tags.md#generate-sdk-install-instructions).
 * Tomma filer har hämtats [exempelapp](https://git.corp.adobe.com/rmaur/Luma){target="_blank"}.
-* Upplev [XCode](https://developer.apple.com/xcode/){target="_blank"}.
+* Upplev [Xcode](https://developer.apple.com/xcode/){target="_blank"}.
 
 ## Utbildningsmål
 
 I den här lektionen kommer du att:
 
-* Lägg till de SDK:er som behövs i projektet med hjälp av Swift Package Manager.
+* Lägg till önskade SDK:er i projektet med Swift Package Manager.
 * Registrera tilläggen.
 
 >[!NOTE]
@@ -39,20 +39,20 @@ I Xcode använder du **[!UICONTROL Fil]** > **[!UICONTROL Lägg till paket...]**
 
 | Paket | Beskrivning |
 |---|---|
-| [AEP Core](https://github.com/adobe/aepsdk-core-ios.git) | The `AEPCore`, `AEPServices`och `AEPIdentity` tillägg utgör grunden för Adobe Experience Platform SDK - alla program som använder SDK måste innehålla dem. Dessa moduler innehåller en gemensam uppsättning funktioner och tjänster som krävs för alla SDK-tillägg.<br/>`AEPCore` innehåller implementering av händelsehubben. Händelsehubben är den mekanism som används för att leverera händelser mellan appen och SDK:n. Händelsehubben används också för att dela data mellan tillägg.<br/>`AEPServices` innehåller flera återanvändbara implementeringar som krävs för plattformsstöd, inklusive nätverk, diskåtkomst och databashantering.<br/>`AEPIdentity` implementerar integreringen med Adobe Experience Platform Identity Services.<br/>`AEPSignal` representerar Signal-tillägget för Adobe Experience Platform SDK som gör att marknadsförare kan skicka en signal till sina appar för att skicka data till externa destinationer eller till öppna URL:er.<br/>`AEPLifecycle` representerar Adobe Experience Platform SDK:s livscykeltillägg som hjälper till att samla in livscykelvärden för program, t.ex. information om programinstallation eller uppgradering, information om programstart och -session, enhetsinformation och eventuella ytterligare kontextdata från programutvecklaren. |
-| [AEP Edge](https://github.com/adobe/aepsdk-edge-ios.git) | Med mobiltillägget Adobe Experience Platform Edge Network kan du skicka data till Adobe Edge Network från ett mobilprogram. Med det här tillägget kan du implementera Adobe Experience Cloud-funktioner på ett mer robust sätt, leverera flera Adobe-lösningar via ett nätverksanrop och samtidigt vidarebefordra informationen till Adobe Experience Platform.<br/>Det mobila tillägget Edge Network är ett tillägg till Adobe Experience Platform SDK och kräver `AEPCore` och `AEPServices` tillägg för händelsehantering samt `AEPEdgeIdentity` tillägg för att hämta identiteter, som ECID. |
-| [AEP Edge Identity](https://github.com/adobe/aepsdk-edgeidentity-ios.git) | Med mobiltillägget AEP Edge Identity kan du hantera användaridentitetsdata från ett mobilprogram när du använder Adobe Experience Platform SDK och Edge Network-tillägget. |
-| [AEP Edge-samtycke](https://github.com/adobe/aepsdk-edgeconsent-ios.git) | Med mobiltillägget AEP Consent Collection kan du samla in medgivandeinställningar från mobilprogrammet när du använder Adobe Experience Platform SDK och Edge Network-tillägget. |
-| [AEP-användarprofil](https://github.com/adobe/aepsdk-userprofile-ios.git) | Adobe Experience Platform User Profile Mobile Extension är ett tillägg för hantering av användarprofiler för Adobe Experience Platform SDK. |
-| [AEP-platser](https://github.com/adobe/aepsdk-places-ios) | Med tillägget AEPPlaces kan du spåra geopositioneringshändelser enligt definitionen i Adobe Platser-användargränssnittet och i Adobe Data Collection-taggregler. |
-| [AEP Messaging](https://github.com/adobe/aepsdk-messaging-ios.git) | Med AEP Messaging-tillägget kan du skicka push-meddelandetokens och skicka vidare klickningsfeedback till Adobe Experience Platform. |
-| [AEP-optimering](https://github.com/adobe/aepsdk-optimize-ios) | Tillägget AEP Optimize innehåller API:er som möjliggör personalisering i realtid i Adobe Experience Platform Mobile SDK:er med Adobe Target eller Adobe Journey Optimizer Offer decisioning. Den kräver `AEPCore` och `AEPEdge` tillägg för att skicka personaliseringsfrågehändelser till Experience Edge-nätverket. |
-| [AEP Assurance](https://github.com/adobe/aepsdk-assurance-ios.git) | Assurance (alias project Griffon) är en ny, innovativ produkt som hjälper er att inspektera, granska, simulera och validera hur ni samlar in data eller levererar upplevelser i er mobilapp. Det här tillägget aktiverar din app för Assurance. |
+| [AEP Core](https://github.com/adobe/aepsdk-core-ios.git) | The `AEPCore`, `AEPServices`och `AEPIdentity` tillägg utgör grunden för Adobe Experience Platform SDK - alla program som använder SDK måste innehålla dem. Dessa moduler innehåller en gemensam uppsättning funktioner och tjänster som krävs för alla SDK-tillägg.<br/><ul><li>`AEPCore` innehåller implementering av händelsehubben. Händelsehubben är den mekanism som används för att leverera händelser mellan appen och SDK:n. Händelsehubben används också för att dela data mellan tillägg.</li><li>`AEPServices` innehåller flera återanvändbara implementeringar som krävs för plattformsstöd, inklusive nätverk, diskåtkomst och databashantering.</li><li>`AEPIdentity` implementerar integreringen med Adobe Experience Platform Identity Services.</li><li>`AEPSignal` representerar Adobe Experience Platform SDK:s signaltillägg som gör att marknadsförarna kan skicka en signal till sina appar för att skicka data till externa destinationer eller till öppna URL:er.</li><li>`AEPLifecycle` representerar Adobe Experience Platform SDK:s Lifecycle-tillägg som hjälper till att samla in uppgifter om programmets livscykel, t.ex. information om installation eller uppgradering, programstart och session, enhetsinformation och eventuella ytterligare kontextdata från programutvecklaren.</li></ul> |
+| [AEP Edge](https://github.com/adobe/aepsdk-edge-ios.git) | Mobiltillägget Adobe Experience Platform Edge Network (`AEPEdge`) kan du skicka data till Adobe Edge Network från ett mobilprogram. Med det här tillägget kan du implementera Adobe Experience Cloud-funktioner på ett mer robust sätt, leverera flera Adobe-lösningar via ett nätverksanrop och samtidigt vidarebefordra informationen till Adobe Experience Platform.<br/>Det mobila tillägget Edge Network är ett tillägg till Adobe Experience Platform SDK och kräver `AEPCore` och `AEPServices` tillägg för händelsehantering samt `AEPEdgeIdentity` tillägg för att hämta identiteter, som ECID. |
+| [AEP Edge Identity](https://github.com/adobe/aepsdk-edgeidentity-ios.git) | Mobiltillägget AEP Edge Identity (`AEPEdgeIdentity`) används för att hantera användaridentitetsdata från ett mobilprogram när Adobe Experience Platform SDK och Edge Network-tillägget används. |
+| [AEP Edge-samtycke](https://github.com/adobe/aepsdk-edgeconsent-ios.git) | Mobiltillägget AEP Consent Collection (`AEPConsent`) aktiverar insamling av medgivandeinställningar från mobilprogrammet när du använder Adobe Experience Platform SDK och Edge Network-tillägget. |
+| [AEP-användarprofil](https://github.com/adobe/aepsdk-userprofile-ios.git) | Tillägget Adobe Experience Platform User Profile Mobile (`AEPUserProfile`) är ett tillägg för att hantera användarprofiler för Adobe Experience Platform SDK. |
+| [AEP-platser](https://github.com/adobe/aepsdk-places-ios) | Tillägget AEP Places (`AEPPlaces`) kan du spåra geopositioneringshändelser enligt definitionen i Adobe Platser-gränssnittet och i Adobe Data Collection Tag-reglerna. |
+| [AEP Messaging](https://github.com/adobe/aepsdk-messaging-ios.git) | Tillägget AEP Messaging (`AEPMessaging`) kan du skicka push-meddelandetokens och skicka vidare klickningsfeedback till Adobe Experience Platform. |
+| [AEP-optimering](https://github.com/adobe/aepsdk-optimize-ios) | Tillägget AEP Optimize (`AEPOptimize`) innehåller API:er för att möjliggöra personalisering i realtid i Adobe Experience Platform Mobile SDK:er med Adobe Target eller Adobe Journey Optimizer Offer decisioning. Den kräver `AEPCore` och `AEPEdge` tillägg för att skicka personaliseringsfrågehändelser till Experience Edge-nätverket. |
+| [AEP Assurance](https://github.com/adobe/aepsdk-assurance-ios.git) | Assurance (alias project Griffon) är en ny, innovativ förlängning (`AEPAssurance`) för att hjälpa er att inspektera, bevisa, simulera och validera hur ni samlar in data eller levererar upplevelser i er mobilapp. Det här tillägget aktiverar din app för Assurance. |
 
 
 När du har installerat alla paket, din Xcode **[!UICONTROL Paketberoenden]** ska se ut så här:
 
-![Xcode-paketberoenden](assets/xcode-package-dependencies.png)
+![Xcode-paketberoenden](assets/xcode-package-dependencies.png){zoomable=&quot;yes&quot;}
 
 
 ## Importera tillägg

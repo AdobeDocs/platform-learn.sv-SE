@@ -3,9 +3,9 @@ title: Hantera WebViews
 description: Lär dig hur du hanterar datainsamling med WebViews i en mobilapp.
 jira: KT-6987
 hide: true
-source-git-commit: 1b09f81b364fe8cfa9d5d1ac801d7781d1786259
+source-git-commit: b3cf168fc9b20ea78df0f8863a6395e9a45ed832
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '459'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ Om du skickar data från appens inbyggda del och från en WebView i appen, gener
 
 För att lösa den oönskade situationen är det viktigt att skicka användarens ECID från den inbyggda delen av appen till en WebView som du kanske vill använda i appen.
 
-JavaScript-tillägget för tjänsten Experience Cloud ID i WebView extraherar ECID från URL:en i stället för att skicka en begäran till Adobe om ett nytt ID. ID-tjänsten använder detta ECID för att spåra besökaren.
+Det AEP Edge Identity-tillägg som används i WebView samlar in det aktuella ECID:t och lägger till det i URL:en i stället för att skicka en begäran till Adobe om ett nytt ID. Implementeringen använder sedan detta ECID för att begära URL:en.
 
 ## Implementering
 

@@ -3,9 +3,9 @@ title: Ställ in försäkring
 description: Lär dig hur du implementerar tillägget Assurance i en mobilapp.
 feature: Mobile SDK,Assurance
 hide: true
-source-git-commit: 1b09f81b364fe8cfa9d5d1ac801d7781d1786259
+source-git-commit: b3cf168fc9b20ea78df0f8863a6395e9a45ed832
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '754'
 ht-degree: 0%
 
 ---
@@ -34,11 +34,7 @@ I den här lektionen kommer du att:
 
 ## Bekräfta åtkomst
 
-Bekräfta att din organisation har åtkomst till Assurance genom att utföra följande steg:
-
-1. Besök [https://experience.adobe.com/assurance](https://experience.adobe.com/assurance){target="_blank"}.
-1. Logga in med dina Adobe ID-inloggningsuppgifter för Experience Cloud.
-1. Om du ser **[!UICONTROL Sessioner]** så får du åtkomst. Om du ser åtkomstsidan (beta) väljer du **[!UICONTROL Registrera]** för att registrera.
+Bekräfta att din organisation har åtkomst till Assurance. Som användare bör du läggas till i profilen för Adobe Experience Platform. Se [Användaråtkomst](https://experienceleague.adobe.com/docs/experience-platform/assurance/user-access.html?lang=en) i Assurance-guiden för mer information.
 
 ## Implementera
 
@@ -70,7 +66,7 @@ Innan du kör programmet för första gången i Xcode måste du uppdatera signer
 1. Välj **Signering och funktioner** -fliken.
 1. Konfigurera **[!UICONTROL Hantera signering automatiskt]**, **[!UICONTROL Team]** och **[!UICONTROL Paketidentifierare]** eller använd dina specifika Apple-utvecklingskonfigurationer.
 
-   ![Xcode-signeringsfunktioner](assets/xcode-signing-capabilities.png)
+   ![Xcode-signeringsfunktioner](assets/xcode-signing-capabilities.png){zoomable=&quot;yes&quot;}
 
 ## Konfigurera en bas-URL
 

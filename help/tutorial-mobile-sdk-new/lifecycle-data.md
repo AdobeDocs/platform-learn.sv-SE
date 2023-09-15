@@ -2,9 +2,9 @@
 title: Livscykeldata
 description: Lär dig hur du samlar in livscykeldata i en mobilapp.
 hide: true
-source-git-commit: 1b09f81b364fe8cfa9d5d1ac801d7781d1786259
+source-git-commit: b3cf168fc9b20ea78df0f8863a6395e9a45ed832
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '630'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Med Adobe Experience Platform Mobile SDK Lifecycle kan du samla in livscykeldata
 
 ## Förutsättningar
 
-* App med SDK:er har installerats och konfigurerats.
+* App med SDK:er har installerats och konfigurerats. Som en del av den här lektionen har du redan påbörjat livscykelövervakning. Se [Installera SDK:er - Uppdatera AppDelegate](install-sdks.md#update-appdelegate) för granskning.
 * Registrerat Assurance-tillägget enligt beskrivningen i [föregående lektion](install-sdks.md).
 
 ## Utbildningsmål

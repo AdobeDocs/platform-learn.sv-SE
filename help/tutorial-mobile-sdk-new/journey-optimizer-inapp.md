@@ -5,9 +5,9 @@ solution: Data Collection,Journey Optimizer
 feature-set: Journey Optimizer
 feature: In App
 hide: true
-source-git-commit: 56323387deae4a977a6410f9b69db951be37059f
+source-git-commit: ae1e05b3f93efd5f2a9b48dc10761dbe7a84fb1e
 workflow-type: tm+mt
-source-wordcount: '1569'
+source-wordcount: '1689'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,11 @@ ht-degree: 0%
 
 Lär dig skapa meddelanden i appen för mobilappar med Experience Platform Mobile SDK och Journey Optimizer.
 
-Med Journey Optimizer kan ni skapa kampanjer för att skicka meddelanden i appen till riktade målgrupper. Innan du skickar meddelanden i appen med Journey Optimizer måste du se till att rätt konfigurationer och integreringar finns på plats. Om du vill veta mer om dataflödet för meddelanden i programmet i Journey Optimizer kan du läsa [dokumentationen](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/inapp-configuration.html?lang=en).
+Med Journey Optimizer kan ni skapa kampanjer för att skicka meddelanden i appen till riktade målgrupper. Kampanjer i Journey Optimizer används för att leverera engångsinnehåll till en viss målgrupp via olika kanaler. Med kampanjer utförs åtgärder samtidigt, antingen omedelbart eller baserat på ett angivet schema. Vid användning av resor (se [Journey Optimizer push-meddelanden](journey-optimizer-push.md) lektion) utförs åtgärderna i följd.
+
+![Arkitektur](assets/architecture-ajo.png)
+
+Innan du skickar meddelanden i appen med Journey Optimizer måste du se till att rätt konfigurationer och integreringar finns på plats. Om du vill veta mer om dataflödet för meddelanden i programmet i Journey Optimizer kan du läsa [dokumentationen](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/inapp-configuration.html?lang=en).
 
 >[!NOTE]
 >
@@ -26,6 +30,7 @@ Med Journey Optimizer kan ni skapa kampanjer för att skicka meddelanden i appen
 ## Förutsättningar
 
 * App med SDK:er har installerats och konfigurerats.
+* Konfigurera appen för Adobe Experience Platform.
 * Åtkomst till Journey Optimizer och tillräcklig behörighet enligt beskrivningen [här](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configuration-message/push-config/push-configuration.html?lang=en). Du behöver även tillräcklig behörighet för följande Journey Optimizer-funktioner.
    * Hantera kampanjer.
 * Betalat Apple-utvecklarkonto med tillräcklig behörighet för att skapa certifikat, identifierare och nycklar.
@@ -43,7 +48,7 @@ I den här lektionen ska du
 * Registrera program-ID med Apple Push Notification-tjänsten (APN).
 * Skapa en appyta i AJO.
 * Installera och konfigurera taggtillägget för Journey Optimizer.
-* Uppdatera appen så att den innehåller taggtillägget Journey Optimizer.
+* Uppdatera appen för att registrera Journey Optimizer-taggtillägget.
 * Validera inställningar i Assurance.
 * Definiera er egen kampanj och upplevelse av meddelanden i appen i Journey Optimizer.
 * Skicka ditt eget meddelande i appen inifrån appen.
@@ -96,7 +101,7 @@ Ytterligare dokumentation kan [hittades här](https://help.apple.com/developer-a
 
 För att din app ska fungera med Journey Optimizer måste du uppdatera din taggegenskap.
 
-1. Navigera till **[!UICONTROL Taggar]** > **[!UICONTROL Tillägg]** > **[!UICONTROL Katalog]**,
+1. Navigera till **[!UICONTROL Taggar]** > **[!UICONTROL Tillägg]** > **[!UICONTROL Katalog]**.
 1. Öppna egenskapen, till exempel **[!UICONTROL Luma Mobile App Tutorial]**.
 1. Välj **[!UICONTROL Katalog]**.
 1. Sök efter **[!UICONTROL Adobe Journey Optimizer]** tillägg.
@@ -171,7 +176,8 @@ Om du vill skapa ett eget meddelande i appen måste du definiera en kampanj i Jo
 * livscykelhändelser, som start, installation, uppgradering, stängning eller krasch,
 * geopositioneringshändelser, som att ange eller avsluta en intressepunkt.
 
-I den här självstudiekursen kommer du att använda de generiska och tilläggsoberoende API:erna för Mobile Core för att underlätta händelsespårning av användarskärmar, åtgärder och PII-data. Händelser som genereras av dessa API:er publiceras till SDK-händelsehubben och kan användas av tillägg. När till exempel Analytics-tillägget installeras skickas alla användaråtgärder och händelsedata för appskärmar till rätt analytiska rapportslutpunkter.
+I den här självstudiekursen kommer du att använda de allmänna och tilläggsoberoende API:erna för Mobile Core (se [Generiska API:er för Mobile Core](https://developer.adobe.com/client-sdks/documentation/mobile-core/#mobile-core-generic-apis)) för att underlätta händelsespårning av användarskärmar, åtgärder och PII-data. Händelser som genereras av dessa API:er publiceras till SDK-händelsehubben och kan användas av tillägg. SDK-händelsehubben tillhandahåller den grundläggande datastruktur som är knuten till alla AEP Mobile SDK-tillägg, med en lista över registrerade tillägg och interna moduler, en lista över registrerade händelseavlyssnare och en delad tillståndsdatabas.
+SDK-händelsehubben publicerar och tar emot händelsedata från registrerade tillägg för att förenkla integreringen med Adobe och tredjepartslösningar. När tillägget Optimera installeras hanteras till exempel alla förfrågningar och interaktioner med erbjudandemotorn Journey Optimizer - Beslutshantering av händelsehubben.
 
 1. I användargränssnittet för Journey Optimizer väljer du **[!UICONTROL Kampanjer]** från den vänstra listen.
 1. Välj **[!UICONTROL Skapa kampanj]**.
@@ -252,7 +258,7 @@ Du kan validera dina meddelanden i appen i Assurance-gränssnittet.
 
 ## Nästa steg
 
-Nu bör du ha alla verktyg du behöver för att börja lägga till meddelanden i appen, där det är relevant och tillämpligt, i Luma-appen. Du kan till exempel marknadsföra produkter baserat på specifika interaktioner som du har spårat i appen.
+Nu bör du ha alla verktyg du behöver för att börja lägga till meddelanden i appen, där det är relevant och tillämpligt.  Du kan till exempel marknadsföra produkter baserat på specifika interaktioner som du spårar i din app.
 
 >[!SUCCESS]
 >

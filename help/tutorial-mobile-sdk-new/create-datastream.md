@@ -3,10 +3,10 @@ title: Konfigurera ett datastream
 description: Lär dig hur du skapar ett datastream i Experience Platform.
 feature: Mobile SDK,Datastreams
 hide: true
-source-git-commit: 56323387deae4a977a6410f9b69db951be37059f
+source-git-commit: ae1e05b3f93efd5f2a9b48dc10761dbe7a84fb1e
 workflow-type: tm+mt
-source-wordcount: '551'
-ht-degree: 1%
+source-wordcount: '598'
+ht-degree: 2%
 
 ---
 
@@ -16,6 +16,8 @@ ht-degree: 1%
 Lär dig hur du skapar ett datastream i Experience Platform.
 
 En datastream är en konfiguration på serversidan på Platform Edge Network. Datastream säkerställer att inkommande data till Platform Edge Network dirigeras till Adobe Experience Cloud-program och -tjänster på rätt sätt. Mer information finns i [dokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html) eller [video](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/configure-datastreams.html).
+
+![Arkitektur](assets/architecture.png)
 
 ## Förutsättningar
 
@@ -33,13 +35,18 @@ I den här lektionen kommer du att:
 
 Datastreams kan skapas i [!UICONTROL Datainsamling] -gränssnittet med [!UICONTROL Datastream] konfigurationsverktyg. Så här skapar du ett datastream:
 
-1. Se till att du är i rätt Experience Platform-sandlåda, eftersom datastreams är definierade på en sandlådenivå.
+1. Se till att du är i rätt Experience Platform-sandlåda, eftersom datastreams definieras på en sandlådenivå.
 1. Välj **[!UICONTROL Datastreams]** till vänster.
 1. Välj **[!UICONTROL Ny datastream]**.
 
    ![datastreams - startsida](assets/datastream-new.png)
 
 1. Ange en **[!UICONTROL Namn]**, till exempel `Luma Mobile App` och **[!UICONTROL Beskrivning]**, till exempel `Datastream for Luma Mobile App`.
+
+   >[!NOTE]
+   >
+   >Sista påminnelsen: Om du går igenom den här självstudiekursen med flera personer i en och samma sandlåda eller använder ett delat konto bör du överväga att lägga till eller föregå en identifiering som en del av namngivningskonventionerna. Använd till exempel `Luma Mobile App Event Dataset - Joe Smith` istället för `Luma Mobile App Event Dataset`. Se även anteckningen i [Ökning](overview.md).
+
 1. Välj schemat som du skapade i föregående lektion från **Event Schema** en lista.
 1. Välj **[!UICONTROL Spara]**.
 
@@ -83,7 +90,7 @@ Du kanske också vill aktivera tjänsten Adobe Experience Platform.
 
 1. Välj **[!UICONTROL Spara]**.
 
-   ![Lägg till Adobe Experience Platform som en datastream-tjänst](assets/datastream-service-aep.png)
+   ![Lägg till Adobe Experience Platform som datastream-tjänst](assets/datastream-service-aep.png)
 1. Den slutliga konfigurationen bör se ut ungefär så här.
 
    ![datastream-inställningar](assets/datastream-settings.png)

@@ -5,9 +5,9 @@ solution: Data Collection,Journey Optimizer
 feature-set: Journey Optimizer
 feature: Push
 hide: true
-source-git-commit: 56323387deae4a977a6410f9b69db951be37059f
+source-git-commit: ae1e05b3f93efd5f2a9b48dc10761dbe7a84fb1e
 workflow-type: tm+mt
-source-wordcount: '2199'
+source-wordcount: '2241'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,9 @@ ht-degree: 0%
 
 Lär dig skapa push-meddelanden för mobilappar med Experience Platform Mobile SDK och Journey Optimizer.
 
-Med Journey Optimizer kan ni skapa resor och skicka meddelanden till riktade målgrupper. Innan du skickar push-meddelanden med Journey Optimizer måste du se till att rätt konfigurationer och integreringar finns på plats. Om du vill veta mer om dataflödet för push-meddelanden i Journey Optimizer kan du läsa [dokumentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configuration-message/push-config/push-gs.html).
+Med Journey Optimizer kan ni skapa resor och skicka meddelanden till utvalda målgrupper. Innan du skickar push-meddelanden med Journey Optimizer måste du se till att rätt konfigurationer och integreringar finns på plats. Om du vill veta mer om dataflödet för push-meddelanden i Journey Optimizer kan du läsa [dokumentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configuration-message/push-config/push-gs.html).
+
+![Arkitektur](assets/architecture-ajo.png)
 
 >[!NOTE]
 >
@@ -26,6 +28,7 @@ Med Journey Optimizer kan ni skapa resor och skicka meddelanden till riktade må
 ## Förutsättningar
 
 * Programmet har skapats och körts med SDK:er installerade och konfigurerade.
+* Konfigurera appen för Adobe Experience Platform.
 * Åtkomst till Journey Optimizer och tillräcklig behörighet enligt beskrivningen [här](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configuration-message/push-config/push-configuration.html?lang=en). Du behöver även tillräcklig behörighet för följande Journey Optimizer-funktioner.
    * Skapa en appyta.
    * Skapa en resa.
@@ -42,7 +45,7 @@ I den här lektionen ska du
 * Skapa en appyta i Journey Optimizer.
 * Uppdatera ditt schema så att det inkluderar push-meddelandefält.
 * Installera och konfigurera taggtillägget för Journey Optimizer.
-* Uppdatera appen så att den innehåller taggtillägget Journey Optimizer.
+* Uppdatera appen för att registrera Journey Optimizer-taggtillägget.
 * Validera inställningar i Assurance.
 * Skicka ett testmeddelande från Assurance
 * Definiera din egen push-meddelandehändelse, resa och upplevelse i Journey Optimizer.
@@ -53,11 +56,11 @@ I den här lektionen ska du
 
 >[!TIP]
 >
->Om du har konfigurerat miljön redan som en del av [Journey Optimizer-meddelanden i appen](journey-optimizer-inapp.md) kan du hoppa över det här avsnittet.
+>Om du redan har konfigurerat miljön som en del av [Journey Optimizer-meddelanden i appen](journey-optimizer-inapp.md) kan du hoppa över det här avsnittet.
 
-### Registrera program-ID med APNS
+### Registrera program-ID med APN:er
 
-Följande steg är inte Adobe Experience Cloud-specifika och har utformats för att vägleda dig genom APNS-konfigurationen.
+Följande steg är inte Adobe Experience Cloud-specifika och har utformats för att vägleda dig genom APN-konfigurationen.
 
 ### Skapa en privat nyckel
 
@@ -70,7 +73,7 @@ Följande steg är inte Adobe Experience Cloud-specifika och har utformats för 
 1. Välj **[!UICONTROL Fortsätt]**.
    ![konfigurera ny nyckel](assets/mobile-push-apple-dev-config-key.png)
 1. Granska konfigurationen och välj **[!UICONTROL Registrera]**.
-1. Ladda ned `.p8` privat nyckel. Den används i appytskonfigurationen.
+1. Ladda ned `.p8` privat nyckel. Den används senare i konfigurationen för appytan i den här lektionen.
 1. Anteckna **[!UICONTROL Nyckel-ID]**. Den används i appytskonfigurationen.
 1. Anteckna **[!UICONTROL Team-ID]**. Den används i appytskonfigurationen.
    ![Nyckelinformation](assets/push-apple-dev-key-details.png)
@@ -194,7 +197,7 @@ Du ska definiera en ny händelsetyp som ännu inte är tillgänglig som en del a
 1. Välj ditt schema, till exempel **[!UICONTROL Luma Mobile App Event Schema]** för att öppna den.
 1. I schemaredigeraren:
    1. Välj **[!UICONTROL eventType]** fält.
-   1. I **[!UICONTROL Fältegenskaper]** bläddra nedåt för att se en lista över möjliga värden för händelsetypen. Välj **[!UICONTROL Lägg till rad]** och lägga till `application.test` som **[!UICONTROL VÄRDE]** och **[!UICONTROL Testhändelse för push-meddelande]** som `DISPLAY NAME`.
+   1. I **[!UICONTROL Fältegenskaper]** bläddra nedåt för att se en lista över möjliga värden för händelsetypen. Välj **[!UICONTROL Lägg till rad]** och lägga till `application.test` som **[!UICONTROL VÄRDE]** och `[!UICONTROL Test event for push notification]` som `DISPLAY NAME`.
    1. Välj **[!UICONTROL Använd]**.
    1. Välj **[!UICONTROL Spara]**.
       ![Lägg till värde till händelsetyper](assets/ajo-update-schema-eventtype-enum.png)
@@ -357,7 +360,7 @@ Den här gången har den upplevelsehändelse du ska skicka inte skapats för att
 
 ## Nästa steg
 
-Nu bör du ha alla verktyg du behöver för att börja bygga resor med push-meddelanden och push-meddelanden om apphantering från Journey Optimizer. Du kan till exempel välkomna användaren när han eller hon loggar in i appen.
+Nu bör du ha alla verktyg som behövs för att hantera push-meddelanden i appen. Du kan till exempel skapa en resa i Journey Optimizer som skickar ett välkomstmeddelande när en användare av appen loggar in. Eller ett bekräftelsemeddelande när en användare köper en produkt i appen. Eller anger geofence för en plats (som du kommer att se i [Platser](places.md) lektion).
 
 >[!SUCCESS]
 >

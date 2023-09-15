@@ -2,7 +2,7 @@
 title: Platser
 description: Lär dig hur du använder platsens geopositioneringstjänst i din mobilapp.
 hide: true
-source-git-commit: 371d71f06796c0f7825217a2ebd87d72ae7e8639
+source-git-commit: b3cf168fc9b20ea78df0f8863a6395e9a45ed832
 workflow-type: tm+mt
 source-wordcount: '1754'
 ht-degree: 0%
@@ -31,7 +31,7 @@ I den här lektionen ska du
 * Uppdatera taggegenskapen med tillägget Platser.
 * Uppdatera ditt schema för att hämta geopositioneringshändelser.
 * Validera inställningar i Assurance.
-* Uppdatera appen så att den innehåller tillägget Platser.
+* Uppdatera programmet för att registrera Platser-tillägget.
 * Implementera geopositioneringsspårning från tjänsten Platser i din app.
 
 
@@ -49,7 +49,7 @@ I den här lektionen ska du
 * Uppdatera ditt schema för att hämta offerthändelser.
 * Validera inställningar i Assurance.
 * Skapa ett offertbeslut baserat på erbjudanden från Journey Optimizer - Beslutshantering.
-* Uppdatera appen så att den innehåller tillägget Optimizer.
+* Uppdatera appen och registrera tillägget Optimizer.
 * Implementera erbjudanden från Beslutshantering i appen.
 
 
@@ -106,7 +106,7 @@ Du definierar några intressepunkter i tjänsten Platser.
 
 Verifiera om ditt schema, enligt definitionen i [Skapa schema](create-schema.md), innehåller de fältgrupper och klasser som krävs för att samla in POI- och geolokaliseringsdata.
 
-1. Navigera till användargränssnittet för datainsamling och välj **[!UICONTROL Scheman]** från den vänstra listen.
+1. Navigera till gränssnittet Datainsamling och välj **[!UICONTROL Scheman]** från den vänstra listen.
 1. Välj **[!UICONTROL Bläddra]** i det övre fältet.
 1. Välj ditt schema för att öppna det.
 1. Välj **[!UICONTROL Consumer Experience Event]**.
@@ -320,7 +320,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
    }
    ```
 
-Det handlar inte bara om självstudiekursen som förklarar hur positionshanteraren implementeras i iOS.
+Det handlar inte bara om den här lektionen där du kan förklara hur positionshanteraren implementeras i iOS.
 
 
 ## Validera med din app
