@@ -1,0 +1,46 @@
+{
+    "config": {
+        "tenant": "_techmarketingdemos",
+        "sandbox": "mobile-and-web-sdk-courses",
+        "datasetId": "64ba5bc041ddf31ca9364aae",
+        "datastreamId": "36ce7dc5-27e9-4c1a-b9b2-4ea45e1db84f",
+        "showProducts": true,
+        "showPersonalisation": true,
+        "showPersonalisationDirect": false,
+        "showGeofences": true,
+        "showBeacons": true,
+        "ldap": "rmaur",
+        "emailDomain": "adobe.com",
+        "tms": "AEP Data Collection"
+    },
+    "customer": {
+        "name": "Luma",
+        "logo": "https://luma.enablementadobe.com/content/dam/luma/en/logos/Luma_Logo.png",
+        "productsType": "Products",
+        "productsSystemImage": "cart",
+        "currency": "€"
+    },
+    "login": {
+        "name": "Mobile App Login",
+        "eventType": "mobileapp.login",
+        "orchestration": {
+            "eventID": "aeeedcda49dbf48c33ea97756f577cdcc12ea3cb2a953767804f58a9bb3c48e2"
+        }
+    },
+    "testPush": {
+        "name": "Mobile App Test Push",
+        "eventType": "application.test",
+        "orchestration": {
+            "eventID": "cb9c8fc3d86043a55e1e3f8039265b4fe87f6ce4ba729a3c3ee1013225651924"
+        }
+    },
+    "target": {
+        "location": "luma-mobileapp-abtest"
+    },
+    "map": {
+        "latitude": 52.37109,
+        "longitude": 4.8919,
+        "zoom": 2
+    }
+}
+
