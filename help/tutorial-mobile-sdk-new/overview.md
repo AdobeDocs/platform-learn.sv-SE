@@ -3,7 +3,7 @@ title: Implementera Adobe Experience Cloud i självstudiekursen om mobilappar
 description: Lär dig hur du implementerar Adobe Experience Cloud mobilappar. Den här självstudiekursen vägleder dig genom en implementering av Experience Cloud-program i ett exempel på en Swift-app.
 recommendations: noDisplay,catalog
 hide: true
-source-git-commit: ae1e05b3f93efd5f2a9b48dc10761dbe7a84fb1e
+source-git-commit: a2788110b1c43d24022672bb5ba0f36af66d962b
 workflow-type: tm+mt
 source-wordcount: '873'
 ht-degree: 1%
@@ -103,4 +103,4 @@ Kom så börjar vi!
 >
 >Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 
-Nästa: **[Skapa ett XDM-schema](create-schema.md)**.
+Nästa: **[Skapa ett XDM-schema](create-schema.md)**

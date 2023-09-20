@@ -1,15 +1,15 @@
 ---
-title: Händelser
+title: Samla in händelsedata
 description: Lär dig hur du samlar in händelsedata i en mobilapp.
 hide: true
-source-git-commit: b3cf168fc9b20ea78df0f8863a6395e9a45ed832
+source-git-commit: a2788110b1c43d24022672bb5ba0f36af66d962b
 workflow-type: tm+mt
-source-wordcount: '1321'
+source-wordcount: '1309'
 ht-degree: 0%
 
 ---
 
-# Händelser
+# Samla in händelsedata
 
 Lär dig spåra händelser i en mobilapp.
 
@@ -127,7 +127,7 @@ Du har olika affärsproduktrelaterade åtgärder i din app och du vill skicka h�
 
 Om du vill implementera sändning av e-handelsrelaterade upplevelsehändelser på ett återanvändbart sätt använder du en dedikerad funktion:
 
-1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project navigator och lägg till följande i `func sendCommerceExperienceEvent(commerceEventType: String, product: Product)` funktion.
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project navigator och lägg till följande i `func sendCommerceExperienceEvent(commerceEventType: String, product: Product)` funktion.
 
    ```swift
    // Set up a data dictionary, create an experience event and send the event.
@@ -158,7 +158,7 @@ Om du vill implementera sändning av e-handelsrelaterade upplevelsehändelser p�
    * ställer in en upplevelsehändelse med hjälp av ordlistan,
    * skickar upplevelsehändelsen med [`Edge.sendEvent`](https://developer.adobe.com/client-sdks/documentation/edge-network/api-reference/#sendevent) API.
 
-1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Produkter]** > **[!UICONTROL ProductView]** i Xcode Project navigator och lägga till olika anrop till `sendCommerceExperienceEvent` funktion:
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Views]** > **[!DNL Products]** > **[!UICONTROL ProductView]** i Xcode Project navigator och lägga till olika anrop till `sendCommerceExperienceEvent` funktion:
 
    1. På `.task` modifierare, i `ATTrackingManager.trackingAuthorizationStatus` stängning. Detta `.task` modifieraren anropas när produktvyn initieras och visas, så du vill skicka en produktvyhändelse vid det tillfället.
 
@@ -263,7 +263,7 @@ Tänk dig att du vill spåra skärmvisningar och interaktioner i själva appen. 
 
 Här kan du implementera koden i Xcode-projektet.
 
-1. För enkelhetens skull definierar du två funktioner i **[!UICONTROL MobileSDK]**. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project Navigator.
+1. För enkelhetens skull definierar du två funktioner i **[!UICONTROL MobileSDK]**. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project Navigator.
 
    1. Ett för appinteraktioner. Lägg till den här koden i `func sendAppInteractionEvent(actionName: String)` funktion:
 
@@ -321,7 +321,7 @@ Här kan du implementera koden i Xcode-projektet.
       * ställer in en upplevelsehändelse med hjälp av ordlistan,
       * skickar upplevelsehändelsen med [`Edge.sendEvent`](https://developer.adobe.com/client-sdks/documentation/edge-network/api-reference/#sendevent) API.
 
-1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Allmänt]** > **[!UICONTROL LoginSheet]**.
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Views]** > **[!DNL General]** > **[!UICONTROL LoginSheet]**.
 
    1. Lägg till följande markerade kod i avslutningsknappen Inloggning:
 
@@ -345,7 +345,7 @@ Här kan du implementera koden i Xcode-projektet.
 
    1. Flytta Assurance-ikonen åt vänster.
    1. Välj **[!UICONTROL Startsida]** i flikfältet och verifiera att en **[!UICONTROL ECID]**, **[!UICONTROL E-post]** och **[!UICONTROL CRM-ID]** på hemskärmen.
-   1. Välj **[!UICONTROL Produkter]** i tabbfältet.
+   1. Välj **[!DNL Products]** i tabbfältet.
    1. Välj en produkt.
    1. Välj <img src="assets/saveforlater.png" width="15" />.
    1. Välj <img src="assets/addtocart.png" width="20" />.
@@ -361,7 +361,7 @@ Här kan du implementera koden i Xcode-projektet.
 
 ## Nästa steg
 
-Nu bör du ha alla verktyg du behöver för att börja lägga till datainsamling i Luma-appen. Du kan lägga till mer information om hur användaren interagerar med dina produkter i appen och du kan lägga till fler appinteraktioner och skärmsspårningsanrop till appen:
+Nu bör du ha alla verktyg du behöver för att börja lägga till datainsamling i appen. Du kan lägga till mer information om hur användaren interagerar med dina produkter i appen och du kan lägga till fler appinteraktioner och skärmsspårningsanrop till appen:
 
 * Implementera beställning, utcheckning, tom varukorg och andra funktioner i appen och lägg till relevanta händelser för e-handelsupplevelser i den här funktionen.
 * Upprepa samtalet till `sendAppInteractionEvent` med rätt parameter för att spåra användarens övriga appinteraktioner.

@@ -1,15 +1,15 @@
 ---
-title: Livscykeldata
+title: Samla in livscykeldata
 description: Lär dig hur du samlar in livscykeldata i en mobilapp.
 hide: true
-source-git-commit: b3cf168fc9b20ea78df0f8863a6395e9a45ed832
+source-git-commit: cd1efbfaa335c08cbcc22603fe349b4594cc1056
 workflow-type: tm+mt
 source-wordcount: '630'
 ht-degree: 0%
 
 ---
 
-# Livscykeldata
+# Samla in livscykeldata
 
 Lär dig hur du samlar in livscykeldata i en mobilapp.
 
@@ -52,7 +52,7 @@ The Consumer Experience Event field group you added in the [previous lesson](cre
 
 Nu kan du uppdatera projektet för att registrera livscykelhändelserna.
 
-1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL SceneDelegate]** i Xcode Project-navigatorn.
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!UICONTROL SceneDelegate]** i Xcode Project-navigatorn.
 
 1. Om appen återupptas från ett bakgrundsläge när den startas kan iOS ringa `sceneWillEnterForeground:` delegeringsmetod och här vill du aktivera en start-händelse för livscykel. Lägg till koden i `func sceneWillEnterForeground(_ scene: UIScene)`:
 

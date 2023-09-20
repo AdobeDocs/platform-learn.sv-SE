@@ -3,9 +3,9 @@ title: Skapa ett XDM-schema
 description: Lär dig hur du skapar ett XDM-schema för mobilappshändelser.
 feature: Mobile SDK,Schemas
 hide: true
-source-git-commit: b3cf168fc9b20ea78df0f8863a6395e9a45ed832
+source-git-commit: a2788110b1c43d24022672bb5ba0f36af66d962b
 workflow-type: tm+mt
-source-wordcount: '1473'
+source-wordcount: '1482'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ Mer information om schemakompositionsmodellen, inklusive designprinciper och bä
 
 >[!TIP]
 >
->Om du känner till SDR (Analytics Solution Design Reference) kan du se ett schema som en mer robust SDR.
+>Om du känner till SDR (Analytics Solution Design Reference) kan du se ett schema som en mer robust SDR. Se [Skapa och underhåll ett SDR-dokument (Solution Design Reference)](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html?lang=en) för mer information.
 
 ## Förutsättningar
 
@@ -214,7 +214,7 @@ Lägg nu till en anpassad fältgrupp med din anpassade datatyp:
 
 1. Ange en **[!UICONTROL Fältnamn]** av `appInformation`, a **[!UICONTROL Visningsnamn]** av `App Information`och en **[!UICONTROL Typ]** av `App Information`.
 
-1. Välj **[!UICONTROL Appinteraktioner]** från **[!UICONTROL Typ]** som är den anpassade datatypen som du skapade i föregående övning.
+1. Välj **[!UICONTROL Appinteraktioner]** från **[!UICONTROL Fältgrupp]** för att tilldela fälten till den nya fältgruppen.
 
 1. Välj **[!UICONTROL Använd]**.
 
@@ -224,7 +224,7 @@ Lägg nu till en anpassad fältgrupp med din anpassade datatyp:
 
 >[!NOTE]
 >
->Anpassade fältgrupper placeras alltid under din Experience Cloud-organisationsidentifierare. Så `_techmarketingdemos`, som används i skärmbilderna, ersätts med din organisations unika värde.
+>Anpassade fältgrupper placeras alltid under din Experience Cloud-organisationsidentifierare.
 
 
 >[!SUCCESS]

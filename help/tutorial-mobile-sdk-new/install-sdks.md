@@ -2,9 +2,9 @@
 title: Installera Adobe Experience Platform Mobile SDKs
 description: Lär dig hur du implementerar Adobe Experience Platform Mobile SDK i en mobilapp.
 hide: true
-source-git-commit: b3cf168fc9b20ea78df0f8863a6395e9a45ed832
+source-git-commit: a2788110b1c43d24022672bb5ba0f36af66d962b
 workflow-type: tm+mt
-source-wordcount: '946'
+source-wordcount: '948'
 ht-degree: 0%
 
 ---
@@ -33,9 +33,12 @@ I den här lektionen kommer du att:
 
 ## Swift Package Manager
 
-Istället för att använda CocoaPods och använda en Pod-fil (se Mobile Install Instructions, se [Generera installationsanvisningar för SDK](./configure-tags.md#generate-sdk-install-instructions)) kan du lägga till enskilda paket med Xcodes inbyggda Swift Package Manager.
+Istället för att använda CocoaPods och använda en Pod-fil (se Mobile Install Instructions, se [Generera installationsanvisningar för SDK](./configure-tags.md#generate-sdk-install-instructions)) kan du lägga till enskilda paket med Xcodes inbyggda Swift Package Manager. Xcode-projektet har redan alla paketberoenden tillagda. Xcode **[!UICONTROL Paketberoenden]** ska se ut så här:
 
-I Xcode använder du **[!UICONTROL Fil]** > **[!UICONTROL Lägg till paket...]** och installera alla paket som anges i tabellen nedan. Markera länken för paketet i tabellen för att hämta den fullständiga URL:en för det specifika paketet.
+![Xcode-paketberoenden](assets/xcode-package-dependencies.png){zoomable=&quot;yes&quot;}
+
+
+I Xcode kan du använda **[!UICONTROL Fil]** > **[!UICONTROL Lägg till paket...]** för att lägga till paket. Tabellen nedan innehåller länkar till de URL:er som du skulle använda för att lägga till paket. Länkarna visar även mer information om varje paket.
 
 | Paket | Beskrivning |
 |---|---|
@@ -50,14 +53,9 @@ I Xcode använder du **[!UICONTROL Fil]** > **[!UICONTROL Lägg till paket...]**
 | [AEP Assurance](https://github.com/adobe/aepsdk-assurance-ios.git) | Assurance (alias project Griffon) är en ny, innovativ förlängning (`AEPAssurance`) för att hjälpa er att inspektera, bevisa, simulera och validera hur ni samlar in data eller levererar upplevelser i er mobilapp. Det här tillägget aktiverar din app för Assurance. |
 
 
-När du har installerat alla paket, din Xcode **[!UICONTROL Paketberoenden]** ska se ut så här:
-
-![Xcode-paketberoenden](assets/xcode-package-dependencies.png){zoomable=&quot;yes&quot;}
-
-
 ## Importera tillägg
 
-I Xcode navigerar du till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL AppDelegate]** och se till att följande importer ingår i den här källfilen.
+I Xcode navigerar du till **[!DNL Luma]** > **[!DNL Luma]** > **[!UICONTROL AppDelegate]** och se till att följande importer ingår i den här källfilen.
 
 ```swift
 // import AEP MobileSDK libraries
@@ -76,16 +74,16 @@ import AEPOptimize
 import AEPAssurance
 ```
 
-Gör på samma sätt för **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Utils]** > **[!UICONTROL MobileSDK]**.
+Gör på samma sätt för **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** > **[!UICONTROL MobileSDK]**.
 
 ## Uppdatera AppDelegate
 
-Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **AppDelegate** i Xcode Project-navigatorn.
+Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **AppDelegate** i Xcode Project-navigatorn.
 
-1. Ange `@AppStorage` värde för `environmentFileId` till det fil-ID för utvecklingsmiljön som du hämtade från taggar i steg 6 i [Generera installationsanvisningar för SDK](configure-tags.md#generate-sdk-install-instructions).
+1. Ersätt `@AppStorage` value `YOUR_ENVIRONMENT_ID_GOES_HERE` for `environmentFileId` till det fil-ID för utvecklingsmiljön som du hämtade från taggar i steg 6 i [Generera installationsanvisningar för SDK](configure-tags.md#generate-sdk-install-instructions).
 
    ```swift
-   @AppStorage("environmentFileId") private var environmentFileId = "b5cbd1a1220e/1857ef6cacb5/launch-2594f26b23cd-development"
+   @AppStorage("environmentFileId") private var environmentFileId = "YOUR_ENVIRONMENT_ID_GOES_HERE"
    ```
 
 1. Lägg till följande kod i `application(_, didFinishLaunchingWithOptions)` funktion.

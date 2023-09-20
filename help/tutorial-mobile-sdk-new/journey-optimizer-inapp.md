@@ -1,18 +1,18 @@
 ---
-title: Adobe Journey Optimizer-meddelanden i appen
-description: Lär dig hur du skapar meddelanden i appen till en mobilapp med Platform Mobile SDK och Adobe Journey Optimizer.
+title: Skapa och skicka meddelanden i appen
+description: Lär dig hur du skapar och skickar meddelanden i appen till en mobilapp med Platform Mobile SDK och Adobe Journey Optimizer.
 solution: Data Collection,Journey Optimizer
 feature-set: Journey Optimizer
 feature: In App
 hide: true
-source-git-commit: ae1e05b3f93efd5f2a9b48dc10761dbe7a84fb1e
+source-git-commit: a2788110b1c43d24022672bb5ba0f36af66d962b
 workflow-type: tm+mt
-source-wordcount: '1689'
+source-wordcount: '1547'
 ht-degree: 0%
 
 ---
 
-# Journey Optimizer-meddelanden i appen
+# Skapa och skicka meddelanden i appen
 
 Lär dig skapa meddelanden i appen för mobilappar med Experience Platform Mobile SDK och Journey Optimizer.
 
@@ -35,10 +35,6 @@ Innan du skickar meddelanden i appen med Journey Optimizer måste du se till att
    * Hantera kampanjer.
 * Betalat Apple-utvecklarkonto med tillräcklig behörighet för att skapa certifikat, identifierare och nycklar.
 * Fysisk iOS-enhet eller simulator för testning.
-* Registrerat program-ID med Apple push-meddelandetjänst
-* Dina push-autentiseringsuppgifter för appen har lagts till i datainsamlingen
-* Tillägget Journey Optimizer-taggar har installerats
-* Implementerat Journey Optimizer i appen
 
 
 ## Utbildningsmål
@@ -57,31 +53,10 @@ I den här lektionen ska du
 
 >[!TIP]
 >
->Om du har konfigurerat miljön redan som en del av [Journey Optimizer push-meddelanden](journey-optimizer-push.md) kan du hoppa över det här avsnittet.
+>Om du har konfigurerat miljön redan som en del av [Journey Optimizer push-meddelanden](journey-optimizer-push.md) kan du redan ha utfört några av stegen i det här inställningsavsnittet.
 
-### Registrera program-ID med APNS
 
-Följande steg är inte Adobe Experience Cloud-specifika och har utformats för att vägleda dig genom APNS-konfigurationen.
-
-### Skapa en privat nyckel
-
-1. Gå till Apple utvecklarportal **[!UICONTROL Tangenter]**.
-1. Om du vill skapa en nyckel väljer du **[!UICONTROL +]**.
-   ![skapa ny nyckel](assets/mobile-push-apple-dev-new-key.png)
-
-1. Ange en **[!UICONTROL Nyckelnamn]**.
-1. Välj **[!UICONTROL Tjänsten Apple Push Notification] (APN)** kryssrutan.
-1. Välj **[!UICONTROL Fortsätt]**.
-   ![konfigurera ny nyckel](assets/mobile-push-apple-dev-config-key.png)
-1. Granska konfigurationen och välj **[!UICONTROL Registrera]**.
-1. Ladda ned `.p8` privat nyckel. Den används i appytskonfigurationen.
-1. Anteckna **[!UICONTROL Nyckel-ID]**. Den används i appytskonfigurationen.
-1. Anteckna **[!UICONTROL Team-ID]**. Den används i appytskonfigurationen.
-   ![Nyckelinformation](assets/push-apple-dev-key-details.png)
-
-Ytterligare dokumentation kan [hittades här](https://help.apple.com/developer-account/#/devcdfbb56a3).
-
-### Lägg till push-autentiseringsuppgifter för appen i datainsamlingen
+### Lägg till en appyta i datainsamling
 
 1. Från [Gränssnitt för datainsamling](https://experience.adobe.com/data-collection/), markera **[!UICONTROL Appytor]** till vänster.
 1. Om du vill skapa en konfiguration väljer du **[!UICONTROL Skapa appyta]**.
@@ -89,20 +64,28 @@ Ytterligare dokumentation kan [hittades här](https://help.apple.com/developer-a
 1. Ange en **[!UICONTROL Namn]** för konfigurationen, till exempel `Luma App Tutorial`  .
 1. Från **[!UICONTROL Konfiguration av mobilprogram]**, markera **[!UICONTROL Apple iOS]**.
 1. Ange programpaket-ID för mobilappen i **[!UICONTROL Program-ID (iOS Bundle-ID)]** fält. Exempel,  `com.adobe.luma.tutorial.swiftui`.
-1. Aktivera **[!UICONTROL Push-autentiseringsuppgifter]** för att lägga till dina inloggningsuppgifter.
-1. Dra och släpp `.p8` **Autentiseringsnyckel för push-meddelanden i Apple** -fil.
-1. Ange **[!UICONTROL Nyckel-ID]**, en sträng med 10 tecken som tilldelas när `p8` auth key. Den finns under **[!UICONTROL Tangenter]** i **Certifikat, identifierare och profiler** på Apple Developer Portal. Se även [Skapa en privat nyckel](#create-a-private-key).
-1. Ange **[!UICONTROL Team-ID]**. Team-ID är ett värde som finns under **medlemskap** eller högst upp på Apple Developer Portal-sidan. Se även [Skapa en privat nyckel](#create-a-private-key).
 1. Välj **[!UICONTROL Spara]**.
 
    ![appytans konfiguration](assets/push-app-surface-config.png)
+
+### Uppdatera datastream-konfiguration
+
+Uppdatera Experience Edge-konfigurationen för att säkerställa att data som skickas från din mobilapp till Edge Network vidarebefordras till Journey Optimizer.
+
+1. I gränssnittet för datainsamling väljer du **[!UICONTROL Datastreams]** och välj till exempel din datastream **[!DNL Luma Mobile App]**.
+1. Välj ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_MoreSmallList_18_N.svg) for **[!UICONTROL Experience Platform]** och markera ![Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) **[!UICONTROL Redigera]** på snabbmenyn.
+1. I **[!UICONTROL Datastreams]** > ![Mapp](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Folder_18_N.svg) >  **[!UICONTROL Adobe Experience Platform]** skärm, se **[!UICONTROL Adobe Journey Optimizer]** är markerat. Se [Adobe Experience Platform-inställningar](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=en#aep) för mer information.
+1. Om du vill spara din datastream-konfiguration väljer du **[!UICONTROL Spara]**.
+
+   ![AEP-konfiguration för datastream](assets/datastream-aep-configuration.png)
+
 
 ### Installera tillägget Journey Optimizer-taggar
 
 För att din app ska fungera med Journey Optimizer måste du uppdatera din taggegenskap.
 
 1. Navigera till **[!UICONTROL Taggar]** > **[!UICONTROL Tillägg]** > **[!UICONTROL Katalog]**.
-1. Öppna egenskapen, till exempel **[!UICONTROL Luma Mobile App Tutorial]**.
+1. Öppna egenskapen, till exempel **[!DNL Luma Mobile App Tutorial]**.
 1. Välj **[!UICONTROL Katalog]**.
 1. Sök efter **[!UICONTROL Adobe Journey Optimizer]** tillägg.
 1. Installera tillägget.
@@ -127,7 +110,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 >
 
 1. I Xcode kontrollerar du att [AEP Messaging](https://github.com/adobe/aepsdk-messaging-ios.git) läggs till i listan över paket i paketberoenden. Se [Swift Package Manager](install-sdks.md#swift-package-manager).
-1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL AppDelegate]** i Xcode Project-navigatorn.
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!UICONTROL AppDelegate]** i Xcode Project-navigatorn.
 1. Säkerställ `AEPMessaging` är en del av din lista över importer.
 
    `import AEPMessaging`
@@ -182,7 +165,7 @@ SDK-händelsehubben publicerar och tar emot händelsedata från registrerade til
 1. I användargränssnittet för Journey Optimizer väljer du **[!UICONTROL Kampanjer]** från den vänstra listen.
 1. Välj **[!UICONTROL Skapa kampanj]**.
 1. I **[!UICONTROL Skapa kampanj]** skärm:
-   1. Välj **[!UICONTROL Meddelande i appen]** och välj en appyta på **[!UICONTROL Appyta]** lista, till exempel **[!UICONTROL Mobilappen Luma]**.
+   1. Välj **[!UICONTROL Meddelande i appen]** och välj en appyta på **[!UICONTROL Appyta]** lista, till exempel **[!DNL Luma Mobile App]**.
    1. Välj **[!UICONTROL Skapa]**
       ![Kampanjegenskaper](assets/ajo-campaign-properties.png)
 1. På skärmen för Campaign-definitionen, på **[!UICONTROL Egenskaper]**, ange **[!UICONTROL Namn]** för kampanjen, till exempel `Luma - In-App Messaging Campaign`och en **[!UICONTROL Beskrivning]**, till exempel `In-app messaging campaign for Luma app`.
@@ -198,7 +181,7 @@ SDK-händelsehubben publicerar och tar emot händelsedata från registrerade til
       ![Redigerare i appen](assets/ajo-in-app-editor.png)
 1. I **[!UICONTROL Granska för att aktivera (Luma - Meddelandekampanj i appen)]** skärm, välja ![Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) i **[!UICONTROL Schema]** platta.
    ![Välj Schema för granskning](assets/ajo-review-select-schedule.png)
-1. Tillbaka i **[!UICONTROL Luma - kampanj för meddelanden i appen]** skärm, välja ![Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) **[!UICONTROL Redigera utlösare]**.
+1. Tillbaka i **[!DNL Luma - In-App Messaging Campaign]** skärm, välja ![Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) **[!UICONTROL Redigera utlösare]**.
 1. I **[!UICONTROL Meddelandeutlösare i appen]** konfigurerar du information om den spårningsåtgärd som utlöser meddelandet i appen:
    1. Ta bort **[!UICONTROL Programstarthändelse]**, markera ![Stäng](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Close_18_N.svg) .
    1. Använd ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Lägg till villkor]** att skapa följande logik för **[!UICONTROL Visa meddelande om]**.
@@ -207,9 +190,9 @@ SDK-händelsehubben publicerar och tar emot händelsedata från registrerade til
 
    Du har definierat en spårningsåtgärd, där **[!UICONTROL Åtgärd]** är lika med `in-app` och **[!UICONTROL Kontextdata]** med funktionsmakrot är ett nyckelvärdepar med `"showMessage" : "true"`.
 
-1. Tillbaka i **[!UICONTROL Luma - kampanj för meddelanden i appen]** skärm, välja **[!UICONTROL Granska för aktivering]**.
+1. Tillbaka i **[!DNL Luma - In-App Messaging Campaign]** skärm, välja **[!UICONTROL Granska för aktivering]**.
 1. I **[!UICONTROL Granska för att aktivera (Luma - Meddelandekampanj i appen)]** skärm, välja **[!UICONTROL Aktivera]**.
-1. Du ser **[!UICONTROL Luma - kampanj för meddelanden i appen]** med status **[!UICONTROL Live]** i **[!UICONTROL Kampanjer]** lista.
+1. Du ser **[!DNL Luma - In-App Messaging Campaign]** med status **[!UICONTROL Live]** i **[!UICONTROL Kampanjer]** lista.
    ![Kampanjlista](assets/ajo-campaign-list.png)
 
 
@@ -217,7 +200,7 @@ SDK-händelsehubben publicerar och tar emot händelsedata från registrerade til
 
 Du har alla ingredienser på plats för att skicka ett meddelande i appen. Det som återstår är hur du utlöser det här meddelandet i appen i din app.
 
-1. Gå till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project-navigatorn. Hitta `func sendTrackAction(action: String, data: [String: Any]?)` och lägg till följande kod som anropar [`MobileCore.track`](https://developer.adobe.com/client-sdks/documentation/mobile-core/api-reference/#trackaction) funktion, baserat på parametrarna `action` och `data`.
+1. Gå till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project-navigatorn. Hitta `func sendTrackAction(action: String, data: [String: Any]?)` och lägg till följande kod som anropar [`MobileCore.track`](https://developer.adobe.com/client-sdks/documentation/mobile-core/api-reference/#trackaction) funktion, baserat på parametrarna `action` och `data`.
 
 
    ```swift
@@ -225,7 +208,7 @@ Du har alla ingredienser på plats för att skicka ett meddelande i appen. Det s
    MobileCore.track(action: action, data: data)
    ```
 
-1. Gå till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Allmänt]** > **[!UICONTROL ConfigView]** i Xcode Project Navigator. Sök efter koden för knappen Meddelande i appen och lägg till följande kod:
+1. Gå till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Views]** > **[!DNL General]** > **[!UICONTROL ConfigView]** i Xcode Project Navigator. Sök efter koden för knappen Meddelande i appen och lägg till följande kod:
 
    ```swift
    // Setting parameters and calling function to send in-app message

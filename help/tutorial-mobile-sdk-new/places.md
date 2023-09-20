@@ -1,15 +1,15 @@
 ---
-title: Platser
+title: Använd geopositioneringstjänster
 description: Lär dig hur du använder platsens geopositioneringstjänst i din mobilapp.
 hide: true
-source-git-commit: b3cf168fc9b20ea78df0f8863a6395e9a45ed832
+source-git-commit: cd1efbfaa335c08cbcc22603fe349b4594cc1056
 workflow-type: tm+mt
-source-wordcount: '1754'
+source-wordcount: '1745'
 ht-degree: 0%
 
 ---
 
-# Platser
+# Använd geopositioneringstjänster
 
 Lär dig hur du använder geopositioneringstjänsten i din app.
 
@@ -72,7 +72,7 @@ Du definierar några intressepunkter i tjänsten Platser.
 1. Stäng **[!UICONTROL Hantera bibliotek]** dialogruta, välja **[!UICONTROL Stäng]**.
 1. Tillbaka in **[!UICONTROL POI-hantering]**, markera **[!UICONTROL Importera POI]**.
 1. Välj **[!UICONTROL Starta]** t**[!UICONTROL Importera platser]**.
-1. Välj **[!UICONTROL Luma]** från listan över bibliotek,
+1. Välj **[!DNL Luma]** från listan över bibliotek,
 1. Välj **[!UICONTROL Nästa]**.
    ![Välj bibliotek](assets/places-import-select-library.png)
 1. Ladda ned [Luma POIs ZIP-fil](assets/luma_pois.csv.zip) och extrahera den till en plats på datorn.
@@ -94,7 +94,7 @@ Du definierar några intressepunkter i tjänsten Platser.
    ![Lägg till beslutstillägg](assets/tag-places-extension.png)
 
 1. I **[!UICONTROL Installera tillägg]** dialog:
-   1. Välj **[!UICONTROL Luma]** från **[!UICONTROL Välj ett bibliotek]** lista.
+   1. Välj **[!DNL Luma]** från **[!UICONTROL Välj ett bibliotek]** lista.
    1. Se till att du har valt ditt arbetsbibliotek, till exempel **[!UICONTROL Inledande bygge]**.
    1. Välj **[!UICONTROL Spara i bibliotek och bygge]** från **[!UICONTROL Spara i bibliotek]**.
       ![Tillägg för Installera platser](assets/places-install-extension.png).
@@ -268,7 +268,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 >
 
 1. I Xcode kontrollerar du att [AEP-platser](https://github.com/adobe/aepsdk-places-ios) läggs till i listan över paket i paketberoenden. Se [Swift Package Manager](install-sdks.md#swift-package-manager).
-1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL AppDelegate]** i Xcode Project-navigatorn.
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL AppDelegate]** i Xcode Project-navigatorn.
 1. Säkerställ `AEPPlaces` är en del av din lista över importer.
 
    `import AEPPlaces`
@@ -291,7 +291,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
    ]
    ```
 
-1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project navigator och hitta `func processRegionEvent(regionEvent: PlacesRegionEvent, forRegion region: CLRegion) async` function.Lägg till följande kod:
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project navigator och hitta `func processRegionEvent(regionEvent: PlacesRegionEvent, forRegion region: CLRegion) async` function.Lägg till följande kod:
 
    ```swift
    // Process geolocation event
@@ -300,7 +300,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 
    Detta [`Places.processRegionEvent`](https://developer.adobe.com/client-sdks/documentation/places/api-reference/#processregionevent) API kommunicerar geopositioneringsinformationen med platstjänsten.
 
-1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Plats]** > **[!UICONTROL GeofenceSheet]** i Xcodes projektnavigator.
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Views]** > **[!DNL Location]** > **[!DNL GeofenceSheet]** i Xcodes projektnavigator.
 
    1. Ange följande kod för anmälningsknappen
 

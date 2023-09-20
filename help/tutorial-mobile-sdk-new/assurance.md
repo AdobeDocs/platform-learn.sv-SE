@@ -3,14 +3,14 @@ title: Ställ in försäkring
 description: Lär dig hur du implementerar tillägget Assurance i en mobilapp.
 feature: Mobile SDK,Assurance
 hide: true
-source-git-commit: b3cf168fc9b20ea78df0f8863a6395e9a45ed832
+source-git-commit: a2788110b1c43d24022672bb5ba0f36af66d962b
 workflow-type: tm+mt
-source-wordcount: '754'
+source-wordcount: '776'
 ht-degree: 0%
 
 ---
 
-# Säkerhet
+# Ställ in försäkring
 
 Lär dig hur du konfigurerar Adobe Experience Platform Assurance i en mobilapp.
 
@@ -40,7 +40,7 @@ Bekräfta att din organisation har åtkomst till Assurance. Som användare bör 
 
 Förutom det allmänna [SDK-installation](install-sdks.md), som du slutförde i den tidigare lektionen, behöver iOS även följande tillägg för att starta Assurance-sessionen för din app.
 
-1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL SceneDelegate]** i Xcodes projektnavigerare.
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!UICONTROL SceneDelegate]** i Xcodes projektnavigerare.
 
 1. Lägg till följande kod i `func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>`:
 
@@ -61,18 +61,23 @@ Mer information finns [här](https://developer.adobe.com/client-sdks/documentati
 Innan du kör programmet för första gången i Xcode måste du uppdatera signeringen.
 
 1. Öppna projektet i Xcode.
-1. Välj **[!UICONTROL Luma]** i projektnavigatorn.
-1. Välj **[!UICONTROL Luma]** mål.
+1. Välj **[!DNL Luma]** i projektnavigatorn.
+1. Välj **[!DNL Luma]** mål.
 1. Välj **Signering och funktioner** -fliken.
 1. Konfigurera **[!UICONTROL Hantera signering automatiskt]**, **[!UICONTROL Team]** och **[!UICONTROL Paketidentifierare]** eller använd dina specifika Apple-utvecklingskonfigurationer.
+
+   >[!IMPORTANT]
+   >
+   >Se till att du väljer en unik källidentifierare som skiljer sig från standardidentifieraren som redan angetts i Start-projektet, eftersom varje källidentifierare måste vara unik.
+
 
    ![Xcode-signeringsfunktioner](assets/xcode-signing-capabilities.png){zoomable=&quot;yes&quot;}
 
 ## Konfigurera en bas-URL
 
 1. Gå till projektet i Xcode.
-1. Välj **[!UICONTROL Luma]** i projektnavigatorn.
-1. Välj **[!UICONTROL Luma]** mål.
+1. Välj **[!DNL Luma]** i projektnavigatorn.
+1. Välj **[!DNL Luma]** mål.
 1. Välj **Info** -fliken.
 1. Bläddra nedåt till om du vill lägga till en bas-URL **URL-typer** och väljer **+** -knappen.
 1. Ange **Identifierare** till den paketidentifierare som du konfigurerade i [Signering](#signing) (till exempel `com.adobe.luma.tutorial.swiftui`) och ange en **URL-scheman**, till exempel `lumatutorialswiftui`.
@@ -90,7 +95,7 @@ Assurance fungerar genom att öppna en URL, antingen via webbläsaren eller QR-k
 1. Välj **[!UICONTROL Säkerhet]** från den vänstra listen i användargränssnittet för datainsamling.
 1. Välj **[!UICONTROL Skapa session]**.
 1. Välj **[!UICONTROL Starta]**.
-1. Ange en **[!UICONTROL Sessionsnamn]** som `Luma Mobile App Session` och **[!UICONTROL Bas-URL]**, som är det URL-schema som du angav i Xcode, följt av `://`. Exempel: `lumatutorialswiftui://`.
+1. Ange en **[!UICONTROL Sessionsnamn]** som `Luma Mobile App Session` och **[!UICONTROL Bas-URL]**, som är det URL-schema som du angav i Xcode, följt av `://` Till exempel: `lumatutorialswiftui://`
 1. Välj **[!UICONTROL Nästa]**.
    ![skapa trygghet, session](assets/assurance-create-session.png)
 1. I **[!UICONTROL Skapa ny session]** modal dialog:

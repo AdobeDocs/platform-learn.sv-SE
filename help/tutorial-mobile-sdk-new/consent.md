@@ -1,16 +1,16 @@
 ---
-title: Godkännande
+title: Genomför samtycke
 description: Lär dig hur du implementerar samtycke i en mobilapp.
 feature: Mobile SDK,Consent
 hide: true
-source-git-commit: 1b09f81b364fe8cfa9d5d1ac801d7781d1786259
+source-git-commit: cd1efbfaa335c08cbcc22603fe349b4594cc1056
 workflow-type: tm+mt
-source-wordcount: '535'
+source-wordcount: '523'
 ht-degree: 0%
 
 ---
 
-# Godkännande
+# Genomför samtycke
 
 Lär dig hur du implementerar samtycke i en mobilapp.
 
@@ -36,7 +36,7 @@ Om du vill börja samla in data måste du få användarens samtycke. I den här 
 
 1. Du vill bara fråga användaren en gång. Så du vill kombinera det mobila SDK-medgivandet med de behörigheter som krävs för att spåra med Apple [App Tracking Transparency Framework](https://developer.apple.com/documentation/apptrackingtransparency). I den här appen antar du när användaren godkänner spårning att användaren också samtycker till att samla in händelser.
 
-1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project-navigatorn.
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project-navigatorn.
 
    Lägg till den här koden i `updateConsent` funktion.
 
@@ -48,7 +48,7 @@ Om du vill börja samla in data måste du få användarens samtycke. I den här 
    MobileCore.updateConfigurationWith(configDict: currentConsents)
    ```
 
-1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Allmänt]** > **[!UICONTROL AnsvarsfriskrivningVisa]** i Xcodes projektnavigerare, som är den vy som visas när du har installerat eller installerat om programmet och startat programmet för första gången. Användaren uppmanas att godkänna spårning per Apple [App Tracking Transparency Framework](https://developer.apple.com/documentation/apptrackingtransparency). Om användaren godkänner det uppdaterar du även medgivandet.
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Views]** > **[!DNL General]** > **[!UICONTROL AnsvarsfriskrivningVisa]** i Xcodes projektnavigerare, som är den vy som visas när du har installerat eller installerat om programmet och startat programmet för första gången. Användaren uppmanas att godkänna spårning per Apple [App Tracking Transparency Framework](https://developer.apple.com/documentation/apptrackingtransparency). Om användaren godkänner det uppdaterar du även medgivandet.
 
    Lägg till följande kod i `ATTrackingManager.requestTrackingAuthorization { status in` stängning.
 
@@ -68,7 +68,7 @@ Om du vill börja samla in data måste du få användarens samtycke. I den här 
 
 Tillägget för mobilen Consent undertrycker/häver automatiskt / tillåter spårning baserat på det aktuella medgivandevärdet. Du kan även komma åt det aktuella medgivandetillståndet själv:
 
-1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Utils]** > **[!UICONTROL MobileSDK]** i Xcodes projektnavigator.
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** > **[!UICONTROL MobileSDK]** i Xcodes projektnavigator.
 
    Lägg till följande kod i `getConsents` funktion:
 
@@ -82,7 +82,7 @@ Tillägget för mobilen Consent undertrycker/häver automatiskt / tillåter spå
    }
    ```
 
-2. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Allmänt]** > **[!UICONTROL HomeView]** i Xcodes projektnavigator.
+2. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Views]** > **[!DNL General]** > **[!UICONTROL HomeView]** i Xcodes projektnavigator.
 
    Lägg till följande kod i `.task` modifierare:
 

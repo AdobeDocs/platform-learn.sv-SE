@@ -5,9 +5,9 @@ solution: Data Collection,Target
 feature-set: Target
 feature: A/B Tests
 hide: true
-source-git-commit: ae1e05b3f93efd5f2a9b48dc10761dbe7a84fb1e
+source-git-commit: a2788110b1c43d24022672bb5ba0f36af66d962b
 workflow-type: tm+mt
-source-wordcount: '1601'
+source-wordcount: '1771'
 ht-degree: 0%
 
 ---
@@ -48,17 +48,19 @@ I den här lektionen ska du
 * Validera implementering i Assurance.
 
 
-## Konfigurera din app
+## Inställningar
 
 >[!TIP]
 >
->Om du redan har konfigurerat ditt program som en del av [Journey Optimizer erbjuder](journey-optimizer-offers.md) kan du hoppa över båda [Installera Adobe Journey Optimizer - Decisioning-taggtillägg](#install-adobe-journey-optimizer---decisioning-tags-extension) och [Uppdatera ditt schema](#update-your-schema).
+>Om du redan har konfigurerat ditt program som en del av [Journey Optimizer erbjuder](journey-optimizer-offers.md) kan du redan ha utfört några av stegen i det här inställningsavsnittet.
 
 ### Uppdatera datastream-konfiguration
 
+### Adobe Target
+
 Om du vill vara säker på att data som skickas från din mobilapp till Experience Platform Edge Network vidarebefordras till Adobe Target, måste du uppdatera din datastream-konfiguration.
 
-1. I gränssnittet för datainsamling väljer du **[!UICONTROL Datastreams]** och välj till exempel din datastream **[!UICONTROL Mobilappen Luma]**.
+1. I gränssnittet för datainsamling väljer du **[!UICONTROL Datastreams]** och välj till exempel din datastream **[!DNL Luma Mobile App]**.
 1. Välj **[!UICONTROL Lägg till tjänst]** och markera **[!UICONTROL Adobe Target]** från **[!UICONTROL Tjänst]** lista.
 1. Om du är en Target Premium-kund och vill använda egenskapstoken anger du Target **[!UICONTROL Egenskapstoken]** värde som du vill använda för den här integreringen. Målstandardanvändare kan hoppa över det här steget.
 
@@ -67,6 +69,18 @@ Om du vill vara säker på att data som skickas från din mobilapp till Experien
 1. Välj **[!UICONTROL Spara]**.
 
    ![Lägg till mål i datastream](assets/edge-datastream-target.png)
+
+
+#### Adobe Journey Optimizer
+
+För att säkerställa att data som skickas från din mobilapp till Edge Network vidarebefordras till Journey Optimizer - Beslutshantering måste du uppdatera Experience Edge-konfigurationen.
+
+1. I gränssnittet för datainsamling väljer du **[!UICONTROL Datastreams]** och välj till exempel din datastream **[!DNL Luma Mobile App]**.
+1. Välj ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_MoreSmallList_18_N.svg) for **[!UICONTROL Experience Platform]** och markera ![Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) **[!UICONTROL Redigera]** på snabbmenyn.
+1. I **[!UICONTROL Datastreams]** > ![Mapp](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Folder_18_N.svg) >  **[!UICONTROL Adobe Experience Platform]** skärm, se **[!UICONTROL Offer decisioning]**, **[!UICONTROL Kantsegmentering]** och **[!UICONTROL Destinationer för anpassning]** är markerade. Om du också följer lektionerna från Journey Optimizer bör du välja **[!UICONTROL Adobe Journey Optimizer]** också. Se [Adobe Experience Platform-inställningar](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=en#aep) för mer information.
+1. Om du vill spara din datastream-konfiguration väljer du **[!UICONTROL Spara]** .
+
+   ![AEP-konfiguration för datastream](assets/datastream-aep-configuration-target.png)
 
 
 ### Installera Adobe Journey Optimizer - Decisioning-taggtillägg
@@ -143,7 +157,7 @@ Det finns många typer av aktiviteter som du kan skapa i Adobe Target och implem
 
       ![Upplevelse B](assets/target-create-activity-experienceB.png)
 
-1. I **[!UICONTROL Målinriktning]** Granska konfigurationen av A/B-testet. Som standard fördelas båda erbjudandena jämnt över alla besökare. Välj **[!UICONTROL Nästa]** för att fortsätta.
+1. I **[!DNL Targeting]** Granska konfigurationen av A/B-testet. Som standard fördelas båda erbjudandena jämnt över alla besökare. Välj **[!UICONTROL Nästa]** för att fortsätta.
 
    ![Målinriktning](assets/taget-targeting.png)
 
@@ -151,7 +165,7 @@ Det finns många typer av aktiviteter som du kan skapa i Adobe Target och implem
 
    1. Byt namn på din namnlösa aktivitet, till exempel till `Luma Mobile SDK Tutorial - A/B Test Example`.
    1. Ange en **[!UICONTROL Syfte]** för A/B-testet, till exempel `A/B Test for Luma mobile app tutorial`.
-   1. Välj **[!UICONTROL Konvertering]**, **[!UICONTROL Klickad på mbox]** i **[!UICONTROL Målmått]** > **[!UICONTROL MIN PRIMÄRA MÅL]** och ange platsens (mbox) namn, till exempel `luma-mobileapp-abtest`.
+   1. Välj **[!UICONTROL Konvertering]**, **[!UICONTROL Visad mbox]** i **[!UICONTROL Målmått]** > **[!UICONTROL MIN PRIMÄRA MÅL]** och ange platsens (mbox) namn, till exempel `luma-mobileapp-abtest`.
    1. Välj **[!UICONTROL Spara och stäng]**.
 
       ![Målinställningar](assets/target-goals.png)
@@ -174,7 +188,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 >
 
 1. I Xcode kontrollerar du att [AEP-optimering](https://github.com/adobe/aepsdk-messaging-ios.git) läggs till i listan över paket i paketberoenden. Se [Swift Package Manager](install-sdks.md#swift-package-manager).
-1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL AppDelegate]** i Xcode Project-navigatorn.
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL AppDelegate]** i Xcode Project-navigatorn.
 1. Säkerställ `AEPOptimize` är en del av din lista över importer.
 
    `import AEPOptimize`
@@ -197,7 +211,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
    ]
    ```
 
-1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project-navigatorn. Hitta ` func updatePropositionAT(ecid: String, location: String) async` funktion. Lägg till följande kod:
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** > **[!DNL MobileSDK]** i Xcode Project-navigatorn. Hitta ` func updatePropositionAT(ecid: String, location: String) async` funktion. Lägg till följande kod:
 
    ```swift
    Task {
@@ -217,13 +231,13 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 
    Sedan anropar funktionen två API:er: [`Optimize.clearCachePropositions`](https://support.apple.com/en-ie/guide/mac-help/mchlp1015/mac)  och [`Optimize.updatePropositions`](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/api-reference/#updatepropositions). Dessa funktioner rensar alla cachelagrade offerter och uppdaterar propositionerna för den här profilen.
 
-1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Personalisering]** > **[!UICONTROL TargetOffersView]** i Xcode Project-navigatorn. Hitta `func onPropositionsUpdateAT(location: String) async {` och inspektera koden för den här funktionen. Den viktigaste delen av funktionen är  [`Optimize.onPropositionsUpdate`](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/api-reference/#onpropositionsupdate) API-anrop som:
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Views]** > **[!DNL Personalization]** > **[!DNL TargetOffersView]** i Xcode Project-navigatorn. Hitta `func onPropositionsUpdateAT(location: String) async {` och inspektera koden för den här funktionen. Den viktigaste delen av funktionen är  [`Optimize.onPropositionsUpdate`](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/api-reference/#onpropositionsupdate) API-anrop som:
    * hämtar förslagen för den aktuella profilen baserat på beslutsomfånget (den plats du har definierat i A/B-testet),
    * hämtar erbjudandet från erbjudandet,
    * frigör innehållet i erbjudandet så att det kan visas korrekt i appen, och
    * utlöser `displayed()` åtgärd för erbjudandet som skickar tillbaka en händelse till Edge Network som talar om att erbjudandet visas.
 
-1. Fortfarande i **[!UICONTROL TargetOffersView]** lägger du till följande kod i `.onFirstAppear` modifierare. Den här koden ser till att callback-funktionen för uppdatering av erbjudanden registreras endast en gång.
+1. Fortfarande i **[!DNL TargetOffersView]** lägger du till följande kod i `.onFirstAppear` modifierare. Den här koden ser till att callback-funktionen för uppdatering av erbjudanden registreras endast en gång.
 
    ```swift
    // Invoke callback for offer updates
@@ -232,12 +246,15 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
    }
    ```
 
-1. Fortfarande i **[!UICONTROL TargetOffersView]** lägger du till följande kod i `.task` modifierare. Den här koden uppdaterar erbjudandena när vyn uppdateras.
+1. Fortfarande i **[!DNL TargetOffersView]** lägger du till följande kod i `.task` modifierare. Den här koden uppdaterar erbjudandena när vyn uppdateras.
 
    ```swift
    // Clear and update offers
    await self.updatePropositionsAT(ecid: currentEcid, location: location)
    ```
+
+Du kan skicka ytterligare Target-parametrar (till exempel mbox, profile, product eller order parameters) i en begäran om personalisering till Experience Edge-nätverket genom att lägga till dem i en datamordlista när du anropar [`Optimize.updatePropositions`](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/api-reference/#updatepropositions) API. Mer information finns i [Målparametrar](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/#target-parameters).
+
 
 ## Validera med appen
 
@@ -260,7 +277,7 @@ Så här validerar du A/B-testet i Assurance:
 1. Välj **[!UICONTROL Konfigurera]** i vänster rand och välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) nästa **[!UICONTROL Granska och simulera]** under **[!UICONTROL ADOBE JOURNEY OPTIMIZER AVGÖRANDE]**.
 1. Välj **[!UICONTROL Spara]**.
 1. Välj **[!UICONTROL Granska och simulera]** till vänster. Både datastream-konfigurationen valideras och SDK-inställningen i ditt program.
-1. Välj **[!UICONTROL Begäranden]** i det övre fältet. Du ser **[!UICONTROL Mål]** förfrågningar.
+1. Välj **[!UICONTROL Begäranden]** i det övre fältet. Du ser **[!DNL Target]** förfrågningar.
    ![Validering av AJO-beslut](assets/assurance-decisioning-requests.png)
 
 1. Du kan utforska **[!UICONTROL Simulera]** och **[!UICONTROL Händelselista]** om du vill ha mer funktionalitet i att kontrollera din konfiguration för Target-erbjudanden.

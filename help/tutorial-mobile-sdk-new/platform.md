@@ -4,9 +4,9 @@ description: Lär dig skicka data till Adobe Experience Platform.
 solution: Data Collection,Experience Platform
 feature: Mobile SDK,Data Ingestion
 hide: true
-source-git-commit: ae1e05b3f93efd5f2a9b48dc10761dbe7a84fb1e
+source-git-commit: cd1efbfaa335c08cbcc22603fe349b4594cc1056
 workflow-type: tm+mt
-source-wordcount: '968'
+source-wordcount: '1056'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,7 @@ Om du inte har tillgång till [hoppa över den här lektionen](install-sdks.md).
 I den här lektionen kommer du att:
 
 * Skapa en Experience Platform-datauppsättning.
+* Konfigurera dataströmmen för att vidarebefordra data till Experience Platform.
 * Validera data i datauppsättningen.
 * Aktivera ditt schema och din datauppsättning för kundprofil i realtid.
 * Validera data i kundprofilen i realtid.
@@ -54,7 +55,7 @@ Alla data som har inhämtats till Adobe Experience Platform lagras i datasjön s
    ![startsida för datauppsättning](assets/dataset-create.png)
 
 1. Sök efter ditt schema. till exempel använda `Luma Mobile` i sökfältet.
-1. Välj ditt schema, till exempel **[!UICONTROL Luma Mobile App Event Schema]**.
+1. Välj ditt schema, till exempel **[!DNL Luma Mobile App Event Schema]**.
 
 1. Välj **[!UICONTROL Nästa]**.
    ![konfigurera datauppsättning](assets/dataset-configure.png)
@@ -64,9 +65,32 @@ Alla data som har inhämtats till Adobe Experience Platform lagras i datasjön s
 1. Välj **[!UICONTROL Slutför]**.
    ![datauppsättningens slut](assets/dataset-finish.png)
 
-## Uppdatera datastream
 
-När du har skapat datauppsättningen ska du se till att [uppdatera din datastream](create-datastream.md#adobe-experience-platform) för att lägga till Adobe Experience Platform. Den här uppdateringen säkerställer dataflöden till plattformen.
+## Lägg till Adobe Experience Platform datastream-tjänst
+
+Om du vill skicka XDM-data från Edge Network till Adobe Experience Platform konfigurerar du Adobe Experience Platform-tjänsten till den datastream som du konfigurerar som en del av [Skapa ett datastream](create-datastream.md).
+
+>[!IMPORTANT]
+>
+>Du kan bara aktivera Adobe Experience Platform-tjänsten när du har skapat en händelsedatamängd.
+
+1. I gränssnittet för datainsamling väljer du **[!UICONTROL Datastreams]** och din datastream.
+
+1. Välj sedan ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Lägg till tjänst]**.
+
+1. Välj **[!UICONTROL Adobe Experience Platform]** från [!UICONTROL Tjänst] lista.
+
+1. Aktivera tjänsten genom att växla **[!UICONTROL Aktiverad]** på.
+
+1. Välj **[!UICONTROL Händelsedatauppsättning]** som du skapade tidigare, till exempel **[!DNL Luma Mobile App Event Dataset]**.
+
+1. Välj **[!UICONTROL Spara]**.
+
+   ![Lägg till Adobe Experience Platform som datastream-tjänst](assets/datastream-service-aep.png)
+1. Den slutliga konfigurationen bör se ut ungefär så här.
+
+   ![datastream-inställningar](assets/datastream-settings.png)
+
 
 ## Validera data i datauppsättningen
 
@@ -89,7 +113,7 @@ Med Experience Platform Real-Time Customer Profile kan ni skapa en helhetsbild a
 
 ### Aktivera schemat
 
-1. Öppna schemat, till exempel **[!UICONTROL Luma Mobile App Event Schema]**.
+1. Öppna schemat, till exempel **[!DNL Luma Mobile App Event Schema]**.
 1. Aktivera **[!UICONTROL Profil]**.
 1. Välj **[!UICONTROL Data för det här schemat kommer att innehålla en primär identitet i identityMap-fältet.]** i dialogrutan.
 1. **[!UICONTROL Spara]** schemat.
@@ -98,7 +122,7 @@ Med Experience Platform Real-Time Customer Profile kan ni skapa en helhetsbild a
 
 ### Aktivera datauppsättningen
 
-1. Öppna datauppsättningen, till exempel **[!UICONTROL Luma Mobile App Event-datauppsättning]**.
+1. Öppna datauppsättningen, till exempel **[!DNL Luma Mobile App Event Dataset]**.
 1. Aktivera **[!UICONTROL Profil]**.
 
    ![aktivera datauppsättningen för profilen](assets/platform-profile-dataset.png)

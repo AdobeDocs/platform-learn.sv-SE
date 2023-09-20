@@ -3,9 +3,9 @@ title: Konfigurera en taggegenskap
 description: Lär dig konfigurera en taggegenskap i [!UICONTROL Datainsamling] gränssnitt.
 feature: Mobile SDK,Tags
 hide: true
-source-git-commit: b3cf168fc9b20ea78df0f8863a6395e9a45ed832
+source-git-commit: a2788110b1c43d24022672bb5ba0f36af66d962b
 workflow-type: tm+mt
-source-wordcount: '1095'
+source-wordcount: '1096'
 ht-degree: 1%
 
 ---
@@ -110,9 +110,9 @@ I den här lektionen kommer du att:
 
 1. Använd ![Sök](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Search_18_N.svg) **[!UICONTROL Sök]** fält för att hitta och installera **Adobe Experience Platform Edge Network** tillägg.
 
-   1. I **[!UICONTROL Datastreams]** välj **[!UICONTROL Datastream]** som du skapade i [föregående steg](create-datastream.md) för varje miljö, till exempel **[!UICONTROL Mobilappen Luma]**.
+   1. I **[!UICONTROL Datastreams]** välj **[!UICONTROL Datastream]** som du skapade i [föregående steg](create-datastream.md) för varje miljö, till exempel **[!DNL Luma Mobile App]**.
 
-   1. Ange **[!UICONTROL Edge Network-domän]** inom **[!UICONTROL Domänkonfiguration]**. Edge Network-domänen är namnet på din organisation, följt av `data.adobedc.net`, till exempel `techmarketingdemos.data.adobedc.net`.
+   1. Om den inte redan är ifylld anger du **[!UICONTROL Edge Network-domän]** inom **[!UICONTROL Domänkonfiguration]**. Edge Network-domänen är namnet på din organisation, följt av `data.adobedc.net`, till exempel `techmarketingdemos.data.adobedc.net`.
 
    1. Från **[!UICONTROL Spara i bibliotek]** meny, välja **[!UICONTROL Spara i bibliotek och bygge]**.
 

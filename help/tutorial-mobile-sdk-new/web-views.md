@@ -3,9 +3,9 @@ title: Hantera WebViews
 description: Lär dig hur du hanterar datainsamling med WebViews i en mobilapp.
 jira: KT-6987
 hide: true
-source-git-commit: b3cf168fc9b20ea78df0f8863a6395e9a45ed832
+source-git-commit: a2788110b1c43d24022672bb5ba0f36af66d962b
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '477'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Det AEP Edge Identity-tillägg som används i WebView samlar in det aktuella ECI
 
 ## Implementering
 
-Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Info]** > **[!UICONTROL TermsOfServiceSheet]** och letar upp `func loadUrl()` funktionen i `final class SwiftUIWebViewModel: ObservableObject` klassen. Lägg till följande anrop för att hantera webbvyn:
+Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Views]** > **[!DNL Info]** > **[!DNL TermsOfServiceSheet]** och letar upp `func loadUrl()` funktionen i `final class SwiftUIWebViewModel: ObservableObject` klassen. Lägg till följande anrop för att hantera webbvyn:
 
 ```swift
 // Handle web view
@@ -63,12 +63,12 @@ The [`AEPEdgeIdentity.Identity.getUrlVariables`](https://developer.adobe.com/cli
 
 Du kan läsa mer om `Identity.getUrlVariables` API i [Referenshandbok för API:t för Edge Network Extension](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables).
 
-## Validering
+## Validera
 
 Så här kör du koden:
 
 1. Gå till **[!UICONTROL Inställningar]** i appen
-1. Tryck på **[!UICONTROL Visa...]** för att visa **[!UICONTROL Användningsvillkor]**.
+1. Tryck på **[!DNL View...]** för att visa **[!DNL Terms of Use]**.
 
    <img src="./assets/tou1.png" width="300" /> <img src="./assets/tou2.png" width="300" />
 
@@ -90,6 +90,8 @@ Så här kör du koden:
      ```html
      adobe_mc=TS=1636526122|MCMID=79076670946787530005526183384271520749|MCORGID=7ABB3E6A5A7491460A495D61@AdobeOrg
      ```
+
+Tyvärr är felsökningen av webbsessionen begränsad. Du kan inte använda Adobe Experience Platform Debugger i webbläsaren för att till exempel fortsätta felsöka webbvisningssessionen.
 
 >[!NOTE]
 >

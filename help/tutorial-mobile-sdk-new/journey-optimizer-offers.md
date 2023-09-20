@@ -1,18 +1,18 @@
 ---
-title: Adobe Journey Optimizer erbjuder
+title: Skapa och visa erbjudanden
 description: Lär dig skapa och visa erbjudanden med Platform Mobile SDK och Adobe Journey Optimizer Decision Management.
 solution: Data Collection,Journey Optimizer
 feature-set: Journey Optimizer
 feature: Offers
 hide: true
-source-git-commit: ae1e05b3f93efd5f2a9b48dc10761dbe7a84fb1e
+source-git-commit: a2788110b1c43d24022672bb5ba0f36af66d962b
 workflow-type: tm+mt
-source-wordcount: '2467'
+source-wordcount: '2443'
 ht-degree: 0%
 
 ---
 
-# Journey Optimizer erbjuder
+# Skapa och visa erbjudanden
 
 Lär dig hur du visar erbjudanden från Journey Optimizer Decision Management i dina mobilappar med Experience Platform Mobile SDK.
 
@@ -54,18 +54,20 @@ I den här lektionen ska du
 
 >[!TIP]
 >
->Om du redan har konfigurerat miljön som en del av [Konfigurera A/B-tester med Target](target.md) självstudiekurs, du kan hoppa över [Installera Adobe Journey Optimizer - Decisioning-taggtillägg](#install-adobe-journey-optimizer---decisioning-tags-extension) och [Uppdatera ditt schema](#update-your-schema).
+>Om du redan har konfigurerat miljön som en del av [Konfigurera A/B-tester med Target](target.md) kan du redan ha utfört några av stegen i det här inställningsavsnittet.
 
 ### Uppdatera datastream-konfiguration
 
 För att säkerställa att data som skickas från din mobilapp till Edge Network vidarebefordras till Journey Optimizer - Beslutshantering måste du uppdatera Experience Edge-konfigurationen.
 
-1. I gränssnittet för datainsamling väljer du **[!UICONTROL Datastreams]** och välj till exempel din datastream **[!UICONTROL Mobilappen Luma]**.
+1. I gränssnittet för datainsamling väljer du **[!UICONTROL Datastreams]** och välj till exempel din datastream **[!DNL Luma Mobile App]**.
 1. Välj ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_MoreSmallList_18_N.svg) for **[!UICONTROL Experience Platform]** och markera ![Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) **[!UICONTROL Redigera]** på snabbmenyn.
-1. I **[!UICONTROL Datastreams]** > ![Mapp](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Folder_18_N.svg) >  **[!UICONTROL Adobe Experience Platform]** skärm, se **[!UICONTROL Offer decisioning]**, **[!UICONTROL Kantsegmentering]**, **[!UICONTROL Destinationer för anpassning]** och **[!UICONTROL Adobe Journey Optimizer]** är markerade. Se [Adobe Experience Platform-inställningar](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=en#aep) för mer information.
+1. I **[!UICONTROL Datastreams]** > ![Mapp](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Folder_18_N.svg) >  **[!UICONTROL Adobe Experience Platform]** skärm, se **[!UICONTROL Offer decisioning]**, **[!UICONTROL Kantsegmentering]** och **[!UICONTROL Adobe Journey Optimizer]** är markerade. Om du även följer mållektionen bör du välja **[!UICONTROL Destinationer för anpassning]** också. Se [Adobe Experience Platform-inställningar](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=en#aep) för mer information.
 1. Om du vill spara din datastream-konfiguration väljer du **[!UICONTROL Spara]** .
 
-   ![AEP-konfiguration för datastream](assets/datastream-aep-configuration.png)
+   ![AEP-konfiguration för datastream](assets/datastream-aep-configuration-offers.png)
+
+
 
 
 ### Installera Journey Optimizer - Decisioning-taggtillägg
@@ -198,7 +200,7 @@ För att kunna presentera ett erbjudande för din mobilappsanvändare måste du 
 1. Välj **[!UICONTROL Samlingar]** i det övre fältet.
 1. Välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Skapa samling]**.
 1. I **[!UICONTROL Ny samling]** dialogruta, ange **[!UICONTROL Namn]** för din samling, till exempel `Luma - Mobile App Collection`, markera **[!UICONTROL Skapa statisk samling]** och klicka **[!UICONTROL Nästa]**.
-1. I **[!UICONTROL Luma - Mobile App Collection]** markerar du de erbjudanden du vill inkludera i samlingen. I den här självstudiekursen väljer du fem erbjudanden du skapat. Du kan enkelt filtrera listan med hjälp av sökfältet, till exempel genom att skriva **[!UICONTROL Luma]**.
+1. I **[!DNL Luma - Mobile App Collection]** markerar du de erbjudanden du vill inkludera i samlingen. I den här självstudiekursen väljer du fem erbjudanden du skapat. Du kan enkelt filtrera listan med hjälp av sökfältet, till exempel genom att skriva **[!DNL Luma]**.
 1. Välj **[!UICONTROL Spara]**.
 
    ![Erbjudanden - samling](assets/ajo-collection-offersselected.png)
@@ -228,14 +230,14 @@ Se [Viktiga steg för att skapa och hantera erbjudanden](https://experienceleagu
 1. I **[!UICONTROL Lägg till beslutsomfattningar]** steg för **[!UICONTROL Skapa ett nytt offertbeslut]**:
    1. Välj **[!UICONTROL Mobile JSON]** från **[!UICONTROL Placement]** lista.
    1. I **[!UICONTROL Utvärderingskriterier]** platta, markera ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Lägg till]**.
-      1. I **[!UICONTROL Lägg till erbjudandesamling]** väljer du din erbjudandesamling. Till exempel: **[!UICONTROL Luma - Mobile App Collection]**.
+      1. I **[!UICONTROL Lägg till erbjudandesamling]** väljer du din erbjudandesamling. Exempel, **[!DNL Luma - Mobile App Collection]**.
       1. Välj **[!UICONTROL Lägg till]**.
          ![Beslut - Välj samling](assets/ajo-decision-selectcollection.png)
    1. Se till att **[!UICONTROL Ingen]** är markerat för **[!UICONTROL Kvalificering]** och **[!UICONTROL Prioritet]** är markerat som **[!UICONTROL Rankningsmetod]**.
    1. Välj **[!UICONTROL Nästa]**.
       ![Beslutsomfattningar](assets/ajo-decision-scopes.png).
 1. I **[!UICONTROL Lägg till reserverbjudande]** steg för **[!UICONTROL Skapa ett nytt offertbeslut]**:
-   1. Välj ditt reserverbjudande, till exempel **[!UICONTROL Luma - Reserverbjudande]**.
+   1. Välj ditt reserverbjudande, till exempel **[!DNL Luma - Fallback offer]**.
    1. Välj **[!UICONTROL Nästa]**.
 1. I **[!UICONTROL Sammanfattning]** steg för **[!UICONTROL Skapa ett nytt offertbeslut]**:
    1. Välj **[!UICONTROL Slutför]**.
@@ -246,7 +248,7 @@ Ditt beslut om erbjudandet, som består av en uppsättning erbjudanden, är nu k
 
 1. I användargränssnittet för Journey Optimizer väljer du **[!UICONTROL Erbjudanden]**.
 1. Välj **[!UICONTROL Beslut]** i det övre fältet.
-1. Välj t.ex. ditt beslut **[!UICONTROL Luma - beslut om mobilappar]**.
+1. Välj t.ex. ditt beslut **[!DNL Luma - Mobile App Decision]**.
 1. I **[!UICONTROL Beslutsomfattningar]** platta, markera ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) **[!UICONTROL Kopiera]**.
 1. Välj **[!UICONTROL Beslutets omfattning]**.
    ![Kopiera beslutsomfattning](assets/ajo-copy-decisionscope.png)
@@ -269,7 +271,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 >
 
 1. I Xcode kontrollerar du att [AEP-optimering](https://github.com/adobe/aepsdk-messaging-ios.git) läggs till i listan över paket i paketberoenden. Se [Swift Package Manager](install-sdks.md#swift-package-manager).
-1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL AppDelegate]** i Xcode Project-navigatorn.
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!UICONTROL AppDelegate]** i Xcode Project-navigatorn.
 1. Säkerställ `AEPOptimize` är en del av din lista över importer.
 
    `import AEPOptimize`
@@ -292,7 +294,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
    ]
    ```
 
-1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project-navigatorn. Hitta `func updatePropositionOD(ecid: String, activityId: String, placementId: String, itemCount: Int) async` funktion. Lägg till följande kod:
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project-navigatorn. Hitta `func updatePropositionOD(ecid: String, activityId: String, placementId: String, itemCount: Int) async` funktion. Lägg till följande kod:
 
    ```swift
    // set up the XDM dictionary, define decision scope and call update proposition API
@@ -325,14 +327,14 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
      Du kan dock använda vilken implementeringsmetod som helst för att se till att Optimera-API:erna får rätt parametrar (`activityId`, `placementId` och `itemCount`), för att skapa en giltig [`DecisionScope`](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/api-reference/#decisionscope) -objekt för implementeringen.
    * anropar två API:er: [`Optimize.clearCachePropositions`](https://support.apple.com/en-ie/guide/mac-help/mchlp1015/mac)  och [`Optimize.updatePropositions`](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/api-reference/#updatepropositions).  Dessa funktioner rensar alla cachelagrade offerter och uppdaterar propositionerna för den här profilen.
 
-1. Navigera till **[!UICONTROL Luma]** > **[!UICONTROL Luma]** > **[!UICONTROL Vyer]** > **[!UICONTROL Personalisering]** > **[!UICONTROL EdgeOffersView]** i Xcode Project-navigatorn. Hitta `func onPropositionsUpdateOD(activityId: String, placementId: String, itemCount: Int) async` och inspektera koden för den här funktionen. Den viktigaste delen av funktionen är [`Optimize.onPropositionsUpdate`](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/api-reference/#onpropositionsupdate) API-anrop, som
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Views]** > **[!UICONTROL Personalisering]** > **[!UICONTROL EdgeOffersView]** i Xcode Project-navigatorn. Hitta `func onPropositionsUpdateOD(activityId: String, placementId: String, itemCount: Int) async` och inspektera koden för den här funktionen. Den viktigaste delen av funktionen är [`Optimize.onPropositionsUpdate`](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/api-reference/#onpropositionsupdate) API-anrop, som
 
    * hämtar förslagen för den aktuella profilen baserat på beslutsomfånget (som du har definierat i Journey Optimizer - Beslutshantering),
    * hämtar erbjudandet från erbjudandet,
    * frigör innehållet i erbjudandet så att det kan visas korrekt i appen, och
    * utlöser `displayed()` åtgärd för erbjudandet som skickar tillbaka en händelse till Edge Network som talar om att erbjudandet visas.
 
-1. Fortfarande i **[!UICONTROL EdgeOffersView]** lägger du till följande kod i `.onFirstAppear` modifierare. Den här koden ser till att callback-funktionen för uppdatering av erbjudanden registreras endast en gång.
+1. Fortfarande i **[!DNL EdgeOffersView]** lägger du till följande kod i `.onFirstAppear` modifierare. Den här koden ser till att callback-funktionen för uppdatering av erbjudanden registreras endast en gång.
 
    ```swift
    // Invoke callback for offer updates
@@ -354,11 +356,11 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 
 1. Öppna appen på en enhet eller i simulatorn.
 
-1. Gå till **[!UICONTROL Personalisering]** -fliken.
+1. Gå till fliken **[!DNL Personalisation]**.
 
-1. Välj **[!UICONTROL Edge Personalization]**.
+1. Välj **[!DNL Edge Personalisation]**.
 
-1. Bläddra högst upp så visas två slumpmässiga erbjudanden från samlingen som du har definierat i **[!UICONTROL BESLUT LUMA - BESLUT OM MOBILAPP]** platta.
+1. Bläddra högst upp så visas två slumpmässiga erbjudanden från samlingen som du har definierat i **[!DNL DECISION LUMA - MOBILE APP DECISION]** platta.
 
    <img src="assets/ajo-app-offers.png" width="300">
 
