@@ -3,9 +3,9 @@ title: Samla in identitetsdata
 description: Lär dig hur du samlar in identitetsdata i en mobilapp.
 feature: Mobile SDK,Identities
 hide: true
-source-git-commit: cd1efbfaa335c08cbcc22603fe349b4594cc1056
+source-git-commit: 5f178f4bd30f78dff3243b3f5bd2f9d11c308045
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '762'
 ht-degree: 1%
 
 ---
@@ -171,4 +171,4 @@ När du är klar med stegen i [Experience Platform lektion](platform.md)kan du b
 >
 >Du har nu konfigurerat din app för att uppdatera identiteter i Edge Network och (när den har konfigurerats) med Adobe Experience Platform.<br/>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
 
-Nästa: **[Profil](profile.md)**
+Nästa: **[Samla in profildata](profile.md)**

@@ -3,9 +3,9 @@ title: Ställ in försäkring
 description: Lär dig hur du implementerar tillägget Assurance i en mobilapp.
 feature: Mobile SDK,Assurance
 hide: true
-source-git-commit: a2788110b1c43d24022672bb5ba0f36af66d962b
+source-git-commit: 5f178f4bd30f78dff3243b3f5bd2f9d11c308045
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '775'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ Innan du kör programmet för första gången i Xcode måste du uppdatera signer
 
    >[!IMPORTANT]
    >
-   >Se till att du väljer en unik källidentifierare som skiljer sig från standardidentifieraren som redan angetts i Start-projektet, eftersom varje källidentifierare måste vara unik.
+   >Se till att du använder en unik källidentifierare som skiljer sig från standardinställningen `com.adobe.luma.tutorial.swiftui`  anges i Start-projektet eftersom varje källidentifierare måste vara unik.
 
 
    ![Xcode-signeringsfunktioner](assets/xcode-signing-capabilities.png){zoomable=&quot;yes&quot;}
@@ -139,4 +139,4 @@ Om du stöter på några problem kan du läsa [teknisk](https://developer.adobe.
 >Du har nu konfigurerat din app att använda Assurance för resten av självstudiekursen.<br/>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
 
 
-Nästa: **[Godkännande](consent.md)**
+Nästa: **[Implementera medgivande](consent.md)**

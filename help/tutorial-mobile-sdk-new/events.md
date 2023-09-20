@@ -1,15 +1,15 @@
 ---
-title: Samla in händelsedata
-description: Lär dig hur du samlar in händelsedata i en mobilapp.
+title: Spåra händelsedata
+description: Lär dig spåra händelsedata i en mobilapp.
 hide: true
-source-git-commit: a2788110b1c43d24022672bb5ba0f36af66d962b
+source-git-commit: 5f178f4bd30f78dff3243b3f5bd2f9d11c308045
 workflow-type: tm+mt
-source-wordcount: '1309'
+source-wordcount: '1310'
 ht-degree: 0%
 
 ---
 
-# Samla in händelsedata
+# Spåra händelsedata
 
 Lär dig spåra händelser i en mobilapp.
 
@@ -380,4 +380,4 @@ Nu när du har samlat in händelserna och skickat dem till Platform Edge Network
 >
 >Du har nu konfigurerat din app för att spåra e-handel, appinteraktion och händelser för skärmspårning till Adobe Experience Platform Edge Network och alla tjänster som du har definierat i din datastam.<br/>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 
-Nästa: **[WebViews](web-views.md)**
+Nästa: **[Hantera WebViews](web-views.md)**

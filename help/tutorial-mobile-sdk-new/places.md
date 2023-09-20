@@ -2,9 +2,9 @@
 title: Använd geopositioneringstjänster
 description: Lär dig hur du använder platsens geopositioneringstjänst i din mobilapp.
 hide: true
-source-git-commit: cd1efbfaa335c08cbcc22603fe349b4594cc1056
+source-git-commit: 5f178f4bd30f78dff3243b3f5bd2f9d11c308045
 workflow-type: tm+mt
-source-wordcount: '1745'
+source-wordcount: '1669'
 ht-degree: 0%
 
 ---
@@ -33,24 +33,6 @@ I den här lektionen ska du
 * Validera inställningar i Assurance.
 * Uppdatera programmet för att registrera Platser-tillägget.
 * Implementera geopositioneringsspårning från tjänsten Platser i din app.
-
-
-## Förutsättningar
-
-* Programmet har skapats och körts med rätt SDK installerat och konfigurerat.
-
-
-## Utbildningsmål
-
-I den här lektionen ska du
-
-* Uppdatera Edge-konfigurationen för beslutshantering.
-* Uppdatera taggegenskapen med tillägget Journey Optimizer - Decisioning.
-* Uppdatera ditt schema för att hämta offerthändelser.
-* Validera inställningar i Assurance.
-* Skapa ett offertbeslut baserat på erbjudanden från Journey Optimizer - Beslutshantering.
-* Uppdatera appen och registrera tillägget Optimizer.
-* Implementera erbjudanden från Beslutshantering i appen.
 
 
 ## Inställningar

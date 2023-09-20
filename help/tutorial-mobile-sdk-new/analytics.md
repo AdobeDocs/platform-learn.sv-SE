@@ -1,11 +1,11 @@
 ---
-title: Samla in och mappa analysdata
+title: Mappa data till analysdata
 description: Lär dig hur du samlar in och mappar data för Adobe Analytics i en mobilapp.
 solution: Data Collection,Experience Platform,Analytics
 hide: true
-source-git-commit: cd1efbfaa335c08cbcc22603fe349b4594cc1056
+source-git-commit: 5f178f4bd30f78dff3243b3f5bd2f9d11c308045
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '632'
 ht-degree: 1%
 
 ---
@@ -230,4 +230,4 @@ Additional information about processing rules and context data can be found [her
 >
 >Du har konfigurerat appen för att mappa Experience Edge XDM-objekt till Adobe Analytics-variabler som aktiverar Adobe Analytics-tjänsten i ditt datastam och som använder bearbetningsregler där det är tillämpligt.<br/> Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 
-Nästa: **[Experience Platform](platform.md)**
+Nästa: **[Skicka data till Experience Platform](platform.md)**

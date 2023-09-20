@@ -3,9 +3,9 @@ title: Konfigurera ett datastream
 description: Lär dig hur du skapar ett datastream i Experience Platform.
 feature: Mobile SDK,Datastreams
 hide: true
-source-git-commit: a2788110b1c43d24022672bb5ba0f36af66d962b
+source-git-commit: 5f178f4bd30f78dff3243b3f5bd2f9d11c308045
 workflow-type: tm+mt
-source-wordcount: '615'
+source-wordcount: '617'
 ht-degree: 1%
 
 ---
@@ -106,4 +106,4 @@ När du implementerar Platform Mobile SDK i din egen app bör du skapa tre datas
 >
 >Du har nu ett datastream att använda för resten av självstudiekursen.<br/>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
 
-Nästa: **[Konfigurera taggar](configure-tags.md)**
+Nästa: **[Konfigurera en taggegenskap](configure-tags.md)**

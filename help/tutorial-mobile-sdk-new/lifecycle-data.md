@@ -2,9 +2,9 @@
 title: Samla in livscykeldata
 description: Lär dig hur du samlar in livscykeldata i en mobilapp.
 hide: true
-source-git-commit: cd1efbfaa335c08cbcc22603fe349b4594cc1056
+source-git-commit: 5f178f4bd30f78dff3243b3f5bd2f9d11c308045
 workflow-type: tm+mt
-source-wordcount: '630'
+source-wordcount: '631'
 ht-degree: 0%
 
 ---
@@ -124,4 +124,4 @@ Du borde se **[!UICONTROL Stäng program (bakgrund)]** och **[!UICONTROL Program
 >
 >Du har nu konfigurerat din app så att den skickar programtillståndshändelser (förgrund, bakgrund) till Adobe Experience Platform Edge Network och alla tjänster som du har definierat i din datastam.<br>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
 
-Nästa: **[Spåra händelser](events.md)**
+Nästa: **[Spåra händelsedata](events.md)**

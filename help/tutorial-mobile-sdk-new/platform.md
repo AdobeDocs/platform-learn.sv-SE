@@ -1,17 +1,17 @@
 ---
-title: Skicka data till Adobe Experience Platform
-description: Lär dig skicka data till Adobe Experience Platform.
+title: Skicka data till Experience Platform
+description: Lär dig hur du skickar data till Experience Platform.
 solution: Data Collection,Experience Platform
 feature: Mobile SDK,Data Ingestion
 hide: true
-source-git-commit: cd1efbfaa335c08cbcc22603fe349b4594cc1056
+source-git-commit: 5f178f4bd30f78dff3243b3f5bd2f9d11c308045
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1052'
 ht-degree: 0%
 
 ---
 
-# Skicka data till Adobe Experience Platform
+# Skicka data till Experience Platform
 
 Lär dig hur du skickar mobilappsdata till Adobe Experience Platform.
 
@@ -170,4 +170,4 @@ Det finns mycket mer som marknadsförare och analytiker kan göra med data som s
 >
 >Du har nu konfigurerat din app så att den inte bara skickar data till Edge Network utan även till Adobe Experience Platform.<br>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 
-Nästa: **[Skicka meddelanden med Journey Optimizer](journey-optimizer-push.md)**
+Nästa: **[Skapa och skicka meddelanden](journey-optimizer-push.md)**
