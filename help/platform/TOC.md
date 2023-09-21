@@ -4,9 +4,9 @@ breadcrumb-title: Självstudiekurser
 user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
-source-git-commit: 78b5ee6e1bcda449d8adf453088ddba6f0e42f36
+source-git-commit: c61d9d10c25cba92136d1dca635e12cbf222b947
 workflow-type: tm+mt
-source-wordcount: '989'
+source-wordcount: '994'
 ht-degree: 8%
 
 ---
@@ -112,6 +112,7 @@ ht-degree: 8%
    + [Ansluta till mål](/help/platform/destinations/connecting-to-destinations.md)
    + [Skapa mål och aktivera data](/help/platform/destinations/create-destinations-and-activate-data.md)
    + [Aktivera profiler och segment till ett mål](/help/platform/destinations/activate-profiles-and-segments-to-a-destination.md)
+   + [Konfigurera ett mål för datauppsättningsexport](/help/platform/destinations/configure-dataset-export-destination.md)
    + [Integrera med Google kundmatchning](/help/platform/destinations/integrate-with-google-customer-match.md)
    + [Konfigurera Azure Blob-målet](/help/platform/destinations/configure-the-azure-blob-destination.md)
    + [Konfigurera Marketo-målet](/help/platform/destinations/configure-the-marketo-destination.md)
