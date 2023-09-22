@@ -4,8 +4,9 @@ breadcrumb-title: Självstudiekurser om datainsamling
 user-guide-description: Instruktionsvideor och självstudiekurser som gör dig till en privilegierad användare av datainsamling i Experience Platform.
 solution: Data Collection,Experience Platform
 doc-type: video
+auto-video-transcripts: true
 role: Developer, Data Engineer
-source-git-commit: e3ef25638384554bf21a50dc57db3152805bfac2
+source-git-commit: 906993f14376f7a1a6344436c7068c747d275fb4
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 17%
