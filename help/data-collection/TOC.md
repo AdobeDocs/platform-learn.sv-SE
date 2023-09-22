@@ -5,9 +5,9 @@ user-guide-description: Instruktionsvideor och självstudiekurser som gör dig t
 solution: Data Collection,Experience Platform
 doc-type: video
 role: Developer, Data Engineer
-source-git-commit: ac07d62cf4bfb6a9a8b383bbfae093304d008b5f
+source-git-commit: e3ef25638384554bf21a50dc57db3152805bfac2
 workflow-type: tm+mt
-source-wordcount: '239'
+source-wordcount: '242'
 ht-degree: 17%
 
 ---
@@ -53,6 +53,7 @@ ht-degree: 17%
    + [Konfigurera en datastream](event-forwarding/set-up-a-datastream.md)
    + [Lägg till ett tillägg](event-forwarding/add-an-extension.md)
    + [Skapa en regel](event-forwarding/create-a-rule.md)
+   + [Snabbstartarbetsflöden](event-forwarding/quick-start-workflows.md)
    + [Övervaka händelsevidarebefordran](event-forwarding/monitor.md)
    + [Flytta taggar på klientsidan](event-forwarding/consider-moving-tags.md)
    + [Konfigurera Google Ads med förbättrad konvertering](event-forwarding/set-up-google-ads-enhanced-conversions.md)
