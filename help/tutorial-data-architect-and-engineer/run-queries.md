@@ -8,7 +8,7 @@ feature: Queries
 jira: KT-4348
 thumbnail: 4348-run-queries.jpg
 exl-id: a37531cb-96ad-4547-86af-84f7ed65f019
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 2%
@@ -22,10 +22,10 @@ I den här lektionen får du lära dig hur du ställer in, skriver och kör frå
 
 Adobe Experience Platform Query Service hjälper dig att förstå dina data genom att du kan använda standard-SQL för att fråga efter data i Platform. Med hjälp av frågetjänsten kan du ansluta till valfri datauppsättning i datasjön och samla in frågeresultaten som en ny datauppsättning för användning vid rapportering, maskininlärning eller för förtäring i realtidskundprofil.
 
-**Dataarkitekturer** och **Datatekniker** måste använda frågetjänsten utanför den här självstudiekursen.
+**Dataarkitekturer** och **Datatekniker** måste använda frågetjänsten utanför den här självstudien.
 
 Innan du börjar övningarna ska du titta på den här korta videon och lära dig mer om Query Service:
->[!VIDEO](https://video.tv.adobe.com/v/29795?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29795?learn=on)
 
 ## Behörigheter krävs
 
@@ -41,8 +41,8 @@ I [Konfigurera behörigheter](configure-permissions.md) lektionen anger du alla 
 
 Låt oss börja med några enkla frågor:
 
-1. Gå till **Frågor** i den vänstra navigeringen
-1. Välj **Skapa fråga** knappen längst upp till höger för att öppna en textruta för att köra och köra frågor
+1. Gå till **Frågor** till vänster navigering
+1. Välj **Skapa fråga** knappen längst upp till höger för att öppna en textruta för att köra frågor
 1. Skriv följande fråga i redigeraren och tryck på Skift+Enter eller Skift+Retur för att köra frågan.
 
    ```
@@ -62,9 +62,9 @@ Låt oss börja med några enkla frågor:
    WHERE loyalty.tier ='gold'
    ```
 
-   ![SELECT-data från lojalitetsdatauppsättningen](assets/queries-loyaltySelect.png)
+   ![VÄLJ data från lojalitetsdatauppsättningen](assets/queries-loyaltySelect.png)
 
-1. Om något fel uppstår visas detaljerade meddelanden i **[!UICONTROL Konsol]** enligt nedan
+1. Om något fel uppstår visas detaljerade meddelanden i dialogrutan **[!UICONTROL Konsol]** enligt nedan
    ![Fel i frågan](assets/queries-error.png)
 
 1. När frågan är klar **[!UICONTROL Namn]** it `Luma Gold Level Customers`

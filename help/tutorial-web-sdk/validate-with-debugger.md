@@ -1,9 +1,9 @@
 ---
 title: Validera Web SDK-implementeringar med Experience Platform Debugger
-description: Lär dig hur du validerar implementeringen av din Platform Web SDK med Adobe Experience Platform Debugger. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
+description: Lär dig hur du validerar implementeringen av din Platform Web SDK med Adobe Experience Platform Debugger. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Tags,Debugger
 exl-id: 150bb1b1-4523-4b44-bd4e-6cabc468fc04
-source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
+source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
 source-wordcount: '1073'
 ht-degree: 1%
@@ -21,7 +21,7 @@ Felsökaren Experience Platform är ett tillägg för webbläsarna Chrome och Fi
 
 Om du aldrig har använt felsökningsfunktionen tidigare - och den här är en annan än den tidigare Adobe Experience Cloud Debugger - kan du titta på den här översiktsvideon med fem minuter:
 
->[!VIDEO](https://video.tv.adobe.com/v/32156?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32156?learn=on)
 
 I den här lektionen använder du [Adobe Experience Cloud Debugger-tillägg](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj) som ersätter taggegenskapen hårdkodad på [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html) med din egen egendom.
 
@@ -49,7 +49,7 @@ Du känner till datainsamlingstaggar och [Luma demo site](https://luma.enablemen
 
 ## Läsa in alternativa taggbibliotek med Felsökning
 
-I den här självstudien används en öppen version av [Lumas demowebbplats](https://luma.enablementadobe.com/content/luma/us/en.html). Öppna hemsidan och bokmärk den.
+I den här självstudiekursen används en öppen version av [Lumas demowebbplats](https://luma.enablementadobe.com/content/luma/us/en.html). Öppna hemsidan och bokmärk den.
 
 ![Lumas hemsida](assets/validate-luma-site.png)
 
@@ -59,7 +59,7 @@ Felsökaren i Experience Platform har en cool funktion som gör att du kan ersä
 1. Felsökaren öppnar och visar information om den hårdkodade implementeringen, som inte har med den här självstudiekursen att göra (du kan behöva läsa in Luma-webbplatsen igen när du har öppnat Felsökning)
 1. Bekräfta att felsökaren är **[!UICONTROL Ansluten till Luma]**&quot; enligt bilden nedan och välj sedan &quot;**[!UICONTROL lock]**&quot; om du vill låsa felsökaren till Luma-webbplatsen.
 1. Välj **[!UICONTROL Logga in]** och logga in på Adobe Experience Cloud med ditt Adobe ID.
-1. Gå till **[!UICONTROL Experience Platform-taggar]** i den vänstra navigeringen
+1. Gå till **[!UICONTROL Experience Platform-taggar]** till vänster navigering
 
    ![Skärm för felsökningstagg](assets/validate-launch-screen.png)
 
@@ -89,7 +89,7 @@ Du kan använda Felsökning för att validera implementeringen av din Platform W
    ![Fliken Sammanfattning](assets/validate-summary.png)
 
 1. Gå till **[!UICONTROL Experience Platform Web SDK]** i den vänstra navigeringen för att se **[!UICONTROL Nätverksförfrågningar]**
-1. Öppna **[!UICONTROL händelser]** rad (oroa dig inte om skärmbilden visar fler begäranden än din, den innehåller begäranden från framtida lektioner och du kan ignorera dem för tillfället)
+1. Öppna **[!UICONTROL händelser]** rad (oroa dig inte om den här skärmbilden visar fler begäranden än din, den innehåller begäranden från framtida lektioner och du kan ignorera dem för tillfället)
 
    ![Adobe Experience Platform Web SDK-begäran](assets/validate-aep-screen.png)
 
@@ -107,7 +107,7 @@ Du kan även validera informationen i identitetskartan:
 
 1. Återgå till [Lumas hemsida](https://luma.enablementadobe.com/content/luma/us/en.html)
 
-1. Öppna **[!UICONTROL Experience Platform Web SDK]** i den vänstra navigeringen
+1. Öppna **[!UICONTROL Experience Platform Web SDK]** till vänster
 
    ![Web SDK in Debugger](assets/identity-debugger-websdk-dark.png)
 
@@ -115,7 +115,7 @@ Du kan även validera informationen i identitetskartan:
 
    ![Web SDK in Debugger](assets/identity-deugger-websdk-event-dark.png)
 
-1. Sök efter **identityMap** i popup-fönstret. Här ser du `lumaCrmId` med tre nycklar för authenticatedState, id och primär:
+1. Sök efter **identityMap** i popup-fönstret. Här ska du se `lumaCrmId` med tre nycklar för authenticatedState, id och primär:
    ![Web SDK in Debugger](assets/identity-deugger-websdk-event-lumaCrmId-dark.png)
 
 
@@ -123,7 +123,7 @@ Du kan även validera informationen i identitetskartan:
 
 Den här typen av förfrågningsinformation visas också i webbläsarens webbutvecklingsverktyg **Nätverk** (förutsatt att webbplatsen läser in taggbiblioteket).
 
-1. Öppna webbläsarens webbutvecklingsverktyg **Nätverk** och läsa in sidan igen. Filter för samtal med `/ee` för att hitta samtalet markerar du det och tittar sedan på **Sidhuvuden** och **Nyttolast** tab
+1. Öppna webbläsarens webbutvecklingsverktyg **Nätverk** och läsa in sidan igen. Filtrera samtal med `/ee` för att hitta samtalet markerar du det och tittar sedan på **Sidhuvuden** och **Nyttolast** tab
 
    ![Fliken Nätverk](assets/validate-dev-console.png)
 

@@ -8,7 +8,7 @@ feature: Data Ingestion
 jira: KT-4348
 thumbnail: 4348-ingest-streaming-data.jpg
 exl-id: 09c24673-af8b-40ab-b894-b4d76ea5b112
-source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
+source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
 source-wordcount: '3344'
 ht-degree: 0%
@@ -31,9 +31,9 @@ Det finns två huvudsakliga uppgifter vi måste utföra i gränssnittet för dat
 
 Innan du börjar övningarna ska du titta på dessa två korta videoklipp för att lära dig mer om strömmande data och Web SDK:
 
->[!VIDEO](https://video.tv.adobe.com/v/28425?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28425?learn=on)
 
->[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34141?learn=on)
 
 >[!NOTE]
 >
@@ -85,7 +85,7 @@ Skapa [!UICONTROL datastream]:
 1. Logga in på [Experience Platform datainsamlingsgränssnitt](https://experience.adobe.com/launch/)
    <!--when will the edge config go live?-->
 
-1. Välj **[!UICONTROL Datastreams]** i den vänstra navigeringen
+1. Välj **[!UICONTROL Datastreams]** till vänster navigering
 1. Välj **[!UICONTROL Ny datastream]** i det övre högra hörnet
 
    ![Välj datastölar i den vänstra navigeringen](assets/websdk-edgeConfig-clickNav.png)
@@ -115,9 +115,9 @@ Alla tre miljöerna innehåller den plattformsinformation du just angav. Dessa u
 
 Först måste vi skapa en taggegenskap (tidigare en taggegenskap). En egenskap är en behållare för alla JavaScript-skript, regler och andra funktioner som krävs för att samla in information från en webbsida och skicka den till olika platser.
 
-Så här skapar du en egenskap:
+Skapa en egenskap:
 
-1. Gå till **[!UICONTROL Egenskaper]** i den vänstra navigeringen
+1. Gå till **[!UICONTROL Egenskaper]** till vänster navigering
 1. Välj **[!UICONTROL Ny egenskap]** knapp
    ![Lägg till en ny egenskap](assets/websdk-property-addNewProperty.png)
 1. Som **[!UICONTROL Namn]**, ange `Luma Platform Tutorial` (lägg till ditt namn i slutet om flera personer från ditt företag använder den här självstudiekursen)
@@ -152,14 +152,14 @@ Now switch back to your browser tab with the Data Collection interface still ope
 Nu när du har en egenskap kan du lägga till Web SDK med ett tillägg. Ett tillägg är ett kodpaket som utökar gränssnittet och funktionerna i datainsamlingen. Så här lägger du till tillägget:
 
 1. Öppna taggegenskapen
-1. Gå till **[!UICONTROL Tillägg]** i den vänstra navigeringen
+1. Gå till **[!UICONTROL Tillägg]** till vänster navigering
 1. Gå till **[!UICONTROL Katalog]** tab
 1. Det finns många tillägg för taggar. Filtrera katalogen med termen `Web SDK`
-1. I **[!UICONTROL Adobe Experience Platform Web SDK]** väljer du **[!UICONTROL Installera]** knapp
+1. I **[!UICONTROL Adobe Experience Platform Web SDK]** tillägg väljer du **[!UICONTROL Installera]** knapp
    ![Installera Adobe Experience Platform Web SDK-tillägget](assets/websdk-property-addExtension.png)
-1. Det finns flera konfigurationer tillgängliga för Web SDK-tillägget, men det finns bara två som vi kommer att konfigurera för den här självstudiekursen. Uppdatera **[!UICONTROL Edge Domain]** till `data.enablementadobe.com`. Med den här inställningen kan du ange cookies från första part med Web SDK-implementeringen, vilket rekommenderas. Senare i den här lektionen kommer du att kartlägga en webbplats på `enablementadobe.com` till din taggegenskap. CNAME för `enablementadobe.com` domänen har redan konfigurerats så att `data.enablementadobe.com` kommer att vidarebefordra till Adobe-servrar. När du implementerar Web SDK på din egen webbplats måste du skapa en CNAME för dina egna datainsamlingssyften, till exempel `data.YOUR_DOMAIN.com`
-1. Från **[!UICONTROL Datastream]** listruta, välj `Luma Platform Tutorial` datastream.
-1. Du kan gärna titta på andra konfigurationsalternativ (men ändra dem inte!) och sedan markera **[!UICONTROL Spara]**
+1. Det finns flera konfigurationer tillgängliga för Web SDK-tillägget, men det finns bara två som vi kommer att konfigurera för den här självstudien. Uppdatera **[!UICONTROL Edge Domain]** till `data.enablementadobe.com`. Med den här inställningen kan du ange cookies från första part med Web SDK-implementeringen, vilket rekommenderas. Senare i den här lektionen kommer du att kartlägga en webbplats på `enablementadobe.com` till din taggegenskap. CNAME för `enablementadobe.com` domänen har redan konfigurerats så att `data.enablementadobe.com` kommer att vidarebefordra till Adobe-servrar. När du implementerar Web SDK på din egen webbplats måste du skapa en CNAME för dina egna datainsamlingssyften, till exempel `data.YOUR_DOMAIN.com`
+1. Från **[!UICONTROL Datastream]** listruta, välj `Luma Platform Tutorial` dataström.
+1. Du kan gärna titta på andra konfigurationsalternativ (men ändra dem inte!) och sedan **[!UICONTROL Spara]**
    <!--is edge domain required for first party? when will it break?-->
    <!--any other fields that should be highlighted-->
    ![](assets/websdk-property-configureExtension.png)
@@ -170,7 +170,7 @@ Nu när du har en egenskap kan du lägga till Web SDK med ett tillägg. Ett till
 
 Nu ska vi skapa en regel för att skicka data till plattformen. En regel är en kombination av händelser, villkor och åtgärder som talar om för taggarna att göra något. Så här skapar du en regel:
 
-1. Gå till **[!UICONTROL Regler]** i den vänstra navigeringen
+1. Gå till **[!UICONTROL Regler]** till vänster navigering
 1. Välj **[!UICONTROL Skapa ny regel]** knapp
    ![Skapa en regel](assets/websdk-property-createRule.png)
 1. Namnge regeln `All Pages - Library Loaded`
@@ -182,7 +182,7 @@ Nu ska vi skapa en regel för att skicka data till plattformen. En regel är en 
 1. Lämna **[!UICONTROL Villkor]** tom, eftersom vi vill att den här regeln ska köras på alla sidor, enligt det namn vi gav den
 1. Under **[!UICONTROL Åtgärder]** väljer du **[!UICONTROL Lägg till]** knapp
 1. Använd **[!UICONTROL Adobe Experience Platform Web SDK]** **[!UICONTROL Tillägg]** och markera **[!UICONTROL Skicka händelse]** som **[!UICONTROL Åtgärdstyp]**
-1. Till höger väljer du **[!UICONTROL web.webpagedetails.pageViews]** från **[!UICONTROL Typ]** listruta. Detta är ett av XDM-fälten i `Luma Web Events Schema`
+1. Välj till höger **[!UICONTROL web.webpagedetails.pageViews]** från **[!UICONTROL Typ]** nedrullningsbar meny. Detta är ett av XDM-fälten i `Luma Web Events Schema`
 1. Välj **[!UICONTROL Behåll ändringar]** för att återgå till huvudlinjeraster
    ![Lägg till åtgärden Skicka händelse](assets/websdk-property-addAction.png)
 1. Välj **[!UICONTROL Spara]** för att spara regeln\
@@ -230,12 +230,12 @@ Now let's bundle the contents of our property&mdash;currently an extension and a
 
 Så här skapar du ett bibliotek:
 
-1. Gå till **[!UICONTROL Publiceringsflöde]** i den vänstra navigeringen
+1. Gå till **[!UICONTROL Publiceringsflöde]** till vänster navigering
 1. Välj **[!UICONTROL Lägg till bibliotek]**
    ![Välj Lägg till bibliotek](assets/websdk-property-pubAddNewLib.png)
 1. För **[!UICONTROL Namn]**, ange `Luma Platform Tutorial`
 1. För **[!UICONTROL Miljö]**, markera `Development`
-1. Välj **[!UICONTROL Lägg till alla ändrade resurser]** -knappen. (Förutom [!UICONTROL Adobe Experience Platform Web SDK] och `All Pages - Library Loaded` -regeln visas också [!UICONTROL Core] tillägget har lagts till som innehåller det grundläggande JavaScript som krävs för alla Launch-webbegenskaper.)
+1. Välj **[!UICONTROL Lägg till alla ändrade resurser]** -knappen. (Förutom [!UICONTROL Adobe Experience Platform Web SDK] tillägg och `All Pages - Library Loaded` -regeln visas också [!UICONTROL Core] tillägget har lagts till som innehåller det grundläggande JavaScript som krävs för alla Launch-webbegenskaper.)
 1. Välj **[!UICONTROL Spara och bygg för utveckling]** knapp
    ![Skapa och bygg biblioteket](assets/websdk-property-buildLibrary.png)
 
@@ -255,14 +255,14 @@ Felsökaren Experience Platform är ett tillägg för webbläsarna Chrome och Fi
 
 Om du aldrig har använt Felsökning tidigare - och den här är en annan än den tidigare Adobe Experience Cloud Debugger - kan du titta på den här översiktsvideon med fem minuter:
 
->[!VIDEO](https://video.tv.adobe.com/v/32156?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32156?learn=on)
 
 ### Öppna Lumas webbplats
 
 I den här självstudiekursen använder vi en öppen version av demonstrationswebbplatsen för Luma. Vi öppnar den och bokmärker den:
 
 1. Öppna [Lumas webbplats](https://luma.enablementadobe.com/content/luma/us/en.html).
-1. Bokmärk sidan så att den kan användas i resten av självstudiekursen
+1. Bokmärk sidan så att den kan användas i resten av kursen
 
 Den här värdbaserade webbplatsen är anledningen till att vi använde `enablementadobe.com` i [!UICONTROL Domäner] fält för den ursprungliga taggegenskapskonfigurationen och varför vi använde `data.enablementadobe.com` som vår förstahandsdomän i [!UICONTROL Adobe Experience Platform Web SDK] tillägg. Jag hade en plan!
 
@@ -276,7 +276,7 @@ Felsökaren i Experience Platform har en cool funktion som gör att du kan ersä
 1. Felsökaren öppnar och visar information om den hårdkodade implementeringen, som inte har med den här självstudiekursen att göra (du kan behöva läsa in Luma-webbplatsen igen när du har öppnat Felsökning)
 1. Bekräfta att felsökaren är **[!UICONTROL Ansluten till Luma]**&quot; enligt bilden nedan och välj sedan &quot;**[!UICONTROL lock]**&quot; om du vill låsa felsökaren till Luma-webbplatsen.
 1. Välj **[!UICONTROL Logga in]** till höger om du vill autentisera.
-1. Gå till **[!UICONTROL Starta]** i den vänstra navigeringen
+1. Gå till **[!UICONTROL Starta]** till vänster navigering
 1. Välj fliken Konfiguration
 1. Till höger om där den visar dig **[!UICONTROL Sidinbäddningskoder]**&#x200B;öppnar du **[!UICONTROL Åtgärder]** och markera **[!UICONTROL Ersätt]**
    ![Välj Åtgärder > Ersätt](assets/websdk-debugger-replaceLibrary.png)
@@ -294,7 +294,7 @@ Felsökaren i Experience Platform har en cool funktion som gör att du kan ersä
    ![Adobe Experience Platform Web SDK-begäran](assets/websdk-debugger-platformNetwork.png)
 1. Se hur vi kan se `web.webpagedetails.pageView` händelsetyp som anges i [!UICONTROL Skicka händelse] och andra färdiga variabler som följer `AEP Web SDK ExperienceEvent Mixin` format
    ![Händelseinformation](assets/websdk-debugger-eventDetails.png)
-1. Den här typen av förfrågningsinformation visas också i webbläsarens webbutvecklingsverktyg **Nätverk** -fliken. Öppna den och läs in sidan igen. Filter för samtal med `interact` för att hitta samtalet markerar du det och tittar sedan på **Sidhuvuden** tab, **Begär nyttolast** område.
+1. Den här typen av förfrågningsinformation visas också i webbläsarens webbutvecklingsverktyg **Nätverk** -fliken. Öppna den och läs in sidan igen. Filtrera samtal med `interact` för att hitta samtalet markerar du det och tittar sedan på **Sidhuvuden** tab, **Begär nyttolast** område.
    ![Fliken Nätverk](assets/websdk-debugger-networkTab.png)
 1. Gå till **Svar** och notera hur ECID-värdet ingår i svaret. Kopiera det här värdet så som du kommer att använda det för att validera profilinformationen i nästa övning.
    ![Fliken Nätverk](assets/websdk-debugger-networkTab-response.png)
@@ -303,11 +303,11 @@ Felsökaren i Experience Platform har en cool funktion som gör att du kan ersä
 
 ## Validera data i Experience Platform
 
-Du kan validera att data landar i Platform genom att titta på de batchar med data som kommer in i `Luma Web Events Dataset`. (Jag vet, det kallas dataöverföring men nu säger jag att det kommer i grupper! Den direktuppspelas i realtid till en profil, så att den kan användas för segmentering och aktivering i realtid, men skickas gruppvis var 15:e minut till datasjön.)
+Du kan validera att data landar i Platform genom att titta på de batchar med data som kommer in i `Luma Web Events Dataset`. (Jag vet, det kallas dataöverföring men nu säger jag att det kommer i grupper! Den direktuppspelas i realtid till Profile, så den kan användas för segmentering och aktivering i realtid, men skickas gruppvis var 15:e minut till datasjön.)
 
 Så här validerar du data:
 
-1. Gå till **[!UICONTROL Datauppsättningar]** i den vänstra navigeringen
+1. Gå till **[!UICONTROL Datauppsättningar]** till vänster navigering
 1. Öppna `Luma Web Events Dataset` och bekräfta att en batch har kommit fram. Kom ihåg att de skickas var 15:e minut, så du kanske måste vänta på att gruppen ska visas.
 1. Välj **[!UICONTROL Förhandsgranska datauppsättning]** knapp
    ![Öppna datauppsättningen](assets/websdk-platform-dataset.png)
@@ -316,7 +316,7 @@ Så här validerar du data:
 
 Du kan också bekräfta att den nya profilen visas:
 
-1. Gå till **[!UICONTROL Profiler]** i den vänstra navigeringen
+1. Gå till **[!UICONTROL Profiler]** till vänster navigering
 1. Välj **[!UICONTROL ECID]** och söka efter ditt ECID-värde (kopiera det från svaret). Profilen kommer att ha ett eget id, som är skilt från ECID.
 1. Välj **[!UICONTROL Profil-ID]** för att öppna profilen
    ![Hitta och öppna profilen](assets/websdk-platform-openProfile.png)
@@ -328,8 +328,8 @@ Du kan också bekräfta att den nya profilen visas:
 
 ### Skapa ett dataelement för sidnamn
 
-1. I tagggränssnittet för datainsamling, i det övre högra hörnet av ditt `Luma Platform Tutorial` -egenskap, öppna **[!UICONTROL Välj ett arbetsbibliotek]** listruta och välj `Luma Platform Tutorial` bibliotek. Den här inställningen gör det enklare att publicera ytterligare uppdateringar till vårt bibliotek.
-1. Gå till **[!UICONTROL Dataelement]** i den vänstra navigeringen
+1. I tagggränssnittet för datainsamling, längst upp till höger i ditt `Luma Platform Tutorial` -egenskap, öppna **[!UICONTROL Välj ett arbetsbibliotek]** listruta och välj `Luma Platform Tutorial` bibliotek. Den här inställningen gör det enklare att publicera ytterligare uppdateringar till vårt bibliotek.
+1. Gå till **[!UICONTROL Dataelement]** till vänster navigering
 1. Välj **[!UICONTROL Skapa nytt dataelement]** knapp
 
    ![Skapa ett nytt dataelement](assets/websdk-property-createNewDataElement.png)
@@ -347,7 +347,7 @@ Nu ska vi mappa vårt sidnamn till Web SDK.
 
 >[!IMPORTANT]
 >
->För att kunna utföra den här uppgiften måste vi se till att din användare först har tillgång till sandlådan Prod. Om du inte redan har tillgång till Prod-sandlådan från en annan produktprofil kan du snabbt öppna din `Luma Tutorial Platform` profil och lägga till behörighetsobjektet **[!UICONTROL Sandlådor]** > **[!UICONTROL Prod]**. När du har gjort det kan du göra en SKIFT-omläsning på dataelementsidan för att rensa cacheminnet
+>För att kunna utföra den här uppgiften måste vi se till att din användare först har tillgång till sandlådan Prod. Om du inte redan har tillgång till Prod-sandlådan från en annan produktprofil kan du snabbt öppna din `Luma Tutorial Platform` profil och lägga till behörighetsobjektet **[!UICONTROL Sandlådor]** > **[!UICONTROL Prod]**. När du har gjort det kan du göra en SKIFT-omläsning på dataelementsidan för att rensa cachen
 >![Lägg till Prod-sandlådan](assets/websdk-property-permissionToLoadSchema.png)
 
 På **[!UICONTROL Dataelement]** sida:
@@ -391,11 +391,11 @@ Du kan också validera de sidnamnsdata som togs emot i Platform genom att förha
 
 Din Web SDK-implementering skickar nu händelser med Experience Cloud ID (ECID) som primär identifierare. ECID genereras automatiskt av Web SDK och är unikt per enhet och webbläsare. En enskild kund kan ha flera ECID:n beroende på vilken enhet och webbläsare de använder. Så hur får vi en enhetlig bild av den här kunden och kan länka deras onlineaktivitet till våra CRM-, Loyalty- och Offline Purchase-data? Det gör vi genom att samla in ytterligare identiteter under deras session och på ett avgörande sätt länka deras profil via identitetssammanfogning.
 
-Om du kommer ihåg det, nämnde jag att vi skulle använda ECID och CRM ID som identiteter för våra webbdata i [Mappa identiteter](map-identities.md) lektion. Låt oss samla in CRM-ID:t med Web SDK!
+Om du kommer ihåg det, nämnde jag att vi skulle använda ECID och CRM ID som identiteter för våra webbdata i [Mappa identiteter](map-identities.md) lektion. Låt oss då samla in CRM-ID:t med Web SDK!
 
 ### Lägg till dataelement för CRM-ID
 
-Först lagrar vi CRM-ID i ett dataelement:
+Först lagrar vi CRM-ID:t i ett dataelement:
 
 1. Lägg till ett dataelement med namnet i tagggränssnittet `CRM Id`
 1. Som **[!UICONTROL Dataelementtyp]**, markera **[!UICONTROL JavaScript-variabel]**
@@ -414,7 +414,7 @@ Nu när vi har hämtat CRM-ID-värdet måste vi associera det med en särskild d
 
    >[!WARNING]
    >
-   >Med Adobe Experience Platform Web SDK-tillägget version 2.2 kan du välja namnutrymme från en ifylld listruta med de faktiska värdena i ditt plattformskonto. Tyvärr är den här funktionen ännu inte&quot;sandlådemedveten&quot;, vilket innebär att `Luma CRM Id` i listrutan. Detta kan hindra dig från att slutföra den här övningen. Vi skickar en lösning när vi har bekräftat.
+   >Med Adobe Experience Platform Web SDK-tillägget version 2.2 kan du välja namnutrymme från en ifylld listruta med de faktiska värdena i ditt plattformskonto. Tyvärr är den här funktionen ännu inte&quot;sandlådemedveten&quot;, vilket innebär att `Luma CRM Id` värdet kanske inte visas i listrutan. Detta kan hindra dig från att slutföra den här övningen. Vi skickar en lösning när vi har bekräftat.
 
 1. Som **[!UICONTROL ID]**, markerar du ikonen för att öppna ett modalt val av dataelement och väljer `CRM Id` dataelement
 1. Som **[!UICONTROL Autentiserat läge]**, markera **[!UICONTROL Autentiserad]**
@@ -442,7 +442,7 @@ Det finns ytterligare ett dataelement som måste uppdateras - XDM-objektets data
 Så här verifierar du att CRM-ID:t nu skickas av Web SDK:
 
 1. Öppna [Lumas webbplats](https://luma.enablementadobe.com/content/luma/us/en.html)
-1. Mappa den till taggegenskapen med Felsökning, enligt tidigare instruktioner
+1. Mappa den till taggegenskapen med hjälp av Felsökning, enligt tidigare instruktioner
 1. Välj **Inloggning** länk längst upp till höger på Lumas webbplats
 1. Logga in med inloggningsuppgifterna `test@adobe.com`/`test`
 1. Kontrollera Experience Platform Web SDK-anropet i Felsökning (**[!UICONTROL Adobe Experience Platform Web SDK]** > **[!UICONTROL Nätverksförfrågningar]** > **[!UICONTROL händelser]** av den senaste begäran) och du bör se `lumaCrmId`:
@@ -457,11 +457,11 @@ Så här verifierar du att CRM-ID:t nu skickas av Web SDK:
 * [Direktuppspelningsdokumentation](https://experienceleague.adobe.com/docs/experience-platform/ingestion/streaming/overview.html?lang=sv)
 * [API-referens för direktuppspelning](https://developer.adobe.com/experience-platform-apis/references/streaming-ingestion/)
 
-Bra jobbat! Det var mycket information om Web SDK och Launch. Det är mycket mer involverat i en fullfjädrad implementering, men det är grunderna som hjälper dig att komma igång och se resultaten i Platform.
+Snyggt jobb! Det var mycket information om Web SDK och Launch. Det är mycket mer involverat i en fullfjädrad implementering, men det är grunderna som hjälper dig att komma igång och se resultaten i Platform.
 
 >[!NOTE]
 >
->Nu när du är klar med inmatningslektionen för direktuppspelning kan du ta bort [!UICONTROL Prod] sandlåda från `Luma Tutorial Platform` produktprofil
+>Nu när du är klar med inmatningslektionen för strömning kan du ta bort [!UICONTROL Prod] sandlåda från `Luma Tutorial Platform` produktprofil
 
 
 Datatekniker, om du vill kan du hoppa fram till [lektion för att köra frågor](run-queries.md).

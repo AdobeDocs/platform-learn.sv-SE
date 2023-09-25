@@ -8,7 +8,7 @@ level: Beginner
 jira: KT-5291
 thumbnail: 34558.jpg
 exl-id: 1e766a0f-7b4f-4c3d-a908-5cb4cba8b334
-source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
+source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
 source-wordcount: '96'
 ht-degree: 40%
@@ -17,9 +17,6 @@ ht-degree: 40%
 
 # Demo av Real-time Customer Data Platform
 
-Den här videon visar hur Real-Time CDP används för att samla in data från flera olika källor, slå samman data till en enda kundprofil i realtid och aktivera dessa data för att skapa personaliserade kundupplevelser.
+Den här videon visar hur Real-Time CDP används för att samla in data från flera olika källor, slå samman data till en enda kundprofil i realtid och aktivera dessa data för att skapa personaliserade kundupplevelser. Mer information finns på [Real-time Customer Data Platform-dokumentation](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=sv).
 
->[!VIDEO](https://video.tv.adobe.com/v/34558?quality=12&learn=on)
-
-
-Mer information finns på [Real-time Customer Data Platform-dokumentation](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=sv).
+>[!VIDEO](https://video.tv.adobe.com/v/34558?learn=on)

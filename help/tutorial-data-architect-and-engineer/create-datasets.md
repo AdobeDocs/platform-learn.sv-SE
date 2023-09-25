@@ -8,7 +8,7 @@ feature: Data Management
 jira: KT-4348
 thumbnail: 4348-create-datasets.jpg
 exl-id: 80227af7-4976-4fd2-b1d4-b26bc4626fa0
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
 source-wordcount: '569'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Alla data som har inhämtats till Adobe Experience Platform lagras i datasjön s
 **Dataarkitekturer** måste skapa datauppsättningar utanför den här självstudiekursen.
 
 Innan du börjar övningarna ska du titta på den här korta videon och lära dig mer om datauppsättningar:
->[!VIDEO](https://video.tv.adobe.com/v/27269?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27269?learn=on)
 
 ## Behörigheter krävs
 
@@ -43,7 +43,7 @@ I [Konfigurera behörigheter](configure-permissions.md) lektionen anger du alla 
 
 I den här övningen kommer vi att skapa datauppsättningar i användargränssnittet. Låt oss börja med lojalitetsdata:
 
-1. Gå till **[!UICONTROL Datauppsättningar]** till vänster i användargränssnittet
+1. Gå till **[!UICONTROL Datauppsättningar]** till vänster i användargränssnittet för plattformen
 1. Välj **[!UICONTROL Skapa datauppsättning]** knapp
    ![Skapa en datauppsättning](assets/datasets-createDataset.png)
 
@@ -87,7 +87,7 @@ Först måste vi skaffa `$id` i `Luma CRM Schema`:
 
 Nu kan du skapa datauppsättningen:
 
-1. Hämta [Catalog Service API.postman_collection.json](https://raw.githubusercontent.com/adobe/experience-platform-postman-samples/master/apis/experience-platform/Catalog%20Service%20API.postman_collection.json) till `Luma Tutorial Assets` mapp.
+1. Ladda ned [Catalog Service API.postman_collection.json](https://raw.githubusercontent.com/adobe/experience-platform-postman-samples/master/apis/experience-platform/Catalog%20Service%20API.postman_collection.json) till `Luma Tutorial Assets` mapp.
 1. Importera samlingen till [!DNL Postman]
 1. Välj begäran **[!DNL Catalog Service API > Datasets > Create a new dataset.]**
 1. Klistra in följande som **Brödtext** av begäran, ***ersätta id-värdet med ditt eget***:
@@ -117,7 +117,7 @@ Nu kan du skapa datauppsättningen:
 > Vanliga fel som gör denna begäran och troliga korrigeringar:
 >
 > * `400: There was a problem retrieving xdm schema`. Se till att du har ersatt id:t i exemplet ovan med ditt eget id `Luma CRM Schema`
-> * Ingen auth-token: Kör **OAuth: Åtkomsttoken för begäran** begäran om att generera en ny token
+> * Ingen auth-token: Kör **OAuth: Begär åtkomsttoken** begäran om att generera en ny token
 > * `401: Not Authorized to PUT/POST/PATCH/DELETE for this path : /global/schemas/`: Uppdatera **CONTAINER_ID** miljövariabel från `global` till `tenant`
 > * `403: PALM Access Denied. POST access is denied for this resource from access control`: Verifiera dina användarbehörigheter i Admin Console
 

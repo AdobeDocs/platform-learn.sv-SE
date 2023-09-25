@@ -8,7 +8,7 @@ feature: Schemas
 jira: KT-4348
 thumbnail: 4348-model-data-in-schemas.jpg
 exl-id: 317f1c39-7f76-4074-a246-ef19f044cb85
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
 source-wordcount: '2485'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Key terms:
 **Dataarkitekturer** måste skapa scheman utanför kursen, men **Datatekniker** kommer att arbeta nära med de scheman som skapas av dataarkitekten.
 
 Innan du börjar övningarna ska du titta på den här korta videon och lära dig mer om scheman och Experience Data Model (XDM):
->[!VIDEO](https://video.tv.adobe.com/v/27105?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27105?learn=on)
 
 >[!TIP]
 >
@@ -70,7 +70,7 @@ I [Konfigurera behörigheter](configure-permissions.md) lektionen anger du alla 
 I den här övningen ska vi skapa ett schema för Lumas lojalitetsdata.
 
 1. Gå till användargränssnittet för plattformen och se till att din sandlåda är markerad.
-1. Gå till **[!UICONTROL Scheman]** i den vänstra navigeringen
+1. Gå till **[!UICONTROL Scheman]** till vänster navigering
 1. Välj **[!UICONTROL Skapa schema]** överst till höger
 1. Välj **[!UICONTROL Individuell XDM-profil]**eftersom vi kommer att modellera attribut för en enskild kund (poäng, status osv.).
    ![Schema med OOTB-fältgrupp](assets/schemas-loyaltyCreateSchema.png)
@@ -95,9 +95,9 @@ Så här lägger du till fältgrupper:
    ![Lägg till standardfältgrupper i bonusschema](assets/schemas-loyalty-saveOotbMixins.png)
 
 
-Ta dig tid att utforska schemats aktuella status. Fältgrupperna har lagt till standardfält som är relaterade till en person, deras kontaktinformation och lojalitetsprogrammets status. Dessa två fältgrupper kan vara användbara när du skapar scheman för ditt företags data. Markera en specifik fältgruppsrad eller markera kryssrutan bredvid fältgruppnamnet för att se hur visualiseringen ändras.
+Ta dig tid att utforska schemats aktuella status. Fältgrupperna har lagt till standardfält som är relaterade till en person, deras kontaktinformation och lojalitetsprogrammets status. Dessa två fältgrupper kan vara användbara när du skapar scheman för det egna företagets data. Markera en specifik fältgruppsrad eller markera kryssrutan bredvid fältgruppnamnet för att se hur visualiseringen ändras.
 
-Så här sparar du schemat:
+Spara schemat:
 
 1. Markera schemats översta nod.
 1. Retur `Luma Loyalty Schema` som **[!UICONTROL Visningsnamn]**.
@@ -108,7 +108,7 @@ Så här sparar du schemat:
 >
 >Det är okej om en fältgrupp lägger till ett fält för en datapunkt som du inte samlar in. &quot;faxPhone&quot; kan till exempel vara ett fält där Luma inte samlar in data. Det är okej. Bara för att ett fält är definierat i schemat betyder det inte att data för det *måste* bli inkapslad senare.
 
-### Lägg till en anpassad fältgrupp
+### Lägga till en anpassad fältgrupp
 
 Nu ska vi skapa en anpassad fältgrupp.
 
@@ -139,7 +139,7 @@ Lägg nu till två fält under `systemIdentifier` objekt:
 
 1. Första fältet
    1. **[!UICONTROL Fältnamn]**: `loyaltyId`
-   1. **[!UICONTROL Visningsnamn:]** `Loyalty Id`
+   1. **[!UICONTROL Visningsnamn]** `Loyalty Id`
    1. **[!UICONTROL Typ]**: **[!UICONTROL Sträng]**
 1. Andra fältet
    1. **[!UICONTROL Fältnamn]**: `crmId`
@@ -153,7 +153,7 @@ Din nya fältgrupp bör se ut så här. Välj **[!UICONTROL Spara]** för att sp
 
 Fältgrupper, till exempel din nya `Luma Identity profile field group`kan återanvändas i andra scheman, vilket gör att du kan använda standarddatadefinitioner i flera system. Men de kan bara återanvändas _i scheman som delar en klass_, i det här fallet klassen XDM Individual Profile.
 
-Datatypen är en annan flerfältskonstruktor som kan återanvändas i scheman _över flera klasser_. Låt oss omvandla våra nya `systemIdentifier` till en datatyp:
+Datatypen är en annan flerfältskonstruktor som kan återanvändas i scheman _över flera klasser_. Låt oss konvertera våra nya `systemIdentifier` till en datatyp:
 
 Med `Luma Loyalty Schema` fortfarande öppen väljer du `systemIdentifier` objekt och markera  **[!UICONTROL Konvertera till ny datatyp]**
 
@@ -174,7 +174,7 @@ Nu ska vi skapa ett schema med API:t.
 >
 > 1. Använd [!UICONTROL Individuell XDM-profil] class
 > 1. Ge den ett namn `Luma CRM Schema`
-> 1. Använd följande fältgrupper: Demografiska detaljer, personliga kontaktuppgifter och fältgruppen Luma Identity
+> 1. Använd följande fältgrupper: Demografiska uppgifter, personliga kontaktuppgifter och Luma Identity-profilgrupp
 
 Först skapar vi det tomma schemat:
 
@@ -184,7 +184,7 @@ Först skapar vi det tomma schemat:
 1. Välj **Spara**
    ![Ändra CONTAINER_ID till klient](assets/schemas-crm-changeContainerId.png)
 1. Öppna förfrågan **[!DNL Schema Registry API > Schemas > Create a new custom schema.]**
-1. Öppna **Brödtext** och klistra in följande kod och markera **Skicka** för att göra API-anropet. Det här anropet skapar ett nytt schema med samma `XDM Individual Profile` basklass:
+1. Öppna **Brödtext** och klistra in följande kod och markera **Skicka** för att anropa API. Det här anropet skapar ett nytt schema med samma `XDM Individual Profile` basklass:
 
    ```json
    {
@@ -214,9 +214,9 @@ Först skapar vi det tomma schemat:
 
 >[!TIP]
 >
-> Vanliga problem med det här samtalet och troliga korrigeringar:
+> Vanliga problem med detta samtal och troliga fixar:
 >
-> * Ingen auth-token: Kör **OAuth: Åtkomsttoken för begäran** begäran om att generera en ny token
+> * Ingen auth-token: Kör **OAuth: Begär åtkomsttoken** begäran om att generera en ny token
 > * `401: Not Authorized to PUT/POST/PATCH/DELETE for this path : /global/schemas/`: Uppdatera **CONTAINER_ID** miljövariabel från `global` till `tenant`
 > * `403: PALM Access Denied. POST access is denied for this resource from access control`: Verifiera dina användarbehörigheter i Admin Console
 
@@ -226,7 +226,7 @@ Nu är det dags att lägga till fältgrupperna i schemat:
 
 1. I [!DNL Postman], Öppna förfrågan **[!DNL Schema Registry API > Schemas > Update one or more attributes of a custom schema specified by ID.]**
 1. I **Parametrar** flik, klistra in `meta:altId` värdet från föregående svar som `SCHEMA_ID`
-1. Öppna fliken Brödtext och klistra in följande kod och markera **Skicka** för att göra API-anropet. Detta anrop lägger till standardfältgrupperna i `Luma CRM Schema`:
+1. Öppna fliken Brödtext och klistra in följande kod och markera **Skicka** för att anropa API. Det här anropet lägger till standardfältgrupperna i `Luma CRM Schema`:
 
    ```json
    [{
@@ -317,12 +317,12 @@ Nu ska vi skapa ett till schema för Lumas webbplatsdata. Nu bör du vara expert
 
 Välj **[!UICONTROL Consumer Experience Event]** fältgrupp. Den här fältgruppen innehåller objekten commerce och productListItems som också fanns i [!UICONTROL Handelsinformation]. Ja [!UICONTROL Consumer Experience Event] är en kombination av flera andra standardfältgrupper som också är tillgängliga separat. [!UICONTROL AEP Web SDK ExperienceEvent Mixin] fältgruppen innehåller även andra fältgrupper, inklusive några av de i [!UICONTROL Consumer Experience Event]. Lyckligtvis smälter de ihop sömlöst.
 
-Observera att vi inte lade till `Luma Identity ExperienceEvent field group` till det här schemat. Det beror på att Web SDK har ett annat sätt att samla in identiteter. Om du väljer **[!UICONTROL XDM ExperienceEvent]** i **[!UICONTROL Disposition]** i schemaredigeraren kommer du att märka att ett av fälten som läggs till som standard anropas **[!UICONTROL IdentityMap]**. [!DNL IdentityMap] används av olika Adobe-program för att länka till plattformen. Du kommer att se hur identiteter skickas till plattformen via identityMap i lektionen om direktuppspelning.
+Observera att vi inte lade till `Luma Identity ExperienceEvent field group` till detta schema. Det beror på att Web SDK har ett annat sätt att samla in identiteter. Om du väljer **[!UICONTROL XDM ExperienceEvent]** i **[!UICONTROL Disposition]** i schemaredigeraren kommer du att märka att ett av fälten som läggs till som standard anropas **[!UICONTROL IdentityMap]**. [!DNL IdentityMap] används av olika Adobe-program för att länka till plattformen. Du kommer att se hur identiteter skickas till plattformen via identityMap i lektionen om direktuppspelning.
 
 
 ## Skapa produktkatalogschema
 
-Genom att använda  [!UICONTROL Handelsinformation] och [!UICONTROL Consumer Experience Event] fältgrupper, Luma rapporterar viss information om produktrelaterade händelser via standarddatatypen productListItems. Men de har också ytterligare produktinformationsfält som de vill skicka till Platform. Istället för att fylla i alla dessa fält i sina butiks- och e-handelssystem föredrar Luma att importera fälten direkt från sitt produktkatalogsystem. Med en &quot;schemarelation&quot; kan du definiera en relation mellan två scheman för klassificering eller sökning. Luma använder en relation för att klassificera sin produktinformation. Vi börjar processen nu och slutför den i slutet av nästa lektion.
+Genom att använda  [!UICONTROL Handelsinformation] och [!UICONTROL Consumer Experience Event] fältgrupper, Luma rapporterar viss information om produktrelaterade händelser via standarddatatypen productListItems. Men de har också ytterligare produktinformationsfält som de vill skicka till Platform. I stället för att fylla i alla dessa fält i sina butiks- och e-handelssystem föredrar Luma att importera fälten direkt från sitt produktkatalogsystem. Med en &quot;schemarelation&quot; kan du definiera en relation mellan två scheman för klassificering eller sökning. Luma använder en relation för att klassificera sin produktinformation. Vi börjar processen nu och slutför den i slutet av nästa lektion.
 
 >[!NOTE]
 >
@@ -338,12 +338,12 @@ Först måste vi skapa ett schema för Lumas produktkatalog med en anpassad klas
 1. Välj **[!UICONTROL Tilldela klass]** knapp
    ![Skapa ny klass](assets/schemas-productClass.png)
 1. Skapa ett nytt [!UICONTROL fältgrupp] anropad `Luma Product Catalog field group` med följande fält:
-   1. productName: Produktnamn: Sträng
-   1. productCategory: Produktkategori: Sträng
-   1. productColor: Produktfärg: Sträng
-   1. productSku: Produkt-SKU: Sträng | Krävs
-   1. productSize: Produktstorlek: Sträng
-   1. productPrice: Produktpris: Dubbel
+   1. productName: Produktnamn: String
+   1. productCategory: Product Category: String
+   1. productColor: Produktfärg: String
+   1. productSku: Product SKU: String | Krävs
+   1. productSize: Produktstorlek: String
+   1. productPrice: Product Price: Double
 1. Namnge schemat `Luma Product Catalog Schema` (se till att uppdatera rätt fält och inte uppdatera klassnamnet)
 1. **[!UICONTROL Spara]** schemat
 
@@ -359,4 +359,4 @@ Nästa steg är att definiera relationen mellan de två ExperienceEvent-scheman 
 * [API för schemaregister](https://www.adobe.io/experience-platform-apis/references/schema-registry/)
 
 
-Nu när du har dina scheman kan du [kartidentiteter](map-identities.md)!
+Nu när du har dina scheman [kartidentiteter](map-identities.md)!

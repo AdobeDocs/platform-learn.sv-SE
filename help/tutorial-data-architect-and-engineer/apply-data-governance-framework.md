@@ -8,7 +8,7 @@ feature: Data Governance
 jira: KT-4348
 thumbnail: 4348-apply-data-governance-framework.jpg
 exl-id: 3cc3c794-5ffd-41bf-95d8-be5bca2e3a0f
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
 source-wordcount: '634'
 ht-degree: 1%
@@ -24,9 +24,9 @@ I den här lektionen kommer du att använda ramverket för datastyrning på data
 Med Adobe Experience Platform Data Governance kan ni hantera kunddata och säkerställa att ni följer regler, begränsningar och policyer som gäller för dataanvändning. Det spelar en viktig roll inom Experience Platform på olika nivåer, bland annat när det gäller att kontrollera användningen av data.
 
 Titta på följande korta videor om datastyrning innan du börjar övningarna:
->[!VIDEO](https://video.tv.adobe.com/v/36653?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36653?learn=on)
 
->[!VIDEO](https://video.tv.adobe.com/v/29708?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29708?learn=on)
 
 <!--
 ## Permissions required
@@ -45,18 +45,18 @@ Luma lovar medlemmarna i deras lojalitetsprogram att lojalitetsdata inte delas m
 
 ## Använd etiketter för datastyrning
 
-Det första steget i datastyrningsprocessen är att använda styrningsetiketter på dina data. Innan vi gör det ska vi ta en snabb titt på vilka etiketter som är tillgängliga:
+Det första steget i datastyrningsprocessen är att använda styrningsetiketter på dina data. Innan vi gör det ska vi ta en snabb titt på vilka etiketter som finns:
 
-1. Välj **[!UICONTROL Profiler]** i den vänstra navigeringen
+1. I användargränssnittet för plattformen väljer du **[!UICONTROL Profiler]** till vänster navigering
 1. Gå till **[!UICONTROL Etiketter]** om du vill visa alla etiketter i kontot.
 
-Det finns många färdiga etiketter, och du kan skapa egna via [!UICONTROL Skapa etikett] -knappen. Det finns tre huvudtyper: [!UICONTROL Kontraktsetiketter], [!UICONTROL Identitetsetiketter]och [!UICONTROL Känsliga etiketter] som motsvarar vanliga orsaker kan data begränsas. Var och en av etiketterna har en [!UICONTROL Eget namn] och en kort [!UICONTROL Namn] som bara är en förkortning av typen och en siffra. Till exempel [!DNL C1] label is for &quot;No third-party export&quot;, which is what we need for our Loyalty policy.
+Det finns många färdiga etiketter, och du kan skapa egna via [!UICONTROL Skapa etikett] -knappen. Det finns tre huvudtyper: [!UICONTROL Kontraktsetiketter], [!UICONTROL Identitetsetiketter]och [!UICONTROL Känsliga etiketter] som motsvarar vanliga orsaker kan data begränsas. Varje etikett har en [!UICONTROL Eget namn] och en kort [!UICONTROL Namn] som bara är en förkortning av typen och en siffra. Till exempel [!DNL C1] label is for &quot;No third-party export&quot;, which is what we need for our Loyalty policy.
 
 ![Datastyrningsetikett](assets/governance-policies.png)
 
 Nu är det dags att märka de data vars användning vi vill begränsa:
 
-1. Välj **[!UICONTROL Datauppsättningar]** i den vänstra navigeringen
+1. I användargränssnittet för plattformen väljer du **[!UICONTROL Datauppsättningar]** till vänster navigering
 1. Öppna `Luma Loyalty Dataset`
 1. Gå till **[!UICONTROL Datastyrning]** tab
 1. Du kan antingen använda etiketter på enskilda fält eller använda dem på hela datauppsättningen. Vi kommer att tillämpa etiketten på hela datauppsättningen. Klicka på pennikonen. Om du inte ser ikonen kan du göra webbläsaren bredare eller rulla den mellersta panelen åt höger.
@@ -75,7 +75,7 @@ Nu är det dags att märka de data vars användning vi vill begränsa:
 
 Nu när våra data är märkta kan vi skapa en politik.
 
-1. Välj **[!UICONTROL Profiler]** i den vänstra navigeringen
+1. I användargränssnittet för plattformen väljer du **[!UICONTROL Profiler]** till vänster navigering
 1. På fliken Bläddra finns det redan en användningsprincip som heter &quot;Export restriction&quot; från tredje part som kopplar C2-etiketten till marknadsföringsåtgärden [!UICONTROL Exportera till tredje part]- exakt vad vi behöver!
 1. Välj profilen och aktivera den sedan via **[!UICONTROL Policystatus]** växla
    ![Datastyrning](assets/governance-enablePolicy.png)

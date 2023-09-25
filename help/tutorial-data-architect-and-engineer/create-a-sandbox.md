@@ -8,7 +8,7 @@ feature: Sandboxes
 jira: KT-4348
 thumbnail: 4348-create-a-sandbox.jpg
 exl-id: a04afada-52a1-4812-8fa2-14be72e68614
-source-git-commit: fdb6a49caa29d98d73524fd0887d25641ef67780
+source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
 source-wordcount: '404'
 ht-degree: 1%
@@ -26,7 +26,7 @@ Sandlådor har isolerade miljöer där du kan testa funktioner utan att blanda r
 **Dataarkitekturer** och **Datatekniker** måste skapa sandlådor utanför den här självstudiekursen.
 
 Titta på den här korta videon för att lära dig mer om sandlådor innan du börjar övningarna:
->[!VIDEO](https://video.tv.adobe.com/v/29838/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29838/?learn=on)
 
 ## Behörigheter krävs
 

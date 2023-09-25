@@ -9,7 +9,7 @@ level: Beginner
 jira: KT-5205
 thumbnail: 34141.jpg
 exl-id: cd010977-9ff1-47ea-8aa1-d9b913ba846b
-source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
+source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 35%
@@ -20,11 +20,11 @@ ht-degree: 35%
 
 Lär dig om hur webb-SDK för Adobe Experience Platform och Edge Network gör det möjligt för kunder att använda ett JavaScript-bibliotek och en sändare för att skicka data till Adobe-program och tredjepartsdestinationer.
 
->[!VIDEO](https://video.tv.adobe.com/v/34141?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34141?learn=on)
 
 >[!NOTE]
 >
->Den här videon är ett utdrag från sessionen Adobe Summit 2020 *[Uppfyll Alloy.js och Aldrig-tagg för en eVar eller Mbox igen](https://business.adobe.com/summit/2020/with-alloy-js-never-tag-for-an-evar-or-mbox-again.html)*.
+>Den här videon är ett utdrag från sessionen Adobe Summit 2020 *[Möt Alloy.js och Aldrig tagg för en eVar eller Mbox Igen](https://business.adobe.com/summit/2020/with-alloy-js-never-tag-for-an-evar-or-mbox-again.html)*.
 >
 >Vidarebefordringsfunktionen på serversidan som beskrivs i den här videon är nu allmänt tillgänglig för alla licensierade kunder. Se [Dokumentation för vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)
 
@@ -32,5 +32,5 @@ Lär dig om hur webb-SDK för Adobe Experience Platform och Edge Network gör de
 
 * [Adobe Experience Platform Web SDK-dokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html)
 * [Förenkla kundarbetsflödena med Adobe Experience Platform Web SDK-blogginlägget](https://medium.com/adobetech/simplifying-customer-workflows-with-adobe-experience-platform-web-sdk-4e54fe134f4a)
-* [Effektivare integrering av klient-server med blogginlägget Adobe Experience Platform Experience Edge](https://medium.com/adobetech/streamlining-client-server-integrations-with-adobe-experience-platform-experience-edge-1caaef887172)
+* [Effektivisera integreringen mellan klient och server med blogginlägget Adobe Experience Platform Experience Edge](https://medium.com/adobetech/streamlining-client-server-integrations-with-adobe-experience-platform-experience-edge-1caaef887172)
 * [Sammanställ era Adobe Experience Platform-tjänster med Adobe Experience Platform Web SDK-blogginlägget](https://medium.com/adobetech/unify-your-adobe-experience-platform-services-with-adobe-experience-platform-web-sdk-75cf6851a9fc)

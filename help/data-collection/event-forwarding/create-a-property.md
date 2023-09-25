@@ -6,7 +6,7 @@ level: Intermediate
 jira: KT-6420
 thumbnail: 331938.jpeg
 exl-id: 63a578d3-1220-4588-b289-7310f4905d52
-source-git-commit: ac07d62cf4bfb6a9a8b383bbfae093304d008b5f
+source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Skapa en egenskap för vidarebefordring av händelser
 
-Lär dig hur du skapar en händelsevidarebefordringsegenskap i datainsamling.
+Lär dig hur du skapar en händelsevidarebefordringsegenskap i datainsamling. Mer information finns på [Skapa dokumentation för en egenskap för vidarebefordring av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/getting-started.html#create-an-event-forwarding-property).
 
 >[!NOTE]
 >
@@ -25,6 +25,4 @@ Lär dig hur du skapar en händelsevidarebefordringsegenskap i datainsamling.
 > * Platform launch Server Side is now **[!DNL event forwarding]**
 > * Edge-konfigurationer är nu **[!DNL datastreams]**
 
->[!VIDEO](https://video.tv.adobe.com/v/331938?quality=12&learn=on)
-
-Mer information finns på [Skapa dokumentation för en egenskap för vidarebefordring av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/getting-started.html#create-an-event-forwarding-property).
+>[!VIDEO](https://video.tv.adobe.com/v/331938?learn=on)

@@ -10,7 +10,7 @@ level: Beginner
 jira: KT-6242
 thumbnail: 40376.jpg
 exl-id: fab8d1ab-87b4-4ec3-ac9e-4c8b3e3b8c75
-source-git-commit: bcf6079bc2e05c8c59bcc1b020ac15d1db6a02f2
+source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 1%
@@ -25,6 +25,5 @@ Den här videon visar att Adobe Experience Platform kan användas tillsammans me
 >
 > Magento kallas nu Adobe Commerce
 
-
->[!VIDEO](https://video.tv.adobe.com/v/40376?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/40376?learn=on)
 

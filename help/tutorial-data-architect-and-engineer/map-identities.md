@@ -8,7 +8,7 @@ feature: Profiles
 jira: KT-4348
 thumbnail: 4348-map-identities.jpg
 exl-id: e17ffabc-049c-42ff-bf0a-8cc31d665dfa
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
 source-wordcount: '944'
 ht-degree: 1%
@@ -26,7 +26,7 @@ Adobe Experience Platform identitetstjänst hjälper er att få en bättre bild 
 **Dataarkitekturer** måste kartlägga identiteter utanför den här självstudiekursen.
 
 Titta på den här korta videon om du vill veta mer om din identitet i Adobe Experience Platform innan du börjar övningarna:
->[!VIDEO](https://video.tv.adobe.com/v/27841?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27841?learn=on)
 
 >[!NOTE]
 >
@@ -56,9 +56,9 @@ I den här övningen ska vi skapa identitetsnamnutrymmen för Lumas anpassade id
 
 Vi börjar med att skapa ett namnutrymme för Luma Loyalty Schema:
 
-1. Gå till **[!UICONTROL Identiteter]** i den vänstra navigeringen
+1. Gå till **[!UICONTROL Identiteter]** till vänster navigering
 1. Du kommer att märka att det finns flera färdiga ID-namnutrymmen. Välj **[!UICONTROL Skapa namnutrymme för identitet]** knapp
-1. Ange följande information
+1. Ange följande information:
 
    | Fält | Värde |
    |---------------|-----------|
@@ -94,7 +94,7 @@ Vi skapar CRM-namnområdet via API.
 
 Låt oss skapa identitetsnamnutrymmet `Luma CRM Id`:
 
-1. Hämta [Identitetstjänst.postman_collection.json](https://raw.githubusercontent.com/adobe/experience-platform-postman-samples/master/apis/experience-platform/Identity%20Service.postman_collection.json) till `Luma Tutorial Assets` mapp
+1. Ladda ned [Identitetstjänst.postman_collection.json](https://raw.githubusercontent.com/adobe/experience-platform-postman-samples/master/apis/experience-platform/Identity%20Service.postman_collection.json) till `Luma Tutorial Assets` mapp
 1. Importera samlingen till [!DNL Postman]
 1. Öppna begäran om du inte har någon åtkomsttoken **[!DNL OAuth: Request Access Token]** och markera **Skicka** för att begära en ny åtkomsttoken.
 1. Välj begäran **[!UICONTROL Identitetstjänst] > [!UICONTROL Identitetsnamnutrymme] > [!UICONTROL Skapa ett nytt identitetsnamnutrymme].**
@@ -140,9 +140,9 @@ Låt oss lägga till en primär identitet i `Luma Loyalty Schema`:
 
 Upprepa processen för ett annat schema:
 
-1. I `Luma CRM Schema`, etikettera `crmId` fältet som primär identitet med `Luma CRM Id` namespace
-1. I `Luma Offline Purchase Events Schema`, etikettera `loyaltyId` fältet som primär identitet med `Luma Loyalty Id` namespace
-1. I `Luma Product Catalog Schema`, etikettera `productSku` fältet som primär identitet med `Luma Product SKU` namespace
+1. I `Luma CRM Schema`, märka `crmId` fältet som primär identitet med `Luma CRM Id` namespace
+1. I `Luma Offline Purchase Events Schema`, märka `loyaltyId` fältet som primär identitet med `Luma Loyalty Id` namespace
+1. I `Luma Product Catalog Schema`, märka `productSku` fältet som primär identitet med `Luma Product SKU` namespace
 
 >[!NOTE]
 >

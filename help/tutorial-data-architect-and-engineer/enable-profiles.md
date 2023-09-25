@@ -8,7 +8,7 @@ feature: Profiles
 jira: KT-4348
 thumbnail: 4348-enable-profiles.jpg
 exl-id: b05f1af1-a599-42f2-8546-77453a578b92
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
 source-wordcount: '1103'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Det finns viktiga [skyddsräcken för kundprofildata i realtid](https://experien
 **Dataarkitekturer** behöver aktivera kundprofil i realtid utanför den här självstudiekursen.
 
 Innan du börjar övningarna ska du titta på den här korta videon och lära dig mer om kundprofilen i realtid:
->[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27251?learn=on)
 
 ## Behörigheter krävs
 
@@ -53,24 +53,24 @@ Låt oss börja med den enkla uppgiften att aktivera ett schema:
 
 1. I användargränssnittet för Plattform öppnar du **Luma Loyalty Schema**
 1. I **[!UICONTROL Schemaegenskaper]**, växlar **Profil** switch
-1. Tryck på **[!UICONTROL Aktivera]** knapp för att bekräfta
+1. Tryck på knappen **[!UICONTROL Aktivera]** knapp som bekräftar
 1. Välj **[!UICONTROL Spara]** knapp för att spara ändringarna
 
    >[!IMPORTANT]
    >
    >När ett schema har aktiverats för profilen kan det inte inaktiveras eller tas bort. Det går inte heller att ta bort fält från schemat efter den här punkten. Dessa konsekvenser är viktiga att tänka på senare när du arbetar med egna data i produktionsmiljön. Du bör använda en utvecklingssandlåda i den här självstudiekursen, som du kan ta bort när som helst.
    >
-   >I den kontrollerade miljön i den här självstudien aktiverar du dina scheman och datauppsättningar för profilen, _innan data hämtas_. När du arbetar med egna data rekommenderar vi att du gör saker i följande ordning:
+   >I den kontrollerade miljön i den här självstudiekursen aktiverar du dina scheman och datauppsättningar för profilen, _innan data hämtas_. När du arbetar med egna data rekommenderar vi att du gör saker i följande ordning:
    >
    > 1. För det första kan du importera vissa data i dina datauppsättningar.
-   > 1. Åtgärda eventuella problem som uppstår under dataöverföringsprocessen (t.ex. datavalidering eller mappningsproblem).
+   > 1. Åtgärda eventuella problem som uppstår under dataöverföringsprocessen (till exempel datavalidering eller mappningsproblem).
    > 1. Aktivera datauppsättningar och scheman för profil
    > 1. Återställ data
 
 
    ![Växla profil](assets/profile-loyalty-enableSchema.png)
 
-Lätt, eller hur? Upprepa stegen ovan för dessa andra scheman:
+Lätt eller? Upprepa stegen ovan för dessa andra scheman:
 
 1. Luma produktkatalogschema
 1. Schema för offlineinköpshändelser för Luma
@@ -117,13 +117,13 @@ Du bör kunna se i användargränssnittet att alla fem scheman är aktiverade f�
 ![Alla scheman är aktiverade](assets/profile-allSchemasEnabled.png)
 
 
-## Aktivera datauppsättningar för kundprofil i realtid med användargränssnittet i plattformen
+## Aktivera datauppsättningar för kundprofil i realtid med hjälp av användargränssnittet i plattformen
 
 Datauppsättningarna måste även aktiveras för profilen, och processen är ännu enklare:
 
 1. I användargränssnittet för Plattform öppnar du `Luma Loyalty Dataset`
 1. Växla **[!UICONTROL Profil]** switch
-1. Tryck på **[!UICONTROL Aktivera]** knapp för att bekräfta
+1. Tryck på knappen **[!UICONTROL Aktivera]** knapp som bekräftar
 
    ![ Växla profil](assets/profile-loyalty-enableDataset.png)
 

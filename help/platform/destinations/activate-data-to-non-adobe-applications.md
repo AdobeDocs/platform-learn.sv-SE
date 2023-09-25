@@ -9,7 +9,7 @@ jira: KT-7035
 thumbnail: 331022.jpg
 type: Event
 exl-id: b1efeaa8-e168-497d-8e11-80e1cc631e63
-source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
+source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
 source-wordcount: '79'
 ht-degree: 0%
@@ -20,6 +20,6 @@ ht-degree: 0%
 
 Det här webbinariet visar hur Adobe Real-Time CDP hjälper er att inte bara skapa sanna personaliseringsstrategier med era målgrupper, utan även hur det passar in i era befintliga ekosystem och andra program från Microsoft, Google och Facebook.
 
->[!VIDEO](https://video.tv.adobe.com/v/331022/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/331022/?learn=on)
 
 

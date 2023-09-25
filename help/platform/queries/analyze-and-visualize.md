@@ -7,7 +7,7 @@ level: Intermediate
 jira: KT-10191
 thumbnail: 342115.jpeg
 exl-id: d39d4bc5-550f-4cb2-875d-2e81a6f4c2b8
-source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
+source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
 source-wordcount: '75'
 ht-degree: 8%
@@ -16,8 +16,6 @@ ht-degree: 8%
 
 # Analysera och visualisera flerkanalsinsikter i Tableau med hjälp av frågetjänsten
 
-Lär dig hur du kan använda Adobe Experience Platform Query Service med externa datavisualiseringsverktyg med hjälp av ett exempel på bortfallsanalys.
+Lär dig hur du kan använda Adobe Experience Platform Query Service med externa datavisualiseringsverktyg med hjälp av ett exempel på bortfallsanalys. Mer information finns på [Dokumentation för frågetjänsten](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=sv).
 
->[!VIDEO](https://video.tv.adobe.com/v/342115?quality=12&learn=on)
-
-Mer information finns på [Dokumentation för frågetjänsten](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=sv).
+>[!VIDEO](https://video.tv.adobe.com/v/342115?learn=on)

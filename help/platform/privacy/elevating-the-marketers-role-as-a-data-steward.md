@@ -9,7 +9,7 @@ thumbnail: 338292.jpg
 jira: KT-9301
 type: Event
 exl-id: 12c258c5-cf91-4403-99bd-6322a92aabfe
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 0%
@@ -24,4 +24,4 @@ Datasyndarnas roll sträcker sig över flera områden och har blivit ett extra a
 * Införliva strategier som bygger på samtycke och som leder med konsumenternas förtroende och smidigt integreras i kundresan
 * Effektivt och tillförlitligt ansvar inom marknadsföraren
 
->[!VIDEO](https://video.tv.adobe.com/v/338292/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/338292/?learn=on)

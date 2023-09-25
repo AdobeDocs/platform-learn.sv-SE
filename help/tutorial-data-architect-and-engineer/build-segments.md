@@ -8,7 +8,7 @@ feature: Data Governance
 jira: KT-4348
 thumbnail: 4348-build-segments.jpg
 exl-id: cd05e814-1ea7-48ba-adf6-1a71504c623e
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
 source-wordcount: '904'
 ht-degree: 0%
@@ -25,7 +25,7 @@ När ni har kundprofiler i realtid kan ni skapa segment för individer som delar
 **Dataarkitekturer** måste skapa segment utanför den här självstudiekursen och ge sina kollegor stöd för den här uppgiften.
 
 Innan du börjar övningarna ska du titta på den här korta videon och lära dig mer om hur du skapar segment:
->[!VIDEO](https://video.tv.adobe.com/v/27254?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27254?learn=on)
 
 
 ## Behörigheter krävs
@@ -36,13 +36,13 @@ I [Konfigurera behörigheter](configure-permissions.md) I lektionen ställer du 
 * Behörighetsobjekt **[!UICONTROL Profilhantering]** > **[!UICONTROL Visa profiler]** och **[!UICONTROL Hantera profiler]**
 * Behörighetsobjekt **[!UICONTROL Sandlådor]** > `Luma Tutorial`
 * Användarrollåtkomst till `Luma Tutorial Platform` produktprofil
-* Tillgång till `Luma Tutorial Platform` produktprofil (för API)
+* Åtkomst till utvecklarrollen till `Luma Tutorial Platform` produktprofil (för API)
 
 ## Bygg ett enkelt segment
 
 Låt oss skapa ett enkelt segment för lojalitetsprogram för kunder med Guld- eller Platinumstatus
 
-1. Gå till **[!UICONTROL Segment]** i den vänstra navigeringen
+1. Gå till **[!UICONTROL Segment]** till vänster navigering
 1. Välj **[!UICONTROL Skapa segment]** knapp
 1. Till vänster om schemaverktaren finns tre flikar för Attribut (postdata), Händelser (tidsseriedata) och Publiker
 1. Markera kugghjulsikonen om du vill se hur segmentbyggaren som standard bara visar fält med data och låter dig ändra kopplingsprofilen
@@ -56,11 +56,11 @@ Låt oss skapa ett enkelt segment för lojalitetsprogram för kunder med Guld- e
 
 <!--## Build a sequential segment-->
 
-## Bygg ett dynamiskt segment
+## Skapa ett dynamiskt segment
 
-I den här övningen kommer vi att skapa ett segment för kunder som har köpt samma produkt två gånger inom 30 dagar. Med dynamiska segment kan du skala segmenteringen genom att använda fält som variabler.
+I den här övningen skapar vi ett segment för kunder som har köpt samma produkt två gånger inom 30 dagar. Med dynamiska segment kan du skala segmenteringen genom att använda fält som variabler.
 
-1. Gå till **[!UICONTROL Segment]** i den vänstra navigeringen
+1. Gå till **[!UICONTROL Segment]** till vänster navigering
 1. Välj **[!UICONTROL Skapa segment]** knapp
 1. Välj **[!UICONTROL Händelser]** tab
 1. Filtrera listan till `purchases`
@@ -74,7 +74,7 @@ I den här övningen kommer vi att skapa ett segment för kunder som har köpt s
 1. Rensa händelsefiltret
 1. Du bör se i **[!UICONTROL Bläddra bland variabler]** finns det mappar för de två inköpshändelserna. Klicka för att utforska **[!UICONTROL Inköp 1]**\
    ![Två köp inom 30 dagar med SKU, bläddra i det första köpet](assets/segment-twoPurchases-browsePurchaseOne.png)
-1. Gå ned i **[!UICONTROL Produktlistartiklar]** väljer du **[!UICONTROL SKU]** och dra den till höger om **[!UICONTROL är lika med]** operand. När du hovrar över området släpper du det i avsnittet&quot;Lägg till för att jämföra operander&quot;
+1. Gå ned i **[!UICONTROL Produktlistartiklar]** väljer du **[!UICONTROL SKU]** och dra den till höger om **[!UICONTROL är lika med]** operand. När du hovrar över området släpper du det i avsnittet Lägg till för att jämföra operander
 1. Namnge ditt segment `Bought same product within 30 days`
 1. Bekräfta att målgruppsdefinitionen är **&quot;Inkludera målgrupper som har minst en Inköpshändelse och inom 30 dagar har minst en Inköpshändelse där ((SKU motsvarar Inköp1 SKU))&quot;**
 1. Välj **[!UICONTROL Spara]** knapp
@@ -89,7 +89,7 @@ Med den avancerade segmenteringsfunktionen för flera enheter kan du skapa segme
 
 Du skapar nästa segment genom att använda relationen som du skapade mellan `Luma Product Catalog Schema` och `Luma Offline Purchase Events Schema`.
 
-1. Gå till **[!UICONTROL Segment]** i den vänstra navigeringen
+1. Gå till **[!UICONTROL Segment]** till vänster navigering
 1. Välj **[!UICONTROL Skapa segment]** knapp
 1. Välj **[!UICONTROL Händelser]** tab
 1. Filtrera listan till `purchases`

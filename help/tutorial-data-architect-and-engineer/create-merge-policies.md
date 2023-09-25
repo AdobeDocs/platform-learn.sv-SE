@@ -11,7 +11,7 @@ doc-type: tutorial
 activity: implement
 thumbnail: 4348-create-merge-policies.jpg
 exl-id: ec862bb2-7aa2-4157-94eb-f5af3a94295f
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
 source-wordcount: '996'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Vi följer användargränssnittet för den här lektionen, men API-alternativ fi
 **Dataarkitekturer** måste skapa kopplingsprofiler utanför den här självstudiekursen.
 
 Innan du börjar övningarna ska du titta på den här korta videon för att lära dig mer om kopplingsregler:
->[!VIDEO](https://video.tv.adobe.com/v/330433?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/330433?learn=on)
 
 ## Behörigheter krävs
 
@@ -49,7 +49,7 @@ I lektionen om batchförbrukning kunde du komma ihåg att vi överförde två po
 
 Så varför gjorde `Danny` vinner du som förnamn? Låt oss ta en titt:
 
-1. Välj **[!UICONTROL Profiler]** i den vänstra navigeringen
+1. I användargränssnittet för plattformen väljer du **[!UICONTROL Profiler]** till vänster navigering
 1. Gå till **[!UICONTROL Sammanfoga profiler]** tab
 1. Standardprincipen för sammanslagning är tidstämpelordning. Eftersom du överförde CRM-data efter lojalitetsdata, `Danny` uteslöts som förnamn i profilen:
 
@@ -71,7 +71,7 @@ Och om du inte gillar den standardprincipen för sammanslagning? Vad händer om 
 1. För **[!UICONTROL ID-textning]**, markera **[!UICONTROL Privat diagram]**
 1. För **[!UICONTROL Koppla attribut]**, markera **[!UICONTROL Datauppsättningsprioritet]**
 1. Dra och släppa `Luma Loyalty Dataset` och `Luma CRM Dataset` till **[!UICONTROL Datauppsättning]** -panelen.
-1. Se till att `Luma Loyalty Dataset` ligger överst genom att dra och släppa det ovanför `Luma CRM Dataset`
+1. Kontrollera att `Luma Loyalty Dataset` ligger överst genom att dra och släppa det ovanför `Luma CRM Dataset`
 1. Välj **[!UICONTROL Spara]** knapp
    <!--do i need to explain Private Graph? Is that GA?-->
    ![Kopplingsprincip](assets/mergepolicies-newPolicy.png)
@@ -91,7 +91,7 @@ Låt oss se om sammanfogningspolicyn gör vad vi kan förvänta oss:
 
 ## Skapa en sammanfogningsprincip med begränsade datauppsättningar
 
-När du skapar sammanfogningsprinciper med datauppsättningsprioritet, inkluderas bara datauppsättningar i samma basklass som du inkluderar till höger i profilen. Låt oss skapa en annan kopplingsprofil
+När du skapar sammanfogningsprinciper med datauppsättningsprioritet, inkluderas bara datauppsättningar i samma basklass som du inkluderar till höger i profilen. Låt oss skapa en annan sammanfogningspolicy
 
 1. På skärmen Sammanfogningsprofiler väljer du **[!UICONTROL Skapa kopplingsprofil]** längst upp till höger
 1. Som **[!UICONTROL Namn]**, ange  `Loyalty Only`
@@ -136,11 +136,11 @@ CRM-ID är ett identitetsfält i `Luma Loyalty Dataset`, men bara primära ident
 
 Vad är det som pågår här? Att sammanfoga profiler är inte en engångsgrej. Kundprofiler i realtid samlas ihop i farten, baserat på olika faktorer, bland annat vilken sammanfogningspolicy som används. Du kan skapa flera sammanfogningsprofiler som ska användas i olika sammanhang, beroende på vilken vy av kunden du vill ha.
 
-Ett viktigt användningsexempel för sammanfogningsprinciper är datastyrning. Exempel: du importerar data från tredje part till Platform som inte kan användas för personalisering, men _kan_ användas för reklamändamål. Du kan skapa en sammanfogningsprincip som utesluter den här tredjepartsdatauppsättningen och använda den här sammanfogningsprincipen för att skapa segment för dina reklamanvändningsfall.
+Ett viktigt användningsexempel för sammanfogningsprinciper är datastyrning. Exempel: du importerar data från tredje part till plattformen som inte kan användas för personalisering, men _kan_ användas för reklamändamål. Du kan skapa en sammanfogningsprincip som utesluter den här tredjepartsdatauppsättningen och använda den här sammanfogningsprincipen för att skapa segment för dina reklamanvändningsfall.
 
 ## Ytterligare resurser
 
 * [Dokumentation för kopplingsprofiler](https://experienceleague.adobe.com/docs/experience-platform/profile/merge-policies/overview.html)
-* [API-referens för sammanslagningsprinciper (ingår i kundprofils-API:t i realtid)](https://www.adobe.io/experience-platform-apis/references/profile/#tag/Merge-policies)
+* [API-referens för sammanslagningsprinciper (ingår i kundprofils-API i realtid)](https://www.adobe.io/experience-platform-apis/references/profile/#tag/Merge-policies)
 
 Nu går vi vidare till [ramverk för datastyrning](apply-data-governance-framework.md).

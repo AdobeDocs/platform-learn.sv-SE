@@ -1,10 +1,10 @@
 ---
 title: Strömma data till Adobe Experience Platform med Web SDK
-description: Lär dig hur du direktuppspelar webbdata till Adobe Experience Platform med Web SDK. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
+description: Lär dig hur du direktuppspelar webbdata till Adobe Experience Platform med Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 exl-id: 4d749ffa-e1c0-4498-9b12-12949807b369
-source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
+source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
-source-wordcount: '1608'
+source-wordcount: '1606'
 ht-degree: 0%
 
 ---
@@ -36,8 +36,8 @@ Du borde ha slutfört följande lektioner:
    * [Konfigurera ett datastream](configure-datastream.md)
    * [Konfigurera ett identitetsnamnutrymme](configure-identities.md)
 
-* The **Tagginställningar** lektioner:
-   * [Installera Web SDK-tillägg](install-web-sdk.md)
+* The **Märkordskonfiguration** lektioner:
+   * [Installera SDK-tillägg för webben](install-web-sdk.md)
    * [Skapa dataelement](create-data-elements.md)
    * [Skapa taggregler](create-tag-rule.md)
 
@@ -54,7 +54,7 @@ I den här övningen skapar du en datauppsättning för att spåra innehåll och
 
 
 1. Gå till [Experience Platform gränssnitt](https://experience.adobe.com/platform/)
-1. Bekräfta att du befinner dig i den utvecklingssandlåda som du använder för den här självstudiekursen
+1. Bekräfta att du befinner dig i den utvecklingssandlåda som du använder för den här självstudien
 1. Öppna **[!UICONTROL Datauppsättningar]** från vänster navigering
 1. Välj **[!UICONTROL Skapa datauppsättning]**
 
@@ -64,7 +64,7 @@ I den här övningen skapar du en datauppsättning för att spåra innehåll och
 
    ![Skapa datauppsättning från schema](assets/experience-platform-create-dataset-schema.png)
 
-1. Välj `Luma Web Event Data` schema som har skapats i [tidigare lektion](configure-schemas.md) och sedan markera **[!UICONTROL Nästa]**
+1. Välj `Luma Web Event Data` schema som har skapats i [tidigare lektion](configure-schemas.md) och sedan **[!UICONTROL Nästa]**
 
    ![Datauppsättning, välj schema](assets/experience-platform-create-dataset-schema-selection.png)
 
@@ -78,14 +78,13 @@ En datauppsättning har nu konfigurerats för att börja samla in data från imp
 
 Nu kan du konfigurera [!UICONTROL datastream] skicka data till [!UICONTROL Adobe Experience Platform]. Datastream är länken mellan taggegenskap, Platform Edge Network och datauppsättningen Experience Platform.
 
-1. Öppna [Datainsamling](https://experience.adobe.com/#/data-collection)Gränssnittet {target=&quot;blank&quot;}
+1. Öppna [Datainsamling](https://experience.adobe.com/#/data-collection){target="blank"} gränssnitt
 1. Välj **[!UICONTROL Datastreams]** från vänster navigering
 1. Öppna datastream som du skapade i [Konfigurera ett datastream](configure-datastream.md) lektion, `Luma Web SDK`
 
    ![Välj dataströmmen för Luma Web SDK](assets/datastream-luma-web-sdk.png)
 
 1. Välj **[!UICONTROL Lägg till tjänst]**
-
    ![Lägg till en tjänst i datastream](assets/experience-platform-addService.png)
 1. Välj **[!UICONTROL Adobe Experience Platform]** som **[!UICONTROL Tjänst]**
 1. Välj `Luma Web Event Data` som **[!UICONTROL Händelsedatauppsättning]**
@@ -104,9 +103,9 @@ Det här steget är viktigt för att se till att data har landats i datauppsätt
 * Validera med [!UICONTROL Förhandsgranska datauppsättning]
 * Validera med [!UICONTROL Frågetjänst]
 
-### Felsökning för Experience Platform
+### Experience Platform Debugger
 
-De här stegen är mer eller mindre desamma som du gjorde i [Felsökningslektion](validate-with-debugger.md). Eftersom data bara skickas till plattformen när du har aktiverat den i datastream måste du generera fler exempeldata:
+De här stegen är mer eller mindre desamma som i [Felsökningslektion](validate-with-debugger.md). Eftersom data bara skickas till plattformen när du har aktiverat den i datastream måste du generera fler exempeldata:
 
 1. Öppna [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html) och väljer [!UICONTROL Felsökning för Experience Platform] tilläggsikon
 
@@ -158,7 +157,7 @@ För att bekräfta att data har landat i plattformens datasjön är ett snabbt a
 
 Nästa steg är att aktivera datauppsättningen och schemat för kundprofilen i realtid. Dataströmning från Web SDK kommer att vara en av många datakällor som flödar på Platform och du vill koppla webbdata till andra datakällor för att skapa 360-graders kundprofiler. Titta på den här korta videon om du vill veta mer om kundprofilen i realtid:
 
->[!VIDEO](https://video.tv.adobe.com/v/27251?quality=12&learn=on&captions=eng)
+>[!VIDEO](https://video.tv.adobe.com/v/27251?learn=on&captions=eng)
 
 >[!CAUTION]
 >
@@ -175,9 +174,9 @@ Nästa steg är att aktivera datauppsättningen och schemat för kundprofilen i 
 
 1. Bekräfta att du vill **[!UICONTROL Aktivera]** datauppsättningen
 
-   ![Aktivera profil](assets/setup-experience-platform-profile-enable.png)
+   ![Aktivera profil/växla](assets/setup-experience-platform-profile-enable.png)
 
-**Så här aktiverar du schemat:**
+**Aktivera schemat:**
 
 1. Öppna schemat som du skapade, `Luma Web Event Data`
 
@@ -194,11 +193,11 @@ Nästa steg är att aktivera datauppsättningen och schemat för kundprofilen i 
 
 1. Välj **[!UICONTROL Aktivera]**
 
-   ![Aktivera profil](assets/setup-experience-platform-profile-schema-enable.png)
+   ![Aktivera profil/växla](assets/setup-experience-platform-profile-schema-enable.png)
 
 1. Välj **[!UICONTROL Spara]** för att spara det uppdaterade schemat
 
-Schemat är nu även aktiverat för profilen.
+Nu är schemat även aktiverat för profilen.
 
 >[!IMPORTANT]
 >
@@ -208,10 +207,9 @@ Schemat är nu även aktiverat för profilen.
 > När du arbetar med egna data rekommenderar vi att du gör saker i följande ordning:
 > 
 > * För det första kan du importera vissa data i dina datauppsättningar.
-> * Åtgärda eventuella problem som uppstår under dataöverföringsprocessen (t.ex. datavalidering eller mappningsproblem).
+> * Åtgärda eventuella problem som uppstår under dataöverföringsprocessen (till exempel datavalidering eller mappningsproblem).
 > * Aktivera datauppsättningar och scheman för profil
 > * Importera data igen
-
 
 
 ### Validera en profil

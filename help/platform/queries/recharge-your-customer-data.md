@@ -7,7 +7,7 @@ level: Beginner
 jira: KT-10323
 thumbnail: 342533.jpeg
 exl-id: 30574cc5-66fa-4ab8-83ed-7af710294dbf
-source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
+source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
 source-wordcount: '172'
 ht-degree: 3%
@@ -17,13 +17,14 @@ ht-degree: 3%
 # Använd era kunddata för att leverera strömmande upplevelser
 
 Flerkanalsdata är en viktig ingrediens för att driva kundprofiler som kan användas av marknadsförare för att samordna aktivering och mäta kundresorna. Men företag står inför utmaningar när det gäller att hantera kvaliteten, skalan och variationen av dessa data. De behöver effektiva lösningar för att minska verkningarna av data av låg kvalitet, minska time to value och öka avkastningen genom att använda samma data för många olika användningsområden.
+Mer information finns på [Dokumentation för frågetjänsten](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=sv).
 
 Den här videon utforskar:
 
 * Utnyttja Adobe Experience Platform funktioner för dataförberedelser
 * Ökad avkastning från Adobe Real-Time CDP, Adobe Journey Optimizer och Customer Journey Analytics
 
->[!VIDEO](https://video.tv.adobe.com/v/342533?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/342533?learn=on)
 
 ## SQL-exempel
 
@@ -45,8 +46,6 @@ AND timestamp > current_date - interval '4 day'
 GROUP BY customerId,sku
 order by price desc)D;
 ```
-
-Mer information finns på [Dokumentation för frågetjänsten](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=sv).
 
 >[!NOTE]
 >

@@ -8,7 +8,7 @@ doc-type: Event
 thumbnail: 337665.jpg
 jira: KT-9145
 exl-id: 84d900c4-662e-486c-97c9-38c55fd5bf28
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
 source-wordcount: '163'
 ht-degree: 4%
@@ -19,7 +19,7 @@ ht-degree: 4%
 
 Leverera på löftet om upplevelsen, med tillgång till färre data. Vare sig du är annonsör, utgivare eller byrå kan det här webbinariet hjälpa till att frigöra möjligheter till datasamarbete i framtiden utan cookies från tredje part.
 
->[!VIDEO](https://video.tv.adobe.com/v/337665/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/337665/?learn=on)
 
 ## Viktiga åtgärder:
 

@@ -7,9 +7,9 @@ level: Beginner
 jira: KT-2704
 thumbnail: 27254.jpg
 exl-id: 5d2a8b17-baf9-4c52-9ebc-7f058ab0e64d
-source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
+source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
-source-wordcount: '112'
+source-wordcount: '96'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,5 @@ Lär dig skapa målgrupper i Adobe Experience Platform. Bygg målgruppsregler oc
 >
 > &quot;[!UICONTROL Segment]&quot; har bytt namn &quot;[!UICONTROL Målgrupper]&quot; i plattformsgränssnittet. Välj **[!UICONTROL Skapa målgrupper]** > **[!UICONTROL Byggregel]** för att ange den regelbyggare som finns i den här videon.
 
->[!VIDEO](https://video.tv.adobe.com/v/27254?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27254?learn=on)
 
-Mer information finns i [Dokumentation för Segment Builder](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/segment-builder.html).

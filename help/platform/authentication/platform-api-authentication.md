@@ -8,7 +8,7 @@ jira: KT-3688
 thumbnail: 28832.jpeg
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: c1774670-436e-46dd-9c9b-177bfee5f749
-source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
+source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
 source-wordcount: '334'
 ht-degree: 5%
@@ -31,23 +31,20 @@ Lär dig hur du kommer igång med Adobe Experience Platform API:er. Den här sj�
 >
 > När du har skapat API-autentiseringsuppgifterna måste systemadministratören associera dem med en roll i Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/28832/?quality=12&learn=on)
-
-
-
+>[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on)
 
 ## Generera en åtkomsttoken med Postman{#generate-an-access-token-with-postman}
 
 Använd [Adobe Identity Management Service API:er](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims) för att få en Access Token för att få tillgång till Adobe Experience Platform API:er.
 
->[!VIDEO](https://video.tv.adobe.com/v/29698/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29698/?learn=on)
 
 
 ## Interagera med Experience Platform API:er med Postman
 
 Upptäck interaktionen med Adobe Experience Platform API:er med [Adobe-medföljande Experience Platform API Postman-samlingar](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform), som bygger på [Miljövariabler för Adobe Developer Console](#export-integration-details-to-postman) och [genererad åtkomsttoken](#generate-an-access-token-with-postman).
 
->[!VIDEO](https://video.tv.adobe.com/v/29704/?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29704/?learn=on)
 
 
 ## Resurser som refereras i dessa videoklipp

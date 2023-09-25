@@ -8,7 +8,7 @@ feature: Data Ingestion
 jira: KT-4348
 thumbnail: 4348-ingest-batch-data.jpg
 exl-id: fc7db637-e191-4cc7-9eec-29f4922ae127
-source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
+source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
 source-wordcount: '2526'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Genom att lägga in data i grupp kan du samtidigt importera en stor mängd data 
 
 Innan du börjar övningarna ska du titta på den här korta videon för att lära dig mer om datainhämtning:
 
->[!VIDEO](https://video.tv.adobe.com/v/27106?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27106?learn=on)
 
 
 ## Behörigheter krävs
@@ -54,10 +54,10 @@ Börja med att hämta exempeldata och anpassa dem för din klientorganisation:
 
 >[!NOTE]
 >
->Data i [luma-data.zip](assets/luma-data.zip) filen är fiktiv och ska endast användas som exempel.
+>Data i [luma-data.zip](assets/luma-data.zip) filen är fiktiv och ska endast användas för demonstrationssyften.
 
-1. Hämta [luma-data.zip](assets/luma-data.zip) till **Luma - resurser för självstudiekurser** mapp.
-1. Zippa upp filen och skapa en mapp med namnet `luma-data` som innehåller de fyra datafilerna som vi kommer att använda i den här lektionen
+1. Ladda ned [luma-data.zip](assets/luma-data.zip) till **Luma självstudieresurser** mapp.
+1. Zippa upp filen och skapa en mapp med namnet `luma-data` som innehåller de fyra datafilerna som vi kommer att använda i lektionen
 1. Öppna `luma-loyalty.json` i en textredigerare och ersätta alla förekomster av `_techmarketingdemos` med ditt eget understreck-tenant-id, som du ser i dina egna scheman:
    ![Klient-ID för understreck](assets/ingestion-underscoreTenant.png)
 
@@ -65,10 +65,10 @@ Börja med att hämta exempeldata och anpassa dem för din klientorganisation:
 
 ### Infoga data
 
-1. Välj **[!UICONTROL Datauppsättningar]** i den vänstra navigeringen
+1. I användargränssnittet för plattformen väljer du **[!UICONTROL Datauppsättningar]** till vänster navigering
 1. Öppna `Luma Loyalty Dataset`
 1. Bläddra nedåt tills du ser **[!UICONTROL Lägg till data]** i den högra kolumnen
-1. Överför `luma-loyalty.json` -fil.
+1. Ladda upp `luma-loyalty.json` -fil.
 1. När filen har överförts visas en rad för gruppen
 1. Om du läser in sidan igen efter några minuter bör du se att batchen har överförts med 1 000 poster och 1 000 profilfragment.
 
@@ -91,15 +91,15 @@ Det finns några sätt att bekräfta att data har importerats.
 Så här bekräftar du att data har importerats till datauppsättningen:
 
 1. På den sida där du har inhämtat data väljer du **[!UICONTROL Förhandsgranska datauppsättning]** överst till höger
-1. Välj **Förhandsgranska** så kan du se några av de inmatade data.
+1. Välj **Förhandsgranska** och du bör kunna se några av de inmatade data.
 
    ![Förhandsgranska den slutförda datauppsättningen](assets/ingestion-loyalty-preview.png)
 
 
 Så här bekräftar du att data landats i profilen (det kan ta några minuter innan data landas):
 
-1. Gå till **[!UICONTROL Profiler]** i den vänstra navigeringen
-1. Markera ikonen bredvid **[!UICONTROL Välj namnområde för identitet]** fält för att öppna modalt
+1. Gå till **[!UICONTROL Profiler]** till vänster navigering
+1. Markera ikonen bredvid ikonen **[!UICONTROL Välj namnområde för identitet]** fält för att öppna modalt
 1. Välj `Luma Loyalty Id` namespace
 1. Ange sedan en av `loyaltyId` värden från datauppsättningen,  `5625458`
 1. Välj **[!UICONTROL Visa]**
@@ -113,9 +113,9 @@ Om du prenumererar på dataöverföringshändelser i den föregående lektionen 
 1. `ig_load_success`—batchen har importerats till identitetsdiagrammet
 1. `ps_load_success`—batchen har importerats till profiltjänsten
 
-![Webbkrok för dataöverföring](assets/ingestion-loyalty-webhook.png)
+![Webbkrok för datainhämtning](assets/ingestion-loyalty-webhook.png)
 
-Se [dokumentation](https://experienceleague.adobe.com/docs/experience-platform/ingestion/quality/subscribe-events.html#available-status-notification-events) om du vill ha mer information om meddelandena.
+Se [dokumentation](https://experienceleague.adobe.com/docs/experience-platform/ingestion/quality/subscribe-events.html#available-status-notification-events) för mer information om meddelandena.
 
 ## Importera data gruppvis med Platform API
 
@@ -147,7 +147,7 @@ Först hämtar vi ID:t för datauppsättnings-ID:t för den datauppsättning som
 
 Nu kan vi skapa en batch i datauppsättningen:
 
-1. Hämta [API.postman_collection.json](https://raw.githubusercontent.com/adobe/experience-platform-postman-samples/master/apis/experience-platform/Data%20Ingestion%20API.postman_collection.json) till `Luma Tutorial Assets` mapp
+1. Ladda ned [API.postman_collection.json](https://raw.githubusercontent.com/adobe/experience-platform-postman-samples/master/apis/experience-platform/Data%20Ingestion%20API.postman_collection.json) till `Luma Tutorial Assets` mapp
 1. Importera samlingen till [!DNL Postman]
 1. Välj begäran **[!DNL Data Ingestion API > Batch Ingestion > Create a new batch in Catalog Service.]**
 1. Klistra in följande som **Brödtext** av begäran, ***ersätta dataId-värdet med ditt eget***:
@@ -174,7 +174,7 @@ Nu kan vi överföra data till gruppen:
 1. I **Parametrar** ange datauppsättnings-id och batch-id i sina respektive fält
 1. I **Parametrar** tabb, ange `luma-crm.json` som **filePath**
 1. I **Brödtext** väljer du **binary** option
-1. Välj den hämtade `luma-crm.json` från din lokala `Luma Tutorial Assets` mapp
+1. Välj den hämtade filen `luma-crm.json` från din lokala `Luma Tutorial Assets` mapp
 1. Välj **Skicka** och du bör få 200 OK-svar med &quot;1&quot; i svarsbrödtexten
 
    ![Överförda data](assets/ingestion-crm-uploadFile.png)
@@ -224,9 +224,9 @@ Grattis, du har just sammanfogat profiler!
 
 Om du prenumererar på dataöverföringshändelser i den föregående lektionen ska du kontrollera din unika webkrok.site-URL. Du bör se tre förfrågningar som kommer in, precis som med lojalitetsdata:
 
-![Webbkrok för dataöverföring](assets/ingestion-crm-webhook.png)
+![Webbkrok för datainhämtning](assets/ingestion-crm-webhook.png)
 
-Se [dokumentation](https://experienceleague.adobe.com/docs/experience-platform/ingestion/quality/subscribe-events.html#available-status-notification-events) om du vill ha mer information om meddelandena.
+Se [dokumentation](https://experienceleague.adobe.com/docs/experience-platform/ingestion/quality/subscribe-events.html#available-status-notification-events) för mer information om meddelandena.
 
 ## Importera data med arbetsflöden
 
@@ -241,7 +241,7 @@ Låt oss titta på ett annat sätt att överföra data. Med arbetsflödesfunktio
 
 Nu ska vi skapa ett arbetsflöde:
 
-1. Gå till **[!UICONTROL Arbetsflöden]** i den vänstra navigeringen
+1. Gå till **[!UICONTROL Arbetsflöden]** till vänster navigering
 1. Välj **[!UICONTROL Mappa CSV till XDM-schema]** och väljer **[!UICONTROL Starta]** knapp
    ![Starta arbetsflödet](assets/ingestion-products-launchWorkflow.png)
 1. Välj `Luma Product Catalog Dataset` och väljer **[!UICONTROL Nästa]** knapp
@@ -268,9 +268,9 @@ Gå till **[!UICONTROL Källor]** i den vänstra navigeringen för att öppna k�
 
 ![Källkatalog](assets/ingestion-offline-sourceCatalog.png)
 
-Okej, vi importerar data med en källanslutning.
+Okej, vi importerar data med hjälp av en källanslutning.
 
-Den här övningen kommer att vara din egen stil på äventyret. Jag ska visa arbetsflödet med FTP-källkopplingen. Du kan antingen använda en annan anslutning till molnlagringskällan som du använder på ditt företag, eller överföra json-filen med datauppsättningens användargränssnitt på samma sätt som med lojalitetsdata.
+Den här övningen kommer att vara din egen stil. Jag ska visa arbetsflödet med FTP-källkopplingen. Du kan antingen använda en annan anslutning till molnlagringskällan som du använder på ditt företag, eller överföra json-filen med datauppsättningens användargränssnitt på samma sätt som med lojalitetsdata.
 
 Många av källorna har ett liknande konfigurationsarbetsflöde där du:
 
@@ -298,7 +298,7 @@ Många av källorna har ett liknande konfigurationsarbetsflöde där du:
 1. Observera att det finns praktiska länkar till dokumentation under `...`
 1. I rutan med den molnlagringsleverantör du föredrar väljer du **[!UICONTROL Konfigurera]** knapp
    ![Välj konfigurera](assets/ingestion-offline-selectFTP.png)
-1. **[!UICONTROL Autentisering]** är det första steget. Ange till exempel namnet på ditt konto `Luma's FTP Account` och din autentiseringsinformation. Det här steget bör vara ungefär likadant för alla molnlagringskällor, men fälten kan variera något. När du har angett autentiseringsinformationen för ett konto kan du återanvända dem för andra källanslutningar som kan skicka andra data i olika scheman från andra filer på samma konto
+1. **[!UICONTROL Autentisering]** är det första steget. Ange namnet på ditt konto, till exempel `Luma's FTP Account` och din autentiseringsinformation. Det här steget bör vara ungefär likadant för alla molnlagringskällor, men fälten kan variera något. När du har angett autentiseringsinformationen för ett konto kan du återanvända dem för andra källanslutningar som kan skicka andra data i olika scheman från andra filer på samma konto
 1. Välj **[!UICONTROL Knappen Anslut till källa]**
 1. När plattformen har anslutit till källan väljer du **[!UICONTROL Nästa]** knapp
    ![Autentisera till källan](assets/ingestion-offline-authentication.png)
@@ -306,19 +306,19 @@ Många av källorna har ett liknande konfigurationsarbetsflöde där du:
 1. På **[!UICONTROL Markera data]** kommer användargränssnittet att använda dina autentiseringsuppgifter för att öppna mappen i din molnlagringslösning
 1. Markera de filer som du vill importera, till exempel `luma-offline-purchases.json`
 1. Som **[!UICONTROL Dataformat]**, markera `XDM JSON`
-1. Du kan sedan förhandsgranska JSON-strukturen och exempeldata i filen
+1. Sedan kan du förhandsgranska JSON-strukturen och exempeldata i filen
 1. Välj **[!UICONTROL Nästa]** knapp
    ![Välj datafil(er)](assets/ingestion-offline-selectData.png)
 
 1. På **[!UICONTROL Mappning]** välj `Luma Offline Purchase Events Dataset` och väljer **[!UICONTROL Nästa]** -knappen. Observera i meddelandet att eftersom de data vi samlar in är en JSON-fil finns det inget mappningssteg där vi mappar källfält till målfält. JSON-data måste redan finnas i XDM. Om du importerade en CSV-fil ser du hela mappningsgränssnittet i det här steget:
    ![Välj datauppsättning](assets/ingestion-offline-mapping.png)
-1. På **[!UICONTROL Schemaläggning]** väljer du hur ofta du vill hämta data från källan. Ta en titt på alternativen. Vi ska bara göra ett engångsintag, så lämna **[!UICONTROL Frekvens]** på **[!UICONTROL En gång]** och väljer **[!UICONTROL Nästa]** knapp:
+1. På **[!UICONTROL Schemaläggning]** väljer du hur ofta du vill hämta data från källan. Ta en stund och titta på alternativen. Vi ska bara göra ett engångsintag, så lämna **[!UICONTROL Frekvens]** på **[!UICONTROL En gång]** och väljer **[!UICONTROL Nästa]** knapp:
    ![Schemalägg ditt dataflöde](assets/ingestion-offline-scheduling.png)
 1. På **[!UICONTROL Dataflödesdetaljer]** kan du välja ett namn för dataflödet, ange en valfri beskrivning, aktivera feldiagnostik och partiellt intag. Låt inställningarna vara som de är och välj **[!UICONTROL Nästa]** knapp:
    ![Redigera detaljer i ditt dataflöde](assets/ingestion-offline-detail.png)
 1. På **[!UICONTROL Granska]** kan du granska alla dina inställningar tillsammans och antingen redigera dem eller välja **[!UICONTROL Slutför]** knapp
 1. När du har sparat kommer du att landa på en skärm som den här:
-   ![Slutförd](assets/ingestion-offline-complete.png)
+   ![Complete](assets/ingestion-offline-complete.png)
 
 ### Validera data
 
