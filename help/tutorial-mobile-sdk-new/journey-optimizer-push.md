@@ -5,7 +5,7 @@ solution: Data Collection,Journey Optimizer
 feature-set: Journey Optimizer
 feature: Push
 hide: true
-source-git-commit: 5f178f4bd30f78dff3243b3f5bd2f9d11c308045
+source-git-commit: 7f77a26dfae71c2f0e643deba6c72a8ecdb0de02
 workflow-type: tm+mt
 source-wordcount: '2554'
 ht-degree: 0%
@@ -153,7 +153,7 @@ För att din app ska fungera med Journey Optimizer måste du uppdatera din tagge
    <img src="assets/luma-app-push.png" width="300" />
 
 
-### Lägg till funktioner för push-meddelanden i appen
+## Lägg till funktioner för push-meddelanden i appen
 
 >[!IMPORTANT]
 >
@@ -172,7 +172,7 @@ Du bör nu ha ett tillägg för push-meddelanden tillagt i appen, som liknar sk�
 ![Tillägg för push-meddelanden](assets/xcode-signing-capabilities-pushnotifications.png)
 
 
-### Implementera Journey Optimizer i appen
+## Implementera Journey Optimizer i appen
 
 Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara konfigurationen. Därefter måste du installera och registrera Messaging SDK. Om de här stegen inte är tydliga går du igenom [Installera SDK:er](install-sdks.md) -avsnitt.
 
@@ -205,7 +205,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
    ]
    ```
 
-### Registrera enhetstoken för push-meddelanden
+## Registrera enhetstoken för push-meddelanden
 
 1. Lägg till [`MobileCore.setPushIdentifier`](https://developer.adobe.com/client-sdks/documentation/mobile-core/api-reference/#setpushidentifier) API till `func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data)` funktion.
 
@@ -318,7 +318,7 @@ Nästa steg är att skapa den resa som utlöser sändningen av push-meddelandet 
    ![Färdig resa](assets/ajo-journey-finished.png)
 
 
-## Utlöser push-meddelandet
+## Utlös push-meddelandet
 
 Du har alla ingredienser på plats för att skicka ett push-meddelande. Det som återstår är hur detta push-meddelande ska utlösas. Det är alltså detsamma som du har sett tidigare: skicka bara en upplevelsehändelse med rätt nyttolast (som i [Händelser](events.md)).
 
