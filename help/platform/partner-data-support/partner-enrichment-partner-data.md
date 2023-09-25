@@ -8,9 +8,9 @@ level: Intermediate
 jira: KT-13830
 thumbnail: 3423075.jpg
 last-substantial-update: 2023-08-23T00:00:00Z
-source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
+source-git-commit: 7c471d9da851c594c33e00473a04996fd247bb84
 workflow-type: tm+mt
-source-wordcount: '75'
+source-wordcount: '71'
 ht-degree: 0%
 
 ---
