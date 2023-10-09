@@ -3,9 +3,10 @@ title: Samla in identitetsdata
 description: Lär dig hur du samlar in identitetsdata i en mobilapp.
 feature: Mobile SDK,Identities
 hide: true
-source-git-commit: 5f178f4bd30f78dff3243b3f5bd2f9d11c308045
+exl-id: e6ec9a4f-3163-47fd-8d5c-6e640af3b4ba
+source-git-commit: d7410a19e142d233a6c6597de92f112b961f5ad6
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '860'
 ht-degree: 1%
 
 ---
@@ -103,7 +104,7 @@ Du vill uppdatera både standardidentiteten (e-post) och den anpassade identitet
 1. Navigera till **[!DNL Luma]** **[!DNL Luma]** > **[!DNL Views]** > **[!DNL General]** > **[!UICONTROL LoginSheet]** i Xcode Project navigator och hitta koden som ska köras när du väljer **[!UICONTROL Inloggning]** -knappen. Lägg till följande kod:
 
    ```swift
-   // Update identities
+   // Call updateIdentities
    MobileSDK.shared.updateIdentities(emailAddress: currentEmailId, crmId: currentCRMId)                             
    ```
 
@@ -117,7 +118,7 @@ Du vill uppdatera både standardidentiteten (e-post) och den anpassade identitet
 
 Du kan använda [`Identity.removeIdentity`](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#removeidentity) API för att ta bort identiteten från den lagrade identitetskartan på klientsidan. Identitetstillägget slutar skicka identifieraren till Edge Network. Om du använder detta API tas inte identifieraren bort från serversidans identitetsdiagram. Se [Visa identitetsdiagram](https://experienceleague.adobe.com/docs/platform-learn/tutorials/identities/view-identity-graphs.html?lang=en) om du vill ha mer information om identitetsdiagram.
 
-1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL General]** > **[!UICONTROL MobileSDK]** i Xcode Project navigator och lägg till följande kod i `func removeIdentities(emailAddress: String, crmId: String)` funktion:
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project navigator och lägg till följande kod i `func removeIdentities(emailAddress: String, crmId: String)` funktion:
 
    ```swift
    // Remove identities and reset email and CRM Id to their defaults
@@ -137,9 +138,9 @@ Du kan använda [`Identity.removeIdentity`](https://developer.adobe.com/client-s
 
 ## Validera med Assurance
 
-1. Granska [installationsanvisningar](assurance.md) och koppla simulatorn eller enheten till Assurance.
+1. Granska [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
 1. I Luma-appen
-   1. Välj **[!UICONTROL Startsida]** -fliken.
+   1. Välj **[!UICONTROL Startsida]** och flytta Assurance-ikonen till vänster.
    1. Markera <img src="assets/login.png" width="15" /> ikonen längst upp till höger.
 
       <img src="./assets/identity1.png" width="300">
@@ -165,6 +166,10 @@ När du är klar med stegen i [Experience Platform lektion](platform.md)kan du b
 1. Du ser **[!UICONTROL Identiteter]** listas.
 
    ![validera identitetsdiagram](assets/identity-validate-graph.png)
+
+>[!INFO]
+>
+>Det finns ingen kod i programmet som återställer ECID, vilket betyder att du bara kan återställa ECID (och effektivt skapa en ny profil med ett nytt ECID på enheten) genom en avinstallation och ominstallation av programmet. Information om hur du implementerar återställning av identifierare finns i [`Identity.resetIdentities`](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/api-reference/#resetidentities) och [`MobileCore.resetIdentities`](https://developer.adobe.com/client-sdks/documentation/mobile-core/api-reference/#resetidentities) API-anrop. Tänk dock på detta när du använder en push-meddelandeidentifierare (se [Skicka push-meddelanden](journey-optimizer-push.md)) blir den identifieraren en annan &#39;klisteristidentifierare&#39; på enheten.
 
 
 >[!SUCCESS]

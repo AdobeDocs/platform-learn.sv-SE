@@ -5,9 +5,10 @@ solution: Data Collection,Journey Optimizer
 feature-set: Journey Optimizer
 feature: In App
 hide: true
-source-git-commit: 5f178f4bd30f78dff3243b3f5bd2f9d11c308045
+exl-id: 6cb4d031-6172-4a84-b717-e3a1f5dc7d5d
+source-git-commit: d7410a19e142d233a6c6597de92f112b961f5ad6
 workflow-type: tm+mt
-source-wordcount: '1546'
+source-wordcount: '1563'
 ht-degree: 0%
 
 ---
@@ -136,9 +137,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 
 ## Validera inställningar med Assurance
 
-1. Granska [installationsanvisningar](assurance.md) -avsnitt.
-1. Installera appen på den fysiska enheten eller i simulatorn.
-1. Starta appen med den URL som skapas av försäkringen.
+1. Granska [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
 1. Välj **[!UICONTROL Konfigurera]**.
    ![konfigurera klicka](assets/push-validate-config.png)
 1. Välj ![Plus](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) knapp bredvid **[!UICONTROL Meddelanden i appen]**.
@@ -159,7 +158,8 @@ Om du vill skapa ett eget meddelande i appen måste du definiera en kampanj i Jo
 * livscykelhändelser, som start, installation, uppgradering, stängning eller krasch,
 * geopositioneringshändelser, som att ange eller avsluta en intressepunkt.
 
-I den här självstudiekursen kommer du att använda de allmänna och tilläggsoberoende API:erna för Mobile Core (se [Generiska API:er för Mobile Core](https://developer.adobe.com/client-sdks/documentation/mobile-core/#mobile-core-generic-apis)) för att underlätta händelsespårning av användarskärmar, åtgärder och PII-data. Händelser som genereras av dessa API:er publiceras till SDK-händelsehubben och kan användas av tillägg. SDK-händelsehubben tillhandahåller den grundläggande datastruktur som är knuten till alla AEP Mobile SDK-tillägg, med en lista över registrerade tillägg och interna moduler, en lista över registrerade händelseavlyssnare och en delad tillståndsdatabas.
+I den här självstudiekursen kommer du att använda de allmänna och tilläggsoberoende API:erna för Mobile Core (se [Generiska API:er för Mobile Core](https://developer.adobe.com/client-sdks/documentation/mobile-core/#mobile-core-generic-apis)) för att underlätta händelsespårning av användarskärmar, åtgärder och PII-data. Händelser som genereras av dessa API:er publiceras till SDK-händelsehubben och kan användas av tillägg. SDK-händelsehubben tillhandahåller den grundläggande datastruktur som är knuten till alla SDK-tillägg för Mobile Platform, med en lista över registrerade tillägg och interna moduler, en lista över registrerade händelseavlyssnare och en delad tillståndsdatabas.
+
 SDK-händelsehubben publicerar och tar emot händelsedata från registrerade tillägg för att förenkla integreringen med Adobe och tredjepartslösningar. När tillägget Optimera installeras hanteras till exempel alla förfrågningar och interaktioner med erbjudandemotorn Journey Optimizer - Beslutshantering av händelsehubben.
 
 1. I användargränssnittet för Journey Optimizer väljer du **[!UICONTROL Kampanjer]** från den vänstra listen.
@@ -219,7 +219,7 @@ Du har alla ingredienser på plats för att skicka ett meddelande i appen. Det s
 
 ## Validera med din app
 
-1. Öppna appen på en enhet eller i simulatorn.
+1. Återskapa och kör appen i simulatorn eller på en fysisk enhet från Xcode med ![Spela upp](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Play_18_N.svg).
 
 1. Gå till **[!UICONTROL Inställningar]** -fliken.
 
@@ -232,6 +232,7 @@ Du har alla ingredienser på plats för att skicka ett meddelande i appen. Det s
 
 Du kan validera dina meddelanden i appen i Assurance-gränssnittet.
 
+1. Granska [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
 1. Välj **[!UICONTROL Meddelanden i appen]**.
 1. Välj **[!UICONTROL Händelselista]**.
 1. Välj en **[!UICONTROL Visa meddelande]** post.

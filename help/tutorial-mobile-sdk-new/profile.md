@@ -2,9 +2,10 @@
 title: Samla in profildata
 description: Lär dig hur du samlar in profildata i en mobilapp.
 hide: true
-source-git-commit: cd1efbfaa335c08cbcc22603fe349b4594cc1056
+exl-id: 6ce02ccc-6280-4a1f-a96e-1975f8a0220a
+source-git-commit: d7410a19e142d233a6c6597de92f112b961f5ad6
 workflow-type: tm+mt
-source-wordcount: '601'
+source-wordcount: '597'
 ht-degree: 0%
 
 ---
@@ -64,7 +65,7 @@ Det kan vara bra att ha som mål och/eller personalisering i appen för att snab
 
    ```swift
    // Update attributes
-   MobileSDK.shared.updateUserAttributes(attributeName: "isPaidUser", attributeValue: "yes")
+   MobileSDK.shared.updateUserAttribute(attributeName: "isPaidUser", attributeValue: "yes")
    ```
 
 
@@ -95,9 +96,7 @@ Ytterligare dokumentation finns [här](https://developer.adobe.com/client-sdks/d
 
 ## Validera med Assurance
 
-1. Granska [installationsanvisningar](assurance.md) -avsnitt.
-1. Installera programmet.
-1. Starta appen med den URL som skapas av försäkringen.
+1. Granska [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
 1. Kör appen för att logga in och interagera med en produkt.
 
    1. Flytta Assurance-ikonen åt vänster.
@@ -132,4 +131,4 @@ Ytterligare dokumentation finns [här](https://developer.adobe.com/client-sdks/d
 >
 >Du har nu konfigurerat din app för att uppdatera profilattribut i Edge Network och (när den har konfigurerats) med Adobe Experience Platform.<br/>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 
-Nästa: **[Använd geopositioneringstjänster](places.md)**
+Nästa: **[Använd platser](places.md)**

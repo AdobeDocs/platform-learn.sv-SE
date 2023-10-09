@@ -5,9 +5,10 @@ solution: Data Collection,Journey Optimizer
 feature-set: Journey Optimizer
 feature: Push
 hide: true
-source-git-commit: 7f77a26dfae71c2f0e643deba6c72a8ecdb0de02
+exl-id: 37d5b52e-c0d0-4ca1-9629-5c3dd2b2a5d5
+source-git-commit: d7410a19e142d233a6c6597de92f112b961f5ad6
 workflow-type: tm+mt
-source-wordcount: '2554'
+source-wordcount: '2607'
 ht-degree: 0%
 
 ---
@@ -102,8 +103,13 @@ Uppdatera Experience Edge-konfigurationen för att säkerställa att data som sk
 
 1. I gränssnittet för datainsamling väljer du **[!UICONTROL Datastreams]** och välj till exempel din datastream **[!DNL Luma Mobile App]**.
 1. Välj ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_MoreSmallList_18_N.svg) for **[!UICONTROL Experience Platform]** och markera ![Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) **[!UICONTROL Redigera]** på snabbmenyn.
-1. I **[!UICONTROL Datastreams]** > ![Mapp](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Folder_18_N.svg) >  **[!UICONTROL Adobe Experience Platform]** skärm, se **[!UICONTROL Adobe Journey Optimizer]** är markerat. Se [Adobe Experience Platform-inställningar](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=en#aep) för mer information.
-1. Om du vill spara din datastream-konfiguration väljer du **[!UICONTROL Spara]**.
+1. I **[!UICONTROL Datastreams]** > ![Mapp](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Folder_18_N.svg) >  **[!UICONTROL Adobe Experience Platform]** skärm:
+
+   1. Om inte redan är markerat väljer du **[!UICONTROL AJO-push-profildatauppsättning]** från **[!UICONTROL Profildatauppsättning]**. Den här profildatauppsättningen krävs när du använder `MobileCore.setPushIdentifier` API-anrop (se [Registrera enhetstoken för push-meddelanden](#register-device-token-for-push-notifications)) som ser till att den unika identifieraren för push-meddelanden (alias push-identifierare) lagras som en del av användarens profil.
+
+   1. **[!UICONTROL Adobe Journey Optimizer]** är markerat. Se [Adobe Experience Platform-inställningar](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=en#aep) för mer information.
+
+   1. Om du vill spara din datastream-konfiguration väljer du **[!UICONTROL Spara]**.
 
    ![AEP-konfiguration för datastream](assets/datastream-aep-configuration.png)
 
@@ -131,9 +137,7 @@ För att din app ska fungera med Journey Optimizer måste du uppdatera din tagge
 
 ## Validera inställningar med Assurance
 
-1. Granska [installationsanvisningar](assurance.md) -avsnitt.
-1. Installera appen på den fysiska enheten eller i simulatorn.
-1. Starta appen med den URL som skapas av försäkringen.
+1. Granska [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
 1. Välj **[!UICONTROL Konfigurera]**.
    ![konfigurera klicka](assets/push-validate-config.png)
 1. Välj ![Plus](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) nästa **[!UICONTROL Push-felsökning]**.
@@ -386,7 +390,7 @@ Den här gången har den upplevelsehändelse du ska skicka inte skapats för att
 
 ## Validera med din app
 
-1. Öppna appen på en enhet eller i simulatorn.
+1. Återskapa och kör appen i simulatorn eller på en fysisk enhet från Xcode med ![Spela upp](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Play_18_N.svg).
 
 1. Gå till **[!UICONTROL Inställningar]** -fliken.
 
@@ -404,4 +408,3 @@ Nu bör du ha alla verktyg som behövs för att hantera push-meddelanden i appen
 >Du har nu aktiverat appen för push-meddelanden med Journey Optimizer och Journey Optimizer-tillägget för Experience Platform Mobile SDK.<br/>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 
 Nästa: **[Skapa och skicka meddelanden i appen](journey-optimizer-inapp.md)**
-

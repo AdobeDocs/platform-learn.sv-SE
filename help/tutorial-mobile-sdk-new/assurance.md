@@ -3,9 +3,10 @@ title: Ställ in försäkring
 description: Lär dig hur du implementerar tillägget Assurance i en mobilapp.
 feature: Mobile SDK,Assurance
 hide: true
-source-git-commit: 5f178f4bd30f78dff3243b3f5bd2f9d11c308045
+exl-id: 49d608e7-e9c4-4bc8-8a8a-5195f8e2ba42
+source-git-commit: d7410a19e142d233a6c6597de92f112b961f5ad6
 workflow-type: tm+mt
-source-wordcount: '775'
+source-wordcount: '962'
 ht-degree: 0%
 
 ---
@@ -68,7 +69,7 @@ Innan du kör programmet för första gången i Xcode måste du uppdatera signer
 
    >[!IMPORTANT]
    >
-   >Se till att du använder en unik källidentifierare som skiljer sig från standardinställningen `com.adobe.luma.tutorial.swiftui`  anges i Start-projektet eftersom varje källidentifierare måste vara unik.
+   >Se till att du använder en _unik_ källidentifierare och ersätt `Luma` källidentifierare eftersom varje källidentifierare måste vara unik. Vanligtvis använder du ett omvänt DNS-format för paket-ID-strängar, som `com.organization.brand.uniqueidentifier`. I den färdiga versionen av den här självstudiekursen används `com.adobe.luma.tutorial.swiftui`.
 
 
    ![Xcode-signeringsfunktioner](assets/xcode-signing-capabilities.png){zoomable=&quot;yes&quot;}
@@ -91,7 +92,7 @@ Assurance fungerar genom att öppna en URL, antingen via webbläsaren eller QR-k
 
 ## Ansluta till en session
 
-1. Kör programmet i simulatorn eller på en ansluten fysisk enhet.
+1. Återskapa och kör appen i simulatorn eller på en fysisk enhet från Xcode med ![Spela upp](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Play_18_N.svg).
 1. Välj **[!UICONTROL Säkerhet]** från den vänstra listen i användargränssnittet för datainsamling.
 1. Välj **[!UICONTROL Skapa session]**.
 1. Välj **[!UICONTROL Starta]**.
@@ -133,6 +134,34 @@ Assurance fungerar genom att öppna en URL, antingen via webbläsaren eller QR-k
          ![säkringshändelser](assets/assurance-events.png)
 
 Om du stöter på några problem kan du läsa [teknisk](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/){target="_blank"} and [general documentation](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html){target="_blank"}.
+
+
+## Verifiera tillägg
+
+Så här kontrollerar du om ditt program använder de senaste tilläggen:
+
+1. Välj **[!UICONTROL Konfigurera]**.
+
+1. Välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) for ![123](https://spectrum.adobe.com/static/icons/workflow_18/Smock_123_18_N.svg) **[!UICONTROL Tilläggsversioner]**.
+
+1. Välj **[!UICONTROL Spara]**.
+
+   ![Konfigurera tilläggsversioner](assets/assurance-configure-extension-versions.png)
+
+1. Välj ![123](https://spectrum.adobe.com/static/icons/workflow_18/Smock_123_18_N.svg) **[!UICONTROL Tilläggsversioner]**. Du får en översikt över de senaste tillgängliga tilläggen och de tillägg som används i din version av programmet.
+
+   ![Tilläggsversioner](assets/assurance-extension-versions.png)
+
+1. Så här uppdaterar du tilläggsversioner (till exempel **[!UICONTROL Meddelanden]** och **[!UICONTROL Optimera]**), i Xcode, för de specifika tillägg som behöver uppgraderas väljer du paketet (tillägget) från **[!UICONTROL Paketberoenden]** (till exempel **[!UICONTROL AEPMessaging]**) och på snabbmenyn väljer **[!UICONTROL Uppdateringspaket]**. Xcode uppdaterar paketberoendena.
+
+
+>[!NOTE]
+>
+>När du har uppdaterat dina tillägg (paket) i Xcode måste du stänga och ta bort den aktuella sessionen och upprepa alla steg från [Ansluta till en session](#connecting-to-a-session) och [Verifiera tillägg](#verify-extensions) för att säkerställa att Assurance rapporterar rätt tillägg i en ny Assurance-session.
+
+
+
+
 
 >[!SUCCESS]
 >

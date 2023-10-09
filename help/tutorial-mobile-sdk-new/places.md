@@ -1,19 +1,20 @@
 ---
-title: Använd geopositioneringstjänster
+title: Använd platser
 description: Lär dig hur du använder platsens geopositioneringstjänst i din mobilapp.
 hide: true
-source-git-commit: 5f178f4bd30f78dff3243b3f5bd2f9d11c308045
+exl-id: adc2952f-cb01-4e06-9629-49fb95f22ca5
+source-git-commit: d7410a19e142d233a6c6597de92f112b961f5ad6
 workflow-type: tm+mt
-source-wordcount: '1669'
+source-wordcount: '1666'
 ht-degree: 0%
 
 ---
 
-# Använd geopositioneringstjänster
+# Använd platser
 
-Lär dig hur du använder geopositioneringstjänsten i din app.
+Lär dig hur du använder platsens geopositioneringstjänst i din app.
 
-Tjänsten Adobe Experience Platform Data Collection Places är en tjänst för geolokalisering som gör att mobilappar med platsmedvetenhet kan förstå platskontexten. Tjänsten använder avancerade och lättanvända SDK-gränssnitt tillsammans med en flexibel databas med intressepunkter (POI).
+Tjänsten Adobe Experience Platform Data Collection Places är en geopositioneringstjänst som gör det möjligt för mobilappar med platsmedvetenhet att förstå platskontexten. Tjänsten använder avancerade och lättanvända SDK-gränssnitt tillsammans med en flexibel databas med intressepunkter (POI).
 
 ## Förutsättningar
 
@@ -32,7 +33,7 @@ I den här lektionen ska du
 * Uppdatera ditt schema för att hämta geopositioneringshändelser.
 * Validera inställningar i Assurance.
 * Uppdatera programmet för att registrera Platser-tillägget.
-* Implementera geopositioneringsspårning från tjänsten Platser i din app.
+* Implementera geopositioneringsspårning från platstjänsten i appen.
 
 
 ## Inställningar
@@ -81,7 +82,7 @@ Du definierar några intressepunkter i tjänsten Platser.
    1. Välj **[!UICONTROL Spara i bibliotek och bygge]** från **[!UICONTROL Spara i bibliotek]**.
       ![Tillägg för Installera platser](assets/places-install-extension.png).
 
-1. Ditt bibliotek återskapas.
+1. Ditt bibliotek har byggts om.
 
 
 ### Verifiera ditt schema
@@ -96,7 +97,7 @@ Verifiera om ditt schema, enligt definitionen i [Skapa schema](create-schema.md)
    ![Schemaplatser](assets/schema-places-context.png).
 
 
-### Uppdatera din tagg
+### Uppdatera taggegenskapen
 
 Tillägget Platser för taggar innehåller funktioner för att övervaka geopositioneringshändelser och gör att du kan utlösa åtgärder som baseras på dessa händelser. Du kan använda den här funktionen för att minimera API-kodningen som du måste implementera i appen.
 
@@ -132,7 +133,7 @@ Först skapar du flera dataelement.
 
 Därefter ska du definiera regler som ska användas med dessa dataelement.
 
-1. I taggegenskapen. välj **[!UICONTROL Regler]** från den vänstra listen.
+1. I taggegenskapen väljer du **[!UICONTROL Regler]** från den vänstra listen.
 1. Välj **[!UICONTROL Lägg till regel]**.
 1. I **[!UICONTROL Skapa regel]** på skärmen, ange ett namn för regeln, till exempel `POI - Entry`.
 1. Välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) under **[!UICONTROL HÄNDELSER]**.
@@ -215,6 +216,10 @@ Låt oss skapa en annan regel
 1. Välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) bredvid **[!UICONTROL Mobile Core - bifoga data]** åtgärd.
    1. Välj **[!UICONTROL Adobe Experience Platform Edge Network]** från **[!UICONTROL Tillägg]** lista och markera **[!UICONTROL Vidarebefordra händelse till Edge Network]**.
    1. Välj **[!UICONTROL Behåll ändringar]**.
+
+1. Spara regeln genom att välja **[!UICONTROL Spara i bibliotek]**.
+
+   ![Regel](assets/tags-rule-poi-exit.png)
 
 
 För att säkerställa att alla ändringar i taggen publiceras
@@ -302,18 +307,15 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
    }
    ```
 
-Det handlar inte bara om den här lektionen där du kan förklara hur positionshanteraren implementeras i iOS.
-
-
 ## Validera med din app
 
 1. Öppna appen på en enhet eller i simulatorn.
 
 1. Gå till **[!UICONTROL Plats]** -fliken.
 
-1. Flytta runt kartan för att säkerställa att den blå cirkeln i mitten ligger ovanpå en av dina POI:n, till exempel London.
+1. Flytta (dra) runt kartan för att se till att den blå mittre cirkeln är ovanför en av dina POI:er, till exempel London.
 
-1. Tryck på <img src="assets/geobutton.png" width="20" /> tills du ser kategorin och namnet längst ned till höger.
+1. Tryck på <img src="assets/geobutton.png" width="20" /> tills du ser kategorin och namnet visas i den röda etiketten med stiftet.
 
 1. Tryck på etiketten för POI, som öppnar dialogrutan **[!UICONTROL Nearby POI]** blad.
 

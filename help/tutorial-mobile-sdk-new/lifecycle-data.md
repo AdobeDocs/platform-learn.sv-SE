@@ -2,9 +2,10 @@
 title: Samla in livscykeldata
 description: Lär dig hur du samlar in livscykeldata i en mobilapp.
 hide: true
-source-git-commit: 5f178f4bd30f78dff3243b3f5bd2f9d11c308045
+exl-id: a3b26e45-2a17-4b44-aec0-fdf83526a273
+source-git-commit: d7410a19e142d233a6c6597de92f112b961f5ad6
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '627'
 ht-degree: 0%
 
 ---
@@ -66,13 +67,11 @@ Nu kan du uppdatera projektet för att registrera livscykelhändelserna.
    ```swift
    // When in background pause lifecycle data collection
    MobileCore.lifecyclePause()
-   }
    ```
 
 ## Validera med Assurance
 
-1. Granska [installationsanvisningar](assurance.md) och koppla simulatorn eller enheten till Assurance.
-1. Starta programmet.
+1. Granska [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
 1. Skicka appen till bakgrunden. Sök efter **[!UICONTROL LifecyclePause]** händelser i försäkringsgränssnittet.
 1. Ta appen till förgrunden. Sök efter **[!UICONTROL LivscykelÅteruppta]** händelser i försäkringsgränssnittet.
    ![validera livscykel](assets/lifecycle-lifecycle-assurance.png)
@@ -82,7 +81,7 @@ Nu kan du uppdatera projektet för att registrera livscykelhändelserna.
 
 I föregående övning skickas för- och bakgrundshändelserna till Adobe Experience Platform Mobile SDK. Så här vidarebefordrar du dessa händelser till Platform Edge Network:
 
-1. Välj **[!UICONTROL Regler]** i användargränssnittet för datainsamling.
+1. Välj **[!UICONTROL Regler]** i taggegenskapen.
    ![Skapa regel](assets/rule-create.png)
 1. Välj **[!UICONTROL Inledande bygge]** som det bibliotek som ska användas.
 1. Välj **[!UICONTROL Skapa ny regel]**.

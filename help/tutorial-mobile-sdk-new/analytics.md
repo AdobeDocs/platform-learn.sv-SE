@@ -3,10 +3,11 @@ title: Mappa data till analysdata
 description: Lär dig hur du samlar in och mappar data för Adobe Analytics i en mobilapp.
 solution: Data Collection,Experience Platform,Analytics
 hide: true
-source-git-commit: 5f178f4bd30f78dff3243b3f5bd2f9d11c308045
+exl-id: 631588df-a540-41b5-94e3-c8e1dc5f240b
+source-git-commit: d7410a19e142d233a6c6597de92f112b961f5ad6
 workflow-type: tm+mt
-source-wordcount: '632'
-ht-degree: 1%
+source-wordcount: '901'
+ht-degree: 0%
 
 ---
 
@@ -22,7 +23,7 @@ The [event](events.md) data som du har samlat in och skickat till Platform Edge 
 
 * Understanding of ExperienceEvent tracking.
 * XDM-data har skickats i exempelappen.
-* Datastream har konfigurerats för Adobe Analytics
+* En Adobe Analytics rapportserie som du kan använda för den här lektionen.
 
 ## Utbildningsmål
 
@@ -128,9 +129,11 @@ s.events = "scAdd:321435"
 
 ## Validera med Assurance
 
-Använda [Säkerhet](assurance.md) du kan bekräfta att du skickar en upplevelsehändelse, att XDM-data är korrekta och att Analytics-mappningen sker som förväntat. Exempel:
+Använda [Säkerhet](assurance.md) du kan bekräfta att du skickar en upplevelsehändelse, att XDM-data är korrekta och att Analytics-mappningen sker som förväntat.
 
-1. Skicka händelsen productListAdds.
+1. Granska [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
+
+1. Skicka en **[!UICONTROL productListAdds]** händelse (lägg till en produkt i korgen).
 
 1. Visa ExperienceEvent-träffen.
 
@@ -149,7 +152,6 @@ Använda [Säkerhet](assurance.md) du kan bekräfta att du skickar en upplevelse
    "eventType" : "commerce.productListAdds",
    "commerce" : {
      "productListAdds" : {
-       "id" : "LLWS05.1-XS",
        "value" : 1
      }
    }
@@ -193,38 +195,45 @@ a.x._techmarketingdemos.appinformation.appstatedetails.screenname
 >
 >`_techmarketingdemos` ersätts med organisationens unika värde.
 
+
+
 Om du vill mappa dessa XDM-kontextdata till analysdata i rapportsviten kan du:
+
+### Använda en fältgrupp
 
 * Lägg till **[!UICONTROL Adobe Analytics ExperienceEvent, fullständigt tillägg]** fältgrupp till ditt schema.
 
   ![Fältgrupp för Analytics ExperienceEvent FullExtension](assets/schema-analytics-extension.png)
-* Skapa regler i taggegenskapen för att mappa kontextdata till fälten i fältgruppen Adobe Analytics ExperienceEvent Full Extension. Till exempel karta `_techmarketingdemo.appinformation.appstatedetails.screenname` till `_experience.analytics.customDimensions.eVars.eVar2`.
 
-<!-- Old processing rules section
-Here is what a processing rule using this data might look like:
+* Bygg XDM-nyttolaster i appen, i enlighet med fältgruppen Adobe Analytics ExperienceEvent Full Extension, i likhet med vad du har gjort i [Spåra händelsedata](events.md) lektion, eller
+* Skapa regler i taggegenskapen som använder regelåtgärder för att bifoga eller ändra data till fältgruppen Adobe Analytics ExperienceEvent Full Extension. Mer information finns i [Bifoga data till SDK-händelser](https://developer.adobe.com/client-sdks/documentation/user-guides/attach-data/) eller [Ändra data i SDK-händelser](https://developer.adobe.com/client-sdks/documentation/user-guides/attach-data/).
 
-* You **[!UICONTROL Overwrite value of]** (1) **[!UICONTROL App Screen Name (eVar2)]** (2) with the value of **[!UICONTROL a.x._techmarketingdemo.appinformation.appstatedetails.screenname]** (3) if **[!UICONTROL a.x._techmarketingdemo.appinformation.appstatedetails.screenname]** (4) **[!UICONTROL is set]** (5).
 
-* You **[!UICONTROL Set event]** (6) **[!UICONTROL Add to Wishlist (Event 3)]** (7) to **[!UICONTROL a.x.commerce.saveForLaters.value(Context)]** (8) if **[!UICONTROL a.x.commerce.saveForLaters.value(Context)]** (9) **[!UICONTROL is set]** (10).
+### Använd bearbetningsregler
 
-![analytics processing rules](assets/analytics-processing-rules.png)
+Så här ser en bearbetningsregel ut när den här informationen används:
+
+* Du **[!UICONTROL Skriv över värde för]** (1) **[!UICONTROL Programskärmens namn (eVar2)]** (2) med värdet av **[!UICONTROL a.x._techmarketingdemo.appinformation.appstatedetails.screenname]** (3) om **[!UICONTROL a.x._techmarketingdemo.appinformation.appstatedetails.screenname]** (4) **[!UICONTROL är inställt]** (5)
+
+* Du **[!UICONTROL Ange händelse]** (6) **[!UICONTROL Lägg till i önskelista (händelse 3)]** (7) till **[!UICONTROL a.x.commerce.saveForLaters.value(Context)]** (8) om **[!UICONTROL a.x.commerce.saveForLaters.value(Context)]** (9) **[!UICONTROL är inställt]** (10)
+
+![regler för analysbearbetning](assets/analytics-processing-rules.png)
 
 >[!IMPORTANT]
 >
 >
->Some of the automatically mapped variables may not be available for use in processing rules.
+>Vissa av de automatiskt mappade variablerna kanske inte är tillgängliga för användning i bearbetningsregler.
 >
 >
->The first time you map to a processing rule, the interface does not show you the context data variables from the XDM object. To fix that select any value, Save, and come back to edit. All XDM variables should now appear.
+>Första gången du mappar till en bearbetningsregel visas inte kontextdatavariablerna från XDM-objektet. Om du vill åtgärda det väljer du ett värde, Spara och återgå till att redigera. Alla XDM-variabler ska nu visas.
 
 
-Additional information about processing rules and context data can be found [here](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/map-contextdata-variables-into-props-and-evars-with-processing-rules.html?lang=en).
+Ytterligare information om bearbetningsregler och kontextdata finns [här](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/map-contextdata-variables-into-props-and-evars-with-processing-rules.html?lang=en).
 
 >[!TIP]
 >
->Unlike previous mobile app implementations, there is no distinction between a page / screen views and other events. Instead you can increment the **[!UICONTROL Page View]** metric by setting the **[!UICONTROL Page Name]** dimension in a processing rule. Since you are collecting the custom `screenName` field in the tutorial, it is highly recommended to map screen name to **[!UICONTROL Page Name]** in a processing rule.
+>Till skillnad från tidigare mobilappsimplementeringar finns det ingen skillnad mellan en sida-/skärmvy och andra händelser. I stället kan du öka stegvis **[!UICONTROL Sidvy]** genom att ställa in **[!UICONTROL Sidnamn]** i en bearbetningsregel. Eftersom du samlar in anpassade `screenName` i självstudiekursen rekommenderar vi att du mappar skärmnamn till **[!UICONTROL Sidnamn]** i en bearbetningsregel.
 
--->
 
 >[!SUCCESS]
 >

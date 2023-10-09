@@ -5,17 +5,17 @@ solution: Data Collection,Target
 feature-set: Target
 feature: A/B Tests
 hide: true
-source-git-commit: 5f178f4bd30f78dff3243b3f5bd2f9d11c308045
+exl-id: 87546baa-2d8a-4cce-b531-bec3782d2e90
+source-git-commit: d7410a19e142d233a6c6597de92f112b961f5ad6
 workflow-type: tm+mt
-source-wordcount: '1769'
+source-wordcount: '1921'
 ht-degree: 0%
 
 ---
 
+# Optimera och personalisera med Adobe Target
 
-# Utför A/B-tester
-
-Lär dig hur du utför A/B-tester i dina mobilappar med Platform Mobile SDK och Adobe Target.
+Lär dig hur du optimerar och personaliserar upplevelserna i dina mobilappar med Platform Mobile SDK och Adobe Target.
 
 Target innehåller allt som ni behöver för att skräddarsy och personalisera kundernas upplevelser. Target hjälper er att maximera intäkterna från era webbplatser och mobilsajter, appar, sociala medier och andra digitala kanaler. Target kan utföra A/B-tester, multivariata tester, rekommendera produkter och innehåll, målinrikta innehåll, anpassa innehåll automatiskt med AI och mycket annat. Fokus i den här lektionen ligger på A/B-testfunktionen i Target.  Se [Översikt över A/B-test](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=en) för mer information.
 
@@ -36,7 +36,7 @@ Innan du kan utföra A/B-tester med Target måste du se till att rätt konfigura
 
 ## Utbildningsmål
 
-I den här lektionen ska du
+I den här lektionen kommer du att:
 
 * Uppdatera ditt datastream för Target-integrering.
 * Uppdatera taggegenskapen med tillägget Journey Optimizer - Decisioning.
@@ -56,7 +56,7 @@ I den här lektionen ska du
 
 ### Uppdatera datastream-konfiguration
 
-### Adobe Target
+#### Adobe Target
 
 Om du vill vara säker på att data som skickas från din mobilapp till Experience Platform Edge Network vidarebefordras till Adobe Target, måste du uppdatera din datastream-konfiguration.
 
@@ -66,6 +66,10 @@ Om du vill vara säker på att data som skickas från din mobilapp till Experien
 
    Du hittar dina egenskaper i målgränssnittet i **[!UICONTROL Administration]** > **[!UICONTROL Egenskaper]**. Välj ![Code](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Code_18_N.svg) för att visa egenskapstoken för den egenskap som du vill använda. Egenskapstoken har ett format som `"at_property": "xxxxxxxx-xxxx-xxxxx-xxxx-xxxxxxxxxxxx"`; du får bara ange värdet `xxxxxxxx-xxxx-xxxxx-xxxx-xxxxxxxxxxxx`.
 
+   Du kan också ange ett ID för målmiljö. Använd miljöer för att ordna era webbplatser och förproduktionsmiljöer för enkel hantering och separat rapportering. I förinställda miljöer ingår produktion, mellanlagring och utveckling. Se [Miljö](https://experienceleague.adobe.com/docs/target/using/administer/environments.html?lang=en) och [Målmiljö-ID](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html?lang=en#target-environment-id) för mer information.
+
+   Du kan också ange ett namnutrymme för ett tredjeparts-ID för mål som stöder profilsynkronisering i ett identitetsnamnområde (till exempel CRM-ID). Se [Namnområde för tredje parts-ID](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html?lang=en#target-third-party-id-namespace) för mer information.
+
 1. Välj **[!UICONTROL Spara]**.
 
    ![Lägg till mål i datastream](assets/edge-datastream-target.png)
@@ -73,7 +77,7 @@ Om du vill vara säker på att data som skickas från din mobilapp till Experien
 
 #### Adobe Journey Optimizer
 
-För att säkerställa att data som skickas från din mobilapp till Edge Network vidarebefordras till Journey Optimizer - Beslutshantering måste du uppdatera Experience Edge-konfigurationen.
+För att säkerställa att data som skickas från din mobilapp till Edge Network vidarebefordras till Journey Optimizer - Beslutshantering måste du uppdatera din datastream-konfiguration.
 
 1. I gränssnittet för datainsamling väljer du **[!UICONTROL Datastreams]** och välj till exempel din datastream **[!DNL Luma Mobile App]**.
 1. Välj ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_MoreSmallList_18_N.svg) for **[!UICONTROL Experience Platform]** och markera ![Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) **[!UICONTROL Redigera]** på snabbmenyn.
@@ -214,6 +218,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** > **[!DNL MobileSDK]** i Xcode Project-navigatorn. Hitta ` func updatePropositionAT(ecid: String, location: String) async` funktion. Lägg till följande kod:
 
    ```swift
+   // set up the XDM dictionary, define decision scope and call update proposition API
    Task {
        let ecid = ["ECID" : ["id" : ecid, "primary" : true] as [String : Any]]
        let identityMap = ["identityMap" : ecid]
@@ -229,7 +234,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
    * ställer in en XDM-ordlista `xdmData`som innehåller ECID för att identifiera den profil som du måste presentera A/B-testet för, och
    * definierar en `decisionScope`, en array med platser där A/B-testet ska presenteras.
 
-   Sedan anropar funktionen två API:er: [`Optimize.clearCachePropositions`](https://support.apple.com/en-ie/guide/mac-help/mchlp1015/mac)  och [`Optimize.updatePropositions`](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/api-reference/#updatepropositions). Dessa funktioner rensar alla cachelagrade offerter och uppdaterar propositionerna för den här profilen.
+   Sedan anropar funktionen två API:er: [`Optimize.clearCachedPropositions`](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/api-reference/#clearpropositions) och [`Optimize.updatePropositions`](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/api-reference/#updatepropositions). Dessa funktioner rensar alla cachelagrade offerter och uppdaterar propositionerna för den här profilen. Ett förslag i det här sammanhanget är upplevelsen (erbjudandet) som väljs från Target-aktiviteten (ditt A/B-test) och som du definierade i [Skapa ett A/B-test](#create-an-ab-test).
 
 1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Views]** > **[!DNL Personalization]** > **[!DNL TargetOffersView]** i Xcode Project-navigatorn. Hitta `func onPropositionsUpdateAT(location: String) async {` och inspektera koden för den här funktionen. Den viktigaste delen av funktionen är  [`Optimize.onPropositionsUpdate`](https://developer.adobe.com/client-sdks/documentation/adobe-journey-optimizer-decisioning/api-reference/#onpropositionsupdate) API-anrop som:
    * hämtar förslagen för den aktuella profilen baserat på beslutsomfånget (den plats du har definierat i A/B-testet),
@@ -258,11 +263,9 @@ Du kan skicka ytterligare Target-parametrar (till exempel mbox, profile, product
 
 ## Validera med appen
 
-1. Öppna appen på en enhet eller i simulatorn.
+1. Återskapa och kör appen i simulatorn eller på en fysisk enhet från Xcode med ![Spela upp](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Play_18_N.svg).
 
 1. Gå till **[!UICONTROL Personalisering]** -fliken.
-
-1. Välj **[!UICONTROL Edge Personalization]**.
 
 1. Bläddra nedåt och se ett av de två erbjudanden som du har definierat i A/B-testet som visas i **[!UICONTROL MÅL]** platta.
 
@@ -273,7 +276,7 @@ Du kan skicka ytterligare Target-parametrar (till exempel mbox, profile, product
 
 Så här validerar du A/B-testet i Assurance:
 
-1. Gå till försäkringsgränssnittet.
+1. Granska [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
 1. Välj **[!UICONTROL Konfigurera]** i vänster rand och välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) nästa **[!UICONTROL Granska och simulera]** under **[!UICONTROL ADOBE JOURNEY OPTIMIZER AVGÖRANDE]**.
 1. Välj **[!UICONTROL Spara]**.
 1. Välj **[!UICONTROL Granska och simulera]** till vänster. Både datastream-konfigurationen valideras och SDK-inställningen i ditt program.

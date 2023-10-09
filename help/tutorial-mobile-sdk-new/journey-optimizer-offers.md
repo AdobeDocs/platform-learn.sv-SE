@@ -5,14 +5,15 @@ solution: Data Collection,Journey Optimizer
 feature-set: Journey Optimizer
 feature: Offers
 hide: true
-source-git-commit: 5f178f4bd30f78dff3243b3f5bd2f9d11c308045
+exl-id: c08a53cb-683e-4487-afab-fd8828c3d830
+source-git-commit: d7410a19e142d233a6c6597de92f112b961f5ad6
 workflow-type: tm+mt
-source-wordcount: '2441'
+source-wordcount: '2618'
 ht-degree: 0%
 
 ---
 
-# Skapa och visa erbjudanden
+# Skapa och visa erbjudanden med Beslutshantering
 
 Lär dig hur du visar erbjudanden från Journey Optimizer Decision Management i dina mobilappar med Experience Platform Mobile SDK.
 
@@ -101,6 +102,27 @@ Så här validerar du inställningarna i Assurance:
 1. Välj **[!UICONTROL Spara]**.
 1. Välj **[!UICONTROL Validera inställningar]** till vänster. Både datastream-konfigurationen och SDK-konfigurationen i ditt program valideras.
    ![Validering av AJO-beslut](assets/ajo-decisioning-validation.png)
+
+
+## Skapa placering
+
+Innan ni kan skapa erbjudanden måste ni definiera hur och var dessa erbjudanden kan placeras i mobilappen. I Beslutshantering definierar du placeringar för detta ändamål och du definierar en placering för den mobila kanal som stöder en JSON-nyttolast:
+
+1. I Journey Optimizer-användargränssnittet väljer du ![Komponenter](https://spectrum.adobe.com/static/icons/workflow_18/Smock_OfferActivities_18_N.svg)  **[!UICONTROL Komponenter]** från **[!UICONTROL BESLUTSHANTERING]** till vänster.
+
+1. Välj **[!UICONTROL Placeringar]** i det övre fältet.
+
+1. Om det inte finns någon placering med namnet **[!UICONTROL Mobile JSON]**,  **[!UICONTROL Mobil]** as **[!UICONTROL Kanaltyp]** och **[!UICONTROL JSON]** as **[!UICONTROL Innehållstyp]** måste du skapa en placering. Annars fortsätter du [Skapa erbjudanden](#create-offers).
+
+Så här skapar du Mobile JSON-placeringen:
+
+1. Välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) Skapa placering.
+
+   1. i **[!UICONTROL Information]** sektion, ange `Mobile JSON` som **[!UICONTROL Namn]**, markera **[!UICONTROL Mobil]** från **[!UICONTROL Kanaltyp]** och **[!UICONTROL JSON]** från **[!UICONTROL Innehållstyp]**.
+   1. Välj **[!UICONTROL Spara]** för att spara placeringen.
+
+   ![Skapa placering](assets/ajo-create-placement.png)
+
 
 
 ## Skapa erbjudanden
@@ -354,7 +376,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 
 ## Validera med appen
 
-1. Öppna appen på en enhet eller i simulatorn.
+1. Återskapa och kör appen i simulatorn eller på en fysisk enhet från Xcode med ![Spela upp](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Play_18_N.svg).
 
 1. Gå till fliken **[!DNL Personalisation]**.
 
@@ -371,7 +393,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 
 Så här validerar du erbjudandeimplementeringen i Assurance:
 
-1. Gå till försäkringsgränssnittet.
+1. Granska [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
 1. Välj **[!UICONTROL Konfigurera]** i vänster rand och välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) nästa **[!UICONTROL Granska och simulera]** under **[!UICONTROL ADOBE JOURNEY OPTIMIZER AVGÖRANDE]**.
 1. Välj **[!UICONTROL Spara]**.
 1. Välj **[!UICONTROL Granska och simulera]** till vänster. Både datastream-konfigurationen valideras och SDK-inställningen i ditt program.

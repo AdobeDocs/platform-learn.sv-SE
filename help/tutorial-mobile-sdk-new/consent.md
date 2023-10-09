@@ -3,9 +3,10 @@ title: Genomför samtycke
 description: Lär dig hur du implementerar samtycke i en mobilapp.
 feature: Mobile SDK,Consent
 hide: true
-source-git-commit: cd1efbfaa335c08cbcc22603fe349b4594cc1056
+exl-id: 83f240ea-ea18-4986-9e89-5110a56167ce
+source-git-commit: d7410a19e142d233a6c6597de92f112b961f5ad6
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '558'
 ht-degree: 0%
 
 ---
@@ -32,9 +33,9 @@ I den här lektionen kommer du att:
 
 Om du följde självstudiekursen från början kanske du kommer ihåg att du har angett standardmedgivandet i tillägget Godkännande till **[!UICONTROL Väntande - Köa händelser som inträffar innan användaren ger sitt medgivande.]**
 
-Om du vill börja samla in data måste du få användarens samtycke. I den här självstudiekursen får du användarens samtycke genom att bara be om det med en varning. I ett verkligt program vill du gärna få information om de effektivaste strategierna för samtycke i din region.
+Om du vill börja samla in data måste du få användarens samtycke. I ett verkligt program vill du gärna få information om de effektivaste strategierna för samtycke i din region. I den här självstudiekursen får du användarens samtycke genom att bara be om det med en varning:
 
-1. Du vill bara fråga användaren en gång. Så du vill kombinera det mobila SDK-medgivandet med de behörigheter som krävs för att spåra med Apple [App Tracking Transparency Framework](https://developer.apple.com/documentation/apptrackingtransparency). I den här appen antar du när användaren godkänner spårning att användaren också samtycker till att samla in händelser.
+1. Du vill bara fråga användaren en gång för godkännande. Så du vill kombinera det mobila SDK-medgivandet med de behörigheter som krävs för att spåra med Apple [App Tracking Transparency Framework](https://developer.apple.com/documentation/apptrackingtransparency). I den här appen antar du när användaren godkänner spårning att användaren också samtycker till att samla in händelser.
 
 1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project-navigatorn.
 
@@ -95,9 +96,7 @@ I exemplet ovan loggar du bara medgivandestatus till konsolen i Xcode. I ett ver
 
 ## Validera med Assurance
 
-1. Granska [Säkerhet](assurance.md) lektion.
-1. Installera programmet.
-1. Starta programmet med den Assurance-genererade URL:en.
+1. Granska [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
 1. Om du har lagt till ovanstående kod korrekt uppmanas du att ge ditt medgivande.
 
    Välj **[!UICONTROL Fortsätt...]** och sedan **[!UICONTROL Tillåt]**.
@@ -107,6 +106,17 @@ I exemplet ovan loggar du bara medgivandestatus till konsolen i Xcode. I ett ver
 
 1. Du borde se en **[!UICONTROL Få svar på innehåll]** -händelse i Assurance-gränssnittet.
    ![validera samtycke](assets/consent-update.png)
+
+
+## Återställ samtycke
+
+Om du vill återställa ditt samtycke:
+
+1. Gå till **[!UICONTROL Inställningar]** i appen.
+
+1. Välj **[!UICONTROL Appinställningar...]** Detta öppnar Luma-appinställningarna i iOS Settings-appen.
+
+1. Växla **[!UICONTROL Tillåt spårning]** av.
 
 
 

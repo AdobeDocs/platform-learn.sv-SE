@@ -3,13 +3,13 @@ title: Konfigurera ett datastream
 description: Lär dig hur du skapar ett datastream i Experience Platform.
 feature: Mobile SDK,Datastreams
 hide: true
-source-git-commit: 5f178f4bd30f78dff3243b3f5bd2f9d11c308045
+exl-id: d8b9df3d-49ee-4578-92c6-0f920a86fe7e
+source-git-commit: d7410a19e142d233a6c6597de92f112b961f5ad6
 workflow-type: tm+mt
-source-wordcount: '617'
+source-wordcount: '459'
 ht-degree: 1%
 
 ---
-
 
 # Skapa ett datastream
 
@@ -57,43 +57,47 @@ Datastreams kan skapas i [!UICONTROL Datainsamling] -gränssnittet med [!UICONTR
 
 När du går igenom (valfritt) [Analyser](analytics.md) och [Experience Platform](platform.md) lektioner i den här självstudiekursen lägger du till tjänster i din datastam för att säkerställa att datastream vidarebefordras till de konfigurerade tjänsterna när Platform Mobile SDK skickar data till Edge Network.
 
+<!--
+
 ### Adobe Analytics
 
-1. Välj **[!UICONTROL Lägg till tjänst]**.
+1. Select **[!UICONTROL Add Service]**.
 
-1. Lägg till **[!UICONTROL Adobe Analytics]** från [!UICONTROL Tjänst] lista,
+1. Add **[!UICONTROL Adobe Analytics]** from the [!UICONTROL Service] list, 
 
-1. Ange namnet på den rapportwebbplats som du vill använda i **[!UICONTROL Report Suite-ID]**.
+1. Enter the name of the report site that you want to use in **[!UICONTROL Report Suite ID]**.
 
-1. Aktivera tjänsten genom att växla **[!UICONTROL Aktiverad]** på.
+1. Enable the service by switching **[!UICONTROL Enabled]** on.
 
-1. Välj **[!UICONTROL Spara]**.
+1. Select **[!UICONTROL Save]**.
 
-   ![Lägg till Adobe Analytics som datastream-tjänst](assets/datastream-service-aa.png)
+   ![Add Adobe Analytics as datastream service](assets/datastream-service-aa.png)
 
 
 ### Adobe Experience Platform
 
-Du kanske också vill aktivera tjänsten Adobe Experience Platform.
+You might also want to enable the Adobe Experience Platform service. 
 
 >[!IMPORTANT]
 >
->Du kan bara aktivera Adobe Experience Platform-tjänsten när du har skapat en händelsedatamängd. Om du inte redan har en händelsedatamängd skapad följer du instruktionerna [här](platform.md).
+>You can only enable the Adobe Experience Platform service when having created an event dataset. If you don't already have an event dataset created, follow the instructions [here](platform.md).
 
-1. Klicka ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Lägg till tjänst]** för att lägga till en annan tjänst.
+1. Click ![Add](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Add Service]** to add another service.
 
-1. Välj **[!UICONTROL Adobe Experience Platform]** från [!UICONTROL Tjänst] lista.
+1. Select **[!UICONTROL Adobe Experience Platform]** from the [!UICONTROL Service] list.
 
-1. Aktivera tjänsten genom att växla **[!UICONTROL Aktiverad]** på.
+1. Enable the service by switching **[!UICONTROL Enabled]** on.
 
-1. Välj **[!UICONTROL Händelsedatauppsättning]** som du skapade som en del av [Skapa en datauppsättning](platform.md#create-a-dataset) instruktioner, till exempel **Luma Mobile App Event-datauppsättning**
+1. Select the **[!UICONTROL Event Dataset]** that you created as part of the [Create a dataset](platform.md#create-a-dataset) instructions, for example **Luma Mobile App Event Dataset**
 
-1. Välj **[!UICONTROL Spara]**.
+1. Select **[!UICONTROL Save]**.
 
-   ![Lägg till Adobe Experience Platform som datastream-tjänst](assets/datastream-service-aep.png)
-1. Den slutliga konfigurationen bör se ut ungefär så här.
+   ![Add Adobe Experience Platform as a datastream service](assets/datastream-service-aep.png)
+1. The final configuration should look something like this.
+   
+   ![datastream settings](assets/datastream-settings.png)
 
-   ![datastream-inställningar](assets/datastream-settings.png)
+-->
 
 
 >[!NOTE]

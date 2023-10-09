@@ -2,9 +2,10 @@
 title: Spåra händelsedata
 description: Lär dig spåra händelsedata i en mobilapp.
 hide: true
-source-git-commit: 5f178f4bd30f78dff3243b3f5bd2f9d11c308045
+exl-id: b926480b-b431-4db8-835c-fa1db6436a93
+source-git-commit: d7410a19e142d233a6c6597de92f112b961f5ad6
 workflow-type: tm+mt
-source-wordcount: '1310'
+source-wordcount: '1390'
 ht-degree: 0%
 
 ---
@@ -67,7 +68,6 @@ För standardfältgrupperna ser processen ut så här:
       "eventType": "commerce.productViews",
       "commerce": [
           "productViews": [
-            "id": sku,
             "value": 1
           ]
       ]
@@ -75,7 +75,6 @@ För standardfältgrupperna ser processen ut så här:
   ```
 
    * `eventType`: Beskriver händelsen som inträffade, använd en [känt värde](https://github.com/adobe/xdm/blob/master/docs/reference/classes/experienceevent.schema.md#xdmeventtype-known-values) om möjligt.
-   * `commerce.productViews.id`: ett strängvärde som representerar SKU:n för produkten
    * `commerce.productViews.value`: händelsens numeriska eller booleska värde. Om det är ett booleskt värde (eller &quot;Räknare&quot; i Adobe Analytics) är värdet alltid 1. Om det är en numerisk händelse eller valutakändelse kan värdet vara > 1.
 
 * Identifiera eventuella ytterligare data som är associerade med händelsen för e-handelsproduktvyn i ditt schema. I det här exemplet inkluderar du **[!UICONTROL productListItems]** som är en standarduppsättning med fält som används för alla e-handelsrelaterade händelser:
@@ -85,25 +84,24 @@ För standardfältgrupperna ser processen ut så här:
 
 * Om du vill lägga till dessa data expanderar du `xdmData` objekt som ska innehålla tilläggsdata:
 
-```swift
-var xdmData: [String: Any] = [
-    "eventType": "commerce.productViews",
-        "commerce": [
-        "productViews": [
-            "id": sku,
-            "value": 1
-        ]
-    ],
-    "productListItems": [
-        [
-            "name":  productName,
-            "SKU": sku,
-            "priceTotal": priceString,
-            "quantity": 1
-        ]
-    ]
-]
-```
+  ```swift
+  var xdmData: [String: Any] = [
+      "eventType": "commerce.productViews",
+          "commerce": [
+          "productViews": [
+              "value": 1
+          ]
+      ],
+      "productListItems": [
+          [
+              "name":  productName,
+              "SKU": sku,
+              "priceTotal": priceString,
+              "quantity": 1
+          ]
+      ]
+  ]
+  ```
 
 * Nu kan du använda den här datastrukturen för att skapa en `ExperienceEvent`:
 
@@ -116,6 +114,8 @@ var xdmData: [String: Any] = [
   ```swift
   Edge.sendEvent(experienceEvent: productViewEvent)
   ```
+
+The [`Edge.sendEvent`](https://developer.adobe.com/client-sdks/documentation/edge-network/api-reference/#sendevent) API är AEP Mobile SDK motsvarande [`MobileCore.trackAction`](https://developer.adobe.com/client-sdks/documentation/mobile-core/api-reference/#trackaction) och [`MobileCore.trackState`](https://developer.adobe.com/client-sdks/documentation/mobile-core/api-reference/#trackstate) API-anrop. Se [Migrera från mobiltillägget Analytics till Adobe Experience Platform Edge Network](https://developer.adobe.com/client-sdks/documentation/adobe-analytics/migrate-to-edge-network/) för mer information.
 
 Du kommer nu att implementera den här koden i ditt Xcode-projekt.
 Du har olika affärsproduktrelaterade åtgärder i din app och du vill skicka händelser baserat på de åtgärder som användaren har utfört:
@@ -135,7 +135,6 @@ Om du vill implementera sändning av e-handelsrelaterade upplevelsehändelser p�
        "eventType": "commerce." + commerceEventType,
        "commerce": [
            commerceEventType: [
-               "id": product.sku,
                "value": 1
            ]
        ],
@@ -328,7 +327,6 @@ Här kan du implementera koden i Xcode-projektet.
       ```swift
       // Send app interaction event
       MobileSDK.shared.sendAppInteractionEvent(actionName: "login")
-      dismiss()
       ```
 
    1. Lägg till följande markerade kod i `onAppear` modifierare:
@@ -340,8 +338,7 @@ Här kan du implementera koden i Xcode-projektet.
 
 ## Validering
 
-1. Granska [installationsanvisningar](assurance.md) och koppla simulatorn eller enheten till Assurance.
-1. Kör programmet, logga in och interagera med en produkt.
+1. Granska [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
 
    1. Flytta Assurance-ikonen åt vänster.
    1. Välj **[!UICONTROL Startsida]** i flikfältet och verifiera att en **[!UICONTROL ECID]**, **[!UICONTROL E-post]** och **[!UICONTROL CRM-ID]** på hemskärmen.
@@ -355,7 +352,8 @@ Här kan du implementera koden i Xcode-projektet.
 
 
 1. I Assurance-gränssnittet letar du efter **[!UICONTROL hitReceived]** händelser från **[!UICONTROL com.adobe.edge.konductor]** leverantör.
-1. Markera händelsen och granska XDM-data i **[!UICONTROL meddelanden]** -objekt.
+1. Markera händelsen och granska XDM-data i **[!UICONTROL meddelanden]** -objekt. Du kan också använda ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) **[!UICONTROL Kopiera Raw-händelse]** och använd en text- eller kodredigerare som du vill klistra in och inspektera händelsen.
+
    ![validering av datainsamling](assets/datacollection-validation.png)
 
 
@@ -374,7 +372,7 @@ Nu bör du ha alla verktyg du behöver för att börja lägga till datainsamling
 
 ## Skicka händelser till Analytics och Platform
 
-Nu när du har samlat in händelserna och skickat dem till Platform Edge Network skickas de till de program och tjänster som är konfigurerade i din [datastream](create-datastream.md). I senare lektioner mappar du dessa data till [Adobe Analytics](analytics.md) och [Adobe Experience Platform](platform.md).
+Nu när du har samlat in händelserna och skickat dem till Platform Edge Network skickas de till de program och tjänster som är konfigurerade i din [datastream](create-datastream.md). I senare lektioner mappar du dessa data till [Adobe Analytics](analytics.md), [Adobe Experience Platform](platform.md) och andra lösningar från Adobe Experience Cloud [Adobe Target](target.md) och Adobe Journey Optimizer.
 
 >[!SUCCESS]
 >
