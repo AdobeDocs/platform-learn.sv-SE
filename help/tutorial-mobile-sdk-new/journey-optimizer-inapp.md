@@ -6,9 +6,9 @@ feature-set: Journey Optimizer
 feature: In App
 hide: true
 exl-id: 6cb4d031-6172-4a84-b717-e3a1f5dc7d5d
-source-git-commit: d7410a19e142d233a6c6597de92f112b961f5ad6
+source-git-commit: 5d34e510ef72190762c29b71359b362ef4be7b22
 workflow-type: tm+mt
-source-wordcount: '1563'
+source-wordcount: '1690'
 ht-degree: 0%
 
 ---
@@ -100,6 +100,27 @@ För att din app ska fungera med Journey Optimizer måste du uppdatera din tagge
 >
 >Om du inte ser `AJO Push Tracking Experience Event Dataset` som ett alternativ, kontakta kundtjänst.
 >
+
+
+## Signering
+
+Det krävs bara att du signerar Luma-appen för [Skapa och skicka push-meddelanden](journey-optimizer-push.md) och [Skapa och skicka meddelanden i appen](journey-optimizer-inapp.md) lektioner i den här självstudien. Dessa lektioner kräver en provisioneringsprofil för Apple som **kräver ett betalt Apple-utvecklarkonto**.
+
+Så här uppdaterar du signeringen för din app:
+
+1. Gå till appen i Xcode.
+1. Välj **[!DNL Luma]** i projektnavigatorn.
+1. Välj **[!DNL Luma]** mål.
+1. Välj **Signering och funktioner** -fliken.
+1. Konfigurera **[!UICONTROL Hantera signering automatiskt]**, **[!UICONTROL Team]** och **[!UICONTROL Paketidentifierare]** eller använd dina specifika Apple-utvecklingskonfigurationer.
+
+   >[!IMPORTANT]
+   >
+   >Se till att du använder en _unik_ källidentifierare och ersätt `com.adobe.luma.tutorial.swiftui` källidentifierare eftersom varje källidentifierare måste vara unik. Vanligtvis använder du ett omvänt DNS-format för paket-ID-strängar, som `com.organization.brand.uniqueidentifier`. I den färdiga versionen av den här självstudiekursen används `com.adobe.luma.tutorial.swiftui`.
+
+
+   ![Xcode-signeringsfunktioner](assets/xcode-signing-capabilities.png){zoomable=&quot;yes&quot;}
+
 
 ### Implementera Journey Optimizer i appen
 
@@ -213,7 +234,7 @@ Du har alla ingredienser på plats för att skicka ett meddelande i appen. Det s
    ```swift
    // Setting parameters and calling function to send in-app message
    Task {
-       AEPService.shared.sendTrackAction(action: "in-app", data: ["showMessage": "true"])
+       MobileSDK.shared.sendTrackAction(action: "in-app", data: ["showMessage": "true"])
    }
    ```
 

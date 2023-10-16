@@ -4,9 +4,9 @@ description: Lär dig hur du implementerar tillägget Assurance i en mobilapp.
 feature: Mobile SDK,Assurance
 hide: true
 exl-id: 49d608e7-e9c4-4bc8-8a8a-5195f8e2ba42
-source-git-commit: d7410a19e142d233a6c6597de92f112b961f5ad6
+source-git-commit: 5d34e510ef72190762c29b71359b362ef4be7b22
 workflow-type: tm+mt
-source-wordcount: '962'
+source-wordcount: '976'
 ht-degree: 0%
 
 ---
@@ -57,22 +57,28 @@ Förutom det allmänna [SDK-installation](install-sdks.md), som du slutförde i 
 
 Mer information finns [här](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/api-reference/){target="_blank"}.
 
-## Signering
+<!-- not initially required
 
-Innan du kör programmet för första gången i Xcode måste du uppdatera signeringen.
+## Signing
 
-1. Öppna projektet i Xcode.
-1. Välj **[!DNL Luma]** i projektnavigatorn.
-1. Välj **[!DNL Luma]** mål.
-1. Välj **Signering och funktioner** -fliken.
-1. Konfigurera **[!UICONTROL Hantera signering automatiskt]**, **[!UICONTROL Team]** och **[!UICONTROL Paketidentifierare]** eller använd dina specifika Apple-utvecklingskonfigurationer.
+Signing the application is only required for the [Create and send push notifications](journey-optimizer-push.md) and the [Create and send in-app messages](journey-optimizer-inapp.md) lessons in this tutorial. These lessons require an Apple provisioning profile which **requires a paid Apple developer account**.
 
+To update the signing for the lessons that require that you sign the application:
+
+1. Open the project in Xcode.
+1. Select **[!DNL Luma]** in the Project navigator.
+1. Select the **[!DNL Luma]** target.
+1. Select the **Signing & Capabilities** tab.
+1. Configure **[!UICONTROL Automatic manage signing]**, **[!UICONTROL Team]**, and **[!UICONTROL Bundle Identifier]**, or use your specific Apple development provisioning details. 
+ 
    >[!IMPORTANT]
    >
-   >Se till att du använder en _unik_ källidentifierare och ersätt `Luma` källidentifierare eftersom varje källidentifierare måste vara unik. Vanligtvis använder du ett omvänt DNS-format för paket-ID-strängar, som `com.organization.brand.uniqueidentifier`. I den färdiga versionen av den här självstudiekursen används `com.adobe.luma.tutorial.swiftui`.
+   >Ensure you use a _unique_ bundle identifier and replace the `com.adobe.luma.tutorial.swiftui` bundle identifier, as each bundle identifier needs to be unique. Typically, you use a reverse-DNS format for bundle ID strings, like `com.organization.brand.uniqueidentifier`. The Finished version of this tutorial, for example, uses `com.adobe.luma.tutorial.swiftui`.
 
 
-   ![Xcode-signeringsfunktioner](assets/xcode-signing-capabilities.png){zoomable=&quot;yes&quot;}
+    ![Xcode signing capabilities](assets/xcode-signing-capabilities.png){zoomable="yes"}
+
+-->
 
 ## Konfigurera en bas-URL
 
@@ -81,9 +87,13 @@ Innan du kör programmet för första gången i Xcode måste du uppdatera signer
 1. Välj **[!DNL Luma]** mål.
 1. Välj **Info** -fliken.
 1. Bläddra nedåt till om du vill lägga till en bas-URL **URL-typer** och väljer **+** -knappen.
-1. Ange **Identifierare** till den paketidentifierare som du konfigurerade i [Signering](#signing) (till exempel `com.adobe.luma.tutorial.swiftui`) och ange en **URL-scheman**, till exempel `lumatutorialswiftui`.
+1. Ange **Identifierare** till valfri källidentifierare och ange en **URL-scheman** efter eget val.
 
    ![försäkrings-URL](assets/assurance-url-type.png)
+
+   >[!IMPORTANT]
+   >
+   >Se till att du använder en _unik_ källidentifierare och ersätt `com.adobe.luma.tutorial.swiftui` källidentifierare eftersom varje källidentifierare måste vara unik. Vanligtvis använder du ett omvänt DNS-format för paket-ID-strängar, som `com.organization.brand.uniqueidentifier`.<br/>Använd på liknande sätt ett unikt URL-schema och ersätt det redan angivna `lumatutorialswiftui` med ditt unika URL-schema.
 
 Mer information om URL-scheman i iOS finns i [Apple dokumentation](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app){target="_blank"}.
 
@@ -92,8 +102,31 @@ Assurance fungerar genom att öppna en URL, antingen via webbläsaren eller QR-k
 
 ## Ansluta till en session
 
-1. Återskapa och kör appen i simulatorn eller på en fysisk enhet från Xcode med ![Spela upp](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Play_18_N.svg).
-1. Välj **[!UICONTROL Säkerhet]** från den vänstra listen i användargränssnittet för datainsamling.
+I Xcode:
+
+1. Bygg eller återskapa och kör appen i simulatorn eller på en fysisk enhet från Xcode med ![Spela upp](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Play_18_N.svg).
+
+1. I **[!UICONTROL Tillåt att&quot;Luma App&quot; använder din plats]** dialogruta, välja **[!UICONTROL Tillåt när appen används]**.
+
+   <img src="assets/geolocation-permissions.png" width="300">
+
+1. I **[!UICONTROL &quot;Luma App&quot; vill skicka meddelanden till dig]** dialogruta, välja **[!UICONTROL Tillåt]**.
+
+   <img src="assets/notification-permissions.png" width="300">
+
+1. Välj **[!UICONTROL Fortsätt...]** så att appen kan spåra din aktivitet.
+
+   <img src="assets/tracking-continue.png" width="300">
+
+1. I **[!UICONTROL Tillåt att&quot;Luma App&quot; spårar din aktivitet över andra företags appar och webbplatser]** dialogruta, välja **[!UICONTROL Tillåt]**.
+
+   <img src="assets/tracking-allow.png" width="300">
+
+
+I webbläsaren:
+
+1. Gå till användargränssnittet för datainsamling.
+1. Välj **[!UICONTROL Säkerhet]** från den vänstra listen.
 1. Välj **[!UICONTROL Skapa session]**.
 1. Välj **[!UICONTROL Starta]**.
 1. Ange en **[!UICONTROL Sessionsnamn]** som `Luma Mobile App Session` och **[!UICONTROL Bas-URL]**, som är det URL-schema som du angav i Xcode, följt av `://` Till exempel: `lumatutorialswiftui://`

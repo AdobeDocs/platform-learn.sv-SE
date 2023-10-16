@@ -3,9 +3,9 @@ title: Använd platser
 description: Lär dig hur du använder platsens geopositioneringstjänst i din mobilapp.
 hide: true
 exl-id: adc2952f-cb01-4e06-9629-49fb95f22ca5
-source-git-commit: d7410a19e142d233a6c6597de92f112b961f5ad6
+source-git-commit: 5d34e510ef72190762c29b71359b362ef4be7b22
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1691'
 ht-degree: 0%
 
 ---
@@ -239,7 +239,10 @@ Så här validerar du inställningarna i Assurance:
 1. Om den inte redan är tillgänglig i den vänstra listen väljer du **[!UICONTROL Konfigurera]** i vänster rand och välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) nästa **[!UICONTROL Händelser]** och **[!UICONTROL Karta och simulera]** under **[!UICONTROL PLATSTJÄNST]**.
 1. Välj **[!UICONTROL Spara]**.
 1. Välj **[!UICONTROL Karta och simulera]** till vänster.
-1. Välj en av POI:erna som definieras i tjänsten Platser och välj sedan i popup-fönstret ![Kugghjul](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Gears_18_N.svg) **[!UICONTROL Simulera anmälningshändelse]**.
+1. Flytta kartan till en plats för en av dina POI:n.
+1. Välj ![Kugghjul](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Gears_18_N.svg) Simulera laddnings-POI.  Din POI identifieras med en cirkel och ett stift.
+1. Välj POI.
+1. Välj ![Kugghjul](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Gears_18_N.svg) **[!UICONTROL Simulera anmälningshändelse]**.
    ![Simulera anmälningshändelse](assets/places-simulate.png)
 1. Välj **[!UICONTROL Händelser]** från vänster spår och du bör se de händelser som du simulerade.
    ![Validering av AJO-beslut](assets/places-events.png)
@@ -258,7 +261,9 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL AppDelegate]** i Xcode Project-navigatorn.
 1. Säkerställ `AEPPlaces` är en del av din lista över importer.
 
-   `import AEPPlaces`
+   ```swift
+   import AEPPlaces
+   ```
 
 1. Säkerställ `Places.self` är en del av den array med tillägg som du registrerar.
 

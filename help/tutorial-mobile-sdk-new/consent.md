@@ -4,9 +4,9 @@ description: Lär dig hur du implementerar samtycke i en mobilapp.
 feature: Mobile SDK,Consent
 hide: true
 exl-id: 83f240ea-ea18-4986-9e89-5110a56167ce
-source-git-commit: d7410a19e142d233a6c6597de92f112b961f5ad6
+source-git-commit: 5d34e510ef72190762c29b71359b362ef4be7b22
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '542'
 ht-degree: 0%
 
 ---
@@ -96,28 +96,10 @@ I exemplet ovan loggar du bara medgivandestatus till konsolen i Xcode. I ett ver
 
 ## Validera med Assurance
 
+1. Ta bort programmet från enheten eller simulatorn eftersom vi vill återställa och initiera spårning och samtycke.
 1. Granska [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
-1. Om du har lagt till ovanstående kod korrekt uppmanas du att ge ditt medgivande.
-
-   Välj **[!UICONTROL Fortsätt...]** och sedan **[!UICONTROL Tillåt]**.
-
-   <img src="./assets/consent-update-1.png" width="300" /> 
-   <img src="./assets/consent-update-2.png" width="300" />
-
-1. Du borde se en **[!UICONTROL Få svar på innehåll]** -händelse i Assurance-gränssnittet.
+1. När du flyttar in appen från **[!UICONTROL Startsida]** skärm till **[!UICONTROL Produkter]** skärm och tillbaka till **[!UICONTROL Startsida]** ska du se en **[!UICONTROL Få svar på innehåll]** -händelse i Assurance-gränssnittet.
    ![validera samtycke](assets/consent-update.png)
-
-
-## Återställ samtycke
-
-Om du vill återställa ditt samtycke:
-
-1. Gå till **[!UICONTROL Inställningar]** i appen.
-
-1. Välj **[!UICONTROL Appinställningar...]** Detta öppnar Luma-appinställningarna i iOS Settings-appen.
-
-1. Växla **[!UICONTROL Tillåt spårning]** av.
-
 
 
 >[!SUCCESS]

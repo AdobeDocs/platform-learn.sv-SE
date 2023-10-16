@@ -3,13 +3,13 @@ title: Hantera WebViews
 description: Lär dig hur du hanterar datainsamling med WebViews i en mobilapp.
 jira: KT-6987
 hide: true
-source-git-commit: a2788110b1c43d24022672bb5ba0f36af66d962b
+exl-id: 0c8818f7-39d3-496e-a835-2d85d50e50d6
+source-git-commit: 5d34e510ef72190762c29b71359b362ef4be7b22
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '490'
 ht-degree: 0%
 
 ---
-
 
 # Hantera WebViews
 
@@ -67,6 +67,7 @@ Du kan läsa mer om `Identity.getUrlVariables` API i [Referenshandbok för API:t
 
 Så här kör du koden:
 
+1. Granska [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
 1. Gå till **[!UICONTROL Inställningar]** i appen
 1. Tryck på **[!DNL View...]** för att visa **[!DNL Terms of Use]**.
 
