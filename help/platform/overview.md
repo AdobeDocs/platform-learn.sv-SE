@@ -1,19 +1,19 @@
 ---
-title: Adobe Experience Platform självstudiekurser
+title: Självstudiekurser om Adobe Experience Platform
 description: Läs om Adobe Experience Platform
 doc-type: overview-page
 mini-toc-levels: 1
 exl-id: 5f84b0b4-b100-45dc-bcac-2dcc127c87f3
-source-git-commit: dcd7219ad6073727f66a8d1f30e67ce98f1b8a73
+source-git-commit: 14ec4ea743d1f323d29f9ab84506355d25c91452
 workflow-type: tm+mt
 source-wordcount: '164'
-ht-degree: 1%
+ht-degree: 6%
 
 ---
 
-# Adobe Experience Platform självstudiekurser
+# Självstudiekurser om Adobe Experience Platform
 
-Adobe Experience Platform är det mest kraftfulla, flexibla och öppna systemet på marknaden för att bygga och hantera kompletta lösningar som ger en bättre kundupplevelse. Med Experience Platform kan organisationer centralisera och standardisera kunddata och innehåll från alla system och tillämpa datavetenskap och maskininlärning för att dramatiskt förbättra utformningen och leveransen av avancerade, personaliserade upplevelser. Använd dessa videoklipp och självstudiekurser för att lära dig Experience Platform.
+Adobe Experience Platform är det mest kraftfulla, flexibla och öppna systemet på marknaden för att bygga och hantera kompletta lösningar som ger en bättre kundupplevelse. Med Experience Platform kan organisationer centralisera och standardisera kunddata och innehåll från alla system och tillämpa datavetenskap och maskininlärning för att dramatiskt förbättra utformningen och leveransen av avancerade, personaliserade upplevelser. Använd dessa videoklipp och självstudiekurser för att lära dig de många komponenterna i Experience Platform.
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -43,7 +43,7 @@ Adobe Experience Platform är det mest kraftfulla, flexibla och öppna systemet 
   </td>
   <td>
     <a href="https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/overview.html">
-      <img alt="miniatyrbild för självstudiekursen"Komma igång för dataarkitekter och datatekniker"" src="assets/thumb_Getting_started.jpg" />
+      <img alt="miniatyrbild för självstudiekursen&quot;Komma igång för dataarkitekter och datatekniker&quot;" src="assets/thumb_Getting_started.jpg" />
     </a>
     <div>
       <a href="https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/overview.html">
@@ -56,7 +56,7 @@ Adobe Experience Platform är det mest kraftfulla, flexibla och öppna systemet 
   </td>
   <td>
     <a href="sources/overview.md">
-      <img alt="miniatyrbild för videon 'Om källkopplingar'" src="assets/thumb_Sources.png" />
+      <img alt="miniatyrbild för videon &apos;Om källkopplingar&apos;" src="assets/thumb_Sources.png" />
     </a>
     <div>
       <a href="sources/overview.md">

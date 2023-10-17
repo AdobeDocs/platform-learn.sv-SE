@@ -3,10 +3,10 @@ title: Självstudiekurser om datainsamling
 description: Instruktionsvideor och självstudiekurser som gör dig till en kraftfull användare av datainsamling
 mini-toc-levels: 0
 exl-id: 2d153ef8-7fba-40da-b34a-cad9b24c902c
-source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
+source-git-commit: 14ec4ea743d1f323d29f9ab84506355d25c91452
 workflow-type: tm+mt
-source-wordcount: '212'
-ht-degree: 8%
+source-wordcount: '241'
+ht-degree: 7%
 
 ---
 
@@ -64,6 +64,19 @@ Datainsamling är nästa generation av funktioner för hantering av webbplatstag
     </div>
     <p>
     <em>Använd taggar för att implementera Platform Mobile SDK</em>
+    <p>
+  </td>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html" target="_blank">
+      <img alt="Migrera mål till Web SDK" src="assets/thumb_targetWebSdk.jpg" />
+    </a>
+    <div>
+      <a href="https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html" target="_blank">
+    <strong>Migrera Adobe Target till Web SDK</strong>
+    </a>
+    </div>
+    <p>
+    <em>Migrera från at.js till Web SDK</em>
     <p>
   </td>
 </tr>
