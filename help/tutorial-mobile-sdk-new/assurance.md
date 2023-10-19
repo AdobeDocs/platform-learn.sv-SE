@@ -4,9 +4,9 @@ description: Lär dig hur du implementerar tillägget Assurance i en mobilapp.
 feature: Mobile SDK,Assurance
 hide: true
 exl-id: 49d608e7-e9c4-4bc8-8a8a-5195f8e2ba42
-source-git-commit: 5d34e510ef72190762c29b71359b362ef4be7b22
+source-git-commit: 68610d961e4825706a5f524652f7ec103c615ecf
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '1002'
 ht-degree: 0%
 
 ---
@@ -105,6 +105,11 @@ Assurance fungerar genom att öppna en URL, antingen via webbläsaren eller QR-k
 I Xcode:
 
 1. Bygg eller återskapa och kör appen i simulatorn eller på en fysisk enhet från Xcode med ![Spela upp](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Play_18_N.svg).
+
+   >[!TIP]
+   >
+   >Om du vill kan du rensa ditt bygge, särskilt när du ser oväntade resultat. Gör detta genom att välja **[!UICONTROL Rensa byggmapp..]** från Xcode **[!UICONTROL Produkt]** -menyn.
+
 
 1. I **[!UICONTROL Tillåt att&quot;Luma App&quot; använder din plats]** dialogruta, välja **[!UICONTROL Tillåt när appen används]**.
 
