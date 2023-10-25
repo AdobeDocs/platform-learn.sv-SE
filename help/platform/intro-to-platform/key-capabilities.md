@@ -1,27 +1,22 @@
 ---
 title: Nyckelfunktioner
-description: I den här videon visas Adobe Experience Platform viktigaste funktioner.
+description: Läs om nyckelfunktionerna i Experience Platform och hur de ger ert företag mervärde.
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
 level: Beginner
+last-substantial-update: 2023-10-24T00:00:00Z
 jira: KT-4332
 thumbnail: 32502.jpg
 exl-id: d46373b9-4a80-4fe0-a072-51ec48585b3f
-source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
+source-git-commit: ca7acd3678b4af4a5b5a040d931a79b7a570fc51
 workflow-type: tm+mt
-source-wordcount: '66'
+source-wordcount: '40'
 ht-degree: 0%
 
 ---
 
 # Viktiga funktioner i Adobe Experience Platform
 
-Läs om huvudfunktionerna i Experience Platform:
-
-1. Skapa användbara, intelligenta kundprofiler i realtid
-1. Förbättra data och få fler insikter med AI/ML-modeller och datafrågor
-1. Nyskapande med öppna och sammansatta komponenter
-1. Förbättra leveransen och personaliseringen av upplevelser i realtid
-1. Få förtroende för styrning, säkerhet och sekretesskontroll
+Läs om nyckelfunktionerna i Experience Platform och hur de ger ert företag mervärde.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32502?learn=on)
 
