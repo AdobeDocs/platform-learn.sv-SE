@@ -10,14 +10,14 @@ level: Beginner
 jira: KT-6242
 thumbnail: 40376.jpg
 exl-id: fab8d1ab-87b4-4ec3-ac9e-4c8b3e3b8c75
-source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
+source-git-commit: 4243da0b3e74d0d07e0a6c624e8173808831adfd
 workflow-type: tm+mt
 source-wordcount: '80'
 ht-degree: 1%
 
 ---
 
-# Affärsvärde för plattform och handlare
+# Affärsvärde för plattform och handel
 
 Den här videon visar att Adobe Experience Platform kan användas tillsammans med Adobe Commerce för att skapa en enda kundvy och på ett intelligent sätt personalisera upplevelser i en digital butik och i olika kanaler.
 
