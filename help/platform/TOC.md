@@ -5,9 +5,9 @@ user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
 auto-video-transcripts: true
-source-git-commit: 3523a5b3af3b3efebaea593e723d8ca2a136986e
+source-git-commit: 85e0c45336044091151a866d8838eae482fde84d
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '1002'
 ht-degree: 8%
 
 ---
@@ -120,6 +120,7 @@ ht-degree: 8%
    + [Konfigurera Marketo-målet](/help/platform/destinations/configure-the-marketo-destination.md)
    + [Konfigurera filbaserad molnlagring eller e-postmarknadsföring](/help/platform/destinations/configuring-file-based-cloud-storage-or-email-marketing-destinations.md)
    + [Konfigurera ett socialt mål](/help/platform/destinations/configure-a-social-destination.md)
+   + [Aktivera via LiveRamp-mål](/help/platform/destinations/liveramp-destinations.md)
    + Adobe Target och anpassad personalisering{#target}
       + [Nästa steg i personaliseringen med Adobe Target](/help/platform/destinations/target/next-hit-personalization.md)
       + [Konfigurera Adobe Target-målet](/help/platform/destinations/target/configure-the-target-destination.md)
