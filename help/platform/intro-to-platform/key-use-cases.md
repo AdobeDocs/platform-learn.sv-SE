@@ -1,12 +1,13 @@
 ---
 title: Viktiga användningsfall
-description: 'Få en översikt över fyra viktiga användningsfall: Experience Platform&mdash, kunddataplattform i realtid, kundreseanalys, leverans och flerkanalsupplevelse samt utveckling av kundupplevelseapplikationer.'
+description: Få en översikt över fem viktiga användningsfall för Experience Platform&mdash;Intelligent reengagement, "Don't Lose" Campaigns, Customer Conversion Optimization, Contextual Recognition och One-Time Value to Lifetime Value.
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
 level: Beginner
+last-substantial-update: 2023-11-01T00:00:00Z
 jira: KT-4337
 thumbnail: 32806.jpg
 exl-id: fcc80ca6-8163-4a4c-b164-4f12f76c03e3
-source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
+source-git-commit: cc38679e0e7f27a10fe2513b4b4986347e501010
 workflow-type: tm+mt
 source-wordcount: '67'
 ht-degree: 0%
@@ -15,7 +16,7 @@ ht-degree: 0%
 
 # Viktiga användningsområden för Adobe Experience Platform
 
-Få en översikt över fyra viktiga användningsfall för Experience Platform - kunddataplattform i realtid, kundreseanalys, leverans och flerkanalsupplevelser samt utveckling av kundupplevelser.
+Få en översikt över de fem viktigaste användningsområdena för Experience Platform - intelligent återanvändning,&quot;Förlora inte&quot;-kampanjer, kundkonverteringsoptimering, sammanhangsbaserad igenkänning och engångsvärde till livstid.
 
 >[!VIDEO](https://video.tv.adobe.com/v/32806?learn=on)
 
