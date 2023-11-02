@@ -11,7 +11,7 @@ doc-type: tutorial
 activity: implement
 thumbnail: 4348-create-merge-policies.jpg
 exl-id: ec862bb2-7aa2-4157-94eb-f5af3a94295f
-source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
+source-git-commit: 915502e54365eedb09b12a92aa3b1af71f6de1f4
 workflow-type: tm+mt
 source-wordcount: '996'
 ht-degree: 0%
@@ -61,7 +61,7 @@ När flera scheman är aktiverade för profilen, [!UICONTROL Unionens schema] sk
 
 Observera att det inte finns något unionsschema för klassen ExperienceEvent. ExperienceEvent-data fastnar fortfarande i profilen eftersom de är tidsseriebaserade, men varje händelse innehåller en tidsstämpel och id och kollisioner är inget problem.
 
-Och om du inte gillar den standardprincipen för sammanslagning? Vad händer om Luma bestämmer att deras CRM-system ska vara källan till sanning när en konflikt uppstår? Därför ska vi skapa en sammanfogningspolicy.
+Och om du inte gillar den standardprincipen för sammanslagning? Tänk om Luma bestämmer att deras lojalitetssystem ska vara källan till sanning när en konflikt uppstår? Därför ska vi skapa en sammanfogningspolicy.
 
 ## Skapa en kopplingsprofil i användargränssnittet
 
