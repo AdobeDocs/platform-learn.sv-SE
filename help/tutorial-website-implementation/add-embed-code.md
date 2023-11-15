@@ -2,9 +2,9 @@
 title: Lägg till inbäddningskoden
 description: Lär dig hur du hämtar taggegenskapens inbäddningskoder och implementerar dem på din webbplats. Den här lektionen är en del av självstudiekursen Implementera Experience Cloud på webbplatser.
 exl-id: a2959553-2d6a-4c94-a7df-f62b720fd230
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 277f5f2c07bb5818e8c5cc129bef1ec93411c90d
 workflow-type: tm+mt
-source-wordcount: '1065'
+source-wordcount: '1056'
 ht-degree: 0%
 
 ---
@@ -17,10 +17,9 @@ I den här lektionen implementerar du den asynkrona inbäddningskoden för tagge
 >
 >Adobe Experience Platform Launch håller på att integreras i Adobe Experience Platform som en serie datainsamlingstekniker. Flera terminologiska förändringar har introducerats i gränssnittet som du bör vara medveten om när du använder det här innehållet:
 >
-> * platforma launchen (klientsidan) är nu **[[!DNL tags]](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv)**
-> * platform launch Server Side is now **[[!DNL event forwarding]](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)**
+> * Platforma launchen (klientsidan) är nu **[[!DNL tags]](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv)**
+> * Platform launch Server Side is now **[[!DNL event forwarding]](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)**
 > * Edge-konfigurationer är nu **[[!DNL datastreams]](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html)**
-
 
 ## Utbildningsmål
 
@@ -28,7 +27,7 @@ När lektionen är klar kan du:
 
 * Hämta inbäddningskoden för taggegenskapen
 * Förstå skillnaden mellan en utvecklings-, mellanlagrings- och produktionsmiljö
-* Lägga till en inbäddningskod för taggar i ett HTML-dokument
+* Lägga till en tagginbäddningskod i ett HTML-dokument
 * Förklara den optimala platsen för taggens inbäddningskod i förhållande till annan kod i `<head>` av ett HTML-dokument
 
 ## Kopiera inbäddningskoden
@@ -61,7 +60,56 @@ Nu kopierar vi inbäddningskoden:
 
 Inbäddningskoden ska implementeras i `<head>` element för alla HTML-sidor som ska dela egenskapen. Du kan ha en eller flera mallfiler som styr `<head>` globalt på hela webbplatsen, vilket gör det enkelt att lägga till taggar.
 
-Hämta om du inte redan gjort det [HTML-exempelsida](https://www.enablementadobe.com/multi/web/basic-sample.html) (högerklicka på den här länken och klicka på Spara länk som) och öppna den i en kodredigerare. [Hakparenteser](https://brackets.io/) är en kostnadsfri redigerare med öppen källkod om du behöver en.
+Om du inte redan har gjort det kopierar du HTML-sidkoden och klistrar in den i en kodredigerare. [Parenteser](https://brackets.io/) är en kostnadsfri redigerare med öppen källkod om du behöver en.
+
++++Exempel på HTML-sidkod
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Tags: Sample HTML Page</title>
+    <!--Preconnect and DNS-Prefetch to improve page load time. REPLACE "techmarketingdemos" WITH YOUR OWN AAM PARTNER ID, TARGET CLIENT CODE, AND ANALYTICS TRACKING SERVER-->
+    <link rel="preconnect" href="//dpm.demdex.net">
+    <link rel="preconnect" href="//fast.techmarketingdemos.demdex.net">
+    <link rel="preconnect" href="//techmarketingdemos.demdex.net">
+    <link rel="preconnect" href="//cm.everesttech.net">
+    <link rel="preconnect" href="//techmarketingdemos.tt.omtrdc.net">
+    <link rel="preconnect" href="//techmarketingdemos.sc.omtrdc.net">
+    <link rel="dns-prefetch" href="//dpm.demdex.net">
+    <link rel="dns-prefetch" href="//fast.techmarketingdemos.demdex.net">
+    <link rel="dns-prefetch" href="//techmarketingdemos.demdex.net">
+    <link rel="dns-prefetch" href="//cm.everesttech.net">
+    <link rel="dns-prefetch" href="//techmarketingdemos.tt.omtrdc.net">
+    <link rel="dns-prefetch" href="//techmarketingdemos.sc.omtrdc.net">
+    <!--/Preconnect and DNS-Prefetch-->
+    <!--Data Layer to enable rich data collection and targeting-->
+    <script>
+    var digitalData = {
+        "page": {
+            "pageInfo" : {
+                "pageName": "Home"
+                }
+            }
+    };
+    </script>
+    <!--/Data Layer-->
+    <!--jQuery or other helper libraries-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <!--/jQuery-->
+    <!--Tags Header Embed Code: REPLACE THE NEXT LINE WITH THE EMBED CODE FROM YOUR OWN DEVELOPMENT ENVIRONMENT-->
+    <script src="//assets.adobedtm.com/launch-EN93497c30fdf0424eb678d5f4ffac66dc.min.js" async></script>
+    <!--/Tags Header Embed Code-->
+</head>
+<body>
+    <h1>Tags: Sample HTML Page</h1>
+    <p>This is a very simple page to demonstrate basic implementation concepts of Tags</p>
+    <p>See <a href="https://docs.adobe.com/content/help/en/experience-cloud/implementing-in-websites-with-launch/index.html">Implementing the Experience Cloud in Websites with Tags</a> for the complete tutorial</p>
+</body>
+</html>
+```
+
++++
 
 Ersätt den befintliga inbäddningskoden på eller runt rad 34 med den i Urklipp och spara sidan. Öppna sidan i en webbläsare. Om du läser in sidan med `file://` måste du lägga till&quot;https:&quot; i början av inbäddningskod-URL:en i kodredigeraren). Raderna 33-36 på exempelsidan kan se ut ungefär så här:
 
@@ -74,7 +122,7 @@ Ersätt den befintliga inbäddningskoden på eller runt rad 34 med den i Urklipp
 Öppna webbläsarens utvecklarverktyg och gå till fliken Nätverk. Nu bör du se ett 404-fel för taggmiljöens URL:
 ![404-fel](images/samplepage-404.png)
 
-Felet 404 förväntas eftersom du ännu inte har byggt ett bibliotek i den här tagg-miljön. Du kommer att göra det i nästa lektion. Om du ser ett meddelande om att det misslyckades i stället för ett 404-fel har du antagligen glömt att lägga till `https://` -protokollet i inbäddningskoden. Du behöver bara ange `https://` -protokollet om du läser in exempelsidan med `file://` -protokoll. Gör den ändringen och läs in sidan igen tills felet 404 visas.
+Felet 404 förväntas eftersom du ännu inte har byggt ett bibliotek i den här tagg-miljön. Du kommer att göra det i nästa lektion. Om du ser ett meddelande om att det misslyckades i stället för ett 404-fel har du antagligen glömt att lägga till `https://` i inbäddningskoden. Du behöver bara ange `https://` -protokollet om du läser in exempelsidan med `file://` -protokoll. Gör den ändringen och läs in sidan igen tills felet 404 visas.
 
 ## Bästa praxis för taggimplementering
 
@@ -90,7 +138,7 @@ Låt oss titta lite närmare på några av de bästa metoderna för taggimplemen
 
 * **HTML5 doctype**: Dokumenttypen HTML5 krävs av Target
 
-* **preconnect och dns-prefetch**: Använd preconnect och dns-prefetch för att förbättra sidans inläsningstid. Se även: [https://w3c.github.io/resource-hints/](https://w3c.github.io/resource-hints/)
+* **preconnect och dns-prefetch**: Använd preconnect och dns-prefetch för att förbättra sidinläsningstiden. Se även: [https://w3c.github.io/resource-hints/](https://w3c.github.io/resource-hints/)
 
 * **fördölja fragment för asynkrona målinsimplementeringar**: Du kommer att lära dig mer om detta i Target-lektionen, men när Target distribueras via asynkrona inbäddningskoder för taggar bör du hårdkoda ett fragment som döljs på sidorna före taggens inbäddningskoder för att hantera innehållsflimret
 
