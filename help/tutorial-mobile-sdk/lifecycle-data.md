@@ -2,9 +2,9 @@
 title: Livscykeldata
 description: Lär dig hur du samlar in livscykeldata i en mobilapp.
 exl-id: 75b2dbaa-2f84-4b95-83f6-2f38a4f1d438
-source-git-commit: b2e1bf08d9fb145ba63263dfa078c96258342708
+source-git-commit: 94ca4a238c241518219fb2e8d73f775836f86d86
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '508'
 ht-degree: 0%
 
 ---
@@ -13,17 +13,21 @@ ht-degree: 0%
 
 Lär dig hur du samlar in livscykeldata i en mobilapp.
 
+>[!INFO]
+>
+> Den här självstudiekursen kommer att ersättas med en ny självstudiekurs om hur du använder en ny exempelapp i slutet av november 2023
+
 Med Adobe Experience Platform Mobile SDK Lifecycle kan du samla in livscykeldata från din mobilapp. Adobe Experience Platform Edge Network-tillägget skickar dessa livscykeldata till Platform Edge Network, där de sedan vidarebefordras till andra program och tjänster enligt din datastream-konfiguration. Läs mer om [Livscykeltillägg](https://developer.adobe.com/client-sdks/documentation/lifecycle-for-edge-network/) i produktdokumentationen.
 
 
 ## Förutsättningar
 
-* Programmet har skapats och körts med SDK:er installerade och konfigurerade.
+* App med SDK:er har installerats och konfigurerats.
 * Assurance SDK importerades.
 
-   ```swift
-   import AEPAssurance
-   ```
+  ```swift
+  import AEPAssurance
+  ```
 
 * Registrerat Assurance-tillägget enligt beskrivningen i [föregående lektion](install-sdks.md).
 
@@ -44,7 +48,7 @@ Fältgruppen Consumer Experience Event som du lade till i [föregående lektion]
 1. Öppna schemat&quot;Luma App&quot; och välj **[!UICONTROL Lägg till]**.
    ![välj lägg till](assets/mobile-lifecycle-add.png)
 1. Skriv&quot;lifecycle&quot; i sökfältet.
-1. Markera kryssrutan bredvid **[!UICONTROL Information om AEP Mobile Lifecycle]**.
+1. Markera kryssrutan intill **[!UICONTROL Information om AEP Mobile Lifecycle]**.
 1. Välj **[!UICONTROL Lägg till fältgrupper]**.
    ![lägg till fältgrupp](assets/mobile-lifecycle-lifecycle-field-group.png)
 1. Välj **[!UICONTROL Spara]**.
@@ -55,7 +59,7 @@ Fältgruppen Consumer Experience Event som du lade till i [föregående lektion]
 
 Nu kan du uppdatera `AppDelegate.swift` för att registrera livscykelhändelser:
 
-1. Om appen återupptas från ett bakgrundsläge när den startas kan iOS ringa upp `applicationWillEnterForeground:` delegeringsmetod. Lägg till `lifecycleStart:`
+1. Om appen återupptas från ett bakgrundsläge när den startas kan iOS ringa `applicationWillEnterForeground:` delegeringsmetod. Lägg till `lifecycleStart:`
 
    ```swift
    MobileCore.lifecycleStart(additionalContextData: nil)
@@ -69,7 +73,7 @@ Nu kan du uppdatera `AppDelegate.swift` för att registrera livscykelhändelser:
 
 >[!NOTE]
 >
->iOS 13 och senare finns i [dokumentation](https://developer.adobe.com/client-sdks/documentation/mobile-core/lifecycle/#register-lifecycle-with-mobile-core-and-add-appropriate-startpause-calls) för något annorlunda kod.
+>IOS 13 och senare finns i [dokumentation](https://developer.adobe.com/client-sdks/documentation/mobile-core/lifecycle/#register-lifecycle-with-mobile-core-and-add-appropriate-startpause-calls) för något annorlunda kod.
 
 ## Validera med Assurance
 

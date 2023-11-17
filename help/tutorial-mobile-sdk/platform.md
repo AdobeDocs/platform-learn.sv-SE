@@ -1,19 +1,23 @@
 ---
 title: Skicka data till Adobe Experience Platform
-description: Lär dig hur du skickar data till Adobe Experience Platform.
+description: Lär dig skicka data till Adobe Experience Platform.
 solution: Data Collection,Experience Platform
 feature: Mobile SDK,Data Ingestion
 exl-id: fdd2c90e-8246-4d75-a6db-df3ef31946c4
-source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
+source-git-commit: 94ca4a238c241518219fb2e8d73f775836f86d86
 workflow-type: tm+mt
-source-wordcount: '844'
+source-wordcount: '862'
 ht-degree: 0%
 
 ---
 
 # Skicka data till Adobe Experience Platform
 
-Lär dig hur du skickar data till Adobe Experience Platform.
+Lär dig skicka data till Adobe Experience Platform.
+
+>[!INFO]
+>
+> Den här självstudiekursen kommer att ersättas med en ny självstudiekurs om hur du använder en ny exempelapp i slutet av november 2023
 
 Den här valfria lektionen gäller alla kunder som har Real-time Customer Data Platform (Real-Time CDP), Journey Optimizer och Customer Journey Analytics. Experience Platform, som är grunden för Experience Cloud-produkterna, är ett öppet system som omvandlar alla era data - Adobe och icke-Adobe - till stabila kundprofiler som uppdateras i realtid och använder AI-baserade insikter för att hjälpa er att leverera rätt upplevelse i alla kanaler.
 
@@ -24,7 +28,7 @@ The [event](events.md), [livscykel](lifecycle-data.md)och [identity](identity.md
 
 Din organisation måste etableras och behörigheter beviljas för Adobe Experience Platform.
 
-Om du inte har åtkomst kan du [hoppa över den här lektionen](install-sdks.md).
+Om du inte har tillgång till [hoppa över den här lektionen](install-sdks.md).
 
 ## Utbildningsmål
 
@@ -62,7 +66,7 @@ Alla data som har inhämtats till Adobe Experience Platform lagras i datasjön s
 
 ## Uppdatera datastream
 
-När du har skapat datauppsättningen ska du se till att [uppdatera din datastream](create-datastream.md) för att lägga till Adobe Experience Platform. Denna uppdatering säkerställer dataflöden till Platform.
+När du har skapat datauppsättningen ska du se till att [uppdatera din datastream](create-datastream.md) för att lägga till Adobe Experience Platform. Den här uppdateringen säkerställer dataflöden till plattformen.
 
 ## Validera data i datauppsättningen
 
@@ -87,7 +91,7 @@ Med Experience Platform Real-Time Customer Profile kan ni skapa en helhetsbild a
 
 1. Öppna ditt schema
 1. Aktivera **[!UICONTROL Profil]**
-1. Välj **[!UICONTROL Data för det här schemat kommer att innehålla en primär identitet i identityMap-fältet.]** i modal
+1. Välj **[!UICONTROL Data för det här schemat kommer att innehålla en primär identitet i identityMap-fältet.]** i modala
 1. **[!UICONTROL Spara]** schemat
 
    ![aktivera schemat för profilen](assets/mobile-platform-profile-schema.png)
@@ -124,7 +128,7 @@ På **[!UICONTROL Händelser]** kan du se de händelser som samlats in från din
 ![profilhändelser](assets/mobile-platform-profile-events.png)
 
 
-Klicka på länken på profildetaljskärmen för att visa identitetsdiagrammet eller navigera till **[!UICONTROL Identiteter]** > **[!UICONTROL Identitetsdiagram]** och söka efter identitetsvärdet. Den här visualiseringen visar alla identiteter som är sammankopplade i en profil och deras ursprung. Här är ett exempel på ett identitetsdiagram som består av data som samlats in från den här självstudiekursen för Mobile SDK (datakälla 2) och [Web SDK, genomgång](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html) (Datakälla 1):
+Klicka på länken på profildetaljskärmen för att visa identitetsdiagrammet eller navigera till **[!UICONTROL Identiteter]** > **[!UICONTROL Identitetsdiagram]** och söka efter identitetsvärdet. Den här visualiseringen visar alla identiteter som är sammankopplade i en profil och deras ursprung. Här är ett exempel på ett identitetsdiagram som består av data som samlats in från den här självstudiekursen för Mobile SDK (datakälla 2) och [Web SDK, genomgång](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html) (datakälla 1):
 
 ![hämta ett identitetsvärde](assets/mobile-platform-profile-identitygraph.png)
 

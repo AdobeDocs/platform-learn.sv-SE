@@ -3,9 +3,9 @@ title: Identitet
 description: Lär dig hur du samlar in identitetsdata i en mobilapp.
 feature: Mobile SDK,Identities
 exl-id: cbcd1708-29e6-4d74-be7a-f75c917ba2fa
-source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
+source-git-commit: 94ca4a238c241518219fb2e8d73f775836f86d86
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '609'
 ht-degree: 1%
 
 ---
@@ -14,13 +14,17 @@ ht-degree: 1%
 
 Lär dig hur du samlar in identitetsdata i en mobilapp.
 
+>[!INFO]
+>
+> Den här självstudiekursen kommer att ersättas med en ny självstudiekurs om hur du använder en ny exempelapp i slutet av november 2023
+
 Adobe Experience Platform identitetstjänst hjälper er att få en bättre bild av era kunder och deras beteenden genom att överbrygga identiteter mellan olika enheter och system, så att ni kan leverera slagkraftiga, personliga digitala upplevelser i realtid. Identitetsfält och namnutrymmen är den kombination som förenar olika datakällor för att skapa en 360-graders kundprofil i realtid.
 
 Läs mer om [Identitetstillägg](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/) och [identitetstjänst](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html?lang=sv) i dokumentationen.
 
 ## Förutsättningar
 
-* Programmet har skapats och körts med SDK:er installerade och konfigurerade.
+* App med SDK:er har installerats och konfigurerats.
 
 ## Utbildningsmål
 
@@ -129,7 +133,7 @@ let logout = UIAlertAction(title: "Logout", style: .destructive, handler: { (act
 1. Du får möjlighet att ange användarnamn och lösenord, båda är valfria och du kan enkelt välja **Logga in**.
 
    ![inloggning för lumatapp](assets/mobile-identity-login-final.png)
-1. Leta i webbgränssnittet för Assurance efter `Edge Identity Update Identities` från `com.adobe.griffon.mobile` leverantör.
+1. Leta i webbgränssnittet för Assurance efter `Edge Identity Update Identities` -händelsen från `com.adobe.griffon.mobile` leverantör.
 1. Markera händelsen och granska data i `ACPExtensionEventData` -objekt. Du bör se de identiteter som du har uppdaterat.
    ![validera identitetsuppdatering](assets/mobile-identity-validate-assurance.png)
 

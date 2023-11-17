@@ -2,9 +2,9 @@
 title: Händelser
 description: Lär dig hur du samlar in händelsedata i en mobilapp.
 exl-id: 4779cf80-c143-437b-8819-1ebc11a26852
-source-git-commit: b2e1bf08d9fb145ba63263dfa078c96258342708
+source-git-commit: 94ca4a238c241518219fb2e8d73f775836f86d86
 workflow-type: tm+mt
-source-wordcount: '937'
+source-wordcount: '955'
 ht-degree: 0%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 0%
 # Händelser
 
 Lär dig spåra händelser i en mobilapp.
+
+>[!INFO]
+>
+> Den här självstudiekursen kommer att ersättas med en ny självstudiekurs om hur du använder en ny exempelapp i slutet av november 2023
 
 Tillägget Edge Network tillhandahåller ett API för att skicka Experience Events till Platform Edge Network. En Experience Event är ett objekt som innehåller data som överensstämmer med XDM ExperienceEvent-schemadefinitionen. Enklare är det att de fångar upp vad andra gör i mobilappen. När data har tagits emot av Platform Edge Network kan de vidarebefordras till program och tjänster som konfigurerats i ditt datastam, som Adobe Analytics och Experience Platform. Läs mer om [Experience Events](https://developer.adobe.com/client-sdks/documentation/getting-started/track-events/) i produktdokumentationen.
 
@@ -60,7 +64,7 @@ Granska följande exempel utan att försöka implementera det i exempelprogramme
 1. Identifiera i ditt schema vilken händelse du försöker samla in, i det här exemplet spårar vi en produktvy.
    ![produktvyschema](assets/mobile-datacollection-prodView-schema.png)
 
-1. Börja skapa objektet:
+1. Börja konstruera objektet:
 
    ```swift
    var xdmData: [String: Any] = [
@@ -73,8 +77,8 @@ Granska följande exempel utan att försöka implementera det i exempelprogramme
    ]
    ```
 
-   * eventType: Beskriver händelsen som inträffade, använd en [känt värde](https://github.com/adobe/xdm/blob/master/docs/reference/classes/experienceevent.schema.md#xdmeventtype-known-values) när det är möjligt.
-   * commerce.productViews.value: Ange händelsens numeriska värde. Om det är ett booleskt värde (eller &quot;Räknare&quot; i Adobe Analytics) är värdet alltid 1. Om det är en numerisk händelse eller valutakändelse kan värdet vara > 1.
+   * eventType: Beskriver händelsen som inträffade, använd en [känt värde](https://github.com/adobe/xdm/blob/master/docs/reference/classes/experienceevent.schema.md#xdmeventtype-known-values) om möjligt.
+   * commerce.productViews.value: Ange det numeriska värdet för händelsen. Om det är ett booleskt värde (eller &quot;Räknare&quot; i Adobe Analytics) är värdet alltid 1. Om det är en numerisk händelse eller valutakändelse kan värdet vara > 1.
 
 1. Identifiera eventuella ytterligare data som är associerade med händelsen i ditt schema. I det här exemplet inkluderar du `productListItems` som är en standarduppsättning med fält som används för e-handelsrelaterade händelser:
    ![schema för produktlisteobjekt](assets/mobile-datacollection-prodListItems-schema.png)
@@ -197,14 +201,14 @@ I exemplen ovan har man förhoppningsvis förklarat tankeprocessen när ett XDM-
            Edge.sendEvent(experienceEvent: experienceEvent)
    ```
 
-1. Upprepa för varje skärm i appen och uppdatera `stateName` allt eftersom.
+1. Upprepa för varje skärm i appen och uppdatera `stateName` allt eftersom du går.
 
 
 
 ### Validering
 
 1. Granska [installationsanvisningar](assurance.md) och koppla simulatorn eller enheten till Assurance.
-1. Utför åtgärden och sök efter `hitReceived` från `com.adobe.edge.konductor` leverantör.
+1. Utför åtgärden och sök efter `hitReceived` -händelsen från `com.adobe.edge.konductor` leverantör.
 1. Markera händelsen och granska XDM-data i `messages` -objekt.
    ![validering av datainsamling](assets/mobile-datacollection-validation.png)
 
@@ -218,16 +222,16 @@ I det här exemplet antar vi att användaren har gjort följande köp:
 * Produkt 2 - vattenflaska.
    * $10.00 x3
    * SKU: 9841
-* Ordersumma: 79,99 USD
-* Unikt order-ID: 298234720
+* Ordersumma: $79,99
+* Unikt ordernummer: 298234720
 * Betalningstyp: Visa kreditkort
-* Unikt transaktions-ID för betalning: 847361
+* Unikt betalningstransaktions-ID: 847361
 
 #### Schema
 
 Här är de relaterade schemafälten som ska användas:
 
-* eventType: &quot;commerce.purchasing&quot;
+* eventType: &quot;commerce.purchase&quot;
 * commerce.purchases
 * commerce.order
 * productsListItems
@@ -313,7 +317,7 @@ Edge.sendEvent(experienceEvent: experienceEvent)
 
 ### Implementera i Luma-appen
 
-Du bör ha alla verktyg du behöver för att börja lägga till datainsamling i Luma-exempelappen. Nedan finns en lista med hypotetiska spårningskrav som du kan följa.
+Du bör ha alla verktyg för att börja lägga till datainsamling i Luma-exempelappen. Nedan finns en lista med hypotetiska spårningskrav som du kan följa.
 
 * Spåra varje skärmvy.
    * Schemafält: screenType, screenName, screenView
@@ -321,12 +325,12 @@ Du bör ha alla verktyg du behöver för att börja lägga till datainsamling i 
    * Schemafält: appInteraction.name, appAction
 * Handelsåtgärder:
    * Produktsida: productViews
-   * Lägg i kundvagnen: productListAdds
-   * Ta bort från kundvagnen: productListRemovals
+   * Lägg till i kundvagnen: productListAdds
+   * Ta bort från kundvagn: productListRemovals
    * Starta utcheckning: utcheckningar
    * Visa kundvagn: productListViews
    * Lägg till i önskelista: saveForLaters
-   * Köp: inköp, beställning
+   * Inköp: inköp, beställning
 
 >[!TIP]
 >
@@ -336,7 +340,7 @@ Du bör ha alla verktyg du behöver för att börja lägga till datainsamling i 
 
 1. Granska [installationsanvisningar](assurance.md) och koppla simulatorn eller enheten till Assurance.
 
-1. Utför åtgärden och sök efter `hitReceived` från `com.adobe.edge.konductor` leverantör.
+1. Utför åtgärden och sök efter `hitReceived` -händelsen från `com.adobe.edge.konductor` leverantör.
 
 1. Markera händelsen och granska XDM-data i `messages` -objekt.
    ![validering av datainsamling](assets/mobile-datacollection-validation.png)

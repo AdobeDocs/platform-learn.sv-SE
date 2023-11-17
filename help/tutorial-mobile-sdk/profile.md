@@ -2,9 +2,9 @@
 title: Profil
 description: Lär dig hur du samlar in profildata i en mobilapp.
 exl-id: 97717611-04d9-45e3-a443-ea220a13b57c
-source-git-commit: b2e1bf08d9fb145ba63263dfa078c96258342708
+source-git-commit: 94ca4a238c241518219fb2e8d73f775836f86d86
 workflow-type: tm+mt
-source-wordcount: '441'
+source-wordcount: '459'
 ht-degree: 1%
 
 ---
@@ -12,6 +12,10 @@ ht-degree: 1%
 # Profil
 
 Lär dig hur du samlar in profildata i en mobilapp.
+
+>[!INFO]
+>
+> Den här självstudiekursen kommer att ersättas med en ny självstudiekurs om hur du använder en ny exempelapp i slutet av november 2023
 
 Du kan använda profiltillägget för att lagra attribut om användaren på klienten. Den här informationen kan användas senare för att målinrikta och personalisera meddelanden i online- eller offlinescenarier, utan att du behöver ansluta till en server för optimala prestanda. Profiltillägget hanterar CSOP (Client-Side Operation Profile), ger ett sätt att reagera på API:er, uppdatera attribut för användarprofiler och delar attribut för användarprofiler med resten av systemet som en genererad händelse.
 
@@ -24,12 +28,12 @@ Profildata används av andra tillägg för att utföra profilrelaterade åtgärd
 
 ## Förutsättningar
 
-* Programmet har skapats och körts med SDK:er installerade och konfigurerade.
+* App med SDK:er har installerats och konfigurerats.
 * Profil-SDK importerades.
 
-   ```swift
-   import AEPUserProfile
-   ```
+  ```swift
+  import AEPUserProfile
+  ```
 
 ## Utbildningsmål
 
@@ -85,7 +89,7 @@ Ytterligare `getUserAttributes` dokumentation finns [här](https://developer.ado
 1. Granska [installationsanvisningar](assurance.md) -avsnitt.
 1. Installera programmet.
 1. Starta appen med den URL som skapas av försäkringen.
-1. Markera kontoikonen och välj sedan Logga in. Obs! du inte har angett några autentiseringsuppgifter.
+1. Markera kontoikonen och välj sedan Logga in. Obs! Du har inga autentiseringsuppgifter.
 1. Stäng inloggningsmenyerna och välj sedan kontoikonen igen. Det här visar skärmen med kontoinformation där `loyaltyLevel` är inställt.
 1. Du borde se en **[!UICONTROL UserProfileUpdate]** händelse i försäkringsgränssnittet med den uppdaterade `profileMap` värde.
    ![validera profil](assets/mobile-profile-validate.png)

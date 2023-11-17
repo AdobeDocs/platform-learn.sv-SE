@@ -1,11 +1,11 @@
 ---
 title: Implementera Adobe Experience Cloud i självstudiekursen om mobilappar
-description: Lär dig hur du implementerar Adobe Experience Cloud mobilappar. I den här självstudiekursen får du hjälp med att implementera Experience Cloud-program i ett exempel på en Swift-app.
+description: Lär dig hur du implementerar Adobe Experience Cloud mobilappar. Den här självstudiekursen vägleder dig genom en implementering av Experience Cloud-program i ett exempel på en Swift-app.
 recommendations: noDisplay,catalog
 exl-id: daff4214-d515-4fad-a224-f7589b685b55
-source-git-commit: 4bccc95ff94e9377b65771268e82b1900c003fc1
+source-git-commit: 94ca4a238c241518219fb2e8d73f775836f86d86
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '661'
 ht-degree: 1%
 
 ---
@@ -13,6 +13,10 @@ ht-degree: 1%
 # Implementera Adobe Experience Cloud i mobilappar, genomgång
 
 Lär dig hur du implementerar Adobe Experience Cloud-program i din mobilapp med Adobe Experience Platform Mobile SDK.
+
+>[!INFO]
+>
+> Den här självstudiekursen kommer att ersättas med en ny självstudiekurs om hur du använder en ny exempelapp i slutet av november 2023
 
 Experience Platform Mobile SDK är en SDK på klientsidan som gör att kunder i Adobe Experience Cloud kan interagera med både Adobe-program och tredjepartstjänster via Adobe Experience Platform Edge Network. Se [Dokumentation för Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) för mer detaljerad information.
 
@@ -23,7 +27,7 @@ Den här självstudiekursen vägleder dig genom implementeringen av Platform Mob
 
 Lektionerna är utformade för iOS och skrivna i Swift, men många av begreppen gäller även för Android™.
 
-När du är klar med den här självstudiekursen kan du:
+När du är klar med självstudiekursen kan du:
 
 * Skapa ett schema med standardfältgrupper och anpassade fältgrupper.
 * Konfigurera en datastream.
@@ -39,7 +43,7 @@ När du är klar med den här självstudiekursen kan du:
    * [Profil](profile.md)
    * [Adobe Experience Platform](platform.md)
    * [Skicka meddelanden med Journey Optimizer](journey-optimizer-push.md)
-* Korrekt skicka Experience Cloud-parametrar till en [webbvy](web-views.md).
+* skicka Experience Cloud-parametrar korrekt till en [webbvy](web-views.md).
 * Validera implementeringen med [Adobe Experience Platform Assurance](assurance.md).
 
 >[!NOTE]
@@ -53,9 +57,9 @@ I den här lektionen antas du ha ett Adobe-ID och de behörigheter som krävs f�
 * I Datainsamling måste du ha:
    * **[!UICONTROL Plattformar]**—behörighetsobjekt **[!UICONTROL Mobil]**
    * **[!UICONTROL Egendomsrättigheter]**—behörighetsobjekt till **[!UICONTROL Utveckla]**, **[!UICONTROL Godkänn]**, **[!UICONTROL Publicera]**, **[!UICONTROL Hantera tillägg]** och **[!UICONTROL Hantera miljöer]**.
-   * **[!UICONTROL Företagsrättigheter]**—behörighetsobjekt till **[!UICONTROL Hantera egenskaper]** och, om du slutför den valfria push-meddelandelektionen, **[!UICONTROL Hantera appkonfigurationer]**
+   * **[!UICONTROL Företagsrättigheter]**—behörighetsobjekt till **[!UICONTROL Hantera egenskaper]** och om du slutför den valfria push-meddelandelektionen, **[!UICONTROL Hantera appkonfigurationer]**
 
-      Mer information om taggbehörigheter finns i [Användarbehörigheter för taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html?lang=en){target="_blank"} i produktdokumentationen.
+     Mer information om taggbehörigheter finns i [Användarbehörigheter för taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html?lang=en){target="_blank"} i produktdokumentationen.
 * I Experience Platform måste du ha:
    * **[!UICONTROL Datamodellering]**—behörighetsobjekt för att hantera och visa scheman.
    * **[!UICONTROL Identity Management]**—behörighetsobjekt för att hantera och visa identitetsnamnutrymmen.
@@ -70,7 +74,7 @@ Alla Experience Cloud-kunder bör ha tillgång till de funktioner som krävs fö
 
 Du måste också känna till [!DNL Swift]. Du behöver inte vara expert för att slutföra lektionerna, men du får ut mer av dem om du enkelt kan läsa och förstå koden.
 
-## Ladda ned Luma-appen
+## Hämta Luma-appen
 
 Det finns två versioner av exempelappen att hämta.
 

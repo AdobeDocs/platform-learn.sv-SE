@@ -1,18 +1,22 @@
 ---
 title: Konfigurera en taggegenskap
-description: Lär dig hur du konfigurerar en taggegenskap i [!UICONTROL Datainsamling] gränssnitt.
+description: Lär dig konfigurera en taggegenskap i [!UICONTROL Datainsamling] gränssnitt.
 feature: Mobile SDK,Tags
 exl-id: 0c4b00cc-34e3-4d08-945e-3fd2bc1b6ccf
-source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
+source-git-commit: 94ca4a238c241518219fb2e8d73f775836f86d86
 workflow-type: tm+mt
-source-wordcount: '715'
+source-wordcount: '733'
 ht-degree: 1%
 
 ---
 
 # Konfigurera en taggegenskap
 
-Lär dig hur du konfigurerar en taggegenskap i [!UICONTROL Datainsamling] gränssnitt.
+Lär dig konfigurera en taggegenskap i [!UICONTROL Datainsamling] gränssnitt.
+
+>[!INFO]
+>
+> Den här självstudiekursen kommer att ersättas med en ny självstudiekurs om hur du använder en ny exempelapp i slutet av november 2023
 
 Taggar i Adobe Experience Platform är nästa generation av tagghanteringsfunktioner från Adobe. Taggar ger kunderna ett enkelt sätt att driftsätta och hantera alla analys-, marknadsförings- och annonstaggar som behövs för att driva relevanta kundupplevelser. Läs mer om [taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv) i produktdokumentationen.
 
@@ -22,7 +26,7 @@ Du måste ha behörighet att skapa en taggegenskap för att kunna slutföra lekt
 
 >[!NOTE]
 >
-> platforma launchen (klientsidan) är nu [taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=en)
+> Platforma launchen (klientsidan) är nu [taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=en)
 
 ## Utbildningsmål
 
@@ -34,7 +38,7 @@ I den här lektionen kommer du att:
 ## Inledande konfiguration
 
 1. Skapa en ny mobil taggegenskap:
-   1. I [Gränssnitt för datainsamling](https://experience.adobe.com/data-collection/){target="_blank"}, markera **[!UICONTROL Taggar]** i den vänstra navigeringen
+   1. I [Gränssnitt för datainsamling](https://experience.adobe.com/data-collection/){target="_blank"}, markera **[!UICONTROL Taggar]** till vänster navigering
    1. Välj **[!UICONTROL Ny egenskap]**
       ![skapa en taggegenskap](assets/mobile-tags-new-property.png).
    1. För **[!UICONTROL Namn]**, ange `Mobile SDK Course`.
@@ -112,7 +116,7 @@ I den här lektionen kommer du att:
 
    Ytterligare information finns [här](https://developer.adobe.com/client-sdks/documentation/getting-started/get-the-sdk/).
 
-   * **[!UICONTROL Miljöfil-ID]**: Detta unika ID pekar på din utvecklingsmiljö, observera detta värde. Produktion/mellanlagring/utveckling har olika ID-värden.
+   * **[!UICONTROL Miljöfil-ID]**: Detta unika ID pekar på din utvecklingsmiljö, observera detta värde. Produktion/mellanlagring/utveckling kommer att ha olika ID-värden.
    * **[!UICONTROL Podfile]**: CocoaPods används för att hantera SDK-versioner och -nedladdningar. Läs mer i [dokumentation](https://cocoapods.org/).
    * **[!UICONTROL Initieringskod]**: Det här kodblocket visar hur du importerar de SDK:er som krävs och registrerar tilläggen vid start.
 

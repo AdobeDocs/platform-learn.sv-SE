@@ -3,9 +3,9 @@ title: Hantera WebViews
 description: Lär dig hur du hanterar datainsamling med WebViews i en mobilapp.
 jira: KT-6987
 exl-id: 9b3c96fa-a1b8-49d2-83fc-ece390b9231c
-source-git-commit: 90f7621536573f60ac6585404b1ac0e49cb08496
+source-git-commit: 94ca4a238c241518219fb2e8d73f775836f86d86
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '415'
 ht-degree: 0%
 
 ---
@@ -14,9 +14,13 @@ ht-degree: 0%
 
 Lär dig hur du hanterar datainsamling med WebViews i en mobilapp.
 
+>[!INFO]
+>
+> Den här självstudiekursen kommer att ersättas med en ny självstudiekurs om hur du använder en ny exempelapp i slutet av november 2023
+
 ## Förutsättningar
 
-* Programmet har skapats och körts med SDK:er installerade och konfigurerade.
+* App med SDK:er har installerats och konfigurerats.
 
 ## Utbildningsmål
 
@@ -35,7 +39,7 @@ JavaScript-tillägget för tjänsten Experience Cloud ID i WebView extraherar EC
 
 ## Implementering
 
-I Luma-exempelappen hittar du `TermsOfService.swift` -filen (i `Intro-Login_SignUp` och leta upp följande kod:
+I Luma-exempelappen hittar du `TermsOfService.swift` (i `Intro-Login_SignUp` och leta upp följande kod:
 
 ```swift
 // Show tou.html
@@ -76,11 +80,11 @@ Du kan läsa mer om `Identity.getUrlVariables` API i [Referenshandbok för API:t
 
 ## Validering
 
-När du har granskat [installationsanvisningar](assurance.md) och koppla simulatorn eller enheten till Assurance, läsa in WebView och leta efter `Edge Identity Response URL Variables` från `com.adobe.griffon.mobile` leverantör.
+När du har granskat [installationsanvisningar](assurance.md) och koppla simulatorn eller enheten till Assurance, läsa in WebView och leta efter `Edge Identity Response URL Variables` -händelsen från `com.adobe.griffon.mobile` leverantör.
 
 Om du vill läsa in WebView går du till startskärmen för Luma-appen och väljer kontoikonen följt av användningsvillkoren i sidfoten.
 
-När du har läst in WebView markerar du händelsen och granskar `urlvariables` i `ACPExtensionEventData` objekt, som bekräftar att följande parametrar finns i URL:en: `adobe_mc`, `mcmid`och `mcorgid`.
+När du har läst in WebView markerar du händelsen och granskar `urlvariables` fältet i `ACPExtensionEventData` objekt, som bekräftar att följande parametrar finns i URL:en: `adobe_mc`, `mcmid`och `mcorgid`.
 
 ![webbvyvalidering](assets/mobile-webview-validation.png)
 

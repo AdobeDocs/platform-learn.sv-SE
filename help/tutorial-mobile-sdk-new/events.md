@@ -3,7 +3,7 @@ title: Spåra händelsedata
 description: Lär dig spåra händelsedata i en mobilapp.
 hide: true
 exl-id: b926480b-b431-4db8-835c-fa1db6436a93
-source-git-commit: d7410a19e142d233a6c6597de92f112b961f5ad6
+source-git-commit: f592fc61ad28d04eba3c1c21a0a66bda6e816a5b
 workflow-type: tm+mt
 source-wordcount: '1390'
 ht-degree: 0%
@@ -367,7 +367,7 @@ Nu bör du ha alla verktyg du behöver för att börja lägga till datainsamling
 
 >[!TIP]
 >
->Granska [färdig app](https://git.corp.adobe.com/rmaur/Luma) för fler exempel.
+>Granska [färdig app](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App) för fler exempel.
 
 
 ## Skicka händelser till Analytics och Platform

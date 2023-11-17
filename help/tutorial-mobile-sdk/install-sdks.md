@@ -2,9 +2,9 @@
 title: Installera Adobe Experience Platform Mobile SDKs
 description: Lär dig hur du implementerar Adobe Experience Platform Mobile SDK i en mobilapp.
 exl-id: 98d6f59e-b8a3-4c63-ae7c-8aa11e948f59
-source-git-commit: b2e1bf08d9fb145ba63263dfa078c96258342708
+source-git-commit: 94ca4a238c241518219fb2e8d73f775836f86d86
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '591'
 ht-degree: 0%
 
 ---
@@ -13,12 +13,16 @@ ht-degree: 0%
 
 Lär dig hur du implementerar Adobe Experience Platform Mobile SDK i en mobilapp.
 
+>[!INFO]
+>
+> Den här självstudiekursen kommer att ersättas med en ny självstudiekurs om hur du använder en ny exempelapp i slutet av november 2023
+
 ## Förutsättningar
 
 * Taggbiblioteket med tilläggen som beskrivs i [föregående lektion](configure-tags.md).
 * Fil-ID för utvecklingsmiljö från [Instruktioner för mobilinstallation](configure-tags.md#generate-sdk-install-instructions).
 * Nedladdad, tom [exempelapp](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App){target="_blank"}.
-* Upplevelse med [XCode](https://developer.apple.com/xcode/){target="_blank"}.
+* Upplev [XCode](https://developer.apple.com/xcode/){target="_blank"}.
 * Grundläggande [kommandorad](https://en.wikipedia.org/wiki/Command-line_interface){target="_blank"} kunskap.
 
 ## Utbildningsmål
@@ -89,7 +93,7 @@ Om du vill uppgradera till den senaste versionen kör du `pod update` -kommando.
 
 >[!NOTE]
 >
-> Du kan behöva ange **Skapa endast aktiv arkitektur** till **Nej**. Det gör du genom att välja Pods-projektet i projektnavigeraren och välja **Inställningar för bygge** och ange **Bygg aktiv arkitektur** till **Nej**.
+> Du kan behöva ange **Bygg endast aktiv arkitektur** till **Nej**. Välj Pods-projektet i projektnavigeraren och välj **Inställningar för bygge** och ange **Bygg aktiv arkitektur** till **Nej**.
 
 Nu kan du skapa och köra projektet.
 
@@ -97,7 +101,7 @@ Nu kan du skapa och köra projektet.
 
 >[!NOTE]
 >
->Lumaprojektet byggdes med Xcode v12.5 på en M1-kretsuppsättning och körs i iOS-simulatorn. Om du använder en annan konfiguration kan du behöva ändra bygginställningarna så att de återspeglar din arkitektur.
+>Lumaprojektet byggdes med Xcode v12.5 på en M1-kretsuppsättning och körs i iOS-simulatorn. Om du använder en annan konfiguration kan du behöva ändra dina bygginställningar så att de återspeglar din arkitektur.
 >
 >Om bygget inte lyckas kan du försöka återställa **Bygg aktiv arkitektur** > **Felsök** återställer till **Ja**.
 >
@@ -105,7 +109,7 @@ Nu kan du skapa och köra projektet.
 
 ## Importera tillägg
 
-I var och en av `.swift` lägger du till följande importer. Börja med att lägga till `AppDelegate.swift`.
+I varje `.swift` lägger du till följande importer. Börja med att lägga till `AppDelegate.swift`.
 
 ```swift
 import AEPUserProfile
@@ -146,6 +150,7 @@ Koden ovan gör följande:
 
 >[!IMPORTANT]
 >I en produktionsapp måste du växla AppId baserat på den aktuella miljön (dev/stag/prod).
+>
 
 Nästa: **[Ställ in försäkring](assurance.md)**
 

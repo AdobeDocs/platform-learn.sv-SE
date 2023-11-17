@@ -3,9 +3,10 @@ title: Implementera Adobe Experience Cloud i självstudiekursen om mobilappar
 description: Lär dig hur du implementerar Adobe Experience Cloud mobilappar. Den här självstudiekursen vägleder dig genom en implementering av Experience Cloud-program i ett exempel på en Swift-app.
 recommendations: noDisplay,catalog
 hide: true
-source-git-commit: a2788110b1c43d24022672bb5ba0f36af66d962b
+exl-id: 378bdf5d-c3ce-4a4c-b188-ab9e8265627f
+source-git-commit: f592fc61ad28d04eba3c1c21a0a66bda6e816a5b
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '874'
 ht-degree: 1%
 
 ---
@@ -86,11 +87,11 @@ Alla Experience Cloud-kunder bör ha tillgång till de funktioner som krävs fö
 
 ## Hämta Luma-appen
 
-Det finns två versioner av exempelappen att hämta. Båda versionerna kan hämtas/klonas från [Github](https://git.corp.adobe.com/rmaur/Luma). Du hittar två mappar:
+Det finns två versioner av exempelappen att hämta. Båda versionerna kan hämtas/klonas från [Github](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App). Du hittar två mappar:
 
 
-1. [Starta](https://git.corp.adobe.com/rmaur/Luma){target="_blank"}: ett projekt utan kod eller med platshållarkod för merparten av SDK-koden för Experience Platform Mobile som du behöver använda för att slutföra övningarna i den här kursen.
-1. [Slutför](https://git.corp.adobe.com/Luma){target="_blank"}: en version med fullständig implementering för referens.
+1. [Starta](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App){target="_blank"}: ett projekt utan kod eller med platshållarkod för merparten av SDK-koden för Experience Platform Mobile som du behöver använda för att slutföra övningarna i den här kursen.
+1. [Slutför](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App){target="_blank"}: en version med fullständig implementering för referens.
 
 >[!NOTE]
 >

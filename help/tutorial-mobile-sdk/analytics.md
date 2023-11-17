@@ -3,9 +3,9 @@ title: Analysmappning
 description: Lär dig hur du samlar in data för Adobe Analytics i en mobilapp.
 solution: Data Collection,Experience Platform,Analytics
 exl-id: 406dc687-643f-4f7b-a8e7-9aad1d0d481d
-source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
+source-git-commit: 94ca4a238c241518219fb2e8d73f775836f86d86
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '609'
 ht-degree: 1%
 
 ---
@@ -13,6 +13,11 @@ ht-degree: 1%
 # Analysmappning
 
 Lär dig hur du mappar mobildata till Adobe Analytics.
+
+>[!INFO]
+>
+> Den här självstudiekursen kommer att ersättas med en ny självstudiekurs om hur du använder en ny exempelapp i slutet av november 2023
+
 
 The [event](events.md) data som du har samlat in och skickat till Platform Edge Network i tidigare lektioner vidarebefordras till de tjänster som konfigurerats i ditt datastam, inklusive Adobe Analytics. Du behöver bara mappa data till rätt variabler i rapportsviten.
 
@@ -107,7 +112,7 @@ s.events = "scAdd:321435"
 
 Använda [Verktyget Assurance QA](assurance.md) du kan bekräfta att du skickar en ExperienceEvent, att XDM-data är korrekta och att Analytics-mappningen sker som förväntat. Exempel:
 
-1. Skicka en productListAdds-händelse.
+1. Skicka händelsen productListAdds.
 
    ```swift
    var xdmData: [String: Any] = [
@@ -200,14 +205,14 @@ Så här ser en bearbetningsregel ut när den här informationen används:
 >Vissa av de automatiskt mappade variablerna kanske inte är tillgängliga för användning i bearbetningsregler.
 >
 >
->Första gången du mappar till en bearbetningsregel visas inte kontextdatavariablerna från XDM-objektet. Om du vill åtgärda det väljer du ett värde och återgår till att redigera. Alla XDM-variabler ska nu visas.
+>Första gången du mappar till en bearbetningsregel visas inte kontextdatavariablerna från XDM-objektet. Om du vill åtgärda det väljer du ett värde, Spara och återgå till att redigera. Alla XDM-variabler ska nu visas.
 
 
 Ytterligare information om bearbetningsregler och kontextdata finns [här](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/map-contextdata-variables-into-props-and-evars-with-processing-rules.html?lang=en).
 
 >[!TIP]
 >
->Till skillnad från tidigare mobilappsimplementeringar finns det ingen skillnad mellan en sida-/skärmvy och andra händelser. I stället kan du öka stegvis **[!UICONTROL Sidvy]** genom att ställa in **[!UICONTROL Sidnamn]** i en bearbetningsregel. Eftersom du samlar in den anpassade `screenName` i självstudiekursen rekommenderar vi att du mappar detta till **[!UICONTROL Sidnamn]** i en bearbetningsregel.
+>Till skillnad från tidigare mobilappsimplementeringar finns det ingen skillnad mellan en sida-/skärmvy och andra händelser. I stället kan du öka stegvis **[!UICONTROL Sidvy]** genom att ställa in **[!UICONTROL Sidnamn]** i en bearbetningsregel. Eftersom du samlar in anpassade `screenName` i självstudiekursen rekommenderar vi att du mappar detta till **[!UICONTROL Sidnamn]** i en bearbetningsregel.
 
 
 Nästa: **[Experience Platform](platform.md)**

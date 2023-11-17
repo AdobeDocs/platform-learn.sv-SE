@@ -1,20 +1,24 @@
 ---
 title: Adobe Journey Optimizer push-meddelanden
-description: Lär dig hur du skapar push-meddelanden till en mobilapp med Platform Mobile SDK och Adobe Journey Optimizer.
+description: Lär dig skapa push-meddelanden till en mobilapp med Platform Mobile SDK och Adobe Journey Optimizer.
 solution: Data Collection,Journey Optimizer
 feature-set: Journey Optimizer
 feature: Push
 exl-id: e8e920d5-fd36-48b7-9185-a34231c0d336
-source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
+source-git-commit: 94ca4a238c241518219fb2e8d73f775836f86d86
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '899'
 ht-degree: 0%
 
 ---
 
 # Adobe Journey Optimizer push-meddelanden
 
-Lär dig hur du skapar push-meddelanden för mobilappar med Platform Mobile SDK och Adobe Journey Optimizer.
+Lär dig skapa push-meddelanden för mobilappar med Platform Mobile SDK och Adobe Journey Optimizer.
+
+>[!INFO]
+>
+> Den här självstudiekursen kommer att ersättas med en ny självstudiekurs om hur du använder en ny exempelapp i slutet av november 2023
 
 Med Journey Optimizer kan ni skapa resor och skicka meddelanden till riktade målgrupper. Innan du skickar push-meddelanden med Journey Optimizer måste du se till att rätt konfigurationer och integreringar finns på plats. Om du vill veta mer om dataflödet för push-meddelanden i Adobe Journey Optimizer kan du läsa [dokumentationen](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configuration-message/push-config/push-gs.html).
 
@@ -25,7 +29,7 @@ Med Journey Optimizer kan ni skapa resor och skicka meddelanden till riktade må
 
 ## Förutsättningar
 
-* Programmet har skapats och körts med SDK:er installerade och konfigurerade.
+* App med SDK:er har installerats och konfigurerats.
 * Åtkomst till Adobe Journey Optimizer och tillräcklig behörighet enligt beskrivningen [här](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configuration-message/push-config/push-configuration.html?lang=en). Du behöver även tillräcklig behörighet för följande Adobe Journey Optimizer-funktioner.
    * Skapa en appyta.
    * Skapa en resa
@@ -53,7 +57,7 @@ Följande steg är inte Adobe Experience Cloud-specifika och har utformats för 
 
 ### Skapa en `.p8` privat nyckel
 
-1. På Apple utvecklarportal går du till **[!UICONTROL Tangenter]**.
+1. Gå till Apple utvecklarportal **[!UICONTROL Tangenter]**.
 1. Skapa en tangent genom att klicka på +-ikonen.
    ![skapa ny nyckel](assets/mobile-push-apple-dev-new-key.png)
 
@@ -67,18 +71,18 @@ Följande steg är inte Adobe Experience Cloud-specifika och har utformats för 
 
 Ytterligare dokumentation kan [hittades här](https://help.apple.com/developer-account/#/devcdfbb56a3).
 
-### Hämta ditt Apple Developer Team ID
+### Hämta ditt Apple-utvecklarteam-ID
 
-1. På Apple utvecklarportal går du till **[!UICONTROL medlemskap]**.
+1. Gå till Apple utvecklarportal **[!UICONTROL medlemskap]**.
 1. Dina **[!UICONTROL Team-ID]** visas tillsammans med din andra medlemskapsinformation. Den används i appytskonfigurationen.
 
 ## Lägg till push-autentiseringsuppgifter för appen i datainsamlingen
 
 1. Från [Gränssnitt för datainsamling](https://experience.adobe.com/data-collection/)väljer du fliken Appytor i den vänstra panelen.
 1. Välj **[!UICONTROL Skapa appytor]** för att skapa en konfiguration.
-   ![appyta - startsida](assets/mobile-push-app-surface.png)
-1. Ange **[!UICONTROL Namn]** för konfigurationen, till exempel `Luma App Tutorial`  .
-1. Välj **[!UICONTROL Apple iOS]**.
+   ![app surface home](assets/mobile-push-app-surface.png)
+1. Ange en **[!UICONTROL Namn]** för konfigurationen, till exempel `Luma App Tutorial`  .
+1. Från Mobile Application Configuration (Konfigurera mobilprogram) väljer du **[!UICONTROL Apple iOS]**.
 1. Ange mobilappens paket-ID i fältet Program-ID (iOS Bundle-ID). Om du följer med i Luma-appen är värdet `com.adobe.luma.tutorial`.
 1. Aktivera **[!UICONTROL Push-autentiseringsuppgifter]** för att lägga till dina inloggningsuppgifter.
 1. Dra och släpp `.p8` **Autentiseringsnyckel för push-meddelanden i Apple** -fil.
@@ -118,7 +122,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 1. Lägg till följande i din lista över importer.
 
    `import AEPMessaging`
-1. Lägg till `Messaging.self` till arrayen med tillägg som du registrerar.
+1. Lägg till `Messaging.self` till den array med tillägg som du registrerar.
 1. Lägg till följande funktion i filen.
 
    ```swift

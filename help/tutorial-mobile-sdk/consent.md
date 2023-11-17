@@ -3,9 +3,9 @@ title: Godkännande
 description: Lär dig hur du implementerar samtycke i en mobilapp.
 feature: Mobile SDK,Consent
 exl-id: 08042569-e16e-4ed9-9b5a-864d8b7f0216
-source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
+source-git-commit: 94ca4a238c241518219fb2e8d73f775836f86d86
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '391'
 ht-degree: 1%
 
 ---
@@ -14,11 +14,15 @@ ht-degree: 1%
 
 Lär dig hur du implementerar samtycke i en mobilapp.
 
-Med mobiltillägget Adobe Experience Platform Consent kan du samla in medgivandeinställningar från din mobilapp när du använder Adobe Experience Platform Mobile SDK och Edge Network-tillägget. Läs mer om [Godkänn tillägg](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/)i dokumentationen.
+>[!INFO]
+>
+> Den här självstudiekursen kommer att ersättas med en ny självstudiekurs om hur du använder en ny exempelapp i slutet av november 2023
+
+Med mobiltillägget Adobe Experience Platform Consent kan du samla in medgivandeinställningar från din mobilapp när du använder Adobe Experience Platform Mobile SDK och Edge Network-tillägget. Läs mer om [Godkänn tillägg](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/), i dokumentationen.
 
 ## Förutsättningar
 
-* Programmet har skapats och körts med SDK:er installerade och konfigurerade.
+* App med SDK:er har installerats och konfigurerats.
 
 ## Utbildningsmål
 
@@ -32,7 +36,7 @@ I den här lektionen kommer du att:
 
 Om du följde självstudiekursen från början kommer du ihåg att ange **[!UICONTROL Standardnivå för samtycke]** till &quot;Väntar&quot;. För att kunna börja samla in data måste du få användarens samtycke. I den här självstudiekursen får du ditt medgivande genom att helt enkelt fråga med en varning i en app i verkligheten som du vill använda för att få ditt medgivande i din region.
 
-1. Du vill bara fråga användaren en gång. Ett enkelt sätt att hantera det är att helt enkelt använda `UserDefaults`.
+1. Du vill bara fråga användaren en gång. Ett enkelt sätt att hantera det är att använda `UserDefaults`.
 1. Navigera till `Home.swift`.
 1. Lägg till följande kod i `viewDidLoad()`.
 
@@ -92,7 +96,7 @@ I exemplet ovan skriver du bara ut medgivandestatus till konsolen. I ett verklig
 1. Starta programmet med den Assurance-genererade URL:en.
 1. Om du har lagt till ovanstående kod korrekt uppmanas du att ge ditt medgivande. Välj **Ja**.
    ![medgivandepopup](assets/mobile-consent-validate.png)
-1. Du borde se en **[!UICONTROL Inställningar för samtycke har uppdaterats]** -händelse i försäkringsgränssnittet.
+1. Du borde se en **[!UICONTROL Inställningar för samtycke har uppdaterats]** -händelse i Assurance-gränssnittet.
    ![validera samtycke](assets/mobile-consent-update.png)
 
 Nästa: **[Samla in livscykeldata](lifecycle-data.md)**

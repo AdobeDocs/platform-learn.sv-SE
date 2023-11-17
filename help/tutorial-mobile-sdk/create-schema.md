@@ -3,9 +3,9 @@ title: Skapa ett XDM-schema
 description: Lär dig hur du skapar ett XDM-schema för mobilappshändelser.
 feature: Mobile SDK,Schemas
 exl-id: c6b0d030-437a-4afe-b7d5-5a7831877983
-source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
+source-git-commit: 94ca4a238c241518219fb2e8d73f775836f86d86
 workflow-type: tm+mt
-source-wordcount: '1297'
+source-wordcount: '1315'
 ht-degree: 0%
 
 ---
@@ -13,6 +13,10 @@ ht-degree: 0%
 # Skapa ett XDM-schema
 
 Lär dig hur du skapar ett XDM-schema för mobilappshändelser.
+
+>[!INFO]
+>
+> Den här självstudiekursen kommer att ersättas med en ny självstudiekurs om hur du använder en ny exempelapp i slutet av november 2023
 
 Standardisering och interoperabilitet är viktiga begrepp bakom Adobe Experience Platform. Experience Data Model (XDM), som drivs av Adobe, är ett försök att standardisera kundupplevelsedata och definiera scheman för kundupplevelsehantering.
 
@@ -85,7 +89,7 @@ I ett verkligt scenario kan schemats designprocess se ut så här:
 
 I utbildningssyfte kommer du att använda färdiga och anpassade fältgrupper.
 
-* **Consumer Experience Event**: Fördefinierad fältgrupp som har många vanliga fält.
+* **Consumer Experience Event**: Fördefinierad fältgrupp med många vanliga fält.
 * **Appinformation**: Anpassad fältgrupp som utformats för att efterlikna koncept i TrackState/TrackAction Analytics.
 
 <!--Later in the tutorial, you can [update the schema](lifecycle-data.md) to include the **[!UICONTROL AEP Mobile Lifecycle Details]** field group.-->
@@ -125,7 +129,7 @@ Börja med att skapa en anpassad datatyp som beskriver de två händelserna:
 * Skärmvy
 * Appinteraktion
 
-1. Välj **[!UICONTROL Datatyper]** tabbtangenten och sedan **[!UICONTROL Skapa datatyp]**.
+1. Välj **[!UICONTROL Datatyper]** tabbtangenten och sedan välja **[!UICONTROL Skapa datatyp]**.
 
    ![Välja datatypmeny](assets/mobile-schema-datatype-create.png)
 
@@ -172,7 +176,7 @@ Börja med att skapa en anpassad datatyp som beskriver de två händelserna:
 
    ![Slutligt tillstånd för datatyp](assets/mobile-schema-datatype-final.png)
 
-## Lägg till en anpassad fältgrupp
+## Lägga till en anpassad fältgrupp
 
 Lägg nu till en anpassad fältgrupp med din anpassade datatyp:
 
