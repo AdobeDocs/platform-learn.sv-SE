@@ -1,31 +1,31 @@
 ---
-title: Implementera Adobe Experience Cloud med Web SDK, genomgång
+title: Självstudiekurs om att implementera Adobe Experience Cloud med webb-SDK
 description: Lär dig hur du implementerar Experience Cloud-program med Adobe Experience Platform Web SDK.
 recommendations: catalog, noDisplay
 exl-id: cf0ff74b-e81e-4f6d-ab7d-6c70e9b52d78
-source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
+source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
 workflow-type: tm+mt
-source-wordcount: '417'
-ht-degree: 1%
+source-wordcount: '416'
+ht-degree: 6%
 
 ---
 
-# Implementera Adobe Experience Cloud med Web SDK, genomgång
+# Självstudiekurs om att implementera Adobe Experience Cloud med webb-SDK
 
 Lär dig hur du implementerar Experience Cloud-program med Adobe Experience Platform Web SDK.
 
 Experience Platform Web SDK är ett JavaScript-bibliotek på klientsidan som gör det möjligt för Adobe Experience Cloud kunder att interagera med både Adobe-program och tredjepartstjänster via Adobe Experience Platform Edge Network. Se [Adobe Experience Platform Web SDK - översikt](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html) för mer detaljerad information.
 
-I den här självstudiekursen får du hjälp med att implementera Platform Web SDK på en exempelwebbplats som heter Luma. The [Luma site](https://luma.enablementadobe.com/content/luma/us/en.html) har ett omfattande datalager och funktioner som gör att du kan skapa en realistisk implementering. När du är klar med den här självstudiekursen kan du börja implementera alla dina marknadsföringslösningar via Platform Web SDK på din egen webbplats.
+I den här självstudiekursen får du hjälp med att implementera Platform Web SDK på en exempelwebbplats som heter Luma. The [Luma-webbplats](https://luma.enablementadobe.com/content/luma/us/en.html) har ett omfattande datalager och funktioner som gör att du kan skapa en realistisk implementering. När du är klar med den här självstudiekursen kan du börja implementera alla dina marknadsföringslösningar via Platform Web SDK på din egen webbplats.
 
 [![Lumas webbplats](assets/old-overview-luma.png)](https://luma.enablementadobe.com/content/luma/us/en.html)
 
 
 ## Utbildningsmål
 
-När du är klar med självstudiekursen kan du:
+När du är klar med självstudiekursen kan du
 
-* Konfigurera datastreams
+* Konfigurera dataströmmar
 
 * Skapa XDM-scheman
 
@@ -61,4 +61,4 @@ Kom så börjar vi!
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

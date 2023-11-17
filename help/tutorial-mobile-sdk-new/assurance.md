@@ -4,9 +4,9 @@ description: Lär dig hur du implementerar tillägget Assurance i en mobilapp.
 feature: Mobile SDK,Assurance
 hide: true
 exl-id: 49d608e7-e9c4-4bc8-8a8a-5195f8e2ba42
-source-git-commit: 68610d961e4825706a5f524652f7ec103c615ecf
+source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '985'
 ht-degree: 0%
 
 ---
@@ -53,7 +53,7 @@ Förutom det allmänna [SDK-installation](install-sdks.md), som du slutförde i 
    }
    ```
 
-   Den här koden startar en säkringssession när appen finns i bakgrunden och öppnas via en djuplänk.
+   Den här koden startar en säkringssession när appen finns i bakgrunden och öppnas med en djuplänk.
 
 Mer information finns [här](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/api-reference/){target="_blank"}.
 
@@ -141,7 +141,7 @@ I webbläsaren:
 
    Om du använder en fysisk enhet:
 
-   * Välj **[!UICONTROL Skanna QR-kod]**. Använd kameran på din fysiska enhet för att skanna QR-koden och tryck på länken för att öppna appen.
+   * Välj **[!UICONTROL Skanna QR-kod]**. Om du vill öppna appen använder du kameran på den fysiska enheten för att skanna QR-koden och trycka på länken.
 
      ![qa-kod för försäkring](assets/assurance-qr-code.png)
 
@@ -171,7 +171,7 @@ I webbläsaren:
 
          ![säkringshändelser](assets/assurance-events.png)
 
-Om du stöter på några problem kan du läsa [teknisk](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/){target="_blank"} and [general documentation](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html){target="_blank"}.
+Om du stöter på några problem kan du gå igenom [teknisk](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/){target="_blank"} and [general documentation](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html){target="_blank"}.
 
 
 ## Verifiera tillägg
@@ -186,16 +186,16 @@ Så här kontrollerar du om ditt program använder de senaste tilläggen:
 
    ![Konfigurera tilläggsversioner](assets/assurance-configure-extension-versions.png)
 
-1. Välj ![123](https://spectrum.adobe.com/static/icons/workflow_18/Smock_123_18_N.svg) **[!UICONTROL Tilläggsversioner]**. Du får en översikt över de senaste tillgängliga tilläggen och de tillägg som används i din version av programmet.
+1. Välj ![123](https://spectrum.adobe.com/static/icons/workflow_18/Smock_123_18_N.svg) **[!UICONTROL Tilläggsversioner]** om du vill se en översikt över de senaste tillgängliga tilläggen och de tillägg som används i din version av programmet.
 
    ![Tilläggsversioner](assets/assurance-extension-versions.png)
 
-1. Så här uppdaterar du tilläggsversioner (till exempel **[!UICONTROL Meddelanden]** och **[!UICONTROL Optimera]**), i Xcode, för de specifika tillägg som behöver uppgraderas väljer du paketet (tillägget) från **[!UICONTROL Paketberoenden]** (till exempel **[!UICONTROL AEPMessaging]**) och på snabbmenyn väljer **[!UICONTROL Uppdateringspaket]**. Xcode uppdaterar paketberoendena.
+1. Så här uppdaterar du tilläggsversioner (till exempel **[!UICONTROL Meddelanden]** och **[!UICONTROL Optimera]**) väljer du paketet (tillägg) från **[!UICONTROL Paketberoenden]** (till exempel **[!UICONTROL AEPMessaging]**) och på snabbmenyn väljer **[!UICONTROL Uppdateringspaket]**. Xcode uppdaterar paketberoendena.
 
 
 >[!NOTE]
 >
->När du har uppdaterat dina tillägg (paket) i Xcode måste du stänga och ta bort den aktuella sessionen och upprepa alla steg från [Ansluta till en session](#connecting-to-a-session) och [Verifiera tillägg](#verify-extensions) för att säkerställa att Assurance rapporterar rätt tillägg i en ny Assurance-session.
+>När du har uppdaterat dina tillägg (paket) i Xcode stänger du och tar bort den aktuella sessionen och upprepar alla steg från [Ansluta till en session](#connecting-to-a-session) och [Verifiera tillägg](#verify-extensions) för att säkerställa att Assurance rapporterar rätt tillägg i en ny Assurance-session.
 
 
 
@@ -203,7 +203,9 @@ Så här kontrollerar du om ditt program använder de senaste tilläggen:
 
 >[!SUCCESS]
 >
->Du har nu konfigurerat din app att använda Assurance för resten av självstudiekursen.<br/>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
+>Du har nu konfigurerat din app att använda Assurance för resten av självstudiekursen.
+>
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
 
 
 Nästa: **[Implementera medgivande](consent.md)**

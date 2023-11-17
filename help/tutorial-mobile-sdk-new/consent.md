@@ -4,9 +4,9 @@ description: Lär dig hur du implementerar samtycke i en mobilapp.
 feature: Mobile SDK,Consent
 hide: true
 exl-id: 83f240ea-ea18-4986-9e89-5110a56167ce
-source-git-commit: 5d34e510ef72190762c29b71359b362ef4be7b22
+source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '539'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Lär dig hur du implementerar samtycke i en mobilapp.
 
-Med mobiltillägget Adobe Experience Platform Consent kan du samla in medgivandeinställningar från din mobilapp när du använder Adobe Experience Platform Mobile SDK och Edge Network-tillägget. Läs mer om [Godkänn tillägg](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/), i dokumentationen.
+Med mobiltillägget Adobe Experience Platform Consent kan du samla in medgivandeinställningar från din mobilapp när du använder Adobe Experience Platform Mobile SDK och Edge Network-tillägget. Läs mer om [Godkänn tillägg](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/) i dokumentationen.
 
 ## Förutsättningar
 
@@ -35,7 +35,7 @@ Om du följde självstudiekursen från början kanske du kommer ihåg att du har
 
 Om du vill börja samla in data måste du få användarens samtycke. I ett verkligt program vill du gärna få information om de effektivaste strategierna för samtycke i din region. I den här självstudiekursen får du användarens samtycke genom att bara be om det med en varning:
 
-1. Du vill bara fråga användaren en gång för godkännande. Så du vill kombinera det mobila SDK-medgivandet med de behörigheter som krävs för att spåra med Apple [App Tracking Transparency Framework](https://developer.apple.com/documentation/apptrackingtransparency). I den här appen antar du när användaren godkänner spårning att användaren också samtycker till att samla in händelser.
+1. Du vill bara fråga användaren en gång för godkännande. Du kan göra detta genom att kombinera Mobile SDK-medgivandet med den behörighet som krävs för att spåra med Apple [App Tracking Transparency Framework](https://developer.apple.com/documentation/apptrackingtransparency). I den här appen antar du att när användaren godkänner spårning godkänner de att samla in händelser.
 
 1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project-navigatorn.
 
@@ -96,14 +96,16 @@ I exemplet ovan loggar du bara medgivandestatus till konsolen i Xcode. I ett ver
 
 ## Validera med Assurance
 
-1. Ta bort programmet från enheten eller simulatorn eftersom vi vill återställa och initiera spårning och samtycke.
-1. Granska [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
+1. Ta bort programmet från enheten eller simulatorn för att återställa och initiera spårning och samtycke.
+1. Om du vill ansluta simulatorn eller enheten till Assurance går du igenom [installationsanvisningar](assurance.md#connecting-to-a-session) -avsnitt.
 1. När du flyttar in appen från **[!UICONTROL Startsida]** skärm till **[!UICONTROL Produkter]** skärm och tillbaka till **[!UICONTROL Startsida]** ska du se en **[!UICONTROL Få svar på innehåll]** -händelse i Assurance-gränssnittet.
    ![validera samtycke](assets/consent-update.png)
 
 
 >[!SUCCESS]
 >
->Du har nu aktiverat appen så att användaren vid den första starten efter installationen (eller ominstallationen) kan godkänna med hjälp av Adobe Experience Platform Mobile SDK.<br/>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
+>Du har nu aktiverat appen så att användaren vid den första starten efter installationen (eller ominstallationen) kan godkänna med hjälp av Adobe Experience Platform Mobile SDK.
+>
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
 
 Nästa: **[Samla in livscykeldata](lifecycle-data.md)**

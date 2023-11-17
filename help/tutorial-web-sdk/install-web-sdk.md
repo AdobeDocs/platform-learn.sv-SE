@@ -1,11 +1,11 @@
 ---
 title: Installera och konfigurera taggtillägget Adobe Experience Platform Web SDK
-description: Lär dig hur du installerar och konfigurerar plattformens SDK-taggtillägg i gränssnittet för datainsamling. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
+description: Lär dig hur du installerar och konfigurerar plattformens SDK-taggtillägg i gränssnittet för datainsamling. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK
 exl-id: f30a44bb-99d7-476e-873a-b7802a0fe6aa
-source-git-commit: cf0193e3aae4d6536c868f078f4773ee14e90408
+source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
 workflow-type: tm+mt
-source-wordcount: '621'
+source-wordcount: '618'
 ht-degree: 0%
 
 ---
@@ -39,8 +39,8 @@ Först måste du ha en taggegenskap. En egenskap är en behållare för alla Jav
 
 Skapa en ny taggegenskap för självstudiekursen:
 
-1. Öppna [Gränssnitt för datainsamling](https://launch.adobe.com/){target=&quot;_blank&quot;}
-1. Välj **[!UICONTROL Taggar]** i den vänstra navigeringen
+1. Öppna [Gränssnitt för datainsamling](https://launch.adobe.com/){target="_blank"}
+1. Välj **[!UICONTROL Taggar]** till vänster navigering
 1. Välj **[!UICONTROL Ny egenskap]** knapp
    ![Lägg till en ny egenskap](assets/websdk-property-addNewProperty.png)
 1. Som **[!UICONTROL Namn]**, ange `Web SDK Course` (lägg till ditt namn i slutet om flera personer från ditt företag använder den här självstudiekursen)
@@ -77,7 +77,7 @@ Nu när du har installerat Platform Web SDK och kopplat det till datastream är 
 
 >[!NOTE]
 >
->Under den här självstudiekursen konfigurerar du bara en datastream och associerar den med alla taggmiljöer (utveckling, scen och produktion). När du implementerar Platform Web SDK på din egen webbplats bör du konfigurera ett separat datastam för varje miljö och mappa dem till dina taggmiljöer med **[!UICONTROL Indatametod]** > **[!UICONTROL Ange värden]**
+>Under den här självstudiekursen konfigurerar du bara en datastream och associerar den med alla taggmiljöer (utveckling, scen och produktion). När du implementerar Platform Web SDK på din egen webbplats bör du konfigurera ett separat datastam för varje miljö och mappa dem till dina taggmiljöer med hjälp av **[!UICONTROL Indatametod]** > **[!UICONTROL Ange värden]**
 >
 >![Val av datastam](assets/extension-luma-web-sdk-datastream-extension-enterValues.png)
 
@@ -93,4 +93,4 @@ Mer information om varje avsnitt av tillägget finns i [Konfigurera Adobe Experi
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

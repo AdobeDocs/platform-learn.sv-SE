@@ -1,11 +1,11 @@
 ---
 title: Konfigurera en egenskap för vidarebefordring av händelser
-description: Lär dig hur du använder händelsevidarebefordringsegenskap med Experience Platform Web SDK-data. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
+description: Lär dig hur du använder händelsevidarebefordringsegenskap med Experience Platform Web SDK-data. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Tags,Event Forwarding
 exl-id: 5a306609-2c63-42c1-8beb-efa412b8efe4
-source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
+source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
 workflow-type: tm+mt
-source-wordcount: '1887'
+source-wordcount: '1886'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ När du är klar med de tidigare lektionerna i den här självstudiekursen bör 
 
 I slutet av lektionen kan du:
 
-* Skapa en egenskap för vidarebefordran av händelser
+* Skapa en egenskap för vidarebefordring av händelser
 * Länka en händelsevidarebefordringsegenskap till ett Platform Web SDK-datalager
 * Förstå skillnaderna mellan taggegenskapens dataelement och regler och händelsevidarebefordringens egenskapselement och regler
 * Skapa ett dataelement för vidarebefordran av händelser
@@ -44,10 +44,10 @@ I slutet av lektionen kan du:
 
 * En programlicens som innehåller vidarebefordran av händelser. Vidarebefordran av händelser är en betalfunktion i datainsamling. Kontakta kontoteamet på Adobe för mer information.
 * Vidarebefordran av händelser är aktiverat i din Experience Cloud-organisation.
-* Användarbehörighet för vidarebefordran av händelser. (tum [Admin Console](https://adminconsole.adobe.com/), under Adobe Experience Platform Launch-produkten, behörighetsobjekt för[!UICONTROL Plattformar] > [!UICONTROL Edge] och alla [!UICONTROL Egendomsrättigheter]). När du fått det bör du se [!UICONTROL Vidarebefordran av händelser] i den vänstra navigeringen i gränssnittet för datainsamling:
+* Användarbehörighet för vidarebefordran av händelser. (tum [Admin Console](https://adminconsole.adobe.com/), under Adobe Experience Platform Launch-produkten, behörigheter för[!UICONTROL Plattformar] > [!UICONTROL Kant] och alla [!UICONTROL Egendomsrättigheter]). När du fått det bör du se [!UICONTROL Vidarebefordran av händelser] i den vänstra navigeringen i gränssnittet för datainsamling:
   ![Egenskaper för vidarebefordran av händelser](assets/event-forwarding-menu.png)
 
-* Adobe Experience Platform Web eller Mobile SDK har konfigurerats för att skicka data till Edge Network. Du måste ha slutfört följande lektioner i den här självstudiekursen:
+* Adobe Experience Platform Web eller Mobile SDK har konfigurerats för att skicka data till Edge Network. Du måste ha gjort följande i den här självstudiekursen:
 
    * Inledande konfiguration
 
@@ -56,15 +56,15 @@ I slutet av lektionen kan du:
       * [Konfigurera ett identitetsnamnutrymme](configure-identities.md)
       * [Konfigurera ett datastream](configure-datastream.md)
 
-   * Tagginställningar
+   * Märkordskonfiguration
 
-      * [Installera Web SDK-tillägg](install-web-sdk.md)
+      * [Installera SDK-tillägg för webben](install-web-sdk.md)
       * [Skapa dataelement](create-data-elements.md)
       * [Skapa en taggregel](create-tag-rule.md)
       * [Validera med Adobe Experience Platform debugger](validate-with-debugger.md)
 
 
-## Skapa en egenskap för vidarebefordran av händelser
+## Skapa en egenskap för vidarebefordring av händelser
 
 Börja med att skapa en händelsevidarebefordringsegenskap:
 
@@ -100,7 +100,7 @@ Så här konfigurerar du Target i datastream:
 
    >[!TIP]
    >
-   >    Om du vill skicka data till en händelsevidarebefordringsmiljö utanför Adobe-organisationen väljer du **[!UICONTROL Ange ID manuellt]** och klistra in ett ID. ID:t anges när du skapar en händelsevidarebefordringsegenskap.
+   >    Om du vill skicka data till en händelsevidarebefordringsmiljö utanför Adobe-organisationen väljer du **[!UICONTROL Ange ID:n manuellt]** och klistra in ett ID. ID:t anges när du skapar en händelsevidarebefordringsegenskap.
 
 1. Välj **[!UICONTROL Spara]**.
 
@@ -118,7 +118,7 @@ I den här övningen får du lära dig hur du ställer in ett dataelement för v
 
 >[!IMPORTANT]
 >
->Du måste redan ha skapat och mappat dataelement till ett XDM-objekt, samt konfigurerade taggregler och byggt dessa ändringar i ett bibliotek till en taggmiljö för att kunna fortsätta. Om du inte har det, se **Tagginställningar** steg i [krav](setup-event-forwarding.md#prerequisites) -avsnitt. Dessa steg säkerställer att data skickas till Platform Edge Network, och därifrån kan du konfigurera en händelsevidarebefordringsegenskap för att vidarebefordra data till en icke-Adobe-lösning.
+>Du måste redan ha skapat och mappat dataelement till ett XDM-objekt, samt konfigurerade taggregler och byggt dessa ändringar i ett bibliotek till en taggmiljö för att kunna fortsätta. Om du inte har det, se **Märkordskonfiguration** steg i [krav](setup-event-forwarding.md#prerequisites) -avsnitt. Dessa steg säkerställer att data skickas till Platform Edge Network, och därifrån kan du konfigurera en händelsevidarebefordringsegenskap för att vidarebefordra data till en icke-Adobe-lösning.
 
 
 ### Skapa ett dataelement för vidarebefordran av händelser
@@ -190,7 +190,7 @@ I den här övningen vidarebefordrar du höjden på webbläsarens visningsruta o
 
 Om du vill skicka data till tredjepartsplatser måste du först installera [!UICONTROL Adobe Cloud Connector] tillägg.
 
-1. Välj **[!UICONTROL Tillägg]** till vänster
+1. Välj **[!UICONTROL Tillägg]** till vänster navigering
 
 1. Välj **[!UICONTROL Katalog]** tab
 
@@ -217,7 +217,7 @@ Det finns några huvudsakliga skillnader mellan att konfigurera regler i en tagg
 
 * **Regelåtgärdssekvens**:
 
-   * Avsnittet Åtgärder i en regel för vidarebefordran av händelser körs alltid sekventiellt. Kontrollera att åtgärdsordningen är korrekt när du sparar en regel. Den här körningssekvensen kan inte köras asynkront på samma sätt som med taggar.
+   * Avsnittet Åtgärder i en regel för vidarebefordran av händelser körs alltid sekventiellt. Kontrollera att åtgärdsordningen är korrekt när du sparar en regel. Den här körningssekvensen kan inte köras asynkront på samma sätt som den kan med taggar.
 
 <!--
   * **Tags**: Rule actions can easily be reordered using drag-and-drop functionality.
@@ -266,7 +266,7 @@ Om du vill konfigurera en regel för att vidarebefordra data till din webkrok m�
 
    ![Lägg till frågeparameter](assets/event-forwarding-rule-query-parameter.png)
 
-1. Regeln ska se ut som nedan
+1. Regeln ska se ut så här nedan
 
 1. Välj **[!UICONTROL Spara]**
 
@@ -290,7 +290,7 @@ Nu kan du validera din egenskap för vidarebefordran av händelser med hjälp av
 
 1. Innan du läser in sidan igen öppnar du felsökaren i Experience Platform **[!UICONTROL Loggar]** från vänster navigering
 
-1. Välj **[!UICONTROL Edge]** tabbtangenten och sedan **[!UICONTROL Anslut]** för att visa förfrågningar om plattforms-Edge-nätverk
+1. Välj **[!UICONTROL Kant]** tabbtangenten och sedan välja **[!UICONTROL Anslut]** för att visa förfrågningar om plattforms-Edge-nätverk
 
    ![Nätverkssession för klientvidarebefordrare](assets/event-forwarding-edge-session.png)
 
@@ -321,4 +321,4 @@ Grattis! Du har konfigurerat vidarebefordran av händelser!
 
 >[!NOTE]
 >
-Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

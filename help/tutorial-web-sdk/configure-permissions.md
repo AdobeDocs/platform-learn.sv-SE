@@ -1,23 +1,23 @@
 ---
-title: Konfigurera behörigheter för självstudiekursen
-description: Lär dig hur du begär åtkomst till Experience Platform Web SDK och konfigurerar behörigheten som krävs för att slutföra självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
+title: Konfigurera behörigheter för självstudien
+description: Lär dig hur du begär åtkomst till Experience Platform Web SDK och konfigurerar behörighet för att slutföra självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Tags,Access Control
 exl-id: d7c4f2c3-cf3c-4587-88f8-82113d250084
-source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
+source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '414'
 ht-degree: 3%
 
 ---
 
-# Konfigurera behörigheter för självstudiekursen
+# Konfigurera behörigheter för självstudien
 
 Lär dig hur du begär åtkomst till Experience Platform Web SDK och konfigurerar behörighet för att slutföra den här självstudiekursen. Om du vill implementera Platform Web SDK med hjälp av taggar i gränssnittet för datainsamling måste du ha rätt användarbehörigheter konfigurerade i [Admin Console](https://adminconsole.adobe.com).
 
 ## Datainsamling
 
 * Har behörighet att **[!UICONTROL Utveckla]**, **[!UICONTROL Redigera]**, **[!UICONTROL Godkänn]**, **[!UICONTROL Publicera]**, **[!UICONTROL Hantera tillägg]**, **[!UICONTROL Hantera miljöer]** och **[!UICONTROL Hantera egenskaper]**. Mer information om taggbehörigheter finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html).
-* Om du ska slutföra den valfria lektionen om vidarebefordran av händelser, ska du ha en produktlicens som innehåller vidarebefordran av edge-material och behörighetsobjekt **[!UICONTROL Plattformar]** > **[!UICONTROL Edge]**
+* Om du ska slutföra den valfria lektionen om vidarebefordran av händelser, ska du ha en produktlicens som innehåller vidarebefordran av edge-material och behörighetsobjekt **[!UICONTROL Plattformar]** > **[!UICONTROL Kant]**
 
 ## Experience Platform
 
@@ -44,7 +44,7 @@ För Adobe Target-lektionen måste du ha [Redigerare eller godkännare](https://
 
 ## Adobe Audience Manager
 
-* För den valfria lektionen Audience Manager måste du ha tillgång till att skapa, läsa och skriva egenskaper, segment och mål. Mer information finns i självstudiekursen om [Audience Manager Role-baserad åtkomstkontroll](https://experienceleague.adobe.com/docs/audience-manager-learn/tutorials/setup-and-admin/user-management/setting-permissions-with-role-based-access-control.html?lang=en).
+* För den valfria lektionen Audience Manager måste du ha tillgång till att skapa, läsa och skriva egenskaper, segment och mål. Mer information finns i självstudiekursen [Audience Manager Role-baserad åtkomstkontroll](https://experienceleague.adobe.com/docs/audience-manager-learn/tutorials/setup-and-admin/user-management/setting-permissions-with-role-based-access-control.html?lang=en).
 
 Nu kan du börja de inledande konfigurationsstegen.
 
@@ -52,4 +52,4 @@ Nu kan du börja de inledande konfigurationsstegen.
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

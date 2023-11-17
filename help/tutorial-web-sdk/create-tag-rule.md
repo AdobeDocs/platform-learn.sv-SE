@@ -1,11 +1,11 @@
 ---
 title: Skapa en taggregel
-description: Lär dig hur du skickar en händelse till Platform Edge Network med ditt XDM-objekt med hjälp av en taggregel. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
+description: Lär dig hur du skickar en händelse till Platform Edge Network med ditt XDM-objekt med hjälp av en taggregel. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Tags
 exl-id: e06bad06-3ee3-475f-9b10-f0825a48a312
-source-git-commit: 7b978e1d98aa539c98b7f11ae33432729ac33bea
+source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '848'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Lär dig hur du skickar en händelse till Platform Edge Network med ditt XDM-obj
 
 >[!NOTE]
 >
-> I demonstrationssyfte bygger övningarna i den här lektionen på det exempel som användes under [Skapa dataelement](create-data-elements.md) steg, skicka en XDM-händelseåtgärd för att hämta innehåll och identiteter från användare på [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html).
+> I demonstrationssyfte bygger övningarna i den här lektionen på det exempel som användes under [Skapa dataelement](create-data-elements.md) steg; skicka en XDM-händelseåtgärd för att hämta innehåll och identiteter från användare på [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html).
 
 
 ## Utbildningsmål
@@ -25,7 +25,7 @@ När lektionen är klar kan du:
 
 * Använd en namnkonvention för att hantera regler i taggar
 * Skapa en taggregel för att skicka en XDM-händelse
-* Publicera en taggregel till ett utvecklingsbibliotek
+* Publicera en taggregel i ett utvecklingsbibliotek
 
 
 ## Förutsättningar
@@ -52,14 +52,14 @@ där
 1. är det eller de program som används i åtgärdssteget för den regeln
 
 
-## Skapa märkordsregel
+## Skapa taggregel
 
 I taggar används regler för att utföra åtgärder (brandanrop) under olika förhållanden. Du använder den första regeln för att skicka XDM-objektet till Edge Network med Web SDK:n [!UICONTROL Skicka händelse] åtgärd. Senare i den här självstudien skickar du olika versioner av XDM-objektet baserat på vilken typ av sida besökaren är på. Därför kommer du att använda regelvillkor för att exkludera de andra sidtyperna.
 
 Så här skapar du en taggregel:
 
-1. Öppna taggegenskapen som du använder för den här självstudiekursen
-1. Gå till **[!UICONTROL Regler]** i den vänstra navigeringen
+1. Öppna taggegenskapen som du använder för den här självstudien
+1. Gå till **[!UICONTROL Regler]** till vänster navigering
 1. Välj **[!UICONTROL Skapa ny regel]** knapp
    ![Skapa en regel](assets/rules-create.png)
 1. Namnge regeln `all pages - library load - AA & AT`
@@ -69,7 +69,6 @@ Så här skapar du en taggregel:
    > Den här regeln används på ett specifikt sätt av Adobe Analytics och Target i en framtida lektion, och det är därför `AA & AT` används i slutet av namnet.
 
 1. I **[!UICONTROL Händelser]** avsnitt, markera **[!UICONTROL Lägg till]**
-
    ![Namnge regeln och lägg till en händelse](assets/rule-name.png)
 1. Använd **[!UICONTROL Kärntillägg]** och markera `Library Loaded (Page Top)` som **[!UICONTROL Händelsetyp]**.
 
@@ -79,9 +78,8 @@ Så här skapar du en taggregel:
 1. I **[!UICONTROL Villkor]** väljer du **[!UICONTROL Lägg till]** knapp
    ![Lägg till villkor](assets/rules-add-conditions.png)
 1. Välj **[!UICONTROL Typ av logik]** `Exception`, **[!UICONTROL Tillägg]** `Core`och **[!UICONTROL Villkorstyp]** `Path Without Query String`
-1. Ange URL-sökvägen `/content/luma/us/en/user/cart.html` i **[!UICONTROL bana är lika med]** fält, och **[!UICONTROL name]** it `Core - cart page`
+1. Ange URL-sökvägen `/content/luma/us/en/user/cart.html` i **[!UICONTROL bana är lika med]** fält och **[!UICONTROL name]** it `Core - cart page`
 1. Välj **[!UICONTROL Behåll ändringar]**
-
    ![Lägg till villkor](assets/rule-condition-exception.png)
 1. Lägg till ytterligare tre undantag för följande URL-sökvägar
 
@@ -114,7 +112,7 @@ Publicera sedan regeln i utvecklingsmiljön så att vi kan bekräfta att den fun
 
 Så här skapar du ett bibliotek:
 
-1. Gå till **[!UICONTROL Publiceringsflöde]** i den vänstra navigeringen
+1. Gå till **[!UICONTROL Publiceringsflöde]** till vänster navigering
 1. Välj **[!UICONTROL Lägg till bibliotek]**
 
    ![Välj Lägg till bibliotek](assets/rule-publish-library.png)
@@ -142,4 +140,4 @@ Nu kan du validera data i begäran med Adobe Experience Platform Debugger.
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

@@ -1,11 +1,11 @@
 ---
 title: Konfigurera Adobe Target med Platform Web SDK
-description: Lär dig implementera Adobe Target med Platform Web SDK. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
+description: Lär dig implementera Adobe Target med Platform Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 solution: Data Collection, Target
 exl-id: 9084f572-5fec-4a26-8906-6d6dd1106d36
-source-git-commit: 13f2c87d7c4cfe21f04a945b9e11dc64e9bf6e0c
+source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
 workflow-type: tm+mt
-source-wordcount: '3801'
+source-wordcount: '3800'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Lär dig implementera Adobe Target med Platform Web SDK. Lär dig hur du leverer
 
 När lektionen är klar kan du:
 
-* Förstå hur du lägger till ett fragment för att dölja plattformswebbsidesknappen för att förhindra flimmer när du använder Target med asynkrona inbäddningskoder för taggar
+* Förstå hur du lägger till ett fragment för att dölja plattformswebbsidesknappen för att förhindra flimmer när du använder Target med asynkrona taggar för inbäddning
 * Konfigurera ett datastream för att aktivera Target-funktioner
 * Återge beslut om visuell personalisering när sidan läses in (kallades tidigare&quot;global mbox&quot;)
 * Skicka XDM-data till Target och förstå mappningen till Target-parametrar
@@ -44,7 +44,7 @@ För att slutföra lektionerna i det här avsnittet måste du först:
    * [Använda hjälptillägget för Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html)
    * [Använd Visual Experience Composer](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer.html)
    * [Använda den formulärbaserade Experience Composer](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-form-based-experience-composer.html)
-   * [Skapa aktiviteter för målinriktad upplevelse](https://experienceleague.adobe.com/docs/target-learn/tutorials/activities/create-experience-targeting-activities.html)
+   * [Skapa aktiviteter för målinriktning på upplevelser](https://experienceleague.adobe.com/docs/target-learn/tutorials/activities/create-experience-targeting-activities.html)
 
 ## Lägg till flimmerreducering
 
@@ -52,7 +52,7 @@ Innan du startar avgör du om en extra flimmerhanteringslösning krävs beroende
 
 >[!NOTE]
 >
->I den här självstudiekursen används [Luma site](https://luma.enablementadobe.com/content/luma/us/en.html) som har en asynkron implementering av taggar och flimmerreducering. I det här avsnittet finns information om hur flimmerfunktionen fungerar med SDK för plattforms-webben.
+>I den här självstudiekursen används [Luma-webbplats](https://luma.enablementadobe.com/content/luma/us/en.html) som har en asynkron implementering av taggar och flimmerreducering. I det här avsnittet finns information om hur flimmerfunktionen fungerar med SDK för plattforms-webben.
 
 
 ### Asynkron implementering
@@ -106,7 +106,7 @@ Stilen för att dölja i förväg för synkrona implementeringar kan konfigurera
 
    ![Skapa fragment som kan döljas i förväg för asynkrona implementeringar](assets/target-flicker-sync.png)
 
-1. Ändra CSS så att de väljare och metoder som du vill använda inkluderas, till exempel: `body { opacity: 0 !important }` om du vill dölja hela sidans brödtext i förväg.
+1. Ändra CSS så att de väljare och metoder som du vill använda inkluderas, till exempel: `body { opacity: 0 !important }` om du vill dölja hela sidans innehåll i förväg.
 1. Spara ändringarna och bygg i ett bibliotek
 
 >[!NOTE]
@@ -129,7 +129,6 @@ Så här konfigurerar du Target i datastream:
    ![Välj dataströmmen för Luma Web SDK](assets/datastream-luma-web-sdk.png)
 
 1. Välj **[!UICONTROL Lägg till tjänst]**
-
    ![Lägg till en tjänst i datastream](assets/target-datastream-addService.png)
 1. Välj **[!UICONTROL Adobe Target]** som **[!UICONTROL Tjänst]**
 1. Om du vill kan du ange valfri information om målimplementeringen enligt anvisningarna nedan.
@@ -175,11 +174,11 @@ Identitetssymbolerna finns i identitetslistan under **Datainsamling** > **[!UICO
 I den här självstudiekursen om du vill använda Luma-webbplatsen använder du identitetssymbolen `lumaCrmId` under lektionen om [Identiteter](configure-identities.md).
 
 
-## Återge beslut om visuell personalisering
+## Ge visuella personaliseringsbeslut
 
 Först måste du förstå den terminologi som används i Target- och tagg-gränssnitten.
 
-* **Aktivitet**: En uppsättning upplevelser för en eller flera målgrupper. Ett enkelt A/B-test kan till exempel vara en aktivitet med två upplevelser.
+* **Aktivitet**: En uppsättning upplevelser som riktar sig till en eller flera målgrupper. Ett enkelt A/B-test kan till exempel vara en aktivitet med två upplevelser.
 * **Upplevelse**: En uppsättning åtgärder riktade till en eller flera platser, eller beslutsomfattningar.
 * **Beslutets omfattning**: En plats där en Target-upplevelse levereras. Beslutsomfattningar motsvarar&quot;mbox&quot; om du är van vid att använda äldre versioner av Target.
 * **Beslut om personalisering**: En åtgärd som servern fastställer ska tillämpas. Dessa beslut kan baseras på målgruppskriterier och prioritering av målaktiviteter.
@@ -189,10 +188,10 @@ Först måste du förstå den terminologi som används i Target- och tagg-gräns
 
 Visuella personaliseringsbeslut från Target levereras av Platform Web SDK, om Target är aktiverat i datastream. Men _de återges inte automatiskt_. Du måste ändra den globala sidans inläsningsregel för att aktivera automatisk återgivning.
 
-1. I [Datainsamling](https://experience.adobe.com/#/data-collection){target="blank"} -gränssnittet, öppna taggegenskapen som du använder för den här självstudiekursen
+1. I [Datainsamling](https://experience.adobe.com/#/data-collection){target="blank"} öppnar du taggegenskapen som du använder för den här självstudiekursen
 1. Öppna `all pages - library load - AA & AT` regel
 1. Välj `Adobe Experience Platform Web SDK - Send event` åtgärd
-1. Aktivera **[!UICONTROL Återge beslut om visuell personalisering]** med kryssrutan
+1. Aktivera **[!UICONTROL Ge visuella personaliseringsbeslut]** med kryssrutan
 
    ![Aktivera beslut om visuell personalisering vid återgivning](assets/target-rule-enable-visual-decisions.png)
 
@@ -202,9 +201,9 @@ Inställningen för beslut om visuell återgivning gör att Platform Web SDK aut
 
 >[!NOTE]
 >
->Vanligtvis är [!UICONTROL Återge beslut om visuell personalisering] inställningen ska bara aktiveras för en enskild Skicka-händelse per helsidesinläsning. Om flera Send Event-åtgärder har den här inställningen aktiverad, ignoreras efterföljande återgivningsbegäranden.
+>Vanligtvis är [!UICONTROL Ge visuella personaliseringsbeslut] inställningen ska bara aktiveras för en enskild Skicka-händelse per helsidesinläsning. Om flera Send Event-åtgärder har den här inställningen aktiverad, ignoreras efterföljande återgivningsbegäranden.
 
-Om du själv föredrar att återge eller vidta åtgärder för dessa beslut med egen kod kan du lämna [!UICONTROL Återge beslut om visuell personalisering] inställningen inaktiverad. Platform Web SDK är flexibelt och ger dig fullständig kontroll. Mer information om [manuellt återge anpassat innehåll](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html).
+Om du själv föredrar att återge eller vidta åtgärder för dessa beslut med egen kod kan du lämna [!UICONTROL Ge visuella personaliseringsbeslut] inställningen inaktiverad. Platform Web SDK är flexibelt och ger dig fullständig kontroll. Mer information om [manuellt återge anpassat innehåll](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html).
 
 ### Konfigurera en Target-aktivitet med Visual Experience Composer
 
@@ -212,14 +211,14 @@ Nu när den grundläggande implementeringsdelen är klar skapar du en XT-aktivit
 
 >[!NOTE]
 >
->Om du använder Google Chrome som webbläsare är [VEC-hjälptillägg (Visual Experience Composer)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html?lang=en) krävs för att läsa in webbplatsen korrekt för redigering i VEC.
+>Om du använder Google Chrome som webbläsare är [Hjälptillägg för Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html?lang=en) krävs för att läsa in webbplatsen korrekt för redigering i VEC.
 
 1. Navigera till mål
 1. Skapa en XT-aktivitet (Experience Targeting) med hjälp av Luma-startsidan för aktivitets-URL:en
 
    ![Skapa en ny XT-aktivitet](assets/target-xt-create-activity.png)
 
-1. Ändra sidan, t.ex. ändra texten på hemsidesbanderollen
+1. Ändra sidan, t.ex. ändra texten på hemsidans banner
 
    ![VEC-ändring för mål](assets/target-xt-vec-modification.png)
 
@@ -230,7 +229,7 @@ Nu när den grundläggande implementeringsdelen är klar skapar du en XT-aktivit
    >Om du inte använder Adobe Analytics väljer du Target som rapportkälla och väljer ett annat mått, som **Engagemang > Sidvyer** i stället. Det krävs ett målmått för att spara och förhandsgranska aktiviteten.
 
 1. Spara aktiviteten
-1. Om du känner dig trygg med dina ändringar kan du aktivera din aktivitet. Om du vill förhandsgranska upplevelsen utan att aktivera kan du i annat fall kopiera [URL för QA-förhandsgranskning](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html).
+1. Om du känner dig trygg med dina ändringar kan du aktivera din aktivitet. Om du inte vill förhandsgranska utan att aktivera kan du kopiera [URL för QA-förhandsgranskning](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html).
 1. Läs in Lumas hemsida så bör du se hur ändringarna tillämpas
 1. Efter några timmar bör du kunna se aktivitetsdata och konverteringar för Target i Adobe Analytics. Mer information om målguiden finns i [Analyser för målrapportering (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/reporting.html?lang=en).
 
@@ -242,10 +241,10 @@ Om du ställer in en aktivitet bör du se hur innehållet återges på sidan. Me
 
 >[!CAUTION]
 >
->Om du använder Google Chrome och har [VEC-hjälptillägg (Visual Experience Composer)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html?lang=en) installerade kontrollerar du att **Inmata målbibliotek** inställningen är inaktiverad. Om du aktiverar den här inställningen kommer det att resultera i extra Target-begäranden.
+>Om du använder Google Chrome och har [Hjälptillägg för Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html?lang=en) installerade kontrollerar du att **Inmata målbibliotek** inställningen är inaktiverad. Om du aktiverar den här inställningen kommer det att resultera i extra Target-begäranden.
 
 1. Öppna webbläsartillägget Adobe Experience Platform debugger
-1. Gå till [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html) och använder felsökaren för att [ändra taggegenskapen på webbplatsen till din egen utvecklingsegenskap](validate-with-debugger.md#use-the-experience-platform-debugger-to-map-to-your-tags-property)
+1. Gå till [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html) och använder felsökaren för att [växla taggegenskapen på webbplatsen till din egen utvecklingsegenskap](validate-with-debugger.md#use-the-experience-platform-debugger-to-map-to-your-tags-property)
 1. Läs in sidan igen
 1. Välj **[!UICONTROL Nätverk]** i felsökningsverktyget
 1. Filtrera efter **[!UICONTROL Adobe Experience Platform Web SDK]**
@@ -262,7 +261,7 @@ Om du ställer in en aktivitet bör du se hur innehållet återges på sidan. Me
 
    ![Målaktivitetsintryck](assets/target-debugger-activity-impression.png)
 
-## Ställa in och återge ett anpassat beslutsomfång
+## Konfigurera och återge ett anpassat beslutsutrymme
 
 Anpassade beslutsomfattningar (tidigare kallade&quot;mboxes&quot;) kan användas för att leverera HTML- eller JSON-innehåll på ett strukturerat sätt med den Target-formulärbaserade Experience Composer. Innehåll som levereras till något av dessa anpassade omfång återges inte automatiskt av Platform Web SDK.
 
@@ -272,7 +271,7 @@ Anpassade beslutsomfattningar (tidigare kallade&quot;mboxes&quot;) kan användas
 
 1. Öppna `all pages - library load - AA & AT` regel
 1. Välj `Adobe Experience Platform Web SDK - Send Event` åtgärd
-1. Lägg till ett eller flera omfång som du vill använda. I det här exemplet använder du `homepage-hero`.
+1. Lägg till ett eller flera omfång som du vill använda. Använd följande exempel: `homepage-hero`.
 
    ![Anpassat omfång](assets/target-rule-custom-scope.png)
 
@@ -287,7 +286,7 @@ Anpassade beslutsomfattningar (tidigare kallade&quot;mboxes&quot;) kan användas
 Nu när du har konfigurerat Platform Web SDK för att begära innehåll för `homepage-hero` måste du göra något med svaret. Taggtillägget Platform Web SDK ger en [!UICONTROL Skicka händelse slutförd] -händelse som kan användas för att omedelbart aktivera en ny regel när ett svar från en [!UICONTROL Skicka händelse] åtgärden har tagits emot.
 
 1. Skapa en anropad regel `homepage - send event complete - render homepage-hero`.
-1. Lägg till en händelse i regeln. Använd **Adobe Experience Platform Web SDK** och **[!UICONTROL Skicka händelse slutförd]** händelsetyp.
+1. Lägg till en händelse i regeln. Använd **Adobe Experience Platform Web SDK** tillägg och **[!UICONTROL Skicka händelse slutförd]** händelsetyp.
 1. Lägg till ett villkor för att begränsa regeln till Luma-startsidan (sökvägen utan frågesträng är lika med) `/content/luma/us/en.html`).
 1. Lägg till en åtgärd i regeln. Använd **Core** tillägg och **Egen kod** åtgärdstyp.
 
@@ -390,7 +389,7 @@ Nu när du har en regel för att manuellt återge ett anpassat beslutsområde ka
 
 1. På [!UICONTROL Mål och inställningar] väljer du Adobe Target som rapportkälla och [!UICONTROL Engagemang] > [!UICONTROL Sidvyer] som mål
 1. Spara aktiviteten
-1. Om du känner dig trygg med dina ändringar kan du aktivera din aktivitet. Om du vill förhandsgranska upplevelsen utan att aktivera kan du i annat fall kopiera [URL för QA-förhandsgranskning](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html).
+1. Om du känner dig trygg med dina ändringar kan du aktivera din aktivitet. Om du inte vill förhandsgranska utan att aktivera kan du kopiera [URL för QA-förhandsgranskning](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html).
 1. Läs in Lumas hemsida så bör du se hur ändringarna tillämpas
 
 >[!NOTE]
@@ -402,7 +401,7 @@ Nu när du har en regel för att manuellt återge ett anpassat beslutsområde ka
 Om du har aktiverat din aktivitet bör du se innehållet återges på sidan. Även om inga aktiviteter finns tillgängliga kan du titta på [!UICONTROL Skicka händelse] nätverksanrop för att bekräfta att Target begär innehåll för dina anpassade omfattningar.
 
 1. Öppna webbläsartillägget Adobe Experience Platform debugger
-1. Gå till [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html) och använder felsökaren för att [ändra taggegenskapen på webbplatsen till din egen utvecklingsegenskap](validate-with-debugger.md#use-the-experience-platform-debugger-to-map-to-your-tags-property)
+1. Gå till [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html) och använder felsökaren för att [växla taggegenskapen på webbplatsen till din egen utvecklingsegenskap](validate-with-debugger.md#use-the-experience-platform-debugger-to-map-to-your-tags-property)
 1. Läs in sidan igen
 1. Välj **[!UICONTROL Nätverk]** i felsökningsverktyget
 1. Filtrera efter **[!UICONTROL Adobe Experience Platform Web SDK]**
@@ -438,30 +437,30 @@ Först ställer du in några extra dataelement för ett profilattribut, entitets
 * **`target.entity.name`** mappad till `digitalData.product.0.productInfo.title`
 * **`target.user.categoryId`** använda följande anpassade kod för att analysera webbplatsens URL för kategorin på den översta nivån:
 
-   ```javascript
-   var cat = location.pathname.split(/[/.]+/);
-   if (cat[5] == 'products') {
-      return (cat[6]);
-   } else if (cat[5] != 'html') { 
-      return (cat[5]);
-   }
-   ```
+  ```javascript
+  var cat = location.pathname.split(/[/.]+/);
+  if (cat[5] == 'products') {
+     return (cat[6]);
+  } else if (cat[5] != 'html') { 
+     return (cat[5]);
+  }
+  ```
 
 * **`data.content`** med följande anpassade kod:
 
-   ```javascript
-   var data = {
-      __adobe: {
-         target: {
-            "entity.id": _satellite.getVar("target.entity.id"),
-            "entity.name": _satellite.getVar("target.entity.name"),
-            "profile.loggedIn": _satellite.getVar("user.profile.attributes.loggedIn"),
-            "user.categoryId": _satellite.getVar("target.user.categoryId")
-         }
-      }
-   }
-   return data;
-   ```
+  ```javascript
+  var data = {
+     __adobe: {
+        target: {
+           "entity.id": _satellite.getVar("target.entity.id"),
+           "entity.name": _satellite.getVar("target.entity.name"),
+           "profile.loggedIn": _satellite.getVar("user.profile.attributes.loggedIn"),
+           "user.categoryId": _satellite.getVar("target.user.categoryId")
+        }
+     }
+  }
+  return data;
+  ```
 
 ### Uppdatera sidans inläsningsregel
 
@@ -520,4 +519,4 @@ Nu när du är klar med den här lektionen bör du ha en fungerande implementeri
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

@@ -1,11 +1,11 @@
 ---
 title: Konfigurera Audience Manager med Platform Web SDK
-description: Lär dig hur du konfigurerar Adobe Audience Manager med Platform Web SDK och validerar implementeringen med hjälp av en cookie-destination. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
+description: Lär dig hur du konfigurerar Adobe Audience Manager med Platform Web SDK och validerar implementeringen med hjälp av en cookie-destination. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 solution: Data Collection, Audience Manager
 exl-id: 45db48e9-73cf-4a9c-88f4-b5872a8224d3
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
 workflow-type: tm+mt
-source-wordcount: '1388'
+source-wordcount: '1385'
 ht-degree: 0%
 
 ---
@@ -27,28 +27,26 @@ När lektionen är klar kan du:
 
 ## Förutsättningar
 
-Du måste först:
+För att slutföra lektionen måste du först:
 
-* Slutför de tidigare lektionerna i avsnitten Inledande konfiguration och Tagginställningar i den här självstudiekursen.
+* Slutför de tidigare lektionerna i avsnitten Inledande konfiguration och Tagginställningar i den här självstudien.
 * ha tillgång till Adobe Audience Manager och de behörigheter som krävs för att skapa, läsa och skriva egenskaper, segment och mål. Mer information finns på [Audience Manager Role-baserad åtkomstkontroll](https://experienceleague.adobe.com/docs/audience-manager-learn/tutorials/setup-and-admin/user-management/setting-permissions-with-role-based-access-control.html?lang=en).
 
 ## Konfigurera datastream
 
-Implementeringen av Audience Manager med Platform Web SDK skiljer sig från implementeringen med [vidarebefordran på serversidan (SSF)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/server-side-forwarding/ssf.html). Vidarebefordran på serversidan skickar Adobe Analytics data till Audience Manager. En SDK-implementering för en plattform skickar XDM-data som skickas till Platform Edge Network till Audience Manager. Audience Manager är aktiverat i datastream:
+Implementeringen av Audience Manager med Platform Web SDK skiljer sig från implementeringen med [vidarebefordran på serversidan (SSF)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/server-side-forwarding/ssf.html). Vidarebefordran på serversidan skickar Adobe Analytics data för begäran till Audience Manager. En SDK-implementering för en plattform skickar XDM-data som skickas till Platform Edge Network till Audience Manager. Audience Manager är aktiverat i datastream:
 
-1. Gå till [Datainsamling](https://experience.adobe.com/#/data-collection)Gränssnittet {target=&quot;blank&quot;}
+1. Gå till [Datainsamling](https://experience.adobe.com/#/data-collection){target="blank"} gränssnitt
 1. Välj **[!UICONTROL Datastreams]**
 1. Markera tidigare skapade `Luma Web SDK` datastream
 
    ![Välj dataströmmen för Luma Web SDK](assets/datastream-luma-web-sdk.png)
 
 1. Välj **[!UICONTROL Lägg till tjänst]**
-
    ![Lägg till en tjänst i datastream](assets/aam-datastream-addService.png)
 1. Välj **[!UICONTROL Adobe Audience Manager]** som **[!UICONTROL Tjänst]**
 1. Bekräfta att **[!UICONTROL Cookie-mål har aktiverats]** och **[!UICONTROL URL-mål har aktiverats]** är markerade
 1. Välj **[!UICONTROL Spara]**
-
    ![Bekräfta datastream-inställningarna för Audience Manager och spara](assets/aam-datastream-save.png)
 
 ## Skapa en datakälla
@@ -118,7 +116,7 @@ Skapa sedan en **Cookie-baserat mål** med **Destinationsverktyget**. Med Destin
 
 1. Öppna målverktyget genom att välja **[!UICONTROL Destinationer]** inom **Målgruppsdata** menyn i den övre navigeringen
 1. Välj **[!UICONTROL Skapa mål]**
-1. Ange ett namn och en beskrivning, `Platform Web SDK tutorial`
+1. Ange ett namn och en beskrivning `Platform Web SDK tutorial`
 1. Som **[!UICONTROL Kategori]**, markera **[!UICONTROL Egen]**
 1. Som **[!UICONTROL Typ]**, markera **[!UICONTROL Cookie]**
 
@@ -127,10 +125,10 @@ Skapa sedan en **Cookie-baserat mål** med **Destinationsverktyget**. Med Destin
 1. Öppna **[!UICONTROL Konfiguration]** för att ange information om din cookie-destination
 1. Ge din cookie ett eget namn, `platform_web_sdk_tutorial`
 1. Som **[!UICONTROL Cookie-domän]**, lägg till domänen för den webbplats där du planerar att integrera, för självstudiekursen i Luma-domänen, `luma.enablementadobe.com`
-1. Som **[!UICONTROL Publicera data till]** alternativ, markera **[!UICONTROL Endast markerade domäner]**
+1. Som **[!UICONTROL Publicera data till]** alternativ, markera **[!UICONTROL Endast de markerade domänerna]**
 1. Välj din domän om den inte redan har lagts till
 1. Som **[!UICONTROL Dataformat]**, markera **[!UICONTROL Enkel nyckel]** och ge din kaka en nyckel. För den här självstudiekursen `segment` som nyckelvärde.
-1. Äntligen väljer du **[!UICONTROL Spara]** för att spara information om målkonfigurationen.
+1. Äntligen väljer du **[!UICONTROL Spara]** om du vill spara information om målkonfigurationen.
 
    ![Avsnittet Konfiguration av mål för Audience Manager](assets/aam-destination-config-dw.png)
 
@@ -149,7 +147,6 @@ Skapa sedan en **Cookie-baserat mål** med **Destinationsverktyget**. Med Destin
 1. Välj **[!UICONTROL Spara]**
 
 1. Välj **[!UICONTROL Klar]**
-
    ![Adobe Experience Platform Audience Manager Add Trait](assets/luma-cookie-segment-dw.png)
 
 Segmentmappningsperioden tar några timmar att aktivera. När du är klar kan du uppdatera Audience Manager-gränssnittet och se att **Mappade segment** listan har uppdaterats.
@@ -162,7 +159,7 @@ Bekräfta först att du kan kvalificera dig för segmentet
 
 1. Öppna [Startsida för Lumas demowebbplats](https://luma.enablementadobe.com/content/luma/us/en.html) med den mappad till taggegenskapen för att kvalificera dig för ditt nyligen skapade segment.
 1. Öppna webbläsarens **utvecklingsverktyg**  > **Nätverk** tab
-1. Filtrera till plattformens SDK-begäran med `interact` som textfiltret
+1. Filtrera till plattformens SDK-begäran med `interact` som textfilter
 1. Välj ett samtal och öppna **Förhandsgranska** för att visa svarsinformation
 1. Expandera **nyttolast** för att visa den förväntade cookie-informationen, som tidigare konfigurerats i Audience Manager. I det här exemplet visas det förväntade cookie-namnet `platform_web_sdk_tutorial`.
 
@@ -185,4 +182,4 @@ Nu när du är klar med den här lektionen bör du kunna se hur Platform Web SDK
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

@@ -3,9 +3,9 @@ title: Använd platser
 description: Lär dig hur du använder platsens geopositioneringstjänst i din mobilapp.
 hide: true
 exl-id: adc2952f-cb01-4e06-9629-49fb95f22ca5
-source-git-commit: 5d34e510ef72190762c29b71359b362ef4be7b22
+source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
 workflow-type: tm+mt
-source-wordcount: '1691'
+source-wordcount: '1692'
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ Du definierar några intressepunkter i tjänsten Platser.
    ![Skapa bibliotek](assets/places-create-library.png)
 1. Stäng **[!UICONTROL Hantera bibliotek]** dialogruta, välja **[!UICONTROL Stäng]**.
 1. Tillbaka in **[!UICONTROL POI-hantering]**, markera **[!UICONTROL Importera POI]**.
-1. Välj **[!UICONTROL Starta]** t**[!UICONTROL Importera platser]**.
+1. Välj **[!UICONTROL Starta]** i **[!UICONTROL Importera platser]** -dialogrutan.
 1. Välj **[!DNL Luma]** från listan över bibliotek,
 1. Välj **[!UICONTROL Nästa]**.
    ![Välj bibliotek](assets/places-import-select-library.png)
@@ -172,7 +172,7 @@ Därefter ska du definiera regler som ska användas med dessa dataelement.
       ![Tagg, åtgärd](assets/tags-action-mobile-core.png)
 
 1. Välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) bredvid **[!UICONTROL Mobile Core - bifoga data]** åtgärd.
-   1. Välj **[!UICONTROL Adobe Experience Platform Edge Network]** från **[!UICONTROL Tillägg]** lista och markera **[!UICONTROL Vidarebefordra händelse till Edge Network]**. Den här åtgärden ser till att händelsen och ytterligare nyttolastdata vidarebefordras till Edge-nätverket.
+   1. Välj **[!UICONTROL Adobe Experience Platform Edge Network]** från **[!UICONTROL Tillägg]** lista och markera **[!UICONTROL Vidarebefordra händelse till Edge Network]**. Den här åtgärden ser till att händelsen och ytterligare nyttolastdata vidarebefordras till plattforms-Edge-nätverket.
    1. Välj **[!UICONTROL Behåll ändringar]**.
 
 1. Spara regeln genom att välja **[!UICONTROL Spara i bibliotek]**.
@@ -240,9 +240,9 @@ Så här validerar du inställningarna i Assurance:
 1. Välj **[!UICONTROL Spara]**.
 1. Välj **[!UICONTROL Karta och simulera]** till vänster.
 1. Flytta kartan till en plats för en av dina POI:n.
-1. Välj ![Kugghjul](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Gears_18_N.svg) Simulera laddnings-POI.  Din POI identifieras med en cirkel och ett stift.
+1. Välj ![Kugghjul](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Gears_18_N.svg) Simulera laddnings-POI. Din POI identifieras med en cirkel och ett stift.
 1. Välj POI.
-1. Välj ![Kugghjul](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Gears_18_N.svg) **[!UICONTROL Simulera anmälningshändelse]**.
+1. I popup-fönstret väljer du ![Kugghjul](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Gears_18_N.svg) **[!UICONTROL Simulera anmälningshändelse]**.
    ![Simulera anmälningshändelse](assets/places-simulate.png)
 1. Välj **[!UICONTROL Händelser]** från vänster spår och du bör se de händelser som du simulerade.
    ![Validering av AJO-beslut](assets/places-events.png)
@@ -283,7 +283,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
    ]
    ```
 
-1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project navigator och hitta `func processRegionEvent(regionEvent: PlacesRegionEvent, forRegion region: CLRegion) async` function.Lägg till följande kod:
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project navigator och hitta `func processRegionEvent(regionEvent: PlacesRegionEvent, forRegion region: CLRegion) async` funktion. Lägg till följande kod:
 
    ```swift
    // Process geolocation event
@@ -320,7 +320,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 
 1. Flytta (dra) runt kartan för att se till att den blå mittre cirkeln är ovanför en av dina POI:er, till exempel London.
 
-1. Tryck på <img src="assets/geobutton.png" width="20" /> tills du ser kategorin och namnet visas i den röda etiketten med stiftet.
+1. Tryck på <img src="assets/geobutton.png" width="20" /> tills du ser kategorin och namnet visas på etiketten på den röda platsen med stiftet.
 
 1. Tryck på etiketten för POI, som öppnar dialogrutan **[!UICONTROL Nearby POI]** blad.
 
@@ -344,6 +344,8 @@ Du har sett en implementering av funktionalitet för din app, som till största 
 
 >[!SUCCESS]
 >
->Du har nu aktiverat appen för geopositioneringstjänster med tillägget Platser i Experience Platform Mobile SDK.<br/>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
+>Du har nu aktiverat appen för geopositioneringstjänster med tillägget Platser i Experience Platform Mobile SDK.
+>
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 
 Nästa: **[Mappa data till Adobe Analytics](analytics.md)**

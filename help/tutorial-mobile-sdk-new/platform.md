@@ -5,9 +5,9 @@ solution: Data Collection,Experience Platform
 feature: Mobile SDK,Data Ingestion
 hide: true
 exl-id: 841b2274-b7a4-4203-9eb4-a2a3783d3f02
-source-git-commit: d7410a19e142d233a6c6597de92f112b961f5ad6
+source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1068'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ Alla data som har inhämtats till Adobe Experience Platform lagras i datasjön s
 
 ## Lägg till Adobe Experience Platform datastream-tjänst
 
-Om du vill skicka XDM-data från Edge Network till Adobe Experience Platform konfigurerar du Adobe Experience Platform-tjänsten till den datastream som du konfigurerar som en del av [Skapa ett datastream](create-datastream.md).
+Om du vill skicka XDM-data från Edge Network till Adobe Experience Platform lägger du till Adobe Experience Platform-tjänsten i det datastream som du konfigurerat som en del av [Skapa ett datastream](create-datastream.md).
 
 >[!IMPORTANT]
 >
@@ -169,6 +169,6 @@ Det finns mycket mer som marknadsförare och analytiker kan göra med data som s
 
 >[!SUCCESS]
 >
->Du har nu konfigurerat din app så att den inte bara skickar data till Edge Network utan även till Adobe Experience Platform.<br>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
+>Du har nu konfigurerat din app så att den inte bara skickar data till Edge Network utan även till Adobe Experience Platform.<br>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 
 Nästa: **[Skapa och skicka push-meddelanden](journey-optimizer-push.md)**

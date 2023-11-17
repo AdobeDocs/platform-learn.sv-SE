@@ -1,11 +1,11 @@
 ---
 title: Skapa dataelement
-description: Lär dig hur du skapar ett XDM-objekt och mappar dataelement till det i taggar. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
+description: Lär dig hur du skapar ett XDM-objekt och mappar dataelement till det i taggar. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Tags
 exl-id: d662ec46-de9b-44ba-974a-f81dfc842e68
-source-git-commit: fe03ee89bfccd0105b45383c84403b6a3d230235
+source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
 workflow-type: tm+mt
-source-wordcount: '1202'
+source-wordcount: '1201'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ Lär dig hur du skapar de grundläggande dataelement som behövs för att hämta
 
 >[!NOTE]
 >
-> I demonstrationssyfte bygger övningarna i den här lektionen på det exempel som används under [Konfigurera ett schema](configure-schemas.md) steg, skapa exempel på XDM-objekt som fångar innehåll som visas och identiteter för användare på [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html).
+> I demonstrationssyfte bygger övningarna i den här lektionen på det exempel som används under [Konfigurera ett schema](configure-schemas.md) steg; skapa XDM-objekt som fångar innehåll som visas och identiteter för användare på [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html).
 
 >[!IMPORTANT]
 >
@@ -30,7 +30,7 @@ Oberoende av Platform Web SDK måste du fortsätta att skapa dataelement inuti t
 
 För steg 1 fortsätter du att mappa datalagret till dataelement på det sätt du gör just nu, med hjälp av någon av bastaggens tilläggstyper för dataelement. I steg 2 skapar Platform Web SDK-tillägget en uppsättning nya dataelementtyper som inte tidigare var tillgängliga:
 
-* ID för händelsesammanfogning
+* ID för händelsesammanslagning
 * Identitetskarta
 * XDM-objekt
 
@@ -47,7 +47,7 @@ När lektionen är slut kan du:
 
 ## Förutsättningar
 
-Du har en förståelse för vad ett datalager är, och vet hur det [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"} datalager och veta hur du refererar till dataelement i taggar. Du måste ha utfört följande steg i självstudiekursen
+Du har en förståelse för vad ett datalager är, och vet hur det [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"} datalager och veta hur du refererar till dataelement i taggar. Du måste ha utfört följande steg i självstudien
 
 * [Konfigurera behörigheter](configure-permissions.md)
 * [Konfigurera ett XDM-schema](configure-schemas.md)
@@ -111,7 +111,7 @@ Sedan kan du skapa dataelementet för identitetskartan:
 
 1. Som **[!UICONTROL Dataelementtyp]**, markera `Identity map`
 
-1. Då visas ett skärmyta till höger i dialogrutan **[!UICONTROL Gränssnitt för datainsamling]** så att du kan konfigurera identiteten:
+1. Då visas ett skärmyta till höger i dialogrutan **[!UICONTROL Gränssnitt för datainsamling]** för att konfigurera identiteten:
 
    ![Gränssnitt för datainsamling](assets/identity-identityMap-setup.png)
 
@@ -170,7 +170,7 @@ Det finns olika sätt att mappa dataelement till XDM-objektfält. Du kan mappa e
 
 Skapa ett XDM-objekt för att hämta innehållsdata:
 
-1. Välj **[!UICONTROL Dataelement]**
+1. I vänster navigering väljer du **[!UICONTROL Dataelement]**
 1. Välj **[!UICONTROL Lägg till dataelement]**
 1. **[!UICONTROL Namn]** dataelementet **`xdm.content`**
 1. Som **[!UICONTROL Tillägg]** välj `Adobe Experience Platform Web SDK`
@@ -182,7 +182,7 @@ Skapa ett XDM-objekt för att hämta innehållsdata:
 
    >[!NOTE]
    >
-   >Sandlådan motsvarar den Experience Platform-sandlåda där du skapade schemat. Det kan finnas flera tillgängliga sandlådor i din Experience Platform-instans, så se till att välja rätt. Arbeta alltid först med utveckling och sedan produktion.
+   >Sandlådan motsvarar den Experience Platform-sandlåda där du skapade schemat. Det kan finnas flera tillgängliga sandlådor i din Experience Platform-instans, så se till att välja rätt. Arbeta alltid först med utveckling och sedan med produktion.
 
 1. Bläddra nedåt tills du når **`web`** object
 1. Markera för att öppna den
@@ -190,7 +190,7 @@ Skapa ett XDM-objekt för att hämta innehållsdata:
    ![Webbobjekt](assets/data-element-pageviews-xdm-object.png)
 
 
-1. Mappa följande webb-XDM-variabler till dataelement
+1. Mappa följande web XDM-variabler till dataelement
 
    * **`web.webPageDetials.name`** till `%page.pageInfo.pageName%`
    * **`web.webPageDetials.server`** till `%page.pageInfo.server%`
@@ -198,7 +198,7 @@ Skapa ett XDM-objekt för att hämta innehållsdata:
 
    ![XDM-objekt](assets/data-element-xdm.content.png)
 
-1. Leta reda på `identityMap` objekt i schemat och markera det
+1. Gå till `identityMap` objekt i schemat och markera det
 
 1. Mappa till `identityMap.loginID` dataelement
 
@@ -211,7 +211,7 @@ Skapa ett XDM-objekt för att hämta innehållsdata:
 
 I slutet av dessa steg bör du skapa följande dataelement:
 
-| CORE-tilläggsdataelement | Webbsidedataelement för plattformar |
+| CORE-tilläggsdataelement | Webbsidedataelement för plattforms-SDK |
 -----------------------------|-------------------------------
 | `cart.orderId` | `identityMap.loginID` |
 | `page.pageInfo.hierarchie1` | `xdm.content` |
@@ -226,4 +226,4 @@ Med dessa dataelement på plats är du redo att börja skicka data till Platform
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

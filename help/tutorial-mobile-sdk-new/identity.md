@@ -4,9 +4,9 @@ description: Lär dig hur du samlar in identitetsdata i en mobilapp.
 feature: Mobile SDK,Identities
 hide: true
 exl-id: e6ec9a4f-3163-47fd-8d5c-6e640af3b4ba
-source-git-commit: d7410a19e142d233a6c6597de92f112b961f5ad6
+source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
 workflow-type: tm+mt
-source-wordcount: '860'
+source-wordcount: '856'
 ht-degree: 1%
 
 ---
@@ -39,7 +39,7 @@ Identitetsnamnutrymmen är komponenter i [Identitetstjänst](https://experiencel
 
 >[!NOTE]
 >
->Mobile SDK genererar en unik identitet i sitt eget namnutrymme med namnet Experience Cloud ID (ECID) när programmet installeras. Detta ECID lagras i beständigt minne på den mobila enheten och skickas med varje träff. ECID tas bort när användaren avinstallerar programmet eller när användaren ställer in den globala sekretessstatusen för Mobile SDK på opedout. I exempelappen Luma bör du ta bort och installera om appen för att skapa en ny profil med ett eget unikt ECID.
+>Mobile SDK genererar en unik identitet i sitt eget namnutrymme med namnet Experience Cloud ID (ECID) när programmet installeras. Detta ECID lagras i beständigt minne på den mobila enheten och skickas med varje träff. ECID tas bort när användaren avinstallerar programmet eller när användaren ställer in den globala sekretessstatusen för Mobile SDK på avanmälan. I exempelappen Luma bör du ta bort och installera om appen för att skapa en ny profil med ett eget unikt ECID.
 
 
 Så här skapar du ett nytt identitetsnamnutrymme:
@@ -101,10 +101,10 @@ Du vill uppdatera både standardidentiteten (e-post) och den anpassade identitet
       Identity.updateIdentities(with: identityMap) 
       ```
 
-1. Navigera till **[!DNL Luma]** **[!DNL Luma]** > **[!DNL Views]** > **[!DNL General]** > **[!UICONTROL LoginSheet]** i Xcode Project navigator och hitta koden som ska köras när du väljer **[!UICONTROL Inloggning]** -knappen. Lägg till följande kod:
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Views]** > **[!DNL General]** > **[!UICONTROL LoginSheet]** i Xcode Project navigator och hitta koden som ska köras när du väljer **[!UICONTROL Inloggning]** -knappen. Lägg till följande kod:
 
    ```swift
-   // Call updateIdentities
+   // Update identities
    MobileSDK.shared.updateIdentities(emailAddress: currentEmailId, crmId: currentCRMId)                             
    ```
 
@@ -169,11 +169,13 @@ När du är klar med stegen i [Experience Platform lektion](platform.md)kan du b
 
 >[!INFO]
 >
->Det finns ingen kod i programmet som återställer ECID, vilket betyder att du bara kan återställa ECID (och effektivt skapa en ny profil med ett nytt ECID på enheten) genom en avinstallation och ominstallation av programmet. Information om hur du implementerar återställning av identifierare finns i [`Identity.resetIdentities`](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/api-reference/#resetidentities) och [`MobileCore.resetIdentities`](https://developer.adobe.com/client-sdks/documentation/mobile-core/api-reference/#resetidentities) API-anrop. Tänk dock på detta när du använder en push-meddelandeidentifierare (se [Skicka push-meddelanden](journey-optimizer-push.md)) blir den identifieraren en annan &#39;klisteristidentifierare&#39; på enheten.
+>Det finns ingen kod i programmet för att återställa ECID, vilket betyder att du bara kan återställa ECID (och effektivt skapa en ny profil med ett nytt ECID) genom en avinstallation och ominstallation av programmet. Information om hur du implementerar återställning av identifierare finns i [`Identity.resetIdentities`](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/api-reference/#resetidentities) och [`MobileCore.resetIdentities`](https://developer.adobe.com/client-sdks/documentation/mobile-core/api-reference/#resetidentities) API-anrop. Tänk dock på detta när du använder en push-meddelandeidentifierare (se [Skicka push-meddelanden](journey-optimizer-push.md)) blir den identifieraren en annan &#39;klisteristidentifierare&#39; på enheten.
 
 
 >[!SUCCESS]
 >
->Du har nu konfigurerat din app för att uppdatera identiteter i Edge Network och (när den har konfigurerats) med Adobe Experience Platform.<br/>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
+>Du har nu konfigurerat din app för att uppdatera identiteter i Edge Network och (när den har konfigurerats) med Adobe Experience Platform.
+>
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
 
 Nästa: **[Samla in profildata](profile.md)**

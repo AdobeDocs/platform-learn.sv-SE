@@ -4,10 +4,10 @@ description: Lär dig hur du implementerar Adobe Experience Cloud mobilappar. De
 recommendations: noDisplay,catalog
 hide: true
 exl-id: 378bdf5d-c3ce-4a4c-b188-ab9e8265627f
-source-git-commit: f592fc61ad28d04eba3c1c21a0a66bda6e816a5b
+source-git-commit: bc53cb5926f708408a42aa98a1d364c5125cb36d
 workflow-type: tm+mt
-source-wordcount: '874'
-ht-degree: 1%
+source-wordcount: '821'
+ht-degree: 0%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 Lär dig hur du implementerar Adobe Experience Cloud-program i din mobilapp med Adobe Experience Platform Mobile SDK.
 
-Experience Platform Mobile SDK är en SDK på klientsidan som gör att kunder i Adobe Experience Cloud kan interagera med både Adobe-program och tredjepartstjänster via Adobe Experience Platform Edge Network. Se [Dokumentation för Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/) för mer detaljerad information.
+Experience Platform Mobile SDK är en SDK på klientsidan som gör att kunder i Adobe Experience Cloud kan interagera med både Adobe-program och tredjepartstjänster via Adobe Experience Platform Edge Network. Se [Dokumentation för Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/home/) för mer detaljerad information.
 
 ![Arkitektur](assets/architecture.png)
 
@@ -41,11 +41,11 @@ När du är klar med självstudiekursen kan du:
    * [Profil](profile.md)
    * [Platser](places.md)
    * [Analytics ](analytics.md)
-   * [Adobe Experience Platform](platform.md)
+   * [Experience Platform](platform.md)
    * [Skicka meddelanden med Journey Optimizer](journey-optimizer-push.md)
    * [Meddelanden i appen med Journey Optimizer](journey-optimizer-inapp.md)
-   * [Erbjudanden med Journey Optimizer](journey-optimizer-offers.md)
-   * [A/B-tester med Target](target.md)
+   * [Beslutshantering med Journey Optimizer](journey-optimizer-offers.md)
+   * [Target](target.md)
 
 
 >[!NOTE]
@@ -54,7 +54,7 @@ När du är klar med självstudiekursen kan du:
 
 ## Förutsättningar
 
-I den här lektionen antas du ha ett Adobe-ID och de behörigheter som krävs för att slutföra övningarna. Om du inte gör det bör du kontakta din Adobe-administratör för att begära åtkomst.
+I den här lektionen antas du ha ett Adobe-ID och de användarbehörigheter som krävs för att slutföra övningarna. Om du inte gör det bör du kontakta din Adobe-administratör för att begära åtkomst.
 
 * I Datainsamling måste du ha:
    * **[!UICONTROL Plattformar]**—behörighetsobjekt **[!UICONTROL Mobil]**
@@ -67,22 +67,20 @@ I den här lektionen antas du ha ett Adobe-ID och de behörigheter som krävs f�
    * **[!UICONTROL Identity Management]**—behörighetsobjekt för att hantera och visa identitetsnamnutrymmen.
    * **[!UICONTROL Datainsamling]**—behörighetsobjekt för att hantera och visa dataströmmar.
 
-   * Om du använder ett plattformsbaserat program som Real-Time CDP, Journey Optimizer eller Customer Journey Analytics bör du även ha:
-      * **[!UICONTROL Datahantering]**—behörighetsobjekt som ska hantera och visa datauppsättningar för att slutföra _valfria plattformsövningar_ (kräver en licens för ett plattformsbaserat program).
+   * Om du använder en plattformsbaserad applikation som Real-Time CDP, Journey Optimizer eller Customer Journey Analytics, och kommer att göra de lektioner du behöver:
+      * **[!UICONTROL Datahantering]**—behörighetsobjekt för att hantera och visa datauppsättningar.
       * En utveckling **sandlåda** som du kan använda för den här självstudiekursen.
+
+   * För Journey Optimizer lektioner behöver du behörighet att konfigurera **push-meddelandetjänst** och skapa en **appyta**, a **resa**, a **message** och **meddelandeförinställningar**. För Beslutshantering behöver du rätt behörighet för att **hantera erbjudanden** och **beslut** enligt beskrivning [här](https://experienceleague.adobe.com/docs/journey-optimizer/using/access-control/privacy/high-low-permissions.html?lang=en#decisions-permissions).
 
 * För Adobe Analytics måste du veta vilken **rapportsviter** du kan använda för att slutföra den här självstudiekursen.
 
-* För Adobe Target måste du ha behörighet, korrekt konfigurerad **roller**, **arbetsytor** och **egenskaper** enligt beskrivning [här](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=en).
-
-* För Adobe Journey Optimizer måste du ha tillräcklig behörighet för att konfigurera **push-meddelandetjänst** och skapa en **appyta**, a **resa**, a **message** och **meddelandeförinställningar**. För Beslutshantering behöver du rätt behörighet för att **hantera erbjudanden** och **beslut** enligt beskrivning [här](https://experienceleague.adobe.com/docs/journey-optimizer/using/access-control/privacy/high-low-permissions.html?lang=en#decisions-permissions).
-
-Alla Experience Cloud-kunder bör ha tillgång till de funktioner som krävs för att driftsätta Mobile SDK.
+* För Adobe Target måste du ha behörighet att skapa och aktivera aktiviteter.
 
 
 >[!NOTE]
 >
->I den här självstudiekursen skapar du scheman, datauppsättningar, identiteter osv. Om du går igenom den här självstudiekursen med flera personer i en och samma sandlåda, eller om du använder ett delat konto, bör du överväga att lägga till eller föregå en identifiering som en del av namnkonventionen när du skapar dessa objekt. Lägg till exempel ` - <your name or initials>` till namnet på det objekt som du ska skapa.
+>Som en del av den här självstudiekursen skapar du scheman, datauppsättningar, identiteter och så vidare. Om flera personer går igenom den här självstudiekursen i en enda sandlåda bör du överväga att lägga till eller föregå en identifiering som en del av namnkonventionen när du skapar dessa objekt. Lägg till exempel ` - <your name or initials>` till namnet på det objekt som du ska skapa.
 
 
 ## Hämta Luma-appen
@@ -93,15 +91,16 @@ Det finns två versioner av exempelappen att hämta. Båda versionerna kan hämt
 1. [Starta](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App){target="_blank"}: ett projekt utan kod eller med platshållarkod för merparten av SDK-koden för Experience Platform Mobile som du behöver använda för att slutföra övningarna i den här kursen.
 1. [Slutför](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App){target="_blank"}: en version med fullständig implementering för referens.
 
+
 >[!NOTE]
 >
->Du kommer att använda iOS som plattform [!DNL Swift] som programmeringsspråk, [!DNL SwiftUI] som gränssnittets ramverk och [!DNL Xcode] som den integrerade utvecklingsmiljön. Många av de implementeringskoncept som beskrivs liknar dock andra utvecklingsplattformar. Och många har redan slutfört den här självstudiekursen så lite som till ingen tidigare erfarenhet av iOS/Swift(UI). Du behöver inte vara expert för att slutföra lektionerna, men du får ut mer av lektionerna om du enkelt kan läsa och förstå koden.
+>Du använder iOS [!DNL Swift] som programmeringsspråk, [!DNL SwiftUI] som gränssnittets ramverk och [!DNL Xcode] som den integrerade utvecklingsmiljön. Många av de implementeringskoncept som beskrivs liknar dock andra utvecklingsplattformar. Många har redan slutfört den här självstudiekursen med lite eller ingen tidigare erfarenhet av iOS/Swift(UI). Du behöver inte vara expert för att slutföra lektionerna, men du får ut mer av lektionerna om du enkelt kan läsa och förstå koden.
 
 
 Kom så börjar vi!
 
 >[!SUCCESS]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 
 Nästa: **[Skapa ett XDM-schema](create-schema.md)**

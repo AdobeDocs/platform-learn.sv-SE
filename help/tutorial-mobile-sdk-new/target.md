@@ -6,18 +6,18 @@ feature-set: Target
 feature: A/B Tests
 hide: true
 exl-id: 87546baa-2d8a-4cce-b531-bec3782d2e90
-source-git-commit: d7410a19e142d233a6c6597de92f112b961f5ad6
+source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
 workflow-type: tm+mt
-source-wordcount: '1921'
+source-wordcount: '1911'
 ht-degree: 0%
 
 ---
 
 # Optimera och personalisera med Adobe Target
 
-Lär dig hur du optimerar och personaliserar upplevelserna i dina mobilappar med Platform Mobile SDK och Adobe Target.
+Lär dig optimera och personalisera upplevelserna i era mobilappar med Platform Mobile SDK och Adobe Target.
 
-Target innehåller allt som ni behöver för att skräddarsy och personalisera kundernas upplevelser. Target hjälper er att maximera intäkterna från era webbplatser och mobilsajter, appar, sociala medier och andra digitala kanaler. Target kan utföra A/B-tester, multivariata tester, rekommendera produkter och innehåll, målinrikta innehåll, anpassa innehåll automatiskt med AI och mycket annat. Fokus i den här lektionen ligger på A/B-testfunktionen i Target.  Se [Översikt över A/B-test](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=en) för mer information.
+Target innehåller allt som ni behöver för att skräddarsy och personalisera kundernas upplevelser. Target hjälper er att maximera intäkterna från era webbplatser och mobilsajter, appar, sociala medier och andra digitala kanaler. Target kan utföra A/B-tester, multivariata tester, rekommendera produkter och innehåll, målinrikta innehåll, anpassa innehåll automatiskt med AI och mycket annat. Fokus i den här lektionen ligger på A/B-testfunktionen i Target. Se [Översikt över A/B-test](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=en) för mer information.
 
 ![Arkitektur](assets/architecture-at.png)
 
@@ -81,7 +81,7 @@ För att säkerställa att data som skickas från din mobilapp till Edge Network
 
 1. I gränssnittet för datainsamling väljer du **[!UICONTROL Datastreams]** och välj till exempel din datastream **[!DNL Luma Mobile App]**.
 1. Välj ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_MoreSmallList_18_N.svg) for **[!UICONTROL Experience Platform]** och markera ![Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) **[!UICONTROL Redigera]** på snabbmenyn.
-1. I **[!UICONTROL Datastreams]** > ![Mapp](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Folder_18_N.svg) >  **[!UICONTROL Adobe Experience Platform]** skärm, se **[!UICONTROL Offer decisioning]**, **[!UICONTROL Kantsegmentering]** och **[!UICONTROL Destinationer för anpassning]** är markerade. Om du också följer lektionerna från Journey Optimizer bör du välja **[!UICONTROL Adobe Journey Optimizer]** också. Se [Adobe Experience Platform-inställningar](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=en#aep) för mer information.
+1. I **[!UICONTROL Datastreams]** > ![Mapp](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Folder_18_N.svg) >  **[!UICONTROL Adobe Experience Platform]** ska du se till att **[!UICONTROL Offer decisioning]**, **[!UICONTROL Kantsegmentering]** och **[!UICONTROL Destinationer för anpassning]** är markerade. Om du också följer lektionerna från Journey Optimizer väljer du **[!UICONTROL Adobe Journey Optimizer]**. Se [Adobe Experience Platform-inställningar](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=en#aep) för mer information.
 1. Om du vill spara din datastream-konfiguration väljer du **[!UICONTROL Spara]** .
 
    ![AEP-konfiguration för datastream](assets/datastream-aep-configuration-target.png)
@@ -104,7 +104,7 @@ För att säkerställa att data som skickas från din mobilapp till Edge Network
 1. Välj **[!UICONTROL Bläddra]** i det övre fältet.
 1. Välj ditt schema för att öppna det.
 1. Välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Lägg till]** nästa **[!UICONTROL Fältgrupper]**.
-1. I dialogrutan Lägg till fältgrupper söker du efter `proposition`, markera **[!UICONTROL Experience Event - Proposition Interactions]** och markera **[!UICONTROL Lägg till fältgrupper]**.
+1. I **[!UICONTROL Lägg till fältgrupper]** dialogruta, söka efter `proposition`, markera **[!UICONTROL Experience Event - Proposition Interactions]** och markera **[!UICONTROL Lägg till fältgrupper]**.
    ![Föreslå](assets/schema-fieldgroup-proposition.png)
 1. Om du vill spara ändringarna i ditt schema väljer du **[!UICONTROL Spara]**.
 
@@ -121,7 +121,7 @@ Så här validerar du inställningarna i Assurance:
 
 ## Skapa ett A/B-test
 
-Det finns många typer av aktiviteter som du kan skapa i Adobe Target och implementera i en mobilapp, vilket nämndes i inledningen. I den här lektionen ska du fokusera på att skapa ett implementeringstest för A/B.
+Det finns många typer av aktiviteter som du kan skapa i Adobe Target och implementera i en mobilapp, vilket nämndes i inledningen. I den här lektionen ska du implementera ett A/B-test.
 
 1. I målgränssnittet väljer du **[!UICONTROL Verksamhet]** i det övre fältet.
 1. Välj **[!UICONTROL Skapa aktivitet]** och **[!UICONTROL A/B-test]** på snabbmenyn.
@@ -191,7 +191,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 >Om du har slutfört [Installera SDK:er](install-sdks.md) är SDK redan installerat och du kan hoppa över det här steget.
 >
 
-1. I Xcode kontrollerar du att [AEP-optimering](https://github.com/adobe/aepsdk-messaging-ios.git) läggs till i listan över paket i paketberoenden. Se [Swift Package Manager](install-sdks.md#swift-package-manager).
+1. I Xcode kontrollerar du att [AEP-optimering](https://github.com/adobe/aepsdk-messaging-ios) läggs till i listan över paket i paketberoenden. Se [Swift Package Manager](install-sdks.md#swift-package-manager).
 1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL AppDelegate]** i Xcode Project-navigatorn.
 1. Säkerställ `AEPOptimize` är en del av din lista över importer.
 
@@ -240,7 +240,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
    * hämtar förslagen för den aktuella profilen baserat på beslutsomfånget (den plats du har definierat i A/B-testet),
    * hämtar erbjudandet från erbjudandet,
    * frigör innehållet i erbjudandet så att det kan visas korrekt i appen, och
-   * utlöser `displayed()` åtgärd för erbjudandet som skickar tillbaka en händelse till Edge Network som talar om att erbjudandet visas.
+   * utlöser `displayed()` åtgärd för erbjudandet som skickar tillbaka en händelse till Platform Edge Network som informerar om att erbjudandet visas.
 
 1. Fortfarande i **[!DNL TargetOffersView]** lägger du till följande kod i `.onFirstAppear` modifierare. Den här koden ser till att callback-funktionen för uppdatering av erbjudanden registreras endast en gång.
 
@@ -287,10 +287,12 @@ Så här validerar du A/B-testet i Assurance:
 
 ## Nästa steg
 
-Nu bör du ha alla verktyg du behöver för att börja lägga till fler A/B-tester eller andra Target-aktiviteter (som Experience Targeting, Multivariate Test), där det är relevant och tillämpligt, i din app. Det finns mer detaljerad information i [Github repo for the Optimize extension](https://github.com/adobe/aepsdk-optimize-ios) där du också kan hitta en länk till en dedikerad [självstudiekurs](https://opensource.adobe.com/aepsdk-optimize-ios/#/tutorials/README) om hur ni håller reda på Adobe Target erbjudanden.
+Nu bör du ha alla verktyg du behöver för att börja lägga till fler A/B-tester eller andra Target-aktiviteter (som Experience Targeting, Multivariate Test), där det är relevant och tillämpligt, i din app. Det finns mer detaljerad information i [GitHub-repo för tillägget Optimera](https://github.com/adobe/aepsdk-optimize-ios) där du också kan hitta en länk till en dedikerad [självstudiekurs](https://opensource.adobe.com/aepsdk-optimize-ios/#/tutorials/README) om hur ni håller reda på Adobe Target erbjudanden.
 
 >[!SUCCESS]
 >
->Du har aktiverat appen för A/B-tester och visat resultatet av ett A/B-test med Adobe Target och tillägget Adobe Journey Optimizer - Decisioning för Adobe Experience Platform Mobile SDK.<br/>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
+>Du har aktiverat appen för A/B-tester och visat resultatet av ett A/B-test med Adobe Target och tillägget Adobe Journey Optimizer - Decisioning för Adobe Experience Platform Mobile SDK.
+>
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 
 Nästa: **[Slutsats och nästa steg](conclusion.md)**

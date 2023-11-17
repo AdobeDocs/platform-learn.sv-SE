@@ -3,9 +3,9 @@ title: Samla in profildata
 description: Lär dig hur du samlar in profildata i en mobilapp.
 hide: true
 exl-id: 6ce02ccc-6280-4a1f-a96e-1975f8a0220a
-source-git-commit: 5d34e510ef72190762c29b71359b362ef4be7b22
+source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
 workflow-type: tm+mt
-source-wordcount: '593'
+source-wordcount: '596'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ I den här lektionen kommer du att:
 
 Det kan vara bra att ha som mål och/eller personalisering i appen för att snabbt veta om en användare har köpt något tidigare eller nyligen. Låt oss konfigurera det i Luma-appen.
 
-1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** >  **[!DNL MobileSDK]** i Xcode Project navigator och hitta `func updateUserAttribute(attributeName: String, attributeValue: String)` funktion. Lägg till följande kod:
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** >  **[!DNL MobileSDK]** i Xcode Project navigator och hitta `func updateUserAttributes(attributeName: String, attributeValue: String)` funktion. Lägg till följande kod:
 
    ```swift
    // Create a profile map, add attributes to the map and update profile using the map
@@ -60,7 +60,7 @@ Det kan vara bra att ha som mål och/eller personalisering i appen för att snab
 
    ```swift
    // Update attributes
-   MobileSDK.shared.updateUserAttribute(attributeName: "isPaidUser", attributeValue: "yes")
+   MobileSDK.shared.updateUserAttributes(attributeName: "isPaidUser", attributeValue: "yes")
    ```
 
 
@@ -115,7 +115,7 @@ Ytterligare dokumentation finns [här](https://developer.adobe.com/client-sdks/d
 
       <img src="./assets/mobile-app-events-3.png" width="300">
 
-   1. Återgå till **[!UICONTROL Startsida]** skärm. Du bör se ett märke tillagt <img src="assets/person-badge-icon.png" width="15" />.
+   1. Återgå till **[!UICONTROL Startsida]** skärm. Du bör se att ett märke har lagts till <img src="assets/person-badge-icon.png" width="15" />.
 
       <img src="./assets/personbadges.png" width="300">
 
@@ -126,6 +126,8 @@ Ytterligare dokumentation finns [här](https://developer.adobe.com/client-sdks/d
 
 >[!SUCCESS]
 >
->Du har nu konfigurerat din app för att uppdatera profilattribut i Edge Network och (när den har konfigurerats) med Adobe Experience Platform.<br/>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
+>Du har nu konfigurerat din app för att uppdatera profilattribut i Edge Network och (när den har konfigurerats) med Adobe Experience Platform.
+>
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 
 Nästa: **[Använd platser](places.md)**

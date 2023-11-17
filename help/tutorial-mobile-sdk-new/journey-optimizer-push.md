@@ -6,9 +6,9 @@ feature-set: Journey Optimizer
 feature: Push
 hide: true
 exl-id: 37d5b52e-c0d0-4ca1-9629-5c3dd2b2a5d5
-source-git-commit: 5d34e510ef72190762c29b71359b362ef4be7b22
+source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
 workflow-type: tm+mt
-source-wordcount: '2734'
+source-wordcount: '2701'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Lär dig skapa push-meddelanden för mobilappar med Experience Platform Mobile SDK och Journey Optimizer.
 
-Med Journey Optimizer kan ni skapa resor och skicka meddelanden till utvalda målgrupper. Innan du skickar push-meddelanden med Journey Optimizer måste du se till att rätt konfigurationer och integreringar finns på plats. Om du vill veta mer om dataflödet för push-meddelanden i Journey Optimizer kan du läsa [dokumentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configuration-message/push-config/push-gs.html).
+Med Journey Optimizer kan ni skapa resor och skicka meddelanden till utvalda målgrupper. Innan du skickar push-meddelanden med Journey Optimizer måste du se till att rätt konfigurationer och integreringar finns på plats. Om du vill veta mer om dataflödet för push-meddelanden i Journey Optimizer kan du läsa [dokumentation](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-gs.html).
 
 ![Arkitektur](assets/architecture-ajo.png)
 
@@ -30,12 +30,12 @@ Med Journey Optimizer kan ni skapa resor och skicka meddelanden till utvalda må
 
 * Programmet har skapats och körts med SDK:er installerade och konfigurerade.
 * Konfigurera appen för Adobe Experience Platform.
-* Åtkomst till Journey Optimizer och tillräcklig behörighet enligt beskrivningen [här](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configuration-message/push-config/push-configuration.html?lang=en). Du behöver även tillräcklig behörighet för följande Journey Optimizer-funktioner.
+* Åtkomst till Journey Optimizer och tillräcklig behörighet enligt beskrivningen [här](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html?lang=en). Du behöver även tillräcklig behörighet för följande Journey Optimizer-funktioner.
    * Skapa en appyta.
    * Skapa en resa.
    * Skapa ett meddelande.
    * Skapa meddelandeförinställningar.
-* Betalat Apple-utvecklarkonto med tillräcklig behörighet för att skapa certifikat, identifierare och nycklar.
+* **Betalat Apple-utvecklarkonto** med tillräcklig åtkomst för att skapa certifikat, identifierare och nycklar.
 * Fysisk iOS-enhet eller simulator för testning.
 
 ## Utbildningsmål
@@ -159,7 +159,7 @@ För att din app ska fungera med Journey Optimizer måste du uppdatera din tagge
 
 ## Signering
 
-Det krävs bara att du signerar Luma-appen för [Skapa och skicka push-meddelanden](journey-optimizer-push.md) och [Skapa och skicka meddelanden i appen](journey-optimizer-inapp.md) lektioner i den här självstudien. Dessa lektioner kräver en provisioneringsprofil för Apple som **kräver ett betalt Apple-utvecklarkonto**.
+Signera Luma-appen krävs för att skicka push-meddelanden och **kräver ett betalt Apple-utvecklarkonto**.
 
 Så här uppdaterar du signeringen för din app:
 
@@ -185,7 +185,7 @@ Så här uppdaterar du signeringen för din app:
 
 1. Välj **[!DNL Luma]** från **[!UICONTROL MÅLGRUPPER]** väljer du **[!UICONTROL Signering och funktioner]** väljer du **[!UICONTROL + Funktioner]** knapp och sedan markera **[!UICONTROL Push-meddelanden]**. Detta gör att din app kan ta emot push-meddelanden.
 
-1. Därefter måste du lägga till ett meddelandetillägg i programmet. Gå tillbaka till **[!DNL General]** och väljer **[!UICONTROL +]** ikonen längst ned i **[!UICONTROL MÅLGRUPPER]** -avsnitt.
+1. Sedan måste du lägga till ett meddelandetillägg i programmet. Gå tillbaka till **[!DNL General]** och väljer **[!UICONTROL +]** ikonen längst ned i **[!UICONTROL MÅLGRUPPER]** -avsnitt.
 
 1. Du uppmanas att välja en mall för det nya målet. Välj **[!UICONTROL Meddelandetjänsttillägg]** välj **[!UICONTROL Nästa]**.
 
@@ -205,7 +205,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 >Om du har slutfört [Installera SDK:er](install-sdks.md) är SDK redan installerat och du kan hoppa över det här steget.
 >
 
-1. I Xcode kontrollerar du att [AEP Messaging](https://github.com/adobe/aepsdk-messaging-ios.git) läggs till i listan över paket i paketberoenden. Se [Swift Package Manager](install-sdks.md#swift-package-manager).
+1. I Xcode kontrollerar du att [AEP Messaging](https://github.com/adobe/aepsdk-messaging-ios) läggs till i listan över paket i paketberoenden. Se [Swift Package Manager](install-sdks.md#swift-package-manager).
 1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!UICONTROL AppDelegate]** i Xcode Project-navigatorn.
 1. Säkerställ `AEPMessaging` är en del av din lista över importer.
 
@@ -251,7 +251,7 @@ Om du vill skapa ett eget push-meddelande måste du definiera en händelse i Jou
 
 ### Uppdatera ditt schema
 
-Du ska definiera en ny händelsetyp som ännu inte är tillgänglig som en del av listan med händelser som definieras i ditt schema. Du kommer att använda den här händelsetypen senare när du utlöser push-meddelanden.
+Du ska definiera en ny händelsetyp som ännu inte är tillgänglig som en del av listan med händelser som definieras i ditt schema. Du använder den här händelsetypen senare när du utlöser push-meddelanden.
 
 1. I användargränssnittet för Journey Optimizer väljer du **[!UICONTROL Scheman]** från den vänstra listen.
 1. Välj **[!UICONTROL Bläddra]** i tabbfältet.
@@ -265,7 +265,7 @@ Du ska definiera en ny händelsetyp som ännu inte är tillgänglig som en del a
 
 ### Definiera en händelse
 
-Med händelser i Journey Optimizer kan du utlösa resor åt gången för att skicka meddelanden, som till exempel push-meddelanden. Se [Om händelser](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/events-journeys/about-events.html?lang=en) för mer information.
+Med händelser i Journey Optimizer kan du utlösa resor åt gången för att skicka meddelanden, till exempel push-meddelanden. Se [Om händelser](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/events-journeys/about-events.html?lang=en) för mer information.
 
 1. I användargränssnittet för Journey Optimizer väljer du **[!UICONTROL Konfigurationer]** från den vänstra listen.
 
@@ -304,7 +304,7 @@ Med händelser i Journey Optimizer kan du utlösa resor åt gången för att ski
    1. Välj **[!UICONTROL Spara]**.
       ![Redigera händelsesteg 2](assets/ajo-edit-event2.png)
 
-Du har just skapat en händelsekonfiguration som baseras på det händelseschema för mobilappsupplevelser som du skapade tidigare som en del av den här självstudien. Den här händelsekonfigurationen kommer att filtrera inkommande upplevelsehändelser med din specifika händelsetyp (`application.test`), så att du bara ser till att händelser av den typen som initieras från din mobilapp utlöser den resa du bygger i nästa steg. I ett verkligt scenario kanske du vill skicka push-meddelanden från en extern tjänst, men samma koncept gäller: från det externa programmet skickar du en upplevelsehändelse till Experience Platform som innehåller specifika fält som du kan använda för att tillämpa villkor på innan dessa händelser utlöser en resa.
+Du har just skapat en händelsekonfiguration som baseras på det händelseschema för mobilappsupplevelser som du skapade tidigare som en del av den här självstudien. Den här händelsekonfigurationen kommer att filtrera inkommande upplevelsehändelser med din specifika händelsetyp (`application.test`), så bara händelser av den typen, som initierats från din mobilapp, kommer att utlösa den resa du bygger i nästa steg. I ett verkligt scenario kanske du vill skicka push-meddelanden från en extern tjänst, men samma koncept gäller: från det externa programmet skickar du en upplevelsehändelse till Experience Platform som innehåller specifika fält som du kan använda för att tillämpa villkor på innan dessa händelser utlöser en resa.
 
 ### Skapa resan
 
@@ -425,6 +425,8 @@ Nu bör du ha alla verktyg som behövs för att hantera push-meddelanden i appen
 
 >[!SUCCESS]
 >
->Du har nu aktiverat appen för push-meddelanden med Journey Optimizer och Journey Optimizer-tillägget för Experience Platform Mobile SDK.<br/>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
+>Du har nu aktiverat appen för push-meddelanden med Journey Optimizer och Journey Optimizer-tillägget för Experience Platform Mobile SDK.
+>
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 
 Nästa: **[Skapa och skicka meddelanden i appen](journey-optimizer-inapp.md)**

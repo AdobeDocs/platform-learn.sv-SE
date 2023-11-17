@@ -4,9 +4,9 @@ description: Lär dig hur du hanterar datainsamling med WebViews i en mobilapp.
 jira: KT-6987
 hide: true
 exl-id: 0c8818f7-39d3-496e-a835-2d85d50e50d6
-source-git-commit: 5d34e510ef72190762c29b71359b362ef4be7b22
+source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
 workflow-type: tm+mt
-source-wordcount: '490'
+source-wordcount: '489'
 ht-degree: 0%
 
 ---
@@ -92,7 +92,7 @@ Så här kör du koden:
      adobe_mc=TS=1636526122|MCMID=79076670946787530005526183384271520749|MCORGID=7ABB3E6A5A7491460A495D61@AdobeOrg
      ```
 
-Tyvärr är felsökningen av webbsessionen begränsad. Du kan inte använda Adobe Experience Platform Debugger i webbläsaren för att till exempel fortsätta felsöka webbvisningssessionen.
+Tyvärr är felsökningen av webbsessionen begränsad. Du kan till exempel inte använda Adobe Experience Platform Debugger i webbläsaren för att fortsätta felsöka webbvisningssessionen.
 
 >[!NOTE]
 >
@@ -101,6 +101,8 @@ Tyvärr är felsökningen av webbsessionen begränsad. Du kan inte använda Adob
 
 >[!SUCCESS]
 >
->Du har nu konfigurerat din app så att den visar innehåll baserat på en URL i en webbvy med samma ECID som det ECID som redan utfärdats av Adobe Experience Platform Mobile SDK.<br/>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
+>Du har nu konfigurerat din app så att den visar innehåll baserat på en URL i en webbvy med samma ECID som det ECID som redan utfärdats av Adobe Experience Platform Mobile SDK.
+>
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
 
 Nästa: **[Identitet](identity.md)**

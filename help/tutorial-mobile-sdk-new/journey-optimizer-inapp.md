@@ -6,9 +6,9 @@ feature-set: Journey Optimizer
 feature: In App
 hide: true
 exl-id: 6cb4d031-6172-4a84-b717-e3a1f5dc7d5d
-source-git-commit: 5d34e510ef72190762c29b71359b362ef4be7b22
+source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
 workflow-type: tm+mt
-source-wordcount: '1690'
+source-wordcount: '1546'
 ht-degree: 0%
 
 ---
@@ -32,9 +32,8 @@ Innan du skickar meddelanden i appen med Journey Optimizer måste du se till att
 
 * App med SDK:er har installerats och konfigurerats.
 * Konfigurera appen för Adobe Experience Platform.
-* Åtkomst till Journey Optimizer och tillräcklig behörighet enligt beskrivningen [här](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configuration-message/push-config/push-configuration.html?lang=en). Du behöver även tillräcklig behörighet för följande Journey Optimizer-funktioner.
+* Åtkomst till Journey Optimizer och tillräcklig behörighet enligt beskrivningen [här](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html). Du behöver även tillräcklig behörighet för följande Journey Optimizer-funktioner.
    * Hantera kampanjer.
-* Betalat Apple-utvecklarkonto med tillräcklig behörighet för att skapa certifikat, identifierare och nycklar.
 * Fysisk iOS-enhet eller simulator för testning.
 
 
@@ -67,16 +66,19 @@ I den här lektionen ska du
 1. Ange programpaket-ID för mobilappen i **[!UICONTROL Program-ID (iOS Bundle-ID)]** fält. Exempel,  `com.adobe.luma.tutorial.swiftui`.
 1. Välj **[!UICONTROL Spara]**.
 
-   ![appytans konfiguration](assets/push-app-surface-config.png)
+   ![appytans konfiguration](assets/push-app-surface-config-inapp.png)
 
 ### Uppdatera datastream-konfiguration
 
 Uppdatera Experience Edge-konfigurationen för att säkerställa att data som skickas från din mobilapp till Edge Network vidarebefordras till Journey Optimizer.
 
+
+
 1. I gränssnittet för datainsamling väljer du **[!UICONTROL Datastreams]** och välj till exempel din datastream **[!DNL Luma Mobile App]**.
 1. Välj ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_MoreSmallList_18_N.svg) for **[!UICONTROL Experience Platform]** och markera ![Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) **[!UICONTROL Redigera]** på snabbmenyn.
 1. I **[!UICONTROL Datastreams]** > ![Mapp](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Folder_18_N.svg) >  **[!UICONTROL Adobe Experience Platform]** skärm, se **[!UICONTROL Adobe Journey Optimizer]** är markerat. Se [Adobe Experience Platform-inställningar](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=en#aep) för mer information.
 1. Om du vill spara din datastream-konfiguration väljer du **[!UICONTROL Spara]**.
+
 
    ![AEP-konfiguration för datastream](assets/datastream-aep-configuration.png)
 
@@ -101,27 +103,6 @@ För att din app ska fungera med Journey Optimizer måste du uppdatera din tagge
 >Om du inte ser `AJO Push Tracking Experience Event Dataset` som ett alternativ, kontakta kundtjänst.
 >
 
-
-## Signering
-
-Det krävs bara att du signerar Luma-appen för [Skapa och skicka push-meddelanden](journey-optimizer-push.md) och [Skapa och skicka meddelanden i appen](journey-optimizer-inapp.md) lektioner i den här självstudien. Dessa lektioner kräver en provisioneringsprofil för Apple som **kräver ett betalt Apple-utvecklarkonto**.
-
-Så här uppdaterar du signeringen för din app:
-
-1. Gå till appen i Xcode.
-1. Välj **[!DNL Luma]** i projektnavigatorn.
-1. Välj **[!DNL Luma]** mål.
-1. Välj **Signering och funktioner** -fliken.
-1. Konfigurera **[!UICONTROL Hantera signering automatiskt]**, **[!UICONTROL Team]** och **[!UICONTROL Paketidentifierare]** eller använd dina specifika Apple-utvecklingskonfigurationer.
-
-   >[!IMPORTANT]
-   >
-   >Se till att du använder en _unik_ källidentifierare och ersätt `com.adobe.luma.tutorial.swiftui` källidentifierare eftersom varje källidentifierare måste vara unik. Vanligtvis använder du ett omvänt DNS-format för paket-ID-strängar, som `com.organization.brand.uniqueidentifier`. I den färdiga versionen av den här självstudiekursen används `com.adobe.luma.tutorial.swiftui`.
-
-
-   ![Xcode-signeringsfunktioner](assets/xcode-signing-capabilities.png){zoomable=&quot;yes&quot;}
-
-
 ### Implementera Journey Optimizer i appen
 
 Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara konfigurationen. Därefter måste du installera och registrera Messaging SDK. Om de här stegen inte är tydliga går du igenom [Installera SDK:er](install-sdks.md) -avsnitt.
@@ -131,7 +112,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 >Om du har slutfört [Installera SDK:er](install-sdks.md) är SDK redan installerat och du kan hoppa över det här steget.
 >
 
-1. I Xcode kontrollerar du att [AEP Messaging](https://github.com/adobe/aepsdk-messaging-ios.git) läggs till i listan över paket i paketberoenden. Se [Swift Package Manager](install-sdks.md#swift-package-manager).
+1. I Xcode kontrollerar du att [AEP Messaging](https://github.com/adobe/aepsdk-messaging-ios) läggs till i listan över paket i paketberoenden. Se [Swift Package Manager](install-sdks.md#swift-package-manager).
 1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!UICONTROL AppDelegate]** i Xcode Project-navigatorn.
 1. Säkerställ `AEPMessaging` är en del av din lista över importer.
 
@@ -263,10 +244,12 @@ Du kan validera dina meddelanden i appen i Assurance-gränssnittet.
 
 ## Nästa steg
 
-Nu bör du ha alla verktyg du behöver för att börja lägga till meddelanden i appen, där det är relevant och tillämpligt.  Du kan till exempel marknadsföra produkter baserat på specifika interaktioner som du spårar i din app.
+Nu bör du ha alla verktyg du behöver för att börja lägga till meddelanden i appen, där det är relevant och tillämpligt. Du kan till exempel marknadsföra produkter baserat på specifika interaktioner som du spårar i din app.
 
 >[!SUCCESS]
 >
->Du har aktiverat appen för meddelanden i appen och lagt till en meddelandekampanj i appen med Journey Optimizer och Journey Optimizer-tillägget för Experience Platform Mobile SDK.<br/>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
+>Du har aktiverat appen för meddelanden i appen och lagt till en meddelandekampanj i appen med Journey Optimizer och Journey Optimizer-tillägget för Experience Platform Mobile SDK.
+>
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 
 Nästa: **[Skapa och visa erbjudanden](journey-optimizer-offers.md)**

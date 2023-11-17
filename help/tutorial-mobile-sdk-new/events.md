@@ -3,7 +3,7 @@ title: Spåra händelsedata
 description: Lär dig spåra händelsedata i en mobilapp.
 hide: true
 exl-id: b926480b-b431-4db8-835c-fa1db6436a93
-source-git-commit: f592fc61ad28d04eba3c1c21a0a66bda6e816a5b
+source-git-commit: 4434bee35591d7cf79b7dddc03faba83d00b31f5
 workflow-type: tm+mt
 source-wordcount: '1390'
 ht-degree: 0%
@@ -171,7 +171,7 @@ Om du vill implementera sändning av e-handelsrelaterade upplevelsehändelser p�
       1. För <img src="assets/saveforlater.png" width="15" />:
 
          ```swift
-         // Send saveForLaters commerce experience event
+         // Send saveForLater commerce experience event
          MobileSDK.shared.sendCommerceExperienceEvent(commerceEventType: "saveForLaters", product: product)
          ```
 
@@ -185,13 +185,13 @@ Om du vill implementera sändning av e-handelsrelaterade upplevelsehändelser p�
       1. För <img src="assets/purchase.png" width="20" />:
 
          ```swift
-         // Send purchases commerce experience event
+         // Send purchase commerce experience event
          MobileSDK.shared.sendCommerceExperienceEvent(commerceEventType: "purchases", product: product)
          ```
 
 >[!TIP]
 >
->Om du utvecklar för Android ska du använda karta (`java.util.Map`) som det grundläggande gränssnittet för att konstruera XDM-nyttolasten.
+>Om du utvecklar för Android™ ska du använda karta (`java.util.Map`) som det grundläggande gränssnittet för att konstruera XDM-nyttolasten.
 
 
 ### Anpassade fältgrupper
@@ -205,9 +205,9 @@ Tänk dig att du vill spåra skärmvisningar och interaktioner i själva appen. 
 
   >[!NOTE]
   >
-  >* Standardfältgrupper börjar alltid i objektroten.
+  * Standardfältgrupper börjar alltid i objektroten.
   >
-  >* Anpassade fältgrupper börjar alltid under ett objekt som är unikt för din Experience Cloud-organisation, `_techmarketingdemos` i detta exempel.
+  * Anpassade fältgrupper börjar alltid under ett objekt som är unikt för din Experience Cloud-organisation, `_techmarketingdemos` i detta exempel.
 
   För programinteraktionshändelsen skapar du ett objekt som:
 
@@ -338,7 +338,7 @@ Här kan du implementera koden i Xcode-projektet.
 
 ## Validering
 
-1. Granska [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
+1. Granska [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten med Assurance.
 
    1. Flytta Assurance-ikonen åt vänster.
    1. Välj **[!UICONTROL Startsida]** i flikfältet och verifiera att en **[!UICONTROL ECID]**, **[!UICONTROL E-post]** och **[!UICONTROL CRM-ID]** på hemskärmen.
@@ -367,15 +367,17 @@ Nu bör du ha alla verktyg du behöver för att börja lägga till datainsamling
 
 >[!TIP]
 >
->Granska [färdig app](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App) för fler exempel.
+Granska [färdig app](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App) för fler exempel.
 
 
 ## Skicka händelser till Analytics och Platform
 
-Nu när du har samlat in händelserna och skickat dem till Platform Edge Network skickas de till de program och tjänster som är konfigurerade i din [datastream](create-datastream.md). I senare lektioner mappar du dessa data till [Adobe Analytics](analytics.md), [Adobe Experience Platform](platform.md) och andra lösningar från Adobe Experience Cloud [Adobe Target](target.md) och Adobe Journey Optimizer.
+Nu när du har samlat in händelserna och skickat dem till Platform Edge Network skickas de till de program och tjänster som är konfigurerade i din [datastream](create-datastream.md). I senare lektioner mappar du dessa data till [Adobe Analytics](analytics.md), [Adobe Experience Platform](platform.md)och andra lösningar från Adobe Experience Cloud [Adobe Target](target.md) och Adobe Journey Optimizer.
 
 >[!SUCCESS]
 >
->Du har nu konfigurerat din app för att spåra e-handel, appinteraktion och händelser för skärmspårning till Adobe Experience Platform Edge Network och alla tjänster som du har definierat i din datastam.<br/>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
+Du har nu konfigurerat din app för att spåra e-handel, appinteraktion och händelser för skärmspårning till Adobe Experience Platform Edge Network och alla tjänster som du har definierat i din datastam.
+>
+Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 
 Nästa: **[Hantera WebViews](web-views.md)**

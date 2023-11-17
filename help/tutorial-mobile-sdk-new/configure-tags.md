@@ -3,10 +3,11 @@ title: Konfigurera en taggegenskap
 description: Lär dig konfigurera en taggegenskap i [!UICONTROL Datainsamling] gränssnitt.
 feature: Mobile SDK,Tags
 hide: true
-source-git-commit: a2788110b1c43d24022672bb5ba0f36af66d962b
+exl-id: 4d67b52e-db72-4ee6-be02-aa11a1d32481
+source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
 workflow-type: tm+mt
-source-wordcount: '1096'
-ht-degree: 1%
+source-wordcount: '1090'
+ht-degree: 0%
 
 ---
 
@@ -45,7 +46,7 @@ I den här lektionen kommer du att:
 
       >[!NOTE]
       >
-      > Standardinställningar för samtycke för de kantbaserade SDK-implementeringarna för mobiler, som den du gör i den här lektionen, kommer från [!UICONTROL Godkänn tillägg] och inte [!UICONTROL Integritet] inställning i taggegenskapskonfigurationen. Du lägger till och konfigurerar tillägget för samtycke senare i den här lektionen. Mer information finns på [dokumentationen](https://developer.adobe.com/client-sdks/documentation/privacy-and-gdpr/).
+      > Standardinställningar för samtycke för de kantbaserade SDK-implementeringarna för mobiler, som den du gör i den här lektionen, kommer från [!UICONTROL Godkänn tillägg] och inte [!UICONTROL Integritet] inställning i taggegenskapskonfigurationen. Du lägger till och konfigurerar tillägget för samtycke senare i den här lektionen. Mer information finns på [dokumentationen](https://developer.adobe.com/client-sdks/edge/consent-for-edge-network/).
 
 
 1. Öppna den nya egenskapen.
@@ -131,7 +132,7 @@ Ditt bibliotek är byggt för de nya tilläggen och konfigurationerna. Ett lycka
 
 1. I **[!UICONTROL Instruktioner för mobilinstallation]** väljer du **[!UICONTROL iOS]** -fliken.
 
-1. Du kan kopiera ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) instruktionerna för att konfigurera projektet med CocoaPods. CocoaPods används för att hantera SDK-versioner och -nedladdningar. Läs mer i [Cocoapods dokumentation](https://cocoapods.org/). Om du använder Android som utvecklingsplattform är Gradle verktyget för att hantera SDK-version, hämtningsbara filer och beroenden. Läs mer i [Dokumentation för grafik](https://gradle.org/)
+1. Du kan kopiera ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) instruktionerna för att konfigurera projektet med CocoaPods. CocoaPods används för att hantera SDK-versioner och -nedladdningar. Läs mer i [CocoaPods-dokumentation](https://cocoapods.org/). Om du använder Android™ som utvecklingsplattform är Gradle verktyget för att hantera SDK-version, hämtningsbara filer och beroenden. Läs mer i [Dokumentation för grafik](https://gradle.org/)
 
    Installationsanvisningarna ger dig en bra startpunkt för implementeringen. Ytterligare information finns [här](https://developer.adobe.com/client-sdks/documentation/getting-started/get-the-sdk/).
 
@@ -140,7 +141,7 @@ Ditt bibliotek är byggt för de nya tilläggen och konfigurationerna. Ett lycka
    >För resten av kursen ska du **not** Använd instruktionerna för CocoaPods, men använd i stället en SPM-baserad konfiguration (Swift Package Manager).
    >
 
-1. Välj **[!UICONTROL Swift]** flik nedan **[!UICONTROL Lägg till initieringskod]**. Det här kodblocket visar hur du importerar de SDK:er som krävs och registrerar tilläggen vid start. Detta beskrivs närmare i [Installera SDK:er](install-sdks.md).
+1. Välj **[!UICONTROL Swift]** flik nedan **[!UICONTROL Lägg till initieringskod]**. Det här kodblocket visar hur du importerar de SDK:er som krävs och registrerar tilläggen vid start. Detta beskrivs mer ingående i [Installera SDK:er](install-sdks.md).
 
 1. Kopiera ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) den **[!UICONTROL Miljöfil-ID]** och lagra dem där du behöver dem senare. Detta unika ID pekar på din utvecklingsmiljö. Varje miljö (produktion, mellanlagring, utveckling) har ett eget unikt ID-värde.
 
@@ -148,7 +149,7 @@ Ditt bibliotek är byggt för de nya tilläggen och konfigurationerna. Ett lycka
 
 >[!NOTE]
 >
->Installationsanvisningarna ska betraktas som en startpunkt och inte som slutgiltig dokumentation. De senaste SDK-versionerna och kodexemplen finns i den officiella [dokumentation](https://developer.adobe.com/client-sdks/documentation/).
+>Installationsanvisningarna ska betraktas som en startpunkt och inte som slutgiltig dokumentation. De senaste SDK-versionerna och kodexemplen finns i den officiella [dokumentation](https://developer.adobe.com/client-sdks/home/).
 
 ## Arkitektur för mobila taggar
 
@@ -156,10 +157,12 @@ Om du är bekant med webbversionen av taggar, tidigare Launch, är det viktigt a
 
 * På webben återges en taggegenskap i JavaScript som sedan (vanligtvis) finns i molnet. JavaScript-filen refereras direkt på webbplatsen.
 
-* I en mobil taggegenskap återges regler och konfigurationer i JSON-filer som lagras i molnet. JSON-filerna hämtas och läses av tillägget Mobile Core i mobilappen. Tillägg är separata SDK:er som fungerar tillsammans. Om du lägger till ett tillägg i taggegenskapen måste du även uppdatera appen. Om du ändrar en tilläggsinställning eller skapar en regel återspeglas dessa ändringar i appen när du har publicerat det uppdaterade taggbiblioteket. Tack vare den flexibiliteten kan du ändra inställningar (till exempel Adobe Analytics-rapportens suide id) eller till och med ändra appens beteende (med dataelement och regler, som du kommer att se i senare lektioner) utan att behöva ändra koden i appen och måste skicka appen till appbutiken igen.
+* I en mobil taggegenskap återges regler och konfigurationer i JSON-filer som lagras i molnet. JSON-filerna hämtas och läses av tillägget Mobile Core i mobilappen. Tillägg är separata SDK:er som fungerar tillsammans. Om du lägger till ett tillägg i taggegenskapen måste du även uppdatera appen. Om du ändrar en tilläggsinställning eller skapar en regel återspeglas dessa ändringar i appen när du har publicerat det uppdaterade taggbiblioteket. Tack vare den flexibiliteten kan du ändra inställningar (som Adobe Analytics Report Suite-id) eller till och med ändra appens beteende (med dataelement och regler, som du kommer att se i senare lektioner) utan att behöva ändra koden i appen och skicka appbutiken igen.
 
 >[!SUCCESS]
 >
->Du har nu en mobil taggegenskap att använda i resten av den här självstudien.<br/>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
+>Du har nu en mobil taggegenskap att använda i resten av den här självstudien.
+>
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
 
 Nästa: **[Installera SDK:er](install-sdks.md)**

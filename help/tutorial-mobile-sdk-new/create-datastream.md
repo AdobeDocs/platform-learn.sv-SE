@@ -4,9 +4,9 @@ description: Lär dig hur du skapar ett datastream i Experience Platform.
 feature: Mobile SDK,Datastreams
 hide: true
 exl-id: d8b9df3d-49ee-4578-92c6-0f920a86fe7e
-source-git-commit: d7410a19e142d233a6c6597de92f112b961f5ad6
+source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '444'
 ht-degree: 1%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 Lär dig hur du skapar ett datastream i Experience Platform.
 
-En datastream är en konfiguration på serversidan på Platform Edge Network. Datastream säkerställer att inkommande data till Platform Edge Network dirigeras till Adobe Experience Cloud-program och -tjänster på rätt sätt. Mer information finns i [dokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html) eller [video](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/configure-datastreams.html).
+En datastream är en konfiguration på serversidan på Platform Edge Network. Datastream säkerställer att inkommande data till Platform Edge Network dirigeras till Adobe Experience Cloud-program och -tjänster på rätt sätt. Mer information finns i [dokumentation](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overview.html) eller [video](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/configure-datastreams.html).
 
 ![Arkitektur](assets/architecture.png)
 
@@ -55,7 +55,7 @@ Datastreams kan skapas i [!UICONTROL Datainsamling] -gränssnittet med [!UICONTR
 
 ## Lägg till tjänster
 
-När du går igenom (valfritt) [Analyser](analytics.md) och [Experience Platform](platform.md) lektioner i den här självstudiekursen lägger du till tjänster i din datastam för att säkerställa att datastream vidarebefordras till de konfigurerade tjänsterna när Platform Mobile SDK skickar data till Edge Network.
+När du går igenom (valfritt) [Analyser](analytics.md) och [Experience Platform](platform.md) lektioner i den här självstudiekursen lägger du till tjänster i din datastam så att data som skickas till Platform Edge Network vidarebefordras till dessa program.
 
 <!--
 
@@ -102,12 +102,14 @@ You might also want to enable the Adobe Experience Platform service.
 
 >[!NOTE]
 >
->Genom att aktivera varje tjänst som din organisation använder ser du till att data som samlas in i mobilappen kan användas överallt. Mer information om datastream-inställningar finns i dokumentationen [här](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html#adobe-experience-platform-settings).
+>Genom att aktivera varje tjänst som din organisation använder ser du till att data som samlas in i mobilappen kan användas överallt. Mer information om datastream-inställningar finns i dokumentationen [här](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overview.html).
 
 När du implementerar Platform Mobile SDK i din egen app bör du skapa tre datastreams som kan kopplas till dina tre taggmiljöer (utveckling, scen och produktion). Om du använder Platform Mobile SDK med plattformsbaserade program som Adobe Real-time Customer Data Platform eller Adobe Journey Optimizer måste du se till att skapa dessa datastölar i rätt sandlåda.
 
 >[!SUCCESS]
 >
->Du har nu ett datastream att använda för resten av självstudiekursen.<br/>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
+>Du har nu ett datastream att använda för resten av självstudiekursen.
+>
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
 
 Nästa: **[Konfigurera en taggegenskap](configure-tags.md)**

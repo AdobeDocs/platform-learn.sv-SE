@@ -1,11 +1,11 @@
 ---
 title: Konfigurera samtycke med Platform Web SDK
-description: Lär dig hur du konfigurerar sekretessinställningarna för taggtillägget Experience Platform Web SDK. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
+description: Lär dig hur du konfigurerar sekretessinställningarna för taggtillägget Experience Platform Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Tags,Consent
 exl-id: 502a7467-3699-4b2b-93bf-6b6069ea2090
-source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
+source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
 workflow-type: tm+mt
-source-wordcount: '1624'
+source-wordcount: '1623'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ När lektionen är slut kan du:
 
 * Läsa in en CMP med taggar
 * Konfigurera sekretessinställningar i taggtillägget Experience Platform Web SDK
-* Ange samtycke för Experience Platform Web SDK baserat på besökarens åtgärd
+* Ange medgivande för Experience Platform Web SDK baserat på besökarens åtgärd
 
 ## Förutsättningar
 
@@ -67,7 +67,7 @@ Läs mer om den plattform för hantering av samtycke som används i den här sj�
 När du är klar med Klaros konfigurationer skapar du nu en taggregel med följande konfigurationer:
 
 * [!UICONTROL Namn]: `all pages - library load - Klaro`
-* [!UICONTROL Händelse]: [!UICONTROL Bibliotek inläst (sidan ovanpå)] med [!UICONTROL Avancerade alternativ] > [!UICONTROL Order] anges till 1
+* [!UICONTROL Händelse]: [!UICONTROL Bibliotek inläst (sidan ovanpå)] med [!UICONTROL Avancerade alternativ] > [!UICONTROL Beställning] anges till 1
 * [!UICONTROL Åtgärd]: [!UICONTROL Egen kod], [!UICONTROL Språk]: HTML för att läsa in CMP-skriptet.
 
 ![Infoga CMP-regel](assets/consent-cmp-inject-rule-1.png)
@@ -98,7 +98,7 @@ Integritetsåtgärder som GDPR, CCPA och andra spelar en viktig roll när det g�
 ![Samtyckesscenarier](assets/consent-scenarios.jpeg)
 
 
-### Scenario 1: Underförstådd anmälan
+### Scenario 1: Implicit deltagande
 
 Underförstådd anmälan innebär att företaget inte behöver få besökarens samtycke (eller&quot;anmälan&quot;) innan de samlar in sina data, och därmed behandlas alla besökare på webbplatsen som insticksprogram som standard. Men besökaren kan avanmäla sig genom att avvisa cookies via medgivandebanderollen. Det här användningsfallet liknar CCPA.
 
@@ -148,7 +148,7 @@ Om en besökare bestämmer sig för att avanmäla sig (avvisa spårningscookies)
     ![Data Element consent confirmed](assets/consent-data-element-confirmed.png)
 -->
 
-1. Skapa en regel som utlöses när besökaren klickar **Jag avböjer**.  Namnge den här regeln som: `all pages - click consent banner - set consent "out"`
+1. Skapa en regel som aktiveras när besökaren klickar **Jag avböjer**.  Namnge den här regeln som: `all pages - click consent banner - set consent "out"`
 
 1. Som **[!UICONTROL Händelse]**, använda **[!UICONTROL Klicka]** på **[!UICONTROL Element som matchar CSS-väljaren]** `#klaro .cn-decline`
 
@@ -169,7 +169,7 @@ Validera genom att gå till webbplatsen Luma Demo, avvisa cookies och bekräfta 
 ### Scenario 2: Underförstådd avanmälan
 
 
-Underförstådd avanmälan innebär att besökarna ska behandlas som avanmäld som standard och cookies bör inte anges. Web SDK-förfrågningar får inte utlösas om inte besökarna bestämmer sig för att manuellt gå med genom att acceptera cookies via medgivandebanderollen. Ni kanske måste hantera ett sådant användningsfall i den EU-region där GDPR gäller.
+Underförstådd avanmälan innebär att besökarna ska behandlas som avanmäld som standard och cookies bör inte anges. Web SDK-begäranden ska inte utlösas om inte besökarna bestämmer sig för att manuellt gå med genom att acceptera cookies via den medgivande bannern. Ni kanske måste hantera ett sådant användningsfall i den EU-region där GDPR gäller.
 
 Så här kan du konfigurera konfigurationen för ett implicit avanmälningsscenario:
 
@@ -192,7 +192,7 @@ Så här kan du konfigurera konfigurationen för ett implicit avanmälningsscena
 
 Om en besökare bestämmer sig för att anmäla sig (acceptera spårningscookies) måste du ändra medgivandet och ange det som **[!UICONTROL I]**. Så här kan du göra med en regel:
 
-1. Skapa en regel som utlöses när besökaren klickar **Det är ok**.  Namnge den här regeln som: `all pages - click consent banner - set consent "in"`
+1. Skapa en regel som aktiveras när besökaren klickar **Det är ok**.  Namnge den här regeln som: `all pages - click consent banner - set consent "in"`
 
 1. Som **[!UICONTROL Händelse]**, använda **[!UICONTROL Klicka]** på **[!UICONTROL Element som matchar CSS-väljaren]** `#klaro .cm-btn-success`
 
@@ -206,7 +206,7 @@ Om en besökare bestämmer sig för att anmäla sig (acceptera spårningscookies
 
 1. Välj **[!UICONTROL Spara i bibliotek och bygge]**:
 
-   ![Avanmäl medgivande](assets/consent-rule-optin-saveAndBuild.png)
+   ![Medgivanderegelns avanmälan](assets/consent-rule-optin-saveAndBuild.png)
 
 1. **[!UICONTROL Spara]** regeln till ditt bibliotek och återskapa den.
 
@@ -224,4 +224,4 @@ Mer information om [!UICONTROL Ange samtycke] åtgärd, se [Ange samtycke](https
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

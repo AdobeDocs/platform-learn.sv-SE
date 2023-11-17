@@ -1,18 +1,18 @@
 ---
 title: Konfigurera Adobe Analytics med Experience Platform Web SDK
-description: Lär dig hur du konfigurerar Adobe Analytics med Experience Platform Web SDK. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
+description: Lär dig hur du konfigurerar Adobe Analytics med Experience Platform Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 solution: Data Collection, Analytics
 exl-id: de86b936-0a47-4ade-8ca7-834c6ed0f041
-source-git-commit: 17b87daf399b11fb698d34bd6f1b93fa8cbaa1d4
+source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
 workflow-type: tm+mt
-source-wordcount: '3554'
+source-wordcount: '3545'
 ht-degree: 0%
 
 ---
 
 # Konfigurera Adobe Analytics med Platform Web SDK
 
-Lär dig hur du konfigurerar Adobe Analytics med [Experience Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html), skapa taggregler för att skicka data till Adobe Analytics och validera att Analytics hämtar in data som förväntat.
+Lär dig konfigurera Adobe Analytics med [Experience Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html), skapa taggregler för att skicka data till Adobe Analytics och validera att Analytics hämtar in data som förväntat.
 
 [Adobe Analytics](https://experienceleague.adobe.com/docs/analytics.html) är en branschledande applikation som ger er möjlighet att förstå era kunder som människor och styra verksamheten med kundanalys.
 
@@ -31,7 +31,7 @@ När lektionen är klar kan du:
 
 ## Förutsättningar
 
-Du känner till taggar, Adobe Analytics och [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html){target=&quot;_blank&quot;} inloggnings- och shoppingfunktioner.
+Du känner till taggar, Adobe Analytics och [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"} inloggnings- och shoppingfunktioner.
 
 Du behöver minst ett test-/dev-rapportpaket-ID. Om du inte har någon test-/dev-rapportsserie som du kan använda för den här självstudiekursen [skapa en](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/t-create-a-report-suite.html).
 
@@ -42,8 +42,8 @@ Du måste ha slutfört alla steg från de föregående avsnitten i självstudien
    * [Konfigurera ett XDM-schema](configure-schemas.md)
    * [Konfigurera ett identitetsnamnutrymme](configure-identities.md)
    * [Konfigurera ett datastream](configure-datastream.md)
-* Tagginställningar
-   * [Installera Web SDK-tillägg](install-web-sdk.md)
+* Märkordskonfiguration
+   * [Installera SDK-tillägg för webben](install-web-sdk.md)
    * [Skapa dataelement](create-data-elements.md)
    * [Skapa en taggregel](create-tag-rule.md)
    * [Validera med Adobe Experience Platform debugger](validate-with-debugger.md)
@@ -74,8 +74,8 @@ Schemat som skapats i [Konfigurera ett schema](configure-schemas.md) lektionen i
 | `commerce.purchases.value` | köp |
 | `commerce.order.currencyCode` | s.currencyCode |
 | `commerce.order.purchaseID` | s.purchaseID |
-| `productListItems[].SKU` | s.products=;product name;;; (primär - se anmärkningen nedan) |
-| `productListItems[].name` | s.products=;product name;;; (fallback - se anm. nedan) |
+| `productListItems[].SKU` | s.products=;product name;;;; (primär - se anmärkning nedan) |
+| `productListItems[].name` | s.products=;product name;;;; (fallback - se anm. nedan) |
 | `productListItems[].quantity` | s.products=;;produktkvantitet; |
 | `productListItems[].priceTotal` | s.product=;;;produktpris; |
 
@@ -83,7 +83,7 @@ Schemat som skapats i [Konfigurera ett schema](configure-schemas.md) lektionen i
 >
 >De enskilda avsnitten i Analytics-produktsträngen anges via olika XDM-variabler under `productListItems` -objekt.
 >18 augusti 2022 `productListItems[].SKU` prioriterar mappning till produktnamnet i variabeln s.products.
->Värdet är inställt på `productListItems[].name` mappas endast till produktnamnet om `productListItems[].SKU` finns inte. Annars är den omappad och tillgänglig i kontextdata.
+>Värdet som anges till `productListItems[].name` mappas endast till produktnamnet om `productListItems[].SKU` finns inte. Annars är den omappad och tillgänglig i kontextdata.
 >Ange inte en tom sträng eller null till  `productListItems[].SKU`. Detta har den oönskade effekten av att mappa till produktnamnet i variabeln s.products.
 
 
@@ -91,14 +91,13 @@ Schemat som skapats i [Konfigurera ett schema](configure-schemas.md) lektionen i
 
 Platform Web SDK skickar data från din webbplats till Platform Edge Network. Din datastream talar sedan om för Platform Edge Network var dessa data ska vidarebefordras, i det här fallet, vilken av dina Adobe Analytics rapporteringsprogram.
 
-1. Gå till [Datainsamling](https://experience.adobe.com/#/data-collection)Gränssnittet {target=&quot;blank&quot;}
+1. Gå till [Datainsamling](https://experience.adobe.com/#/data-collection){target="blank"} gränssnitt
 1. Välj **[!UICONTROL Datastreams]**
 1. Markera tidigare skapade `Luma Web SDK` datastream
 
    ![Välj dataströmmen för Luma Web SDK](assets/datastream-luma-web-sdk.png)
 
 1. Välj **[!UICONTROL Lägg till tjänst]**
-
    ![Lägg till en tjänst i datastream](assets/analytics-addService.png)
 1. Välj **[!UICONTROL Adobe Analytics]** som **[!UICONTROL Tjänst]**
 1. Ange  **[!UICONTROL Report Suite-ID]** av din utvecklingsrapportsserie
@@ -121,7 +120,7 @@ Hämta sedan in ytterligare data från Luma-datalagret och skicka dem till Platf
 
 ### Skapa dataelement för e-handel
 
-Under lektionen Skapa dataelement kan du [skapade JavaScript-dataelement](create-data-elements.md#create-data-elements-to-capture-the-data-layer) som fångade innehåll och identitetsinformation. Nu ska du skapa ytterligare dataelement för att hämta in e-handelsdata. På grund av [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html){target=&quot;_blank&quot;} använder olika datalagerstrukturer för produktinformationssidor och produkter i kundvagnen. Du måste skapa dataelement för varje scenario. Du måste skapa vissa anpassade kodelement för att kunna hämta det du behöver från Luma-datalagret, som kanske inte behövs när du implementerar på din egen webbplats. I så fall måste du slingra dig igenom en mängd olika varukorgsartiklar för att få information om varje produkt. Använd följande kodfragment:
+Under lektionen Skapa dataelement kan du [skapade JavaScript-dataelement](create-data-elements.md#create-data-elements-to-capture-the-data-layer) som fångade innehåll och identitetsinformation. Nu ska du skapa ytterligare dataelement för att hämta in e-handelsdata. På grund av [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"} använder olika datalagerstrukturer för produktinformationssidor och produkter i kundvagnen, måste du skapa dataelement för varje scenario. Du måste skapa vissa anpassade kodelement för att kunna hämta det du behöver från Luma-datalagret, som kanske inte behövs när du implementerar på din egen webbplats. I så fall måste du slingra dig igenom en mängd olika varukorgsartiklar för att få information om varje produkt. Använd följande kodfragment:
 
 1. Öppna taggegenskapen som du använder för självstudiekursen
 1. Gå till **[!UICONTROL Dataelement]**
@@ -149,38 +148,38 @@ Under lektionen Skapa dataelement kan du [skapade JavaScript-dataelement](create
 
    ![Produkt-SKU för anpassad kod](assets/data-element-products-sku-custom-code.jpg)
 
-1. Välj **[!UICONTROL Spara]** för att spara dataelementet
+1. Välj **[!UICONTROL Spara]** spara dataelementet
 
 Följ de här stegen för att skapa ytterligare dataelement:
 
 * **`product.productInfo.title`**
 
-   ```javascript
-   var cart = digitalData.product;
-   var cartItem;
-   cart.forEach(function(item){
-   cartItem = item.productInfo.title;
-   });
-   return cartItem;
-   ```
+  ```javascript
+  var cart = digitalData.product;
+  var cartItem;
+  cart.forEach(function(item){
+  cartItem = item.productInfo.title;
+  });
+  return cartItem;
+  ```
 
 * **`cart.productInfo`**
 
-   ```javascript
-   var cart = digitalData.cart.cartEntries;
-   var cartItem = [];
-   cart.forEach(function(item, index, array){
-   var qty = parseInt(item.qty);
-   var price = parseInt(item.price);
-   cartItem.push({
-   "SKU": item.sku,
-   "name":item.title,
-   "quantity":qty,
-   "priceTotal":price
-   });
-   });
-   return cartItem;
-   ```
+  ```javascript
+  var cart = digitalData.cart.cartEntries;
+  var cartItem = [];
+  cart.forEach(function(item, index, array){
+  var qty = parseInt(item.qty);
+  var price = parseInt(item.price);
+  cartItem.push({
+  "SKU": item.sku,
+  "name":item.title,
+  "quantity":qty,
+  "priceTotal":price
+  });
+  });
+  return cartItem;
+  ```
 
 När du har lagt till dessa dataelement och skapat de tidigare elementen i [Skapa dataelement](create-data-elements.md) lektion bör du ha följande dataelement:
 
@@ -205,10 +204,9 @@ När du har lagt till dessa dataelement och skapat de tidigare elementen i [Skap
 >* **[!UICONTROL identityMap]** för att hämta det autentiserade ID:t enligt [Skapa dataelement för identitetskarta](create-data-elements.md#create-identity-map-data-element) träna i [Skapa dataelement](create-data-elements.md) lektion.
 >* **[!UICONTROL webb]** objekt för att hämta innehåll enligt [content XDM-objekt](create-data-elements.md#map-content-data-elements-to-XDM-Schema-individually) träna i [Skapa dataelement](create-data-elements.md) lektion på alla dataelement ovan.
 
+### Öka sidvyer
 
-### Öka sidvisningar
-
-I lektionen Skapa dataelement [skapade `xdm.content` dataelement](create-data-elements.md#map-content-data-elements-to-xdm-schema-individually) för att hämta in innehållsdimensioner. Eftersom du nu skickar data till Adobe Analytics måste du även mappa ett extra XDM-fält för att ange att en fyr ska bearbetas som en Analytics-sidvy.
+I lektionen Skapa dataelement [har skapat `xdm.content` dataelement](create-data-elements.md#map-content-data-elements-to-xdm-schema-individually) för att hämta in innehållsdimensioner. Eftersom du nu skickar data till Adobe Analytics måste du även mappa ett extra XDM-fält för att ange att en fyr ska bearbetas som en Analytics-sidvy.
 
 1. Öppna `xdm.content` dataelement
 1. Bläddra nedåt och välj att öppna tills `web.webPageDetails`
@@ -220,7 +218,7 @@ I lektionen Skapa dataelement [skapade `xdm.content` dataelement](create-data-el
 
 >[!TIP]
 >
->Det här fältet motsvarar att skicka en **`s.t()`** sidvisningsfyr för Analytics med `AppMeasurement.js`. Ange `webInteraction.linkClicks.value` till `1`
+>Det här fältet motsvarar att skicka en **`s.t()`** sidvisningsfyr för Analytics med `AppMeasurement.js`. För en länk klickar du på beacon och anger `webInteraction.linkClicks.value` till `1`
 
 
 ### Ange produktsträngen
@@ -256,7 +254,7 @@ Du kan mappa till enskilda variabler för att samla in data på sidan med produk
 1. Välj **[!UICONTROL Ange enskilda objekt]**
 1. Välj **[!UICONTROL Lägg till objekt]**
 
-   ![Anger produktvyhändelse](assets/data-element-xdm-productlistitem.png)
+   ![Anger produktvisningshändelse](assets/data-element-xdm-productlistitem.png)
 
    >[!CAUTION]
    >
@@ -295,7 +293,7 @@ Jämför dataelementet med `productListItems` struktur (tips, det ska matcha).
 Nu tillbaka till mappningen av XDM-objektet till en hel array. Skapa ett XDM-objektdataelement för att hämta produkter på kundvagnssidan:
 
 1. Skapa en **[!UICONTROL XDM-objekt]** **[!UICONTROL Dataelementtyp]** namngiven **`xdm.commerce.cartView`**
-1. Välj samma plattformssandlåda och XDM-schema som du använder för den här självstudiekursen
+1. Välj samma plattformssandlåda och XDM-schema som du använder för den här självstudien
 1. Öppna **[!UICONTROL handel]** object
 1. Öppna **[!UICONTROL productListViews]** objekt och ange `value` till `1`
 
@@ -304,7 +302,7 @@ Nu tillbaka till mappningen av XDM-objektet till en hel array. Skapa ett XDM-obj
    >Det här steget motsvarar inställningen `scView` händelse i Analytics
 
 1. Bläddra nedåt till och markera **[!UICONTROL productListItems]** array
-1. Välj **[!UICONTROL Ange hela arrayen]**
+1. Välj **[!UICONTROL Ange hela matrisen]**
 1. Mappa till **`cart.productInfo`** dataelement
 
    ![Hela arraymappningen till XDM-objektet](assets/data-element-xdm-provide-array.png)
@@ -325,22 +323,22 @@ Skapa en till **[!UICONTROL XDM-objekt]**  **[!UICONTROL Dataelementtyp]** för 
 
 Det finns ytterligare steg för att hämta `purchase` händelse:
 
-1. Skapa en till  **[!UICONTROL XDM-objekt]**  **[!UICONTROL Dataelementtyp]** för inköp som anropas `xdm.commerce.purchase`
+1. Skapa en till  **[!UICONTROL XDM-objekt]**  **[!UICONTROL Dataelementtyp]** för inköp anropade `xdm.commerce.purchase`
 1. Öppna **[!UICONTROL handel]** object
-1. Öppna **[!UICONTROL order]** object
+1. Öppna **[!UICONTROL beställa]** object
 1. Karta **[!UICONTROL purchaseID]** till `cart.orderId` dataelement
 1. Ange **[!UICONTROL currencyCode]** till hårdkodat värde `USD`
 
-   ![Ställa in purchaseID för Analytics](assets/analytics-commerce-purchaseID.png)
+   ![Ange purchaseID för Analytics](assets/analytics-commerce-purchaseID.png)
 
    >[!TIP]
    >
-   >Detta motsvarar inställningen `s.purcahseID` och `s.currencyCode` variabler i Analytics
+   >Det här motsvarar inställningen `s.purcahseID` och `s.currencyCode` variabler i Analytics
 
 1. Välj för att öppna `purchases` objekt och ange `value` till `1`
    >[!TIP]
    >
-   >Detta motsvarar inställningen `purchase` händelse i Analytics
+   >Det här motsvarar inställningen `purchase` händelse i Analytics
 
    >[!IMPORTANT]
    >
@@ -365,7 +363,7 @@ I slutet av dessa steg bör du skapa följande fem XDM-objektdataelement:
 
 När du har skapat flera XDM-objektdataelement kan du ange beacons med hjälp av regler. I den här övningen skapar du individuella regler per e-handelshändelse och användningsvillkor så att reglerna aktiveras på rätt sidor. Låt oss börja med en produktvyhändelse.
 
-1. Välj **[!UICONTROL Regler]** och sedan markera **[!UICONTROL Lägg till regel]**
+1. Välj **[!UICONTROL Regler]** och sedan **[!UICONTROL Lägg till regel]**
 1. Ge den ett namn  [!UICONTROL `product view - library load - AA`]
 1. Under **[!UICONTROL Händelser]**, markera **[!UICONTROL Bibliotek inläst (sidan ovanpå)]**
 1. Under **[!UICONTROL Villkor]**, välj **[!UICONTROL Lägg till]**
@@ -402,7 +400,7 @@ När du har skapat flera XDM-objektdataelement kan du ange beacons med hjälp av
 
 Upprepa samma sak för alla andra e-handelshändelser med följande parametrar:
 
-**Regelnamn**: kundvagnsvy - biblioteksladdning - AA
+**Regelnamn**: kundvagnsvy - biblioteksinläsning - AA
 
 * **[!UICONTROL Händelsetyp]**: Bibliotek inläst (sidan ovanpå)
 * **[!UICONTROL Villkor]**: /content/luma/us/en/user/cart.html
@@ -416,7 +414,7 @@ Upprepa samma sak för alla andra e-handelshändelser med följande parametrar:
 * **Typ för Web SDK - skicka åtgärd**: commerce.checkouts
 * **XDM-data för Web SDK - skicka åtgärd:** `%xdm.commerce.checkout%`
 
-**Regelnamn**: inköp - bibliotekslast - AA
+**Regelnamn**: purchase - library load - AA
 
 * **[!UICONTROL Händelsetyp]**: Bibliotek inläst (sidan ovanpå)
 * **[!UICONTROL Villkor]** /content/luma/us/en/user/checkout/order/thank-you.html
@@ -445,7 +443,7 @@ Lär dig hur du validerar att Adobe Analytics spelar in ECID, sidvisningar, prod
 
 ### Experience Cloud ID-validering
 
-1. Gå till [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html){target=&quot;_blank&quot;} och använd felsökningsfunktionen Experience Platform för att [ändra taggegenskapen på webbplatsen till din egen utvecklingsegenskap](validate-with-debugger.md#use-the-experience-platform-debugger-to-map-to-your-tags-property)
+1. Gå till [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"} och använd Experience Platform Debugger för att [växla taggegenskapen på webbplatsen till din egen utvecklingsegenskap](validate-with-debugger.md#use-the-experience-platform-debugger-to-map-to-your-tags-property)
 
    >[!WARNING]
    >
@@ -455,8 +453,7 @@ Lär dig hur du validerar att Adobe Analytics spelar in ECID, sidvisningar, prod
    >
    > 1. Du omdirigeras automatiskt till [Didi Sport Watch produktsida](https://luma.enablementadobe.com/content/luma/us/en/products/gear/watches/didi-sport-watch.html#24-WG02) vid inläsning av nästa sida
 
-
-1. Om du vill aktivera Edge Trace går du till Felsökning för Experience Platform, i den vänstra navigeringen väljer du **[!UICONTROL Loggar]** väljer du **[!UICONTROL Edge]** och markera **[!UICONTROL Anslut]**
+1. Om du vill aktivera Edge Trace går du till Felsökning för Experience Platform, i den vänstra navigeringen väljer du **[!UICONTROL Loggar]** väljer du **[!UICONTROL Kant]** och markera **[!UICONTROL Anslut]**
 
    ![Koppla kantkalkering](assets/analytics-debugger-edgeTrace.png)
 
@@ -467,7 +464,7 @@ Lär dig hur du validerar att Adobe Analytics spelar in ECID, sidvisningar, prod
 1. Uppdatera [Didi Sport Watch produktsida](https://luma.enablementadobe.com/content/luma/us/en/products/gear/watches/didi-sport-watch.html#24-WG02) och kontrollera Experience Platform Debugger igen bör du se data som kommit fram. Raden börjar med **[!UICONTROL Automatisk mappning av RSID för analyser]** är Adobe Analytics fyr
 1. Markera för att öppna båda `[!UICONTROL mappedQueryParams]` listruta och den andra listrutan för att visa Analytics-variabler
 
-   ![Kantspår för analysfyr](assets/analytics-debugger-edge-analytics.png)
+   ![Kantkalkering för analysfyr](assets/analytics-debugger-edge-analytics.png)
 
    >[!TIP]
    >
@@ -480,14 +477,14 @@ Lär dig hur du validerar att Adobe Analytics spelar in ECID, sidvisningar, prod
 
    >[!NOTE]
    >
-   >Eftersom du är inloggad bör du ägna en stund åt att validera det autentiserade ID:t `112ca06ed53d3db37e4cea49cc45b71e` för användaren **test@adobe.com** hämtas också i `[!UICONTROL c.a.x.identitymap.lumacrmid.[0].id]`
+   >Eftersom du är inloggad bör du ägna en stund åt att validera det autentiserade ID:t `112ca06ed53d3db37e4cea49cc45b71e` för användaren **test@adobe.com** tas också med i `[!UICONTROL c.a.x.identitymap.lumacrmid.[0].id]`
 
 
 ### Vyer av innehållssidor
 
 Du använder samma fyr för att validera att innehållssidvisningar hämtas av Analytics.
 
-1. Sök efter `[!UICONTROL c.a.x.web.webpagedetails.pageviews.value]=1`. Det säger att `s.t()` sidvisningsfyren skickas till Analytics
+1. Leta efter `[!UICONTROL c.a.x.web.webpagedetails.pageviews.value]=1`. Det säger att `s.t()` sidvisningsfyren skickas till Analytics
 1. Bläddra nedåt för att se `[!UICONTROL gn]` variabel. Det är den dynamiska syntaxen i Analytics för `[!UICONTROL s.pageName]` variabel. Det hämtar sidnamnet från datalagret.
 
    ![Produktsträng för Analytics](assets/analytics-debugger-edge-page-view.png)
@@ -497,13 +494,13 @@ Du använder samma fyr för att validera att innehållssidvisningar hämtas av A
 Eftersom du redan är på en produktsida fortsätter den här övningen att använda samma Edge Trace för att validera att produktdata hämtas av Analytics. Både produktsträngen och e-handelshändelserna mappas automatiskt XDM-variabler till Analytics. Så länge du har mappat till rätt `productListItem` XDM-variabeln while [konfigurera ett XDM-schema för Adobe Analytics](setup-analytics.md#configure-an-xdm-schema-for-adobe-analytics)tar Platform Edge Network hand om att mappa data till rätt analysvariabler.
 
 1. Verifiera först att `Product String` är inställt
-1. Sök efter `[!UICONTROL c.a.x.productlistitems.][0].[!UICONTROL sku]`. Variabeln hämtar det dataelementvärde som du har mappat till `productListItems.item1.sku` tidigare i den här lektionen
+1. Leta efter `[!UICONTROL c.a.x.productlistitems.][0].[!UICONTROL sku]`. Variabeln hämtar det dataelementvärde som du har mappat till `productListItems.item1.sku` tidigare i den här lektionen
 1. Bläddra nedåt för att se `[!UICONTROL pl]` variabel. Det är den dynamiska syntaxen för produktsträngvariabeln Analytics
 1. Båda värdena matchar produktnamnet som finns i datalagret
 
    ![Produktsträng för Analytics](assets/analytics-debugger-prodstring.png)
 
-Edge Trace behandlar `commerce` händelser något annorlunda än `productList` dimensioner. Du ser inte att en kontextdatavariabel är mappad på samma sätt som du ser produktnamnet som är mappat till `[!UICONTROL c.a.x.productlistitem.[0].name]` ovan. I stället visar Edge Trace den slutliga automatiska händelsemappningen i Analytics `event` variabel. Platform Edge Network mappar det så länge du mappar till rätt XDM `commerce` variabel while [konfigurera schema för Adobe Analytics](setup-analytics.md#configure-an-xdm-schema-for-adobe-analytics); i detta fall `commerce.productViews.value=1`.
+Edge Trace behandlar `commerce` händelser något annorlunda än `productList` dimensioner. Du ser inte att en kontextdatavariabel är mappad på samma sätt som du ser produktnamnet mappat till `[!UICONTROL c.a.x.productlistitem.[0].name]` ovan. I stället visar Edge Trace den slutliga automatiska händelsemappningen i Analytics `event` variabel. Platform Edge Network mappar det så länge du mappar till rätt XDM `commerce` variabel while [konfigurera schema för Adobe Analytics](setup-analytics.md#configure-an-xdm-schema-for-adobe-analytics); i detta fall `commerce.productViews.value=1`.
 
 1. Gå tillbaka till Experience Platform Debugger-fönstret och rulla nedåt till `[!UICONTROL event]` variabel, är inställd på `[!UICONTROL prodView]`
 
@@ -538,18 +535,18 @@ Nu när du har validerat Analytics-fyrar med Edge Trace kan du även validera da
 
 I den här övningen mappar du en XDM-variabel till ett utkast så att du kan visa den i realtidsrapporter. Följ de här stegen för alla anpassade mappningar du måste göra för alla `eVar`, `prop`, `event`, eller variabel som är tillgänglig via bearbetningsregler.
 
-1. I Analytics-gränssnittet går du till [!UICONTROL Administratör] > [!UICONTROL Administratörsverktyg] > [!UICONTROL Rapportsviter ]
+1. Gå till Analytics-gränssnittet [!UICONTROL Administratör] > [!UICONTROL Administratörsverktyg] > [!UICONTROL Rapportsviter]
 1. Välj den rapport för utveckling/test som du använder för självstudiekursen > [!UICONTROL Redigera inställningar] > [!UICONTROL Allmänt] > [!UICONTROL Bearbetar regler]
 
    ![Köp av analyser](assets/analytics-process-rules.png)
 
-1. Skapa en regel till **[!UICONTROL Skriv över värdet]** `[!UICONTROL Product Name (prop1)]` till `a.x.productlistitems.0.name`. Kom ihåg att lägga till anteckningen till varför du skapar regeln och ge den ett namn. Välj **[!UICONTROL Spara]**
+1. Skapa en regel till **[!UICONTROL Skriv över värde för]** `[!UICONTROL Product Name (prop1)]` till `a.x.productlistitems.0.name`. Kom ihåg att lägga till anteckningen till varför du skapar regeln och ge den ett namn. Välj **[!UICONTROL Spara]**
 
    ![Köp av analyser](assets/analytics-set-processing-rule.png)
 
    >[!IMPORTANT]
    >
-   >Första gången du mappar till en bearbetningsregel visas inte kontextdatavariablerna från XDM-objektet. Om du vill åtgärda det väljer du ett värde och återgår till att redigera. Alla XDM-variabler ska nu visas.
+   >Första gången du mappar till en bearbetningsregel visas inte kontextdatavariablerna från XDM-objektet. Om du vill åtgärda det väljer du ett värde, Spara och återgå till att redigera. Alla XDM-variabler ska nu visas.
 
 1. Gå till [!UICONTROL Redigera inställningar] >  [!UICONTROL Realtid]. Konfigurera alla tre med följande parametrar som visas nedan så att du kan validera visningar av innehållssidor, produktvyer och köp
 
@@ -578,4 +575,4 @@ Grattis! Det här är slutet av lektionen och nu är du redo att implementera Ad
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

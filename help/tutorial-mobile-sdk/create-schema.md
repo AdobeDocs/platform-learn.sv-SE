@@ -3,9 +3,9 @@ title: Skapa ett XDM-schema
 description: Lär dig hur du skapar ett XDM-schema för mobilappshändelser.
 feature: Mobile SDK,Schemas
 exl-id: c6b0d030-437a-4afe-b7d5-5a7831877983
-source-git-commit: 94ca4a238c241518219fb2e8d73f775836f86d86
+source-git-commit: bc53cb5926f708408a42aa98a1d364c5125cb36d
 workflow-type: tm+mt
-source-wordcount: '1315'
+source-wordcount: '1314'
 ht-degree: 0%
 
 ---
@@ -214,4 +214,4 @@ Nästa: **[Skapa en [!UICONTROL datastream]](create-datastream.md)**
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)

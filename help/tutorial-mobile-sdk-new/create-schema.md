@@ -4,9 +4,9 @@ description: Lär dig hur du skapar ett XDM-schema för mobilappshändelser.
 feature: Mobile SDK,Schemas
 hide: true
 exl-id: 66a3c062-93e5-4183-8fb4-1f72cacb6552
-source-git-commit: d7410a19e142d233a6c6597de92f112b961f5ad6
+source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
 workflow-type: tm+mt
-source-wordcount: '1506'
+source-wordcount: '1505'
 ht-degree: 0%
 
 ---
@@ -134,7 +134,7 @@ I utbildningssyfte använder du fördefinierade och anpassade fältgrupper.
 
 >[!NOTE]
 >
->Tänk på att du inte behöver använda alla fält i en grupp. Du kan även ta bort fält om det gör att schemat blir kortfattat och begripligt. Om det är till hjälp kan du tänka dig ett schema som ett tomt datalager. I appen fyller du i relevanta värden vid rätt tidpunkt.
+>Tänk på att du inte behöver använda alla fält i en grupp. Du kan även ta bort fält för att se till att schemat är kortfattat och begripligt. Om det är till hjälp kan du tänka dig ett schema som ett tomt datalager. I appen fyller du i relevanta värden vid rätt tidpunkt.
 
 The [!UICONTROL Consumer Experience Event] fältgruppen har en datatyp som heter [!UICONTROL Webbinformation]som beskriver händelser som sidvisning och länkklick. Just nu finns det ingen paritet för mobilappar med den här funktionen, så du kommer att skapa en egen.
 
@@ -163,7 +163,7 @@ Börja med att skapa en anpassad datatyp som beskriver de två händelserna:
 1. Om du vill lägga till ett fält väljer du ![Plus](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) -knappen.
 
 
-1. Det här fältet är ett behållarobjekt för programinteraktion. Ange därför ett fodral **[!UICONTROL Fältnamn]** `appInteraction`, **[!UICONTROL Visningsnamn]** `App Interaction`och markera `Object` från **[!UICONTROL Typ]** lista.
+1. Det här fältet är ett behållarobjekt för programinteraktion, så skapa en kamelcase **[!UICONTROL Fältnamn]** `appInteraction`, **[!UICONTROL Visningsnamn]** `App Interaction`och markera `Object` från **[!UICONTROL Typ]** lista.
 
 1. Välj **[!UICONTROL Använd]**.
 
@@ -234,6 +234,8 @@ Lägg nu till en anpassad fältgrupp med din anpassade datatyp:
 
 >[!SUCCESS]
 >
->Nu har du ett schema att använda för resten av självstudiekursen.<br/>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
+>Nu har du ett schema att använda för resten av självstudiekursen.
+>
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 
 Nästa: **[Skapa en [!UICONTROL datastream]](create-datastream.md)**
