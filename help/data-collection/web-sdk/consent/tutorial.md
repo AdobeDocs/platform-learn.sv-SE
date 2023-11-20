@@ -1,13 +1,13 @@
 ---
 title: Implementera samtycke med en plattform för hantering av samtycke (CMP)
-description: Lär dig hur du implementerar och aktiverar data för samtycke som hämtats från en CMP (Consent Management Platform) med Adobe Experience Platform Web SDK-tillägget i datainsamling.
+description: Lär dig hur du implementerar och aktiverar medgivandedata från en CMP (Consent Management Platform) med Adobe Experience Platform Web SDK-tillägget i datainsamling.
 feature: Web SDK, Tags
 level: Intermediate
 doc-type: tutorial
 exl-id: bee792c3-17b7-41fb-a422-289ca018097d
-source-git-commit: ac07d62cf4bfb6a9a8b383bbfae093304d008b5f
+source-git-commit: e2594d3b30897001ce6cb2f6908d75d0154015eb
 workflow-type: tm+mt
-source-wordcount: '3321'
+source-wordcount: '3320'
 ht-degree: 0%
 
 ---
@@ -236,7 +236,7 @@ Om du använder [arbetsbibliotek](https://experienceleague.adobe.com/docs/platfo
 
 ### Steg 4: Inspect och validera datainsamling
 
-På vår webbplats uppdaterar vi sidan och bekräftar biblioteksbygget i [Felsökning](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj) Kromtillägg, i taggmenyavsnittet:
+På vår webbplats uppdaterar vi sidan och bekräftar biblioteksbygget i [Felsökning](https://chromewebstore.google.com/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) Kromtillägg, i taggmenyavsnittet:
 
 ![](./images/build-date.png)
 

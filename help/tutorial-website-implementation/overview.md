@@ -3,9 +3,9 @@ title: Implementera Experience Cloud på webbplatser med taggar
 description: Implementera Experience Cloud på webbplatser med taggar är den perfekta startpunkten för gränssnittsutvecklare eller teknikmarknadsförare som vill lära sig hur man implementerar Adobe Experience Cloud lösningar på sin webbplats.
 recommendations: catalog, noDisplay
 exl-id: 1b95f0b2-3062-49d1-9b0b-e6824a54008f
-source-git-commit: 8c3b487691c95b16da2a270b7d71cfd3bab1f0eb
+source-git-commit: 2483409b52562e13a4f557fe5bdec75b5afb4716
 workflow-type: tm+mt
-source-wordcount: '897'
+source-wordcount: '896'
 ht-degree: 2%
 
 ---
@@ -80,7 +80,7 @@ I den här lektionen kommer du att implementera Adobe Experience Cloud i en fals
 ## Skaffa verktygen
 
 1. Eftersom du kommer att använda vissa webbläsarspecifika tillägg rekommenderar vi att du slutför självstudiekursen med [Chrome Web Browser](https://www.google.com/chrome/)
-1. Lägg till [Adobe Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj) tillägg till webbläsaren Chrome
+1. Lägg till [Adobe Experience Platform Debugger](https://chromewebstore.google.com/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) tillägg till webbläsaren Chrome
 1. Kopiera HTML-exempelsidkoden
 
    +++Exempel på HTML-sidkod

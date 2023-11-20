@@ -1,10 +1,10 @@
 ---
 title: Publicera taggegenskap
-description: Lär dig hur du publicerar taggegenskaper från utvecklingsmiljön till mellanlagrings- och produktionsmiljöerna. Den här lektionen är en del av självstudiekursen Implementera Experience Cloud på webbplatser.
+description: Lär dig hur du publicerar taggegenskaper från utvecklingsmiljön till mellanlagrings- och produktionsmiljöer. Den här lektionen är en del av självstudiekursen Implementera Experience Cloud på webbplatser.
 exl-id: dec70472-cecc-4630-b68e-723798f17a56
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: e2594d3b30897001ce6cb2f6908d75d0154015eb
 workflow-type: tm+mt
-source-wordcount: '598'
+source-wordcount: '597'
 ht-degree: 1%
 
 ---
@@ -17,10 +17,9 @@ Nu när du har implementerat några av Adobe Experience Cloud lösningar i utvec
 >
 >Adobe Experience Platform Launch håller på att integreras i Adobe Experience Platform som en serie datainsamlingstekniker. Flera terminologiska förändringar har introducerats i gränssnittet som du bör vara medveten om när du använder det här innehållet:
 >
-> * platforma launchen (klientsidan) är nu **[[!DNL tags]](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv)**
-> * platform launch Server Side is now **[[!DNL event forwarding]](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)**
+> * Platforma launchen (klientsidan) är nu **[[!DNL tags]](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv)**
+> * Platform launch Server Side is now **[[!DNL event forwarding]](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)**
 > * Edge-konfigurationer är nu **[[!DNL datastreams]](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html)**
-
 
 ## Utbildningsmål
 
@@ -58,7 +57,7 @@ I verkligheten är nästa steg i processen vanligtvis att låta QA-teamet valide
 
 1. I taggegenskapen öppnar du [!UICONTROL Miljö] page
 
-1. I [!UICONTROL Mellanlagring] klickar du på ikonen Installera ![Ikonen Installera](images/launch-installIcon.png) för att öppna modal
+1. I [!UICONTROL Mellanlagring] klickar du på ikonen Installera ![Ikonen Installera](images/launch-installIcon.png) för att öppna modala
 
    ![Gå till sidan för miljöer och klicka för att öppna den modala](images/publishing-getStagingCode.png)
 
@@ -70,20 +69,20 @@ I verkligheten är nästa steg i processen vanligtvis att låta QA-teamet valide
 
 1. Öppna [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html) i webbläsaren Chrome
 
-1. Öppna [Experience Cloud Debugger](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj) genom att klicka på ![Felsökningsikon](images/icon-debugger.png) icon
+1. Öppna [Felsökningstillägg för Experience Platform](https://chromewebstore.google.com/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) genom att klicka på ![Felsökningsikon](images/icon-debugger.png) icon
 
-   ![Klicka på felsökningsikonen](images/switchEnvironments-openDebugger.png)
+   ![Klicka på ikonen Felsökning](images/switchEnvironments-openDebugger.png)
 
 1. Gå till fliken Verktyg
 
 1. I **[!UICONTROL Adobe Launch > Replace Launch Embed Code]** -avsnittet klistra in den mellanlagringsinbäddningskod som finns i Urklipp
-1. Aktivera **[!UICONTROL Använd på luma.enablementadobe.com]** switch
+1. Aktivera **[!UICONTROL Använd i alla luma.enablementadobe.com]** switch
 
 1. Klicka på diskikonen för att spara
 
    ![taggmiljö som visas i Felsökning](images/switchEnvironments-debugger-save.png)
 
-1. Läs in och kontrollera fliken Sammanfattning i Felsökning. Under avsnittet Launch bör du nu se hur egenskapen Staging har implementerats och visa ditt egenskapsnamn (dvs. &quot;taggar, självstudiekurs&quot; eller vad du än har namngett din egendom)!
+1. Läs in och kontrollera fliken Sammanfattning i Felsökning. Under startavsnittet ska du nu se hur egenskapen för mellanlagring implementeras och visa ditt egenskapsnamn (t.ex.&quot;tagg, självstudiekurs&quot; eller något annat namn på din egenskap).
 
    ![taggmiljö som visas i Felsökning](images/publishing-debugger-staging.png)
 
@@ -115,4 +114,4 @@ När kvalitetsteamet har signerat i realtid genom att granska ändringarna i mel
 
    ![Publicerad](images/publishing-published.png)
 
-Nu räcker det! Du har slutfört självstudiekursen och publicerat din första egenskap i taggar!
+Så ja! Du har slutfört självstudiekursen och publicerat din första egenskap i taggar!

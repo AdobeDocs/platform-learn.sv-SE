@@ -6,10 +6,10 @@ solution: Data Collection,Experience Platform
 doc-type: video
 auto-video-transcripts: true
 role: Developer, Data Engineer
-source-git-commit: 906993f14376f7a1a6344436c7068c747d275fb4
+source-git-commit: e2594d3b30897001ce6cb2f6908d75d0154015eb
 workflow-type: tm+mt
-source-wordcount: '242'
-ht-degree: 17%
+source-wordcount: '214'
+ht-degree: 20%
 
 ---
 
@@ -66,8 +66,3 @@ ht-degree: 17%
    + [Enhets-ID:n från första part](edge/generate-first-party-device-ids.md)
 + Debugger{#debugger}
    + [Översikt](debugger/overview.md)
-   + Experience Cloud Debugger{#experience-cloud}
-      + [Installera felsökaren](debugger/experience-cloud/add-the-extension.md)
-      + [Använda Felsökning](debugger/experience-cloud/use-the-experience-cloud-debugger.md)
-      + [Felsök mål](https://experienceleague.adobe.com/docs/target-learn/tutorials/troubleshooting/troubleshoot-with-the-experience-cloud-debugger.html){target="_blank"}
-      + [Byt taggmiljöer](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/switch-environments.html){target="_blank"}

@@ -2,7 +2,8 @@
 title: CSC-startläger - innehållsleveranskedja i fyra faser
 description: Även om det kan vara en utmaning att hålla jämna steg med den ökande efterfrågan på innehåll kan ni planera, producera och leverera innehåll snabbt och enkelt med en väldesignad innehållsleveranskedja.
 doc-type: multipage-overview
-source-git-commit: 989e4e2add1d45571462eccaeebcbe66a77291db
+exl-id: 7745e3ae-6e13-4cc2-9017-8bfb9d4ae1b4
+source-git-commit: 2483409b52562e13a4f557fe5bdec75b5afb4716
 workflow-type: tm+mt
 source-wordcount: '1639'
 ht-degree: 0%
@@ -27,7 +28,7 @@ En innehållsförsörjningskedja är den process som sammanför människor, verk
 
 ![En översikt över vilka faser och team som ingår i en innehållsleveranskedja.](./images/csc-overview.png)
 
-Teoretiskt sett är det en process som bör hjälpa företag överallt att få ut sitt innehåll snabbare. Men i praktiken bryts de flesta försörjningskedjorna på grund av hur livscykeln för tvärfunktionellt innehåll är naturligt. När dessa kedjor bryts kan de tyvärr skapa intern felpassning, få budgetar att löpa, slita bort medarbetarna och sakta ned hastigheten med att leverera viktiga budskap på marknaden.
+Teoretiskt sett är det en process som bör hjälpa företag överallt att få ut sitt innehåll snabbare. Men i praktiken bryts de flesta försörjningskedjor på grund av hur livscykeln för tvärfunktionellt innehåll är naturligt. När dessa kedjor bryts kan de tyvärr skapa intern felpassning, få budgetar att löpa, slita bort medarbetarna och sakta ned hastigheten med att leverera viktiga budskap på marknaden.
 
 ### Vad är det som bryter mot innehållsförsörjningskedjan?
 
@@ -39,11 +40,11 @@ För att få en ännu bättre överblick över vad som är vanligare bakom brutn
 
 1. I  **planering**  en enda fas, brist på en enhetlig projektprocess eller ett centralt sätt att hålla reda på resurser, leder till flera revisioner, överdrivna kostnader, priskänsliga förseningar och oförmåga att balansera arbetet. Frånkopplingen mellan teammedlemmarna resulterar dessutom i slöseri med cykler och långsamma prioritetsförändringar.
 2. Under  **produktion** , isolerade system och fristående arbetsflöden begränsar möjligheten till live-samarbete, sökning av resurser, förseningar och utbränning. Och eftersom kreatörerna måste spåra uppgifter och resurser manuellt och utföra repetitiva uppgifter manuellt blir kostnaderna högre och antalet fel ökar.
-3. När det är dags för  **leverans** , som inte har ett centralt resurshanteringssystem - och dessutom begränsad automatisering för att skala innehåll - minskar teamets förmåga att lansera sammanhängande, personaliserade upplevelser i alla kanaler. Dessutom begränsar fragmenterade leveransverktyg och data exakt mätning av tillgångarnas prestanda.
+3. När det är dags för  **leverans** , som inte har ett centralt resurshanteringssystem - och dessutom begränsad automatisering för att skala innehåll - minskar teamets förmåga att lansera sammanhängande, personaliserade upplevelser i alla kanaler. Dessutom begränsar fragmenterade leveransverktyg och data en korrekt mätning av tillgångarnas prestanda.
 
 ![I en trasig leveranskedja skapar fragmenterade system kaos.](./images/fragmented-supply-chain.png)
 
-## Det är dags att vässa innehållsförsörjningskedjan
+## Det är dags att vässa innehållsleveranskedjan
 
 Som med allt som råkar ut för felsteg och felkommunikation finns det alltid ett sätt att förbättra processen. Om vi följer samma tre faser kan vi titta närmare på hur en bra innehållsleveranskedja kan se ut för er verksamhet.
 
@@ -51,7 +52,7 @@ Som med allt som råkar ut för felsteg och felkommunikation finns det alltid et
 
 Helst bör marknadsföringsteamet använda en lösning för hantering av arbete som möjliggör samarbete mellan olika funktioner och kopplar projekt till planerade, datadrivna resultat. Det bör också ge marknadsföringsteamet möjlighet att prioritera arbetet strategiskt och presentera dessa prioriteringar för ert kreativa team. Därifrån bör det kreativa informationsmaterialet, innehållsversionerna och feedback knytas ihop i varje projekt så att teamet inte behöver söka i gamla e-postmeddelanden för att hitta det de letar efter.
 
-Det kreativa teamet bör vara välbekant med [bra hantering av digitala resurser](https://business.adobe.com/products/experience-manager/assets/digital-asset-management.html)[(DAM)](https://business.adobe.com/products/experience-manager/assets/digital-asset-management.html)[ system](https://business.adobe.com/products/experience-manager/assets/digital-asset-management.html) som är integrerad med dina kreativa verktyg och verktyg för arbetshantering. På så sätt är det enkelt för dem att hitta, använda, uppdatera eller återanvända relevanta resurser. Genom att göra allt detta kan ni förbättra er hastighet på marknaden och förenkla interna rutiner och processer.
+Det kreativa teamet bör vara välbekant med [bra hantering av digitala resurser](https://business.adobe.com/products/experience-manager/assets/digital-asset-management.html)[(DAM)](https://business.adobe.com/products/experience-manager/assets/digital-asset-management.html)[system](https://business.adobe.com/products/experience-manager/assets/digital-asset-management.html) som är integrerad med dina kreativa verktyg och verktyg för arbetshantering. På så sätt är det enkelt för dem att hitta, använda, uppdatera eller återanvända relevanta resurser. Genom att göra allt detta kan ni förbättra er hastighet på marknaden och förenkla interna rutiner och processer.
 
 ### Öka effektiviteten i produktionen med smidiga arbetsflöden
 
@@ -71,7 +72,7 @@ Dessutom använder en riktigt bra innehållsleveranskedja ett DAM som automatisk
 
 Vår egen [Adobe Experience Cloud](https://business.adobe.com/) fokuserar på att följa de steg som beskrivs ovan för att ge liv åt våra kampanjer och stödja flera segment. Vår vision har varit att leverera övertygande innehåll globalt som är anpassat till vårt kampanjramverk och vårt budskap.
 
-Nyckeln till vår kompletta process för att skapa innehåll är att kombinera [Adobe Workfront](https://business.adobe.com/products/workfront/main.html/) och [Adobe Experience Manager Assets](https://business.adobe.com/products/experience-manager/assets/aem-assets.html). Låt oss titta på hur vi har närmat oss vår process med samma tre högnivåfaser.
+Nyckeln till vår kompletta process för att skapa innehåll är att kombinera [Adobe Workfront](https://business.adobe.com/products/workfront/main.html) och [Adobe Experience Manager Assets](https://business.adobe.com/products/experience-manager/assets/aem-assets.html). Låt oss ta en titt på hur vi har närmat vår process med samma tre högnivåfaser.
 
 Vi börjar med  **planering** , där vi tar in hundratals innehållsförfrågningar från hela företaget och sedan prioriterar dem i förhållande till våra kvartalsvisa prioriteringar. Vi använder sedan en kontrollpanel för innehållsförslag i Workfront för att skapa transparens, så att vi kan anpassa oss till våra intressenter och snabbt få en sign-off för våra marknadsförings-, kreativa, webb- och säljteam. Genom att göra detta skapar vi ett register över vad vi åtagit oss för kvarteret, och vi ger även våra kreativa team och webbteam insyn i den totala ordervolymen så att de kan planera för resurser. Dessutom kan chefer enkelt övervaka arbetsbelastningen för sina team.
 
@@ -79,7 +80,7 @@ När vi går in  **produktion** , blir godkända förfrågningar projekt som ger
 
 Och när innehållet är klart för  **leverans** , vi [publicera erbjudanden, resurser och kampanjinnehåll](https://business.adobe.com/customer-success-stories/adobe-content-hub-case-study.html) till Experience Manager Assets. Allt går specifikt in i vår interna marknadsföringsnav, där alla i företaget snabbt kan hitta precis det innehåll de behöver, precis när de behöver det.
 
-Vi har sett stora vinster av att bygga upp en fungerande innehållsleveranskedja. Vi har minskat vår datainmatning för dubbletter på hälften genom att migrera till ett enda arbetshanteringssystem. Och även om det alltid finns utrymme för förbättringar vet vi att vi är på väg mot en process som hjälper oss att ligga steget före kundernas förväntningar.
+Vi har sett en del stora vinster av att bygga en fungerande innehållsleveranskedja. Vi har minskat vår datainmatning med två gånger genom att migrera till ett enda arbetshanteringssystem. Och även om det alltid finns utrymme för förbättringar vet vi att vi är på väg mot en process som hjälper oss att ligga steget före kundernas förväntningar.
 
 >[!NOTE]
 >
@@ -87,7 +88,7 @@ Vi har sett stora vinster av att bygga upp en fungerande innehållsleveranskedja
 
 ## Den fjärde fasen: Insikter
 
-Content Supply Chain är ingen magisk lösning på alla era problem. Det är ett sätt att arbeta som gör att ni kan vara mer effektiva och hantera alla upplevelser ni vill ge kunderna. Du måste krypa innan du kan gå och till slut springa.
+Content Supply Chain är ingen magisk lösning på alla era problem. Det är ett sätt att arbeta som gör att ni kan vara mer effektiva och hantera alla upplevelser ni vill ge kunderna. Du måste krypa innan du kan gå och så småningom springa.
 
 ![Crawlgångskörning](./images/crawl-walk-run.png)
 

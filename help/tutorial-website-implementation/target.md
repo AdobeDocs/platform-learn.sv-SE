@@ -3,7 +3,7 @@ title: Lägg till Adobe Target med taggar
 description: Lär dig hur du implementerar Adobe Target med taggar med at.js, en sidinläsningsbegäran, parametrar, en orderbegäran och anpassad sidhuvud-/sidfotskod. Den här lektionen är en del av självstudiekursen Implementera Experience Cloud på webbplatser.
 solution: Data Collection, Target
 exl-id: aa22e51a-67c2-4b54-b582-6f34f8c68aee
-source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
+source-git-commit: e2594d3b30897001ce6cb2f6908d75d0154015eb
 workflow-type: tm+mt
 source-wordcount: '4445'
 ht-degree: 0%
@@ -20,15 +20,15 @@ I den här lektionen ska vi implementera [Adobe Target-tillägg](https://experie
 >
 >Adobe Experience Platform Launch håller på att integreras i Adobe Experience Platform som en serie datainsamlingstekniker. Flera terminologiska förändringar har introducerats i gränssnittet som du bör vara medveten om när du använder det här innehållet:
 >
-> * platforma launchen (klientsidan) är nu **[!DNL tags]**
-> * platform launch Server Side is now **[!DNL event forwarding]**
+> * Platforma launchen (klientsidan) är nu **[!DNL tags]**
+> * Platform launch Server Side is now **[!DNL event forwarding]**
 > * Edge-konfigurationer är nu **[!DNL datastreams]**
 
 ## Utbildningsmål
 
 När lektionen är klar kan du:
 
-* Lägg till det fördolda kodutdrag som används för att hantera flimmer när Target används med asynkrona inbäddningskoder för taggar
+* Lägg till det fördolda kodutdrag som används för att hantera flimmer när Target används med asynkrona tagginbäddningskoder
 * Lägg till tillägget Target v2
 * Starta begäran om sidinläsning (kallades tidigare&quot;global mbox&quot;)
 * Lägg till parametrar i sidinläsningsbegäran
@@ -99,12 +99,12 @@ Adobe Target-tillägget stöder implementeringar på klientsidan med Target Java
 
 Tillägget Target v2 består av två huvuddelar:
 
-1. Tilläggskonfigurationen som hanterar huvudbiblioteksinställningarna
+1. Tilläggskonfigurationen, som hanterar huvudbiblioteksinställningarna
 1. Regelåtgärder för att göra följande:
    1. Load Target (at.js 2.x)
    1. Lägg till parametrar i sidinläsningsbegäranden
    1. Lägg till parametrar i alla begäranden
-   1. Inläsningsbegäran för brandsida
+   1. Begäran om inläsning av brandsida
 
 I den här första övningen ska vi lägga till tillägget och titta på konfigurationerna. I senare övningar kommer vi att använda åtgärderna.
 
@@ -116,7 +116,7 @@ I den här första övningen ska vi lägga till tillägget och titta på konfigu
 
    ![Installera tillägget Target v2](images/target-installExtension.png)
 
-1. När du lägger till tillägget importeras många, men inte alla dina at.js-inställningar från Target-gränssnittet, enligt bilden nedan. En inställning som inte importeras är Timeout, som alltid är 3 000 ms efter att tillägget har lagts till. Lämna standardinställningarna för självstudiekursen. Observera, att till vänster visas versionen at.js som levereras med den aktuella versionen av tillägget.
+1. När du lägger till tillägget importeras många, men inte alla dina at.js-inställningar från Target-gränssnittet, enligt bilden nedan. En inställning som inte kommer att importeras är Timeout, som alltid är 3 000 ms efter att tillägget har lagts till. Lämna standardinställningarna för självstudiekursen. Observera, att till vänster visas versionen at.js som levereras med den aktuella versionen av tillägget.
 
 1. Klicka **[!UICONTROL Spara i bibliotek]**
 
@@ -134,7 +134,7 @@ Marknadsförarna använder Target för att styra besökarupplevelsen på sidan n
 
 Du kan använda `All Pages - Library Loaded` regel som du skapade i lektionen[Lägg till dataelement, regler och bibliotek](add-data-elements-rules.md)&quot; för att implementera Target eftersom det redan aktiveras så tidigt som möjligt vid sidinläsning.
 
-**Läs in mål**
+**Att läsa in mål**
 
 1. Gå till **[!UICONTROL Regler]** i den vänstra navigeringen och klicka sedan på `All Pages - Library Loaded` för att öppna regelredigeraren
 
@@ -184,7 +184,7 @@ Nu när du har lagt till tillägget Target v2 och startat `Load Target` och `Fir
 
 1. Läs in exempelsidan igen. Du bör inte längre se en fördröjning på tre sekunder innan sidan syns. Om du läser in exempelsidan med `file://` -protokollet bör du göra det här steget i Firefox- eller Safari-webbläsare eftersom Chrome inte kommer att starta en Target-begäran när du använder `file://` -protokoll.
 
-1. Öppna [Luma site](https://luma.enablementadobe.com/content/luma/us/en.html)
+1. Öppna [Luma-webbplats](https://luma.enablementadobe.com/content/luma/us/en.html)
 
 1. Kontrollera att felsökaren mappar taggegenskapen till *din* Utvecklingsmiljö, enligt beskrivningen i [tidigare lektion](switch-environments.md)
 
@@ -287,11 +287,11 @@ Du skickar inga profilparametrar i den här självstudiekursen, men arbetsflöde
 
 Enhetsparametrar används som särskilda parametrar i [Recommendations implementeringar](https://experienceleague.adobe.com/docs/target/using/recommendations/plan-implement.html) av tre huvudskäl:
 
-1. Som en nyckel för att utlösa produktrekommendationer. Om du till exempel använder en rekommendationsalgoritm som&quot;Personer som visade produkt X, även visade Y&quot;, är&quot;X&quot; rekommendationens&quot;nyckel&quot;. Det är vanligtvis produktknappen (`entity.id`) eller kategori (`entity.categoryId`) som besökaren för närvarande visar.
+1. Som en nyckel för att utlösa produktrekommendationer. Om du till exempel använder en rekommendationsalgoritm som&quot;Personer som visade produkt X, även visade Y&quot;, är&quot;X&quot; rekommendationens&quot;nyckel&quot;. Det är vanligtvis produktsku (`entity.id`) eller kategori (`entity.categoryId`) som besökaren för närvarande visar.
 1. Samla in besökares beteende för att driva rekommendationer som&quot;Senast visade produkter&quot; eller&quot;De mest visade produkterna&quot;
 1. Fylla i Recommendations-katalogen. Recommendations innehåller en databas över alla produkter och artiklar på din webbplats, så att de kan visas i rekommendationserbjudandet. Om du till exempel rekommenderar produkter bör du visa attribut som produktnamnet (`entity.name`) och bild (`entity.thumbnailUrl`). Vissa kunder fyller i sin katalog med serverdelsflöden, men de kan också fyllas i med enhetsparametrar i Target-begäranden.
 
-Du behöver inte skicka några enhetsparametrar i den här självstudien, men arbetsflödet är identiskt med det du gjorde tidigare när du skickade `pageName` request parameter - bara ge parametern ett namn med prefixet &quot;entity&quot; som prefix. och mappa det till det relevanta dataelementet. Observera att vissa vanliga entiteter har reserverade namn som måste användas (t.ex. entity.id för produktsku). Så här skulle det se ut att ange enhetsparametrar i `Add Params to Page Load Request` åtgärd:
+Du behöver inte skicka några enhetsparametrar i den här självstudien, men arbetsflödet är identiskt med det du gjorde tidigare när du skickade `pageName` request parameter - bara ge parametern ett namn med prefixet &quot;entity&quot; som prefix. och mappa det till det relevanta dataelementet. Observera att vissa vanliga entiteter har reserverade namn som måste användas (t.ex. entity.id för produktsku). Så här skulle det se ut att ställa in enhetsparametrar i `Add Params to Page Load Request` åtgärd:
 
 ![Lägga till enhetsparametrar](images/target-entityParameters.png)
 
@@ -314,7 +314,7 @@ För närvarande är anpassade parametrar som skickas med at.js 2.x-begäranden 
 
 **Så här validerar du kund-ID:t**
 
-1. Öppna [Luma site](https://luma.enablementadobe.com/content/luma/us/en.html)
+1. Öppna [Luma-webbplats](https://luma.enablementadobe.com/content/luma/us/en.html)
 
 1. Kontrollera att felsökaren mappar taggegenskapen till *din* Utvecklingsmiljö, enligt beskrivningen i [tidigare lektion](switch-environments.md)
 
@@ -351,7 +351,7 @@ För närvarande är anpassade parametrar som skickas med at.js 2.x-begäranden 
 
 Egenskapstoken är en reserverad parameter som används med Target Premium [Enterprise-användarbehörigheter](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html) -funktion. Det används för att definiera olika digitala egenskaper så att olika medlemmar i en Experience Cloud-organisation kan tilldelas olika behörigheter för varje egenskap. Du kanske till exempel vill att en grupp användare ska kunna konfigurera Target-aktiviteter på din webbplats, men inte i ditt mobilprogram.
 
-Målegenskaperna motsvarar taggegenskaper och rapportsviter från Analytics. Ett företag med flera varumärken, webbplatser och marknadsföringsteam kan använda olika Target-egenskaper, taggegenskap och Analytics-rapporteringsprogram för varje webbplats eller mobilapp. Taggegenskaperna skiljs åt med hjälp av deras inbäddningskoder, Analytics-rapportsviterna skiljs åt med hjälp av deras rapportritets-ID och Target-egenskaperna skiljs åt med deras egenskapstokenparameter.
+Målegenskaperna motsvarar taggegenskaper och analysrapportsviter. Ett företag med flera varumärken, webbplatser och marknadsföringsteam kan använda olika Target-egenskaper, taggegenskap och Analytics-rapporteringsprogram för varje webbplats eller mobilapp. Taggegenskaperna skiljs åt med hjälp av deras inbäddningskoder, Analytics-rapportsviterna skiljs åt med hjälp av deras rapportritets-ID och Target-egenskaperna skiljs åt med deras egenskapstokenparameter.
 
 
 Egenskapstoken måste implementeras med en anpassad kodåtgärd i taggar med `targetPageParams()` funktion. Om du implementerar flera webbplatser med olika värden för at_property med en enda taggegenskap kan du hantera värdet at_property via ett dataelement.
@@ -391,7 +391,7 @@ Här är en valfri övning om du är en Target Premium-kund och vill implementer
 
 >[!WARNING]
 >
->Om du försöker lägga till `at_property` parametern via **[!UICONTROL Lägg till parametrar i sidinläsningsbegäran]** -åtgärden fyller parametern i nätverksbegäran men Target kan inte identifiera den automatiskt när sidan läses in. Fyll alltid i `at_property` med `targetPageParams()` i en Custom Code-åtgärd.
+>Om du försöker lägga till `at_property` -parametern via **[!UICONTROL Lägg till parametrar i sidinläsningsbegäran]** -åtgärden fyller parametern i nätverksbegäran men Target kan inte identifiera den automatiskt när sidan läses in. Fyll alltid i `at_property` med `targetPageParams()` i en Custom Code-åtgärd.
 
 #### Validera egenskapstoken
 
@@ -399,7 +399,7 @@ För närvarande är anpassade parametrar som skickas med at.js 2.x-begäranden 
 
 **Så här validerar du parametern för egenskapstoken**
 
-1. Öppna [Luma site](https://luma.enablementadobe.com/content/luma/us/en.html)
+1. Öppna [Luma-webbplats](https://luma.enablementadobe.com/content/luma/us/en.html)
 1. Kontrollera att felsökaren mappar taggegenskapen till *din* Utvecklingsmiljö, enligt beskrivningen i [tidigare lektion](switch-environments.md)
 
    ![Taggens utvecklingsmiljö visas i Felsökning](images/switchEnvironments-debuggerOnWeRetail.png)
@@ -428,7 +428,7 @@ Begäran om orderbekräftelse är en särskild typ av begäran som används för
 1. Använder en annan algoritm bakom scenen för att beräkna statistisk säkerhet
 1. Skapar en särskild, nedladdningsbar revideringsrapport över information om enskilda order
 
-Det bästa sättet är att använda en orderbekräftelsebegäran i alla ordergrupper, även på icke-butikssajter. Exempelvis har leadgenereringswebbplatser vanligtvis lead-trattar med ett unikt lead-id som genereras i slutet. Dessa platser bör implementera en beställningsförfrågan med ett statiskt värde (t.ex. &quot;1&quot;) för orderTotal.
+Det bästa sättet är att använda en orderbekräftelsebegäran i alla ordergrupper, även på icke-butikssajter. Exempelvis har leadgenereringswebbplatser vanligtvis lead-trattar med ett unikt lead-id som genereras i slutet. Dessa platser bör implementera en beställningsbegäran med ett statiskt värde (t.ex. &quot;1&quot;) för orderTotal.
 
 Kunder som använder integreringen med Analytics for Target (A4T) för de flesta rapporter kanske också vill implementera beställningsförfrågan om de använder Automated Personalization-aktiviteter, som inte har stöd för A4T. Dessutom är beställningsbegäran en viktig del i Recommendations implementeringar, som driver algoritmer baserat på inköpsbeteenden. Den senaste informationen om A4T-stöd finns på [dokumentationen](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=en#section_F487896214BF4803AF78C552EF1669AA).
 
@@ -438,7 +438,7 @@ Låt oss lägga till dataelementen och regeln vi måste skicka en orderbekräfte
 
 **Skapa dataelement för order-ID**
 
-1. Klicka **[!UICONTROL Dataelement]** i den vänstra navigeringen
+1. Klicka **[!UICONTROL Dataelement]** till vänster navigering
 1. Klicka **[!UICONTROL Lägg till dataelement]**
 1. Namnge dataelementet `Order Id`
 1. Välj **[!UICONTROL Dataelementtyp > JavaScript-variabel]**
@@ -461,7 +461,7 @@ Låt oss lägga till dataelementen och regeln vi måste skicka en orderbekräfte
 1. Klicka **[!UICONTROL Lägg till dataelement]**
 1. Namnge dataelementet `Cart SKUs (Target)`
 1. Välj **[!UICONTROL Dataelementtyp > Anpassad kod]**
-1. För Target måste skalet vara en kommaseparerad lista. Den här anpassade koden formaterar om datalagerarrayen till rätt format. Klistra in följande i den anpassade kodredigeraren:
+1. För Target måste skalet vara en kommaseparerad lista. Den här anpassade koden formaterar om datalagrets array till rätt format. Klistra in följande i den anpassade kodredigeraren:
 
    ```javascript
    var targetProdSkus="";
@@ -482,7 +482,7 @@ Nu måste vi skapa en regel för att utlösa orderbekräftelsebegäran med dessa
 
 **Så här skapar du regeln för sidan Orderbekräftelse**
 
-1. Klicka **[!UICONTROL Regler]** i den vänstra navigeringen
+1. Klicka **[!UICONTROL Regler]** till vänster navigering
 1. Klicka **[!UICONTROL Lägg till regel]**
 1. Namnge regeln `Order Confirmation Page - Library Loaded - 60`
 1. Klicka **[!UICONTROL Händelser > Lägg till]**
@@ -530,7 +530,7 @@ Nu måste vi skapa en regel för att utlösa orderbekräftelsebegäran med dessa
 
 För närvarande är anpassade parametrar som skickas med at.js 2.x-begäranden inte så lätta att se i Felsökning, så vi kommer att använda webbläsarens utvecklingsverktyg.
 
-1. Öppna [Luma site](https://luma.enablementadobe.com/content/luma/us/en.html)
+1. Öppna [Luma-webbplats](https://luma.enablementadobe.com/content/luma/us/en.html)
 
 1. Kontrollera att felsökaren mappar taggegenskapen till *din* Utvecklingsmiljö, enligt beskrivningen i [tidigare lektion](switch-environments.md)
 
@@ -568,8 +568,8 @@ I dessa fall använder du åtgärden Anpassad kod i Core-tillägget för att utl
 
 ## Bibliotekshuvud och bibliotekets sidfot
 
-Skärmen Edit at.js i användargränssnittet Target har platser där du kan klistra in anpassad JavaScript som körs omedelbart före eller efter filen at.js. Bibliotekshuvudet används ibland för att åsidosätta at.js-inställningarna via
-[targetGlobalSettings()](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/functions-overview/targetgobalsettings.html) fungerar eller skickar data från tredje part med [Dataleverantörer](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/use-data-providers-to-integrate-third-party-data.html) -funktion. Bibliotekets sidfot används ibland för att lägga till [at.js, anpassad händelse](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/functions-overview/atjs-custom-events.html) avlyssnare.
+Skärmen Edit at.js i användargränssnittet Target har platser där du kan klistra in anpassad JavaScript som körs omedelbart före eller efter filen at.js. Library Header används ibland för att åsidosätta at.js-inställningarna via
+[targetGlobalSettings()](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/functions-overview/targetgobalsettings.html) fungerar eller skickar data från tredje part med [Dataleverantörer](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/use-data-providers-to-integrate-third-party-data.html) -funktion. Bibliotekets sidfot används ibland för att lägga till [at.js, anpassad händelse](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/atjs-custom-events.html) avlyssnare.
 
 Om du vill replikera den här funktionen i taggar behöver du bara använda åtgärden Anpassad kod i Core-tillägget och sekvensera åtgärden före (Bibliotekshuvud) eller efter (Biblioteksfot) åtgärden Läs in mål. Detta kan göras i samma regel som `Load Target` (se bilden nedan) eller i separata regler med händelser eller orderinställningar som kommer att aktiveras före eller efter regeln som innehåller `Load Target`:
 
