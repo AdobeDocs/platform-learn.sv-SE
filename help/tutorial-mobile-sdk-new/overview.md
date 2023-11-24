@@ -4,9 +4,9 @@ description: Lär dig hur du implementerar Adobe Experience Cloud mobilappar. De
 recommendations: noDisplay,catalog
 hide: true
 exl-id: 378bdf5d-c3ce-4a4c-b188-ab9e8265627f
-source-git-commit: 6726b0d0570311987b7edac4bf0cd2da35e72f30
+source-git-commit: 8810829ec80b38afafbd4384005f5e145c5b5999
 workflow-type: tm+mt
-source-wordcount: '850'
+source-wordcount: '849'
 ht-degree: 0%
 
 ---
@@ -82,6 +82,10 @@ I den här lektionen antas du ha ett Adobe-ID och de användarbehörigheter som 
 >
 >Som en del av den här självstudiekursen skapar du scheman, datauppsättningar, identiteter och så vidare. Om flera personer går igenom den här självstudiekursen i en enda sandlåda bör du överväga att lägga till eller föregå en identifiering som en del av namnkonventionen när du skapar dessa objekt. Lägg till exempel ` - <your name or initials>` till namnet på det objekt som du ska skapa.
 
+>[!NOTE]
+>
+>Du använder iOS [!DNL Swift] som programmeringsspråk, [!DNL SwiftUI] som gränssnittets ramverk och [!DNL Xcode] som den integrerade utvecklingsmiljön. Många av de implementeringskoncept som beskrivs liknar dock andra utvecklingsplattformar. Många har redan slutfört den här självstudiekursen med lite eller ingen tidigare erfarenhet av iOS/Swift(UI). Du behöver inte vara expert för att slutföra lektionerna, men du får ut mer av lektionerna om du enkelt kan läsa och förstå koden.
+
 
 ## Hämta Luma-appen
 
@@ -91,15 +95,9 @@ Det finns två versioner av exempelappen att hämta. Båda versionerna kan hämt
 1. [Starta](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App){target="_blank"}: ett projekt utan kod eller med platshållarkod för merparten av SDK-koden för Experience Platform Mobile som du behöver använda för att slutföra övningarna i den här kursen.
 1. [Slutför](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App){target="_blank"}: en version med fullständig implementering för referens.
 
->[!NOTE]
->
->Du använder iOS [!DNL Swift] som programmeringsspråk, [!DNL SwiftUI] som gränssnittets ramverk och [!DNL Xcode] som den integrerade utvecklingsmiljön. Många av de implementeringskoncept som beskrivs liknar dock andra utvecklingsplattformar. Många har redan slutfört den här självstudiekursen med lite eller ingen tidigare erfarenhet av iOS/Swift(UI). Du behöver inte vara expert för att slutföra lektionerna, men du får ut mer av lektionerna om du enkelt kan läsa och förstå koden.
+Om du bara vill experimentera med det färdiga programmet kan du även hämta programmet direkt från Apple App Store.
 
->[!INFO]
->
->Om du bara vill experimentera med det färdiga programmet kan du även hämta programmet direkt från Apple App Store.
->[![Hämta](assets/download-app.svg)](https://apps.apple.com/us/app/luma-app/id6466588487)
-
+[<img src="assets/download-app.svg">](https://apps.apple.com/us/app/luma-app/id6466588487)
 
 Kom så börjar vi!
 
