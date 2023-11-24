@@ -4,9 +4,9 @@ description: Lär dig hur du samlar in identitetsdata i en mobilapp.
 feature: Mobile SDK,Identities
 hide: true
 exl-id: e6ec9a4f-3163-47fd-8d5c-6e640af3b4ba
-source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
+source-git-commit: d1338390986a242c91051e94134f8d69e979c0b4
 workflow-type: tm+mt
-source-wordcount: '856'
+source-wordcount: '919'
 ht-degree: 1%
 
 ---
@@ -66,7 +66,7 @@ Du vill uppdatera både standardidentiteten (e-post) och den anpassade identitet
    let identityMap: IdentityMap = IdentityMap()
    
    let emailIdentity = IdentityItem(id: emailAddress, authenticatedState: AuthenticatedState.authenticated)
-   let crmIdentity = IdentityItem(id: crmId, authenticatedState: AuthenticatedState.authenticated)
+   let crmIdentity = IdentityItem(id: crmId, authenticatedState: AuthenticatedState.authenticated, primary: true)
    identityMap.add(item:emailIdentity, withNamespace: "Email")
    identityMap.add(item: crmIdentity, withNamespace: "lumaCRMId")
    
@@ -81,12 +81,14 @@ Du vill uppdatera både standardidentiteten (e-post) och den anpassade identitet
       let identityMap: IdentityMap = IdentityMap()
       ```
 
-   1. Inställningar `IdentityItem` objekt för e-post och CRM-ID.
+   1. Inställningar `IdentityItem` objekt för e-post och CRM-ID. Adobe rekommenderar att du skickar identiteter som representerar en person, till exempel Luma CRM Id, som primär identitet. Om identitetskartan innehåller personidentifieraren (t.ex. Luma CRM-ID) blir personidentifieraren den primära identiteten. Annars blir ECID den primära identiteten. Om du anger ett person-ID som primärt ID blir det enklare att söka efter en profil vid efterföljande API-anrop.
 
       ```swift
       let emailIdentity = IdentityItem(id: emailAddress, authenticatedState: AuthenticatedState.authenticated)
-      let crmIdentity = IdentityItem(id: crmId, authenticatedState: AuthenticatedState.authenticated)
+      let crmIdentity = IdentityItem(id: crmId, authenticatedState: AuthenticatedState.authenticated, primary: true)
       ```
+
+
 
    1. Lägger till dessa `IdentityItem` objekt till `IdentityMap` -objekt.
 

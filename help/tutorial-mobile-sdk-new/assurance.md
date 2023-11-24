@@ -4,9 +4,9 @@ description: Lär dig hur du implementerar tillägget Assurance i en mobilapp.
 feature: Mobile SDK,Assurance
 hide: true
 exl-id: 49d608e7-e9c4-4bc8-8a8a-5195f8e2ba42
-source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
+source-git-commit: d1338390986a242c91051e94134f8d69e979c0b4
 workflow-type: tm+mt
-source-wordcount: '985'
+source-wordcount: '987'
 ht-degree: 0%
 
 ---
@@ -86,14 +86,14 @@ To update the signing for the lessons that require that you sign the application
 1. Välj **[!DNL Luma]** i projektnavigatorn.
 1. Välj **[!DNL Luma]** mål.
 1. Välj **Info** -fliken.
-1. Bläddra nedåt till om du vill lägga till en bas-URL **URL-typer** och väljer **+** -knappen.
+1. Bläddra nedåt till **URL-typer (1)** och öppna avsnittet med chevron (>) om inget redan är öppet.
 1. Ange **Identifierare** till valfri källidentifierare och ange en **URL-scheman** efter eget val.
 
    ![försäkrings-URL](assets/assurance-url-type.png)
 
    >[!IMPORTANT]
    >
-   >Se till att du använder en _unik_ källidentifierare och ersätt `com.adobe.luma.tutorial.swiftui` källidentifierare eftersom varje källidentifierare måste vara unik. Vanligtvis använder du ett omvänt DNS-format för paket-ID-strängar, som `com.organization.brand.uniqueidentifier`.<br/>Använd på liknande sätt ett unikt URL-schema och ersätt det redan angivna `lumatutorialswiftui` med ditt unika URL-schema.
+   >Se till att du använder en _unik_ källidentifierare, så ersätt `com.adobe.luma.tutorial.swiftui` källidentifierare eftersom varje källidentifierare måste vara unik. Vanligtvis använder du ett omvänt DNS-format för paket-ID-strängar, som `com.organization.brand.uniqueidentifier`.<br/>Använd på samma sätt ett unikt URL-schema, så ersätt det redan angivna `lumatutorialswiftui` med ditt unika URL-schema.
 
 Mer information om URL-scheman i iOS finns i [Apple dokumentation](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app){target="_blank"}.
 

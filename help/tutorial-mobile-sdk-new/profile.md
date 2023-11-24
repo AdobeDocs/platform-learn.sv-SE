@@ -3,7 +3,7 @@ title: Samla in profildata
 description: Lär dig hur du samlar in profildata i en mobilapp.
 hide: true
 exl-id: 6ce02ccc-6280-4a1f-a96e-1975f8a0220a
-source-git-commit: 8f77843aec76e49c5e774016ed6cca5df510d3a4
+source-git-commit: d1338390986a242c91051e94134f8d69e979c0b4
 workflow-type: tm+mt
 source-wordcount: '596'
 ht-degree: 0%
@@ -96,8 +96,8 @@ Ytterligare dokumentation finns [här](https://developer.adobe.com/client-sdks/d
 1. Granska [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
 1. Kör appen för att logga in och interagera med en produkt.
 
-   1. Flytta Assurance-ikonen åt vänster.
    1. Välj **[!UICONTROL Startsida]** i tabbfältet.
+   1. Flytta Assurance-ikonen åt vänster.
    1. Om du vill öppna inloggningsbladet väljer du <img src="assets/login.png" width="15" /> -knappen.
 
       <img src="./assets/mobile-app-events-1.png" width="300">

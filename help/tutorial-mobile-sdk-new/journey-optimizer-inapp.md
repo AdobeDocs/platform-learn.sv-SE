@@ -6,9 +6,9 @@ feature-set: Journey Optimizer
 feature: In App
 hide: true
 exl-id: 6cb4d031-6172-4a84-b717-e3a1f5dc7d5d
-source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
+source-git-commit: d1338390986a242c91051e94134f8d69e979c0b4
 workflow-type: tm+mt
-source-wordcount: '1546'
+source-wordcount: '1536'
 ht-degree: 0%
 
 ---
@@ -41,7 +41,6 @@ Innan du skickar meddelanden i appen med Journey Optimizer måste du se till att
 
 I den här lektionen ska du
 
-* Registrera program-ID med Apple Push Notification-tjänsten (APN).
 * Skapa en appyta i AJO.
 * Installera och konfigurera taggtillägget för Journey Optimizer.
 * Uppdatera appen för att registrera Journey Optimizer-taggtillägget.
