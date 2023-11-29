@@ -4,14 +4,14 @@ breadcrumb-title: Självstudiekurs om mobila appar
 user-guide-description: Lär dig hur du implementerar Adobe Experience Cloud-program i mobila appar med Experience Platform Mobile SDK.
 solution: Data Collection
 feature: Mobile SDK
-role: Data Engineer, Developer
+role: Developer
 level: Beginner,Intermediate
 jira: KT-6987
 recommendations: noDisplay,noCatalog
-source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
+source-git-commit: 779ce60b8e89520231d4d9cbaecfe09a8cabc38f
 workflow-type: tm+mt
-source-wordcount: '69'
-ht-degree: 53%
+source-wordcount: '75'
+ht-degree: 56%
 
 ---
 
@@ -32,8 +32,14 @@ ht-degree: 53%
    + [WebViews](web-views.md)
    + [Identitet](identity.md)
    + [Profil](profile.md)
+   + [Platser](places.md)
 + Experience Cloud{#experience-cloud}
    + [Analytics ](analytics.md)
    + [Experience Platform](platform.md)
-   + [Journey Optimizer push-meddelanden](journey-optimizer-push.md)
+   + Journey Optimer{#journey-optimizer}
+      + [Push-meddelanden](journey-optimizer-push.md)
+      + [Meddelanden i appen](journey-optimizer-inapp.md)
+      + [Beslutshantering](journey-optimizer-offers.md)
+   + [Target](target.md)
 + [Slutsats](conclusion.md)
+

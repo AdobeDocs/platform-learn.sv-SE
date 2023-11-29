@@ -1,11 +1,11 @@
 ---
-title: Hantera WebViews
+title: Hantera WebViews med Platform Mobile SDK
 description: Lär dig hur du hanterar datainsamling med WebViews i en mobilapp.
 jira: KT-6987
 exl-id: 9b3c96fa-a1b8-49d2-83fc-ece390b9231c
-source-git-commit: bc53cb5926f708408a42aa98a1d364c5125cb36d
+source-git-commit: d353de71d8ad26d2f4d9bdb4582a62d0047fd6b1
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '493'
 ht-degree: 0%
 
 ---
@@ -13,10 +13,6 @@ ht-degree: 0%
 # Hantera WebViews
 
 Lär dig hur du hanterar datainsamling med WebViews i en mobilapp.
-
->[!INFO]
->
-> Den här självstudiekursen kommer att ersättas med en ny självstudiekurs om hur du använder en ny exempelapp i slutet av november 2023
 
 ## Förutsättningar
 
@@ -26,85 +22,86 @@ Lär dig hur du hanterar datainsamling med WebViews i en mobilapp.
 
 I den här lektionen kommer du att:
 
-* Förstå varför du måste ta särskild hänsyn till WebViews.
+* Förstå varför du måste ta särskild hänsyn till WebViews i din app.
 * Förstå koden som krävs för att förhindra spårningsproblem.
 
 ## Potentiella spårningsproblem
 
-Om du skickar data från den inbyggda delen av programmet och en WebView genererar varje sitt eget Experience Cloud-ID (ECID). Detta resulterar i osammanhängande träffar och uppblåsta besöksdata. Mer information om ECID finns i [ECID - översikt](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=en).
+Om du skickar data från appens inbyggda del och från en WebView i appen, genererar varje sitt eget Experience Cloud-ID (ECID), vilket resulterar i frånkopplade träffar och uppblåsta besöksdata. Mer information om ECID finns i [ECID - översikt](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=en).
 
-För att lösa den oönskade situationen är det viktigt att skicka användarens ECID från den ursprungliga delen till WebView.
+För att lösa den oönskade situationen är det viktigt att skicka användarens ECID från den inbyggda delen av appen till en WebView som du kanske vill använda i appen.
 
-JavaScript-tillägget för tjänsten Experience Cloud ID i WebView extraherar ECID från URL:en i stället för att skicka en begäran till Adobe om ett nytt ID. ID-tjänsten använder detta ECID för att spåra besökaren.
+Det AEP Edge Identity-tillägg som används i WebView samlar in det aktuella ECID:t och lägger till det i URL:en i stället för att skicka en begäran till Adobe om ett nytt ID. Implementeringen använder sedan detta ECID för att begära URL:en.
 
 ## Implementering
 
-I Luma-exempelappen hittar du `TermsOfService.swift` (i `Intro-Login_SignUp` och leta upp följande kod:
+Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Views]** > **[!DNL Info]** > **[!DNL TermsOfServiceSheet]** och letar upp `func loadUrl()` funktionen i `final class SwiftUIWebViewModel: ObservableObject` klassen. Lägg till följande anrop för att hantera webbvyn:
 
 ```swift
-// Show tou.html
-let url = Bundle.main.url(forResource: "tou", withExtension: "html")
-let myRequest = URLRequest(url: url!)
-self.webView.load(myRequest)
-```
-
-Det här är ett enkelt sätt att läsa in en WebView. I det här fallet är det en lokal fil, men samma koncept gäller för fjärrsidor.
-
-Reaktera webbvykoden så som visas nedan:
-
-```swift
-let url = Bundle.main.url(forResource: "tou", withExtension: "html")
-if var urlString = url?.absoluteString {
-    // Adobe Experience Platform - Handle Web View
-    AEPEdgeIdentity.Identity.getUrlVariables {(urlVariables, error) in
-        if let error = error {
-            self.simpleAlert("\(error.localizedDescription)")
-            return;
-        }
-
-        if let urlVariables: String = urlVariables {
-            urlString.append("?" + urlVariables)
-        }
-
-        DispatchQueue.main.async {
-            self.webView.load(URLRequest(url: URL(string: urlString)!))
-        }
-        print("Successfully retrieved urlVariables for WebView, final URL: \(urlString)")
+// Handle web view
+AEPEdgeIdentity.Identity.getUrlVariables {(urlVariables, error) in
+    if let error = error {
+        print("Error with Webview", error)
+        return;
     }
-} else {
-    self.simpleAlert("Failed to create URL for webView")
+    
+    if let urlVariables: String = urlVariables {
+        urlString.append("?" + urlVariables)
+        guard let url = URL(string: urlString) else {
+            return
+        }
+        DispatchQueue.main.async {
+            self.webView.load(URLRequest(url: url))
+        }
+    }
+    Logger.aepMobileSDK.info("Successfully retrieved urlVariables for WebView, final URL: \(urlString)")
 }
 ```
 
+The [`AEPEdgeIdentity.Identity.getUrlVariables`](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables) API ställer in variablerna så att URL:en innehåller all relevant information, som ECID, med mera. I exemplet använder du en lokal fil, men samma koncept gäller för fjärrsidor.
+
 Du kan läsa mer om `Identity.getUrlVariables` API i [Referenshandbok för API:t för Edge Network Extension](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#geturlvariables).
 
-## Validering
+## Validera
 
-När du har granskat [installationsanvisningar](assurance.md) och koppla simulatorn eller enheten till Assurance, läsa in WebView och leta efter `Edge Identity Response URL Variables` -händelsen från `com.adobe.griffon.mobile` leverantör.
+Så här kör du koden:
 
-Om du vill läsa in WebView går du till startskärmen för Luma-appen och väljer kontoikonen följt av användningsvillkoren i sidfoten.
+1. Granska [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
+1. Gå till **[!UICONTROL Inställningar]** i appen
+1. Tryck på **[!DNL View...]** för att visa **[!DNL Terms of Use]**.
 
-När du har läst in WebView markerar du händelsen och granskar `urlvariables` fältet i `ACPExtensionEventData` objekt, som bekräftar att följande parametrar finns i URL:en: `adobe_mc`, `mcmid`och `mcorgid`.
+   <img src="./assets/tou1.png" width="300" /> <img src="./assets/tou2.png" width="300" />
 
-![webbvyvalidering](assets/mobile-webview-validation.png)
+1. I Assurance-gränssnittet letar du efter **[!UICONTROL URL-variabler för Edge Identity Response]** -händelsen från **[!UICONTROL com.adobe.griffon.mobile]** leverantör.
+1. Markera händelsen och granska **[!UICONTROL urlvariable]** fältet i **[!UICONTROL ACPExtensionEventData]** objekt, som bekräftar att följande parametrar finns i URL:en: `adobe_mc`, `mcmid`och `mcorgid`.
 
-Ett exempel `urvariables` visas nedan:
+   ![webbvyvalidering](assets/webview-validation.png)
 
-```html
-// Original (with escaped characters)
-adobe_mc=TS%3D1636526122%7CMCMID%3D79076670946787530005526183384271520749%7CMCORGID%3D7ABB3E6A5A7491460A495D61%40AdobeOrg
+   Ett exempel `urvariables` visas nedan:
 
-// Beautified
-adobe_mc=TS=1636526122|MCMID=79076670946787530005526183384271520749|MCORGID=7ABB3E6A5A7491460A495D61@AdobeOrg
-```
+   * Original (med escape-tecken)
+
+     ```html
+     adobe_mc=TS%3D1636526122%7CMCMID%3D79076670946787530005526183384271520749%7CMCORGID%3D7ABB3E6A5A7491460A495D61%40AdobeOrg
+     ```
+
+   * Fantastisk
+
+     ```html
+     adobe_mc=TS=1636526122|MCMID=79076670946787530005526183384271520749|MCORGID=7ABB3E6A5A7491460A495D61@AdobeOrg
+     ```
+
+Tyvärr är felsökningen av webbsessionen begränsad. Du kan till exempel inte använda Adobe Experience Platform Debugger i webbläsaren för att fortsätta felsöka webbvisningssessionen.
 
 >[!NOTE]
 >
->Besökarsytning via dessa URL-parametrar stöds för närvarande i Platform Web SDK (version 2.11.0 eller senare) och `VisitorAPI.js`.
+>Sutning av besökare via dessa URL-parametrar stöds i Platform Web SDK (version 2.11.0 eller senare) och vid användning av `VisitorAPI.js`.
 
 
-Nästa: **[Identitet](identity.md)**
-
->[!NOTE]
+>[!SUCCESS]
+>
+>Du har nu konfigurerat din app så att den visar innehåll baserat på en URL i en webbvy med samma ECID som det ECID som redan utfärdats av Adobe Experience Platform Mobile SDK.
 >
 >Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
+
+Nästa: **[Identitet](identity.md)**

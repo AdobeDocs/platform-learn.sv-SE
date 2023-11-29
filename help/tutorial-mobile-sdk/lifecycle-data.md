@@ -1,101 +1,127 @@
 ---
-title: Livscykeldata
+title: Samla in livscykeldata med Platform Mobile SDK
 description: Lär dig hur du samlar in livscykeldata i en mobilapp.
 exl-id: 75b2dbaa-2f84-4b95-83f6-2f38a4f1d438
-source-git-commit: bc53cb5926f708408a42aa98a1d364c5125cb36d
+source-git-commit: d353de71d8ad26d2f4d9bdb4582a62d0047fd6b1
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '631'
 ht-degree: 0%
 
 ---
 
-# Livscykeldata
+# Samla in livscykeldata
 
 Lär dig hur du samlar in livscykeldata i en mobilapp.
-
->[!INFO]
->
-> Den här självstudiekursen kommer att ersättas med en ny självstudiekurs om hur du använder en ny exempelapp i slutet av november 2023
 
 Med Adobe Experience Platform Mobile SDK Lifecycle kan du samla in livscykeldata från din mobilapp. Adobe Experience Platform Edge Network-tillägget skickar dessa livscykeldata till Platform Edge Network, där de sedan vidarebefordras till andra program och tjänster enligt din datastream-konfiguration. Läs mer om [Livscykeltillägg](https://developer.adobe.com/client-sdks/documentation/lifecycle-for-edge-network/) i produktdokumentationen.
 
 
 ## Förutsättningar
 
-* App med SDK:er har installerats och konfigurerats.
-* Assurance SDK importerades.
-
-  ```swift
-  import AEPAssurance
-  ```
-
+* App med SDK:er har installerats och konfigurerats. Som en del av den här lektionen har du redan påbörjat livscykelövervakning. Se [Installera SDK:er - Uppdatera AppDelegate](install-sdks.md#update-appdelegate) för granskning.
 * Registrerat Assurance-tillägget enligt beskrivningen i [föregående lektion](install-sdks.md).
 
 ## Utbildningsmål
 
 I den här lektionen kommer du att:
 
-* Lägg till fältgrupp för livscykel i schemat.
+<!--
+* Add lifecycle field group to the schema.
+* -->
 * Få korrekta livscykelvärden genom att starta/pausa korrekt när appen flyttas mellan förgrunden och bakgrunden.
 * Skicka data från appen till Platform Edge Network.
 * Validera i Assurance.
 
-## Lägg till fältgrupp för livscykel till schema
+<!--
+## Add lifecycle field group to schema
 
-Fältgruppen Consumer Experience Event som du lade till i [föregående lektion](create-schema.md) innehåller redan livscykelfälten, så du kan hoppa över det här steget. Om du inte använder fältgruppen Consumer Experience Event i din egen app kan du lägga till livscykelfälten genom att göra följande:
+The Consumer Experience Event field group you added in the [previous lesson](create-schema.md) already contains the lifecycle fields, so you can skip this step. If you don't use Consumer Experience Event field group in your own app, you can add the lifecycle fields by doing the following:
 
-1. Navigera till schemagränssnitt enligt beskrivningen i [föregående lektion](create-schema.md).
-1. Öppna schemat&quot;Luma App&quot; och välj **[!UICONTROL Lägg till]**.
-   ![välj lägg till](assets/mobile-lifecycle-add.png)
-1. Skriv&quot;lifecycle&quot; i sökfältet.
-1. Markera kryssrutan intill **[!UICONTROL Information om AEP Mobile Lifecycle]**.
-1. Välj **[!UICONTROL Lägg till fältgrupper]**.
-   ![lägg till fältgrupp](assets/mobile-lifecycle-lifecycle-field-group.png)
-1. Välj **[!UICONTROL Spara]**.
-   ![spara](assets/mobile-lifecycle-lifecycle-save.png)
-
+1. Navigate to the schema interface as described in the [previous lesson](create-schema.md).
+1. Open the **Luma Mobile App Event Schema** schema and select **[!UICONTROL Add]** next to Field groups.
+    ![select add](assets/lifecycle-add.png)
+1. In the search bar, enter "lifecycle".
+1. Select the checkbox next to **[!UICONTROL AEP Mobile Lifecycle Details]**.
+1. Select **[!UICONTROL Add field groups]**.
+    ![add field group](assets/lifecycle-lifecycle-field-group.png)
+1. Select **[!UICONTROL Save]**.
+    ![save](assets/lifecycle-lifecycle-save.png)
+-->
 
 ## Implementeringsändringar
 
-Nu kan du uppdatera `AppDelegate.swift` för att registrera livscykelhändelser:
+Nu kan du uppdatera projektet för att registrera livscykelhändelserna.
 
-1. Om appen återupptas från ett bakgrundsläge när den startas kan iOS ringa `applicationWillEnterForeground:` delegeringsmetod. Lägg till `lifecycleStart:`
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!UICONTROL SceneDelegate]** i Xcode Project-navigatorn.
+
+1. Om appen återupptas från ett bakgrundsläge när den startas kan iOS ringa `sceneWillEnterForeground:` delegeringsmetod och här vill du aktivera en start-händelse för livscykel. Lägg till koden i `func sceneWillEnterForeground(_ scene: UIScene)`:
 
    ```swift
+   // When in foreground start lifecycle data collection
    MobileCore.lifecycleStart(additionalContextData: nil)
    ```
 
-1. När appen placeras i bakgrunden pausar du datainsamlingen för livscykeln från appens `applicationDidEnterBackground:` delegeringsmetod.
+1. När appen placeras i bakgrunden vill du pausa datainsamlingen i livscykeln från appens `sceneDidEnterBackground:` delegeringsmetod. Lägg till koden i  `func sceneDidEnterBackground(_ scene: UIScene)`:
 
    ```swift
+   // When in background pause lifecycle data collection
    MobileCore.lifecyclePause()
    ```
 
->[!NOTE]
->
->IOS 13 och senare finns i [dokumentation](https://developer.adobe.com/client-sdks/documentation/mobile-core/lifecycle/#register-lifecycle-with-mobile-core-and-add-appropriate-startpause-calls) för något annorlunda kod.
-
 ## Validera med Assurance
 
-1. Granska [installationsanvisningar](assurance.md) och koppla simulatorn eller enheten till Assurance.
-1. Starta programmet.
-1. Skicka appen till bakgrunden. Sök efter `LifecyclePause`.
-1. Ta appen till förgrunden. Sök efter `LifecycleResume`.
-   ![validera livscykel](assets/mobile-lifecycle-lifecycle-assurance.png)
+1. Granska [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
+1. Skicka appen till bakgrunden. Sök efter **[!UICONTROL LifecyclePause]** händelser i försäkringsgränssnittet.
+1. Ta appen till förgrunden. Sök efter **[!UICONTROL LivscykelÅteruppta]** händelser i försäkringsgränssnittet.
+   ![validera livscykel](assets/lifecycle-lifecycle-assurance.png)
 
 
 ## Vidarebefordra data till plattforms-Edge Network
 
-I den föregående övningen skickas för- och bakgrundshändelserna till Mobile SDK. Om du vill skicka dessa händelser till Platform Edge Network följer du de steg som anges [här](https://developer.adobe.com/client-sdks/documentation/lifecycle-for-edge-network/#configure-a-rule-to-forward-lifecycle-metrics-to-platform). När händelserna har skickats till Platform Edge Network vidarebefordras de till andra program och tjänster enligt din datastream-konfiguration.
+I föregående övning skickas för- och bakgrundshändelserna till Adobe Experience Platform Mobile SDK. Så här vidarebefordrar du dessa händelser till Platform Edge Network:
 
-När du har lagt till regeln för att skicka livscykelhändelser till Platform Edge Network bör du se `Application Close (Background)` och `Application Launch (Foreground)` händelser som innehåller XDM-data i Assurance.
+1. Välj **[!UICONTROL Regler]** i taggegenskapen.
+   ![Skapa regel](assets/rule-create.png)
+1. Välj **[!UICONTROL Inledande bygge]** som det bibliotek som ska användas.
+1. Välj **[!UICONTROL Skapa ny regel]**.
+   ![Skapa ny regel](assets/rules-create-new.png)
+1. I **[!UICONTROL Skapa regel]** skärm, ange `Application Status` for **[!UICONTROL Namn]**.
+1. Välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Lägg till]** nedan **[!UICONTROL HÄNDELSER]**.
+   ![Dialogrutan Skapa regel](assets/rule-create-name.png)
+1. I **[!UICONTROL Händelsekonfiguration]** steg:
+   1. Välj **[!UICONTROL Mobile Core]** som **[!UICONTROL Tillägg]**.
+   1. Välj **[!UICONTROL Förgrund]** som **[!UICONTROL Händelsetyp]**.
+   1. Välj **[!UICONTROL Behåll ändringar]**.
+      ![Regelhändelsekonfiguration](assets/rule-event-configuration.png)
+1. Tillbaka i **[!UICONTROL Skapa regel]** skärm, välja ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Lägg till]** nästa **[!UICONTROL Mobile Core - förgrund]**.
+   ![Konfiguration av nästa händelse](assets/rule-event-configuration-next.png)
+1. I **[!UICONTROL Händelsekonfiguration]** steg:
+   1. Välj **[!UICONTROL Mobile Core]** som **[!UICONTROL Tillägg]**.
+   1. Välj **[!UICONTROL Bakgrund]** som **[!UICONTROL Händelsetyp]**.
+   1. Välj **[!UICONTROL Behåll ändringar]**.
+      ![Regelhändelsekonfiguration](assets/rule-event-configuration-background.png)
+1. Tillbaka i **[!UICONTROL Skapa regel]** skärm, välja ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Lägg till]** under **[!UICONTROL ÅTGÄRDER]**.
+   ![Lägg till åtgärd i regel](assets/rule-action-button.png)
+1. I **[!UICONTROL Åtgärdskonfiguration]** steg:
+   1. Välj **[!UICONTROL Adobe Experience Edge Network]** som **[!UICONTROL Tillägg]**.
+   1. Välj **[!UICONTROL Vidarebefordra händelse till Edge Network]** som **[!UICONTROL Åtgärdstyp]**.
+   1. Välj **[!UICONTROL Behåll ändringar]**.
+      ![Regelåtgärdskonfiguration](assets/rule-action-configuration.png)
+1. Välj **[!UICONTROL Spara i bibliotek]**.
+   ![Regel - spara i bibliotek](assets/rule-save-to-library.png)
+1. Välj **[!UICONTROL Bygge]** för att återskapa biblioteket.
+   ![Regel - bygge](assets/rule-build.png)
 
-![validera livscykel som skickats till Platform Edge](assets/mobile-lifecycle-edge-assurance.png)
+När du har skapat egenskapen skickas händelserna till Platform Edge Network och händelserna vidarebefordras till andra program och tjänster enligt din datastream-konfiguration.
 
+Du borde se **[!UICONTROL Stäng program (bakgrund)]** och **[!UICONTROL Programstart (förgrund)]** händelser som innehåller XDM-data i Assurance.
 
+![validera livscykel som skickats till Platform Edge](assets/lifecycle-edge-assurance.png)
 
-Nästa: **[Spåra händelser](events.md)**
-
->[!NOTE]
+>[!SUCCESS]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
+>Du har nu konfigurerat din app så att den skickar programtillståndshändelser (förgrund, bakgrund) till Adobe Experience Platform Edge Network och alla tjänster som du har definierat i din datastam.
+>
+> Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
+
+Nästa: **[Spåra händelsedata](events.md)**

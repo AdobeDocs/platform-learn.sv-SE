@@ -2,9 +2,9 @@
 title: Installera Adobe Experience Platform Mobile SDKs
 description: Lär dig hur du implementerar Adobe Experience Platform Mobile SDK i en mobilapp.
 exl-id: 98d6f59e-b8a3-4c63-ae7c-8aa11e948f59
-source-git-commit: bc53cb5926f708408a42aa98a1d364c5125cb36d
+source-git-commit: deea910040382142fe0b26893b9b20a949cb0974
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '940'
 ht-degree: 0%
 
 ---
@@ -13,147 +13,133 @@ ht-degree: 0%
 
 Lär dig hur du implementerar Adobe Experience Platform Mobile SDK i en mobilapp.
 
->[!INFO]
->
-> Den här självstudiekursen kommer att ersättas med en ny självstudiekurs om hur du använder en ny exempelapp i slutet av november 2023
-
 ## Förutsättningar
 
-* Taggbiblioteket med tilläggen som beskrivs i [föregående lektion](configure-tags.md).
+* Ett taggbibliotek med tilläggen som beskrivs i [föregående lektion](configure-tags.md).
 * Fil-ID för utvecklingsmiljö från [Instruktioner för mobilinstallation](configure-tags.md#generate-sdk-install-instructions).
-* Nedladdad, tom [exempelapp](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App){target="_blank"}.
-* Upplev [XCode](https://developer.apple.com/xcode/){target="_blank"}.
-* Grundläggande [kommandorad](https://en.wikipedia.org/wiki/Command-line_interface){target="_blank"} kunskap.
+* Tomma filer har hämtats [exempelapp](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App){target="_blank"}.
+* Upplev [Xcode](https://developer.apple.com/xcode/){target="_blank"}.
 
 ## Utbildningsmål
 
 I den här lektionen kommer du att:
 
-* Uppdatera din CocoaPod-fil.
-* Importera de SDK:er som behövs.
+* Lägg till önskade SDK:er i projektet med Swift Package Manager.
 * Registrera tilläggen.
 
 >[!NOTE]
 >
 >I en mobilappsimplementering är termerna &quot;extensions&quot; och &quot;SDKs&quot; nästan utbytbara.
 
+## Swift Package Manager
 
-## Uppdatera PodFile
+Istället för att använda CocoaPods och en Pod-fil (enligt beskrivningen i [Generera installationsanvisningar för SDK](./configure-tags.md#generate-sdk-install-instructions)) kan du lägga till enskilda paket med Xcodes inbyggda Swift Package Manager. Xcode-projektet har redan alla paketberoenden tillagda. Xcode **[!UICONTROL Paketberoenden]** ska se ut så här:
 
->[!NOTE]
->
-> Om du inte är bekant med CocoaPods, se den officiella [komma igång-guide](https://guides.cocoapods.org/using/getting-started.html).
+![Xcode-paketberoenden](assets/xcode-package-dependencies.png){zoomable=&quot;yes&quot;}
 
-Installera är vanligtvis ett enkelt sudo-kommando:
 
-```console
-sudo gem install cocoapods
-```
+I Xcode kan du använda **[!UICONTROL Fil]** > **[!UICONTROL Lägg till paket...]** för att lägga till paket. Tabellen nedan innehåller länkar till de URL:er som du skulle använda för att lägga till paket. Länkarna visar även mer information om varje paket.
 
-Öppna Podfilen när du har installerat CocoaPods.
+| Paket | Beskrivning |
+|---|---|
+| [AEP Core](https://github.com/adobe/aepsdk-core-ios) | The `AEPCore`, `AEPServices`och `AEPIdentity` tillägg utgör grunden för Adobe Experience Platform SDK - alla program som använder SDK måste innehålla dem. Dessa moduler innehåller en gemensam uppsättning funktioner och tjänster som krävs för alla SDK-tillägg.<br/><ul><li>`AEPCore` innehåller implementering av händelsehubben. Händelsehubben är den mekanism som används för att leverera händelser mellan appen och SDK:n. Händelsehubben används också för att dela data mellan tillägg.</li><li>`AEPServices` innehåller flera återanvändbara implementeringar som krävs för plattformsstöd, inklusive nätverk, diskåtkomst och databashantering.</li><li>`AEPIdentity` implementerar integreringen med Adobe Experience Platform Identity Services.</li><li>`AEPSignal` representerar Adobe Experience Platform SDK:s signaltillägg som gör att marknadsförarna kan skicka en signal till sina appar för att skicka data till externa destinationer eller till öppna URL:er.</li><li>`AEPLifecycle` representerar Adobe Experience Platform SDK:s Lifecycle-tillägg som hjälper till att samla in uppgifter om programmets livscykel, t.ex. information om installation eller uppgradering, programstart och session, enhetsinformation och eventuella ytterligare kontextdata från programutvecklaren.</li></ul> |
+| [AEP Edge](https://github.com/adobe/aepsdk-edge-ios) | Mobiltillägget Adobe Experience Platform Edge Network (`AEPEdge`) kan du skicka data till Adobe Edge Network från ett mobilprogram. Med det här tillägget kan du implementera Adobe Experience Cloud-funktioner på ett mer robust sätt, leverera flera Adobe-lösningar via ett nätverksanrop och samtidigt vidarebefordra informationen till Adobe Experience Platform.<br/>Det mobila tillägget Edge Network är ett tillägg till Adobe Experience Platform SDK och kräver `AEPCore` och `AEPServices` tillägg för händelsehantering samt `AEPEdgeIdentity` tillägg för att hämta identiteter, som ECID. |
+| [AEP Edge Identity](https://github.com/adobe/aepsdk-edgeidentity-ios) | Mobiltillägget AEP Edge Identity (`AEPEdgeIdentity`) används för att hantera användaridentitetsdata från ett mobilprogram när Adobe Experience Platform SDK och Edge Network-tillägget används. |
+| [AEP Edge-samtycke](https://github.com/adobe/aepsdk-edgeconsent-ios) | Mobiltillägget AEP Consent Collection (`AEPConsent`) aktiverar insamling av medgivandeinställningar från mobilprogrammet när du använder Adobe Experience Platform SDK och Edge Network-tillägget. |
+| [AEP-användarprofil](https://github.com/adobe/aepsdk-userprofile-ios) | Tillägget Adobe Experience Platform User Profile Mobile (`AEPUserProfile`) är ett tillägg för att hantera användarprofiler för Adobe Experience Platform SDK. |
+| [AEP-platser](https://github.com/adobe/aepsdk-places-ios) | Tillägget AEP Places (`AEPPlaces`) kan du spåra geopositioneringshändelser enligt definitionen i Adobe Platser-gränssnittet och i Adobe Data Collection Tag-reglerna. |
+| [AEP Messaging](https://github.com/adobe/aepsdk-messaging-ios) | Tillägget AEP Messaging (`AEPMessaging`) kan du skicka push-meddelandetokens och skicka vidare klickningsfeedback till Adobe Experience Platform. |
+| [AEP-optimering](https://github.com/adobe/aepsdk-optimize-ios) | Tillägget AEP Optimize (`AEPOptimize`) innehåller API:er för att möjliggöra personalisering i realtid i Adobe Experience Platform Mobile SDK:er med Adobe Target eller Adobe Journey Optimizer Offer decisioning. Den kräver `AEPCore` och `AEPEdge` tillägg för att skicka personaliseringsfrågehändelser till Experience Edge-nätverket. |
+| [AEP Assurance](https://github.com/adobe/aepsdk-assurance-ios) | Assurance (alias project Griffon) är en ny, innovativ förlängning (`AEPAssurance`) för att hjälpa er att inspektera, bevisa, simulera och validera hur ni samlar in data eller levererar upplevelser i er mobilapp. Det här tillägget aktiverar din app för Assurance. |
 
-![initial podfile](assets/mobile-install-initial-podfile.png)
-
-Uppdatera filen så att den innehåller följande punkter:
-
-```swift
-pod 'AEPCore', '~> 3'
-pod 'AEPEdge', '~> 1'
-pod 'AEPUserProfile', '~> 3'
-pod 'AEPAssurance', '~> 3'
-pod 'AEPServices', '~> 3'
-pod 'AEPEdgeConsent', '~> 1'
-pod 'AEPLifecycle', '~>3'
-pod 'AEPMessaging', '~>1'
-pod 'AEPEdgeIdentity', '~>1'
-pod 'AEPSignal', '~>3'
-```
-
->[!NOTE]
->
-> `AEPMessaging` krävs bara om du tänker implementera push-meddelanden med Adobe Journey Optimizer. Läs självstudiekursen om [implementera push-meddelanden med Adobe Journey Optimizer](journey-optimizer-push.md) för mer information.
-
-När du har sparat ändringarna i din Podfile navigerar du till mappen med ditt projekt och kör `pod install` för att installera ändringarna.
-
-![pod-installation](assets/mobile-install-podfile-install.png)
-
->[!NOTE]
->
-> Om du får &quot;No Podfile found in the project directory.&quot; fel, terminalen finns i fel mapp. Navigera till mappen med den PDF-fil du har uppdaterat och försök igen.
-
-Om du vill uppgradera till den senaste versionen kör du `pod update` -kommando.
-
->[!INFO]
->
->Om du inte kan använda CocoaPods i dina egna program kan du lära dig mer om andra [implementeringar som stöds](https://github.com/adobe/aepsdk-core-ios#binaries) i GitHub-projektet.
-
-## Bygg CocoaPods
-
-Öppna om du vill bygga CocoaPods `Luma.xcworkspace`och markera **Produkt**, följt av **Rensa byggmapp**.
-
->[!NOTE]
->
-> Du kan behöva ange **Bygg endast aktiv arkitektur** till **Nej**. Välj Pods-projektet i projektnavigeraren och välj **Inställningar för bygge** och ange **Bygg aktiv arkitektur** till **Nej**.
-
-Nu kan du skapa och köra projektet.
-
-![bygginställningar](assets/mobile-install-build-settings.png)
-
->[!NOTE]
->
->Lumaprojektet byggdes med Xcode v12.5 på en M1-kretsuppsättning och körs i iOS-simulatorn. Om du använder en annan konfiguration kan du behöva ändra dina bygginställningar så att de återspeglar din arkitektur.
->
->Om bygget inte lyckas kan du försöka återställa **Bygg aktiv arkitektur** > **Felsök** återställer till **Ja**.
->
->Simulatorkonfigurationen &quot;iPod touch (7:e generationen)&quot; användes när självstudiekursen skapades.
 
 ## Importera tillägg
 
-I varje `.swift` lägger du till följande importer. Börja med att lägga till `AppDelegate.swift`.
+I Xcode navigerar du till **[!DNL Luma]** > **[!DNL Luma]** > **[!UICONTROL AppDelegate]** och se till att följande importer ingår i den här källfilen.
 
 ```swift
-import AEPUserProfile
-import AEPAssurance
-import AEPEdge
+// import AEP MobileSDK libraries
 import AEPCore
+import AEPServices
+import AEPIdentity
+import AEPSignal
+import AEPLifecycle
+import AEPEdge
 import AEPEdgeIdentity
 import AEPEdgeConsent
-import AEPLifecycle
-import AEPMessaging //Optional, used for AJO push messaging
-import AEPSignal
-import AEPServices
+import AEPUserProfile
+import AEPPlaces
+import AEPMessaging
+import AEPOptimize
+import AEPAssurance
 ```
+
+Gör på samma sätt för **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** > **[!UICONTROL MobileSDK]**.
 
 ## Uppdatera AppDelegate
 
-I `AppDelegate.swift` lägg till följande kod i `didFinishLaunchingWithOptions`. Ersätt currentAppId med det fil-ID för utvecklingsmiljöfil som du hämtade från taggar i [föregående lektion](configure-tags.md).
+Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **AppDelegate** i Xcode Project-navigatorn.
 
-```swift
-let currentAppId = "b5cbd1a1220e/bae66382cce8/launch-88492c6dcb6e-development"
+1. Ersätt `@AppStorage` value `YOUR_ENVIRONMENT_ID_GOES_HERE` for `environmentFileId` till det fil-ID för utvecklingsmiljön som du hämtade från taggar i [Generera installationsanvisningar för SDK](configure-tags.md#generate-sdk-install-instructions).
 
-let extensions = [Edge.self, Assurance.self, Lifecycle.self, UserProfile.self, Consent.self, AEPEdgeIdentity.Identity.self, Messaging.self]
+   ```swift
+   @AppStorage("environmentFileId") private var environmentFileId = "YOUR_ENVIRONMENT_ID_GOES_HERE"
+   ```
 
-MobileCore.setLogLevel(.trace)
+1. Lägg till följande kod i `application(_, didFinishLaunchingWithOptions)` funktion.
 
-MobileCore.registerExtensions(extensions, {
-    MobileCore.configureWith(appId: currentAppId)
-})
-```
-
-`Messaging.self` krävs bara om du tänker implementera push-meddelanden via Adobe Journey Optimizer enligt beskrivningen [här](journey-optimizer-push.md).
+   ```swift
+   // Define extensions
+   let extensions = [
+       AEPIdentity.Identity.self,
+       Lifecycle.self,
+       Signal.self,
+       Edge.self,
+       AEPEdgeIdentity.Identity.self,
+       Consent.self,
+       UserProfile.self,
+       Places.self,
+       Messaging.self,
+       Optimize.self,
+       Assurance.self
+   ]
+   
+   // Register extensions
+   MobileCore.registerExtensions(extensions, {
+       // Use the environment file id assigned to this application via Adobe Experience Platform Data Collection
+       Logger.aepMobileSDK.info("Luma - using mobile config: \(self.environmentFileId)")
+       MobileCore.configureWith(appId: self.environmentFileId)
+   
+       // set this to false or comment it when deploying to TestFlight (default is false),
+       // set this to true when testing on your device.
+       MobileCore.updateConfigurationWith(configDict: ["messaging.useSandbox": true])
+       if appState != .background {
+           // only start lifecycle if the application is not in the background
+           MobileCore.lifecycleStart(additionalContextData: nil)
+       }
+   
+       // assume unknown, adapt to your needs.
+       MobileCore.setPrivacyStatus(.unknown)
+   })
+   ```
 
 Koden ovan gör följande:
 
-* Registrerar nödvändiga tillägg.
-* Konfigurerar MobileCore och andra tillägg så att taggegenskapskonfigurationen används.
-* Aktiverar felsökningsloggning. Mer information och alternativ finns i [Mobile SDK-dokumentation](https://developer.adobe.com/client-sdks/documentation/getting-started/enable-debug-logging/).
+1. Registrerar nödvändiga tillägg.
+1. Konfigurerar MobileCore och andra tillägg så att taggegenskapskonfigurationen används.
+1. Aktiverar felsökningsloggning. Mer information och alternativ finns i [Dokumentation för Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/getting-started/enable-debug-logging/).
+1. Startar livscykelövervakning. Se [Livscykel](lifecycle-data.md) i självstudiekursen för mer information.
+1. Anger okänt standardsamtycke. Se [Godkännande](consent.md) i självstudiekursen för mer information.
 
 >[!IMPORTANT]
->I en produktionsapp måste du växla AppId baserat på den aktuella miljön (dev/stag/prod).
+>
+>Se till att du uppdaterar `MobileCore.configureWith(appId: self.environmentFileId)` med `appId` baserat på `environmentFileId` från den taggmiljö du bygger för (utveckling, staging eller produktion).
 >
 
-Nästa: **[Ställ in försäkring](assurance.md)**
-
->[!NOTE]
+>[!SUCCESS]
+>
+>Du har nu installerat de nödvändiga paketen och uppdaterat projektet för att korrekt registrera de Adobe Experience Platform Mobile SDK-tillägg som du kommer att använda för resten av kursen.
 >
 >Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
+
+Nästa: **[Ställ in försäkring](assurance.md)**

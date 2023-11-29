@@ -1,21 +1,17 @@
 ---
-title: Profil
+title: Samla in profildata med Platform Mobile SDK
 description: Lär dig hur du samlar in profildata i en mobilapp.
 exl-id: 97717611-04d9-45e3-a443-ea220a13b57c
-source-git-commit: bc53cb5926f708408a42aa98a1d364c5125cb36d
+source-git-commit: d353de71d8ad26d2f4d9bdb4582a62d0047fd6b1
 workflow-type: tm+mt
-source-wordcount: '458'
-ht-degree: 1%
+source-wordcount: '600'
+ht-degree: 0%
 
 ---
 
-# Profil
+# Samla in profildata
 
 Lär dig hur du samlar in profildata i en mobilapp.
-
->[!INFO]
->
-> Den här självstudiekursen kommer att ersättas med en ny självstudiekurs om hur du använder en ny exempelapp i slutet av november 2023
 
 Du kan använda profiltillägget för att lagra attribut om användaren på klienten. Den här informationen kan användas senare för att målinrikta och personalisera meddelanden i online- eller offlinescenarier, utan att du behöver ansluta till en server för optimala prestanda. Profiltillägget hanterar CSOP (Client-Side Operation Profile), ger ett sätt att reagera på API:er, uppdatera attribut för användarprofiler och delar attribut för användarprofiler med resten av systemet som en genererad händelse.
 
@@ -29,11 +25,6 @@ Profildata används av andra tillägg för att utföra profilrelaterade åtgärd
 ## Förutsättningar
 
 * App med SDK:er har installerats och konfigurerats.
-* Profil-SDK importerades.
-
-  ```swift
-  import AEPUserProfile
-  ```
 
 ## Utbildningsmål
 
@@ -43,59 +34,99 @@ I den här lektionen kommer du att:
 * Hämta användarattribut.
 
 
-## Ange och uppdatera
+## Ange och uppdatera användarattribut
 
-Det skulle vara praktiskt för målgruppsanpassning och/eller personalisering att snabbt veta om en användare har köpt appen tidigare. Låt oss konfigurera det i Luma-appen.
+Det kan vara bra att ha som mål och/eller personalisering i appen för att snabbt veta om en användare har köpt något tidigare eller nyligen. Låt oss konfigurera det i Luma-appen.
 
-1. Navigera till `Cart.swift`
-
-1. Lägg till nedanstående kod i `processOrder() `funktion.
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** >  **[!DNL MobileSDK]** i Xcode Project navigator och hitta `func updateUserAttribute(attributeName: String, attributeValue: String)` funktion. Lägg till följande kod:
 
    ```swift
+   // Create a profile map, add attributes to the map and update profile using the map
    var profileMap = [String: Any]()
-   profileMap["isPaidUser"] = "yes"
+   profileMap[attributeName] = attributeValue
    UserProfile.updateUserAttributes(attributeDict: profileMap)
    ```
 
-Personaliseringsteamet kanske också vill rikta sig baserat på användarens lojalitetsnivå. Låt oss konfigurera det i Luma-appen.
+   Den här koden:
 
-1. Navigera till `Account.swift`
+   1. Ställer in en tom ordlista med namnet `profileMap`.
 
-1. Lägg till nedanstående kod i `showUserInfo()` funktion.
+   1. Lägger till ett element i ordlistan med `attributeName` (till exempel `isPaidUser`), och `attributeValue` (till exempel `yes`).
+
+   1. Använder `profileMap` ordlista som ett värde för `attributeDict` parametern för [`UserProfile.updateUserAttributes`](https://developer.adobe.com/client-sdks/documentation/profile/api-reference/#updateuserattributes) API-anrop.
+
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Views]** > **[!DNL Products]** > **[!DNL ProductView]** i Xcode Project navigator och hitta anropet till `updateUserAttributes` (inom koden för köpet) <img src="assets/purchase.png" width="15" /> -knapp). Lägg till följande kod:
 
    ```swift
-   var profileMap = [String: Any]()
-   profileMap["loyaltyLevel"] = loyaltyLevel
-   UserProfile.updateUserAttributes(attributeDict: profileMap)
+   // Update attributes
+   MobileSDK.shared.updateUserAttribute(attributeName: "isPaidUser", attributeValue: "yes")
    ```
 
-Ytterligare `updateUserAttributes` dokumentation finns [här](https://developer.adobe.com/client-sdks/documentation/profile/api-reference/#updateuserattribute).
 
-## Hämta
+## Hämta användarattribut
 
-När du har uppdaterat en användares attribut är det tillgängligt för andra Adobe SDK:er, men du kan även hämta attribut explicit.
+När du har uppdaterat en användares attribut är det tillgängligt för andra Adobe SDK:er, men du kan även hämta attribut explicit, så att appen fungerar som du vill.
 
-```swift
-UserProfile.getUserAttributes(attributeNames: ["isPaidUser","loyaltyLevel"]){
-    attributes, error in
-    print("Profile: getUserAttributes: ",attributes as Any)
-}
-```
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Views]** > **[!DNL General]** > **[!DNL HomeView]** i Xcode Project navigator och hitta `.onAppear` modifierare. Lägg till följande kod:
 
-Ytterligare `getUserAttributes` dokumentation finns [här](https://developer.adobe.com/client-sdks/documentation/profile/api-reference/#getuserattributes).
+   ```swift
+   // Get attributes
+   UserProfile.getUserAttributes(attributeNames: ["isPaidUser"]) { attributes, error in
+       if attributes?.count ?? 0 > 0 {
+           if attributes?["isPaidUser"] as? String == "yes" {
+               showBadgeForUser = true
+           }
+           else {
+               showBadgeForUser = false
+           }
+       }
+   }
+   ```
+
+   Den här koden:
+
+   1. Anropar [`UserProfile.getUserAttributes`](https://developer.adobe.com/client-sdks/documentation/profile/api-reference/#getuserattributes) API med `isPaidUser` attributnamn som enskilt element i `attributeNames` array.
+   1. Kontrollerar sedan värdet för `isPaidUser` och när `yes`, placerar ett märke på <img src="assets/paiduser.png" width="20" /> i verktygsfältet längst upp till höger.
+
+Ytterligare dokumentation finns [här](https://developer.adobe.com/client-sdks/documentation/profile/api-reference/#getuserattributes).
 
 ## Validera med Assurance
 
-1. Granska [installationsanvisningar](assurance.md) -avsnitt.
-1. Installera programmet.
-1. Starta appen med den URL som skapas av försäkringen.
-1. Markera kontoikonen och välj sedan Logga in. Obs! Du har inga autentiseringsuppgifter.
-1. Stäng inloggningsmenyerna och välj sedan kontoikonen igen. Det här visar skärmen med kontoinformation där `loyaltyLevel` är inställt.
-1. Du borde se en **[!UICONTROL UserProfileUpdate]** händelse i försäkringsgränssnittet med den uppdaterade `profileMap` värde.
-   ![validera profil](assets/mobile-profile-validate.png)
+1. Granska [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
+1. Kör appen för att logga in och interagera med en produkt.
 
-Nästa: **[Mappa data till Adobe Analytics](analytics.md)**
+   1. Flytta Assurance-ikonen åt vänster.
+   1. Välj **[!UICONTROL Startsida]** i tabbfältet.
+   1. Om du vill öppna inloggningsbladet väljer du <img src="assets/login.png" width="15" /> -knappen.
 
->[!NOTE]
+      <img src="./assets/mobile-app-events-1.png" width="300">
+
+   1. Välj <img src="assets/insert.png" width="15" /> knapp .
+   1. Välj **[!UICONTROL Inloggning]**.
+
+      <img src="./assets/mobile-app-events-2.png" width="300">
+
+   1. Välj **[!DNL Products]** i tabbfältet.
+   1. Välj en produkt.
+   1. Välj <img src="assets/saveforlater.png" width="15" />.
+   1. Välj <img src="assets/addtocart.png" width="20" />.
+   1. Välj <img src="assets/purchase.png" width="15" />.
+
+      <img src="./assets/mobile-app-events-3.png" width="300">
+
+   1. Återgå till **[!UICONTROL Startsida]** skärm. Du bör se att ett märke har lagts till <img src="assets/person-badge-icon.png" width="15" />.
+
+      <img src="./assets/personbadges.png" width="300">
+
+
+
+1. I försäkringsgränssnittet bör du se en **[!UICONTROL UserProfileUpdate]** och **[!UICONTROL getUserAttributes]** händelser med uppdaterade `profileMap` värde.
+   ![validera profil](assets/profile-validate.png)
+
+>[!SUCCESS]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
+>Du har nu konfigurerat din app för att uppdatera profilattribut i Edge Network och (när den har konfigurerats) med Adobe Experience Platform.
+>
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
+
+Nästa: **[Använd platser](places.md)**

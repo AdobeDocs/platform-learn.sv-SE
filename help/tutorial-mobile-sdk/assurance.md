@@ -1,22 +1,18 @@
 ---
-title: Ställ in försäkring
+title: Konfigurera Assurance för plattformens SDK-implementeringar
 description: Lär dig hur du implementerar tillägget Assurance i en mobilapp.
 feature: Mobile SDK,Assurance
 exl-id: e15774b2-2f52-400f-9313-bb4338a88918
-source-git-commit: bc53cb5926f708408a42aa98a1d364c5125cb36d
+source-git-commit: d353de71d8ad26d2f4d9bdb4582a62d0047fd6b1
 workflow-type: tm+mt
-source-wordcount: '602'
+source-wordcount: '990'
 ht-degree: 0%
 
 ---
 
-# Säkerhet
+# Ställ in försäkring
 
 Lär dig hur du konfigurerar Adobe Experience Platform Assurance i en mobilapp.
-
->[!INFO]
->
-> Den här självstudiekursen kommer att ersättas med en ny självstudiekurs om hur du använder en ny exempelapp i slutet av november 2023
 
 Assurance, som formellt kallas Project Griffon, är utformat för att hjälpa er att inspektera, verifiera, simulera och validera hur ni samlar in data eller levererar upplevelser i er mobilapp.
 
@@ -25,7 +21,7 @@ Med Assurance kan du inspektera SDK-råhändelser som genererats av Adobe Experi
 
 ## Förutsättningar
 
-* Exempelappen med SDK:er installerade och konfigurerade har skapats och körts.
+* Appen har konfigurerats med SDK:er installerade och konfigurerade.
 
 ## Utbildningsmål
 
@@ -38,71 +34,177 @@ I den här lektionen kommer du att:
 
 ## Bekräfta åtkomst
 
-Bekräfta att din organisation har åtkomst till Assurance genom att utföra följande steg:
-
-1. Besök [https://experience.adobe.com/#/assurance](https://experience.adobe.com/griffon){target="_blank"}
-1. Logga in med dina Adobe ID-uppgifter för Experience Cloud.
-1. Om du kommer till **[!UICONTROL Sessioner]** så får du åtkomst. Om du kommer till betaåtkomstsidan väljer du **[!UICONTROL Registrera]**.
+Bekräfta att din organisation har åtkomst till Assurance. Som användare bör du läggas till i profilen för Adobe Experience Platform. Se [Användaråtkomst](https://experienceleague.adobe.com/docs/experience-platform/assurance/user-access.html?lang=en) i Assurance-guiden för mer information.
 
 ## Implementera
 
-Förutom det allmänna [SDK-installation](install-sdks.md) När du är klar med den tidigare lektionen behöver iOS även följande tillägg. Lägg till följande kod i `AppDelegate.swift` fil:
+Förutom det allmänna [SDK-installation](install-sdks.md), som du slutförde i den tidigare lektionen, behöver iOS även följande tillägg för att starta Assurance-sessionen för din app.
 
-```swift
-func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
-    Assurance.startSession(url: url)
-    return true
-}
-```
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!UICONTROL SceneDelegate]** i Xcodes projektnavigerare.
 
-I exemplet Luma för den här kursen används iOS 12.0. Om du följer med i ditt eget scenbaserade program med iOS 13 och senare använder du `UISceneDelegate's scene(_:openURLContexts:)` metod enligt följande:
+1. Lägg till följande kod i `func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>`:
 
-```swift
-func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
-    // Called when the app in background is opened with a deep link.
-    if let deepLinkURL = URLContexts.first?.url {
-        Assurance.startSession(url: deepLinkURL)
-    }
-}
-```
+   ```swift
+   // Called when the app in background is opened with a deep link.
+   if let deepLinkURL = URLContexts.first?.url {
+       // Start the Assurance session
+       Assurance.startSession(url: deepLinkURL)
+   }
+   ```
+
+   Den här koden startar en säkringssession när appen finns i bakgrunden och öppnas med en djuplänk.
 
 Mer information finns [här](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/api-reference/){target="_blank"}.
 
+<!-- not initially required
+
+## Signing
+
+Signing the application is only required for the [Create and send push notifications](journey-optimizer-push.md) and the [Create and send in-app messages](journey-optimizer-inapp.md) lessons in this tutorial. These lessons require an Apple provisioning profile which **requires a paid Apple developer account**.
+
+To update the signing for the lessons that require that you sign the application:
+
+1. Open the project in Xcode.
+1. Select **[!DNL Luma]** in the Project navigator.
+1. Select the **[!DNL Luma]** target.
+1. Select the **Signing & Capabilities** tab.
+1. Configure **[!UICONTROL Automatic manage signing]**, **[!UICONTROL Team]**, and **[!UICONTROL Bundle Identifier]**, or use your specific Apple development provisioning details. 
+ 
+   >[!IMPORTANT]
+   >
+   >Ensure you use a _unique_ bundle identifier and replace the `com.adobe.luma.tutorial.swiftui` bundle identifier, as each bundle identifier needs to be unique. Typically, you use a reverse-DNS format for bundle ID strings, like `com.organization.brand.uniqueidentifier`. The Finished version of this tutorial, for example, uses `com.adobe.luma.tutorial.swiftui`.
+
+
+    ![Xcode signing capabilities](assets/xcode-signing-capabilities.png){zoomable="yes"}
+
+-->
+
 ## Konfigurera en bas-URL
 
-1. Öppna XCode och välj projektnamnet.
-1. Navigera till **Info** -fliken.
-1. Bläddra nedåt till **URL-typer** och väljer **+** för att lägga till en ny.
-1. Ange **Identifierare** och **URL-scheman** till&quot;lumadeeplink&quot;.
-1. Bygg och kör appen.
+1. Gå till projektet i Xcode.
+1. Välj **[!DNL Luma]** i projektnavigatorn.
+1. Välj **[!DNL Luma]** mål.
+1. Välj **Info** -fliken.
+1. Bläddra nedåt till om du vill lägga till en bas-URL **URL-typer** och väljer **+** -knappen.
+1. Ange **Identifierare** till valfri källidentifierare och ange en **URL-scheman** efter eget val.
 
-![försäkrings-URL](assets/mobile-assurance-url-type.png)
+   ![försäkrings-URL](assets/assurance-url-type.png)
+
+   >[!IMPORTANT]
+   >
+   >Se till att du använder en _unik_ källidentifierare och ersätt `com.adobe.luma.tutorial.swiftui` källidentifierare eftersom varje källidentifierare måste vara unik. Vanligtvis använder du ett omvänt DNS-format för paket-ID-strängar, som `com.organization.brand.uniqueidentifier`.<br/>Använd på liknande sätt ett unikt URL-schema och ersätt det redan angivna `lumatutorialswiftui` med ditt unika URL-schema.
 
 Mer information om URL-scheman i iOS finns i [Apple dokumentation](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app){target="_blank"}.
 
-Assurance fungerar genom att öppna en URL, antingen via webbläsare eller QR-kod, som börjar med den bas-URL som öppnar programmet och som innehåller ytterligare parametrar. Dessa unika parametrar används för att ansluta sessionen.
+Assurance fungerar genom att öppna en URL, antingen via webbläsaren eller QR-koden. Den URL:en börjar med den bas-URL som öppnar appen och innehåller ytterligare parametrar. Dessa unika parametrar används för att ansluta sessionen.
+
 
 ## Ansluta till en session
 
-1. Navigera till [Försäkringsgränssnitt](https://experience.adobe.com/griffon){target="_blank"}.
+I Xcode:
+
+1. Bygg eller återskapa och kör appen i simulatorn eller på en fysisk enhet från Xcode med ![Spela upp](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Play_18_N.svg).
+
+   >[!TIP]
+   >
+   >Om du vill kan du rensa ditt bygge, särskilt när du ser oväntade resultat. Gör detta genom att välja **[!UICONTROL Rensa byggmapp..]** från Xcode **[!UICONTROL Produkt]** -menyn.
+
+
+1. I **[!UICONTROL Tillåt att&quot;Luma App&quot; använder din plats]** dialogruta, välja **[!UICONTROL Tillåt när appen används]**.
+
+   <img src="assets/geolocation-permissions.png" width="300">
+
+1. I **[!UICONTROL &quot;Luma App&quot; vill skicka meddelanden till dig]** dialogruta, välja **[!UICONTROL Tillåt]**.
+
+   <img src="assets/notification-permissions.png" width="300">
+
+1. Välj **[!UICONTROL Fortsätt...]** så att appen kan spåra din aktivitet.
+
+   <img src="assets/tracking-continue.png" width="300">
+
+1. I **[!UICONTROL Tillåt att&quot;Luma App&quot; spårar din aktivitet över andra företags appar och webbplatser]** dialogruta, välja **[!UICONTROL Tillåt]**.
+
+   <img src="assets/tracking-allow.png" width="300">
+
+
+I webbläsaren:
+
+1. Gå till användargränssnittet för datainsamling.
+1. Välj **[!UICONTROL Säkerhet]** från den vänstra listen.
 1. Välj **[!UICONTROL Skapa session]**.
-1. Ange **[!UICONTROL Sessionsnamn]** som `Luma App QA` och **[!UICONTROL Bas-URL]** `lumadeeplink://default`
+1. Välj **[!UICONTROL Starta]**.
+1. Ange en **[!UICONTROL Sessionsnamn]** som `Luma Mobile App Session` och **[!UICONTROL Bas-URL]**, som är det URL-schema som du angav i Xcode, följt av `://` Till exempel: `lumatutorialswiftui://`
 1. Välj **[!UICONTROL Nästa]**.
-   ![skapa trygghet, session](assets/mobile-assurance-create-session.png)
-1. **[!UICONTROL Skanna QR-kod]** om du använder en fysisk enhet. Om du använder simulatorn **[!UICONTROL Kopiera länk]** och öppna den med Safari i simulatorn.
-   ![qa-kod för försäkring](assets/mobile-assurance-qr-code.png)
-1. När appen läses in visas en modal som ber dig ange din PIN-kod från föregående steg.
-   ![stiftstappen](assets/mobile-assurance-enter-pin.png)
-1. Om anslutningen lyckades visas händelser i webbgränssnittet för försäkringen och en flytande säkerhetsikon i appen.
-   * Löpande säkerhetsikon.
-     ![modal](assets/mobile-assurance-modal.png)
-   * Experience Cloud event som kommer igenom i webbgränssnittet.
-     ![säkringshändelser](assets/mobile-assurance-events.png)
+   ![skapa trygghet, session](assets/assurance-create-session.png)
+1. I **[!UICONTROL Skapa ny session]** modal dialog:
 
-Om du stöter på några problem kan du läsa [teknisk](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/){target="_blank"} and [general documentation](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html){target="_blank"}.
+   Om du använder en fysisk enhet:
 
-Nästa: **[Godkännande](consent.md)**
+   * Välj **[!UICONTROL Skanna QR-kod]**. Om du vill öppna appen använder du kameran på den fysiska enheten för att skanna QR-koden och trycka på länken.
+
+     ![qa-kod för försäkring](assets/assurance-qr-code.png)
+
+   Om du använder en simulator:
+
+   1. Välj **[!UICONTROL Kopiera länk]**.
+   1. Kopiera den djupa länken med ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg)  och använd länken till att öppna appen med Safari i simulatorn.
+      ![Länk till Assurance-kopia](assets/assurance-copy-link.png)
+
+1. När appen läses in visas en modal dialogruta där du ombeds ange den PIN-kod som visas i steg 7.
+
+   <img src="assets/assurance-enter-pin.png" width="300">
+
+   Ange PIN-koden och välj **[!UICONTROL Anslut]**.
+
+
+1. Om anslutningen lyckades ser du:
+   * En säkerhetsikon visas ovanpå din app.
+
+     <img src="assets/assurance-modal.png" width="300">
+
+   * Uppdateringar från Experience Cloud i försäkringsgränssnittet som visar:
+
+      1. Experience Events kommer från appen.
+      1. Information om en markerad händelse.
+      1. Enheten och tidslinjen.
+
+         ![säkringshändelser](assets/assurance-events.png)
+
+Om du stöter på några problem kan du gå igenom [teknisk](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/){target="_blank"} and [general documentation](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html){target="_blank"}.
+
+
+## Verifiera tillägg
+
+Så här kontrollerar du om ditt program använder de senaste tilläggen:
+
+1. Välj **[!UICONTROL Konfigurera]**.
+
+1. Välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) for ![123](https://spectrum.adobe.com/static/icons/workflow_18/Smock_123_18_N.svg) **[!UICONTROL Tilläggsversioner]**.
+
+1. Välj **[!UICONTROL Spara]**.
+
+   ![Konfigurera tilläggsversioner](assets/assurance-configure-extension-versions.png)
+
+1. Välj ![123](https://spectrum.adobe.com/static/icons/workflow_18/Smock_123_18_N.svg) **[!UICONTROL Tilläggsversioner]** om du vill se en översikt över de senaste tillgängliga tilläggen och de tillägg som används i din version av programmet.
+
+   ![Tilläggsversioner](assets/assurance-extension-versions.png)
+
+1. Så här uppdaterar du tilläggsversioner (till exempel **[!UICONTROL Meddelanden]** och **[!UICONTROL Optimera]**) väljer du paketet (tillägg) från **[!UICONTROL Paketberoenden]** (till exempel **[!UICONTROL AEPMessaging]**) och på snabbmenyn väljer **[!UICONTROL Uppdateringspaket]**. Xcode uppdaterar paketberoendena.
+
 
 >[!NOTE]
 >
+>När du har uppdaterat dina tillägg (paket) i Xcode stänger du och tar bort den aktuella sessionen och upprepar alla steg från [Ansluta till en session](#connecting-to-a-session) och [Verifiera tillägg](#verify-extensions) för att säkerställa att Assurance rapporterar rätt tillägg i en ny Assurance-session.
+
+
+
+
+
+>[!SUCCESS]
+>
+>Du har nu konfigurerat din app att använda Assurance för resten av självstudiekursen.
+>
 >Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
+
+
+Nästa: **[Implementera medgivande](consent.md)**
