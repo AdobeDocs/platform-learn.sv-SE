@@ -3,9 +3,9 @@ title: Implementera Adobe Experience Cloud i självstudiekursen om mobilappar
 description: Lär dig hur du implementerar Adobe Experience Cloud mobilappar. Den här självstudiekursen vägleder dig genom en implementering av Experience Cloud-program i ett exempel på en Swift-app.
 recommendations: noDisplay,catalog
 exl-id: daff4214-d515-4fad-a224-f7589b685b55
-source-git-commit: deea910040382142fe0b26893b9b20a949cb0974
+source-git-commit: ebc283c041dcacd262dfa6cdb3b8a05a288e6664
 workflow-type: tm+mt
-source-wordcount: '821'
+source-wordcount: '844'
 ht-degree: 0%
 
 ---
@@ -81,6 +81,10 @@ I den här lektionen antas du ha ett Adobe-ID och de användarbehörigheter som 
 >
 >Som en del av den här självstudiekursen skapar du scheman, datauppsättningar, identiteter och så vidare. Om flera personer går igenom den här självstudiekursen i en enda sandlåda bör du överväga att lägga till eller föregå en identifiering som en del av namnkonventionen när du skapar dessa objekt. Lägg till exempel ` - <your name or initials>` till namnet på det objekt som du ska skapa.
 
+## Versionshantering
+
+* 29 november 2023: Större översyn med nya exempelappar och nya lektioner för meddelanden i appen, beslutshantering och Adobe Target.
+* 9 mars 2022: Första publiceringen
 
 ## Hämta Luma-appen
 
