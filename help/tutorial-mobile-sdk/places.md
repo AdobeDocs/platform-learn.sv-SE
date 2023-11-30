@@ -2,7 +2,7 @@
 title: Använd platser med plattformens mobila SDK
 description: Lär dig hur du använder platsens geopositioneringstjänst i din mobilapp.
 exl-id: adc2952f-cb01-4e06-9629-49fb95f22ca5
-source-git-commit: d353de71d8ad26d2f4d9bdb4582a62d0047fd6b1
+source-git-commit: 87477cce0f0c5c0bb140927bed22dbc6e11f2af9
 workflow-type: tm+mt
 source-wordcount: '1696'
 ht-degree: 0%
@@ -182,7 +182,7 @@ Låt oss skapa en annan regel
 
 1. I **[!UICONTROL Skapa regel]** på skärmen, ange ett namn för regeln, till exempel `POI - Exit`.
 1. Välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) under **[!UICONTROL HÄNDELSER]**.
-   1. Välj **[!UICONTROL Platser]** från **[!UICONTROL Tillägg]** lista och markera **[!UICONTROL Ange POI]** från **[!UICONTROL Händelsetyp]** lista.
+   1. Välj **[!UICONTROL Platser]** från **[!UICONTROL Tillägg]** lista och markera **[!UICONTROL Avsluta POI]** från **[!UICONTROL Händelsetyp]** lista.
    1. Välj **[!UICONTROL Behåll ändringar]**.
 1. Välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) under **[!UICONTROL ÅTGÄRDER]**.
    1. Välj **[!UICONTROL Mobile Core]** från **[!UICONTROL Tillägg]** lista, välj **[!UICONTROL Bifoga data]** från **[!UICONTROL Åtgärdstyp]** lista.

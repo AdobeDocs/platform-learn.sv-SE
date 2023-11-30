@@ -3,9 +3,9 @@ title: Mappa data som samlats in med Platform Mobile SDK till Adobe Analytics
 description: Lär dig hur du samlar in och mappar data för Adobe Analytics i en mobilapp.
 solution: Data Collection,Experience Platform,Analytics
 exl-id: 406dc687-643f-4f7b-a8e7-9aad1d0d481d
-source-git-commit: d353de71d8ad26d2f4d9bdb4582a62d0047fd6b1
+source-git-commit: 29b9771d81395676547b93ab3a1475a6a69c763f
 workflow-type: tm+mt
-source-wordcount: '907'
+source-wordcount: '931'
 ht-degree: 0%
 
 ---
@@ -86,7 +86,7 @@ s.products = ";Yoga Mat;1;49.99,;Water Bottle,3,30.00"
 
 >[!NOTE]
 >
->För närvarande `productListItems[N].SKU` ignoreras av automatisk mappning.
+>If `productListItems[].SKU` och `productListItems[].name` båda innehåller data, värdet i `productListItems[].SKU` används. Se [Variabelmappning för analyser i Adobe Experience Edge](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html?lang=en) för mer information.
 
 
 ### Exempel 2 - scAdd
