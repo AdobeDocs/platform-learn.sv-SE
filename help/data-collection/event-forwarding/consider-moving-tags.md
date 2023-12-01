@@ -6,7 +6,7 @@ role: Admin, Developer, Architect, Data Engineer
 level: Intermediate, Experienced
 jira: KT-9921
 exl-id: f8fd351a-435c-4cc1-b987-ed2ead20d4d6
-source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
+source-git-commit: 7edf8fc46943ae2f1e6e2e20f4d589d7959310c8
 workflow-type: tm+mt
 source-wordcount: '1369'
 ht-degree: 1%
@@ -23,7 +23,7 @@ Den här utvärderingen är bara nödvändig om du överväger att ta bort en le
 >
 >Adobe Experience Platform Launch har omklassificerats som en serie datainsamlingstekniker i Adobe Experience Platform. Som ett resultat av detta har flera terminologiska förändringar införts i produktdokumentationen. Se följande [dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) för en konsoliderad hänvisning till terminologiska förändringar.
 
-Webbläsarleverantörer ändrar hur de hanterar cookies från tredje part. Reklamleverantörer och marknadsföringsteknologier kräver ofta användning av många taggar på klientsidan. Dessa utmaningar är bara två övertygande skäl till att våra kunder lägger till datadistribution på serversidan.
+Webbläsarleverantörer ändrar hur de hanterar cookies från tredje part. Reklamleverantörer och marknadsföringsteknologier behöver ofta använda många taggar på klientsidan. Dessa utmaningar är bara två övertygande skäl till att våra kunder lägger till datadistribution på serversidan.
 
 >[!NOTE]
 >
@@ -31,7 +31,7 @@ Webbläsarleverantörer ändrar hur de hanterar cookies från tredje part. Rekla
 
 ## Användningsexempel och data {#use-cases-data}
 
-Det första steget är att definiera de användningsfall som implementeras med leverantörstaggen på klientsidan. Ta till exempel pixeln Facebook (Meta). Flytta den från vår webbplats till [Facebook Conversion API](https://exchange.adobe.com/apps/ec/105509/facebook-conversions-api-extension) med tillägget för händelsevidarebefordran innebär det att de specifika användningsfallen dokumenteras först.
+Det första steget är att definiera de användningsfall som implementeras med leverantörstaggen på klientsidan. Ta till exempel pixeln Facebook (Meta). Flytta den från vår webbplats till [Meta Conversions API](https://exchange.adobe.com/apps/ec/109168/meta-conversions-api) med tillägget för händelsevidarebefordran innebär det att de specifika användningsfallen dokumenteras först.
 
 För den aktuella leverantörskoden på klientsidan:
 
@@ -70,9 +70,9 @@ Har leverantören API:er som är utformade för överföring av händelsedata fr
 - Finns API-slutpunkterna för att skicka nödvändiga data? Om du vill hitta slutpunkter som stöder dina användningsfall kan du titta i leverantörens dokumentation för utvecklare eller API.
 - Tillåter de strömmande händelsedata eller endast batchdata?
 - Vilka autentiseringsmetoder stöder de? Token, HTTP, OAuth client credentials version eller annan? Se [här](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html) för metoder som stöds av händelsevidarebefordran.
-- Vad är uppdateringsförskjutningen för deras API? Är den begränsningen kompatibel med minimumen för händelsespridning? Detaljer [här](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html#:~:text=you%20can%20configure%20the%20Refresh%20Offset%20value%20for%20the%20secret).
+- Vad är uppdateringsförskjutningen för deras API? Är den begränsningen kompatibel med minimumen för händelsespridning? Information [här](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html#:~:text=you%20can%20configure%20the%20Refresh%20Offset%20value%20for%20the%20secret).
 - Vilka data kräver de för de relevanta slutpunkterna?
-- Kräver de en leverantörsspecifik användaridentifierare med varje anrop till slutpunkten?
+- Kräver de en leverantörsspecifik användaridentifierare för varje anrop till slutpunkten?
 - Om de behöver den identifieraren, var och hur kan den genereras eller hämtas, utan kod på klientsidan?
 
 Med andra ord:
@@ -101,6 +101,6 @@ Det är enklare att undersöka och testa leverantörs-API-slutpunkter med verkty
 
 I den här artikeln finns en serie steg för att utvärdera en leverantörs klientsidestagg och eventuellt flytta den på serversidan i en egenskap för vidarebefordring av händelser. Mer information om relaterade ämnen finns i följande länkar:
 
-- [Tagghantering](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv) i Adobe Experience Platform
-- [Vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) för bearbetning på serversidan
+- [Tagghantering](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv) i ADOBE EXPERIENCE PLATFORM
+- [Vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) för serverbearbetning
 - [Uppdateringar om terminologi](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) datainsamling
