@@ -2,11 +2,12 @@
 title: Konfigurera ett datastream för plattformens SDK-implementeringar
 description: Lär dig hur du skapar ett datastream i Experience Platform.
 feature: Mobile SDK,Datastreams
+jira: KT-14625
 exl-id: 7b83f834-d1fb-45d1-8bcf-bc621f94725c
-source-git-commit: d353de71d8ad26d2f4d9bdb4582a62d0047fd6b1
+source-git-commit: 25f0df2ea09bb7383f45a698e75bd31be7541754
 workflow-type: tm+mt
-source-wordcount: '449'
-ht-degree: 1%
+source-wordcount: '428'
+ht-degree: 0%
 
 ---
 
@@ -44,7 +45,7 @@ Datastreams kan skapas i [!UICONTROL Datainsamling] -gränssnittet med [!UICONTR
 
    >[!NOTE]
    >
-   >Sista påminnelsen: Om du går igenom den här självstudiekursen med flera personer i en och samma sandlåda eller använder ett delat konto bör du överväga att lägga till eller föregå en identifiering som en del av namngivningskonventionerna. Använd till exempel `Luma Mobile App Event Dataset - Joe Smith` istället för `Luma Mobile App Event Dataset`. Se även anteckningen i [Ökning](overview.md).
+   >Sista påminnelsen: Om du går igenom den här självstudiekursen med flera personer i en och samma sandlåda eller använder ett delat konto bör du överväga att lägga till eller föregå en identifiering som en del av namngivningskonventionerna. I stället för `Luma Mobile App Event Dataset`, använda `Luma Mobile App Event Dataset - Joe Smith`. Se även anteckningen i [Ökning](overview.md).
 
 1. Välj schemat som du skapade i föregående lektion från **Händelseschema** lista.
 1. Välj **[!UICONTROL Spara]**.

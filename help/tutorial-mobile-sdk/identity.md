@@ -2,11 +2,12 @@
 title: Samla in identitetsdata i en mobilapp med Mobile SDK
 description: Lär dig hur du samlar in identitetsdata i en mobilapp.
 feature: Mobile SDK,Identities
+jira: KT-14633
 exl-id: cbcd1708-29e6-4d74-be7a-f75c917ba2fa
-source-git-commit: d353de71d8ad26d2f4d9bdb4582a62d0047fd6b1
+source-git-commit: 25f0df2ea09bb7383f45a698e75bd31be7541754
 workflow-type: tm+mt
-source-wordcount: '863'
-ht-degree: 1%
+source-wordcount: '815'
+ht-degree: 0%
 
 ---
 
@@ -140,7 +141,7 @@ Du kan använda [`Identity.removeIdentity`](https://developer.adobe.com/client-s
 1. Granska [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
 1. I Luma-appen
    1. Välj **[!UICONTROL Startsida]** och flytta Assurance-ikonen till vänster.
-   1. Markera <img src="assets/login.png" width="15" /> ikonen längst upp till höger.
+   1. Välj <img src="assets/login.png" width="15" /> ikonen längst upp till höger.
 
       <img src="./assets/identity1.png" width="300">
 

@@ -4,10 +4,11 @@ description: Lär dig skapa push-meddelanden till en mobilapp med Platform Mobil
 solution: Data Collection,Journey Optimizer
 feature-set: Journey Optimizer
 feature: Push
+jira: KT-14638
 exl-id: e8e920d5-fd36-48b7-9185-a34231c0d336
-source-git-commit: d353de71d8ad26d2f4d9bdb4582a62d0047fd6b1
+source-git-commit: 25f0df2ea09bb7383f45a698e75bd31be7541754
 workflow-type: tm+mt
-source-wordcount: '2705'
+source-wordcount: '2556'
 ht-degree: 0%
 
 ---
@@ -87,7 +88,7 @@ Ytterligare dokumentation kan [hittades här](https://help.apple.com/developer-a
    ![app surface home](assets/push-app-surface.png)
 1. Ange en **[!UICONTROL Namn]** för konfigurationen, till exempel `Luma App Tutorial`  .
 1. Från **[!UICONTROL Konfiguration av mobilprogram]**, markera **[!UICONTROL Apple iOS]**.
-1. Ange programpaket-ID för mobilappen i **[!UICONTROL Program-ID (iOS Bundle-ID)]** fält. Exempel,  `com.adobe.luma.tutorial.swiftui`.
+1. Ange programpaket-ID för mobilappen i **[!UICONTROL Program-ID (iOS Bundle-ID)]** fält. Till exempel:  `com.adobe.luma.tutorial.swiftui`.
 1. Aktivera **[!UICONTROL Push-autentiseringsuppgifter]** för att lägga till dina inloggningsuppgifter.
 1. Dra och släpp `.p8` **Autentiseringsnyckel för push-meddelanden i Apple** -fil.
 1. Ange **[!UICONTROL Nyckel-ID]**, en sträng med 10 tecken som tilldelas när `p8` auth key. Den finns under **[!UICONTROL Tangenter]** i **Certifikat, identifierare och profiler** på Apple Developer Portal. Se även [Skapa en privat nyckel](#create-a-private-key).

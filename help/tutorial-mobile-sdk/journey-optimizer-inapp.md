@@ -4,10 +4,11 @@ description: Lär dig hur du skapar och skickar meddelanden i appen till en mobi
 solution: Data Collection,Journey Optimizer
 feature-set: Journey Optimizer
 feature: In App
+jira: KT-14639
 exl-id: 6cb4d031-6172-4a84-b717-e3a1f5dc7d5d
-source-git-commit: d353de71d8ad26d2f4d9bdb4582a62d0047fd6b1
+source-git-commit: 25f0df2ea09bb7383f45a698e75bd31be7541754
 workflow-type: tm+mt
-source-wordcount: '1540'
+source-wordcount: '1434'
 ht-degree: 0%
 
 ---
@@ -61,7 +62,7 @@ I den här lektionen ska du
    ![app surface home](assets/push-app-surface.png)
 1. Ange en **[!UICONTROL Namn]** för konfigurationen, till exempel `Luma App Tutorial`  .
 1. Från **[!UICONTROL Konfiguration av mobilprogram]**, markera **[!UICONTROL Apple iOS]**.
-1. Ange programpaket-ID för mobilappen i **[!UICONTROL Program-ID (iOS Bundle-ID)]** fält. Exempel,  `com.adobe.luma.tutorial.swiftui`.
+1. Ange programpaket-ID för mobilappen i **[!UICONTROL Program-ID (iOS Bundle-ID)]** fält. Till exempel:  `com.adobe.luma.tutorial.swiftui`.
 1. Välj **[!UICONTROL Spara]**.
 
    ![appytans konfiguration](assets/push-app-surface-config-inapp.png)

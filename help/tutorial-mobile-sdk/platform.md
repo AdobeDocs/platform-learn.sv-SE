@@ -3,10 +3,11 @@ title: Skicka data till Experience Platform med Platform Mobile SDK
 description: Lär dig hur du skickar data till Experience Platform.
 solution: Data Collection,Experience Platform
 feature: Mobile SDK,Data Ingestion
+jira: KT-14637
 exl-id: fdd2c90e-8246-4d75-a6db-df3ef31946c4
-source-git-commit: d353de71d8ad26d2f4d9bdb4582a62d0047fd6b1
+source-git-commit: 25f0df2ea09bb7383f45a698e75bd31be7541754
 workflow-type: tm+mt
-source-wordcount: '1072'
+source-wordcount: '1032'
 ht-degree: 0%
 
 ---

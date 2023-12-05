@@ -1,10 +1,11 @@
 ---
 title: Använd platser med plattformens mobila SDK
 description: Lär dig hur du använder platsens geopositioneringstjänst i din mobilapp.
+jira: KT-14635
 exl-id: adc2952f-cb01-4e06-9629-49fb95f22ca5
-source-git-commit: 87477cce0f0c5c0bb140927bed22dbc6e11f2af9
+source-git-commit: 3186788dfb834f980f743cef82942b3cf468a857
 workflow-type: tm+mt
-source-wordcount: '1696'
+source-wordcount: '1588'
 ht-degree: 0%
 
 ---
@@ -319,7 +320,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 
 1. Flytta (dra) runt kartan för att se till att den blå mittre cirkeln är ovanför en av dina POI:er, till exempel London.
 
-1. Tryck på <img src="assets/geobutton.png" width="20" /> tills du ser kategorin och namnet visas på etiketten på den röda platsen med stiftet.
+1. Tryck <img src="assets/geobutton.png" width="20" /> tills du ser kategorin och namnet visas på etiketten på den röda platsen med stiftet.
 
 1. Tryck på etiketten för POI, som öppnar dialogrutan **[!UICONTROL Nearby POI]** blad.
 

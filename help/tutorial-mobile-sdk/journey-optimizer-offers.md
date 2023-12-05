@@ -4,10 +4,11 @@ description: Lär dig skapa och visa erbjudanden med Platform Mobile SDK och Ado
 solution: Data Collection,Journey Optimizer
 feature-set: Journey Optimizer
 feature: Offers
+jira: KT-14640
 exl-id: c08a53cb-683e-4487-afab-fd8828c3d830
-source-git-commit: d353de71d8ad26d2f4d9bdb4582a62d0047fd6b1
+source-git-commit: 25f0df2ea09bb7383f45a698e75bd31be7541754
 workflow-type: tm+mt
-source-wordcount: '2676'
+source-wordcount: '2470'
 ht-degree: 0%
 
 ---
@@ -250,7 +251,7 @@ Se [Viktiga steg för att skapa och hantera erbjudanden](https://experienceleagu
 1. I **[!UICONTROL Lägg till beslutsomfattningar]** steg för **[!UICONTROL Skapa ett nytt offertbeslut]**:
    1. Välj **[!UICONTROL Mobile JSON]** från **[!UICONTROL Placement]** lista.
    1. I **[!UICONTROL Utvärderingskriterier]** platta, markera ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Lägg till]**.
-      1. I **[!UICONTROL Lägg till erbjudandesamling]** väljer du din erbjudandesamling. Exempel, **[!DNL Luma - Mobile App Collection]**.
+      1. I **[!UICONTROL Lägg till erbjudandesamling]** väljer du din erbjudandesamling. Till exempel: **[!DNL Luma - Mobile App Collection]**.
       1. Välj **[!UICONTROL Lägg till]**.
          ![Beslut - Välj samling](assets/ajo-decision-selectcollection.png)
    1. Se till att **[!UICONTROL Ingen]** är markerat för **[!UICONTROL Kvalificering]** och **[!UICONTROL Prioritet]** är markerat som **[!UICONTROL Rankningsmetod]**.
@@ -381,7 +382,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 
 1. Återskapa och kör appen i simulatorn eller på en fysisk enhet från Xcode med ![Spela upp](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Play_18_N.svg).
 
-1. Gå till fliken **[!DNL Personalisation]**.
+1. Gå till **[!DNL Personalisation]** -fliken.
 
 1. Välj **[!DNL Edge Personalisation]**.
 

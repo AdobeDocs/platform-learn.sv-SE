@@ -1,10 +1,11 @@
 ---
 title: Spåra händelsedata i mobilappar med Platform Mobile SDK
 description: Lär dig spåra händelsedata i en mobilapp.
+jira: KT-14631
 exl-id: 4779cf80-c143-437b-8819-1ebc11a26852
-source-git-commit: d353de71d8ad26d2f4d9bdb4582a62d0047fd6b1
+source-git-commit: 25f0df2ea09bb7383f45a698e75bd31be7541754
 workflow-type: tm+mt
-source-wordcount: '1397'
+source-wordcount: '1328'
 ht-degree: 0%
 
 ---
@@ -165,7 +166,7 @@ Om du vill implementera sändning av e-handelsrelaterade upplevelsehändelser p�
       MobileSDK.shared.sendCommerceExperienceEvent(commerceEventType: "productViews", product: product)
       ```
 
-   1. För varje knapp (<img src="assets/saveforlater.png" width="15" />, <img src="assets/addtocart.png" width="20" /> och  <img src="assets/purchase.png" width="20" />) i verktygsfältet lägger du till samtalet i `ATTrackingManager.trackingAuthorizationStatus == .authorized` stängning:
+   1. För varje knapp (<img src="assets/saveforlater.png" width="15" />, <img src="assets/addtocart.png" width="20" /> och <img src="assets/purchase.png" width="20" />) i verktygsfältet lägger du till samtalet i `ATTrackingManager.trackingAuthorizationStatus == .authorized` stängning:
 
       1. För <img src="assets/saveforlater.png" width="15" />:
 
