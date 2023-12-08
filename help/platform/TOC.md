@@ -5,10 +5,10 @@ user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
 auto-video-transcripts: true
-source-git-commit: 650ae527c640ec62b21e4e0e9b66a6efc1c580a1
+source-git-commit: cb97521c7906bcb16c7352f6c2447e07abb828c7
 workflow-type: tm+mt
-source-wordcount: '1000'
-ht-degree: 8%
+source-wordcount: '847'
+ht-degree: 7%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 8%
    + [En kundupplevelse som bygger på Experience Platform](/help/platform/intro-to-platform/a-customer-experience-powered-by-experience-platform.md)
    + [Bakom kulisserna: En kundupplevelse som drivs av Experience Platform](/help/platform/intro-to-platform/behind-the-scenes-a-customer-experience-powered-by-experience-platform.md)
    + [Översikt över Experience Platform](/help/platform/intro-to-platform/overview.md)
-   + [Viktiga möjligheter](/help/platform/intro-to-platform/key-capabilities.md)
+   + [Viktiga funktioner](/help/platform/intro-to-platform/key-capabilities.md)
    + [Plattformsbaserade program](/help/platform/intro-to-platform/native-applications.md)
    + [Integrering med Experience Cloud-program](/help/platform/intro-to-platform/integrations-with-experience-cloud-applications.md)
    + [Viktiga användningsexempel](/help/platform/intro-to-platform/key-use-cases.md)
@@ -36,13 +36,13 @@ ht-degree: 8%
 + [Komma igång: Dataarkitekter och datatekniker](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/overview.html){target="_blank"}
 + [Autentisera till Experience Platform API:er](/help/platform/authentication/platform-api-authentication.md)
 + [Importera exempeldata till Experience Platform](/help/platform/data-generator/import-sample-data.md)
-+ Administrering {#admin}
++ Administration {#admin}
    + [Använda varningar](/help/platform/admin/use-alerts.md)
    + [Använda sandlådor](/help/platform/admin/use-sandboxes.md)
    + [Kopiera objekt mellan sandlådor](/help/platform/admin/copy-objects-between-sandboxes.md)
+   + [Lägg till användare](/help/platform/admin/add-users.md)
+   + [Lägg till produktadministratörer](/help/platform/admin/add-product-administrators.md)
    + [Konfigurera attributbaserad åtkomstkontroll](/help/platform/admin/configure-attribute-based-access-control.md)
-   + [Admin Console](/help/platform/admin/admin-console.md)
-   + [Hantera produktprofiler](/help/platform/admin/managing-product-profiles.md)
 + Målgrupper och segmentering {#audiences}
    + [Introduktion till Audience Portal and Composition](audiences/introduction-to-audience-portal-and-composition.md)
    + [Överför målgrupper](audiences/upload-audiences.md)
@@ -77,7 +77,7 @@ ht-degree: 8%
    + [Integrera med IAB Transparency och Consent Framework 2.0](/help/platform/governance/integrate-with-iab-transparency-and-consent-framework-2.md)
 + Datahygien {#data-hygiene}
    + [Ta bort datauppsättningar](/help/platform/data-hygiene/delete-datasets.md)
-+ Datainmatning {#data-ingestion}
++ Inmatning av data {#data-ingestion}
    + [Översikt](/help/platform/data-ingestion/understanding-data-ingestion.md)
    + [Översikt över batchöverföring](/help/platform/data-ingestion/batch-ingestion-overview.md)
    + [Skapa och fylla i en datauppsättning](/help/platform/data-ingestion/create-datasets-and-ingest-data.md)
@@ -93,7 +93,7 @@ ht-degree: 8%
    + [Direktuppspela data med hjälp av källanslutningar](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/streaming-ingestion-source-connector.html)
    + [Självstudiekurser för Web SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html){target="_blank"}
    + [SDK-självstudiekurser för mobiler](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html){target="_blank"}
-+ Arbetsyta för datavetenskap {#data-science-workspace}
++ Datavetenskap {#data-science-workspace}
    + [Översikt](/help/platform/data-science-workspace/understanding-data-science-workspace.md)
    + [Arkitektur](data-science-workspace/architecture-overview.md)
    + [Skapa kursschema och datauppsättning](data-science-workspace/create-the-course-schema-and-dataset.md)
@@ -110,7 +110,7 @@ ht-degree: 8%
    + [Importera ett paketerat recept (UI)](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/models-recipes/import-packaged-recipe-ui.html){target="_blank"}
    + [Importera ett paketerat recept (API)](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/models-recipes/import-packaged-recipe-api.html){target="_blank"}
 + Mål {#destinations}
-   + [Översikt över mål](/help/platform/destinations/understanding-destinations.md)
+   + [Översikt över destinationer](/help/platform/destinations/understanding-destinations.md)
    + [Ansluta till mål](/help/platform/destinations/connecting-to-destinations.md)
    + [Skapa mål och aktivera data](/help/platform/destinations/create-destinations-and-activate-data.md)
    + [Aktivera profiler och segment till ett mål](/help/platform/destinations/activate-profiles-and-segments-to-a-destination.md)
@@ -159,6 +159,7 @@ ht-degree: 8%
    + [Visa kontoprofiler](/help/platform/profiles/view-account-profiles.md)
    + [Skapa sammanfogningsprinciper](/help/platform/profiles/create-merge-policies.md)
    + [Översikt över unionens scheman](/help/platform/profiles/union-schemas-overview.md)
+   + [Skapa ett beräknat attribut](/help/platform/profiles/create-a-computed-attribute-for-sum-of-purchases.md)
    + [Uppdatera ett specifikt attribut med upsert](/help/platform/profiles/update-a-specific-attribute-with-upsert.md)
 + Integritet och säkerhet {#privacy}
    + [Introduktion till Privacy Service](/help/platform/privacy/introduction-to-privacy-services.md)
@@ -219,7 +220,7 @@ ht-degree: 8%
    + [Audience Manager](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-aam.html)
    + [Commerce](/help/platform/experience-cloud/business-value-of-platform-and-commerce.md)
    + [Marketo Engage](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/orchestrate-campaigns-with-marketo-engage.html)
-   + [Target](https://experienceleague.adobe.com/docs/platform-learn/tutorials/destinations/target/next-hit-personalization.html)
+   + [Målgrupp](https://experienceleague.adobe.com/docs/platform-learn/tutorials/destinations/target/next-hit-personalization.html)
 + Branschtrender {#industry}
    + [Framtiden för datahantering och den föränderliga miljön](/help/platform/industry/the-future-of-data-management-and-the-changing-environment.md)
    + [En tabell med två perceptioner - varumärken jämfört med konsumenter](/help/platform/industry/brands-vs-consumers.md)

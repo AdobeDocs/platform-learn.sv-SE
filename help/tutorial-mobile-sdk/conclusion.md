@@ -2,11 +2,12 @@
 title: Slutsats och nästa steg efter att du slutfört självstudiekursen om Platform Mobile SDK
 description: Så här gör du när du är klar med självstudien
 recommendations: display,noCatalog
+jira: KT-14642
 exl-id: 69db6cf3-0d5d-4864-aac2-e5e1aea4c02e
-source-git-commit: d353de71d8ad26d2f4d9bdb4582a62d0047fd6b1
+source-git-commit: cb97521c7906bcb16c7352f6c2447e07abb828c7
 workflow-type: tm+mt
-source-wordcount: '471'
-ht-degree: 1%
+source-wordcount: '438'
+ht-degree: 2%
 
 ---
 
