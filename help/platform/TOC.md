@@ -5,9 +5,9 @@ user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
 auto-video-transcripts: true
-source-git-commit: cb97521c7906bcb16c7352f6c2447e07abb828c7
+source-git-commit: d60e457874f1f05a4a86a6b37b8aee58d4b3f067
 workflow-type: tm+mt
-source-wordcount: '847'
+source-wordcount: '849'
 ht-degree: 7%
 
 ---
@@ -41,6 +41,7 @@ ht-degree: 7%
    + [Använda sandlådor](/help/platform/admin/use-sandboxes.md)
    + [Kopiera objekt mellan sandlådor](/help/platform/admin/copy-objects-between-sandboxes.md)
    + [Lägg till användare](/help/platform/admin/add-users.md)
+   + [Lägg till utvecklare](/help/platform/admin/add-developers.md)
    + [Lägg till produktadministratörer](/help/platform/admin/add-product-administrators.md)
    + [Konfigurera attributbaserad åtkomstkontroll](/help/platform/admin/configure-attribute-based-access-control.md)
 + Målgrupper och segmentering {#audiences}
