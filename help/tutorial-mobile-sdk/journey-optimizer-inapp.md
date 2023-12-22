@@ -6,9 +6,9 @@ feature-set: Journey Optimizer
 feature: In App
 jira: KT-14639
 exl-id: 6cb4d031-6172-4a84-b717-e3a1f5dc7d5d
-source-git-commit: 25f0df2ea09bb7383f45a698e75bd31be7541754
+source-git-commit: e316f881372a387b82f8af27f7f0ea032a99be99
 workflow-type: tm+mt
-source-wordcount: '1434'
+source-wordcount: '1447'
 ht-degree: 0%
 
 ---
@@ -79,7 +79,7 @@ Uppdatera Experience Edge-konfigurationen för att säkerställa att data som sk
 1. Om du vill spara din datastream-konfiguration väljer du **[!UICONTROL Spara]**.
 
 
-   ![AEP-konfiguration för datastream](assets/datastream-aep-configuration.png)
+   ![AEP-konfiguration för datastream](assets/datastream-ajo-inapp-configuration.png)
 
 
 ### Installera tillägget Journey Optimizer-taggar
@@ -91,16 +91,9 @@ För att din app ska fungera med Journey Optimizer måste du uppdatera din tagge
 1. Välj **[!UICONTROL Katalog]**.
 1. Sök efter **[!UICONTROL Adobe Journey Optimizer]** tillägg.
 1. Installera tillägget.
-1. I **[!UICONTROL Installera tillägg]** dialog
-   1. Välj en miljö, till exempel **[!UICONTROL Utveckling]**.
-   1. Välj **[!UICONTROL AJO Push Tracking Experience, händelsedatauppsättning]** datauppsättning från **[!UICONTROL Händelsedatauppsättning]** lista.
-   1. Välj **[!UICONTROL Spara i bibliotek och bygge]**.
-      ![Inställningar för AJO-tillägg](assets/push-tags-ajo.png)
 
->[!NOTE]
->
->Om du inte ser `AJO Push Tracking Experience Event Dataset` som ett alternativ, kontakta kundtjänst.
->
+När *endast* använda meddelanden i appen, i **[!UICONTROL Installera tillägg]** eller **[!UICONTROL Konfigurera tillägg]** behöver du inte konfigurera något. Om du redan har följt [Push-meddelanden](journey-optimizer-push.md) lektion i självstudiekursen ser du det för **[!UICONTROL Utveckling]** miljö, **[!UICONTROL AJO Push Tracking Experience, händelsedatauppsättning]** datauppsättningen väljs från **[!UICONTROL Händelsedatauppsättning]** lista.
+
 
 ### Implementera Journey Optimizer i appen
 
