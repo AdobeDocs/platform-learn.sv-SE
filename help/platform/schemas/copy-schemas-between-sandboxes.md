@@ -7,15 +7,19 @@ level: Intermediate
 jira: KT-7939
 thumbnail: 333592.jpg
 exl-id: d0d23739-3a3a-4938-a400-684f36b0ae82
-source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
+source-git-commit: 9a6c0487427673a6728e1f4a02e54f0f36e67f9f
 workflow-type: tm+mt
-source-wordcount: '82'
-ht-degree: 7%
+source-wordcount: '107'
+ht-degree: 0%
 
 ---
 
 # Kopiera scheman mellan sandlådor
 
 I den här videon visas hur du kopierar ett schema från en sandlåda till en annan i Adobe Experience Platform med hjälp av API:t för export/import av schema. Bygg och testa dina scheman i utvecklingssandlådor och kopiera dem sedan till produktion. Mer information finns på [schemadokumentation](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=sv).
+
+>[!TIP]
+>
+>En mycket enklare, gränssnittscentrerad process för att flytta scheman och andra objekt mellan sandlådor introducerades i slutet av 2023, som vi rekommenderar att du använder istället. Se [Kopiera objekt mellan sandlådor](https://experienceleague.adobe.com/docs/platform-learn/tutorials/admin/copy-objects-between-sandboxes.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/333592?learn=on)
