@@ -4,9 +4,9 @@ description: Lär dig hur du implementerar Adobe Experience Cloud mobilappar. De
 recommendations: noDisplay,catalog
 last-substantial-update: 2023-11-29T00:00:00Z
 exl-id: daff4214-d515-4fad-a224-f7589b685b55
-source-git-commit: 4bd8d0cdcf9c5d29434de4968a048fd46e163b54
+source-git-commit: 0d5914ee0e63719c0439f02a5aa2a1e1c1d11a2f
 workflow-type: tm+mt
-source-wordcount: '844'
+source-wordcount: '826'
 ht-degree: 0%
 
 ---
@@ -95,10 +95,14 @@ Det finns två versioner av exempelappen att hämta. Båda versionerna kan hämt
 1. [Starta](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App){target="_blank"}: ett projekt utan kod eller med platshållarkod för merparten av SDK-koden för Experience Platform Mobile som du behöver använda för att slutföra övningarna i den här kursen.
 1. [Slutför](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App){target="_blank"}: en version med fullständig implementering för referens.
 
-
 >[!NOTE]
 >
 >Du använder iOS [!DNL Swift] som programmeringsspråk, [!DNL SwiftUI] som gränssnittets ramverk och [!DNL Xcode] som den integrerade utvecklingsmiljön. Många av de implementeringskoncept som beskrivs liknar dock andra utvecklingsplattformar. Många har redan slutfört den här självstudiekursen med lite eller ingen tidigare erfarenhet av iOS/Swift(UI). Du behöver inte vara expert för att slutföra lektionerna, men du får ut mer av lektionerna om du enkelt kan läsa och förstå koden.
+
+
+Du kan hämta den slutliga versionen av programmet från App Store.
+
+[![Ladda ned](assets/download-app.svg)](https://apps.apple.com/us/app/luma-app/id6466588487)
 
 
 Kom så börjar vi!
