@@ -2,9 +2,9 @@
 title: Konfigurera en egenskap för vidarebefordring av händelser
 description: Lär dig hur du använder händelsevidarebefordringsegenskap med Experience Platform Web SDK-data. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Tags,Event Forwarding
-source-git-commit: 695c12ab66df33af00baacabc3b69eaac7ada231
+source-git-commit: 904581df85df5d8fc4f36a4d47a37b03ef92d76f
 workflow-type: tm+mt
-source-wordcount: '1855'
+source-wordcount: '1858'
 ht-degree: 0%
 
 ---
@@ -59,6 +59,7 @@ I slutet av lektionen kan du:
 
       * [Installera SDK-tillägg för webben](install-web-sdk.md)
       * [Skapa dataelement](create-data-elements.md)
+      * [Skapa identiteter](create-identities.md)
       * [Skapa en taggregel](create-tag-rule.md)
       * [Validera med Adobe Experience Platform debugger](validate-with-debugger.md)
 
@@ -320,4 +321,4 @@ Grattis! Du har konfigurerat vidarebefordran av händelser!
 
 >[!NOTE]
 >
-Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

@@ -2,7 +2,7 @@
 title: Konfigurera Audience Manager med Platform Web SDK
 description: Lär dig hur du konfigurerar Adobe Audience Manager med Platform Web SDK och validerar implementeringen med hjälp av en cookie-destination. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 solution: Data Collection, Audience Manager
-source-git-commit: 695c12ab66df33af00baacabc3b69eaac7ada231
+source-git-commit: f08866de1bd6ede50bda1e5f8db6dbd2951aa872
 workflow-type: tm+mt
 source-wordcount: '1330'
 ht-degree: 0%
@@ -85,7 +85,7 @@ När datakällan har sparats ställer du in en [trait](https://experienceleague.
 1. Välj **[!UICONTROL Datakälla]** som du skapade i föregående avsnitt.
 1. **[!UICONTROL Välj en mapp]** där du kan spara ditt spår i rutan till höger. Du kan skapa en mapp med **markera ikonen +** bredvid en befintlig överordnad mapp. Du kan namnge den nya mappen `Platform Web SDK tutorial`.
 1. Expandera **[!UICONTROL Trait-uttryck]** cirkumflex och markera **[!UICONTROL Expression Builder]** Du måste ange ett nyckelvärdepar som betecknar ett hemsidesbesök.
-1. Öppna [Lumas hemsida](https://luma.enablementadobe.com/content/luma/us/en.html) (mappas till taggegenskapen) och **SDK-felsökning för plattform** och uppdatera sidan.
+1. Öppna [Lumas hemsida](https://luma.enablementadobe.com/content/luma/us/en.html) (mappas till taggegenskapen) och **Adobe Experience Platform Debugger** och uppdatera sidan.
 1. Titta på nätverksförfrågningar och händelseinformationen för Platform Web SDK för att hitta nyckel- och namnvärdet för hemsidan.
    ![Adobe Experience Platform Audience Manager XDM-data](assets/xdm-keyvalue.jpg)
 1. Gå tillbaka till Expression Builder i användargränssnittet för Audience Manager och ange tangenten som **`web.webPageDetails.name`** och värdet av **`content:luma:us:en`**. Det här steget gör att du får ett spår när du läser in hemsidan.
@@ -100,7 +100,8 @@ Nästa steg är att skapa en **segment** och tilldela det här segmentet din nyd
 1. Välj **[!UICONTROL Lägg till ny]** i det övre vänstra hörnet på sidan för att öppna segmentverktyget
 1. Ge segmentet ett eget namn och en beskrivning, till exempel `Platform Web SDK - Homepage visitors`
 1. **[!UICONTROL Välj en mapp]** där segmentet sparas i rutan till höger. Du kan skapa en mapp med **markera ikonen +** bredvid en befintlig överordnad mapp. Du kan namnge den nya mappen `Platform Web SDK tutorial`.
-1. Lägg till en integrationskod, som i det här fallet är en slumpmässig uppsättning med siffror. 1. I **[!UICONTROL Datakälla]** avsnitt, markera **[!UICONTROL Audience Manager]** och datakällan som du skapade tidigare
+1. Lägg till en integrationskod, som i det här fallet är en slumpmässig uppsättning med siffror.
+1. I **[!UICONTROL Datakälla]** avsnitt, markera **[!UICONTROL Audience Manager]** och datakällan som du skapade tidigare
 1. Expandera **[!UICONTROL Traits]** och sök efter den egenskap du har skapat
 1. Välj **[!UICONTROL Lägg till fack]**.
 1. Välj **[!UICONTROL Spara]** längst ned på sidan
@@ -181,4 +182,4 @@ Nu när du är klar med den här lektionen bör du kunna se hur Platform Web SDK
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

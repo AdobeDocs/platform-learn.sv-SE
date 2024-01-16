@@ -2,9 +2,9 @@
 title: Konfigurera behörigheter för självstudien
 description: Lär dig hur du begär åtkomst till Experience Platform Web SDK och konfigurerar behörighet för att slutföra självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Tags,Access Control
-source-git-commit: 695c12ab66df33af00baacabc3b69eaac7ada231
+source-git-commit: f08866de1bd6ede50bda1e5f8db6dbd2951aa872
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '367'
 ht-degree: 3%
 
 ---
@@ -23,9 +23,9 @@ Lär dig hur du begär åtkomst till Experience Platform Web SDK och konfigurera
 Dessa funktioner bör vara tillgängliga för alla Experience Cloud-kunder, även om du inte är kund till en plattformsbaserad applikation som Real-Time CDP.
 
 * Åtkomst till **standardproduktion**, **&quot;Prod&quot;** sandlåda.
-* Åtkomst till **[!UICONTROL Hantera scheman]** och **[!UICONTROL Visa scheman]** under **[!UICONTROL Datamodellering]**
-* Åtkomst till **[!UICONTROL Hantera identitetsnamnutrymmen]** och **[!UICONTROL Visa identitetsnamnutrymmen]** under **[!UICONTROL Identity Management]**
-* Åtkomst till **[!UICONTROL Hantera datastreams]** och **[!UICONTROL Visa datastreams]** under **[!UICONTROL Datainsamling]**
+* Åtkomst till **[!UICONTROL Hantera scheman]** och **[!UICONTROL Visa scheman]** under **[!UICONTROL Datamodellering]**.
+* Åtkomst till **[!UICONTROL Hantera identitetsnamnutrymmen]** och **[!UICONTROL Visa identitetsnamnutrymmen]** under **[!UICONTROL Identity Management]**.
+* Åtkomst till **[!UICONTROL Hantera datastreams]** och **[!UICONTROL Visa datastreams]** under **[!UICONTROL Datainsamling]**.
 * Om du är kund till ett plattformsbaserat program och kommer att fylla i [Konfigurera Experience Platform](setup-experience-platform.md) lektion:
    * Åtkomst till en **utveckling** sandlåda.
    * Alla behörighetsobjekt under **[!UICONTROL Datahantering]** och **[!UICONTROL Profilhantering]**:
@@ -51,4 +51,4 @@ Nu kan du börja de inledande konfigurationsstegen.
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

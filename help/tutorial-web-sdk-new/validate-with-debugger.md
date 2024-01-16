@@ -2,9 +2,9 @@
 title: Validera Web SDK-implementeringar med Experience Platform Debugger
 description: Lär dig hur du validerar implementeringen av din Platform Web SDK med Adobe Experience Platform Debugger. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Tags,Debugger
-source-git-commit: 695c12ab66df33af00baacabc3b69eaac7ada231
+source-git-commit: 904581df85df5d8fc4f36a4d47a37b03ef92d76f
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '1465'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ Om du aldrig har använt felsökningsfunktionen tidigare - och den här är en a
 
 >[!VIDEO](https://video.tv.adobe.com/v/32156?learn=on)
 
-I den här lektionen använder du [Adobe Experience Platform Debugger](https://chromewebstore.google.com/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) som ersätter taggegenskapen hårdkodad på [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html) med din egen egendom.
+I den här lektionen använder du [Adobe Experience Cloud Debugger-tillägg](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj) som ersätter taggegenskapen hårdkodad på [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html) med din egen egendom.
 
 Den här tekniken kallas för miljöväxling och kan vara användbar senare när du arbetar med taggar på din egen webbplats. Du kan läsa in din produktionswebbplats i webbläsaren, men med *utveckling* -tagg. På så sätt kan du tryggt göra och validera taggändringar oberoende av dina vanliga kodreleaser. Den här åtskillnaden mellan marknadsföringstaggreleaser och vanliga kodreleaser är ju en av de främsta anledningarna till att kunderna använder taggar i första hand!
 
@@ -31,20 +31,21 @@ Den här tekniken kallas för miljöväxling och kan vara användbar senare när
 När lektionen är klar kan du använda felsökaren för att:
 
 * Läsa in ett alternativt taggbibliotek
-* Validera att XDM-objektet hämtar och skickar data som förväntat Edge Network
+* Validera att XDM-händelsen på klientsidan hämtar in och skickar data som förväntat till Platform Edge Network
+* Aktivera Edge Trace för att visa begäranden på serversidan som skickats av Platform Edge Network
+* Starta en Adobe Experience Platform Assurance-session för att visa ett Experience Cloud-ID som genererats av Platform Edge Network
 
 ## Förutsättningar
 
 Du känner till datainsamlingstaggar och [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"} och har avslutat följande lektioner i självstudiekursen:
 
-* [Konfigurera behörigheter](configure-permissions.md)
 * [Konfigurera ett XDM-schema](configure-schemas.md)
 * [Konfigurera ett identitetsnamnutrymme](configure-identities.md)
 * [Konfigurera ett datastream](configure-datastream.md)
 * [Web SDK-tillägget är installerat i taggegenskapen](install-web-sdk.md)
 * [Skapa dataelement](create-data-elements.md)
+* [Skapa identiteter](create-identities.md)
 * [Skapa en taggregel](create-tag-rule.md)
-
 
 ## Läsa in alternativa taggbibliotek med Felsökning
 
@@ -67,38 +68,46 @@ Felsökaren i Experience Platform har en cool funktion som gör att du kan ersä
 
    ![Välj Åtgärder > Ersätt](assets/validate-switch-environment.png)
 
-1. Eftersom du är autentiserad kommer felsökaren att hämta tillgängliga taggegenskaper och -miljöer. Välj `Web SDK Course` property
+1. Eftersom du är autentiserad kommer felsökaren att hämta tillgängliga taggegenskaper och -miljöer. Välj din egenskap, i det här fallet `Web SDK Course 3`
 1. Välj `Development` miljö
 1. Välj **[!UICONTROL Använd]** knapp
 
    ![Välj den alternativa taggegenskapen](assets/validate-switch-selection.png)
 
-1. Lumas webbplats kommer nu att läsas in igen _med taggegenskapen_.
+1. Lumas webbplats kommer nu att läsas in igen _med din egen taggegenskap_.
 
    ![tagg, egenskap ersatt](assets/validate-switch-success.png)
 
-När du fortsätter med självstudiekursen använder du den här tekniken för att mappa Luma-webbplatsen till din egen taggegenskap för att validera implementeringen av Platform Web SDK. När du börjar använda taggar på produktionswebbplatsen kan du använda samma teknik för att validera ändringar.
+När du fortsätter med självstudiekursen använder du den här tekniken för att mappa Luma-webbplatsen till din egen taggegenskap för att validera implementeringen av din Platform Web SDK. När du börjar använda taggar på produktionswebbplatsen kan du använda samma teknik för att validera ändringar.
 
-## Validera implementeringen i Experience Platform Debugger
+## Validera nätverksbegäranden på klientsidan med Experience Platform Debugger
 
-Du kan använda Felsökning för att validera implementeringen av din Platform Web SDK och visa data som skickas till Platform Edge Network:
+Du kan använda felsökaren för att validera klientsidesbeacons som aktiveras från plattformens Web SDK-implementering för att visa data som skickas till Platform Edge Network:
 
 1. Gå till **[!UICONTROL Sammanfattning]** i den vänstra navigeringen om du vill se information om taggegenskapen
 
    ![Fliken Sammanfattning](assets/validate-summary.png)
 
 1. Gå till **[!UICONTROL Experience Platform Web SDK]** i den vänstra navigeringen för att se **[!UICONTROL Nätverksförfrågningar]**
-1. Öppna **[!UICONTROL händelser]** rad (oroa dig inte om den här skärmbilden visar fler begäranden än din, den innehåller begäranden från framtida lektioner och du kan ignorera dem för tillfället)
+1. Öppna **[!UICONTROL händelser]** rad
 
    ![Adobe Experience Platform Web SDK-begäran](assets/validate-aep-screen.png)
 
-1. Se hur vi kan se `web.webpagedetails.pageView` händelsetyp som anges i [!UICONTROL Skicka händelse] och andra färdiga variabler som följer `AEP Web SDK ExperienceEvent Mixin` format
+1. Se hur du kan se `web.webpagedetails.pageView` händelsetyp som du har angett i [!UICONTROL Uppdatera variabel] och andra färdiga variabler som följer `AEP Web SDK ExperienceEvent` fältgrupp
 
    ![Händelseinformation](assets/validate-event-pageViews.png)
 
-1. Bläddra nedåt till `web` -objekt, välj att öppna det och inspektera `webPageDetails.name`, `webPageDetails.server`och `webPageDetails.siteSection`. De ska matcha motsvarande datalagervariabler för digitalData på hemsidan
+1. Bläddra nedåt till `web` -objekt, välj att öppna det och inspektera `webPageDetails.name`, `webPageDetails.server`och `webPageDetails.siteSection`. De ska matcha motsvarande `digitalData` datalagervariabler på hemsidan
 
-   ![Fliken Nätverk](assets/validate-xdm-content.png)
+>[!TIP]
+>
+> Visa och jämföra `digitalData` datalager på hemsidan:
+>
+> 1. Öppna webbläsarutvecklarverktygen på Lumas hemsida. I Chrome väljer du knapp `F12` på tangentbordet
+> 1. Välj **[!UICONTROL Konsol]** tab
+> 1. Retur `digitalData` och markera `Enter` på tangentbordet för att visa datalagrets värden
+
+![Fliken Nätverk](assets/validate-xdm-content.png)
 
 Du kan även validera informationen i identitetskartan:
 
@@ -117,8 +126,7 @@ Du kan även validera informationen i identitetskartan:
 1. Sök efter **identityMap** i popup-fönstret. Här ska du se `lumaCrmId` med tre nycklar för authenticatedState, id och primär:
    ![Web SDK in Debugger](assets/identity-deugger-websdk-event-lumaCrmId-dark.png)
 
-
-## Validera med utvecklingsverktygen i webbläsaren
+### Validera klientförfrågningar med utvecklingsverktyg i webbläsaren
 
 Den här typen av förfrågningsinformation visas också i webbläsarens webbutvecklingsverktyg **Nätverk** (förutsatt att webbplatsen läser in taggbiblioteket).
 
@@ -130,9 +138,59 @@ Den här typen av förfrågningsinformation visas också i webbläsarens webbutv
 
    ![Fliken Nätverk](assets/validate-dev-console-ecid.png)
 
-   >[!NOTE]
+
+## Validera nätverksbegäranden på serversidan med Experience Platform Debugger
+
+Som du lärde dig i [Konfigurera ett datastream](configure-datastream.md) Platform Web SDK skickar först data från din digitala egendom till Platform Edge Network. Sedan gör Platform Edge Network ytterligare serverförfrågningar till motsvarande tjänster som är aktiverade i din datastam.
+
+Du kan validera begäranden på serversidan genom att aktivera Edge Trace i Felsökning. Dessutom kan du validera den fullt bearbetade nyttolasten när den når ett Adobe-program genom att använda [Adobe Experience Platform Assurance](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html?lang=en).
+
+I de följande två övningarna aktiverar du Edge Trace och visar det Experience Cloud-ID som genererats från Platform Edge Network genom att använda Assurance.
+
+### Aktivera Edge Trace
+
+Aktivera kantkalkering
+
+1. I vänster navigering i **[!UICONTROL Felsökning för Experience Platform]** välj **[!UICONTROL Loggar]**
+1. Välj **[!UICONTROL Kant]** och markera **[!UICONTROL Anslut]**
+
+   ![Koppla kantkalkering](assets/analytics-debugger-edgeTrace.png)
+
+1. Det är tomt för tillfället
+
+   ![Ansluten kantkalkering](assets/analytics-debugger-edge-connected.png)
+
+1. Uppdatera [Lumas startsida](https://luma.enablementadobe.com/) och kontrollera **[!UICONTROL Felsökning för Experience Platform]** än en gång för att se data komma igenom.
+
+   ![Kantkalkering för analysfyr](assets/validate-edge-trace.png)
+
+I nuläget kan du inte visa några begäranden om att gå till ett Adobe-program för ett Platform Edge Network-nätverk eftersom du inte har aktiverat några i datastream. I framtida lektioner använder du Edge Trace för att visa utgående begäranden på serversidan till Adobe-program. Med Assurance kan du dock fortfarande visa det Experience Cloud-ID som genererats av Platform Edge Network.
+
+### Starta en Assurance-session
+
+Adobe Experience Platform Assurance är en produkt från Adobe Experience Cloud som hjälper er att inspektera, bevisa, simulera och validera hur ni samlar in data eller levererar upplevelser.
+
+Läs mer om [Adobe Assurance](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html?lang=en).
+
+Varje gång du aktiverar Edge Trace startas en Assurance-session i bakgrunden.
+
+Så här visar du Assurance-sessionen:
+
+1. När Edge Trace är aktiverat visas en utgående länkikon högst upp. Välj ikonen för att öppna Assurance. En ny flik i webbläsaren öppnas.
+
+   ![Starta Assurance-session](assets/validate-debugger-start-assurnance.png)
+
+1. Markera raden med händelsen Adobe-svarshandtag.
+1. En meny visas till höger. Välj `+` signera bredvid `[!UICONTROL ACPExtensionEvent]`
+1. Granska nedåt genom att välja `[!UICONTROL payload > 0 > payload > 0 > namespace]`. Det ID som visas under den sista `0` motsvarar `ECID`. Det vet du genom det värde som visas under `namespace` matchning `ECID`
+
+   ![Verifiera ECID för försäkring](assets/validate-assurance-ecid.png)
+
+   >[!CAUTION]
    >
-   >    Du kanske inte ser samma mängd nyttolastbegäranden som i skärmbilden ovan. Skillnaden beror på att framtida lektioner för [konfigurera mål](setup-target.md) slutfördes när skärmbilden togs. Du kan för tillfället ignorera den här skillnaden.
+   >Du kan se ett trunkerat ECID-värde på grund av fönstrets bredd. Markera bara handtagsfältet i gränssnittet och dra åt vänster för att visa hela ECID:t.
+
+I framtida lektioner använder du Assurance för att validera fullt bearbetade nyttolaster som når ett Adobe-program som är aktiverat i ditt datastream.
 
 Med ett XDM-objekt som nu utlöses på en sida, och med kännedom om hur datainsamlingen ska valideras, är du redo att skapa de enskilda Adobe-programmen med Platform Web SDK.
 
@@ -140,4 +198,4 @@ Med ett XDM-objekt som nu utlöses på en sida, och med kännedom om hur datains
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

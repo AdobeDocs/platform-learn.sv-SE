@@ -9,10 +9,10 @@ jira: KT-6953
 recommendations: noDisplay,noCatalog
 index: false
 hide: true
-source-git-commit: 695c12ab66df33af00baacabc3b69eaac7ada231
+source-git-commit: 1b6fa039a255de8cdd1889136039e6f23b183578
 workflow-type: tm+mt
-source-wordcount: '81'
-ht-degree: 18%
+source-wordcount: '96'
+ht-degree: 15%
 
 ---
 
@@ -29,6 +29,7 @@ ht-degree: 18%
 + Märkordskonfiguration {#tags-configuration}
    + [Installera SDK-tillägg för webben](install-web-sdk.md)
    + [Skapa dataelement](create-data-elements.md)
+   + [Skapa identiteter](create-identities.md)
    + [Skapa en taggregel](create-tag-rule.md)
    + [Validera med felsökning](validate-with-debugger.md)
 
@@ -37,6 +38,9 @@ ht-degree: 18%
    + [Konfigurera Adobe Analytics](setup-analytics.md)
    + [Konfigurera Audience Manager](setup-audience-manager.md)
    + [Konfigurera mål](setup-target.md)
+   + Konfigurera Journey Optimizer-funktioner {#journey-optimizer}
+      + [Konfigurera webbkanal](journey-optimizer/setup-web-channel.md)
+      + [Ställ in beslutshantering](journey-optimizer/setup-decision-management.md)
 
 + Hantering av samtycke {#consent-management}
    + [Ställ in samtycke](setup-consent.md)

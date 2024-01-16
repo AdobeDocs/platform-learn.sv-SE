@@ -1,10 +1,10 @@
 ---
 title: Konfigurera ett identitetsnamnutrymme
 description: Lär dig hur du konfigurerar identitetsnamnutrymmen som ska användas med Adobe Experience Platform Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
-feature: Web SDK,Tags,Identities
-source-git-commit: 695c12ab66df33af00baacabc3b69eaac7ada231
+feature: Web SDK,Identities
+source-git-commit: f08866de1bd6ede50bda1e5f8db6dbd2951aa872
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '643'
 ht-degree: 0%
 
 ---
@@ -13,13 +13,13 @@ ht-degree: 0%
 
 Lär dig hur du konfigurerar identitetsnamnutrymmen som ska användas med Adobe Experience Platform Web SDK.
 
-The [Adobe Experience Platform Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html) ställer in ett gemensamt besökar-ID för alla Adobe-lösningar för att underlätta för Experience Cloud, som målgruppsdelning mellan olika lösningar. Du kan också skicka dina egna kund-ID:n till tjänsten för att möjliggöra målinriktning mellan olika enheter och integrering med andra system, som CRM-systemet (Customer Relationship Management).
+The [Adobe Experience Platform Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html) ställer in ett gemensamt besökar-ID för olika Adobe-program för att underlätta för Experience Cloud, t.ex. målgruppsdelning mellan olika program. Du kan också skicka dina egna kund-ID:n till tjänsten för att möjliggöra målinriktning mellan olika enheter och integrering med andra system, som CRM-systemet (Customer Relationship Management).
 
 Om din webbplats redan använder Experience Cloud ID-tjänsten på din webbplats (antingen via Visitor API eller Experience Cloud ID Service Tag-tillägget) och du vill fortsätta använda den när du migrerar till Adobe Experience Platform Web SDK, måste du använda den senaste versionen av Visitor API eller Experience Cloud ID Service Tag-tillägget. Se [ID-migrering](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en) för mer information.
 
 >[!NOTE]
 >
-> I demonstrationssyfte kan du använda övningarna i den här lektionen för att fånga identitetsinformationen för en fiktiv kund som är inloggad på [Luma Demo Site](https://luma.enablementadobe.com/content/luma/us/en.html) med hjälp av inloggningsuppgifterna, **användare: test@adobe.com / lösenord: test**. Du kan använda de här stegen för att skapa en annan identitet för dina egna syften, men om du vill lära dig funktionerna i identitetskartan i gränssnittet för datainsamling rekommenderar vi att du följer med för att hämta exempelidentiteten.
+> I demonstrationssyfte kan du använda övningarna i den här lektionen för att fånga identitetsinformationen för en fiktiv kund som är inloggad på [Luma Demo Site](https://luma.enablementadobe.com/content/luma/us/en.html) med hjälp av inloggningsuppgifterna, **användare: `test@adobe.com` / lösenord: test**. Du kan använda de här stegen för att skapa en annan identitet för dina egna syften, men om du vill lära dig funktionerna i identitetskartan i gränssnittet för datainsamling rekommenderar vi att du följer med för att hämta exempelidentiteten.
 
 ## Utbildningsmål
 
@@ -33,7 +33,6 @@ När lektionen är klar kan du:
 
 Du måste ha slutfört tidigare lektioner:
 
-* [Konfigurera behörigheter](configure-permissions.md)
 * [Konfigurera scheman](configure-schemas.md)
 
 >[!IMPORTANT]
@@ -45,6 +44,7 @@ Du måste ha slutfört tidigare lektioner:
 I den här övningen skapar du ett ID-namnutrymme för Lumas anpassade identitetsfält, `lumaCrmId`. Identitetsnamnutrymmen spelar en viktig roll när det gäller att skapa kundprofiler i realtid, eftersom två matchande värden i samma namnutrymme gör att två datakällor kan bilda ett identitetsdiagram.
 
 Titta på den här korta videon om du vill veta mer om din identitet i Adobe Experience Platform innan du börjar övningarna:
+
 >[!VIDEO](https://video.tv.adobe.com/v/27841?learn=on)
 
 Skapa nu ett namnutrymme för Luma CRM-ID:
@@ -71,7 +71,7 @@ Skapa nu ett namnutrymme för Luma CRM-ID:
    |---------------|-----------|
    | Visningsnamn | Luma CRM-ID |
    | Identitetssymbol | lumaCrmId |
-   | Typ | Enhets-ID |
+   | Typ | Enskilt enhets-ID |
 
 
    ![Skapa namnutrymmen](assets/identities-create-namespace.png)
@@ -82,18 +82,13 @@ Skapa nu ett namnutrymme för Luma CRM-ID:
    ![Skapa namnutrymmen](assets/configure-identities-namespace-lumaCrmId.png)
 
 
->[!INFO]
+>[!NOTE]
 >
-> I [Skapa dataelement](create-data-elements.md) lektionen lär du dig hur du använder det här namnutrymmet när du skickar identiteter till Platform Edge Network.
+> I [Skapa identiteter](create-identities.md) lektionen lär du dig hur du använder det här namnutrymmet när du skickar identiteter till Platform Edge Network.
 
 ## Skapa identitetsnamnutrymmet i din produktionssandlåda
 
 På grund av en aktuell begränsning i Web SDK-tillägget måste även identitetsnamnutrymmen skapas i produktionssandlådan för att kunna använda namnutrymmet för att skicka data till en utvecklingssandlåda. Om du har använt en utvecklingssandlåda för den här självstudiekursen skapar du även `Luma CRM ID` namnutrymme i din produktionssandlåda.
-
-## Ytterligare resurser
-
-* [Identitetstjänstens dokumentation](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html?lang=sv)
-* [Identitetstjänstens API](https://www.adobe.io/experience-platform-apis/references/identity-service/)
 
 Nu när identiteter finns på plats kan datastream konfigureras.
 
@@ -101,4 +96,4 @@ Nu när identiteter finns på plats kan datastream konfigureras.
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

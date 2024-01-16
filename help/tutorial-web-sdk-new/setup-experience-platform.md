@@ -1,9 +1,9 @@
 ---
 title: Strömma data till Adobe Experience Platform med Web SDK
 description: Lär dig hur du direktuppspelar webbdata till Adobe Experience Platform med Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
-source-git-commit: 695c12ab66df33af00baacabc3b69eaac7ada231
+source-git-commit: 904581df85df5d8fc4f36a4d47a37b03ef92d76f
 workflow-type: tm+mt
-source-wordcount: '1562'
+source-wordcount: '1601'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,6 @@ När lektionen är klar kan du:
 Du borde ha slutfört följande lektioner:
 
 * The **Inledande konfiguration** lektioner:
-   * [Konfigurera behörigheter](configure-permissions.md)
    * [Konfigurera ett XDM-schema](configure-schemas.md)
    * [Konfigurera ett datastream](configure-datastream.md)
    * [Konfigurera ett identitetsnamnutrymme](configure-identities.md)
@@ -38,6 +37,7 @@ Du borde ha slutfört följande lektioner:
 * The **Märkordskonfiguration** lektioner:
    * [Installera SDK-tillägg för webben](install-web-sdk.md)
    * [Skapa dataelement](create-data-elements.md)
+   * [Skapa identiteter](create-identities.md)
    * [Skapa taggregler](create-tag-rule.md)
 
 
@@ -54,7 +54,7 @@ I den här övningen skapar du en datauppsättning för att spåra innehåll och
 
 1. Gå till [Experience Platform gränssnitt](https://experience.adobe.com/platform/)
 1. Bekräfta att du befinner dig i den utvecklingssandlåda som du använder för den här självstudien
-1. Öppna **[!UICONTROL Datauppsättningar]** från vänster navigering
+1. Öppna **[!UICONTROL Datahantering > Datauppsättningar]** från vänster navigering
 1. Välj **[!UICONTROL Skapa datauppsättning]**
 
    ![Skapa schema](assets/experience-platform-create-dataset.png)
@@ -129,7 +129,7 @@ Nu ska data fyllas i i `Luma Web Event Data` datauppsättning och klar för vali
 
 För att bekräfta att data har landat i plattformens datasjön är ett snabbt alternativ att använda **[!UICONTROL Förhandsgranska datauppsättning]** -funktion. SDK-data för webben mikrobatcheras till datasjön och uppdateras regelbundet i plattformsgränssnittet. Det kan ta 10-15 minuter att se data som du har skapat.
 
-1. I [Experience Platform](https://experience.adobe.com/platform/) gränssnitt, välja **[!UICONTROL Datauppsättningar]** i den vänstra navigeringen för att öppna **[!UICONTROL Datauppsättningar]** kontrollpanel.
+1. I [Experience Platform](https://experience.adobe.com/platform/) gränssnitt, välja **[!UICONTROL Datahantering > Datauppsättningar]** i den vänstra navigeringen för att öppna **[!UICONTROL Datauppsättningar]** kontrollpanel.
 
    Kontrollpanelen visar alla tillgängliga datauppsättningar för din organisation. Information visas för varje datamängd som anges, inklusive namn, schema som datauppsättningen följer och status för den senaste importen.
 
@@ -220,7 +220,7 @@ Först måste du generera fler exempeldata. Upprepa stegen tidigare i den här l
 1. I [Experience Platform](https://experience.adobe.com/platform/) gränssnitt, välja **[!UICONTROL Profiler]** i den vänstra navigeringen
 
 1. Som **[!UICONTROL Namnutrymme för identitet]** use `lumaCRMId`
-1. Kopiera och klistra in värdet för `lumaCRMId` godkändes i samtalet som du inspekterade i felsökaren i Experience Platform (troligtvis `112ca06ed53d3db37e4cea49cc45b71e`).
+1. Kopiera och klistra in värdet för `lumaCRMId` godkändes i samtalet som du inspekterade i felsökaren i Experience Platform, i det här fallet `112ca06ed53d3db37e4cea49cc45b71e`.
 
    ![Profil](assets/experience-platform-validate-dataset-profile.png)
 
@@ -228,15 +228,22 @@ Först måste du generera fler exempeldata. Upprepa stegen tidigare i den här l
 
    ![Profil](assets/experience-platform-validate-dataset-profile-set.png)
 
-1. Klicka på [!UICONTROL Profil-ID] och [!UICONTROL Kundprofil] konsolen fylls i. Här ser du alla identiteter som är länkade till `lumaCRMId`, till exempel `ECID`:
+1. Så här visar du de fullständiga **[!UICONTROL Kundprofil]** för varje ID väljer du **[!UICONTROL Profil-ID]** i huvudfönstret.
+
+   >[!NOTE]
+   >
+   >Observera att du kan välja hyperlänken för profil-ID:t, eller om du markerar raden öppnas en högermeny där du kan välja hyperlänken för profil-ID
+   > ![Kundprofil](assets/experience-platform-select-profileId.png)
+
+   Här ser du alla identiteter som är länkade till `lumaCRMId`, till exempel `ECID`.
 
    ![Kundprofil](assets/experience-platform-validate-dataset-custProfile.png)
 
-Du har nu aktiverat Platform Web SDK för Experience Platform (och Real-Time CDP! Och Customer Journey Analytics! Och Journey Optimizer!)!
+Du har nu aktiverat Platform Web SDK för Experience Platform (och Real-Time CDP! Och Journey Optimizer!)!
 
 
 [Nästa: ](setup-analytics.md)
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

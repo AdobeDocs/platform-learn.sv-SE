@@ -2,16 +2,16 @@
 title: Installera och konfigurera taggtillägget Adobe Experience Platform Web SDK
 description: Lär dig hur du installerar och konfigurerar plattformens SDK-taggtillägg i gränssnittet för datainsamling. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK
-source-git-commit: 695c12ab66df33af00baacabc3b69eaac7ada231
+source-git-commit: f08866de1bd6ede50bda1e5f8db6dbd2951aa872
 workflow-type: tm+mt
-source-wordcount: '606'
+source-wordcount: '604'
 ht-degree: 0%
 
 ---
 
 # Installera taggtillägget Adobe Experience Platform Web SDK
 
-Lär dig hur du installerar och konfigurerar plattformens SDK-taggtillägg i gränssnittet för datainsamling. Det här taggtillägget är _endast taggtillägg_ som krävs för att skicka data till _alla Adobe Experience Cloud-program_, inklusive [Analyser](setup-analytics.md), [Mål](setup-target.md), [Audience Manager](setup-audience-manager.md), Real-time Customer Data Platform och Journey Optimizer!
+Lär dig hur du installerar och konfigurerar plattformens SDK-taggtillägg. Det enklaste sättet att implementera Web SDK är att använda tagghanteraren Adobe, taggar (tidigare kallad Launch). Taggtillägget Platform Web SDK är _endast taggtillägg_ som krävs för att skicka data till _alla Adobe Experience Cloud-program_, inklusive [Analyser](setup-analytics.md), [Mål](setup-target.md), [Audience Manager](setup-audience-manager.md), Real-time Customer Data Platform och Journey Optimizer!
 
 ## Utbildningsmål
 
@@ -25,9 +25,6 @@ När lektionen är klar kan du:
 
 Du måste ha slutfört föregående lektioner i den här självstudien:
 
-* [Konfigurera behörigheter](configure-permissions.md)
-* [Konfigurera ett XDM-schema](configure-schemas.md)
-* [Konfigurera ett identitetsnamnutrymme](configure-identities.md)
 * [Konfigurera ett datastream](configure-datastream.md)
 
 ## Installera Experience Platform Web SDK-tillägg
@@ -66,6 +63,7 @@ Lämna de flesta standardinställningarna och uppdatera dem senare efter behov. 
 1. Under **[!UICONTROL Datastreams]** väljer du **[!UICONTROL Välj från lista]** indatametod
 1. Välj den datastream du skapade tidigare, `Luma Web SDK`
 1. Välj **[!UICONTROL Spara]**
+
    >[!NOTE]
    >
    > Om du inte hittar ditt datastream går du till [Konfigurera ett datastream](configure-datastream.md) lektion och följ stegen för att skapa en
@@ -76,9 +74,7 @@ Nu när du har installerat Platform Web SDK och kopplat det till datastream är 
 
 >[!NOTE]
 >
->Under den här självstudiekursen konfigurerar du bara en datastream och associerar den med alla taggmiljöer (utveckling, scen och produktion). När du implementerar Platform Web SDK på din egen webbplats bör du konfigurera ett separat datastam för varje miljö och mappa dem till dina taggmiljöer med hjälp av **[!UICONTROL Indatametod]** > **[!UICONTROL Ange värden]**
->
->![Val av datastam](assets/extension-luma-web-sdk-datastream-extension-enterValues.png)
+>Under den här självstudiekursen konfigurerar du bara en datastream och associerar den med alla taggmiljöer (utveckling, scen och produktion). När du implementerar Platform Web SDK på din egen webbplats bör du konfigurera ett separat datastam för varje miljö och mappa dem till dina taggmiljöer.
 
 >[!NOTE]
 >
@@ -92,4 +88,4 @@ Mer information om varje avsnitt av tillägget finns i [Konfigurera Adobe Experi
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
