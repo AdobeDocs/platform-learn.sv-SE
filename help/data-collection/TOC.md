@@ -6,9 +6,9 @@ solution: Data Collection,Experience Platform
 doc-type: video
 auto-video-transcripts: true
 role: Developer, Data Engineer
-source-git-commit: e2594d3b30897001ce6cb2f6908d75d0154015eb
+source-git-commit: 762fae584213b9f44ea6b97cb66f69526fc29595
 workflow-type: tm+mt
-source-wordcount: '214'
+source-wordcount: '185'
 ht-degree: 20%
 
 ---
@@ -17,6 +17,7 @@ ht-degree: 20%
 # Självstudiekurser om datainsamling{#data-collection}
 
 + [Självstudiekurser om datainsamling](overview.md)
++ [Användare och behörigheter](admin/users-and-permissions.md)
 + Taggar{#tags}
    + [Översikt och skapa en egenskap](tags/create-a-property.md)
    + [Välj ett värdalternativ](tags/choose-a-hosting-option.md)
@@ -25,11 +26,10 @@ ht-degree: 20%
    + [Skapa dataelement](tags/create-data-elements.md)
    + [Skapa regler](tags/build-rules.md)
    + [Skapa och publicera ett bibliotek](tags/build-and-publish-a-library.md)
-   + [Användare och behörigheter](tags/users-and-permissions.md)
    + [Implementera webbplatser med Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html){target="_blank"}
    + [Implementera webbplatser med SDK:er för lösningar](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/overview.html){target="_blank"}
    + [Implementera i mobilappar](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/overview.html){target="_blank"}
-+ Webb-SDK{#web-sdk}
++ Web SDK{#web-sdk}
    + [Översikt](web-sdk/overview.md)
    + [Demo](web-sdk/demo.md)
    + [Implementeringsjälvstudiekurs (med taggar)](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html){target="_blank"}
@@ -40,7 +40,7 @@ ht-degree: 20%
       + [Ange värden för medgivande med hjälp av IAB TCF 2.0-standarden](web-sdk/consent/set-consent-iab.md)
       + [Inspect och validera godkännandedata](web-sdk/consent/inspect.md)
       + [Självstudiekurs om bearbetning av samtycke från början till slut](web-sdk/consent/tutorial.md)
-+ Mobil-SDK{#mobile-sdk}
++ Mobile SDK{#mobile-sdk}
    + [Översikt](mobile-sdk/overview.md)
    + [Skapa mobila egenskaper](mobile-sdk/create-mobile-properties.md)
    + [Använd beroendehanterare](mobile-sdk/use-dependency-managers.md)
@@ -64,5 +64,5 @@ ht-degree: 20%
    + [Dataprep](edge/data-prep.md)
    + [Hantera känsliga data](edge/manage-sensitive-data-in-datastreams.md)
    + [Enhets-ID:n från första part](edge/generate-first-party-device-ids.md)
-+ Debugger{#debugger}
++ Felsökning{#debugger}
    + [Översikt](debugger/overview.md)
