@@ -4,9 +4,9 @@ description: Lär dig hur du samlar in och mappar data för Adobe Analytics i en
 solution: Data Collection,Experience Platform,Analytics
 jira: KT-14636
 exl-id: 406dc687-643f-4f7b-a8e7-9aad1d0d481d
-source-git-commit: 3186788dfb834f980f743cef82942b3cf468a857
+source-git-commit: 30dd0142f1f5220f30c45d58665b710a06c827a8
 workflow-type: tm+mt
-source-wordcount: '878'
+source-wordcount: '923'
 ht-degree: 0%
 
 ---
@@ -82,7 +82,7 @@ Det här objektet:
 resulterar i
 
 ```
-s.products = ";5829,1,49.99;9841,3,30.00"
+s.products = ";5829;1;49.99,9841;3;30.00"
 ```
 
 >[!NOTE]
@@ -207,6 +207,79 @@ Om du vill mappa dessa XDM-kontextdata till analysdata i rapportsviten kan du:
 
 * Bygg XDM-nyttolaster i appen, i enlighet med fältgruppen Adobe Analytics ExperienceEvent Full Extension, i likhet med vad du har gjort i [Spåra händelsedata](events.md) lektion, eller
 * Skapa regler i taggegenskapen som använder regelåtgärder för att bifoga eller ändra data till fältgruppen Adobe Analytics ExperienceEvent Full Extension. Mer information finns i [Bifoga data till SDK-händelser](https://developer.adobe.com/client-sdks/documentation/user-guides/attach-data/) eller [Ändra data i SDK-händelser](https://developer.adobe.com/client-sdks/documentation/user-guides/attach-data/).
+
+
+### Marknadsförande eVars
+
+Om du använder [varuexponering eVars](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/merchandising-evars.html?lang=en) i Analytics-konfigurationen, till exempel för att fånga färgen på produkter, som `&&products = ...;evar1=red;event10=50,...;evar1=blue;event10=60`måste du utöka XDM-nyttolasten som du definierade i [Spåra händelsedata](events.md) för att få tag i denna marknadsinformation.
+
+* I JSON:
+
+  ```json
+  {
+    "productListItems": [
+        {
+            "SKU": "LLWS05.1-XS",
+            "name": "Desiree Fitness Tee",
+            "priceTotal": 24,
+            "_experience": {
+                "analytics": {
+                    "events1to100": {
+                        "event10": {
+                            "value": 50
+                        }
+                    },
+                    "customDimensions": {
+                        "eVars": {
+                            "eVar1": "red",
+                        }
+                    }
+                }
+            }
+        }
+    ],
+    "eventType": "commerce.productListAdds",
+    "commerce": {
+        "productListAdds": {
+            "value": 1
+        }
+    }
+  }
+  ```
+
+* I kod:
+
+  ```swift
+  var xdmData: [String: Any] = [
+    "productListItems": [
+      [
+        "name":  productName,
+        "SKU": sku,
+        "priceTotal": priceString,
+        "_experience" : [
+          "analytics": [
+            "events1to100": [
+              "event10": [
+                "value:": value
+              ]
+            ],
+            "customDimensions": [
+              "eVars": [
+                "eVar1": color
+              ]
+            ]
+          ]
+        ]
+      ]
+    ],
+    "eventType": "commerce.productViews",
+    "commerce": [
+      "productViews": [
+        "value": 1
+      ]
+    ]
+  ]
+  ```
 
 
 ### Använd bearbetningsregler
