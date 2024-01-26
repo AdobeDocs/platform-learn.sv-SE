@@ -2,9 +2,9 @@
 title: Konfigurera Adobe Target med Platform Web SDK
 description: Lär dig implementera Adobe Target med Platform Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 solution: Data Collection, Target
-source-git-commit: 904581df85df5d8fc4f36a4d47a37b03ef92d76f
+source-git-commit: 324ce76ff9f6b926ca330de1a1e827f8e88dc12d
 workflow-type: tm+mt
-source-wordcount: '4183'
+source-wordcount: '4282'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,7 @@ Det här fragmentet finns redan på Luma-webbplatsen, men vi ska titta närmare 
   if (a) return;
   var o=e.createElement("style");
   o.id="alloy-prehiding",o.innerText=n,i.appendChild(o),setTimeout(function(){o.parentNode&&o.parentNode.removeChild(o)},t)}}
-  (document, document.location.href.indexOf("mboxEdit") !== -1, ".body { opacity: 0 !important }", 3000);
+  (document, document.location.href.indexOf("adobe_authoring_enabled") !== -1, ".personalization-container { opacity: 0 !important }", 3000);
 </script>
 ```
 
@@ -144,16 +144,17 @@ Om du vill konfigurera eller söka efter egenskapstoken går du till **Adobe Tar
 
 ![Målegenskapstoken](assets/target-admin-properties.png)
 
->[!NOTE]
->
->Endast en egenskapstoken kan anges per datastream.
+<a id="advanced-pto"></a>
 
+Endast en egenskapstoken kan anges per datastream, men med åsidosättningar av egenskapstoken kan du ange alternativa egenskapstoken som ersätter den primära egenskapstoken som definierats i datastream. En uppdatering av `sendEvent` åtgärd krävs också för att åsidosätta datastream.
+
+![Identitetslista](assets/advanced-property-token.png)
 
 ### Målmiljö-ID
 
 [Miljö](https://experienceleague.adobe.com/docs/target/using/administer/environments.html) i Target hjälper er att hantera implementeringen i alla utvecklingsfaser. Den här valfria inställningen anger vilken målmiljö du ska använda för varje datastream.
 
-Adobe rekommenderar att du ställer in målmiljö-ID på olika sätt för alla dina dataströmmar för utveckling, staging och produktion för att göra det enkelt.
+Adobe rekommenderar att du ställer in målmiljö-ID på olika sätt för alla dina dataströmmar för utveckling, staging och produktion för att göra det enkelt. Du kan också ordna dina miljöer i Target-gränssnittet med hjälp av [värdar](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) -funktion.
 
 Navigera till för att konfigurera eller hitta miljö-ID:n **Adobe Target** > **[!UICONTROL Administration]** > **[!UICONTROL Miljö]**.
 
@@ -168,19 +169,12 @@ Navigera till för att konfigurera eller hitta miljö-ID:n **Adobe Target** > **
 Med den här valfria inställningen kan du ange vilken identitetssymbol som ska användas för mål-ID:t för tredje part. Target stöder bara profilsynkronisering för en enskild identitetssymbol eller ett namnutrymme. Mer information finns i [Synkronisering av realtidsprofiler för mbox3rdPartyId](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html) i målguiden.
 
 Identitetssymbolerna finns i identitetslistan under **Datainsamling** > **[!UICONTROL Kund]** > **[!UICONTROL Identiteter]**.
-<a id="advanced-pto"></a>
-
-### Åsidosättningar av egenskapstoken
-
-Det avancerade avsnittet innehåller ett fält för åsidosättningar av egenskapstoken som gör att du kan ange vilka egenskapstoken som kan ersätta den primära egenskapstoken som du definierade i konfigurationen.
-
-![Identitetslista](assets/advanced-property-token.png)
-
-Identitetssymbolerna finns i identitetslistan under **Datainsamling** > **[!UICONTROL Kund]** > **[!UICONTROL Identiteter]**.
 
 ![Identitetslista](assets/target-identities.png)
 
 I den här självstudiekursen om du vill använda Luma-webbplatsen använder du identitetssymbolen `lumaCrmId` under lektionen om [Identiteter](configure-identities.md).
+
+
 
 
 ## Ge visuella personaliseringsbeslut
@@ -263,7 +257,7 @@ Om du ställer in en aktivitet bör du se innehållet renderas på sidan. Men ä
 >
 >Om du använder Google Chrome och har [Hjälptillägg för Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html?lang=en) installerade kontrollerar du att **Inmata målbibliotek** inställningen är inaktiverad. Om du aktiverar den här inställningen kommer det att resultera i extra Target-begäranden.
 
-1. Öppna webbläsartillägget Adobe Experience Platform debugger
+1. Öppna webbläsartillägget Adobe Experience Platform Debugger
 1. Gå till [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html) och använder felsökaren för att [växla taggegenskapen på webbplatsen till din egen utvecklingsegenskap](validate-with-debugger.md#use-the-experience-platform-debugger-to-map-to-your-tags-property)
 1. Läs in sidan igen
 1. Välj **[!UICONTROL Nätverk]** i felsökningsverktyget
@@ -318,11 +312,11 @@ Nu när du har konfigurerat Platform Web SDK för att begära innehåll för `ho
 
 1. Retur `%event.propositions%` i fältet Föreslå när vi använder händelsen&quot;Skicka händelse klar&quot; som utlösare för den här regeln.
 1. I avsnittet &quot;Föreslå metadata&quot; väljer du **[!UICONTROL Använda ett formulär]**
-1. För indata från omfångsfältet `homepage-hero`
-1. För indata från väljarfältet `div.heroimage`
-1. Lämna åtgärdstypen som `Set HTML`
+1. För **[!UICONTROL Omfång]** fältinmatning `homepage-hero`
+1. För **[!UICONTROL Väljare]** fältinmatning `div.heroimage`
+1. För **[!UICONTROL Åtgärdstyp]** välj **[!UICONTROL Ange HTML]**
 
-![Återge hemsidans hjälteåtgärd](assets/target-action-render-hero.png)
+   ![Återge hemsidans hjälteåtgärd](assets/target-action-render-hero.png)
 
 1. Spara ändringarna och bygg i biblioteket
 1. Läs in Lumas hemsida några gånger, vilket bör räcka för att skapa den nya `homepage-hero` register för beslutsomfattning i Target-gränssnittet.
@@ -364,7 +358,7 @@ Nu när du har en regel för att manuellt återge ett anpassat beslutsområde ka
 
 >[!NOTE]
 >
->Konverteringsmålet &quot;Click on mbox&quot; fungerar inte automatiskt. Eftersom SDK för plattformen inte återger anpassade omfång automatiskt spåras inte klickningar till platser som du väljer att använda innehållet på. Du kan skapa en egen klickspårning för varje omfång med hjälp av&quot;klicka&quot; `eventType` med tillämplig `_experience` information med `sendEvent` åtgärd.
+>Konverteringsmålet &quot;Click on mbox&quot; fungerar inte automatiskt. Eftersom anpassade omfång inte återges automatiskt i Platform Web SDK spåras inte klickningar till platser som du väljer att tillämpa innehållet. Du kan skapa en egen klickspårning för varje omfång med hjälp av&quot;klicka&quot; `eventType` med tillämplig `_experience` information med `sendEvent` åtgärd.
 
 ### Validera med felsökaren
 
@@ -452,15 +446,16 @@ Om ytterligare data för Target skickas utanför XDM-objektet måste tillämplig
 
 ## Dela upp personaliseringsbeslut och Analytics Collection-händelser
 
-Du kan skicka en begäran om beslutsutkast och en begäran om insamling av analysdata separat. Om händelsereglerna bryts på det här sättet kan Target Decision-händelsen utlösas så tidigt som möjligt. Analyshändelsen kan vänta tills datalagrets objekt har fyllts i.
+Datalagret på Luma-webbplatsen definieras fullständigt innan taggarna bäddar in kod. Detta gör att vi kan använda ett enda anrop för att både hämta personaliserat innehåll (t.ex. från Adobe Target) och skicka analysdata (t.ex. till Adobe Analytics). På många webbplatser kan datalagret inte läsas in tillräckligt tidigt eller tillräckligt snabbt för att vara lämpligt att använda för personaliseringsprogram. I dessa situationer kan du göra två `sendEvent` en enda sida laddas och den första används för personalisering och den andra för analys. Om händelsereglerna bryts på det här sättet kan Target Decision-händelsen utlösas så tidigt som möjligt. Analyshändelsen kan vänta tills datalagrets objekt har fyllts i. Detta är en liknande implementering av SDK som fanns före webben, där Adobe Target avfyrade `target-global-mbox` överst på sidan så avfyrar Adobe Analytics `s.t()` ring längst ned på sidan
 
-1. Skapa en anropad regel `all pages - page top - request decisions`.
-2. Lägg till en händelse i regeln. Använd **Core** tillägg och **[!UICONTROL Bibliotek inläst (sidan ovanpå)]** händelsetyp.
-3. Lägg till en åtgärd i regeln. Använd **Adobe Experience Platform Web SDK** tillägg och **Skicka händelse** åtgärdstyp.
-4. I **Guidad händelseläge** väljer du **[!UICONTROL Top of page event - request personalization Decision]** alternativknapp
-5. Det här låser **Typ** as **[!UICONTROL Avvikelsepropositionshämtning]**
 
-![send_Decision_request_alone](assets/target-decision-request.png)
+1. Skapa en anropad regel `all pages - page top - request decisions`
+1. Lägg till en händelse i regeln. Använd **Core** tillägg och **[!UICONTROL Bibliotek inläst (sidan ovanpå)]** händelsetyp
+1. Lägg till en åtgärd i regeln. Använd **Adobe Experience Platform Web SDK** tillägg och **Skicka händelse** åtgärdstyp
+1. Välj **[!UICONTROL Använda guidade händelser]** och sedan **[!UICONTROL Begär personalisering]**
+1. Det här låser **Typ** as **[!UICONTROL Avvikelsepropositionshämtning]**
+
+   ![send_Decision_request_alone](assets/target-decision-request.png)
 
 1. När dina `Adobe Analytics Send Event rule` använder **Guidad händelseläge** välj **[!UICONTROL Längst ned på sidhändelsen - samla in analyser]** alternativknapp
 1. Det här låser **[!UICONTROL Inkludera väntande visningsmeddelanden]** kryssrutan markerad så att det köade visningsmeddelandet från beslutsbegäran skickas.
@@ -514,7 +509,7 @@ Om du har Target Premium kan du även validera att entitetsdata skickades korrek
 
 ### Validera med Assurance
 
-Dessutom kan du använda Asset där det är lämpligt för att bekräfta att målbeslutsbegäranden hämtar rätt data och att eventuella serveromvandlingar sker korrekt. Du kan också bekräfta att kampanj- och upplevelseinformation finns i Adobe Analytics-anropen även när Target-beslutet och Adobe Analytics-anrop skickas separat.
+Dessutom kan du använda Assurance där det är lämpligt för att bekräfta att målbeslutsbegäranden hämtar rätt data och att eventuella serveromvandlingar sker korrekt. Du kan också bekräfta att kampanj- och upplevelseinformation finns i Adobe Analytics-anropen även när Target-beslutet och Adobe Analytics-anrop skickas separat.
 
 1. Öppna [Säkerhet](https://experience.adobe.com/assurance)
 1. Starta en ny session, ange **[!UICONTROL sessionsnamn]** och matar in **[!UICONTROL bas-URL]** för din webbplats eller någon annan sida som du testar

@@ -4,9 +4,9 @@ description: Lär dig implementera beslutshantering med hjälp av Platform Web S
 solution: Data Collection,Experience Platform,Journey Optimizer
 feature-set: Journey Optimizer
 feature: Decision Management,Offers
-source-git-commit: f08866de1bd6ede50bda1e5f8db6dbd2951aa872
+source-git-commit: 324ce76ff9f6b926ca330de1a1e827f8e88dc12d
 workflow-type: tm+mt
-source-wordcount: '2455'
+source-wordcount: '2464'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 Lär dig implementera beslutshantering med hjälp av Platform Web SDK. Den här guiden innehåller grundläggande krav för beslutshantering, detaljerade konfigurationssteg och en djupdykning i ett användningsexempel som fokuserar på lojalitetsstatus.
 
-Genom att följa den här dokumentationen kan Journey Optimizer-användare effektivt tillämpa offera decisioningar, vilket förbättrar personaliseringen och relevansen i deras kundinteraktioner.
+Genom att följa den här självstudiekursen kan Journey Optimizer-användare effektivt tillämpa offera decisioningar, vilket förbättrar personaliseringen och relevansen i deras kundinteraktioner.
 
 ## Utbildningsmål
 
@@ -24,7 +24,7 @@ När lektionen är slut kan du:
 
 * Ta en titt på de centrala begreppen för beslutshantering inom Adobe Journey Optimizer och dess integrering med Adobe Experience Platform Web SDK.
 
-* Lär dig steg för steg hur du konfigurerar Web SDK för Offer decisioning och säkerställer smidig integrering med AJO.
+* Lär dig steg för steg hur du konfigurerar Web SDK för Offer decisioning och säkerställer smidig integrering med Journey Optimizer.
 
 * Utforska ett detaljerat användningsexempel som fokuserar på lojalitetserbjudanden och få insikter i hur ni effektivt kan skapa och hantera erbjudanden, beslut och placeringar.
 
@@ -38,13 +38,11 @@ När lektionen är slut kan du:
 
 För att slutföra lektionerna i det här avsnittet måste du först:
 
-* Se till att din organisation har tillgång till Adobe Journey Optimizer Ultimate (AJO och Offer decisioning) eller Adobe Experience Platform samt programtillägget för Offer decisioning.
+* Se till att din organisation har tillgång till Adobe Journey Optimizer Ultimate (Journey Optimizer och Offer decisioning) eller Adobe Experience Platform och Offera decisioningens programtjänsttillägg.
 
 * Slutför alla lektioner för den inledande konfigurationen av Platform Web SDK.
 
 * Aktivera din organisation för Edge Decisioning.
-
-* Publicera din dataström.
 
 * Lär dig hur du konfigurerar en placering och instansierar placerings- och aktivitets-ID:n i din beslutsomfångs-JSON.
 
@@ -143,7 +141,7 @@ Med detta exempel får ni en bättre förståelse för hur Journey Optimizer kan
 
 >[!NOTE]
 >
-> Eftersom den här självstudiekursen riktar sig till implementerare är det värt att notera att den här lektionen handlar om omfattande gränssnittsarbete i AJO. Sådana användargränssnittsuppgifter hanteras vanligtvis av marknadsförare, men det kan vara bra för implementerare att få insikt i processen, även om de inte i längden ansvarar för att skapa en beslutshanteringskampanj.
+> Eftersom den här självstudiekursen riktar sig till implementerare är det värt att notera att den här lektionen handlar om omfattande gränssnittsarbete i Journey Optimizer. Sådana gränssnittsuppgifter hanteras vanligtvis av marknadsförare, men det kan vara bra för implementerare att få insikt i processen, även om de inte i längden ansvarar för att skapa en beslutshanteringskampanj.
 
 ## Komponenter
 
@@ -173,7 +171,7 @@ Så här skapar du placeringen:
 
 1. Klicka **Spara**.
 1. När placeringen har skapats visas den i placeringslistan.
-1. Observera placerings-ID, eftersom det kan behövas för konfiguration inom ditt beslutsomfång.
+1. Markera raden som innehåller din nya placering och notera placerings-ID, eftersom detta kan behövas för konfigurationen inom ditt beslutsomfång.
 
    ![Se Placering-ID ](../assets/decisioning-placement-id.png)
 

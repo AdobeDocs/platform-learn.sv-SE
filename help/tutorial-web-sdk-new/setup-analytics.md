@@ -2,9 +2,9 @@
 title: Konfigurera Adobe Analytics med Experience Platform Web SDK
 description: Lär dig hur du konfigurerar Adobe Analytics med Experience Platform Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 solution: Data Collection, Analytics
-source-git-commit: f08866de1bd6ede50bda1e5f8db6dbd2951aa872
+source-git-commit: 324ce76ff9f6b926ca330de1a1e827f8e88dc12d
 workflow-type: tm+mt
-source-wordcount: '4649'
+source-wordcount: '4675'
 ht-degree: 0%
 
 ---
@@ -52,7 +52,7 @@ Du måste ha slutfört alla steg från de föregående avsnitten i självstudien
    * [Skapa en taggregel](create-tag-rule.md)
    * [Validera med Adobe Experience Platform debugger](validate-with-debugger.md)
 
-Du måste också [Aktivera användaråtkomst till Adobe Experience Platform Assurance](https://experienceleague.adobe.com/docs/experience-platform/assurance/user-access.html) så att du kan validera dina Adobe Analytics-data med Adobe Experience Platform Assurance.
+Du måste också [Aktivera användaråtkomst till Adobe Experience Platform Assurance](https://experienceleague.adobe.com/docs/experience-platform/assurance/user-access.html) så att du kan validera dina Adobe Analytics-data med Adobe Experience Platform Assurance. (Om du har åtkomstscheman, ID-namnutrymmen och datastreams har du redan åtkomst till Assurance)
 
 ## XDM-scheman och analysvariabler
 
@@ -65,7 +65,7 @@ Grattis! Du har redan konfigurerat ett schema som är kompatibelt med Adobe Anal
 
 To understand what XDM variables are auto-mapped to Adobe Analytics, please see [Variables automatically mapped in Analytics](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/adobe-analytics/automatically-mapped-vars.html?lang=en). Any variable that is not auto-mapped must be manually mapped. -->
 
-1. **Produktmedveten XDM**: upprätthålla ett semantiskt XDM-schema för nyckelvärdepar och använda [Adobe Analytics bearbetningsregler](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/processing-rules.html) för att mappa XDM-fälten till eVars, props och så vidare.
+1. **Produktmedveten XDM**: upprätthålla ett semantiskt XDM-schema för nyckelvärdepar och använda [Adobe Analytics bearbetningsregler](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/processing-rules.html) för att mappa XDM-fälten till eVars, props och så vidare. Med ett semantiskt XDM-schema menar vi att fältnamnen själva har betydelse. Fältnamnet `web.webPageDetails.pageName` har mer betydelse än att säga `prop1` eller `evar3`.
 
    >[!IMPORTANT]
    >
@@ -140,7 +140,7 @@ Platform Web SDK skickar data från din webbplats till Platform Edge Network. Di
 
 Du kanske vill ändra vilka data i Adobe Analytics rapportserie som skickas till när besökarna finns på vissa sidor. Så här konfigurerar du en åsidosättningsinställning för datastream för Adobe Analytics:
 
-1. Redigera **[!UICONTROL Adobe Analytics]** genom att öppna menyn shish-kabab och sedan välja **[!UICONTROL Redigera]**
+1. Redigera **[!UICONTROL Adobe Analytics]** genom att öppna ![mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) och sedan välja **[!UICONTROL Redigera]**
 
    ![Skriv över datastream](assets/datastream-edit-analytics.png)
 
@@ -306,19 +306,16 @@ I [Skapa en taggregel](create-tag-rule.md) lektion, du skapar en `all pages glob
 
 ### Öka sidvyer
 
-Eftersom du nu skickar data till Adobe Analytics måste du även mappa ett extra XDM-fält för att ange att en fyr ska bearbetas som en sidvy i Analytics.
+Eftersom du nu skickar data till Adobe Analytics rekommenderar vi att du mappar ett extra XDM-fält för att ange en sidvy. Det krävs inte för Analytics för att bearbeta en fyr som en sidvy, men det är bra att ha ett standardsätt att indikera en sidvy för andra program i senare led.
 
 1. Öppna `all pages global content variables - page bottom - AA (order 1)` regel
+1. Öppna **[!UICONTROL Uppdatera variabel]** åtgärd
 1. Bläddra nedåt och välj att öppna tills `web.webPageDetails`
 1. Välj för att öppna **[!UICONTROL pageViews]** object
 1. Ange **[!UICONTROL value]** till `1`
 1. Välj **[!UICONTROL Behåll ändringar]**
 
    ![XDM-objekt för sidvyer](assets/set-up-analytics-pageviews.png)
-
-   >[!TIP]
-   >
-   >Det här fältet motsvarar att skicka en **`s.t()`** sidvisningsfyr för Analytics med `AppMeasurement.js`. För en länk klickar du på beacon och anger `webInteraction.linkClicks.value` till `1`
 
 
 ### Skicka en sidvy till en annan rapportserie med åsidosättning av datastream
@@ -381,9 +378,9 @@ Skapa en regel för att skicka ytterligare ett sidvyanrop till en annan rapports
 1. Under **[!UICONTROL Rapportsviter]** väljer du den rapportwebbplats som du vill åsidosätta. I detta fall `tmd-websdk-course-stg`.
 
 
->[!TIP]
->
->Listan över rapportsviter som visas här avgörs av [konfigurera åsidosättning av en datastream-rapportsprogramsvit](configure-datastream.md###configure-a-datastream-report-suite-override) steg. Att lägga till rapportsvit motsvarar taggning av flera programsviter.
+   >[!TIP]
+   >
+   >Listan över rapportsviter som visas här avgörs av [konfigurera åsidosättning av en datastream-rapportsprogramsvit](configure-datastream.md###configure-a-datastream-report-suite-override) steg. Att lägga till rapportsvit motsvarar taggning av flera programsviter.
 
 1. Välj **[!UICONTROL Behåll ändringar]**
 
@@ -415,6 +412,7 @@ Börja med att spåra produktvyer på Lumas produktinformationssida.
 
 1. Välj **[!UICONTROL Regler]** och sedan **[!UICONTROL Lägg till regel]**
 1. Ge den ett namn  [!UICONTROL `ecommerce - pdp page bottom - AA (order 20)`]
+1. Välj ![+ symbol](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) under Händelse för att lägga till en ny utlösare
 1. Under **[!UICONTROL Tillägg]**, markera **[!UICONTROL Core]**
 1. Under **[!UICONTROL Händelsetyp]**, markera **[!UICONTROL Sidan nederst]**
 1. Ge den ett namn `Core - Page Bottom - order 20`
@@ -520,6 +518,7 @@ Jämför dataelementet med `productListItems` struktur (tips, det ska matcha).
 Nu tillbaka till mappningen av XDM-objektet till en hel array. Upprepa samma steg som när du skapar `ecommerce - pdp page bottom - AA (order 20)` regel:
 
 1. Ge den ett namn  [!UICONTROL `ecommerce - cart page bottom - AA (order 20)`]
+1. Välj ![+ symbol](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) under Händelse för att lägga till en ny utlösare
 1. Under **[!UICONTROL Tillägg]**, markera **[!UICONTROL Core]**
 1. Under **[!UICONTROL Händelsetyp]**, markera **[!UICONTROL Sidan nederst]**
 1. Ge den ett namn `Core - Page Bottom - order 20`
@@ -670,16 +669,10 @@ Lär dig hur du validerar att Adobe Analytics spelar in ECID, sidvisningar, prod
 
 ### Experience Cloud ID-validering
 
-1. Gå till [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"} och använd Experience Platform Debugger för att [växla taggegenskapen på webbplatsen till din egen utvecklingsegenskap](validate-with-debugger.md#use-the-experience-platform-debugger-to-map-to-your-tags-property)
+1. Gå till [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"}
+1. Välj inloggningsknappen högst upp till höger och använd inloggningsuppgifterna u: test@adobe.com p: test to authenticate
+1. Öppna felsökaren för Experience Platform och [växla taggegenskapen på webbplatsen till din egen utvecklingsegenskap](validate-with-debugger.md#use-the-experience-platform-debugger-to-map-to-your-tags-property)
 
-
-   >[!WARNING]
-   >
-   >Kontrollera att du är inloggad på Luma-webbplatsen innan du fortsätter.  Om du inte är inloggad tillåter Luma-webbplatsen inte utcheckning.
-   >
-   > 1. På Luma väljer du inloggningsknappen längst upp till höger och använder inloggningsuppgifter **u: `test@adobe.com` p: test** autentisera
-   >
-   > 1. Du omdirigeras automatiskt till [Didi Sport Watch produktsida](https://luma.enablementadobe.com/content/luma/us/en/products/gear/watches/didi-sport-watch.html#24-WG02) vid inläsning av nästa sida
 
 1. Om du vill aktivera Edge Trace går du till Felsökning för Experience Platform, i den vänstra navigeringen väljer du **[!UICONTROL Loggar]** väljer du **[!UICONTROL Kant]** och markera **[!UICONTROL Anslut]**
 
@@ -689,7 +682,7 @@ Lär dig hur du validerar att Adobe Analytics spelar in ECID, sidvisningar, prod
 
    ![Ansluten kantkalkering](assets/analytics-debugger-edge-connected.png)
 
-1. Uppdatera [Didi Sport Watch produktsida](https://luma.enablementadobe.com/content/luma/us/en/products/gear/watches/didi-sport-watch.html#24-WG02) och kontrollera Experience Platform Debugger igen bör du se data som kommit fram. Raden börjar med **[!UICONTROL Automatisk mappning av analyser]** är Adobe Analytics fyr
+1. Uppdatera Luma-sidan och kontrollera felsökaren i Experience Platform igen. Du bör se data som skickats. Raden börjar med **[!UICONTROL Automatisk mappning av analyser]** är Adobe Analytics fyr
 1. Markera för att öppna båda `[!UICONTROL mappedQueryParams]` listruta och den andra listrutan för att visa Analytics-variabler
 
    ![Kantkalkering för analysfyr](assets/analytics-debugger-edge-analytics.png)
@@ -700,6 +693,7 @@ Lär dig hur du validerar att Adobe Analytics spelar in ECID, sidvisningar, prod
 
 1. Bläddra nedåt för att hitta `[!UICONTROL c.a.x.identitymap.ecid.[0].id]`. Det är en kontextdatavariabel som hämtar ECID
 1. Fortsätt rulla nedåt tills du ser Analytics `[!UICONTROL mid]` variabel. Båda ID:n överensstämmer med enhetens Experience Cloud ID.
+1. På Lumas webbplats
 
    ![Analytics ECID](assets/analytics-debugger-ecid.png)
 
@@ -711,7 +705,7 @@ Lär dig hur du validerar att Adobe Analytics spelar in ECID, sidvisningar, prod
 
 Ovanför du konfigurerade en åsidosättning av datastream för [Lumas hemsida](https://luma.enablementadobe.com/content/luma/us/en.html).  Validera konfigurationen
 
-1. Leta efter en rad med **[!UICONTROL Datastream-konfiguration efter att åsidosättning har tillämpats.]**. Här hittar du den primära rapportsviten och de extra rapportsviterna som har konfigurerats för åsidosättningar av rapportsviten.
+1. Leta efter en rad med **[!UICONTROL Datastream-konfiguration efter åsidosättning användes]**. Här hittar du den primära rapportsviten och de extra rapportsviterna som har konfigurerats för åsidosättningar av rapportsviten.
 
    ![Verifiering av åsidosättningslista för Analytics-rapportsviten](assets/aep-debugger-datastream-override.png)
 
@@ -721,9 +715,9 @@ Ovanför du konfigurerade en åsidosättning av datastream för [Lumas hemsida](
 
 ### Vyer av innehållssidor
 
-Gå tillbaka till [Didi Sport Watch produktsida](https://luma.enablementadobe.com/content/luma/us/en/products/gear/watches/didi-sport-watch.html#24-WG02).  Den här gången validerar du att innehållssidvisningar hämtas av Analytics.
+Gå till en produktsida som [Didi Sport Watch produktsida](https://luma.enablementadobe.com/content/luma/us/en/products/gear/watches/didi-sport-watch.html#24-WG02).  Verifiera att innehållssidvisningar hämtas av Analytics.
 
-1. Leta efter `[!UICONTROL c.a.x.web.webpagedetails.pageviews.value]=1`. Det säger att `s.t()` sidvisningsfyren skickas till Analytics
+1. Leta efter `[!UICONTROL c.a.x.web.webpagedetails.pageviews.value]=1`.
 1. Bläddra nedåt för att se `[!UICONTROL gn]` variabel. Det är den dynamiska syntaxen i Analytics för `[!UICONTROL s.pageName]` variabel. Det hämtar sidnamnet från datalagret.
 
    ![Produktsträng för Analytics](assets/analytics-debugger-edge-page-view.png)
@@ -737,7 +731,7 @@ Eftersom du redan är på en produktsida fortsätter den här övningen att anv�
 1. Leta efter `[!UICONTROL c.a.x.productlistitems.][0].[!UICONTROL sku]`. Variabeln hämtar det dataelementvärde som du har mappat till `productListItems.item1.sku` tidigare i den här lektionen
 1. Sök även efter `[!UICONTROL c.a.x.productlistitems.][0].[!UICONTROL _experience.analytics.customdimensions.evars.evar1]`. Variabeln hämtar det dataelementvärde som du har mappat till `productListItems.item1._experience.analytics.customdimensions.evars.evar1`
 1. Bläddra nedåt för att se `[!UICONTROL pl]` variabel. Det är den dynamiska syntaxen för produktsträngvariabeln Analytics
-1. Observera att produktnamnet från datalagret mappas både till `[!UICONTROL c.a.x.productlistitems.][0].[!UICONTROL sku]` och `[!UICONTROL product]` -parametern i produktionssträngen.  Dessutom mappas produkttiteln från datalagret till merchandising evar1 i produktionssträngen.
+1. Observera att produktnamnet från datalagret mappas både till `[!UICONTROL c.a.x.productlistitems.][0].[!UICONTROL sku]` och `[!UICONTROL product]` -parametern i produktsträngen.  Dessutom mappas produkttiteln från datalagret till merchandising evar1 i produktsträngen.
 
    ![Produktsträng för Analytics](assets/analytics-debugger-prodstring.png)
 
@@ -840,9 +834,9 @@ Ovanför du har verifierat att Adobe Analytics spelar in ECID, sidvisningar, pro
 
 Det finns flera sätt att få åtkomst till Assurance:
 
-1. Åtkomstsäkring via Adobe Experience Platform
-1. Åtkomstsäkerhet via Adobe Experience Platform Data Collection
-1. Få åtkomst till försäkringen via loggar i Adobe Experience Platform Debugger
+1. Via Adobe Experience Platform
+1. Via Adobe Experience Platform Data Collection
+1. Via loggar i Adobe Experience Platform Debugger (rekommenderas)
 
 Bläddra nedåt och välj för att få åtkomst till försäkringen via Adobe Experience Platform **[!UICONTROL Säkerhet]** till vänster på den räls som finns under **[!UICONTROL DATAINSAMLING]**.  Välj **[!UICONTROL &quot;Web SDK Tutorial 3&quot;]** -session för att komma åt händelser som genererats i föregående avsnitt.
 ![Säkerhet via Adobe Experience Platform](assets/assurance-open-aep.png)
@@ -850,7 +844,7 @@ Bläddra nedåt och välj för att få åtkomst till försäkringen via Adobe Ex
 Om du vill få åtkomst till försäkringen via Adobe Experience Platform Data Collection väljer du **[!UICONTROL Säkerhet]** till vänster på den räls som finns under **[!UICONTROL DATAINSAMLING]**.  Välj **[!UICONTROL &quot;Web SDK Tutorial 3&quot;]** -session för att komma åt händelser som genererats i föregående avsnitt.\
 ![Säkerhet genom Adobe Experience Platform Data Collection](assets/assurance-open-data-collection.png)
 
-Gå till Felsökning för Experience Platform i det vänstra navigeringsfältet för att få åtkomst till försäkringen via Adobe Experience Platform Debugger **[!UICONTROL Loggar]** väljer du **[!UICONTROL Kant]** och markera **[!UICONTROL Anslut]**.  När anslutningen till Edge Network är upprättad väljer du ikonen för den externa länken\
+Gå till Felsökning för Experience Platform i det vänstra navigeringsfältet för att få åtkomst till försäkringen via Adobe Experience Platform Debugger **[!UICONTROL Loggar]** väljer du **[!UICONTROL Kant]** och markera **[!UICONTROL Anslut]**.  När anslutningen till Edge Network är upprättad väljer du den externa länkikonen. Vi rekommenderar att du får åtkomst till Assurance via Felsökning eftersom webbsessioner för närvarande måste startas från Felsökning.
 ![Säkerhet genom Adobe Experience Platform Data Collection](assets/assurance-open-aep-debugger.png)
 
 I **[!UICONTROL &quot;Web SDK Tutorial 3&quot;]** Anmäl session **[!UICONTROL &quot;hitdebugger&quot;]** i sökfältet Händelser för att filtrera resultaten till data som skickats efter bearbetning i Adobe Analytics.
