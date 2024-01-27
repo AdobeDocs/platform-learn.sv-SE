@@ -5,9 +5,9 @@ user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
 auto-video-transcripts: true
-source-git-commit: 762fae584213b9f44ea6b97cb66f69526fc29595
+source-git-commit: b38cd5cf681415defae1dab77ad19fd00d41fda2
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '868'
 ht-degree: 7%
 
 ---
@@ -207,7 +207,7 @@ ht-degree: 7%
    + [Uppdatera scheman](/help/platform/schemas/update-schemas.md)
    + [Skapa ett ad hoc-schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/ad-hoc.html){target="_blank"}
 + Källor {#sources}
-   + [Översikt över källor](/help/platform/sources/overview.md)
+   + [Översikt](/help/platform/sources/overview.md)
    + [Importera data från Adobe Analytics](/help/platform/sources/ingest-data-from-adobe-analytics.md)
    + [Ingrediera data från Audience Manager](/help/platform/sources/ingest-data-from-aam.md)
    + [Importera data från Marketo](/help/platform/sources/ingest-data-from-marketo.md)
@@ -217,6 +217,10 @@ ht-degree: 7%
    + [Strömma data med HTTP API](/help/platform/sources/streaming-ingestion-http-api.md)
    + [Direktuppspela data med hjälp av källanslutningar](/help/platform/sources/streaming-ingestion-source-connector.md)
    + [Felsökning: SFTP Connector](/help/platform/sources/troubleshoot-sftp-connector.md)
++ Använd fallspelningsböcker {#use-case-playbooks}
+   + [Översikt](/help/platform/use-case-playbooks/overview.md)
+   + [Konfigurera en spelningsbokssandlåda](/help/platform/use-case-playbooks/configure-a-playbook-sandbox.md)
+   + [Skapa och publicera en spelboksinstans](/help/platform/use-case-playbooks/create-and-publish-a-playbook-instance.md)
 + Integrering med Experience Cloud {#experience-cloud}
    + [Analyser](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html)
    + [Audience Manager](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-aam.html)
