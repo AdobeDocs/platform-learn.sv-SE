@@ -6,10 +6,10 @@ solution: Data Collection,Experience Platform
 doc-type: video
 auto-video-transcripts: true
 role: Developer, Data Engineer
-source-git-commit: 762fae584213b9f44ea6b97cb66f69526fc29595
+source-git-commit: 72be7f50cf52633ea5970fd5a3b5b3d7fe9ea470
 workflow-type: tm+mt
-source-wordcount: '185'
-ht-degree: 20%
+source-wordcount: '188'
+ht-degree: 19%
 
 ---
 
@@ -21,7 +21,7 @@ ht-degree: 20%
 + Taggar{#tags}
    + [Översikt och skapa en egenskap](tags/create-a-property.md)
    + [Välj ett värdalternativ](tags/choose-a-hosting-option.md)
-   + [Använd miljöer](tags/use-environments.md)
+   + [Använda miljöer och bädda in koder](tags/use-environments-and-embed-codes.md)
    + [Lägga till och konfigurera tillägg](tags/add-and-configure-extensions.md)
    + [Skapa dataelement](tags/create-data-elements.md)
    + [Skapa regler](tags/build-rules.md)
