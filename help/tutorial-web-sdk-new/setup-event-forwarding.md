@@ -2,9 +2,9 @@
 title: Konfigurera en egenskap för vidarebefordring av händelser
 description: Lär dig hur du använder händelsevidarebefordringsegenskap med Experience Platform Web SDK-data. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Tags,Event Forwarding
-source-git-commit: 904581df85df5d8fc4f36a4d47a37b03ef92d76f
+source-git-commit: 58034fc649a06b4e17ffddfd0640a81a4616f688
 workflow-type: tm+mt
-source-wordcount: '1858'
+source-wordcount: '1862'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,9 @@ ht-degree: 0%
 Lär dig hur du använder händelsevidarebefordringsegenskap med Experience Platform Web SDK-data.
 
 Vidarebefordran av händelser är en ny typ av egenskap som är tillgänglig i datainsamling. Med händelsevidarebefordran kan du skicka data till andra leverantörer än Adobe direkt från Adobe Experience Platform Edge Network i stället för till den traditionella webbläsaren på klientsidan. Läs mer om fördelarna med vidarebefordran av händelser i [Översikt över vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=en).
+
+
+![Web SDK och händelsevidarebefordringsdiagram](assets/dc-websdk-eventforwarding.png)
 
 Om du vill använda händelsevidarebefordran i Adobe Experience Platform måste data skickas till Adobe Experience Platform Edge Network först med ett eller flera av följande tre alternativ:
 
@@ -50,7 +53,6 @@ I slutet av lektionen kan du:
 
    * Inledande konfiguration
 
-      * [Konfigurera behörigheter](configure-permissions.md)
       * [Konfigurera ett XDM-schema](configure-schemas.md)
       * [Konfigurera ett identitetsnamnutrymme](configure-identities.md)
       * [Konfigurera ett datastream](configure-datastream.md)

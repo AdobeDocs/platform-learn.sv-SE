@@ -2,9 +2,9 @@
 title: Konfigurera Audience Manager med Platform Web SDK
 description: Lär dig hur du konfigurerar Adobe Audience Manager med Platform Web SDK och validerar implementeringen med hjälp av en cookie-destination. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 solution: Data Collection, Audience Manager
-source-git-commit: 324ce76ff9f6b926ca330de1a1e827f8e88dc12d
+source-git-commit: 58034fc649a06b4e17ffddfd0640a81a4616f688
 workflow-type: tm+mt
-source-wordcount: '1330'
+source-wordcount: '1337'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,7 @@ Lär dig hur du konfigurerar Adobe Audience Manager med Platform Web SDK och val
 
 [Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager.html) är en Adobe Experience Cloud-lösning som innehåller allt som krävs för att samla in kommersiellt relevant information om webbplatsbesökare, skapa marknadsföringsbara segment och leverera riktad reklam och innehåll till rätt målgrupp.
 
+![Web SDK och Adobe Audience Manager](assets/dc-websdk-aam.png)
 
 ## Utbildningsmål
 
