@@ -2,9 +2,9 @@
 title: Konfigurera Adobe Target med Platform Web SDK
 description: Lär dig implementera Adobe Target med Platform Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 solution: Data Collection, Target
-source-git-commit: 58034fc649a06b4e17ffddfd0640a81a4616f688
+source-git-commit: aff41fd5ecc57c9c280845669272e15145474e50
 workflow-type: tm+mt
-source-wordcount: '4288'
+source-wordcount: '4264'
 ht-degree: 0%
 
 ---
@@ -394,22 +394,9 @@ Det finns vissa datapunkter som kan vara användbara för Target som inte har ma
 * [Recommendations reserverade parametrar](https://experienceleague.adobe.com/docs/target/using/recommendations/plan-implement.html?lang=en#pass-behavioral)
 * Kategorivärden för [kategoritillhörighet](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/category-affinity.html?lang=en)
 
-### Skapa dataelement för Target-parametrar
+### Skapa dataelement för särskilda Target-parametrar
 
-Först ställer du in några extra dataelement för ett profilattribut, entitetsattribut, kategorivärde och sedan konstruerar du `data` objekt som används för att skicka icke-XDM-data:
-
-* **`target.entity.id`** mappad till `digitalData.product.0.productInfo.sku`
-* **`target.entity.name`** mappad till `digitalData.product.0.productInfo.title`
-* **`target.user.categoryId`** använda följande anpassade kod för att analysera webbplatsens URL för kategorin på den översta nivån:
-
-  ```javascript
-  var cat = location.pathname.split(/[/.]+/);
-  if (cat[5] == 'products') {
-     return (cat[6]);
-  } else if (cat[5] != 'html') { 
-     return (cat[5]);
-  }
-  ```
+Använd först dataelementen som skapas i [Skapa dataelement](create-data-elements.md) lektion för att skapa `data` objekt som används för att skicka icke-XDM-data:
 
 * **`data.content`** med följande anpassade kod:
 
@@ -417,10 +404,10 @@ Först ställer du in några extra dataelement för ett profilattribut, entitets
   var data = {
      __adobe: {
         target: {
-           "entity.id": _satellite.getVar("target.entity.id"),
-           "entity.name": _satellite.getVar("target.entity.name"),
+           "entity.id": _satellite.getVar("product.productInfo.sku"),
+           "entity.name": _satellite.getVar("product.productInfo.title"),
            "profile.loggedIn": _satellite.getVar("user.profile.attributes.loggedIn"),
-           "user.categoryId": _satellite.getVar("target.user.categoryId")
+           "user.categoryId": _satellite.getVar("product.category")
         }
      }
   }

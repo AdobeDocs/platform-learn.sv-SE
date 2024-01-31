@@ -9,9 +9,9 @@ jira: KT-6953
 recommendations: noDisplay,noCatalog
 index: false
 hide: true
-source-git-commit: 1b6fa039a255de8cdd1889136039e6f23b183578
+source-git-commit: aff41fd5ecc57c9c280845669272e15145474e50
 workflow-type: tm+mt
-source-wordcount: '96'
+source-wordcount: '97'
 ht-degree: 15%
 
 ---
@@ -21,7 +21,6 @@ ht-degree: 15%
 
 + [Översikt över självstudiekursen](overview.md)
 + Inledande konfiguration {#initial-configuration}
-   + [Konfigurera behörigheter](configure-permissions.md)
    + [Konfigurera ett XDM-schema](configure-schemas.md)
    + [Konfigurera ett identitetsnamnutrymme](configure-identities.md)
    + [Konfigurera ett datastream](configure-datastream.md)
@@ -32,6 +31,7 @@ ht-degree: 15%
    + [Skapa identiteter](create-identities.md)
    + [Skapa en taggregel](create-tag-rule.md)
    + [Validera med felsökning](validate-with-debugger.md)
+   + [Validera med Assurance](validate-with-assurance.md)
 
 + Programinställningar {#applications-setup}
    + [Konfigurera Experience Platform](setup-experience-platform.md)

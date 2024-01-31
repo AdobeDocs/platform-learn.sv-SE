@@ -2,7 +2,7 @@
 title: Självstudiekurs om att implementera Adobe Experience Cloud med webb-SDK
 description: Lär dig hur du implementerar Experience Cloud-program med Adobe Experience Platform Web SDK.
 recommendations: catalog, noDisplay
-source-git-commit: f08866de1bd6ede50bda1e5f8db6dbd2951aa872
+source-git-commit: 12e6e9d06ae0d6945c165032d89fd0f801d94ff2
 workflow-type: tm+mt
 source-wordcount: '695'
 ht-degree: 2%
@@ -40,7 +40,7 @@ När du är klar med den här självstudiekursen kan du börja implementera alla
 
 Alla Experience Cloud-kunder kan använda Platform Web SDK. Det är inte ett krav att licensiera ett plattformsbaserat program som Real-time Customer Data Platform eller Journey Optimizer att använda Web SDK.
 
-I den här lektionen antas att du har ett Adobe-konto och [nödvändiga behörigheter](configure-permissions.md) för att slutföra lektionerna. Om inte, måste du kontakta din Experience Cloud-administratör för att begära åtkomst.
+I den här lektionen antas du ha ett Adobe-konto och de behörigheter som krävs för att slutföra lektionerna. Om inte, måste du kontakta din Experience Cloud-administratör för att begära åtkomst.
 
 * För **Datainsamling** måste du ha:
    * **[!UICONTROL Plattformar]**—behörighet för **[!UICONTROL Webb]** och, om licens finns, **[!UICONTROL Kant]**

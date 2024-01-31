@@ -4,9 +4,9 @@ description: Lär dig implementera beslutshantering med hjälp av Platform Web S
 solution: Data Collection,Experience Platform,Journey Optimizer
 feature-set: Journey Optimizer
 feature: Decision Management,Offers
-source-git-commit: 324ce76ff9f6b926ca330de1a1e827f8e88dc12d
+source-git-commit: 12e6e9d06ae0d6945c165032d89fd0f801d94ff2
 workflow-type: tm+mt
-source-wordcount: '2464'
+source-wordcount: '2470'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,9 @@ ht-degree: 0%
 Lär dig implementera beslutshantering med hjälp av Platform Web SDK. Den här guiden innehåller grundläggande krav för beslutshantering, detaljerade konfigurationssteg och en djupdykning i ett användningsexempel som fokuserar på lojalitetsstatus.
 
 Genom att följa den här självstudiekursen kan Journey Optimizer-användare effektivt tillämpa offera decisioningar, vilket förbättrar personaliseringen och relevansen i deras kundinteraktioner.
+
+
+![Web SDK och Adobe Analytics](../assets/dc-websdk-ajo.png)
 
 ## Utbildningsmål
 

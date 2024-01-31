@@ -4,9 +4,9 @@ description: Lär dig implementera webbkanal med Platform Web SDK. Den här lekt
 solution: Data Collection,Experience Platform,Journey Optimizer
 feature-set: Journey Optimizer
 feature: Web Channel,Web SDK
-source-git-commit: 324ce76ff9f6b926ca330de1a1e827f8e88dc12d
+source-git-commit: 12e6e9d06ae0d6945c165032d89fd0f801d94ff2
 workflow-type: tm+mt
-source-wordcount: '2444'
+source-wordcount: '2450'
 ht-degree: 0%
 
 ---
@@ -17,6 +17,8 @@ ht-degree: 0%
 Lär dig implementera webbkanal med Platform Web SDK. Den här guiden innehåller grundläggande krav för webbkanalen, detaljerade konfigurationssteg och en djupdykning i ett användningsexempel som fokuserar på lojalitetsstatus.
 
 Genom att följa den här guiden kan Journey Optimizer-användare effektivt använda webbkanalen för avancerad onlineanpassning med Journey Optimizer Web Designer.
+
+![Web SDK och Adobe Analytics](../assets/dc-websdk-ajo.png)
 
 ## Utbildningsmål
 
