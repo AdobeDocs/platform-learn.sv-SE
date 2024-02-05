@@ -1,7 +1,7 @@
 ---
 title: Strömma data till Adobe Experience Platform med Web SDK
 description: Lär dig hur du direktuppspelar webbdata till Adobe Experience Platform med Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
-source-git-commit: 58034fc649a06b4e17ffddfd0640a81a4616f688
+source-git-commit: 367789cfb0800fee7d020303629f57112e52464f
 workflow-type: tm+mt
 source-wordcount: '1608'
 ht-degree: 0%
@@ -84,7 +84,7 @@ Nu kan du konfigurera [!UICONTROL datastream] skicka data till [!UICONTROL Adobe
 1. Välj **[!UICONTROL Datastreams]** från vänster navigering
 1. Öppna datastream som du skapade i [Konfigurera ett datastream](configure-datastream.md) lektion, `Luma Web SDK`
 
-   ![Välj dataströmmen för Luma Web SDK](assets/datastream-luma-web-sdk.png)
+   ![Välj dataströmmen för Luma Web SDK](assets/datastream-luma-web-sdk-development.png)
 
 1. Välj **[!UICONTROL Lägg till tjänst]**
    ![Lägg till en tjänst i datastream](assets/experience-platform-addService.png)

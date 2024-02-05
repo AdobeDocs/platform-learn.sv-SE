@@ -2,7 +2,7 @@
 title: Skapa dataelement
 description: Lär dig hur du skapar ett XDM-objekt och mappar dataelement till det i taggar. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Tags
-source-git-commit: aff41fd5ecc57c9c280845669272e15145474e50
+source-git-commit: 367789cfb0800fee7d020303629f57112e52464f
 workflow-type: tm+mt
 source-wordcount: '1212'
 ht-degree: 0%
@@ -154,7 +154,7 @@ Innan du skapar XDM-objektet skapar du följande uppsättning dataelement för [
 
 1. Gå till **[!UICONTROL Dataelement]** och markera **[!UICONTROL Lägg till dataelement]** (eller **[!UICONTROL Skapa nytt dataelement]** om det inte finns några befintliga dataelement i taggegenskapen)
 
-   ![Skapa dataelement](assets/data-element-create.jpg)
+   ![Skapa dataelement](assets/data-element-create.png)
 
 1. Namnge dataelementet `page.pageInfo.pageName`
 1. Använd **[!UICONTROL JavaScript-variabel]** **[!UICONTROL Dataelementtyp]** för att peka på ett värde i Lumas datalager: `digitalData.page.pageInfo.pageName`
@@ -165,7 +165,7 @@ Innan du skapar XDM-objektet skapar du följande uppsättning dataelement för [
 
 1. Välj **[!UICONTROL Spara]**
 
-   ![Dataelement för sidnamn](assets/data-element-pageName.jpg)
+   ![Dataelement för sidnamn](assets/data-element-pageName.png)
 
 Skapa dessa ytterligare dataelement genom att följa samma steg:
 

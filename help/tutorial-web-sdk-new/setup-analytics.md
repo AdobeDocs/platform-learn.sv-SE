@@ -2,7 +2,7 @@
 title: Konfigurera Adobe Analytics med Experience Platform Web SDK
 description: Lär dig hur du konfigurerar Adobe Analytics med Experience Platform Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 solution: Data Collection, Analytics
-source-git-commit: 58034fc649a06b4e17ffddfd0640a81a4616f688
+source-git-commit: 367789cfb0800fee7d020303629f57112e52464f
 workflow-type: tm+mt
 source-wordcount: '4681'
 ht-degree: 0%
@@ -304,13 +304,13 @@ När du har lagt till dessa dataelement och skapat de tidigare elementen i [Skap
 
 ## Skapa ytterligare regler
 
-I [Skapa en taggregel](create-tag-rule.md) lektion, du skapar en `all pages global content variables - page bottom - AA (order 1)` regel som [skapade ett baslinje-XDM-objekt med **[!UICONTROL Uppdatera variabel]** **[!UICONTROL åtgärdstyper]**](create-tag-rule.md#create-tag-rule). I följande övningar berikas XDM-objektet så att ytterligare data som är specifika för vissa sidor samlas in.
+I [Skapa en taggregel](create-tag-rule.md) lektion, du skapar en `all pages global content variables - library loaded - AA (order 1)` regel som [skapade ett baslinje-XDM-objekt med **[!UICONTROL Uppdatera variabel]** **[!UICONTROL åtgärdstyper]**](create-tag-rule.md#create-tag-rule). I följande övningar berikas XDM-objektet så att ytterligare data som är specifika för vissa sidor samlas in.
 
 ### Öka sidvyer
 
 Eftersom du nu skickar data till Adobe Analytics rekommenderar vi att du mappar ett extra XDM-fält för att ange en sidvy. Det krävs inte för Analytics för att bearbeta en fyr som en sidvy, men det är bra att ha ett standardsätt att indikera en sidvy för andra program i senare led.
 
-1. Öppna `all pages global content variables - page bottom - AA (order 1)` regel
+1. Öppna `all pages global content variables - library loaded - AA (order 1)` regel
 1. Öppna **[!UICONTROL Uppdatera variabel]** åtgärd
 1. Bläddra nedåt och välj att öppna tills `web.webPageDetails`
 1. Välj för att öppna **[!UICONTROL pageViews]** object
@@ -324,17 +324,17 @@ Eftersom du nu skickar data till Adobe Analytics rekommenderar vi att du mappar 
 
 Skapa en regel för att skicka ytterligare ett sidvyanrop till en annan rapportsvit. Använd åsidosättningsfunktionen för datastream för att ändra rapportsviten för en sida med hjälp av **[!UICONTROL Skicka händelse]** Åtgärd.
 
-1. Skapa en ny regel, kalla den `homepage report suite override - page bottom - AA (order 51)`
+1. Skapa en ny regel, kalla den `homepage report suite override - library loaded - AA (order 51)`
 
 1. Markera plustecknet under **[!UICONTROL Händelse]** lägga till en ny utlösare
 
 1. Under **[!UICONTROL Tillägg]**, markera **[!UICONTROL Core]**
 
-1. Under **[!UICONTROL Händelsetyp]**, markera **[!UICONTROL Sidan nederst]**
+1. Under **[!UICONTROL Händelsetyp]**, markera **[!UICONTROL biblioteket har lästs in]**
 
-1. Ge den ett namn `Core - Page Bottom - order 51`
+1. Ge den ett namn `Core - library loaded - order 51`
 
-1. Markera för att öppna **[!UICONTROL Avancerade alternativ]**, skriva in `51`. Detta garanterar att regeln körs efter `all pages global content variables - page bottom - AA (order 50)` som ställer in baslinje-XDM med **[!UICONTROL Uppdatera variabel]** åtgärdstyp.
+1. Markera för att öppna **[!UICONTROL Avancerade alternativ]**, skriva in `51`. Detta garanterar att regeln körs efter `all pages global content variables - library loaded - AA (order 50)` som ställer in baslinje-XDM med **[!UICONTROL Uppdatera variabel]** åtgärdstyp.
 
    ![Åsidosättning av analysrapportsSuite](assets/set-up-analytics-rs-override.png)
 
@@ -392,7 +392,7 @@ Skapa en regel för att skicka ytterligare ett sidvyanrop till en annan rapports
 
 ### Förbättra XDM-objektet med hjälp av variabeln Update
 
-Använda **[!UICONTROL Uppdatera variabel]** åtgärdstyp kan du skapa ytterligare regler för att berika &quot;global content XDM&quot; innan det skickas till [!UICONTROL Platform Edge Network]. Uppfyll detta genom att sekvensera de nya reglerna före `all pages send event - page bottom - AA (order 50)` som skickar händelsen [!UICONTROL Platform Edge Network].
+Använda **[!UICONTROL Uppdatera variabel]** åtgärdstyp kan du skapa ytterligare regler för att berika &quot;global content XDM&quot; innan det skickas till [!UICONTROL Platform Edge Network]. Uppfyll detta genom att sekvensera de nya reglerna före `all pages send event - library loaded - AA (order 50)` som skickar händelsen [!UICONTROL Platform Edge Network].
 
 >[!TIP]
 >
@@ -413,12 +413,12 @@ Se [Samla in data om handel och produkter](https://experienceleague.adobe.com/do
 Börja med att spåra produktvyer på Lumas produktinformationssida.
 
 1. Välj **[!UICONTROL Regler]** och sedan **[!UICONTROL Lägg till regel]**
-1. Ge den ett namn  [!UICONTROL `ecommerce - pdp page bottom - AA (order 20)`]
+1. Ge den ett namn  [!UICONTROL `ecommerce - pdp library loaded - AA (order 20)`]
 1. Välj ![+ symbol](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) under Händelse för att lägga till en ny utlösare
 1. Under **[!UICONTROL Tillägg]**, markera **[!UICONTROL Core]**
-1. Under **[!UICONTROL Händelsetyp]**, markera **[!UICONTROL Sidan nederst]**
-1. Ge den ett namn `Core - Page Bottom - order 20`
-1. Markera för att öppna **[!UICONTROL Avancerade alternativ]**, skriva in `20`. Detta garanterar att regeln körs efter `all pages global content variables - page bottom - AA (order 1)` som ställer in globala innehållsvariabler, men före `all pages send event - page bottom - AA (order 50)` som skickar XDM-händelsen.
+1. Under **[!UICONTROL Händelsetyp]**, markera **[!UICONTROL biblioteket har lästs in]**
+1. Ge den ett namn `Core - library loaded - order 20`
+1. Markera för att öppna **[!UICONTROL Avancerade alternativ]**, skriva in `20`. Detta garanterar att regeln körs efter `all pages global content variables - library loaded - AA (order 1)` som ställer in globala innehållsvariabler, men före `all pages send event - library loaded - AA (order 50)` som skickar XDM-händelsen.
 
    ![XDM-regler för analyser](assets/set-up-analytics-pdp.png)
 
@@ -517,13 +517,13 @@ Jämför dataelementet med `productListItems` struktur (tips, det ska matcha).
 >Observera hur numeriska variabler översätts, med strängvärden i datalagret som `price` och `qty` formateras om till tal i dataelementet. Dessa formatkrav är viktiga för dataintegriteten i plattformar och fastställs under [konfigurera scheman](configure-schemas.md) steg. I exemplet **[!UICONTROL kvantitet]** använder **[!UICONTROL Heltal]** datatyp.
 > ![XDM-schemadatatyp](assets/set-up-analytics-quantity-integer.png)
 
-Nu tillbaka till mappningen av XDM-objektet till en hel array. Upprepa samma steg som när du skapar `ecommerce - pdp page bottom - AA (order 20)` regel:
+Nu tillbaka till mappningen av XDM-objektet till en hel array. Upprepa samma steg som när du skapar `ecommerce - pdp library loaded - AA (order 20)` regel:
 
-1. Ge den ett namn  [!UICONTROL `ecommerce - cart page bottom - AA (order 20)`]
+1. Ge den ett namn  [!UICONTROL `ecommerce - cart library loaded - AA (order 20)`]
 1. Välj ![+ symbol](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) under Händelse för att lägga till en ny utlösare
 1. Under **[!UICONTROL Tillägg]**, markera **[!UICONTROL Core]**
-1. Under **[!UICONTROL Händelsetyp]**, markera **[!UICONTROL Sidan nederst]**
-1. Ge den ett namn `Core - Page Bottom - order 20`
+1. Under **[!UICONTROL Händelsetyp]**, markera **[!UICONTROL biblioteket har lästs in]**
+1. Ge den ett namn `Core - library loaded - order 20`
 1. Markera för att öppna **[!UICONTROL Avancerade alternativ]**, skriva in `20`
 1. Välj **[!UICONTROL Behåll ändringar]**
 
@@ -574,7 +574,7 @@ Nu tillbaka till mappningen av XDM-objektet till en hel array. Upprepa samma ste
 
 Skapa ytterligare två regler för utcheckning och köp enligt samma mönster med skillnaderna nedan:
 
-**Regelnamn**: `ecommerce - checkout page bottom - AA (order 20)`
+**Regelnamn**: `ecommerce - checkout library loaded - AA (order 20)`
 
 * **[!UICONTROL Villkor]**: /content/luma/us/en/user/checkout.html
 * Ange `eventType` till `commerce.checkouts`
@@ -584,7 +584,7 @@ Skapa ytterligare två regler för utcheckning och köp enligt samma mönster me
   >
   >Det här motsvarar inställningen `scCheckout` händelse i Analytics
 
-**Regelnamn**: `ecommerce - purchase page bottom - AA (order 20)`
+**Regelnamn**: `ecommerce - purchase library loaded - AA (order 20)`
 
 * **[!UICONTROL Villkor]**: /content/luma/us/en/user/checkout/order/thank-you.html
 * Ange `eventType` till `commerce.purchases`
@@ -745,7 +745,7 @@ Eftersom du redan är på en produktsida fortsätter den här övningen att anv�
 
    >[!TIP]
    >
-   > The `ecommerce - pdp page bottom - AA (order 20)` regeln skriver över värdet för `eventType` anges av `all pages global content variables - page bottom - AA (order 1)` styckelinje efter att den har ställts in att utlösas senare i sekvensen
+   > The `ecommerce - pdp library loaded - AA (order 20)` regeln skriver över värdet för `eventType` anges av `all pages global content variables - library loaded - AA (order 1)` styckelinje efter att den har ställts in att utlösas senare i sekvensen
 
 
    ![Analytics - produktvy](assets/analytics-debugger-prodView.png)

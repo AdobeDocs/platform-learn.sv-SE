@@ -2,7 +2,7 @@
 title: Skapa taggregler
 description: Lär dig hur du skickar en händelse till Platform Edge Network med ditt XDM-objekt med hjälp av en taggregel. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Tags
-source-git-commit: aff41fd5ecc57c9c280845669272e15145474e50
+source-git-commit: 367789cfb0800fee7d020303629f57112e52464f
 workflow-type: tm+mt
 source-wordcount: '2005'
 ht-degree: 0%
@@ -80,7 +80,7 @@ Så här skapar du en taggregel för de globala XDM-fälten:
 
    ![Skapa en regel](assets/rules-create.png)
 
-1. Namnge regeln `all pages global content variables - page bottom - AA (order 1)`
+1. Namnge regeln `all pages global content variables - library loaded - AA (order 1)`
 
 1. I **[!UICONTROL Händelser]** avsnitt, markera **[!UICONTROL Lägg till]**
 
@@ -173,12 +173,12 @@ Du kan använda **[!UICONTROL Uppdatera variabel]**  i flera sekvensregler för 
 Börja med att spåra produktvyer på Lumas produktinformationssida:
 
 1. Välj **[!UICONTROL Lägg till regel]**
-1. Ge den ett namn  [!UICONTROL `ecommerce - pdp page bottom - AA (order 20)`]
+1. Ge den ett namn  [!UICONTROL `ecommerce - pdp library loaded - AA (order 20)`]
 1. Välj ![+ symbol](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) under Händelse för att lägga till en ny utlösare
 1. Under **[!UICONTROL Tillägg]**, markera **[!UICONTROL Core]**
 1. Under **[!UICONTROL Händelsetyp]**, markera **[!UICONTROL Sidan nederst]**
 1. Ge den ett namn `Core - Page Bottom - order 20`
-1. Markera för att öppna **[!UICONTROL Avancerade alternativ]**, skriva in `20`. Detta garanterar att regeln körs efter `all pages global content variables - page bottom - AA (order 1)` som ställer in globala innehållsvariabler, men före `all pages send event - page bottom - AA (order 50)` som skickar XDM-händelsen.
+1. Markera för att öppna **[!UICONTROL Avancerade alternativ]**, skriva in `20`. Detta garanterar att regeln körs efter `all pages global content variables - library loaded - AA (order 1)` som ställer in globala innehållsvariabler, men före `all pages send event - library loaded - AA (order 50)` som skickar XDM-händelsen.
 
    ![XDM-regler för analyser](assets/set-up-analytics-pdp.png)
 
@@ -247,7 +247,7 @@ Jämför dataelementet med `productListItems` struktur (tips, det ska matcha).
 Låt oss mappa vår array till XDM-objektet&quot;
 
 
-1. Skapa en ny regel med namnet `ecommerce - cart page bottom - AA (order 20)`
+1. Skapa en ny regel med namnet `ecommerce - cart library loaded - AA (order 20)`
 1. Välj ![+ symbol](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) under Händelse för att lägga till en ny utlösare
 1. Under **[!UICONTROL Tillägg]**, markera **[!UICONTROL Core]**
 1. Under **[!UICONTROL Händelsetyp]**, markera **[!UICONTROL Sidan nederst]**
@@ -295,7 +295,7 @@ Låt oss mappa vår array till XDM-objektet&quot;
 
 Skapa ytterligare två regler för utcheckning och köp enligt samma mönster med skillnaderna nedan:
 
-**Regelnamn**: `ecommerce - checkout page bottom - AA (order 20)`
+**Regelnamn**: `ecommerce - checkout library loaded - AA (order 20)`
 
 * **[!UICONTROL Villkor]**: /content/luma/us/en/user/checkout.html
 * Ange `eventType` till `commerce.checkouts`
@@ -305,7 +305,7 @@ Skapa ytterligare två regler för utcheckning och köp enligt samma mönster me
   >
   >Det här motsvarar inställningen `scCheckout` händelse i Analytics
 
-**Regelnamn**: `ecommerce - purchase page bottom - AA (order 20)`
+**Regelnamn**: `ecommerce - purchase library loaded - AA (order 20)`
 
 * **[!UICONTROL Villkor]**: /content/luma/us/en/user/checkout/order/thank-you.html
 * Ange `eventType` till `commerce.purchases`
@@ -345,7 +345,7 @@ Nu när du har angett variablerna kan du skapa den andra regeln som skickar XDM-
 
 1. Till höger väljer du **[!UICONTROL Lägg till regel]** för att skapa en annan regel
 
-1. Namnge regeln `all pages send event - page bottom - AA (order 50)`
+1. Namnge regeln `all pages send event - library loaded - AA (order 50)`
 
 1. I **[!UICONTROL Händelser]** avsnitt, markera **[!UICONTROL Lägg till]**
 
@@ -390,7 +390,7 @@ Så här skapar du ett bibliotek:
 
    >[!NOTE]
    >
-   >    Förutom Adobe Experience Platform Web SDK och `all pages global content variables - page bottom - AA (order 50)` -regeln, du ser taggkomponenterna som skapades i tidigare lektioner. Tillägget Core innehåller det grundläggande JavaScript som krävs för alla egenskaper för webbtaggar.
+   >    Förutom Adobe Experience Platform Web SDK och `all pages global content variables - library loaded - AA (order 50)` -regeln, du ser taggkomponenterna som skapades i tidigare lektioner. Tillägget Core innehåller det grundläggande JavaScript som krävs för alla egenskaper för webbtaggar.
 
 1. Välj **[!UICONTROL Spara och bygg för utveckling]**
 
