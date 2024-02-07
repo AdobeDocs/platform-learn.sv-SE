@@ -2,9 +2,9 @@
 title: Konfigurera ett datastream
 description: Lär dig hur du aktiverar ett datastream och konfigurerar Experience Cloud-lösningar. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Datastreams
-source-git-commit: 58034fc649a06b4e17ffddfd0640a81a4616f688
+source-git-commit: ef3d374f800905c49cefba539c1ac16ee88c688b
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '547'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Nu kan du skapa en datastream som anger för Platform Edge Network var data som 
 
    >[!NOTE]
    >
-   >Om du använder ett plattformsbaserat program som Real-Time CDP rekommenderar vi att du använder en utvecklingssandlåda för den här självstudiekursen. Om du inte gör det använder du **[!UICONTROL Prod]** sandlåda.
+   >Om du använder ett plattformsbaserat program som Real-Time CDP eller Journey Optimizer rekommenderar vi att du använder en utvecklingssandlåda för den här kursen. Om du inte gör det använder du **[!UICONTROL Prod]** sandlåda.
 
 1. Gå till **[!UICONTROL Datastreams]** till vänster navigering
 1. Välj **[!UICONTROL Ny datastream]** till höger på skärmen.
@@ -52,13 +52,6 @@ Nu kan du skapa en datastream som anger för Platform Edge Network var data som 
 1. Välj **[!UICONTROL Spara]**
 
    ![Skapa datastream](assets/datastream-create-new-datastream.png)
-
-   >[!AVAILABILITY]
-   >
-   >Mappningsfunktionen kommer att ingå i kursen vid ett senare tillfälle.
-
-
-
 
 På nästa skärm kan du lägga till tjänster som Adobe i dataströmmen, men du kommer inte att lägga till några tjänster just nu i självstudiekursen. Du kommer att göra det senare i lektionerna [Konfigurera Experience Platform](setup-experience-platform.md), [Ställ in Analytics](setup-analytics.md), [Konfigurera Audience Manager](setup-audience-manager.md), [Konfigurera mål](setup-target.md), eller [Vidarebefordran av händelser](setup-event-forwarding.md).
 
@@ -76,9 +69,9 @@ Med åsidosättningar av dataströmmar kan du definiera ytterligare konfiguratio
 1. Först definierar du åsidosättningar av datastream i datastream-konfigurationen. Detta måste göras per Adobe-program som du vill åsidosätta.
 1. Sedan skickar du åsidosättningarna till Edge Network antingen via en SDK-sändningshändelseåtgärd för Web SDK eller genom en konfiguration i taggtillägget för Web SDK.
 
-Se [information om åsidosättning av dataströmskonfiguration](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overrides.html?lang=en) om du vill ha detaljerade anvisningar om hur du åsidosätter datastream-konfigurationer.
+I [Konfigurera Adobe Analytics](setup-analytics.md) lektioner som du åsidosätter rapportsviten för en sida med hjälp av Platform Web SDK Send Event Action.
 
-I Konfigurera Adobe Analytics-lektionen [åsidosätta rapportsviten för en sida med plattformens SDK-åtgärd för skicka händelse](setup-analytics.md).
+Se [information om åsidosättning av dataströmskonfiguration](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overrides.html?lang=en) om du vill ha detaljerade anvisningar om hur du åsidosätter datastream-konfigurationer.
 
 Du kan nu installera tillägget Platform Web SDK i taggegenskapen!
 

@@ -2,7 +2,7 @@
 title: Självstudiekurs om att implementera Adobe Experience Cloud med webb-SDK
 description: Lär dig hur du implementerar Experience Cloud-program med Adobe Experience Platform Web SDK.
 recommendations: catalog, noDisplay
-source-git-commit: 12e6e9d06ae0d6945c165032d89fd0f801d94ff2
+source-git-commit: ef3d374f800905c49cefba539c1ac16ee88c688b
 workflow-type: tm+mt
 source-wordcount: '695'
 ht-degree: 2%
@@ -76,9 +76,9 @@ I den här lektionen antas du ha ett Adobe-konto och de behörigheter som krävs
 
 ## Läs in Luma-webbplatsen
 
-Läs in [Lumas webbplats](https://luma.enablementadobe.com/content/luma/us/en.html) i en separat webbläsarflik och bokmärk den så att du enkelt kan läsa in den när det behövs under självstudiekursen. Du behöver inte ha någon annan åtkomst till Luma än att kunna läsa in vår värdbaserade produktionsplats.
+Läs in [Lumas webbplats](https://luma.enablementadobe.com/content/luma/us/en.html){target="blank"} i en separat webbläsarflik och bokmärk den så att du enkelt kan läsa in den när det behövs under självstudiekursen. Du behöver inte ha någon annan åtkomst till Luma än att kunna läsa in vår värdbaserade produktionsplats.
 
-[![Lumas webbplats](assets/old-overview-luma.png)](https://luma.enablementadobe.com/content/luma/us/en.html)
+[![Lumas webbplats](assets/old-overview-luma.png)](https://luma.enablementadobe.com/content/luma/us/en.html){target="blank"}
 
 Kom så börjar vi!
 

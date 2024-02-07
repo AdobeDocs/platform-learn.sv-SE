@@ -2,7 +2,7 @@
 title: Installera och konfigurera taggtillägget Adobe Experience Platform Web SDK
 description: Lär dig hur du installerar och konfigurerar plattformens SDK-taggtillägg i gränssnittet för datainsamling. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK
-source-git-commit: f08866de1bd6ede50bda1e5f8db6dbd2951aa872
+source-git-commit: ef3d374f800905c49cefba539c1ac16ee88c688b
 workflow-type: tm+mt
 source-wordcount: '604'
 ht-degree: 0%
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Installera taggtillägget Adobe Experience Platform Web SDK
 
-Lär dig hur du installerar och konfigurerar plattformens SDK-taggtillägg. Det enklaste sättet att implementera Web SDK är att använda tagghanteraren Adobe, taggar (tidigare kallad Launch). Taggtillägget Platform Web SDK är _endast taggtillägg_ som krävs för att skicka data till _alla Adobe Experience Cloud-program_, inklusive [Analyser](setup-analytics.md), [Mål](setup-target.md), [Audience Manager](setup-audience-manager.md), Real-time Customer Data Platform och Journey Optimizer!
+Lär dig hur du installerar och konfigurerar plattformens SDK-taggtillägg. Det enklaste sättet att implementera Web SDK är att använda tagghanteraren Adobe, taggar (tidigare kallad Launch). Taggtillägget Platform Web SDK är _endast taggtillägg_ som krävs för att skicka data till _alla Adobe Experience Cloud-program_, inklusive [Analyser](setup-analytics.md), [Mål](setup-target.md), [Audience Manager](setup-audience-manager.md), Real-time Customer Data Platform och [Journey Optimizer](journey-optimizer/setup-web-channel.md)!
 
 ## Utbildningsmål
 

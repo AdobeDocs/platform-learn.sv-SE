@@ -2,9 +2,9 @@
 title: Konfigurera ett identitetsnamnutrymme
 description: Lär dig hur du konfigurerar identitetsnamnutrymmen som ska användas med Adobe Experience Platform Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Identities
-source-git-commit: f08866de1bd6ede50bda1e5f8db6dbd2951aa872
+source-git-commit: ef3d374f800905c49cefba539c1ac16ee88c688b
 workflow-type: tm+mt
-source-wordcount: '643'
+source-wordcount: '640'
 ht-degree: 0%
 
 ---
@@ -13,13 +13,15 @@ ht-degree: 0%
 
 Lär dig hur du konfigurerar identitetsnamnutrymmen som ska användas med Adobe Experience Platform Web SDK.
 
-The [Adobe Experience Platform Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html) ställer in ett gemensamt besökar-ID för olika Adobe-program för att underlätta för Experience Cloud, t.ex. målgruppsdelning mellan olika program. Du kan också skicka dina egna kund-ID:n till tjänsten för att möjliggöra målinriktning mellan olika enheter och integrering med andra system, som CRM-systemet (Customer Relationship Management).
+The [Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html) ställer in ett gemensamt besökar-ID (ECID) för SDK-baserade Adobe-program för att underlätta Experience Cloud-funktioner, t.ex. målgruppsdelning mellan program. Du kan också skicka dina egna kund-ID:n till tjänsten för att möjliggöra målinriktning mellan olika enheter och integrering med andra system, som CRM-systemet (Customer Relationship Management).
 
-Om din webbplats redan använder Experience Cloud ID-tjänsten på din webbplats (antingen via Visitor API eller Experience Cloud ID Service Tag-tillägget) och du vill fortsätta använda den när du migrerar till Adobe Experience Platform Web SDK, måste du använda den senaste versionen av Visitor API eller Experience Cloud ID Service Tag-tillägget. Se [ID-migrering](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en) för mer information.
+The [Adobe Experience Platform Identity Service](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html?lang=sv) (Ja, det finns två!) använder ECID:n och kund-ID:n för att generera identitetsdiagram, så att du kan sammanfoga attribut och beteenden i kundprofiler i realtid.
+
+
 
 >[!NOTE]
 >
-> I demonstrationssyfte kan du använda övningarna i den här lektionen för att fånga identitetsinformationen för en fiktiv kund som är inloggad på [Luma Demo Site](https://luma.enablementadobe.com/content/luma/us/en.html) med hjälp av inloggningsuppgifterna, **användare: `test@adobe.com` / lösenord: test**. Du kan använda de här stegen för att skapa en annan identitet för dina egna syften, men om du vill lära dig funktionerna i identitetskartan i gränssnittet för datainsamling rekommenderar vi att du följer med för att hämta exempelidentiteten.
+> I demonstrationssyfte kan du använda övningarna i den här lektionen för att fånga identitetsinformationen för en fiktiv kund som är inloggad på [Luma Demo Site](https://luma.enablementadobe.com/content/luma/us/en.html) med hjälp av inloggningsuppgifterna, **användare: `test@adobe.com` / lösenord: test**.
 
 ## Utbildningsmål
 
@@ -38,6 +40,8 @@ Du måste ha slutfört tidigare lektioner:
 >[!IMPORTANT]
 >
 >The [Experience Cloud ID-tillägg](https://exchange.adobe.com/experiencecloud.details.100160.adobe-experience-cloud-id-launch-extension.html) behövs inte när du implementerar Adobe Experience Platform Web SDK, eftersom JavaScript-biblioteket för Web SDK innehåller funktioner för tjänsten för besöks-ID.
+>
+> Om din webbplats redan använder Experience Cloud ID-tjänsten på din webbplats (antingen via Visitor API eller Experience Cloud ID Service Tag-tillägget) och du vill fortsätta använda den när du migrerar till Adobe Experience Platform Web SDK, måste du använda den senaste versionen av Visitor API eller Experience Cloud ID Service Tag-tillägget. Se [ID-migrering](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en) för mer information.
 
 ## Skapa ett identitetsnamnutrymme
 
@@ -54,12 +58,12 @@ Skapa nu ett namnutrymme för Luma CRM-ID:
 
    >[!NOTE]
    >
-   >Om du använder ett plattformsbaserat program som Real-Time CDP rekommenderar vi att du använder en utvecklingssandlåda för den här självstudiekursen. Om du inte gör det använder du **[!UICONTROL Prod]** sandlåda.
+   >Om du använder ett plattformsbaserat program som Real-Time CDP eller Journey Optimizer rekommenderar vi att du använder en utvecklingssandlåda för den här kursen. Om du inte gör det använder du **[!UICONTROL Prod]** sandlåda.
 
 1. Välj **[!UICONTROL Identiteter]** till vänster navigering
 1. Välj **[!UICONTROL Bläddra]**
 
-   En lista med identitetsnamnutrymmen visas i sidans huvudgränssnitt med namn, identitetssymboler, senaste uppdateringsdatum och om de är standardnamnutrymmen eller anpassade namnutrymmen. Den högra listen innehåller information om identitetsgrafens styrka.
+   En lista med identitetsnamnutrymmen visas i sidans huvudgränssnitt med namn, identitetssymboler, senaste uppdateringsdatum och om de är standardnamnutrymmen eller anpassade namnutrymmen. Den högra listen innehåller information om [!UICONTROL Styrka för identitetsdiagram].
 
 1. Välj **[!UICONTROL Skapa namnutrymme för identitet]**
 

@@ -2,9 +2,9 @@
 title: Skapa identiteter
 description: Lär dig hur du skapar identiteter i XDM och använder dataelementet Identitetskarta för att hämta användar-ID:n. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Tags
-source-git-commit: aff41fd5ecc57c9c280845669272e15145474e50
+source-git-commit: ef3d374f800905c49cefba539c1ac16ee88c688b
 workflow-type: tm+mt
-source-wordcount: '858'
+source-wordcount: '894'
 ht-degree: 0%
 
 ---
@@ -19,13 +19,13 @@ Den här lektionen fokuserar på det dataelement för identitetskartan som finns
 
 När lektionen är slut kan du:
 
-* Förstå skillnaden mellan Experience Cloud ID (ECID) och ID för förstahandsenhet
+* Förstå relationen mellan Experience Cloud ID (ECID) och FPID (First Party Device ID)
 * Förstå skillnaden mellan oautentiserade och autentiserade ID:n
 * Skapa ett dataelement för identitetskarta
 
 ## Förutsättningar
 
-Du har en förståelse för vad ett datalager är, och vet hur det [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"} datalager och veta hur du refererar till dataelement i taggar. Du måste ha slutfört följande tidigare lektioner i självstudien:
+Du har en förståelse för vad ett datalager är, och vet hur det [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"} datalager och veta hur du refererar till dataelement i taggar. Du måste ha slutfört föregående lektioner i självstudien:
 
 * [Konfigurera ett XDM-schema](configure-schemas.md)
 * [Konfigurera ett identitetsnamnutrymme](configure-identities.md)
@@ -55,11 +55,11 @@ ECID anges med en kombination av cookies från första part och Platform Edge Ne
 
 ## FPID (First Party Device ID)
 
-FPID är cookies från första part _du använder dina egna webbservrar_ som Adobe sedan använder för att ställa in ECID, i stället för att använda cookie-filen från Web SDK. Första parts-cookies är mest effektiva när de ställs in med en server som använder en DNS A-post (för IPv4) eller en AAAA-post (för IPv6), i motsats till en DNS CNAME- eller JavaScript-kod.
+FPID är cookies från första part _du använder dina egna webbservrar_ som Adobe sedan använder för att skapa ECID, i stället för att använda cookie-filen från Web SDK. Webbläsarstödet kan variera, men cookies från första part kan vara mer varaktiga när de anges av en server som använder en DNS A-post (för IPv4) eller AAAA-post (för IPv6), i motsats till när de anges av en DNS CNAME- eller JavaScript-kod.
 
 När en FPID-cookie har angetts kan dess värde hämtas och skickas till Adobe när händelsedata samlas in. Insamlade FPID används som startvärde för att generera ECID på Platform Edge Network, som även i fortsättningen är standardidentifierare i Adobe Experience Cloud-program.
 
-Läs mer om [Första parts enhets-ID i Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html?lang=en)
+Även om FPID inte används i den här självstudiekursen bör du använda FPID i din egen Web SDK-implementering. Läs mer om [Första parts enhets-ID i Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html?lang=en)
 
 >[!CAUTION]
 >
@@ -69,7 +69,7 @@ Läs mer om [Första parts enhets-ID i Platform Web SDK](https://experienceleagu
 
 Som nämnts ovan tilldelas alla besökare av dina digitala resurser ett ECID av Adobe när de använder Platform Web SDK. Detta gör ECID till standardidentitet för att spåra oautentiserat digitalt beteende.
 
-Du kan också skicka ett autentiserat användar-ID så att plattformen kan skapa [Identitetsdiagram](https://experienceleague.adobe.com/docs/platform-learn/tutorials/identities/understanding-identity-and-identity-graphs.html?lang=en), kan Target ange sin tredje part. Detta görs genom att använda [!UICONTROL Identitetskarta] dataelementtyp.
+Du kan också skicka ett autentiserat användar-ID så att plattformen kan skapa [Identitetsdiagram](https://experienceleague.adobe.com/docs/platform-learn/tutorials/identities/understanding-identity-and-identity-graphs.html?lang=en) och Target kan ange [Tredjeparts-ID](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html). Detta görs genom att använda [!UICONTROL Identitetskarta] dataelementtyp.
 
 Skapa [!UICONTROL Identitetskarta] dataelement:
 
@@ -133,12 +133,17 @@ Skapa [!UICONTROL Identitetskarta] dataelement:
 
 I slutet av dessa steg bör du skapa följande dataelement:
 
-| CORE-tilläggsdataelement | Webbsidedataelement för plattforms-SDK |
+| Dataelement för kärntillägg | Dataelement för plattforms-SDK-tillägg |
 -----------------------------|-------------------------------
 | `cart.orderId` | `identityMap.loginID` |
-| `page.pageInfo.hierarchie1` | `xdm.variable.content` |
+| `cart.productInfo` | `xdm.variable.content` |
+| `cart.productInfo.purchase` | |
+| `page.pageInfo.hierarchie1` | |
 | `page.pageInfo.pageName` | |
 | `page.pageInfo.server` | |
+| `product.category` | |
+| `product.productInfo.sku` | |
+| `product.productInfo.title` | |
 | `user.profile.attributes.loggedIn` | |
 | `user.profile.attributes.username` | |
 
