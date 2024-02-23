@@ -3,29 +3,16 @@ title: Självstudiekurser om datainsamling
 description: Instruktionsvideor och självstudiekurser som gör dig till en kraftfull användare av datainsamling
 mini-toc-levels: 0
 exl-id: 2d153ef8-7fba-40da-b34a-cad9b24c902c
-source-git-commit: 14ec4ea743d1f323d29f9ab84506355d25c91452
+source-git-commit: d04a9dbe0f148e7ef210f1f4472a7771db5bb511
 workflow-type: tm+mt
-source-wordcount: '241'
-ht-degree: 7%
+source-wordcount: '165'
+ht-degree: 9%
 
 ---
 
 # Självstudiekurser om datainsamling
 
 Datainsamling är nästa generation av funktioner för hantering av webbplatstaggar och SDK för mobiler från Adobe. Datainsamling ger kunderna ett enkelt sätt att driftsätta och hantera de analys-, marknadsförings- och annonslösningar som behövs för att skapa relevanta kundupplevelser. Använd dessa videor och självstudiekurser för att lära dig den här viktiga tekniken.
-
-<div id="whats-new-section">
-
-## Nyheter
-
-* **[Översikt över server-API (video)](server-api/overview.md)**
-  *Skicka data med ett säkert, autentiserat server-API.*
-* **[Implementera Adobe Experience Cloud i mobilappar (självstudiekurs)](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/overview.html)**
-  *Implementera Experience Cloud-applikationer med Mobile SDK.*
-* **[Flytta taggar på klientsidan (självstudiekurs)](event-forwarding/consider-moving-tags.md)**
-  *Överväg att flytta taggar på klientsidan till händelsevidarebefordran.*
-
-</div>
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
