@@ -5,9 +5,9 @@ user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
 auto-video-transcripts: true
-source-git-commit: 6068feccb23c8485390e64cd79e021167b1271a8
+source-git-commit: 9c4e85a75f640ec9c2eaae6874e2331bf54c3ca7
 workflow-type: tm+mt
-source-wordcount: '868'
+source-wordcount: '869'
 ht-degree: 7%
 
 ---
@@ -56,7 +56,7 @@ ht-degree: 7%
    + [Skapa sekventiella målgrupper](audiences/create-sequential-audiences.md)
    + [Skapa dynamiska målgrupper](audiences/create-dynamic-audiences.md)
    + [Skapa målgrupper med flera enheter](audiences/create-multi-entity-audiences.md)
-   + [Skapa målgrupper med B2B-data](audiences/create-audiences-with-b2b-data.md)
+   + [Skapa och aktivera kontomålgrupper (B2B)](audiences/create-audiences-with-b2b-data.md)
    + [Demo av direktuppspelningssegmentering](/help/platform/audiences/streaming-segmentation-demo.md)
    + [Utvärdera en målgruppsregel](https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/evaluate-a-segment.html){target="_blank"}
    + [Skapa en datauppsättning för att exportera data](https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-dataset-export-segment.html){target="_blank"}
