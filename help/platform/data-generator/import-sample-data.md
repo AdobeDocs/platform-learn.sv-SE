@@ -5,12 +5,11 @@ feature: API
 role: Developer
 level: Experienced
 jira: KT-7349
-thumbnail: 7349.jpg
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: da94f4bd-0686-4d6a-a158-506f2e401b4e
-source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
+source-git-commit: 4db88dbae923d37884391a65ff8fc16f53e19187
 workflow-type: tm+mt
-source-wordcount: '1831'
+source-wordcount: '1763'
 ht-degree: 0%
 
 ---
@@ -154,7 +153,7 @@ Nu kan du förbereda och importera data till din plattformssandlåda. De Postman
    ![Förmånsresultat](../assets/data-generator/images/loyalty-result.png)
 
 1. Nu ska vi logga in på [Adobe Experience Platform](https://platform.adobe.com/) och navigera till datauppsättningar.
-1. Öppna `Luma Loyalty Dataset` datauppsättning, och under aktivitetsfönstret för datauppsättningen, kan du visa en lyckad batchkörning som importerade 1 000 poster. Du kan också klicka på alternativet för förhandsgranskning av datauppsättning för att verifiera de poster som har importerats. Du kan behöva vänta flera minuter för att bekräfta att 1000 [!UICONTROL Nya profilfragment] skapades.
+1. Öppna `Luma Loyalty Dataset` datauppsättning, och under aktivitetsfönstret för datauppsättningen, kan du visa en lyckad batchkörning som importerade 1 000 poster. Du kan också klicka på alternativet för förhandsgranskning av datauppsättning för att verifiera de poster som har importerats. Du kan behöva vänta flera minuter för att bekräfta att 1000 [!UICONTROL New Profile Fragments] skapades.
    ![Förmånsdatauppsättning](../assets/data-generator/images/loyalty-dataset.png)
 1. Upprepa steg 1-3 för att köra de andra samlingarna:
    * `2-Luma-CRM-Data.postman_collection.json` skapar ett schema och en ifylld datauppsättning för kundens CRM-data. Schemat är baserat på klassen XDM Individual Profile som omfattar Demografisk information, personlig kontaktinformation, inställningsinformation och en anpassad identitetsfältgrupp.
@@ -169,19 +168,19 @@ Nu kan du förbereda och importera data till din plattformssandlåda. De Postman
 
 Exempeldata har utformats så att kundprofiler i realtid som kombinerar data från flera system byggs när samlingarna har körts. Ett bra exempel på detta är den första posten i datamängderna för lojalitet, CRM och offlineköp. Slå upp den profilen för att bekräfta att data har importerats. I [Adobe Experience Platform](https://experience.adobe.com/platform/):
 
-1. Gå till **[!UICONTROL Profiler]** > **[!UICONTROL Bläddra]**
-1. Välj `Luma Loyalty Id` som **[!UICONTROL Namnutrymme för identitet]**
-1. Sök efter `5625458` som **[!UICONTROL Identitetsvärde]**
+1. Gå till **[!UICONTROL Profiles]** > **[!UICONTROL Browse]**
+1. Välj `Luma Loyalty Id` som **[!UICONTROL Identity namespace]**
+1. Sök efter `5625458` som **[!UICONTROL Identity value]**
 1. Öppna `Daniel Wright` profil
 
 >[!TIP]
 >
->Om du inte ser profilen kan du kontrollera [!UICONTROL Datauppsättningar] för att bekräfta att alla datauppsättningar har skapats och importerats. Om det ser bra ut kan du vänta i femton minuter och se om profilen är tillgänglig i visningsprogrammet.  Om det uppstår problem med dataimporten kontrollerar du felmeddelandena för att försöka hitta problemet. Du kan även försöka aktivera feldiagnostik på [!UICONTROL Datauppsättningar] och dra och släpp JSON-datafilen för att importera data igen.
+>Om du inte ser profilen kan du kontrollera [!UICONTROL Datasets] för att bekräfta att alla datauppsättningar har skapats och importerats. Om det ser bra ut kan du vänta i femton minuter och se om profilen är tillgänglig i visningsprogrammet.  Om det uppstår problem med dataimporten kontrollerar du felmeddelandena för att försöka hitta problemet. Du kan även försöka aktivera feldiagnostik på [!UICONTROL Datasets] och dra och släpp JSON-datafilen för att importera data igen.
 
 
 ![Öppna en profil](../assets/data-generator/images/validation-profile-open.png)
 
-Genom att bläddra bland data i **[!UICONTROL Attribut]** och **[!UICONTROL Händelser]** ser du att profilen innehåller data från de olika datafilerna:
+Genom att bläddra bland data i **[!UICONTROL Attributes]** och **[!UICONTROL Events]** ser du att profilen innehåller data från de olika datafilerna:
 ![Händelsedata från offlineinköpshändelsefilen](../assets/data-generator/images/validation-profile-events.png)
 
 ## Nästa steg
