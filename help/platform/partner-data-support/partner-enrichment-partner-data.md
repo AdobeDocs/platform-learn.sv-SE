@@ -6,11 +6,11 @@ topic: Integrations
 role: Architect, Data Architect, User
 level: Intermediate
 jira: KT-13830
-thumbnail: 3423075.jpg
 last-substantial-update: 2023-08-23T00:00:00Z
-source-git-commit: 7c471d9da851c594c33e00473a04996fd247bb84
+exl-id: 7b6cb89d-b514-48ae-b932-1254abd57d31
+source-git-commit: 3e8f68c89b5ab94045ec1120a95b1e2cc1d1c97a
 workflow-type: tm+mt
-source-wordcount: '71'
+source-wordcount: '64'
 ht-degree: 0%
 
 ---
