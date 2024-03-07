@@ -3,10 +3,11 @@ title: Skapa märkordselement
 description: Lär dig hur du skapar dataelement för att lagra värden som hämtas från datalagret och gör dem tillgängliga för regler och tillägg i taggegenskapen.
 feature: Tags
 level: Beginner
-jira: KT-3529
+duration: 588
 last-substantial-update: 2024-02-23T00:00:00Z
+jira: KT-3529
 exl-id: 0be71b74-758e-4952-ab77-55deb8a02eda
-source-git-commit: 1c939857f362542cf88dff3d1477cd71fa5c9389
+source-git-commit: a72fd41c9673d06585dc787ffe8086e5c9ba23a0
 workflow-type: tm+mt
 source-wordcount: '68'
 ht-degree: 0%
