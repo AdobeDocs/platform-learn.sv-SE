@@ -3,14 +3,19 @@ title: Validera Web SDK-implementeringar med Experience Platform Debugger
 description: Lär dig hur du validerar implementeringen av din Platform Web SDK med Adobe Experience Platform Debugger. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Tags,Debugger
 exl-id: 150bb1b1-4523-4b44-bd4e-6cabc468fc04
-source-git-commit: e2594d3b30897001ce6cb2f6908d75d0154015eb
+source-git-commit: 9f75ef042342e1ff9db6039e722159ad96ce5e5b
 workflow-type: tm+mt
-source-wordcount: '1071'
-ht-degree: 1%
+source-wordcount: '1039'
+ht-degree: 0%
 
 ---
 
 # Validera Web SDK-implementeringar med Experience Platform Debugger
+
+
+>[!CAUTION]
+>
+>Vi räknar med att publicera viktiga ändringar av den här självstudiekursen fredagen den 15 mars 2024. Därefter kommer många övningar att ändras och du kan behöva starta om självstudiekursen från början för att kunna slutföra alla lektioner.
 
 Lär dig hur du validerar implementeringen av din Platform Web SDK med Adobe Experience Platform Debugger.
 
@@ -57,20 +62,20 @@ Felsökaren i Experience Platform har en cool funktion som gör att du kan ersä
 
 1. Kontrollera att Luma-webbplatsen är öppen och välj ikonen för Experience Platform-felsökningstillägget
 1. Felsökaren öppnar och visar information om den hårdkodade implementeringen, som inte har med den här självstudiekursen att göra (du kan behöva läsa in Luma-webbplatsen igen när du har öppnat Felsökning)
-1. Bekräfta att felsökaren är **[!UICONTROL Ansluten till Luma]**&quot; enligt bilden nedan och välj sedan &quot;**[!UICONTROL lock]**&quot; om du vill låsa felsökaren till Luma-webbplatsen.
-1. Välj **[!UICONTROL Logga in]** och logga in på Adobe Experience Cloud med ditt Adobe ID.
-1. Gå till **[!UICONTROL Experience Platform-taggar]** till vänster navigering
+1. Bekräfta att felsökaren är **[!UICONTROL Connected to Luma]**&quot; enligt bilden nedan och välj sedan &quot;**[!UICONTROL lock]**&quot; om du vill låsa felsökaren till Luma-webbplatsen.
+1. Välj **[!UICONTROL Sign In]** och logga in på Adobe Experience Cloud med ditt Adobe ID.
+1. Gå till **[!UICONTROL Experience Platform Tags]** till vänster navigering
 
    ![Skärm för felsökningstagg](assets/validate-launch-screen.png)
 
-1. Välj **[!UICONTROL Konfiguration]** tab
-1. Till höger om där den visar dig **[!UICONTROL Sidinbäddningskoder]**&#x200B;öppnar du **[!UICONTROL Åtgärder]** och markera **[!UICONTROL Ersätt]**
+1. Välj **[!UICONTROL Configuration]** tab
+1. Till höger om där den visar dig **[!UICONTROL Page Embed Codes]**&#x200B;öppnar du **[!UICONTROL Actions]** och markera **[!UICONTROL Replace]**
 
    ![Välj Åtgärder > Ersätt](assets/validate-switch-environment.png)
 
 1. Eftersom du är autentiserad kommer felsökaren att hämta tillgängliga taggegenskaper och -miljöer. Välj `Web SDK Course` property
 1. Välj `Development` miljö
-1. Välj **[!UICONTROL Använd]** knapp
+1. Välj **[!UICONTROL Apply]** knapp
 
    ![Välj den alternativa taggegenskapen](assets/validate-switch-selection.png)
 
@@ -84,16 +89,16 @@ När du fortsätter med självstudiekursen använder du den här tekniken för a
 
 Du kan använda Felsökning för att validera implementeringen av din Platform Web SDK och visa data som skickas till Platform Edge Network:
 
-1. Gå till **[!UICONTROL Sammanfattning]** i den vänstra navigeringen om du vill se information om taggegenskapen
+1. Gå till **[!UICONTROL Summary]** i den vänstra navigeringen om du vill se information om taggegenskapen
 
    ![Fliken Sammanfattning](assets/validate-summary.png)
 
-1. Gå till **[!UICONTROL Experience Platform Web SDK]** i den vänstra navigeringen för att se **[!UICONTROL Nätverksförfrågningar]**
-1. Öppna **[!UICONTROL händelser]** rad (oroa dig inte om den här skärmbilden visar fler begäranden än din, den innehåller begäranden från framtida lektioner och du kan ignorera dem för tillfället)
+1. Gå till **[!UICONTROL Experience Platform Web SDK]** i den vänstra navigeringen för att se **[!UICONTROL Network Requests]**
+1. Öppna **[!UICONTROL events]** rad (oroa dig inte om den här skärmbilden visar fler begäranden än din, den innehåller begäranden från framtida lektioner och du kan ignorera dem för tillfället)
 
    ![Adobe Experience Platform Web SDK-begäran](assets/validate-aep-screen.png)
 
-1. Se hur vi kan se `web.webpagedetails.pageView` händelsetyp som anges i [!UICONTROL Skicka händelse] och andra färdiga variabler som följer `AEP Web SDK ExperienceEvent Mixin` format
+1. Se hur vi kan se `web.webpagedetails.pageView` händelsetyp som anges i [!UICONTROL Send Event] och andra färdiga variabler som följer `AEP Web SDK ExperienceEvent Mixin` format
 
    ![Händelseinformation](assets/validate-event-pageViews.png)
 
@@ -111,7 +116,7 @@ Du kan även validera informationen i identitetskartan:
 
    ![Web SDK in Debugger](assets/identity-debugger-websdk-dark.png)
 
-1. Välj **[!UICONTROL händelser]** rad för att öppna information i ett popup-fönster
+1. Välj **[!UICONTROL events]** rad för att öppna information i ett popup-fönster
 
    ![Web SDK in Debugger](assets/identity-deugger-websdk-event-dark.png)
 

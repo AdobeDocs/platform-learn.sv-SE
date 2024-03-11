@@ -3,14 +3,19 @@ title: Skapa dataelement
 description: Lär dig hur du skapar ett XDM-objekt och mappar dataelement till det i taggar. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Tags
 exl-id: d662ec46-de9b-44ba-974a-f81dfc842e68
-source-git-commit: aea1b1a88361f2ae0082772b5e7eeb6b25cec4c6
+source-git-commit: 9f75ef042342e1ff9db6039e722159ad96ce5e5b
 workflow-type: tm+mt
-source-wordcount: '1174'
+source-wordcount: '1152'
 ht-degree: 0%
 
 ---
 
 # Skapa dataelement
+
+
+>[!CAUTION]
+>
+>Vi räknar med att publicera viktiga ändringar av den här självstudiekursen fredagen den 15 mars 2024. Därefter kommer många övningar att ändras och du kan behöva starta om självstudiekursen från början för att kunna slutföra alla lektioner.
 
 Lär dig hur du skapar de grundläggande dataelement som behövs för att hämta in data med Experience Platform Web SDK. Samla in både innehåll- och identitetsdata på [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html). Lär dig hur du använder XDM-schemat som du skapade tidigare för att samla in data med hjälp av Platform Web SDK via ett nytt dataelement som kallas XDM-objekt.
 
@@ -63,18 +68,18 @@ Du har en förståelse för vad ett datalager är, och vet hur det [Luma demo si
 
 Innan du börjar skapa XDM-objektet skapar du följande uppsättning dataelement som ska mappas till [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"} datalager:
 
-1. Gå till **[!UICONTROL Dataelement]** och markera **[!UICONTROL Lägg till dataelement]** (eller **[!UICONTROL Skapa nytt dataelement]** om det inte finns några befintliga dataelement i taggegenskapen)
+1. Gå till **[!UICONTROL Data Elements]** och markera **[!UICONTROL Add Data Element]** (eller **[!UICONTROL Create New Data Element]** om det inte finns några befintliga dataelement i taggegenskapen)
 
    ![Skapa dataelement](assets/data-element-create.jpg)
 
 1. Namnge dataelementet `page.pageInfo.pageName`
-1. Använd **[!UICONTROL JavaScript-variabel]** **[!UICONTROL Dataelementtyp]** för att peka på ett värde i Lumas datalager: `digitalData.page.pageInfo.pageName`
+1. Använd **[!UICONTROL JavaScript Variable]** **[!UICONTROL Data Element type]** för att peka på ett värde i Lumas datalager: `digitalData.page.pageInfo.pageName`
 
-1. Markera rutorna för **[!UICONTROL Använd gemener]** och **[!UICONTROL Rensa text]** standardisera ärendet och ta bort ovidkommande utrymmen
+1. Markera rutorna för **[!UICONTROL Force lowercase value]** och **[!UICONTROL Clean text]** standardisera ärendet och ta bort ovidkommande utrymmen
 
-1. Lämna `None` som **[!UICONTROL Lagringstid]** inställning eftersom det här värdet är olika på alla sidor
+1. Lämna `None` som **[!UICONTROL Storage Duration]** inställning eftersom det här värdet är olika på alla sidor
 
-1. Välj **[!UICONTROL Spara]**
+1. Välj **[!UICONTROL Save]**
 
    ![Dataelement för sidnamn](assets/data-element-pageName.jpg)
 
@@ -97,31 +102,31 @@ Följ de här stegen för att skapa ytterligare fyra dataelement:
 
 >[!CAUTION]
 >
->The [!UICONTROL JavaScript-variabel] dataelementtypen behandlar arrayreferenser som punkter i stället för hakparenteser, så att användarnamnets dataelement refereras som `digitalData.user[0].profile[0].attributes.username` **fungerar inte**.
+>The [!UICONTROL JavaScript variable] dataelementtypen behandlar arrayreferenser som punkter i stället för hakparenteser, så att användarnamnets dataelement refereras som `digitalData.user[0].profile[0].attributes.username` **fungerar inte**.
 
 ## Skapa dataelement för identitetskarta
 
 Sedan kan du skapa dataelementet för identitetskartan:
 
-1. Gå till **[!UICONTROL Dataelement]** och markera **[!UICONTROL Lägg till dataelement]**
+1. Gå till **[!UICONTROL Data Elements]** och markera **[!UICONTROL Add Data Element]**
 
-1. **[!UICONTROL Namn]** dataelementet `identityMap.loginID`
+1. **[!UICONTROL Name]** dataelementet `identityMap.loginID`
 
-1. Som **[!UICONTROL Tillägg]**, markera `Adobe Experience Platform Web SDK`
+1. Som **[!UICONTROL Extension]**, markera `Adobe Experience Platform Web SDK`
 
-1. Som **[!UICONTROL Dataelementtyp]**, markera `Identity map`
+1. Som **[!UICONTROL Data Element Type]**, markera `Identity map`
 
-1. Då visas ett skärmyta till höger i dialogrutan **[!UICONTROL Gränssnitt för datainsamling]** för att konfigurera identiteten:
+1. Då visas ett skärmyta till höger i dialogrutan **[!UICONTROL Data Collection interface]** för att konfigurera identiteten:
 
    ![Gränssnitt för datainsamling](assets/identity-identityMap-setup.png)
 
-1. Som  **[!UICONTROL Namnutrymme]** väljer du `Luma CRM Id` namnutrymme som du tidigare skapade i [Konfigurera identiteter](configure-identities.md) lektion.
+1. Som  **[!UICONTROL Namespace]** väljer du `Luma CRM Id` namnutrymme som du tidigare skapade i [Konfigurera identiteter](configure-identities.md) lektion.
 
    >[!NOTE]
    >
    >    Om du inte ser dina `Luma CRM Id` namnutrymme kontrollerar du att du även har skapat det i din standardproduktionssandlåda. Endast namnutrymmen som skapats i standardproduktionssandlådan visas för närvarande i listrutan för namnutrymme.
 
-1. Efter **[!UICONTROL Namnutrymme]** är markerat måste ett ID anges. Välj `user.profile.attributes.username` dataelement som skapades tidigare i den här lektionen, som hämtar ett ID när användare loggar in på Luma-webbplatsen.
+1. Efter **[!UICONTROL Namespace]** är markerat måste ett ID anges. Välj `user.profile.attributes.username` dataelement som skapades tidigare i den här lektionen, som hämtar ett ID när användare loggar in på Luma-webbplatsen.
 
 <!--  >[!TIP]
    >
@@ -130,18 +135,18 @@ Sedan kan du skapa dataelementet för identitetskartan:
    >   ![Data Element  ID ](assets/identity-data-element-customer-id.png)
 -->
 
-1. Som **[!UICONTROL Autentiserat läge]**, markera **[!UICONTROL Autentiserad]**
-1. Välj **[!UICONTROL Primär]**
+1. Som **[!UICONTROL Authenticated state]**, markera **[!UICONTROL Authenticated]**
+1. Välj **[!UICONTROL Primary]**
 
-1. Välj **[!UICONTROL Spara]**
+1. Välj **[!UICONTROL Save]**
 
    ![Gränssnitt för datainsamling](assets/identity-id-namespace.png)
 
 >[!TIP]
 >
-> Adobe rekommenderar att du skickar identiteter som representerar en person, till exempel `Luma CRM Id`, som [!UICONTROL primär] identitet.
+> Adobe rekommenderar att du skickar identiteter som representerar en person, till exempel `Luma CRM Id`, som [!UICONTROL primary] identitet.
 >
-> Om identitetskartan innehåller personidentifieraren (t.ex. `Luma CRM Id`) blir personidentifieraren [!UICONTROL primär] identitet. I annat fall `ECID` blir [!UICONTROL primär] identitet.
+> Om identitetskartan innehåller personidentifieraren (t.ex. `Luma CRM Id`) blir personidentifieraren [!UICONTROL primary] identitet. I annat fall `ECID` blir [!UICONTROL primary] identitet.
 
 
 
@@ -170,11 +175,11 @@ Det finns olika sätt att mappa dataelement till XDM-objektfält. Du kan mappa e
 
 Skapa ett XDM-objekt för att hämta innehållsdata:
 
-1. I vänster navigering väljer du **[!UICONTROL Dataelement]**
-1. Välj **[!UICONTROL Lägg till dataelement]**
-1. **[!UICONTROL Namn]** dataelementet **`xdm.content`**
-1. Som **[!UICONTROL Tillägg]** välj `Adobe Experience Platform Web SDK`
-1. Som **[!UICONTROL Dataelementtyp]** välj `XDM object`
+1. I vänster navigering väljer du **[!UICONTROL Data Elements]**
+1. Välj **[!UICONTROL Add Data Element]**
+1. **[!UICONTROL Name]** dataelementet **`xdm.content`**
+1. Som **[!UICONTROL Extension]** välj `Adobe Experience Platform Web SDK`
+1. Som **[!UICONTROL Data Element Type]** välj `XDM object`
 1. Välj plattform **[!UICONTROL Sandbox]** som du skapade XDM-schemat i under [Konfigurera ett XDM-schema](configure-schemas.md) lektion, i det här exemplet `DEVELOPMENT Mobile and Web SDK Courses`
 1. Som **[!UICONTROL Schema]** väljer du `Luma Web Event Data` schema:
 
@@ -202,7 +207,7 @@ Skapa ett XDM-objekt för att hämta innehållsdata:
 
 1. Mappa till `identityMap.loginID` dataelement
 
-1. Välj **[!UICONTROL Spara]**
+1. Välj **[!UICONTROL Save]**
 
    ![Gränssnitt för datainsamling](assets/identity-dataElements-xdmContent-LumaSchema-identityMapSelect3.png)
 

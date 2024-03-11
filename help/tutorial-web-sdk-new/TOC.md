@@ -9,9 +9,9 @@ jira: KT-6953
 recommendations: noDisplay,noCatalog
 index: false
 hide: true
-source-git-commit: aff41fd5ecc57c9c280845669272e15145474e50
+source-git-commit: fd366a4848c2dd9e01b727782e2f26005a440725
 workflow-type: tm+mt
-source-wordcount: '97'
+source-wordcount: '96'
 ht-degree: 15%
 
 ---
@@ -29,7 +29,7 @@ ht-degree: 15%
    + [Installera SDK-tillägg för webben](install-web-sdk.md)
    + [Skapa dataelement](create-data-elements.md)
    + [Skapa identiteter](create-identities.md)
-   + [Skapa en taggregel](create-tag-rule.md)
+   + [Skapa taggregler](create-tag-rule.md)
    + [Validera med felsökning](validate-with-debugger.md)
    + [Validera med Assurance](validate-with-assurance.md)
 

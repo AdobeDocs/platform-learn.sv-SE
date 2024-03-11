@@ -2,9 +2,9 @@
 title: Validera Web SDK-implementeringar med Experience Platform Debugger
 description: Lär dig hur du validerar implementeringen av din Platform Web SDK med Adobe Experience Platform Debugger. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Tags,Debugger
-source-git-commit: ef3d374f800905c49cefba539c1ac16ee88c688b
+source-git-commit: fd366a4848c2dd9e01b727782e2f26005a440725
 workflow-type: tm+mt
-source-wordcount: '1226'
+source-wordcount: '1165'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,6 @@ När lektionen är klar kan du använda felsökaren för att:
 * Läsa in ett alternativt taggbibliotek
 * Validera att XDM-händelsen på klientsidan hämtar in och skickar data som förväntat till Platform Edge Network
 * Aktivera Edge Trace för att visa begäranden på serversidan som skickats av Platform Edge Network
-* Starta en Adobe Experience Platform Assurance-session för att visa ett Experience Cloud-ID som genererats av Platform Edge Network
 
 ## Förutsättningar
 
@@ -45,7 +44,7 @@ Du känner till datainsamlingstaggar och [Luma demo site](https://luma.enablemen
 * [Web SDK-tillägget är installerat i taggegenskapen](install-web-sdk.md)
 * [Skapa dataelement](create-data-elements.md)
 * [Skapa identiteter](create-identities.md)
-* [Skapa en taggregel](create-tag-rule.md)
+* [Skapa taggregler](create-tag-rule.md)
 
 ## Läsa in alternativa taggbibliotek med Felsökning
 
@@ -53,20 +52,20 @@ Felsökaren i Experience Platform har en cool funktion som gör att du kan ersä
 
 1. Se till att du har [Lumas demowebbplats](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"} öppna och markera Experience Platform-ikonen för felsökningstillägget
 1. Felsökaren öppnas och visar information om den hårdkodade implementeringen (du kan behöva läsa in Luma-webbplatsen igen när du har öppnat felsökaren)
-1. Bekräfta att felsökaren är **[!UICONTROL Ansluten till Luma]**&quot; enligt bilden nedan och välj sedan &quot;**[!UICONTROL lock]**&quot; om du vill låsa felsökaren till Luma-webbplatsen.
-1. Välj **[!UICONTROL Logga in]** och logga in på Adobe Experience Cloud med ditt Adobe ID.
-1. Gå till **[!UICONTROL Experience Platform-taggar]** till vänster navigering
+1. Bekräfta att felsökaren är **[!UICONTROL Connected to Luma]**&quot; enligt bilden nedan och välj sedan &quot;**[!UICONTROL lock]**&quot; om du vill låsa felsökaren till Luma-webbplatsen.
+1. Välj **[!UICONTROL Sign In]** och logga in på Adobe Experience Cloud med ditt Adobe ID.
+1. Gå till **[!UICONTROL Experience Platform Tags]** till vänster navigering
 
    ![Skärm för felsökningstagg](assets/validate-launch-screen.png)
 
-1. Välj **[!UICONTROL Konfiguration]** tab
-1. Till höger om där den visar dig **[!UICONTROL Sidinbäddningskoder]**&#x200B;öppnar du **[!UICONTROL Åtgärder]** och markera **[!UICONTROL Ersätt]**
+1. Välj **[!UICONTROL Configuration]** tab
+1. Till höger om där den visar dig **[!UICONTROL Page Embed Codes]**&#x200B;öppnar du **[!UICONTROL Actions]** och markera **[!UICONTROL Replace]**
 
    ![Välj Åtgärder > Ersätt](assets/validate-switch-environment.png)
 
 1. Eftersom du är autentiserad kommer felsökaren att hämta tillgängliga taggegenskaper och -miljöer. Välj din egenskap, i det här fallet `Web SDK Course 3`
 1. Välj `Development` miljö
-1. Välj **[!UICONTROL Använd]** knapp
+1. Välj **[!UICONTROL Apply]** knapp
 
    ![Välj den alternativa taggegenskapen](assets/validate-switch-selection.png)
 
@@ -80,16 +79,16 @@ När du fortsätter med självstudiekursen använder du den här tekniken för a
 
 Du kan använda felsökaren för att validera klientsidesbeacons som aktiveras från plattformens Web SDK-implementering för att visa data som skickas till Platform Edge Network:
 
-1. Gå till **[!UICONTROL Sammanfattning]** i den vänstra navigeringen om du vill se information om taggegenskapen
+1. Gå till **[!UICONTROL Summary]** i den vänstra navigeringen om du vill se information om taggegenskapen
 
    ![Fliken Sammanfattning](assets/validate-summary.png)
 
-1. Gå till **[!UICONTROL Experience Platform Web SDK]** i den vänstra navigeringen för att se **[!UICONTROL Nätverksförfrågningar]**
-1. Öppna **[!UICONTROL händelser]** rad
+1. Gå till **[!UICONTROL Experience Platform Web SDK]** i den vänstra navigeringen för att se **[!UICONTROL Network Requests]**
+1. Öppna **[!UICONTROL events]** rad
 
    ![Adobe Experience Platform Web SDK-begäran](assets/validate-aep-screen.png)
 
-1. Se hur du kan se `web.webpagedetails.pageView` händelsetyp som du har angett i [!UICONTROL Uppdatera variabel] och andra färdiga variabler som följer `AEP Web SDK ExperienceEvent` fältgrupp
+1. Se hur du kan se `web.webpagedetails.pageView` händelsetyp som du har angett i [!UICONTROL Update variable] och andra färdiga variabler som följer `AEP Web SDK ExperienceEvent` fältgrupp
 
    ![Händelseinformation](assets/validate-event-pageViews.png)
 
@@ -100,7 +99,7 @@ Du kan använda felsökaren för att validera klientsidesbeacons som aktiveras f
 > Visa och jämföra `digitalData` datalager på hemsidan:
 >
 > 1. Öppna webbläsarutvecklarverktygen på Lumas hemsida. I Chrome väljer du knapp `F12` på tangentbordet
-> 1. Välj **[!UICONTROL Konsol]** tab
+> 1. Välj **[!UICONTROL Console]** tab
 > 1. Retur `digitalData` och markera `Enter` på tangentbordet för att visa datalagrets värden
 
 ![Fliken Nätverk](assets/validate-xdm-content.png)
@@ -115,7 +114,7 @@ Du kan även validera informationen i identitetskartan:
 
    ![Web SDK in Debugger](assets/identity-debugger-websdk-dark.png)
 
-1. Välj **[!UICONTROL händelser]** rad för att öppna information i ett popup-fönster
+1. Välj **[!UICONTROL events]** rad för att öppna information i ett popup-fönster
 
    ![Web SDK in Debugger](assets/identity-deugger-websdk-event-dark.png)
 
@@ -149,8 +148,8 @@ Som du lärde dig i [Konfigurera ett datastream](configure-datastream.md) Platfo
 
 Så här aktiverar du Edge Trace:
 
-1. I vänster navigering i **[!UICONTROL Felsökning för Experience Platform]** välj **[!UICONTROL Loggar]**
-1. Välj **[!UICONTROL Kant]** och markera **[!UICONTROL Anslut]**
+1. I vänster navigering i **[!UICONTROL Experience Platform Debugger]** välj **[!UICONTROL Logs]**
+1. Välj **[!UICONTROL Edge]** och markera **[!UICONTROL Connect]**
 
    ![Koppla kantkalkering](assets/analytics-debugger-edgeTrace.png)
 
@@ -158,7 +157,7 @@ Så här aktiverar du Edge Trace:
 
    ![Ansluten kantkalkering](assets/analytics-debugger-edge-connected.png)
 
-1. Uppdatera [Lumas startsida](https://luma.enablementadobe.com/) och kontrollera **[!UICONTROL Felsökning för Experience Platform]** än en gång för att se data komma igenom.
+1. Uppdatera [Lumas startsida](https://luma.enablementadobe.com/) och kontrollera **[!UICONTROL Experience Platform Debugger]** än en gång för att se data komma igenom.
 
    ![Kantkalkering för analysfyr](assets/validate-edge-trace.png)
 

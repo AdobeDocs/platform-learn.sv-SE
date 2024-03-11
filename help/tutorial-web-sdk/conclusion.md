@@ -3,14 +3,19 @@ title: Slutsats och nästa steg
 description: Så här gör du när du är klar med självstudien
 recommendations: display,noCatalog
 exl-id: bb0ef04d-fd01-4c24-8670-a84a9e33f1b6
-source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
+source-git-commit: 9f75ef042342e1ff9db6039e722159ad96ce5e5b
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '427'
 ht-degree: 2%
 
 ---
 
 # Slutsats och nästa steg
+
+
+>[!CAUTION]
+>
+>Vi räknar med att publicera viktiga ändringar av den här självstudiekursen fredagen den 15 mars 2024. Därefter kommer många övningar att ändras och du kan behöva starta om självstudiekursen från början för att kunna slutföra alla lektioner.
 
 Grattis! Du har slutfört självstudiekursen&quot;Implementera Adobe Experience Cloud med Web SDK&quot;!
 

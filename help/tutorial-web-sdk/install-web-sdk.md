@@ -3,14 +3,19 @@ title: Installera och konfigurera taggtillägget Adobe Experience Platform Web S
 description: Lär dig hur du installerar och konfigurerar plattformens SDK-taggtillägg i gränssnittet för datainsamling. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK
 exl-id: f30a44bb-99d7-476e-873a-b7802a0fe6aa
-source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
+source-git-commit: 9f75ef042342e1ff9db6039e722159ad96ce5e5b
 workflow-type: tm+mt
-source-wordcount: '618'
+source-wordcount: '624'
 ht-degree: 0%
 
 ---
 
 # Installera taggtillägget Adobe Experience Platform Web SDK
+
+
+>[!CAUTION]
+>
+>Vi räknar med att publicera viktiga ändringar av den här självstudiekursen fredagen den 15 mars 2024. Därefter kommer många övningar att ändras och du kan behöva starta om självstudiekursen från början för att kunna slutföra alla lektioner.
 
 Lär dig hur du installerar och konfigurerar plattformens SDK-taggtillägg i gränssnittet för datainsamling. Det här taggtillägget är _endast taggtillägg_ som krävs för att skicka data till _alla Adobe Experience Cloud-program_, inklusive [Analyser](setup-analytics.md), [Mål](setup-target.md), [Audience Manager](setup-audience-manager.md), Real-time Customer Data Platform och Journey Optimizer!
 
@@ -40,12 +45,12 @@ Först måste du ha en taggegenskap. En egenskap är en behållare för alla Jav
 Skapa en ny taggegenskap för självstudiekursen:
 
 1. Öppna [Gränssnitt för datainsamling](https://launch.adobe.com/){target="_blank"}
-1. Välj **[!UICONTROL Taggar]** till vänster navigering
-1. Välj **[!UICONTROL Ny egenskap]** knapp
+1. Välj **[!UICONTROL Tags]** till vänster navigering
+1. Välj **[!UICONTROL New Property]** knapp
    ![Lägg till en ny egenskap](assets/websdk-property-addNewProperty.png)
-1. Som **[!UICONTROL Namn]**, ange `Web SDK Course` (lägg till ditt namn i slutet om flera personer från ditt företag använder den här självstudiekursen)
-1. Som **[!UICONTROL Domäner]**, ange `enablementadobe.com` (förklaras senare)
-1. Välj **[!UICONTROL Spara]**
+1. Som **[!UICONTROL Name]**, ange `Web SDK Course` (lägg till ditt namn i slutet om flera personer från ditt företag använder den här självstudiekursen)
+1. Som **[!UICONTROL Domains]**, ange `enablementadobe.com` (förklaras senare)
+1. Välj **[!UICONTROL Save]**
    ![Egenskapsinformation](assets/websdk-property-propertyDetails.png)
 
 ## Lägg till Web SDK-tillägget
@@ -53,9 +58,9 @@ Skapa en ny taggegenskap för självstudiekursen:
 Med ditt XDM-schema, datastream och taggegenskap som nu skapas är du redo att installera Platform Web SDK-tillägget:
 
 1. Öppna den nya taggegenskapen
-1. Gå till **[!UICONTROL Tillägg]** > **[!UICONTROL Katalog]**
+1. Gå till **[!UICONTROL Extensions]** > **[!UICONTROL Catalog]**
 1. Sök efter `Adobe Experience Platform Web SDK`
-1. Välj **[!UICONTROL Installera]**
+1. Välj **[!UICONTROL Install]**
 
    ![Installera SDK-tillägg för webben](assets/extension-platform-web-sdk.jpg)
 
@@ -64,9 +69,9 @@ Med ditt XDM-schema, datastream och taggegenskap som nu skapas är du redo att i
 
 Lämna de flesta standardinställningarna och uppdatera dem senare efter behov. Det enda du behöver göra nu är att länka tillägget till ditt datastream:
 
-1. Under **[!UICONTROL Datastreams]** väljer du **[!UICONTROL Välj från lista]** indatametod
+1. Under **[!UICONTROL Datastreams]** väljer du **[!UICONTROL Choose from list]** indatametod
 1. Välj den datastream du skapade tidigare, `Luma Web SDK`
-1. Välj **[!UICONTROL Spara]**
+1. Välj **[!UICONTROL Save]**
    >[!NOTE]
    >
    > Om du inte hittar ditt datastream går du till [Konfigurera ett datastream](configure-datastream.md) lektion och följ stegen för att skapa en
@@ -77,7 +82,7 @@ Nu när du har installerat Platform Web SDK och kopplat det till datastream är 
 
 >[!NOTE]
 >
->Under den här självstudiekursen konfigurerar du bara en datastream och associerar den med alla taggmiljöer (utveckling, scen och produktion). När du implementerar Platform Web SDK på din egen webbplats bör du konfigurera ett separat datastam för varje miljö och mappa dem till dina taggmiljöer med hjälp av **[!UICONTROL Indatametod]** > **[!UICONTROL Ange värden]**
+>Under den här självstudiekursen konfigurerar du bara en datastream och associerar den med alla taggmiljöer (utveckling, scen och produktion). När du implementerar Platform Web SDK på din egen webbplats bör du konfigurera ett separat datastam för varje miljö och mappa dem till dina taggmiljöer med hjälp av **[!UICONTROL Input method]** > **[!UICONTROL Enter values]**
 >
 >![Val av datastam](assets/extension-luma-web-sdk-datastream-extension-enterValues.png)
 

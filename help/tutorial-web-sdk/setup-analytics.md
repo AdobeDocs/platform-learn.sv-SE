@@ -3,14 +3,19 @@ title: Konfigurera Adobe Analytics med Experience Platform Web SDK
 description: Lär dig hur du konfigurerar Adobe Analytics med Experience Platform Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 solution: Data Collection, Analytics
 exl-id: de86b936-0a47-4ade-8ca7-834c6ed0f041
-source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
+source-git-commit: 9f75ef042342e1ff9db6039e722159ad96ce5e5b
 workflow-type: tm+mt
-source-wordcount: '3545'
+source-wordcount: '3305'
 ht-degree: 0%
 
 ---
 
 # Konfigurera Adobe Analytics med Platform Web SDK
+
+
+>[!CAUTION]
+>
+>Vi räknar med att publicera viktiga ändringar av den här självstudiekursen fredagen den 15 mars 2024. Därefter kommer många övningar att ändras och du kan behöva starta om självstudiekursen från början för att kunna slutföra alla lektioner.
 
 Lär dig konfigurera Adobe Analytics med [Experience Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html), skapa taggregler för att skicka data till Adobe Analytics och validera att Analytics hämtar in data som förväntat.
 
@@ -33,7 +38,7 @@ När lektionen är klar kan du:
 
 Du känner till taggar, Adobe Analytics och [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"} inloggnings- och shoppingfunktioner.
 
-Du behöver minst ett test-/dev-rapportpaket-ID. Om du inte har någon test-/dev-rapportsserie som du kan använda för den här självstudiekursen [skapa en](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/t-create-a-report-suite.html).
+Du behöver minst ett test-/dev-rapportpaket-ID. Om du inte har någon test-/dev-rapportsserie som du kan använda för den här självstudiekursen, [skapa en](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/t-create-a-report-suite.html).
 
 Du måste ha slutfört alla steg från de föregående avsnitten i självstudien:
 
@@ -97,17 +102,17 @@ Platform Web SDK skickar data från din webbplats till Platform Edge Network. Di
 
    ![Välj dataströmmen för Luma Web SDK](assets/datastream-luma-web-sdk.png)
 
-1. Välj **[!UICONTROL Lägg till tjänst]**
+1. Välj **[!UICONTROL Add Service]**
    ![Lägg till en tjänst i datastream](assets/analytics-addService.png)
-1. Välj **[!UICONTROL Adobe Analytics]** som **[!UICONTROL Tjänst]**
-1. Ange  **[!UICONTROL Report Suite-ID]** av din utvecklingsrapportsserie
-1. Välj **[!UICONTROL Spara]**
+1. Välj **[!UICONTROL Adobe Analytics]** som **[!UICONTROL Service]**
+1. Ange  **[!UICONTROL Report Suite ID]** av din utvecklingsrapportsserie
+1. Välj **[!UICONTROL Save]**
 
    ![DataStream Save analytics](assets/analytics-datastream-save.png)
 
    >[!TIP]
    >
-   >Lägg till fler rapportsviter genom att välja **[!UICONTROL Lägg till rapportsvit]** motsvarar taggning i flera programsviter.
+   >Lägg till fler rapportsviter genom att välja **[!UICONTROL Add Report Suite]** motsvarar taggning i flera programsviter.
 
 >[!WARNING]
 >
@@ -123,13 +128,13 @@ Hämta sedan in ytterligare data från Luma-datalagret och skicka dem till Platf
 Under lektionen Skapa dataelement kan du [skapade JavaScript-dataelement](create-data-elements.md#create-data-elements-to-capture-the-data-layer) som fångade innehåll och identitetsinformation. Nu ska du skapa ytterligare dataelement för att hämta in e-handelsdata. På grund av [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"} använder olika datalagerstrukturer för produktinformationssidor och produkter i kundvagnen, måste du skapa dataelement för varje scenario. Du måste skapa vissa anpassade kodelement för att kunna hämta det du behöver från Luma-datalagret, som kanske inte behövs när du implementerar på din egen webbplats. I så fall måste du slingra dig igenom en mängd olika varukorgsartiklar för att få information om varje produkt. Använd följande kodfragment:
 
 1. Öppna taggegenskapen som du använder för självstudiekursen
-1. Gå till **[!UICONTROL Dataelement]**
-1. Välj **[!UICONTROL Lägg till dataelement]**
+1. Gå till **[!UICONTROL Data Elements]**
+1. Välj **[!UICONTROL Add Data Element]**
 1. Ge den ett namn **`product.productInfo.sku`**
-1. Använd **[!UICONTROL Egen kod]** **[!UICONTROL Dataelementtyp]**
-1. Lämna kryssrutor för **[!UICONTROL Använd gemener]** och **[!UICONTROL Rensa text]** avmarkerad
-1. Lämna `None` som **[!UICONTROL Lagringstid]** inställning eftersom det här värdet är olika på alla sidor
-1. Välj **[!UICONTROL Öppna redigeraren]**
+1. Använd **[!UICONTROL Custom Code]** **[!UICONTROL Data Element Type]**
+1. Lämna kryssrutor för **[!UICONTROL Force lowercase value]** och **[!UICONTROL Clean text]** avmarkerad
+1. Lämna `None` som **[!UICONTROL Storage Duration]** inställning eftersom det här värdet är olika på alla sidor
+1. Välj **[!UICONTROL Open Editor]**
 
    ![Element för anpassade koddata](assets/data-element-open-editor.jpg)
 
@@ -144,11 +149,11 @@ Under lektionen Skapa dataelement kan du [skapade JavaScript-dataelement](create
    return cartItem;
    ```
 
-1. Välj **[!UICONTROL Spara]** för att spara den anpassade koden
+1. Välj **[!UICONTROL Save]** för att spara den anpassade koden
 
    ![Produkt-SKU för anpassad kod](assets/data-element-products-sku-custom-code.jpg)
 
-1. Välj **[!UICONTROL Spara]** spara dataelementet
+1. Välj **[!UICONTROL Save]** spara dataelementet
 
 Följ de här stegen för att skapa ytterligare dataelement:
 
@@ -202,7 +207,7 @@ När du har lagt till dessa dataelement och skapat de tidigare elementen i [Skap
 >I den här självstudiekursen skapar du olika XDM-objekt för varje händelse. Det innebär att du måste mappa om variabler som betraktas som&quot;globalt&quot; tillgängliga för varje träff, till exempel sidnamn och identityMap. Du kan dock [Sammanfoga objekt](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/core/overview.html#merged-objects) eller använda [Mappa tabeller](https://exchange.adobe.com/experiencecloud.details.103136.mapping-table.html) att hantera XDM-objekten effektivare i verkligheten. I den här lektionen betraktas de globala variablerna som:
 >
 >* **[!UICONTROL identityMap]** för att hämta det autentiserade ID:t enligt [Skapa dataelement för identitetskarta](create-data-elements.md#create-identity-map-data-element) träna i [Skapa dataelement](create-data-elements.md) lektion.
->* **[!UICONTROL webb]** objekt för att hämta innehåll enligt [content XDM-objekt](create-data-elements.md#map-content-data-elements-to-XDM-Schema-individually) träna i [Skapa dataelement](create-data-elements.md) lektion på alla dataelement ovan.
+>* **[!UICONTROL web]** objekt för att hämta innehåll enligt [content XDM-objekt](create-data-elements.md#map-content-data-elements-to-XDM-Schema-individually) träna i [Skapa dataelement](create-data-elements.md) lektion på alla dataelement ovan.
 
 ### Öka sidvyer
 
@@ -230,7 +235,7 @@ Innan du mappar till produktsträngen är det viktigt att förstå att det finns
 
 Se [Samla in data om handel och produkter](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html?lang=en) för mer information.
 
-Det är också viktigt att du förstår att du kan **[!UICONTROL ange enskilda attribut]** till enskilda XDM-fält eller **[!UICONTROL tillhandahåller en hel array]** till ett XDM-objekt.
+Det är också viktigt att du förstår att du kan **[!UICONTROL provide individual attributes]** till enskilda XDM-fält eller **[!UICONTROL provide an entire array]** till ett XDM-objekt.
 
 ![XDM-objekt för sidvyer](assets/analytics-xdm-population.png)
 
@@ -238,9 +243,9 @@ Det är också viktigt att du förstår att du kan **[!UICONTROL ange enskilda a
 
 Du kan mappa till enskilda variabler för att samla in data på sidan med produktinformation på Luma Demo-webbplatsen:
 
-1. Skapa en **[!UICONTROL XDM-objekt]** **[!UICONTROL Dataelementtyp]** namngiven **`xdm.commerce.prodView`**
+1. Skapa en **[!UICONTROL XDM object]** **[!UICONTROL Data Element Type]** namngiven **`xdm.commerce.prodView`**
 1. Välj samma plattformssandlåda och XDM-schema som användes i tidigare lektioner
-1. Öppna **[!UICONTROL handel]** object
+1. Öppna **[!UICONTROL commerce]** object
 1. Öppna **[!UICONTROL productViews]** objekt och ange **[!UICONTROL value]** till `1`
 
    ![Mappning av dataelement till XDM-objekt](assets/analytics-commerce-prodView.png)
@@ -251,8 +256,8 @@ Du kan mappa till enskilda variabler för att samla in data på sidan med produk
 
 
 1. Bläddra nedåt till och markera `productListItems` array
-1. Välj **[!UICONTROL Ange enskilda objekt]**
-1. Välj **[!UICONTROL Lägg till objekt]**
+1. Välj **[!UICONTROL Provide individual items]**
+1. Välj **[!UICONTROL Add Item]**
 
    ![Anger produktvisningshändelse](assets/data-element-xdm-productlistitem.png)
 
@@ -260,7 +265,7 @@ Du kan mappa till enskilda variabler för att samla in data på sidan med produk
    >
    >The **`productListItems`** är en `array` datatyp så att data förväntas komma in som en samling element. På grund av Luma-demonstrationswebbplatsens datalagerstruktur och eftersom det bara är möjligt att visa en produkt i taget på Luma-webbplatsen, kommer du att lägga till objekt individuellt. När du implementerar på din egen webbplats, beroende på din datalagerstruktur, kanske du kan tillhandahålla en hel array.
 
-1. Markera för att öppna **[!UICONTROL Objekt 1]**
+1. Markera för att öppna **[!UICONTROL Item 1]**
 1. Mappa följande XDM-variabler till dataelement
 
    * **`productListItems.item1.SKU`** till `%product.productInfo.sku%`
@@ -273,7 +278,7 @@ Du kan mappa till enskilda variabler för att samla in data på sidan med produk
    >Innan du sparar det här XDM-objektet måste du även ange globala variabler och sidvisningsökare:
    >![Återställa globala variabler i XDM](assets/analytics-global-xdm.png)
 
-1. Välj **[!UICONTROL Spara]**
+1. Välj **[!UICONTROL Save]**
 
 ### Mappa en hel array till ett XDM-objekt
 
@@ -287,14 +292,14 @@ Jämför dataelementet med `productListItems` struktur (tips, det ska matcha).
 
 >[!IMPORTANT]
 >
->Observera hur numeriska variabler översätts, med strängvärden i datalagret som `price` och `qty` formateras om till tal i dataelementet. Dessa formatkrav är viktiga för dataintegriteten i plattformar och fastställs under [konfigurera scheman](configure-schemas.md) steg. I exemplet **[!UICONTROL kvantitet]** använder **[!UICONTROL Heltal]** datatyp.
+>Observera hur numeriska variabler översätts, med strängvärden i datalagret som `price` och `qty` formateras om till tal i dataelementet. Dessa formatkrav är viktiga för dataintegriteten i plattformar och fastställs under [konfigurera scheman](configure-schemas.md) steg. I exemplet **[!UICONTROL quantity]** använder **[!UICONTROL Integer]** datatyp.
 > ![XDM-schemadatatyp](assets/schema-data-type.png)
 
 Nu tillbaka till mappningen av XDM-objektet till en hel array. Skapa ett XDM-objektdataelement för att hämta produkter på kundvagnssidan:
 
-1. Skapa en **[!UICONTROL XDM-objekt]** **[!UICONTROL Dataelementtyp]** namngiven **`xdm.commerce.cartView`**
+1. Skapa en **[!UICONTROL XDM object]** **[!UICONTROL Data Element Type]** namngiven **`xdm.commerce.cartView`**
 1. Välj samma plattformssandlåda och XDM-schema som du använder för den här självstudien
-1. Öppna **[!UICONTROL handel]** object
+1. Öppna **[!UICONTROL commerce]** object
 1. Öppna **[!UICONTROL productListViews]** objekt och ange `value` till `1`
 
    >[!TIP]
@@ -302,7 +307,7 @@ Nu tillbaka till mappningen av XDM-objektet till en hel array. Skapa ett XDM-obj
    >Det här steget motsvarar inställningen `scView` händelse i Analytics
 
 1. Bläddra nedåt till och markera **[!UICONTROL productListItems]** array
-1. Välj **[!UICONTROL Ange hela matrisen]**
+1. Välj **[!UICONTROL Provide entire array]**
 1. Mappa till **`cart.productInfo`** dataelement
 
    ![Hela arraymappningen till XDM-objektet](assets/data-element-xdm-provide-array.png)
@@ -312,9 +317,9 @@ Nu tillbaka till mappningen av XDM-objektet till en hel array. Skapa ett XDM-obj
    >Innan du sparar det här XDM-objektet måste du även ange globala variabler och sidvisningsökare:
    >![Återställa globala variabler i XDM](assets/analytics-global-xdm.png)
 
-1. Välj **[!UICONTROL Spara]**
+1. Välj **[!UICONTROL Save]**
 
-Skapa en till **[!UICONTROL XDM-objekt]**  **[!UICONTROL Dataelementtyp]** för utcheckning har anropats `xdm.commerce.checkout`. Den här gången anger du **[!UICONTROL commerce.checkouts.value]** till `1`, karta **[!UICONTROL productListItems]** till **`cart.productInfo`** som du just gjorde, och lägg till de&quot;globala&quot; variablerna och sidvisningsräknaren.
+Skapa en till **[!UICONTROL XDM object]**  **[!UICONTROL Data Element Type]** för utcheckning har anropats `xdm.commerce.checkout`. Den här gången anger du **[!UICONTROL commerce.checkouts.value]** till `1`, karta **[!UICONTROL productListItems]** till **`cart.productInfo`** som du just gjorde, och lägg till de&quot;globala&quot; variablerna och sidvisningsräknaren.
 
 >[!TIP]
 >
@@ -323,9 +328,9 @@ Skapa en till **[!UICONTROL XDM-objekt]**  **[!UICONTROL Dataelementtyp]** för 
 
 Det finns ytterligare steg för att hämta `purchase` händelse:
 
-1. Skapa en till  **[!UICONTROL XDM-objekt]**  **[!UICONTROL Dataelementtyp]** för inköp anropade `xdm.commerce.purchase`
-1. Öppna **[!UICONTROL handel]** object
-1. Öppna **[!UICONTROL beställa]** object
+1. Skapa en till  **[!UICONTROL XDM object]**  **[!UICONTROL Data Element Type]** för inköp anropade `xdm.commerce.purchase`
+1. Öppna **[!UICONTROL commerce]** object
+1. Öppna **[!UICONTROL order]** object
 1. Karta **[!UICONTROL purchaseID]** till `cart.orderId` dataelement
 1. Ange **[!UICONTROL currencyCode]** till hårdkodat värde `USD`
 
@@ -345,7 +350,7 @@ Det finns ytterligare steg för att hämta `purchase` händelse:
    >Innan du sparar det här XDM-objektet måste du även ange globala variabler och sidvisningsökare:
    >![Återställa globala variabler i XDM](assets/analytics-global-xdm.png)
 
-1. Välj **[!UICONTROL Spara]**
+1. Välj **[!UICONTROL Save]**
 
 I slutet av dessa steg bör du skapa följande fem XDM-objektdataelement:
 
@@ -363,37 +368,37 @@ I slutet av dessa steg bör du skapa följande fem XDM-objektdataelement:
 
 När du har skapat flera XDM-objektdataelement kan du ange beacons med hjälp av regler. I den här övningen skapar du individuella regler per e-handelshändelse och användningsvillkor så att reglerna aktiveras på rätt sidor. Låt oss börja med en produktvyhändelse.
 
-1. Välj **[!UICONTROL Regler]** och sedan **[!UICONTROL Lägg till regel]**
+1. Välj **[!UICONTROL Rules]** och sedan **[!UICONTROL Add Rule]**
 1. Ge den ett namn  [!UICONTROL `product view - library load - AA`]
-1. Under **[!UICONTROL Händelser]**, markera **[!UICONTROL Bibliotek inläst (sidan ovanpå)]**
-1. Under **[!UICONTROL Villkor]**, välj **[!UICONTROL Lägg till]**
+1. Under **[!UICONTROL Events]**, markera **[!UICONTROL Library Loaded (Page Top)]**
+1. Under **[!UICONTROL Conditions]**, välj **[!UICONTROL Add]**
 
    ![XDM-regler för analyser](assets/analytics-rule-product-view-event.png)
 
-1. Lämna **[!UICONTROL Typ av logik]** as **[!UICONTROL Normal]**
-1. Lämna **[!UICONTROL Tillägg]** as **[!UICONTROL Core]**
-1. Välj **[!UICONTROL Villkorstyp]** as **[!UICONTROL Sökväg utan frågesträng]**
+1. Lämna **[!UICONTROL Logic Type]** as **[!UICONTROL Regular]**
+1. Lämna **[!UICONTROL Extensions]** as **[!UICONTROL Core]**
+1. Välj **[!UICONTROL Condition Type]** as **[!UICONTROL Path Without Query String]**
 1. Till höger aktiverar du **[!UICONTROL Regex]** växla
-1. Under **[!UICONTROL bana är lika med]** set `/products/`. För demonstrationswebbplatsen Luma säkerställer den att regeln endast aktiveras på produktsidor
-1. Välj **[!UICONTROL Behåll ändringar]**
+1. Under **[!UICONTROL path equals]** set `/products/`. För demonstrationswebbplatsen Luma säkerställer den att regeln endast aktiveras på produktsidor
+1. Välj **[!UICONTROL Keep Changes]**
 
    ![XDM-regler för analyser](assets/analytics-tags-prodView.png)
 
-1. Under **[!UICONTROL Åtgärder]** välj **[!UICONTROL Lägg till]**
+1. Under **[!UICONTROL Actions]** välj **[!UICONTROL Add]**
 1. Välj **[!UICONTROL Adobe Experience Platform Web SDK]** extension
-1. Välj **[!UICONTROL Åtgärdstyp]** as **[!UICONTROL Skicka händelse]**
-1. The **[!UICONTROL Typ]** fältet har en nedrullningsbar lista med värden att välja mellan. Välj `[!UICONTROL commerce.productViews]`
+1. Välj **[!UICONTROL Action Type]** as **[!UICONTROL Send event]**
+1. The **[!UICONTROL Type]** fältet har en nedrullningsbar lista med värden att välja mellan. Välj `[!UICONTROL commerce.productViews]`
 
    >[!TIP]
    >
    >Det värde som markeras här påverkar inte hur data mappas till Analytics, men vi rekommenderar att variabeln tillämpas noggrant eftersom den används i Adobe Experience Platform segmentbygggränssnitt. Det valda värdet är tillgängligt att använda i `[!UICONTROL c.a.x.eventtype]` sammanhangsdatavariabel nedströms.
 
-1. Under **[!UICONTROL XDM-data]** väljer du `[!UICONTROL xdm.commerce.prodView]` XDM-objektdataelement
-1. Välj **[!UICONTROL Behåll ändringar]**
+1. Under **[!UICONTROL XDM Data]** väljer du `[!UICONTROL xdm.commerce.prodView]` XDM-objektdataelement
+1. Välj **[!UICONTROL Keep Changes]**
 
    ![XDM-regler för analyser](assets/analytics-rule-commerce-productViews.png)
 
-1. Regeln ska se ut ungefär som nedan. Välj **[!UICONTROL Spara]**
+1. Regeln ska se ut ungefär som nedan. Välj **[!UICONTROL Save]**
 
    ![XDM-regler för analyser](assets/analytics-rule-product-view.png)
 
@@ -402,22 +407,22 @@ Upprepa samma sak för alla andra e-handelshändelser med följande parametrar:
 
 **Regelnamn**: kundvagnsvy - biblioteksinläsning - AA
 
-* **[!UICONTROL Händelsetyp]**: Bibliotek inläst (sidan ovanpå)
-* **[!UICONTROL Villkor]**: /content/luma/us/en/user/cart.html
+* **[!UICONTROL Event Type]**: Bibliotek inläst (sidan ovanpå)
+* **[!UICONTROL Condition]**: /content/luma/us/en/user/cart.html
 * **Ange ett värde under Web SDK - skicka åtgärd**: commerce.productListViews
 * **XDM-data för Web SDK - skicka åtgärd:** `%xdm.commerce.cartView%`
 
 **Regelnamn**: utcheckning - biblioteksinläsning - AA
 
-* **[!UICONTROL Händelsetyp]**: Bibliotek inläst (sidan ovanpå)
-* **[!UICONTROL Villkor]** /content/luma/us/en/user/checkout.html
+* **[!UICONTROL Event Type]**: Bibliotek inläst (sidan ovanpå)
+* **[!UICONTROL Condition]** /content/luma/us/en/user/checkout.html
 * **Typ för Web SDK - skicka åtgärd**: commerce.checkouts
 * **XDM-data för Web SDK - skicka åtgärd:** `%xdm.commerce.checkout%`
 
 **Regelnamn**: purchase - library load - AA
 
-* **[!UICONTROL Händelsetyp]**: Bibliotek inläst (sidan ovanpå)
-* **[!UICONTROL Villkor]** /content/luma/us/en/user/checkout/order/thank-you.html
+* **[!UICONTROL Event Type]**: Bibliotek inläst (sidan ovanpå)
+* **[!UICONTROL Condition]** /content/luma/us/en/user/checkout/order/thank-you.html
 * **Typ för Web SDK - skicka åtgärd**: commerce.purchase
 * **XDM-data för Web SDK - skicka åtgärd:** `%xdm.commerce.purchase%`
 
@@ -453,7 +458,7 @@ Lär dig hur du validerar att Adobe Analytics spelar in ECID, sidvisningar, prod
    >
    > 1. Du omdirigeras automatiskt till [Didi Sport Watch produktsida](https://luma.enablementadobe.com/content/luma/us/en/products/gear/watches/didi-sport-watch.html#24-WG02) vid inläsning av nästa sida
 
-1. Om du vill aktivera Edge Trace går du till Felsökning för Experience Platform, i den vänstra navigeringen väljer du **[!UICONTROL Loggar]** väljer du **[!UICONTROL Kant]** och markera **[!UICONTROL Anslut]**
+1. Om du vill aktivera Edge Trace går du till Felsökning för Experience Platform, i den vänstra navigeringen väljer du **[!UICONTROL Logs]** väljer du **[!UICONTROL Edge]** och markera **[!UICONTROL Connect]**
 
    ![Koppla kantkalkering](assets/analytics-debugger-edgeTrace.png)
 
@@ -461,7 +466,7 @@ Lär dig hur du validerar att Adobe Analytics spelar in ECID, sidvisningar, prod
 
    ![Ansluten kantkalkering](assets/analytics-debugger-edge-connected.png)
 
-1. Uppdatera [Didi Sport Watch produktsida](https://luma.enablementadobe.com/content/luma/us/en/products/gear/watches/didi-sport-watch.html#24-WG02) och kontrollera Experience Platform Debugger igen bör du se data som kommit fram. Raden börjar med **[!UICONTROL Automatisk mappning av RSID för analyser]** är Adobe Analytics fyr
+1. Uppdatera [Didi Sport Watch produktsida](https://luma.enablementadobe.com/content/luma/us/en/products/gear/watches/didi-sport-watch.html#24-WG02) och kontrollera Experience Platform Debugger igen bör du se data som kommit fram. Raden börjar med **[!UICONTROL Analytics Automatic Mapping RSIDs]** är Adobe Analytics fyr
 1. Markera för att öppna båda `[!UICONTROL mappedQueryParams]` listruta och den andra listrutan för att visa Analytics-variabler
 
    ![Kantkalkering för analysfyr](assets/analytics-debugger-edge-analytics.png)
@@ -535,12 +540,12 @@ Nu när du har validerat Analytics-fyrar med Edge Trace kan du även validera da
 
 I den här övningen mappar du en XDM-variabel till ett utkast så att du kan visa den i realtidsrapporter. Följ de här stegen för alla anpassade mappningar du måste göra för alla `eVar`, `prop`, `event`, eller variabel som är tillgänglig via bearbetningsregler.
 
-1. Gå till Analytics-gränssnittet [!UICONTROL Administratör] > [!UICONTROL Administratörsverktyg] > [!UICONTROL Rapportsviter]
-1. Välj den rapport för utveckling/test som du använder för självstudiekursen > [!UICONTROL Redigera inställningar] > [!UICONTROL Allmänt] > [!UICONTROL Bearbetar regler]
+1. Gå till Analytics-gränssnittet [!UICONTROL Admin] > [!UICONTROL Admin Tools] > [!UICONTROL Report Suites]
+1. Välj den rapport för utveckling/test som du använder för självstudiekursen > [!UICONTROL Edit Settings] > [!UICONTROL General] > [!UICONTROL Processing Rules]
 
    ![Köp av analyser](assets/analytics-process-rules.png)
 
-1. Skapa en regel till **[!UICONTROL Skriv över värde för]** `[!UICONTROL Product Name (prop1)]` till `a.x.productlistitems.0.name`. Kom ihåg att lägga till anteckningen till varför du skapar regeln och ge den ett namn. Välj **[!UICONTROL Spara]**
+1. Skapa en regel till **[!UICONTROL Overwrite value of]** `[!UICONTROL Product Name (prop1)]` till `a.x.productlistitems.0.name`. Kom ihåg att lägga till anteckningen till varför du skapar regeln och ge den ett namn. Välj **[!UICONTROL Save]**
 
    ![Köp av analyser](assets/analytics-set-processing-rule.png)
 
@@ -548,7 +553,7 @@ I den här övningen mappar du en XDM-variabel till ett utkast så att du kan vi
    >
    >Första gången du mappar till en bearbetningsregel visas inte kontextdatavariablerna från XDM-objektet. Om du vill åtgärda det väljer du ett värde, Spara och återgå till att redigera. Alla XDM-variabler ska nu visas.
 
-1. Gå till [!UICONTROL Redigera inställningar] >  [!UICONTROL Realtid]. Konfigurera alla tre med följande parametrar som visas nedan så att du kan validera visningar av innehållssidor, produktvyer och köp
+1. Gå till [!UICONTROL Edit Settings] >  [!UICONTROL Real-Time]. Konfigurera alla tre med följande parametrar som visas nedan så att du kan validera visningar av innehållssidor, produktvyer och köp
 
    ![Köp av analyser](assets/analytics-debugger-real-time.png)
 

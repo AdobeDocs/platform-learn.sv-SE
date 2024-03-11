@@ -3,14 +3,19 @@ title: Konfigurera Adobe Target med Platform Web SDK
 description: Lär dig implementera Adobe Target med Platform Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 solution: Data Collection, Target
 exl-id: 9084f572-5fec-4a26-8906-6d6dd1106d36
-source-git-commit: 1eb67da6513106aa0339ddd65a6f86fed2a029f1
+source-git-commit: 9f75ef042342e1ff9db6039e722159ad96ce5e5b
 workflow-type: tm+mt
-source-wordcount: '3582'
+source-wordcount: '3545'
 ht-degree: 0%
 
 ---
 
 # Konfigurera Adobe Target med Platform Web SDK
+
+
+>[!CAUTION]
+>
+>Vi räknar med att publicera viktiga ändringar av den här självstudiekursen fredagen den 15 mars 2024. Därefter kommer många övningar att ändras och du kan behöva starta om självstudiekursen från början för att kunna slutföra alla lektioner.
 
 Lär dig implementera Adobe Target med Platform Web SDK. Lär dig hur du levererar upplevelser och hur du skickar ytterligare parametrar till Target.
 
@@ -84,9 +89,9 @@ Beteendet före döljning styrs av två konfigurationer i slutet av fragmentet.
 
 Det fragment som döljs är också tillgängligt i taggar:
 
-1. Gå till **[!UICONTROL Tillägg]** taggavsnitt
-1. Välj **[!UICONTROL Konfigurera]** för Adobe Experience Platform Web SDK-tillägget
-1. Välj **[!UICONTROL Kopiera fördolda fragment till Urklipp]** knapp
+1. Gå till **[!UICONTROL Extensions]** taggavsnitt
+1. Välj **[!UICONTROL Configure]** för Adobe Experience Platform Web SDK-tillägget
+1. Välj **[!UICONTROL Copy pre-hiding snippet to clipboard]** knapp
 
    ![Skapa fragment som kan döljas i förväg för asynkrona implementeringar](assets/target-flicker-async.png)
 
@@ -100,9 +105,9 @@ Adobe rekommenderar att du implementerar taggar asynkront enligt anvisningarna p
 
 Stilen för att dölja i förväg för synkrona implementeringar kan konfigureras på följande sätt:
 
-1. Gå till **[!UICONTROL Tillägg]** taggavsnitt
-1. Välj **[!UICONTROL Konfigurera]** knapp för Platform Web SDK-tillägget
-1. Välj **[!UICONTROL Redigera fördolt format]** knapp
+1. Gå till **[!UICONTROL Extensions]** taggavsnitt
+1. Välj **[!UICONTROL Configure]** knapp för Platform Web SDK-tillägget
+1. Välj **[!UICONTROL Edit pre-hiding style]** knapp
 
    ![Skapa fragment som kan döljas i förväg för asynkrona implementeringar](assets/target-flicker-sync.png)
 
@@ -128,11 +133,11 @@ Så här konfigurerar du Target i datastream:
 
    ![Välj dataströmmen för Luma Web SDK](assets/datastream-luma-web-sdk.png)
 
-1. Välj **[!UICONTROL Lägg till tjänst]**
+1. Välj **[!UICONTROL Add Service]**
    ![Lägg till en tjänst i datastream](assets/target-datastream-addService.png)
-1. Välj **[!UICONTROL Adobe Target]** som **[!UICONTROL Tjänst]**
+1. Välj **[!UICONTROL Adobe Target]** som **[!UICONTROL Service]**
 1. Om du vill kan du ange valfri information om målimplementeringen enligt anvisningarna nedan.
-1. Välj **[!UICONTROL Spara]**
+1. Välj **[!UICONTROL Save]**
 
    ![Måldatastream-konfiguration](assets/target-datastream.png)
 
@@ -140,7 +145,7 @@ Så här konfigurerar du Target i datastream:
 
 Målgrupper för Premium-kunder kan hantera användarbehörigheter med egenskaper. Med målegenskaper kan du skapa gränser runt var användare kan köra Target-aktiviteter. Se [Enterprise permissions](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html) i Target-dokumentationen för mer information.
 
-Om du vill konfigurera eller söka efter egenskapstoken går du till **Adobe Target** > **[!UICONTROL Administration]** > **[!UICONTROL Egenskaper]**. The `</>` -ikonen visar implementeringskoden. The `at_property` värde är den egenskapstoken som du skulle använda i din datastream.
+Om du vill konfigurera eller söka efter egenskapstoken går du till **Adobe Target** > **[!UICONTROL Administration]** > **[!UICONTROL Properties]**. The `</>` -ikonen visar implementeringskoden. The `at_property` värde är den egenskapstoken som du skulle använda i din datastream.
 
 ![Målegenskapstoken](assets/target-admin-properties.png)
 
@@ -155,7 +160,7 @@ Om du vill konfigurera eller söka efter egenskapstoken går du till **Adobe Tar
 
 Adobe rekommenderar att du ställer in målmiljö-ID på olika sätt för alla dina dataströmmar för utveckling, staging och produktion för att göra det enkelt.
 
-Navigera till för att konfigurera eller hitta miljö-ID:n **Adobe Target** > **[!UICONTROL Administration]** > **[!UICONTROL Miljö]**.
+Navigera till för att konfigurera eller hitta miljö-ID:n **Adobe Target** > **[!UICONTROL Administration]** > **[!UICONTROL Environments]**.
 
 ![Målmiljöer](assets/target-admin-environments.png)
 
@@ -167,7 +172,7 @@ Navigera till för att konfigurera eller hitta miljö-ID:n **Adobe Target** > **
 
 Med den här valfria inställningen kan du ange vilken identitetssymbol som ska användas för mål-ID:t för tredje part. Target stöder bara profilsynkronisering för en enskild identitetssymbol eller ett namnutrymme. Mer information finns i [Synkronisering av realtidsprofiler för mbox3rdPartyId](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html) i målguiden.
 
-Identitetssymbolerna finns i identitetslistan under **Datainsamling** > **[!UICONTROL Kund]** > **[!UICONTROL Identiteter]**.
+Identitetssymbolerna finns i identitetslistan under **Datainsamling** > **[!UICONTROL Customer]** > **[!UICONTROL Identities]**.
 
 ![Identitetslista](assets/target-identities.png)
 
@@ -191,7 +196,7 @@ Visuella personaliseringsbeslut från Target levereras av Platform Web SDK, om T
 1. I [Datainsamling](https://experience.adobe.com/#/data-collection){target="blank"} öppnar du taggegenskapen som du använder för den här självstudiekursen
 1. Öppna `all pages - library load - AA & AT` regel
 1. Välj `Adobe Experience Platform Web SDK - Send event` åtgärd
-1. Aktivera **[!UICONTROL Ge visuella personaliseringsbeslut]** med kryssrutan
+1. Aktivera **[!UICONTROL Render visual personalization decisions]** med kryssrutan
 
    ![Aktivera beslut om visuell personalisering vid återgivning](assets/target-rule-enable-visual-decisions.png)
 
@@ -201,9 +206,9 @@ Inställningen för beslut om visuell återgivning gör att Platform Web SDK aut
 
 >[!NOTE]
 >
->Vanligtvis är [!UICONTROL Ge visuella personaliseringsbeslut] inställningen ska bara aktiveras för en enskild Skicka-händelse per helsidesinläsning. Om flera Send Event-åtgärder har den här inställningen aktiverad, ignoreras efterföljande återgivningsbegäranden.
+>Vanligtvis är [!UICONTROL Render visual personalization decisions] inställningen ska bara aktiveras för en enskild Skicka-händelse per helsidesinläsning. Om flera Send Event-åtgärder har den här inställningen aktiverad, ignoreras efterföljande återgivningsbegäranden.
 
-Om du själv föredrar att återge eller vidta åtgärder för dessa beslut med egen kod kan du lämna [!UICONTROL Ge visuella personaliseringsbeslut] inställningen inaktiverad. Platform Web SDK är flexibelt och ger dig fullständig kontroll. Mer information om [manuellt återge anpassat innehåll](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html).
+Om du själv föredrar att återge eller vidta åtgärder för dessa beslut med egen kod kan du lämna [!UICONTROL Render visual personalization decisions] inställningen inaktiverad. Platform Web SDK är flexibelt och ger dig fullständig kontroll. Mer information om [manuellt återge anpassat innehåll](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html).
 
 ### Konfigurera en Target-aktivitet med Visual Experience Composer
 
@@ -246,7 +251,7 @@ Om du ställer in en aktivitet bör du se hur innehållet återges på sidan. Me
 1. Öppna webbläsartillägget Adobe Experience Platform debugger
 1. Gå till [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html) och använder felsökaren för att [växla taggegenskapen på webbplatsen till din egen utvecklingsegenskap](validate-with-debugger.md#use-the-experience-platform-debugger-to-map-to-your-tags-property)
 1. Läs in sidan igen
-1. Välj **[!UICONTROL Nätverk]** i felsökningsverktyget
+1. Välj **[!UICONTROL Network]** i felsökningsverktyget
 1. Filtrera efter **[!UICONTROL Adobe Experience Platform Web SDK]**
 1. Välj värdet i händelseraden för det första anropet
 
@@ -283,10 +288,10 @@ Anpassade beslutsomfattningar (tidigare kallade&quot;mboxes&quot;) kan användas
 
 ### Bearbeta svaret från Target
 
-Nu när du har konfigurerat Platform Web SDK för att begära innehåll för `homepage-hero` måste du göra något med svaret. Taggtillägget Platform Web SDK ger en [!UICONTROL Skicka händelse slutförd] -händelse som kan användas för att omedelbart aktivera en ny regel när ett svar från en [!UICONTROL Skicka händelse] åtgärden har tagits emot.
+Nu när du har konfigurerat Platform Web SDK för att begära innehåll för `homepage-hero` måste du göra något med svaret. Taggtillägget Platform Web SDK ger en [!UICONTROL Send Event Complete] -händelse som kan användas för att omedelbart aktivera en ny regel när ett svar från en [!UICONTROL Send Event] åtgärden har tagits emot.
 
 1. Skapa en anropad regel `homepage - send event complete - render homepage-hero`.
-1. Lägg till en händelse i regeln. Använd **Adobe Experience Platform Web SDK** tillägg och **[!UICONTROL Skicka händelse slutförd]** händelsetyp.
+1. Lägg till en händelse i regeln. Använd **Adobe Experience Platform Web SDK** tillägg och **[!UICONTROL Send event complete]** händelsetyp.
 1. Lägg till ett villkor för att begränsa regeln till Luma-startsidan (sökvägen utan frågesträng är lika med) `/content/luma/us/en.html`).
 1. Lägg till en åtgärd i regeln. Använd **Core** tillägg och **Egen kod** åtgärdstyp.
 
@@ -367,7 +372,7 @@ Nu när du har en regel för att manuellt återge ett anpassat beslutsområde ka
 
    ![Skapa en ny XT-aktivitet](assets/target-xt-create-form-activity.png)
 
-1. Välj **`homepage-hero`** plats i listrutan och **[!UICONTROL Skapa HTML]** i listrutan Innehåll. Om platsen inte är tillgänglig kan du skriva in den. Målet fyller regelbundet i nya platsnamn efter att ha tagit emot begäranden för den platsen eller det omfånget.
+1. Välj **`homepage-hero`** plats i listrutan och **[!UICONTROL Create HTML Offer]** i listrutan Innehåll. Om platsen inte är tillgänglig kan du skriva in den. Målet fyller regelbundet i nya platsnamn efter att ha tagit emot begäranden för den platsen eller det omfånget.
 
    ![Skapa en ny XT-aktivitet](assets/target-xt-form-activity.png)
 
@@ -387,7 +392,7 @@ Nu när du har en regel för att manuellt återge ett anpassat beslutsområde ka
    </div>
    ```
 
-1. På [!UICONTROL Mål och inställningar] väljer du Adobe Target som rapportkälla och [!UICONTROL Engagemang] > [!UICONTROL Sidvyer] som mål
+1. På [!UICONTROL Goals & Settings] väljer du Adobe Target som rapportkälla och [!UICONTROL Engagement] > [!UICONTROL Page Views] som mål
 1. Spara aktiviteten
 1. Om du känner dig trygg med dina ändringar kan du aktivera din aktivitet. Om du inte vill förhandsgranska utan att aktivera kan du kopiera [URL för QA-förhandsgranskning](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html).
 1. Läs in Lumas hemsida så bör du se hur ändringarna tillämpas
@@ -398,12 +403,12 @@ Nu när du har en regel för att manuellt återge ett anpassat beslutsområde ka
 
 ### Validera med felsökaren
 
-Om du har aktiverat din aktivitet bör du se innehållet återges på sidan. Även om inga aktiviteter finns tillgängliga kan du titta på [!UICONTROL Skicka händelse] nätverksanrop för att bekräfta att Target begär innehåll för dina anpassade omfattningar.
+Om du har aktiverat din aktivitet bör du se innehållet återges på sidan. Även om inga aktiviteter finns tillgängliga kan du titta på [!UICONTROL Send Event] nätverksanrop för att bekräfta att Target begär innehåll för dina anpassade omfattningar.
 
 1. Öppna webbläsartillägget Adobe Experience Platform debugger
 1. Gå till [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html) och använder felsökaren för att [växla taggegenskapen på webbplatsen till din egen utvecklingsegenskap](validate-with-debugger.md#use-the-experience-platform-debugger-to-map-to-your-tags-property)
 1. Läs in sidan igen
-1. Välj **[!UICONTROL Nätverk]** i felsökningsverktyget
+1. Välj **[!UICONTROL Network]** i felsökningsverktyget
 1. Filtrera efter **[!UICONTROL Adobe Experience Platform Web SDK]**
 1. Välj värdet i händelseraden för det första anropet
 
@@ -498,19 +503,19 @@ Nu när reglerna har uppdaterats kan du validera om data skickas korrekt med Ado
 Titta sedan i Target-gränssnittet för att bekräfta att data har tagits emot och är tillgängliga för användning i målgrupper och aktiviteter. XDM-data mappas automatiskt till anpassade Target-parametrar. Du kan validera att XDM-data har tagits emot av Target och är tillgängliga genom att skapa en målgrupp.
 
 1. Öppna [Adobe Target](https://experience.adobe.com/target)
-1. Navigera till **[!UICONTROL Målgrupper]** section
-1. Skapa en målgrupp och välj **[!UICONTROL Egen]** attributtyp
+1. Navigera till **[!UICONTROL Audiences]** section
+1. Skapa en målgrupp och välj **[!UICONTROL Custom]** attributtyp
 1. Sök i **[!UICONTROL Parameter]** fält för `web`. Listrutan ska innehålla alla XDM-fält som hör till webbsidans information.
 
 Verifiera sedan att attributet för inloggningstillståndsprofilen har skickats.
 
-1. Välj **[!UICONTROL Besökarprofil]** attributtyp
+1. Välj **[!UICONTROL Visitor Profile]** attributtyp
 1. Sök efter `loggedIn`. Om attributet är tillgängligt i listrutan skickades attributet korrekt till Target. Det kan ta flera minuter innan nya attribut blir tillgängliga i målgränssnittet.
 
 Om du har Target Premium kan du även validera att entitetsdata skickades korrekt och att produktdata skrevs till Recommendations produktkatalog.
 
 1. Navigera till **[!UICONTROL Recommendations]** section
-1. Välj **[!UICONTROL Katalogsökning]** i navigeringen till vänster
+1. Välj **[!UICONTROL Catalog Search]** i navigeringen till vänster
 1. Sök efter den produkt-SKU eller det produktnamn du besökt tidigare på Luma-webbplatsen. Produkten ska visas i produktkatalogen. Nya produkter kan ta flera minuter att söka i Recommendations produktkatalog.
 
 Nu när du är klar med den här lektionen bör du ha en fungerande implementering av Adobe Target med Platform Web SDK.

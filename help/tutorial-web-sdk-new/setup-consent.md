@@ -2,9 +2,9 @@
 title: Konfigurera samtycke med Platform Web SDK
 description: Lär dig hur du konfigurerar sekretessinställningarna för taggtillägget Experience Platform Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Tags,Consent
-source-git-commit: 904581df85df5d8fc4f36a4d47a37b03ef92d76f
+source-git-commit: fd366a4848c2dd9e01b727782e2f26005a440725
 workflow-type: tm+mt
-source-wordcount: '1603'
+source-wordcount: '1533'
 ht-degree: 0%
 
 ---
@@ -63,11 +63,11 @@ Läs mer om den plattform för hantering av samtycke som används i den här sj�
 >Det bästa sättet att implementera en plattform för hantering av samtycke är vanligtvis att läsa in CMP _före_ läser in tagghanteraren. För att underlätta den här självstudiekursen läser du in CMP _med_ tagghanteraren. Den här lektionen visar hur du använder medgivandefunktionerna i Platform Web SDK och ska inte användas som vägledning för att konfigurera Klaro eller någon annan CMP på rätt sätt.
 
 
-När du är klar med Klaros konfigurationer skapar du nu en taggregel med följande konfigurationer:
+När du är klar med Klaros konfigurationer kan du nu skapa taggregler med följande konfigurationer:
 
-* [!UICONTROL Namn]: `all pages - library load - Klaro`
-* [!UICONTROL Händelse]: [!UICONTROL Bibliotek inläst (sidan ovanpå)] med [!UICONTROL Avancerade alternativ] > [!UICONTROL Beställning] anges till 1
-* [!UICONTROL Åtgärd]: [!UICONTROL Egen kod], [!UICONTROL Språk]: HTML för att läsa in CMP-skriptet.
+* [!UICONTROL Name]: `all pages - library load - Klaro`
+* [!UICONTROL Event]: [!UICONTROL Library Loaded (Page Top)] med [!UICONTROL Advanced Options] > [!UICONTROL Order] anges till 1
+* [!UICONTROL Action]: [!UICONTROL Custom Code], [!UICONTROL Language]: HTML för att läsa in CMP-skriptet.
 
 ![Infoga CMP-regel](assets/consent-cmp-inject-rule-1.png)
 
@@ -103,7 +103,7 @@ Underförstådd anmälan innebär att företaget inte behöver få besökarens s
 
 Nu ska du konfigurera och implementera samtycke för det här scenariot:
 
-1. I **[!UICONTROL Integritet]** i Experience Platform Web SDK-taggtillägget kontrollerar du att  **[!UICONTROL Standardsamtycke]** är inställd på **[!UICONTROL I]** :
+1. I **[!UICONTROL Privacy]** i Experience Platform Web SDK-taggtillägget kontrollerar du att  **[!UICONTROL Default consent]** är inställd på **[!UICONTROL In]** :
 
 
    ![Integritetskonfiguration för AEP-tillägg för samtycke](assets/consent-web-sdk-privacy-in.png)
@@ -118,14 +118,14 @@ Nu ska du konfigurera och implementera samtycke för det här scenariot:
 
 2. Spara och skapa den här ändringen i ditt taggbibliotek
 3. Läs in ditt taggbibliotek på webbplatsen Luma Demo
-4. Aktivera taggfelsökning på Luma-webbplatsen och läs in sidan igen. I webbläsarens utvecklarkonsol ser du att defaultConsent är lika med **[!UICONTROL I]**
+4. Aktivera taggfelsökning på Luma-webbplatsen och läs in sidan igen. I webbläsarens utvecklarkonsol ser du att defaultConsent är lika med **[!UICONTROL In]**
 5. Med den här konfigurationen fortsätter tillägget Experience Platform Web SDK att göra nätverksbegäranden, såvida inte en besökare bestämmer sig för att avvisa cookies och avanmäla sig:
 
    ![Medgivande - underförstådd anmälan](assets/consent-Implied-optin-default.png)
 
 
 
-Om en besökare bestämmer sig för att avanmäla sig (avvisa spårningscookies) måste du ändra medgivandet till **[!UICONTROL Ut]**. Ändra inställningen för samtycke genom att följa dessa steg:
+Om en besökare bestämmer sig för att avanmäla sig (avvisa spårningscookies) måste du ändra medgivandet till **[!UICONTROL Out]**. Ändra inställningen för samtycke genom att följa dessa steg:
 
 <!--
 1. Create a data element to store the consent value of the visitor. Let's call it `klaro consent value`. Use the code snippet to create a custom code type data element:
@@ -149,19 +149,19 @@ Om en besökare bestämmer sig för att avanmäla sig (avvisa spårningscookies)
 
 1. Skapa en regel som aktiveras när besökaren klickar **Jag avböjer**.  Namnge den här regeln som: `all pages - click consent banner - set consent "out"`
 
-1. Som **[!UICONTROL Händelse]**, använda **[!UICONTROL Klicka]** på **[!UICONTROL Element som matchar CSS-väljaren]** `#klaro .cn-decline`
+1. Som **[!UICONTROL Event]**, använda **[!UICONTROL Click]** på **[!UICONTROL Elements matching the CSS selector]** `#klaro .cn-decline`
 
    ![Regelvillkorsanvändare klickar på Jag avböjer](assets/consent-optOut-clickEvent.png)
 
-1. Använd nu Experience Platform Web SDK, [!UICONTROL Ange samtycke] [!UICONTROL åtgärdstyp] för att ange medgivande som utställt:
+1. Använd nu Experience Platform Web SDK, [!UICONTROL Set consent] [!UICONTROL action type] för att ange medgivande som utställt:
 
    ![Avanvisningsåtgärd för regel för samtycke](assets/consent-rule-optout-action.png)
 
-1. Välj **[!UICONTROL Spara i bibliotek och bygge]**:
+1. Välj **[!UICONTROL Save to Library and Build]**:
 
    ![Spara och skapa ditt bibliotek](assets/consent-rule-optout-saveAndBuild.png)
 
-När en besökare avanmäler sig skulle nu regeln som konfigurerats på ovanstående sätt utlösas och ge webb-SDK-medgivandet som **[!UICONTROL Ut]**.
+När en besökare avanmäler sig skulle nu regeln som konfigurerats på ovanstående sätt utlösas och ge webb-SDK-medgivandet som **[!UICONTROL Out]**.
 
 Validera genom att gå till webbplatsen Luma Demo, avvisa cookies och bekräfta att ingen Web SDK-begäran utlöses efter att du avanmält dig.
 
@@ -174,40 +174,40 @@ Så här kan du konfigurera konfigurationen för ett implicit avanmälningsscena
 
 1. I Klaro kan du stänga av **Standardläge för tjänst** i `aep web sdk` och spara den uppdaterade konfigurationen.
 
-1. I **[!UICONTROL Integritet]** del av Experience Platform Web SDK-tillägg, ange standardsamtycke till **[!UICONTROL Ut]** eller **[!UICONTROL Väntande]** efter behov.
+1. I **[!UICONTROL Privacy]** del av Experience Platform Web SDK-tillägg, ange standardsamtycke till **[!UICONTROL Out]** eller **[!UICONTROL Pending]** efter behov.
 
    ![Integritetskonfiguration för AEP-tillägg för samtycke](assets/consent-implied-opt-out.png)
 
 1. **Spara** den uppdaterade konfigurationen till ditt taggbibliotek och återskapa den.
 
-   Med den här konfigurationen ser Experience Platform Web SDK till att ingen begäran aktiveras om inte medgivandebehörigheten ändras till **[!UICONTROL I]**. Det kan inträffa om en besökare manuellt accepterar cookies genom att anmäla sig.
+   Med den här konfigurationen ser Experience Platform Web SDK till att ingen begäran aktiveras om inte medgivandebehörigheten ändras till **[!UICONTROL In]**. Det kan inträffa om en besökare manuellt accepterar cookies genom att anmäla sig.
 
 1. I Felsökning kontrollerar du att Luma-webbplatsen är kopplad till din taggegenskap och att taggkonsolloggningen är aktiverad.
 1. Använd webbläsarens utvecklarkonsol för att **Rensa webbplatsdata** in **Program** > **Lagring**
 
-1. Läs in Luma-webbplatsen igen och se att `defaultConsent` är inställd på **[!UICONTROL Ut]** och inga Web SDK-begäranden har gjorts
+1. Läs in Luma-webbplatsen igen och se att `defaultConsent` är inställd på **[!UICONTROL Out]** och inga Web SDK-begäranden har gjorts
 
    ![Medgivande underförstådd avanmälan](assets/consent-implied-out-cmp.png)
 
-Om en besökare bestämmer sig för att anmäla sig (acceptera spårningscookies) måste du ändra medgivandet och ange det som **[!UICONTROL I]**. Så här kan du göra med en regel:
+Om en besökare bestämmer sig för att anmäla sig (acceptera spårningscookies) måste du ändra medgivandet och ange det som **[!UICONTROL In]**. Så här kan du göra med en regel:
 
 1. Skapa en regel som aktiveras när besökaren klickar **Det är ok**.  Namnge den här regeln som: `all pages - click consent banner - set consent "in"`
 
-1. Som **[!UICONTROL Händelse]**, använda **[!UICONTROL Klicka]** på **[!UICONTROL Element som matchar CSS-väljaren]** `#klaro .cm-btn-success`
+1. Som **[!UICONTROL Event]**, använda **[!UICONTROL Click]** på **[!UICONTROL Elements matching the CSS selector]** `#klaro .cm-btn-success`
 
    ![Regelvillkorsanvändare klickar på &quot;Det är OK&quot;](assets/consent-optIn-clickEvent.png)
 
-1. Lägga till en åtgärd med Experience Platform Web SDK [!UICONTROL Tillägg], **[!UICONTROL Åtgärdstyp]** av **[!UICONTROL Ange samtycke]**, **[!UICONTROL Allmänt samtycke]** as **[!UICONTROL I]**.
+1. Lägga till en åtgärd med Experience Platform Web SDK [!UICONTROL Extension], **[!UICONTROL Action Type]** av **[!UICONTROL Set consent]**, **[!UICONTROL General consent]** as **[!UICONTROL In]**.
 
    ![Medgivanderegelns inmatningsåtgärd](assets/consent-rule-optin-action.png)
 
-   En sak att notera här är att detta [!UICONTROL Ange samtycke] åtgärden kommer att bli den första begäran som går ut och fastställer identitet. Därför kan det vara viktigt att synkronisera identiteter på själva den första begäran. Identitetskartan kan läggas till i [!UICONTROL Ange samtycke] genom att skicka ett datataelement för identitetstyp.
+   En sak att notera här är att detta [!UICONTROL Set consent] åtgärden kommer att bli den första begäran som går ut och fastställer identitet. Därför kan det vara viktigt att synkronisera identiteter på själva den första begäran. Identitetskartan kan läggas till i [!UICONTROL Set consent] genom att skicka ett datataelement för identitetstyp.
 
-1. Välj **[!UICONTROL Spara i bibliotek och bygge]**:
+1. Välj **[!UICONTROL Save to Library and Build]**:
 
    ![Medgivanderegelns avanmälan](assets/consent-rule-optin-saveAndBuild.png)
 
-1. **[!UICONTROL Spara]** regeln till ditt bibliotek och återskapa den.
+1. **[!UICONTROL Save]** regeln till ditt bibliotek och återskapa den.
 
 När du har den här regeln på plats, bör händelsesamlingen börja när en besökare väljer att delta.
 
@@ -217,7 +217,7 @@ När du har den här regeln på plats, bör händelsesamlingen börja när en be
 Mer information om samtycke i Web SDK finns i [Stöd för kundernas samtycke](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?lang=en).
 
 
-Mer information om [!UICONTROL Ange samtycke] åtgärd, se [Ange samtycke](https://experienceleague.adobe.com/docs/experience-platform/edge/extension/action-types.html?lang=en#set-consent).
+Mer information om [!UICONTROL Set consent] åtgärd, se [Ange samtycke](https://experienceleague.adobe.com/docs/experience-platform/edge/extension/action-types.html?lang=en#set-consent).
 
 [Nästa: ](setup-event-forwarding.md)
 

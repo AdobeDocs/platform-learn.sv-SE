@@ -3,14 +3,19 @@ title: Konfigurera ett datastream
 description: Lär dig hur du aktiverar ett datastream och konfigurerar Experience Cloud-lösningar. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Tags,Datastreams
 exl-id: ca28374a-9fe0-44de-a7ac-0aa046712515
-source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
+source-git-commit: 9f75ef042342e1ff9db6039e722159ad96ce5e5b
 workflow-type: tm+mt
-source-wordcount: '447'
+source-wordcount: '463'
 ht-degree: 0%
 
 ---
 
 # Konfigurera ett datastream
+
+
+>[!CAUTION]
+>
+>Vi räknar med att publicera viktiga ändringar av den här självstudiekursen fredagen den 15 mars 2024. Därefter kommer många övningar att ändras och du kan behöva starta om självstudiekursen från början för att kunna slutföra alla lektioner.
 
 Lär dig hur du aktiverar ett datastream och konfigurerar Experience Cloud-lösningar.
 
@@ -46,10 +51,10 @@ Nu kan du skapa en datastream som anger för Platform Edge Network var data som 
    >Om du använder ett plattformsbaserat program som Real-Time CDP rekommenderar vi att du använder en utvecklingssandlåda för den här självstudiekursen. Om du inte gör det använder du **[!UICONTROL Prod]** sandlåda.
 
 1. Gå till **[!UICONTROL Datastreams]** till vänster navigering
-1. Välj **[!UICONTROL Ny datastream]** till höger på skärmen.
-1. Retur `Luma Web SDK` som **[!UICONTROL Namn]**. Namnet refereras senare när du konfigurerar Web SDK-tillägget i taggegenskapen.
-1. Välj `Luma Web Event Data` som **[!UICONTROL Händelseschema]**
-1. Välj **[!UICONTROL Spara]**
+1. Välj **[!UICONTROL New Datastream]** till höger på skärmen.
+1. Retur `Luma Web SDK` som **[!UICONTROL Name]**. Namnet refereras senare när du konfigurerar Web SDK-tillägget i taggegenskapen.
+1. Välj `Luma Web Event Data` som **[!UICONTROL Event Schema]**
+1. Välj **[!UICONTROL Save]**
 
    ![Skapa datastream](assets/datastream-create-datastream.png)
 

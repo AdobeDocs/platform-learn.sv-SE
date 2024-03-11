@@ -3,14 +3,19 @@ title: Självstudiekurs om att implementera Adobe Experience Cloud med webb-SDK
 description: Lär dig hur du implementerar Experience Cloud-program med Adobe Experience Platform Web SDK.
 recommendations: catalog, noDisplay
 exl-id: cf0ff74b-e81e-4f6d-ab7d-6c70e9b52d78
-source-git-commit: 4a12f8261cf1fb071bc70b6a04c34f6c16bcce64
+source-git-commit: 9f75ef042342e1ff9db6039e722159ad96ce5e5b
 workflow-type: tm+mt
-source-wordcount: '416'
-ht-degree: 6%
+source-wordcount: '434'
+ht-degree: 4%
 
 ---
 
 # Självstudiekurs om att implementera Adobe Experience Cloud med webb-SDK
+
+>[!CAUTION]
+>
+>Vi räknar med att publicera viktiga ändringar av den här självstudiekursen fredagen den 15 mars 2024. Därefter kommer många övningar att ändras och du kan behöva starta om självstudiekursen från början för att kunna slutföra alla lektioner.
+
 
 Lär dig hur du implementerar Experience Cloud-program med Adobe Experience Platform Web SDK.
 

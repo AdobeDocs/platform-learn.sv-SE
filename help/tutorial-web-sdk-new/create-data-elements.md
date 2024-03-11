@@ -2,22 +2,16 @@
 title: Skapa dataelement
 description: Lär dig hur du skapar ett XDM-objekt och mappar dataelement till det i taggar. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Tags
-source-git-commit: ef3d374f800905c49cefba539c1ac16ee88c688b
+source-git-commit: fd366a4848c2dd9e01b727782e2f26005a440725
 workflow-type: tm+mt
-source-wordcount: '1189'
+source-wordcount: '1148'
 ht-degree: 0%
 
 ---
 
 # Skapa dataelement
 
-Lär dig hur du skapar dataelement i taggar för innehåll, handel och identitetsdata på [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html). Fyll sedan i fälten i XDM-schemat med datatypen Variable.
-
-
->[!IMPORTANT]
->
->Informationen i den här lektionen kommer från `[!UICONTROL digitalData]` datalager på Luma-webbplatsen. Om du vill visa datalagret öppnar du utvecklarkonsolen och skriver in `[!UICONTROL digitalData]` för att se hela datalagret.![digitalt datalager](assets/data-element-data-layer.png)
-
+Lär dig hur du skapar dataelement i taggar för innehåll, handel och identitetsdata på [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html). Fyll sedan i fälten i XDM-schemat med datatypen Variable för Platform Web SDK-tillägget.
 
 ## Utbildningsmål
 
@@ -37,9 +31,15 @@ Du har en förståelse för vad ett datalager är och har slutfört föregående
 * [Konfigurera ett datastream](configure-datastream.md)
 * [Web SDK-tillägget är installerat i taggegenskapen](install-web-sdk.md)
 
+
+>[!IMPORTANT]
+>
+>Informationen i den här lektionen kommer från `[!UICONTROL digitalData]` datalager på Luma-webbplatsen. Om du vill visa datalagret öppnar du utvecklarkonsolen och skriver in `[!UICONTROL digitalData]` för att se hela datalagret.![digitalt datalager](assets/data-element-data-layer.png)
+
+
 ## Metoder för datalager
 
-Det finns flera sätt att mappa data från datalagret till XDM med taggfunktionerna i Adobe Experience Platform. Nedan visas några fördelar och ikoner med tre olika strategier:
+Det finns flera sätt att mappa data från datalagret till XDM med taggfunktionerna i Adobe Experience Platform. Nedan visas några fördelar och ikoner med tre olika strategier. Det är möjligt att kombinera metoder, om så önskas:
 
 1. Implementera XDM i datalagret
 1. Mappa till XDM i taggar
@@ -104,7 +104,7 @@ Kon
 
 * Fullständigt beroende av utvecklingsteamet och utvecklingscykeln för uppdatering av vilka data som skickas till XDM
 * Begränsad flexibilitet eftersom XDM får exakt nyttolast från datalagret
-* Det går inte att använda inbyggda taggar, som skrapning, beständighet, funktioner för snabb distribution
+* Det går inte att använda inbyggda taggfunktioner, till exempel skrapning, beständighet och funktioner för snabb distribution
 * Det går inte att använda datalagret för pixlar från tredje part
 * Ingen möjlighet att omvandla data mellan datalagret och XDM
 
@@ -155,18 +155,18 @@ Den här metoden använder den inbyggda funktionaliteten i datastream-konfigurat
 
 Innan du skapar XDM-objektet skapar du följande uppsättning dataelement för [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"} datalager:
 
-1. Gå till **[!UICONTROL Dataelement]** och markera **[!UICONTROL Lägg till dataelement]** (eller **[!UICONTROL Skapa nytt dataelement]** om det inte finns några befintliga dataelement i taggegenskapen)
+1. Gå till **[!UICONTROL Data Elements]** och markera **[!UICONTROL Add Data Element]** (eller **[!UICONTROL Create New Data Element]** om det inte finns några befintliga dataelement i taggegenskapen)
 
    ![Skapa dataelement](assets/data-element-create.png)
 
 1. Namnge dataelementet `page.pageInfo.pageName`
-1. Använd **[!UICONTROL JavaScript-variabel]** **[!UICONTROL Dataelementtyp]** för att peka på ett värde i Lumas datalager: `digitalData.page.pageInfo.pageName`
+1. Använd **[!UICONTROL JavaScript Variable]** **[!UICONTROL Data Element type]** för att peka på ett värde i Lumas datalager: `digitalData.page.pageInfo.pageName`
 
-1. Markera rutorna för **[!UICONTROL Använd gemener]** och **[!UICONTROL Rensa text]** standardisera ärendet och ta bort ovidkommande utrymmen
+1. Markera rutorna för **[!UICONTROL Force lowercase value]** och **[!UICONTROL Clean text]** standardisera ärendet och ta bort ovidkommande utrymmen
 
-1. Lämna `None` som **[!UICONTROL Lagringstid]** inställning eftersom det här värdet är olika på alla sidor
+1. Lämna `None` som **[!UICONTROL Storage Duration]** inställning eftersom det här värdet är olika på alla sidor
 
-1. Välj **[!UICONTROL Spara]**
+1. Välj **[!UICONTROL Save]**
 
    ![Dataelement för sidnamn](assets/data-element-pageName.png)
 
@@ -207,7 +207,7 @@ Skapa dessa ytterligare dataelement genom att följa samma steg:
     return cartItem;
     ```
     -->
-* **`product.category`** med **[!UICONTROL Egen kod]** **[!UICONTROL Dataelementtyp]** och följande anpassade kod för att analysera webbplatsens URL för kategorin på den översta nivån:
+* **`product.category`** med **[!UICONTROL Custom Code]** **[!UICONTROL Data Element type]** och följande anpassade kod för att analysera webbplatsens URL för kategorin på den översta nivån:
 
   ```javascript
   var cat = location.pathname.split(/[/.]+/);
@@ -252,21 +252,21 @@ Skapa dessa ytterligare dataelement genom att följa samma steg:
 
 >[!CAUTION]
 >
->The [!UICONTROL JavaScript-variabel] dataelementtypen behandlar arrayreferenser som punkter i stället för hakparenteser, så att användarnamnets dataelement refereras som `digitalData.user[0].profile[0].attributes.username` **fungerar inte**.
+>The [!UICONTROL JavaScript variable] dataelementtypen behandlar arrayreferenser som punkter i stället för hakparenteser, så att användarnamnets dataelement refereras som `digitalData.user[0].profile[0].attributes.username` **fungerar inte**.
 
 ## Skapa dataelement för variabel
 
-mappa dataelementen till XDM med hjälp av **[!UICONTROL Variabel]** dataelement som definierar det schema som används för XDM-objektet. Det här objektet bör följa XDM-schemat som du skapade under [Konfigurera ett schema](configure-schemas.md) lektion.
+mappa dataelementen till XDM med hjälp av **[!UICONTROL Variable]** dataelement som definierar det schema som används för XDM-objektet. Det här objektet bör följa XDM-schemat som du skapade under [Konfigurera ett schema](configure-schemas.md) lektion.
 
 Så här skapar du ett variabeldataelement:
 
-1. Välj **[!UICONTROL Lägg till dataelement]**
+1. Välj **[!UICONTROL Add Data element]**
 1. Namnge dataelementet `xdm.variable.content`. Vi rekommenderar att du prefix med &quot;xdm&quot; för dataelementen som är specifika för XDM för att bättre organisera taggegenskaperna
-1. Välj **[!UICONTROL Adobe Experience Platform Web SDK]** som **[!UICONTROL Tillägg]**
-1. Välj **[!UICONTROL Variabel]** som **[!UICONTROL Dataelementtyp]**
+1. Välj **[!UICONTROL Adobe Experience Platform Web SDK]** som **[!UICONTROL Extension]**
+1. Välj **[!UICONTROL Variable]** som **[!UICONTROL Data Element Type]**
 1. Välj lämplig Experience Platform **[!UICONTROL Sandbox]**
 1. Välj lämplig **[!UICONTROL Schema]**, i detta fall `Luma Web Event Data`
-1. Välj **[!UICONTROL Spara]**
+1. Välj **[!UICONTROL Save]**
 
    ![Variabeldataelement](assets/analytics-tags-data-element-xdm-variable.png)
 
@@ -289,7 +289,7 @@ I slutet av dessa steg bör du skapa följande dataelement:
 
 >[!TIP]
 >
->I framtiden [Skapa en taggregel](create-tag-rule.md) lektion, lär dig hur **[!UICONTROL Variabel]** kan du stapla flera regler i taggar med hjälp av **[!UICONTROL Uppdatera typ av variabelåtgärd]**.
+>I framtiden [Skapa taggregler](create-tag-rule.md) lektion, lär dig hur **[!UICONTROL Variable]** kan du stapla flera regler i taggar med hjälp av **[!UICONTROL Update Variable Action type]**.
 
 Med dessa dataelement på plats är du redo att börja skicka data till Platform Edge Network med en taggregel. Men först lär du dig att samla in identiteter med Web SDK.
 

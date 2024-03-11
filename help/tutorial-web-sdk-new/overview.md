@@ -2,9 +2,9 @@
 title: Självstudiekurs om att implementera Adobe Experience Cloud med webb-SDK
 description: Lär dig hur du implementerar Experience Cloud-program med Adobe Experience Platform Web SDK.
 recommendations: catalog, noDisplay
-source-git-commit: ef3d374f800905c49cefba539c1ac16ee88c688b
+source-git-commit: b46666013f39a5a71323810ee69876d9e32e02e3
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '656'
 ht-degree: 2%
 
 ---
@@ -40,24 +40,24 @@ När du är klar med den här självstudiekursen kan du börja implementera alla
 
 Alla Experience Cloud-kunder kan använda Platform Web SDK. Det är inte ett krav att licensiera ett plattformsbaserat program som Real-time Customer Data Platform eller Journey Optimizer att använda Web SDK.
 
-I den här lektionen antas du ha ett Adobe-konto och de behörigheter som krävs för att slutföra lektionerna. Om inte, måste du kontakta din Experience Cloud-administratör för att begära åtkomst.
+I den här lektionen antas du ha ett Adobe-konto och de behörigheter som krävs för att slutföra lektionerna. Annars måste du kontakta en Experience Cloud-administratör på ditt företag för att få åtkomst.
 
 * För **Datainsamling** måste du ha:
-   * **[!UICONTROL Plattformar]**—behörighet för **[!UICONTROL Webb]** och, om licens finns, **[!UICONTROL Kant]**
-   * **[!UICONTROL Egendomsrättigheter]**—behörighet till **[!UICONTROL Godkänn]**, **[!UICONTROL Utveckla]**, **[!UICONTROL Redigera egenskap]**, **[!UICONTROL Hantera miljöer]**, **[!UICONTROL Hantera tillägg]** och **[!UICONTROL Publicera]**,
-   * **[!UICONTROL Företagsrättigheter]**—behörighet till **[!UICONTROL Hantera egenskaper]**
+   * **[!UICONTROL Platforms]**—behörighet för **[!UICONTROL Web]** och, om licens finns, **[!UICONTROL Edge]**
+   * **[!UICONTROL Property Rights]**—behörighet till **[!UICONTROL Approve]**, **[!UICONTROL Develop]**, **[!UICONTROL Edit Property]**, **[!UICONTROL Manage Environments]**, **[!UICONTROL Manage Extensions]** och **[!UICONTROL Publish]**,
+   * **[!UICONTROL Company Rights]**—behörighet till **[!UICONTROL Manage Properties]**
 
      Mer information om taggbehörigheter finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html).
 
 * För **Experience Platform** måste du ha:
 
    * Åtkomst till **standardproduktion**, **&quot;Prod&quot;** sandlåda.
-   * Åtkomst till **[!UICONTROL Hantera scheman]** och **[!UICONTROL Visa scheman]** under **[!UICONTROL Datamodellering]**.
-   * Åtkomst till **[!UICONTROL Hantera identitetsnamnutrymmen]** och **[!UICONTROL Visa identitetsnamnutrymmen]** under **[!UICONTROL Identity Management]**.
-   * Åtkomst till **[!UICONTROL Hantera datastreams]** och **[!UICONTROL Visa datastreams]** under **[!UICONTROL Datainsamling]**.
+   * Åtkomst till **[!UICONTROL Manage Schemas]** och **[!UICONTROL View Schemas]** under **[!UICONTROL Data Modeling]**.
+   * Åtkomst till **[!UICONTROL Manage Identity Namespaces]** och **[!UICONTROL View Identity Namespaces]** under **[!UICONTROL Identity Management]**.
+   * Åtkomst till **[!UICONTROL Manage Datastreams]** och **[!UICONTROL View Datastreams]** under **[!UICONTROL Data Collection]**.
    * Om du är kund till ett plattformsbaserat program och kommer att fylla i [Konfigurera Experience Platform](setup-experience-platform.md) lektion:
       * Åtkomst till en **utveckling** sandlåda.
-      * Alla behörighetsobjekt under **[!UICONTROL Datahantering]** och **[!UICONTROL Profilhantering]**:
+      * Alla behörighetsobjekt under **[!UICONTROL Data Management]** och **[!UICONTROL Profile Management]**:
 
      De funktioner som krävs bör vara tillgängliga för alla Experience Cloud-kunder, även om du inte är kund till en plattformsbaserad applikation som Real-Time CDP.
 
