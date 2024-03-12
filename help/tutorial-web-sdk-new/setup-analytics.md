@@ -2,9 +2,9 @@
 title: Konfigurera Adobe Analytics med Experience Platform Web SDK
 description: Lär dig hur du konfigurerar Adobe Analytics med Experience Platform Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 solution: Data Collection, Analytics
-source-git-commit: fd366a4848c2dd9e01b727782e2f26005a440725
+source-git-commit: 26545b660b70daf4296ec2afbc067065f77def01
 workflow-type: tm+mt
-source-wordcount: '2930'
+source-wordcount: '2876'
 ht-degree: 0%
 
 ---
@@ -21,16 +21,12 @@ Lär dig konfigurera Adobe Analytics med [Experience Platform Web SDK](https://e
 
 När lektionen är klar kan du:
 
-* Konfigurera ett XDM-schema för Adobe Analytics
-* Förstå skillnaden mellan automatiskt mappade och manuellt mappade XDM-variabler för Analytics
 * Konfigurera ett datastream för att aktivera Adobe Analytics
-* Åsidosätt ett datastream för att skicka data till ett annat Adobe Analytics-rapportpaket
-* Mappa enskilda eller hela arraydataelement till XDM-objektet
-* Använd åtgärdstypen Uppdatera variabelregel för att stapla flera regler i en XDM-händelse
-* Hämta sidvyer i Adobe Analytics med XDM-objektet
-* Samla in e-handelsdata med XDM-objektet för Adobe Analytics produktsträng
+* Förstå skillnaden mellan automatiskt mappade och manuellt mappade XDM-variabler för Analytics
+* Konfigurera ett XDM-schema för Adobe Analytics-specifika variabler
 * Ange eVar för produktsyntaxmarknadsföring med hjälp av XDM
-* Validera Adobe Analytics-variabler anges med XDM-objektet med Experience Platform Debugger
+* Åsidosätt ett datastream för att skicka data till ett annat Adobe Analytics-rapportpaket
+* Validera Adobe Analytics-variabler med Experience Platform Debugger
 * Använd Adobe Analytics bearbetningsregler för att ange anpassade variabler
 * Validera data som har fångats in av Adobe Analytics med Adobe Experience Platform Assurance
 * Validera data hämtas av Adobe Analytics med Real-Time Reports

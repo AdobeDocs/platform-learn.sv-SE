@@ -2,9 +2,9 @@
 title: Skapa taggregler
 description: Lär dig hur du skickar en händelse till Platform Edge Network med ditt XDM-objekt med hjälp av en taggregel. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Tags
-source-git-commit: fd366a4848c2dd9e01b727782e2f26005a440725
+source-git-commit: 26545b660b70daf4296ec2afbc067065f77def01
 workflow-type: tm+mt
-source-wordcount: '1795'
+source-wordcount: '1811'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,9 @@ Lär dig hur du skickar händelser till Platform Edge Network med ditt XDM-objek
 När lektionen är slut kan du:
 
 * Använd en namnkonvention för att hantera regler i taggar
-* Skicka en XDM-händelse genom att använda åtgärdstyperna Uppdatera variabel och Skicka händelse i en taggregel
+* Skicka en händelse med XDM-fält med åtgärderna Uppdatera variabel och Skicka händelse
+* Stapla flera uppsättningar XDM-fält över flera regler
+* Mappa enskilda eller hela arraydataelement till XDM-objektet
 * Publicera en taggregel i ett utvecklingsbibliotek
 
 
