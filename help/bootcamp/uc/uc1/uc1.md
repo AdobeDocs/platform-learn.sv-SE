@@ -5,9 +5,9 @@ jira: KT-5342
 audience: Data Engineer, Data Architect
 doc-type: tutorial
 activity: develop
-feature: Profiles, Segments, Integrations, Destinations
+feature: Profiles, Audiences, Integrations, Destinations
 exl-id: 4500dc9b-cc1a-4de8-aa39-7d4e849d65c4
-source-git-commit: ee5c0af17c12f1d90774a3a4150c9788e2368e39
+source-git-commit: 0474808b42925bf95529e10a42a0563f0ecc43b8
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 0%
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Den här självstudiekursen har skapats för att underlätta ett visst Bootläger-format. Den använder specifika system och konton som du kanske inte har tillgång till. Även om ni inte har tillgång till dem tror vi att ni fortfarande kan lära er mycket genom att läsa igenom detta mycket detaljerade innehåll. Om du deltar i något av bootlägren och behöver dina inloggningsuppgifter, kontaktar du din Adobe-representant som ger dig den information som krävs.
+>Den här självstudiekursen har skapats för att underlätta ett visst Bootcamp-format. Den använder specifika system och konton som du kanske inte har tillgång till. Även om ni inte har tillgång till dem tror vi att ni fortfarande kan lära er mycket genom att läsa igenom detta mycket detaljerade innehåll. Om du deltar i något av bootlägren och behöver dina inloggningsuppgifter, kontaktar du din Adobe-representant som ger dig den information som krävs.
 
 ## Utövningar
 
@@ -36,18 +36,18 @@ I den här övningen följer du ett manus och går igenom webbplatsen.
 
 [1.2 Visualisera din egen kundprofil i realtid - användargränssnitt](./ex2.md)
 
-I den här övningen loggar du in på Adobe Experience Platform och visar din egen kundprofil i realtid i användargränssnittet.
+I den här övningen loggar du in på Adobe Experience Platform och du får se din egen kundprofil i realtid i användargränssnittet.
 
-[1.3 Skapa ett segment - användargränssnitt](./ex3.md)
+[1.3 Skapa en målgrupp - användargränssnitt](./ex3.md)
 
-I den här övningen skapar du ett segment genom att använda Adobe Experience Platform Segment Builder.
+I den här övningen skapar du en publik genom att använda Adobe Experience Platform Audience Builder.
 
-[1.4 Vidta åtgärder: skicka segmentet till Adobe Target](./ex4.md)
+[1.4 Take Action: send your audition to Adobe Target](./ex4.md)
 
-Använd det segment du skapat i övning 1.1 för att konfigurera en Experience Targeting Activity i Adobe Target.
+Använd målgruppen som du skapade i övning 1.1 för att konfigurera en Experience Targeting Activity i Adobe Target.
 
-[1.5 Vidta åtgärder: skicka segmentet till Facebook](./ex5.md)
+[1.5 Take Action: send your audition to Facebook](./ex5.md)
 
-Koppla segmentet du skapat i övning 1.1 till Facebook.
+Koppla den målgrupp du skapat i övning 1.1 till Facebook.
 
 [Gå tillbaka till Alla moduler](../../overview.md)

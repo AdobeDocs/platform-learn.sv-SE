@@ -1,30 +1,30 @@
 ---
-title: Bootcamp - CDP i realtid - Bygg ett segment och vidta åtgärder - Skicka ditt segment till DV360
-description: Bootcamp - CDP i realtid - Bygg ett segment och vidta åtgärder - Skicka ditt segment till DV360
+title: Bootcamp - CDP i realtid - Bygg en målgrupp och vidta åtgärder - Skicka din målgrupp till DV360
+description: Bootcamp - CDP i realtid - Bygg en målgrupp och vidta åtgärder - Skicka din målgrupp till DV360
 jira: KT-5342
 audience: Data Architect, Orchestration Engineer, Marketer
 doc-type: tutorial
 activity: develop
 feature: Destinations
 exl-id: 31f46e37-f1c0-4730-8520-1ccd98df6501
-source-git-commit: 3c86f9b19cecf92c9a324fb6fcfcefaebf82177f
+source-git-commit: 9d12b3e3ad2238cf79aca3d9723e7e60d72e765c
 workflow-type: tm+mt
-source-wordcount: '281'
-ht-degree: 3%
+source-wordcount: '277'
+ht-degree: 2%
 
 ---
 
-# 1.5 Vidta åtgärder: skicka segmentet till Facebook
+# 1.5 Take Action: send your audition to Facebook
 
-Gå till [Adobe Experience Platform](https://experience.adobe.com/platform). När du loggat in kommer du till Adobe Experience Platform hemsida.
+Gå till [Adobe Experience Platform](https://experience.adobe.com/platform). När du har loggat in loggar du in på Adobe Experience Platform hemsida.
 
-![Datainmatning](./images/home.png)
+![Inmatning av data](./images/home.png)
 
-Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``Bootcamp``. Du kan göra detta genom att klicka på texten **[!UICONTROL Produktionsprodukt]** i den blå linjen ovanför skärmen. När du har valt lämplig [!UICONTROL sandlåda]kommer du att se skärmändringen och nu är du med på din [!UICONTROL sandlåda].
+Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``Bootcamp``. Du kan göra detta genom att klicka på texten **[!UICONTROL Production Prod]** i den blå linjen ovanför skärmen. När du har valt lämplig [!UICONTROL sandbox]kommer du att se skärmändringen och nu är du med på din [!UICONTROL sandbox].
 
-![Datainmatning](./images/sb1.png)
+![Inmatning av data](./images/sb1.png)
 
-Gå till den vänstra menyn **Destinationer** och sedan gå till **Katalog**. Då ser du **Målkatalog**. I **Destinationer**, klicka **Aktivera segment** på **Facebook Custom Audience** kort.
+Gå till den vänstra menyn **Destinationer** och sedan gå till **Katalog**. Då ser du **Målkatalog**. I **Destinationer**, klicka **Aktivera målgrupper** på **Facebook Custom Audience** kort.
 
 ![RTCDP](./images/rtcdpgoogleseg.png)
 
@@ -32,7 +32,7 @@ Välj mål **bootcamp-facebook** och klicka **Nästa**.
 
 ![RTCDP](./images/rtcdpcreatedest2.png)
 
-I listan med tillgängliga segment väljer du det segment som du skapade i föregående övning. Klicka på **Nästa**.
+I listan över tillgängliga målgrupper väljer du den målgrupp du skapade i föregående övning. Klicka på **Nästa**.
 
 ![RTCDP](./images/rtcdpcreatedest3.png)
 
@@ -40,17 +40,17 @@ På **Mappning** se till att **Använd omformning** kryssrutan är aktiverad. Kl
 
 ![RTCDP](./images/rtcdpcreatedest4a.png)
 
-På **Segmentschema** väljer du **Målgruppens ursprung** och ange **Direkt från kunderna**. Klicka på **Nästa**.
+På **Målgruppsplan** väljer du **Målgruppens ursprung** och ange **Direkt från kunderna**. Klicka på **Nästa**.
 
 ![RTCDP](./images/rtcdpcreatedest4.png)
 
-Till sist **Granska** sida, klicka **Slutför**.
+Till sist på **Granska** sida, klicka **Slutför**.
 
 ![RTCDP](./images/rtcdpcreatedest5.png)
 
-Ditt segment är nu länkat till Facebook anpassade målgrupper. Varje gång en kund kvalificerar sig för det här segmentet skickas en signal till Facebook på serversidan för att inkludera den kunden i Custom Audience på Facebook sida.
+Din målgrupp är nu länkad till Facebook anpassade målgrupper. Varje gång en kund kvalificerar sig för den här målgruppen skickas en signal till Facebook på serversidan om att inkludera den kunden i Custom Audience på Facebook sida.
 
-I Facebook hittar du ditt segment från Adobe Experience Platform under Anpassade målgrupper:
+I Facebook hittar du målgrupper från Adobe Experience Platform under Anpassade målgrupper:
 
 ![RTCDP](./images/rtcdpcreatedest5b.png)
 
