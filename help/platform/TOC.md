@@ -5,9 +5,9 @@ user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
 auto-video-transcripts: true
-source-git-commit: 9c4e85a75f640ec9c2eaae6874e2331bf54c3ca7
+source-git-commit: fd571fccc93e8d99beb9dafbe432961488a4d94d
 workflow-type: tm+mt
-source-wordcount: '869'
+source-wordcount: '874'
 ht-degree: 7%
 
 ---
@@ -79,6 +79,7 @@ ht-degree: 7%
    + [Integrera med IAB Transparency och Consent Framework 2.0](/help/platform/governance/integrate-with-iab-transparency-and-consent-framework-2.md)
 + Datahygien {#data-hygiene}
    + [Ta bort datauppsättningar](/help/platform/data-hygiene/delete-datasets.md)
+   + [Pseudonym profil och förfallodatum för händelse](/help/platform/data-hygiene/pseudonymous-profile-and-event-expiration.md)
 + Inmatning av data {#data-ingestion}
    + [Översikt](/help/platform/data-ingestion/understanding-data-ingestion.md)
    + [Översikt över batchöverföring](/help/platform/data-ingestion/batch-ingestion-overview.md)
