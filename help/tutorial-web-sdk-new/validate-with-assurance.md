@@ -2,9 +2,10 @@
 title: Validera Web SDK-implementeringar med Experience Platform Assurance
 description: Lär dig hur du validerar implementeringen av din Platform Web SDK med Adobe Experience Platform Assurance. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Tags,Assurance
-source-git-commit: fd366a4848c2dd9e01b727782e2f26005a440725
+exl-id: 31e381ea-fbaf-495f-a6e9-2ff6c0d36939
+source-git-commit: 5e778dde1698110fade7163ed2585f059c27274c
 workflow-type: tm+mt
-source-wordcount: '584'
+source-wordcount: '585'
 ht-degree: 0%
 
 ---
@@ -31,7 +32,7 @@ Du känner till datainsamlingstaggar och [Luma demo site](https://luma.enablemen
 * [Web SDK-tillägget är installerat i taggegenskapen](install-web-sdk.md)
 * [Skapa dataelement](create-data-elements.md)
 * [Skapa identiteter](create-identities.md)
-* [Skapa taggregler](create-tag-rule.md)
+* [Skapa en taggregel](create-tag-rule.md)
 * [Validera med felsökning](validate-with-debugger.md)
 
 
@@ -70,7 +71,7 @@ Se hur vi gjorde det här i felsökningslektionen:
 
 ## Validera det aktuella läget för Web SDK-implementeringen
 
-Det finns begränsad information att visa i det här skedet av implementeringen. Ett värde som vi kan se är ditt Experience Cloud-ID (ECID) som genereras i Platform Edge Network:
+Det finns begränsad information att visa i det här skedet av implementeringen. Ett värde som vi kan se är ditt Experience Cloud-ID (ECID) som genereras på Platform Edge Network:
 
 1. Markera raden med händelsen Adobe-svarshandtag.
 1. En meny visas till höger. Välj `+` signera bredvid `[!UICONTROL ACPExtensionEvent]`
