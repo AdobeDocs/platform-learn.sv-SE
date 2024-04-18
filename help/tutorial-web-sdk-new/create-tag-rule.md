@@ -2,7 +2,8 @@
 title: Skapa taggregler
 description: Lär dig hur du skickar en händelse till Platform Edge Network med ditt XDM-objekt med hjälp av en taggregel. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Tags
-source-git-commit: 26545b660b70daf4296ec2afbc067065f77def01
+exl-id: c77ab8a1-922b-481e-b3cb-d2c5ca7bb8cb
+source-git-commit: fe8b92c560c9676a44935005cc558388244d6aea
 workflow-type: tm+mt
 source-wordcount: '1811'
 ht-degree: 0%
@@ -105,7 +106,7 @@ Så här skapar du taggregler för de globala XDM-fälten:
    > Ju lägre ordernummer, desto tidigare körs det. Därför ger vi vår&quot;globala konfiguration&quot; ett lågt ordernummer.
 
 1. Välj **[!UICONTROL Keep Changes]** för att återgå till huvudlinjeraster
-   ![Välj utlösare för inläst bibliotek](assets/create-tag-rule-trigger-bottom.png)
+   ![Välj utlösare för inläst bibliotek](assets/create-tag-rule-trigger-loaded.png)
 
 1. I **[!UICONTROL Actions]** avsnitt, markera **[!UICONTROL Add]**
 
@@ -339,7 +340,7 @@ När du är klar bör du se följande regler som skapats.
 
 ### Skicka händelseregel
 
-Nu när du har angett variablerna kan du skapa regeln för att skicka hela XDM-objektet till Platform Edge Network med **[!UICONTROL Send event]** åtgärd.
+Nu när du har ställt in variablerna kan du skapa en regel som skickar hela XDM-objektet till Platform Edge Network med **[!UICONTROL Send event]** åtgärd.
 
 1. Välj till höger **[!UICONTROL Add Rule]** för att skapa en annan regel
 
@@ -352,7 +353,7 @@ Nu när du har angett variablerna kan du skapa regeln för att skicka hela XDM-o
 1. Välj **[!UICONTROL Advanced]** listruta och ange `50` in **[!UICONTROL Order]**. Detta garanterar att den andra regeln aktiveras efter den första regeln som du anger som utlösare `1`.
 
 1. Välj **[!UICONTROL Keep Changes]** för att återgå till huvudlinjeraster
-   ![Välj utlösare för inläst bibliotek](assets/create-tag-rule-trigger-bottom-send.png)
+   ![Välj utlösare för inläst bibliotek](assets/create-tag-rule-trigger-loaded-send.png)
 
 1. I **[!UICONTROL Actions]** avsnitt, markera **[!UICONTROL Add]**
 

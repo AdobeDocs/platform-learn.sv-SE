@@ -3,9 +3,9 @@ title: Validera Web SDK-implementeringar med Experience Platform Assurance
 description: Lär dig hur du validerar implementeringen av din Platform Web SDK med Adobe Experience Platform Assurance. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Tags,Assurance
 exl-id: 31e381ea-fbaf-495f-a6e9-2ff6c0d36939
-source-git-commit: 5e778dde1698110fade7163ed2585f059c27274c
+source-git-commit: fe8b92c560c9676a44935005cc558388244d6aea
 workflow-type: tm+mt
-source-wordcount: '585'
+source-wordcount: '597'
 ht-degree: 0%
 
 ---
@@ -61,13 +61,16 @@ Se hur vi gjorde det här i felsökningslektionen:
 1. Öppna [Gränssnitt för datainsamling](https://experience.adobe.com/#/data-collection/home){target="_blank"}
 1. Välj Assurance i den vänstra navigeringen
 1. Välj Skapa session
+   ![Skapa en Assurance-session](assets/assurance-create-session.png)
 1. Välj Start
 1. Ge sessionen ett namn, till exempel `Luma Web SDK validation`
 1. Som **[!UICONTROL Base URL]** enter `https://luma.enablementadobe.com/`
+   ![Namnge Assurance-sessionen](assets/assurance-name-session.png)
 1. På nästa skärm väljer du **[!UICONTROL Copy Link]**
 1. Markera ikonen om du vill kopiera länken till Urklipp
 1. Klistra in URL:en i webbläsaren, som öppnar Luma-webbplatsen med en speciell URL-parameter `adb_validation_sessionid` och starta sessionen
 1. I Assurance-gränssnittet bör du se ett meddelande som anger att du har anslutit till sessionen och du bör se händelser som har hämtats i Assurance-gränssnittet.
+   ![Assurance-sessionen har anslutits](assets/assurance-success.png)
 
 ## Validera det aktuella läget för Web SDK-implementeringen
 

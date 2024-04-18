@@ -2,9 +2,10 @@
 title: Skapa ett XDM-schema för webbdata
 description: Lär dig hur du skapar ett XDM-schema för webbdata i gränssnittet för datainsamling. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Schemas
-source-git-commit: f08866de1bd6ede50bda1e5f8db6dbd2951aa872
+exl-id: 159f914a-43d4-4808-b6af-01136386e25c
+source-git-commit: fe8b92c560c9676a44935005cc558388244d6aea
 workflow-type: tm+mt
-source-wordcount: '1493'
+source-wordcount: '1457'
 ht-degree: 0%
 
 ---
@@ -79,16 +80,16 @@ I den här övningen skapar du ett XDM-schema med de rekommenderade baslinjefäl
    >
    >Om du använder ett plattformsbaserat program som Real-Time CDP eller Journey Optimizer rekommenderar vi att du använder en utvecklingssandlåda för den här kursen. Om du inte gör det använder du **[!UICONTROL Prod]** sandlåda.
 
-1. Gå till **[!UICONTROL Scheman]** till vänster navigering
-1. Välj **[!UICONTROL Skapa schema]** överst till höger
+1. Gå till **[!UICONTROL Schemas]** till vänster navigering
+1. Välj **[!UICONTROL Create Schema]** överst till höger
 
    ![Skapa schema](assets/schema-xdm-create-schema.png)
 1. Välj **[!UICONTROL Experience Event]** på följande skärm
-1. Välj **[!UICONTROL Nästa]**
+1. Välj **[!UICONTROL Next]**
 
    ![Schemaupplevelsehändelse](assets/schema-experience-event.png)
 
-1. Ange namnet på schemat under **[!UICONTROL Visningsnamn för schema]** fält, i detta fall `Luma Web Event Data`
+1. Ange namnet på schemat under **[!UICONTROL Schema display name]** fält, i detta fall `Luma Web Event Data`
 
    >[!TIP]
    >
@@ -107,12 +108,12 @@ När det är möjligt bör du använda befintliga fältgrupper och följa en pro
 
 >[!TIP]
 > 
->I den här övningen lägger du till de rekommenderade fördefinierade fältgrupperna för insamling av webbdata: _**[!UICONTROL AEP Web SDK ExperienceEvent]**_ och _**[!UICONTROL Consumer Experience Event]**_.
+>I den här övningen lägger du till de rekommenderade fördefinierade fältgrupperna för insamling av webbdata: _**[!UICONTROL AEP Web SDK ExperienceEvent]**_och_**[!UICONTROL Consumer Experience Event]**_.
 >
 >
-> Om du bara implementerar **Adobe Analytics** med Web SDK och inte skicka data till **Experience Platform**, använder du [!UICONTROL Adobe Analytics ExperienceEvent-mall] fältgrupp för att definiera XDM-schemat. Detta kommer att användas i [Konfigurationsanalys](setup-analytics.md) lektion.
+> Om du bara implementerar **Adobe Analytics** med Web SDK och inte skicka data till **Experience Platform**, använder du [!UICONTROL Adobe Analytics ExperienceEvent Template] fältgrupp för att definiera XDM-schemat. Detta kommer att användas i [Konfigurationsanalys](setup-analytics.md) lektion.
 
-1. I **[!UICONTROL Fältgrupper]** avsnitt, markera **[!UICONTROL Lägg till]**
+1. I **[!UICONTROL Field groups]** avsnitt, markera **[!UICONTROL Add]**
 
    ![Ny fältgrupp](assets/schema-new-field-group.png)
 
@@ -120,11 +121,11 @@ När det är möjligt bör du använda befintliga fältgrupper och följa en pro
 1. Markera rutan
 1. Sök efter [!UICONTROL `Consumer Experience Event`]
 1. Markera rutan
-1. Välj **[!UICONTROL Lägg till fältgrupper]**
+1. Välj **[!UICONTROL Add field groups]**
 
-   ![Lägg till fältgrupp](assets/schema-add-field-group.jpg)
+   ![Lägg till fältgrupp](assets/schema-add-field-group.png)
 
-Observera att du har tillgång till de mest använda nyckelvärdepar som krävs för datainsamling på webben i båda fältgrupperna. The [!UICONTROL visningsnamn] av varje fält visas för marknadsförarna i segmentbygggränssnittet i plattformsbaserade program och du kan ändra visningsnamnet för standardfält efter behov. Du kan också ta bort fält som du inte vill ha. När du klickar på något av fältgruppsnamnen markeras vilka nyckelvärdepar som tillhör det. I exemplet nedan ser du vilka grupper som tillhör **[!UICONTROL Consumer Experience Event]**.
+Observera att du har tillgång till de mest använda nyckelvärdepar som krävs för datainsamling på webben i båda fältgrupperna. The [!UICONTROL display name] av varje fält visas för marknadsförarna i segmentbygggränssnittet i plattformsbaserade program och du kan ändra visningsnamnet för standardfält efter behov. Du kan också ta bort fält som du inte vill ha. När du klickar på något av fältgruppsnamnen markeras vilka nyckelvärdepar som tillhör det. I exemplet nedan ser du vilka grupper som tillhör **[!UICONTROL Consumer Experience Event]**.
 
 ![Fältgrupper för schema](assets/schema-consumer-experience-event.png)
 
@@ -142,13 +143,13 @@ Det är ett måste-ha-objekt för alla webbrelaterade datainsamlingar eftersom d
 
 >[!IMPORTANT]
 >
-> Det går att aktivera **[!UICONTROL Profil]** för ett schema innan du sparar schemat. **Gör inte** aktivera det nu. När ett schema har aktiverats för profilen kan det inte inaktiveras eller tas bort. Det går inte att ta bort fält från scheman just nu, även om det går att [Föråldrade fält i användargränssnittet](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/field-deprecation-ui.html?lang=en#deprecate). Dessa konsekvenser är viktiga att tänka på senare när du arbetar med egna data i produktionsmiljön.
+> Det går att aktivera **[!UICONTROL Profile]** för ett schema innan du sparar schemat. **Gör inte** aktivera det nu. När ett schema har aktiverats för profilen kan det inte inaktiveras eller tas bort. Det går inte att ta bort fält från scheman just nu, även om det går att [Föråldrade fält i användargränssnittet](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/field-deprecation-ui.html?lang=en#deprecate). Dessa konsekvenser är viktiga att tänka på senare när du arbetar med egna data i produktionsmiljön.
 >
 >
 >Den här inställningen diskuteras mer under [Konfigurera Experience Platform](setup-experience-platform.md) lektion.
 >![Profilschema](assets/schema-profile.png)
 
-Om du vill slutföra den här lektionen väljer du **[!UICONTROL Spara]** överst till höger.
+Om du vill slutföra den här lektionen väljer du **[!UICONTROL Save]** överst till höger.
 
 ![Spara schema](assets/schema-select-save.png)
 

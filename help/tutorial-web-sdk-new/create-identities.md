@@ -2,9 +2,10 @@
 title: Skapa identiteter
 description: Lär dig hur du skapar identiteter i XDM och använder dataelementet Identitetskarta för att hämta användar-ID:n. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Tags
-source-git-commit: ef3d374f800905c49cefba539c1ac16ee88c688b
+exl-id: 7ca32dc8-dd86-48e0-8931-692bcbb2f446
+source-git-commit: fe8b92c560c9676a44935005cc558388244d6aea
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '867'
 ht-degree: 0%
 
 ---
@@ -47,7 +48,7 @@ The [Experience Cloud ID (ECID)](https://experienceleague.adobe.com/docs/experie
 
 Läs mer om hur [ECID:n spåras med Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en).
 
-ECID anges med en kombination av cookies från första part och Platform Edge Network. Som standard anges cookies från första part av Web SDK. Om du vill ta hänsyn till webbläsarbegränsningar för cookies kan du välja att ställa in och hantera dina egna cookies från första part i stället. Dessa kallas för FPID (First-party device ID).
+ECID anges med en kombination av cookies från första part och Platform Edge Network. Som standard anges cookies från första part av Web SDK på klientsidan. Om du vill ta hänsyn till webbläsarbegränsningar för cookie-intervall kan du välja att ange en egen cookies-server för första part i stället. Dessa kallas för FPID (First-party device ID).
 
 >[!IMPORTANT]
 >
@@ -57,7 +58,7 @@ ECID anges med en kombination av cookies från första part och Platform Edge Ne
 
 FPID är cookies från första part _du använder dina egna webbservrar_ som Adobe sedan använder för att skapa ECID, i stället för att använda cookie-filen från Web SDK. Webbläsarstödet kan variera, men cookies från första part kan vara mer varaktiga när de anges av en server som använder en DNS A-post (för IPv4) eller AAAA-post (för IPv6), i motsats till när de anges av en DNS CNAME- eller JavaScript-kod.
 
-När en FPID-cookie har angetts kan dess värde hämtas och skickas till Adobe när händelsedata samlas in. Insamlade FPID används som startvärde för att generera ECID på Platform Edge Network, som även i fortsättningen är standardidentifierare i Adobe Experience Cloud-program.
+När en FPID-cookie har angetts kan dess värde hämtas och skickas till Adobe när händelsedata samlas in. Insamlade FPID används som startvärde för att generera ECID på Platform Edge Network, som även fortsättningsvis är standardidentifierare i Adobe Experience Cloud-program.
 
 Även om FPID inte används i den här självstudiekursen bör du använda FPID i din egen Web SDK-implementering. Läs mer om [Första parts enhets-ID i Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html?lang=en)
 
@@ -69,29 +70,29 @@ När en FPID-cookie har angetts kan dess värde hämtas och skickas till Adobe n
 
 Som nämnts ovan tilldelas alla besökare av dina digitala resurser ett ECID av Adobe när de använder Platform Web SDK. Detta gör ECID till standardidentitet för att spåra oautentiserat digitalt beteende.
 
-Du kan också skicka ett autentiserat användar-ID så att plattformen kan skapa [Identitetsdiagram](https://experienceleague.adobe.com/docs/platform-learn/tutorials/identities/understanding-identity-and-identity-graphs.html?lang=en) och Target kan ange [Tredjeparts-ID](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html). Detta görs genom att använda [!UICONTROL Identitetskarta] dataelementtyp.
+Du kan också skicka ett autentiserat användar-ID så att plattformen kan skapa [Identitetsdiagram](https://experienceleague.adobe.com/docs/platform-learn/tutorials/identities/understanding-identity-and-identity-graphs.html?lang=en) och Target kan ange [Tredjeparts-ID](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html). Detta görs genom att använda [!UICONTROL Identity Map] dataelementtyp.
 
-Skapa [!UICONTROL Identitetskarta] dataelement:
+Skapa [!UICONTROL Identity Map] dataelement:
 
-1. Gå till **[!UICONTROL Dataelement]** och markera **[!UICONTROL Lägg till dataelement]**
+1. Gå till **[!UICONTROL Data Elements]** och markera **[!UICONTROL Add Data Element]**
 
-1. **[!UICONTROL Namn]** dataelementet `identityMap.loginID`
+1. **[!UICONTROL Name]** dataelementet `identityMap.loginID`
 
-1. Som **[!UICONTROL Tillägg]**, markera `Adobe Experience Platform Web SDK`
+1. Som **[!UICONTROL Extension]**, markera `Adobe Experience Platform Web SDK`
 
-1. Som **[!UICONTROL Dataelementtyp]**, markera `Identity map`
+1. Som **[!UICONTROL Data Element Type]**, markera `Identity map`
 
-1. Då visas ett skärmyta till höger i dialogrutan **[!UICONTROL Gränssnitt för datainsamling]** för att konfigurera identiteten:
+1. Då visas ett skärmyta till höger i dialogrutan **[!UICONTROL Data Collection interface]** för att konfigurera identiteten:
 
    ![Gränssnitt för datainsamling](assets/identity-identityMap-setup.png)
 
-1. Som  **[!UICONTROL Namnutrymme]** väljer du `lumaCrmId` namnutrymme som du tidigare skapade i [Konfigurera identiteter](configure-identities.md) lektion.
+1. Som  **[!UICONTROL Namespace]** väljer du `lumaCrmId` namnutrymme som du tidigare skapade i [Konfigurera identiteter](configure-identities.md) lektion.
 
    >[!NOTE]
    >
    >    Om du inte ser dina `lumaCrmId` namnutrymme kontrollerar du att du även har skapat det i din standardproduktionssandlåda. Endast namnutrymmen som skapats i standardproduktionssandlådan visas för närvarande i listrutan för namnutrymme.
 
-1. Efter **[!UICONTROL Namnutrymme]** är markerat måste ett ID anges. Välj `user.profile.attributes.username` dataelement som skapades tidigare i [Skapa dataelement](create-data-elements.md#create-data-elements-to-capture-the-data-layer) lektion, som hämtar ett ID när användare loggar in på Luma-webbplatsen.
+1. Efter **[!UICONTROL Namespace]** är markerat måste ett ID anges. Välj `user.profile.attributes.username` dataelement som skapades tidigare i [Skapa dataelement](create-data-elements.md#create-data-elements-to-capture-the-data-layer) lektion, som hämtar ett ID när användare loggar in på Luma-webbplatsen.
 
    <!--  >[!TIP]
     >
@@ -100,18 +101,18 @@ Skapa [!UICONTROL Identitetskarta] dataelement:
     >   ![Data Element  ID ](assets/identity-data-element-customer-id.png)
     -->
 
-1. Som **[!UICONTROL Autentiserat läge]**, markera **[!UICONTROL Autentiserad]**
-1. Välj **[!UICONTROL Primär]**
+1. Som **[!UICONTROL Authenticated state]**, markera **[!UICONTROL Authenticated]**
+1. Välj **[!UICONTROL Primary]**
 
-1. Välj **[!UICONTROL Spara]**
+1. Välj **[!UICONTROL Save]**
 
    ![Gränssnitt för datainsamling](assets/identity-id-namespace.png)
 
 >[!TIP]
 >
-> Adobe rekommenderar att du skickar identiteter som representerar en person, till exempel `Luma CRM Id`, som [!UICONTROL primär] identitet.
+> Adobe rekommenderar att du skickar identiteter som representerar en person, till exempel `Luma CRM Id`, som [!UICONTROL primary] identitet.
 >
-> Om identitetskartan innehåller personidentifieraren (t.ex. `Luma CRM Id`) blir personidentifieraren [!UICONTROL primär] identitet. I annat fall `ECID` blir [!UICONTROL primär] identitet.
+> Om identitetskartan innehåller personidentifieraren (t.ex. `Luma CRM Id`) blir personidentifieraren [!UICONTROL primary] identitet. I annat fall `ECID` blir [!UICONTROL primary] identitet.
 
 
 

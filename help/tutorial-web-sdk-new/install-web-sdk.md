@@ -2,9 +2,10 @@
 title: Installera och konfigurera taggtillägget Adobe Experience Platform Web SDK
 description: Lär dig hur du installerar och konfigurerar plattformens SDK-taggtillägg i gränssnittet för datainsamling. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK
-source-git-commit: ef3d374f800905c49cefba539c1ac16ee88c688b
+exl-id: 7dedf9ea-eeda-4738-9633-b5a5a5f5f9ae
+source-git-commit: fe8b92c560c9676a44935005cc558388244d6aea
 workflow-type: tm+mt
-source-wordcount: '604'
+source-wordcount: '588'
 ht-degree: 0%
 
 ---
@@ -36,12 +37,12 @@ Först måste du ha en taggegenskap. En egenskap är en behållare för alla Jav
 Skapa en ny taggegenskap för självstudiekursen:
 
 1. Öppna [Gränssnitt för datainsamling](https://launch.adobe.com/){target="_blank"}
-1. Välj **[!UICONTROL Taggar]** till vänster navigering
-1. Välj **[!UICONTROL Ny egenskap]** knapp
+1. Välj **[!UICONTROL Tags]** till vänster navigering
+1. Välj **[!UICONTROL New Property]** knapp
    ![Lägg till en ny egenskap](assets/websdk-property-addNewProperty.png)
-1. Som **[!UICONTROL Namn]**, ange `Web SDK Course` (lägg till ditt namn i slutet om flera personer från ditt företag använder den här självstudiekursen)
-1. Som **[!UICONTROL Domäner]**, ange `enablementadobe.com` (förklaras senare)
-1. Välj **[!UICONTROL Spara]**
+1. Som **[!UICONTROL Name]**, ange `Web SDK Course` (lägg till ditt namn i slutet om flera personer från ditt företag använder den här självstudiekursen)
+1. Som **[!UICONTROL Domains]**, ange `enablementadobe.com` (förklaras senare)
+1. Välj **[!UICONTROL Save]**
    ![Egenskapsinformation](assets/websdk-property-propertyDetails.png)
 
 ## Lägg till Web SDK-tillägget
@@ -49,20 +50,20 @@ Skapa en ny taggegenskap för självstudiekursen:
 Med ditt XDM-schema, datastream och taggegenskap som nu skapas är du redo att installera Platform Web SDK-tillägget:
 
 1. Öppna den nya taggegenskapen
-1. Gå till **[!UICONTROL Tillägg]** > **[!UICONTROL Katalog]**
+1. Gå till **[!UICONTROL Extensions]** > **[!UICONTROL Catalog]**
 1. Sök efter `Adobe Experience Platform Web SDK`
-1. Välj **[!UICONTROL Installera]**
+1. Välj **[!UICONTROL Install]**
 
-   ![Installera SDK-tillägg för webben](assets/extension-platform-web-sdk.jpg)
+   ![Installera SDK-tillägg för webben](assets/extension-platform-web-sdk.png)
 
 
 ## Länka Platform Web SDK till din datastream
 
 Lämna de flesta standardinställningarna och uppdatera dem senare efter behov. Det enda du behöver göra nu är att länka tillägget till ditt datastream:
 
-1. Under **[!UICONTROL Datastreams]** väljer du **[!UICONTROL Välj från lista]** indatametod
+1. Under **[!UICONTROL Datastreams]** väljer du **[!UICONTROL Choose from list]** indatametod
 1. Välj den datastream du skapade tidigare, `Luma Web SDK`
-1. Välj **[!UICONTROL Spara]**
+1. Välj **[!UICONTROL Save]**
 
    >[!NOTE]
    >
