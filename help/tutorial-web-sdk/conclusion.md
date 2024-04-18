@@ -3,7 +3,7 @@ title: Slutsats och nästa steg
 description: Så här gör du när du är klar med självstudien
 recommendations: display,noCatalog
 exl-id: bb0ef04d-fd01-4c24-8670-a84a9e33f1b6
-source-git-commit: 9f75ef042342e1ff9db6039e722159ad96ce5e5b
+source-git-commit: 15bc08bdbdcb19f5b086267a6d94615cbfe1bac7
 workflow-type: tm+mt
 source-wordcount: '427'
 ht-degree: 2%
@@ -15,7 +15,7 @@ ht-degree: 2%
 
 >[!CAUTION]
 >
->Vi räknar med att publicera viktiga ändringar av den här självstudiekursen fredagen den 15 mars 2024. Därefter kommer många övningar att ändras och du kan behöva starta om självstudiekursen från början för att kunna slutföra alla lektioner.
+>Vi räknar med att kunna publicera viktiga ändringar av den här självstudiekursen tisdagen den 23 april 2024. Därefter kommer många övningar att ändras och du kan behöva starta om självstudiekursen från början för att kunna slutföra alla lektioner.
 
 Grattis! Du har slutfört självstudiekursen&quot;Implementera Adobe Experience Cloud med Web SDK&quot;!
 
@@ -31,7 +31,7 @@ Låt oss snabbt granska allt du har gjort. Du har:
    * Adobe Analytics
    * Adobe Audience Manager
    * Adobe Target
-* Händelsevidarebefordran används för att skicka data från Platform Edge Network till en webkrok.
+* Använde händelsevidarebefordran för att skicka data från Platform Edge Network till en webkrok.
 * Implementeringen har validerats med Adobe Experience Platform Debugger.
 
 Du är redo att påbörja nästa fas av din resa - implementera Adobe Experience Cloud på din egen webbplats!

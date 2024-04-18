@@ -3,7 +3,7 @@ title: Konfigurera Adobe Analytics med Experience Platform Web SDK
 description: Lär dig hur du konfigurerar Adobe Analytics med Experience Platform Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 solution: Data Collection, Analytics
 exl-id: de86b936-0a47-4ade-8ca7-834c6ed0f041
-source-git-commit: 9f75ef042342e1ff9db6039e722159ad96ce5e5b
+source-git-commit: 15bc08bdbdcb19f5b086267a6d94615cbfe1bac7
 workflow-type: tm+mt
 source-wordcount: '3305'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->Vi räknar med att publicera viktiga ändringar av den här självstudiekursen fredagen den 15 mars 2024. Därefter kommer många övningar att ändras och du kan behöva starta om självstudiekursen från början för att kunna slutföra alla lektioner.
+>Vi räknar med att kunna publicera viktiga ändringar av den här självstudiekursen tisdagen den 23 april 2024. Därefter kommer många övningar att ändras och du kan behöva starta om självstudiekursen från början för att kunna slutföra alla lektioner.
 
 Lär dig konfigurera Adobe Analytics med [Experience Platform Web SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html), skapa taggregler för att skicka data till Adobe Analytics och validera att Analytics hämtar in data som förväntat.
 
@@ -233,7 +233,7 @@ Innan du mappar till produktsträngen är det viktigt att förstå att det finns
 1. The `commerce` objekt ställer in Analytics-händelser som `prodView`, `scView`och `purchase`
 1. The `productListItems` objekt ställer in Analytics-dimensioner som `productID`.
 
-Se [Samla in data om handel och produkter](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html?lang=en) för mer information.
+Se [Samla in data om Commerce och produkter](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html?lang=en) för mer information.
 
 Det är också viktigt att du förstår att du kan **[!UICONTROL provide individual attributes]** till enskilda XDM-fält eller **[!UICONTROL provide an entire array]** till ett XDM-objekt.
 
@@ -439,7 +439,7 @@ Lägg till nya dataelement och regler i `Luma Web SDK Tutorial` och bygga om utv
 
 I [Felsökning](validate-with-debugger.md) lektionen lärde du dig att inspektera XDM-objektbeacon på klientsidan med plattformsfelsökaren och webbläsarutvecklarkonsolen, som liknar hur du felsöker en `AppMeasurement.js` Implementering av analyser. För att validera att Analytics hämtar in data på rätt sätt via Platform Web SDK måste du gå två steg längre:
 
-1. Validera hur data bearbetas av XDM-objektet på Platform Edge Network med hjälp av funktionen Edge Trace i Experience Platform-felsökaren
+1. Validera hur data bearbetas av XDM-objektet på Platform Edge Network med hjälp av funktionen Edge Trace i Experience Platform Debugger
 1. Validera hur data behandlas av Analytics med bearbetningsregler och realtidsrapporter.
 
 ### Använd kantkalkering
@@ -505,7 +505,7 @@ Eftersom du redan är på en produktsida fortsätter den här övningen att anv�
 
    ![Produktsträng för Analytics](assets/analytics-debugger-prodstring.png)
 
-Edge Trace behandlar `commerce` händelser något annorlunda än `productList` dimensioner. Du ser inte att en kontextdatavariabel är mappad på samma sätt som du ser produktnamnet mappat till `[!UICONTROL c.a.x.productlistitem.[0].name]` ovan. I stället visar Edge Trace den slutliga automatiska händelsemappningen i Analytics `event` variabel. Platform Edge Network mappar det så länge du mappar till rätt XDM `commerce` variabel while [konfigurera schema för Adobe Analytics](setup-analytics.md#configure-an-xdm-schema-for-adobe-analytics); i detta fall `commerce.productViews.value=1`.
+Edge Trace behandlar `commerce` händelser något annorlunda än `productList` dimensioner. Du ser inte att en kontextdatavariabel är mappad på samma sätt som du ser produktnamnet mappat till `[!UICONTROL c.a.x.productlistitem.[0].name]` ovan. I stället visar Edge Trace den slutliga automatiska händelsemappningen i Analytics `event` variabel. Platform Edge Network mappar den så länge du mappar till rätt XDM `commerce` variabel while [konfigurera schema för Adobe Analytics](setup-analytics.md#configure-an-xdm-schema-for-adobe-analytics); i detta fall `commerce.productViews.value=1`.
 
 1. Gå tillbaka till Experience Platform Debugger-fönstret och rulla nedåt till `[!UICONTROL event]` variabel, är inställd på `[!UICONTROL prodView]`
 

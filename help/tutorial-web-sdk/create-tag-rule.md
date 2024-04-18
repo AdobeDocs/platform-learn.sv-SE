@@ -3,7 +3,7 @@ title: Skapa en taggregel
 description: Lär dig hur du skickar en händelse till Platform Edge Network med ditt XDM-objekt med hjälp av en taggregel. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Tags
 exl-id: e06bad06-3ee3-475f-9b10-f0825a48a312
-source-git-commit: 9f75ef042342e1ff9db6039e722159ad96ce5e5b
+source-git-commit: 15bc08bdbdcb19f5b086267a6d94615cbfe1bac7
 workflow-type: tm+mt
 source-wordcount: '810'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->Vi räknar med att publicera viktiga ändringar av den här självstudiekursen fredagen den 15 mars 2024. Därefter kommer många övningar att ändras och du kan behöva starta om självstudiekursen från början för att kunna slutföra alla lektioner.
+>Vi räknar med att kunna publicera viktiga ändringar av den här självstudiekursen tisdagen den 23 april 2024. Därefter kommer många övningar att ändras och du kan behöva starta om självstudiekursen från början för att kunna slutföra alla lektioner.
 
 Lär dig hur du skickar en händelse till Platform Edge Network med ditt XDM-objekt med hjälp av en taggregel. En taggregel är en kombination av händelser, villkor och åtgärder som instruerar taggegenskapen att göra något.
 
@@ -59,7 +59,7 @@ där
 
 ## Skapa taggregel
 
-I taggar används regler för att utföra åtgärder (brandanrop) under olika förhållanden. Du använder den första regeln för att skicka XDM-objektet till Edge Network med Web SDK:n [!UICONTROL Send Event] åtgärd. Senare i den här självstudien skickar du olika versioner av XDM-objektet baserat på vilken typ av sida besökaren är på. Därför kommer du att använda regelvillkor för att exkludera de andra sidtyperna.
+I taggar används regler för att utföra åtgärder (brandanrop) under olika förhållanden. Du använder den första regeln för att skicka XDM-objektet till Edge Network med hjälp av Web SDK:n [!UICONTROL Send Event] åtgärd. Senare i den här självstudien skickar du olika versioner av XDM-objektet baserat på vilken typ av sida besökaren är på. Därför kommer du att använda regelvillkor för att exkludera de andra sidtyperna.
 
 Så här skapar du en taggregel:
 

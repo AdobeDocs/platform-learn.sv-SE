@@ -2,7 +2,7 @@
 title: Strömma data till Adobe Experience Platform med Web SDK
 description: Lär dig hur du direktuppspelar webbdata till Adobe Experience Platform med Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 exl-id: 4d749ffa-e1c0-4498-9b12-12949807b369
-source-git-commit: 9f75ef042342e1ff9db6039e722159ad96ce5e5b
+source-git-commit: 15bc08bdbdcb19f5b086267a6d94615cbfe1bac7
 workflow-type: tm+mt
 source-wordcount: '1528'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->Vi räknar med att publicera viktiga ändringar av den här självstudiekursen fredagen den 15 mars 2024. Därefter kommer många övningar att ändras och du kan behöva starta om självstudiekursen från början för att kunna slutföra alla lektioner.
+>Vi räknar med att kunna publicera viktiga ändringar av den här självstudiekursen tisdagen den 23 april 2024. Därefter kommer många övningar att ändras och du kan behöva starta om självstudiekursen från början för att kunna slutföra alla lektioner.
 
 Lär dig hur du strömmar webbdata till Adobe Experience Platform med Platform Web SDK.
 
@@ -81,7 +81,7 @@ En datauppsättning har nu konfigurerats för att börja samla in data från imp
 
 ## Konfigurera datastream
 
-Nu kan du konfigurera [!UICONTROL datastream] skicka data till [!UICONTROL Adobe Experience Platform]. Datastream är länken mellan taggegenskap, Platform Edge Network och datauppsättningen Experience Platform.
+Nu kan du konfigurera [!UICONTROL datastream] skicka data till [!UICONTROL Adobe Experience Platform]. Datastream är länken mellan taggegenskapen, Platform Edge Network och datamängden Experience Platform.
 
 1. Öppna [Datainsamling](https://experience.adobe.com/#/data-collection){target="blank"} gränssnitt
 1. Välj **[!UICONTROL Datastreams]** från vänster navigering

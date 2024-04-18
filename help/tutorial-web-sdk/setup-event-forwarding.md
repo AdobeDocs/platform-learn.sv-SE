@@ -3,7 +3,7 @@ title: Konfigurera en egenskap för vidarebefordring av händelser
 description: Lär dig hur du använder händelsevidarebefordringsegenskap med Experience Platform Web SDK-data. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Tags,Event Forwarding
 exl-id: 5a306609-2c63-42c1-8beb-efa412b8efe4
-source-git-commit: 9f75ef042342e1ff9db6039e722159ad96ce5e5b
+source-git-commit: 15bc08bdbdcb19f5b086267a6d94615cbfe1bac7
 workflow-type: tm+mt
 source-wordcount: '1806'
 ht-degree: 0%
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 >[!CAUTION]
 >
->Vi räknar med att publicera viktiga ändringar av den här självstudiekursen fredagen den 15 mars 2024. Därefter kommer många övningar att ändras och du kan behöva starta om självstudiekursen från början för att kunna slutföra alla lektioner.
+>Vi räknar med att kunna publicera viktiga ändringar av den här självstudiekursen tisdagen den 23 april 2024. Därefter kommer många övningar att ändras och du kan behöva starta om självstudiekursen från början för att kunna slutföra alla lektioner.
 
 Lär dig hur du använder händelsevidarebefordringsegenskap med Experience Platform Web SDK-data.
 
-Vidarebefordran av händelser är en ny typ av egenskap som är tillgänglig i datainsamling. Med händelsevidarebefordran kan du skicka data till andra leverantörer än Adobe direkt från Adobe Experience Platform Edge Network i stället för till den traditionella webbläsaren på klientsidan. Läs mer om fördelarna med vidarebefordran av händelser i [Översikt över vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=en).
+Vidarebefordran av händelser är en ny typ av egenskap som är tillgänglig i datainsamling. Med händelsevidarebefordran kan du skicka data till andra leverantörer än Adobe direkt från Adobe Experience Platform Edge Network istället för till den traditionella webbläsaren på klientsidan. Läs mer om fördelarna med vidarebefordran av händelser i [Översikt över vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=en).
 
 Om du vill använda händelsevidarebefordran i Adobe Experience Platform måste data skickas till Adobe Experience Platform Edge Network först med ett eller flera av följande tre alternativ:
 
@@ -31,7 +31,7 @@ Om du vill använda händelsevidarebefordran i Adobe Experience Platform måste 
 >[!NOTE]
 >Platform Web SDK och Platform Mobile SDK kräver inte distribution via taggar, men du bör använda taggar för att distribuera dessa SDK:er.
 
-När du är klar med de tidigare lektionerna i den här självstudiekursen bör du skicka data till Platform Edge Network med Web SDK. När data finns i Platform Edge Network kan du aktivera vidarebefordran av händelser och använda en händelsevidarebefordringsegenskap för att skicka data till lösningar utanför Adobe.
+När du är klar med de tidigare lektionerna i den här självstudiekursen bör du skicka data till Platform Edge Network med hjälp av Web SDK. När data finns i Platform Edge Network kan du aktivera vidarebefordran av händelser och använda en händelsevidarebefordringsegenskap för att skicka data till lösningar utanför Adobe.
 
 ## Utbildningsmål
 
@@ -113,7 +113,7 @@ Så här konfigurerar du Target i datastream:
 
 Upprepa dessa steg för staging- och produktionsdatastreams när du är redo att marknadsföra dina ändringar via publiceringsflödet.
 
-## Vidarebefordra data från Platform Edge Network till en lösning som inte är Adobe
+## Vidarebefordra data från Platform Edge Network till en icke-Adobe-lösning
 
 I den här övningen får du lära dig hur du ställer in ett dataelement för vidarebefordran av händelser, konfigurerar en regel för vidarebefordring av händelser och validerar med ett tredjedelsverktyg som kallas [Webkrok.webbplats](https://webhook.site/).
 
@@ -295,7 +295,7 @@ Nu kan du validera din egenskap för vidarebefordran av händelser med hjälp av
 
 1. Innan du läser in sidan igen öppnar du felsökaren i Experience Platform **[!UICONTROL Logs]** från vänster navigering
 
-1. Välj **[!UICONTROL Edge]** tabbtangenten och sedan välja **[!UICONTROL Connect]** för att visa förfrågningar om plattforms-Edge-nätverk
+1. Välj **[!UICONTROL Edge]** tabbtangenten och sedan välja **[!UICONTROL Connect]** för att visa begäran från Platform Edge Network
 
    ![Nätverkssession för klientvidarebefordrare](assets/event-forwarding-edge-session.png)
 
