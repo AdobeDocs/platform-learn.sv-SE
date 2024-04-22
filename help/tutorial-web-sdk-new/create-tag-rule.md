@@ -3,7 +3,7 @@ title: Skapa taggregler
 description: Lär dig hur du skickar en händelse till Platform Edge Network med ditt XDM-objekt med hjälp av en taggregel. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Tags
 exl-id: c77ab8a1-922b-481e-b3cb-d2c5ca7bb8cb
-source-git-commit: fe8b92c560c9676a44935005cc558388244d6aea
+source-git-commit: 0220f5dbe8e34e92cf584380629ecc29a549dabd
 workflow-type: tm+mt
 source-wordcount: '1811'
 ht-degree: 0%
@@ -344,7 +344,7 @@ Nu när du har ställt in variablerna kan du skapa en regel som skickar hela XDM
 
 1. Välj till höger **[!UICONTROL Add Rule]** för att skapa en annan regel
 
-1. Namnge regeln `all pages - library loaded - set send event - 50`
+1. Namnge regeln `all pages - library loaded - send event - 50`
 
 1. I **[!UICONTROL Events]** avsnitt, markera **[!UICONTROL Add]**
 
