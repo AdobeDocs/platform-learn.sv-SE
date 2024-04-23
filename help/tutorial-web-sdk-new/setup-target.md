@@ -2,9 +2,10 @@
 title: Konfigurera Adobe Target med Platform Web SDK
 description: Lär dig implementera Adobe Target med Platform Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 solution: Data Collection, Target
-source-git-commit: c57ad58f8ca145a01689a5d32b4ecb94cf169b2c
+exl-id: 5bf95d05-a651-438e-a4f2-4b8f210d7f63
+source-git-commit: 6a741604cd2eb026600c2d4cb8c0ddcb15f64e3f
 workflow-type: tm+mt
-source-wordcount: '4176'
+source-wordcount: '4175'
 ht-degree: 0%
 
 ---
@@ -19,16 +20,16 @@ Lär dig implementera Adobe Target med Platform Web SDK. Lär dig hur du leverer
 
 ## Utbildningsmål
 
-När lektionen är klar kan du:
+När lektionen är klar kan du göra följande med en Web SDK-implementering av Target:
 
-* Förstå hur du lägger till ett fragment för att dölja plattformswebbsidesknappen för att förhindra flimmer när du använder Target med asynkrona taggar för inbäddning
+* Lägg till det fragment som döljs för att förhindra flimmer
 * Konfigurera ett datastream för att aktivera Target-funktioner
 * Återge aktiviteter för visuell upplevelsedisposition
 * Återge formulärdispositionsaktiviteter
 * Skicka XDM-data till Target och förstå mappningen till Target-parametrar
 * Skicka anpassade data till Target, t.ex. profil- och enhetsparametrar
-* Validera en målinriktad implementering med Platform Web SDK
-* Skicka målförslagsförfrågningar som är åtskilda från Adobe Analytics-förfrågningar och åtgärda deras visningshändelser senare
+* Validera en målinriktad implementering
+* Separera personaliseringsbegäranden från analysförfrågningar
 
 >[!TIP]
 >
@@ -48,7 +49,7 @@ För att slutföra lektionerna i det här avsnittet måste du först:
    * [Använda den formulärbaserade Experience Composer](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-form-based-experience-composer.html)
    * [Skapa aktiviteter för målinriktning på upplevelser](https://experienceleague.adobe.com/docs/target-learn/tutorials/activities/create-experience-targeting-activities.html)
 
-## Lägg till flimmerreducering
+## Lägg till flimmerhantering
 
 Innan du startar avgör du om en extra flimmerhanteringslösning krävs beroende på hur taggbiblioteket läses in.
 
@@ -59,7 +60,7 @@ Innan du startar avgör du om en extra flimmerhanteringslösning krävs beroende
 
 ### Asynkron implementering
 
-När ett taggbibliotek läses in asynkront kan sidan slutföra återgivningen innan Target har utfört en innehållsväxling. Det här beteendet kan leda till det som kallas&quot;flimmer&quot;, där standardinnehållet visas kort innan det ersätts av det anpassade innehåll som anges av Target. Om du vill undvika denna flimmer rekommenderar Adobe att du lägger till ett särskilt fragment som döljs innan den asynkrona taggen bäddar in.
+När ett taggbibliotek läses in asynkront kan det hända att sidan sluts återgivningen innan Target har ersatt standardinnehållet med anpassat innehåll. Det här beteendet kan leda till det som kallas&quot;flimmer&quot;, där standardinnehållet visas kort innan det ersätts av det anpassade innehåll som anges av Target. Om du vill undvika denna flimmer rekommenderar Adobe att du lägger till ett särskilt fragment som döljs innan den asynkrona taggen bäddar in.
 
 Det här fragmentet finns redan på Luma-webbplatsen, men vi ska titta närmare på vad koden gör:
 
@@ -181,7 +182,7 @@ I den här självstudiekursen om du vill använda Luma-webbplatsen använder du 
 
 ## Ge visuella personaliseringsbeslut
 
-Först måste du förstå den terminologi som används i Target- och tagg-gränssnitten.
+De visuella personaliseringsbesluten avser de upplevelser som skapas i Adobe Target visuella upplevelsedisposition. För det första bör du förstå terminologin som används i Target- och tagggränssnitten:
 
 * **Aktivitet**: En uppsättning upplevelser som riktar sig till en eller flera målgrupper. Ett enkelt A/B-test kan till exempel vara en aktivitet med två upplevelser.
 * **Upplevelse**: En uppsättning åtgärder riktade till en eller flera platser, eller beslutsomfattningar.

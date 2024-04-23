@@ -5,9 +5,9 @@ solution: Data Collection,Experience Platform,Journey Optimizer
 feature-set: Journey Optimizer
 feature: Web Channel,Web SDK
 exl-id: ab83ce56-7f54-4341-8750-b458d0db0239
-source-git-commit: c57ad58f8ca145a01689a5d32b4ecb94cf169b2c
+source-git-commit: 43eb66edecb9dce59dbb4995230181c9f2cbce5b
 workflow-type: tm+mt
-source-wordcount: '2462'
+source-wordcount: '2537'
 ht-degree: 0%
 
 ---
@@ -127,10 +127,29 @@ Med detta exempel får ni en bättre förståelse för hur Journey Optimizer kan
 
 ### Skapa ett bonusschema och importera exempeldata
 
-När Web SDK-data hämtas till Adobe Experience Platform kan de berikas av alla andra data som du har inkapslat. När en användare autentiserar sig på Luma-webbplatsen och autentiserad identitet skickas till Platform som representerar en identitet i Lumas CRM-system. Ett identitetsdiagram skapas i Experience Platform och alla andra profilaktiverade datauppsättningar som även innehåller identiteter med `lumaCrmId` namnutrymmet kan sammanfogas för att skapa kundprofiler i realtid. Vi kommer snabbt att skapa ytterligare en datauppsättning i Adobe Experience Platform med några exempel på lojalitetsdata så att vi kan visa hur kundprofiler i realtid kan användas i Journey Optimizer webbkampanjer. Eftersom du redan har övat på liknande sätt kommer instruktionerna att vara kortfattade.
+När Web SDK-data hämtas till Adobe Experience Platform kan de berikas av andra datakällor som du har kapslat in i Platform. När en användare till exempel loggar in på Luma-webbplatsen `lumaCrmId` skickas till Platform som representerar en identitet i Lumas CRM-system. Ett identitetsdiagram skapas i Experience Platform och alla andra profilaktiverade datauppsättningar kan sammanfogas för att skapa kundprofiler i realtid. Vi kommer snabbt att skapa ytterligare en datauppsättning i Adobe Experience Platform med några exempel på lojalitetsdata så att vi kan visa hur kundprofiler i realtid kan användas i Journey Optimizer webbkampanjer. Eftersom du redan har övat på liknande sätt kommer instruktionerna att vara kortfattade.
 
+Så här skapar du schemat:
 
+1. Skapa ett nytt schema
+1. Välj **[!UICONTROL Individual Profile]** som [!UICONTROL base class]
+1. Namnge schemat `Luma Loyalty Schema`
+1. Välj `personID` field and mark is as an [!UICONTROL Identity] och [!UICONTROL Primary identity] med `Luma CRM Id` [!UICONTROL Identity namespace].
+1. Lägg till [!UICONTROL Loyalty Details] fältgrupp
+1. Aktivera schemat för [!UICONTROL Profile]
 
+SCHEMASKÄRM
+
+Så här skapar du datauppsättningen och importerar exempeldata:
+
+1. Skapa en ny datauppsättning från `Luma Loyalty Schema`
+1. Namnge datauppsättningen `Luma Loyalty Dataset`
+1. Aktivera datauppsättningen för [!UICONTROL Profile]
+1. Ladda ned exempelfilen LoyaltyWebSDK.json
+1. Dra och släpp filen i datauppsättningen
+1. Bekräfta att data har importerats
+
+SKÄRMBILD AV DATAUPPSÄTTNING OCH BEKRÄFTELSE
 
 ### Skapa lojalitetskampanj
 
