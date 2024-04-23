@@ -9,9 +9,9 @@ jira: KT-6953
 recommendations: noDisplay,noCatalog
 index: false
 hide: true
-source-git-commit: fd366a4848c2dd9e01b727782e2f26005a440725
+source-git-commit: e9e5e1dec8a0595bb789f0324c3263cf914dec31
 workflow-type: tm+mt
-source-wordcount: '96'
+source-wordcount: '95'
 ht-degree: 15%
 
 ---
@@ -38,9 +38,8 @@ ht-degree: 15%
    + [Konfigurera Adobe Analytics](setup-analytics.md)
    + [Konfigurera Audience Manager](setup-audience-manager.md)
    + [Konfigurera mål](setup-target.md)
-   + Konfigurera Journey Optimizer-funktioner {#journey-optimizer}
-      + [Konfigurera webbkanal](journey-optimizer/setup-web-channel.md)
-      + [Ställ in beslutshantering](journey-optimizer/setup-decision-management.md)
+   + [Konfigurera Journey Optimizer Web Channel](setup-web-channel.md)
+   + [Konfigurera Journey Optimizer Beslutshantering](setup-decision-management.md)
 
 + Hantering av samtycke {#consent-management}
    + [Ställ in samtycke](setup-consent.md)
