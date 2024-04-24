@@ -2,20 +2,14 @@
 title: Konfigurera behörigheter för självstudien
 description: Lär dig hur du begär åtkomst till Experience Platform Web SDK och konfigurerar behörighet för att slutföra självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Tags,Access Control
-exl-id: d7c4f2c3-cf3c-4587-88f8-82113d250084
-source-git-commit: 15bc08bdbdcb19f5b086267a6d94615cbfe1bac7
+source-git-commit: d81e7df36807778967bc0350735aec008fb1a55e
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '331'
 ht-degree: 3%
 
 ---
 
 # Konfigurera behörigheter för självstudien
-
-
->[!CAUTION]
->
->Vi räknar med att kunna publicera viktiga ändringar av den här självstudiekursen tisdagen den 23 april 2024. Därefter kommer många övningar att ändras och du kan behöva starta om självstudiekursen från början för att kunna slutföra alla lektioner.
 
 Lär dig hur du begär åtkomst till Experience Platform Web SDK och konfigurerar behörighet för att slutföra den här självstudiekursen. Om du vill implementera Platform Web SDK med hjälp av taggar i gränssnittet för datainsamling måste du ha rätt användarbehörigheter konfigurerade i [Admin Console](https://adminconsole.adobe.com).
 
@@ -29,9 +23,9 @@ Lär dig hur du begär åtkomst till Experience Platform Web SDK och konfigurera
 Dessa funktioner bör vara tillgängliga för alla Experience Cloud-kunder, även om du inte är kund till en plattformsbaserad applikation som Real-Time CDP.
 
 * Åtkomst till **standardproduktion**, **&quot;Prod&quot;** sandlåda.
-* Åtkomst till **[!UICONTROL Manage Schemas]** och **[!UICONTROL View Schemas]** under **[!UICONTROL Data Modeling]**
-* Åtkomst till **[!UICONTROL Manage Identity Namespaces]** och **[!UICONTROL View Identity Namespaces]** under **[!UICONTROL Identity Management]**
-* Åtkomst till **[!UICONTROL Manage Datastreams]** och **[!UICONTROL View Datastreams]** under **[!UICONTROL Data Collection]**
+* Åtkomst till **[!UICONTROL Manage Schemas]** och **[!UICONTROL View Schemas]** under **[!UICONTROL Data Modeling]**.
+* Åtkomst till **[!UICONTROL Manage Identity Namespaces]** och **[!UICONTROL View Identity Namespaces]** under **[!UICONTROL Identity Management]**.
+* Åtkomst till **[!UICONTROL Manage Datastreams]** och **[!UICONTROL View Datastreams]** under **[!UICONTROL Data Collection]**.
 * Om du är kund till ett plattformsbaserat program och kommer att fylla i [Konfigurera Experience Platform](setup-experience-platform.md) lektion:
    * Åtkomst till en **utveckling** sandlåda.
    * Alla behörighetsobjekt under **[!UICONTROL Data Management]** och **[!UICONTROL Profile Management]**:
@@ -57,4 +51,4 @@ Nu kan du börja de inledande konfigurationsstegen.
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

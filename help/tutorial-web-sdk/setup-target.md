@@ -3,35 +3,33 @@ title: Konfigurera Adobe Target med Platform Web SDK
 description: Lär dig implementera Adobe Target med Platform Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 solution: Data Collection, Target
 exl-id: 9084f572-5fec-4a26-8906-6d6dd1106d36
-source-git-commit: 15bc08bdbdcb19f5b086267a6d94615cbfe1bac7
+source-git-commit: 100a6a9ac8d580b68beb7811f99abcdc0ddefd1a
 workflow-type: tm+mt
-source-wordcount: '3545'
+source-wordcount: '4175'
 ht-degree: 0%
 
 ---
 
 # Konfigurera Adobe Target med Platform Web SDK
 
-
->[!CAUTION]
->
->Vi räknar med att kunna publicera viktiga ändringar av den här självstudiekursen tisdagen den 23 april 2024. Därefter kommer många övningar att ändras och du kan behöva starta om självstudiekursen från början för att kunna slutföra alla lektioner.
-
 Lär dig implementera Adobe Target med Platform Web SDK. Lär dig hur du levererar upplevelser och hur du skickar ytterligare parametrar till Target.
 
 [Adobe Target](https://experienceleague.adobe.com/docs/target/using/target-home.html) är den Adobe Experience Cloud-applikation som innehåller allt ni behöver för att skräddarsy och personalisera kundupplevelsen, så att ni kan maximera intäkterna på era webbplatser, mobilsajter, appar och andra digitala kanaler.
 
+![Web SDK och Adobe Target](assets/dc-websdk-at.png)
 
 ## Utbildningsmål
 
-När lektionen är klar kan du:
+När lektionen är klar kan du göra följande med en Web SDK-implementering av Target:
 
-* Förstå hur du lägger till ett fragment för att dölja plattformswebbsidesknappen för att förhindra flimmer när du använder Target med asynkrona taggar för inbäddning
+* Lägg till det fragment som döljs för att förhindra flimmer
 * Konfigurera ett datastream för att aktivera Target-funktioner
-* Återge beslut om visuell personalisering när sidan läses in (kallades tidigare&quot;global mbox&quot;)
+* Återge aktiviteter för visuell upplevelsedisposition
+* Återge formulärdispositionsaktiviteter
 * Skicka XDM-data till Target och förstå mappningen till Target-parametrar
 * Skicka anpassade data till Target, t.ex. profil- och enhetsparametrar
-* Validera en målinriktad implementering med Platform Web SDK
+* Validera en målinriktad implementering
+* Separera personaliseringsbegäranden från analysförfrågningar
 
 >[!TIP]
 >
@@ -43,7 +41,7 @@ När lektionen är klar kan du:
 För att slutföra lektionerna i det här avsnittet måste du först:
 
 * Slutför alla lektioner för den inledande konfigurationen av Platform Web SDK, inklusive inställning av dataelement och regler.
-* Kontrollera att du har en [Redigeraren eller godkännarrollen](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html#section_8C425E43E5DD4111BBFC734A2B7ABC80).
+* Kontrollera att du har en [Redigeraren eller godkännarrollen](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html#section_8C425E43E5DD4111BBFC734A2B7ABC80) i Adobe Target.
 * Installera [Hjälptillägg för Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html) om du använder webbläsaren Google Chrome.
 * Lär dig hur du ställer in aktiviteter i Target. Om du behöver en uppdaterare kan du använda följande självstudiekurser och guider för den här lektionen:
    * [Använda hjälptillägget för Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html)
@@ -51,7 +49,7 @@ För att slutföra lektionerna i det här avsnittet måste du först:
    * [Använda den formulärbaserade Experience Composer](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-form-based-experience-composer.html)
    * [Skapa aktiviteter för målinriktning på upplevelser](https://experienceleague.adobe.com/docs/target-learn/tutorials/activities/create-experience-targeting-activities.html)
 
-## Lägg till flimmerreducering
+## Lägg till flimmerhantering
 
 Innan du startar avgör du om en extra flimmerhanteringslösning krävs beroende på hur taggbiblioteket läses in.
 
@@ -62,7 +60,7 @@ Innan du startar avgör du om en extra flimmerhanteringslösning krävs beroende
 
 ### Asynkron implementering
 
-När ett taggbibliotek läses in asynkront kan sidan slutföra återgivningen innan Target har utfört en innehållsväxling. Det här beteendet kan leda till det som kallas&quot;flimmer&quot;, där standardinnehållet visas kort innan det ersätts av det anpassade innehåll som anges av Target. Om du vill undvika denna flimmer rekommenderar Adobe att du lägger till ett särskilt fragment som döljs innan den asynkrona taggen bäddar in.
+När ett taggbibliotek läses in asynkront kan det hända att sidan sluts återgivningen innan Target har ersatt standardinnehållet med anpassat innehåll. Det här beteendet kan leda till det som kallas&quot;flimmer&quot;, där standardinnehållet visas kort innan det ersätts av det anpassade innehåll som anges av Target. Om du vill undvika denna flimmer rekommenderar Adobe att du lägger till ett särskilt fragment som döljs innan den asynkrona taggen bäddar in.
 
 Det här fragmentet finns redan på Luma-webbplatsen, men vi ska titta närmare på vad koden gör:
 
@@ -129,9 +127,9 @@ Så här konfigurerar du Target i datastream:
 
 1. Gå till [Datainsamling](https://experience.adobe.com/#/data-collection){target="blank"} gränssnitt
 1. Välj **[!UICONTROL Datastreams]**
-1. Markera tidigare skapade `Luma Web SDK` datastream
+1. Markera tidigare skapade `Luma Web SDK: Development Environment` datastream
 
-   ![Välj dataströmmen för Luma Web SDK](assets/datastream-luma-web-sdk.png)
+   ![Välj dataströmmen för Luma Web SDK](assets/datastream-luma-web-sdk-development.png)
 
 1. Välj **[!UICONTROL Add Service]**
    ![Lägg till en tjänst i datastream](assets/target-datastream-addService.png)
@@ -149,16 +147,17 @@ Om du vill konfigurera eller söka efter egenskapstoken går du till **Adobe Tar
 
 ![Målegenskapstoken](assets/target-admin-properties.png)
 
->[!NOTE]
->
->Endast en egenskapstoken kan anges per datastream.
+<a id="advanced-pto"></a>
 
+Endast en egenskapstoken kan anges per datastream, men med åsidosättningar av egenskapstoken kan du ange alternativa egenskapstoken som ersätter den primära egenskapstoken som definierats i datastream. En uppdatering av `sendEvent` åtgärd krävs också för att åsidosätta datastream.
+
+![Identitetslista](assets/advanced-property-token.png)
 
 ### Målmiljö-ID
 
 [Miljö](https://experienceleague.adobe.com/docs/target/using/administer/environments.html) i Target hjälper er att hantera implementeringen i alla utvecklingsfaser. Den här valfria inställningen anger vilken målmiljö du ska använda för varje datastream.
 
-Adobe rekommenderar att du ställer in målmiljö-ID på olika sätt för alla dina dataströmmar för utveckling, staging och produktion för att göra det enkelt.
+Adobe rekommenderar att du ställer in målmiljö-ID på olika sätt för alla dina dataströmmar för utveckling, staging och produktion för att göra det enkelt. Du kan också ordna dina miljöer i Target-gränssnittet med hjälp av [värdar](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html) -funktion.
 
 Navigera till för att konfigurera eller hitta miljö-ID:n **Adobe Target** > **[!UICONTROL Administration]** > **[!UICONTROL Environments]**.
 
@@ -179,9 +178,11 @@ Identitetssymbolerna finns i identitetslistan under **Datainsamling** > **[!UICO
 I den här självstudiekursen om du vill använda Luma-webbplatsen använder du identitetssymbolen `lumaCrmId` under lektionen om [Identiteter](configure-identities.md).
 
 
+
+
 ## Ge visuella personaliseringsbeslut
 
-Först måste du förstå den terminologi som används i Target- och tagg-gränssnitten.
+De visuella personaliseringsbesluten avser de upplevelser som skapas i Adobe Target visuella upplevelsedisposition. För det första bör du förstå terminologin som används i Target- och tagggränssnitten:
 
 * **Aktivitet**: En uppsättning upplevelser som riktar sig till en eller flera målgrupper. Ett enkelt A/B-test kan till exempel vara en aktivitet med två upplevelser.
 * **Upplevelse**: En uppsättning åtgärder riktade till en eller flera platser, eller beslutsomfattningar.
@@ -189,16 +190,22 @@ Först måste du förstå den terminologi som används i Target- och tagg-gräns
 * **Beslut om personalisering**: En åtgärd som servern fastställer ska tillämpas. Dessa beslut kan baseras på målgruppskriterier och prioritering av målaktiviteter.
 * **Föreslå**: Resultatet av beslut som fattats av servern och som levereras i svaret på Platform Web SDK. Om du till exempel byter en banderollbild blir det ett förslag.
 
-### Uppdatera sidans inläsningsregel
+### Uppdatera [!UICONTROL Send event] åtgärd
 
-Visuella personaliseringsbeslut från Target levereras av Platform Web SDK, om Target är aktiverat i datastream. Men _de återges inte automatiskt_. Du måste ändra den globala sidans inläsningsregel för att aktivera automatisk återgivning.
+Visuella personaliseringsbeslut från Target levereras av Platform Web SDK, om Target är aktiverat i datastream. Men _de återges inte automatiskt_. Du måste uppdatera [!UICONTROL Send event] åtgärd för att aktivera automatisk återgivning.
 
 1. I [Datainsamling](https://experience.adobe.com/#/data-collection){target="blank"} öppnar du taggegenskapen som du använder för den här självstudiekursen
-1. Öppna `all pages - library load - AA & AT` regel
+1. Öppna `all pages - library loaded - send event - 50` regel
 1. Välj `Adobe Experience Platform Web SDK - Send event` åtgärd
 1. Aktivera **[!UICONTROL Render visual personalization decisions]** med kryssrutan
 
    ![Aktivera beslut om visuell personalisering vid återgivning](assets/target-rule-enable-visual-decisions.png)
+
+<!--
+1. In the **[!UICONTROL Datastream configuration overrides**] the **[!UICONTROL Target Property Token]** can be overridden either as a static value or with a data element. Only property tokens defined in the [**Advanced Property Token Overrides**](#advanced-pto) section in **Datastream Configuration** will return results.
+   
+   ![Override the Property Token](assets/target-property-token-ovrrides.png)
+   -->
 
 1. Spara ändringarna och bygg i biblioteket
 
@@ -210,6 +217,7 @@ Inställningen för beslut om visuell återgivning gör att Platform Web SDK aut
 
 Om du själv föredrar att återge eller vidta åtgärder för dessa beslut med egen kod kan du lämna [!UICONTROL Render visual personalization decisions] inställningen inaktiverad. Platform Web SDK är flexibelt och ger dig fullständig kontroll. Mer information om [manuellt återge anpassat innehåll](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html).
 
+
 ### Konfigurera en Target-aktivitet med Visual Experience Composer
 
 Nu när den grundläggande implementeringsdelen är klar skapar du en XT-aktivitet (Experience Targeting) i Target för att kontrollera att allt fungerar som det ska. Du kan använda självstudiekursen Mål för [skapa aktiviteter för Experience Targeting](https://experienceleague.adobe.com/docs/target-learn/tutorials/activities/create-experience-targeting-activities.html) om du behöver hjälp.
@@ -218,16 +226,22 @@ Nu när den grundläggande implementeringsdelen är klar skapar du en XT-aktivit
 >
 >Om du använder Google Chrome som webbläsare är [Hjälptillägg för Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html?lang=en) krävs för att läsa in webbplatsen korrekt för redigering i VEC.
 
-1. Navigera till mål
+1. Navigera till Adobe Target
 1. Skapa en XT-aktivitet (Experience Targeting) med hjälp av Luma-startsidan för aktivitets-URL:en
 
    ![Skapa en ny XT-aktivitet](assets/target-xt-create-activity.png)
 
-1. Ändra sidan, t.ex. ändra texten på hemsidans banner
+1. Ändra sidan, till exempel texten på startsidans hjältebanner.  När du är klar väljer du **[!UICONTROL Save]** sedan **[!UICONTROL Next]**.
 
    ![VEC-ändring för mål](assets/target-xt-vec-modification.png)
 
+1. Uppdatera händelsenamnet och välj **[!UICONTROL Next]**.
+
+   ![VEC-uppdateringshändelse för mål](assets/target-xt-vec-updateevent.png)
+
 1. Välj Adobe Analytics som rapportkälla med rätt rapportsserie och måttet på beställningar som mål.
+
+   ![Målkälla för VEC-rapportering](assets/target-xt-vec-reportingsource.png)
 
    >[!NOTE]
    >
@@ -242,13 +256,13 @@ Nu när den grundläggande implementeringsdelen är klar skapar du en XT-aktivit
 
 ### Validera med felsökaren
 
-Om du ställer in en aktivitet bör du se hur innehållet återges på sidan. Men även om inga aktiviteter är aktiva kan du kontrollera att Target är korrekt konfigurerat genom att titta i nätverksanropet för Skicka händelse.
+Om du ställer in en aktivitet bör du se innehållet renderas på sidan. Men även om inga aktiviteter är aktiva kan du kontrollera att Target är korrekt konfigurerat genom att titta i nätverksanropet för Skicka händelse.
 
 >[!CAUTION]
 >
 >Om du använder Google Chrome och har [Hjälptillägg för Visual Experience Composer (VEC)](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html?lang=en) installerade kontrollerar du att **Inmata målbibliotek** inställningen är inaktiverad. Om du aktiverar den här inställningen kommer det att resultera i extra Target-begäranden.
 
-1. Öppna webbläsartillägget Adobe Experience Platform debugger
+1. Öppna webbläsartillägget Adobe Experience Platform Debugger
 1. Gå till [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html) och använder felsökaren för att [växla taggegenskapen på webbplatsen till din egen utvecklingsegenskap](validate-with-debugger.md#use-the-experience-platform-debugger-to-map-to-your-tags-property)
 1. Läs in sidan igen
 1. Välj **[!UICONTROL Network]** i felsökningsverktyget
@@ -257,9 +271,9 @@ Om du ställer in en aktivitet bör du se hur innehållet återges på sidan. Me
 
    ![Nätverksanrop i Adobe Experience Platform Debugger](assets/target-debugger-network.png)
 
-1. Observera att det finns nycklar under `query` > `personalization` och  `decisionScopes` har värdet `__view__`. Detta omfång motsvarar Target&quot;global mbox&quot;. Detta Platform Web SDK-anrop begärde beslut från Target.
+1. Observera att det finns nycklar under `query` > `personalization` och  `decisionScopes` har värdet `__view__`. Detta omfång motsvarar `target-global-mbox`. Detta Platform Web SDK-anrop begärde beslut från Target.
 
-   ![__visa__ DecisionScope-begäran](assets/target-debugger-view-scope.png)
+   ![`__view__` DecisionScope-begäran](assets/target-debugger-view-scope.png)
 
 1. Stäng övertäckningen och välj händelseinformation för det andra nätverksanropet. Det här anropet är bara tillgängligt om Target returnerade en aktivitet.
 1. Observera att det finns information om aktiviteten och upplevelsen som returnerats från Target. Detta Platform Web SDK-anrop skickar ett meddelande om att en Target-aktivitet återgavs till användaren och ökar intrycket.
@@ -268,13 +282,13 @@ Om du ställer in en aktivitet bör du se hur innehållet återges på sidan. Me
 
 ## Konfigurera och återge ett anpassat beslutsutrymme
 
-Anpassade beslutsomfattningar (tidigare kallade&quot;mboxes&quot;) kan användas för att leverera HTML- eller JSON-innehåll på ett strukturerat sätt med den Target-formulärbaserade Experience Composer. Innehåll som levereras till något av dessa anpassade omfång återges inte automatiskt av Platform Web SDK.
+Anpassade beslutsomfattningar (tidigare kallade&quot;mboxes&quot;) kan användas för att leverera HTML- eller JSON-innehåll på ett strukturerat sätt med den Target-formulärbaserade Experience Composer. Innehåll som levereras till något av dessa anpassade omfång återges inte automatiskt av Platform Web SDK. Den kan återges med en åtgärd i Taggar.
 
-### Lägga till ett omfång till sidinläsningsregeln
+### Lägg till ett omfång i [!UICONTROL Send event action]
 
 Ändra sidans inläsningsregel för att lägga till ett anpassat beslutsomfång:
 
-1. Öppna `all pages - library load - AA & AT` regel
+1. Öppna `all pages - library loaded - send event - 50` regel
 1. Välj `Adobe Experience Platform Web SDK - Send Event` åtgärd
 1. Lägg till ett eller flera omfång som du vill använda. Använd följande exempel: `homepage-hero`.
 
@@ -293,7 +307,7 @@ Nu när du har konfigurerat Platform Web SDK för att begära innehåll för `ho
 1. Skapa en anropad regel `homepage - send event complete - render homepage-hero`.
 1. Lägg till en händelse i regeln. Använd **Adobe Experience Platform Web SDK** tillägg och **[!UICONTROL Send event complete]** händelsetyp.
 1. Lägg till ett villkor för att begränsa regeln till Luma-startsidan (sökvägen utan frågesträng är lika med) `/content/luma/us/en.html`).
-1. Lägg till en åtgärd i regeln. Använd **Core** tillägg och **Egen kod** åtgärdstyp.
+1. Lägg till en åtgärd i regeln. Använd **Adobe Experience Platform Web SDK** tillägg och **Använd förslag** åtgärdstyp.
 
    ![Återge startsidans hjälteregel](assets/target-rule-render-hero.png)
 
@@ -301,63 +315,13 @@ Nu när du har konfigurerat Platform Web SDK för att begära innehåll för `ho
    >
    >Ge regelhändelser, villkor och funktionsmakron beskrivande namn i stället för att använda standardnamn. Robusta namn på regelkomponenter gör sökresultatet mycket mer användbart.
 
-1. Ange anpassad kod för att läsa och vidta åtgärder för de förslag som returneras från svaret på Platform Web SDK. Den anpassade koden i det här exemplet använder den metod som beskrivs i handboken för [manuellt återge anpassat innehåll](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=en#manually-rendering-content). Koden anpassades för `homepage-hero` exempelomfång med hjälp av en taggregelåtgärd.
+1. Retur `%event.propositions%` i fältet Föreslå när vi använder händelsen&quot;Skicka händelse klar&quot; som utlösare för den här regeln.
+1. I avsnittet &quot;Föreslå metadata&quot; väljer du **[!UICONTROL Use a form]**
+1. För **[!UICONTROL Scope]** fältinmatning `homepage-hero`
+1. För **[!UICONTROL Selector]** fältinmatning `div.heroimage`
+1. För **[!UICONTROL Action Type]** välj **[!UICONTROL Set HTML]**
 
-   ```javascript
-   var propositions = event.propositions;
-   
-   var heroProposition;
-   if (propositions) {
-      // Find the hero proposition, if it exists.
-      for (var i = 0; i < propositions.length; i++) {
-         var proposition = propositions[i];
-         if (proposition.scope === "homepage-hero") {
-            heroProposition = proposition;
-            break;
-         }
-      }
-   }
-   
-   var heroHtml;
-   if (heroProposition) {
-      // Find the item from proposition that should be rendered.
-      // Rather than assuming there a single item that has HTML
-      // content, find the first item whose schema indicates
-      // it contains HTML content.
-      for (var j = 0; j < heroProposition.items.length; j++) {
-         var heroPropositionItem = heroProposition.items[j];
-         if (heroPropositionItem.schema === "https://ns.adobe.com/personalization/html-content-item") {
-            heroHtml = heroPropositionItem.data.content;
-            break;
-         }
-      }
-   }
-   
-   if (heroHtml) {
-      // Hero HTML exists. Time to render it.
-      var heroElement = document.querySelector(".heroimage");
-      heroElement.innerHTML = heroHtml;
-      // For this example, we assume there is only a signle place to update in the HTML.
-   }
-   
-   // Send a "display" event 
-   alloy("sendEvent", {
-      xdm: {
-         eventType: "propositionDisplay",
-         _experience: {
-            decisioning: {
-               propositions: [
-                  {
-                     id: heroProposition.id,
-                     scope: heroProposition.scope,
-                     scopeDetails: heroProposition.scopeDetails
-                  }
-               ]
-            }
-         }
-      }
-   });
-   ```
+   ![Återge hemsidans hjälteåtgärd](assets/target-action-render-hero.png)
 
 1. Spara ändringarna och bygg i biblioteket
 1. Läs in Lumas hemsida några gånger, vilket bör räcka för att skapa den nya `homepage-hero` register för beslutsomfattning i Target-gränssnittet.
@@ -399,7 +363,7 @@ Nu när du har en regel för att manuellt återge ett anpassat beslutsområde ka
 
 >[!NOTE]
 >
->Konverteringsmålet &quot;Click on mbox&quot; fungerar inte automatiskt. Eftersom SDK för plattformen inte återger anpassade omfång automatiskt spåras inte klickningar till platser som du väljer att använda innehållet på. Du kan skapa en egen klickspårning för varje omfång med hjälp av&quot;klicka&quot; `eventType` med tillämplig `_experience` information med `sendEvent` åtgärd.
+>Konverteringsmålet &quot;Click on mbox&quot; fungerar inte automatiskt. Eftersom anpassade omfång inte återges automatiskt i Platform Web SDK spåras inte klickningar till platser som du väljer att tillämpa innehållet. Du kan skapa en egen klickspårning för varje omfång med hjälp av&quot;klicka&quot; `eventType` med tillämplig `_experience` information med `sendEvent` åtgärd.
 
 ### Validera med felsökaren
 
@@ -416,16 +380,24 @@ Om du har aktiverat din aktivitet bör du se innehållet återges på sidan. Äv
 
 1. Observera att det finns nycklar under `query` > `personalization` och  `decisionScopes` har värdet `__view__` som förut, men nu finns det också en `homepage-hero` omfång ingår. Detta Platform Web SDK-anrop begärde beslut från Target för ändringar som gjorts med VEC och den specifika `homepage-hero` plats.
 
-   ![__visa__ DecisionScope-begäran](assets/target-debugger-view-scope.png)
+   ![`__view__` DecisionScope-begäran](assets/target-debugger-view-scope.png)
 
 1. Stäng övertäckningen och välj händelseinformation för det andra nätverksanropet. Det här anropet är bara tillgängligt om Target returnerade en aktivitet.
 1. Observera att det finns information om aktiviteten och upplevelsen som returnerats från Target. Detta Platform Web SDK-anrop skickar ett meddelande om att en Target-aktivitet återgavs till användaren och ökar intrycket.
 
    ![Målaktivitetsintryck](assets/target-debugger-activity-impression.png)
 
-## Skicka ytterligare data till mål
+## Skicka parametrar till mål
 
 I det här avsnittet skickar du Target-specifika data och tar en närmare titt på hur XDM-data mappas till Target-parametrar.
+
+### Sidparametrar (mbox) och XDM
+
+Alla XDM-fält skickas automatiskt till Target som [sidparametrar](https://experienceleague.adobe.com/en/docs/target-dev/developer/implementation/methods/page) eller mbox-parametrar.
+
+Vissa av dessa XDM-fält mappas till specialobjekt i Target serverdel. Till exempel: `web.webPageDetails.URL` kommer automatiskt att vara tillgängligt för att skapa URL-baserade villkor för målinriktning eller som `page.url` när du skapar profilskript.
+
+### Särskilda parametrar och dataobjektet
 
 Det finns vissa datapunkter som kan vara användbara för Target som inte har mappats från XDM-objektet. Dessa speciella Target-parametrar inkluderar:
 
@@ -434,22 +406,9 @@ Det finns vissa datapunkter som kan vara användbara för Target som inte har ma
 * [Recommendations reserverade parametrar](https://experienceleague.adobe.com/docs/target/using/recommendations/plan-implement.html?lang=en#pass-behavioral)
 * Kategorivärden för [kategoritillhörighet](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/category-affinity.html?lang=en)
 
-### Skapa dataelement för Target-parametrar
+Dessa parametrar måste skickas i `data` i stället för i `xdm` -objekt. Dessutom kan sidparametrar (eller mbox-parametrar) också inkluderas i `data` -objekt.
 
-Först ställer du in några extra dataelement för ett profilattribut, entitetsattribut, kategorivärde och sedan konstruerar du `data` objekt som används för att skicka icke-XDM-data:
-
-* **`target.entity.id`** mappad till `digitalData.product.0.productInfo.sku`
-* **`target.entity.name`** mappad till `digitalData.product.0.productInfo.title`
-* **`target.user.categoryId`** använda följande anpassade kod för att analysera webbplatsens URL för kategorin på den översta nivån:
-
-  ```javascript
-  var cat = location.pathname.split(/[/.]+/);
-  if (cat[5] == 'products') {
-     return (cat[6]);
-  } else if (cat[5] != 'html') { 
-     return (cat[5]);
-  }
-  ```
+Om du vill fylla i dataobjektet skapar du följande dataelement och återanvänder dataelement som skapats i [Skapa dataelement](create-data-elements.md) lektion:
 
 * **`data.content`** med följande anpassade kod:
 
@@ -457,32 +416,65 @@ Först ställer du in några extra dataelement för ett profilattribut, entitets
   var data = {
      __adobe: {
         target: {
-           "entity.id": _satellite.getVar("target.entity.id"),
-           "entity.name": _satellite.getVar("target.entity.name"),
+           "entity.id": _satellite.getVar("product.productInfo.sku"),
+           "entity.name": _satellite.getVar("product.productInfo.title"),
            "profile.loggedIn": _satellite.getVar("user.profile.attributes.loggedIn"),
-           "user.categoryId": _satellite.getVar("target.user.categoryId")
+           "user.categoryId": _satellite.getVar("product.category")
         }
      }
   }
   return data;
   ```
 
+
+
 ### Uppdatera sidans inläsningsregel
 
 Om ytterligare data för Target skickas utanför XDM-objektet måste tillämpliga regler uppdateras. I det här exemplet är den enda ändringen du måste göra att inkludera den nya **data.content** dataelement till den allmänna sidinläsningsregeln och visningsregeln för produktsidor.
 
-1. Öppna `all pages - library load - AA & AT` regel
+1. Öppna `all pages - library loaded - send event - 50` regel
 1. Välj `Adobe Experience Platform Web SDK - Send event` åtgärd
 1. Lägg till `data.content` dataelement till datafältet
 
    ![Lägg till måldata i regel](assets/target-rule-data.png)
 
 1. Spara ändringarna och bygg i biblioteket
-1. Upprepa steg 1 till 4 för **produktvy - biblioteksladdning - AA** regel
+1. Upprepa steg 1 till 4 för **ecommerce - bibliotek inläst - ange produktinformationsvariabler - 20** regel
 
 >[!NOTE]
 >
 >I exemplet ovan används en `data` objekt som inte är fullständigt ifyllt på alla sidtyper. Taggar hanterar den här situationen korrekt och utesluter tangenter som har ett odefinierat värde. Till exempel: `entity.id` och `entity.name` kommer inte att skickas på några sidor utöver produktinformationen.
+
+
+## Dela upp personaliserings- och analysförfrågningar
+
+Datalagret på Luma-webbplatsen definieras fullständigt innan taggarna bäddar in kod. Detta gör att vi kan använda ett enda anrop för att både hämta personaliserat innehåll (t.ex. från Adobe Target) och skicka analysdata (t.ex. till Adobe Analytics).
+
+På många webbplatser kan datalagret dock inte läsas in tillräckligt tidigt eller tillräckligt snabbt för att använda ett enda anrop för båda programmen. I dessa situationer kan du använda två [!UICONTROL Send event] åtgärder på en enda sida laddas och används den första för personalisering och den andra för analys. Genom att dela upp händelserna på det här sättet kan personaliseringshändelsen utlösas så tidigt som möjligt, samtidigt som datalagret läses in helt innan Analytics-händelsen skickas. Detta liknar många SDK-implementeringar som gjorts före webben, där Adobe Target skulle starta `target-global-mbox` överst på sidan så avfyrar Adobe Analytics `s.t()` ring längst ned på sidan
+
+Så här skapar du en begäran om anpassning överst:
+
+1. Öppna `all pages - library loaded - send event - 50` regel
+1. Öppna **Skicka händelse** åtgärd
+1. Välj **[!UICONTROL Use guided events]** och sedan **[!UICONTROL Request personalization]**
+1. Det här låser **Typ** as **[!UICONTROL Decisioning Proposition Fetch]**
+
+   ![send_Decision_request_alone](assets/target-decision-request.png)
+
+Så här skapar du en begäran som baseras på analys:
+
+1. Skapa en ny regel som anropas `all pages - page bottom - send event - 50`
+1. Lägg till en händelse i regeln. Använd **Core** tillägg och **[!UICONTROL Page Bottom]** händelsetyp
+1. Lägg till en åtgärd i regeln. Använd **Adobe Experience Platform Web SDK** tillägg och **Skicka händelse** åtgärdstyp
+1. Välj **[!UICONTROL Use guided events]** och sedan **[!UICONTROL Collect analytics]**
+1. Det här låser **[!UICONTROL Include pending display notifications]** kryssrutan markerad så att det köade visningsmeddelandet från beslutsbegäran skickas.
+
+![send_Decision_request_alone](assets/target-aa-request-guided.png)
+
+>[!TIP]
+>
+>Om händelsen som du hämtar en beslutsutkast för inte har någon Adobe Analytics-händelse efter den använder du **Guidad händelseläge** **[!UICONTROL Unguided - show all fields]**. Du måste välja alla alternativ manuellt, men alternativet låses upp för att **[!UICONTROL automatically send a display notification]** tillsammans med din hämtningsförfrågan.
+
 
 ### Validera med felsökaren
 
@@ -496,7 +488,7 @@ Nu när reglerna har uppdaterats kan du validera om data skickas korrekt med Ado
 1. Välj värdet i händelseraden för det första anropet
 1. Observera att det finns nycklar under `data` > `__adobe` > `target` och de fylls i med information om produkt, kategori och inloggningsstatus.
 
-   ![__visa__ DecisionScope-begäran](assets/target-debugger-data.png)
+   ![`__view__` DecisionScope-begäran](assets/target-debugger-data.png)
 
 ### Validera i målgränssnittet
 
@@ -507,10 +499,14 @@ Titta sedan i Target-gränssnittet för att bekräfta att data har tagits emot o
 1. Skapa en målgrupp och välj **[!UICONTROL Custom]** attributtyp
 1. Sök i **[!UICONTROL Parameter]** fält för `web`. Listrutan ska innehålla alla XDM-fält som hör till webbsidans information.
 
+   ![Validera i anpassat Target-attribut](assets/validate-in-target-customattribute.png)
+
 Verifiera sedan att attributet för inloggningstillståndsprofilen har skickats.
 
 1. Välj **[!UICONTROL Visitor Profile]** attributtyp
-1. Sök efter `loggedIn`. Om attributet är tillgängligt i listrutan skickades attributet korrekt till Target. Det kan ta flera minuter innan nya attribut blir tillgängliga i målgränssnittet.
+2. Sök efter `loggedIn`. Om attributet är tillgängligt i listrutan skickades attributet korrekt till Target. Det kan ta flera minuter innan nya attribut blir tillgängliga i målgränssnittet.
+
+   ![Validera i målprofil](assets/validate-in-target-profile.png)
 
 Om du har Target Premium kan du även validera att entitetsdata skickades korrekt och att produktdata skrevs till Recommendations produktkatalog.
 
@@ -518,10 +514,41 @@ Om du har Target Premium kan du även validera att entitetsdata skickades korrek
 1. Välj **[!UICONTROL Catalog Search]** i navigeringen till vänster
 1. Sök efter den produkt-SKU eller det produktnamn du besökt tidigare på Luma-webbplatsen. Produkten ska visas i produktkatalogen. Nya produkter kan ta flera minuter att söka i Recommendations produktkatalog.
 
+   ![Validera i sökning i målkatalog](assets/validate-in-target-catalogsearch.png)
+
+### Validera med Assurance
+
+Dessutom kan du använda Assurance där det är lämpligt för att bekräfta att målbeslutsbegäranden hämtar rätt data och att eventuella serveromvandlingar sker korrekt. Du kan också bekräfta att kampanj- och upplevelseinformation finns i Adobe Analytics-anropen även när Target-beslutet och Adobe Analytics-anrop skickas separat.
+
+1. Öppna [Säkerhet](https://experience.adobe.com/assurance)
+1. Starta en ny session, ange **[!UICONTROL session name]** och matar in **[!UICONTROL base url]** för din webbplats eller någon annan sida som du testar
+1. Klicka **[!UICONTROL Next]**
+
+   ![Validera i ny session med säkerhet](assets/validate-in-assurance-newsession.png)
+
+1. Välj anslutningsmetod, i det här fallet använder vi **[!UICONTROL copy link]**
+1. Kopiera länken och klistra in den på en ny flik i webbläsaren
+1. Klicka **[!UICONTROL Done]**
+
+   ![Validera i försäkrings-anslut via kopieringslänk](assets/validate-in-assurance-copylink.png)
+
+1. När din Assurance-session startas visas händelser som fylls i på fliken Händelser
+1. Filtrera efter &quot;ton&quot;
+1. Markera det senaste samtalet och expandera meddelandena för att se till att de fylls i korrekt och notera värdena för&quot;data&quot;
+
+   ![Validera i bekräftelsemålträff](assets/validate-in-assurance-targetevent.png)
+
+1. Behåll sedan datafiltret och välj händelsen analytics.mapping som inträffar efter den målhändelse som vi just visade.
+1. Undersök&quot;context.mappedQueryParams.\&lt;yourschemaname>&quot; för att bekräfta det innehåller ett &quot;tta&quot;-attribut med en sammanfogad sträng som matchar de &quot;tta&quot;-värden som påträffades i föregående målhändelse.
+
+   ![Validera i bekräftelseanalys - träff](assets/validate-in-assurance-analyticsevent.png)
+
+Detta bekräftar att A4T-informationen som ställdes i kö för senare överföring när vi gjorde målbeslutsanropet skickades korrekt när analysspårningsanropet utlöstes senare på sidan.
+
 Nu när du är klar med den här lektionen bör du ha en fungerande implementering av Adobe Target med Platform Web SDK.
 
-[Nästa: ](setup-consent.md)
+[Nästa: ](setup-web-channel.md)
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

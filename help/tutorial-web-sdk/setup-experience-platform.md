@@ -2,23 +2,20 @@
 title: Strömma data till Adobe Experience Platform med Web SDK
 description: Lär dig hur du direktuppspelar webbdata till Adobe Experience Platform med Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 exl-id: 4d749ffa-e1c0-4498-9b12-12949807b369
-source-git-commit: 15bc08bdbdcb19f5b086267a6d94615cbfe1bac7
+source-git-commit: 100a6a9ac8d580b68beb7811f99abcdc0ddefd1a
 workflow-type: tm+mt
-source-wordcount: '1528'
+source-wordcount: '1511'
 ht-degree: 0%
 
 ---
 
 # Strömma data till Experience Platform med Web SDK
 
-
->[!CAUTION]
->
->Vi räknar med att kunna publicera viktiga ändringar av den här självstudiekursen tisdagen den 23 april 2024. Därefter kommer många övningar att ändras och du kan behöva starta om självstudiekursen från början för att kunna slutföra alla lektioner.
-
 Lär dig hur du strömmar webbdata till Adobe Experience Platform med Platform Web SDK.
 
 Experience Platform är ryggraden i alla nya Experience Cloud-program, som Adobe Real-time Customer Data Platform, Adobe Customer Journey Analytics och Adobe Journey Optimizer. Dessa program är utformade för att använda Platform Web SDK som den optimala metoden för webbdatainsamling.
+
+![Web SDK och Adobe Experience Platform](assets/dc-websdk-aep.png)
 
 Experience Platform använder samma XDM-schema som du skapade tidigare för att hämta händelsedata från Luma-webbplatsen. När dessa data skickas till Platform Edge Network kan datastream-konfigurationen vidarebefordra dem till Experience Platform.
 
@@ -33,34 +30,22 @@ När lektionen är klar kan du:
 
 ## Förutsättningar
 
-Du borde ha slutfört följande lektioner:
+För att slutföra lektionen måste du först:
 
-* The **Inledande konfiguration** lektioner:
-   * [Konfigurera behörigheter](configure-permissions.md)
-   * [Konfigurera ett XDM-schema](configure-schemas.md)
-   * [Konfigurera ett datastream](configure-datastream.md)
-   * [Konfigurera ett identitetsnamnutrymme](configure-identities.md)
-
-* The **Märkordskonfiguration** lektioner:
-   * [Installera SDK-tillägg för webben](install-web-sdk.md)
-   * [Skapa dataelement](create-data-elements.md)
-   * [Skapa taggregler](create-tag-rule.md)
+* Har tillgång till ett Adobe Experience Platform-program som Real-time Customer Data Platform, Journey Optimizer eller Customer Journey Analytics
+* Slutför de tidigare lektionerna i avsnitten Inledande konfiguration och Tagginställningar i den här självstudien.
 
 
 ## Skapa en datauppsättning
 
 Alla data som har inhämtats till Adobe Experience Platform lagras i datasjön som datauppsättningar. A [datauppsättning](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/overview.html?lang=en) är en lagrings- och hanteringskonstruktion för en samling data, vanligtvis en tabell, som innehåller ett schema (kolumner) och fält (rader). Datauppsättningar innehåller också metadata som beskriver olika aspekter av de data som lagras.
 
-I den här övningen skapar du en datauppsättning för att spåra innehåll och e-handelsinformation för [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html).
-
->[!WARNING]
->
->Du måste ha skapat `Luma Web Event Data` schemat, enligt instruktionerna i föregående lektion, [Konfigurera ett XDM-schema](configure-schemas.md).
+Låt oss skapa en datauppsättning för dina webbhändelsedata för Luma:
 
 
 1. Gå till [Experience Platform gränssnitt](https://experience.adobe.com/platform/)
 1. Bekräfta att du befinner dig i den utvecklingssandlåda som du använder för den här självstudien
-1. Öppna **[!UICONTROL Datasets]** från vänster navigering
+1. Öppna **[!UICONTROL Data Management > Datasets]** från vänster navigering
 1. Välj **[!UICONTROL Create dataset]**
 
    ![Skapa schema](assets/experience-platform-create-dataset.png)
@@ -87,7 +72,7 @@ Nu kan du konfigurera [!UICONTROL datastream] skicka data till [!UICONTROL Adobe
 1. Välj **[!UICONTROL Datastreams]** från vänster navigering
 1. Öppna datastream som du skapade i [Konfigurera ett datastream](configure-datastream.md) lektion, `Luma Web SDK`
 
-   ![Välj dataströmmen för Luma Web SDK](assets/datastream-luma-web-sdk.png)
+   ![Välj dataströmmen för Luma Web SDK](assets/datastream-luma-web-sdk-development.png)
 
 1. Välj **[!UICONTROL Add Service]**
    ![Lägg till en tjänst i datastream](assets/experience-platform-addService.png)
@@ -135,7 +120,7 @@ Nu ska data fyllas i i `Luma Web Event Data` datauppsättning och klar för vali
 
 För att bekräfta att data har landat i plattformens datasjön är ett snabbt alternativ att använda **[!UICONTROL Preview dataset]** -funktion. SDK-data för webben mikrobatcheras till datasjön och uppdateras regelbundet i plattformsgränssnittet. Det kan ta 10-15 minuter att se data som du har skapat.
 
-1. I [Experience Platform](https://experience.adobe.com/platform/) gränssnitt, välja **[!UICONTROL Datasets]** i den vänstra navigeringen för att öppna **[!UICONTROL Datasets]** kontrollpanel.
+1. I [Experience Platform](https://experience.adobe.com/platform/) gränssnitt, välja **[!UICONTROL Data Management > Datasets]** i den vänstra navigeringen för att öppna **[!UICONTROL Datasets]** kontrollpanel.
 
    Kontrollpanelen visar alla tillgängliga datauppsättningar för din organisation. Information visas för varje datamängd som anges, inklusive namn, schema som datauppsättningen följer och status för den senaste importen.
 
@@ -214,7 +199,7 @@ Nu är schemat även aktiverat för profilen.
 > * För det första kan du importera vissa data i dina datauppsättningar.
 > * Åtgärda eventuella problem som uppstår under dataöverföringsprocessen (till exempel datavalidering eller mappningsproblem).
 > * Aktivera datauppsättningar och scheman för profil
-> * Importera data igen
+> * Importera data igen, om det behövs
 
 
 ### Validera en profil
@@ -226,7 +211,7 @@ Först måste du generera fler exempeldata. Upprepa stegen tidigare i den här l
 1. I [Experience Platform](https://experience.adobe.com/platform/) gränssnitt, välja **[!UICONTROL Profiles]** i den vänstra navigeringen
 
 1. Som **[!UICONTROL Identity namespace]** use `lumaCRMId`
-1. Kopiera och klistra in värdet för `lumaCRMId` godkändes i samtalet som du inspekterade i felsökaren i Experience Platform (troligtvis `112ca06ed53d3db37e4cea49cc45b71e`).
+1. Kopiera och klistra in värdet för `lumaCRMId` godkändes i samtalet som du inspekterade i felsökaren i Experience Platform, i det här fallet `112ca06ed53d3db37e4cea49cc45b71e`.
 
    ![Profil](assets/experience-platform-validate-dataset-profile.png)
 
@@ -234,15 +219,22 @@ Först måste du generera fler exempeldata. Upprepa stegen tidigare i den här l
 
    ![Profil](assets/experience-platform-validate-dataset-profile-set.png)
 
-1. Klicka på [!UICONTROL Profile ID] och [!UICONTROL Customer profile] konsolen fylls i. Här ser du alla identiteter som är länkade till `lumaCRMId`, till exempel `ECID`:
+1. Så här visar du de fullständiga **[!UICONTROL Customer Profile]** för varje ID väljer du **[!UICONTROL Profile ID]** i huvudfönstret.
+
+   >[!NOTE]
+   >
+   >Observera att du kan välja hyperlänken för profil-ID:t, eller om du markerar raden öppnas en högermeny där du kan välja hyperlänken för profil-ID
+   > ![Kundprofil](assets/experience-platform-select-profileId.png)
+
+   Här ser du alla identiteter som är länkade till `lumaCRMId`, till exempel `ECID`.
 
    ![Kundprofil](assets/experience-platform-validate-dataset-custProfile.png)
 
-Du har nu aktiverat Platform Web SDK för Experience Platform (och Real-Time CDP! Och Customer Journey Analytics! Och Journey Optimizer!)!
+Du har nu aktiverat Platform Web SDK för Experience Platform (och Real-Time CDP! Och Journey Optimizer!)!
 
 
 [Nästa: ](setup-analytics.md)
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

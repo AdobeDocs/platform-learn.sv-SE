@@ -3,25 +3,20 @@ title: Konfigurera samtycke med Platform Web SDK
 description: Lär dig hur du konfigurerar sekretessinställningarna för taggtillägget Experience Platform Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Tags,Consent
 exl-id: 502a7467-3699-4b2b-93bf-6b6069ea2090
-source-git-commit: 15bc08bdbdcb19f5b086267a6d94615cbfe1bac7
+source-git-commit: 100a6a9ac8d580b68beb7811f99abcdc0ddefd1a
 workflow-type: tm+mt
-source-wordcount: '1571'
+source-wordcount: '1533'
 ht-degree: 0%
 
 ---
 
 # Konfigurera samtycke med Platform Web SDK
 
-
->[!CAUTION]
->
->Vi räknar med att kunna publicera viktiga ändringar av den här självstudiekursen tisdagen den 23 april 2024. Därefter kommer många övningar att ändras och du kan behöva starta om självstudiekursen från början för att kunna slutföra alla lektioner.
-
 Lär dig hur du konfigurerar sekretessinställningarna för taggtillägget Experience Platform Web SDK. Ange samtycke baserat på besökarens interaktion med en banderoll från en CMP (Consent Management Platform).
 
 >[!NOTE]
 > 
->I den här självstudiekursen används [Klaro](https://heyklaro.com/){target="_blank"} som CMP. Du kan följa med i arbetet med Klaro eller den CMP du använder på din webbplats.
+>I den här självstudiekursen används [Klaro](https://heyklaro.com/) som CMP. Du kan följa med i arbetet med Klaro eller den CMP du använder på din webbplats.
 
 
 ## Utbildningsmål
@@ -69,7 +64,7 @@ Läs mer om den plattform för hantering av samtycke som används i den här sj�
 >Det bästa sättet att implementera en plattform för hantering av samtycke är vanligtvis att läsa in CMP _före_ läser in tagghanteraren. För att underlätta den här självstudiekursen läser du in CMP _med_ tagghanteraren. Den här lektionen visar hur du använder medgivandefunktionerna i Platform Web SDK och ska inte användas som vägledning för att konfigurera Klaro eller någon annan CMP på rätt sätt.
 
 
-När du är klar med Klaros konfigurationer skapar du nu en taggregel med följande konfigurationer:
+När du är klar med Klaros konfigurationer kan du nu skapa taggregler med följande konfigurationer:
 
 * [!UICONTROL Name]: `all pages - library load - Klaro`
 * [!UICONTROL Event]: [!UICONTROL Library Loaded (Page Top)] med [!UICONTROL Advanced Options] > [!UICONTROL Order] anges till 1
@@ -229,4 +224,4 @@ Mer information om [!UICONTROL Set consent] åtgärd, se [Ange samtycke](https:/
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

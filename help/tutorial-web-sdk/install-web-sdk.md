@@ -3,21 +3,16 @@ title: Installera och konfigurera taggtillägget Adobe Experience Platform Web S
 description: Lär dig hur du installerar och konfigurerar plattformens SDK-taggtillägg i gränssnittet för datainsamling. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK
 exl-id: f30a44bb-99d7-476e-873a-b7802a0fe6aa
-source-git-commit: 15bc08bdbdcb19f5b086267a6d94615cbfe1bac7
+source-git-commit: 100a6a9ac8d580b68beb7811f99abcdc0ddefd1a
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '588'
 ht-degree: 0%
 
 ---
 
 # Installera taggtillägget Adobe Experience Platform Web SDK
 
-
->[!CAUTION]
->
->Vi räknar med att kunna publicera viktiga ändringar av den här självstudiekursen tisdagen den 23 april 2024. Därefter kommer många övningar att ändras och du kan behöva starta om självstudiekursen från början för att kunna slutföra alla lektioner.
-
-Lär dig hur du installerar och konfigurerar plattformens SDK-taggtillägg i gränssnittet för datainsamling. Det här taggtillägget är _endast taggtillägg_ som krävs för att skicka data till _alla Adobe Experience Cloud-program_, inklusive [Analyser](setup-analytics.md), [Mål](setup-target.md), [Audience Manager](setup-audience-manager.md), Real-time Customer Data Platform och Journey Optimizer!
+Lär dig hur du installerar och konfigurerar plattformens SDK-taggtillägg. Det enklaste sättet att implementera Web SDK är att använda tagghanteraren Adobe, taggar (tidigare kallad Launch). Taggtillägget Platform Web SDK är _endast taggtillägg_ som krävs för att skicka data till _alla Adobe Experience Cloud-program_, inklusive [Analyser](setup-analytics.md), [Mål](setup-target.md), [Audience Manager](setup-audience-manager.md), Real-time Customer Data Platform och [Journey Optimizer](setup-web-channel.md)!
 
 ## Utbildningsmål
 
@@ -31,9 +26,6 @@ När lektionen är klar kan du:
 
 Du måste ha slutfört föregående lektioner i den här självstudien:
 
-* [Konfigurera behörigheter](configure-permissions.md)
-* [Konfigurera ett XDM-schema](configure-schemas.md)
-* [Konfigurera ett identitetsnamnutrymme](configure-identities.md)
 * [Konfigurera ett datastream](configure-datastream.md)
 
 ## Installera Experience Platform Web SDK-tillägg
@@ -62,7 +54,7 @@ Med ditt XDM-schema, datastream och taggegenskap som nu skapas är du redo att i
 1. Sök efter `Adobe Experience Platform Web SDK`
 1. Välj **[!UICONTROL Install]**
 
-   ![Installera SDK-tillägg för webben](assets/extension-platform-web-sdk.jpg)
+   ![Installera SDK-tillägg för webben](assets/extension-platform-web-sdk.png)
 
 
 ## Länka Platform Web SDK till din datastream
@@ -72,6 +64,7 @@ Lämna de flesta standardinställningarna och uppdatera dem senare efter behov. 
 1. Under **[!UICONTROL Datastreams]** väljer du **[!UICONTROL Choose from list]** indatametod
 1. Välj den datastream du skapade tidigare, `Luma Web SDK`
 1. Välj **[!UICONTROL Save]**
+
    >[!NOTE]
    >
    > Om du inte hittar ditt datastream går du till [Konfigurera ett datastream](configure-datastream.md) lektion och följ stegen för att skapa en
@@ -82,9 +75,7 @@ Nu när du har installerat Platform Web SDK och kopplat det till datastream är 
 
 >[!NOTE]
 >
->Under den här självstudiekursen konfigurerar du bara en datastream och associerar den med alla taggmiljöer (utveckling, scen och produktion). När du implementerar Platform Web SDK på din egen webbplats bör du konfigurera ett separat datastam för varje miljö och mappa dem till dina taggmiljöer med hjälp av **[!UICONTROL Input method]** > **[!UICONTROL Enter values]**
->
->![Val av datastam](assets/extension-luma-web-sdk-datastream-extension-enterValues.png)
+>Under den här självstudiekursen konfigurerar du bara en datastream och associerar den med alla taggmiljöer (utveckling, scen och produktion). När du implementerar Platform Web SDK på din egen webbplats bör du konfigurera ett separat datastam för varje miljö och mappa dem till dina taggmiljöer.
 
 >[!NOTE]
 >
@@ -98,4 +89,4 @@ Mer information om varje avsnitt av tillägget finns i [Konfigurera Adobe Experi
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

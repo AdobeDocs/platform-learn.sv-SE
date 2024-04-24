@@ -3,23 +3,21 @@ title: Konfigurera en egenskap för vidarebefordring av händelser
 description: Lär dig hur du använder händelsevidarebefordringsegenskap med Experience Platform Web SDK-data. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Tags,Event Forwarding
 exl-id: 5a306609-2c63-42c1-8beb-efa412b8efe4
-source-git-commit: 15bc08bdbdcb19f5b086267a6d94615cbfe1bac7
+source-git-commit: 100a6a9ac8d580b68beb7811f99abcdc0ddefd1a
 workflow-type: tm+mt
-source-wordcount: '1806'
+source-wordcount: '1774'
 ht-degree: 0%
 
 ---
 
 # Konfigurera en egenskap för vidarebefordring av händelser
 
-
->[!CAUTION]
->
->Vi räknar med att kunna publicera viktiga ändringar av den här självstudiekursen tisdagen den 23 april 2024. Därefter kommer många övningar att ändras och du kan behöva starta om självstudiekursen från början för att kunna slutföra alla lektioner.
-
 Lär dig hur du använder händelsevidarebefordringsegenskap med Experience Platform Web SDK-data.
 
 Vidarebefordran av händelser är en ny typ av egenskap som är tillgänglig i datainsamling. Med händelsevidarebefordran kan du skicka data till andra leverantörer än Adobe direkt från Adobe Experience Platform Edge Network istället för till den traditionella webbläsaren på klientsidan. Läs mer om fördelarna med vidarebefordran av händelser i [Översikt över vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=en).
+
+
+![Web SDK och händelsevidarebefordringsdiagram](assets/dc-websdk-eventforwarding.png)
 
 Om du vill använda händelsevidarebefordran i Adobe Experience Platform måste data skickas till Adobe Experience Platform Edge Network först med ett eller flera av följande tre alternativ:
 
@@ -56,7 +54,6 @@ I slutet av lektionen kan du:
 
    * Inledande konfiguration
 
-      * [Konfigurera behörigheter](configure-permissions.md)
       * [Konfigurera ett XDM-schema](configure-schemas.md)
       * [Konfigurera ett identitetsnamnutrymme](configure-identities.md)
       * [Konfigurera ett datastream](configure-datastream.md)
@@ -65,7 +62,8 @@ I slutet av lektionen kan du:
 
       * [Installera SDK-tillägg för webben](install-web-sdk.md)
       * [Skapa dataelement](create-data-elements.md)
-      * [Skapa en taggregel](create-tag-rule.md)
+      * [Skapa identiteter](create-identities.md)
+      * [Skapa taggregler](create-tag-rule.md)
       * [Validera med Adobe Experience Platform debugger](validate-with-debugger.md)
 
 
@@ -91,9 +89,9 @@ Så här konfigurerar du Target i datastream:
 
 1. Gå till [Datainsamling](https://experience.adobe.com/#/data-collection){target="blank"} gränssnitt
 1. Välj **[!UICONTROL Datastreams]**
-1. Markera tidigare skapade `Luma Web SDK` datastream
+1. Markera tidigare skapade `Luma Web SDK: Development Environment` datastream
 
-   ![Välj dataströmmen för Luma Web SDK](assets/datastream-luma-web-sdk.png)
+   ![Välj dataströmmen för Luma Web SDK](assets/datastream-luma-web-sdk-development.png)
 
 1. Välj **[!UICONTROL Add Service]**
    ![Lägg till en tjänst i datastream](assets/event-forwarding-datastream-addService.png)
@@ -326,4 +324,4 @@ Grattis! Du har konfigurerat vidarebefordran av händelser!
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

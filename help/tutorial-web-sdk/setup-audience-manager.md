@@ -3,24 +3,20 @@ title: Konfigurera Audience Manager med Platform Web SDK
 description: Lär dig hur du konfigurerar Adobe Audience Manager med Platform Web SDK och validerar implementeringen med hjälp av en cookie-destination. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 solution: Data Collection, Audience Manager
 exl-id: 45db48e9-73cf-4a9c-88f4-b5872a8224d3
-source-git-commit: 15bc08bdbdcb19f5b086267a6d94615cbfe1bac7
+source-git-commit: 100a6a9ac8d580b68beb7811f99abcdc0ddefd1a
 workflow-type: tm+mt
-source-wordcount: '1276'
+source-wordcount: '1245'
 ht-degree: 0%
 
 ---
 
 # Konfigurera Audience Manager med Platform Web SDK
 
-
->[!CAUTION]
->
->Vi räknar med att kunna publicera viktiga ändringar av den här självstudiekursen tisdagen den 23 april 2024. Därefter kommer många övningar att ändras och du kan behöva starta om självstudiekursen från början för att kunna slutföra alla lektioner.
-
 Lär dig hur du konfigurerar Adobe Audience Manager med Platform Web SDK och validerar implementeringen med hjälp av en cookie-destination.
 
 [Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager.html) är en Adobe Experience Cloud-lösning som innehåller allt som krävs för att samla in kommersiellt relevant information om webbplatsbesökare, skapa marknadsföringsbara segment och leverera riktad reklam och innehåll till rätt målgrupp.
 
+![Web SDK och Adobe Audience Manager](assets/dc-websdk-aam.png)
 
 ## Utbildningsmål
 
@@ -43,9 +39,9 @@ Implementeringen av Audience Manager med Platform Web SDK skiljer sig från impl
 
 1. Gå till [Datainsamling](https://experience.adobe.com/#/data-collection){target="blank"} gränssnitt
 1. Välj **[!UICONTROL Datastreams]**
-1. Markera tidigare skapade `Luma Web SDK` datastream
+1. Markera tidigare skapade `Luma Web SDK: Development Environment` datastream
 
-   ![Välj dataströmmen för Luma Web SDK](assets/datastream-luma-web-sdk.png)
+   ![Välj dataströmmen för Luma Web SDK](assets/datastream-luma-web-sdk-development.png)
 
 1. Välj **[!UICONTROL Add Service]**
    ![Lägg till en tjänst i datastream](assets/aam-datastream-addService.png)
@@ -65,7 +61,7 @@ Skapa sedan en [Datakälla](https://experienceleague.adobe.com/docs/audience-man
 
    ![Adobe Experience Platform Audience Manager datakällor](assets/data-sources-list.jpg)
 
-1. Ge datakällan ett eget namn och en beskrivning. För den första konfigurationen kan du namnge detta`Platform Web SDK tutorial`.
+1. Ge datakällan ett eget namn och en beskrivning. För den första konfigurationen kan du namnge detta `Platform Web SDK tutorial`.
 1. Ange **[!UICONTROL ID Type]** till **[!UICONTROL Cookie]**
 1. I **[!UICONTROL Data Export Controls]** avsnitt, markera **[!UICONTROL No Restriction]**
 
@@ -91,7 +87,7 @@ När datakällan har sparats ställer du in en [trait](https://experienceleague.
 1. Välj **[!UICONTROL Data Source]** som du skapade i föregående avsnitt.
 1. **[!UICONTROL Select a Folder]** där du kan spara ditt spår i rutan till höger. Du kan skapa en mapp med **markera ikonen +** bredvid en befintlig överordnad mapp. Du kan namnge den nya mappen `Platform Web SDK tutorial`.
 1. Expandera **[!UICONTROL Trait Expression]** cirkumflex och markera **[!UICONTROL Expression Builder]** Du måste ange ett nyckelvärdepar som betecknar ett hemsidesbesök.
-1. Öppna [Lumas hemsida](https://luma.enablementadobe.com/content/luma/us/en.html) (mappas till taggegenskapen) och **SDK-felsökning för plattform** och uppdatera sidan.
+1. Öppna [Lumas hemsida](https://luma.enablementadobe.com/content/luma/us/en.html) (mappas till taggegenskapen) och **Adobe Experience Platform Debugger** och uppdatera sidan.
 1. Titta på nätverksförfrågningar och händelseinformationen för Platform Web SDK för att hitta nyckel- och namnvärdet för hemsidan.
    ![Adobe Experience Platform Audience Manager XDM-data](assets/xdm-keyvalue.jpg)
 1. Gå tillbaka till Expression Builder i användargränssnittet för Audience Manager och ange tangenten som **`web.webPageDetails.name`** och värdet av **`content:luma:us:en`**. Det här steget gör att du får ett spår när du läser in hemsidan.
@@ -106,7 +102,8 @@ Nästa steg är att skapa en **segment** och tilldela det här segmentet din nyd
 1. Välj **[!UICONTROL Add New]** i det övre vänstra hörnet på sidan för att öppna segmentverktyget
 1. Ge segmentet ett eget namn och en beskrivning, till exempel `Platform Web SDK - Homepage visitors`
 1. **[!UICONTROL Select a Folder]** där segmentet sparas i rutan till höger. Du kan skapa en mapp med **markera ikonen +** bredvid en befintlig överordnad mapp. Du kan namnge den nya mappen `Platform Web SDK tutorial`.
-1. Lägg till en integrationskod, som i det här fallet är en slumpmässig uppsättning med siffror. 1. I **[!UICONTROL Data Source]** avsnitt, markera **[!UICONTROL Audience Manager]** och datakällan som du skapade tidigare
+1. Lägg till en integrationskod, som i det här fallet är en slumpmässig uppsättning med siffror.
+1. I **[!UICONTROL Data Source]** avsnitt, markera **[!UICONTROL Audience Manager]** och datakällan som du skapade tidigare
 1. Expandera **[!UICONTROL Traits]** och sök efter den egenskap du har skapat
 1. Välj **[!UICONTROL Add Trait]**.
 1. Välj **[!UICONTROL Save]** längst ned på sidan
@@ -187,4 +184,4 @@ Nu när du är klar med den här lektionen bör du kunna se hur Platform Web SDK
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
