@@ -3,7 +3,7 @@ title: Konfigurera ett identitetsnamnutrymme
 description: Lär dig hur du konfigurerar identitetsnamnutrymmen som ska användas med Adobe Experience Platform Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Identities
 exl-id: 7719dff4-6b30-4fa0-acae-7491c3208f15
-source-git-commit: 100a6a9ac8d580b68beb7811f99abcdc0ddefd1a
+source-git-commit: aeff30f808fd65370b58eba69d24e658474a92d7
 workflow-type: tm+mt
 source-wordcount: '629'
 ht-degree: 0%
@@ -14,9 +14,9 @@ ht-degree: 0%
 
 Lär dig hur du konfigurerar identitetsnamnutrymmen som ska användas med Adobe Experience Platform Web SDK.
 
-The [Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html) ställer in ett gemensamt besökar-ID (ECID) för SDK-baserade Adobe-program för att underlätta Experience Cloud-funktioner, t.ex. målgruppsdelning mellan program. Du kan också skicka dina egna kund-ID:n till tjänsten för att möjliggöra målinriktning mellan olika enheter och integrering med andra system, som CRM-systemet (Customer Relationship Management).
+The [Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/en/docs/id-service/using/home) ställer in ett gemensamt besökar-ID (ECID) för SDK-baserade Adobe-program för att underlätta Experience Cloud-funktioner, t.ex. målgruppsdelning mellan program. Du kan också skicka dina egna kund-ID:n till tjänsten för att möjliggöra målinriktning mellan olika enheter och integrering med andra system, som CRM-systemet (Customer Relationship Management).
 
-The [Adobe Experience Platform Identity Service](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html?lang=sv) (Ja, det finns två!) använder ECID:n och kund-ID:n för att generera identitetsdiagram, så att du kan sammanfoga attribut och beteenden i kundprofiler i realtid.
+The [Adobe Experience Platform Identity Service](https://experienceleague.adobe.com/en/docs/experience-platform/identity/home) (Ja, det finns två!) använder ECID:n och kund-ID:n för att generera identitetsdiagram, så att du kan sammanfoga attribut och beteenden i kundprofiler i realtid.
 
 >[!NOTE]
 >
@@ -40,7 +40,7 @@ Du måste ha slutfört tidigare lektioner:
 >
 >The [Experience Cloud ID-tillägg](https://exchange.adobe.com/experiencecloud.details.100160.adobe-experience-cloud-id-launch-extension.html) behövs inte när du implementerar Adobe Experience Platform Web SDK, eftersom JavaScript-biblioteket för Web SDK innehåller funktioner för tjänsten för besöks-ID.
 >
-> Om din webbplats redan använder Experience Cloud ID-tjänsten på din webbplats (antingen via Visitor API eller Experience Cloud ID Service Tag-tillägget) och du vill fortsätta använda den när du migrerar till Adobe Experience Platform Web SDK, måste du använda den senaste versionen av Visitor API eller Experience Cloud ID Service Tag-tillägget. Se [ID-migrering](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en) för mer information.
+> Om din webbplats redan använder Experience Cloud ID-tjänsten på din webbplats (antingen via Visitor API eller Experience Cloud ID Service Tag-tillägget) och du vill fortsätta använda den när du migrerar till Adobe Experience Platform Web SDK, måste du använda den senaste versionen av Visitor API eller Experience Cloud ID Service Tag-tillägget. Se [ID-migrering](https://experienceleague.adobe.com/en/docs/experience-platform/edge/identity/overview) för mer information.
 
 ## Skapa ett identitetsnamnutrymme
 

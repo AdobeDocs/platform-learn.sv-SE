@@ -3,7 +3,7 @@ title: Slutsats och nästa steg
 description: Så här gör du när du är klar med självstudien
 recommendations: display,noCatalog
 exl-id: ca28374a-9fe0-44de-a7ac-0aa046712515
-source-git-commit: 100a6a9ac8d580b68beb7811f99abcdc0ddefd1a
+source-git-commit: aeff30f808fd65370b58eba69d24e658474a92d7
 workflow-type: tm+mt
 source-wordcount: '390'
 ht-degree: 2%
@@ -34,11 +34,11 @@ Du är redo att påbörja nästa fas av din resa - implementera Adobe Experience
 Och det finns alltid mer att lära sig! Här följer några förslag på annat innehåll som ska byggas på implementeringen:
 
 
-* **Utlösa en resa i Journey Optimizer**. De händelser du implementerade på Lumas webbplats kan användas för att utlösa resor. Läs mer om detta [videosjälvstudie](https://experienceleague.adobe.com/docs/journey-optimizer-learn/tutorials/create-journeys/use-case-transactional-journey.html).
-* **Connect Customer Journey Analytics**. Om du skapade [Plattformsdatauppsättning](setup-experience-platform.md)kan du ansluta datauppsättningen till Customer Journey Analytics. Läs mer om detta [videosjälvstudie](https://experienceleague.adobe.com/docs/customer-journey-analytics-learn/tutorials/connecting-customer-journey-analytics-to-data-sources-in-platform.html)
-* **Skapa ett segment i plattformen**. Om du har aktiverat [schema och datauppsättning för kundprofil i realtid](setup-experience-platform.md)kan du skapa segment baserat på dina webbhändelser, kombinera dem med data från andra källor och sedan skicka dessa segment till mål i Real-time Customer Data Platform. Läs mer om segmentbyggaren i det här [videosjälvstudie](https://experienceleague.adobe.com/docs/platform-learn/tutorials/segments/create-segments.html).
-* **Implementera plattformens Mobile SDK**. Nu när du har bemästrat en SDK, lär du dig en annan! Adobe Experience Platform Mobile SDK används för att driva Experience Cloud och tredjepartstjänster för mobilappar. Det finns en liknande [praktisk självstudiekurs för Mobile SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/overview.html). Fyll i båda och se profilerna sammanfogas mellan olika enheter!
-* **Läs mer om Experience Platform**. Läs mer om hur du importerar data från andra källor och kombinerar dem med dina Web SDK-data i [Getting Started with Adobe Experience Platform for Data Architects and Data Engineers](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/overview.html)
+* **Utlösa en resa i Journey Optimizer**. De händelser du implementerade på Lumas webbplats kan användas för att utlösa resor. Läs mer om detta [videosjälvstudie](https://experienceleague.adobe.com/en/docs/journey-optimizer-learn/tutorials/create-journeys/use-case-transactional-journey).
+* **Connect Customer Journey Analytics**. Om du skapade [Plattformsdatauppsättning](setup-experience-platform.md)kan du ansluta datauppsättningen till Customer Journey Analytics. Läs mer om detta [videosjälvstudie](https://experienceleague.adobe.com/en/docs/customer-journey-analytics-learn/tutorials/connecting-customer-journey-analytics-to-data-sources-in-platform)
+* **Skapa ett segment i plattformen**. Om du har aktiverat [schema och datauppsättning för kundprofil i realtid](setup-experience-platform.md)kan du skapa segment baserat på dina webbhändelser, kombinera dem med data från andra källor och sedan skicka dessa segment till mål i Real-time Customer Data Platform. Läs mer om segmentbyggaren i det här [videosjälvstudie](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/segments/create-segments).
+* **Implementera plattformens Mobile SDK**. Nu när du har bemästrat en SDK, lär du dig en annan! Adobe Experience Platform Mobile SDK används för att driva Experience Cloud och tredjepartstjänster för mobilappar. Det finns en liknande [praktisk självstudiekurs för Mobile SDK](https://experienceleague.adobe.com/en/docs/platform-learn/implement-mobile-sdk/overview). Fyll i båda och se profilerna sammanfogas mellan olika enheter!
+* **Läs mer om Experience Platform**. Läs mer om hur du importerar data från andra källor och kombinerar dem med dina Web SDK-data i [Getting Started with Adobe Experience Platform for Data Architects and Data Engineers](https://experienceleague.adobe.com/en/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/overview)
 
 
 >[!NOTE]

@@ -5,7 +5,7 @@ solution: Data Collection,Experience Platform,Journey Optimizer
 feature-set: Journey Optimizer
 feature: Decision Management,Offers
 exl-id: f7852ef4-44b0-49df-aec8-cb211726247d
-source-git-commit: d81e7df36807778967bc0350735aec008fb1a55e
+source-git-commit: aeff30f808fd65370b58eba69d24e658474a92d7
 workflow-type: tm+mt
 source-wordcount: '2511'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Observera följande begränsning:
 
 ## Bevilja åtkomst till beslutsledning
 
-Om du vill ge åtkomst till funktionen Beslutshantering måste du skapa en **Produktprofil** och tilldela användarna motsvarande behörigheter. [Läs mer om hur du hanterar Journey Optimizer-användare och behörigheter i det här avsnittet](https://experienceleague.adobe.com/docs/journey-optimizer/using/access-control/privacy/high-low-permissions.html?lang=en#decisions-permissions).
+Om du vill ge åtkomst till funktionen Beslutshantering måste du skapa en **Produktprofil** och tilldela användarna motsvarande behörigheter. [Läs mer om hur du hanterar Journey Optimizer-användare och behörigheter i det här avsnittet](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/privacy/high-low-permissions#decisions-permissions).
 
 ## Konfigurera datastream
 
@@ -340,7 +340,7 @@ Välj **Simuleringar** -fliken från **Erbjudanden** -menyn.
 
 ### Testa lojalitetserbjudanden
 
-1. Välj en testprofil som ska användas för simuleringen. Klicka **Hantera profil**. [Följ den här guiden för att skapa eller ange en ny testprofil för erbjudandetestning](https://experienceleague.adobe.com/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles.html?lang=en#create-test-profiles-csv).
+1. Välj en testprofil som ska användas för simuleringen. Klicka **Hantera profil**. [Följ den här guiden för att skapa eller ange en ny testprofil för erbjudandetestning](https://experienceleague.adobe.com/en/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles#create-test-profiles-csv).
    <!--
       ![ADD SCREENSHOT](#)
    -->
@@ -372,7 +372,7 @@ The **Adobe Experience Platform Debugger** för både Chrome och Firefox analyse
 
 Du kan använda felsökaren på Luma-webbplatsen för att validera beslutslogiken i produktionen. Det här är en bra rutin när Loyalty Rewards-användningsexemplet är öppet och körs för att säkerställa att allt är korrekt konfigurerat.
 
-[Lär dig hur du konfigurerar felsökaren i webbläsaren med hjälp av guiden här](https://experienceleague.adobe.com/docs/platform-learn/data-collection/debugger/overview.html?lang=en).
+[Lär dig hur du konfigurerar felsökaren i webbläsaren med hjälp av guiden här](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/debugger/overview).
 
 Så här börjar du valideringen med felsökaren:
 

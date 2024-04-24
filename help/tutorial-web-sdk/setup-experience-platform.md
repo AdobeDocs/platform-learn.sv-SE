@@ -2,7 +2,7 @@
 title: Strömma data till Adobe Experience Platform med Web SDK
 description: Lär dig hur du direktuppspelar webbdata till Adobe Experience Platform med Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 exl-id: 4d749ffa-e1c0-4498-9b12-12949807b369
-source-git-commit: 100a6a9ac8d580b68beb7811f99abcdc0ddefd1a
+source-git-commit: aeff30f808fd65370b58eba69d24e658474a92d7
 workflow-type: tm+mt
 source-wordcount: '1511'
 ht-degree: 0%
@@ -38,7 +38,7 @@ För att slutföra lektionen måste du först:
 
 ## Skapa en datauppsättning
 
-Alla data som har inhämtats till Adobe Experience Platform lagras i datasjön som datauppsättningar. A [datauppsättning](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/overview.html?lang=en) är en lagrings- och hanteringskonstruktion för en samling data, vanligtvis en tabell, som innehåller ett schema (kolumner) och fält (rader). Datauppsättningar innehåller också metadata som beskriver olika aspekter av de data som lagras.
+Alla data som har inhämtats till Adobe Experience Platform lagras i datasjön som datauppsättningar. A [datauppsättning](https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/overview) är en lagrings- och hanteringskonstruktion för en samling data, vanligtvis en tabell, som innehåller ett schema (kolumner) och fält (rader). Datauppsättningar innehåller också metadata som beskriver olika aspekter av de data som lagras.
 
 Låt oss skapa en datauppsättning för dina webbhändelsedata för Luma:
 
@@ -140,7 +140,7 @@ För att bekräfta att data har landat i plattformens datasjön är ett snabbt a
 
 >[!INFO]
 >
->Adobe Experience Platform frågetjänst är en stabilare metod för att validera data i sjön, men den här självstudiekursen omfattar inte detta. Mer information finns i [Utforska data](https://experienceleague.adobe.com/docs/platform-learn/tutorials/queries/explore-data.html) i avsnittet Plattformssjälvstudiekurser.
+>Adobe Experience Platform frågetjänst är en stabilare metod för att validera data i sjön, men den här självstudiekursen omfattar inte detta. Mer information finns i [Utforska data](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/queries/explore-data) i avsnittet Plattformssjälvstudiekurser.
 
 
 ## Aktivera datauppsättningen och schemat för kundprofil i realtid

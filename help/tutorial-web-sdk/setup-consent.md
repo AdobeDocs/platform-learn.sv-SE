@@ -3,7 +3,7 @@ title: Konfigurera samtycke med Platform Web SDK
 description: Lär dig hur du konfigurerar sekretessinställningarna för taggtillägget Experience Platform Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Tags,Consent
 exl-id: 502a7467-3699-4b2b-93bf-6b6069ea2090
-source-git-commit: 100a6a9ac8d580b68beb7811f99abcdc0ddefd1a
+source-git-commit: aeff30f808fd65370b58eba69d24e658474a92d7
 workflow-type: tm+mt
 source-wordcount: '1533'
 ht-degree: 0%
@@ -215,10 +215,10 @@ När du har den här regeln på plats, bör händelsesamlingen börja när en be
 ![Alternativ för samtycke efter besökare](assets/consent-post-user-optin.png)
 
 
-Mer information om samtycke i Web SDK finns i [Stöd för kundernas samtycke](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?lang=en).
+Mer information om samtycke i Web SDK finns i [Stöd för kundernas samtycke](https://experienceleague.adobe.com/en/docs/experience-platform/edge/consent/supporting-consent).
 
 
-Mer information om [!UICONTROL Set consent] åtgärd, se [Ange samtycke](https://experienceleague.adobe.com/docs/experience-platform/edge/extension/action-types.html?lang=en#set-consent).
+Mer information om [!UICONTROL Set consent] åtgärd, se [Ange samtycke](https://experienceleague.adobe.com/en/docs/experience-platform/edge/extension/action-types#set-consent).
 
 [Nästa: ](setup-event-forwarding.md)
 

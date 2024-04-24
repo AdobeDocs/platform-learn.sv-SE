@@ -3,7 +3,7 @@ title: Konfigurera Audience Manager med Platform Web SDK
 description: Lär dig hur du konfigurerar Adobe Audience Manager med Platform Web SDK och validerar implementeringen med hjälp av en cookie-destination. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 solution: Data Collection, Audience Manager
 exl-id: 45db48e9-73cf-4a9c-88f4-b5872a8224d3
-source-git-commit: 100a6a9ac8d580b68beb7811f99abcdc0ddefd1a
+source-git-commit: aeff30f808fd65370b58eba69d24e658474a92d7
 workflow-type: tm+mt
 source-wordcount: '1245'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Lär dig hur du konfigurerar Adobe Audience Manager med Platform Web SDK och validerar implementeringen med hjälp av en cookie-destination.
 
-[Adobe Audience Manager](https://experienceleague.adobe.com/docs/audience-manager.html) är en Adobe Experience Cloud-lösning som innehåller allt som krävs för att samla in kommersiellt relevant information om webbplatsbesökare, skapa marknadsföringsbara segment och leverera riktad reklam och innehåll till rätt målgrupp.
+[Adobe Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager) är en Adobe Experience Cloud-lösning som innehåller allt som krävs för att samla in kommersiellt relevant information om webbplatsbesökare, skapa marknadsföringsbara segment och leverera riktad reklam och innehåll till rätt målgrupp.
 
 ![Web SDK och Adobe Audience Manager](assets/dc-websdk-aam.png)
 
@@ -31,11 +31,11 @@ När lektionen är klar kan du:
 För att slutföra lektionen måste du först:
 
 * Slutför de tidigare lektionerna i avsnitten Inledande konfiguration och Tagginställningar i den här självstudien.
-* ha tillgång till Adobe Audience Manager och de behörigheter som krävs för att skapa, läsa och skriva egenskaper, segment och mål. Mer information finns på [Audience Manager Role-baserad åtkomstkontroll](https://experienceleague.adobe.com/docs/audience-manager-learn/tutorials/setup-and-admin/user-management/setting-permissions-with-role-based-access-control.html?lang=en).
+* ha tillgång till Adobe Audience Manager och de behörigheter som krävs för att skapa, läsa och skriva egenskaper, segment och mål. Mer information finns på [Audience Manager Role-baserad åtkomstkontroll](https://experienceleague.adobe.com/en/docs/audience-manager-learn/tutorials/setup-and-admin/user-management/setting-permissions-with-role-based-access-control).
 
 ## Konfigurera datastream
 
-Implementeringen av Audience Manager med Platform Web SDK skiljer sig från implementeringen med [vidarebefordran på serversidan (SSF)](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/server-side-forwarding/ssf.html). Vidarebefordran på serversidan skickar Adobe Analytics data för begäran till Audience Manager. En SDK-implementering för en plattform skickar XDM-data som skickas till Platform Edge Network till Audience Manager. Audience Manager är aktiverat i datastream:
+Implementeringen av Audience Manager med Platform Web SDK skiljer sig från implementeringen med [vidarebefordran på serversidan (SSF)](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/server-side-forwarding/ssf). Vidarebefordran på serversidan skickar Adobe Analytics data för begäran till Audience Manager. En SDK-implementering för en plattform skickar XDM-data som skickas till Platform Edge Network till Audience Manager. Audience Manager är aktiverat i datastream:
 
 1. Gå till [Datainsamling](https://experience.adobe.com/#/data-collection){target="blank"} gränssnitt
 1. Välj **[!UICONTROL Datastreams]**
@@ -52,7 +52,7 @@ Implementeringen av Audience Manager med Platform Web SDK skiljer sig från impl
 
 ## Skapa en datakälla
 
-Skapa sedan en [Datakälla](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/data-sources/datasources-list-and-settings.html?lang=en), ett grundläggande verktyg för att ordna data i Audience Manager:
+Skapa sedan en [Datakälla](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/data-sources/datasources-list-and-settings), ett grundläggande verktyg för att ordna data i Audience Manager:
 
 1. Gå till [Audience Manager](https://experience.adobe.com/#/audience-manager/) gränssnitt
 1. Välj **[!UICONTROL Audience Data]** från den övre navigeringen
@@ -72,7 +72,7 @@ Skapa sedan en [Datakälla](https://experienceleague.adobe.com/docs/audience-man
 
 ## Skapa ett varumärke
 
-När datakällan har sparats ställer du in en [trait](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/traits/traits-overview.html?lang=en). Traits är en kombination av en eller flera signaler i Audience Manager. Skapa ett varumärke för besökare på hemsidan.
+När datakällan har sparats ställer du in en [trait](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/traits/traits-overview). Traits är en kombination av en eller flera signaler i Audience Manager. Skapa ett varumärke för besökare på hemsidan.
 
 >[!NOTE]
 >

@@ -2,7 +2,7 @@
 title: Konfigurera behörigheter för självstudien
 description: Lär dig hur du begär åtkomst till Experience Platform Web SDK och konfigurerar behörighet för att slutföra självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Tags,Access Control
-source-git-commit: d81e7df36807778967bc0350735aec008fb1a55e
+source-git-commit: aeff30f808fd65370b58eba69d24e658474a92d7
 workflow-type: tm+mt
 source-wordcount: '331'
 ht-degree: 3%
@@ -15,7 +15,7 @@ Lär dig hur du begär åtkomst till Experience Platform Web SDK och konfigurera
 
 ## Datainsamling
 
-* Har behörighet att **[!UICONTROL Develop]**, **[!UICONTROL Edit]**, **[!UICONTROL Approve]**, **[!UICONTROL Publish]**, **[!UICONTROL Manage Extensions]**, **[!UICONTROL Manage Environments]** och **[!UICONTROL Manage Properties]**. Mer information om taggbehörigheter finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html).
+* Har behörighet att **[!UICONTROL Develop]**, **[!UICONTROL Edit]**, **[!UICONTROL Approve]**, **[!UICONTROL Publish]**, **[!UICONTROL Manage Extensions]**, **[!UICONTROL Manage Environments]** och **[!UICONTROL Manage Properties]**. Mer information om taggbehörigheter finns i [dokumentationen](https://experienceleague.adobe.com/en/docs/experience-platform/tags/admin/user-permissions).
 * Om du ska slutföra den valfria lektionen om vidarebefordran av händelser, ska du ha en produktlicens som innehåller vidarebefordran av edge-material och behörighetsobjekt **[!UICONTROL Platforms]** > **[!UICONTROL Edge]**
 
 ## Experience Platform
@@ -31,11 +31,11 @@ Dessa funktioner bör vara tillgängliga för alla Experience Cloud-kunder, äve
    * Alla behörighetsobjekt under **[!UICONTROL Data Management]** och **[!UICONTROL Profile Management]**:
 
 
-Mer information om plattformsåtkomstkontroll finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html).
+Mer information om plattformsåtkomstkontroll finns i [dokumentationen](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home).
 
 ## Adobe Analytics
 
-För Adobe Analytics-lektionen måste du ha [administratörsåtkomst till inställningar för Report Suite, bearbetningsregler och Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/admin/admin-console/home.html)
+För Adobe Analytics-lektionen måste du ha [administratörsåtkomst till inställningar för Report Suite, bearbetningsregler och Analysis Workspace](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-console/home)
 
 ## Adobe Target
 
@@ -43,7 +43,7 @@ För Adobe Target-lektionen måste du ha [Redigerare eller godkännare](https://
 
 ## Adobe Audience Manager
 
-* För den valfria lektionen Audience Manager måste du ha tillgång till att skapa, läsa och skriva egenskaper, segment och mål. Mer information finns i självstudiekursen [Audience Manager Role-baserad åtkomstkontroll](https://experienceleague.adobe.com/docs/audience-manager-learn/tutorials/setup-and-admin/user-management/setting-permissions-with-role-based-access-control.html?lang=en).
+* För den valfria lektionen Audience Manager måste du ha tillgång till att skapa, läsa och skriva egenskaper, segment och mål. Mer information finns i självstudiekursen [Audience Manager Role-baserad åtkomstkontroll](https://experienceleague.adobe.com/en/docs/audience-manager-learn/tutorials/setup-and-admin/user-management/setting-permissions-with-role-based-access-control).
 
 Nu kan du börja de inledande konfigurationsstegen.
 

@@ -3,7 +3,7 @@ title: Skapa identiteter
 description: Lär dig hur du skapar identiteter i XDM och använder dataelementet Identitetskarta för att hämta användar-ID:n. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Tags
 exl-id: 7ca32dc8-dd86-48e0-8931-692bcbb2f446
-source-git-commit: d81e7df36807778967bc0350735aec008fb1a55e
+source-git-commit: aeff30f808fd65370b58eba69d24e658474a92d7
 workflow-type: tm+mt
 source-wordcount: '867'
 ht-degree: 0%
@@ -37,7 +37,7 @@ Du har en förståelse för vad ett datalager är, och vet hur det [Luma demo si
 
 ## EXPERIENCE CLOUD ID
 
-The [Experience Cloud ID (ECID)](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=en) är ett delat ID-namnutrymme som används i Adobe Experience Platform- och Adobe Experience Cloud-program. ECID utgör grunden för kundidentiteten och är standardidentitet för digitala resurser. Detta gör ECID till den idealiska identifieraren för att spåra oautentiserade användarbeteenden eftersom det alltid finns
+The [Experience Cloud ID (ECID)](https://experienceleague.adobe.com/en/docs/experience-platform/identity/ecid) är ett delat ID-namnutrymme som används i Adobe Experience Platform- och Adobe Experience Cloud-program. ECID utgör grunden för kundidentiteten och är standardidentitet för digitala resurser. Detta gör ECID till den idealiska identifieraren för att spåra oautentiserade användarbeteenden eftersom det alltid finns
 
 <!-- FYI I commented this out because it was breaking the build - Jack
 >[!TIP]
@@ -46,7 +46,7 @@ The [Experience Cloud ID (ECID)](https://experienceleague.adobe.com/docs/experie
 >![View ECID](assets/validate-dev-console-ecid.png)
 -->
 
-Läs mer om hur [ECID:n spåras med Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/overview.html?lang=en).
+Läs mer om hur [ECID:n spåras med Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/edge/identity/overview).
 
 ECID anges med en kombination av cookies från första part och Platform Edge Network. Som standard anges cookies från första part av Web SDK på klientsidan. Om du vill ta hänsyn till webbläsarbegränsningar för cookie-intervall kan du välja att ange en egen cookies-server för första part i stället. Dessa kallas för FPID (First-party device ID).
 
@@ -60,7 +60,7 @@ FPID är cookies från första part _du använder dina egna webbservrar_ som Ado
 
 När en FPID-cookie har angetts kan dess värde hämtas och skickas till Adobe när händelsedata samlas in. Insamlade FPID används som startvärde för att generera ECID på Platform Edge Network, som även fortsättningsvis är standardidentifierare i Adobe Experience Cloud-program.
 
-Även om FPID inte används i den här självstudiekursen bör du använda FPID i din egen Web SDK-implementering. Läs mer om [Första parts enhets-ID i Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html?lang=en)
+Även om FPID inte används i den här självstudiekursen bör du använda FPID i din egen Web SDK-implementering. Läs mer om [Första parts enhets-ID i Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/edge/identity/first-party-device-ids)
 
 >[!CAUTION]
 >
@@ -70,7 +70,7 @@ När en FPID-cookie har angetts kan dess värde hämtas och skickas till Adobe n
 
 Som nämnts ovan tilldelas alla besökare av dina digitala resurser ett ECID av Adobe när de använder Platform Web SDK. Detta gör ECID till standardidentitet för att spåra oautentiserat digitalt beteende.
 
-Du kan också skicka ett autentiserat användar-ID så att plattformen kan skapa [Identitetsdiagram](https://experienceleague.adobe.com/docs/platform-learn/tutorials/identities/understanding-identity-and-identity-graphs.html?lang=en) och Target kan ange [Tredjeparts-ID](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/3rd-party-id.html). Detta görs genom att använda [!UICONTROL Identity Map] dataelementtyp.
+Du kan också skicka ett autentiserat användar-ID så att plattformen kan skapa [Identitetsdiagram](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/understanding-identity-and-identity-graphs) och Target kan ange [Tredjeparts-ID](https://experienceleague.adobe.com/en/docs/target/using/audiences/visitor-profiles/3rd-party-id). Detta görs genom att använda [!UICONTROL Identity Map] dataelementtyp.
 
 Skapa [!UICONTROL Identity Map] dataelement:
 

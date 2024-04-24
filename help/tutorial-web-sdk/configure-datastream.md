@@ -3,7 +3,7 @@ title: Konfigurera ett datastream
 description: Lär dig hur du aktiverar ett datastream och konfigurerar Experience Cloud-lösningar. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Datastreams
 exl-id: 20f770d1-eb0f-41a9-b451-4069a0a91fc4
-source-git-commit: d81e7df36807778967bc0350735aec008fb1a55e
+source-git-commit: aeff30f808fd65370b58eba69d24e658474a92d7
 workflow-type: tm+mt
 source-wordcount: '539'
 ht-degree: 0%
@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Lär dig hur du aktiverar ett datastam och konfigurerar Experience Cloud-program.
 
-Datastreams talar om för Adobe Experience Platform Edge Network var data som samlats in av Platform Web SDK ska skickas. I datastreams-konfigurationen aktiverar du dina Experience Cloud-program, ditt Experience Platform-konto och händelsevidarebefordran. Se [Grundläggande om att konfigurera ett datastream](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=en) för mer detaljerad information.
+Datastreams talar om för Adobe Experience Platform Edge Network var data som samlats in av Platform Web SDK ska skickas. I datastreams-konfigurationen aktiverar du dina Experience Cloud-program, ditt Experience Platform-konto och händelsevidarebefordran. Se [Grundläggande om att konfigurera ett datastream](https://experienceleague.adobe.com/en/docs/experience-platform/edge/fundamentals/datastreams) för mer detaljerad information.
 
 
 ![Web SDK, datastreams och Edge Network](assets/dc-websdk-datastreams.png)
@@ -72,7 +72,7 @@ Med åsidosättningar av dataströmmar kan du definiera ytterligare konfiguratio
 
 I [Konfigurera Adobe Analytics](setup-analytics.md) lektioner som du åsidosätter rapportsviten för en sida med hjälp av Platform Web SDK Send Event Action.
 
-Se [information om åsidosättning av dataströmskonfiguration](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overrides.html?lang=en) om du vill ha detaljerade anvisningar om hur du åsidosätter datastream-konfigurationer.
+Se [information om åsidosättning av dataströmskonfiguration](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overrides) om du vill ha detaljerade anvisningar om hur du åsidosätter datastream-konfigurationer.
 
 Du kan nu installera tillägget Platform Web SDK i taggegenskapen!
 

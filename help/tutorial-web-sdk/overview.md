@@ -3,7 +3,7 @@ title: Självstudiekurs om att implementera Adobe Experience Cloud med webb-SDK
 description: Lär dig hur du implementerar Experience Cloud-program med Adobe Experience Platform Web SDK.
 recommendations: catalog, noDisplay
 exl-id: cf0ff74b-e81e-4f6d-ab7d-6c70e9b52d78
-source-git-commit: 100a6a9ac8d580b68beb7811f99abcdc0ddefd1a
+source-git-commit: aeff30f808fd65370b58eba69d24e658474a92d7
 workflow-type: tm+mt
 source-wordcount: '675'
 ht-degree: 2%
@@ -14,7 +14,7 @@ ht-degree: 2%
 
 Lär dig hur du implementerar Experience Cloud-program med Adobe Experience Platform Web SDK.
 
-Experience Platform Web SDK är ett JavaScript-bibliotek på klientsidan som gör att Adobe Experience Cloud kunder kan interagera med både Adobe och tredjepartstjänster via Adobe Experience Platform Edge Network. Se [Adobe Experience Platform Web SDK - översikt](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html) för mer detaljerad information.
+Experience Platform Web SDK är ett JavaScript-bibliotek på klientsidan som gör att Adobe Experience Cloud kunder kan interagera med både Adobe och tredjepartstjänster via Adobe Experience Platform Edge Network. Se [Adobe Experience Platform Web SDK - översikt](https://experienceleague.adobe.com/en/docs/experience-platform/edge/home) för mer detaljerad information.
 
 ![Experience Platform Web SDK-arkitektur](assets/dc-websdk.png)
 
@@ -48,7 +48,7 @@ I den här lektionen antas du ha ett Adobe-konto och de behörigheter som krävs
    * **[!UICONTROL Property Rights]**—behörighet till **[!UICONTROL Approve]**, **[!UICONTROL Develop]**, **[!UICONTROL Edit Property]**, **[!UICONTROL Manage Environments]**, **[!UICONTROL Manage Extensions]** och **[!UICONTROL Publish]**,
    * **[!UICONTROL Company Rights]**—behörighet till **[!UICONTROL Manage Properties]**
 
-     Mer information om taggbehörigheter finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html).
+     Mer information om taggbehörigheter finns i [dokumentationen](https://experienceleague.adobe.com/en/docs/experience-platform/tags/admin/user-permissions).
 
 * För **Experience Platform** måste du ha:
 
@@ -62,13 +62,13 @@ I den här lektionen antas du ha ett Adobe-konto och de behörigheter som krävs
 
      De funktioner som krävs bör vara tillgängliga för alla Experience Cloud-kunder, även om du inte är kund till en plattformsbaserad applikation som Real-Time CDP.
 
-     Mer information om plattformsåtkomstkontroll finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html).
+     Mer information om plattformsåtkomstkontroll finns i [dokumentationen](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home).
 
-* För det valfria **Adobe Analytics** lektion måste du ha [administratörsåtkomst till inställningar för Report Suite, bearbetningsregler och Analysis Workspace](https://experienceleague.adobe.com/docs/analytics/admin/admin-console/home.html)
+* För det valfria **Adobe Analytics** lektion måste du ha [administratörsåtkomst till inställningar för Report Suite, bearbetningsregler och Analysis Workspace](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-console/home)
 
 * För det valfria **Adobe Target** lektion måste du ha [Redigerare eller godkännare](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html#section_8C425E43E5DD4111BBFC734A2B7ABC80) åtkomst.
 
-* För det valfria **Audience Manager** lektion måste du ha tillgång till för att skapa, läsa och skriva egenskaper, segment och mål. Mer information finns i självstudiekursen [Audience Manager Role-baserad åtkomstkontroll](https://experienceleague.adobe.com/docs/audience-manager-learn/tutorials/setup-and-admin/user-management/setting-permissions-with-role-based-access-control.html?lang=en).
+* För det valfria **Audience Manager** lektion måste du ha tillgång till för att skapa, läsa och skriva egenskaper, segment och mål. Mer information finns i självstudiekursen [Audience Manager Role-baserad åtkomstkontroll](https://experienceleague.adobe.com/en/docs/audience-manager-learn/tutorials/setup-and-admin/user-management/setting-permissions-with-role-based-access-control).
 
 
 >[!NOTE]
