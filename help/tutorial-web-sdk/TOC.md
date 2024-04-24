@@ -7,19 +7,20 @@ role: Data Engineer, Developer
 level: Beginner,Intermediate
 jira: KT-6953
 recommendations: noDisplay,noCatalog
-source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
+index: false
+hide: true
+source-git-commit: a56a63c79417fc98f2c3ec4a9613e39c46ac098a
 workflow-type: tm+mt
-source-wordcount: '81'
-ht-degree: 30%
+source-wordcount: '95'
+ht-degree: 15%
 
 ---
 
 
-# Självstudiekurs om att implementera Adobe Experience Cloud med webb-SDK. {#implement-web-sdk}
+# Implementera Adobe Experience Cloud med Web SDK, genomgång. {#implement-web-sdk}
 
 + [Översikt över självstudiekursen](overview.md)
 + Inledande konfiguration {#initial-configuration}
-   + [Konfigurera behörigheter](configure-permissions.md)
    + [Konfigurera ett XDM-schema](configure-schemas.md)
    + [Konfigurera ett identitetsnamnutrymme](configure-identities.md)
    + [Konfigurera ett datastream](configure-datastream.md)
@@ -27,14 +28,18 @@ ht-degree: 30%
 + Märkordskonfiguration {#tags-configuration}
    + [Installera SDK-tillägg för webben](install-web-sdk.md)
    + [Skapa dataelement](create-data-elements.md)
-   + [Skapa en taggregel](create-tag-rule.md)
+   + [Skapa identiteter](create-identities.md)
+   + [Skapa taggregler](create-tag-rule.md)
    + [Validera med felsökning](validate-with-debugger.md)
+   + [Validera med Assurance](validate-with-assurance.md)
 
 + Programinställningar {#applications-setup}
    + [Konfigurera Experience Platform](setup-experience-platform.md)
    + [Konfigurera Adobe Analytics](setup-analytics.md)
    + [Konfigurera Audience Manager](setup-audience-manager.md)
    + [Konfigurera mål](setup-target.md)
+   + [Konfigurera Journey Optimizer Web Channel](setup-web-channel.md)
+   + [Konfigurera Journey Optimizer Beslutshantering](setup-decision-management.md)
 
 + Hantering av samtycke {#consent-management}
    + [Ställ in samtycke](setup-consent.md)
