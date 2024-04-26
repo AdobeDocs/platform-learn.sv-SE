@@ -3,9 +3,9 @@ title: Validera Web SDK-implementeringar med Experience Platform Debugger
 description: Lär dig hur du validerar implementeringen av din Platform Web SDK med Adobe Experience Platform Debugger. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Tags,Debugger
 exl-id: 150bb1b1-4523-4b44-bd4e-6cabc468fc04
-source-git-commit: aeff30f808fd65370b58eba69d24e658474a92d7
+source-git-commit: 78df0fb4e2f2b56b829c54c08a16f860192592d1
 workflow-type: tm+mt
-source-wordcount: '1165'
+source-wordcount: '1153'
 ht-degree: 0%
 
 ---
@@ -19,13 +19,13 @@ Felsökaren Experience Platform är ett tillägg för webbläsarna Chrome och Fi
 * [Firefox-tillägg](https://addons.mozilla.org/sv-SE/firefox/addon/adobe-experience-platform-dbg/)
 * [Kromtillägg](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
-Om du aldrig har använt felsökningsfunktionen tidigare - och den här är en annan än den tidigare Adobe Experience Cloud Debugger - kan du titta på den här översiktsvideon med fem minuter:
+Om du aldrig har använt felsökaren tidigare kanske du vill titta på den här översiktsvideon på fem minuter:
 
 >[!VIDEO](https://video.tv.adobe.com/v/32156?learn=on)
 
 I den här lektionen använder du [Adobe Experience Cloud Debugger-tillägg](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj) som ersätter taggegenskapen hårdkodad på [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html) med din egen egendom.
 
-Den här tekniken kallas för miljöväxling och kan vara användbar senare när du arbetar med taggar på din egen webbplats. Du kan läsa in din produktionswebbplats i webbläsaren, men med *utveckling* -tagg. På så sätt kan du tryggt göra och validera taggändringar oberoende av dina vanliga kodreleaser. Den här åtskillnaden mellan marknadsföringstaggreleaser och vanliga kodreleaser är ju en av de främsta anledningarna till att kunderna använder taggar i första hand!
+Den här tekniken kallas för miljöväxling och kan vara användbar senare när du arbetar med taggar på din egen webbplats. Du kan läsa in din produktionswebbplats i webbläsaren, men med *utveckling* taggbibliotek. På så sätt kan du tryggt göra och validera taggändringar oberoende av dina vanliga kodreleaser. Den här åtskillnaden mellan marknadsföringstaggreleaser och vanliga kodreleaser är ju en av de främsta anledningarna till att kunderna använder taggar i första hand!
 
 ## Utbildningsmål
 
@@ -64,7 +64,7 @@ Felsökaren i Experience Platform har en cool funktion som gör att du kan ersä
 
    ![Välj Åtgärder > Ersätt](assets/validate-switch-environment.png)
 
-1. Eftersom du är autentiserad kommer felsökaren att hämta tillgängliga taggegenskaper och -miljöer. Välj din egenskap, i det här fallet `Web SDK Course 3`
+1. Eftersom du är autentiserad kommer felsökaren att hämta tillgängliga taggegenskaper och -miljöer. Välj din egenskap
 1. Välj `Development` miljö
 1. Välj **[!UICONTROL Apply]** knapp
 

@@ -3,9 +3,9 @@ title: Skapa identiteter
 description: Lär dig hur du skapar identiteter i XDM och använder dataelementet Identitetskarta för att hämta användar-ID:n. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Tags
 exl-id: 7ca32dc8-dd86-48e0-8931-692bcbb2f446
-source-git-commit: aeff30f808fd65370b58eba69d24e658474a92d7
+source-git-commit: 78df0fb4e2f2b56b829c54c08a16f860192592d1
 workflow-type: tm+mt
-source-wordcount: '867'
+source-wordcount: '863'
 ht-degree: 0%
 
 ---
@@ -148,7 +148,7 @@ I slutet av dessa steg bör du skapa följande dataelement:
 | `user.profile.attributes.loggedIn` | |
 | `user.profile.attributes.username` | |
 
-Med dessa dataelement på plats är du redo att börja skicka data till Platform Edge Network via XDM-objektet genom att skapa en regel i taggar.
+Med dessa dataelement på plats kan du börja skicka data till Platform Edge Network genom att skapa en regel i taggar.
 
 [Nästa: ](create-tag-rule.md)
 

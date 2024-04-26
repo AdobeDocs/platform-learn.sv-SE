@@ -3,16 +3,16 @@ title: Validera Web SDK-implementeringar med Experience Platform Assurance
 description: Lär dig hur du validerar implementeringen av din Platform Web SDK med Adobe Experience Platform Assurance. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Tags,Assurance
 exl-id: 31e381ea-fbaf-495f-a6e9-2ff6c0d36939
-source-git-commit: aeff30f808fd65370b58eba69d24e658474a92d7
+source-git-commit: 78df0fb4e2f2b56b829c54c08a16f860192592d1
 workflow-type: tm+mt
-source-wordcount: '597'
+source-wordcount: '599'
 ht-degree: 0%
 
 ---
 
 # Validera Web SDK-implementeringar med Experience Platform Assurance
 
-Adobe Experience Platform Assurance är en produkt från Adobe Experience Cloud som hjälper er att inspektera, bevisa, simulera och validera hur ni samlar in data eller levererar upplevelser. Läs mer om [Adobe Assurance](https://experienceleague.adobe.com/en/docs/experience-platform/assurance/home).
+Adobe Experience Platform Assurance är en funktion som hjälper er att inspektera, bevisa, simulera och validera hur ni samlar in data eller levererar upplevelser. Läs mer om [Adobe Assurance](https://experienceleague.adobe.com/en/docs/experience-platform/assurance/home).
 
 
 ## Utbildningsmål
@@ -51,10 +51,11 @@ Se hur vi gjorde det här i felsökningslektionen:
 1. Välj **[!UICONTROL Edge]** och markera **[!UICONTROL Connect]**
 
    ![Koppla kantkalkering](assets/analytics-debugger-edgeTrace.png)
-1. När Edge Trace är aktiverat visas en utgående länkikon högst upp. Välj ikonen för att öppna Assurance. En ny flik i webbläsaren öppnas.
+1. När Edge Trace är aktiverat visas en utgående länkikon högst upp. Välj ikonen för att öppna Assurance.
 
    ![Starta Assurance-session](assets/validate-debugger-start-assurnance.png)
 
+1. En ny flik i webbläsaren öppnas med gränssnittet Assurance.
 
 ### Starta en Assurance-session från försäkringsgränssnittet
 
@@ -88,7 +89,7 @@ Det finns begränsad information att visa i det här skedet av implementeringen.
 
 I framtida lektioner använder du Assurance för att validera fullt bearbetade nyttolaster som når ett Adobe-program som är aktiverat i ditt datastream.
 
-Med ett XDM-objekt som nu utlöses på en sida, och med kännedom om hur datainsamlingen ska valideras, är du redo att skapa de enskilda Adobe-programmen med Platform Web SDK.
+Med ett XDM-objekt som nu utlöses på en sida, och med kännedom om hur datainsamlingen ska valideras, är du redo att konfigurera Experience Platform och de enskilda Adobe-programmen med Platform Web SDK.
 
 [Nästa: ](setup-experience-platform.md)
 

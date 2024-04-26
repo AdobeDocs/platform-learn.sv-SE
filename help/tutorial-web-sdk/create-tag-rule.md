@@ -3,21 +3,16 @@ title: Skapa taggregler
 description: Lär dig hur du skickar en händelse till Platform Edge Network med ditt XDM-objekt med hjälp av en taggregel. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Tags
 exl-id: e06bad06-3ee3-475f-9b10-f0825a48a312
-source-git-commit: 100a6a9ac8d580b68beb7811f99abcdc0ddefd1a
+source-git-commit: 78df0fb4e2f2b56b829c54c08a16f860192592d1
 workflow-type: tm+mt
-source-wordcount: '1811'
+source-wordcount: '1745'
 ht-degree: 0%
 
 ---
 
 # Skapa taggregler
 
-Lär dig hur du skickar händelser till Platform Edge Network med ditt XDM-objekt med hjälp av taggregler. En taggregel är en kombination av händelser, villkor och åtgärder som instruerar taggegenskapen att göra något. Med Platform Web SDK används regler för att skicka händelser till Platform Edge Network med rätt XDM-fält.
-
->[!NOTE]
->
-> I demonstrationssyfte bygger övningarna i den här lektionen på de tidigare lektionerna för att skicka händelser från användare på [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"}.
-
+Lär dig hur du skickar händelser till Platform Edge Network med ditt XDM-objekt med hjälp av taggregler. En taggregel är en kombination av händelser, villkor och åtgärder som instruerar taggegenskapen att göra något. Med Platform Web SDK används regler för att skicka händelser till Platform Edge Network med rätt data.
 
 ## Utbildningsmål
 
@@ -45,29 +40,28 @@ Du känner till datainsamlingstaggar och [Luma demo site](https://luma.enablemen
 
 Om du vill hantera regler i taggar bättre bör du följa en standardnamnkonvention. I den här självstudiekursen används en namnkonvention med fem delar:
 
-* [**plats**] - [**event**] - [**syfte**] - [**verktyg**] - [**beställa**]
+* [**plats**] - [**event**] - [**syfte**] - [**beställa**]
 
 där
 
 1. **plats** är den eller de sidor på webbplatsen där regeln utlöses
 1. **event** är utlösaren för regeln
 1. **syfte** är huvudåtgärden som utförs av regeln
-1. **verktyg** är det eller de specifika program som används i åtgärdssteget för den regeln, vilket bör vara sällsynt med Web SDK
-1. **sekvens** är den ordning i vilken regeln ska utlösas i förhållande till andra regler
+1. **beställa** är den ordning i vilken regeln ska utlösas i förhållande till andra regler
 <!-- minor update -->
 
 ## Skapa taggregler
 
 I taggar används regler för att utföra åtgärder (brandanrop) under olika förhållanden. Tillägget Platform Web SDK-taggar innehåller två åtgärder som kommer att användas i den här lektionen:
 
-* **[!UICONTROL Update variable]** mappar dataelement till XDM-fält
+* **[!UICONTROL Update variable]** mappar dataelement till egenskaper i ett XDM-objekt
 * **[!UICONTROL Send Event]** skickar XDM-objektet till Experience Platform Edge Network
 
 I resten av lektionen:
 
-1. Skapa en regel för att definiera en&quot;global konfiguration&quot; av XDM-fält (med [!UICONTROL Update variable] som vi vill skicka på varje sida på webbplatsen (till exempel sidnamnet) med hjälp av **[!UICONTROL Update Variable]** åtgärd.
+1. Skapa en regel med **[!UICONTROL Update variable]** åtgärd för att definiera en&quot;global konfiguration&quot; av XDM-fält.
 
-1. Skapa ytterligare regler som åsidosätter vår&quot;globala konfiguration&quot; eller bidrar med ytterligare XDM-fält (med [!UICONTROL Update variable] igen) som bara är relevanta under vissa förhållanden (till exempel genom att lägga till produktinformation på produktsidor).
+1. Skapa ytterligare regler med **[!UICONTROL Update variable]** åtgärd som åsidosätter vår&quot;globala konfiguration&quot; och bidrar till ytterligare XDM-fält under vissa förhållanden (t.ex. genom att lägga till produktinformation på produktsidor).
 
 1. Skapa en annan regel med **[!UICONTROL Send Event]** som skickar hela XDM-objektet till Adobe Experience Platform Edge Network.
 
@@ -77,11 +71,9 @@ Den här videon ger en översikt över processen:
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427710/?learn=on)
 
-### Uppdatera variabelregler
+### Globala konfigurationsfält
 
-#### Global konfiguration
-
-Så här skapar du taggregler för de globala XDM-fälten:
+Så här skapar du en taggregel för de globala XDM-fälten:
 
 1. Öppna taggegenskapen som du använder för den här självstudien
 
@@ -118,11 +110,7 @@ Så här skapar du taggregler för de globala XDM-fälten:
 
    ![Uppdatera variabelschema](assets/create-rule-update-variable.png)
 
-Kartlägg dina [!UICONTROL data elements] till [!UICONTROL schema] används av ditt XDM-objekt.
-
->[!NOTE]
-> 
-> Du kan mappa till enskilda egenskaper eller hela objekt. I det här exemplet mappar du till enskilda egenskaper.
+Kartlägg dina [!UICONTROL data elements] till [!UICONTROL schema] används av ditt XDM-objekt. Du kan mappa till enskilda egenskaper eller hela objekt. I det här exemplet mappar du till enskilda egenskaper:
 
 1. Sök efter fältet eventType och markera det
 
@@ -160,13 +148,13 @@ Kartlägg dina [!UICONTROL data elements] till [!UICONTROL schema] används av d
 
    >[!TIP]
    >
-   > Medan ingen `eventType` ange till `web.webpagedetails.pageViews` eller `web.webPageDetials.pageViews.value` krävs för att Adobe Analytics ska kunna bearbeta en fyr som en sidvy är det praktiskt att ha ett standardsätt att indikera en sidvy för andra program i senare led.
+   > Medan ingen `eventType` ange till `web.webpagedetails.pageViews` eller `web.webPageDetails.pageViews.value` krävs för att Adobe Analytics ska kunna bearbeta en fyr som en sidvy är det praktiskt att ha ett standardsätt att indikera en sidvy för andra program i senare led.
 
 
 1. Välj **[!UICONTROL Keep Changes]** och sedan **[!UICONTROL Save]** regeln på nästa skärm för att slutföra skapandet av regeln
 
 
-#### Produktsidesfält
+### Produktsidesfält
 
 Börja använda nu **[!UICONTROL Update variable]** i ytterligare sekvensregler för att berika XDM-objektet innan det skickas till [!UICONTROL Platform Edge Network].
 
@@ -235,7 +223,7 @@ Börja med att spåra produktvyer på Lumas produktinformationssida:
 1. Välj **[!UICONTROL Save]** för att spara regeln
 
 
-#### Kundvagnsfält
+### Kundvagnsfält
 
 Du kan mappa hela arrayen till ett XDM-objekt, förutsatt att arrayen matchar formatet för XDM-schemat. Elementet med anpassade koddata `cart.productInfo` du skapade tidigare slingor genom `digitalData.cart.cartEntries` datalagerobjekt på Luma och översätter det till det format som krävs för `productListItems` XDM-schemats objekt.
 

@@ -3,9 +3,9 @@ title: Installera och konfigurera taggtillägget Adobe Experience Platform Web S
 description: Lär dig hur du installerar och konfigurerar plattformens SDK-taggtillägg i gränssnittet för datainsamling. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK
 exl-id: f30a44bb-99d7-476e-873a-b7802a0fe6aa
-source-git-commit: aeff30f808fd65370b58eba69d24e658474a92d7
+source-git-commit: 78df0fb4e2f2b56b829c54c08a16f860192592d1
 workflow-type: tm+mt
-source-wordcount: '588'
+source-wordcount: '573'
 ht-degree: 0%
 
 ---
@@ -28,9 +28,7 @@ Du måste ha slutfört föregående lektioner i den här självstudien:
 
 * [Konfigurera ett datastream](configure-datastream.md)
 
-## Installera Experience Platform Web SDK-tillägg
-
-### Lägg till en egenskap
+### Lägga till en taggegenskap
 
 Först måste du ha en taggegenskap. En egenskap är en behållare för alla JavaScript-skript, regler och andra funktioner som krävs för att samla in information från en webbsida och skicka den till olika platser.
 
@@ -57,7 +55,7 @@ Med ditt XDM-schema, datastream och taggegenskap som nu skapas är du redo att i
    ![Installera SDK-tillägg för webben](assets/extension-platform-web-sdk.png)
 
 
-## Länka Platform Web SDK till din datastream
+## Länka tillägget till din datastream
 
 Lämna de flesta standardinställningarna och uppdatera dem senare efter behov. Det enda du behöver göra nu är att länka tillägget till ditt datastream:
 
@@ -71,19 +69,17 @@ Lämna de flesta standardinställningarna och uppdatera dem senare efter behov. 
 
    ![Val av datastam](assets/extension-luma-web-sdk-datastream-extension.png)
 
-Nu när du har installerat Platform Web SDK och kopplat det till datastream är du redo att börja mappa dataelement till ett XDM-objekt med det schema du skapade.
-
->[!NOTE]
->
->Under den här självstudiekursen konfigurerar du bara en datastream och associerar den med alla taggmiljöer (utveckling, scen och produktion). När du implementerar Platform Web SDK på din egen webbplats bör du konfigurera ett separat datastam för varje miljö och mappa dem till dina taggmiljöer.
+Mer information om varje avsnitt av tillägget finns i [Konfigurera Adobe Experience Platform Web SDK-tillägget](https://experienceleague.adobe.com/en/docs/experience-platform/edge/extension/web-sdk-extension-configuration).
 
 >[!NOTE]
 >
 >När du inte konfigurerade en CNAME i [!UICONTROL Edge domain] i den här lektionen rekommenderar Adobe att du använder en CNAME när du implementerar Platform Web SDK på din egen webbplats. En CNAME-implementering ger inga fördelar vad gäller cookie-livstid, men det kan finnas andra fördelar. Fördelarna är annonsblockerare och mindre vanliga webbläsare som förhindrar att data skickas till domäner som de klassificerar som spårare. I dessa fall kan användning av CNAME förhindra att datainsamlingen avbryts för användare som använder dessa verktyg.
 
-Mer information om varje avsnitt av tillägget finns i [Konfigurera Adobe Experience Platform Web SDK-tillägget](https://experienceleague.adobe.com/en/docs/experience-platform/edge/extension/web-sdk-extension-configuration)
+>[!NOTE]
+>
+>Under den här självstudiekursen konfigurerar du bara en datastream och associerar den med alla taggmiljöer (utveckling, scen och produktion). När du implementerar Platform Web SDK på din egen webbplats bör du konfigurera ett separat datastam för varje miljö och mappa dem därefter i tilläggskonfigurationen.
 
-
+Nu när du har installerat Platform Web SDK och kopplat det till datastream är du redo att börja samla in data.
 
 [Nästa: ](create-data-elements.md)
 

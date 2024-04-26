@@ -2,9 +2,9 @@
 title: Strömma data till Adobe Experience Platform med Web SDK
 description: Lär dig hur du direktuppspelar webbdata till Adobe Experience Platform med Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 exl-id: 4d749ffa-e1c0-4498-9b12-12949807b369
-source-git-commit: aeff30f808fd65370b58eba69d24e658474a92d7
+source-git-commit: 78df0fb4e2f2b56b829c54c08a16f860192592d1
 workflow-type: tm+mt
-source-wordcount: '1511'
+source-wordcount: '1515'
 ht-degree: 0%
 
 ---
@@ -230,7 +230,7 @@ Först måste du generera fler exempeldata. Upprepa stegen tidigare i den här l
 
    ![Kundprofil](assets/experience-platform-validate-dataset-custProfile.png)
 
-Du har nu aktiverat Platform Web SDK för Experience Platform (och Real-Time CDP! Och Journey Optimizer!)!
+Du har nu aktiverat Platform Web SDK för Experience Platform (och Real-Time CDP! Och Journey Optimizer! Och Customer Journey Analytics!).
 
 
 [Nästa: ](setup-analytics.md)
