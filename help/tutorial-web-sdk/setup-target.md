@@ -2,17 +2,18 @@
 title: Konfigurera Adobe Target med Platform Web SDK
 description: Lär dig implementera Adobe Target med Platform Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 solution: Data Collection, Target
+jira: KT-15410
 exl-id: 9084f572-5fec-4a26-8906-6d6dd1106d36
-source-git-commit: aeff30f808fd65370b58eba69d24e658474a92d7
+source-git-commit: dc23b39e4311d618022fb1c70c2a106c0e901c8e
 workflow-type: tm+mt
-source-wordcount: '4175'
+source-wordcount: '4173'
 ht-degree: 0%
 
 ---
 
 # Konfigurera Adobe Target med Platform Web SDK
 
-Lär dig implementera Adobe Target med Platform Web SDK. Lär dig hur du levererar upplevelser och hur du skickar ytterligare parametrar till Target.
+Lär dig implementera Adobe Target med Adobe Experience Platform Web SDK. Lär dig hur du levererar upplevelser och hur du skickar ytterligare parametrar till Target.
 
 [Adobe Target](https://experienceleague.adobe.com/en/docs/target/using/target-home) är den Adobe Experience Cloud-applikation som innehåller allt ni behöver för att skräddarsy och personalisera kundupplevelsen, så att ni kan maximera intäkterna på era webbplatser, mobilsajter, appar och andra digitala kanaler.
 
@@ -20,11 +21,11 @@ Lär dig implementera Adobe Target med Platform Web SDK. Lär dig hur du leverer
 
 ## Utbildningsmål
 
-När lektionen är klar kan du göra följande med en Web SDK-implementering av Target:
+I slutet av lektionen kan du göra följande med en Web SDK-implementering av Target:
 
 * Lägg till det fragment som döljs för att förhindra flimmer
 * Konfigurera ett datastream för att aktivera Target-funktioner
-* Återge aktiviteter för visuell upplevelsedisposition
+* Visa dispositionsaktiviteter för visuell upplevelse
 * Återge formulärdispositionsaktiviteter
 * Skicka XDM-data till Target och förstå mappningen till Target-parametrar
 * Skicka anpassade data till Target, t.ex. profil- och enhetsparametrar
@@ -41,7 +42,7 @@ När lektionen är klar kan du göra följande med en Web SDK-implementering av 
 För att slutföra lektionerna i det här avsnittet måste du först:
 
 * Slutför alla lektioner för den inledande konfigurationen av Platform Web SDK, inklusive inställning av dataelement och regler.
-* Kontrollera att du har en [Redigeraren eller godkännarrollen](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html#section_8C425E43E5DD4111BBFC734A2B7ABC80) i Adobe Target.
+* Kontrollera att du har en [Redigeraren eller godkännarrollen](https://experienceleague.adobe.com/en/docs/target/using/administer/manage-users/enterprise/properties-overview#section_8C425E43E5DD4111BBFC734A2B7ABC80) i Adobe Target.
 * Installera [Hjälptillägg för Visual Experience Composer](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension) om du använder webbläsaren Google Chrome.
 * Lär dig hur du ställer in aktiviteter i Target. Om du behöver en uppdaterare kan du använda följande självstudiekurser och guider för den här lektionen:
    * [Använda hjälptillägget för Visual Experience Composer (VEC)](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension)
@@ -55,12 +56,12 @@ Innan du startar avgör du om en extra flimmerhanteringslösning krävs beroende
 
 >[!NOTE]
 >
->I den här självstudiekursen används [Luma-webbplats](https://luma.enablementadobe.com/content/luma/us/en.html) som har en asynkron implementering av taggar och flimmerreducering. I det här avsnittet finns information om hur flimmerfunktionen fungerar med SDK för plattforms-webben.
+>I den här självstudiekursen används [Lumas webbplats](https://luma.enablementadobe.com/content/luma/us/en.html){target=_blank}, som har en asynkron implementering av taggar och flimmerreducering. I det här avsnittet finns information om hur flimmerfunktionen fungerar med SDK för plattforms-webben.
 
 
 ### Asynkron implementering
 
-När ett taggbibliotek läses in asynkront kan det hända att sidan sluts återgivningen innan Target har ersatt standardinnehållet med anpassat innehåll. Det här beteendet kan leda till det som kallas&quot;flimmer&quot;, där standardinnehållet visas kort innan det ersätts av det anpassade innehåll som anges av Target. Om du vill undvika denna flimmer rekommenderar Adobe att du lägger till ett särskilt fragment som döljs innan den asynkrona taggen bäddar in.
+När ett taggbibliotek läses in asynkront kan det hända att sidan sluts återgivningen innan Target har ersatt standardinnehållet med anpassat innehåll. Det här beteendet kan leda till det som kallas&quot;flimmer&quot;, där standardinnehållet visas kort innan det ersätts av det anpassade innehållet. Om du vill undvika denna flimmer rekommenderar Adobe att du lägger till ett särskilt fragment som döljs innan den asynkrona taggen bäddar in.
 
 Det här fragmentet finns redan på Luma-webbplatsen, men vi ska titta närmare på vad koden gör:
 
@@ -182,13 +183,13 @@ I den här självstudiekursen om du vill använda Luma-webbplatsen använder du 
 
 ## Ge visuella personaliseringsbeslut
 
-De visuella personaliseringsbesluten avser de upplevelser som skapas i Adobe Target visuella upplevelsedisposition. För det första bör du förstå terminologin som används i Target- och tagggränssnitten:
+De visuella personaliseringsbesluten avser de upplevelser som har skapats i Adobe Target Visual Experience Composer. För det första bör du förstå terminologin som används i Target- och tagggränssnitten:
 
 * **Aktivitet**: En uppsättning upplevelser som riktar sig till en eller flera målgrupper. Ett enkelt A/B-test kan till exempel vara en aktivitet med två upplevelser.
 * **Upplevelse**: En uppsättning åtgärder riktade till en eller flera platser, eller beslutsomfattningar.
 * **Beslutets omfattning**: En plats där en Target-upplevelse levereras. Beslutsomfattningar motsvarar&quot;mbox&quot; om du är van vid att använda äldre versioner av Target.
 * **Beslut om personalisering**: En åtgärd som servern fastställer ska tillämpas. Dessa beslut kan baseras på målgruppskriterier och prioritering av målaktiviteter.
-* **Föreslå**: Resultatet av beslut som fattats av servern och som levereras i svaret på Platform Web SDK. Om du till exempel byter en banderollbild blir det ett förslag.
+* **Föreslå**: Resultatet av serverns beslut, som levereras i svaret på Platform Web SDK. Om du till exempel byter en banderollbild blir det ett förslag.
 
 ### Uppdatera [!UICONTROL Send event] åtgärd
 
@@ -231,7 +232,7 @@ Nu när den grundläggande implementeringsdelen är klar skapar du en XT-aktivit
 
    ![Skapa en ny XT-aktivitet](assets/target-xt-create-activity.png)
 
-1. Ändra sidan, till exempel texten på startsidans hjältebanner.  När du är klar väljer du **[!UICONTROL Save]** sedan **[!UICONTROL Next]**.
+1. Ändra till exempel texten på startsidans hjältebanner.  När du är klar väljer du **[!UICONTROL Save]** sedan **[!UICONTROL Next]**.
 
    ![VEC-ändring för mål](assets/target-xt-vec-modification.png)
 
@@ -256,7 +257,7 @@ Nu när den grundläggande implementeringsdelen är klar skapar du en XT-aktivit
 
 ### Validera med felsökaren
 
-Om du ställer in en aktivitet bör du se innehållet renderas på sidan. Men även om inga aktiviteter är aktiva kan du kontrollera att Target är korrekt konfigurerat genom att titta i nätverksanropet för Skicka händelse.
+Om du ställer in en aktivitet bör du se innehållet renderas på sidan. Men även om inga aktiviteter är aktiva kan du kontrollera att Target är korrekt konfigurerat genom att titta på nätverksanropet för Skicka händelse.
 
 >[!CAUTION]
 >
@@ -302,7 +303,7 @@ Anpassade beslutsomfattningar (tidigare kallade&quot;mboxes&quot;) kan användas
 
 ### Bearbeta svaret från Target
 
-Nu när du har konfigurerat Platform Web SDK för att begära innehåll för `homepage-hero` måste du göra något med svaret. Taggtillägget Platform Web SDK ger en [!UICONTROL Send Event Complete] -händelse som kan användas för att omedelbart aktivera en ny regel när ett svar från en [!UICONTROL Send Event] åtgärden har tagits emot.
+Nu när du har konfigurerat Platform Web SDK för att begära innehåll för `homepage-hero` måste du göra något med svaret. Taggtillägget Platform Web SDK ger en [!UICONTROL Send Event Complete] -händelse, som kan användas för att omedelbart aktivera en ny regel när ett svar från en [!UICONTROL Send Event] åtgärden har tagits emot.
 
 1. Skapa en anropad regel `homepage - send event complete - render homepage-hero`.
 1. Lägg till en händelse i regeln. Använd **Adobe Experience Platform Web SDK** tillägg och **[!UICONTROL Send event complete]** händelsetyp.
@@ -393,7 +394,7 @@ I det här avsnittet skickar du Target-specifika data och tar en närmare titt p
 
 ### Sidparametrar (mbox) och XDM
 
-Alla XDM-fält skickas automatiskt till Target som [sidparametrar](https://experienceleague.adobe.com/en/docs/target-dev/developer/implementation/methods/page) eller mbox-parametrar.
+Alla XDM-fält skickas automatiskt till Target som [sidparametrar](https://experienceleague.adobe.com/en/docs/target-dev/developer/implementation/methods/page-parameters) eller mbox-parametrar.
 
 Vissa av dessa XDM-fält mappas till specialobjekt i Target serverdel. Till exempel: `web.webPageDetails.URL` kommer automatiskt att vara tillgängligt för att skapa URL-baserade villkor för målinriktning eller som `page.url` när du skapar profilskript.
 
@@ -401,7 +402,7 @@ Vissa av dessa XDM-fält mappas till specialobjekt i Target serverdel. Till exem
 
 Det finns vissa datapunkter som kan vara användbara för Target som inte har mappats från XDM-objektet. Dessa speciella Target-parametrar inkluderar:
 
-* [Profilattribut](https://experienceleague.adobe.com/en/docs/target/using/implement-target/before-implement/methods/in-page-profile-attributes)
+* [Profilattribut](https://experienceleague.adobe.com/en/docs/target-dev/developer/implementation/methods/in-page-profile-attributes)
 * [Recommendations entitetsattribut](https://experienceleague.adobe.com/en/docs/target/using/recommendations/entities/entity-attributes)
 * [Recommendations reserverade parametrar](https://experienceleague.adobe.com/en/docs/target/using/recommendations/plan-implement#pass-behavioral)
 * Kategorivärden för [kategoritillhörighet](https://experienceleague.adobe.com/en/docs/target/using/audiences/visitor-profiles/category-affinity)
@@ -551,4 +552,4 @@ Nu när du är klar med den här lektionen bör du ha en fungerande implementeri
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

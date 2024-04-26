@@ -1,22 +1,23 @@
 ---
-title: Konfigurera beslutshantering med Platform Web SDK
+title: Konfigurera Journey Optimizer Decision Management med Platform Web SDK
 description: Lär dig implementera beslutshantering med hjälp av Platform Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 solution: Data Collection,Experience Platform,Journey Optimizer
 feature-set: Journey Optimizer
 feature: Decision Management,Offers
+jira: KT-15412
 exl-id: f7852ef4-44b0-49df-aec8-cb211726247d
-source-git-commit: aeff30f808fd65370b58eba69d24e658474a92d7
+source-git-commit: 8602110d2b2ddc561e45f201e3bcce5e6a6f8261
 workflow-type: tm+mt
-source-wordcount: '2511'
+source-wordcount: '2515'
 ht-degree: 0%
 
 ---
 
 # Konfigurera beslutshantering med Platform Web SDK
 
-Lär dig implementera beslutshantering med hjälp av Platform Web SDK. Den här guiden innehåller grundläggande krav för beslutshantering, detaljerade konfigurationssteg och en djupdykning i ett användningsexempel som fokuserar på lojalitetsstatus.
+Lär dig hur du implementerar Adobe Journey Optimizer beslutsstyrningsfunktion med Platform Web SDK. Den här guiden innehåller grundläggande krav för beslutshantering, detaljerade konfigurationssteg och en djupdykning i ett användningsexempel som fokuserar på lojalitetsstatus.
 
-Genom att följa den här självstudiekursen kan Journey Optimizer-användare effektivt tillämpa offera decisioningar, vilket förbättrar personaliseringen och relevansen i deras kundinteraktioner.
+Genom att följa den här självstudiekursen är Journey Optimizer-användare utrustade att använda funktioner för beslutshantering, vilket förbättrar personaliseringen och relevansen av deras kundinteraktioner.
 
 
 ![Web SDK och Adobe Analytics](assets/dc-websdk-ajo.png)
@@ -51,9 +52,7 @@ För att slutföra lektionerna i det här avsnittet måste du först:
 
 ## Begränsningar
 
-Observera följande begränsning:
-
-* Händelsebaserade erbjudanden stöds för närvarande inte i Adobe Journey Optimizer. Om du skapar en beslutsregel baserat på en händelse kan du inte tillämpa den i ett erbjudande.
+Händelsebaserade erbjudanden stöds för närvarande inte i Adobe Journey Optimizer. Om du skapar en beslutsregel baserat på en händelse kan du inte tillämpa den i ett erbjudande.
 
 ## Bevilja åtkomst till beslutsledning
 
@@ -140,7 +139,7 @@ För det första bör du förstå den terminologi som används i gränssnittet f
 
 I den här lektionen implementerar du ett exempel på Loyalty Rewards-användning för att förstå hur beslut hanteras med Web SDK.
 
-Med detta exempel får ni en bättre förståelse för hur Journey Optimizer kan hjälpa er att leverera det bästa erbjudandet till era kunder genom att utnyttja det centraliserade erbjudandebiblioteket och beslutsmotorn för erbjudandet.
+Med detta exempel får ni en bättre förståelse för hur Journey Optimizer kan hjälpa er att leverera det bästa erbjudandet till era kunder genom att utnyttja det centraliserade erbjudandebiblioteket och beslutsmotorn.
 
 >[!NOTE]
 >
@@ -311,7 +310,7 @@ Så här skapar du ett beslut:
    <!--
       ![ADD SCREENSHOT](#)
    -->
-1. Nästa steg du måste lägga till **utvärderingskriterier** för beslutets omfattning. Klicka **Lägg till** och välj den tidigare skapade *Lojalitetsbelöningar*&#39; **samling** som innehåller alla lojalitetserbjudanden att tänka på.
+1. Nästa steg du måste lägga till **utvärderingskriterier** för beslutets omfattning. Klicka **Lägg till** och välj den tidigare skapade *Lojalitetsbelöningar***collection, som innehåller alla lojalitetserbjudanden att ta hänsyn till.
    <!--
       ![ADD SCREENSHOT](#)
    -->
@@ -334,7 +333,7 @@ Så här skapar du ett beslut:
 
 ## Simuleringar
 
-Som en god praxis bör ni validera Luma Loyalty-beslutslogiken för att säkerställa att rätt erbjudanden levereras till rätt lojalitetsmålgrupper. Du kan göra detta med **testprofiler**. Det är också en bra idé att testa ändringar av erbjudanden via testprofiler innan nya erbjudandeversioner skickas till produktionen.
+Som en god praxis bör ni validera Luma Loyalty-beslutslogiken för att säkerställa att rätt erbjudanden levereras till rätt lojalitetsmålgrupper. Du kan göra valideringen med **testprofiler**. Det är också en bra idé att testa ändringar av erbjudanden via testprofiler innan nya erbjudandeversioner skickas till produktionen.
 
 Välj **Simuleringar** -fliken från **Erbjudanden** -menyn.
 
@@ -370,7 +369,7 @@ Välj **Simuleringar** -fliken från **Erbjudanden** -menyn.
 
 The **Adobe Experience Platform Debugger** för både Chrome och Firefox analyserar dina webbsidor för att identifiera problem med implementeringen av Adobe Experience Cloud lösningar.
 
-Du kan använda felsökaren på Luma-webbplatsen för att validera beslutslogiken i produktionen. Det här är en bra rutin när Loyalty Rewards-användningsexemplet är öppet och körs för att säkerställa att allt är korrekt konfigurerat.
+Du kan använda felsökaren på Luma-webbplatsen för att validera beslutslogiken i produktionen. Valideringen är bra att använda när Loyalty Rewards-användningsexemplet är öppet och körs för att säkerställa att allt är korrekt konfigurerat.
 
 [Lär dig hur du konfigurerar felsökaren i webbläsaren med hjälp av guiden här](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/debugger/overview).
 
@@ -405,4 +404,4 @@ Så här börjar du valideringen med felsökaren:
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

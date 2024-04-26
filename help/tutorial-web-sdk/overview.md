@@ -3,7 +3,7 @@ title: Självstudiekurs om att implementera Adobe Experience Cloud med webb-SDK
 description: Lär dig hur du implementerar Experience Cloud-program med Adobe Experience Platform Web SDK.
 recommendations: catalog, noDisplay
 exl-id: cf0ff74b-e81e-4f6d-ab7d-6c70e9b52d78
-source-git-commit: aeff30f808fd65370b58eba69d24e658474a92d7
+source-git-commit: 8602110d2b2ddc561e45f201e3bcce5e6a6f8261
 workflow-type: tm+mt
 source-wordcount: '675'
 ht-degree: 2%
@@ -20,7 +20,7 @@ Experience Platform Web SDK är ett JavaScript-bibliotek på klientsidan som gö
 
 I den här självstudiekursen får du hjälp med att implementera Platform Web SDK på en exempelwebbplats som heter Luma. The [Luma-webbplats](https://luma.enablementadobe.com/content/luma/us/en.html) har ett omfattande datalager och funktioner som gör att du kan skapa en realistisk implementering. I den här självstudiekursen:
 
-* Skapa en egen taggegenskap på ditt eget konto med en Platform Web SDK-implementering för Luma-webbplatsen.
+* Skapa en egen taggegenskap, på ditt eget konto, med en Platform Web SDK-implementering för Luma-webbplatsen.
 * Konfigurera alla datainsamlingsfunktioner för Web SDK-implementeringar som datastreams, scheman och identitetsnamnutrymmen.
 * Lägg till följande Adobe Experience Cloud-program:
    * **[Adobe Experience Platform](setup-experience-platform.md)** (och program som bygger på Platform som Adobe Real-time Customer Data Platform, Adobe Journey Optimizer och Adobe Customer Journey Analytics)
@@ -66,7 +66,7 @@ I den här lektionen antas du ha ett Adobe-konto och de behörigheter som krävs
 
 * För det valfria **Adobe Analytics** lektion måste du ha [administratörsåtkomst till inställningar för Report Suite, bearbetningsregler och Analysis Workspace](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-console/home)
 
-* För det valfria **Adobe Target** lektion måste du ha [Redigerare eller godkännare](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html#section_8C425E43E5DD4111BBFC734A2B7ABC80) åtkomst.
+* För det valfria **Adobe Target** lektion måste du ha [Redigerare eller godkännare](https://experienceleague.adobe.com/en/docs/target/using/administer/manage-users/enterprise/properties-overview#section_8C425E43E5DD4111BBFC734A2B7ABC80) åtkomst.
 
 * För det valfria **Audience Manager** lektion måste du ha tillgång till för att skapa, läsa och skriva egenskaper, segment och mål. Mer information finns i självstudiekursen [Audience Manager Role-baserad åtkomstkontroll](https://experienceleague.adobe.com/en/docs/audience-manager-learn/tutorials/setup-and-admin/user-management/setting-permissions-with-role-based-access-control).
 
@@ -77,7 +77,7 @@ I den här lektionen antas du ha ett Adobe-konto och de behörigheter som krävs
 
 ## Uppdateringar
 
-* 24 april 2024: Större uppdatering med begäran om Set Variable/Update Variable, delad personalisering och analys, Journey Optimizer-lektioner
+* 24 april 2024: Viktiga uppdateringar inklusive tillägg av begäran om Set Variable/Update Variable, delad personalisering och analys, Journey Optimizer-lektioner
 
 ## Läs in Luma-webbplatsen
 
@@ -91,4 +91,4 @@ Kom så börjar vi!
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

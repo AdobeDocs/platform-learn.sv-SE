@@ -2,10 +2,11 @@
 title: Konfigurera ett identitetsnamnutrymme
 description: Lär dig hur du konfigurerar identitetsnamnutrymmen som ska användas med Adobe Experience Platform Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Identities
+jira: KT-15400
 exl-id: 7719dff4-6b30-4fa0-acae-7491c3208f15
-source-git-commit: aeff30f808fd65370b58eba69d24e658474a92d7
+source-git-commit: 8602110d2b2ddc561e45f201e3bcce5e6a6f8261
 workflow-type: tm+mt
-source-wordcount: '629'
+source-wordcount: '565'
 ht-degree: 0%
 
 ---
@@ -38,7 +39,7 @@ Du måste ha slutfört tidigare lektioner:
 
 >[!IMPORTANT]
 >
->The [Experience Cloud ID-tillägg](https://exchange.adobe.com/experiencecloud.details.100160.adobe-experience-cloud-id-launch-extension.html) behövs inte när du implementerar Adobe Experience Platform Web SDK, eftersom JavaScript-biblioteket för Web SDK innehåller funktioner för tjänsten för besöks-ID.
+>The [Experience Cloud ID-tillägg](https://exchange.adobe.com/apps/ec/100160/adobe-experience-cloud-id-launch-extension) behövs inte när du implementerar Adobe Experience Platform Web SDK, eftersom JavaScript-biblioteket för Web SDK innehåller funktioner för tjänsten för besöks-ID.
 >
 > Om din webbplats redan använder Experience Cloud ID-tjänsten på din webbplats (antingen via Visitor API eller Experience Cloud ID Service Tag-tillägget) och du vill fortsätta använda den när du migrerar till Adobe Experience Platform Web SDK, måste du använda den senaste versionen av Visitor API eller Experience Cloud ID Service Tag-tillägget. Se [ID-migrering](https://experienceleague.adobe.com/en/docs/experience-platform/edge/identity/overview) för mer information.
 
@@ -89,14 +90,10 @@ Skapa nu ett namnutrymme för Luma CRM-ID:
 >
 > I [Skapa identiteter](create-identities.md) lektionen lär du dig hur du använder det här namnutrymmet när du skickar identiteter till Platform Edge Network.
 
-## Skapa identitetsnamnutrymmet i din produktionssandlåda
-
-På grund av en aktuell begränsning i Web SDK-tillägget måste även identitetsnamnutrymmen skapas i produktionssandlådan för att kunna använda namnutrymmet för att skicka data till en utvecklingssandlåda. Om du har använt en utvecklingssandlåda för den här självstudiekursen skapar du även `Luma CRM ID` namnutrymme i din produktionssandlåda.
-
 Nu när identiteter finns på plats kan datastream konfigureras.
 
 [Nästa: ](configure-datastream.md)
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

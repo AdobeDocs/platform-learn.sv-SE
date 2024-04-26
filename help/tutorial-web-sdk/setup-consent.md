@@ -2,21 +2,22 @@
 title: Konfigurera samtycke med Platform Web SDK
 description: Lär dig hur du konfigurerar sekretessinställningarna för taggtillägget Experience Platform Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Tags,Consent
+jira: KT-15413
 exl-id: 502a7467-3699-4b2b-93bf-6b6069ea2090
-source-git-commit: aeff30f808fd65370b58eba69d24e658474a92d7
+source-git-commit: 8602110d2b2ddc561e45f201e3bcce5e6a6f8261
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1535'
 ht-degree: 0%
 
 ---
 
 # Konfigurera samtycke med Platform Web SDK
 
-Lär dig hur du konfigurerar sekretessinställningarna för taggtillägget Experience Platform Web SDK. Ange samtycke baserat på besökarens interaktion med en banderoll från en CMP (Consent Management Platform).
+Lär dig hur du konfigurerar sekretessinställningarna för taggtillägget Adobe Experience Platform Web SDK. Ange samtycke baserat på besökarens interaktion med en banderoll från en CMP (Consent Management Platform).
 
 >[!NOTE]
 > 
->I den här självstudiekursen används [Klaro](https://heyklaro.com/) som CMP. Du kan följa med i arbetet med Klaro eller den CMP du använder på din webbplats.
+>I den här självstudiekursen används [Klaro](https://klaro.org/) som CMP. Du kan följa med i arbetet med Klaro eller den CMP du använder på din webbplats.
 
 
 ## Utbildningsmål
@@ -32,20 +33,21 @@ När lektionen är slut kan du:
 Du bör känna till taggarna och stegen för att skapa regler, dataelement, bygga bibliotek för miljöer och växla taggbibliotek med Experience Platform Debugger.
 
 Innan du börjar konfigurera sekretessinställningarna och skapar regler för samtycke, måste du se till att du har injicerat ditt skript för plattformar för samtyckeshantering på webbplatsen och fungerar som det ska. En CMP kan läsas in direkt i källkoden med hjälp av webbplatsutvecklare eller läsas in med hjälp av själva taggar. Den här lektionen visar det senare tillvägagångssättet.
+
 >[!NOTE]
 > 
 >1. En plattform för hantering av samtycke (CMP) används av organisationer för att lagligen dokumentera och hantera besökares val av samtycke innan besökarens data samlas in, delas eller säljs från onlinekällor som webbplatser och appar.
 >
->2. Det rekommenderade sättet att injicera en CMP är direkt via källkoden före tagghanteringsskriptet.
+>2. Det rekommenderade sättet att injicera en CMP är direkt genom källkoden före tagghanteringsskriptet.
 
 ### Konfigurera Klaro
 
 Läs mer om den plattform för hantering av samtycke som används i den här självstudiekursen Klaro innan du börjar använda taggkonfigurationer.
 
-1. Besök [Klaro](https://heyklaro.com/) och skapa ett konto.
+1. Besök [Klaro](https://klaro.org/) och skapa ett konto.
 1. Gå till **Sekretesshanteraren** och skapa en instans enligt instruktionerna.
 1. Använd **Integrationskod** för att injicera Klaro i din taggegenskap (instruktioner finns i nästa övning).
-1. Hoppa över **Skanning** eftersom den identifierar taggegenskapen som är hårdkodad på demowebbplatsen Luma och inte den du har skapat för den här kursen.
+1. Hoppa över **Skanning** när den identifierar taggegenskapen som är hårdkodad på demowebbplatsen Luma och inte den du har skapat för den här kursen.
 1. Lägg till en tjänst som anropas `aep web sdk` och aktivera **Standardläge för tjänst**. När det är aktiverat är standardvärdet för samtycke `true`, annars är det `false`. Den här konfigurationen är användbar när du vill bestämma vilket standardtillstånd (innan besökaren ger sitt samtycke) som ska användas för ditt webbprogram. Exempel:
    * För CCPA är standardmedgivandet vanligtvis inställt på `true`. Du kommer att referera till det här scenariot som **Underförstådd anmälan** genom den här självstudiekursen
    * För GDPR är standardmedgivandet vanligtvis inställt på `false`. Du kommer att referera till det här scenariot som **Underförstådd avanmälan** genom den här självstudiekursen.
@@ -218,10 +220,10 @@ När du har den här regeln på plats, bör händelsesamlingen börja när en be
 Mer information om samtycke i Web SDK finns i [Stöd för kundernas samtycke](https://experienceleague.adobe.com/en/docs/experience-platform/edge/consent/supporting-consent).
 
 
-Mer information om [!UICONTROL Set consent] åtgärd, se [Ange samtycke](https://experienceleague.adobe.com/en/docs/experience-platform/edge/extension/action-types#set-consent).
+Mer information om [!UICONTROL Set consent] åtgärd, se [Ange samtycke](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/web-sdk/action-types#set-consent).
 
 [Nästa: ](setup-event-forwarding.md)
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

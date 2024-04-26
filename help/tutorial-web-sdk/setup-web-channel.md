@@ -4,20 +4,21 @@ description: Lär dig implementera Journey Optimizer webbkanal med Platform Web 
 solution: Data Collection,Experience Platform,Journey Optimizer
 feature-set: Journey Optimizer
 feature: Web Channel,Web SDK
+jira: KT-15411
 exl-id: ab83ce56-7f54-4341-8750-b458d0db0239
-source-git-commit: aeff30f808fd65370b58eba69d24e658474a92d7
+source-git-commit: 8602110d2b2ddc561e45f201e3bcce5e6a6f8261
 workflow-type: tm+mt
-source-wordcount: '2729'
+source-wordcount: '2736'
 ht-degree: 0%
 
 ---
 
 
-# Konfigurera Journey Optimizer webbkanal
+# Konfigurera Journey Optimizer webbkanal med Web SDK
 
-Så här implementerar du Journey Optimizer [webbkanal](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/web/get-started-web) med Platform Web SDK. Den här lektionen handlar om grundläggande krav för webbkanaler, detaljerade konfigurationssteg och en djupdykning i ett användningsexempel som fokuserar på lojalitetsstatus.
+Så här implementerar du Adobe Journey Optimizer [webbkanal](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/web/get-started-web) med Adobe Experience Platform Web SDK. Den här lektionen handlar om grundläggande krav för webbkanaler, detaljerade konfigurationssteg och en djupdykning i ett användningsexempel som fokuserar på lojalitetsstatus.
 
-Genom att följa den här lektionen får Journey Optimizer-användare möjlighet att effektivt använda webbkanalen för avancerad onlineanpassning med Journey Optimizer webbdesigner.
+När du följer den här lektionen är Journey Optimizer-användare utrustade att använda webbkanalen för avancerad onlineanpassning med Journey Optimizer webbdesigner.
 
 ![Web SDK och Adobe Analytics](assets/dc-websdk-ajo.png)
 
@@ -51,7 +52,7 @@ För att slutföra lektionerna i det här avsnittet måste du först:
   > 1. Webbplatsen är inbäddad i en iframe.
   > 1. Kundens QA- eller stage-sajt är inte externt tillgänglig (det är en intern sajt).
 
-* När du skapar webbupplevelser och inkluderar innehåll från Adobe Experience Manager Assets Essentials-biblioteket måste du [konfigurera underdomänen för publicering av innehållet](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/web/web-delegated-subdomains).
+* När du skapar webbupplevelser och inkluderar innehåll från Adobe Experience Manager Assets Essentials-biblioteket måste du [konfigurera underdomänen för publicering av innehållet](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/web/configure-web-channel/web-delegated-subdomains).
 * Om du använder funktionen för innehållsexperimenterande ska du se till att din webbdatauppsättning också ingår i rapportkonfigurationen.
 * För närvarande finns det två typer av implementeringar som gör det möjligt att skapa och leverera webbkanalskampanjer på dina webbegenskaper:
    * Endast på klientsidan: Om du vill ändra webbplatsen måste du implementera Adobe Experience Platform Web SDK.
@@ -245,7 +246,7 @@ Så här skapar du innehållsexperimentet:
 
 1. När du skapar ett experiment med webbkanalen och väljer **[!UICONTROL Inbound Clicks]**, **[!UICONTROL Unique Inbound Clicks]**, **[!UICONTROL Page Views]**, eller **[!UICONTROL Unique Page Views]** mätvärden, **[!UICONTROL Click Action]** I den här listrutan kan du hålla reda på och övervaka klick och vyer på specifika sidor.
 
-1. Du kan också ange en **[!UICONTROL Holdout]** som inte får någon av de två behandlingarna. Låt det vara omarkerat för tillfället.
+1. Om du vill kan du ange **[!UICONTROL Holdout]** som inte får någon av de två behandlingarna. Låt det vara omarkerat för tillfället.
 
 1. Du kan också välja att **[!UICONTROL Distribute evenly]**. Markera det här alternativet för att se till att uppdelningarna alltid är jämnt fördelade.
 
@@ -259,7 +260,7 @@ Låt oss nu skapa webbkanalsupplevelsen. Använd Adobe Experience Cloud **[!UICO
 
    ![Redigera innehåll](assets/web-channel-edit-content.png)
 
-1. Klicka nu **[!UICONTROL Edit web page]** för att börja skapa.
+1. Klicka nu på **[!UICONTROL Edit web page]** för att börja skapa.
 
    ![Redigera webbsida](assets/web-channel-edit-web-page.png)
 
@@ -387,4 +388,4 @@ Så här börjar du valideringen med felsökaren:
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

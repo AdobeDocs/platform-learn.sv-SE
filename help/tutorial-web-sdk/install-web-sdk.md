@@ -1,18 +1,19 @@
 ---
 title: Installera och konfigurera taggtillägget Adobe Experience Platform Web SDK
 description: Lär dig hur du installerar och konfigurerar plattformens SDK-taggtillägg i gränssnittet för datainsamling. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
-feature: Web SDK
+feature: Web SDK, Tags
+jira: KT-15404
 exl-id: f30a44bb-99d7-476e-873a-b7802a0fe6aa
-source-git-commit: 78df0fb4e2f2b56b829c54c08a16f860192592d1
+source-git-commit: 8602110d2b2ddc561e45f201e3bcce5e6a6f8261
 workflow-type: tm+mt
-source-wordcount: '573'
+source-wordcount: '578'
 ht-degree: 0%
 
 ---
 
 # Installera taggtillägget Adobe Experience Platform Web SDK
 
-Lär dig hur du installerar och konfigurerar plattformens SDK-taggtillägg. Det enklaste sättet att implementera Web SDK är att använda tagghanteraren Adobe, taggar (tidigare kallad Launch). Taggtillägget Platform Web SDK är _endast taggtillägg_ som krävs för att skicka data till _alla Adobe Experience Cloud-program_, inklusive [Analyser](setup-analytics.md), [Mål](setup-target.md), [Audience Manager](setup-audience-manager.md), Real-time Customer Data Platform och [Journey Optimizer](setup-web-channel.md)!
+Lär dig installera och konfigurera taggtillägget Adobe Experience Platform Web SDK. Det enklaste sättet att implementera Web SDK är att använda tagghanteraren Adobe, taggar (tidigare kallad Launch). Taggtillägget Platform Web SDK är _endast taggtillägg_ som krävs för att skicka data till _alla Adobe Experience Cloud-program_, inklusive [Analyser](setup-analytics.md), [Mål](setup-target.md), [Audience Manager](setup-audience-manager.md), Real-time Customer Data Platform och [Journey Optimizer](setup-web-channel.md)!
 
 ## Utbildningsmål
 
@@ -57,10 +58,10 @@ Med ditt XDM-schema, datastream och taggegenskap som nu skapas är du redo att i
 
 ## Länka tillägget till din datastream
 
-Lämna de flesta standardinställningarna och uppdatera dem senare efter behov. Det enda du behöver göra nu är att länka tillägget till ditt datastream:
+Lämna de flesta standardinställningarna och uppdatera dem senare efter behov. Det enda du måste göra nu är att länka tillägget till ditt datastream:
 
 1. Under **[!UICONTROL Datastreams]** väljer du **[!UICONTROL Choose from list]** indatametod
-1. Välj den datastream du skapade tidigare, `Luma Web SDK`
+1. Välj den datastream som du skapade tidigare, `Luma Web SDK`
 1. Välj **[!UICONTROL Save]**
 
    >[!NOTE]
@@ -69,7 +70,7 @@ Lämna de flesta standardinställningarna och uppdatera dem senare efter behov. 
 
    ![Val av datastam](assets/extension-luma-web-sdk-datastream-extension.png)
 
-Mer information om varje avsnitt av tillägget finns i [Konfigurera Adobe Experience Platform Web SDK-tillägget](https://experienceleague.adobe.com/en/docs/experience-platform/edge/extension/web-sdk-extension-configuration).
+Mer information om varje avsnitt av tillägget finns i [Konfigurera Adobe Experience Platform Web SDK-tillägget](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/web-sdk/web-sdk-extension-configuration).
 
 >[!NOTE]
 >
@@ -85,4 +86,4 @@ Nu när du har installerat Platform Web SDK och kopplat det till datastream är 
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

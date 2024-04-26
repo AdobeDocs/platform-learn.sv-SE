@@ -2,17 +2,18 @@
 title: Konfigurera Adobe Analytics med Experience Platform Web SDK
 description: Lär dig hur du konfigurerar Adobe Analytics med Experience Platform Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 solution: Data Collection, Analytics
+jira: KT-15408
 exl-id: de86b936-0a47-4ade-8ca7-834c6ed0f041
-source-git-commit: aeff30f808fd65370b58eba69d24e658474a92d7
+source-git-commit: 8602110d2b2ddc561e45f201e3bcce5e6a6f8261
 workflow-type: tm+mt
-source-wordcount: '2671'
+source-wordcount: '2678'
 ht-degree: 0%
 
 ---
 
-# Konfigurera Adobe Analytics med Platform Web SDK
+# Konfigurera Adobe Analytics med Adobe Experience Platform Web SDK
 
-Lär dig konfigurera Adobe Analytics med [Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/web-sdk/overview), skapa taggregler för att skicka data till Adobe Analytics och validera att Analytics hämtar in data som förväntat.
+Lär dig konfigurera Adobe Analytics med [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/web-sdk/overview), skapa taggregler för att skicka data till Adobe Analytics och validera att Analytics hämtar in data som förväntat.
 
 [Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics) är en branschledande applikation som ger er möjlighet att förstå era kunder som människor och styra verksamheten med kundanalys.
 
@@ -34,13 +35,13 @@ För att slutföra lektionen måste du först:
 
 * Bekanta dig med och få tillgång till Adobe Analytics.
 
-* Ha minst ett test-/dev-rapportpaket-ID. Om du inte har någon test-/dev-rapportsserie som du kan använda för den här självstudiekursen, [skapa en](https://experienceleague.adobe.com/en/docs/analytics/admin/manage-report-suites/new-report-suite/t-create-a-report-suite).
+* Ha minst ett test-/dev-rapportpaket-ID. Om du inte har någon test-/dev-rapportsserie som du kan använda för den här självstudiekursen, [skapa en](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite).
 
 * Slutför de tidigare lektionerna i avsnitten Inledande konfiguration och Tagginställningar i den här självstudien.
 
 ## Konfigurera datastream
 
-Platform Web SDK skickar data från din webbplats till Platform Edge Network. Din datastream talar sedan om för Platform Edge Network till vilken Adobe Analytics-rapport säger att dina data ska vidarebefordras.
+Platform Web SDK skickar data från din webbplats till Platform Edge Network. Din datastream talar sedan om för Platform Edge Network till vilken Adobe Analytics-rapport säger att dina data ska skickas.
 
 1. Gå till [Datainsamling](https://experience.adobe.com/#/data-collection){target="blank"} gränssnitt
 1. Välj **[!UICONTROL Datastreams]**
@@ -51,7 +52,7 @@ Platform Web SDK skickar data från din webbplats till Platform Edge Network. Di
 1. Välj **[!UICONTROL Add Service]**
    ![Lägg till en tjänst i datastream](assets/datastream-analytics-addService.png)
 1. Välj **[!UICONTROL Adobe Analytics]** som **[!UICONTROL Service]**
-1. Ange  **[!UICONTROL Report Suite ID]** av din utvecklingsrapportsserie
+1. Ange **[!UICONTROL Report Suite ID]** av din utvecklingsrapportsserie
 1. Välj **[!UICONTROL Save]**
 
    ![DataStream Save analytics](assets/datastream-add-analytics.png)
@@ -62,7 +63,7 @@ Platform Web SDK skickar data från din webbplats till Platform Edge Network. Di
 
 >[!WARNING]
 >
->I den här självstudiekursen konfigurerar du bara Adobe Analytics rapportsvit för din utvecklingsmiljö. När du skapar datastreams för din egen webbplats skapar du ytterligare datastreams och rapportsviter för dina staging- och produktionsmiljöer.
+>I den här självstudiekursen konfigurerar du bara Adobe Analytics rapportsvit för din utvecklingsmiljö. När du skapar datastreams för din egen webbplats bör du skapa ytterligare datastreams och rapportsviter för dina staging- och produktionsmiljöer.
 
 ## XDM-scheman och analysvariabler
 
@@ -117,7 +118,7 @@ Schemat som skapats i [Konfigurera ett schema](configure-schemas.md) lektionen i
 De enskilda avsnitten i Analytics-produktsträngen anges via olika XDM-variabler under `productListItems` -objekt.
 >18 augusti 2022 `productListItems[].SKU` prioriterar mappning till produktnamnet i variabeln s.products.
 >Värdet som anges till `productListItems[].name` mappas endast till produktnamnet om `productListItems[].SKU` finns inte. Annars är den omappad och tillgänglig i kontextdata.
->Ange inte en tom sträng eller null till  `productListItems[].SKU`. Detta har den oönskade effekten av att mappa till produktnamnet i variabeln s.products.
+>Ange inte en tom sträng eller null till `productListItems[].SKU`. Detta har den oönskade effekten av att mappa till produktnamnet i variabeln s.products.
 
 Den senaste listan över mappningar finns på [Variabelmappning för analyser i Adobe Experience Edge](https://experienceleague.adobe.com/en/docs/experience-platform/edge/data-collection/adobe-analytics/automatically-mapped-vars).
 
@@ -126,7 +127,7 @@ Den senaste listan över mappningar finns på [Variabelmappning för analyser i 
 
 Alla fält i XDM-schemat blir tillgängliga för Adobe Analytics som Context Data Variables med följande prefix `a.x.`. Exempel: `a.x.web.webinteraction.region`
 
-I den här övningen mappar du en XDM-variabel till en prop. Följ de här stegen för alla anpassade mappningar du måste göra för alla `eVar`, `prop`, `event`, eller variabel som är tillgänglig via bearbetningsregler.
+I den här övningen mappar du en XDM-variabel till en prop. Följ de här stegen för alla anpassade mappningar som du måste göra för alla `eVar`, `prop`, `event`, eller variabel som är tillgänglig via bearbetningsregler.
 
 1. Gå till Analytics-gränssnittet
 1. Gå till [!UICONTROL Admin] > [!UICONTROL Admin Tools] > [!UICONTROL Report Suites]
@@ -156,7 +157,7 @@ Lägg till `Adobe Analytics ExperienceEvent Template` fältgrupp till ditt schem
 1. Hitta `Adobe Analytics ExperienceEvent Template` fältgrupp och lägg till den i ditt schema
 
 
-Ange nu en eVar för varuexponering i produktsträngen. Med `Adobe Analytics ExperienceEvent Template` kan du mappa variabler till marknadsföring av eVars eller händelser i produktsträngen. Detta kallas även inställning **Produktsyntaxmarknadsföring**.
+Ange en eVar för varuexponering i produktsträngen. Med `Adobe Analytics ExperienceEvent Template` kan du mappa variabler till marknadsföring av eVars eller händelser i produktsträngen. Detta kallas även inställning **Produktsyntaxmarknadsföring**.
 
 1. Gå tillbaka till taggegenskapen
 
@@ -187,7 +188,7 @@ Du kanske vill ändra vilka data i Adobe Analytics rapportserie som skickas till
 
 ### Konfigurera datastream för åsidosättning av en rapportserie
 
-Så här konfigurerar du en åsidosättningsinställning för Adobe Analytics-rapportsviten i datastream:
+Så här konfigurerar du åsidosättningsinställningen för Adobe Analytics-rapportsviten i datastream:
 
 1. Öppna ditt datastream
 1. Redigera **[!UICONTROL Adobe Analytics]** genom att öppna ![mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_More_18_N.svg) och sedan välja **[!UICONTROL Edit]**
@@ -243,7 +244,7 @@ Låt oss skapa en regel för att skicka ytterligare ett sidvisningsanrop till en
 
 1. Som **[!UICONTROL Type]**, markera `web.webpagedetails.pageViews`
 
-1. Som **[!UICONTROL XDM data]** väljer du `xdm.variable.content` du skapade i [Skapa dataelement](create-data-elements.md) lektion
+1. Som **[!UICONTROL XDM data]** väljer du `xdm.variable.content` dataelement som du skapade i [Skapa dataelement](create-data-elements.md) lektion
 
    ![Åsidosättning av analysdataström](assets/set-up-analytics-datastream-override-1.png)
 
@@ -406,7 +407,7 @@ I den föregående övningen validerade du att Adobe Analytics spelar in ECID, s
 Som du lärde dig i [Säkerhet](validate-with-assurance.md) kan du starta en Assurance-session på flera olika sätt. Eftersom du redan har Adobe Experience Platform Debugger öppen med en Edge Trace-session som initierats från den senaste övningen rekommenderar vi att du får åtkomst till Assurance via Felsökning:
 ![Säkerhet genom Adobe Experience Platform Data Collection](assets/assurance-open-aep-debugger.png)
 
-I **[!UICONTROL "Web SDK Tutorial 3"]** Anmäl session **[!UICONTROL "hitdebugger"]** i sökfältet Händelser för att filtrera resultaten till data som skickats efter bearbetning i Adobe Analytics.
+I **[!UICONTROL "Web SDK Tutorial 3"]** Anmäl session **[!UICONTROL "hitdebugger"]** i sökfältet Händelser för att filtrera resultaten till data som bearbetats i Adobe Analytics Post.
 ![Adobe-analys för Assurance-efterbearbetade data](assets/assurance-hitdebugger.png)
 
 ### Experience Cloud ID-validering
@@ -452,4 +453,4 @@ Grattis! Du lyckades! Det här är slutet av lektionen och nu är du redo att im
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

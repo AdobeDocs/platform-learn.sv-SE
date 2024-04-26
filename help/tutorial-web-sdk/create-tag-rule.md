@@ -1,18 +1,19 @@
 ---
-title: Skapa taggregler
+title: Skapa taggregler för Platform Web SDK
 description: Lär dig hur du skickar en händelse till Platform Edge Network med ditt XDM-objekt med hjälp av en taggregel. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Tags
+jira: KT-15403
 exl-id: e06bad06-3ee3-475f-9b10-f0825a48a312
-source-git-commit: 78df0fb4e2f2b56b829c54c08a16f860192592d1
+source-git-commit: 8602110d2b2ddc561e45f201e3bcce5e6a6f8261
 workflow-type: tm+mt
-source-wordcount: '1745'
+source-wordcount: '1751'
 ht-degree: 0%
 
 ---
 
 # Skapa taggregler
 
-Lär dig hur du skickar händelser till Platform Edge Network med ditt XDM-objekt med hjälp av taggregler. En taggregel är en kombination av händelser, villkor och åtgärder som instruerar taggegenskapen att göra något. Med Platform Web SDK används regler för att skicka händelser till Platform Edge Network med rätt data.
+Lär dig hur du skickar händelser till Adobe Experience Platform Edge Network med ditt XDM-objekt med hjälp av taggregler. En taggregel är en kombination av händelser, villkor och åtgärder som instruerar taggegenskapen att göra något. Med Platform Web SDK används regler för att skicka händelser till Platform Edge Network med rätt data.
 
 ## Utbildningsmål
 
@@ -38,7 +39,7 @@ Du känner till datainsamlingstaggar och [Luma demo site](https://luma.enablemen
 
 ## Namnkonventioner
 
-Om du vill hantera regler i taggar bättre bör du följa en standardnamnkonvention. I den här självstudiekursen används en namnkonvention med fem delar:
+Om du vill hantera regler i taggar bör du följa en standardnamnkonvention. I den här självstudiekursen används en namnkonvention med fem delar:
 
 * [**plats**] - [**event**] - [**syfte**] - [**beställa**]
 
@@ -52,7 +53,7 @@ där
 
 ## Skapa taggregler
 
-I taggar används regler för att utföra åtgärder (brandanrop) under olika förhållanden. Tillägget Platform Web SDK-taggar innehåller två åtgärder som kommer att användas i den här lektionen:
+I taggar används regler för att utföra åtgärder (brandanrop) under olika förhållanden. Tillägget Platform Web SDK-taggar innehåller två åtgärder som används i den här lektionen:
 
 * **[!UICONTROL Update variable]** mappar dataelement till egenskaper i ett XDM-objekt
 * **[!UICONTROL Send Event]** skickar XDM-objektet till Experience Platform Edge Network
@@ -171,7 +172,7 @@ Börja med att spåra produktvyer på Lumas produktinformationssida:
 1. Välj ![+ symbol](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) under Händelse för att lägga till en ny utlösare
 1. Under **[!UICONTROL Extension]**, markera **[!UICONTROL Core]**
 1. Under **[!UICONTROL Event Type]**, markera **[!UICONTROL Library Loaded (Page Top)]**
-1. Markera för att öppna **[!UICONTROL Advanced Options]**, skriva in `20`. Detta garanterar att regeln körs efter `all pages - library loaded - set global variables - 1` som anger den globala konfigurationen.
+1. Markera för att öppna **[!UICONTROL Advanced Options]**, skriva in `20`. Det här ordervärdet garanterar att regeln körs efter `all pages - library loaded - set global variables - 1` som anger den globala konfigurationen.
 
    ![XDM-regler för analyser](assets/set-up-analytics-pdp.png)
 
@@ -345,9 +346,9 @@ Nu när du har ställt in variablerna kan du skapa en regel som skickar hela XDM
 
 1. I **[!UICONTROL Actions]** avsnitt, markera **[!UICONTROL Add]**
 
-1. Som **[!UICONTROL Extension]**, markera  **[!UICONTROL Adobe Experience Platform Web SDK]**
+1. Som **[!UICONTROL Extension]**, markera **[!UICONTROL Adobe Experience Platform Web SDK]**
 
-1. Som  **[!UICONTROL Action Type]**, markera  **[!UICONTROL Send event]**
+1. Som  **[!UICONTROL Action Type]**, markera **[!UICONTROL Send event]**
 
 1. Som **[!UICONTROL XDM]** väljer du `xdm.variable.content` dataelement som skapades i föregående lektion
 
@@ -358,7 +359,7 @@ Nu när du har ställt in variablerna kan du skapa en regel som skickar hela XDM
 
    ![Spara regeln](assets/create-rule-save-rule.png)
 
-## Publicera regeln i ett bibliotek
+## Publicera reglerna i ett bibliotek
 
 Publicera sedan regeln i utvecklingsmiljön så att du kan verifiera att den fungerar.
 
@@ -385,7 +386,7 @@ Det kan ta några minuter att skapa biblioteket och när det är klart visas en 
 
 ![Bygget är klart](assets/create-rule-development-success.png)
 
-Som du kan se på [!UICONTROL Publishing Flow] på skärmen finns det mycket mer i publiceringsprocessen som ligger utanför kursen. I den här självstudiekursen används bara ett bibliotek i din utvecklingsmiljö.
+Som du kan se på [!UICONTROL Publishing Flow] på skärmen finns det mycket mer i publiceringsprocessen, som ligger utanför kursens räckvidd. I den här självstudiekursen används bara ett bibliotek i din utvecklingsmiljö.
 
 Nu kan du validera data i begäran med Adobe Experience Platform Debugger.
 
@@ -393,4 +394,4 @@ Nu kan du validera data i begäran med Adobe Experience Platform Debugger.
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

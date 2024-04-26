@@ -2,17 +2,18 @@
 title: Skapa ett XDM-schema för webbdata
 description: Lär dig hur du skapar ett XDM-schema för webbdata i gränssnittet för datainsamling. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Schemas
+jira: KT-15398
 exl-id: 2858ce03-4f95-43ac-966c-1b647b33ef16
-source-git-commit: aeff30f808fd65370b58eba69d24e658474a92d7
+source-git-commit: 8602110d2b2ddc561e45f201e3bcce5e6a6f8261
 workflow-type: tm+mt
-source-wordcount: '1457'
+source-wordcount: '1462'
 ht-degree: 0%
 
 ---
 
 # Skapa ett XDM-schema för webbdata
 
-Lär dig hur du skapar ett XDM-schema för webbdata i gränssnittet för datainsamling.
+Lär dig hur du skapar ett XDM-schema för webbdata i Adobe Experience Platform Data Collection-gränssnittet.
 
 XDM-scheman (Experience Data Model) är byggstenar, principer och bästa praxis för datainsamling i Adobe Experience Platform.
 
@@ -22,7 +23,7 @@ Platform Web SDK använder ditt schema för att standardisera dina webbhändelse
 
 Företag har sitt eget språk för att kommunicera om sin domän. Bilhandlare hanterar fabriker, modeller och cylindrar. Flygbolagen hanterar flightnummer, tjänsteklass och platstilldelningar. Vissa av dessa villkor är unika för ett visst företag, andra delas av ett vertikalt företag i branschen och andra delas av nästan alla företag. För termer som delas av en bransch vertikalt eller till och med bredare, kan ni börja göra kraftfulla saker med era data när ni namnger och strukturerar dessa termer på ett gemensamt sätt.
 
-Många företag hanterar till exempel beställningar. Vad händer om dessa företag tillsammans beslutar sig för att göra en beställning på ett liknande sätt? Tänk dig till exempel om datamodellen består av ett objekt med en `priceTotal` som representerade orderns totala pris? Vad händer om det objektet också har egenskaper med namnet `currencyCode` och `purchaseOrderNumber`? Orderobjektet kanske innehåller en egenskap med namnet `payments` som skulle vara en matris med betalningsobjekt. Varje objekt motsvarar en betalning för ordern. En kund kanske till exempel har betalat för en del av beställningen med ett presentkort och betalat för resten med kreditkort. Du kan börja skapa en modell som ser ut ungefär så här:
+Många företag hanterar till exempel beställningar. Vad händer om dessa företag tillsammans beslutar sig för att göra en beställning på ett liknande sätt? Tänk dig till exempel om datamodellen består av ett objekt med en `priceTotal` som representerade orderns totala pris? Vad händer om det objektet också har egenskaper med namnet `currencyCode` och `purchaseOrderNumber`? Orderobjektet kanske innehåller en egenskap med namnet `payments` som skulle vara en matris med betalningsobjekt. Varje objekt motsvarar en betalning för ordern. En kund kanske till exempel betalar en del av beställningen med ett presentkort och resten med kreditkort. Du kan börja skapa en modell som ser ut ungefär så här:
 
 ```json
 {
@@ -111,7 +112,7 @@ När det är möjligt bör du använda befintliga fältgrupper och följa en pro
 >I den här övningen lägger du till de rekommenderade fördefinierade fältgrupperna för insamling av webbdata: _**[!UICONTROL AEP Web SDK ExperienceEvent]**_och_**[!UICONTROL Consumer Experience Event]**_.
 >
 >
-> Om du bara implementerar **Adobe Analytics** med Web SDK och inte skicka data till **Experience Platform**, använder du [!UICONTROL Adobe Analytics ExperienceEvent Template] fältgrupp för att definiera XDM-schemat. Detta kommer att användas i [Konfigurationsanalys](setup-analytics.md) lektion.
+> Om du bara implementerar **Adobe Analytics** med Web SDK och inte skicka data till **Experience Platform**, använder du [!UICONTROL Adobe Analytics ExperienceEvent Template] fältgrupp för att definiera XDM-schemat. Detta används i [Konfigurationsanalys](setup-analytics.md) lektion.
 
 1. I **[!UICONTROL Field groups]** avsnitt, markera **[!UICONTROL Add]**
 
@@ -125,7 +126,7 @@ När det är möjligt bör du använda befintliga fältgrupper och följa en pro
 
    ![Lägg till fältgrupp](assets/schema-add-field-group.png)
 
-Observera att du har tillgång till de mest använda nyckelvärdepar som krävs för datainsamling på webben i båda fältgrupperna. The [!UICONTROL display name] av varje fält visas för marknadsförarna i segmentbygggränssnittet i plattformsbaserade program och du kan ändra visningsnamnet för standardfält efter behov. Du kan också ta bort fält som du inte vill ha. När du klickar på något av fältgruppsnamnen markeras vilka nyckelvärdepar som tillhör det. I exemplet nedan ser du vilka grupper som tillhör **[!UICONTROL Consumer Experience Event]**.
+Observera att du har tillgång till de mest använda nyckelvärdepar som krävs för datainsamling på webben i båda fältgrupperna. The [!UICONTROL display name] av varje fält visas för marknadsförarna i segmentbygggränssnittet i plattformsbaserade program och du kan ändra visningsnamnet för standardfält efter behov. Du kan också ta bort fält som du inte vill ha. När du klickar på något av fältgruppsnamnen markeras vilka nyckelvärdepar som tillhör det. I exemplet nedan ser du vilka fält som tillhör **[!UICONTROL Consumer Experience Event]**.
 
 ![Fältgrupper för schema](assets/schema-consumer-experience-event.png)
 
@@ -143,7 +144,7 @@ Det är ett måste-ha-objekt för alla webbrelaterade datainsamlingar eftersom d
 
 >[!IMPORTANT]
 >
-> Det går att aktivera **[!UICONTROL Profile]** för ett schema innan du sparar schemat. **Gör inte** aktivera det nu. När ett schema har aktiverats för profilen kan det inte inaktiveras eller tas bort. Det går inte att ta bort fält från scheman just nu, även om det går att [Föråldrade fält i användargränssnittet](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/tutorials/field-deprecation-ui#deprecate). Dessa konsekvenser är viktiga att tänka på senare när du arbetar med egna data i produktionsmiljön.
+> Det går att aktivera **[!UICONTROL Profile]** för ett schema innan du sparar schemat. **Gör inte** aktivera det nu. När ett schema har aktiverats för profilen kan det inte inaktiveras eller tas bort utan att hela sandlådan har återställts. Det går inte att ta bort fält från scheman just nu, även om det går att [Föråldrade fält i användargränssnittet](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/tutorials/field-deprecation-ui#deprecate). Dessa konsekvenser är viktiga att tänka på senare när du arbetar med egna data i produktionsmiljön.
 >
 >
 >Den här inställningen diskuteras mer under [Konfigurera Experience Platform](setup-experience-platform.md) lektion.
@@ -161,4 +162,4 @@ Nu kan du referera till det här schemat när du lägger till Web SDK-tillägget
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

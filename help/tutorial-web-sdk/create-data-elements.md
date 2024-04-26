@@ -1,18 +1,19 @@
 ---
-title: Skapa dataelement
+title: Skapa dataelement för Platform Web SDK
 description: Lär dig hur du skapar ett XDM-objekt och mappar dataelement till det i taggar. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Tags
+jira: KT-15401
 exl-id: d662ec46-de9b-44ba-974a-f81dfc842e68
-source-git-commit: aeff30f808fd65370b58eba69d24e658474a92d7
+source-git-commit: 8602110d2b2ddc561e45f201e3bcce5e6a6f8261
 workflow-type: tm+mt
-source-wordcount: '1148'
+source-wordcount: '1154'
 ht-degree: 0%
 
 ---
 
 # Skapa dataelement
 
-Lär dig hur du skapar dataelement i taggar för innehåll, handel och identitetsdata på [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html). Fyll sedan i fälten i XDM-schemat med datatypen Variable för Platform Web SDK-tillägget.
+Lär dig hur du skapar dataelement i taggar för innehåll, handel och identitetsdata på [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html). Fyll sedan i fälten i XDM-schemat med dataelementtypen för Adobe Experience Platform Web SDK-tillägget Variable.
 
 ## Utbildningsmål
 
@@ -53,7 +54,7 @@ Det finns flera sätt att mappa data från datalagret till XDM med taggfunktione
 
 ### Implementera XDM i datalagret
 
-Detta innebär att det fullständigt definierade XDM-objektet används som struktur för datalagret. Därefter mappar du hela datalagret till ett XDM-objektdataelement i -taggar. Om implementeringen inte använder en tagghanterare kan det här tillvägagångssättet vara idealiskt eftersom du kan skicka data till XDM direkt från programmet med [XDM-kommandot sendEvent](https://experienceleague.adobe.com/en/docs/experience-platform/edge/fundamentals/tracking-events#sending-xdm-data). Om du använder taggar kan du skapa ett anpassat kodelement som hämtar hela datalagret som ett genomströmningsJSON-objekt till XDM. Därefter mappar du genomströmnings-JSON till XDM-objektfältet i åtgärden Skicka händelse.
+Detta innebär att det fullständigt definierade XDM-objektet används som struktur för datalagret. Därefter mappar du hela datalagret till ett XDM-objektdataelement i -taggar. Om implementeringen inte använder en tagghanterare kan det här tillvägagångssättet vara idealiskt eftersom du kan skicka data till XDM direkt från programmet med [XDM-kommandot sendEvent](https://experienceleague.adobe.com/en/docs/experience-platform/edge/fundamentals/tracking-events#sending-xdm-data). Om du använder taggar kan du skapa ett anpassat kodelement som hämtar hela datalagret som ett genomströmningsJSON-objekt till XDM-filen. Därefter mappar du genomströmnings-JSON till XDM-objektfältet i åtgärden Skicka händelse.
 
 Nedan visas ett exempel på hur datalagret skulle se ut med formatet Adobe Client Data Layer:
 
@@ -99,7 +100,7 @@ window.adobeDataLayer.push({
 Proffs
 
 * Eliminerar ytterligare steg som går vidare till datalagervariabler till XDM
-* Kan vara snabbare att driftsätta om ditt utvecklingsteam äger taggning i digitalt beteende
+* Det kan gå snabbare att driftsätta om utvecklingsteamet äger taggning av digitalt beteende
 
 Kon
 
@@ -138,7 +139,7 @@ Den här metoden använder den inbyggda funktionaliteten i datastream-konfigurat
 
 * Flexibelt eftersom du kan mappa enskilda variabler till XDM
 * Möjlighet att [beräkna nya värden](https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/functions) eller [transformera datatyper](https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/data-handling) från ett datalager innan det går till XDM
-* Utnyttja [Mappningsgränssnitt](https://experienceleague.adobe.com/docs/experience-platform/datastreams/data-prep.html#create-mapping) för att mappa fält i källdata till XDM med ett användargränssnitt där du kan peka och klicka
+* Utnyttja [Mappningsgränssnitt](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/data-prep#create-mapping) för att mappa fält i källdata till XDM med ett användargränssnitt där du kan peka och klicka
 
 #### Kon
 
@@ -298,4 +299,4 @@ Med dessa dataelement på plats är du redo att börja skicka data till Platform
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

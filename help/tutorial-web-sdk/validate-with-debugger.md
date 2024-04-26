@@ -2,28 +2,29 @@
 title: Validera Web SDK-implementeringar med Experience Platform Debugger
 description: Lär dig hur du validerar implementeringen av din Platform Web SDK med Adobe Experience Platform Debugger. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Tags,Debugger
+jira: KT-15405
 exl-id: 150bb1b1-4523-4b44-bd4e-6cabc468fc04
-source-git-commit: 78df0fb4e2f2b56b829c54c08a16f860192592d1
+source-git-commit: 8602110d2b2ddc561e45f201e3bcce5e6a6f8261
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1154'
 ht-degree: 0%
 
 ---
 
 # Validera Web SDK-implementeringar med Experience Platform Debugger
 
-Lär dig hur du validerar implementeringen av din Platform Web SDK med Adobe Experience Platform Debugger.
+Lär dig validera Adobe Experience Platform Web SDK-implementeringen med Adobe Experience Platform Debugger.
 
-Felsökaren Experience Platform är ett tillägg för webbläsarna Chrome och Firefox som gör att du kan se Adobe-tekniken som används på dina webbsidor. Ladda ned den version du föredrar:
+Felsökaren Experience Platform är ett tillägg för webbläsarna Chrome och Firefox, som hjälper dig att se Adobe-tekniken som används på dina webbsidor. Ladda ned den version du föredrar:
 
 * [Firefox-tillägg](https://addons.mozilla.org/sv-SE/firefox/addon/adobe-experience-platform-dbg/)
-* [Kromtillägg](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
+* [Kromtillägg](https://chromewebstore.google.com/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
 Om du aldrig har använt felsökaren tidigare kanske du vill titta på den här översiktsvideon på fem minuter:
 
 >[!VIDEO](https://video.tv.adobe.com/v/32156?learn=on)
 
-I den här lektionen använder du [Adobe Experience Cloud Debugger-tillägg](https://chrome.google.com/webstore/detail/adobe-experience-cloud-de/ocdmogmohccmeicdhlhhgepeaijenapj) som ersätter taggegenskapen hårdkodad på [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html) med din egen egendom.
+I den här lektionen använder du [Adobe Experience Platform Debugger](https://chromewebstore.google.com/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) som ersätter taggegenskapen hårdkodad på [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html) med din egen egendom.
 
 Den här tekniken kallas för miljöväxling och kan vara användbar senare när du arbetar med taggar på din egen webbplats. Du kan läsa in din produktionswebbplats i webbläsaren, men med *utveckling* taggbibliotek. På så sätt kan du tryggt göra och validera taggändringar oberoende av dina vanliga kodreleaser. Den här åtskillnaden mellan marknadsföringstaggreleaser och vanliga kodreleaser är ju en av de främsta anledningarna till att kunderna använder taggar i första hand!
 
@@ -162,10 +163,10 @@ Så här aktiverar du Edge Trace:
 
    ![Kantkalkering för analysfyr](assets/validate-edge-trace.png)
 
-För närvarande kan du inte visa några Platform Edge Network-begäranden som går till ett Adobe-program eftersom du inte har aktiverat några i datastream. I framtida lektioner använder du Edge Trace för att visa utgående begäranden på serversidan till Adobe-program och händelsevidarebefordran. Men först får du lära dig mer om ett annat verktyg för att validera serverförfrågningar från Platform Edge Network - Adobe Experience Platform Assurance!
+För närvarande kan du inte visa några Platform Edge Network-begäranden som går till Adobe-program eftersom du inte har aktiverat några i datastream. I framtida lektioner använder du Edge Trace för att visa utgående begäranden på serversidan till Adobe-program och händelsevidarebefordran. Men först får du lära dig mer om ett annat verktyg för att validera serverförfrågningar från Platform Edge Network - Adobe Experience Platform Assurance!
 
 [Nästa: ](validate-with-assurance.md)
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

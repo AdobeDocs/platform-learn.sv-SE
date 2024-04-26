@@ -1,18 +1,19 @@
 ---
-title: Konfigurera en egenskap för vidarebefordring av händelser
+title: Konfigurera en händelsevidarebefordring med plattformsdata för Web SDK
 description: Lär dig hur du använder händelsevidarebefordringsegenskap med Experience Platform Web SDK-data. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Tags,Event Forwarding
+jira: KT-15414
 exl-id: 5a306609-2c63-42c1-8beb-efa412b8efe4
-source-git-commit: aeff30f808fd65370b58eba69d24e658474a92d7
+source-git-commit: 8602110d2b2ddc561e45f201e3bcce5e6a6f8261
 workflow-type: tm+mt
-source-wordcount: '1774'
+source-wordcount: '1786'
 ht-degree: 0%
 
 ---
 
-# Konfigurera en egenskap för vidarebefordring av händelser
+# Konfigurera händelsevidarebefordran med plattformsdata för Web SDK
 
-Lär dig hur du använder händelsevidarebefordringsegenskap med Experience Platform Web SDK-data.
+Lär dig hur du använder händelsevidarebefordran med Adobe Experience Platform Web SDK-data.
 
 Vidarebefordran av händelser är en ny typ av egenskap som är tillgänglig i datainsamling. Med händelsevidarebefordran kan du skicka data till andra leverantörer än Adobe direkt från Adobe Experience Platform Edge Network istället för till den traditionella webbläsaren på klientsidan. Läs mer om fördelarna med vidarebefordran av händelser i [Översikt över vidarebefordran av händelser](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/overview).
 
@@ -22,7 +23,7 @@ Vidarebefordran av händelser är en ny typ av egenskap som är tillgänglig i d
 Om du vill använda händelsevidarebefordran i Adobe Experience Platform måste data skickas till Adobe Experience Platform Edge Network först med ett eller flera av följande tre alternativ:
 
 * [Webb-SDK för Adobe Experience Platform](overview.md)
-* [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/documentation/)
+* [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/home/)
   <!--* [Server-to-Server API](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s)-->
 
 
@@ -83,7 +84,7 @@ Börja med att skapa en händelsevidarebefordringsegenskap:
 
 ## Konfigurera datastream
 
-För att händelsevidarebefordran ska kunna använda data som du skickar till Edge-nätverket måste du länka den nyligen skapade händelsevidarebefordringsegenskapen till samma dataström som används för att skicka data till Adobe-lösningar.
+För att händelsevidarebefordran ska kunna använda data som du skickar till Platform Edge Network måste du länka den nyligen skapade händelsevidarebefordringsegenskapen till samma dataström som används för att skicka data till Adobe-lösningar.
 
 Så här konfigurerar du Target i datastream:
 
@@ -231,7 +232,7 @@ Om du vill konfigurera en regel för att vidarebefordra data till din webkrok m�
 
 1. Gå till [Webkrok.webbplats](https://webhook.site)
 
-1. Sök **Din unika URL** kommer du att använda detta som URL-begäran i regeln för vidarebefordran av händelser
+1. Sök **Din unika URL** använder du det här som URL-begäran i regeln för vidarebefordran av händelser
 
 1. Välj **[!UICONTROL Copy to clipboard]**
 
@@ -324,4 +325,4 @@ Grattis! Du har konfigurerat vidarebefordran av händelser!
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-launch/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

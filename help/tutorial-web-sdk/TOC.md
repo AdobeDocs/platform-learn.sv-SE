@@ -7,9 +7,7 @@ role: Data Engineer, Developer
 level: Beginner,Intermediate
 jira: KT-6953
 recommendations: noDisplay,noCatalog
-index: false
-hide: true
-source-git-commit: a56a63c79417fc98f2c3ec4a9613e39c46ac098a
+source-git-commit: 4ed0c204613e283bbd9f51f4225215068284ac69
 workflow-type: tm+mt
 source-wordcount: '95'
 ht-degree: 15%
