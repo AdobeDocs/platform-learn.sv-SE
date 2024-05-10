@@ -7,9 +7,9 @@ doc-type: tutorial
 activity: develop
 feature: Profiles
 exl-id: 4c810767-00ab-4cae-baa9-97b0cb9bf2df
-source-git-commit: 3c86f9b19cecf92c9a324fb6fcfcefaebf82177f
+source-git-commit: 47b9c3553bd0dae39f8271446dd15ee2f6df4d41
 workflow-type: tm+mt
-source-wordcount: '507'
+source-wordcount: '489'
 ht-degree: 0%
 
 ---
@@ -39,12 +39,6 @@ Gå till den vänstra menyn **Profiler** och till **Bläddra**.
 På panelen Profilvisningsprogram på webbplatsen finns en översikt över identiteten. Alla identiteter är länkade till ett namnutrymme.
 
 ![Kundprofil](./images/identities.png)
-
-På profilvisarpanelen ser du den här identiteten:
-
-| Namnutrymme | Identitet |
-|:-------------:| :---------------:|
-| Experience Cloud ID (ECID) | 19428085896177382402834560825640259081 |
 
 Med Adobe Experience Platform är alla ID:n lika viktiga. Tidigare var ECID det viktigaste ID:t i Adobe-kontexten och alla andra ID:n länkades till ECID i en hierarkisk relation. I Adobe Experience Platform är detta inte längre fallet och varje ID kan betraktas som en primär identifierare.
 

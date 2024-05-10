@@ -7,9 +7,9 @@ doc-type: tutorial
 activity: develop
 feature: Profiles
 exl-id: 32a084a3-4c04-4367-947e-f7151fdad73b
-source-git-commit: 3c86f9b19cecf92c9a324fb6fcfcefaebf82177f
+source-git-commit: cd59a41f4533f18a54d80298ee9faf3a8ba3c6e7
 workflow-type: tm+mt
-source-wordcount: '415'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ Plattform är en miljö där ordet kund är bredare än bara de kända kunderna.
 
 ## Kundreseflöde
 
-Gå till [https://bootcamp.aepdemo.net](https://bootcamp.aepdemo.net). Klicka **Tillåt alla**.
+Gå till [https://bootcamp.aepdemo.net](https://publish9122.adobedemo.com/content/aep-bootcamp-experience/language-masters/en.html). Klicka **Tillåt alla**.
 
 ![DSN](./images/web8.png)
 
@@ -34,7 +34,7 @@ Klicka på logotypikonen för Adobe i det övre vänstra hörnet av skärmen fö
 
 ![Demo](./images/pv1.png)
 
-Ta en titt på panelen Profilvisningsprogram och kundprofilen i realtid med **Experience Cloud ID** som primär identifierare för den okända kunden.
+Ta en titt på panelen Profilvisningsprogram och kundprofilen i realtid med **EXPERIENCE CLOUD ID** som primär identifierare för den okända kunden.
 
 ![Demo](./images/pv2.png)
 

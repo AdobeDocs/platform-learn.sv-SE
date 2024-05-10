@@ -9,10 +9,10 @@ solution: Journey Optimizer
 feature-set: Journey Optimizer
 feature: Journeys
 exl-id: 138a70fa-fe50-4585-b47f-150db4770c3d
-source-git-commit: 3c86f9b19cecf92c9a324fb6fcfcefaebf82177f
+source-git-commit: cd59a41f4533f18a54d80298ee9faf3a8ba3c6e7
 workflow-type: tm+mt
-source-wordcount: '938'
-ht-degree: 3%
+source-wordcount: '948'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 3%
 
 I den här övningen konfigurerar du den resa som behöver utlösas när någon skapar ett konto på demowebbplatsen.
 
-Logga in på Adobe Journey Optimizer genom att gå till [Adobe Experience Cloud](https://experience.adobe.com). Klicka **Journey Optimizer**.
+Logga in på Adobe Journey Optimizer genom att [Adobe Experience Cloud](https://experience.adobe.com). Klicka **Journey Optimizer**.
 
 ![ACOP](./images/acophome.png)
 
@@ -30,11 +30,11 @@ Du omdirigeras till **Startsida**  i Journey Optimizer. Kontrollera först att d
 
 ## 2.3.1 Skapa din resa
 
-Klicka på **Resor**. Klicka på **Skapa resa** för att skapa en ny resa.
+Klicka på **Resor**. Klicka på Nästa **Skapa resa** för att skapa en ny resa.
 
 ![ACOP](./images/createjourney.png)
 
-Då ser du en tom skärm.
+Då ser du en tom skärm för resan.
 
 ![ACOP](./images/journeyempty.png)
 
@@ -64,7 +64,7 @@ Som det tredje steget på resan måste du lägga till en **E-post** åtgärd. G�
 
 ![ACOP](./images/journeyactions.png)
 
-Ange **Kategori** till **Marknadsföring** och välj en e-postyta som gör att du kan skicka e-post. I det här fallet är e-postytan som ska väljas **E-post**. Se till att kryssrutorna för **Klicka på e-post** och **e-post öppnas** båda är aktiverade.
+Ange **Kategori** till **Marknadsföring** och välj en e-postyta som gör att du kan skicka e-post. I det här fallet är e-postytan som ska väljas **E-post**. Se till att kryssrutorna för **Klicka på e-post** och **e-postöppning** båda är aktiverade.
 
 ![ACOP](./images/journeyactions1.png)
 
@@ -90,7 +90,7 @@ Börja skriva i textområdet **Hej**
 
 ![Journey Optimizer](./images/msg6.png)
 
-Ämnesraden är inte färdig än. Därefter måste du ta in en personaliseringstoken för fältet **Förnamn** som lagras under `profile.person.name.firstName`. Bläddra nedåt i den vänstra menyn för att hitta **Person** och klicka på pilen för att gå en nivå längre.
+Ämnesraden är inte färdig än. Därefter måste du ta in en token för anpassning för fältet **Förnamn** som lagras under `profile.person.name.firstName`. Bläddra nedåt i den vänstra menyn för att hitta **Person** och klicka på pilen för att gå en nivå längre.
 
 ![Journey Optimizer](./images/msg7.png)
 
@@ -112,7 +112,7 @@ Du kommer då tillbaka hit. Klicka **E-postdesigner** för att skapa e-postens i
 
 På nästa skärm får du tre olika metoder för att ange e-postens innehåll:
 
-- **Designa från grunden**: Börja med en tom arbetsyta och använd WYSIWYG-redigeraren för att dra och släppa struktur och innehållskomponenter för att visuellt bygga upp e-postmeddelandets innehåll.
+- **Designa från grunden**: Börja med en tom arbetsyta och använd WYSIWYG-redigeraren för att dra och släppa struktur och innehållskomponenter för att visuellt bygga upp e-postens innehåll.
 - **Koda din egen**: Skapa en egen e-postmall genom att koda den med HTML
 - **Importera HTML**: Importera en befintlig HTML-mall som du kan redigera.
 
@@ -128,11 +128,11 @@ Du kommer då att se den här standardmallen för e-post:
 
 ![Journey Optimizer](./images/msg14.png)
 
-Låt oss personalisera e-postmeddelandet. Klicka bredvid texten **Hej** och klicka sedan på **Lägg till personalisering** ikon.
+Låt oss personalisera e-postmeddelandet. Klicka bredvid texten **Hej** och klicka sedan på **Lägg till personalisering** -ikon.
 
 ![Journey Optimizer](./images/msg35.png)
 
-Nästa steg är att ta fram **Förnamn** personaliseringstoken som lagras under `profile.person.name.firstName`. På menyn hittar du **Person** -element, gå ned till **Fullständigt namn** och sedan klicka på **+** om du vill lägga till fältet Förnamn i uttrycksredigeraren.
+Nästa steg är att du måste ta fram **Förnamn** personaliseringstoken som lagras under `profile.person.name.firstName`. På menyn hittar du **Person** -element, gå nedåt till **Fullständigt namn** och sedan klicka på **+** om du vill lägga till fältet Förnamn i uttrycksredigeraren.
 
 Klicka **Spara**.
 
@@ -160,7 +160,7 @@ Klicka **OK**.
 
 ## 2.3.3 Publicera din resa
 
-Du måste fortfarande ge din resa ett namn. Du kan göra det genom att klicka på **Egenskaper** i skärmens övre högra hörn.
+Du måste fortfarande ge din resa ett namn. Du kan göra det genom att klicka på **Penna** ikonen längst upp till vänster på skärmen.
 
 ![ACOP](./images/journeyname.png)
 

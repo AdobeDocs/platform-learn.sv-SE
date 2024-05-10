@@ -9,10 +9,10 @@ solution: Journey Optimizer
 feature-set: Journey Optimizer
 feature: Events
 exl-id: be8c23ec-c5f8-4abc-849f-994446072a84
-source-git-commit: 3c86f9b19cecf92c9a324fb6fcfcefaebf82177f
+source-git-commit: cd59a41f4533f18a54d80298ee9faf3a8ba3c6e7
 workflow-type: tm+mt
-source-wordcount: '831'
-ht-degree: 1%
+source-wordcount: '839'
+ht-degree: 0%
 
 ---
 
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 I den här övningen ska du konfigurera den resa och det meddelande som ska utlösas när någon går in i en sändare med mobilappen.
 
-Logga in på Adobe Journey Optimizer genom att gå till [Adobe Experience Cloud](https://experience.adobe.com). Klicka **Journey Optimizer**.
+Logga in på Adobe Journey Optimizer genom att [Adobe Experience Cloud](https://experience.adobe.com). Klicka **Journey Optimizer**.
 
 ![ACOP](./images/acophome.png)
 
@@ -30,11 +30,11 @@ Du omdirigeras till **Startsida**  i Journey Optimizer. Kontrollera först att d
 
 ## 3.3.1 Skapa din resa
 
-Klicka på **Resor**. Klicka på **Skapa resa** för att skapa en ny resa.
+Klicka på **Resor**. Klicka på Nästa **Skapa resa** för att skapa en ny resa.
 
 ![ACOP](./images/createjourney.png)
 
-Då ser du en tom skärm.
+Då ser du en tom skärm för resan.
 
 ![ACOP](./images/journeyempty.png)
 
@@ -80,7 +80,7 @@ Börja skriva i textområdet **Hej**. Klicka på personaliseringsikonen.
 
 ![Journey Optimizer](./images/msg6.png)
 
-Du måste nu ta in en personaliseringstoken för fältet **Förnamn** som lagras under `profile.person.name.firstName`. Välj **Profilattribut**, bläddra nedåt/navigera för att hitta **Person** och klicka på pilen för att gå en nivå längre tills du når fältet `profile.person.name.firstName`. Klicka på **+** om du vill lägga till fältet på arbetsytan. Klicka **Spara**.
+Du måste nu ta in en token för anpassning för fältet **Förnamn** som lagras under `profile.person.name.firstName`. Välj **Profilattribut**, bläddra nedåt/navigera för att hitta **Person** och klicka på pilen för att gå en nivå längre tills du når fältet `profile.person.name.firstName`. Klicka på **+** om du vill lägga till fältet på arbetsytan. Klicka **Spara**.
 
 ![Journey Optimizer](./images/msg7.png)
 
@@ -92,7 +92,7 @@ Skriv i textområdet `Welcome at the `.
 
 ![Journey Optimizer](./images/msg12.png)
 
-Klicka på **Sammanhangsberoende attribut** och sedan **Journey Orchestration**.
+Klicka på Nästa **Sammanhangsberoende attribut** och sedan **Journey Orchestration**.
 
 ![ACOP](./images/jomsg3.png)
 
@@ -108,7 +108,7 @@ Klicka **Montera kontext**.
 
 ![ACOP](./images/jomsg6.png)
 
-Klicka **POI-interaktion**.
+Klicka **POI Interaction**.
 
 ![ACOP](./images/jomsg7.png)
 
@@ -116,8 +116,8 @@ Klicka **POI-detalj**.
 
 ![ACOP](./images/jomsg8.png)
 
-Klicka på **+** ikon på **POI-namn**.
-Du kommer då att se det här. Klicka **Spara**.
+Klicka på **+** ikon på **POI name**.
+Då ser du det här. Klicka **Spara**.
 
 ![ACOP](./images/jomsg9.png)
 
@@ -131,11 +131,11 @@ Klicka **OK**.
 
 ## 3.3.2 Skicka ett meddelande till en skärm
 
-Som det tredje steget på resan måste du lägga till en **sendMessageToScreen** åtgärd. Gå till skärmens vänstra sida för att **Åtgärder** väljer du **sendMessageToScreen** och sedan dra och släppa det på den tredje noden på din resa. Du kommer då att se det här.
+Som det tredje steget på resan måste du lägga till en **sendMessageToScreen** åtgärd. Gå till skärmens vänstra sida för att **Åtgärder** väljer du **sendMessageToScreen** och sedan dra och släppa det på den tredje noden på din resa. Då ser du det här.
 
 ![ACOP](./images/jomsg15.png)
 
-The **sendMessageToScreen** är en anpassad åtgärd som publicerar ett meddelande till slutpunkten som används av butiksskärmen. The **sendMessageToScreen** förväntas ett antal variabler som ska definieras. Du kan se dessa variabler genom att rulla nedåt tills du ser dem **Åtgärdsparametrar**.
+The **sendMessageToScreen** är en anpassad åtgärd som publicerar ett meddelande till slutpunkten som används av butiksskärmen. The **sendMessageToScreen** för åtgärden förväntas ett antal variabler som ska definieras. Du kan se dessa variabler genom att rulla nedåt tills du ser dem **Åtgärdsparametrar**.
 
 ![ACOP](./images/jomsg16.png)
 
@@ -155,7 +155,7 @@ Du måste nu ange värden för varje åtgärdsparameter. Följ den här tabellen
 
 {style="table-layout:auto"}
 
-Klicka på **Redigera** ikon.
+Klicka på knappen **Redigera** -ikon.
 
 ![ACOP](./images/jomsg17.png)
 
@@ -181,7 +181,7 @@ Bläddra uppåt och klicka **OK**.
 
 ![ACOP](./images/jomsg21.png)
 
-Du måste fortfarande ge din resa ett namn. Du kan göra det genom att klicka på **Egenskaper** i skärmens övre högra hörn.
+Du måste fortfarande ge din resa ett namn. Du kan göra det genom att klicka på **Penna** ikonen längst upp till vänster på skärmen.
 
 ![ACOP](./images/journeyname.png)
 
