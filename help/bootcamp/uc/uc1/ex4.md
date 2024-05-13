@@ -1,6 +1,6 @@
 ---
-title: Bootcamp - CDP i realtid - Bygg ett segment och vidta åtgärder - Skicka ditt segment till Adobe Target
-description: Bootcamp - CDP i realtid - Bygg ett segment och vidta åtgärder - Skicka ditt segment till Adobe Target
+title: Bootcamp - CDP i realtid - Skapa en målgrupp och vidta åtgärder - Skicka din målgrupp till Adobe Target
+description: Bootcamp - CDP i realtid - Skapa en målgrupp och vidta åtgärder - Skicka din målgrupp till Adobe Target
 jira: KT-5342
 audience: Data Architect, Orchestration Engineer, Marketer
 doc-type: tutorial
@@ -8,14 +8,14 @@ activity: develop
 solution: Experience Platform, Target
 feature: Audiences, Integrations
 exl-id: 6a76c2ab-96b7-4626-a6d3-afd555220b1e
-source-git-commit: 47b9c3553bd0dae39f8271446dd15ee2f6df4d41
+source-git-commit: 5876de5015e4c8c337c235c24cc28b0a32e274dd
 workflow-type: tm+mt
 source-wordcount: '863'
 ht-degree: 0%
 
 ---
 
-# 1.4 Take Action: send your segment to Adobe Target
+# 1.4 Take Action: send your audition to Adobe Target
 
 Gå till [Adobe Experience Platform](https://experience.adobe.com/platform). När du har loggat in loggar du in på Adobe Experience Platform hemsida.
 
@@ -25,11 +25,11 @@ Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska marke
 
 ![Inmatning av data](./images/sb1.png)
 
-## 1.4.1 Aktivera segmentet till Adobe Target
+## 1.4.1 Aktivera er målgrupp för Adobe Target
 
 Adobe Target finns som mål från Real-Time CDP. Om du vill konfigurera Adobe Target-integreringen går du till **Destinationer**, till **Katalog**.
 
-Klicka **Personalisering** i **Kategorier** -menyn. Då ser du **Adobe Target** destinationskort. Klicka **Aktivera segment**.
+Klicka **Personalisering** i **Kategorier** -menyn. Då ser du **Adobe Target** destinationskort. Klicka **Aktivera målgrupper**.
 
 ![AT](./images/atdest1.png)
 
@@ -37,7 +37,7 @@ Välj mål ``Bootcamp Target`` och klicka **Nästa**.
 
 ![AT](./images/atdest3.png)
 
-I listan med tillgängliga segment väljer du det segment du skapade i [1.3 Skapa ett segment](./ex3.md), som har namnet `yourLastName - Interest in Real-Time CDP`. Klicka sedan på **Nästa**.
+I listan över tillgängliga målgrupper väljer du den målgrupp du har skapat i [1.3 Skapa en målgrupp](./ex3.md), som har namnet `yourLastName - Interest in Real-Time CDP`. Klicka sedan på **Nästa**.
 
 ![AT](./images/atdest8.png)
 
@@ -49,17 +49,17 @@ Klicka **Slutför**.
 
 ![AT](./images/atdest10.png)
 
-Ditt segment är nu aktiverat mot Adobe Target.
+Din publik är nu aktiv mot Adobe Target.
 
 ![AT](./images/atdest11.png)
 
 >[!IMPORTANT]
 >
->När du just har skapat Adobe Target-destinationen i Real-Time CDP kan det ta upp till en timme innan destinationen är aktiv. Detta är en engångsväntetid på grund av konfigurationen av serverdelskonfigurationen. När den inledande väntetiden på en timme och backend-konfigurationen är klar, kommer nytillagda kantsegment som skickas till Adobe Target-destinationen att vara tillgängliga för målgruppsanpassning i realtid.
+>När du just har skapat Adobe Target-destinationen i Real-Time CDP kan det ta upp till en timme innan destinationen är aktiv. Detta är en engångsväntetid på grund av konfigurationen av serverdelskonfigurationen. När den inledande väntetiden på en timme och serverdelskonfigurationen är klar kommer nytillagda målgrupper som skickas till Adobe Target-destinationen att vara tillgängliga för målgruppsanpassning i realtid.
 
 ## 1.4.2 Konfigurera din formulärbaserade Adobe Target-aktivitet
 
-Nu när ditt Real-Time CDP-segment är konfigurerat att skickas till Adobe Target kan du konfigurera din Experience Targeting-aktivitet i Adobe Target. I den här övningen ska du konfigurera en Visual Experience Composer-baserad aktivitet.
+Nu när er Real-Time CDP-målgrupp är konfigurerad att skickas till Adobe Target kan ni konfigurera er Experience Targeting-aktivitet i Adobe Target. I den här övningen ska du konfigurera en Visual Experience Composer-baserad aktivitet.
 
 Gå till Adobe Experience Cloud hemsida genom att [https://experiencecloud.adobe.com/](https://experiencecloud.adobe.com/). Klicka **Mål** för att öppna den.
 
@@ -98,11 +98,11 @@ Standardmålgruppen är för närvarande **Alla besökare**. Klicka på **3 punk
 
 ![RTCDP](./images/atform3.png)
 
-Du ser nu en lista över tillgängliga målgrupper, och Adobe Experience Platform-segmentet som du skapade tidigare och skickade till Adobe Target ingår nu i den här listan. Markera det segment som du tidigare har skapat i Adobe Experience Platform. Klicka **Tilldela publik**.
+Du ser nu en lista över tillgängliga målgrupper, och Adobe Experience Platform-målgruppen som du skapade tidigare och skickade till Adobe Target ingår nu i listan. Välj den målgrupp du redan har skapat i Adobe Experience Platform. Klicka **Tilldela publik**.
 
 ![RTCDP](./images/exclatvecchaud.png)
 
-Ditt Adobe Experience Platform-segment är nu en del av denna Experience Targeting Activity.
+Din Adobe Experience Platform-publik är nu en del av denna Experience Targeting Activity.
 
 ![RTCDP](./images/atform4.png)
 
@@ -170,7 +170,7 @@ Sedan får du en visuell bekräftelse på att din aktivitet nu är aktiv.
 
 Din aktivitet finns nu tillgänglig och kan testas på Bootlägers webbplats.
 
-Om du nu går tillbaka till demowebbplatsen och går till produktsidan för **Real-Time CDP** blir du sedan direkt berättigad till det segment du har skapat och du ser Adobe Target-aktiviteten visas på startsidan i realtid.
+Om du nu går tillbaka till demowebbplatsen och går till produktsidan för **Real-Time CDP** blir du sedan direkt berättigad till den målgrupp du skapat och du ser Adobe Target-aktiviteten visas på startsidan i realtid.
 
 >[!IMPORTANT]
 >
@@ -182,7 +182,7 @@ Om du nu går tillbaka till demowebbplatsen och går till produktsidan för **Re
 
 ![RTCDP](./images/atform12a.png)
 
-Nästa steg: [1.5 Take Action: send your segment to Facebook](./ex5.md)
+Nästa steg: [1.5 Take Action: send your audition to Facebook](./ex5.md)
 
 [Gå tillbaka till användarflöde 1](./uc1.md)
 

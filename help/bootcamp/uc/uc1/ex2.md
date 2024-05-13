@@ -7,9 +7,9 @@ doc-type: tutorial
 activity: develop
 feature: Profiles
 exl-id: 4c810767-00ab-4cae-baa9-97b0cb9bf2df
-source-git-commit: 47b9c3553bd0dae39f8271446dd15ee2f6df4d41
+source-git-commit: 5876de5015e4c8c337c235c24cc28b0a32e274dd
 workflow-type: tm+mt
-source-wordcount: '489'
+source-wordcount: '487'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ I den här övningen loggar du in på Adobe Experience Platform och visar din eg
 
 ## Artikel
 
-I kundprofilen i realtid visas alla profildata tillsammans med händelsedata samt befintliga segmentmedlemskap. De data som visas kan komma var som helst, från Adobe-program och externa lösningar. Det här är den mest kraftfulla vyn i Adobe Experience Platform, det verkliga upplevelsesystemet.
+I kundprofilen i realtid visas alla profildata tillsammans med händelsedata samt befintliga målgruppsmedlemskap. De data som visas kan komma var som helst, från Adobe-program och externa lösningar. Det här är den mest kraftfulla vyn i Adobe Experience Platform, det verkliga upplevelsesystemet.
 
 ## 1.2.1 Använda kundprofilvyn i Adobe Experience Platform
 
@@ -30,7 +30,7 @@ Gå till [Adobe Experience Platform](https://experience.adobe.com/platform). Nä
 
 Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``Bootcamp``. Du kan göra detta genom att klicka på texten **[!UICONTROL Production Prod]** i den blå linjen ovanför skärmen. När du har valt lämplig [!UICONTROL sandbox]kommer du att se skärmändringen och nu är du med på din [!UICONTROL sandbox].
 
-![Inmatning av data](./images/sb1.png)
+
 
 Gå till den vänstra menyn **Profiler** och till **Bläddra**.
 
@@ -39,6 +39,9 @@ Gå till den vänstra menyn **Profiler** och till **Bläddra**.
 På panelen Profilvisningsprogram på webbplatsen finns en översikt över identiteten. Alla identiteter är länkade till ett namnutrymme.
 
 ![Kundprofil](./images/identities.png)
+
+
+
 
 Med Adobe Experience Platform är alla ID:n lika viktiga. Tidigare var ECID det viktigaste ID:t i Adobe-kontexten och alla andra ID:n länkades till ECID i en hierarkisk relation. I Adobe Experience Platform är detta inte längre fallet och varje ID kan betraktas som en primär identifierare.
 
@@ -56,13 +59,13 @@ Gå till **Händelser**, där du kan se poster för varje upplevelsehändelse so
 
 ![Kundprofil](./images/profileee.png)
 
-Till sist går du till menyalternativet **Segmentmedlemskap**. Nu visas alla segment som är kvalificerade för den här profilen.
+Till sist går du till menyalternativet **Målgruppsmedlemskap**. Nu ser du alla målgrupper som är kvalificerade för den här profilen.
 
 ![Kundprofil](./images/profileseg.png)
 
-Nu ska vi skapa ett nytt segment som gör att ni kan personalisera kundupplevelsen för en anonym eller välkänd kund.
+Nu ska vi skapa en ny målgrupp som gör att ni kan personalisera kundupplevelsen för en anonym eller välkänd kund.
 
-Nästa steg: [1.3 Skapa ett segment - användargränssnitt](./ex3.md)
+Nästa steg: [1.3 Skapa en målgrupp - användargränssnitt](./ex3.md)
 
 [Gå tillbaka till användarflöde 1](./uc1.md)
 

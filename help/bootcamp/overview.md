@@ -3,9 +3,9 @@ title: Experience Makers Bootcamp
 description: Startpunkt för deltagarna i Experience Makers Bootcamp
 doc-type: multipage-overview
 exl-id: 400bd9f1-229c-4016-b06b-8fc033f7dbf2
-source-git-commit: 3a16967ead0bf86daaf69cf920586318a5866492
+source-git-commit: 97591b0e14468c136e60c60580aeab0b7bbbbbb4
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: '718'
 ht-degree: 0%
 
 ---
@@ -18,20 +18,56 @@ Många organisationer är inte medvetna om den friktion som finns i kundresan, v
 
 Delta i det här bootlägret och lär dig hur en plattformsbaserad strategi kan hjälpa er att få de insikter ni behöver för att identifiera och ta bort friktionspunkter för att förbättra kundresan.
 
-Personalisering i stor skala börjar med att förstå vad som kan förbättras, och en realtidsbild av kunden är avgörande för detta. Insikter leder till handling, vilket leder till fler insikter. Adobe unika plattformsbaserade strategi ger er verktyg som inte bara driver på den tekniska utvecklingen, utan även påverkar er organisation, ert team och er förmåga att leverera en helhetsbild av kunderna istället för en kanalspecifik kundupplevelse.
-
->[!VIDEO](https://video.tv.adobe.com/v/344962?quality=12&enable=on)
+Personalisering i stor skala börjar med att förstå vad som kan förbättras, och en realtidsbild av kunden är avgörande för detta. Insikter leder till handling, vilket leder till fler insikter. Adobe unika plattformsinriktade strategi ger er verktygen för att inte bara driva på den tekniska utvecklingen, utan även påverka er organisation, ert team och er förmåga att leverera en helhetsbild av kundupplevelsen i stället för en kanalspecifik kundupplevelse.
 
 ## Dagordning
 
 ### Dag 1
 
+9:30: Gå in
 
-10:00: Kickoff 10:30: Demo om kundresan: Art of the possible 11:00: 1-1-personalisering, friktionsjakt, silor, Adobe POV (whiteboard) 11:45: Bryt 12:00: Uppdelning av lösningsarkitektur (whiteboard) 13:00: Lunch 14:00: Användarflöde 1 Registrering och introduktion - genomgång (varför hur) 15:30: Bryt 16:00: Användarflöde 2 Blanda fysiskt och digitalt - genomgång och praktiska/djupdykning 18:00: Bryt 18:30: Gå till restaurang 19:00: Middag
+10:00: Kickoff / Intro &amp; Bootcamp Challenge
+
+11:00: Personalisering, friktionsjakt, vattentäta skott, Adobe POV (whiteboard)
+
+12:00: Brytning
+
+12:15: Uppdelning av lösningsarkitektur (whiteboard)
+
+13:00: Lunch
+
+14:00: Användarflöde 1 -&quot;Förvärv&quot;, genomgång och handledning - Djupdykning
+
+15:30: Brytning
+
+16:00: Användarflöde 2 - registrering och introduktion
+
+17:30: Golfklinik &amp; Borrel
+
+19:30: Middag
 
 ### Dag 2
 
-08:00: Frukost 08:30: Introduktion till användarbaserad leverans på resa, teamstruktur, leveranseftersläpning 09.45: Användarflöde 3 Blandning av fysiskt och digitalt - genomgång med praktisk övning 11.15: Brytning 11.30: Användarflöden sammanförs - (var) 12:00: Grupp Presentations 12.30: Lunch 13.30: Användarflöde 4: Kundanalys - djupgående 14.30: Slutsats, sammanfattning och nästa steg 15.00: Drinks &amp; Drupn
+08:30: Frukostsession: Introduktion till användarbaserad resebaserad leverans, teamstruktur, eftersläpning vid leverans
+
+09.45: Förstå AEP-dataflöden genom praktiska scenarier
+
+10.15: Stärk integriteten: Insikter i datastyrning med AEP
+
+10.45: Brytning
+
+12:00: Användarflöde 3 &quot; Blanda fysiskt och digitalt&quot;
+
+12.30: Lunch
+
+13.30: Customer Journey Analytics - fördjupning
+
+14.15: Exploring the Latest Invoations around GenAI for AEP and Beyond
+
+14.45: Convlusion &amp; Wrap Up
+
+15.00: Drinks &amp; ADDZON
+
 
 ## Förutsättningar
 
@@ -80,3 +116,4 @@ I det här användarflödet kan ni personalisera kundupplevelsen i både online-
 [4. Kundreseanalys](./uc/uc4/uc4.md)
 
 I det här användarflödet kommer du att bekanta dig med Customer Journey Analytics och få insikt i hur kunderna utvecklas från en kanal till en annan, från online till offline till callcenter och mycket mer.
+
