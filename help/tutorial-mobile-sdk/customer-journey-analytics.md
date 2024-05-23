@@ -4,9 +4,9 @@ description: Lär dig hur du rapporterar och analyserar interaktionen med din mo
 solution: Data Collection,Experience Platform,Analytics
 hide: true
 hidefromtoc: true
-source-git-commit: 9607ec77a891a85a8bae2a2622e74d59588e1dbf
+source-git-commit: 7237bc0e6fabd74157022b99e6edee47ef83f1c9
 workflow-type: tm+mt
-source-wordcount: '3121'
+source-wordcount: '3116'
 ht-degree: 0%
 
 ---
@@ -85,9 +85,9 @@ En anslutning i Customer Journey Analytics definierar de datauppsättningar (och
          | ODE-beslutshändelser - *sandlådenamn* beslut | identityMap | tidsstämpel | Mobilappsdata | enable | enable |
          | AJO Push Tracking Experience, händelsedatauppsättning | identityMap | tidsstämpel | Mobilappsdata | enable | enable |
 
-         ![CJA-anslutningar 3](assets/cja-connections-3.png)
-
       1. Välj **[!UICONTROL Add datasets]**.
+
+         ![CJA-anslutningar 3](assets/cja-connections-3.png)
 
 1. Tillbaka i **[!UICONTROL Connections]** > **[!UICONTROL Luma App - AEP Mobile SDK Tutorial Connection]**, markera **[!UICONTROL Save]** för att spara anslutningen.
 
@@ -156,8 +156,6 @@ Så här skapar du en datavy:
       ![Komponentinställningar för CJA-datavyn](assets/cja-dataview-component-settings.png)
 
    1. Nu när du förstår hur du lägger till fält i datavyn och konfigurerar den resulterande komponenten kan du använda tabellerna nedan för att visa en lista med schemafält som ska läggas till som mått eller dimension. Använd **Schema Path** kolumnvärde från tabellen nedan om du vill söka efter eller gå till det specifika schemafältet. När du har dragit och släppt ska du kontrollera **Komponentinställningar** kolumnvärde i tabellen om specifika inställningar krävs för en komponent, som att ändra dess **[!UICONTROL Component name]** eller definiera **[!UICONTROL INCLUDE EXCLUDE VALUES]**.
-
-      ![Komponentinställningar för CJA-datavyn](assets/cja-dataview-component-settings.png)
 
       **METRIK**
 
@@ -232,9 +230,9 @@ Så här skapar du ditt projekt:
 
    1. Välj **[!UICONTROL Blank Workspace project]** i popup-dialogrutan.
 
-      ![CJA-projekt - 1](assets/cja-projects-1.png)
-
    1. Välj **[!UICONTROL Create]**.
+
+      ![CJA-projekt - 1](assets/cja-projects-1.png)
 
 1. Du får se **[!UICONTROL New project]** gränssnitt. I det här gränssnittet kan du skapa rapporter och visualiseringar.
 
@@ -357,8 +355,10 @@ Baserat på föregående rapport vill du visualisera utfallet i e-handelstratten
    ![CJA-projekt 18](assets/cja-projects-18.png)
 Du kan också dra och släppa **[!UICONTROL Products View]** dimension under **[!UICONTROL All people]** dimension i **[!UICONTROL Fallout]** visualisering.
 
-1. Upprepa ovanstående steg för **[!UICONTROL Product Add To Lists]** och **[!UICONTROL Purchases]** dimensioner. Dina **[!UICONTROL Fallout]** visualisering visar nu en visuell representation av konverteringstratten för dina produkter.
-   ![CJA-projekt 19](assets/cja-projects-19.png)
+1. Upprepa ovanstående steg för **[!UICONTROL Product Add To Lists]** och **[!UICONTROL Purchases]** dimensioner.
+
+Dina **[!UICONTROL Fallout]** visualisering visar nu en visuell representation av konverteringstratten för dina produkter.
+![CJA-projekt 19](assets/cja-projects-19.png)
 
 Glöm inte att spara projektet!
 
