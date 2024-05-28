@@ -1,25 +1,25 @@
 ---
-user-guide-title: Självstudiekurser om Adobe Experience Platform
+user-guide-title: Adobe Experience Platform Tutorials
 breadcrumb-title: Självstudiekurser
 user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
 auto-video-transcripts: true
-source-git-commit: fd571fccc93e8d99beb9dafbe432961488a4d94d
+source-git-commit: 39a2297c90162bde5ae9c99d5a2061a801434215
 workflow-type: tm+mt
-source-wordcount: '874'
-ht-degree: 7%
+source-wordcount: '876'
+ht-degree: 4%
 
 ---
 
 
-# Självstudiekurser om Adobe Experience Platform {#tutorials}
+# Adobe Experience Platform Tutorials {#tutorials}
 
 + [Platform Tutorials](/help/platform/overview.md)
 + Introduktion till plattform {#intro-to-platform}
    + [En kundupplevelse som bygger på Experience Platform](/help/platform/intro-to-platform/a-customer-experience-powered-by-experience-platform.md)
    + [Bakom kulisserna: En kundupplevelse som drivs av Experience Platform](/help/platform/intro-to-platform/behind-the-scenes-a-customer-experience-powered-by-experience-platform.md)
-   + [Översikt över Experience Platform](/help/platform/intro-to-platform/overview.md)
+   + [Experience Platform - översikt](/help/platform/intro-to-platform/overview.md)
    + [Viktiga funktioner](/help/platform/intro-to-platform/key-capabilities.md)
    + [Plattformsbaserade program](/help/platform/intro-to-platform/native-applications.md)
    + [Integrering med Experience Cloud-program](/help/platform/intro-to-platform/integrations-with-experience-cloud-applications.md)
@@ -78,7 +78,6 @@ ht-degree: 7%
    + [Tvinga samtycke](/help/platform/governance/enforce-consent.md)
    + [Integrera med IAB Transparency och Consent Framework 2.0](/help/platform/governance/integrate-with-iab-transparency-and-consent-framework-2.md)
 + Datahygien {#data-hygiene}
-   + [Ta bort datauppsättningar](/help/platform/data-hygiene/delete-datasets.md)
    + [Pseudonym profil och förfallodatum för händelse](/help/platform/data-hygiene/pseudonymous-profile-and-event-expiration.md)
 + Inmatning av data {#data-ingestion}
    + [Översikt](/help/platform/data-ingestion/understanding-data-ingestion.md)
@@ -96,6 +95,8 @@ ht-degree: 7%
    + [Direktuppspela data med hjälp av källanslutningar](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/streaming-ingestion-source-connector.html)
    + [Självstudiekurser för Web SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html){target="_blank"}
    + [SDK-självstudiekurser för mobiler](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html){target="_blank"}
++ Datas livscykel {#data-lifecycle}
+   + [Förfaller datauppsättningar](/help/platform/data-lifecycle/expire-datasets.md)
 + Datavetenskap {#data-science-workspace}
    + [Översikt](/help/platform/data-science-workspace/understanding-data-science-workspace.md)
    + [Arkitektur](data-science-workspace/architecture-overview.md)
@@ -112,7 +113,7 @@ ht-degree: 7%
    + [Paketera källfiler i ett recept](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/models-recipes/package-source-files-recipe.html){target="_blank"}
    + [Importera ett paketerat recept (UI)](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/models-recipes/import-packaged-recipe-ui.html){target="_blank"}
    + [Importera ett paketerat recept (API)](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/models-recipes/import-packaged-recipe-api.html){target="_blank"}
-+ Mål {#destinations}
++ Destinationer {#destinations}
    + [Översikt över destinationer](/help/platform/destinations/understanding-destinations.md)
    + [Ansluta till mål](/help/platform/destinations/connecting-to-destinations.md)
    + [Skapa mål och aktivera data](/help/platform/destinations/create-destinations-and-activate-data.md)
@@ -227,7 +228,7 @@ ht-degree: 7%
    + [Audience Manager](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-aam.html)
    + [Commerce](/help/platform/experience-cloud/business-value-of-platform-and-commerce.md)
    + [Marketo Engage](https://experienceleague.adobe.com/docs/platform-learn/tutorials/rtcdp/orchestrate-campaigns-with-marketo-engage.html)
-   + [Målgrupp](https://experienceleague.adobe.com/docs/platform-learn/tutorials/destinations/target/next-hit-personalization.html)
+   + [Mål](https://experienceleague.adobe.com/docs/platform-learn/tutorials/destinations/target/next-hit-personalization.html)
 + Branschtrender {#industry}
    + [Framtiden för datahantering och den föränderliga miljön](/help/platform/industry/the-future-of-data-management-and-the-changing-environment.md)
    + [En tabell med två perceptioner - varumärken jämfört med konsumenter](/help/platform/industry/brands-vs-consumers.md)
