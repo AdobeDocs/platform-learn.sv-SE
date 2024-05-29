@@ -8,14 +8,14 @@ thumbnail: 4348-overview.jpg
 recommendations: catalog, noDisplay
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: fabbc591-840b-40dc-89af-305626a16338
-source-git-commit: e640a7e5c3a5f745462aa0d4e9d5f5c0b34ca8d7
+source-git-commit: efef0389cedfec7dfa19d876df96c58b7463ee12
 workflow-type: tm+mt
-source-wordcount: '777'
-ht-degree: 1%
+source-wordcount: '771'
+ht-degree: 0%
 
 ---
 
-# Komma igång med Adobe Experience Platform för dataarkitekter och datatekniker
+# Getting Started with Adobe Experience Platform for Data Architects and Data Engineers
 
 <!--5min-->
 
@@ -26,7 +26,7 @@ _Getting Started with Adobe Experience Platform for Data Architects and Data Eng
 
 ## Utbildningsmål
 
-Dataarkitekter och datatekniker måste samarbeta nära för en framgångsrik driftsättning i Experience Platform. Den här praktiska självstudiekursen lär dig de viktigaste uppgifterna som utförs av _båda rollerna_ så att ni vet hur ni börjar implementera Platform för ert eget företag. Du får vägledning i övningar där du får lära dig grunderna för Experience Platform och nyckelterminologi, funktioner, gränssnitt och API:er. Kunder som använder Adobe Experience Cloud-program som Real-time Customer Data Platform, Customer Journey Analytics och Journey Optimizer tycker också att det här innehållet är användbart eftersom plattformstjänster är en viktig grund för dessa program.
+Dataarkitekter och datatekniker måste samarbeta nära för en framgångsrik driftsättning i Experience Platform. Den här praktiska självstudiekursen lär dig de viktigaste uppgifterna som utförs av _båda rollerna_ så att ni vet hur ni börjar implementera Platform för ert eget företag. Du får hjälp med övningar som presenterar nyckelterminologi, funktioner, gränssnitt och API:er för Experience Platform. Kunder som använder Adobe Experience Cloud-program som Real-time Customer Data Platform, Customer Journey Analytics och Journey Optimizer tycker också att det här innehållet är användbart eftersom plattformstjänster är en viktig grund för dessa program.
 
 ![Adobe Experience Cloud Marknadsföring visar de plattformstjänster som ingår i kursen - identitet, profil, segmentering, intag, fråga och styrning](assets/marketecture.png)
 
@@ -39,7 +39,7 @@ Dataarkitekter och datatekniker måste samarbeta nära för en framgångsrik dri
 * Inläsning av data med batchläge och direktuppspelningsläge
 * Hämta webbdata med Adobe Experience Platform Web SDK
 * Skapa kundprofiler i realtid
-* Använda frågetjänsten för att validera data och extrahera data
+* Validera data och extrahera data med frågetjänsten
 * Bygga segment
 
 ## Affärsscenario
@@ -48,7 +48,7 @@ Adobe Experience Platform är en teknisk plattform som hjälper er att uppnå er
 
 ## Krav
 
-* Du har slutfört [Introduktion till Adobe Experience Platform-kurs](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2020.1) på Experience League och känner till plattformsfunktionerna
+* Du har slutfört [Introduktion till Adobe Experience Platform-kurs](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2020.1) på Experience League och är bekanta med plattformsfunktioner
 * Du har tillgång till ett konto som etablerats med Adobe Experience Platform (eller ett plattformsbaserat program som Real-Time CDP eller Journey Optimizer) och Data Collection (tidigare Launch).
 * Du är systemadministratör för det kontot eller kan ha en [konfigurera användarbehörigheter](configure-permissions.md) för dig.
 
@@ -60,7 +60,7 @@ När du skapar olika plattformselement under den här självstudiekursen kan du 
 
 Om du fastnar kan du prova att läsa instruktionerna igen och sedan använda ![Logga ett problem](https://experienceleague.adobe.com/assets/img/feedback.svg) på sidofältet på varje sida för att kontakta mig.
 
-## Tekniska anteckningar
+## Teknisk information
 
 ### Sandlådemiljöer
 
