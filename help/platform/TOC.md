@@ -5,9 +5,9 @@ user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
 auto-video-transcripts: true
-source-git-commit: 39a2297c90162bde5ae9c99d5a2061a801434215
+source-git-commit: bad48d8b5845aa2812630a07cada2d465b729325
 workflow-type: tm+mt
-source-wordcount: '876'
+source-wordcount: '890'
 ht-degree: 4%
 
 ---
@@ -78,7 +78,10 @@ ht-degree: 4%
    + [Tvinga samtycke](/help/platform/governance/enforce-consent.md)
    + [Integrera med IAB Transparency och Consent Framework 2.0](/help/platform/governance/integrate-with-iab-transparency-and-consent-framework-2.md)
 + Datahygien {#data-hygiene}
-   + [Pseudonym profil och förfallodatum för händelse](/help/platform/data-hygiene/pseudonymous-profile-and-event-expiration.md)
+   + [Pseudonym profil och utgångsdatum för händelse (TTL)](/help/platform/data-hygiene/pseudonymous-profile-and-event-expiration.md)
+   + [Dataförberedelse för datahygien](/help/platform/data-hygiene/data-prep-for-data-hygiene.md)
+   + [Förfaller datauppsättningar](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/data-lifecycle/expire-datasets)
+   + [Uppdatera ett profilattribut](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/profiles/update-a-specific-attribute-with-upsert)
 + Inmatning av data {#data-ingestion}
    + [Översikt](/help/platform/data-ingestion/understanding-data-ingestion.md)
    + [Översikt över batchöverföring](/help/platform/data-ingestion/batch-ingestion-overview.md)

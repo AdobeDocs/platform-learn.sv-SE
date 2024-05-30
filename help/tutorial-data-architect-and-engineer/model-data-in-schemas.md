@@ -8,9 +8,9 @@ feature: Schemas
 jira: KT-4348
 thumbnail: 4348-model-data-in-schemas.jpg
 exl-id: 317f1c39-7f76-4074-a246-ef19f044cb85
-source-git-commit: e0289aeaf2d987e4690c08b1695a3356442b15f6
+source-git-commit: 8e470d8a0c9fee7389ac60a743431fe81012fa0f
 workflow-type: tm+mt
-source-wordcount: '2469'
+source-wordcount: '2476'
 ht-degree: 0%
 
 ---
@@ -86,7 +86,7 @@ I den här övningen ska vi skapa ett schema för Lumas lojalitetsdata.
 
 När schemat har skapats omdirigeras du till schemaredigeraren där du kan lägga till fält i schemat. Du kan lägga till enskilda fält direkt i schemat eller använda fältgrupper. Observera att alla enskilda fält fortfarande är kopplade till en klass eller fältgrupp. Du kan välja bland en stor uppsättning standardfältgrupper från Adobe eller skapa egna. När ni börjar utforma egna data i Experience Platform är det bra att bekanta sig med de branschledande fältgrupperna från Adobe. När det är möjligt är det en god praxis att använda dem eftersom de ibland driver tjänster längre fram i kedjan, t.ex. kundens AI, Attribution AI och Adobe Analytics.
 
-När du arbetar med egna data är det ett stort steg att avgöra vilken av dina egna data som ska samlas in i Platform och hur de ska modelleras. Det här stora ämnet diskuteras mer ingående i kursen [Modellera era kundupplevelsedata med XDM](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-D-1-2021.1.xdm). I den här självstudiekursen vägleder jag dig genom implementeringen av några förbestämda scheman.
+När du arbetar med egna data är det viktigt att du tar reda på vilken av dina egna data som ska samlas in i Platform och hur de ska modelleras. Det här stora ämnet diskuteras mer ingående i kursen [Modellera era kundupplevelsedata med XDM](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-D-1-2021.1.xdm). I den här självstudiekursen kommer jag att vägleda dig genom implementeringen av några förbestämda scheman.
 
 Så här lägger du till fältgrupper:
 
@@ -99,8 +99,8 @@ Så här lägger du till fältgrupper:
    ![Välj standardfältgrupper](assets/schemas-loyalty-addFirstTwoFieldGroups.png)
 
 1. Kontrollera **[!UICONTROL Industry]** > **[!UICONTROL Retail]** för att visa branschspecifika fältgrupper.
-1. Välj **[!UICONTROL Loyalty]** om du vill lägga till fälten för bonusprogram.
-1. Välj **[!UICONTROL Add field group]** om du vill lägga till alla tre fältgrupper i schemat.
+1. Välj **[!UICONTROL Loyalty Details]** om du vill lägga till fälten för bonusprogram.
+1. Välj **[!UICONTROL Add field groups]** om du vill lägga till alla tre fältgrupper i schemat.
    ![Lägg till standardfältgrupper i bonusschema](assets/schemas-loyalty-saveOotbMixins.png)
 
 
@@ -111,7 +111,7 @@ Om du vill spara schemat väljer du **[!UICONTROL Save]**.
 
 >[!NOTE]
 >
->Det är okej om en fältgrupp lägger till ett fält för en datapunkt som du inte samlar in. &quot;faxPhone&quot; kan till exempel vara ett fält där Luma inte samlar in data. Det är okej. Bara för att ett fält är definierat i schemat betyder det inte att data för det *måste* bli inkapslad senare.
+>Det är okej om en fältgrupp lägger till ett fält för en datapunkt som du inte samlar in. &quot;faxPhone&quot; kan till exempel vara ett fält där Luma inte samlar in data. Det är okej. Bara för att ett fält är definierat i schemat betyder det inte att data för det *måste* bli inkapslad senare. Du kan även ta bort fältet från schemat.
 
 ### Lägga till en anpassad fältgrupp
 
@@ -119,7 +119,12 @@ Nu ska vi skapa en anpassad fältgrupp.
 
 Medan lojalitetsfältgruppen innehöll en `loyaltyID` Luma vill hantera alla sina systemidentifierare i en enda grupp för att säkerställa konsekvens i alla sina scheman.
 
-Fältgrupper måste skapas i schemaarbetsflödet. Du kan lägga till ett nytt anpassat fält i schemat och skapa en anpassad fältgrupp på det sättet. Du kan också skapa en anpassad fältgrupp först och sedan lägga till fält i den. I den här självstudiekursen börjar vi med att skapa en anpassad fältgrupp.
+Fältgrupper måste skapas i schemaarbetsflödet. Du kan antingen:
+
+* Lägg till ett nytt anpassat fält i schemat först och skapa sedan en anpassad fältgrupp, eller
+* Skapa först en anpassad fältgrupp och lägg sedan till fält i den.
+
+I den här självstudiekursen börjar vi med att skapa en anpassad fältgrupp.
 
 Så här skapar du fältgruppen:
 
