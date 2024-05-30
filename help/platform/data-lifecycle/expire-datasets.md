@@ -6,9 +6,9 @@ role: Data Engineer, Data Architect
 level: Experienced
 jira: KT-10697
 thumbnail: 345065.jpeg
-last-substantial-update: 2022-07-27T00:00:00Z
+last-substantial-update: 2024-05-29T00:00:00Z
 exl-id: 7764de70-e0c1-48a8-8d1f-a5426f8d580a
-source-git-commit: 39a2297c90162bde5ae9c99d5a2061a801434215
+source-git-commit: 252ef67017850c9ac3710d34ffe315463a406828
 workflow-type: tm+mt
 source-wordcount: '83'
 ht-degree: 0%
