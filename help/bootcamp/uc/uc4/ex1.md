@@ -7,9 +7,9 @@ doc-type: tutorial
 activity: develop
 solution: Customer Journey Analytics
 exl-id: 587be8bc-8ebe-4f30-99d8-ba88ce40caf7
-source-git-commit: 3c86f9b19cecf92c9a324fb6fcfcefaebf82177f
+source-git-commit: 901b90ca165a74bbc4f871469222064b70d0a20a
 workflow-type: tm+mt
-source-wordcount: '876'
+source-wordcount: '874'
 ht-degree: 0%
 
 ---
@@ -18,9 +18,9 @@ ht-degree: 0%
 
 ## Mål
 
-- Förstå CJA-programtjänsten
+- Förstå CJA-programmet
 - Lär dig placera CJA
-- Förstå arbetsflödet i CJA: från dataanslutning till insikter
+- Förstå CJA-arbetsflödet: från dataanslutning till insikter
 
 ## 4.1.1 Vad är Customer Journey Analytics?
 
@@ -70,34 +70,34 @@ Innan du börjar med stegen ovan ska du inte glömma steg 0, som är att först�
 
 **Skräp in, skräp ut.** Kommer du ihåg? Du måste ha en tydlig uppfattning om vilka data som är tillgängliga och hur scheman i Adobe Experience Platform är konfigurerade. Förståelse av data i Adobe Experience Platform kommer att göra det enklare, inte bara i dataanslutningsdelen, utan även när man bygger visualiseringar och gör analyser.
 
-## 4.1.5 Steg 0: Om Adobe Experience Platform scheman och datauppsättningar
+## 4.1.5 Steg 0: Förstå Adobe Experience Platform scheman och datauppsättningar
 
 Logga in på Adobe Experience Platform genom att gå till denna URL: [https://experience.adobe.com/platform](https://experience.adobe.com/platform).
 
-När du loggat in kommer du till Adobe Experience Platform hemsida.
+När du har loggat in loggar du in på Adobe Experience Platform hemsida.
 
-![Datainmatning](../uc1/images/home.png)
+![Inmatning av data](../uc1/images/home.png)
 
 Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``Bootcamp``. Du kan göra detta genom att klicka på texten **[!UICONTROL Prod]** i skärmens övre högra hörn. När du har valt rätt sandlåda ser du skärmändringen och nu befinner du dig i din dedikerade sandlåda.
 
-![Datainmatning](../uc1/images/sb1.png)
+![Inmatning av data](../uc1/images/sb1.png)
 
 Ta en titt på dessa scheman och datauppsättningar i Adobe Experience Platform.
 
 | Datauppsättning | Schema |
 | ----------------- |-------------| 
-| Demo System - händelsedatauppsättning för webbplats (Global v1.1) | Demonstrationssystem - händelseschema för webbplats (Global v1.1) |
+| Demo System - händelsedatauppsättning för webbplats (Global v1.1) | Demo System - händelseschema för webbplats (Global v1.1) |
 | Demo System - händelsedatauppsättning för callcenter (Global v1.1) | Demo System - händelseschema för callcenter (Global v1.1) |
-| Demonstrationssystem - händelsedatauppsättning för röstassistenter (Global v1.1) | Demonstrationssystem - händelseschema för röstassistenter (Global v1.1) |
+| Demo System - händelsedatauppsättning för röstassistenter (Global v1.1) | Demo System - händelseschema för röstassistenter (Global v1.1) |
 
 Se till att du åtminstone har kontrollerat saker som:
 
 - Identiteter: CRMID, phoneNumber, ECID, email. Vilka identiteter är de primära identifierarna, vilka är de sekundära identifierarna?
-Du kan hitta identifierarna genom att öppna ett schema och titta på objektet `_experienceplatform.identification.core`. Ta en titt på schemat [Demonstrationssystem - händelseschema för webbplats (Global v1.1)](https://experience.adobe.com/platform/schema).
+Du kan hitta identifierarna genom att öppna ett schema och titta på objektet `_experienceplatform.identification.core`. Ta en titt på schemat [Demo System - händelseschema för webbplats (Global v1.1)](https://experience.adobe.com/platform/schema).
 
 ![demo](./images/identity.png)
 
-- Utforska handelsobjektet i schemat [Demonstrationssystem - händelseschema för webbplats (Global v1.1)](https://experience.adobe.com/platform/schema).
+- Utforska handelsobjektet i schemat [Demo System - händelseschema för webbplats (Global v1.1)](https://experience.adobe.com/platform/schema).
 
 ![demo](./images/commerce.png)
 

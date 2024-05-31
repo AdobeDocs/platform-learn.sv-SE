@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar identitetsnamnutrymmen som ska använd
 feature: Web SDK,Identities
 jira: KT-15400
 exl-id: 7719dff4-6b30-4fa0-acae-7491c3208f15
-source-git-commit: 8602110d2b2ddc561e45f201e3bcce5e6a6f8261
+source-git-commit: 1a4f2e3813a6db4bef77753525c8a7d40692a4b2
 workflow-type: tm+mt
-source-wordcount: '565'
+source-wordcount: '644'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,10 @@ Lär dig hur du konfigurerar identitetsnamnutrymmen som ska användas med Adobe 
 The [Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/en/docs/id-service/using/home) ställer in ett gemensamt besökar-ID (ECID) för SDK-baserade Adobe-program för att underlätta Experience Cloud-funktioner, t.ex. målgruppsdelning mellan program. Du kan också skicka dina egna kund-ID:n till tjänsten för att möjliggöra målinriktning mellan olika enheter och integrering med andra system, som CRM-systemet (Customer Relationship Management).
 
 The [Adobe Experience Platform Identity Service](https://experienceleague.adobe.com/en/docs/experience-platform/identity/home) (Ja, det finns två!) använder ECID:n och kund-ID:n för att generera identitetsdiagram, så att du kan sammanfoga attribut och beteenden i kundprofiler i realtid.
+
+>[!NOTE]
+>
+>Ett anpassat ID-namnutrymme är _krävs inte_ för att implementera Adobe Analytics, Adobe Target eller Adobe Audience Manager med Web SDK (autentiserade identiteter kan skickas i `data` i stället för `xdm` som du kommer att se senare). Identitetsnamnutrymmen krävs för plattformsspecifika program som Journey Optimizer, Real-time Customer Data Platform och Customer Journey Analytics. Även om du kanske bestämmer dig för att inte använda ett identitetsnamnutrymme i din egen implementering, förväntas du göra det som en del av den här självstudien.
 
 >[!NOTE]
 >

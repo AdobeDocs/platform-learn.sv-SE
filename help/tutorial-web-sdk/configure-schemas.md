@@ -4,9 +4,9 @@ description: Lär dig hur du skapar ett XDM-schema för webbdata i gränssnittet
 feature: Web SDK,Schemas
 jira: KT-15398
 exl-id: 2858ce03-4f95-43ac-966c-1b647b33ef16
-source-git-commit: 8602110d2b2ddc561e45f201e3bcce5e6a6f8261
+source-git-commit: 1a4f2e3813a6db4bef77753525c8a7d40692a4b2
 workflow-type: tm+mt
-source-wordcount: '1462'
+source-wordcount: '1510'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,10 @@ Lär dig hur du skapar ett XDM-schema för webbdata i Adobe Experience Platform 
 XDM-scheman (Experience Data Model) är byggstenar, principer och bästa praxis för datainsamling i Adobe Experience Platform.
 
 Platform Web SDK använder ditt schema för att standardisera dina webbhändelsedata, skicka dem till Platform Edge Network och slutligen vidarebefordra data till alla Experience Cloud-program som konfigurerats i datastream. Det här steget är viktigt eftersom det definierar en standarddatamodell som krävs för inmatning av kundupplevelsedata i Experience Platform och möjliggör tjänster och applikationer som bygger på dessa standarder.
+
+>[!NOTE]
+>
+>Ett XDM-schema är _krävs inte_ för att implementera Adobe Analytics, Adobe Target eller Adobe Audience Manager med Web SDK (data kan skickas i `data` i stället för `xdm` som du kommer att se senare). Ett XDM-schema krävs för de mest prestandaoptimerade implementeringarna av plattformsspecifika program som Journey Optimizer, Real-time Customer Data Platform, Customer Journey Analytics. Även om du kanske bestämmer dig för att inte använda ett XDM-schema i din egen implementering, så är det en del av den här självstudiekursen.
 
 ## Varför modellera data?
 
@@ -111,8 +115,7 @@ När det är möjligt bör du använda befintliga fältgrupper och följa en pro
 > 
 >I den här övningen lägger du till de rekommenderade fördefinierade fältgrupperna för insamling av webbdata: _**[!UICONTROL AEP Web SDK ExperienceEvent]**_och_**[!UICONTROL Consumer Experience Event]**_.
 >
->
-> Om du bara implementerar **Adobe Analytics** med Web SDK och inte skicka data till **Experience Platform**, använder du [!UICONTROL Adobe Analytics ExperienceEvent Template] fältgrupp för att definiera XDM-schemat. Detta används i [Konfigurationsanalys](setup-analytics.md) lektion.
+
 
 1. I **[!UICONTROL Field groups]** avsnitt, markera **[!UICONTROL Add]**
 

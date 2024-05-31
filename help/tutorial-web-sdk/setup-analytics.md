@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar Adobe Analytics med Experience Platfor
 solution: Data Collection, Analytics
 jira: KT-15408
 exl-id: de86b936-0a47-4ade-8ca7-834c6ed0f041
-source-git-commit: 8602110d2b2ddc561e45f201e3bcce5e6a6f8261
+source-git-commit: c5318809bfd475463bac3c05d4f35138fb2d7f28
 workflow-type: tm+mt
-source-wordcount: '2678'
+source-wordcount: '2628'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ När lektionen är klar kan du:
 
 * Konfigurera ett datastream för att aktivera Adobe Analytics
 * Ta reda på vilka XDM-standardfält som automatiskt mappas till analysvariabler
-* Ange anpassade analysvariabler med fältgruppen eller bearbetningsreglerna för Adobe Analytics ExperienceEvent-mallen
+* Ange analysvariabler i dataobjektet
 * Skicka data till en annan rapportserie genom att åsidosätta datastream
 * Validera Adobe Analytics-variabler med Felsökning och Assurance
 
@@ -65,38 +65,24 @@ Platform Web SDK skickar data från din webbplats till Platform Edge Network. Di
 >
 >I den här självstudiekursen konfigurerar du bara Adobe Analytics rapportsvit för din utvecklingsmiljö. När du skapar datastreams för din egen webbplats bör du skapa ytterligare datastreams och rapportsviter för dina staging- och produktionsmiljöer.
 
-## XDM-scheman och analysvariabler
+## Ange analysvariabler
 
-Grattis! Du har redan konfigurerat ett schema som är kompatibelt med Adobe Analytics i [Konfigurera ett schema](configure-schemas.md) lektion!
+Det finns flera sätt att ställa in Analytics-variabler i en Web SDK-implementering:
 
-Men du kanske undrar hur jag ställer upp alla mina proppar, evar och events?
+1. Automatisk mappning av XDM-fält till analysvariabler (automatiskt).
+1. Ange fält i dialogrutan `data` objekt (rekommenderas).
+1. Mappa XDM-fält till Analytics-variabler i Analytics-bearbetningsregler (rekommenderas inte längre).
+1. Mappa till Analytics-variabler direkt i XDM-schemat (rekommenderas inte längre).
 
-Det finns flera metoder som kan användas samtidigt:
-
-1. Ange XDM-standardfält och andra mappas automatiskt till analysvariabler.
-1. Mappa ytterligare XDM-fält till Analytics-variabler i Analytics-bearbetningsregler.
-1. Mappa till Analytics-variabler direkt i XDM-schemat.
-
-<!-- Implementing Platform Web SDK should be as product-agnostic as possible. For Adobe Analytics, mapping eVars, props, and events doesn't occur during schema creation, nor during the tag rules configuration as it has been done traditionally. Instead, every XDM key-value pair becomes a Context Data Variable that maps to an Analytics variable in one of two ways: 
-
-1. Automatically mapped variables using reserved XDM fields
-1. Manually mapped variables using Analytics Processing Rules
-
-To understand what XDM variables are auto-mapped to Adobe Analytics, please see [Variables automatically mapped in Analytics](https://experienceleague.adobe.com/en/docs/experience-platform/edge/data-collection/adobe-analytics/automatically-mapped-vars). Any variable that is not auto-mapped must be manually mapped. 
-
- 1. **Product-agnostic XDM**: maintain a semantic key-value pair XDM schema and use [Adobe Analytics Processing Rules](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/c-processing-rules/processing-rules) to map the XDM fields to eVars, props, and so on. By a semantic XDM schema, we mean that the field names themselves have meaning. For example, the field name `web.webPageDetails.pageName` has more meaning than say `prop1` or `evar3`.
-
-
- 1. **Analytics-specific XDM**: Use a purpose-built Adobe Analytics field group in the XDM schema called `Adobe Analytics ExperienceEvent Template`
- 
-The approach Adobe has seen customers prefer is the **Analytics-specific XDM**, because it skips the mapping step in the Adobe Analytics Processing Rules interface. The steps in this lesson use the **Analytics-specific XDM** approach.
--->
+Från maj 2024 behöver du inte längre skapa ett XDM-schema för att implementera Adobe Analytics med Platform Web SDK. The `data` -objekt (och `data.variable` dataelement som du skapade i den här självstudiekursen) kan användas för att ställa in alla anpassade Analytics-variabler. Att ställa in dessa variabler i dataobjektet kommer att kännas bekant för befintliga analyskunder, är mer effektivt än att använda gränssnittet för bearbetningsregler och förhindrar att onödiga data tar upp utrymme i kundprofiler i realtid (viktigt om du har Real-time Customer Data Platform eller Journey Optimizer).
 
 ### Automatiskt mappade fält
 
-Många XDM-fält mappas automatiskt till analysvariabler.
+Många XDM-fält mappas automatiskt till analysvariabler. Den senaste listan över mappningar finns på [Variabelmappning för analyser i Adobe Experience Edge](https://experienceleague.adobe.com/en/docs/experience-platform/edge/data-collection/adobe-analytics/automatically-mapped-vars).
 
-Schemat som skapats i [Konfigurera ett schema](configure-schemas.md) lektionen innehåller några automatiskt mappade till analysvariabler, som beskrivs i följande tabell:
+Detta inträffar om _även om du inte har definierat ett anpassat schema_. Experience Platform Web SDK samlar automatiskt in vissa data och skickar dem till Platform Edge Network som XDM-fält. Web SDK läser till exempel den aktuella sidans URL och skickar den som `web.webPageDetails.URL`. Det här fältet vidarebefordras till Adobe Analytics och fyller automatiskt i sidans URL-rapporter i Adobe Analytics.
+
+När du implementerar Web SDK för analyser och plattformsbaserade program skapar du ett anpassat XDM-schema, som du har gjort i den här självstudiekursen i [Konfigurera ett schema](configure-schemas.md) lektion. Några av de XDM-fält som du har implementerat för automatisk mappning till analysvariabler, enligt beskrivningen i följande tabell:
 
 | XDM till Analytics - automappade variabler | Adobe Analytics-variabel |
 |-------|---------|
@@ -116,71 +102,90 @@ Schemat som skapats i [Konfigurera ett schema](configure-schemas.md) lektionen i
 | `productListItems[].priceTotal` | s.product=;;;produktpris; |
 
 De enskilda avsnitten i Analytics-produktsträngen anges via olika XDM-variabler under `productListItems` -objekt.
+
 >18 augusti 2022 `productListItems[].SKU` prioriterar mappning till produktnamnet i variabeln s.products.
 >Värdet som anges till `productListItems[].name` mappas endast till produktnamnet om `productListItems[].SKU` finns inte. Annars är den omappad och tillgänglig i kontextdata.
 >Ange inte en tom sträng eller null till `productListItems[].SKU`. Detta har den oönskade effekten av att mappa till produktnamnet i variabeln s.products.
 
-Den senaste listan över mappningar finns på [Variabelmappning för analyser i Adobe Experience Edge](https://experienceleague.adobe.com/en/docs/experience-platform/edge/data-collection/adobe-analytics/automatically-mapped-vars).
+### Ange variabler i dataobjektet
+
+Ange variabler i `data` är det rekommenderade sättet att ställa in Analytics-variabler med Web SDK. Om du ställer in variabler i dataobjektet kan även alla automatiskt mappade variabler skrivas över.
+
+För det första, vad är `data` objekt? I alla Web SDK-händelser kan du skicka två objekt med anpassade data, `data` -objektet och `xdm` -objekt. Båda skickas till Platform Edge Network, men bara till `xdm` -objektet skickas till datauppsättningen Experience Platform. Egenskaper i `data` kan mappas på Edge till `xdm` fält som använder funktionen Dataprep för datainsamling, men som annars inte skickas till Experience Platform. Detta gör det till ett idealiskt sätt att skicka data till program som Analytics, som inte är inbyggt i Experience Platform.
+
+Här är de två objekten i ett generiskt Web SDK-anrop:
+
+![data- och xdm-objekt](assets/analytics-data-object-intro.png)
+
+Adobe Analytics har konfigurerats för att söka efter egenskaper i `data.__adobe.analytics` och använda dem för analysvariabler.
+
+Nu gör vi det här.
+
+Vi använder `data.variable` dataelement t
 
 
-### Mappa till Analytics-variabler med bearbetningsregler
-
-Alla fält i XDM-schemat blir tillgängliga för Adobe Analytics som Context Data Variables med följande prefix `a.x.`. Exempel: `a.x.web.webinteraction.region`
-
-I den här övningen mappar du en XDM-variabel till en prop. Följ de här stegen för alla anpassade mappningar som du måste göra för alla `eVar`, `prop`, `event`, eller variabel som är tillgänglig via bearbetningsregler.
-
-1. Gå till Analytics-gränssnittet
-1. Gå till [!UICONTROL Admin] > [!UICONTROL Admin Tools] > [!UICONTROL Report Suites]
-1. Välj den rapport för utveckling/test som du använder för självstudiekursen > [!UICONTROL Edit Settings] > [!UICONTROL General] > [!UICONTROL Processing Rules]
-
-   ![Köp av analyser](assets/analytics-process-rules.png)
-
-1. Skapa en regel till **[!UICONTROL Overwrite value of]** `[!UICONTROL Product SKU (prop1)]` till `a.x.productlistitems.0.sku`. Kom ihåg att lägga till en anteckning om varför du skapar regeln och namnge regeltiteln. Välj **[!UICONTROL Save]**
-
-   ![Köp av analyser](assets/analytics-set-processing-rule.png)
-
-   >[!IMPORTANT]
-   >
-   >Första gången du mappar till en bearbetningsregel visas inte kontextdatavariablerna från XDM-objektet. Om du vill åtgärda det väljer du ett värde, Spara och återgå till att redigera. Alla XDM-variabler ska nu visas.
-
-### Mappa till Analytics-variabler med Adobe Analytics-fältgrupp
-
-Ett alternativ till bearbetningsregler är att mappa till Analytics-variabler i XDM-schemat med hjälp av `Adobe Analytics ExperienceEvent Template` fältgrupp. Detta tillvägagångssätt har blivit populärt eftersom många användare tycker att det är enklare än att konfigurera bearbetningsregler, men om du ökar storleken på XDM-nyttolasten kan det i sin tur öka profilstorleken i andra program som Real-Time CDP.
-
-Lägg till `Adobe Analytics ExperienceEvent Template` fältgrupp till ditt schema:
-
-1. Öppna [Datainsamling](https://experience.adobe.com/#/data-collection){target="blank"} gränssnitt
-1. Välj **[!UICONTROL Schemas]** från vänster navigering
-1. Se till att du är i sandlådan som du använder från självstudiekursen
-1. Öppna `Luma Web Event Data` schema
-1. I **[!UICONTROL Field Groups]** avsnitt, markera **[!UICONTROL Add]**
-1. Hitta `Adobe Analytics ExperienceEvent Template` fältgrupp och lägg till den i ditt schema
+<!--
 
 
-Ange en eVar för varuexponering i produktsträngen. Med `Adobe Analytics ExperienceEvent Template` kan du mappa variabler till marknadsföring av eVars eller händelser i produktsträngen. Detta kallas även inställning **Produktsyntaxmarknadsföring**.
+### Map to Analytics variables with processing rules
 
-1. Gå tillbaka till taggegenskapen
+All fields in the XDM schema become available to Adobe Analytics as Context Data Variables with the following prefix `a.x.`. For example, `a.x.web.webinteraction.region`
 
-1. Öppna regeln `ecommerce - library loaded - set product details variables - 20`
+In this exercise, you map one XDM variable to a prop. Follow these same steps for any custom mapping that you must do for any `eVar`, `prop`, `event`, or variable accessible via Processing Rules.
 
-1. Öppna **[!UICONTROL Set Variable]** åtgärd
+1. Go to the Analytics interface
+1. Go to [!UICONTROL Admin] > [!UICONTROL Admin Tools] > [!UICONTROL Report Suites ]
+1. Select the dev/test report suite that you are using for the tutorial > [!UICONTROL Edit Settings] > [!UICONTROL General] > [!UICONTROL Processing Rules]
 
-1. Markera för att öppna `_experience > analytics > customDimensions > eVars > eVar1`
+    ![Analytics Purchase](assets/analytics-process-rules.png)   
 
-1. Ange **[!UICONTROL Value]** till `%product.productInfo.title%`
+1. Create a rule to **[!UICONTROL Overwrite value of]** `[!UICONTROL Product SKU (prop1)]` to `a.x.productlistitems.0.sku`. Remember to add a note about why you are creating the rule and name your rule title. Select **[!UICONTROL Save]**
 
-1. Välj **[!UICONTROL Keep Changes]**
+    ![Analytics Purchase](assets/analytics-set-processing-rule.png)   
 
-   ![Produktens SKU XDM-objektsvariabel](assets/set-up-analytics-product-merchandising.png)
+    >[!IMPORTANT]
+    >
+    >The first time you map to a processing rule, the UI does not show you the context data variables from the XDM object. To fix that select any value, Save, and come back to edit. All XDM variables should now appear.
 
-1. Välj **[!UICONTROL Save]** för att spara regeln
+### Map to Analytics variables using the Adobe Analytics field group
 
-Som du just såg kan i stort sett alla Analytics-variabler anges i `Adobe Analytics ExperienceEvent Template` fältgrupp.
+An alternative to processing rules is to map to Analytics variables in the XDM schema using the `Adobe Analytics ExperienceEvent Template` field group. This approach has gained popularity because many users find it simpler than configuring processing rules, however, by increasing the size of the XDM payload it could in turn increase the profile size in other applications like Real-Time CDP.
+
+To add the `Adobe Analytics ExperienceEvent Template` field group to your schema:
+
+1. Open the [Data Collection](https://experience.adobe.com/#/data-collection){target="blank"} interface
+1. Select **[!UICONTROL Schemas]** from the left navigation
+1. Make sure you are in the sandbox you are using from the tutorial
+1. Open your `Luma Web Event Data` schema
+1. In the **[!UICONTROL Field Groups]** section, select **[!UICONTROL Add]**
+1. Find the `Adobe Analytics ExperienceEvent Template` field group and add it to your schema
+
+
+Now, set a merchandising eVar in the product string. With the `Adobe Analytics ExperienceEvent Template` field group, you are able to map variables to merchandising eVars or events within the product string. This is also known as setting **Product Syntax Merchandising**. 
+
+1. Go back to your tag property
+
+1. Open the rule `ecommerce - library loaded - set product details variables - 20`
+
+1. Open the **[!UICONTROL Set Variable]** action
+
+1. Select to open `_experience > analytics > customDimensions > eVars > eVar1`
+
+1. Set the **[!UICONTROL Value]** to `%product.productInfo.title%`
+
+1. Select **[!UICONTROL Keep Changes]**
+
+    ![Product SKU XDM object Variable](assets/set-up-analytics-product-merchandising.png)
+
+1. Select **[!UICONTROL Save]** to save the rule
+
+As you just saw, basically all of the Analytics variables can be set in the `Adobe Analytics ExperienceEvent Template` field group.
 
 >[!NOTE]
 >
-> Lägg märke till `_experience` objekt under `productListItems` > `Item 1`. Ange alla variabler under den här [!UICONTROL object] anger produktsyntaxen eVars eller Events.
+> Notice the `_experience` object under `productListItems` > `Item 1`. Setting any variable under this [!UICONTROL object] sets Product Syntax eVars or Events.
 
+-->
 
 ## Skicka data till en annan rapportserie
 

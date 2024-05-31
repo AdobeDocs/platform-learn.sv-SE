@@ -9,18 +9,18 @@ solution: Customer Journey Analytics
 feature-set: Customer Journey Analytics
 feature: Connections, Data Views, Workspace Basics, Calculated Metrics, Visualizations, Audiences
 exl-id: cd4b423c-cd0b-44cf-8ac7-23c25876457c
-source-git-commit: 3c86f9b19cecf92c9a324fb6fcfcefaebf82177f
+source-git-commit: 901b90ca165a74bbc4f871469222064b70d0a20a
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '384'
 ht-degree: 0%
 
 ---
 
-# 4. Kundreseanalys
+# 4. Analys av kundresan
 
-I det här användarflödet får du en praktisk upplevelse av programtjänsten Customer Journey Analytics.
+I det här användarflödet får du en praktisk upplevelse av programmet Customer Journey Analytics.
 
-Customer Journey Analytics tillhandahåller en verktygslåda till affärsintelligens och datavetenskap för sammanfogning och analys av data över flera kanaler (online och offline). Funktionerna i Customer Journey Analytics ger sammanhang och tydlighet till komplexa flerkanalskundresor. Den tillhandahållna kontexten genererar användbara insikter om hur ni kan ta bort smärtor från kundkonverteringsprocessen och leverera positiva upplevelser i de ögonblick som betyder mest.
+Customer Journey Analytics tillhandahåller en verktygslåda till affärsintelligens och datavetenskap för sammanfogning och analys av data över flera kanaler (online och offline). Funktionerna i Customer Journey Analytics ger kontext och tydlighet till komplexa flerkanalskundresor. Den tillhandahållna kontexten genererar användbara insikter om hur ni kan ta bort smärtor från kundkonverteringsprocessen och leverera positiva upplevelser i de ögonblick som betyder mest.
 
 Titta på den här videon för att förstå värde, kundresa och konfigurationsprocess:
 
@@ -40,11 +40,11 @@ Mer information om Customer Journey Analytics finns [här](https://spark.adobe.c
 
 - Viss kunskap om Analysis Workspace är att föredra, men är inte nödvändig
 - Tillgång till Adobe Experience Platform: [https://experience.adobe.com/platform](https://experience.adobe.com/platform)
-- Åtkomst till programtjänsten Customer Journey Analytics
+- Åtkomst till programmet Customer Journey Analytics
 
 >[!IMPORTANT]
 >
->Den här självstudiekursen har skapats för att underlätta ett visst Bootläger-format. Den använder specifika system och konton som du kanske inte har tillgång till. Även om ni inte har tillgång till dem tror vi att ni fortfarande kan lära er mycket genom att läsa igenom detta mycket detaljerade innehåll. Om du deltar i något av bootlägren och behöver dina inloggningsuppgifter, kontaktar du din Adobe-representant som ger dig den information som krävs.
+>Den här självstudiekursen har skapats för att underlätta ett visst Bootcamp-format. Den använder specifika system och konton som du kanske inte har tillgång till. Även om ni inte har tillgång till dem tror vi att ni fortfarande kan lära er mycket genom att läsa igenom detta mycket detaljerade innehåll. Om du deltar i något av bootlägren och behöver dina inloggningsuppgifter, kontaktar du din Adobe-representant som ger dig den information som krävs.
 
 ## Utövningar
 

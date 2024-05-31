@@ -6,9 +6,9 @@ feature-set: Journey Optimizer
 feature: Decision Management,Offers
 jira: KT-15412
 exl-id: f7852ef4-44b0-49df-aec8-cb211726247d
-source-git-commit: 8602110d2b2ddc561e45f201e3bcce5e6a6f8261
+source-git-commit: 901b90ca165a74bbc4f871469222064b70d0a20a
 workflow-type: tm+mt
-source-wordcount: '2515'
+source-wordcount: '2513'
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ När lektionen är slut kan du:
 
 För att slutföra lektionerna i det här avsnittet måste du först:
 
-* Se till att din organisation har tillgång till Adobe Journey Optimizer Ultimate (Journey Optimizer och Offer decisioning) eller Adobe Experience Platform och Offera decisioningens programtjänsttillägg.
+* Se till att din organisation har tillgång till Adobe Journey Optimizer Ultimate (Journey Optimizer och Offer decisioning) eller Adobe Experience Platform och Offer decisioning-tillägget.
 
 * Slutför alla lektioner för den inledande konfigurationen av Platform Web SDK.
 

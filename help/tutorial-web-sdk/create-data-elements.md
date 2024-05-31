@@ -4,9 +4,9 @@ description: Lär dig hur du skapar ett XDM-objekt och mappar dataelement till d
 feature: Tags
 jira: KT-15401
 exl-id: d662ec46-de9b-44ba-974a-f81dfc842e68
-source-git-commit: 8602110d2b2ddc561e45f201e3bcce5e6a6f8261
+source-git-commit: 1a4f2e3813a6db4bef77753525c8a7d40692a4b2
 workflow-type: tm+mt
-source-wordcount: '1154'
+source-wordcount: '1237'
 ht-degree: 0%
 
 ---
@@ -256,29 +256,41 @@ Skapa dessa ytterligare dataelement genom att följa samma steg:
 >
 >The [!UICONTROL JavaScript variable] dataelementtypen behandlar arrayreferenser som punkter i stället för hakparenteser, så att användarnamnets dataelement refereras som `digitalData.user[0].profile[0].attributes.username` **fungerar inte**.
 
-## Skapa dataelement för variabel
+## Skapa variabla dataelement för XDM- och dataobjekt
 
-mappa dataelementen till XDM med hjälp av **[!UICONTROL Variable]** dataelement som definierar det schema som används för XDM-objektet. Det här objektet bör följa XDM-schemat som du skapade under [Konfigurera ett schema](configure-schemas.md) lektion.
+De dataelement du just skapade används för att skapa ett XDM-objekt (för plattformsprogram) och ett dataobjekt (för Analytics, Target och Audience Manager). Objekten har egna speciella dataelement som kallas **[!UICONTROL Variable]** dataelement som är mycket enkla att skapa.
 
-Så här skapar du ett variabeldataelement:
+Om du vill skapa ett variabeldataelement för XDM kopplar du det till schemat som du skapade i [Konfigurera ett schema](configure-schemas.md) lektion:
 
 1. Välj **[!UICONTROL Add Data element]**
 1. Namnge dataelementet `xdm.variable.content`. Vi rekommenderar att du prefix med &quot;xdm&quot; för dataelementen som är specifika för XDM för att bättre organisera taggegenskaperna
 1. Välj **[!UICONTROL Adobe Experience Platform Web SDK]** som **[!UICONTROL Extension]**
 1. Välj **[!UICONTROL Variable]** som **[!UICONTROL Data Element Type]**
+1. Välj **[!UICONTROL XDM]** som **[!UICONTROL property]**
 1. Välj lämplig Experience Platform **[!UICONTROL Sandbox]**
 1. Välj lämplig **[!UICONTROL Schema]**, i detta fall `Luma Web Event Data`
 1. Välj **[!UICONTROL Save]**
 
-   ![Variabeldataelement](assets/analytics-tags-data-element-xdm-variable.png)
+   ![Variabeldataelement för XDM](assets/analytics-tags-data-element-xdm-variable.png)
+
+Skapa sedan dataelementet Variable för dataobjektet:
+
+1. Välj **[!UICONTROL Add Data element]**
+1. Namnge dataelementet `data.variable`. Vi rekommenderar att du prefix med&quot;data&quot; för dataelementen som är specifika för dataobjektet för att bättre organisera taggegenskapen
+1. Välj **[!UICONTROL Adobe Experience Platform Web SDK]** som **[!UICONTROL Extension]**
+1. Välj **[!UICONTROL Variable]** som **[!UICONTROL Data Element Type]**
+1. Välj **[!UICONTROL data]** som **[!UICONTROL property]**
+1. Välj **[!UICONTROL Save]**
+
+   ![Variabeldataelement för dataobjekt](assets/data-element-data-variable.png.png)
 
 
 I slutet av dessa steg bör du skapa följande dataelement:
 
 | Dataelement för kärntillägg | Dataelement för plattforms-SDK-tillägg |
 -----------------------------|-------------------------------
-| `cart.orderId` | `xdm.variable.content` |
-| `cart.productInfo` | |
+| `cart.orderId` | `data.variable` |
+| `cart.productInfo` | `xdm.variable.content` |
 | `cart.productInfo.purchase` | |
 | `page.pageInfo.hierarchie1` | |
 | `page.pageInfo.pageName` | |
@@ -291,7 +303,7 @@ I slutet av dessa steg bör du skapa följande dataelement:
 
 >[!TIP]
 >
->I framtiden [Skapa taggregler](create-tag-rule.md) lektion, lär dig hur **[!UICONTROL Variable]** kan du stapla flera regler i taggar med hjälp av **[!UICONTROL Update Variable Action type]**.
+>I framtiden [Skapa taggregler](create-tag-rule.md) lektion, lär dig hur **[!UICONTROL Variable]** Med dataelement kan du stapla flera regler i taggar med **[!UICONTROL Update Variable Action type]**.
 
 Med dessa dataelement på plats är du redo att börja skicka data till Platform Edge Network med en taggregel. Men först lär du dig att samla in identiteter med Web SDK.
 

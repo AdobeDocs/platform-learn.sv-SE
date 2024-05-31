@@ -3,9 +3,9 @@ title: Strömma data till Adobe Experience Platform med Platform Web SDK
 description: Lär dig hur du direktuppspelar webbdata till Adobe Experience Platform med Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 jira: KT-15407
 exl-id: 4d749ffa-e1c0-4498-9b12-12949807b369
-source-git-commit: 8602110d2b2ddc561e45f201e3bcce5e6a6f8261
+source-git-commit: c5318809bfd475463bac3c05d4f35138fb2d7f28
 workflow-type: tm+mt
-source-wordcount: '1516'
+source-wordcount: '1835'
 ht-degree: 0%
 
 ---
@@ -232,6 +232,57 @@ Först måste du generera fler exempeldata. Upprepa stegen tidigare i den här l
    ![Kundprofil](assets/experience-platform-validate-dataset-custProfile.png)
 
 Du har nu aktiverat Platform Web SDK för Experience Platform (och Real-Time CDP! Och Journey Optimizer! Och Customer Journey Analytics!).
+
+### Skapa ett bonusschema och importera exempeldata
+
+Kunder som använder Real-time Customer Data Platform och Journey Optimizer förväntas bli klara.
+
+När Web SDK-data hämtas till Adobe Experience Platform kan de berikas av andra datakällor som du har kapslat in i Platform. När en användare till exempel loggar in på Luma-webbplatsen skapas ett identitetsdiagram i Experience Platform och alla andra profilaktiverade datauppsättningar kan sammanfogas för att skapa kundprofiler i realtid. Om du vill se hur detta fungerar skapar du snabbt en ny datauppsättning i Adobe Experience Platform med några exempel på lojalitetsdata så att du kan använda kundprofiler i realtid med Real-time Customer Data Platform och Journey Optimizer. Eftersom du redan har gjort liknande övningar kommer instruktionerna att vara korta.
+
+Skapa bonusschemat:
+
+1. Skapa ett nytt schema
+1. Välj **[!UICONTROL Individual Profile]** som [!UICONTROL base class]
+1. Namnge schemat `Luma Loyalty Schema`
+1. Lägg till [!UICONTROL Loyalty Details] fältgrupp
+1. Lägg till [!UICONTROL Demographic Details] fältgrupp
+1. Välj `Person ID` fält och markera det som [!UICONTROL Identity] och [!UICONTROL Primary identity] med `Luma CRM Id` [!UICONTROL Identity namespace].
+1. Aktivera schemat för [!UICONTROL Profile]
+
+   ![Bonusschema](assets/web-channel-loyalty-schema.png)
+
+Så här skapar du datauppsättningen och importerar exempeldata:
+
+1. Skapa en ny datauppsättning från `Luma Loyalty Schema`
+1. Namnge datauppsättningen `Luma Loyalty Dataset`
+1. Aktivera datauppsättningen för [!UICONTROL Profile]
+1. Hämta exempelfilen [luma-loyalty-forWeb.json](assets/luma-loyalty-forWeb.json)
+1. Dra och släpp filen i datauppsättningen
+1. Bekräfta att data har importerats
+
+   ![Bonusschema](assets/web-channel-loyalty-dataset.png)
+
+### Skapa en målgrupp
+
+Målgruppsprofiler samlas kring gemensamma egenskaper. Skapa en snabb målgrupp som ni kan använda i er webbkampanj:
+
+1. I Experience Platform går du till **[!UICONTROL Audiences]** till vänster navigering
+1. Välj **[!UICONTROL Create audience]**
+1. Välj **[!UICONTROL Build rule]**
+1. Välj **[!UICONTROL Create]**
+
+   ![Skapa en målgrupp](assets/web-campaign-create-audience.png)
+
+1. Välj **[!UICONTROL Attributes]**
+1. Hitta **[!UICONTROL Loyalty]** > **[!UICONTROL Tier]** och dra det till **[!UICONTROL Attributes]** section
+1. Definiera målgruppen som användare vars `tier` är `gold`
+1. Namnge målgruppen `Luma Loyalty Rewards – Gold Status`
+1. Välj **[!UICONTROL Edge]** som **[!UICONTROL Evaluation method]**
+1. Välj **[!UICONTROL Save]**
+
+   ![Definiera målgruppen](assets/web-campaign-define-audience.png)
+
+Eftersom detta är en mycket enkel publik kan vi använda Edge-utvärderingsmetoden. Edge-målgrupperna utvärderas i det närmaste, så i samma begäran som Web SDK till Platform Edge Network kan vi utvärdera målgruppsdefinitionen och omedelbart bekräfta om användaren är berättigad.
 
 
 [Nästa: ](setup-analytics.md)
