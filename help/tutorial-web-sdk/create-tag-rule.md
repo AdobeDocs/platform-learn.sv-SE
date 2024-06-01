@@ -4,9 +4,9 @@ description: Lär dig hur du skickar en händelse till Platform Edge Network med
 feature: Tags
 jira: KT-15403
 exl-id: e06bad06-3ee3-475f-9b10-f0825a48a312
-source-git-commit: 8602110d2b2ddc561e45f201e3bcce5e6a6f8261
+source-git-commit: a8431137e0551d1135763138da3ca262cb4bc4ee
 workflow-type: tm+mt
-source-wordcount: '1751'
+source-wordcount: '1762'
 ht-degree: 0%
 
 ---
@@ -163,7 +163,6 @@ Börja använda nu **[!UICONTROL Update variable]** i ytterligare sekvensregler 
 >
 >Regelordningen bestämmer vilken regel som körs först när en händelse utlöses. Om två regler har samma händelsetyp körs den med det lägsta talet först.
 > 
->![rule-order](assets/set-up-analytics-sequencing.png)
 
 Börja med att spåra produktvyer på Lumas produktinformationssida:
 
@@ -172,7 +171,8 @@ Börja med att spåra produktvyer på Lumas produktinformationssida:
 1. Välj ![+ symbol](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) under Händelse för att lägga till en ny utlösare
 1. Under **[!UICONTROL Extension]**, markera **[!UICONTROL Core]**
 1. Under **[!UICONTROL Event Type]**, markera **[!UICONTROL Library Loaded (Page Top)]**
-1. Markera för att öppna **[!UICONTROL Advanced Options]**, skriva in `20`. Det här ordervärdet garanterar att regeln körs efter `all pages - library loaded - set global variables - 1` som anger den globala konfigurationen.
+1. Markera för att öppna **[!UICONTROL Advanced Options]**, skriva in `20`. Det här ordervärdet garanterar att regeln körs _efter_ den `all pages - library loaded - set global variables - 1` som anger den globala konfigurationen.
+1. Välj **[!UICONTROL Keep changes]**
 
    ![XDM-regler för analyser](assets/set-up-analytics-pdp.png)
 
@@ -189,6 +189,7 @@ Börja med att spåra produktvyer på Lumas produktinformationssida:
 1. Under **[!UICONTROL Actions]** välj **[!UICONTROL Add]**
 1. Välj **[!UICONTROL Adobe Experience Platform Web SDK]** extension
 1. Välj **[!UICONTROL Action Type]** as **[!UICONTROL Update variable]**
+1. Välj `xdm.variable.content` som **[!UICONTROL Data element]**
 1. Bläddra nedåt till `commerce` object
 1. Öppna **[!UICONTROL productViews]** objekt och ange **[!UICONTROL value]** till `1`
 
@@ -202,7 +203,7 @@ Börja med att spåra produktvyer på Lumas produktinformationssida:
 
    >[!NOTE]
    >
-   >Eftersom den här regeln har en högre ordning skrivs den över `eventType` anges i regeln &quot;global konfiguration&quot;. `eventType` kan bara innehålla ett värde, och vi rekommenderar att du ställer in det med händelsen för det högsta värdet.
+   >Eftersom den här regeln har en högre ordning skrivs den över `eventType` anges i regeln &quot;global konfiguration&quot;. `eventType` kan bara innehålla ett värde och vi rekommenderar att du ställer in det med den mest värdefulla händelsen.
 
 1. Bläddra nedåt till och markera `productListItems` array
 1. Välj **[!UICONTROL Provide individual items]**
@@ -264,6 +265,7 @@ Låt oss mappa vår array till XDM-objektet:
 1. Under **[!UICONTROL Actions]** välj **[!UICONTROL Add]**
 1. Välj **[!UICONTROL Adobe Experience Platform Web SDK]** extension
 1. Välj **[!UICONTROL Action Type]** as **[!UICONTROL Update variable]**
+1. Välj `xdm.variable.content` som **[!UICONTROL Data element]**
 1. Bläddra nedåt till `commerce` och väljer att öppna det.
 1. Öppna **[!UICONTROL productListViews]** objekt och ange **[!UICONTROL value]** till `1`
 
@@ -320,6 +322,7 @@ Skapa ytterligare två regler för utcheckning och köp enligt samma mönster me
 1. Bläddra nedåt till och markera **[!UICONTROL productListItems]** array
 1. Välj **[!UICONTROL Provide entire array]**
 1. Mappa till **`cart.productInfo.purchase`** dataelement
+1. Välj **[!UICONTROL Keep Changes]**
 1. Välj **[!UICONTROL Save]**
 
 När du är klar bör du se följande regler som skapats.
@@ -339,7 +342,7 @@ Nu när du har ställt in variablerna kan du skapa en regel som skickar hela XDM
 
 1. Använd **[!UICONTROL Core Extension]** och markera `Library Loaded (Page Top)` som **[!UICONTROL Event Type]**
 
-1. Välj **[!UICONTROL Advanced]** listruta och ange `50` in **[!UICONTROL Order]**. Detta garanterar att den andra regeln aktiveras efter den första regeln som du anger som utlösare `1`.
+1. Välj **[!UICONTROL Advanced]** listruta och ange `50` in **[!UICONTROL Order]**. Detta säkerställer att den här regeln aktiveras efter alla andra regler som du har konfigurerat (som `1` eller `20` som [!UICONTROL Order]).
 
 1. Välj **[!UICONTROL Keep Changes]** för att återgå till huvudlinjeraster
    ![Välj utlösare för inläst bibliotek](assets/create-tag-rule-trigger-loaded-send.png)

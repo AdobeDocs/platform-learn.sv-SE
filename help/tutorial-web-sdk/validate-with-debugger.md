@@ -4,9 +4,9 @@ description: Lär dig hur du validerar implementeringen av din Platform Web SDK 
 feature: Web SDK,Tags,Debugger
 jira: KT-15405
 exl-id: 150bb1b1-4523-4b44-bd4e-6cabc468fc04
-source-git-commit: 8602110d2b2ddc561e45f201e3bcce5e6a6f8261
+source-git-commit: a8431137e0551d1135763138da3ca262cb4bc4ee
 workflow-type: tm+mt
-source-wordcount: '1154'
+source-wordcount: '1131'
 ht-degree: 0%
 
 ---
@@ -75,7 +75,7 @@ Felsökaren i Experience Platform har en cool funktion som gör att du kan ersä
 
    ![tagg, egenskap ersatt](assets/validate-switch-success.png)
 
-När du fortsätter med självstudiekursen använder du den här tekniken för att mappa Luma-webbplatsen till din egen taggegenskap för att validera implementeringen av din Platform Web SDK. När du börjar använda taggar på produktionswebbplatsen kan du använda samma teknik för att validera ändringar som du gör i utvecklingsmiljön för taggar.
+När du fortsätter med självstudiekursen använder du den här tekniken för att mappa Luma-webbplatsen till din egen taggegenskap för att validera implementeringen av din Platform Web SDK. När du använder taggar på din egen webbplats kan du använda samma teknik för att validera utvecklingstaggbibliotek på din produktionswebbplats.
 
 ## Validera nätverksbegäranden på klientsidan med Experience Platform Debugger
 
@@ -131,7 +131,7 @@ Den här typen av förfrågningsinformation visas också i webbläsarens webbutv
 
    ![Fliken Nätverk](assets/validate-dev-console.png)
 
-1. Gå till **Svar** och notera hur ECID-värdet ingår i svaret. Kopiera det här värdet så som du kommer att använda det för att validera profilinformationen i nästa övning
+1. Gå till **Svar** och notera hur ECID-värdet ingår i svaret.
 
    ![Fliken Nätverk](assets/validate-dev-console-ecid.png)
 
@@ -141,7 +141,7 @@ Den här typen av förfrågningsinformation visas också i webbläsarens webbutv
 
 ## Validera nätverksbegäranden på serversidan med Experience Platform Debugger
 
-Som du lärde dig i [Konfigurera ett datastream](configure-datastream.md) Platform Web SDK skickar först data från din digitala egendom till Platform Edge Network. Sedan gör Platform Edge Network ytterligare serverförfrågningar till motsvarande tjänster som är aktiverade i ditt datastream. Du kan validera de serverförfrågningar som gjorts av Platform Edge Network genom att använda Edge Trace i felsökaren.
+Som du lärde dig i [Konfigurera ett datastream](configure-datastream.md) Platform Web SDK skickar först data från din digitala egendom till Platform Edge Network. Sedan gör Platform Edge Network ytterligare serverförfrågningar till motsvarande tjänster som är aktiverade i ditt datastream. Du kan validera de serverförfrågningar som gjorts av Platform Edge Network genom att använda Edge Trace i Felsökning.
 
 <!--Furthermore, you can also validate the fully processed payload after it reaches an Adobe application by using [Adobe Experience Platform Assurance](https://experienceleague.adobe.com/en/docs/experience-platform/assurance/home). -->
 

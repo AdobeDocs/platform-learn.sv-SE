@@ -4,9 +4,9 @@ description: Lär dig hur du konfigurerar Adobe Analytics med Experience Platfor
 solution: Data Collection, Analytics
 jira: KT-15408
 exl-id: de86b936-0a47-4ade-8ca7-834c6ed0f041
-source-git-commit: c5318809bfd475463bac3c05d4f35138fb2d7f28
+source-git-commit: a8431137e0551d1135763138da3ca262cb4bc4ee
 workflow-type: tm+mt
-source-wordcount: '2628'
+source-wordcount: '2732'
 ht-degree: 0%
 
 ---
@@ -74,15 +74,15 @@ Det finns flera sätt att ställa in Analytics-variabler i en Web SDK-implemente
 1. Mappa XDM-fält till Analytics-variabler i Analytics-bearbetningsregler (rekommenderas inte längre).
 1. Mappa till Analytics-variabler direkt i XDM-schemat (rekommenderas inte längre).
 
-Från maj 2024 behöver du inte längre skapa ett XDM-schema för att implementera Adobe Analytics med Platform Web SDK. The `data` -objekt (och `data.variable` dataelement som du skapade i den här självstudiekursen) kan användas för att ställa in alla anpassade Analytics-variabler. Att ställa in dessa variabler i dataobjektet kommer att kännas bekant för befintliga analyskunder, är mer effektivt än att använda gränssnittet för bearbetningsregler och förhindrar att onödiga data tar upp utrymme i kundprofiler i realtid (viktigt om du har Real-time Customer Data Platform eller Journey Optimizer).
+Från maj 2024 behöver du inte längre skapa ett XDM-schema för att implementera Adobe Analytics med Platform Web SDK. The `data` -objekt (och `data.variable` dataelement som du skapade i [Skapa dataelement](create-data-elements.md) lektion) kan användas för att ställa in alla anpassade Analytics-variabler. Att ställa in dessa variabler i dataobjektet kommer att kännas bekant för befintliga analyskunder, är mer effektivt än att använda gränssnittet för bearbetningsregler och förhindrar att onödiga data tar upp utrymme i kundprofiler i realtid (viktigt om du har Real-time Customer Data Platform eller Journey Optimizer).
 
 ### Automatiskt mappade fält
 
 Många XDM-fält mappas automatiskt till analysvariabler. Den senaste listan över mappningar finns på [Variabelmappning för analyser i Adobe Experience Edge](https://experienceleague.adobe.com/en/docs/experience-platform/edge/data-collection/adobe-analytics/automatically-mapped-vars).
 
-Detta inträffar om _även om du inte har definierat ett anpassat schema_. Experience Platform Web SDK samlar automatiskt in vissa data och skickar dem till Platform Edge Network som XDM-fält. Web SDK läser till exempel den aktuella sidans URL och skickar den som `web.webPageDetails.URL`. Det här fältet vidarebefordras till Adobe Analytics och fyller automatiskt i sidans URL-rapporter i Adobe Analytics.
+Detta inträffar om _även om du inte har definierat ett anpassat schema_. Experience Platform Web SDK samlar automatiskt in vissa data och skickar dem till Platform Edge Network som XDM-fält. Web SDK läser till exempel den aktuella sidans URL och skickar den som XDM-fält `web.webPageDetails.URL`. Det här fältet vidarebefordras till Adobe Analytics och fyller automatiskt i sidans URL-rapporter i Adobe Analytics.
 
-När du implementerar Web SDK för analyser och plattformsbaserade program skapar du ett anpassat XDM-schema, som du har gjort i den här självstudiekursen i [Konfigurera ett schema](configure-schemas.md) lektion. Några av de XDM-fält som du har implementerat för automatisk mappning till analysvariabler, enligt beskrivningen i följande tabell:
+Om du implementerar Web SDK för Adobe Analytics med ett XDM-schema, som du har gjort i den här självstudiekursen, har du några av de XDM-fält som du har anpassat automatiskt mappa till Analytics-variabler, vilket beskrivs i följande tabell:
 
 | XDM till Analytics - automappade variabler | Adobe Analytics-variabel |
 |-------|---------|
@@ -103,15 +103,18 @@ När du implementerar Web SDK för analyser och plattformsbaserade program skapa
 
 De enskilda avsnitten i Analytics-produktsträngen anges via olika XDM-variabler under `productListItems` -objekt.
 
+>[!NOTE]
+>
 >18 augusti 2022 `productListItems[].SKU` prioriterar mappning till produktnamnet i variabeln s.products.
 >Värdet som anges till `productListItems[].name` mappas endast till produktnamnet om `productListItems[].SKU` finns inte. Annars är den omappad och tillgänglig i kontextdata.
 >Ange inte en tom sträng eller null till `productListItems[].SKU`. Detta har den oönskade effekten av att mappa till produktnamnet i variabeln s.products.
 
+
 ### Ange variabler i dataobjektet
 
-Ange variabler i `data` är det rekommenderade sättet att ställa in Analytics-variabler med Web SDK. Om du ställer in variabler i dataobjektet kan även alla automatiskt mappade variabler skrivas över.
+Men evar, props och händelser då? Ange variabler i `data` är det rekommenderade sättet att ställa in dessa Analytics-variabler med Web SDK. Om du ställer in variabler i dataobjektet kan även alla automatiskt mappade variabler skrivas över.
 
-För det första, vad är `data` objekt? I alla Web SDK-händelser kan du skicka två objekt med anpassade data, `data` -objektet och `xdm` -objekt. Båda skickas till Platform Edge Network, men bara till `xdm` -objektet skickas till datauppsättningen Experience Platform. Egenskaper i `data` kan mappas på Edge till `xdm` fält som använder funktionen Dataprep för datainsamling, men som annars inte skickas till Experience Platform. Detta gör det till ett idealiskt sätt att skicka data till program som Analytics, som inte är inbyggt i Experience Platform.
+För det första, vad är `data` objekt? I alla Web SDK-händelser kan du skicka två objekt med anpassade data, `xdm` -objektet och `data` -objekt. Båda skickas till Platform Edge Network, men bara till `xdm` -objektet skickas till datauppsättningen Experience Platform. Egenskaper i `data` kan mappas på Edge till `xdm` fält som använder funktionen Dataprep för datainsamling, men som annars inte skickas till Experience Platform. Detta gör det till ett idealiskt sätt att skicka data till program som Analytics, som inte är inbyggt i Experience Platform.
 
 Här är de två objekten i ett generiskt Web SDK-anrop:
 
@@ -119,9 +122,28 @@ Här är de två objekten i ett generiskt Web SDK-anrop:
 
 Adobe Analytics har konfigurerats för att söka efter egenskaper i `data.__adobe.analytics` och använda dem för analysvariabler.
 
-Nu gör vi det här.
+Nu ska vi se hur det här fungerar. Låt oss sätta igång `eVar1` och `prop1` med vårt sidnamn och se hur XDM-mappat värde kan skrivas över
 
-Vi använder `data.variable` dataelement t
+1. Öppna märkordsregeln `all pages - library loaded - set global variables - 1`
+1. Lägg till en ny **[!UICONTROL Action]**
+1. Välj **[!UICONTROL Adobe Experience Platform Web SDK]** extension
+1. Välj **[!UICONTROL Action Type]** as **[!UICONTROL Update variable]**
+1. Välj `data.variable` som **[!UICONTROL Data element]**
+1. Välj **[!UICONTROL analytics]** object
+1. Ange `eVar1` som `page.pageInfo.pageName` dataelement
+1. Ange `prop1` för att kopiera värdet för `eVar1`
+1. Testa hur XDM-mappade värden skrivs över i **[!UICONTROL Additional property]** anger att sidnamnet ska vara ett statiskt värde `test`
+1. Spara regeln
+
+
+Nu måste vi inkludera dataobjektet i vår sändningshändelseregel.
+
+1. Öppna märkordsregeln `all pages - library loaded - send event - 50`
+1. Öppna **[!UICONTROL Send Event]** åtgärd
+1. Välj `data.variable` som **[!UICONTROL Data]**
+1. Välj **[!UICONTROL Keep Changes]**
+1. Välj **[!UICONTROL Save]**
+
 
 
 <!--
@@ -200,7 +222,7 @@ Så här konfigurerar du åsidosättningsinställningen för Adobe Analytics-rap
 
    ![Skriv över datastream](assets/datastream-edit-analytics.png)
 
-1. Välj **[!UICONTROL Advance Options]** att öppna **[!UICONTROL Report Suite Overrides]**
+1. Välj **[!UICONTROL Advanced Options]** att öppna **[!UICONTROL Report Suite Overrides]**
 
 1. Markera de rapportsviter som du vill åsidosätta. I detta fall `Web SDK Course Dev` och `Web SDK Course Stg`
 
@@ -219,9 +241,10 @@ Låt oss skapa en regel för att skicka ytterligare ett sidvisningsanrop till en
 
 1. Under **[!UICONTROL Extension]**, markera **[!UICONTROL Core]**
 
-1. Under **[!UICONTROL Event Type]**, markera **[!UICONTROL library loaded]**
+1. Under **[!UICONTROL Event Type]**, markera **[!UICONTROL Library Loaded (Page Top)]**
 
 1. Markera för att öppna **[!UICONTROL Advanced Options]**, skriva in `51`. Detta garanterar att regeln körs efter `all pages - library loaded - send event - 50` som ställer in baslinje-XDM med **[!UICONTROL Update variable]** åtgärdstyp.
+1. Välj **[!UICONTROL Keep Changes]**
 
    ![Åsidosättning av analysrapportsSuite](assets/set-up-analytics-rs-override.png)
 
@@ -247,9 +270,9 @@ Låt oss skapa en regel för att skicka ytterligare ett sidvisningsanrop till en
 
 1. Som **[!UICONTROL Action Type]**, markera **[!UICONTROL Send Event]**
 
-1. Som **[!UICONTROL Type]**, markera `web.webpagedetails.pageViews`
-
 1. Som **[!UICONTROL XDM data]** väljer du `xdm.variable.content` dataelement som du skapade i [Skapa dataelement](create-data-elements.md) lektion
+
+1. Som **[!UICONTROL Data]** väljer du `data.variable` dataelement som du skapade i [Skapa dataelement](create-data-elements.md) lektion
 
    ![Åsidosättning av analysdataström](assets/set-up-analytics-datastream-override-1.png)
 
@@ -261,7 +284,7 @@ Låt oss skapa en regel för att skicka ytterligare ett sidvisningsanrop till en
    >
    >    Den här fliken avgör i vilken taggmiljö åsidosättningen sker. I det här exemplet anger du bara utvecklingsmiljön, men när du distribuerar den till produktionen måste du också göra det i **[!UICONTROL Production]** miljö.
 
-
+1. Välj **[!UICONTROL Sandbox]** som du använder för självstudiekursen
 1. Välj **[!UICONTROL Datastream]**, i detta fall `Luma Web SDK: Development Environment`
 
 1. Under **[!UICONTROL Report suites]** väljer du den rapportwebbplats som du vill åsidosätta. I detta fall `tmd-websdk-course-stg`.
@@ -275,7 +298,7 @@ Låt oss skapa en regel för att skicka ytterligare ett sidvisningsanrop till en
 
 ## Bygg en utvecklingsmiljö
 
-Lägg till nya dataelement och regler i `Luma Web SDK Tutorial` och bygga om utvecklingsmiljön.
+Lägg till dina uppdaterade regler i `Luma Web SDK Tutorial` och bygga om utvecklingsmiljön.
 
 Grattis! Nästa steg är att validera din Adobe Analytics-implementering via Experience Platform Web SDK.
 

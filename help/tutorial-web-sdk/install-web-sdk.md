@@ -4,9 +4,9 @@ description: Lär dig hur du installerar och konfigurerar plattformens SDK-taggt
 feature: Web SDK, Tags
 jira: KT-15404
 exl-id: f30a44bb-99d7-476e-873a-b7802a0fe6aa
-source-git-commit: 8602110d2b2ddc561e45f201e3bcce5e6a6f8261
+source-git-commit: a8431137e0551d1135763138da3ca262cb4bc4ee
 workflow-type: tm+mt
-source-wordcount: '578'
+source-wordcount: '591'
 ht-degree: 0%
 
 ---
@@ -61,6 +61,7 @@ Med ditt XDM-schema, datastream och taggegenskap som nu skapas är du redo att i
 Lämna de flesta standardinställningarna och uppdatera dem senare efter behov. Det enda du måste göra nu är att länka tillägget till ditt datastream:
 
 1. Under **[!UICONTROL Datastreams]** väljer du **[!UICONTROL Choose from list]** indatametod
+1. Välj den sandlåda som du skapade schemat i, identitetsnamnområdet och datastream
 1. Välj den datastream som du skapade tidigare, `Luma Web SDK`
 1. Välj **[!UICONTROL Save]**
 

@@ -4,9 +4,9 @@ description: Lär dig hur du skapar identiteter i XDM och använder dataelemente
 feature: Web SDK, Tags, Identities
 jira: KT-15402
 exl-id: 7ca32dc8-dd86-48e0-8931-692bcbb2f446
-source-git-commit: c5318809bfd475463bac3c05d4f35138fb2d7f28
+source-git-commit: a8431137e0551d1135763138da3ca262cb4bc4ee
 workflow-type: tm+mt
-source-wordcount: '848'
+source-wordcount: '849'
 ht-degree: 0%
 
 ---
@@ -69,7 +69,7 @@ När en FPID-cookie har angetts kan dess värde hämtas och skickas till Adobe n
 
 ## Autentiserat ID
 
-Som nämnts ovan tilldelas alla besökare av dina digitala resurser ett ECID av Adobe när de använder Platform Web SDK. ECID är standardidentiteten för att spåra oautentiserat digitalt beteende.
+Som nämnts ovan tilldelas alla besökare av dina digitala resurser ett ECID av Adobe när de använder Platform Web SDK. ECID är standardidentitet för att spåra oautentiserat digitalt beteende.
 
 Du kan också skicka ett autentiserat användar-ID så att plattformen kan skapa [Identitetsdiagram](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/understanding-identity-and-identity-graphs) och Target kan ange [Tredjeparts-ID](https://experienceleague.adobe.com/en/docs/target/using/audiences/visitor-profiles/3rd-party-id). Inställningen av det autentiserade ID:t görs med [!UICONTROL Identity Map] dataelementtyp.
 

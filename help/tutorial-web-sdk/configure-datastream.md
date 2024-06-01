@@ -4,9 +4,9 @@ description: Lär dig hur du aktiverar ett datastream och konfigurerar Experienc
 feature: Web SDK,Datastreams
 jira: KT-15399
 exl-id: 20f770d1-eb0f-41a9-b451-4069a0a91fc4
-source-git-commit: 8602110d2b2ddc561e45f201e3bcce5e6a6f8261
+source-git-commit: a8431137e0551d1135763138da3ca262cb4bc4ee
 workflow-type: tm+mt
-source-wordcount: '525'
+source-wordcount: '530'
 ht-degree: 0%
 
 ---
@@ -55,9 +55,9 @@ Nu kan du skapa en datastream som anger för Platform Edge Network var data som 
 
    >[!NOTE]
    >
-   >Du behöver bara välja ett schema om du använder [Dataförberedelse för datainsamling](/help/data-collection/edge/data-prep.md) -funktion.
+   >Du behöver inte välja ett schema. Du behöver bara välja ett schema om du använder [Dataförberedelse för datainsamling](/help/data-collection/edge/data-prep.md) -funktion.
 
-På nästa skärm kan du lägga till tjänster som Adobe i dataströmmen, men du kommer inte att lägga till några tjänster just nu i självstudiekursen. Du kommer att göra det senare i lektionerna [Konfigurera Experience Platform](setup-experience-platform.md), [Ställ in Analytics](setup-analytics.md), [Konfigurera Audience Manager](setup-audience-manager.md), [Konfigurera mål](setup-target.md), eller [Vidarebefordran av händelser](setup-event-forwarding.md).
+På nästa skärm kan du lägga till tjänster som Adobe i dataströmmen, men du kommer inte att lägga till några tjänster just nu. Du kommer att göra det senare i lektionerna [Konfigurera Experience Platform](setup-experience-platform.md), [Ställ in Analytics](setup-analytics.md), [Konfigurera Audience Manager](setup-audience-manager.md), [Konfigurera mål](setup-target.md), eller [Vidarebefordran av händelser](setup-event-forwarding.md).
 
 >[!NOTE]
 >

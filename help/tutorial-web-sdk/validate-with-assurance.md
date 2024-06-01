@@ -4,9 +4,9 @@ description: Lär dig hur du validerar implementeringen av din Platform Web SDK 
 feature: Web SDK,Tags,Assurance
 jira: KT-15406
 exl-id: 31e381ea-fbaf-495f-a6e9-2ff6c0d36939
-source-git-commit: 8602110d2b2ddc561e45f201e3bcce5e6a6f8261
+source-git-commit: a8431137e0551d1135763138da3ca262cb4bc4ee
 workflow-type: tm+mt
-source-wordcount: '599'
+source-wordcount: '596'
 ht-degree: 0%
 
 ---
@@ -78,8 +78,8 @@ Se hur vi gjorde det här i felsökningslektionen:
 
 Det finns begränsad information att visa i det här skedet av implementeringen. Ett värde som vi kan se är ditt Experience Cloud-ID (ECID) som genereras på Platform Edge Network:
 
-1. Markera raden med händelsen Adobe-svarshandtag.
-1. En meny visas till höger. Välj `+` signera bredvid `[!UICONTROL ACPExtensionEvent]`
+1. Markera raden med händelsen anropad `Alloy Response Handle`.
+1. En meny visas till höger. Välj `+` signera bredvid `[!UICONTROL ACPExtensionEventData]`
 1. Granska nedåt genom att välja `[!UICONTROL payload > 0 > payload > 0 > namespace]`. Det ID som visas under den sista `0` motsvarar `ECID`. Det vet du genom det värde som visas under `namespace` matchning `ECID`
 
    ![Verifiera ECID för försäkring](assets/validate-assurance-ecid.png)

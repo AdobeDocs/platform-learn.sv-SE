@@ -4,9 +4,9 @@ description: Lär dig hur du skapar ett XDM-objekt och mappar dataelement till d
 feature: Tags
 jira: KT-15401
 exl-id: d662ec46-de9b-44ba-974a-f81dfc842e68
-source-git-commit: 1a4f2e3813a6db4bef77753525c8a7d40692a4b2
+source-git-commit: a8431137e0551d1135763138da3ca262cb4bc4ee
 workflow-type: tm+mt
-source-wordcount: '1237'
+source-wordcount: '1268'
 ht-degree: 0%
 
 ---
@@ -100,14 +100,14 @@ window.adobeDataLayer.push({
 Proffs
 
 * Eliminerar ytterligare steg som går vidare till datalagervariabler till XDM
-* Det kan gå snabbare att driftsätta om utvecklingsteamet äger taggning av digitalt beteende
+* Det kan gå snabbare att driftsätta om webbutvecklingsteamet också äger taggning av digitalt beteende
 
 Kon
 
 * Fullständigt beroende av utvecklingsteamet och utvecklingscykeln för uppdatering av vilka data som skickas till XDM
 * Begränsad flexibilitet eftersom XDM får exakt nyttolast från datalagret
 * Det går inte att använda inbyggda taggfunktioner, till exempel skrapning, beständighet och funktioner för snabb distribution
-* Det går inte att använda datalagret för pixlar från tredje part
+* Det är svårare att använda datalagret för pixlar från tredje part (men du kanske vill flytta dessa pixlar till [händelsevidarebefordran](setup-event-forwarding.md)!
 * Ingen möjlighet att omvandla data mellan datalagret och XDM
 
 ### Mappa datalager i taggar
@@ -267,7 +267,7 @@ Om du vill skapa ett variabeldataelement för XDM kopplar du det till schemat so
 1. Välj **[!UICONTROL Adobe Experience Platform Web SDK]** som **[!UICONTROL Extension]**
 1. Välj **[!UICONTROL Variable]** som **[!UICONTROL Data Element Type]**
 1. Välj **[!UICONTROL XDM]** som **[!UICONTROL property]**
-1. Välj lämplig Experience Platform **[!UICONTROL Sandbox]**
+1. Välj **[!UICONTROL Sandbox]** som du skapade schemat i
 1. Välj lämplig **[!UICONTROL Schema]**, i detta fall `Luma Web Event Data`
 1. Välj **[!UICONTROL Save]**
 
@@ -280,6 +280,7 @@ Skapa sedan dataelementet Variable för dataobjektet:
 1. Välj **[!UICONTROL Adobe Experience Platform Web SDK]** som **[!UICONTROL Extension]**
 1. Välj **[!UICONTROL Variable]** som **[!UICONTROL Data Element Type]**
 1. Välj **[!UICONTROL data]** som **[!UICONTROL property]**
+1. Välj de Experience Cloud-lösningar du vill implementera som en del av den här självstudiekursen
 1. Välj **[!UICONTROL Save]**
 
    ![Variabeldataelement för dataobjekt](assets/data-element-data-variable.png.png)
