@@ -4,9 +4,9 @@ description: Lär dig hur du rapporterar och analyserar interaktionen med din mo
 solution: Data Collection,Experience Platform,Analytics
 hide: true
 hidefromtoc: true
-source-git-commit: 7237bc0e6fabd74157022b99e6edee47ef83f1c9
+source-git-commit: 686cb15eceb8faa375280f5d5ee8c925b841a601
 workflow-type: tm+mt
-source-wordcount: '3116'
+source-wordcount: '3000'
 ht-degree: 0%
 
 ---
@@ -15,16 +15,16 @@ ht-degree: 0%
 
 Lär dig hur du rapporterar och analyserar mobilappsinteraktioner med Customer Journey Analytics.
 
-Händelsedata för mobilappar, som du samlade in och skickade till Platform Edge Network i tidigare lektioner, vidarebefordras till de tjänster som konfigurerats i din datastam. Om du följde [Skicka data till Experience Platform](platform.md) lektionen, att data nu lagras i datavjön på Experience Platform som datamängder. Och dessa data finns sedan tillgängliga för Customer Journey Analytics att användas för rapportering och analys.
+Händelsedata för mobilappar, som du samlade in och skickade till Platform Edge Network i tidigare lektioner, vidarebefordras till de tjänster som konfigurerats i din datastam. Om du följde [Skicka data till Experience Platform](platform.md) lektionen, att data nu lagras i datavjön på Experience Platform som datamängder. I nuläget finns uppgifterna tillgängliga för Customer Journey Analytics för rapportering och analys.
 
-Till skillnad från Adobe Analytics är Customer Journey Analytics ett program som *använder* data från datauppsättningar som du har skapat i Experience Platform och som appen skickar data till. Med Adobe Experience Platform Mobile SDK skickar du inga data direkt till Customer Journey Analytics. I stället använder Customer Journey Analytics data från datauppsättningarna i Experience Platform.
+Till skillnad från Adobe Analytics, Customer Journey Analytics *använder* data från datauppsättningar som skapats i Experience Platform. Data skickas inte direkt till Customer Journey Analytics med Adobe Experience Platform Mobile SDK, utan data skickas till datauppsättningar. Anslutningar konfigureras sedan i Customer Journey Analytics för att välja de datauppsättningar som du vill använda i dina rapporterings- och analysprojekt.
 
-Den här lektionen i självstudiekursen fokuserar på att rapportera och analysera data som hämtats in från Luma-självstudieversionen. En av de unika möjligheterna i Customer Journey Analytics är att kombinera data från olika källor (CRM, butiksadress, lojalitetsprogram, callcenter) och kanaler (webb, mobil, offline) för att ge djupgående insikter i kundresorna. Denna möjlighet ligger utanför den här lektionens räckvidd. Se [Customer Journey Analytics - översikt](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview) för mer information.
+Den här lektionen i självstudiekursen fokuserar på att rapportera och analysera data som hämtats in från Luma-självstudieversionen. En av de unika funktionerna i Customer Journey Analytics är att kombinera data från olika källor (CRM, butiksadress, lojalitetsprogram, callcenter) och kanaler (webb, mobil, offline) för att få djupgående insikter om kundresor. Denna möjlighet ligger utanför den här lektionens räckvidd. Se [Customer Journey Analytics - översikt](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview) för mer information.
 
 
 ## Förutsättningar
 
-Din organisation måste etableras och tillstånd beviljas för Customer Journey Analytics. Du måste ha administrationsåtkomst till Customer Journey Analytics.
+Din organisation måste etableras och tillstånd beviljas för Customer Journey Analytics. Du måste ha administratörsåtkomst till Customer Journey Analytics.
 
 
 ## Utbildningsmål
@@ -35,7 +35,7 @@ I den här lektionen kommer du att:
 - Skapa en datavy för att förbereda data från datauppsättningar för din rapportering och analys
 - Skapa ett projekt för att skapa rapporter och visualiseringar så att ni kan analysera data från mobilappen.
 
-Den här beställningen är avsiktlig. I Customer Journey Analytics är en rapport i Analysis Workspace beroende av en datavy. Och en datavy är beroende av en anslutning.
+Sekvensen är avsiktlig. Anslutningar använder datauppsättningar, och datavyer använder anslutningar.
 
 
 ## Skapa en anslutning
@@ -66,7 +66,7 @@ En anslutning i Customer Journey Analytics definierar de datauppsättningar (och
 
    6. I **[!UICONTROL Add datasets]** guide, **[!UICONTROL Select datasets]** steg,
 
-      1. välj följande datauppsättningar:
+      1. Välj följande datauppsättningar:
 
          - **[!UICONTROL Luma Mobile App Event Dataset]**, den datauppsättning du skapade som en del av [Skapa en datauppsättning](platform.md#create-a-dataset) i lektionen Experience Platform.
          - **[!UICONTROL ODE DecisionEvents - *sandlådenamn *]beslut**
@@ -112,7 +112,7 @@ I **[!UICONTROL Connections]** > **[!UICONTROL Luma App - AEP Mobile SDK Tutoria
 
 När posterna har lagts till från datauppsättningarna till Customer Journey Analytics kan du skapa en datavy som definierar vilka komponenter av data som du vill rapportera om.
 
-En datavy är en behållare som är specifik för Customer Journey Analytics och som gör att du kan avgöra hur data från en anslutning ska tolkas. Du kan konfigurera standard- och schemafält, från alla datauppsättningar som du har definierat i anslutningen, som komponenter (dimensioner, mått) i Analysis Workspace.
+En datavy är en behållare som är specifik för Customer Journey Analytics och som gör att du kan avgöra hur data från en anslutning ska tolkas. Du kan konfigurera standard- och schemafält från alla datauppsättningar som du har definierat i din anslutning som komponenter (mått, mått) i Analysis Workspace.
 
 En datavy i Customer Journey Analytics är mycket flexibel när det gäller att konfigurera och definiera data från anslutningen. I den här självstudiekursen använder du bara de funktioner som krävs för din rapportering och analys. Se [Datavyer](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views) för mer information.
 
@@ -131,7 +131,7 @@ Så här skapar du en datavy:
 
       ![CJA-datavy 1](assets/cja-dataview-1.png)
 
-1. I **[!UICONTROL Components]** -fliken i **[!UICONTROL Luma App - AEP Mobile SDK Tutorial Data view]** kan ni definiera de mätvärden och mått som ni vill använda när ni rapporterar i mobilappen. Som standard är ett antal standardmått och -mått (som gemensamt kallas för komponenter) redan konfigurerade för datavyn. Men datavyn kräver fler komponenter. <br/>Om du vill lägga till ett schemafält från ditt tidigare definierade schema eller från rutscheman (se [Skapa ett schema](create-schema.md) lektion), som en komponent (mått eller mått):
+1. I **[!UICONTROL Components]** -fliken i **[!UICONTROL Luma App - AEP Mobile SDK Tutorial Data view]** kan ni definiera de mätvärden och mått som ni vill använda när ni rapporterar i mobilappen. Som standard är ett antal standardmått och -mått (som gemensamt kallas för komponenter) redan konfigurerade för datavyn. Men datavyn kräver fler komponenter. <br/>Så här lägger du till ett schemafält från ett schema som du tidigare definierat eller från scheman som inte är installerade (se [Skapa ett schema](create-schema.md) lektion), som en komponent (mått eller mått):
 
    1. Hitta schemafältet:
 
@@ -155,7 +155,7 @@ Så här skapar du en datavy:
 
       ![Komponentinställningar för CJA-datavyn](assets/cja-dataview-component-settings.png)
 
-   1. Nu när du förstår hur du lägger till fält i datavyn och konfigurerar den resulterande komponenten kan du använda tabellerna nedan för att visa en lista med schemafält som ska läggas till som mått eller dimension. Använd **Schema Path** kolumnvärde från tabellen nedan om du vill söka efter eller gå till det specifika schemafältet. När du har dragit och släppt ska du kontrollera **Komponentinställningar** kolumnvärde i tabellen om specifika inställningar krävs för en komponent, som att ändra dess **[!UICONTROL Component name]** eller definiera **[!UICONTROL INCLUDE EXCLUDE VALUES]**.
+   1. Nu när du förstår hur du lägger till fält i datavyn och konfigurerar den resulterande komponenten kan du använda tabellerna nedan för att visa en lista med schemafält som ska läggas till som mått. Använd **Schema Path** kolumnvärde från tabellen nedan om du vill söka efter eller gå till det specifika schemafältet. När mätvärden och dimensioner har lagts till kontrollerar du **Komponentinställningar** kolumnvärde i tabellen om specifika inställningar krävs för en komponent, som dess **[!UICONTROL Component name]** eller definiera **[!UICONTROL INCLUDE EXCLUDE VALUES]**.
 
       **METRIK**
 
@@ -177,9 +177,12 @@ Så här skapar du en datavy:
 
       {style="table-layout:auto"}
 
-      Observera hur schemafältet för platshändelsemåttet använder **[!UICONTROL INCLUDE EXCLUDE VALUES]** för att räkna händelsetyper som innehåller `location`.
+      >[!NOTE]
+      >
+      >Observera hur schemafältet för platshändelsemåttet använder **[!UICONTROL INCLUDE EXCLUDE VALUES]** för att räkna händelsetyper som innehåller `location`.
 
-      När du har lagt till alla schemafält från tabellen ovan som en måttkomponent, konfigureras datavyn för **[!UICONTROL METRICS]** ska se ut så här:
+
+      Din datavy-konfiguration för **[!UICONTROL METRICS]** ska matcha nedan efter att du har lagt till alla schemafält från tabellen ovan som en måttkomponent:
 
       ![CJA Datview 4](assets/cja-dataview-4.png)
 
@@ -197,7 +200,7 @@ Så här skapar du en datavy:
 
       {style="table-layout:auto"}
 
-      När du har lagt till alla schemafält från tabellen ovan som en dimensionskomponent konfigurerar datavyn för **[!UICONTROL DIMENSIONS]** ska se ut så här:
+      Din datavy-konfiguration för **[!UICONTROL DIMENSIONS]** ska matcha nedan efter att du har lagt till alla schemafält från tabellen ovan som en dimensionskomponent:
 
       ![CJA Datview 4](assets/cja-dataview-5.png)
 
@@ -211,7 +214,7 @@ Du har definierat datavyn och allt finns på plats för att börja skapa rapport
 
 ## Skapa ett projekt
 
-Du använder Workspace-projekt i Customer Journey Analytics för att skapa rapporter och visualiseringar. Det finns många möjligheter att skapa omfattande rapporter och engagerande visualiseringar, men alla dessa möjligheter ligger utanför kursens räckvidd. Se [Översikt över arbetsytan](https://experienceleague.adobe.com/en/docs/customer-journey-analytics-learn/tutorials/analysis-workspace/workspace-projects/analysis-workspace-overview) och [Skapa ett nytt projekt](https://experienceleague.adobe.com/en/docs/customer-journey-analytics-learn/tutorials/analysis-workspace/workspace-projects/build-a-new-project) för mer information.
+Arbetsyteprojekt används i Customer Journey Analytics för att skapa rapporter och visualiseringar. Det finns många möjligheter att skapa omfattande rapporter och engagerande visualiseringar, men detta ligger utanför kursens räckvidd. Se [Översikt över arbetsytan](https://experienceleague.adobe.com/en/docs/customer-journey-analytics-learn/tutorials/analysis-workspace/workspace-projects/analysis-workspace-overview) och [Skapa ett nytt projekt](https://experienceleague.adobe.com/en/docs/customer-journey-analytics-learn/tutorials/analysis-workspace/workspace-projects/build-a-new-project) för mer information.
 
 I det här avsnittet av lektionen skapar du ett projekt som visar rapporter och visualiseringar om:
 
@@ -250,23 +253,22 @@ Så här skapar du ditt projekt:
 >
 >   Kom ihåg att spara projektet regelbundet, annars försvinner ändringarna. Du kan snabbt spara projektet med **[!UICONTROL ctrl + s]** (Windows) eller **[!UICONTROL ⌘ (cmd) + s]** (macOS)
 
-Du har nu konfigurerat ditt projekt. Det finns redan en friformspanel på huvudarbetsytan som innehåller en friformstabell. Du kommer snart att lägga till komponenter i den här tabellen, men du måste först se till att friformspanelen använder rätt datavy och rätt tidsperiod.
-
+Du har nu konfigurerat ditt projekt. En friformstabell tillhandahålls som standard. Innan du lägger till komponenter bör du kontrollera att du använder rätt datavy och tidsperiod på frihandspanelen.
 
 1. Välj datavyn i listrutan. Till exempel: **[!UICONTROL Luma App - AEP Mobile SDK Tutorial Data view]**. Om du inte kan se datavyn i listan väljer du **[!UICONTROL Show all]** längst ned i listrutan.
    ![CJA-projekt 5](assets/cja-projects-5.png)
 
-1. Ange lämplig tidsperiod för panelen genom att välja standardinställningen **[!UICONTROL This month]** och på popup-panelen definierar du start- och slutdatum. Eller använd en **[!UICONTROL Preset]**, gilla **[!UICONTROL Last 6 full months]** och markera **[!UICONTROL Apply]**.
+1. Välj standardförinställningen om du vill definiera en lämplig tidsperiod för panelen **[!UICONTROL This month]** ange ett eget start- och slutdatum eller använd en **[!UICONTROL Preset]** (som **[!UICONTROL Last 6 full months]**) och markera **[!UICONTROL Apply]**.
    ![CJA-projekt 6](assets/cja-projects-6.png)
 
 
 ### Appanvändning
 
-Du vill rapportera hur appen används. Du har lagt till den nödvändiga koden i appen för att registrera appinteraktioner och vilka skärmar som används i appen (se [Spåra händelser](events.md) lektion) och du vill nu rapportera om dessa data.
+Nu kan du rapportera hur appen används. Du har lagt till den nödvändiga koden i appen för att registrera appinteraktioner och vilka skärmar som används i appen (se [Spåra händelser](events.md) lektion) och du vill nu rapportera om dessa data.
 
 #### Skärmnamn
 
-Först vill du rapportera vilka skärmar som har visats i appen.
+Så här rapporterar du skärmar som visas i appen:
 
 1. Byt namn på **[!UICONTROL Freeform]** panel till `App Usage`.
 
@@ -276,7 +278,7 @@ Först vill du rapportera vilka skärmar som har visats i appen.
 
 1. Dra och släpp **[!UICONTROL Screen Views]** komponent på [!UICONTROL _Släpp **mått**här (eller någon annan komponent)_)].
    ![CJA-projekt 7](assets/cja-projects-7.png)
-I frihandstabellen visas nu skärmvyer för de dagar som du har valt för den angivna tidsperioden. Du vill dock visa skärmvyer för de olika skärmar som används i appen.
+I frihandstabellen visas nu skärmvyer för varje dag under den valda tidsperioden. Du vill dock visa antalet skärmvyer för var och en av de olika skärmar som används i programmet.
 
 1. Visa **[!UICONTROL DIMENSIONS]** lista med komponenter, välja ![Kryss](https://spectrum.adobe.com/static/icons/ui_18/CrossSize100.svg) för att ta bort ![Händelse](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Event_18_N.svg) **[!UICONTROL Metrics]** filter från komponenterna.
    ![CJA-projekt 8](assets/cja-projects-8.png)
@@ -286,15 +288,18 @@ I frihandstabellen visas nu skärmvyer för de dagar som du har valt för den an
 1. Dra och släpp **[!UICONTROL Screen Name]** -komponenten på **[!UICONTROL Day]** header. Åtgärden visar ![Byt](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Switch_18_N.svg) **[!UICONTROL Replace]** för att ange att dimensionen ska ersättas.
    ![CJA-projekt 9](assets/cja-projects-9.png)
 
-Din första rapport är klar och visar skärmvisningar för de olika skärmnamn du har definierat i appen.
+Din första Freeform-tabell i din rapport är klar.
 
 ![CJA-projekt 10](assets/cja-projects-10.png)
 
-Glöm inte att spara projektet!
+>[!NOTE]
+>
+>Spara projektet innan du fortsätter.
+
 
 #### Appinteraktioner
 
-Du vill också rapportera hur användarna interagerade med appen.
+Därefter ska du skapa en Freeform-tabell som visar hur användarna interagerade med appen.
 
 1. Välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) och från popup-fönstret ![Frihandsregister](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Table_18_N.svg) om du vill lägga till en ny friformstabell.
    ![CJA-projekt 11](assets/cja-projects-11.png)
@@ -310,7 +315,9 @@ Din andra rapport är nu klar och visar appinteraktioner.
 
 Informationen är begränsad huvudsakligen eftersom du implementerat `MobileSDK.shared.sendAppInteractionEvent(actionName: "<actionName>")` API-anrop enbart på inloggningsskärmen. Om du lägger till det här API-anropet på fler skärmar i din app blir den här rapporten mer informativ.
 
-Glöm inte att spara projektet!
+>[!NOTE]
+>
+>Spara projektet innan du fortsätter.
 
 
 ### Commerce
@@ -340,14 +347,17 @@ Nu vill du rapportera om e-handelshändelser som inträffar i appen på en separ
 
 1. Dra och släpp **[!UICONTROL Month]** -dimensionen ovanpå **[!UICONTROL Day]** för att ändra rapporteringen från dag till månad.
 
-Dina **[!UICONTROL Commerce Events]** är nu klar och visar hur användarna har tittat på produkter, lagt till produkter i önskelistan, sparade produkter för senare eller till och med köpt produkterna.
+Din Commerce Events-rapport är klar.
+
 ![CJA-projekt 16](assets/cja-projects-16.png)
 
-Glöm inte att spara projektet!
+>[!NOTE]
+>
+>Spara projektet innan du fortsätter.
 
 #### Utfall
 
-Baserat på föregående rapport vill du visualisera utfallet i e-handelstratten: hur många användare som visade produkter har också lagt till produkter i kundvagnar. Och hur många användare som har lagt till produkter i sina varukorgar har också sparat dessa produkter för senare tid. Och så vidare.
+Därefter ska du skapa en utfallsvisualisering för e-handelstratten som visar hur många användare som har visat produkter som har lagt till de här produkterna i kundvagnen, och därefter hur många användare som har sparat produkterna senare.
 
 1. Välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) inom **[!UICONTROL Commerce]** och från popup-menyn ![Utfall](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ConversionFunnel_18_N.svg) (som representerar utfallsvisualiseringen).
 
@@ -357,10 +367,12 @@ Du kan också dra och släppa **[!UICONTROL Products View]** dimension under **[
 
 1. Upprepa ovanstående steg för **[!UICONTROL Product Add To Lists]** och **[!UICONTROL Purchases]** dimensioner.
 
-Dina **[!UICONTROL Fallout]** visualisering visar nu en visuell representation av konverteringstratten för dina produkter.
+Din rapport om utfallsvisualisering är klar.
 ![CJA-projekt 19](assets/cja-projects-19.png)
 
-Glöm inte att spara projektet!
+>[!NOTE]
+>
+>Spara projektet innan du fortsätter.
 
 
 ### Erbjudanden
@@ -383,10 +395,13 @@ Du vill rapportera hur många erbjudanden och vilka erbjudanden som visas för a
 
 1. Dra och släpp **[!UICONTROL Month]** dimension på **[!UICONTROL Day]** kolumn som ska ersätta dimensionen.
 
-Nu har du en rapport som visar de månatliga erbjudanden som visas för användarna i appen.
+Din månatliga översikt över erbjudanden är klar.
+
 ![CJA Projects 20](assets/cja-projects-20.png)
 
-Glöm inte att spara projektet!
+>[!NOTE]
+>
+>Spara projektet innan du fortsätter.
 
 
 #### Erbjudanden till människor
@@ -406,10 +421,13 @@ Du vill också ha en rapport som visar vilka erbjudanden som visades i vilka num
 1. Välj **[!UICONTROL Breakdown]** > **[!UICONTROL Dimensions]** > **[!UICONTROL Offer Name]**. Det här valet kommer att dela upp dimensionen Aktivitetsnamn i Erbjudandenamn.
    ![CJA Projects 20b](assets/cja-projects-20b.png)
 
-Du har nu en rapport som visar de enskilda erbjudanden som visas för det här erbjudandebeslutet för den valda perioden för appanvändarna.
+Rapporten om erbjudanden till människor är klar.
+
 ![CJA-projekt 21](assets/cja-projects-21.png)
 
-Glöm inte att spara projektet!
+>[!NOTE]
+>
+>Spara projektet innan du fortsätter.
 
 
 ### Butiksbesök
@@ -438,7 +456,7 @@ Slutligen vill ni rapportera om butiksbesök.
 
 1. Markera alla rader i tabellen, högerklicka och välj Brytning > Dimension > Händelsetyper på snabbmenyn.
 
-Nu har du en rapport som visar att användare befinner sig i och utanför butiksplatserna (som du definierade dessa platser i [Platser](places.md) lektion).
+Dina Store-besöksrapporter har slutförts. Nu har du en rapport som visar att användare befinner sig i och utanför butiksplatserna (som du definierade dessa platser i [Platser](places.md) lektion).
 
 ![CJA-projekt 23](assets/cja-projects-23.png)
 
