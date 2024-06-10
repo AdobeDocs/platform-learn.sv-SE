@@ -4,9 +4,10 @@ description: Lär dig hur du rapporterar och analyserar interaktionen med din mo
 solution: Data Collection,Experience Platform,Analytics
 hide: true
 hidefromtoc: true
-source-git-commit: 686cb15eceb8faa375280f5d5ee8c925b841a601
+exl-id: c41b76eb-2ed7-4a82-80c1-b67476c464ad
+source-git-commit: 0af0ca0fe85fd1ba53861a1635bc0b54d0939141
 workflow-type: tm+mt
-source-wordcount: '3000'
+source-wordcount: '2991'
 ht-degree: 0%
 
 ---
@@ -15,7 +16,7 @@ ht-degree: 0%
 
 Lär dig hur du rapporterar och analyserar mobilappsinteraktioner med Customer Journey Analytics.
 
-Händelsedata för mobilappar, som du samlade in och skickade till Platform Edge Network i tidigare lektioner, vidarebefordras till de tjänster som konfigurerats i din datastam. Om du följde [Skicka data till Experience Platform](platform.md) lektionen, att data nu lagras i datavjön på Experience Platform som datamängder. I nuläget finns uppgifterna tillgängliga för Customer Journey Analytics för rapportering och analys.
+Händelsedata för mobilappar, som du samlade in och skickade till Platform Edge Network i tidigare lektioner, vidarebefordras till de tjänster som konfigurerats i din datastam. Om du följde [Skicka data till Experience Platform](platform.md) lektion: Dessa data lagras nu i en datauppsättning för Experience Platform och är tillgängliga för Customer Journey Analytics att användas för rapportering och analys.
 
 Till skillnad från Adobe Analytics, Customer Journey Analytics *använder* data från datauppsättningar som skapats i Experience Platform. Data skickas inte direkt till Customer Journey Analytics med Adobe Experience Platform Mobile SDK, utan data skickas till datauppsättningar. Anslutningar konfigureras sedan i Customer Journey Analytics för att välja de datauppsättningar som du vill använda i dina rapporterings- och analysprojekt.
 
