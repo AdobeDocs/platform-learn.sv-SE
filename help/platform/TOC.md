@@ -5,9 +5,9 @@ user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
 auto-video-transcripts: true
-source-git-commit: bad48d8b5845aa2812630a07cada2d465b729325
+source-git-commit: 66165c7b55a6c7483b58ce4d6da7eda11baee08a
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '896'
 ht-degree: 4%
 
 ---
@@ -80,6 +80,7 @@ ht-degree: 4%
 + Datahygien {#data-hygiene}
    + [Pseudonym profil och utgångsdatum för händelse (TTL)](/help/platform/data-hygiene/pseudonymous-profile-and-event-expiration.md)
    + [Dataförberedelse för datahygien](/help/platform/data-hygiene/data-prep-for-data-hygiene.md)
+   + [Ta bort datauppsättningar och grupper](/help/platform/data-hygiene/delete-datasets-and-batches.md)
    + [Förfaller datauppsättningar](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/data-lifecycle/expire-datasets)
    + [Uppdatera ett profilattribut](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/profiles/update-a-specific-attribute-with-upsert)
 + Inmatning av data {#data-ingestion}
@@ -167,6 +168,7 @@ ht-degree: 4%
    + [Skapa sammanfogningsprinciper](/help/platform/profiles/create-merge-policies.md)
    + [Översikt över unionens scheman](/help/platform/profiles/union-schemas-overview.md)
    + [Skapa ett beräknat attribut](/help/platform/profiles/create-a-computed-attribute-for-sum-of-purchases.md)
+   + [Ta bort profiler](/help/platform/profiles/delete-profiles.md)
    + [Uppdatera ett specifikt attribut med upsert](/help/platform/profiles/update-a-specific-attribute-with-upsert.md)
 + Integritet och säkerhet {#privacy}
    + [Introduktion till Privacy Service](/help/platform/privacy/introduction-to-privacy-services.md)

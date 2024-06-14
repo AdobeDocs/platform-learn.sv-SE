@@ -1,15 +1,15 @@
 ---
 title: Skapa datauppsättningar och inmatningsdata i Adobe Experience Platform
 description: I den här videon visas hur du skapar datauppsättningar och importerar data i Adobe Experience Platform-gränssnittet.
-feature: Data Ingestion
+feature: Data Ingestion, Datasets
 role: Data Architect, Data Engineer, Developer
 level: Beginner
 jira: KT-2700
 thumbnail: 27269.jpg
 exl-id: f01c7d88-a77e-4fb2-aa5a-d647abc41790
-source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
+source-git-commit: 66165c7b55a6c7483b58ce4d6da7eda11baee08a
 workflow-type: tm+mt
-source-wordcount: '93'
+source-wordcount: '76'
 ht-degree: 0%
 
 ---
