@@ -5,9 +5,9 @@ user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
 auto-video-transcripts: true
-source-git-commit: 66165c7b55a6c7483b58ce4d6da7eda11baee08a
+source-git-commit: e3aeab8a3627b9fd962f4169957a7af2f856259e
 workflow-type: tm+mt
-source-wordcount: '896'
+source-wordcount: '899'
 ht-degree: 4%
 
 ---
@@ -37,6 +37,7 @@ ht-degree: 4%
 + [Autentisera till Experience Platform API:er](/help/platform/authentication/platform-api-authentication.md)
 + [Importera exempeldata till Experience Platform](/help/platform/data-generator/import-sample-data.md)
 + Administration {#admin}
+   + [Använd AI-assistenten](/help/platform/admin/ai-assistant.md)
    + [Använda varningar](/help/platform/admin/use-alerts.md)
    + [Använda sandlådor](/help/platform/admin/use-sandboxes.md)
    + [Kopiera objekt mellan sandlådor](/help/platform/admin/copy-objects-between-sandboxes.md)
