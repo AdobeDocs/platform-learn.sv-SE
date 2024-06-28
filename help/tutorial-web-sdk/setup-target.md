@@ -4,9 +4,9 @@ description: Lär dig implementera Adobe Target med Platform Web SDK. Den här l
 solution: Data Collection, Target
 jira: KT-15410
 exl-id: 9084f572-5fec-4a26-8906-6d6dd1106d36
-source-git-commit: dc23b39e4311d618022fb1c70c2a106c0e901c8e
+source-git-commit: e7bb1a7856d04c30da63cc013c2d5a5fea3d718e
 workflow-type: tm+mt
-source-wordcount: '4173'
+source-wordcount: '4226'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ I slutet av lektionen kan du göra följande med en Web SDK-implementering av Ta
 >Se vår [Migrera mål från at.js 2.x till Platform Web SDK](/help/tutorial-migrate-target-websdk/introduction.md) självstudiekurs om hur du steg för steg migrerar din befintliga at.js-implementering.
 
 
-## Förutsättningar
+## Förhandskrav
 
 För att slutföra lektionerna i det här avsnittet måste du först:
 
@@ -188,7 +188,7 @@ De visuella personaliseringsbesluten avser de upplevelser som har skapats i Adob
 * **Aktivitet**: En uppsättning upplevelser som riktar sig till en eller flera målgrupper. Ett enkelt A/B-test kan till exempel vara en aktivitet med två upplevelser.
 * **Upplevelse**: En uppsättning åtgärder riktade till en eller flera platser, eller beslutsomfattningar.
 * **Beslutets omfattning**: En plats där en Target-upplevelse levereras. Beslutsomfattningar motsvarar&quot;mbox&quot; om du är van vid att använda äldre versioner av Target.
-* **Beslut om personalisering**: En åtgärd som servern fastställer ska tillämpas. Dessa beslut kan baseras på målgruppskriterier och prioritering av målaktiviteter.
+* **Personalization-beslut**: En åtgärd som servern fastställer ska tillämpas. Dessa beslut kan baseras på målgruppskriterier och prioritering av målaktiviteter.
 * **Föreslå**: Resultatet av serverns beslut, som levereras i svaret på Platform Web SDK. Om du till exempel byter en banderollbild blir det ett förslag.
 
 ### Uppdatera [!UICONTROL Send event] åtgärd
@@ -267,7 +267,7 @@ Om du ställer in en aktivitet bör du se innehållet renderas på sidan. Men ä
 1. Gå till [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html) och använder felsökaren för att [växla taggegenskapen på webbplatsen till din egen utvecklingsegenskap](validate-with-debugger.md#use-the-experience-platform-debugger-to-map-to-your-tags-property)
 1. Läs in sidan igen
 1. Välj **[!UICONTROL Network]** i felsökningsverktyget
-1. Filtrera efter **[!UICONTROL Adobe Experience Platform Web SDK]**
+1. Filtrera efter **[!UICONTROL Experience Platform Web SDK]**
 1. Välj värdet i händelseraden för det första anropet
 
    ![Nätverksanrop i Adobe Experience Platform Debugger](assets/target-debugger-network.png)
@@ -321,11 +321,57 @@ Nu när du har konfigurerat Platform Web SDK för att begära innehåll för `ho
 1. För **[!UICONTROL Scope]** fältinmatning `homepage-hero`
 1. För **[!UICONTROL Selector]** fältinmatning `div.heroimage`
 1. För **[!UICONTROL Action Type]** välj **[!UICONTROL Set HTML]**
+1. Välj **[!UICONTROL Keep Changes]**
 
    ![Återge hemsidans hjälteåtgärd](assets/target-action-render-hero.png)
 
+   Förutom att återge aktiviteten måste du anropa Target ytterligare för att ange att den formulärbaserade aktiviteten har återgetts:
+
+1. Lägg till en annan åtgärd till regeln. Använd **Core** tillägg och **[!UICONTROL Custom code]** åtgärdstyp:
+1. Klistra in följande JavaScript-kod:
+
+   ```javascript
+   var propositions = event.propositions;
+   var heroProposition;
+   if (propositions) {
+      // Find the hero proposition, if it exists.
+      for (var i = 0; i < propositions.length; i++) {
+         var proposition = propositions[i];
+         if (proposition.scope === "homepage-hero") {
+            heroProposition = proposition;
+            break;
+         }xw
+      }
+   }
+   // Send a "display" event
+   if (heroProposition !== undefined){
+      alloy("sendEvent", {
+         xdm: {
+            eventType: "display",
+            _experience: {
+               decisioning: {
+                  propositions: [{
+                     id: heroProposition.id,
+                     scope: heroProposition.scope,
+                     scopeDetails: heroProposition.scopeDetails
+                  }]
+               }
+            }
+         }
+      });
+   }
+   ```
+
+   ![Återge hemsidans hjälteåtgärd](assets/target-action-fire-display.png)
+
+1. Välj **[!UICONTROL Keep Changes]**
+
 1. Spara ändringarna och bygg i biblioteket
 1. Läs in Lumas hemsida några gånger, vilket bör räcka för att skapa den nya `homepage-hero` register för beslutsomfattning i Target-gränssnittet.
+
+
+
+
 
 ### Konfigurera en Target-aktivitet med den formulärbaserade Experience Composer
 
@@ -381,10 +427,10 @@ Om du har aktiverat din aktivitet bör du se innehållet återges på sidan. Äv
 
 1. Observera att det finns nycklar under `query` > `personalization` och  `decisionScopes` har värdet `__view__` som förut, men nu finns det också en `homepage-hero` omfång ingår. Detta Platform Web SDK-anrop begärde beslut från Target för ändringar som gjorts med VEC och den specifika `homepage-hero` plats.
 
-   ![`__view__` DecisionScope-begäran](assets/target-debugger-view-scope.png)
+   ![`__view__` DecisionScope-begäran](assets/target-debugger-view-custom-scope.png)
 
 1. Stäng övertäckningen och välj händelseinformation för det andra nätverksanropet. Det här anropet är bara tillgängligt om Target returnerade en aktivitet.
-1. Observera att det finns information om aktiviteten och upplevelsen som returnerats från Target. Detta Platform Web SDK-anrop skickar ett meddelande om att en Target-aktivitet återgavs till användaren och ökar intrycket.
+1. Observera att det finns information om aktiviteten och upplevelsen som returnerats från Target. Detta Platform Web SDK-anrop skickar ett meddelande om att en Target-aktivitet återgavs till användaren och ökar intrycket. Den initierades av den anpassade kodåtgärden som du lade till tidigare.
 
    ![Målaktivitetsintryck](assets/target-debugger-activity-impression.png)
 
@@ -397,6 +443,8 @@ I det här avsnittet skickar du Target-specifika data och tar en närmare titt p
 Alla XDM-fält skickas automatiskt till Target som [sidparametrar](https://experienceleague.adobe.com/en/docs/target-dev/developer/implementation/methods/page-parameters) eller mbox-parametrar.
 
 Vissa av dessa XDM-fält mappas till specialobjekt i Target serverdel. Till exempel: `web.webPageDetails.URL` kommer automatiskt att vara tillgängligt för att skapa URL-baserade villkor för målinriktning eller som `page.url` när du skapar profilskript.
+
+Du kan också lägga till sidparametrar med dataobjektet.
 
 ### Särskilda parametrar och dataobjektet
 
@@ -440,14 +488,13 @@ Om ytterligare data för Target skickas utanför XDM-objektet måste tillämplig
    ![Lägg till måldata i regel](assets/target-rule-data.png)
 
 1. Spara ändringarna och bygg i biblioteket
-1. Upprepa steg 1 till 4 för **ecommerce - bibliotek inläst - ange produktinformationsvariabler - 20** regel
 
 >[!NOTE]
 >
 >I exemplet ovan används en `data` objekt som inte är fullständigt ifyllt på alla sidtyper. Taggar hanterar den här situationen korrekt och utesluter tangenter som har ett odefinierat värde. Till exempel: `entity.id` och `entity.name` kommer inte att skickas på några sidor utöver produktinformationen.
 
 
-## Dela upp personaliserings- och analysförfrågningar
+## Dela upp förfrågningar från Personalization och Analytics
 
 Datalagret på Luma-webbplatsen definieras fullständigt innan taggarna bäddar in kod. Detta gör att vi kan använda ett enda anrop för att både hämta personaliserat innehåll (t.ex. från Adobe Target) och skicka analysdata (t.ex. till Adobe Analytics).
 
