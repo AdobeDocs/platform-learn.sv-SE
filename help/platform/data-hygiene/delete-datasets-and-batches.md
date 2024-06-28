@@ -6,10 +6,10 @@ role: Data Engineer, Developer
 level: Intermediate
 doc-type: Feature Video
 duration: 356
-last-substantial-update: 2024-06-13T00:00:00Z
+last-substantial-update: 2024-06-28T00:00:00Z
 jira: KT-12388
 exl-id: 76e6cba0-5175-4cc4-8b80-caa4c39bfba1
-source-git-commit: 90dc23605e6d6e6c7050a6b500348adb76770981
+source-git-commit: ace29b834284a1ea0884ff974913b5bfd88b50ec
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 0%
