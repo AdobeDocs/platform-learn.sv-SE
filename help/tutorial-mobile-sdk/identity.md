@@ -6,7 +6,7 @@ jira: KT-14633
 exl-id: cbcd1708-29e6-4d74-be7a-f75c917ba2fa
 source-git-commit: 25f0df2ea09bb7383f45a698e75bd31be7541754
 workflow-type: tm+mt
-source-wordcount: '815'
+source-wordcount: '779'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ Lär dig hur du samlar in identitetsdata i en mobilapp.
 
 Adobe Experience Platform identitetstjänst hjälper er att få en bättre bild av era kunder och deras beteenden genom att överbrygga identiteter mellan olika enheter och system, så att ni kan leverera slagkraftiga, personliga digitala upplevelser i realtid. Identitetsfält och namnutrymmen är den kombination som förenar olika datakällor för att skapa en 360-graders kundprofil i realtid.
 
-Läs mer om [Identitetstillägg](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/) och [identitetstjänst](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html?lang=sv) i dokumentationen.
+Läs mer om [identitetstillägget](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/) och [identitetstjänsten](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html?lang=sv) i dokumentationen.
 
-## Förutsättningar
+## Förhandskrav
 
 * App med SDK:er har installerats och konfigurerats.
 
@@ -35,7 +35,7 @@ I den här lektionen kommer du att:
 
 ## Konfigurera ett anpassat ID-namnutrymme
 
-Identitetsnamnutrymmen är komponenter i [Identitetstjänst](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html?lang=en) som fungerar som indikatorer för det sammanhang som en identitet hör till. De skiljer till exempel på värdet `name@email.com` som e-postadress eller `443522` som ett numeriskt CRM-ID.
+Identitetsnamnutrymmen är komponenter i [identitetstjänsten](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html?lang=en) som fungerar som indikatorer för det sammanhang som en identitet relateras till. De särskiljer till exempel värdet `name@email.com` som en e-postadress eller `443522` som ett numeriskt CRM-ID.
 
 >[!NOTE]
 >
@@ -44,13 +44,13 @@ Identitetsnamnutrymmen är komponenter i [Identitetstjänst](https://experiencel
 
 Så här skapar du ett nytt identitetsnamnutrymme:
 
-1. I gränssnittet för datainsamling väljer du **[!UICONTROL Identiteter]** från vänster-rälsnavigering.
-1. Välj **[!UICONTROL Skapa namnutrymme för identitet]**.
-1. Ange en **[!UICONTROL Visningsnamn]** av `Luma CRM ID` och **[!UICONTROL Identitetssymbol]** värde för `lumaCRMId`.
-1. Välj **[!UICONTROL Enhetsoberoende ID]**.
-1. Välj **[!UICONTROL Skapa]**.
+1. I gränssnittet för datainsamling väljer du **[!UICONTROL Identities]** i navigeringen till vänster.
+1. Välj **[!UICONTROL Create identity namespace]**.
+1. Ange **[!UICONTROL Display name]** av `Luma CRM ID` och **[!UICONTROL Identity symbol]** värdet `lumaCRMId`.
+1. Välj **[!UICONTROL Cross-device ID]**.
+1. Välj **[!UICONTROL Create]**.
 
-   ![skapa namnutrymme för identitet](assets/identity-create.png)
+   ![skapa ID-namnområde](assets/identity-create.png)
 
 
 
@@ -59,7 +59,7 @@ Så här skapar du ett nytt identitetsnamnutrymme:
 
 Du vill uppdatera både standardidentiteten (e-post) och den anpassade identiteten (Luma CRM ID) när användaren loggar in i programmet.
 
-1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project navigator och hitta `func updateIdentities(emailAddress: String, crmId: String)` funktionsimplementering. Lägg till följande kod i funktionen.
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** > **[!UICONTROL MobileSDK]** i Xcode-projektnavigeraren och hitta `func updateIdentities(emailAddress: String, crmId: String)`-funktionsimplementeringen. Lägg till följande kod i funktionen.
 
    ```swift
    // Set up identity map, add identities to map and update identities
@@ -75,33 +75,33 @@ Du vill uppdatera både standardidentiteten (e-post) och den anpassade identitet
 
    Den här koden:
 
-   1. Skapar en tom `IdentityMap` -objekt.
+   1. Skapar ett tomt `IdentityMap`-objekt.
 
       ```swift
       let identityMap: IdentityMap = IdentityMap()
       ```
 
-   1. Inställningar `IdentityItem` objekt för e-post och CRM-ID.
+   1. Ställer in `IdentityItem` objekt för e-post och CRM-ID.
 
       ```swift
       let emailIdentity = IdentityItem(id: emailAddress, authenticatedState: AuthenticatedState.authenticated)
       let crmIdentity = IdentityItem(id: crmId, authenticatedState: AuthenticatedState.authenticated)
       ```
 
-   1. Lägger till dessa `IdentityItem` objekt till `IdentityMap` -objekt.
+   1. Lägger till dessa `IdentityItem`-objekt i `IdentityMap`-objektet.
 
       ```swift
       identityMap.add(item:emailIdentity, withNamespace: "Email")
       identityMap.add(item: crmIdentity, withNamespace: "lumaCRMId")
       ```
 
-   1. Skickar `IdentityItem` objektet som en del av `Identity.updateIdentities` API-anrop till Edge Network.
+   1. Skickar `IdentityItem`-objektet som en del av `Identity.updateIdentities` API-anropet till Edge Network.
 
       ```swift
       Identity.updateIdentities(with: identityMap) 
       ```
 
-1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Views]** > **[!DNL General]** > **[!UICONTROL LoginSheet]** i Xcode Project navigator och hitta koden som ska köras när du väljer **[!UICONTROL Inloggning]** -knappen. Lägg till följande kod:
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Views]** > **[!DNL General]** > **[!UICONTROL LoginSheet]** i Xcode-projektnavigeraren och sök efter koden som ska köras när du väljer knappen **[!UICONTROL Login]**. Lägg till följande kod:
 
    ```swift
    // Update identities
@@ -111,14 +111,14 @@ Du vill uppdatera både standardidentiteten (e-post) och den anpassade identitet
 
 >[!NOTE]
 >
->Du kan skicka flera identiteter i en enda `updateIdentities` ring. Du kan också ändra identiteter som du tidigare skickat.
+>Du kan skicka flera identiteter i ett enda `updateIdentities`-samtal. Du kan också ändra identiteter som du tidigare skickat.
 
 
 ## Ta bort en identitet
 
-Du kan använda [`Identity.removeIdentity`](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#removeidentity) API för att ta bort identiteten från den lagrade identitetskartan på klientsidan. Identitetstillägget slutar skicka identifieraren till Edge Network. Om du använder detta API tas inte identifieraren bort från serversidans identitetsdiagram. Se [Visa identitetsdiagram](https://experienceleague.adobe.com/docs/platform-learn/tutorials/identities/view-identity-graphs.html?lang=en) om du vill ha mer information om identitetsdiagram.
+Du kan använda API:t [`Identity.removeIdentity`](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#removeidentity) för att ta bort identiteten från den lagrade identitetskartan på klientsidan. Identitetstillägget slutar skicka identifieraren till Edge Network. Om du använder detta API tas inte identifieraren bort från serversidans identitetsdiagram. Mer information om identitetsdiagram finns i [Visa identitetsdiagram](https://experienceleague.adobe.com/docs/platform-learn/tutorials/identities/view-identity-graphs.html?lang=en).
 
-1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project navigator och lägg till följande kod i `func removeIdentities(emailAddress: String, crmId: String)` funktion:
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project-navigatorn och lägg till följande kod i funktionen `func removeIdentities(emailAddress: String, crmId: String)`:
 
    ```swift
    // Remove identities and reset email and CRM Id to their defaults
@@ -128,7 +128,7 @@ Du kan använda [`Identity.removeIdentity`](https://developer.adobe.com/client-s
    currentCRMId = "112ca06ed53d3db37e4cea49cc45b71e"
    ```
 
-1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Views]** > **[!DNL General]** > **[!UICONTROL LoginSheet]** i Xcode Project navigator och hitta koden som ska köras när du väljer **[!UICONTROL Utloggning]** -knappen. Lägg till följande kod:
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Views]** > **[!DNL General]** > **[!UICONTROL LoginSheet]** i Xcode-projektnavigeraren och sök efter koden som ska köras när du väljer knappen **[!UICONTROL Logout]**. Lägg till följande kod:
 
    ```swift
    // Remove identities
@@ -138,44 +138,44 @@ Du kan använda [`Identity.removeIdentity`](https://developer.adobe.com/client-s
 
 ## Validera med Assurance
 
-1. Granska [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
+1. Granska avsnittet [Installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
 1. I Luma-appen
-   1. Välj **[!UICONTROL Startsida]** och flytta Assurance-ikonen till vänster.
-   1. Välj <img src="assets/login.png" width="15" /> ikonen längst upp till höger.
+   1. Välj fliken **[!UICONTROL Home]** och flytta Assurance-ikonen till vänster.
+   1. Välj Ikonen <img src="assets/login.png" width="15" /> uppifrån till höger.
 
       <img src="./assets/identity1.png" width="300">
 
    1. Ange en e-postadress och ett CRM-ID, eller
-   1. Välj <img src="assets/insert.png" width="15" /> till slumpmässigt generera en **[!UICONTROL E-post]** och **[!UICONTROL CRM-ID]**.
-   1. Välj **[!UICONTROL Inloggning]**.
+   1. Välj <img src="assets/insert.png" width="15" /> om du vill generera en **[!UICONTROL Email]** och **[!UICONTROL CRM ID]** slumpmässigt.
+   1. Välj **[!UICONTROL Login]**.
 
       <img src="./assets/identity2.png" width="300">
 
 
-1. Leta i webbgränssnittet för Assurance efter **[!UICONTROL Edge Identity Update Identities]** -händelsen från **[!UICONTROL com.adobe.griffon.mobile]** leverantör.
-1. Markera händelsen och granska data i **[!UICONTROL ACPExtensionEventData]** -objekt. Du bör se de identiteter som du har uppdaterat.
+1. Sök efter händelsen **[!UICONTROL Edge Identity Update Identities]** från leverantören **[!UICONTROL com.adobe.griffon.mobile]** i kontrollwebbgränssnittet.
+1. Markera händelsen och granska data i objektet **[!UICONTROL ACPExtensionEventData]**. Du bör se de identiteter som du har uppdaterat.
    ![validera identitetsuppdatering](assets/identity-validate-assurance.png)
 
 ## Validera med identitetsdiagram
 
-När du är klar med stegen i [Experience Platform lektion](platform.md)kan du bekräfta identitetsfångsten i visningsprogrammet för plattformsidentitetsdiagram:
+När du har slutfört stegen i [Experience Platform-lektionen](platform.md) kan du bekräfta identitetsfångsten i visningsprogrammet för plattformsidentitetsdiagram:
 
-1. Välj **[!UICONTROL Identiteter]** i användargränssnittet för datainsamling.
-1. Välj **[!UICONTROL Identitetsdiagram]** i det övre fältet.
-1. Retur `Luma CRM ID` som **[!UICONTROL Namnutrymme för identitet]** och ditt CRM-ID (till exempel `24e620e255734d8489820e74f357b5c8`) som **[!UICONTROL Identitetsvärde]**.
-1. Du ser **[!UICONTROL Identiteter]** listas.
+1. Välj **[!UICONTROL Identities]** i användargränssnittet för datainsamling.
+1. Välj **[!UICONTROL Identity Graph]** i det övre fältet.
+1. Ange `Luma CRM ID` som **[!UICONTROL Identity namespace]** och ditt CRM-ID (till exempel `24e620e255734d8489820e74f357b5c8`) som **[!UICONTROL Identity value]**.
+1. **[!UICONTROL Identities]** visas.
 
    ![validera identitetsdiagram](assets/identity-validate-graph.png)
 
 >[!INFO]
 >
->Det finns ingen kod i programmet för att återställa ECID, vilket betyder att du bara kan återställa ECID (och effektivt skapa en ny profil med ett nytt ECID) genom en avinstallation och ominstallation av programmet. Information om hur du implementerar återställning av identifierare finns i [`Identity.resetIdentities`](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/api-reference/#resetidentities) och [`MobileCore.resetIdentities`](https://developer.adobe.com/client-sdks/documentation/mobile-core/api-reference/#resetidentities) API-anrop. Tänk dock på detta när du använder en push-meddelandeidentifierare (se [Skicka push-meddelanden](journey-optimizer-push.md)) blir den identifieraren en annan &#39;klisteristidentifierare&#39; på enheten.
+>Det finns ingen kod i programmet för att återställa ECID, vilket betyder att du bara kan återställa ECID (och effektivt skapa en ny profil med ett nytt ECID) genom en avinstallation och ominstallation av programmet. Information om hur du implementerar återställningen av identifierare finns i API-anropen för [`Identity.resetIdentities`](https://developer.adobe.com/client-sdks/documentation/mobile-core/identity/api-reference/#resetidentities) och [`MobileCore.resetIdentities`](https://developer.adobe.com/client-sdks/documentation/mobile-core/api-reference/#resetidentities). Tänk dock på att när du använder en identifierare för push-meddelanden (se [Skicka push-meddelanden](journey-optimizer-push.md)) blir den identifieraren en annan profilidentifierare för push-meddelanden på enheten.
 
 
 >[!SUCCESS]
 >
 >Du har nu konfigurerat din app för att uppdatera identiteter i Edge Network och (när den har konfigurerats) med Adobe Experience Platform.
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
 
 Nästa: **[Samla in profildata](profile.md)**

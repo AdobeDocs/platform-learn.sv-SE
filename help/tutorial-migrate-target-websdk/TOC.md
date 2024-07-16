@@ -13,7 +13,7 @@ jira: KT-11159
 source-git-commit: 42427df298e2c5ae734ce050e935378db51e66a1
 workflow-type: tm+mt
 source-wordcount: '88'
-ht-degree: 5%
+ht-degree: 3%
 
 ---
 

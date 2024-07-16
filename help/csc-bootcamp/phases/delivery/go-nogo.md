@@ -2,9 +2,10 @@
 title: CSC Bootcamp - Campaign GO/NO-GO
 description: CSC Bootcamp - Campaign GO/NO-GO
 doc-type: multipage-overview
-source-git-commit: 989e4e2add1d45571462eccaeebcbe66a77291db
+exl-id: 18b553cf-68f3-407d-9ad9-752db6b3e014
+source-git-commit: 143da6340b932563a3309bb46c1c7091e0ab2ee2
 workflow-type: tm+mt
-source-wordcount: '432'
+source-wordcount: '436'
 ht-degree: 0%
 
 ---
@@ -31,7 +32,7 @@ Vi kan se att det är en tvåstegsprocess där antingen jag, Petra eller någon 
 
 Därför visas mina godkännandeknappar längst upp till höger och jag kan nu godkänna det här&quot;Go No/Go&quot; för första steget. Klicka på den gröna bocken för att godkänna:
 
-![godkänna kampanjen](./images/gongo-given-approvals.png)
+![godkänn kampanjen](./images/gongo-given-approvals.png)
 
 Alla våra projekt väntar nu på Olivias godkännande. När hon har godkänt - vilket hon naturligtvis kommer att göra - kan vår kampanj publiceras.
 
@@ -39,14 +40,14 @@ Alla våra projekt väntar nu på Olivias godkännande. När hon har godkänt - 
 
 Eftersom vi nu har verifierat att vår kampanj är redo att lanseras och vi är redo att börja sälja våra cyklar, är det dags att ta ett steg framåt. Och vilket bättre sätt kan du göra det på, sedan med ett inlägg i sociala medier?
 
-![Demo-Instagram](./images/instagram-overview.png)
+![Demo-Instagram-sidan](./images/instagram-overview.png)
 
-Eftersom vi redan har skapat och godkänt ett inlägg i sociala medier kan vi nu publicera det på vårt Instagram-demokonto.
+Eftersom vi redan har skapat och godkänt ett inlägg i sociala medier kan vi nu publicera det på vårt Instagram-konto för demo.
 
 >[!WARNING]
 > Vissa regler för hushållning
 > 
-> Det här är ett konto som bara används för att slutföra historien om vårt bootläger. Det är **inte är avsedda att delas, följas eller offentliggöras**. Behåll ditt inlägg **respektfull och professionell**. **Dela inte inloggningsuppgifterna** med någon utanför bootlägret, och observera **alla enheter loggas ut** efter denna övning.
+> Det här är ett konto som bara används för att slutföra historien om vårt bootläger. Den är **inte avsedd att delas, följas upp eller publiceras**. Behåll ditt inlägg **respektfullt och professionellt**. **Dela inte inloggningsuppgifterna** med någon utanför bootlägret, och observera **att alla enheter loggas ut** efter den här övningen.
 
 - Du får lösenordet för ett Instagram-konto med namnet &quot;csc_bootcamp_emea&quot;.
 - Skapa ett nytt inlägg där du som sista del av bildtexten lägger till den plats du är medlem från samt datum och ditt teamnummer.

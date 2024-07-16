@@ -11,7 +11,7 @@ feature: Audiences
 exl-id: 7a38a0a4-46e4-41f2-9a75-316dfde7128f
 source-git-commit: 3c86f9b19cecf92c9a324fb6fcfcefaebf82177f
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '420'
 ht-degree: 0%
 
 ---
@@ -25,13 +25,13 @@ ht-degree: 0%
 
 ## 4.6.1 Skapa en målgrupp och publicera den
 
-I ditt projekt skapade du ett filter som kallas **Utlysningar** och kunde visa antalet användare som hade sina samtal till callcentret klassificerade som **positiv**. Nu kan du skapa ett segment med de här användarna och aktivera dem på resor eller i kommunikationskanaler.
+I ditt projekt skapade du ett filter med namnet **Ring samtal** och kunde visa antalet användare som hade sina samtal till callcentret klassificerade som **positivt**. Nu kan du skapa ett segment med de här användarna och aktivera dem på resor eller i kommunikationskanaler.
 
-Det första steget är: Markera en rad i panelen som skapades i den senaste övningen **1. Samtalskunskap - positiv**, högerklicka och välj **Skapa målgrupp från urval** alternativ:
+Det första steget är: Markera rad **1 på panelen som skapades i den senaste övningen. Anropsfunktion - Positiv**, högerklicka och välj alternativet **Skapa målgrupp från urval**:
 
 ![demo](./images/aud1.png)
 
-Ge sedan målgruppen ett namn som följer modellen **yourLastName - CJA-publiken känner sig positiv**:
+Ge sedan målgruppen ett namn som följer modellen **yourLastName - CJA-målgruppsanropet som känns positivt**:
 
 ![demo](./images/aud2.png)
 
@@ -39,13 +39,13 @@ Observera att det går att förhandsgranska den målgrupp som skapas:
 
 ![demo](./images/aud3.png)
 
-Klicka slutligen **Publicera**.
+Klicka slutligen på **Publish**.
 
 ![demo](./images/aud4.png)
 
 ## 4.6.2 Använda er målgrupp som en del av ett segment
 
-Gå tillbaka till Adobe Experience Platform, gå till **Segment > Bläddra** och du kommer att kunna se ditt segment som skapats i CJA klart och tillgängligt för användning i dina aktiveringar och resor!
+Gå tillbaka till Adobe Experience Platform, gå till **Segment > Bläddra** så ser du att ditt segment som skapats i CJA är klart och tillgängligt att användas i dina aktiveringar och resor!
 
 ![demo](./images/aud5.png)
 
@@ -53,27 +53,27 @@ Nu ska vi använda det här segmentet i en aktivering av Facebook och på en kun
 
 ## 4.6.3 Använda ditt segment i Real-Time CDP i realtid
 
-I Adobe Experience Platform går du till **Segment > Bläddra** och hitta den målgrupp du skapat i CJA:
+I Adobe Experience Platform går du till **Segment > Bläddra** och söker efter den målgrupp du har skapat i CJA:
 
 ![demo](./images/aud6.png)
 
-Klicka på segmentet och klicka sedan på **Aktivera till mål**:
+Klicka på ditt segment och sedan på **Aktivera till mål**:
 
 ![demo](./images/aud7.png)
 
-Markera målet med namnet **bootcamp-facebook** och klicka sedan på **Nästa**.
+Välj målet **bootcamp-facebook** och klicka sedan på **Next**.
 
 ![demo](./images/aud8.png)
 
-Klicka **Nästa** igen.
+Klicka på **Nästa** igen.
 
 ![demo](./images/aud9.png)
 
-Välj **Målgruppens ursprung** och ange **Direkt från kunderna**, klicka **Nästa**.
+Välj alternativet **Publiken** som har sitt ursprung och ange det som **Direkt från kunderna**. Klicka sedan på **Nästa**.
 
 ![demo](./images/aud10.png)
 
-Klicka **Slutför**.
+Klicka på **Slutför**.
 
 ![demo](./images/aud11.png)
 
@@ -81,7 +81,7 @@ Ditt segment är nu anslutet till Facebook anpassade målgrupper. Nu ska vi anv�
 
 ## 4.6.4 Använda ditt segment i Adobe Journey Optimizer
 
-I Adobe Experience Platform klickar du på **Journey Optimizer** och klicka sedan på **Resor** och börja skapa en resa genom att klicka **Skapa resa**.
+I Adobe Experience Platform klickar du på **Journey Optimizer** och sedan på **Resor** på den vänstra menyn. Klicka sedan på **Skapa resa** för att börja skapa en resa.
 
 ![demo](./images/aud20.png)
 
@@ -89,19 +89,19 @@ I Adobe Experience Platform klickar du på **Journey Optimizer** och klicka seda
 
 ![demo](./images/aud22.png)
 
-Sedan, på den vänstra menyn, under **Händelser**, markera **Segmentkvalificering** och dra den till resan:
+Välj sedan **Segmentkvalificering** under **Händelser** på den vänstra menyn och dra den till resan:
 
 ![demo](./images/aud23.png)
 
-Klicka under Segment **Redigera** för att markera ett segment:
+Under Segment klickar du på **Redigera** för att markera ett segment:
 
 ![demo](./images/aud24.png)
 
-Välj den målgrupp du skapade tidigare i CJA och klicka på  **Spara**.
+Markera målgruppen som du skapade tidigare i CJA och klicka på **Spara**.
 
 ![demo](./images/aud25.png)
 
-Redo! Härifrån kan ni skapa en resa för kunder som är kvalificerade för det här segmentet.
+Redo! Härifrån kan ni skapa en resa för kunder som är kvalificerade för detta segment.
 
 [Gå tillbaka till användarflöde 4](./uc4.md)
 

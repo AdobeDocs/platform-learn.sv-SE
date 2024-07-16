@@ -18,7 +18,7 @@ ht-degree: 19%
 
 + [Självstudiekurser om datainsamling](overview.md)
 + [Användare och behörigheter](admin/users-and-permissions.md)
-+ Taggar{#tags}
++ Taggar {#tags}
    + [Översikt och skapa en egenskap](tags/create-a-property.md)
    + [Välj ett värdalternativ](tags/choose-a-hosting-option.md)
    + [Använda miljöer och bädda in koder](tags/use-environments-and-embed-codes.md)
@@ -28,14 +28,14 @@ ht-degree: 19%
    + [Stapelregler](tags/stack-rules.md)
    + [Skapa och publicera ett bibliotek](tags/build-and-publish-a-library.md)
    + [Implementera webbplatser med Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html){target="_blank"}
-   + [Implementera webbplatser med SDK:er för lösningar](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/overview.html){target="_blank"}
-   + [Implementera i mobilappar](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/overview.html){target="_blank"}
+   + [Implementera webbplatser med SDK-lösningar](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/overview.html){target="_blank"}
+   + [Implementering i mobilappar](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/overview.html){target="_blank"}
 + Web SDK{#web-sdk}
    + [Översikt](web-sdk/overview.md)
    + [Demo](web-sdk/demo.md)
    + [Implementeringsjälvstudiekurs (med taggar)](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html){target="_blank"}
    + [Migrera mål, självstudiekurs](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html){target="_blank"}
-   + Godkännande{#consent}
+   + Samtycke{#consent}
       + [Översikt](web-sdk/consent/overview.md)
       + [Ange medgivandevärden med Adobe-standarden](web-sdk/consent/set-consent-adobe.md)
       + [Ange värden för medgivande med hjälp av IAB TCF 2.0-standarden](web-sdk/consent/set-consent-iab.md)
@@ -45,11 +45,11 @@ ht-degree: 19%
    + [Översikt](mobile-sdk/overview.md)
    + [Skapa mobila egenskaper](mobile-sdk/create-mobile-properties.md)
    + [Använd beroendehanterare](mobile-sdk/use-dependency-managers.md)
-   + [Implementera i mobilappar](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/overview.html){target="_blank"}
+   + [Implementering i mobilappar](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/overview.html){target="_blank"}
 + Server-API{#server-api}
    + [Översikt](server-api/overview.md)
    + [Grunderna i API:er](server-api/introduction.md)
-+ Vidarebefordran av händelser{#event-forwarding}
++ Händelsevidarebefordran {#event-forwarding}
    + [Översikt](event-forwarding/overview.md)
    + [Skapa en egenskap](event-forwarding/create-a-property.md)
    + [Konfigurera en datastream](event-forwarding/set-up-a-datastream.md)

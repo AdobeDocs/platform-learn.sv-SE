@@ -1,10 +1,11 @@
 ---
 title: Migrera mål från at.js 2.x till Web SDK
-description: Lär dig hur du migrerar en Adobe Target-implementering från at.js 2.x till Adobe Experience Platform Web SDK. Ämnen som omfattar biblioteksöversikt, implementeringsskillnader och andra viktiga hänvisningar.
-source-git-commit: 287ebcb275c4fca574dbd6cdf7e07ba4268bddb5
+description: Lär dig migrera en Adobe Target-implementering från at.js 2.x till Adobe Experience Platform Web SDK. Ämnen som omfattar biblioteksöversikt, implementeringsskillnader och andra viktiga hänvisningar.
+exl-id: 43b9ae91-4524-4071-9eb4-12a0a8aec242
+source-git-commit: 4690d41f92c83fe17eda588538d397ae1fa28af0
 workflow-type: tm+mt
-source-wordcount: '412'
-ht-degree: 1%
+source-wordcount: '400'
+ht-degree: 0%
 
 ---
 
@@ -12,8 +13,8 @@ ht-degree: 1%
 
 I vissa målinriktade implementeringar kan regionala mrutor (som nu kallas omfång) användas för att leverera innehåll från aktiviteter som använder den formulärbaserade Experience Composer. Om implementeringen av at.js Target använder mboxes måste du göra följande:
 
-* Uppdatera alla referenser från implementeringen av at.js som använder `getOffer()` eller `getOffers()` till motsvarande Platform Web SDK-metoder.
-* Lägga till kod för att aktivera en `propositionDisplay` så att ett intryck räknas.
+* Uppdatera alla referenser från din at.js-implementering som använder `getOffer()` eller `getOffers()` till motsvarande Platform Web SDK-metoder.
+* Lägg till kod för att utlösa en `propositionDisplay`-händelse så att ett intryck räknas.
 
 ## Begär och tillämpa innehåll på begäran
 
@@ -22,9 +23,9 @@ Aktiviteter som skapats med Target formulärbaserade disposition och som leverer
 
 +++at.js Exempel med `getOffer()` och `applyOffer()`:
 
-1. Kör `getOffer()` för att begära ett erbjudande om en plats
+1. Kör `getOffer()` för att begära ett erbjudande för en plats
 1. Kör `applyOffer()` för att återge erbjudandet till en angiven väljare
-1. Ett aktivitetsintryck ökar automatiskt vid tidpunkten för `getOffer()` förfrågan
+1. Ett aktivitetsintryck ökar automatiskt vid tidpunkten för `getOffer()`-begäran
 
 ```JavaScript
 // Retrieve an offer for the homepage-hero location
@@ -48,11 +49,11 @@ adobe.target.getOffer({
 
 +++
 
-+++Platform Web SDK-motsvarigheten med `applyPropositions` kommando:
++++Plattformsmotsvarighet för Web SDK med kommandot `applyPropositions`:
 
-1. Kör `sendEvent` för att begära erbjudanden (erbjudanden) för en eller flera platser (omfattningar)
-1. Kör `applyPropositions` -kommando med metadataobjekt som innehåller instruktioner för hur innehållet ska tillämpas på sidan för varje omfång
-1. Kör `sendEvent` kommando med eventType för `decisioning.propositionDisplay` för att spåra ett intryck
+1. Kör kommandot `sendEvent` för att begära erbjudanden (erbjudanden) för en eller flera platser (omfattningar)
+1. Kör kommandot `applyPropositions` med metadataobjekt som innehåller instruktioner för hur du använder innehåll på sidan för varje omfång
+1. Kör kommandot `sendEvent` med eventType för `decisioning.propositionDisplay` för att spåra ett intryck
 
 ```JavaScript
 // Retrieve propositions for homepage_hero location (scope)
@@ -91,19 +92,19 @@ alloy("sendEvent", {
 
 +++
 
-Platform Web SDK ger större kontroll vid användning av formulärbaserade aktiviteter på sidan med `applyPropositions` kommando med `actionType` anges:
+Med Platform Web SDK får du större kontroll över hur du använder formulärbaserade aktiviteter på sidan med kommandot `applyPropositions` och `actionType`:
 
-| `actionType` | Beskrivning | at.js `applyOffer()` | Platform Web SDK `applyPropositions` |
+| `actionType` | Beskrivning | at.js `applyOffer()` | SDK för plattformswebben `applyPropositions` |
 | --- | --- | --- | --- |
 | `setHtml` | Rensa innehållet i behållaren och lägg sedan till erbjudandet i behållaren | Ja (används alltid) | Ja |
 | `replaceHtml` | Ta bort behållaren och ersätt den med erbjudandet | Nej | Ja |
 | `appendHtml` | Lägger till erbjudandet efter den angivna väljaren | Nej | Ja |
 
-Se [dedikerad dokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html) om hur du återger innehåll med Platform Web SDK för ytterligare återgivningsalternativ och exempel.
+Mer information om ytterligare återgivningsalternativ och exempel finns i [dedikerad dokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html) om hur du återger innehåll med hjälp av Platform Web SDK.
 
 ## Implementeringsexempel
 
-Exemplsidan nedan bygger på implementeringen som beskrivs i föregående avsnitt, men lägger bara till ytterligare omfång i `sendEvent` -kommando.
+Exemplsidan nedan bygger på implementeringen som beskrivs i föregående avsnitt, men lägger bara till ytterligare omfång till kommandot `sendEvent`.
 
 +++Platform Web SDK-exempel med flera omfattningar
 
@@ -196,8 +197,8 @@ Exemplsidan nedan bygger på implementeringen som beskrivs i föregående avsnit
 </html>
 ```
 
-Lär dig sedan hur du [skicka Target-parametrar med Platform Web SDK](send-parameters.md).
+Läs sedan om hur du [skickar målparametrar med hjälp av Platform Web SDK](send-parameters.md).
 
 >[!NOTE]
 >
->Vi vill hjälpa dig att lyckas med målmigreringen från at.js till Web SDK. Om du stöter på problem med din migrering eller känner att det saknas viktig information i den här guiden ber vi dig att meddela oss genom att publicera i [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-target-from-at-js-to-web-sdk/m-p/575587#M463).
+>Vi vill hjälpa dig att lyckas med målmigreringen från at.js till Web SDK. Om du stöter på problem med din migrering eller om du känner att det saknas viktig information i den här guiden kan du meddela oss genom att publicera [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-target-from-at-js-to-web-sdk/m-p/575587#M463).

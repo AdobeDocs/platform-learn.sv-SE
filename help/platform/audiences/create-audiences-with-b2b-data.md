@@ -1,6 +1,6 @@
 ---
 title: Skapa och aktivera kontomålgrupper för [!DNL B2B] och [!DNL B2P]
-description: Läs om Account-Based Marketing funktioner i [!DNL B2B] och [!DNL B2P] utgåvor av [!DNL Real-Time Customer Data Platform], inklusive att skapa och aktivera kontomålgrupper.
+description: Lär dig mer om Account-Based Marketing funktioner i [!DNL B2B] och [!DNL B2P] utgåvorna av [!DNL Real-Time Customer Data Platform], inklusive att skapa och aktivera kontomålgrupper.
 solution: Real-Time Customer Data Platform
 feature: Segments
 role: User
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Skapa och aktivera kontomålgrupper för [!DNL B2B] och [!DNL B2P]
 
-Läs om Account-Based Marketing funktioner i [!DNL B2B] och [!DNL B2P] utgåvor av [!DNL Real-Time Customer Data Platform], inklusive att skapa och aktivera kontomålgrupper. Mer information finns i [dokumentation](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/account-audiences.html).
+Lär dig mer om Account-Based Marketing funktioner i [!DNL B2B]- och [!DNL B2P]-utgåvorna av [!DNL Real-Time Customer Data Platform], inklusive att skapa och aktivera kontomålgrupper. Mer information finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/account-audiences.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/338252?learn=on)
 

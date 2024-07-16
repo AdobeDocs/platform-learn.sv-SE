@@ -19,7 +19,7 @@ ht-degree: 0%
 # Implementera Experience Cloud på webbplatser med taggar {#implement-in-websites}
 
 + [Implementera webbplatser med självstudiekursen Taggar](overview.md)
-+ Konfigurera taggar{#configure-tags}
++ Konfigurera taggar {#configure-tags}
    + [Skapa en taggegenskap](create-a-property.md)
    + [Lägg till inbäddningskoden](add-embed-code.md)
    + [Lägga till ett dataelement, en regel och ett bibliotek](add-data-elements-rules.md)
@@ -30,5 +30,5 @@ ht-degree: 0%
    + [Lägg till Adobe Analytics](analytics.md)
    + [Lägg till Adobe Audience Manager](audience-manager.md)
    + [Integrering med Experience Cloud](integrations.md)
-+ Publicera din egendom{#publish}
-   + [Publicera din egenskap](publish.md)
++ Publish din egenskap {#publish}
+   + [Publish din egendom](publish.md)

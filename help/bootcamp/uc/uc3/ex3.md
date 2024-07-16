@@ -20,17 +20,17 @@ ht-degree: 0%
 
 I den här övningen ska du konfigurera den resa och det meddelande som ska utlösas när någon går in i en sändare med mobilappen.
 
-Logga in på Adobe Journey Optimizer genom att [Adobe Experience Cloud](https://experience.adobe.com). Klicka **Journey Optimizer**.
+Logga in på Adobe Journey Optimizer på [Adobe Experience Cloud](https://experience.adobe.com). Klicka på **Journey Optimizer**.
 
 ![ACOP](./images/acophome.png)
 
-Du omdirigeras till **Startsida**  i Journey Optimizer. Kontrollera först att du använder rätt sandlåda. Sandlådan som ska användas anropas `Bootcamp`. Om du vill ändra från en sandlåda till en annan klickar du på **Prod** och välj sandlådan i listan. I det här exemplet heter sandlådan **Bootläger**. Då är du i **Startsida** vy över din sandlåda `Bootcamp`.
+Du omdirigeras till vyn **Hem** i Journey Optimizer. Kontrollera först att du använder rätt sandlåda. Sandlådan som ska användas kallas `Bootcamp`. Om du vill ändra från en sandlåda till en annan klickar du på **Prod** och väljer sandlådan i listan. I det här exemplet heter sandlådan **Bootcamp**. Du kommer sedan att vara i vyn **Hem** i din sandlåda `Bootcamp`.
 
 ![ACOP](./images/acoptriglp.png)
 
 ## 3.3.1 Skapa din resa
 
-Klicka på **Resor**. Klicka på Nästa **Skapa resa** för att skapa en ny resa.
+Klicka på **Resor** på den vänstra menyn. Klicka sedan på **Skapa resa** för att skapa en ny resa.
 
 ![ACOP](./images/createjourney.png)
 
@@ -38,7 +38,7 @@ Då ser du en tom skärm för resan.
 
 ![ACOP](./images/journeyempty.png)
 
-I föregående övning skapade du en ny **Händelse**. Du namngav den så här `yourLastNameBeaconEntryEvent` och ersatt `yourLastName` med ditt efternamn. Detta var resultatet av händelseskapandet:
+I föregående övning skapade du en ny **Event**. Du gav den ett namn som `yourLastNameBeaconEntryEvent` och ersatte `yourLastName` med ditt efternamn. Detta var resultatet av händelseskapandet:
 
 ![ACOP](./images/eventdone.png)
 
@@ -46,23 +46,23 @@ Du måste nu ta det här evenemanget som början på den här resan. Du kan gör
 
 ![ACOP](./images/eventlist.png)
 
-Markera händelsen, dra och släpp den på arbetsytan för resan. Din resa ser nu ut så här. Klicka **OK** för att spara ändringarna.
+Markera händelsen, dra och släpp den på arbetsytan för resan. Din resa ser nu ut så här. Klicka på **OK** om du vill spara ändringarna.
 
 ![ACOP](./images/journeyevent.png)
 
-Som det andra steget på resan måste du lägga till en **Push** åtgärd. Gå till skärmens vänstra sida för att **Åtgärder** väljer du **Push** och sedan dra och släppa det på den andra noden på din resa.
+Som det andra steget i resan måste du lägga till en **push**-åtgärd. Gå till vänster på skärmen till **Åtgärder**, välj åtgärden **Skjut** och dra och släpp den på den andra noden på resan.
 
 ![ACOP](./images/journeyactions.png)
 
 Till höger på skärmen måste du nu skapa ett push-meddelande.
 
-Ange **Kategori** till **Marknadsföring** och välj en push-yta som gör att du kan skicka push-meddelanden. I det här fallet är den push-yta som ska markeras **mmeeewis-app-mobile-bootcamp**.
+Ange **kategorin** till **Marknadsföring** och välj en push-yta som gör att du kan skicka push-meddelanden. I det här fallet är den push-yta som ska väljas **mmeewis-app-mobile-bootcamp**.
 
 ![ACOP](./images/journeyactions1.png)
 
 ## 3.3.2 Skapa ett meddelande
 
-Klicka **Redigera innehåll**.
+Klicka på **Redigera innehåll**.
 
 ![ACOP](./images/emptymsg.png)
 
@@ -72,52 +72,52 @@ Då ser du det här:
 
 Låt oss definiera innehållet i push-meddelandet.
 
-Klicka på **Titel** textfält.
+Klicka på textfältet **Titel**.
 
 ![Journey Optimizer](./images/msg5.png)
 
-Börja skriva i textområdet **Hej**. Klicka på personaliseringsikonen.
+Börja skriva **Hi** i textområdet. Klicka på personaliseringsikonen.
 
 ![Journey Optimizer](./images/msg6.png)
 
-Du måste nu ta in en token för anpassning för fältet **Förnamn** som lagras under `profile.person.name.firstName`. Välj **Profilattribut**, bläddra nedåt/navigera för att hitta **Person** och klicka på pilen för att gå en nivå längre tills du når fältet `profile.person.name.firstName`. Klicka på **+** om du vill lägga till fältet på arbetsytan. Klicka **Spara**.
+Du måste nu hämta en personaliseringstoken för fältet **Förnamn** som lagras under `profile.person.name.firstName`. Välj **Profilattribut** på den vänstra menyn, rulla nedåt/navigera för att hitta elementet **Person** och klicka på pilen för att gå en nivå längre tills du når fältet `profile.person.name.firstName`. Klicka på ikonen **+** för att lägga till fältet på arbetsytan. Klicka på **Spara**.
 
 ![Journey Optimizer](./images/msg7.png)
 
-Du kommer då tillbaka hit. Klicka på ikonen för anpassning bredvid fältet **Brödtext**.
+Du kommer då tillbaka hit. Klicka på personaliseringsikonen bredvid fältet **Brödtext**.
 
 ![Journey Optimizer](./images/msg11.png)
 
-Skriv i textområdet `Welcome at the `.
+Skriv `Welcome at the ` i textområdet.
 
 ![Journey Optimizer](./images/msg12.png)
 
-Klicka på Nästa **Sammanhangsberoende attribut** och sedan **Journey Orchestration**.
+Klicka sedan på **Sammanhangsberoende attribut** och **Journey Orchestration**.
 
 ![ACOP](./images/jomsg3.png)
 
-Klicka **Händelser**.
+Klicka på **Händelser**.
 
 ![ACOP](./images/jomsg4.png)
 
-Klicka på namnet på din händelse som ska se ut så här: **yourLastNameBeaconEntryEvent**.
+Klicka på namnet på händelsen som ska se ut så här: **yourLastNameBeaconEntryEvent**.
 
 ![ACOP](./images/jomsg5.png)
 
-Klicka **Montera kontext**.
+Klicka på **Montera kontext**.
 
 ![ACOP](./images/jomsg6.png)
 
-Klicka **POI Interaction**.
+Klicka på **POI Interaction**.
 
 ![ACOP](./images/jomsg7.png)
 
-Klicka **POI-detalj**.
+Klicka på **POI-detalj**.
 
 ![ACOP](./images/jomsg8.png)
 
-Klicka på **+** ikon på **POI name**.
-Då ser du det här. Klicka **Spara**.
+Klicka på ikonen **+** på **POI-namn**.
+Då ser du det här. Klicka på **Spara**.
 
 ![ACOP](./images/jomsg9.png)
 
@@ -125,17 +125,17 @@ Meddelandet är nu klart. Klicka på pilen i det övre vänstra hörnet för att
 
 ![ACOP](./images/jomsg11.png)
 
-Klicka **OK**.
+Klicka på **OK**.
 
 ![ACOP](./images/jomsg14.png)
 
 ## 3.3.2 Skicka ett meddelande till en skärm
 
-Som det tredje steget på resan måste du lägga till en **sendMessageToScreen** åtgärd. Gå till skärmens vänstra sida för att **Åtgärder** väljer du **sendMessageToScreen** och sedan dra och släppa det på den tredje noden på din resa. Då ser du det här.
+Som det tredje steget i resan måste du lägga till en **sendMessageToScreen**-åtgärd. Gå till vänster på skärmen till **Åtgärder**, markera åtgärden **sendMessageToScreen** och dra och släpp den på den tredje noden på resan. Då ser du det här.
 
 ![ACOP](./images/jomsg15.png)
 
-The **sendMessageToScreen** är en anpassad åtgärd som publicerar ett meddelande till slutpunkten som används av butiksskärmen. The **sendMessageToScreen** för åtgärden förväntas ett antal variabler som ska definieras. Du kan se dessa variabler genom att rulla nedåt tills du ser dem **Åtgärdsparametrar**.
+Åtgärden **sendMessageToScreen** är en anpassad åtgärd som publicerar ett meddelande till slutpunkten som används av butiksskärmen. Åtgärden **sendMessageToScreen** förväntar sig ett antal variabler som ska definieras. Du kan se dessa variabler genom att rulla nedåt tills du ser **åtgärdsparametrar**.
 
 ![ACOP](./images/jomsg16.png)
 
@@ -155,15 +155,15 @@ Du måste nu ange värden för varje åtgärdsparameter. Följ den här tabellen
 
 {style="table-layout:auto"}
 
-Klicka på knappen **Redigera** -ikon.
+Klicka på ikonen **Redigera** om du vill ange dessa värden.
 
 ![ACOP](./images/jomsg17.png)
 
-Nästa, välj **Avancerat läge**.
+Välj sedan **Avancerat läge**.
 
 ![ACOP](./images/jomsg18.png)
 
-Klistra sedan in värdet baserat på tabellen ovan. Klicka **OK**.
+Klistra sedan in värdet baserat på tabellen ovan. Klicka på **OK**.
 
 ![ACOP](./images/jomsg19.png)
 
@@ -171,29 +171,29 @@ Upprepa den här processen om du vill lägga till värden för varje fält.
 
 >[!IMPORTANT]
 >
->För fältet ECID finns en referens till händelsen `yourLastNameBeaconEntryEvent`. Se till att ersätta `yourLastName` efter ditt efternamn.
+>Det finns en referens till händelsen `yourLastNameBeaconEntryEvent` för fältet-ECID. Ersätt `yourLastName` med ditt efternamn.
 
 Slutresultatet ska se ut så här:
 
 ![ACOP](./images/jomsg20.png)
 
-Bläddra uppåt och klicka **OK**.
+Bläddra uppåt och klicka på **OK**.
 
 ![ACOP](./images/jomsg21.png)
 
-Du måste fortfarande ge din resa ett namn. Du kan göra det genom att klicka på **Penna** ikonen längst upp till vänster på skärmen.
+Du måste fortfarande ge din resa ett namn. Du kan göra det genom att klicka på ikonen **Penna** längst upp till vänster på skärmen.
 
 ![ACOP](./images/journeyname.png)
 
-Du kan sedan ange resans namn här. Använd `yourLastName - Beacon Entry Journey`. Klicka **OK** för att spara ändringarna.
+Du kan sedan ange resans namn här. Använd `yourLastName - Beacon Entry Journey`. Klicka på **OK** om du vill spara ändringarna.
 
 ![ACOP](./images/journeyname1.png)
 
-Nu kan du publicera din resa genom att klicka **Publicera**.
+Nu kan du publicera din resa genom att klicka på **Publish**.
 
 ![ACOP](./images/publishjourney.png)
 
-Klicka **Publicera** igen.
+Klicka på **Publish** igen.
 
 ![ACOP](./images/publish1.png)
 

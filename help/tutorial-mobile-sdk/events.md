@@ -5,7 +5,7 @@ jira: KT-14631
 exl-id: 4779cf80-c143-437b-8819-1ebc11a26852
 source-git-commit: 25f0df2ea09bb7383f45a698e75bd31be7541754
 workflow-type: tm+mt
-source-wordcount: '1328'
+source-wordcount: '1308'
 ht-degree: 0%
 
 ---
@@ -16,11 +16,11 @@ Lär dig spåra händelser i en mobilapp.
 
 Tillägget Edge Network tillhandahåller ett API för att skicka Experience Events till Platform Edge Network. En Experience Event är ett objekt som innehåller data som överensstämmer med XDM ExperienceEvent-schemadefinitionen. Enklare är det att de fångar upp vad andra gör i mobilappen. När data har tagits emot av Platform Edge Network kan de vidarebefordras till program och tjänster som konfigurerats i ditt datastam, som Adobe Analytics och Experience Platform. Läs mer om [Experience Events](https://developer.adobe.com/client-sdks/documentation/getting-started/track-events/) i produktdokumentationen.
 
-## Förutsättningar
+## Förhandskrav
 
 * Alla paketberoenden finns på plats i Xcode-projektet.
 * Registrerade tillägg i **[!UICONTROL AppDelegate]**.
-* Konfigurerat MobileCore-tillägg för att använda din utveckling `appId`.
+* MobileCore-tillägget har konfigurerats för att använda din utveckling `appId`.
 * Importerade SDK:er.
 * Programmet har skapats och körts med ändringarna ovan.
 
@@ -36,7 +36,7 @@ I den här lektionen ska du
 
 ## Skapa en upplevelsehändelse
 
-Tillägget Adobe Experience Platform Edge kan skicka händelser som följer ett tidigare definierat XDM-schema till Adobe Experience Platform Edge Network.
+Adobe Experience Platform Edge-tillägget kan skicka händelser som följer ett tidigare definierat XDM-schema till Adobe Experience Platform Edge Network.
 
 Processen går så här..
 
@@ -57,7 +57,7 @@ Processen går så här..
 
 För standardfältgrupperna ser processen ut så här:
 
-* Identifiera de händelser som du försöker samla in i ditt schema. I det här exemplet spårar du händelser för e-handelsupplevelser, till exempel en produktvy (**[!UICONTROL productViews]**).
+* Identifiera de händelser som du försöker samla in i ditt schema. I det här exemplet spårar du händelser för e-handelsupplevelser, till exempel en produktvyhändelse (**[!UICONTROL productViews]**).
 
   ![produktvyschema](assets/datacollection-prodView-schema.png)
 
@@ -74,15 +74,15 @@ För standardfältgrupperna ser processen ut så här:
   ]
   ```
 
-   * `eventType`: Beskriver händelsen som inträffade, använd en [känt värde](https://github.com/adobe/xdm/blob/master/docs/reference/classes/experienceevent.schema.md#xdmeventtype-known-values) om möjligt.
+   * `eventType`: Beskriver händelsen som inträffade, använd ett [känt värde](https://github.com/adobe/xdm/blob/master/docs/reference/classes/experienceevent.schema.md#xdmeventtype-known-values) när det är möjligt.
    * `commerce.productViews.value`: händelsens numeriska eller booleska värde. Om det är ett booleskt värde (eller &quot;Räknare&quot; i Adobe Analytics) är värdet alltid 1. Om det är en numerisk händelse eller valutakändelse kan värdet vara > 1.
 
-* Identifiera eventuella ytterligare data som är associerade med händelsen för e-handelsproduktvyn i ditt schema. I det här exemplet inkluderar du **[!UICONTROL productListItems]** som är en standarduppsättning med fält som används för alla e-handelsrelaterade händelser:
+* Identifiera eventuella ytterligare data som är associerade med händelsen för e-handelsproduktvyn i ditt schema. I det här exemplet inkluderar du **[!UICONTROL productListItems]**, som är en standarduppsättning med fält som används med alla e-handelsrelaterade händelser:
 
-  ![schema för produktlisteobjekt](assets/datacollection-prodListItems-schema.png)
+  ![objektschema för produktlista](assets/datacollection-prodListItems-schema.png)
    * Observera att **[!UICONTROL productListItems]** är en matris så att flera produkter kan anges.
 
-* Om du vill lägga till dessa data expanderar du `xdmData` objekt som ska innehålla tilläggsdata:
+* Om du vill lägga till dessa data expanderar du objektet `xdmData` så att det innehåller ytterligare data:
 
   ```swift
   var xdmData: [String: Any] = [
@@ -103,31 +103,31 @@ För standardfältgrupperna ser processen ut så här:
   ]
   ```
 
-* Nu kan du använda den här datastrukturen för att skapa en `ExperienceEvent`:
+* Du kan nu använda den här datastrukturen för att skapa en `ExperienceEvent`:
 
   ```swift
   let productViewEvent = ExperienceEvent(xdm: xdmData)
   ```
 
-* Och skicka händelsen och data till Platform Edge Network med `sendEvent` API:
+* Och skicka händelsen och data till Platform Edge Network med API:t `sendEvent`:
 
   ```swift
   Edge.sendEvent(experienceEvent: productViewEvent)
   ```
 
-The [`Edge.sendEvent`](https://developer.adobe.com/client-sdks/documentation/edge-network/api-reference/#sendevent) API är AEP Mobile SDK motsvarande [`MobileCore.trackAction`](https://developer.adobe.com/client-sdks/documentation/mobile-core/api-reference/#trackaction) och [`MobileCore.trackState`](https://developer.adobe.com/client-sdks/documentation/mobile-core/api-reference/#trackstate) API-anrop. Se [Migrera från mobiltillägget Analytics till Adobe Experience Platform Edge Network](https://developer.adobe.com/client-sdks/documentation/adobe-analytics/migrate-to-edge-network/) för mer information.
+API:t [`Edge.sendEvent`](https://developer.adobe.com/client-sdks/documentation/edge-network/api-reference/#sendevent) är det AEP Mobile SDK som motsvarar API-anropen [`MobileCore.trackAction`](https://developer.adobe.com/client-sdks/documentation/mobile-core/api-reference/#trackaction) och [`MobileCore.trackState`](https://developer.adobe.com/client-sdks/documentation/mobile-core/api-reference/#trackstate). Mer information finns i [Migrera från mobiltillägget Analytics till Adobe Experience Platform Edge Network](https://developer.adobe.com/client-sdks/documentation/adobe-analytics/migrate-to-edge-network/).
 
 Du kommer nu att implementera den här koden i ditt Xcode-projekt.
 Du har olika affärsproduktrelaterade åtgärder i din app och du vill skicka händelser baserat på de åtgärder som användaren har utfört:
 
 * vy: inträffar när en användare tittar på en viss produkt,
-* lägg till i kundvagn: när en användare trycker <img src="assets/addtocart.png" width="20" /> i en produktinformationsskärm
-* spara för senare: när en användare trycker <img src="assets/saveforlater.png" width="15" /> i en produktinformationsskärm
+* lägg till i kundvagn: när en användare trycker <img src="assets/addtocart.png" width="20" /> i en produktinformationsskärm,
+* spara för senare: när en användare trycker <img src="assets/saveforlater.png" width="15" /> i en produktinformationsskärm,
 * köp: när en användare trycker <img src="assets/purchase.png" width="20" /> i en produktinformationsskärm.
 
 Om du vill implementera sändning av e-handelsrelaterade upplevelsehändelser på ett återanvändbart sätt använder du en dedikerad funktion:
 
-1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project navigator och lägg till följande i `func sendCommerceExperienceEvent(commerceEventType: String, product: Product)` funktion.
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project navigator och lägg till följande i funktionen `func sendCommerceExperienceEvent(commerceEventType: String, product: Product)`.
 
    ```swift
    // Set up a data dictionary, create an experience event and send the event.
@@ -155,18 +155,18 @@ Om du vill implementera sändning av e-handelsrelaterade upplevelsehändelser p�
 
    * ställer in XDM-nyttolasten som en ordlista med hjälp av funktionens parametrar,
    * ställer in en upplevelsehändelse med hjälp av ordlistan,
-   * skickar upplevelsehändelsen med [`Edge.sendEvent`](https://developer.adobe.com/client-sdks/documentation/edge-network/api-reference/#sendevent) API.
+   * skickar upplevelsehändelsen med API:t [`Edge.sendEvent`](https://developer.adobe.com/client-sdks/documentation/edge-network/api-reference/#sendevent).
 
-1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Views]** > **[!DNL Products]** > **[!UICONTROL ProductView]** i Xcode Project navigator och lägga till olika anrop till `sendCommerceExperienceEvent` funktion:
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Views]** > **[!DNL Products]** > **[!UICONTROL ProductView]** i Xcode Project navigator och lägg till olika anrop till funktionen `sendCommerceExperienceEvent`:
 
-   1. På `.task` modifierare, i `ATTrackingManager.trackingAuthorizationStatus` stängning. Detta `.task` modifieraren anropas när produktvyn initieras och visas, så du vill skicka en produktvyhändelse vid det tillfället.
+   1. Vid modifieraren `.task`, inom stängningen av `ATTrackingManager.trackingAuthorizationStatus`. Den här `.task`-modifieraren anropas när produktvyn initieras och visas, så du vill skicka en produktvyhändelse vid det tillfället.
 
       ```swift
       // Send productViews commerce experience event
       MobileSDK.shared.sendCommerceExperienceEvent(commerceEventType: "productViews", product: product)
       ```
 
-   1. För varje knapp (<img src="assets/saveforlater.png" width="15" />, <img src="assets/addtocart.png" width="20" /> och <img src="assets/purchase.png" width="20" />) i verktygsfältet lägger du till samtalet i `ATTrackingManager.trackingAuthorizationStatus == .authorized` stängning:
+   1. För varje knapp (<img src="assets/saveforlater.png" width="15" />, <img src="assets/addtocart.png" width="20" /> och <img src="assets/purchase.png" width="20" />) i verktygsfältet lägger du till det relevanta samtalet i `ATTrackingManager.trackingAuthorizationStatus == .authorized`-stängningen:
 
       1. För <img src="assets/saveforlater.png" width="15" />:
 
@@ -191,7 +191,7 @@ Om du vill implementera sändning av e-handelsrelaterade upplevelsehändelser p�
 
 >[!TIP]
 >
->Om du utvecklar för Android™ ska du använda karta (`java.util.Map`) som det grundläggande gränssnittet för att konstruera XDM-nyttolasten.
+>Om du utvecklar för Android™ använder du karta (`java.util.Map`) som grundgränssnitt för att skapa din XDM-nyttolast.
 
 
 ### Anpassade fältgrupper
@@ -205,9 +205,9 @@ Tänk dig att du vill spåra skärmvisningar och interaktioner i själva appen. 
 
   >[!NOTE]
   >
-  * Standardfältgrupper börjar alltid i objektroten.
+  >* Standardfältgrupper börjar alltid i objektroten.
   >
-  * Anpassade fältgrupper börjar alltid under ett objekt som är unikt för din Experience Cloud-organisation, `_techmarketingdemos` i detta exempel.
+  >* Anpassade fältgrupper börjar alltid under ett objekt som är unikt för din Experience Cloud-organisation, `_techmarketingdemos` i det här exemplet.
 
   För programinteraktionshändelsen skapar du ett objekt som:
 
@@ -247,7 +247,7 @@ Tänk dig att du vill spåra skärmvisningar och interaktioner i själva appen. 
   ```
 
 
-* Nu kan du använda den här datastrukturen för att skapa en `ExperienceEvent`.
+* Du kan nu använda den här datastrukturen för att skapa en `ExperienceEvent`.
 
   ```swift
   let event = ExperienceEvent(xdm: xdmData)
@@ -262,9 +262,9 @@ Tänk dig att du vill spåra skärmvisningar och interaktioner i själva appen. 
 
 Här kan du implementera koden i Xcode-projektet.
 
-1. För enkelhetens skull definierar du två funktioner i **[!UICONTROL MobileSDK]**. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project Navigator.
+1. För enkelhetens skull definierar du två funktioner i **[!UICONTROL MobileSDK]**. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project-navigatorn.
 
-   1. Ett för appinteraktioner. Lägg till den här koden i `func sendAppInteractionEvent(actionName: String)` funktion:
+   1. Ett för appinteraktioner. Lägg till den här koden i funktionen `func sendAppInteractionEvent(actionName: String)`:
 
       ```swift
       // Set up a data dictionary, create an experience event and send the event.
@@ -289,10 +289,10 @@ Här kan du implementera koden i Xcode-projektet.
 
       * ställer in XDM-nyttolasten som en ordlista med hjälp av parametern från funktionen,
       * ställer in en upplevelsehändelse med hjälp av ordlistan,
-      * skickar upplevelsehändelsen med [`Edge.sendEvent`](https://developer.adobe.com/client-sdks/documentation/edge-network/api-reference/#sendevent) API.
+      * skickar upplevelsehändelsen med API:t [`Edge.sendEvent`](https://developer.adobe.com/client-sdks/documentation/edge-network/api-reference/#sendevent).
 
 
-   1. Och en för skärmspårning. Lägg till den här koden i `func sendTrackScreenEvent(stateName: String) ` funktion:
+   1. Och en för skärmspårning. Lägg till den här koden i funktionen `func sendTrackScreenEvent(stateName: String) `:
 
       ```swift
       // Set up a data dictionary, create an experience event and send the event.
@@ -318,7 +318,7 @@ Här kan du implementera koden i Xcode-projektet.
 
       * ställer in XDM-nyttolasten som en ordlista med hjälp av parametern från funktionen,
       * ställer in en upplevelsehändelse med hjälp av ordlistan,
-      * skickar upplevelsehändelsen med [`Edge.sendEvent`](https://developer.adobe.com/client-sdks/documentation/edge-network/api-reference/#sendevent) API.
+      * skickar upplevelsehändelsen med API:t [`Edge.sendEvent`](https://developer.adobe.com/client-sdks/documentation/edge-network/api-reference/#sendevent).
 
 1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Views]** > **[!DNL General]** > **[!UICONTROL LoginSheet]**.
 
@@ -329,7 +329,7 @@ Här kan du implementera koden i Xcode-projektet.
       MobileSDK.shared.sendAppInteractionEvent(actionName: "login")
       ```
 
-   1. Lägg till följande markerade kod i `onAppear` modifierare:
+   1. Lägg till följande markerade kod i modifieraren `onAppear`:
 
       ```swift
       // Send track screen event
@@ -338,11 +338,11 @@ Här kan du implementera koden i Xcode-projektet.
 
 ## Validering
 
-1. Granska [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten med Assurance.
+1. Granska avsnittet [Installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten med Assurance.
 
    1. Flytta Assurance-ikonen åt vänster.
-   1. Välj **[!UICONTROL Startsida]** i flikfältet och verifiera att en **[!UICONTROL ECID]**, **[!UICONTROL E-post]** och **[!UICONTROL CRM-ID]** på hemskärmen.
-   1. Välj **[!DNL Products]** i tabbfältet.
+   1. Välj **[!UICONTROL Home]** i flikfältet och kontrollera att du ser en **[!UICONTROL ECID]**, **[!UICONTROL Email]** och **[!UICONTROL CRM ID]** på hemskärmen.
+   1. Välj **[!DNL Products]** i flikfältet.
    1. Välj en produkt.
    1. Välj <img src="assets/saveforlater.png" width="15" />.
    1. Välj <img src="assets/addtocart.png" width="20" />.
@@ -351,10 +351,10 @@ Här kan du implementera koden i Xcode-projektet.
       <img src="./assets/mobile-app-events-3.png" width="300">
 
 
-1. I Assurance-gränssnittet letar du efter **[!UICONTROL hitReceived]** händelser från **[!UICONTROL com.adobe.edge.konductor]** leverantör.
-1. Markera händelsen och granska XDM-data i **[!UICONTROL meddelanden]** -objekt. Du kan också använda ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) **[!UICONTROL Kopiera Raw-händelse]** och använd en text- eller kodredigerare som du vill klistra in och inspektera händelsen.
+1. Sök efter **[!UICONTROL hitReceived]**-händelserna från **[!UICONTROL com.adobe.edge.konductor]**-leverantören i försäkringsgränssnittet.
+1. Markera händelsen och granska XDM-data i objektet **[!UICONTROL messages]**. Du kan också använda ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) **[!UICONTROL Copy Raw Event]** och en text- eller kodredigerare som du föredrar för att klistra in och inspektera händelsen.
 
-   ![validering av datainsamling](assets/datacollection-validation.png)
+   ![datainsamlingsvalidering](assets/datacollection-validation.png)
 
 
 ## Nästa steg
@@ -362,22 +362,22 @@ Här kan du implementera koden i Xcode-projektet.
 Nu bör du ha alla verktyg du behöver för att börja lägga till datainsamling i appen. Du kan lägga till mer information om hur användaren interagerar med dina produkter i appen och du kan lägga till fler appinteraktioner och skärmsspårningsanrop till appen:
 
 * Implementera beställning, utcheckning, tom varukorg och andra funktioner i appen och lägg till relevanta händelser för e-handelsupplevelser i den här funktionen.
-* Upprepa samtalet till `sendAppInteractionEvent` med rätt parameter för att spåra användarens övriga appinteraktioner.
-* Upprepa samtalet till `sendTrackScreenEvent` med rätt parameter för att spåra skärmar som visas av användaren i appen.
+* Upprepa anropet till `sendAppInteractionEvent` med rätt parameter för att spåra andra appinteraktioner av användaren.
+* Upprepa anropet till `sendTrackScreenEvent` med rätt parameter för att spåra skärmar som visas av användaren i appen.
 
 >[!TIP]
 >
-Granska [färdig app](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App) för fler exempel.
+>Granska den [färdiga appen](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App) för fler exempel.
 
 
 ## Skicka händelser till Analytics och Platform
 
-Nu när du har samlat in händelserna och skickat dem till Platform Edge Network skickas de till de program och tjänster som är konfigurerade i din [datastream](create-datastream.md). I senare lektioner mappar du dessa data till [Adobe Analytics](analytics.md), [Adobe Experience Platform](platform.md)och andra lösningar från Adobe Experience Cloud [Adobe Target](target.md) och Adobe Journey Optimizer.
+Nu när du har samlat in händelserna och skickat dem till Platform Edge Network skickas de till de program och tjänster som konfigurerats i [datastream](create-datastream.md). I senare lektioner mappar du dessa data till [Adobe Analytics](analytics.md), [Adobe Experience Platform](platform.md) och andra Adobe Experience Cloud-lösningar som [Adobe Target](target.md) och Adobe Journey Optimizer.
 
 >[!SUCCESS]
 >
-Du har nu konfigurerat din app för att spåra e-handel, appinteraktion och händelser för skärmspårning till Adobe Experience Platform Edge Network och alla tjänster som du har definierat i din datastam.
+>Du har nu konfigurerat din app för att spåra händelser i samband med handel, appinteraktion och skärmspårning till Adobe Experience Platform Edge Network och alla tjänster som du har definierat i din datastam.
 >
-Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 
 Nästa: **[Hantera WebViews](web-views.md)**

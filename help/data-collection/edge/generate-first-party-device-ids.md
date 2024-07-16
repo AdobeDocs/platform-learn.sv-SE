@@ -8,7 +8,7 @@ thumbnail: KT-9728.jpeg
 exl-id: 2e3c1f71-e224-4631-b680-a05ecd4c01e7
 source-git-commit: ac07d62cf4bfb6a9a8b383bbfae093304d008b5f
 workflow-type: tm+mt
-source-wordcount: '687'
+source-wordcount: '682'
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ De senaste ändringarna i webbläsaren begränsar varaktigheten för dessa typer
 
 Här är ett kort exempel på hur funktionen fungerar:
 
-![ID:n för förstahandsenhet (FPID) och Experience Cloud ID:n (ECID)](../assets/kt-9728.png)
+![Första parts enhets-ID (FPID) och Experience Cloud-ID (ECID)](../assets/kt-9728.png)
 
 1. En slutanvändares webbläsare begär en webbsida från en kunds webbserver eller CDN.
 1. Kunden genererar ett enhets-ID (FPID) på sin webbserver eller CDN (webbservern ska vara knuten till domännamnets DNS A/AAAA-post).
@@ -33,12 +33,12 @@ Här är ett kort exempel på hur funktionen fungerar:
 1. Kundens implementering av Adobe Experience Platform Web SDK gör en begäran till Platform Edge Network, inklusive FPID i identitetskartan.
 1. Experience Platform Edge Network tar emot FPID och använder det för att generera ett Experience Cloud ID (ECID).
 1. SDK-svaret för plattformen skickar ECID tillbaka till slutanvändarens webbläsare.
-1. Om `idMigrationEnabled=true`används JavaScript för att lagra ECID som `AMCV_` cookie i slutanvändarens webbläsare.
-1. I händelsen `AMCV_` cookie förfaller, processen upprepas själv. Så länge samma enhets-ID finns tillgängligt får du ett nytt `AMCV_` cookie skapas med samma ECID-värde som tidigare.
+1. Om `idMigrationEnabled=true` används JavaScript för att lagra ECID som `AMCV_`-cookie i slutanvändarens webbläsare.
+1. Om cookien `AMCV_` går ut upprepas processen. Så länge samma enhets-ID finns tillgängligt skapas en ny `AMCV_`-cookie med samma ECID-värde som tidigare.
 
 >[!NOTE]
 >
->The `idMigrationEnabled` behöver inte anges till `true` för att använda FPID. Med `idMigrationEnabled=false` du kanske inte ser en `AMCV_` cookie och måste söka efter ECID-värdet i nätverkssvaret.
+>`idMigrationEnabled` behöver inte anges till `true` för att använda FPID. Med `idMigrationEnabled=false` kanske du inte ser någon `AMCV_`-cookie och måste leta efter ECID-värdet i nätverkssvaret.
 
 
 I den här självstudiekursen används ett specifikt exempel med skriptspråket PHP för att visa hur du:
@@ -134,7 +134,7 @@ Det sista steget är att använda PHP för att eko cookie-värdet till identitet
 
 >[!IMPORTANT]
 >
->Identitetsnamnutrymmessymbolen som används i identitetskartan måste anropas `FPID`.
+>Identitetsnamnutrymmessymbolen som används i identitetskartan måste kallas `FPID`.
 >
 > `FPID` är ett reserverat ID-namnutrymme som inte visas i gränssnittslistorna med identitetsnamnutrymmen.
 
@@ -144,10 +144,10 @@ Det sista steget är att använda PHP för att eko cookie-värdet till identitet
 Validera implementeringen genom att bekräfta att samma ECID genereras från ditt första enhets-ID:
 
 1. Skapa en FPID-cookie.
-1. Skicka en begäran till Platform Edge Network med Platform Web SDK.
+1. Skicka en begäran till Platform Edge Network via Platform Web SDK.
 1. En cookie med formatet `AMCV_<IMSORGID@AdobeOrg>` genereras. Denna cookie innehåller ECID.
-1. Anteckna cookie-värdet som genereras och ta sedan bort alla cookies för webbplatsen utom `FPID` cookie.
+1. Anteckna cookie-värdet som genereras och ta sedan bort alla cookies för din webbplats utom `FPID`-cookien.
 1. Skicka ytterligare en begäran till Platform Edge Network.
-1. Bekräfta värdet i `AMCV_<IMSORGID@AdobeOrg>` cookie är samma `ECID` som i `AMCV_` cookie som har tagits bort. Om cookie-värdet är samma för en viss FPID har sederingsprocessen för ECID slutförts.
+1. Bekräfta att värdet i cookien `AMCV_<IMSORGID@AdobeOrg>` har samma `ECID`-värde som i cookien `AMCV_` som togs bort. Om cookie-värdet är samma för en viss FPID har sederingsprocessen för ECID slutförts.
 
 Mer information om den här funktionen finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html).

@@ -9,7 +9,7 @@ feature: Segments
 exl-id: 9b8d93b5-5bed-4600-8602-b438a0893612
 source-git-commit: ee5c0af17c12f1d90774a3a4150c9788e2368e39
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '514'
 ht-degree: 2%
 
 ---
@@ -20,19 +20,19 @@ Neste övício, você irá criar um segmento usando o Construtor de Segmentos da
 
 ## História
 
-Åtkomst [Adobe Experience Platform](https://experience.adobe.com/platform). Depois de fazer inloggning, você irá acessar a página inicial da Adobe Experience Platform.
+Öppna [Adobe Experience Platform](https://experience.adobe.com/platform). Depois de fazer inloggning, você irá acessar a página inicial da Adobe Experience Platform.
 
 ![Datainmatning](./images/home.png)
 
-Antes de continuar, você preca selecionar um **sandlåda**. O nome do sandbox a ser seleconado é ``Bootcamp``. É beível fazer isso clicando no texto **[!UICONTROL Produktionsprodukt]** na linha azul na parte superior da tela. Depois de selecionar o sandbox apropriado, você verá a tela mudando e agora você está em seu [!UICONTROL sandlåda] dedikat.
+Antes de continuar, você preca selecionar um **sandbox**. O nome do sandbox a ser selecionado é ``Bootcamp``. É kapível fazer isso clicando no texto **[!UICONTROL Production Prod]** na linha azul na parte superior da tela. Depois de selecionar o sandbox apropriado, você verá a tela mudando e agora você está em seu [!UICONTROL sandbox] dedikado.
 
 ![Datainmatning](./images/sb1.png)
 
-Ingen meny à esquerda, acesse **Segment**. Nesta página, você tem uma visão geral de todos os segmentos exist. Clique no botão + Criar segmento para começar a criar um novo segmento.
+Ingen meny à esquerda, åtkomst till **segment**. Nesta página, você tem uma visão geral de todos os segmentos exist. Clique no botão + Criar segmento para começar a criar um novo segmento.
 
 ![Segmentering](./images/menuseg.png)
 
-Quando estiver no novo construtor de segmentos, você irá perceber imediatamente a opção de menu **Attribut** e a referência do **Individuell XDM-profil**.
+Quando estiver no novo construtor de segmentos, você irá perceber imediatamente a opção de menu **Attributes** e a referenência do **XDM Individual Profile**.
 
 ![Segmentering](./images/segmentationui.png)
 
@@ -40,31 +40,31 @@ Como o XDM é a linguagem que alimenta o setor de experience ência, o XDM tamb�
 
 Agora você preca criar um segmento de todos os clientes que visualizaram o produto **Real-Time CDP**.
 
-Para construir este segmento, você preca adicionar um Evento de experience ência. Você pode encontrar todos os Eventos de Experience ência clicando no ícone **Händelser** na barra de menu **Fält**.
+Para construir este segmento, você preca adicionar um Evento de experience ência. Você pode encontrar todos os Eventos de experience ência clicando no ícone **Events** na barra de menu **Fields**.
 
 ![Segmentering](./images/findee.png)
 
-Em seguida, você verá o nó **XDM ExperienceEvents** do nível superior. Clique em **XDM ExperienceEvent**.
+Em seguida, você verá o nó **XDM ExperienceEvents** do nível superior. Klicka på **XDM ExperienceEvent**.
 
 ![Segmentering](./images/see.png)
 
-Åtkomst **Produktlisteobjekt**.
+Öppna **produktlisteobjekt**.
 
 ![Segmentering](./images/plitems.png)
 
-Markering **Namn** e arablonsolte o objeto **Namn** do menu à esquerda na tela do construtor de segmentos na seção **Händelser**. Em seguida, o seguinte será exibido:
+Välj **Namn** e arraysole o objeto **Namn** do menu à esquerda na tela do construtor de segmentos na seção **Events**. Em seguida, o seguinte será exibido:
 
 ![Segmentering](./images/eewebpdtlname.png)
 
-O parâmetro de Comparação deve ser **är lika med** e, no campo de entrada, insira **CDP i realtid**.
+O parâmetro de comparação deve ser **equals** e, no campo de entrada, insira **Real-time CDP**.
 
 ![Segmentering](./images/pv.png)
 
-Sempre que adicionar um elemento ao construtor de segmentos, você pode clicar no botão **Uppdatera offert** para obter uma nova estimativa da população em seu segmento.
+Sempre que adicionar um elemento ao construtor de segmentos, você pode clicar no botão **Refresh Estimat** para obter uma nova estimativa da população em seu segmento.
 
 ![Segmentering](./images/refreshest.png)
 
-Para **Utvärderingsmetod**, selecione **Edge**.
+Para **Utvärderingsmetod**, välj **Edge**.
 
 ![Segmentering](./images/evedge.png)
 
@@ -74,7 +74,7 @@ Como modelo de nomenklatura, använd:
 
 - `seuSobrenome - Interest in Real-Time CDP`
 
-Em seguida, clique no botão **Spara och stäng** para salvar seu segmento.
+Em seguida, clique no botão **Save and Close** para salvar seu segmento.
 
 ![Segmentering](./images/segmentname.png)
 

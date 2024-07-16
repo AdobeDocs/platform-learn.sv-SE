@@ -8,13 +8,13 @@ thumbnail: 343999.jpeg
 exl-id: 15948005-53d7-413d-9379-0d7b5189b839
 source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
-source-wordcount: '44'
+source-wordcount: '38'
 ht-degree: 0%
 
 ---
 
 # Övervaka händelsevidarebefordran
 
-Lär dig hur du övervakar vidarebefordran av händelser i gränssnittet för datainsamling. Mer information finns på [dokumentation för vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html).
+Lär dig hur du övervakar vidarebefordran av händelser i gränssnittet för datainsamling. Mer information finns i [dokumentationen för vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/343999?learn=on)

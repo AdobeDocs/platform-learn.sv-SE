@@ -16,7 +16,7 @@ Lär dig hur du strömmar webbdata till Adobe Experience Platform med Platform W
 
 Experience Platform är ryggraden i alla nya Experience Cloud-program, som Adobe Real-time Customer Data Platform, Adobe Customer Journey Analytics och Adobe Journey Optimizer. Dessa program är utformade för att använda Platform Web SDK som den optimala metoden för webbdatainsamling.
 
-![Web SDK och Adobe Experience Platform](assets/dc-websdk-aep.png)
+![Web SDK och Adobe Experience Platform-diagram](assets/dc-websdk-aep.png)
 
 Experience Platform använder samma XDM-schema som du skapade tidigare för att hämta händelsedata från Luma-webbplatsen. När dessa data skickas till Platform Edge Network kan datastream-konfigurationen vidarebefordra dem till Experience Platform.
 
@@ -31,7 +31,7 @@ När lektionen är klar kan du:
 * Infoga exempeldata om lojalitetsprogram i plattformen
 * Bygg en publik på en enkel plattform
 
-## Förutsättningar
+## Förhandskrav
 
 För att slutföra lektionen måste du först:
 
@@ -44,41 +44,41 @@ För att slutföra lektionen måste du först:
 
 ## Skapa en datauppsättning
 
-Alla data som har inhämtats till Adobe Experience Platform lagras i datasjön som datauppsättningar. A [datauppsättning](https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/overview) är en lagrings- och hanteringskonstruktion för en datamängd, vanligtvis en tabell som innehåller ett schema (kolumner) och fält (rader). Datauppsättningar innehåller också metadata som beskriver olika aspekter av de data som lagras.
+Alla data som har inhämtats till Adobe Experience Platform lagras i datasjön som datauppsättningar. En [datamängd](https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/overview) är en lagrings- och hanteringskonstruktion för en datamängd, vanligtvis en tabell som innehåller ett schema (kolumner) och fält (rader). Datauppsättningar innehåller också metadata som beskriver olika aspekter av de data som lagras.
 
 Låt oss skapa en datauppsättning för dina webbhändelsedata för Luma:
 
 
-1. Gå till [Experience Platform](https://experience.adobe.com/platform/) eller [Journey Optimizer](https://experience.adobe.com/journey-optimizer/) gränssnitt
+1. Gå till gränssnittet [Experience Platform](https://experience.adobe.com/platform/) eller [Journey Optimizer](https://experience.adobe.com/journey-optimizer/)
 1. Bekräfta att du befinner dig i den utvecklingssandlåda som du använder för den här självstudien
-1. Öppna **[!UICONTROL Data Management > Datasets]** från vänster navigering
+1. Öppna **[!UICONTROL Data Management > Datasets]** från den vänstra navigeringen
 1. Välj **[!UICONTROL Create dataset]**
 
    ![Skapa schema](assets/experience-platform-create-dataset.png)
 
-1. Välj **[!UICONTROL Create dataset from schema]** option
+1. Välj alternativet **[!UICONTROL Create dataset from schema]**
 
    ![Skapa datauppsättning från schema](assets/experience-platform-create-dataset-schema.png)
 
-1. Välj `Luma Web Event Data` schema som har skapats i [tidigare lektion](configure-schemas.md) och sedan **[!UICONTROL Next]**
+1. Välj det `Luma Web Event Data`-schema som skapades i [tidigare lektionen](configure-schemas.md) och välj sedan **[!UICONTROL Next]**
 
    ![Datauppsättning, välj schema](assets/experience-platform-create-dataset-schema-selection.png)
 
-1. Ange en **[!UICONTROL Name]** och valfria **[!UICONTROL Description]** för datauppsättningen. För denna övning används `Luma Web Event Data`väljer **[!UICONTROL Finish]**
+1. Ange ett **[!UICONTROL Name]** och valfritt **[!UICONTROL Description]** för datauppsättningen. Använd `Luma Web Event Data` för den här övningen och välj sedan **[!UICONTROL Finish]**
 
-   ![Namn på datauppsättning ](assets/experience-platform-create-dataset-schema-name.png)
+   ![Datauppsättningsnamn ](assets/experience-platform-create-dataset-schema-name.png)
 
 En datauppsättning har nu konfigurerats för att börja samla in data från implementeringen av Platform Web SDK.
 
 ## Konfigurera datastream
 
-Nu kan du konfigurera [!UICONTROL datastream] skicka data till [!UICONTROL Adobe Experience Platform]. Datastream är länken mellan taggegenskapen, Platform Edge Network och datamängden Experience Platform.
+Nu kan du konfigurera [!UICONTROL datastream] för att skicka data till [!UICONTROL Adobe Experience Platform]. Datastream är länken mellan taggegenskapen, Platform Edge Network och datamängden Experience Platform.
 
-1. Öppna [Datainsamling](https://experience.adobe.com/#/data-collection){target="blank"} gränssnitt
-1. Välj **[!UICONTROL Datastreams]** från vänster navigering
-1. Öppna datastream som du skapade i [Konfigurera ett datastream](configure-datastream.md) lektion, `Luma Web SDK`
+1. Öppna gränssnittet [Datainsamling](https://experience.adobe.com/#/data-collection){target="blank"}
+1. Välj **[!UICONTROL Datastreams]** i den vänstra navigeringen
+1. Öppna datastream som du skapade i [Konfigurera en datastream](configure-datastream.md)-lektion, `Luma Web SDK`
 
-   ![Välj dataströmmen för Luma Web SDK](assets/datastream-luma-web-sdk-development.png)
+   ![Välj Luma Web SDK-datastream](assets/datastream-luma-web-sdk-development.png)
 
 1. Välj **[!UICONTROL Add Service]**
    ![Lägg till en tjänst i datastream](assets/experience-platform-addService.png)
@@ -87,9 +87,9 @@ Nu kan du konfigurera [!UICONTROL datastream] skicka data till [!UICONTROL Adobe
 
 1. Välj **[!UICONTROL Save]**.
 
-   ![Datastream Config](assets/experience-platform-datastream-config.png)
+   ![Datastream-konfiguration](assets/experience-platform-datastream-config.png)
 
-När du genererar trafik på [Luma Demo Site](https://luma.enablementadobe.com/content/luma/us/en.html) mappas till taggegenskapen, data fyller i datauppsättningen i Experience Platform!
+När du genererar trafik på [Luma Demo Site](https://luma.enablementadobe.com/content/luma/us/en.html) som är mappad till din taggegenskap fylls datauppsättningen i Experience Platform!
 
 ## Validera datauppsättningen
 
@@ -101,11 +101,11 @@ Det här steget är viktigt för att se till att data har landats i datauppsätt
 
 ### Experience Platform Debugger
 
-De här stegen är mer eller mindre desamma som i [Felsökningslektion](validate-with-debugger.md). Eftersom data bara skickas till plattformen när du har aktiverat den i datastream måste du generera fler exempeldata:
+De här stegen är mer eller mindre desamma som du gjorde i [felsökningslektionen](validate-with-debugger.md). Eftersom data bara skickas till plattformen när du har aktiverat den i datastream måste du generera fler exempeldata:
 
-1. Öppna [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html) och väljer [!UICONTROL Experience Platform Debugger] tilläggsikon
+1. Öppna [demowebbplatsen för luma](https://luma.enablementadobe.com/content/luma/us/en.html) och välj tilläggsikonen [!UICONTROL Experience Platform Debugger]
 
-1. Konfigurera felsökaren för att mappa taggegenskapen till *din* Utvecklingsmiljö, enligt beskrivningen i [Validera med felsökning](validate-with-debugger.md) lektion
+1. Konfigurera felsökaren för att mappa taggegenskapen till *din* utvecklingsmiljö, enligt beskrivningen i lektionen [Validera med felsökning](validate-with-debugger.md)
 
    ![Din startutvecklingsmiljö visas i Felsökning](assets/experience-platform-debugger-dev.png)
 
@@ -115,28 +115,28 @@ De här stegen är mer eller mindre desamma som i [Felsökningslektion](validate
 
 1. Markera på raden &quot;events&quot; i plattforms-Web SDK-nätverksbeacons som visas av felsökaren för att visa information i ett popup-fönster
 
-   ![Web SDK in Debugger](assets/experience-platform-debugger-dev-eventType.png)
+   ![Web SDK i felsökning](assets/experience-platform-debugger-dev-eventType.png)
 
 1. Sök efter &quot;identityMap&quot; i popup-fönstret. Här visas lumaCrmId med tre nycklar för authenticatedState, id och primär
-   ![Web SDK in Debugger](assets/experience-platform-debugger-dev-idMap.png)
+   ![Web SDK i felsökning](assets/experience-platform-debugger-dev-idMap.png)
 
-Nu ska data fyllas i i `Luma Web Event Data` datauppsättning och klar för validering av Preview Dataset.
+Data ska nu fyllas i i datamängden `Luma Web Event Data` och vara klara för validering av datauppsättningen Preview.
 
 ### Förhandsgranska datauppsättningen
 
-För att bekräfta att data har landat i plattformens datasjön är ett snabbt alternativ att använda **[!UICONTROL Preview dataset]** -funktion. SDK-data för webben mikrobatcheras till datasjön och uppdateras regelbundet i plattformsgränssnittet. Det kan ta 10-15 minuter att se data som du har skapat.
+För att bekräfta att data har landat i plattformens datalinje är ett snabbt alternativ att använda funktionen **[!UICONTROL Preview dataset]**. SDK-data för webben mikrobatcheras till datasjön och uppdateras regelbundet i plattformsgränssnittet. Det kan ta 10-15 minuter att se data som du har skapat.
 
-1. I [Experience Platform](https://experience.adobe.com/platform/) gränssnitt, välja **[!UICONTROL Data Management > Datasets]** i den vänstra navigeringen för att öppna **[!UICONTROL Datasets]** kontrollpanel.
+1. I gränssnittet [Experience Platform](https://experience.adobe.com/platform/) väljer du **[!UICONTROL Data Management > Datasets]** i den vänstra navigeringen för att öppna kontrollpanelen **[!UICONTROL Datasets]**.
 
    Kontrollpanelen visar alla tillgängliga datauppsättningar för din organisation. Information visas för varje datamängd som anges, inklusive namn, schema som datauppsättningen följer och status för den senaste importen.
 
-1. Välj `Luma Web Event Data` datauppsättning för att öppna **[!UICONTROL Dataset activity]** skärm.
+1. Markera `Luma Web Event Data`-datauppsättningen för att öppna dess **[!UICONTROL Dataset activity]**-skärm.
 
-   ![Webbhändelse för Luma för datauppsättning](assets/experience-platform-dataset-validation-lumaSDK.png)
+   ![Webbhändelse för datauppsättnings-Luma](assets/experience-platform-dataset-validation-lumaSDK.png)
 
    Aktivitetsskärmen innehåller ett diagram som visar hur många meddelanden som har förbrukats samt en lista över lyckade och misslyckade batchar.
 
-1. Från **[!UICONTROL Dataset activity]** skärm, välja **[!UICONTROL Preview dataset]** i skärmens övre högra hörn om du vill förhandsgranska upp till 100 rader med data. Om datauppsättningen är tom inaktiveras förhandsgranskningslänken.
+1. På skärmen **[!UICONTROL Dataset activity]** väljer du **[!UICONTROL Preview dataset]** i skärmens övre högra hörn om du vill förhandsgranska upp till 100 rader med data. Om datauppsättningen är tom inaktiveras förhandsgranskningslänken.
 
    ![Förhandsgranska datauppsättning](assets/experience-platform-dataset-preview.png)
 
@@ -147,10 +147,10 @@ För att bekräfta att data har landat i plattformens datasjön är ett snabbt a
 
 ### Fråga data
 
-1. I [Experience Platform](https://experience.adobe.com/platform/) gränssnitt, välja **[!UICONTROL Data Management > Queroes]** i den vänstra navigeringen för att öppna **[!UICONTROL Queries]** skärm.
+1. I gränssnittet [Experience Platform](https://experience.adobe.com/platform/) väljer du **[!UICONTROL Data Management > Queroes]** i den vänstra navigeringen för att öppna skärmen **[!UICONTROL Queries]**.
 1. Välj **[!UICONTROL Create query]**
-1. Kör först en fråga för att se alla tabellnamn i datasjön. Retur `SHOW TABLES` i frågeredigeraren och klicka på uppspelningsikonen för att köra frågan.
-1. Lägg märke till hur namnet på tabellen ser ut ungefär som `luma_web_event_data`
+1. Kör först en fråga för att se alla tabellnamn i datasjön. Ange `SHOW TABLES` i frågeredigeraren och klicka på uppspelningsikonen för att köra frågan.
+1. Lägg märke till att namnet på tabellen liknar `luma_web_event_data` i resultatet
 1. Fråga nu tabellen med en enkel fråga som refererar till tabellen (observera att frågan som standard är begränsad till 100 resultat): `SELECT * FROM "luma_web_event_data"`
 1. Efter en stund bör du se exempelposter av dina webbdata.
 
@@ -160,7 +160,7 @@ För att bekräfta att data har landat i plattformens datasjön är ett snabbt a
 
 >[!INFO]
 >
->  Mer information om Adobe Experience Platform frågetjänst finns i [Utforska data](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/queries/explore-data) i avsnittet Plattformssjälvstudiekurser.
+>  Mer information om Adobe Experience Platform frågetjänst finns i [Utforska data](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/queries/explore-data) i självstudiekurserna för plattformen.
 
 
 ## Aktivera datauppsättningen och schemat för kundprofil i realtid
@@ -178,7 +178,7 @@ För kunder som har Real-time Customer Data Platform och Journey Optimizer är n
 
 1. Öppna datauppsättningen som du skapade, `Luma Web Event Data`
 
-1. Välj **[!UICONTROL Profile Toggle]** för att aktivera
+1. Markera **[!UICONTROL Profile Toggle]** för att aktivera den
 
    ![Växla profil](assets/setup-experience-platform-profile.png)
 
@@ -186,11 +186,11 @@ För kunder som har Real-time Customer Data Platform och Journey Optimizer är n
 
    ![Aktivera profil/växla](assets/setup-experience-platform-profile-enable.png)
 
-**Aktivera schemat:**
+**Så här aktiverar du schemat:**
 
 1. Öppna schemat som du skapade, `Luma Web Event Data`
 
-1. Välj **[!UICONTROL Profile Toggle]** för att aktivera
+1. Markera **[!UICONTROL Profile Toggle]** för att aktivera den
 
    ![Växla profil](assets/setup-experience-platform-profile-schema.png)
 
@@ -205,7 +205,7 @@ För kunder som har Real-time Customer Data Platform och Journey Optimizer är n
 
    ![Aktivera profil/växla](assets/setup-experience-platform-profile-schema-enable.png)
 
-1. Välj **[!UICONTROL Save]** för att spara det uppdaterade schemat
+1. Välj **[!UICONTROL Save]** om du vill spara det uppdaterade schemat
 
 Nu är schemat även aktiverat för profilen.
 
@@ -226,27 +226,27 @@ Nu är schemat även aktiverat för profilen.
 
 Du kan slå upp en kundprofil i plattformsgränssnittet (eller Journey Optimizer-gränssnittet) för att bekräfta att data har landats i kundprofilen i realtid. Som namnet antyder fyller profilerna i realtid, så det är ingen fördröjning som när data i datauppsättningen validerades.
 
-Först måste du generera fler exempeldata. Upprepa stegen tidigare i den här lektionen för att logga in på Luma-webbplatsen när den mappas till taggegenskapen. Inspect-begäran om Platform Web SDK för att säkerställa att den skickar data med `lumaCRMId`.
+Först måste du generera fler exempeldata. Upprepa stegen tidigare i den här lektionen för att logga in på Luma-webbplatsen när den mappas till taggegenskapen. Inspect-begäran om Platform Web SDK för att se till att den skickar data med `lumaCRMId`.
 
-1. I [Experience Platform](https://experience.adobe.com/platform/) gränssnitt, välja **[!UICONTROL Customer]** > **[!UICONTROL Profiles]** i den vänstra navigeringen
+1. I gränssnittet [Experience Platform](https://experience.adobe.com/platform/) väljer du **[!UICONTROL Customer]** > **[!UICONTROL Profiles]** i den vänstra navigeringen
 
-1. Som **[!UICONTROL Identity namespace]** use `lumaCRMId`
-1. Kopiera och klistra in värdet för `lumaCRMId` det anrop som du inspekterade i felsökaren Experience Platform, i det här fallet `112ca06ed53d3db37e4cea49cc45b71e`.
+1. Som **[!UICONTROL Identity namespace]** använder du `lumaCRMId`
+1. Kopiera och klistra in värdet för `lumaCRMId` som skickades i anropet som du inspekterade i felsökaren i Experience Platform, i det här fallet `112ca06ed53d3db37e4cea49cc45b71e`.
 
    ![Profil](assets/experience-platform-validate-dataset-profile.png)
 
-1. Om det finns ett giltigt värde i profilen för `lumaCRMId`fyller ett profil-ID i konsolen:
+1. Om det finns ett giltigt värde i profilen för `lumaCRMId` fylls ett profil-ID i konsolen:
 
    ![Profil](assets/experience-platform-validate-dataset-profile-set.png)
 
-1. Så här visar du de fullständiga **[!UICONTROL Customer Profile]** för varje ID väljer du **[!UICONTROL Profile ID]** i huvudfönstret.
+1. Om du vill visa hela **[!UICONTROL Customer Profile]** för varje ID väljer du **[!UICONTROL Profile ID]** i huvudfönstret.
 
    >[!NOTE]
    >
    >Observera att du kan välja hyperlänken för profil-ID:t, eller om du markerar raden öppnas en högermeny där du kan välja hyperlänken för profil-ID
    > ![Kundprofil](assets/experience-platform-select-profileId.png)
 
-   Här ser du alla identiteter som är länkade till `lumaCRMId`, till exempel `ECID`.
+   Här kan du se alla identiteter som är länkade till `lumaCRMId`, till exempel `ECID`.
 
    ![Kundprofil](assets/experience-platform-validate-dataset-custProfile.png)
 
@@ -263,9 +263,9 @@ Skapa bonusschemat:
 1. Skapa ett nytt schema
 1. Välj **[!UICONTROL Individual Profile]** som [!UICONTROL base class]
 1. Namnge schemat `Luma Loyalty Schema`
-1. Lägg till [!UICONTROL Loyalty Details] fältgrupp
-1. Lägg till [!UICONTROL Demographic Details] fältgrupp
-1. Välj `Person ID` fält och markera det som [!UICONTROL Identity] och [!UICONTROL Primary identity] med `Luma CRM Id` [!UICONTROL Identity namespace].
+1. Lägg till fältgruppen [!UICONTROL Loyalty Details]
+1. Lägg till fältgruppen [!UICONTROL Demographic Details]
+1. Markera fältet `Person ID` och markera det som en [!UICONTROL Identity] och [!UICONTROL Primary identity] med `Luma CRM Id` [!UICONTROL Identity namespace].
 1. Aktivera schemat för [!UICONTROL Profile]. Om du inte kan hitta växlingsknappen Profil kan du prova att klicka på schemanamnet högst upp till vänster.
 1. Spara schemat
 
@@ -286,7 +286,7 @@ Så här skapar du datauppsättningen och importerar exempeldata:
 
 Målgruppsprofiler samlas kring gemensamma egenskaper. Skapa en snabb målgrupp som ni kan använda i er webbkampanj:
 
-1. I gränssnittet Experience Platform eller Journey Optimizer går du till **[!UICONTROL Customer]** > **[!UICONTROL Audiences]** till vänster navigering
+1. I gränssnittet Experience Platform eller Journey Optimizer går du till **[!UICONTROL Customer]** > **[!UICONTROL Audiences]** i den vänstra navigeringen
 1. Välj **[!UICONTROL Create audience]**
 1. Välj **[!UICONTROL Build rule]**
 1. Välj **[!UICONTROL Create]**
@@ -294,7 +294,7 @@ Målgruppsprofiler samlas kring gemensamma egenskaper. Skapa en snabb målgrupp 
    ![Skapa en målgrupp](assets/web-campaign-create-audience.png)
 
 1. Välj **[!UICONTROL Attributes]**
-1. Hitta **[!UICONTROL Loyalty]** > **[!UICONTROL Tier]** och dra det till **[!UICONTROL Attributes]** section
+1. Hitta fältet **[!UICONTROL Loyalty]** > **[!UICONTROL Tier]** och dra det till avsnittet **[!UICONTROL Attributes]**
 1. Definiera målgruppen som användare vars `tier` är `gold`
 1. Namnge målgruppen `Luma Loyalty Rewards – Gold Status`
 1. Välj **[!UICONTROL Edge]** som **[!UICONTROL Evaluation method]**
@@ -302,11 +302,11 @@ Målgruppsprofiler samlas kring gemensamma egenskaper. Skapa en snabb målgrupp 
 
    ![Definiera målgruppen](assets/web-campaign-define-audience.png)
 
-Eftersom detta är en mycket enkel publik kan vi använda Edge-utvärderingsmetoden. Edge-målgrupperna utvärderas i det närmaste, så i samma begäran som Web SDK till Platform Edge Network kan vi utvärdera målgruppsdefinitionen och omedelbart bekräfta om användaren är berättigad.
+Eftersom detta är en mycket enkel publik kan vi använda Edge utvärderingsmetod. Edge målgrupper utvärderas i det närmaste, så i samma begäran som Web SDK till Platform Edge Network kan vi utvärdera målgruppsdefinitionen och omedelbart bekräfta om användaren är berättigad.
 
 
 [Nästa: ](setup-analytics.md)
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

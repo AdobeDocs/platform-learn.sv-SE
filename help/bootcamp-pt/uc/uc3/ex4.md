@@ -11,7 +11,7 @@ feature: Events
 exl-id: 04e2877f-8672-4584-8204-4489a7025c63
 source-git-commit: 3c86f9b19cecf92c9a324fb6fcfcefaebf82177f
 workflow-type: tm+mt
-source-wordcount: '194'
+source-wordcount: '186'
 ht-degree: 0%
 
 ---
@@ -25,11 +25,11 @@ Para testar sua jnada, você deve usar o eventID criado no övício 3.2, que dev
 O eventID é o que precise a ser enviado à Adobe Experience Platform para acionar a jnada. Neste exemplo, o eventID é:
 `e76c0bf0c77c3517e5b6f4c457a0754ebaf5f1f6b9357d74e0d8e13ae517c3d5`.
 
-Abra o aplicativo móvel e vá para a página inicial. Clique no ícone de **Configuração**.
+Abra o aplicativo móvel e vá para a página inicial. Clique no ícone de **Configuração**.
 
 ![DSN](./images/appsett.png)
 
-Cole seu eventID no campo **Beacon EventID** e clique em **Spara**.
+Cole seu eventID no campo **Beacon EventID** e clique em **Save**.
 
 ![DSN](./images/beacon1.png)
 
@@ -39,11 +39,11 @@ Em seguida, será exibida a tela:
 
 ![DSN](./images/screen1.png)
 
-Retorne para a página inicial. Clique no ícone do **beacon**.
+Retorne para a página inicial. Klicka på no ícone do **beacon**.
 
 ![DSN](./images/app23.png)
 
-Primeiro, selecione **Bootcamp Screen Beacon** e clique no botão de **entrada** -knappen. Isso permitirá que você simule uma entrada do beacon.
+Primeiro, selecione **Bootcamp Screen Beacon** e clique no botão de **entrada** button. Isso permitirá que você simule uma entrada do beacon.
 
 ![DSN](./images/app21.png)
 

@@ -72,15 +72,15 @@ Innan du börjar med stegen ovan ska du inte glömma steg 0, som är att först�
 
 ## 4.1.5 Steg 0: Förstå Adobe Experience Platform scheman och datauppsättningar
 
-Logga in på Adobe Experience Platform genom att gå till denna URL: [https://experience.adobe.com/platform](https://experience.adobe.com/platform).
+Logga in på Adobe Experience Platform via följande URL: [https://experience.adobe.com/platform](https://experience.adobe.com/platform).
 
 När du har loggat in loggar du in på Adobe Experience Platform hemsida.
 
-![Inmatning av data](../uc1/images/home.png)
+![Datainmatning](../uc1/images/home.png)
 
 Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``Bootcamp``. Du kan göra detta genom att klicka på texten **[!UICONTROL Prod]** i skärmens övre högra hörn. När du har valt rätt sandlåda ser du skärmändringen och nu befinner du dig i din dedikerade sandlåda.
 
-![Inmatning av data](../uc1/images/sb1.png)
+![Datainmatning](../uc1/images/sb1.png)
 
 Ta en titt på dessa scheman och datauppsättningar i Adobe Experience Platform.
 
@@ -93,15 +93,15 @@ Ta en titt på dessa scheman och datauppsättningar i Adobe Experience Platform.
 Se till att du åtminstone har kontrollerat saker som:
 
 - Identiteter: CRMID, phoneNumber, ECID, email. Vilka identiteter är de primära identifierarna, vilka är de sekundära identifierarna?
-Du kan hitta identifierarna genom att öppna ett schema och titta på objektet `_experienceplatform.identification.core`. Ta en titt på schemat [Demo System - händelseschema för webbplats (Global v1.1)](https://experience.adobe.com/platform/schema).
+Du kan hitta identifierarna genom att öppna ett schema och titta på objektet `_experienceplatform.identification.core`. Titta närmare på schemat [Demo System - Händelseschema för webbplats (Global v1.1)](https://experience.adobe.com/platform/schema).
 
 ![demo](./images/identity.png)
 
-- Utforska handelsobjektet i schemat [Demo System - händelseschema för webbplats (Global v1.1)](https://experience.adobe.com/platform/schema).
+- Utforska handelsobjektet i schemat [Demo System - Händelseschema för webbplats (Global v1.1)](https://experience.adobe.com/platform/schema).
 
 ![demo](./images/commerce.png)
 
-- Förhandsgranska alla [datauppsättningar](https://experience.adobe.com/platform/dataset/browse?limit=50&amp;page=1&amp;sortDescending=1&amp;sortField=created) och ta en titt på data
+- Förhandsgranska alla [datauppsättningar](https://experience.adobe.com/platform/dataset/browse?limit=50&amp;page=1&amp;sortDescending=1&amp;sortField=created) och titta på data
 
 Nu kan du börja använda användargränssnittet i Customer Journey Analytics.
 

@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Skapa identiteter
 
-Lär dig hur du fångar identiteter med Adobe Experience Platform Web SDK. Samla in både oautentiserade och autentiserade identitetsdata på [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html). Lär dig hur du använder dataelementen som du skapade tidigare för att samla in autentiserade data med datatypen Platform Web SDK som kallas identitetskarta.
+Lär dig hur du fångar identiteter med Adobe Experience Platform Web SDK. Hämta både oautentiserade och autentiserade identitetsdata på [demowebbplatsen för Luma](https://luma.enablementadobe.com/content/luma/us/en.html). Lär dig hur du använder dataelementen som du skapade tidigare för att samla in autentiserade data med datatypen Platform Web SDK som kallas identitetskarta.
 
 Den här lektionen fokuserar på det dataelement för identitetskartan som finns i taggtillägget Adobe Experience Platform Web SDK. Du mappar dataelement som innehåller ett autentiserat användar-ID och autentiseringsstatus till XDM.
 
@@ -25,9 +25,9 @@ När lektionen är slut kan du:
 * Förstå skillnaden mellan oautentiserade och autentiserade ID:n
 * Skapa ett dataelement för identitetskarta
 
-## Förutsättningar
+## Förhandskrav
 
-Du har en förståelse för vad ett datalager är, och vet hur det [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"} datalager och veta hur du refererar till dataelement i taggar. Du måste ha slutfört föregående lektioner i självstudien:
+Du har en förståelse för vad ett datalager är, har lärt dig mer om datalagret [Luma demo ](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"} och vet hur du refererar till dataelement i taggar. Du måste ha slutfört föregående lektioner i självstudien:
 
 * [Konfigurera ett XDM-schema](configure-schemas.md)
 * [Konfigurera ett identitetsnamnutrymme](configure-identities.md)
@@ -38,7 +38,7 @@ Du har en förståelse för vad ett datalager är, och vet hur det [Luma demo si
 
 ## EXPERIENCE CLOUD ID
 
-The [Experience Cloud ID (ECID)](https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/ecid) är ett delat ID-namnutrymme som används i Adobe Experience Platform- och Adobe Experience Cloud-program. ECID utgör grunden för kundidentiteten och är standardidentitet för digitala resurser. ECID är den idealiska identifieraren för att spåra oautentiserade användarbeteenden eftersom det alltid finns.
+[Experience Cloud ID (ECID)](https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/ecid) är ett delat ID-namnområde som används i Adobe Experience Platform- och Adobe Experience Cloud-program. ECID utgör grunden för kundidentiteten och är standardidentitet för digitala resurser. ECID är den idealiska identifieraren för att spåra oautentiserade användarbeteenden eftersom det alltid finns.
 
 <!-- FYI I commented this out because it was breaking the build - Jack
 >[!TIP]
@@ -53,15 +53,15 @@ ECID anges med en kombination av cookies från första part och Platform Edge Ne
 
 >[!IMPORTANT]
 >
->The [Experience Cloud ID-tjänsttillägg](https://exchange.adobe.com/apps/ec/100160/adobe-experience-cloud-id-launch-extension) behövs inte vid implementering av Adobe Experience Platform Web SDK eftersom ID-tjänstfunktionen är inbyggd i Platform Web SDK.
+>Tjänsttillägget [Experience Cloud ID](https://exchange.adobe.com/apps/ec/100160/adobe-experience-cloud-id-launch-extension) behövs inte när Adobe Experience Platform Web SDK implementeras eftersom ID-tjänstfunktionen är inbyggd i Platform Web SDK.
 
 ## FPID (First Party Device ID)
 
-FPID är cookies från första part _du använder dina egna webbservrar_ som Adobe sedan använder för att skapa ECID, i stället för att använda cookie-filen från Web SDK. Webbläsarstödet kan variera, men cookies från första part kan vara mer varaktiga när de anges av en server som använder en DNS A-post (för IPv4) eller en AAA-post (för IPv6), i motsats till när de anges av en DNS CNAME- eller JavaScript-kod.
+FPID är cookies från första part _du anger med dina egna webbservrar_ som Adobe sedan använder för att skapa ECID, i stället för att använda cookie-filen från första part som anges av Web SDK. Webbläsarstödet kan variera, men cookies från första part kan vara mer varaktiga när de anges av en server som använder en DNS A-post (för IPv4) eller en AAA-post (för IPv6), i motsats till när de anges av en DNS CNAME- eller JavaScript-kod.
 
 När en FPID-cookie har angetts kan dess värde hämtas och skickas till Adobe när händelsedata samlas in. Insamlade FPID används som startvärde för att generera ECID på Platform Edge Network, som även fortsättningsvis är standardidentifierare i Adobe Experience Cloud-program.
 
-Även om FPID inte används i den här självstudiekursen bör du använda FPID i din egen Web SDK-implementering. Läs mer om [Första parts enhets-ID i Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/edge/identity/first-party-device-ids)
+Även om FPID inte används i den här självstudiekursen bör du använda FPID i din egen Web SDK-implementering. Läs mer om [Första parts enhets-ID i plattformens webb-SDK](https://experienceleague.adobe.com/en/docs/experience-platform/edge/identity/first-party-device-ids)
 
 >[!CAUTION]
 >
@@ -71,25 +71,25 @@ När en FPID-cookie har angetts kan dess värde hämtas och skickas till Adobe n
 
 Som nämnts ovan tilldelas alla besökare av dina digitala resurser ett ECID av Adobe när de använder Platform Web SDK. ECID är standardidentitet för att spåra oautentiserat digitalt beteende.
 
-Du kan också skicka ett autentiserat användar-ID så att plattformen kan skapa [Identitetsdiagram](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/understanding-identity-and-identity-graphs) och Target kan ange [Tredjeparts-ID](https://experienceleague.adobe.com/en/docs/target/using/audiences/visitor-profiles/3rd-party-id). Inställningen av det autentiserade ID:t görs med [!UICONTROL Identity Map] dataelementtyp.
+Du kan också skicka ett autentiserat användar-ID så att plattformen kan skapa [identitetsdiagram](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/understanding-identity-and-identity-graphs) och mål kan ange sitt [tredjeparts-ID](https://experienceleague.adobe.com/en/docs/target/using/audiences/visitor-profiles/3rd-party-id). Inställningen av det autentiserade ID:t görs med dataelementtypen [!UICONTROL Identity Map].
 
-Skapa [!UICONTROL Identity Map] dataelement:
+Så här skapar du dataelementet [!UICONTROL Identity Map]:
 
-1. Gå till **[!UICONTROL Data Elements]** och markera **[!UICONTROL Add Data Element]**
+1. Gå till **[!UICONTROL Data Elements]** och välj **[!UICONTROL Add Data Element]**
 
 1. **[!UICONTROL Name]** dataelementet `identityMap.loginID`
 
-1. Som **[!UICONTROL Extension]**, markera `Adobe Experience Platform Web SDK`
+1. Som **[!UICONTROL Extension]** väljer du `Adobe Experience Platform Web SDK`
 
-1. Som **[!UICONTROL Data Element Type]**, markera `Identity map`
+1. Som **[!UICONTROL Data Element Type]** väljer du `Identity map`
 
-1. Då visas ett skärmyta till höger i dialogrutan **[!UICONTROL Data Collection interface]** för att konfigurera identiteten:
+1. Ett skärmyta visas till höger i **[!UICONTROL Data Collection interface]** så att du kan konfigurera identiteten:
 
    ![Gränssnitt för datainsamling](assets/identity-identityMap-setup.png)
 
-1. Som  **[!UICONTROL Namespace]** väljer du `lumaCrmId` namnutrymme som du tidigare skapade i [Konfigurera identiteter](configure-identities.md) lektion. Om den inte visas i listrutan skriver du in den.
+1. Som **[!UICONTROL Namespace]** väljer du namnutrymmet `lumaCrmId` som du tidigare skapade i lektionen [Konfigurera identiteter](configure-identities.md). Om den inte visas i listrutan skriver du in den.
 
-1. Efter **[!UICONTROL Namespace]** är markerat måste ett ID anges. Välj `user.profile.attributes.username` dataelement som skapades tidigare i [Skapa dataelement](create-data-elements.md#create-data-elements-to-capture-the-data-layer) lektion, som hämtar ett ID när användare loggar in på Luma-webbplatsen.
+1. När **[!UICONTROL Namespace]** har valts måste ett ID anges. Markera dataelementet `user.profile.attributes.username` som skapades tidigare i lektionen [Skapa dataelement](create-data-elements.md#create-data-elements-to-capture-the-data-layer) som hämtar ett ID när användare är inloggade på Luma-webbplatsen.
 
    <!--  >[!TIP]
     >
@@ -98,7 +98,7 @@ Skapa [!UICONTROL Identity Map] dataelement:
     >   ![Data Element  ID ](assets/identity-data-element-customer-id.png)
     -->
 
-1. Som **[!UICONTROL Authenticated state]**, markera **[!UICONTROL Authenticated]**
+1. Som **[!UICONTROL Authenticated state]** väljer du **[!UICONTROL Authenticated]**
 1. Välj **[!UICONTROL Primary]**
 
 1. Välj **[!UICONTROL Save]**
@@ -107,9 +107,9 @@ Skapa [!UICONTROL Identity Map] dataelement:
 
 >[!TIP]
 >
-> Adobe rekommenderar att du skickar identiteter som representerar en person, till exempel `Luma CRM Id`, som [!UICONTROL primary] identitet.
+> Adobe rekommenderar att du skickar identiteter som representerar en person, till exempel `Luma CRM Id`, som [!UICONTROL primary]-identitet.
 >
-> Om identitetskartan innehåller personidentifieraren (till exempel `Luma CRM Id`) blir personidentifieraren [!UICONTROL primary] identitet. I annat fall `ECID` blir [!UICONTROL primary] identitet.
+> Om identitetskartan innehåller personidentifieraren (till exempel `Luma CRM Id`) blir personidentifieraren [!UICONTROL primary]-identiteten. Annars blir `ECID` [!UICONTROL primary]-identiteten.
 
 
 
@@ -151,4 +151,4 @@ Med dessa dataelement på plats kan du börja skicka data till Platform Edge Net
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

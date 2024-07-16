@@ -2,9 +2,10 @@
 title: CSC Bootcamp - Insikter för en Marketing Manager
 description: CSC Bootcamp - Insikter för en Marketing Manager
 doc-type: multipage-overview
-source-git-commit: 989e4e2add1d45571462eccaeebcbe66a77291db
+exl-id: 8a979899-7b56-427e-aede-6d4e045c89c1
+source-git-commit: 143da6340b932563a3309bb46c1c7091e0ab2ee2
 workflow-type: tm+mt
-source-wordcount: '330'
+source-wordcount: '331'
 ht-degree: 0%
 
 ---
@@ -15,27 +16,27 @@ ht-degree: 0%
 
 Klicka på Veckovy för projektledare i den vänstra kolumnen:
 
-![projektledare varje vecka](./images/weekly-view.png)
+![projektledare veckovis vy](./images/weekly-view.png)
 
 Här finns en mängd olika rapporter, som alltid går att klicka på/hantera för mer information:
 
-- The **aktiviteter som förfaller den här veckan efter projekt**
+- **aktiviteter som förfaller den här veckan efter projekt**
 
 ![förfaller den här veckan](./images/tasks-due.png)
 
-- The **Projektledningens kommande milstolpar** :
+- **Projektledningens kommande milstolpar** :
 
 ![kommande milstolpar](./images/upcoming-milestones.png)
 
-- The **Öppna ärenden efter prioritet**
+- **Öppna ärenden efter prioritet**
 
-![frågor efter prioritet](./images/open-issues.png)
+![utgåvor efter prioritet](./images/open-issues.png)
 
-- The **Sena uppgifter per avdelning**
+- **Sena uppgifter per avdelning**
 
 ![sena uppgifter](./images/late-tasks.png)
 
-- The **Sena uppgifter per individ**
+- De **sena aktiviteterna per individ**
 
 ![enskilda sena uppgifter](./images/individual-late-tasks.png)
 
@@ -61,15 +62,15 @@ Om era team arbetar med SCRUM-metoden är detta en intressant uppsättning rappo
 
 - **Iterationer per team**
 
-![iterationer per team](./images/iterations-by-team.png)
+![iterationer av team](./images/iterations-by-team.png)
 
 ## Effektivitetsrapportering
 
 Klicka på Effektivitet i den vänstra kolumnen
 
-![klickningseffektivitet](./images/efficiency.png)
+![klicka på effektivitet](./images/efficiency.png)
 
-- **Planerat/ej planerat förhållande** (av det utförda arbetet)
+- **Planerat/ej planerat förhållande** (av utfört arbete)
 
 ![planerad/oplanerad proportion](./images/planned-unplanned.png)
 
@@ -89,7 +90,7 @@ Klicka fortfarande på Marknadsföring - pågående projekt i den vänstra kolum
 
 ![projekt efter villkor](./images/project-by-condition.png)
 
-- Lista, förlopp och ekonomisk information om **Projekt under flygning**
+- Lista, förlopp och ekonomisk information om **pågående projekt**
 
 ![ekonomisk information](./images/inflights-projects.png)
 
@@ -99,7 +100,7 @@ Gå tillbaka till PIN-koden och klicka på Portfolio Gant View:
 
 ![klicka på portföljgarantvyn](./images/gant-view.png)
 
-Här har du en **Vyn Gant-schema för en grupp projekt** med möjliga beroenden (föregångare) mellan projekt
+Här har du en **Gant Chart-vy för en grupp projekt** med möjliga beroenden (föregångare) mellan projekt
 
 ![beroenden mellan projekt](./images/gant-chart.png)
 
@@ -111,17 +112,17 @@ Här har du en **Vyn Gant-schema för en grupp projekt** med möjliga beroenden 
 
 På PIN-koden klickar du på Kampanjsammanfattning:
 
-- **Adobe Campaign Summary**
+- **Adobe Campaign i korthet**
 
 ![sammanfattning](./images/campaign-summary.png)
 
 - **Adobe Campaign skickat till öppningar**
 
-![skickat till öppning](./images/sent-to-open.png)
+![har skickats för att öppna](./images/sent-to-open.png)
 
-- **Adobe Campaign öppnas och klickas**
+- **Adobe Campaign öppnas och klickar**
 
-![öppna och klicka](./images/open-to-click.png)
+![öppen för att klicka på](./images/open-to-click.png)
 
 Nästa steg: [Slutsats](../../conclusion.md)
 

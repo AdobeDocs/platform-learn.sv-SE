@@ -1,10 +1,11 @@
 ---
-title: CSC Bootcamp - Insights - Översikt
-description: CSC Bootcamp - Insights - Översikt
+title: CSC-startläger - Insights - Översikt
+description: CSC-startläger - Insights - Översikt
 doc-type: multipage-overview
-source-git-commit: 989e4e2add1d45571462eccaeebcbe66a77291db
+exl-id: b2522d95-7fd9-41c3-9f49-757aaee410b7
+source-git-commit: 143da6340b932563a3309bb46c1c7091e0ab2ee2
 workflow-type: tm+mt
-source-wordcount: '109'
+source-wordcount: '111'
 ht-degree: 0%
 
 ---

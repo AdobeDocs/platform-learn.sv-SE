@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Skapa märkordsregler
 
-Lär dig hur du skapar regler så att du kan köra kommandon i taggar. Händelser och villkor avgör *när* att göra saker medan funktionsmakron bestämmer *vad* att göra. Mer information finns i [regler](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html) dokumentation.
+Lär dig hur du skapar regler så att du kan köra kommandon i taggar. Händelser och villkor avgör *när* ska göra saker medan åtgärder bestämmer *vad* ska göra. Mer information finns i dokumentationen för [regler](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/28730/?learn=on)

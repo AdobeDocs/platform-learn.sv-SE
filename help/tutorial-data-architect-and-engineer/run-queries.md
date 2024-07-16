@@ -10,8 +10,8 @@ thumbnail: 4348-run-queries.jpg
 exl-id: a37531cb-96ad-4547-86af-84f7ed65f019
 source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
-source-wordcount: '323'
-ht-degree: 2%
+source-wordcount: '311'
+ht-degree: 0%
 
 ---
 
@@ -22,14 +22,14 @@ I den här lektionen får du lära dig hur du ställer in, skriver och kör frå
 
 Adobe Experience Platform Query Service hjälper dig att förstå dina data genom att du kan använda standard-SQL för att fråga efter data i Platform. Med hjälp av frågetjänsten kan du ansluta till valfri datauppsättning i datasjön och samla in frågeresultaten som en ny datauppsättning för användning vid rapportering, maskininlärning eller för förtäring i realtidskundprofil.
 
-**Dataarkitekturer** och **Datatekniker** måste använda frågetjänsten utanför den här självstudien.
+**Dataarkitekter** och **Datatekniker** måste använda frågetjänsten utanför den här självstudien.
 
 Innan du börjar övningarna ska du titta på den här korta videon och lära dig mer om Query Service:
 >[!VIDEO](https://video.tv.adobe.com/v/29795?learn=on)
 
 ## Behörigheter krävs
 
-I [Konfigurera behörigheter](configure-permissions.md) lektionen anger du alla åtkomstkontroller som krävs för att slutföra lektionen.
+I lektionen [Konfigurera behörigheter](configure-permissions.md) ställer du in alla åtkomstkontroller som krävs för att slutföra lektionen.
 
 <!-- Settings > **[!UICONTROL Services]** > **[!UICONTROL Query Service]**
 * Permission items Data Management > **[!UICONTROL View Datasets]** and  **[!UICONTROL Manage Datasets]**
@@ -41,8 +41,8 @@ I [Konfigurera behörigheter](configure-permissions.md) lektionen anger du alla 
 
 Låt oss börja med några enkla frågor:
 
-1. Gå till **Frågor** till vänster navigering
-1. Välj **Skapa fråga** knappen längst upp till höger för att öppna en textruta för att köra frågor
+1. Gå till **Frågor** i den vänstra navigeringen i användargränssnittet för plattformen
+1. Markera knappen **Skapa fråga** längst upp till höger för att öppna en textruta där frågor kan köras och köras
 1. Skriv följande fråga i redigeraren och tryck på Skift+Enter eller Skift+Retur för att köra frågan.
 
    ```
@@ -54,7 +54,7 @@ Låt oss börja med några enkla frågor:
    ![VISA TABLE-fråga](assets/queries-showTables.png)
 
 
-1. Prova den här frågan och ersätt `_techmarketingdemos` med ditt eget klientnamnutrymme, som om du minns det är synligt i dina scheman.
+1. Prova den här frågan och ersätt `_techmarketingdemos` med ditt eget klientnamnutrymme, som visas i dina scheman om du kommer ihåg det.
 
    ```
    SELECT person.name.lastName,loyalty.tier
@@ -62,13 +62,13 @@ Låt oss börja med några enkla frågor:
    WHERE loyalty.tier ='gold'
    ```
 
-   ![VÄLJ data från lojalitetsdatauppsättningen](assets/queries-loyaltySelect.png)
+   ![SELECT-data från lojalitetsdatauppsättningen](assets/queries-loyaltySelect.png)
 
-1. Om något fel uppstår visas detaljerade meddelanden i dialogrutan **[!UICONTROL Konsol]** enligt nedan
+1. Om något fel uppstår visas detaljerade meddelanden på fliken **[!UICONTROL Console]**, enligt bilden nedan
    ![Fel i frågan](assets/queries-error.png)
 
-1. När frågan är klar **[!UICONTROL Namn]** it `Luma Gold Level Customers`
-1. Välj **[!UICONTROL Spara]** knapp
+1. Med din fråga **[!UICONTROL Name]** `Luma Gold Level Customers`
+1. Markera knappen **[!UICONTROL Save]**
    ![Sparar frågan](assets/queries-loyaltySelect-save.png)
 
 
@@ -122,4 +122,4 @@ In this exercise, we will join two datasets `Luma Loyalty Dataset` and `Luma Off
 * [Dokumentation för frågetjänsten](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=sv)
 * [API-referens för frågetjänst](https://www.adobe.io/experience-platform-apis/references/query-service/)
 
-Och nu till den sista praktiska lektionen, [skapa segment](build-segments.md)!
+Nu till den sista praktiska lektionen: [skapar segment](build-segments.md)!

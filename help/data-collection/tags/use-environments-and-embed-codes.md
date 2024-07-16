@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Använda taggmiljöer och bädda in koder
 
-Lär dig hur du använder utvecklings-, staging- och produktionsmiljöer samt bäddar in koder för att utveckla och validera taggegenskaperna. Mer information finns i [miljöer](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html) dokumentation.
+Lär dig hur du använder utvecklings-, staging- och produktionsmiljöer samt bäddar in koder för att utveckla och validera taggegenskaperna. Mer information finns i dokumentationen för [miljöerna](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/28729/?learn=on)

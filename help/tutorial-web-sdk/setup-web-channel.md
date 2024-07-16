@@ -16,11 +16,11 @@ ht-degree: 0%
 
 # Konfigurera Journey Optimizer webbkanal med Web SDK
 
-Så här implementerar du Adobe Journey Optimizer [webbkanal](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/web/get-started-web) med Adobe Experience Platform Web SDK. Den här lektionen handlar om grundläggande krav för webbkanaler, detaljerade konfigurationssteg och en djupdykning i ett användningsexempel som fokuserar på lojalitetsstatus.
+Lär dig hur du implementerar Adobe Journey Optimizer [webbkanal](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/web/get-started-web) med Adobe Experience Platform Web SDK. Den här lektionen handlar om grundläggande krav för webbkanaler, detaljerade konfigurationssteg och en djupdykning i ett användningsexempel som fokuserar på lojalitetsstatus.
 
 När du följer den här lektionen är Journey Optimizer-användare utrustade att använda webbkanalen för avancerad onlineanpassning med Journey Optimizer webbdesigner.
 
-![Web SDK och Adobe Analytics](assets/dc-websdk-ajo.png)
+![Web SDK och Adobe Analytics-diagram](assets/dc-websdk-ajo.png)
 
 ## Utbildningsmål
 
@@ -34,14 +34,14 @@ När lektionen är slut kan du:
 * Lär dig hur du infogar erbjudanden på en webbsida med beslutsdelen för erbjudandet.
 * Bekanta dig med bästa praxis för att säkerställa kvaliteten och framgången för en webbkanalskampanj.
 
-## Förutsättningar
+## Förhandskrav
 
 För att slutföra lektionerna i det här avsnittet måste du först:
 
 * Slutför alla lektioner för den inledande konfigurationen av Platform Web SDK, inklusive inställning av dataelement och regler.
 * Kontrollera att Adobe Experience Platform Web SDK-taggtilläggets version är 2.16 eller senare.
-* Om du använder Journey Optimizer webbdesigner för att skapa din webbkanalsupplevelse måste du kontrollera att du använder webbläsarna Google Chrome eller Microsoft® Edge.
-* Se även till att du har laddat ned och aktiverat [Webbläsartillägg för Adobe Experience Cloud Visual Editing](https://chromewebstore.google.com/detail/adobe-experience-cloud-vi/kgmjjkfjacffaebgpkpcllakjifppnca).
+* Om du använder Journey Optimizer webbdesigner för att skapa din webbkanal måste du kontrollera att du använder webbläsarna Google Chrome eller Microsoft® Edge.
+* Kontrollera också att du har hämtat och aktiverat webbläsartillägget [Adobe Experience Cloud Visual Editing Helper](https://chromewebstore.google.com/detail/adobe-experience-cloud-vi/kgmjjkfjacffaebgpkpcllakjifppnca).
 * Kontrollera att cookies från tredje part tillåts i webbläsaren. Det kan vara nödvändigt att inaktivera alla annonsblockerare i webbläsaren.
 
   >[!CAUTION]
@@ -52,7 +52,7 @@ För att slutföra lektionerna i det här avsnittet måste du först:
   > 1. Webbplatsen är inbäddad i en iframe.
   > 1. Kundens QA- eller stage-sajt är inte externt tillgänglig (det är en intern sajt).
 
-* När du skapar webbupplevelser och inkluderar innehåll från Adobe Experience Manager Assets Essentials-biblioteket måste du [konfigurera underdomänen för publicering av innehållet](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/web/configure-web-channel/web-delegated-subdomains).
+* När du skapar webbupplevelser och inkluderar innehåll från Adobe Experience Manager Assets Essentials-biblioteket måste du [konfigurera underdomänen för publicering av det här innehållet](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/web/configure-web-channel/web-delegated-subdomains).
 * Om du använder funktionen för innehållsexperimenterande ska du se till att din webbdatauppsättning också ingår i rapportkonfigurationen.
 * För närvarande finns det två typer av implementeringar som gör det möjligt att skapa och leverera webbkanalskampanjer på dina webbegenskaper:
    * Endast på klientsidan: Om du vill ändra webbplatsen måste du implementera Adobe Experience Platform Web SDK.
@@ -72,15 +72,15 @@ Först och främst bör ni förstå den terminologi som används i webbkanalskam
 * **Webbkanal**: Ett medium för kommunikation eller leverans av innehåll via webben. I den här guiden hänvisar den till den mekanism genom vilken personaliserat innehåll levereras till webbplatsbesökare som använder Platform Web SDK, inom Adobe Journey Optimizer.
 * **Webbyta**: Avser en webbegenskap som identifieras av en URL där innehållet levereras. Det kan omfatta en eller flera webbsidor.
 * **Journey Optimizer webbdesigner**: Ett specifikt verktyg eller gränssnitt i Journey Optimizer där användare kan designa sina webbkanalsupplevelser.
-* **Adobe Experience Cloud Visual Editing Helper**: Ett webbläsartillägg som gör det lättare att redigera och utforma webbkanalsupplevelser visuellt.
-* **Datastream**: En konfiguration i Adobe Experience Platform-tjänsten som säkerställer att webbkanalsupplevelserna kan levereras.
-* **Kopplingsprincip**: En konfiguration som säkerställer korrekt aktivering och publicering av inkommande kampanjer.
-* **Målgrupp**: Ett specifikt segment med användare eller besökare som uppfyller vissa kriterier.
-* **Webbdesigner**: Ett gränssnitt eller verktyg som gör det enklare att redigera och designa webbupplevelser visuellt utan att djupdyka i koden.
-* **Uttrycksredigerare**: Ett verktyg i webbdesignern som gör att användare kan lägga till personalisering i webbinnehåll, eventuellt baserat på dataattribut eller andra kriterier.
-* **Beslutskomponent för erbjudande**: En komponent i webbdesignern som hjälper till att avgöra vilket erbjudande som är bäst lämpat att visas för en viss besökare baserat på beslutshantering.
+* **Hjälp för visuell redigering i Adobe Experience Cloud**: Ett webbläsartillägg som kan användas för visuell redigering och design av webbkanalsupplevelser.
+* **Datastream**: En konfiguration i Adobe Experience Platform-tjänsten som säkerställer att det går att leverera webbkanalsupplevelser.
+* **Sammanslagningsprincip**: En konfiguration som säkerställer korrekt aktivering och publicering av inkommande kampanjer.
+* **Målgrupp**: Ett specifikt segment med användare eller webbplatsbesökare som uppfyller vissa villkor.
+* **Webbdesigner**: Ett gränssnitt eller verktyg som hjälper dig att redigera och utforma webbupplevelser visuellt utan att ge djupdykning i koden.
+* **Uttrycksredigeraren**: Ett verktyg i webbdesignern som gör att användare kan lägga till personalisering i webbinnehåll, eventuellt baserat på dataattribut eller andra villkor.
+* **Erbjud beslutskomponent**: En komponent i webbdesignern som hjälper dig att avgöra vilket erbjudande som passar bäst för en specifik besökare baserat på beslutshantering.
 * **Innehållsexperiment**: En metod för att testa olika innehållsvariationer för att ta reda på vilken som fungerar bäst när det gäller det önskade måttet, till exempel inkommande klick.
-* **Behandling**: I samband med innehållsexperiment avser en behandling en specifik variation av innehåll som testas mot en annan.
+* **Behandling**: I samband med innehållsexperiment refererar en behandling till en specifik variation av innehåll som testas mot en annan.
 * **Simulering**: En förhandsvisningsmekanism som visualiserar webbkanalsupplevelsen innan den aktiveras för aktiva målgrupper.
 
 ## Konfigurera datastream
@@ -89,19 +89,19 @@ Du har redan lagt till Adobe Experience Platform-tjänsten i din datastream. Nu 
 
 Så här konfigurerar du Adobe Journey Optimizer i datastream:
 
-1. Gå till [Datainsamling](https://experience.adobe.com/#/data-collection){target="blank"} gränssnitt.
-1. Välj **[!UICONTROL Datastreams]**.
+1. Gå till gränssnittet [Datainsamling](https://experience.adobe.com/#/data-collection){target="blank"}.
+1. Välj **[!UICONTROL Datastreams]** i den vänstra navigeringen.
 1. Markera tidigare skapade Luma Web SDK-dataström.
 
    ![Välj datastream](assets/web-channel-select-datastream.png)
 
-1. Välj **[!UICONTROL Edit]** i Adobe Experience Platform.
+1. Välj **[!UICONTROL Edit]** i Adobe Experience Platform-tjänsten.
 
    ![Redigera datastream](assets/web-channel-edit-datastream.png)
 
-1. Kontrollera **[!UICONTROL Adobe Journey Optimizer]** box.
+1. Markera rutan **[!UICONTROL Adobe Journey Optimizer]**.
 
-   ![Kryssruta för AJO](assets/web-channel-check-ajo-box.png)
+   ![Markera AJO-rutan](assets/web-channel-check-ajo-box.png)
 
 1. Välj **[!UICONTROL Save]**.
 
@@ -109,13 +109,13 @@ Detta säkerställer att inkommande händelser för Journey Optimizer hanteras k
 
 ## Konfigurera sammanfogningsprincipen
 
-Kontrollera att en sammanfogningsprincip har definierats med **[!UICONTROL Active-On-Edge Merge Policy]** aktiverat alternativ. Det här alternativet används av Journey Optimizer inkommande kanaler för att säkerställa korrekt aktivering och publicering av inkommande kampanjer.
+Kontrollera att en sammanfogningsprincip har definierats med alternativet **[!UICONTROL Active-On-Edge Merge Policy]** aktiverat. Det här alternativet används av Journey Optimizer inkommande kanaler för att säkerställa korrekt aktivering och publicering av inkommande kampanjer.
 
 Så här konfigurerar du alternativet i sammanfogningsprincipen:
 
-1. Gå till **[!UICONTROL Customer]** > **[!UICONTROL Profiles]** i Experience Platform eller Journey Optimizer gränssnitt.
-1. Välj **[!UICONTROL Merge Policies]** -fliken.
-1. Välj din profil (det är oftast bäst att använda [!UICONTROL Default Timebased] och växla **[!UICONTROL Active-On-Edge Merge Policy]** i **[!UICONTROL Configure]** steg.
+1. Gå till sidan **[!UICONTROL Customer]** > **[!UICONTROL Profiles]** i Experience Platform- eller Journey Optimizer-gränssnittet.
+1. Klicka på fliken **[!UICONTROL Merge Policies]**.  
+1. Välj din profil (det är oftast bäst att använda principen [!UICONTROL Default Timebased]) och växla alternativet **[!UICONTROL Active-On-Edge Merge Policy]** i steget **[!UICONTROL Configure]**.
 
    ![Växla sammanfogningsprincip](assets/web-channel-active-on-edge-merge-policy.png)
 
@@ -123,7 +123,7 @@ Så här konfigurerar du alternativet i sammanfogningsprincipen:
 
 Om du vill använda innehållsexperiment i webbkanalskampanjer måste du se till att den webbdatauppsättning som används också ingår i rapportkonfigurationen. Journey Optimizer rapporteringssystem använder datauppsättningen i skrivskyddat läge för att fylla i användningsklara innehållsexperimenteringsrapporter.
 
-[I det här avsnittet beskrivs hur du lägger till datauppsättningar för rapportering av innehållsexperiment](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/content-experiment/reporting-configuration#add-datasets).
+[Att lägga till datauppsättningar för rapportering av innehållsexperiment beskrivs i det här avsnittet](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/content-experiment/reporting-configuration#add-datasets).
 
 ## Use Case Overview - Loyalty Rewards
 
@@ -139,65 +139,65 @@ Nu när du har inhämtat våra exempeldata om lojalitet och skapat vårt segment
 
 Så här skapar du exempelkampanjen:
 
-1. Öppna [Journey Optimizer](https://experience.adobe.com/journey-optimizer/home){target="_blank"} gränssnitt
+1. Öppna [Journey Optimizer](https://experience.adobe.com/journey-optimizer/home){target="_blank"}-gränssnittet
 
    >[!NOTE]
    >
    > Schema, datauppsättningar och målgrupper kan också byggas i Journey Optimizer gränssnitt eftersom de alla är vanliga Experience Platform-konstruktioner.
 
-1. Navigera till **[!UICONTROL Journey Management]** > **[!UICONTROL Campaigns]** till vänster navigering
-1. Klicka **[!UICONTROL Create campaign]** i det övre högra hörnet.
-1. I **[!UICONTROL Properties]** anger du hur kampanjen ska köras. För användningsfallet Loyalty Rewards väljer du **Schemalagd**.
+1. Navigera till **[!UICONTROL Journey Management]** > **[!UICONTROL Campaigns]** i den vänstra navigeringen
+1. Klicka på **[!UICONTROL Create campaign]** uppe till höger.
+1. I avsnittet **[!UICONTROL Properties]** anger du hur du vill köra kampanjen. Välj **Schemalagd** för användningsfallet för Loyalty Rewards.
 
    ![Schemalagd kampanj](assets/web-channel-campaign-properties-scheduled.png)
 
-1. I **[!UICONTROL Actions]** väljer du **[!UICONTROL Web channel]**. Som  **[!UICONTROL Web surface]**, markera **[!UICONTROL Page URL]**.
+1. Välj **[!UICONTROL Web channel]** i avsnittet **[!UICONTROL Actions]**. Som **[!UICONTROL Web surface]** väljer du **[!UICONTROL Page URL]**.
 
    >[!NOTE]
    >
    >En webbyta refererar till en webbegenskap som identifieras av en URL där innehållet levereras. Den kan motsvara en enda sidas URL eller innehålla flera sidor, vilket gör att du kan använda ändringarna på en eller flera webbsidor.
 
-1. Välj **[!UICONTROL Page URL]** webbsidesalternativ för att distribuera upplevelsen på en sida för kampanjen. Ange Luma-sidans URL, `https://luma.enablementadobe.com/content/luma/us/en.html`
+1. Välj webbytsalternativet **[!UICONTROL Page URL]** om du vill distribuera upplevelsen på en sida för kampanjen. Ange Luma-sidans URL, `https://luma.enablementadobe.com/content/luma/us/en.html`
 
-1. När webbytan är definierad väljer du **[!UICONTROL Create]**.
+1. När webbytan har definierats väljer du **[!UICONTROL Create]**.
 
-   ![Markera webbyta](assets/web-channel-web-surface.png)
+   ![Markera en webbyta](assets/web-channel-web-surface.png)
 
-1. Nu kan du lägga till ytterligare information i den nya webbkanalskampanjen. Ge först namnet på kampanjen. Ring `Luma Loyalty Rewards – Gold Status`. Du kan också lägga till en beskrivning till kampanjen. Lägg även till **[!UICONTROL Tags]** för att förbättra den övergripande kampanjtaxonomin.
+1. Nu kan du lägga till ytterligare information i den nya webbkanalskampanjen. Ge först namnet på kampanjen. Ring det `Luma Loyalty Rewards – Gold Status`. Du kan också lägga till en beskrivning till kampanjen. Lägg även till **[!UICONTROL Tags]** för att förbättra den övergripande kampanjtaxonomin.
 
    ![Namnge kampanjen](assets/web-channel-campaign-name.png)
 
-1. Som standard är kampanjen aktiv för alla webbplatsbesökare. I det här fallet bör endast guldstatuspoängare se upplevelsen. Aktivera detta genom att klicka på **[!UICONTROL Select audience]** och väljer `Luma Loyalty Rewards – Gold Status` målgrupp.
+1. Som standard är kampanjen aktiv för alla webbplatsbesökare. I det här fallet bör endast guldstatuspoängare se upplevelsen. Aktivera detta genom att klicka på **[!UICONTROL Select audience]** och välja målgruppen `Luma Loyalty Rewards – Gold Status`.
 
-1. I **[!UICONTROL Identity namespace]** markerar du namnutrymmet för att identifiera individer inom det valda segmentet. Eftersom du distribuerar kampanjen på Luma-webbplatsen kan du välja ECID-namnutrymmet. Profiler i `Luma Loyalty Rewards – Gold Status` målgrupper som saknar ECID-namnutrymmet bland sina olika identiteter omfattas inte av webbkanalskampanjen.
+1. I fältet **[!UICONTROL Identity namespace]** väljer du namnutrymmet för att identifiera individer inom det valda segmentet. Eftersom du distribuerar kampanjen på Luma-webbplatsen kan du välja ECID-namnutrymmet. Profiler inom målgruppen `Luma Loyalty Rewards – Gold Status` som saknar ECID-namnutrymmet bland sina olika identiteter omfattas inte av webbkanalskampanjen.
 
    ![Välj identitetstyp](assets/web-channel-indentity-type.png)
 
-1. Schemalägg kampanjen till dagens datum med **[!UICONTROL Campaign start]** och avslutas på en vecka med **[!UICONTROL Campaign end]** alternativ.
+1. Schemalägg kampanjen så att den börjar på dagens datum med alternativet **[!UICONTROL Campaign start]** och avslutas om en vecka med alternativet **[!UICONTROL Campaign end]**.
 
    ![Kampanjschema](assets/web-channel-campaign-schedule.png)
 
 >[!NOTE]
 >
->Tänk på att webbupplevelsen visas när besökaren öppnar sidan för webbkanalskampanjer. Till skillnad från andra typer av kampanjer i Adobe Journey Optimizer **[!UICONTROL Action triggers]** -avsnittet kan inte konfigureras.
+>Tänk på att webbupplevelsen visas när besökaren öppnar sidan för webbkanalskampanjer. Till skillnad från andra typer av kampanjer i Adobe Journey Optimizer går det därför inte att konfigurera avsnittet **[!UICONTROL Action triggers]**.
 
 ### Experimentera med lojalitetsmaterial
 
-Om du bläddrar tillbaka uppåt **[!UICONTROL Action]** kan du skapa ett experiment för att testa vilket innehåll som fungerar bäst för `Luma Loyalty Rewards – Gold Status` målgrupp. Låt oss skapa och testa två behandlingar som en del av kampanjkonfigurationen.
+Om du rullar tillbaka uppåt i avsnittet **[!UICONTROL Action]** kan du skapa ett experiment för att testa vilket innehåll som fungerar bäst för målgruppen `Luma Loyalty Rewards – Gold Status`. Låt oss skapa och testa två behandlingar som en del av kampanjkonfigurationen.
 
 Så här skapar du innehållsexperimentet:
 
-1. Klicka **[!UICONTROL Create experiment]**.
+1. Klicka på **[!UICONTROL Create experiment]**.
 
    ![Skapa experiment](assets/web-channel-create-content-experiment.png)
 
-1. Välj först **[!UICONTROL Success metric]**. Detta är måttet för att avgöra innehållets effektivitet. Välj **[!UICONTROL Unique Inbound Clicks]**, för att se vilken innehållsbehandling som genererar fler klick på webbupplevelsen CTA.
+1. Välj först **[!UICONTROL Success metric]**. Detta är måttet för att avgöra innehållets effektivitet. Välj **[!UICONTROL Unique Inbound Clicks]** om du vill se vilken innehållsbehandling som genererar fler klick på CTA för webbupplevelser.
 
    ![Välj framgångsmått](assets/web-channel-content-experiment-metric.png)
 
-1. När du skapar ett experiment med webbkanalen och väljer **[!UICONTROL Inbound Clicks]**, **[!UICONTROL Unique Inbound Clicks]**, **[!UICONTROL Page Views]**, eller **[!UICONTROL Unique Page Views]** mätvärden, **[!UICONTROL Click Action]** I den här listrutan kan du hålla reda på och övervaka klick och vyer på specifika sidor.
+1. När du konfigurerar ett experiment med webbkanal och väljer måtten **[!UICONTROL Inbound Clicks]**, **[!UICONTROL Unique Inbound Clicks]**, **[!UICONTROL Page Views]** eller **[!UICONTROL Unique Page Views]** kan du med listrutan **[!UICONTROL Click Action]** spåra och övervaka klick och vyer exakt på specifika sidor.
 
-1. Om du vill kan du ange **[!UICONTROL Holdout]** som inte får någon av de två behandlingarna. Låt det vara omarkerat för tillfället.
+1. Du kan också ange en **[!UICONTROL Holdout]** som inte får någon av de två behandlingarna. Låt det vara omarkerat för tillfället.
 
 1. Du kan också välja att **[!UICONTROL Distribute evenly]**. Markera det här alternativet för att se till att uppdelningarna alltid är jämnt fördelade.
 
@@ -205,9 +205,9 @@ Så här skapar du innehållsexperimentet:
 
 ### Redigera innehåll med hjälp av den visuella hjälpen
 
-Låt oss nu skapa webbkanalsupplevelsen. Använd Adobe Experience Cloud **[!UICONTROL Visual Helper]**. Det här verktyget är ett webbläsartillägg som är kompatibelt med Google Chrome och Microsoft® Edge. Kontrollera att du har hämtat tillägget innan du försöker skapa dina upplevelser. Se även till att webbsidan innehåller Web SDK.
+Låt oss nu skapa webbkanalsupplevelsen. Använd Adobe Experience Cloud **[!UICONTROL Visual Helper]** om du vill göra det. Det här verktyget är ett webbläsartillägg som är kompatibelt med Google Chrome och Microsoft® Edge. Kontrollera att du har hämtat tillägget innan du försöker skapa dina upplevelser. Se även till att webbsidan innehåller Web SDK.
 
-1. I **[!UICONTROL Action]** fliken för kampanjen, klicka på **[!UICONTROL Edit content]**. Eftersom du angav en enda sidadress som yta bör du vara redo att börja arbeta i dispositionen.
+1. Klicka på **[!UICONTROL Edit content]** på fliken **[!UICONTROL Action]** i kampanjen. Eftersom du angav en enda sidadress som yta bör du vara redo att börja arbeta i dispositionen.
 
    ![Redigera innehåll](assets/web-channel-edit-content.png)
 
@@ -217,7 +217,7 @@ Låt oss nu skapa webbkanalsupplevelsen. Använd Adobe Experience Cloud **[!UICO
 
 1. Börja med att redigera vissa element med hjälp av webbdispositionen. Använd snabbmenyn för att redigera Luma-hjältebildhuvudet. Justera formatet för den sammanhangsberoende rutan till höger.
 
-   ![Lägga till sammanhangsberoende redigeringar](assets/web-channel-some-contextual-edit.png)
+   ![Lägg till sammanhangsberoende redigeringar](assets/web-channel-some-contextual-edit.png)
 
 1. Lägg även till personalisering i behållaren med **[!UICONTROL Expression editor]**.
 
@@ -227,24 +227,24 @@ Låt oss nu skapa webbkanalsupplevelsen. Använd Adobe Experience Cloud **[!UICO
 
    ![Klicka på spår](assets/web-channel-click-tracking.png)
 
-1. Använd **[!UICONTROL Offer decision component]** för att infoga erbjudanden på webbsidan. Den här komponenten använder **[!UICONTROL Decision Management]** för att välja det bästa erbjudandet att leverera till Luma-besökare.
+1. Använd **[!UICONTROL Offer decision component]** för att infoga erbjudanden på webbsidan. Den här komponenten använder **[!UICONTROL Decision Management]** för att välja det bästa erbjudandet för Luma-besökare.
 
 
 ### Designändringar för HTML
 
 Det finns några tillgängliga metoder om du vill göra mer avancerade eller anpassade ändringar av webbplatsen som en del av kampanjen Loyalty Rewards.
 
-Använd **[!UICONTROL Components]** för att lägga till HTML eller annat innehåll direkt på Luma-webbplatsen.
+Använd rutan **[!UICONTROL Components]** för att lägga till HTML eller annat innehåll direkt på Luma-webbplatsen.
 
 ![Utforska komponentfönstret](assets/web-channel-components-pane.png)
 
-Lägg till en ny HTML-komponent högst upp på sidan. Redigera HTML i komponenten från designgränssnittet eller **[!UICONTROL Contextual]** fönster.
+Lägg till en ny HTML-komponent högst upp på sidan. Redigera HTML i komponenten från designgränssnittet eller **[!UICONTROL Contextual]**-rutan.
 
 ![Lägg till anpassad HTML](assets/web-channel-add-html-component.png)
 
-Du kan också lägga till HTML-redigeringar från **[!UICONTROL Modifications]** fönster. I den här rutan kan du markera en komponent på sidan och redigera den i designergränssnittet.
+Du kan också lägga till HTML-redigeringar från rutan **[!UICONTROL Modifications]**. I den här rutan kan du markera en komponent på sidan och redigera den i designergränssnittet.
 
-Lägg till HTML för `Luma Loyalty Rewards – Gold Status` målgrupp. Välj **[!UICONTROL Validate]**.
+Lägg till HTML för målgruppen `Luma Loyalty Rewards – Gold Status` i redigeraren. Välj **[!UICONTROL Validate]**.
 
 ![Validera HTML](assets/web-channel-add-custom-html-validate.png)
 
@@ -252,11 +252,11 @@ Granska nu den nya anpassade HTML-komponenten så att den passar och känns.
 
 ![Granska anpassad HTML](assets/web-channel-review-custom-html.png)
 
-Redigera en viss komponent med **[!UICONTROL CSS selector type]** modifiering.
+Redigera en specifik komponent med ändringen **[!UICONTROL CSS selector type]**.
 
 ![Ändra CSS](assets/web-channel-css-selector.png)
 
-Lägg till anpassad kod med **Sida `<head>` type** modifiering.
+Lägg till anpassad kod med ändringen **Sida `<head>` typ** .
 
 ![Ändra huvud](assets/web-channel-page-head-modification.png)
 
@@ -268,11 +268,11 @@ Titta på en förhandsgranskning av den ändrade webbsidan innan du aktiverar ka
 
 Så här simulerar du upplevelsen:
 
-1. Välj **[!UICONTROL Simulate content]** inom kampanjen.
+1. Välj **[!UICONTROL Simulate content]** i kampanjen.
 
    ![Simulera innehåll](assets/web-channel-simulate-content.png)
 
-1. Välj en testprofil för att ta emot simuleringen. Tänk på att testprofilen ska finnas i `Luma Loyalty Rewards – Gold Status` för att få rätt behandling.
+1. Välj en testprofil för att ta emot simuleringen. Kom ihåg att testprofilen bör finnas hos `Luma Loyalty Rewards – Gold Status`-målgruppen för att få rätt behandling.
 
 1. Förhandsgranskningen visas för testprofilen.
 
@@ -280,9 +280,9 @@ Så här simulerar du upplevelsen:
 
 Aktivera slutligen webbkanalskampanjen.
 
-1. Välj **Granska för aktivering**.
+1. Välj **Granska för att aktivera**.
 
-1. Du uppmanas att bekräfta kampanjinformationen en sista gång. Välj **[!UICONTROL Activate]**. Det kan ta upp till 15 minuter innan kampanjen publiceras på webbplatsen.
+1. Du uppmanas att bekräfta kampanjinformationen en sista gång. Välj **[!UICONTROL Activate]**.  Det kan ta upp till 15 minuter innan kampanjen publiceras på webbplatsen.
 
 ### Lojalitetsprogram - QA
 
@@ -292,7 +292,7 @@ Det finns några inloggningar du kan använda för att simulera &quot;guldstatus
 1. `leftybeagen@emailsim.io`/`test`
 1. `jenimartinho@emailsim.io`/`test`
 
-Det bästa är att följa **[!UICONTROL Web]** i kampanjens livs- och globala rapporter för kampanjspecifika nyckeltal. För den här kampanjen ska du övervaka upplevelseintrycken och klicka på en frekvens.
+Som en god praxis bör du övervaka fliken **[!UICONTROL Web]** för kampanjens livs- och globala rapporter för kampanjspecifika nyckeltal. För den här kampanjen ska du övervaka upplevelseintrycken och klicka på en frekvens.
 
 ![Visa webbrapport](assets/web-channel-web-report.png)
 
@@ -310,11 +310,11 @@ Så här börjar du valideringen med felsökaren:
    <!--
     ![ADD SCREENSHOT](#)
     -->
-1. Öppna **[!UICONTROL Adobe Experience Platform Debugger]**.
+1. Öppna **[!UICONTROL Adobe Experience Platform Debugger]** när du är på webbsidan.
    <!--
     ![ADD SCREENSHOT](#)
     -->
-1. Navigera till **Sammanfattning**. Verifiera att **[!UICONTROL Datastream ID]** matchar **[!UICONTROL datastream]** in **[!UICONTROL Adobe Data Collection]** som du har aktiverat Adobe Journey Optimizer för.
+1. Navigera till **Sammanfattning**. Kontrollera att **[!UICONTROL Datastream ID]** matchar **[!UICONTROL datastream]** i **[!UICONTROL Adobe Data Collection]** som du har aktiverat Adobe Journey Optimizer för.
    <!--
     ![ADD SCREENSHOT](#)
     -->
@@ -322,15 +322,15 @@ Så här börjar du valideringen med felsökaren:
    <!--
     ![ADD SCREENSHOT](#)
     -->
-1. Under **[!UICONTROL Solutions]** navigera till **[!UICONTROL Experience Platform Web SDK]**.
+1. Under **[!UICONTROL Solutions]** navigerar du till **[!UICONTROL Experience Platform Web SDK]**.
    <!--
     ![ADD SCREENSHOT](#)
     -->
-1. I **Konfiguration** flik, växla på **[!UICONTROL Enable Debugging]**. Detta aktiverar loggning för sessionen i en **[!UICONTROL Adobe Experience Platform Assurance]** session.
+1. Växla på **[!UICONTROL Enable Debugging]** på fliken **Konfiguration**. Detta aktiverar loggning för sessionen i en **[!UICONTROL Adobe Experience Platform Assurance]**-session.
    <!--
     ![ADD SCREENSHOT](#)
     -->
-1. Logga in på webbplatsen med olika Luma-förmånskonton och använd felsökaren för att validera förfrågningar som skickas till **[!UICONTROL Adobe Experience Platform Edge network]**. Alla dessa förfrågningar ska registreras i **[!UICONTROL Assurance]** för loggspårning.
+1. Logga in på webbplatsen med olika Luma-förmånskonton och använd felsökaren för att validera begäranden som skickas till **[!UICONTROL Adobe Experience Platform Edge network]**. Alla dessa förfrågningar ska hämtas i **[!UICONTROL Assurance]** för loggspårning.
 <!--
    ![ADD SCREENSHOT](#)
 -->
@@ -339,4 +339,4 @@ Så här börjar du valideringen med felsökaren:
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

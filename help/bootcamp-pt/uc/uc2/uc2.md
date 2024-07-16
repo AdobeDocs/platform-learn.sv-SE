@@ -11,7 +11,7 @@ feature: Events, Journeys, Profiles, Mobile SDK
 exl-id: 21ca2a7a-fdf2-4cdf-97df-13c4e208d2ea
 source-git-commit: 3c86f9b19cecf92c9a324fb6fcfcefaebf82177f
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '218'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 Neste övício, você irá aprender como configurar um even to.
 
-[2.2 Kriminalvårdsdagen](./ex2.md)
+[2.2 Kriminalvårdsdagen till och med](./ex2.md)
 
 Neste övício, você irá aprender como configurar um even to.
 

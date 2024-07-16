@@ -1,5 +1,5 @@
 ---
-title: Affärsvärde för plattform och handel
+title: Affärsvärde för Platform och Commerce
 description: Den här videon visar att Adobe Experience Platform kan användas tillsammans med Magento Commerce för att skapa en enda bild av kunderna och på ett intelligent sätt personalisera upplevelser i en digital butik och i olika kanaler.
 solution: Experience Platform, Commerce
 feature: Integrations
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 ---
 
-# Affärsvärde för plattform och handel
+# Affärsvärde för Platform och Commerce
 
 Den här videon visar att Adobe Experience Platform kan användas tillsammans med Adobe Commerce för att skapa en enda kundvy och på ett intelligent sätt personalisera upplevelser i en digital butik och i olika kanaler.
 

@@ -11,36 +11,36 @@ feature: Events
 exl-id: 3d47c686-c2d8-4961-a05b-0990025392fa
 source-git-commit: 3c86f9b19cecf92c9a324fb6fcfcefaebf82177f
 workflow-type: tm+mt
-source-wordcount: '453'
+source-wordcount: '457'
 ht-degree: 0%
 
 ---
 
 # 3.2 Skapa en aktivitet
 
-Logga in på Adobe Journey Optimizer genom att gå till [Adobe Experience Cloud](https://experience.adobe.com). Klicka **Journey Optimizer**.
+Logga in på Adobe Journey Optimizer på [Adobe Experience Cloud](https://experience.adobe.com). Klicka på **Journey Optimizer**.
 
 ![ACOP](./images/acophome.png)
 
-Du omdirigeras till **Startsida**  i Journey Optimizer. Kontrollera först att du använder rätt sandlåda. Sandlådan som ska användas anropas `Bootcamp`. Om du vill ändra från en sandlåda till en annan klickar du på **Prod** och välj sandlådan i listan. I det här exemplet heter sandlådan **Bootcamp2**. Då är du i **Startsida** vy över din sandlåda `Bootcamp`.
+Du omdirigeras till vyn **Hem** i Journey Optimizer. Kontrollera först att du använder rätt sandlåda. Sandlådan som ska användas kallas `Bootcamp`. Om du vill ändra från en sandlåda till en annan klickar du på **Prod** och väljer sandlådan i listan. I det här exemplet heter sandlådan **Bootcamp2**. Du kommer sedan att vara i vyn **Hem** i din sandlåda `Bootcamp`.
 
 ![ACOP](./images/acoptriglp.png)
 
-Bläddra nedåt i den vänstra menyn och klicka på **Konfigurationer**. Klicka sedan på **Hantera** knapp under **Händelser**.
+Bläddra nedåt på den vänstra menyn och klicka på **Konfigurationer**. Klicka sedan på knappen **Hantera** under **Händelser**.
 
 ![ACOP](./images/acopmenu.png)
 
-Därefter visas en översikt över alla tillgängliga händelser. Klicka **Skapa händelse** för att börja skapa en egen händelse.
+Därefter visas en översikt över alla tillgängliga händelser. Klicka på **Skapa händelse** för att börja skapa en egen händelse.
 
 ![ACOP](./images/emptyevent.png)
 
 Ett nytt, tomt händelsefönster öppnas sedan.
 
-Först och främst ger du evenemanget ett namn som detta: `yourLastNameBeaconEntryEvent` och lägg till en beskrivning som denna `Beacon Entry Event`.
+Först och främst ger du evenemanget ett namn som detta: `yourLastNameBeaconEntryEvent` och lägger till en beskrivning som denna `Beacon Entry Event`.
 
 ![ACOP](./images/eventdescription.png)
 
-Kontrollera sedan att **Typ** är inställd på **Unitary** och för **Typ av händelse-ID** markering, markera **Systemgenererat**.
+Kontrollera sedan att **Type** är inställd på **Unitary** och välj **System Generated** för **Event ID Type** -markeringen.
 
 ![ACOP](./images/eventidtype.png)
 
@@ -48,19 +48,19 @@ Nästa steg är schemavalet. Ett schema förbereddes för den här övningen. An
 
 ![ACOP](./images/eventschema.png)
 
-När du har valt schemat visas ett antal fält i **Fält** -avsnitt. Nu ska du hovra över **Fält** så visas tre popup-fönster med ikoner. Klicka på **Redigera** ikon.
+När du har valt schemat visas ett antal fält som markeras i avsnittet **Fält**. Nu bör du hovra över avsnittet **Fält** så visas 3 ikoner-popup. Klicka på ikonen **Redigera** .
 
 ![ACOP](./images/eventpayload.png)
 
-Du får se en **Fält** fönsterpopup, där du måste markera några av de fält som vi behöver för att anpassa resan.  Vi väljer andra profilattribut senare med de data som redan finns i Adobe Experience Platform.
+Du kommer att se en popup-meny i fönstret **Fält** där du måste markera några fält som vi behöver för att anpassa resan.  Vi väljer andra profilattribut senare med de data som redan finns i Adobe Experience Platform.
 
 ![ACOP](./images/eventfields.png)
 
-Bläddra nedåt tills du ser objektet `Place context` och markera kryssrutan. På så sätt blir kundens hela kontext tillgänglig för resan. Klicka **OK** för att spara ändringarna.
+Bläddra nedåt tills du ser objektet `Place context` och markera kryssrutan. På så sätt kommer kundens hela kontext att göras tillgänglig för resan. Klicka på **OK** om du vill spara ändringarna.
 
 ![ACOP](./images/eventpayloadbr.png)
 
-Du borde se det här då. Klicka **Spara** ännu en gång för att spara ändringarna.
+Du borde se det här då. Klicka på **Spara** en gång till för att spara ändringarna.
 
 ![ACOP](./images/eventsave.png)
 
@@ -68,7 +68,7 @@ Din händelse är nu konfigurerad och sparad.
 
 ![ACOP](./images/eventdone.png)
 
-Klicka på aktiviteten igen för att öppna **Redigera händelse** skärm igen. Hovra över **Fält** igen för att se de tre ikonerna. Klicka på **Visa** ikon.
+Klicka på aktiviteten igen för att öppna skärmen **Redigera händelse** igen. Håll pekaren över **Fält** igen om du vill se de tre ikonerna. Klicka på ikonen **Visa** .
 
 ![ACOP](./images/viewevent.png)
 
@@ -80,11 +80,11 @@ Händelsen har ett unikt ID för Orchestration-händelse som du kan hitta genom 
 Händelse-ID:t är det som måste skickas till Adobe Experience Platform för att utlösa den resa som du ska bygga i någon av de kommande övningarna. Kom ihåg detta eventID, som du kanske behöver det senare.
 `"eventID": "e76c0bf0c77c3517e5b6f4c457a0754ebaf5f1f6b9357d74e0d8e13ae517c3d5"`
 
-Klicka **OK**, följt av att klicka **Avbryt**.
+Klicka på **OK** och sedan på **Avbryt**.
 
 Du har nu avslutat den här övningen.
 
-Nästa steg: [3.3 Skapa din resa och skicka push-meddelanden](./ex3.md)
+Nästa steg: [3.3 Skapa din resa och push-meddelanden](./ex3.md)
 
 [Gå tillbaka till användarflöde 3](./uc3.md)
 

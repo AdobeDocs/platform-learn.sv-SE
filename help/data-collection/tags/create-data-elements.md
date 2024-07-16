@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Skapa dataelement
 
-Lär dig hur du skapar dataelement för att lagra värden som hämtas från datalagret och gör dem tillgängliga för regler och tillägg i taggegenskapen. Mer information finns i [dataelement](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/data-elements.html) dokumentation.
+Lär dig hur du skapar dataelement för att lagra värden som hämtas från datalagret och gör dem tillgängliga för regler och tillägg i taggegenskapen. Mer information finns i dokumentationen för [dataelement](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/data-elements.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/28733/?learn=on)

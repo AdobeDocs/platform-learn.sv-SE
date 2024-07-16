@@ -1,9 +1,10 @@
 ---
 title: Skicka parametrar | Migrera mål från at.js 2.x till Web SDK
-description: Lär dig hur du skickar mbox-, profile- och enhetsparametrar till Adobe Target med Experience Platform Web SDK.
-source-git-commit: 287ebcb275c4fca574dbd6cdf7e07ba4268bddb5
+description: Lär dig hur du skickar parametrar för mbox, profile och entity till Adobe Target med Experience Platform Web SDK.
+exl-id: 7916497b-0078-4651-91b1-f53c86dd2100
+source-git-commit: 4690d41f92c83fe17eda588538d397ae1fa28af0
 workflow-type: tm+mt
-source-wordcount: '1646'
+source-wordcount: '1478'
 ht-degree: 0%
 
 ---
@@ -97,41 +98,41 @@ Anta följande två exempelsidor med at.js:
 
 Målparametrarna för de här sidorna skickas annorlunda med Platform Web SDK. Det finns flera sätt att skicka parametrar till Target med at.js:
 
-- Använd `targetPageParams()` funktion för sidans load-händelse (används i exemplen på den här sidan)
-- Använd `targetPageParamsAll()` funktion för alla Target-begäranden på sidan
-- Skicka parametrar direkt med `getOffer()` funktion för en enda plats
-- Skicka parametrar direkt med `getOffers()` funktion för en eller flera platser
+- Ange med funktionen `targetPageParams()` för sidans load-händelse (används i exemplen på den här sidan)
+- Ange med funktionen `targetPageParamsAll()` för alla Target-begäranden på sidan
+- Skicka parametrar direkt med funktionen `getOffer()` för en enda plats
+- Skicka parametrar direkt med funktionen `getOffers()` för en eller flera platser
 
 
-Platform Web SDK är ett enda konsekvent sätt att skicka data utan behov av extra funktioner. Alla parametrar måste skickas i nyttolasten med `sendEvent` Kommando och faller under två kategorier:
+Platform Web SDK är ett enda konsekvent sätt att skicka data utan behov av extra funktioner. Alla parametrar måste skickas i nyttolasten med kommandot `sendEvent` och faller under två kategorier:
 
-- Mappas automatiskt från `xdm` object
-- Manuellt skickad med `data.__adobe.target` object
+- Mappas automatiskt från objektet `xdm`
+- Manuellt skickad med objektet `data.__adobe.target`
 
 Tabellen nedan visar hur exempelparametrarna skulle ommappas med Platform Web SDK:
 
 | Exempel på parametern at.js | Platform Web SDK, alternativ | Anteckningar |
 | --- | --- | --- |
-| `at_property` | Ej tillämpligt | Egenskapstoken har konfigurerats i [datastream](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html#target) och kan inte anges i `sendEvent` ring. |
-| `pageName` | `xdm.web.webPageDetails.name` | Alla Target-parametrar måste skickas som en del av `xdm` och anpassa till ett schema med klassen XDM ExperienceEvent. Mbox-parametrar kan inte skickas som en del av `data` -objekt. |
-| `profile.gender` | `data.__adobe.target.profile.gender` | Alla målprofilsparametrar måste skickas som en del av `data` objekt och prefix med `profile.` mappas på lämpligt sätt. |
-| `user.categoryId` | `data.__adobe.target.user.categoryId` | Reserverad parameter som används för målets kategoritillhörighetsfunktion som måste skickas som en del av `data` -objekt. |
-| `entity.id` | `data.__adobe.target.entity.id` <br>ELLER<br> `xdm.productListItems[0].SKU` | Enhets-ID används för Recommendations-målräknare. Dessa enhets-ID kan antingen skickas som en del av `data` eller automatiskt mappas från det första objektet i `xdm.productListItems` -array om implementeringen använder den fältgruppen. |
-| `entity.categoryId` | `data.__adobe.target.entity.categoryId` | Enhetskategori-ID:n kan skickas som en del av `data` -objekt. |
-| `entity.customEntity` | `data.__adobe.target.entity.customEntity` | Anpassade enhetsparametrar används för att uppdatera Recommendations produktkatalog. Dessa anpassade parametrar måste skickas som en del av `data` -objekt. |
+| `at_property` | N/A | Egenskapstoken har konfigurerats i [datastream](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html#target) och kan inte anges i anropet `sendEvent`. |
+| `pageName` | `xdm.web.webPageDetails.name` | Alla Target-mbox-parametrar måste skickas som en del av `xdm`-objektet och överensstämma med ett schema med klassen XDM ExperienceEvent. Mbox-parametrar kan inte skickas som en del av `data`-objektet. |
+| `profile.gender` | `data.__adobe.target.profile.gender` | Alla målprofilsparametrar måste skickas som en del av objektet `data` och prefixeras med `profile.` för att mappas korrekt. |
+| `user.categoryId` | `data.__adobe.target.user.categoryId` | Reserverad parameter används för målets kategoritillhörighetsfunktion som måste skickas som en del av objektet `data`. |
+| `entity.id` | `data.__adobe.target.entity.id` <br>OR<br> `xdm.productListItems[0].SKU` | Enhets-ID:n används för Recommendations-målräknare. Dessa enhets-ID:n kan antingen skickas som en del av `data`-objektet eller mappas automatiskt från det första objektet i `xdm.productListItems` -arrayen om implementeringen använder den fältgruppen. |
+| `entity.categoryId` | `data.__adobe.target.entity.categoryId` | Enhetskategori-ID:n kan skickas som en del av objektet `data`. |
+| `entity.customEntity` | `data.__adobe.target.entity.customEntity` | Anpassade enhetsparametrar används för att uppdatera Recommendations produktkatalog. Dessa anpassade parametrar måste skickas som en del av objektet `data`. |
 | `cartIds` | `data.__adobe.target.cartIds` | Används för Target-s kundvagnsbaserade rekommendationsalgoritmer. |
 | `excludedIds` | `data.__adobe.target.excludedIds` | Används för att förhindra att specifika enhets-ID returneras i en rekommendationsdesign. |
-| `mbox3rdPartyId` | Ange i dialogrutan `xdm.identityMap` object | Används för synkronisering av målprofiler mellan enheter och kundattribut. Namnutrymmet som ska användas för kund-ID:t måste anges i [Målkonfiguration för datastream](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/using-mbox-3rdpartyid.html). |
+| `mbox3rdPartyId` | Ange i objektet `xdm.identityMap` | Används för synkronisering av målprofiler mellan enheter och kundattribut. Namnområdet som ska användas för kund-ID:t måste anges i [målkonfigurationen för datastream](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/using-mbox-3rdpartyid.html). |
 | `orderId` | `xdm.commerce.order.purchaseID` | Används för att identifiera en unik order för målkonverteringsspårning. |
 | `orderTotal` | `xdm.commerce.order.priceTotal` | Används för att spåra ordersummor för målkonverterings- och optimeringsmål. |
-| `productPurchasedId` | `data.__adobe.target.productPurchasedId` <br>ELLER<br> `xdm.productListItems[0-n].SKU` | Används för spårning av målkonvertering och rekommendationsalgoritmer. Se [enhetsparametrar](#entity-parameters) för mer information. |
-| `mboxPageValue` | `data.__adobe.target.mboxPageValue` | Används för [egen poängsättning](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/capture-score.html) verksamhetsmål. |
+| `productPurchasedId` | `data.__adobe.target.productPurchasedId` <br>OR<br> `xdm.productListItems[0-n].SKU` | Används för spårning av målkonvertering och rekommendationer. Mer information finns i avsnittet [enhetsparametrar](#entity-parameters) nedan. |
+| `mboxPageValue` | `data.__adobe.target.mboxPageValue` | Används för aktivitetsmålet [för anpassad poängsättning](https://experienceleague.adobe.com/docs/target/using/activities/success-metrics/capture-score.html). |
 
-{style=&quot;table-layout:auto&quot;}
+{style="table-layout:auto"}
 
 ## Egna parametrar
 
-Egna mbox-parametrar måste skickas som XDM-data med `sendEvent` -kommando. Det är viktigt att se till att XDM-schemat innehåller alla fält som krävs för målitimplementeringen.
+Egna mbox-parametrar måste skickas som XDM-data med kommandot `sendEvent`. Det är viktigt att se till att XDM-schemat innehåller alla fält som krävs för målitimplementeringen.
 
 at.js-exempel med `targetPageParams()`:
 
@@ -143,7 +144,7 @@ targetPageParams = function() {
 };
 ```
 
-JavaScript-exempel för Platform Web SDK med `sendEvent` kommando:
+Exempel på JavaScript för Platform Web SDK med kommandot `sendEvent`:
 
 >[!BEGINTABS]
 
@@ -164,27 +165,27 @@ alloy("sendEvent", {
 
 >[!TAB Taggar]
 
-I -taggar använder du först en [!UICONTROL XDM-objekt] dataelement som ska mappas till XDM-fältet:
+I taggar använder du först ett [!UICONTROL XDM object]-dataelement för att mappa till XDM-fältet:
 
-![Mappa till ett XDM-fält i ett XDM-objektdataelement](assets/params-tags-pageName.png){zoomable=&quot;yes&quot;}
+![Mappning till ett XDM-fält i ett XDM-objektdataelement](assets/params-tags-pageName.png){zoomable="yes"}
 
-Och lägg sedan in [!UICONTROL XDM-objekt] i [!UICONTROL Skicka händelse] [!UICONTROL åtgärd] (multipel [!UICONTROL XDM-objekt] kan [sammanfogad](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/core/overview.html?lang=en#merged-objects)):
+Ta sedan med din [!UICONTROL XDM object] i din [!UICONTROL Send event] [!UICONTROL action] (flera [!UICONTROL XDM objects] kan [sammanfogas](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/core/overview.html?lang=en#merged-objects)):
 
-![Inkludera ett XDM-objektdataelement i en Send-händelse](assets/params-tags-sendEvent.png){zoomable=&quot;yes&quot;}
+![Inkludera ett XDM-objektdataelement i en Send-händelse](assets/params-tags-sendEvent.png){zoomable="yes"}
 
 >[!ENDTABS]
 
 
 >[!NOTE]
 >
->Eftersom anpassade mbox-parametrar är en del av `xdm` måste du uppdatera alla målgrupper, aktiviteter eller profilskript som refererar till dessa mbox-parametrar med deras nya namn. Se [Uppdatera målgrupper och profilskript för kompatibilitet med Platform Web SDK](update-audiences.md) sidan med den här självstudiekursen för mer information.
+>Eftersom anpassade mbox-parametrar är en del av `xdm`-objektet måste du uppdatera alla målgrupper, aktiviteter eller profilskript som refererar till de här mbox-parametrarna med deras nya namn. Mer information finns på sidan [Uppdatera målgrupper och profilskript för kompatibilitet med plattformswebbsäkra DK](update-audiences.md) i den här självstudiekursen.
 
 
 ## Profilparametrar
 
-Målprofilsparametrar måste skickas under `data.__adobe.target` objekt i Platform Web SDK `sendEvent` kommandots nyttolast.
+Målprofilsparametrar måste skickas under objektet `data.__adobe.target` i kommandotolken för Platform Web SDK `sendEvent`.
 
-Precis som at.js måste alla profilparametrar också ha prefix med `profile.` för att värdet ska lagras korrekt som ett beständigt Target-profilattribut. Den reserverade `user.categoryId` parametern för målets kategoritillhörighet har prefixet `user.`.
+Precis som at.js måste alla profilparametrar också ha prefixet `profile.` för att värdet ska lagras korrekt som ett beständigt Target-profilattribut. Den reserverade parametern `user.categoryId` för målets kategoritillhörighetsfunktion har prefixet `user.`.
 
 at.js-exempel med `targetPageParams()`:
 
@@ -197,7 +198,7 @@ targetPageParams = function() {
 };
 ```
 
-Exempel på Web SDK för plattformar med `sendEvent` kommando:
+Exempel på SDK för plattformswebben med kommandot `sendEvent`:
 
 >[!BEGINTABS]
 
@@ -218,21 +219,21 @@ alloy("sendEvent", {
 
 >[!TAB Taggar]
 
-Skapa först ett dataelement i taggar för att definiera `data.__adobe.target` objekt:
+Skapa först ett dataelement i taggar för att definiera objektet `data.__adobe.target`:
 
-![Definiera dataobjektet i ett dataelement](assets/params-tags-dataObject.png){zoomable=&quot;yes&quot;}
+![Definiera ditt dataobjekt i ett dataelement](assets/params-tags-dataObject.png){zoomable="yes"}
 
-Ta sedan med dataobjektet i [!UICONTROL Skicka händelse] [!UICONTROL åtgärd] (multipel [!UICONTROL objekt] kan [sammanfogad](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/core/overview.html?lang=en#merged-objects)):
+Inkludera sedan dataobjektet i [!UICONTROL Send event] [!UICONTROL action] (flera [!UICONTROL objects] kan vara [sammanfogade](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/core/overview.html?lang=en#merged-objects)):
 
-![Inkludera ett dataobjekt i en Skicka-händelse](assets/params-tags-sendEvent-withData.png){zoomable=&quot;yes&quot;}
+![Inkludera ett dataobjekt i en Send-händelse](assets/params-tags-sendEvent-withData.png){zoomable="yes"}
 
 >[!ENDTABS]
 
 ## Enhetsparametrar
 
-Enhetsparametrar används för att skicka beteendedata och kompletterande kataloginformation för Target Recommendations. Alla [enhetsparametrar](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html) som stöds av at.js stöds även av Platform Web SDK. Precis som för profilparametrar ska alla enhetsparametrar skickas under `data.__adobe.target` objekt i Platform Web SDK `sendEvent` kommandots nyttolast.
+Enhetsparametrar används för att skicka beteendedata och kompletterande kataloginformation för Target Recommendations. Alla [enhetsparametrar](https://experienceleague.adobe.com/docs/target/using/recommendations/entities/entity-attributes.html) som stöds av at.js stöds också av Platform Web SDK. På samma sätt som profilparametrar bör alla enhetsparametrar skickas under objektet `data.__adobe.target` i plattformens Web SDK `sendEvent` -kommandonyttolast.
 
-Entitetsparametrar för ett specifikt objekt måste föregås av `entity.` för korrekt datainhämtning. Den reserverade `cartIds` och `excludedIds` parametrar för rekommendationsalgoritmer ska inte prefixas och värdet för var och en måste innehålla en kommaavgränsad lista med enhets-ID:n.
+Entitetsparametrar för ett specifikt objekt måste ha prefixet `entity.` för korrekt datainhämtning. De reserverade parametrarna `cartIds` och `excludedIds` för rekommendationsalgoritmer ska inte prefixas och värdet för var och en måste innehålla en kommaavgränsad lista med entitets-ID:n.
 
 at.js-exempel med `targetPageParams()`:
 
@@ -248,7 +249,7 @@ targetPageParams = function() {
 };
 ```
 
-Exempel på Web SDK för plattformar med `sendEvent` kommando:
+Exempel på SDK för plattformswebben med kommandot `sendEvent`:
 
 >[!BEGINTABS]
 
@@ -272,24 +273,24 @@ alloy("sendEvent", {
 
 >[!TAB Taggar]
 
-Skapa först ett dataelement i taggar för att definiera `data.__adobe.target` objekt:
+Skapa först ett dataelement i taggar för att definiera objektet `data.__adobe.target`:
 
-![Definiera dataobjektet i ett dataelement](assets/params-tags-dataObject-entities.png){zoomable=&quot;yes&quot;}
+![Definiera ditt dataobjekt i ett dataelement](assets/params-tags-dataObject-entities.png){zoomable="yes"}
 
-Ta sedan med dataobjektet i [!UICONTROL Skicka händelse] [!UICONTROL åtgärd] (multipel [!UICONTROL objekt] kan [sammanfogad](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/core/overview.html?lang=en#merged-objects)):
+Inkludera sedan dataobjektet i [!UICONTROL Send event] [!UICONTROL action] (flera [!UICONTROL objects] kan vara [sammanfogade](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/core/overview.html?lang=en#merged-objects)):
 
-![Inkludera ett dataobjekt i en Skicka-händelse](assets/params-tags-sendEvent-withData.png){zoomable=&quot;yes&quot;}
+![Inkludera ett dataobjekt i en Send-händelse](assets/params-tags-sendEvent-withData.png){zoomable="yes"}
 
 >[!ENDTABS]
 
 >[!NOTE]
 >
->Om `commerce` fältgruppen används och `productListItems` -arrayen ingår i XDM-nyttolasten och sedan den första `SKU` värdet i den här arrayen mappas till `entity.id` för att öka en produktvy.
+>Om fältgruppen `commerce` används och arrayen `productListItems` ingår i XDM-nyttolasten mappas det första `SKU`-värdet i den här arrayen till `entity.id` för att öka en produktvy.
 
 
 ## Inköpsparametrar
 
-Inköpsparametrar skickas till en orderbekräftelsesida efter en lyckad beställning och används för målkonverterings- och optimeringsmål. Med en plattformsbaserad Web SDK-implementering mappas dessa parametrar och automatiskt från XDM-data som skickas som en del av `commerce` fältgrupp.
+Inköpsparametrar skickas till en orderbekräftelsesida efter en lyckad beställning och används för målkonverterings- och optimeringsmål. Med en plattformsbaserad Web SDK-implementering mappas de här parametrarna automatiskt från XDM-data som skickas som en del av fältgruppen `commerce`.
 
 at.js-exempel med `targetPageParams()`:
 
@@ -303,9 +304,9 @@ targetPageParams = function() {
 };
 ```
 
-Inköpsinformation skickas till Target när `commerce` fältgruppen har `purchases.value` ange till `1`. Orderns-ID och ordersumman mappas automatiskt från `order` -objekt. Om `productListItems` arrayen finns, sedan `SKU` värden används för `productPurchasedId`.
+Inköpsinformation skickas till mål när fältgruppen `commerce` har `purchases.value` inställt på `1`. Orderns ID och ordersumman mappas automatiskt från objektet `order`. Om `productListItems`-arrayen finns används `SKU`-värdena för `productPurchasedId`.
 
-Exempel på Web SDK för plattformar med `sendEvent` kommando:
+Exempel på SDK för plattformswebben med kommandot `sendEvent`:
 
 >[!BEGINTABS]
 
@@ -334,20 +335,20 @@ alloy("sendEvent", {
 
 >[!TAB Taggar]
 
-I -taggar använder du först en [!UICONTROL XDM-objekt] dataelement som ska mappas till XDM-fält:
+I taggar använder du först ett [!UICONTROL XDM object]-dataelement för att mappa till XDM-fälten:
 
-![Mappa till ett XDM-fält i ett XDM-objektdataelement](assets/params-tags-purchase.png){zoomable=&quot;yes&quot;}
+![Mappning till ett XDM-fält i ett XDM-objektdataelement](assets/params-tags-purchase.png){zoomable="yes"}
 
-Och lägg sedan in [!UICONTROL XDM-objekt] i [!UICONTROL Skicka händelse] [!UICONTROL åtgärd] (multipel [!UICONTROL XDM-objekt] kan [sammanfogad](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/core/overview.html?lang=en#merged-objects)):
+Ta sedan med din [!UICONTROL XDM object] i din [!UICONTROL Send event] [!UICONTROL action] (flera [!UICONTROL XDM objects] kan [sammanfogas](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/client/core/overview.html?lang=en#merged-objects)):
 
-![Inkludera ett XDM-objektdataelement i en Send-händelse](assets/params-tags-sendEvent-purchase.png){zoomable=&quot;yes&quot;}
+![Inkludera ett XDM-objektdataelement i en Send-händelse](assets/params-tags-sendEvent-purchase.png){zoomable="yes"}
 
 >[!ENDTABS]
 
 
 >[!NOTE]
 >
->The `productPurchasedId` värdet kan också skickas som en kommaavgränsad lista med enhets-ID:n under `data` -objekt.
+>Värdet `productPurchasedId` kan också skickas som en kommaavgränsad lista med enhets-ID:n under objektet `data`.
 
 
 ## Kund-ID (mbox3rdPartyId)
@@ -356,10 +357,10 @@ Target tillåter profilsynkronisering mellan enheter och system med ett enda kun
 
 Det finns några steg för att konfigurera ID-synkronisering för olika målenheter och för att använda kundattribut:
 
-1. Skapa en **[!UICONTROL identity namespace]** för kund-ID:t i **[!UICONTROL Identiteter]** skärm för datainsamling eller -plattform
-1. Se till att **[!UICONTROL alias]** i kundattribut matchar **[!UICONTROL identitetssymbol]** namnutrymmet
-1. Ange **[!UICONTROL identy symbol]** som **[!UICONTROL Namnområde för tredje parts ID-mål]** i målkonfigurationen för datastream
-1. Kör en `sendEvent` med `identityMap` fältgrupp
+1. Skapa en **[!UICONTROL identity namespace]** för kund-ID på skärmen **[!UICONTROL Identities]** i datainsamling eller plattform
+1. Kontrollera att **[!UICONTROL alias]** i kundattribut matchar **[!UICONTROL identity symbol]** i namnutrymmet
+1. Ange **[!UICONTROL identy symbol]** som **[!UICONTROL Target Third Party ID Namespace]** i målkonfigurationen för datastream
+1. Kör ett `sendEvent`-kommando med fältgruppen `identityMap`
 
 at.js-exempel med `targetPageParams()`:
 
@@ -371,7 +372,7 @@ targetPageParams = function() {
 };
 ```
 
-Exempel på Web SDK för plattformar med `sendEvent` kommando:
+Exempel på SDK för plattformswebben med kommandot `sendEvent`:
 
 >[!BEGINTABS]
 
@@ -392,18 +393,18 @@ alloy("sendEvent", {
 
 >[!TAB Taggar]
 
-The [!UICONTROL ID] värde, [!UICONTROL Autentiserat läge] och [!UICONTROL Namnutrymme] hämtas från en [!UICONTROL Identitetskarta] dataelement:
-![Identitetskarta, dataelement som hämtar kund-ID](assets/params-tags-customerIdDataElement.png){zoomable=&quot;yes&quot;}
+[!UICONTROL ID]-värdet, [!UICONTROL Authenticated state] och [!UICONTROL Namespace] hämtas i ett [!UICONTROL Identity map]-dataelement:
+![Identitetskarta - dataelement som hämtar kund-ID:t ](assets/params-tags-customerIdDataElement.png){zoomable="yes"}
 
-The [!UICONTROL Identitetskarta] dataelementet används sedan för att ställa in [!UICONTROL identityMap] i [!UICONTROL XDM-objekt] dataelement:
-![Identitetskartelement som används i XDM-objektdataelement](assets/params-tags-customerIdInXDMObject.png){zoomable=&quot;yes&quot;}
+Dataelementet [!UICONTROL Identity map] används sedan för att ställa in fältet [!UICONTROL identityMap] i dataelementet [!UICONTROL XDM object]:
+![ Identitetskarta, dataelement som används i XDM-objektdataelement ](assets/params-tags-customerIdInXDMObject.png){zoomable="yes"}
 
-The [!UICONTROL XDM-objekt] ingår sedan i [!UICONTROL Skicka händelse] åtgärd för en regel:
+[!UICONTROL XDM object] ingår sedan i åtgärden [!UICONTROL Send event] för en regel:
 
-![Inkludera ett XDM-objektdataelement i en Send-händelse](assets/params-tags-sendEvent-xdm.png){zoomable=&quot;yes&quot;}
+![Inkludera ett XDM-objektdataelement i en Send-händelse](assets/params-tags-sendEvent-xdm.png){zoomable="yes"}
 
-I din datastreams Adobe Target-tjänst måste du ange [!UICONTROL Namnområde för tredje parts ID-mål] till samma namnutrymme som används i [!UICONTROL Identitetskarta] dataelement:
-![Ange namnutrymmet för mål-ID för tredje part i datastream](assets/params-tags-customerIdNamespaceInDatastream.png){zoomable=&quot;yes&quot;}
+I datastreams Adobe Target-tjänst måste du ange [!UICONTROL Target Third Party ID Namespace] till samma namnområde som används i dataelementet [!UICONTROL Identity map]:
+![Ange namnutrymmet för mål-ID för tredje part i datastream ](assets/params-tags-customerIdNamespaceInDatastream.png){zoomable="yes"}
 
 >[!ENDTABS]
 
@@ -413,9 +414,9 @@ Nu när du förstår hur de olika Target-parametrarna mappas med Platform Web SD
 
 - Skapa ett fördolt fragment för en asynkron biblioteksimplementering
 - Baskod för Platform Web SDK
-- Platform Web SDK JavaScript-biblioteket
-- A `configure` för att initiera biblioteket
-- A `sendEvent` för att skicka data och begära att Target-innehåll återges
+- JavaScript-biblioteket Platform Web SDK
+- Ett `configure`-kommando för att initiera biblioteket
+- Ett `sendEvent`-kommando som skickar data och begär att Target-innehåll ska återges
 
 +++Web SDK på en produktinformationssida:
 
@@ -563,8 +564,8 @@ Nu när du förstår hur de olika Target-parametrarna mappas med Platform Web SD
 
 +++
 
-Lär dig sedan hur du [spåra konverteringshändelser för mål](track-events.md) med Platform Web SDK.
+Läs sedan om hur du [spårar målkonverteringshändelser](track-events.md) med Platform Web SDK.
 
 >[!NOTE]
 >
->Vi vill hjälpa dig att lyckas med målmigreringen från at.js till Web SDK. Om du stöter på problem med din migrering eller känner att det saknas viktig information i den här guiden ber vi dig att meddela oss genom att publicera i [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-target-from-at-js-to-web-sdk/m-p/575587#M463).
+>Vi vill hjälpa dig att lyckas med målmigreringen från at.js till Web SDK. Om du stöter på problem med din migrering eller om du känner att det saknas viktig information i den här guiden kan du meddela oss genom att publicera [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-target-from-at-js-to-web-sdk/m-p/575587#M463).

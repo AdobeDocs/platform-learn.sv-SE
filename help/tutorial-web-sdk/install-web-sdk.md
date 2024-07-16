@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Installera taggtillägget Adobe Experience Platform Web SDK
 
-Lär dig installera och konfigurera taggtillägget Adobe Experience Platform Web SDK. Det enklaste sättet att implementera Web SDK är att använda tagghanteraren Adobe, taggar (tidigare kallad Launch). Taggtillägget Platform Web SDK är _endast taggtillägg_ som krävs för att skicka data till _alla Adobe Experience Cloud-program_, inklusive [Analyser](setup-analytics.md), [Mål](setup-target.md), [Audience Manager](setup-audience-manager.md), Real-time Customer Data Platform och [Journey Optimizer](setup-web-channel.md)!
+Lär dig installera och konfigurera taggtillägget Adobe Experience Platform Web SDK. Det enklaste sättet att implementera Web SDK är att använda tagghanteraren Adobe, taggar (tidigare kallad Launch). Taggtillägget Platform Web SDK är det _enda taggtillägget_ som krävs för att skicka data till _alla Adobe Experience Cloud-program_, inklusive [Analytics](setup-analytics.md), [Target](setup-target.md), [Audience Manager](setup-audience-manager.md), Real-time Customer Data Platform och [Journey Optimizer](setup-web-channel.md)!
 
 ## Utbildningsmål
 
@@ -23,7 +23,7 @@ När lektionen är klar kan du:
 * Installera plattformens SDK-taggtillägg
 * Mappa tidigare skapade data till tillägget
 
-## Förutsättningar
+## Förhandskrav
 
 Du måste ha slutfört föregående lektioner i den här självstudien:
 
@@ -31,16 +31,16 @@ Du måste ha slutfört föregående lektioner i den här självstudien:
 
 ### Lägga till en taggegenskap
 
-Först måste du ha en taggegenskap. En egenskap är en behållare för alla JavaScript-skript, regler och andra funktioner som krävs för att samla in information från en webbsida och skicka den till olika platser.
+Först måste du ha en taggegenskap. En egenskap är en behållare för alla JavaScript, regler och andra funktioner som krävs för att samla in information från en webbsida och skicka den till olika platser.
 
 Skapa en ny taggegenskap för självstudiekursen:
 
-1. Öppna [Gränssnitt för datainsamling](https://launch.adobe.com/){target="_blank"}
-1. Välj **[!UICONTROL Tags]** till vänster navigering
-1. Välj **[!UICONTROL New Property]** knapp
+1. Öppna [gränssnittet för datainsamling](https://launch.adobe.com/){target="_blank"}
+1. Välj **[!UICONTROL Tags]** i den vänstra navigeringen
+1. Markera knappen **[!UICONTROL New Property]**
    ![Lägg till en ny egenskap](assets/websdk-property-addNewProperty.png)
-1. Som **[!UICONTROL Name]**, ange `Web SDK Course` (lägg till ditt namn i slutet om flera personer från ditt företag använder den här självstudiekursen)
-1. Som **[!UICONTROL Domains]**, ange `enablementadobe.com` (förklaras senare)
+1. Som **[!UICONTROL Name]** anger du `Web SDK Course` (lägg till ditt namn i slutet om flera personer från ditt företag använder den här självstudiekursen)
+1. Ange `enablementadobe.com` som **[!UICONTROL Domains]** (förklaras senare)
 1. Välj **[!UICONTROL Save]**
    ![Egenskapsinformation](assets/websdk-property-propertyDetails.png)
 
@@ -60,22 +60,22 @@ Med ditt XDM-schema, datastream och taggegenskap som nu skapas är du redo att i
 
 Lämna de flesta standardinställningarna och uppdatera dem senare efter behov. Det enda du måste göra nu är att länka tillägget till ditt datastream:
 
-1. Under **[!UICONTROL Datastreams]** väljer du **[!UICONTROL Choose from list]** indatametod
+1. Under **[!UICONTROL Datastreams]** väljer du indatametoden **[!UICONTROL Choose from list]**
 1. Välj den sandlåda som du skapade schemat i, identitetsnamnområdet och datastream
 1. Välj den datastream som du skapade tidigare, `Luma Web SDK`
 1. Välj **[!UICONTROL Save]**
 
    >[!NOTE]
    >
-   > Om du inte hittar ditt datastream går du till [Konfigurera ett datastream](configure-datastream.md) lektion och följ stegen för att skapa en
+   > Om du inte hittar ditt datastream går du till [Konfigurera ett datastream](configure-datastream.md)-lektioner och följer stegen för att skapa ett
 
-   ![Val av datastam](assets/extension-luma-web-sdk-datastream-extension.png)
+   ![Val av dataström](assets/extension-luma-web-sdk-datastream-extension.png)
 
-Mer information om varje avsnitt av tillägget finns i [Konfigurera Adobe Experience Platform Web SDK-tillägget](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/web-sdk/web-sdk-extension-configuration).
+Mer information om varje avsnitt i tillägget finns i [Konfigurera Adobe Experience Platform Web SDK-tillägget](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/web-sdk/web-sdk-extension-configuration).
 
 >[!NOTE]
 >
->När du inte konfigurerade en CNAME i [!UICONTROL Edge domain] i den här lektionen rekommenderar Adobe att du använder en CNAME när du implementerar Platform Web SDK på din egen webbplats. En CNAME-implementering ger inga fördelar vad gäller cookie-livstid, men det kan finnas andra fördelar. Fördelarna är annonsblockerare och mindre vanliga webbläsare som förhindrar att data skickas till domäner som de klassificerar som spårare. I dessa fall kan användning av CNAME förhindra att datainsamlingen avbryts för användare som använder dessa verktyg.
+>Du konfigurerade inte en CNAME i inställningen [!UICONTROL Edge domain] i den här lektionen, men Adobe rekommenderar att du använder en CNAME när du implementerar Platform Web SDK på din egen webbplats. En CNAME-implementering ger inga fördelar vad gäller cookie-livstid, men det kan finnas andra fördelar. Fördelarna är annonsblockerare och mindre vanliga webbläsare som förhindrar att data skickas till domäner som de klassificerar som spårare. I dessa fall kan användning av CNAME förhindra att datainsamlingen avbryts för användare som använder dessa verktyg.
 
 >[!NOTE]
 >
@@ -87,4 +87,4 @@ Nu när du har installerat Platform Web SDK och kopplat det till datastream är 
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

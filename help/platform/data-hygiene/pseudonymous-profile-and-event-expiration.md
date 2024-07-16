@@ -7,7 +7,8 @@ level: Beginner
 jira: KT-15319
 thumbnail: 3428361.jpeg
 last-substantial-update: 2024-04-15T00:00:00Z
-source-git-commit: e27d72948bb92ae004209d9f43850fba33dd1603
+exl-id: 16ecab9e-32e2-464f-a421-6575abe05fac
+source-git-commit: b6e09a211b7de72879dba27af67c8b9a90e6aaf2
 workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 0%
@@ -18,7 +19,7 @@ ht-degree: 0%
 
 Lär dig hur du konfigurerar förfalloinställningar för pseudonyma profiler och händelser i Experience Platform och fördelarna.
 
-Med de här inställningarna kan datafördelningar ange förfallodatum för oautentiserade profiler och tillhörande händelser. Detta bidrar till att hålla [!DNL Profile Service] relevanta för era användningsfall inom marknadsföring och annonsering. Mer information finns på [Förfallotid för upplevelsehändelse](https://experienceleague.adobe.com/en/docs/experience-platform/profile/event-expirations) och [Förfallodatum för pseudonyma profiler](https://experienceleague.adobe.com/en/docs/experience-platform/profile/event-expirations) dokumentation.
+Med de här inställningarna kan datafördelningar ange förfallodatum för oautentiserade profiler och tillhörande händelser. Detta gör att [!DNL Profile Service] förblir relevant för dina användningsfall för marknadsföring och annonsering. Mer information finns i dokumentationen [Upplevelseförfallodatum](https://experienceleague.adobe.com/en/docs/experience-platform/profile/event-expirations) och [Pseudonymous Profiles data expiration](https://experienceleague.adobe.com/en/docs/experience-platform/profile/event-expirations) .
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3428361?learn=on)

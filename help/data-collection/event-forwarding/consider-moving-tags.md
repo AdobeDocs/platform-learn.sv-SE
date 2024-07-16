@@ -8,8 +8,8 @@ jira: KT-9921
 exl-id: f8fd351a-435c-4cc1-b987-ed2ead20d4d6
 source-git-commit: 7edf8fc46943ae2f1e6e2e20f4d589d7959310c8
 workflow-type: tm+mt
-source-wordcount: '1369'
-ht-degree: 1%
+source-wordcount: '1279'
+ht-degree: 0%
 
 ---
 
@@ -17,21 +17,21 @@ ht-degree: 1%
 
 Det finns flera goda skäl att överväga att flytta leverantörstaggar på klientsidan från webbläsare och enheter och till en server. I den här artikeln diskuterar vi hur du utvärderar en leverantörstagg på klientsidan för att kunna flytta den till en händelsevidarebefordringsegenskap.
 
-Den här utvärderingen är bara nödvändig om du överväger att ta bort en leverantörstagg på klientsidan och ersätta den med datadistribution på serversidan i en händelsevidarebefordringsegenskap. I den här artikeln förutsätts att du är bekant med grunderna i [datainsamling](https://experienceleague.adobe.com/docs/data-collection.html)och [händelsevidarebefordran](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html).
+Den här utvärderingen är bara nödvändig om du överväger att ta bort en leverantörstagg på klientsidan och ersätta den med datadistribution på serversidan i en händelsevidarebefordringsegenskap. I den här artikeln förutsätts du känna till grunderna för [datainsamling](https://experienceleague.adobe.com/docs/data-collection.html) och [vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html).
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch har omklassificerats som en serie datainsamlingstekniker i Adobe Experience Platform. Som ett resultat av detta har flera terminologiska förändringar införts i produktdokumentationen. Se följande [dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) för en konsoliderad hänvisning till terminologiska förändringar.
+>Adobe Experience Platform Launch har omklassificerats som en serie datainsamlingstekniker i Adobe Experience Platform. Som ett resultat av detta har flera terminologiska förändringar införts i produktdokumentationen. I följande [dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) finns en konsoliderad referens till de ändrade terminologin.
 
-Webbläsarleverantörer ändrar hur de hanterar cookies från tredje part. Reklamleverantörer och marknadsföringsteknologier behöver ofta använda många taggar på klientsidan. Dessa utmaningar är bara två övertygande skäl till att våra kunder lägger till datadistribution på serversidan.
+Webbläsarleverantörer ändrar hur de hanterar cookies från tredje part. Advertising och marknadsföringsleverantörer och marknadsföringsteknologier kräver ofta användning av många taggar på klientsidan. Dessa utmaningar är bara två övertygande skäl till att våra kunder lägger till datadistribution på serversidan.
 
 >[!NOTE]
 >
->`Tag` i den här artikeln betyder kod på klientsidan, vanligtvis JavaScript från en leverantör som används för datainsamling i webbläsaren eller enheten medan en besökare interagerar med webbplatsen eller appen. `Website` eller `site` avser en webbplats, ett webbprogram eller ett program för en mobil enhet. En&quot;tagg&quot; för dessa syften kallas ofta även en pixel.
+>`Tag` i den här artikeln betyder klientkod, vanligtvis JavaScript från en leverantör som används för datainsamling i webbläsaren eller enheten medan en besökare interagerar med webbplatsen eller appen. `Website` eller `site` avser här en webbplats, ett webbprogram eller ett program för en mobil enhet. En&quot;tagg&quot; för dessa syften kallas ofta även en pixel.
 
 ## Användningsexempel och data {#use-cases-data}
 
-Det första steget är att definiera de användningsfall som implementeras med leverantörstaggen på klientsidan. Ta till exempel pixeln Facebook (Meta). Flytta den från vår webbplats till [Meta Conversions API](https://exchange.adobe.com/apps/ec/109168/meta-conversions-api) med tillägget för händelsevidarebefordran innebär det att de specifika användningsfallen dokumenteras först.
+Det första steget är att definiera de användningsfall som implementeras med leverantörstaggen på klientsidan. Ta till exempel pixeln Facebook (Meta). Om du flyttar den från vår webbplats till [Meta Conversions API](https://exchange.adobe.com/apps/ec/109168/meta-conversions-api) med tillägget för händelsevidarebefordran måste du först dokumentera de specifika användningsfallen.
 
 För den aktuella leverantörskoden på klientsidan:
 
@@ -44,7 +44,7 @@ I vårt exempel spårar vi konverteringar med Facebook pixel när besökarna int
 
 ### Data {#data}
 
-Vad händer med data för vår användning när den befintliga taggen på klientsidan körs eller körs på vår webbplats? Kan vi samla in de data vi behöver i klienten, utan leverantörstaggen, så att vi kan skicka dem till händelsevidarebefordran? När du använder [taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv) eller andra tagghanteringssystem, är de flesta data för besökarinteraktion tillgängliga för insamling och distribution. Men finns de data vi behöver för vår användning tillgängliga när vi behöver dem, där vi behöver dem och i det format vi behöver dem - utan leverantörstaggen på klientsidan? Här är några andra datafrågor att tänka på:
+Vad händer med data för vår användning när den befintliga taggen på klientsidan körs eller körs på vår webbplats? Kan vi samla in de data vi behöver i klienten, utan leverantörstaggen, så att vi kan skicka dem till händelsevidarebefordran? När du använder [taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv) eller andra tagghanteringssystem är de flesta besökarinteraktionsdata tillgängliga för insamling och distribution. Men finns de data vi behöver för vår användning tillgängliga när vi behöver dem, där vi behöver dem och i det format vi behöver dem - utan leverantörstaggen på klientsidan? Här är några andra datafrågor att tänka på:
 
 - Krävs det ett användar-ID för varje leverantör för varje händelse?
 - Om så är fallet, hur kan de samlas in eller genereras utan klientsidestaggen?
@@ -87,20 +87,20 @@ Om leverantören inte har API-slutpunkterna som stöd för våra användningsfal
 
 Vad händer om de har API:er, men också behöver ett unikt besökar- eller användar-ID för varje API-anrop? Hur kommer vi åt det ID:t om vi inte har leverantörens klientkod (tagg) på webbplatsen?
 
-Vissa leverantörer förändrar sina system för den nya världen utan cookies från tredje part. Dessa ändringar inkluderar användning av alternativa unika identifierare, som en [UUID](https://developer.mozilla.org/en-US/docs/Glossary/UUID) eller andra [kundgenererat ID](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html). Om leverantören tillåter ett kundgenererat ID kan vi antingen skicka det från klienten till Platform Edge Network med Web eller Mobile SDK, eller eventuellt hämta det från ett API-anrop vid händelsevidarebefordran. När vi skickar data till den leverantören i en regel för vidarebefordran av händelser, tar vi bara med den identifieraren vid behov.
+Vissa leverantörer förändrar sina system för den nya världen utan cookies från tredje part. Dessa ändringar inkluderar användning av alternativa unika identifierare, som ett [UID](https://developer.mozilla.org/en-US/docs/Glossary/UUID) eller annat [kundgenererat ID](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html). Om leverantören tillåter ett kundgenererat ID kan vi antingen skicka det från klienten till Platform Edge Network med Web eller Mobile SDK, eller eventuellt hämta det från ett API-anrop vid händelsevidarebefordran. När vi skickar data till den leverantören i en regel för vidarebefordran av händelser, tar vi bara med den identifieraren vid behov.
 
-Om leverantören kräver data (t.ex. ett leverantörsspecifikt unikt ID) som bara kan genereras eller kommas åt av deras egen tagg på klientsidan, är det troligt att den leverantörstaggen inte är en bra kandidat att flytta. _Ett försök att bakåtkompilera en tagg på klientsidan med tanken på att flytta den datainsamlingen till händelsevidarebefordran utan lämpliga API:er rekommenderas inte._
+Om leverantören kräver data (t.ex. ett leverantörsspecifikt unikt ID) som bara kan genereras eller kommas åt av deras egen tagg på klientsidan, är det troligt att den leverantörstaggen inte är en bra kandidat att flytta. _Försök att bakåtkompilera en klientsidestagg med tanken att flytta den datainsamlingen till händelsevidarebefordran utan lämpliga API:er rekommenderas inte._
 
-The [Adobe Experience Platform Cloud Connector](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/cloud-connector/overview.html) tillägg kan göra HTTP-begäranden efter behov med leverantörer som har rätt API:er för överföring av server-till-server-händelsedata. Även om leverantörsspecifika tillägg är bra att ha och fler tillägg håller på att utvecklas just nu, kan vi implementera regler för vidarebefordran av händelser i dag med Cloud Connector-tillägget, utan att vänta på ytterligare leverantörstillägg.
+Tillägget [Adobe Experience Platform Cloud Connector](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/cloud-connector/overview.html) kan göra HTTP-begäranden vid behov med leverantörer som har rätt API:er för överföring av händelsedata från server till server. Även om leverantörsspecifika tillägg är bra att ha och fler tillägg håller på att utvecklas just nu, kan vi implementera regler för vidarebefordran av händelser i dag med Cloud Connector-tillägget, utan att vänta på ytterligare leverantörstillägg.
 
 ## Verktyg {#tools}
 
-Det är enklare att undersöka och testa leverantörs-API-slutpunkter med verktyg som [Postman](https://www.postman.com/), eller textredigeringstillägg som Visual Studio Code [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client), eller [HTTP-klient](https://marketplace.visualstudio.com/items?itemName=mkloubert.vscode-http-client).
+Det är enklare att undersöka och testa leverantörs-API-slutpunkter med verktyg som [Postman](https://www.postman.com/) eller textredigeringstillägg som Visual Studio Code [Thunder Client](https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client) eller [HTTP Client](https://marketplace.visualstudio.com/items?itemName=mkloubert.vscode-http-client).
 
 ## Nästa steg {#next-steps}
 
 I den här artikeln finns en serie steg för att utvärdera en leverantörs klientsidestagg och eventuellt flytta den på serversidan i en egenskap för vidarebefordring av händelser. Mer information om relaterade ämnen finns i följande länkar:
 
-- [Tagghantering](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv) i ADOBE EXPERIENCE PLATFORM
-- [Vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) för serverbearbetning
-- [Uppdateringar om terminologi](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) datainsamling
+- [Tagghantering](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv) i Adobe Experience Platform
+- [Vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) för bearbetning på serversidan
+- [Terminologiska uppdateringar](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) i datainsamling

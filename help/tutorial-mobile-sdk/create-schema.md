@@ -6,8 +6,8 @@ jira: KT-14624
 exl-id: c6b0d030-437a-4afe-b7d5-5a7831877983
 source-git-commit: 25f0df2ea09bb7383f45a698e75bd31be7541754
 workflow-type: tm+mt
-source-wordcount: '1414'
-ht-degree: 0%
+source-wordcount: '1313'
+ht-degree: 1%
 
 ---
 
@@ -25,13 +25,13 @@ Experience Platform använder scheman för att beskriva datastrukturen på ett k
 
 Innan data kan hämtas in till Platform måste ett schema sättas samman för att beskriva datastrukturen och tillhandahålla begränsningar för den typ av data som kan finnas i varje fält. Scheman består av en basklass och noll eller flera schemafältgrupper.
 
-Mer information om schemakompositionsmodellen, inklusive designprinciper och bästa praxis, finns i [grunderna för schemakomposition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en) eller kursen [Modellera era kundupplevelsedata med XDM](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-D-1-2021.1.xdm).
+Mer information om schemakompositionsmodellen, inklusive designprinciper och bästa praxis, finns i [grunderna för schemakomposition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en) eller kursen [Modellera dina kundupplevelsedata med XDM](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-D-1-2021.1.xdm).
 
 >[!TIP]
 >
->Om du känner till SDR (Analytics Solution Design Reference) kan du se ett schema som en mer robust SDR. Se [Skapa och underhåll ett SDR-dokument (Solution Design Reference)](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html?lang=en) för mer information.
+>Om du känner till SDR (Analytics Solution Design Reference) kan du se ett schema som en mer robust SDR. Mer information finns i [Skapa och underhåll ett SDR-dokument ](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html?lang=en).
 
-## Förutsättningar
+## Förhandskrav
 
 Du måste ha behörighet att skapa ett Experience Platform-schema för att kunna slutföra lektionen.
 
@@ -49,28 +49,28 @@ I den här lektionen kommer du att:
 
 1. Se till att du är i sandlådan Experience Platform som du använder för den här självstudiekursen.
 
-1. Öppna appväljaren ![Appväxlare](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Apps_18_N.svg)  (längst upp till höger),
+1. Öppna appväljaren ![App Switcher](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Apps_18_N.svg) (längst upp till höger),
 
-1. Välj **[!UICONTROL Datainsamling]** på menyn.
+1. Välj **[!UICONTROL Data Collection]** på menyn.
 
-   ![Logga in i Experience Cloud](assets/experiencecloud-login.png)
+   ![Logga in på Experience Cloud](assets/experiencecloud-login.png)
 
    >[!NOTE]
    >
    > Kunder som använder plattformsbaserade program som Real-Time CDP bör använda en utvecklingssandlåda för den här självstudiekursen. Andra kunder använder standardproduktionssandlådan.
 
 
-1. Välj **[!UICONTROL Scheman]** under **[!UICONTROL Datahantering]** till vänster.
+1. Välj **[!UICONTROL Schemas]** under **[!UICONTROL Data Management]** i den vänstra listen.
 
    ![taggar, startskärm](assets/mobile-schema-navigate.png)
 
 Du finns nu på huvudschemasidan och visas med en lista över befintliga scheman. Du kan även se flikar som motsvarar grundstenarna i ett schema:
 
-* **Fältgrupper** är återanvändbara komponenter som definierar ett eller flera fält för att samla in specifika data, t.ex. personuppgifter, hotellinställningar eller adress.
-* **Klasser** Definiera beteendeaspekterna för de data som schemat innehåller. Till exempel: `XDM ExperienceEvent` hämtar tidsserie, händelsedata och `XDM Individual Profile` hämtar attributdata om en individ.
+* **Fältgrupper** är återanvändbara komponenter som definierar ett eller flera fält för att hämta specifika data, till exempel personuppgifter, hotellinställningar eller adress.
+* **Klasser** definierar beteendeaspekterna för de data som schemat innehåller. Till exempel: `XDM ExperienceEvent` hämtar tidsserier, händelsedata och `XDM Individual Profile` hämtar attributdata om en individ.
 * **Datatyper** används som referensfälttyper i klasser eller fältgrupper på samma sätt som grundläggande litteralfält.
 
-Ovanstående beskrivningar är en översikt på hög nivå. Mer information finns i [Byggstenar för schema](https://experienceleague.adobe.com/docs/platform-learn/tutorials/schemas/schema-building-blocks.html) video eller läs [Grunderna för schemakomposition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en) i produktdokumentationen.
+Ovanstående beskrivningar är en översikt på hög nivå. Mer information finns i videon [Schemabyggande block](https://experienceleague.adobe.com/docs/platform-learn/tutorials/schemas/schema-building-blocks.html) eller i [Grundläggande om schemakomposition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en) i produktdokumentationen.
 
 I den här självstudiekursen använder du fältgruppen Consumer Experience Event och skapar en anpassad som demonstrerar processen.
 
@@ -89,32 +89,32 @@ I ett verkligt scenario kan schemats designprocess se ut så här:
 I utbildningssyfte använder du fördefinierade och anpassade fältgrupper.
 
 * **Consumer Experience Event**: Fördefinierad fältgrupp med många vanliga fält.
-* **Appinformation**: Anpassad fältgrupp som utformats för att efterlikna koncept i TrackState/TrackAction Analytics.
+* **Programinformation**: Anpassad fältgrupp som utformats för att efterlikna koncept i TrackState/TrackAction Analytics.
 
 <!--Later in the tutorial, you can [update the schema](lifecycle-data.md) to include the **[!UICONTROL AEP Mobile Lifecycle Details]** field group.-->
 
 ## Skapa ett schema
 
-1. Välj **[!UICONTROL Skapa schema]**.
+1. Välj **[!UICONTROL Create Schema]**.
 
-1. I **[!UICONTROL Välj en klass]** steg i **[!UICONTROL Skapa schema]** guide, välj **[!UICONTROL Experience Event]** under **[!UICONTROL Välj en basklass för schemat]**.
+1. Välj **[!UICONTROL Experience Event]** under **[!UICONTROL Select a base class for this schema]** i steget **[!UICONTROL Select a class]** i guiden **[!UICONTROL Create schema]**.
 
-1. Välj **[!UICONTROL Nästa]**.
+1. Välj **[!UICONTROL Next]**.
 
-   ![Basklass för schemaguiden](assets/schema-wizard-base-class.png)
+   ![Grundklass för schemaguiden](assets/schema-wizard-base-class.png)
 
-1. I **[!UICONTROL Namn och granskning]** steg i **[!UICONTROL Skapa schema]** guide, ange **[!UICONTROL Visningsnamn för schema]**, till exempel `Luma Mobile Event Schema` och [!UICONTROL Beskrivning], till exempel `Schema for Luma mobile app experience events`.
+1. I steget **[!UICONTROL Name and review]** i guiden **[!UICONTROL Create schema]** anger du en **[!UICONTROL Schema display name]**, till exempel `Luma Mobile Event Schema` och en [!UICONTROL Description], till exempel `Schema for Luma mobile app experience events`.
 
    >[!NOTE]
    >
-   >Om du går igenom den här självstudiekursen med flera personer i en och samma sandlåda, eller om du använder ett delat konto, bör du överväga att lägga till eller föregå en identifiering som en del av namnkonventionen. I stället för `Luma Mobile App Event Schema`, använda `Luma Mobile App Event Schema - Joe Smith`. Se även anteckningen i [Ökning](overview.md).
+   >Om du går igenom den här självstudiekursen med flera personer i en och samma sandlåda, eller om du använder ett delat konto, bör du överväga att lägga till eller föregå en identifiering som en del av namnkonventionen. Använd till exempel `Luma Mobile App Event Schema - Joe Smith` i stället för `Luma Mobile App Event Schema`. Se även anteckningen i [Översikt](overview.md).
 
-1. Välj **[!UICONTROL Slutför]** för att avsluta guiden.
+1. Välj **[!UICONTROL Finish]** om du vill avsluta guiden.
 
    ![Schemanamn och granskning](assets/schema-wizard-name-and-review.png)
 
 
-1. Välj ![Plus](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **Lägg till** nästa **[!UICONTROL Fältgrupper]**.
+1. Välj ![Plus](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **Lägg till** intill **[!UICONTROL Field groups]**.
 
    ![Lägg till fältgrupp](assets/add-field-group.png)
 
@@ -124,19 +124,19 @@ I utbildningssyfte använder du fördefinierade och anpassade fältgrupper.
 
 1. Välj **Consumer Experience Event**.
 
-1. Välj **[!UICONTROL Lägg till fältgrupper]**.
+1. Välj **[!UICONTROL Add field groups]**.
 
    ![Markerar fältgrupp](assets/schema-select-field-groups.png)
 
    Du kommer tillbaka till huvudfönstret för schemakomposition där du kan se alla tillgängliga fält.
 
-1. Välj **[!UICONTROL Spara]**.
+1. Välj **[!UICONTROL Save]**.
 
 >[!NOTE]
 >
 >Tänk på att du inte behöver använda alla fält i en grupp. Du kan även ta bort fält för att se till att schemat är kortfattat och begripligt. Om det är till hjälp kan du tänka dig ett schema som ett tomt datalager. I appen fyller du i relevanta värden vid rätt tidpunkt.
 
-The [!UICONTROL Consumer Experience Event] fältgruppen har en datatyp som heter [!UICONTROL Webbinformation]som beskriver händelser som sidvisning och länkklick. Just nu finns det ingen paritet för mobilappar med den här funktionen, så du kommer att skapa en egen.
+Fältgruppen [!UICONTROL Consumer Experience Event] har datatypen [!UICONTROL Web information] som beskriver händelser som sidvy och länkklick. Just nu finns det ingen paritet för mobilappar med den här funktionen, så du kommer att skapa en egen.
 
 ## Skapa en anpassad datatyp
 
@@ -145,55 +145,55 @@ Börja med att skapa en anpassad datatyp som beskriver de två händelserna:
 * Skärmvy
 * Appinteraktion
 
-1. Välj **[!UICONTROL Datatyper]** -fliken.
+1. Klicka på fliken **[!UICONTROL Data types]**.  
 
-1. Välj **[!UICONTROL Skapa datatyp]**.
+1. Välj **[!UICONTROL Create data type]**.
 
-   ![Välja datatypmeny](assets/schema-datatype-create.png)
+   ![Markerar datatypmenyn](assets/schema-datatype-create.png)
 
-1. Ange en **[!UICONTROL Visningsnamn]** och **[!UICONTROL Beskrivning]**, till exempel `App Information` och `Custom data type describing "Screen Views" & "App Actions"`
+1. Ange **[!UICONTROL Display name]** och **[!UICONTROL Description]**, till exempel `App Information` och `Custom data type describing "Screen Views" & "App Actions"`
 
    ![Ange namn och beskrivning](assets/schema-datatype-name.png)
 
    >[!TIP]
    >
-   > Använd alltid läsbar, beskrivande [!UICONTROL visningsnamn] för era anpassade fält, eftersom detta gör dem mer tillgängliga för marknadsförarna när fälten visas i tjänster som segmentbyggaren.
+   > Använd alltid läsbara, beskrivande [!UICONTROL display names] för dina anpassade fält, eftersom detta gör dem mer tillgängliga för marknadsförare när fälten visas i underordnade tjänster som segmentbyggaren.
 
 
-1. Om du vill lägga till ett fält väljer du ![Plus](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) -knappen.
+1. Om du vill lägga till ett fält väljer du knappen ![Plus](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) .
 
 
-1. Det här fältet är ett behållarobjekt för programinteraktion, så skapa en kamelcase **[!UICONTROL Fältnamn]** `appInteraction`, **[!UICONTROL Visningsnamn]** `App Interaction`och markera `Object` från **[!UICONTROL Typ]** lista.
+1. Det här fältet är ett behållarobjekt för programinteraktion, så ange en **[!UICONTROL Field name]** `appInteraction`, **[!UICONTROL Display name]** `App Interaction` och välj `Object` i listan **[!UICONTROL Type]**.
 
-1. Välj **[!UICONTROL Använd]**.
+1. Välj **[!UICONTROL Apply]**.
 
-   ![Lägga till en ny programåtgärdshändelse](assets/schema-datatype-app-action.png)
+   ![Lägger till en ny programåtgärdshändelse](assets/schema-datatype-app-action.png)
 
-1. Om du vill mäta hur ofta en åtgärd har inträffat lägger du till ett fält genom att markera ![Plus](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) knappen bredvid **[!UICONTROL appInteraction]** objekt som du skapade.
+1. Om du vill mäta hur ofta en åtgärd har inträffat lägger du till ett fält genom att markera knappen ![Plus](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) bredvid det **[!UICONTROL appInteraction]** objekt du skapade.
 
-1. Ge den en kamelväska **[!UICONTROL Fältnamn]** `appAction`, **[!UICONTROL Visningsnamn]** av `App Action` och **[!UICONTROL Typ]** `Measure`.
+1. Ge den en kamelcase **[!UICONTROL Field name]** `appAction`, **[!UICONTROL Display name]** av `App Action` och **[!UICONTROL Type]** `Measure`.
 
    Det här steget motsvarar ett lyckat evenemang i Adobe Analytics.
 
-1. Välj **[!UICONTROL Använd]**.
+1. Välj **[!UICONTROL Apply]**.
 
-   ![Lägger till namnfält för åtgärd](assets/schema-datatype-action-name.png)
+   ![Lägger till åtgärdsnamnfält](assets/schema-datatype-action-name.png)
 
-1. Lägg till ett fält som beskriver typen av interaktion genom att markera ![Plus](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) knappen bredvid **[!UICONTROL appInteraction]** -objekt.
+1. Lägg till ett fält som beskriver typen av interaktion genom att markera knappen ![Plus](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) bredvid objektet **[!UICONTROL appInteraction]**.
 
-1. Ge den en **[!UICONTROL Fältnamn]** `name`, **[!UICONTROL Visningsnamn]** av `Name` och **[!UICONTROL Typ]** `String`.
+1. Ge den en **[!UICONTROL Field name]** `name`, **[!UICONTROL Display name]** av `Name` och **[!UICONTROL Type]** `String`.
 
    Det här steget motsvarar en dimension i Adobe Analytics.
 
-   ![Markering används](assets/schema-datatype-apply.png)
+   ![Markeringen gäller](assets/schema-datatype-apply.png)
 
-1. Rulla längst ned på den högra listen och välj **[!UICONTROL Använd]**.
+1. Rulla till nederkanten av den högra listen och välj **[!UICONTROL Apply]**.
 
-1. Skapa en `appStateDetails` objekt som innehåller **[!UICONTROL Mät]** fältet anropades `screenView` och två **[!UICONTROL Sträng]** fält anropade `screenName` och `screenType`följer du samma steg som när du skapade **[!UICONTROL appInteraction]** -objekt.
+1. Om du vill skapa ett `appStateDetails`-objekt som innehåller ett **[!UICONTROL Measure]**-fält med namnet `screenView` och två **[!UICONTROL String]**-fält med namnen `screenName` och `screenType` följer du samma steg som när du skapade **[!UICONTROL appInteraction]**-objektet.
 
-1. Välj **[!UICONTROL Spara]**.
+1. Välj **[!UICONTROL Save]**.
 
-   ![Slutligt tillstånd för datatyp](assets/schema-datatype-final.png)
+   ![Slutligt tillstånd för datatypen](assets/schema-datatype-final.png)
 
 ## Lägga till en anpassad fältgrupp
 
@@ -201,31 +201,31 @@ Lägg nu till en anpassad fältgrupp med din anpassade datatyp:
 
 1. Öppna schemat som du skapade tidigare i den här lektionen.
 
-1. Välj ![Plus](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Lägg till]** nästa **[!UICONTROL Fältgrupper]**.
+1. Välj ![Plus](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Add]** bredvid **[!UICONTROL Field groups]**.
 
    ![Lägger till ny fältgrupp](assets/schema-fieldgroup-add.png)
 
-1. Välj **[!UICONTROL Skapa ny fältgrupp]**.
+1. Välj **[!UICONTROL Create new field group]**.
 
-1. Ange en **[!UICONTROL Visningsnamn]** och **[!UICONTROL Beskrivning]**, till exempel `App Interactions` och `Fields for app interactions`.
+1. Ange en **[!UICONTROL Display name]** och **[!UICONTROL Description]**, till exempel `App Interactions` och `Fields for app interactions`.
 
 1. Välj **Lägg till fältgrupper**.
 
    ![Ange namn och beskrivning](assets/schema-fieldgroup-name.png)
 
-1. Välj **[!UICONTROL Appinteraktioner**].
+1. Välj **[!UICONTROL App Interactions**] på dispositionsskärmen.
 
-1. Lägg till ett fält i schemats rot genom att markera ![Plus](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) intill schemanamnet.
+1. Lägg till ett fält i schemats rot genom att markera knappen ![Plus](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) bredvid schemanamnet.
 
-1. Ange en **[!UICONTROL Fältnamn]** av `appInformation`, a **[!UICONTROL Visningsnamn]** av `App Information`och en **[!UICONTROL Typ]** av `App Information`.
+1. Ange **[!UICONTROL Field name]** av `appInformation`, **[!UICONTROL Display name]** av `App Information` och **[!UICONTROL Type]** av `App Information` i den högra listen.
 
-1. Välj **[!UICONTROL Appinteraktioner]** från **[!UICONTROL Fältgrupp]** för att tilldela fälten till den nya fältgruppen.
+1. Välj **[!UICONTROL App Interactions]** i listrutan **[!UICONTROL Field Group]** om du vill tilldela fälten till den nya fältgruppen.
 
-1. Välj **[!UICONTROL Använd]**.
+1. Välj **[!UICONTROL Apply]**.
 
-1. Välj **[!UICONTROL Spara]**.
+1. Välj **[!UICONTROL Save]**.
 
-   ![Markering används](assets/schema-fieldgroup-apply.png)
+   ![Markeringen gäller](assets/schema-fieldgroup-apply.png)
 
 >[!NOTE]
 >
@@ -236,6 +236,6 @@ Lägg nu till en anpassad fältgrupp med din anpassade datatyp:
 >
 >Nu har du ett schema att använda för resten av självstudiekursen.
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 
-Nästa: **[Skapa en [!UICONTROL datastream]](create-datastream.md)**
+Nästa: **[Skapa en[!UICONTROL datastream]](create-datastream.md)**

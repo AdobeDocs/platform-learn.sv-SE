@@ -6,7 +6,7 @@ mini-toc-levels: 1
 exl-id: 5f84b0b4-b100-45dc-bcac-2dcc127c87f3
 source-git-commit: 14ec4ea743d1f323d29f9ab84506355d25c91452
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '154'
 ht-degree: 6%
 
 ---
@@ -34,11 +34,11 @@ Adobe Experience Platform är det mest kraftfulla, flexibla och öppna systemet 
     </a>
     <div>
       <a href="intro-to-platform/a-customer-experience-powered-by-experience-platform.md">
-    <strong>En kundupplevelse som bygger på Experience Platform</strong>
+    <strong>En kundupplevelse som drivs av Experience Platform </strong>
     </a>
     </div>
     <p>
-    <em>Se hur Platform kan användas för att ge en kundupplevelse kraft</em>
+    <em>Se hur plattformen kan användas för att ge en bättre kundupplevelse</em>
     <p>
   </td>
   <td>
@@ -51,7 +51,7 @@ Adobe Experience Platform är det mest kraftfulla, flexibla och öppna systemet 
     </a>
     </div>
     <p>
-    <em>Praktiska övningar för att komma igång</em>
+    <em>Handövningar för att komma igång</em>
     <p>
   </td>
   <td>
@@ -60,7 +60,7 @@ Adobe Experience Platform är det mest kraftfulla, flexibla och öppna systemet 
     </a>
     <div>
       <a href="sources/overview.md">
-    <strong>Om källkopplingar</strong>
+    <strong> Om källanslutningar </strong>
     </a>
     </div>
     <p>

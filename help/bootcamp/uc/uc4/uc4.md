@@ -36,10 +36,10 @@ Mer information om Customer Journey Analytics finns [här](https://spark.adobe.c
 - Förstå begreppen för en dataanslutning och en datavy
 - Använda Analysis Workspace med Adobe Experience Platform datauppsättningar
 
-## Förutsättningar
+## Förhandskrav
 
 - Viss kunskap om Analysis Workspace är att föredra, men är inte nödvändig
-- Tillgång till Adobe Experience Platform: [https://experience.adobe.com/platform](https://experience.adobe.com/platform)
+- Åtkomst till Adobe Experience Platform: [https://experience.adobe.com/platform](https://experience.adobe.com/platform)
 - Åtkomst till programmet Customer Journey Analytics
 
 >[!IMPORTANT]

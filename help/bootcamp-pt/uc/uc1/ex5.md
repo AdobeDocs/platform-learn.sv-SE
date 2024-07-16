@@ -9,42 +9,42 @@ feature: Destinations
 exl-id: acb32859-6f82-44e0-8948-a045a9fe2afe
 source-git-commit: 3c86f9b19cecf92c9a324fb6fcfcefaebf82177f
 workflow-type: tm+mt
-source-wordcount: '293'
-ht-degree: 1%
+source-wordcount: '290'
+ht-degree: 0%
 
 ---
 
 # 1.5 Ação: envie seu segmento para o Facebook
 
-Åtkomst [Adobe Experience Platform](https://experience.adobe.com/platform). Depois de fazer inloggning, você irá acessar a página inicial da Adobe Experience Platform.
+Öppna [Adobe Experience Platform](https://experience.adobe.com/platform). Depois de fazer inloggning, você irá acessar a página inicial da Adobe Experience Platform.
 
 ![Datainmatning](./images/home.png)
 
-Antes de continuar, você preca selecionar um **sandlåda**. O nome do sandbox a ser selecionado é Bootcamp. É beível fazer isso clicando no texto **[!UICONTROL Produktionsprodukt]** na linha azul na parte superior da tela. Depois de selecionar o sandbox apropriado, você verá a tela mudando e agora você está em seu [!UICONTROL sandlåda] dedikat.
+Antes de continuar, você preca selecionar um **sandbox**. O nome do sandbox a ser selecionado é Bootcamp. É kapível fazer isso clicando no texto **[!UICONTROL Production Prod]** na linha azul na parte superior da tela. Depois de selecionar o sandbox apropriado, você verá a tela mudando e agora você está em seu [!UICONTROL sandbox] dedikado.
 
 ![Datainmatning](./images/sb1.png)
 
-Ingen meny à esquerda, vá para **Destinationer** e, em seguida, vá para **Katalog**. Você verá o **Målkatalog**. FM **Destinationer**, clique em **Aktivera segment** no cartão **Facebook Custom Audience**.
+Ingen meny à esquerda, vá para **Destinations** e, em seguida, vá para **Catalog**. Você verá o **Målkatalog**. Fm **Destinations**, clique em **Activate Segments** no cartão **Facebook Custom Audience**.
 
 ![RTCDP](./images/rtcdpgoogleseg.png)
 
-Markera **bootcamp-facebook** e clique em **Nästa**.
+Välj **bootcamp-facebook** e clique em **Next**.
 
 ![RTCDP](./images/rtcdpcreatedest2.png)
 
-Na lista de segmentos display oníveis, selecione o segmento que você criou no övício anterior. Clique em **Nästa**.
+Na lista de segmentos display oníveis, selecione o segmento que você criou no övício anterior. Klicka på **Nästa**.
 
 ![RTCDP](./images/rtcdpcreatedest3.png)
 
-Na página **Mappning**, verifique se a caixa de seleção **Använd omformning** está marcada. Clique em **Nästa**.
+Na página **Mapping**, verifique se a caixa de seleção **Apply Transformation** está marcada. Klicka på **Nästa**.
 
 ![RTCDP](./images/rtcdpcreatedest4a.png)
 
-Na página **Segmentschema**, välj en **Målgruppens ursprung** e defina como **Direkt från kunderna**. Clique em **Nästa**.
+Na página **Segmentschema**, välj en **publikens ursprung** e defina como **direkt från kunderna**. Klicka på **Nästa**.
 
 ![RTCDP](./images/rtcdpcreatedest4.png)
 
-Por fim, na página **Granska**, clique em **Slutför**.
+Por fim, na página **Review**, clique em **Finish**.
 
 ![RTCDP](./images/rtcdpcreatedest5.png)
 

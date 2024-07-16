@@ -1,13 +1,13 @@
 ---
 title: Spåra händelser | Migrera mål från at.js 2.x till Web SDK
 description: Lär dig spåra konverteringshändelser för Adobe Target med Experience Platform Web SDK.
-source-git-commit: 287ebcb275c4fca574dbd6cdf7e07ba4268bddb5
+exl-id: 5da772bc-de05-4ea9-afbd-3ef58bc7f025
+source-git-commit: 4690d41f92c83fe17eda588538d397ae1fa28af0
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '635'
 ht-degree: 0%
 
 ---
-
 
 # Spåra målkonverteringshändelser med Platform Web SDK
 
@@ -17,15 +17,15 @@ Konverteringshändelser för Target kan spåras med Platform Web SDK som liknar 
 * Inköpskonverteringshändelser som ska justeras för implementering av plattformens Web SDK
 * Konverteringshändelser som inte är köpta och som kräver koduppdateringar
 
-## Jämförelse av målspårning
+## Målspårningsjämförelse
 
 I följande tabell jämförs hur at.js och Platform Web SDK spårar konverteringshändelser
 
 | Aktivitetsmål | Mål at.js 2.x | Platform Web SDK |
 |---|---|---|
-| Konvertering > Visad sida | Spåras automatiskt. Baserat på värdet av `context.address.url` i på at.js-begäran nyttolast. | Spåras automatiskt. Baserat på värdet av `xdm.web.webPageDetails.URL` i `sendEvent` nyttolast |
-| Konvertering > Visad mbox | Spårat med begäran om en visningsruta eller ett meddelande med `trackEvent()` eller `sendNotifications()` med `type` värde för `display`. | Spårat med en Platform Web SDK `sendEvent` ring med `eventType` av `decisioning.propositionDisplay`. |
-| Konvertering > Klickade på ett element | Spåras automatiskt för VEC-baserade aktiviteter. Visas som ett at.js-nätverksanrop med en `notifications` -objektet i nyttolasten i begäran och `type` värde för `click`. | Spåras automatiskt för VEC-baserade aktiviteter. Visas som en SDK för plattformar `sendEvent` ring med `eventType` av `decisioning.propositionInteract`. |
+| Konvertering > Visad sida | Spåras automatiskt. Baserat på värdet `context.address.url` i nyttolasten för at.js-begäran. | Spåras automatiskt. Baserat på värdet för `xdm.web.webPageDetails.URL` i nyttolasten `sendEvent` |
+| Konvertering > Visad mbox | Spårat med begäran om en visningsruteplats eller ett meddelande med `trackEvent()` eller `sendNotifications()` med värdet `type`. `display` | Spårat med ett Platform Web SDK `sendEvent`-anrop med `eventType` av `decisioning.propositionDisplay`. |
+| Konvertering > Klickade på ett element | Spåras automatiskt för VEC-baserade aktiviteter. Visas som ett at.js-nätverksanrop med ett `notifications`-objekt i nyttolasten i begäran och ett `type`-värde på `click`. | Spåras automatiskt för VEC-baserade aktiviteter. Visas som ett Platform Web SDK `sendEvent`-anrop med `eventType` av `decisioning.propositionInteract`. |
 | Engagemang > Sidvyer | Spåras automatiskt | Spåras automatiskt |
 | Engagemang > Tid på plats | Spåras automatiskt | Spåras automatiskt |
 
@@ -46,7 +46,7 @@ Följande konverteringsmål kräver inga specifika justeringar av implementering
 
 >[!NOTE]
 >
->Platform Web SDK ger större kontroll över de värden som skickas i nyttolasten. Kontrollera att målfunktionerna som QA URL:er och Konverteringsmålen &quot;Viewed a Page&quot; fungerar som de ska `xdm.web.webPageDetails.URL` värdet innehåller den fullständiga sidans URL med rätt skiftläge för tecken.
+>Platform Web SDK ger större kontroll över de värden som skickas i nyttolasten. För att garantera att målfunktioner som QA-URL:er och konverteringsmålen &quot;Viewed a Page&quot; fungerar som de ska, kontrollerar du att värdet `xdm.web.webPageDetails.URL` innehåller den fullständiga URL:en med rätt skiftläge.
 
 <!--
 ## Purchase conversion events
@@ -73,16 +73,16 @@ Tabellen nedan visar metoden at.js och motsvarigheten till Platform Web SDK för
 
 | Användningsfall | Mål at.js 2.x | Platform Web SDK |
 |---|---|---|
-| Spåra en klickkonverteringshändelse för en mbox-plats (scope) | Kör `trackEvent()` eller `sendNotifications()` med `type` värde för `click` för en viss mbox-plats | Kör en `sendEvent` kommando med en händelsetyp av `decisioning.propositionInteract` |
-| Spåra en anpassad konverteringshändelse som även kan innehålla ytterligare data, till exempel parametrar för målprofilen | Kör `trackEvent()` eller `sendNotifications()` med `type` värde för `display` för en viss mbox-plats | Kör en `sendEvent` kommando med en händelsetyp av `decisioning.propositionDisplay` |
+| Spåra en klickkonverteringshändelse för en mbox-plats (scope) | Kör `trackEvent()` eller `sendNotifications()` med värdet `type` för `click` för en specifik mbox-plats | Kör ett `sendEvent`-kommando med händelsetypen `decisioning.propositionInteract` |
+| Spåra en anpassad konverteringshändelse som även kan innehålla ytterligare data, till exempel parametrar för målprofilen | Kör `trackEvent()` eller `sendNotifications()` med värdet `type` för `display` för en specifik mbox-plats | Kör ett `sendEvent`-kommando med händelsetypen `decisioning.propositionDisplay` |
 
 >[!NOTE]
 >
->Fast `decisioning.propositionDisplay` används oftast för att öka intrycket av specifika omfattningar, men bör även användas som direkt ersättning för at.js `trackEvent()` vanligtvis. The `trackEvent()` som standard är en typ av `display` om inget anges. Kontrollera implementeringen för att säkerställa att du använder rätt händelsetyp för alla anpassade konverteringar som du har definierat.
+>Även om `decisioning.propositionDisplay` oftast används för att öka antalet visningar för specifika omfattningar, bör den även användas som direkt ersättning för at.js `trackEvent()` vanligtvis. Funktionen `trackEvent()` är som standard av typen `display` om den inte anges. Kontrollera implementeringen för att säkerställa att du använder rätt händelsetyp för alla anpassade konverteringar som du har definierat.
 
-Mer information om hur du använder finns i den dedikerade at.js-dokumentationen [`trackEvent()`](https://developer.adobe.com/target/implement/client-side/atjs/atjs-functions/adobe-target-trackevent/) och [`sendNotifications()`](https://developer.adobe.com/target/implement/client-side/atjs/atjs-functions/adobe-target-sendnotifications-atjs-21/) för att spåra Target-händelser.
+Mer information om hur du använder [`trackEvent()`](https://developer.adobe.com/target/implement/client-side/atjs/atjs-functions/adobe-target-trackevent/) och [`sendNotifications()`](https://developer.adobe.com/target/implement/client-side/atjs/atjs-functions/adobe-target-sendnotifications-atjs-21/) för att spåra Target-händelser finns i den dedikerade at.js-dokumentationen.
 
-at.js-exempel med `trackEvent()` för att spåra en klickning på en mbox-plats:
+Exempel på at.js som använder `trackEvent()` för att spåra en klickning på en mbox-plats:
 
 ```JavaScript
 adobe.target.trackEvent({
@@ -91,12 +91,12 @@ adobe.target.trackEvent({
 });
 ```
 
-Med en implementering av Platform Web SDK kan du spåra händelser och användaråtgärder genom att anropa `sendEvent` kommando, fylla i `_experience.decisioning.propositions` XDM-fältgrupp och inställning av `eventType` till ett av två värden:
+Med en implementering av Platform Web SDK kan du spåra händelser och användaråtgärder genom att anropa kommandot `sendEvent`, fylla i `_experience.decisioning.propositions` XDM-fältgruppen och ställa in `eventType` på ett av två värden:
 
-* `decisioning.propositionDisplay`: Signalerar målaktivitetens återgivning.
+* `decisioning.propositionDisplay`: Signalerar återgivningen av målaktiviteten.
 * `decisioning.propositionInteract`: Signalerar en användarinteraktion med aktiviteten, som ett musklick.
 
-The `_experience.decisioning.propositions` XDM-fältgruppen är en array med objekt. Egenskaperna för varje objekt hämtas från `result.propositions` som returneras i `sendEvent` kommando: `{ id, scope, scopeDetails }`
+`_experience.decisioning.propositions` XDM-fältgruppen är en objektmatris. Egenskaperna för varje objekt härleds från `result.propositions` som returneras i kommandot `sendEvent`: `{ id, scope, scopeDetails }`
 
 ```JavaScript
 alloy("sendEvent", {
@@ -143,8 +143,8 @@ alloy("sendEvent", {
 });
 ```
 
-Lär dig sedan hur du [aktivera delning av domänöverskridande ID](cross-domain.md) för enhetliga besökarprofiler.
+Läs sedan om hur du [aktiverar delning av korsdomän-ID](cross-domain.md) för konsekventa besökarprofiler.
 
 >[!NOTE]
 >
->Vi vill hjälpa dig att lyckas med målmigreringen från at.js till Web SDK. Om du stöter på problem med din migrering eller känner att det saknas viktig information i den här guiden ber vi dig att meddela oss genom att publicera i [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-target-from-at-js-to-web-sdk/m-p/575587#M463).
+>Vi vill hjälpa dig att lyckas med målmigreringen från at.js till Web SDK. Om du stöter på problem med din migrering eller om du känner att det saknas viktig information i den här guiden kan du meddela oss genom att publicera [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-target-from-at-js-to-web-sdk/m-p/575587#M463).

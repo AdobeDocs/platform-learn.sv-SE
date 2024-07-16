@@ -1,9 +1,10 @@
 ---
 title: Planering | Migrera mål från at.js 2.x till Web SDK
 description: Lär dig planera Adobe Target-implementeringen från at.js 2.x till Adobe Experience Platform Web SDK.
-source-git-commit: 287ebcb275c4fca574dbd6cdf7e07ba4268bddb5
+exl-id: 0e8f9cde-f361-4f69-886d-aad3074cd9b2
+source-git-commit: 4690d41f92c83fe17eda588538d397ae1fa28af0
 workflow-type: tm+mt
-source-wordcount: '491'
+source-wordcount: '480'
 ht-degree: 0%
 
 ---
@@ -18,18 +19,18 @@ Det första steget mot en framgångsrik migrering är att ha en god förståelse
 
 ### Vilka funktioner stöds?
 
-Platform Web SDK är under ständig aktiv utveckling och funktioner och förbättringar läggs till regelbundet. När du utvärderar din nuvarande at.js-implementering kan du läsa [användningsfall som stöds](https://github.com/orgs/adobe/projects/18/views/1) sida för den senaste informationen.
+Platform Web SDK är under ständig aktiv utveckling och funktioner och förbättringar läggs till regelbundet. När du utvärderar din nuvarande at.js-implementering kan du få den senaste informationen på sidan [Supported use cases](https://github.com/orgs/adobe/projects/18/views/1) .
 
 ### Vilka funktioner använder du idag?
 
 Platform Web SDK är ett nytt bibliotek som samlar alla Adobe-lösningar för webbplatserna i en enda SDK. Detta ger bättre integration och möjliggör nya funktioner som är unika för Adobe Experience Platform. Detta innebär dock också att funktionen at.js inte är bakåtkompatibel med Platform Web SDK. Observera följande när du utvärderar den aktuella implementeringen:
 
-- at.js funktioner som `getOffer()` och `applyOffer()`
+- at.js-funktioner som `getOffer()` och `applyOffer()`
 - Ändringar av Target-ets globala inställningar
 - Integrering med Adobe Analytics
 - Användning av ett flimmerande skript
 - Användning av svarstoken
-- Användning av mbox-, profile- och enhetsparametrar
+- Användning av parametrarna mbox, profile och entity
 - Anpassad kod som är unik för din implementering
 
 ### Vilken migreringsstrategi tänker du använda?
@@ -48,8 +49,8 @@ När du migrerar bör du planera för att följa företagets process för att te
 >Omdirigeringserbjudanden stöds inte i sidvis migrering om du omdirigerar från en sida med ett bibliotek till en sida med ett annat bibliotek
 
 
-Granska sedan detaljerna [jämförelse av at.js med Platform Web SDK](detailed-comparison.md) för att få en bättre förståelse för de tekniska skillnaderna och identifiera områden som kräver extra fokus.
+Granska sedan den detaljerade [jämförelsen av at.js till Platform Web SDK](detailed-comparison.md) för att få en bättre förståelse för de tekniska skillnaderna och identifiera områden som kräver ytterligare fokus.
 
 >[!NOTE]
 >
->Vi vill hjälpa dig att lyckas med målmigreringen från at.js till Web SDK. Om du stöter på problem med din migrering eller känner att det saknas viktig information i den här guiden ber vi dig att meddela oss genom att publicera i [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-target-from-at-js-to-web-sdk/m-p/575587#M463).
+>Vi vill hjälpa dig att lyckas med målmigreringen från at.js till Web SDK. Om du stöter på problem med din migrering eller om du känner att det saknas viktig information i den här guiden kan du meddela oss genom att publicera [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-target-from-at-js-to-web-sdk/m-p/575587#M463).

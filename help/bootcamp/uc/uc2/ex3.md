@@ -20,17 +20,17 @@ ht-degree: 0%
 
 I den här övningen konfigurerar du den resa som behöver utlösas när någon skapar ett konto på demowebbplatsen.
 
-Logga in på Adobe Journey Optimizer genom att [Adobe Experience Cloud](https://experience.adobe.com). Klicka **Journey Optimizer**.
+Logga in på Adobe Journey Optimizer på [Adobe Experience Cloud](https://experience.adobe.com). Klicka på **Journey Optimizer**.
 
 ![ACOP](./images/acophome.png)
 
-Du omdirigeras till **Startsida**  i Journey Optimizer. Kontrollera först att du använder rätt sandlåda. Sandlådan som ska användas anropas `Bootcamp`. Om du vill ändra från en sandlåda till en annan klickar du på **Prod** och välj sandlådan i listan. I det här exemplet heter sandlådan **Bootläger**. Då är du i **Startsida** vy över din sandlåda `Bootcamp`.
+Du omdirigeras till vyn **Hem** i Journey Optimizer. Kontrollera först att du använder rätt sandlåda. Sandlådan som ska användas kallas `Bootcamp`. Om du vill ändra från en sandlåda till en annan klickar du på **Prod** och väljer sandlådan i listan. I det här exemplet heter sandlådan **Bootcamp**. Du kommer sedan att vara i vyn **Hem** i din sandlåda `Bootcamp`.
 
 ![ACOP](./images/acoptriglp.png)
 
 ## 2.3.1 Skapa din resa
 
-Klicka på **Resor**. Klicka på Nästa **Skapa resa** för att skapa en ny resa.
+Klicka på **Resor** på den vänstra menyn. Klicka sedan på **Skapa resa** för att skapa en ny resa.
 
 ![ACOP](./images/createjourney.png)
 
@@ -38,7 +38,7 @@ Då ser du en tom skärm för resan.
 
 ![ACOP](./images/journeyempty.png)
 
-I föregående övning skapade du en ny **Händelse**. Du namngav den så här `yourLastNameAccountCreationEvent` och ersatt `yourLastName` med ditt efternamn. Detta var resultatet av händelseskapandet:
+I föregående övning skapade du en ny **Event**. Du gav den ett namn som `yourLastNameAccountCreationEvent` och ersatte `yourLastName` med ditt efternamn. Detta var resultatet av händelseskapandet:
 
 ![ACOP](./images/eventdone.png)
 
@@ -50,7 +50,7 @@ Markera händelsen, dra och släpp den på arbetsytan på resan. Din resa ser nu
 
 ![ACOP](./images/journeyevent.png)
 
-Som det andra steget på resan måste du lägga till en kort **Vänta** steg. Gå till vänster på skärmen till vänster **Orchestration** för att hitta det här. Du kommer att använda profilattribut och måste se till att de är ifyllda i kundprofilen i realtid.
+Som det andra steget i resan måste du lägga till ett kort **Vänta**-steg. Gå till vänster på skärmen till avsnittet **Orchestration** om du vill hitta det här. Du kommer att använda profilattribut och måste se till att de är ifyllda i kundprofilen i realtid.
 
 ![ACOP](./images/journeywait.png)
 
@@ -58,23 +58,23 @@ Din resa ser nu ut så här. Till höger på skärmen måste du konfigurera vän
 
 ![ACOP](./images/journeywait1.png)
 
-Klicka **OK** för att spara ändringarna.
+Klicka på **OK** om du vill spara ändringarna.
 
-Som det tredje steget på resan måste du lägga till en **E-post** åtgärd. Gå till skärmens vänstra sida för att **Åtgärder** väljer du **E-post** och sedan dra och släppa det på den andra noden på din resa. Nu ser du det här.
+Som det tredje steget på resan måste du lägga till en **e-poståtgärd**. Gå till vänster på skärmen till **Åtgärder**, välj åtgärden **E-post** och dra och släpp den på den andra noden på resan. Nu ser du det här.
 
 ![ACOP](./images/journeyactions.png)
 
-Ange **Kategori** till **Marknadsföring** och välj en e-postyta som gör att du kan skicka e-post. I det här fallet är e-postytan som ska väljas **E-post**. Se till att kryssrutorna för **Klicka på e-post** och **e-postöppning** båda är aktiverade.
+Ange **kategorin** till **Marknadsföring** och välj en e-postyta som gör att du kan skicka e-post. I det här fallet är e-postytan som ska väljas **E-post**. Kontrollera att kryssrutorna för **klick på e-post** och **e-post** är aktiverade.
 
 ![ACOP](./images/journeyactions1.png)
 
-Nästa steg är att skapa ett meddelande. Det gör du genom att klicka **Redigera innehåll**.
+Nästa steg är att skapa ett meddelande. Det gör du genom att klicka på **Redigera innehåll**.
 
 ![ACOP](./images/journeyactions2.png)
 
 ## 2.3.2 Skapa ett meddelande
 
-Klicka på **Redigera innehåll**.
+Klicka på **Redigera innehåll** om du vill skapa ditt meddelande.
 
 ![ACOP](./images/journeyactions2.png)
 
@@ -82,31 +82,31 @@ Nu ser du det här.
 
 ![ACOP](./images/journeyactions3.png)
 
-Klicka på **Subject line** textfält.
+Klicka på textfältet **Ämnesrad**.
 
 ![Journey Optimizer](./images/msg5.png)
 
-Börja skriva i textområdet **Hej**
+Börja skriva **Hi** i textområdet
 
 ![Journey Optimizer](./images/msg6.png)
 
-Ämnesraden är inte färdig än. Därefter måste du ta in en token för anpassning för fältet **Förnamn** som lagras under `profile.person.name.firstName`. Bläddra nedåt i den vänstra menyn för att hitta **Person** och klicka på pilen för att gå en nivå längre.
+Ämnesraden är inte färdig än. Därefter måste du hämta en personaliseringstoken för fältet **Förnamn** som lagras under `profile.person.name.firstName`. Bläddra nedåt i den vänstra menyn för att hitta elementet **Person** och klicka på pilen för att gå en nivå längre ned.
 
 ![Journey Optimizer](./images/msg7.png)
 
-Nu hittar du **Fullständigt namn** och klicka på pilen för att gå en nivå längre.
+Leta reda på elementet **Fullständigt namn** och klicka på pilen för att gå en högre nivå.
 
 ![Journey Optimizer](./images/msg8.png)
 
-Till sist hittar du **Förnamn** och klicka på **+** signera bredvid den. Sedan visas personaliseringstoken i textfältet.
+Leta reda på fältet **Förnamn** och klicka på **+** bredvid det. Sedan visas personaliseringstoken i textfältet.
 
 ![Journey Optimizer](./images/msg9.png)
 
-Lägg sedan till texten **, tack för att du registrerar dig!**. Klicka **Spara**.
+Lägg sedan till texten **, tack för att du registrerar dig!**. Klicka på **Spara**.
 
 ![Journey Optimizer](./images/msg10.png)
 
-Du kommer då tillbaka hit. Klicka **E-postdesigner** för att skapa e-postens innehåll.
+Du kommer då tillbaka hit. Klicka på **E-posta Designer** för att skapa e-postens innehåll.
 
 ![Journey Optimizer](./images/msg11.png)
 
@@ -116,11 +116,11 @@ På nästa skärm får du tre olika metoder för att ange e-postens innehåll:
 - **Koda din egen**: Skapa en egen e-postmall genom att koda den med HTML
 - **Importera HTML**: Importera en befintlig HTML-mall som du kan redigera.
 
-Klicka **Importera HTML**. Du kan också klicka **Sparade mallar** och välj en mall **Bootcamp - e-postmall**.
+Klicka på **Importera HTML**. Du kan också klicka på **Sparade mallar** och välja mallen **Bootcamp - e-postmall**.
 
 ![Journey Optimizer](./images/msg12.png)
 
-Om du valde **Importera HTML** kan du nu dra och släppa filen **mailmallebootcamp.html** som du kan ladda ned [här](../../assets/html/mailtemplatebootcamp.html.zip). Klicka på Importera.
+Om du har valt **Importera HTML** kan du nu dra och släppa filen **mailtemplateBootcamp.html** som du kan hämta [här](../../assets/html/mailtemplatebootcamp.html.zip). Klicka på Importera.
 
 ![Journey Optimizer](./images/msg13.png)
 
@@ -128,13 +128,13 @@ Du kommer då att se den här standardmallen för e-post:
 
 ![Journey Optimizer](./images/msg14.png)
 
-Låt oss personalisera e-postmeddelandet. Klicka bredvid texten **Hej** och klicka sedan på **Lägg till personalisering** -ikon.
+Låt oss personalisera e-postmeddelandet. Klicka bredvid texten **Hej** och klicka sedan på ikonen **Lägg till Personalization** .
 
 ![Journey Optimizer](./images/msg35.png)
 
-Nästa steg är att du måste ta fram **Förnamn** personaliseringstoken som lagras under `profile.person.name.firstName`. På menyn hittar du **Person** -element, gå nedåt till **Fullständigt namn** och sedan klicka på **+** om du vill lägga till fältet Förnamn i uttrycksredigeraren.
+Därefter måste du hämta en **förnamn**-personaliseringstoken som lagras under `profile.person.name.firstName`. Leta reda på elementet **Person** på menyn, gå ned till elementet **Fullständigt namn** och klicka sedan på ikonen **+** för att lägga till fältet Förnamn i uttrycksredigeraren.
 
-Klicka **Spara**.
+Klicka på **Spara**.
 
 ![Journey Optimizer](./images/msg36.png)
 
@@ -142,11 +142,11 @@ Nu kommer du att märka hur personaliseringsfältet har lagts till i texten.
 
 ![Journey Optimizer](./images/msg37.png)
 
-Klicka **Spara** för att spara meddelandet.
+Klicka på **Spara** för att spara meddelandet.
 
 ![Journey Optimizer](./images/msg55.png)
 
-Gå tillbaka till meddelandekontrollpanelen genom att klicka på **pil** bredvid texten på ämnesraden i det övre vänstra hörnet.
+Gå tillbaka till meddelandekontrollpanelen genom att klicka på **pilen** intill ämnesraden i det övre vänstra hörnet.
 
 ![Journey Optimizer](./images/msg56.png)
 
@@ -154,25 +154,25 @@ Du har nu skapat e-postmeddelandet med din registrering. Klicka på pilen i det 
 
 ![Journey Optimizer](./images/msg57.png)
 
-Klicka **OK**.
+Klicka på **OK**.
 
 ![Journey Optimizer](./images/msg57a.png)
 
-## 2.3.3 Publicera din resa
+## 2.3.3 Publish din resa
 
-Du måste fortfarande ge din resa ett namn. Du kan göra det genom att klicka på **Penna** ikonen längst upp till vänster på skärmen.
+Du måste fortfarande ge din resa ett namn. Du kan göra det genom att klicka på ikonen **Penna** längst upp till vänster på skärmen.
 
 ![ACOP](./images/journeyname.png)
 
-Du kan sedan ange resans namn här. Använd `yourLastName - Account Creation Journey`. Klicka **OK** för att spara ändringarna.
+Du kan sedan ange resans namn här. Använd `yourLastName - Account Creation Journey`. Klicka på **OK** om du vill spara ändringarna.
 
 ![ACOP](./images/journeyname1.png)
 
-Nu kan du publicera din resa genom att klicka **Publicera**.
+Nu kan du publicera din resa genom att klicka på **Publish**.
 
 ![ACOP](./images/publishjourney.png)
 
-Klicka **Publicera** igen.
+Klicka på **Publish** igen.
 
 ![ACOP](./images/publish1.png)
 

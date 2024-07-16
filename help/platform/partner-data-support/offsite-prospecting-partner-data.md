@@ -1,6 +1,6 @@
 ---
-title: stödja användningsexempel för prospektering utanför webbplatsen med partnerdata i [!DNL Real-Time CDP]
-description: Läs mer om arbetsflödet för att importera nya potentiella kunder från partners i [!DNL Real-Time CDP] för målgruppsanpassning före besök. 
+title: Stöd för användningsfall för offsite-prospektering med partnerdata i  [!DNL Real-Time CDP]
+description: Läs om arbetsflödet som används för att importera nya potentiella kunder från partners i [!DNL Real-Time CDP] för målgruppsanpassning före besök. 
 feature: Integrations
 topic: Integrations
 solution: Real-Time Customer Data Platform
@@ -17,8 +17,8 @@ ht-degree: 0%
 
 ---
 
-# stödja användningsexempel för prospektering utanför webbplatsen med partnerdata i [!DNL Real-Time CDP]
+# Stöd för användningsfall för offsitprospektering med partnerdata i [!DNL Real-Time CDP]
 
-Läs mer om arbetsflödet för att importera nya potentiella kunder från partners i [!DNL Real-Time CDP] för målgruppsanpassning före besök. Mer information finns på [Engagera och värva nya kunder genom prospektering av användningsfall](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/use-cases/partner-data/prospecting.html) dokumentation.
+Läs om arbetsflödet som används för att importera nya potentiella kunder från partner i [!DNL Real-Time CDP] för målgruppsanpassning före besök. Mer information finns i dokumentationen för [Engagera och få nya kunder genom prospektering av användningsexempel](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/use-cases/partner-data/prospecting.html) .
 
 >[!VIDEO](https://video.tv.adobe.com/v/3423071/?learn=on)

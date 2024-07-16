@@ -1,5 +1,5 @@
 ---
-user-guide-title: Adobe Experience Platform Tutorials
+user-guide-title: Självstudiekurser om Adobe Experience Platform
 breadcrumb-title: Självstudiekurser
 user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
@@ -8,18 +8,18 @@ auto-video-transcripts: true
 source-git-commit: f7811c363435b14eed28c4c2d674ace14832977a
 workflow-type: tm+mt
 source-wordcount: '912'
-ht-degree: 4%
+ht-degree: 6%
 
 ---
 
 
-# Adobe Experience Platform Tutorials {#tutorials}
+# Självstudiekurser om Adobe Experience Platform {#tutorials}
 
 + [Platform Tutorials](/help/platform/overview.md)
-+ Introduktion till plattform {#intro-to-platform}
++ Introduktion till plattformen {#intro-to-platform}
    + [En kundupplevelse som bygger på Experience Platform](/help/platform/intro-to-platform/a-customer-experience-powered-by-experience-platform.md)
    + [Bakom kulisserna: En kundupplevelse som drivs av Experience Platform](/help/platform/intro-to-platform/behind-the-scenes-a-customer-experience-powered-by-experience-platform.md)
-   + [Experience Platform - översikt](/help/platform/intro-to-platform/overview.md)
+   + [Översikt över Experience Platform](/help/platform/intro-to-platform/overview.md)
    + [Viktiga funktioner](/help/platform/intro-to-platform/key-capabilities.md)
    + [Plattformsbaserade program](/help/platform/intro-to-platform/native-applications.md)
    + [Integrering med Experience Cloud-program](/help/platform/intro-to-platform/integrations-with-experience-cloud-applications.md)
@@ -68,7 +68,7 @@ ht-degree: 4%
    + [Mottagningsdata för segmentmatchning](/help/platform/segments/segment-match-receiving-data.md)
 + [Granskningsloggar](/help/platform/governance/audit-logs.md)
 + [Datainsamling](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html){target="_blank"}
-+ Kontrollpaneler {#dashboards}
++ Instrumentpaneler {#dashboards}
    + [Skapa en instrumentpanel](/help/platform/dashboards/create-a-dashboard.md)
 + Datastyrning {#data-governance}
    + [Översikt](/help/platform/governance/understanding-data-governance.md)
@@ -85,26 +85,26 @@ ht-degree: 4%
    + [Pseudonym profil och utgångsdatum för händelse (TTL)](/help/platform/data-hygiene/pseudonymous-profile-and-event-expiration.md)
    + [Ta bort profiler](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/profiles/delete-profiles)
    + [Uppdatera ett profilattribut](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/profiles/update-a-specific-attribute-with-upsert)
-+ Inmatning av data {#data-ingestion}
++ Datainmatning {#data-ingestion}
    + [Översikt](/help/platform/data-ingestion/understanding-data-ingestion.md)
    + [Översikt över batchöverföring](/help/platform/data-ingestion/batch-ingestion-overview.md)
    + [Skapa och fylla i en datauppsättning](/help/platform/data-ingestion/create-datasets-and-ingest-data.md)
    + [Ta bort datauppsättningar och grupper](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/data-hygiene/delete-datasets-and-batches)
    + [Mappa en CSV-fil till XDM](https://experienceleague.adobe.com/docs/experience-platform/ingestion/tutorials/map-csv/existing-schema.html){target="_blank"}
-   + [Översikt över källor](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/overview.html)
-   + [Importera data från Adobe Analytics](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html)
-   + [Ingrediera data från Audience Manager](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-aam.html)
-   + [Importera data från molnlagring](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-cloud-storage.html)
-   + [Importera data från CRM](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-crm.html)
+   + [Källor - översikt](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/overview.html)
+   + [Infoga data från Adobe Analytics](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html)
+   + [Infoga data från Audience Manager](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-aam.html)
+   + [Infoga data från molnlagring](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-cloud-storage.html)
+   + [Infoga data från CRM](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-crm.html)
    + [Infoga data från databaser](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-databases.html)
    + [Översikt över direktuppspelning](/help/platform/data-ingestion/understanding-streaming-ingestion.md)
    + [Strömma data med HTTP API](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/streaming-ingestion-http-api.html)
-   + [Direktuppspela data med hjälp av källanslutningar](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/streaming-ingestion-source-connector.html)
+   + [Strömma data med Source Connectors](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/streaming-ingestion-source-connector.html)
    + [Självstudiekurser för Web SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html){target="_blank"}
-   + [SDK-självstudiekurser för mobiler](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html){target="_blank"}
+   + [Självstudiekurser för mobil SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html){target="_blank"}
 + Datas livscykel {#data-lifecycle}
    + [Förfaller datauppsättningar](/help/platform/data-lifecycle/expire-datasets.md)
-+ Datavetenskap {#data-science-workspace}
++ Data Science Workspace {#data-science-workspace}
    + [Översikt](/help/platform/data-science-workspace/understanding-data-science-workspace.md)
    + [Arkitektur](data-science-workspace/architecture-overview.md)
    + [Skapa kursschema och datauppsättning](data-science-workspace/create-the-course-schema-and-dataset.md)
@@ -120,7 +120,7 @@ ht-degree: 4%
    + [Paketera källfiler i ett recept](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/models-recipes/package-source-files-recipe.html){target="_blank"}
    + [Importera ett paketerat recept (UI)](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/models-recipes/import-packaged-recipe-ui.html){target="_blank"}
    + [Importera ett paketerat recept (API)](https://experienceleague.adobe.com/docs/experience-platform/data-science-workspace/models-recipes/import-packaged-recipe-api.html){target="_blank"}
-+ Destinationer {#destinations}
++ Mål {#destinations}
    + [Översikt över destinationer](/help/platform/destinations/understanding-destinations.md)
    + [Ansluta till mål](/help/platform/destinations/connecting-to-destinations.md)
    + [Skapa mål och aktivera data](/help/platform/destinations/create-destinations-and-activate-data.md)
@@ -132,7 +132,7 @@ ht-degree: 4%
    + [Konfigurera filbaserad molnlagring eller e-postmarknadsföring](/help/platform/destinations/configuring-file-based-cloud-storage-or-email-marketing-destinations.md)
    + [Konfigurera ett socialt mål](/help/platform/destinations/configure-a-social-destination.md)
    + [Aktivera via LiveRamp-mål](/help/platform/destinations/liveramp-destinations.md)
-   + Adobe Target och anpassad personalisering{#target}
+   + Adobe Target och anpassad Personalization{#target}
       + [Nästa steg i personaliseringen med Adobe Target](/help/platform/destinations/target/next-hit-personalization.md)
       + [Konfigurera Adobe Target-målet](/help/platform/destinations/target/configure-the-target-destination.md)
       + [Aktivera segment och profilattribut](/help/platform/destinations/target/activate-segments-and-profile-attributes.md)
@@ -166,15 +166,15 @@ ht-degree: 4%
    + [Förstå kundprofil i realtid](/help/platform/profiles/understanding-the-real-time-customer-profile.md)
    + [Profilöversikt - diagram](/help/platform/profiles/overview-diagram.md)
    + [Använd data i profil](/help/platform/profiles/bring-data-into-the-real-time-customer-profile.md)
-   + [Anpassa profilvydetaljer](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/profile-customization.html){target="_blank"}
+   + [Anpassa profilvyinformation](https://experienceleague.adobe.com/docs/experience-platform/profile/ui/profile-customization.html){target="_blank"}
    + [Visa kontoprofiler](/help/platform/profiles/view-account-profiles.md)
    + [Skapa sammanfogningsprinciper](/help/platform/profiles/create-merge-policies.md)
    + [Översikt över unionens scheman](/help/platform/profiles/union-schemas-overview.md)
    + [Skapa ett beräknat attribut](/help/platform/profiles/create-a-computed-attribute-for-sum-of-purchases.md)
-   + [Pseudonymt utgångsdatum (TTL)](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/data-hygiene/pseudonymous-profile-and-event-expiration)
+   + [Pseudonyma profiler som förfaller (TTL)](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/data-hygiene/pseudonymous-profile-and-event-expiration)
    + [Ta bort profiler](/help/platform/profiles/delete-profiles.md)
    + [Uppdatera ett specifikt attribut med upsert](/help/platform/profiles/update-a-specific-attribute-with-upsert.md)
-+ Integritet och säkerhet {#privacy}
++ Sekretess och säkerhet {#privacy}
    + [Introduktion till Privacy Service](/help/platform/privacy/introduction-to-privacy-services.md)
    + [Identitetsdata i sekretessförfrågningar](/help/platform/privacy/identity-data-in-privacy-requests.md)
    + [Sekretessbibliotek för JavaScript](/help/platform/privacy/using-privacy-javascript-library.md)
@@ -226,13 +226,13 @@ ht-degree: 4%
    + [Importera data från CRM](/help/platform/sources/ingest-data-from-crm.md)
    + [Infoga data från databaser](/help/platform/sources/ingest-data-from-databases.md)
    + [Strömma data med HTTP API](/help/platform/sources/streaming-ingestion-http-api.md)
-   + [Direktuppspela data med hjälp av källanslutningar](/help/platform/sources/streaming-ingestion-source-connector.md)
+   + [Strömma data med Source Connectors](/help/platform/sources/streaming-ingestion-source-connector.md)
    + [Felsökning: SFTP Connector](/help/platform/sources/troubleshoot-sftp-connector.md)
 + Använd fallspelningsböcker {#use-case-playbooks}
    + [Översikt](/help/platform/use-case-playbooks/overview.md)
    + [Konfigurera en spelningsbokssandlåda](/help/platform/use-case-playbooks/configure-a-playbook-sandbox.md)
    + [Skapa och publicera en spelboksinstans](/help/platform/use-case-playbooks/create-and-publish-a-playbook-instance.md)
-+ Integrering med Experience Cloud {#experience-cloud}
++ Integreringar i Experience Cloud {#experience-cloud}
    + [Analyser](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html)
    + [Audience Manager](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-aam.html)
    + [Commerce](/help/platform/experience-cloud/business-value-of-platform-and-commerce.md)
@@ -243,4 +243,4 @@ ht-degree: 4%
    + [En tabell med två perceptioner - varumärken jämfört med konsumenter](/help/platform/industry/brands-vs-consumers.md)
    + [Utvecklar ditt högteknologiska målgruppscenter](/help/platform/industry/evolving-your-audience-center-of-excellence.md)
    + [Skapa bättre upplevelser med kundprofiler](/help/platform/industry/building-better-experiences-with-customer-profiles.md)
-   + [Datasamarbete i förstahandskontexten](/help/platform/industry/data-collaboration-in-the-first-party-data-context.md)
+   + [Data-Collaboration i förstahandskontexten](/help/platform/industry/data-collaboration-in-the-first-party-data-context.md)

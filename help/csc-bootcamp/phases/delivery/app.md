@@ -2,9 +2,10 @@
 title: CSC-startläger - verifiera mobilapp
 description: CSC-startläger - verifiera mobilapp
 doc-type: multipage-overview
-source-git-commit: 989e4e2add1d45571462eccaeebcbe66a77291db
+exl-id: 930d9487-7c39-4657-9fe4-436dc53343e1
+source-git-commit: 143da6340b932563a3309bb46c1c7091e0ab2ee2
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '427'
 ht-degree: 0%
 
 ---
@@ -13,7 +14,7 @@ ht-degree: 0%
 
 ## Android
 
-- Hämta mobilappen från [här](https://tinyurl.com/CSCBootcampApp) på din Android-enhet. Du kan ladda ned den på en [Android-emulator](https://developer.android.com/studio/run/emulator) eller din fysiska Android-enhet.
+- Hämta mobilappen från [här](https://tinyurl.com/CSCBootcampApp) på din Android-enhet. Du kan hämta den på en [Android-emulator](https://developer.android.com/studio/run/emulator) eller din fysiska Android-enhet.
 
 ![Hämta app](./images/delivery-app-android-download.png)
 
@@ -42,7 +43,7 @@ Eftersom detta inte är en officiellt distribuerad app är iOS-konfigurationen n
 
 - Hämta Expo Go-appen från [App Store](https://itunes.apple.com/app/apple-store/id982107779).
 
-![Ladda ned appen för att exportera](./images/delivery-app-ios-download.png)
+![Ladda ned programmet för export](./images/delivery-app-ios-download.png)
 
 - I appen iPhone Camera kan du skanna den QR-kod som Adobe-teamet ska projicera på bootlägret. När du uppmanas till det klickar du på knappen som visas.
 
@@ -50,7 +51,7 @@ Eftersom detta inte är en officiellt distribuerad app är iOS-konfigurationen n
 
 - Då öppnas en webbsida där du kan öppna appen på din iPhone. Klicka på knappen &quot;Expo Go&quot; för att öppna den i det program du just laddat ned.
 
-![Klicka på knappen för att avsluta](./images/delivery-app-ios-open-expo.png)
+![Klicka på knappen för att exportera ](./images/delivery-app-ios-open-expo.png)
 
 - I den dialogruta som öppnas väljer du&quot;Öppna&quot; så att programmet Expo Go kan läsas in med rätt information.
 
@@ -62,13 +63,13 @@ Eftersom detta inte är en officiellt distribuerad app är iOS-konfigurationen n
 
 - Du kan få en felsida först. Klicka bara på knappen &quot;Försök igen&quot; för att slutligen läsa in appen på din enhet. Observera att om du stänger programmet Expo Go eller kopplar från din enhet från WiFi-nätverket kommer programmet inte längre att svara.
 
-![Försök igen om det misslyckas](./images/delivery-app-ios-retry.png)
+![Försök igen om det inte fungerar](./images/delivery-app-ios-retry.png)
 
 ## Navigera i programmet
 
-I appen kan du välja ditt team i listrutan. Detta läses dynamiskt in i det innehåll du skapade i AEM. Om du inte är nöjd med innehållet kan du alltid uppdatera det i det innehållsfragment som vi skapade tidigare och sedan publicera innehållet igen. Du ser sedan ändringarna som återspeglas i appen.
+I appen kan du välja ditt team i listrutan. Detta läses dynamiskt in i innehållet som du skapade i AEM. Om du inte är nöjd med innehållet kan du alltid uppdatera det i det innehållsfragment som vi skapade tidigare och sedan publicera innehållet igen. Du ser sedan ändringarna som återspeglas i appen.
 
-![App före val av team](./images/delivery-app-initial.png)
+![App innan du väljer team](./images/delivery-app-initial.png)
 ![App efter val av team](./images/delivery-app-loaded.png)
 
 Nästa steg: [Fas 3 - Leverans: Skapa sida i AEM](./page-in-aem.md)

@@ -19,25 +19,25 @@ ht-degree: 0%
 
 Gå till [Adobe Experience Platform](https://experience.adobe.com/platform). När du har loggat in loggar du in på Adobe Experience Platform hemsida.
 
-![Inmatning av data](./images/home.png)
+![Datainmatning](./images/home.png)
 
-Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``Bootcamp``. Du kan göra detta genom att klicka på texten **[!UICONTROL Production Prod]** i den blå linjen ovanför skärmen. När du har valt lämplig [!UICONTROL sandbox]kommer du att se skärmändringen och nu är du med på din [!UICONTROL sandbox].
+Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``Bootcamp``. Du kan göra detta genom att klicka på texten **[!UICONTROL Production Prod]** i den blå raden ovanför skärmen. När du har valt rätt [!UICONTROL sandbox] visas skärmändringen och nu är du i din dedikerade [!UICONTROL sandbox].
 
-![Inmatning av data](./images/sb1.png)
+![Datainmatning](./images/sb1.png)
 
 ## 1.4.1 Aktivera er målgrupp för Adobe Target
 
-Adobe Target finns som mål från Real-Time CDP. Om du vill konfigurera Adobe Target-integreringen går du till **Destinationer**, till **Katalog**.
+Adobe Target finns som mål från Real-Time CDP. Gå till **Destinationer** och **Katalog** om du vill konfigurera din Adobe Target-integrering.
 
-Klicka **Personalisering** i **Kategorier** -menyn. Då ser du **Adobe Target** destinationskort. Klicka **Aktivera målgrupper**.
+Klicka på **Personalization** på menyn **Kategorier**. Sedan visas **Adobe Target**-målkortet. Klicka på **Aktivera målgrupper**.
 
 ![AT](./images/atdest1.png)
 
-Välj mål ``Bootcamp Target`` och klicka **Nästa**.
+Markera målet ``Bootcamp Target`` och klicka på **Nästa**.
 
 ![AT](./images/atdest3.png)
 
-I listan över tillgängliga målgrupper väljer du den målgrupp du har skapat i [1.3 Skapa en målgrupp](./ex3.md), som har namnet `yourLastName - Interest in Real-Time CDP`. Klicka sedan på **Nästa**.
+I listan över tillgängliga målgrupper väljer du målgruppen som du skapade i [1.3 Skapa en målgrupp](./ex3.md), som har namnet `yourLastName - Interest in Real-Time CDP`. Klicka sedan på **Nästa**.
 
 ![AT](./images/atdest8.png)
 
@@ -45,7 +45,7 @@ På nästa sida klickar du på **Nästa**.
 
 ![AT](./images/atdest9.png)
 
-Klicka **Slutför**.
+Klicka på **Slutför**.
 
 ![AT](./images/atdest10.png)
 
@@ -61,12 +61,12 @@ Din publik är nu aktiv mot Adobe Target.
 
 Nu när er Real-Time CDP-målgrupp är konfigurerad att skickas till Adobe Target kan ni konfigurera er Experience Targeting-aktivitet i Adobe Target. I den här övningen ska du konfigurera en Visual Experience Composer-baserad aktivitet.
 
-Gå till Adobe Experience Cloud hemsida genom att [https://experiencecloud.adobe.com/](https://experiencecloud.adobe.com/). Klicka **Mål** för att öppna den.
+Gå till Adobe Experience Cloud hemsida på [https://experiencecloud.adobe.com/](https://experiencecloud.adobe.com/). Klicka på **Mål** för att öppna det.
 
 ![RTCDP](./images/excl.png)
 
-På **Adobe Target** på startsidan ser du alla befintliga aktiviteter.
-Klicka **+ Skapa aktivitet** för att skapa en ny aktivitet.
+På startsidan för **Adobe Target** visas alla befintliga aktiviteter.
+Klicka på **+ Skapa aktivitet** för att skapa en ny aktivitet.
 
 ![RTCDP](./images/exclatov.png)
 
@@ -74,7 +74,7 @@ Välj **Experience Targeting**.
 
 ![RTCDP](./images/exclatcrxt.png)
 
-Välj **Visual** och ange **Aktivitets-URL** till `https://bootcamp.aepdemo.net/content/aep-bootcamp-experience/language-masters/en/exercises/particpantXX.html`, men innan du gör det ska du ersätta XX med ett tal mellan 01 och 30.
+Välj **Visuell** och ange **Aktivitets-URL** till `https://bootcamp.aepdemo.net/content/aep-bootcamp-experience/language-masters/en/exercises/particpantXX.html`, men innan du gör det ska du ersätta XX med ett tal mellan 01 och 30.
 
 >[!IMPORTANT]
 >
@@ -82,9 +82,9 @@ Välj **Visual** och ange **Aktivitets-URL** till `https://bootcamp.aepdemo.net/
 >
 >Sidorna har alla samma bas-URL och slutar med deltagarens nummer.
 >
->Som exempel bör deltagare 1 använda URL `https://bootcamp.aepdemo.net/content/aep-bootcamp-experience/language-masters/en/exercises/particpant01.html`, deltagare 30 ska använda URL `https://bootcamp.aepdemo.net/content/aep-bootcamp-experience/language-masters/en/exercises/particpant30.html`.
+>Som exempel bör deltagare 1 använda URL `https://bootcamp.aepdemo.net/content/aep-bootcamp-experience/language-masters/en/exercises/particpant01.html`, deltagare 30 bör använda URL `https://bootcamp.aepdemo.net/content/aep-bootcamp-experience/language-masters/en/exercises/particpant30.html`.
 
-Markera arbetsytan **AT Bootcamp**.
+Välj arbetsytan **AT Bootcamp**.
 
 Klicka på **Nästa**.
 
@@ -94,11 +94,11 @@ Du är nu med i Visual Experience Composer. Det kan ta 20-30 sekunder tills webb
 
 ![RTCDP](./images/atform1.png)
 
-Standardmålgruppen är för närvarande **Alla besökare**. Klicka på **3 punkter** nästa **Alla besökare** och klicka **Ändra målgrupp**.
+Standardmålgruppen är **Alla besökare**. Klicka på **3 punkter** bredvid **Alla besökare** och klicka på **Ändra publik**.
 
 ![RTCDP](./images/atform3.png)
 
-Du ser nu en lista över tillgängliga målgrupper, och Adobe Experience Platform-målgruppen som du skapade tidigare och skickade till Adobe Target ingår nu i listan. Välj den målgrupp du redan har skapat i Adobe Experience Platform. Klicka **Tilldela publik**.
+Du ser nu en lista över tillgängliga målgrupper, och Adobe Experience Platform-målgruppen som du skapade tidigare och skickade till Adobe Target ingår nu i listan. Välj den målgrupp du redan har skapat i Adobe Experience Platform. Klicka på **Tilldela målgrupp**.
 
 ![RTCDP](./images/exclatvecchaud.png)
 
@@ -106,21 +106,21 @@ Din Adobe Experience Platform-publik är nu en del av denna Experience Targeting
 
 ![RTCDP](./images/atform4.png)
 
-Innan du kan ändra hjältebilden måste du klicka **Tillåt alla** på kakbanderollen.
+Innan du kan ändra hjältebilden måste du klicka på **Tillåt alla** på cookie-banderollen.
 
-Om du vill göra det går du till **Bläddra**
+Gå till **Bläddra** om du vill göra det.
 
 ![RTCDP](./images/cook1.png)
 
-Klicka på Nästa **Tillåt alla**.
+Klicka sedan på **Tillåt alla**.
 
 ![RTCDP](./images/cook2.png)
 
-Gå tillbaka till **Skapa**.
+Gå sedan tillbaka till **Disponera**.
 
 ![RTCDP](./images/cook3.png)
 
-Nu ska vi ändra hjältebilden på webbplatsens hemsida. Klicka på standardhjältebilden på webbplatsen och klicka på **Ersätt innehåll** och sedan **Bild**.
+Nu ska vi ändra hjältebilden på webbplatsens hemsida. Klicka på standardhjältebilden på webbplatsen, klicka på **Ersätt innehåll** och välj sedan **Bild**.
 
 ![RTCDP](./images/atform5.png)
 
@@ -148,19 +148,19 @@ Klicka på **Nästa**.
 
 ![RTCDP](./images/atform8a.png)
 
-På **Mål och inställningar** - sida, gå till **Målmått**.
+Gå till **Målmått** på sidan **Mål och inställningar** -.
 
 ![RTCDP](./images/atform9.png)
 
-Ställ in det primära målet på **Engagemang** - **Tid på plats**. Klicka **Spara och stäng**.
+Ange som primärt mål **engagemang** - **tid på plats**. Klicka på **Spara och stäng**.
 
 ![RTCDP](./images/vec3.png)
 
-Du är nu på **Översikt över aktivitet** sida. Du måste fortfarande aktivera din aktivitet.
+Du finns nu på sidan **Aktivitetsöversikt**. Du måste fortfarande aktivera din aktivitet.
 
 ![RTCDP](./images/atform10.png)
 
-Klicka på fältet **Inaktiv** och markera **Aktivera**.
+Klicka på fältet **Inaktiv** och välj **Aktivera**.
 
 ![RTCDP](./images/atform11.png)
 
@@ -170,7 +170,7 @@ Sedan får du en visuell bekräftelse på att din aktivitet nu är aktiv.
 
 Din aktivitet finns nu tillgänglig och kan testas på Bootlägers webbplats.
 
-Om du nu går tillbaka till demowebbplatsen och går till produktsidan för **Real-Time CDP** blir du sedan direkt berättigad till den målgrupp du skapat och du ser Adobe Target-aktiviteten visas på startsidan i realtid.
+Om du nu går tillbaka till din demowebbplats och besöker produktsidan för **Real-Time CDP** kan du direkt kvalificera dig för den målgrupp du har skapat och du ser att Adobe Target-aktiviteten visas på startsidan i realtid.
 
 >[!IMPORTANT]
 >
@@ -178,11 +178,11 @@ Om du nu går tillbaka till demowebbplatsen och går till produktsidan för **Re
 >
 >Sidorna har alla samma bas-URL och slutar med deltagarens nummer.
 >
->Som exempel bör deltagare 1 använda URL `https://bootcamp.aepdemo.net/content/aep-bootcamp-experience/language-masters/en/exercises/particpant01.html`, deltagare 30 ska använda URL `https://bootcamp.aepdemo.net/content/aep-bootcamp-experience/language-masters/en/exercises/particpant30.html`.
+>Som exempel bör deltagare 1 använda URL `https://bootcamp.aepdemo.net/content/aep-bootcamp-experience/language-masters/en/exercises/particpant01.html`, deltagare 30 bör använda URL `https://bootcamp.aepdemo.net/content/aep-bootcamp-experience/language-masters/en/exercises/particpant30.html`.
 
 ![RTCDP](./images/atform12a.png)
 
-Nästa steg: [1.5 Take Action: send your audition to Facebook](./ex5.md)
+Nästa steg: [1.5 Vidta åtgärd: skicka målgruppen till Facebook](./ex5.md)
 
 [Gå tillbaka till användarflöde 1](./uc1.md)
 

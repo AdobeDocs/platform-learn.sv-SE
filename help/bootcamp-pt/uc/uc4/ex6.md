@@ -11,7 +11,7 @@ feature: Audiences
 exl-id: 28b87e21-3168-447e-9a93-a6ae7e969657
 source-git-commit: 3c86f9b19cecf92c9a324fb6fcfcefaebf82177f
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '454'
 ht-degree: 0%
 
 ---
@@ -25,13 +25,13 @@ ht-degree: 0%
 
 ## 4.6.1 Crie uma audiência e publique-a
 
-Em seu projeto, você criou um filtro chamado **Utlysningar** e conseguiu visualizar a kvantidade de usuários que tiveram suas ligações ao call center classificadas como **posivas**. Agora, você poderá criar um segmento com esses usuários e ativação-los em hunadas ou em canais de comunicação.
+Em seu projeto, você criou um filtro chamado **Call Feelings** e conseguiu visualizar a kvantidade de usuários que tiveram suas ligações ao call center classificadas como **posivas** . Agora, você poderá criar um segmento com esses usuários e ativação-los em hunadas ou em canais de comunicação.
 
-O primeiro passo é: Ingen smärtsam criado no último övício, selecione a linha **1. Samtalskunskap - positiv**, clique com o botão direito de seu mouse e selecione a opção **Skapa målgrupp från urval**:
+O primeiro passo é: No smärtel criado no último övício, selecione a linha **1. Call Feeling - Positive**, clique com o botão direito de seu mouse e selecione a opção **Create audience from selection**:
 
 ![demo](./images/aud1.png)
 
-Em seguida, dê um nome para a sua audiência seguindo o modelo **yourLastName - publiken i USA känner sig positiv**:
+Em seguida, dê um nome para a sua audiência seguindo o modelo **yourLastName - cia publiken kallar sig positiv**:
 
 ![demo](./images/aud2.png)
 
@@ -39,13 +39,13 @@ Note que é posiível ter um preview da audiência que está sendo criada:
 
 ![demo](./images/aud3.png)
 
-Para finalizar, clique em **Publikat**:
+Para finalizar, clique em **Publicar**:
 
 ![demo](./images/aud4.png)
 
 ## 4.6.2 Använd sua audiência como parte de um segmento
 
-Voltando para a Adobe Experience Platform, vá em **Segment > Bläddra** e você conseguirá visualizar o seu segmento criado no CJA pronto e disonível para ser usado nas suas ativações e tills vidare!
+Voltando para a Adobe Experience Platform, vá em **Segments > Browse** e você conseguirá visualizar o seu segmento criado no CJA pronto e disonível para ser usado nas suas ativações e jtills
 
 ![demo](./images/aud5.png)
 
@@ -53,11 +53,11 @@ Vamos agora usar esse segmento em uma ativação no Facebook e em uma husnada do
 
 ## 4.6.3 Använda seu segmento na Real-Time CDP em tempo real
 
-Na Adobe Experience Platform, vá em **Segment > Bläddra** e encontra audiência que você criou no CJA:
+Na Adobe Experience Platform, vá em **Segments > Browse** e encontra a audiência que você criou no CJA:
 
 ![demo](./images/aud6.png)
 
-Clique no seu segmento e, em seguida, clique em **Aktivera till mål**:
+Klicka på no seu segmento e, em seguida, clique em **Activate to Destination**:
 
 ![demo](./images/aud7.png)
 
@@ -69,11 +69,11 @@ Em seguida, clique em Next novamente:
 
 ![demo](./images/aud9.png)
 
-Selecione a opção **Målgruppens ursprung** e defina como **Direkt från kunderna** e clique em Next:
+Välj en opção **Publiken** e defina como **Direkt från kunderna** e clique em Nästa:
 
 ![demo](./images/aud10.png)
 
-Por fim, na página **Granska** clique em Finish!
+Por fim, na página **Review** clique em Finish!
 
 ![demo](./images/aud11.png)
 
@@ -82,7 +82,7 @@ Agora, vamos utilizar esse segmento no AJO!
 
 ## 4.6.4 Använda seu-segment i Adobe Journey Optimizer
 
-Na interface da Adobe Experience Platform clique em Journey Optimizer e, em seguida, no menu ateral esquerdo, clique em **Resor** Han kommer med en kriar uma jnada clicando em **Skapa resa**:
+Na interface da Adobe Experience Platform clique em Journey Optimizer e, em seguida, no menu ateral esquerdo, clique em **Journeys** e comece a criar uma jnada clicando em **Create Journey** :
 
 ![demo](./images/aud20.png)
 
@@ -90,15 +90,15 @@ Na interface da Adobe Experience Platform clique em Journey Optimizer e, em segu
 
 ![demo](./images/aud22.png)
 
-Em seguida, no menu ateral esquerdo, em Eventos, selecione **Segmentkvalificering** e arablono até a jodnada:
+Em seguida, no menu ateral esquerdo, em Eventos, selecione **Segment Qualification** e arablono até a jnada:
 
 ![demo](./images/aud23.png)
 
-Em seguida, em **Segment** klippa **Redigera** para selecionar um segmento:
+Em seguida, em **Segment** clique em **Edit** para selecionar um segmento:
 
 ![demo](./images/aud24.png)
 
-Selecone a audiência que você criou no CJA e clique em **Spara**:
+Välj en audiência que você criou no CJA e clique em **Save**:
 
 ![demo](./images/aud25.png)
 

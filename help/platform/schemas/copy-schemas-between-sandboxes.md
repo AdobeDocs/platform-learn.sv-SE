@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Kopiera scheman mellan sandlådor
 
-I den här videon visas hur du kopierar ett schema från en sandlåda till en annan i Adobe Experience Platform med hjälp av API:t för export/import av schema. Bygg och testa dina scheman i utvecklingssandlådor och kopiera dem sedan till produktion. Mer information finns på [schemadokumentation](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=sv).
+I den här videon visas hur du kopierar ett schema från en sandlåda till en annan i Adobe Experience Platform med hjälp av API:t för export/import av schema. Bygg och testa dina scheman i utvecklingssandlådor och kopiera dem sedan till produktion. Mer information finns i [schemadokumentationen](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=sv).
 
 >[!TIP]
 >

@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Bygga och publicera ett taggbibliotek
 
-Lär dig hur du skapar ett bibliotek i taggegenskaperna och gör ändringar i utvecklings-, staging- och produktionsmiljöer. Lär dig hur du kan använda flera utvecklingsmiljöer för att hjälpa flera team att uppdatera egenskapen i parallella arbetsflöden. Mer information finns i [publicera](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/overview.html) dokumentation.
+Lär dig hur du skapar ett bibliotek i taggegenskaperna och gör ändringar i utvecklings-, staging- och produktionsmiljöer. Lär dig hur du kan använda flera utvecklingsmiljöer för att hjälpa flera team att uppdatera egenskapen i parallella arbetsflöden. Mer information finns i dokumentationen för [publicering](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/overview.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/28731/?learn=on)

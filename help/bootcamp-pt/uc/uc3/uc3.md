@@ -11,7 +11,7 @@ feature: Events, Journeys, Profiles, Mobile SDK
 exl-id: 145ffaea-c630-4ec3-a12d-69661ce26f49
 source-git-commit: 3c86f9b19cecf92c9a324fb6fcfcefaebf82177f
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '202'
 ht-degree: 0%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## Pré-reksitos
 
-- Acesso à Adobe Experience Platform:  [https://experience.adobe.com/platform](https://experience.adobe.com/platform)
+- Acesso à Adobe Experience Platform: [https://experience.adobe.com/platform](https://experience.adobe.com/platform)
 - Acesso à coleta de dados da Adobe Experience Platform: [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/)
 - Acesso ao site de demonstração
 
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 Neste övício, você irá aprender como configurar um even to.
 
-[3.2 Kriminalvårdsöar till och med](./ex2.md)
+[3.2 Kriminalvårdsdagen](./ex2.md)
 
 Neste övício, você irá aprender como configurar um even to.
 

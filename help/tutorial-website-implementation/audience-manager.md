@@ -5,7 +5,7 @@ solution: Data Collection, Audience Manager
 exl-id: ddc77dc5-bfb5-4737-b6b6-47d37c9f0528
 source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
 workflow-type: tm+mt
-source-wordcount: '1795'
+source-wordcount: '1723'
 ht-degree: 0%
 
 ---
@@ -20,10 +20,9 @@ I den här lektionen får du hjälp med att aktivera Adobe Audience Manager med 
 >
 >Adobe Experience Platform Launch håller på att integreras i Adobe Experience Platform som en serie datainsamlingstekniker. Flera terminologiska förändringar har introducerats i gränssnittet som du bör vara medveten om när du använder det här innehållet:
 >
-> * platforma launchen (klientsidan) är nu **[[!DNL tags]](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv)**
-> * platform launch Server Side is now **[[!DNL event forwarding]](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)**
+> * Platforma launchen (klientsidan) är nu **[[!DNL tags]](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv)**
+> * Platforma launchens serversida är nu **[[!DNL event forwarding]](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)**
 > * Edge-konfigurationer är nu **[[!DNL datastreams]](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html)**
-
 
 ## Utbildningsmål
 
@@ -33,11 +32,11 @@ När lektionen är klar kan du:
 1. Lägg till Audience Manager med hjälp av funktionen för vidarebefordran på serversidan i Analytics
 1. Validera implementeringen av Audience Manager
 
-## Förutsättningar
+## Förhandskrav
 
 Du behöver följande för att kunna slutföra lektionen:
 
-1. Att ha slutfört lektionerna i [Konfigurera taggar](create-a-property.md), [Lägg till Adobe Analytics](analytics.md)och [Lägg till identitetstjänsten](id-service.md).
+1. För att ha slutfört lektionerna i [Konfigurera taggar](create-a-property.md), [Lägg till Adobe Analytics](analytics.md) och [Lägg till identitetstjänsten](id-service.md).
 
 1. Administratörsåtkomst till Adobe Analytics så att du kan aktivera vidarebefordran på serversidan för den rapportserie du använder för kursen. Du kan också be en befintlig administratör på din organisation att göra detta åt dig enligt instruktionerna nedan.
 
@@ -45,24 +44,24 @@ Du behöver följande för att kunna slutföra lektionen:
 
    ![Du kan använda Felsökning för att hitta Audience Manager-underdomänen på din webbplats](images/aam-debugger-partner.png)
 
-Om du inte redan har implementerat Audience Manager följer du dessa instruktioner för att [hämta din Audience Manager-underdomän](https://experienceleague.adobe.com/docs/audience-manager-learn/tutorials/web-implementation/how-to-identify-your-partner-id-or-subdomain.html).
+Om du inte redan har implementerat Audience Manager följer du de här instruktionerna för att [hämta din Audience Manager-underdomän](https://experienceleague.adobe.com/docs/audience-manager-learn/tutorials/web-implementation/how-to-identify-your-partner-id-or-subdomain.html).
 
 ## Implementeringsalternativ
 
 Det finns två sätt att implementera Audience Manager på en webbplats:
 
-* **SSF (Server-Side Forwarding)**- för kunder med Adobe Analytics är detta det enklaste och rekommenderade sättet att implementera. Adobe Analytics skickar data till AAM på Adobe backend, vilket gör att det går att skicka en mindre begäran på sidan. Detta möjliggör också viktiga integreringsfunktioner och uppfyller våra bästa metoder för implementering och driftsättning av Audience Manager-kod.
+* **Vidarebefordring på serversidan (SSF)** - för kunder med Adobe Analytics är detta det enklaste och rekommenderade sättet att implementera. Adobe Analytics skickar data till AAM på Adobe backend, vilket gör att det går att skicka en mindre begäran på sidan. Detta möjliggör också viktiga integreringsfunktioner och uppfyller våra bästa metoder för implementering och driftsättning av Audience Manager-kod.
 
-* **DIL på klientsidan**- Detta är ett tillvägagångssätt för kunder som inte har Adobe Analytics. DIL-kod (Data Integration Library Code, den AAM JavaScript-konfigurationskoden) skickar data direkt från webbsidan till Audience Manager.
+* **Klientsidan DIL** - Den här metoden är avsedd för kunder som inte har Adobe Analytics. DIL-kod (Data Integration Library Code, den AAM JavaScript-konfigurationskoden) skickar data direkt från webbsidan till Audience Manager.
 
-Eftersom du redan har distribuerat Adobe Analytics i den här självstudiekursen kommer du att distribuera Audience Manager med hjälp av Serverside Forwarding. En fullständig beskrivning och kravlista för vidarebefordran på serversidan finns i [dokumentation](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/server-side-forwarding/ssf.html)så att du vet hur det fungerar, vad som krävs och hur det valideras.
+Eftersom du redan har distribuerat Adobe Analytics i den här självstudiekursen kommer du att distribuera Audience Manager med hjälp av Serverside Forwarding. En fullständig beskrivning och kravlista för vidarebefordran på serversidan finns i [dokumentationen](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/server-side-forwarding/ssf.html), så att du vet hur den fungerar, vad som krävs och hur du validerar.
 
 ## Aktivera vidarebefordran på serversidan
 
 Det finns två huvudsteg i en SSF-implementering:
 
-1. Aktivera en&quot;switch&quot; i Analytics-Admin Console för att vidarebefordra data från Analytics till Audience Manager *per rapportsvit*.
-1. Placera koden på plats, vilket görs via taggar. För att detta ska fungera på rätt sätt måste du ha tillägget Adobe Experience Platform Identity Service installerat, liksom Analytics-tillägget (du kommer att *not* behöver AAM, vilket förklaras nedan).
+1. Aktiverar en växel i Analytics-Admin Console för att vidarebefordra data från Analytics till Audience Manager *per rapportsvit*.
+1. Placera koden på plats, vilket görs via taggar. För att det här ska fungera på rätt sätt måste du ha tillägget Adobe Experience Platform Identity Service installerat, liksom Analytics-tillägget (du *behöver inte* det AAM tillägget, vilket förklaras nedan).
 
 ### Aktivera vidarebefordran på serversidan i Analytics Admin Console
 
@@ -74,11 +73,11 @@ Det krävs en konfiguration i Adobe Analytics Admin Console för att börja vida
 
    ![Logga in på Adobe Analytics](images/aam-logIntoAnalytics.png)
 
-1. I den övre navigeringen i Analytics väljer du **[!UICONTROL Admin > Rapportsviter]** och i listan väljer du (markera flera) de rapportsviter som du vill vidarebefordra till Audience Manager.
+1. I den översta navigeringen i Analytics väljer du **[!UICONTROL Admin > Report Suites]**, och i listan markerar du (multi-select) de rapportsviter som du vill vidarebefordra till Audience Manager.
 
    ![Klicka på Admin Console](images/aam-analyticsAdminConsoleReportSuites.png)
 
-1. Välj på skärmen Rapportsviter och med rapportsviten/rapportrutorna markerade **[!UICONTROL Redigera inställningar > Allmänt > Vidarebefordran på serversidan]**.
+1. Välj **[!UICONTROL Edit Settings > General > Server-Side Forwarding]** på skärmen Rapportsviter och med rapportsviten/rapportsviterna markerade.
 
    ![Välj SSF-menyn](images/aam-selectSSFmenu.png)
 
@@ -86,11 +85,11 @@ Det krävs en konfiguration i Adobe Analytics Admin Console för att börja vida
    >
    >Som vi nämnt ovan måste du ha administratörsbehörighet för att kunna se det här menyalternativet.
 
-1. Läs informationen på sidan Vidarebefordring på serversidan och markera kryssrutan för att **[!UICONTROL Aktivera vidarebefordran på serversidan]** för rapportsviten/rapporterna.
+1. Läs informationen på sidan Vidarebefordra på serversidan och markera kryssrutan till **[!UICONTROL Enable Server-Side Forwarding]** för rapportsviten/-sviterna.
 
-1. Klicka **[!UICONTROL Spara]**
+1. Klicka på **[!UICONTROL Save]**
 
-   ![Slutför SSF-konfiguration](images/aam-enableSSFcomplete.png)
+   ![Fullständig SSF-konfiguration](images/aam-enableSSFcomplete.png)
 
 >[!NOTE]
 >
@@ -98,7 +97,7 @@ Det krävs en konfiguration i Adobe Analytics Admin Console för att börja vida
 >
 >Om SSF-alternativet är nedtonat måste du mappa rapportsviten(en) till din Experience Cloud-organisation för att kunna aktivera alternativet. Detta förklaras i [dokumentationen](https://experienceleague.adobe.com/docs/analytics/admin/data-governance/gdpr-view-settings.html).
 
-När det här steget har slutförts och du har aktiverat Adobe Experience Platform Identity Service vidarebefordras data från Analytics till AAM. Om du vill slutföra processen så att svaret kommer tillbaka korrekt från AAM till sidan (och även till Analytics via funktionen Audience Analytics) måste du slutföra följande steg i taggar också. Oroa dig inte, det är superenkelt.
+När det här steget har slutförts och du har aktiverat Adobe Experience Platform Identity Service, vidarebefordras data från Analytics till AAM. Om du vill slutföra processen så att svaret kommer tillbaka korrekt från AAM till sidan (och även till Analytics via funktionen Audience Analytics) måste du slutföra följande steg i taggar också. Oroa dig inte, det är superenkelt.
 
 ### Aktivera vidarebefordran på serversidan i taggar
 
@@ -106,21 +105,21 @@ Detta är det andra av två steg för att aktivera SSF. Du har redan växlat i A
 
 >[!NOTE]
 >
->För att implementera vidarebefordran av analysdata på serversidan i AAM redigerar/konfigurerar vi faktiskt Analytics-tillägget i taggar, **not** AAM. Tillägget AAM används endast för implementeringar på klientsidan DIL, för dem som inte har Adobe Analytics. Så följande steg är korrekta när de skickar dig till Analytics-tillägget för att konfigurera detta.
+>För att implementera vidarebefordran av analysdata på serversidan i AAM redigerar/konfigurerar vi faktiskt Analytics-tillägget i taggar, **inte** AAM. Tillägget AAM används endast för implementeringar på klientsidan DIL, för dem som inte har Adobe Analytics. Så följande steg är korrekta när de skickar dig till Analytics-tillägget för att konfigurera detta.
 
 #### Aktivera SSF i taggar
 
-1. Gå till **[!UICONTROL Tillägg > Installerade]** och klicka för att konfigurera Analytics-tillägget.
+1. Gå till **[!UICONTROL Extensions > Installed]** och klicka för att konfigurera Analytics-tillägget.
 
    ![Konfigurera analystillägget](images/aam-configAnalyticsExtension.png)
 
-1. Expandera `Adobe Audience Manager` section
+1. Expandera avsnittet `Adobe Audience Manager`
 
-1. Markera rutan till **[!UICONTROL Dela analysdata automatiskt med Audience Manager]**. Detta lägger till Audience Manager-modulen (kod) i analysen `AppMeasurement.js` implementering.
+1. Markera rutan till **[!UICONTROL Automatically share Analytics Data with Audience Manager]**. Detta lägger till Audience Manager-modulen (kod) i implementeringen av Analytics `AppMeasurement.js`.
 
-1. Lägg till din&quot;Audience Manager-underdomän&quot; (kallas även&quot;Partner-namn&quot;,&quot;Partner-ID&quot; eller&quot;Partner-underdomän&quot;). Följ dessa instruktioner för att [hämta din Audience Manager-underdomän](https://experienceleague.adobe.com/docs/audience-manager-learn/tutorials/web-implementation/how-to-identify-your-partner-id-or-subdomain.html).
+1. Lägg till din&quot;Audience Manager-underdomän&quot; (kallas även&quot;Partnernamn&quot;,&quot;Partner-ID&quot; eller&quot;Partnerunderdomän&quot;). Följ de här instruktionerna för att [hämta din Audience Manager-underdomän](https://experienceleague.adobe.com/docs/audience-manager-learn/tutorials/web-implementation/how-to-identify-your-partner-id-or-subdomain.html).
 
-1. Klicka **[!UICONTROL Spara i bibliotek och bygge]**
+1. Klicka på **[!UICONTROL Save to Library and Build]**
 
    ![Konfigurera SSF](images/aam-configLaunchSSF.png)
 
@@ -132,14 +131,15 @@ Det viktigaste sättet att verifiera att vidarebefordran på serversidan är ig�
 
 #### Kontrollera att koden läses in korrekt
 
-Koden som taggar installeras för att hantera vidarebefordran, och särskilt svaret från AAM till sidan, kallas Audience Manager&quot;Modul&quot;. Vi kan använda Experience Cloud Debugger för att se till att den har lästs in.
+Koden som installeras för att hantera vidarebefordran, och särskilt svaret från AAM till sidan, kallas Audience Manager
+&quot;Modul.&quot; Vi kan använda Experience Cloud Debugger för att se till att den har lästs in.
 
 1. Öppna Luma-webbplatsen
 1. Klicka på felsökningsikonen i webbläsaren för att öppna felsökningsprogrammet för Experience Cloud
 1. På fliken Sammanfattning bläddrar du nedåt till avsnittet Analytics
-1. Verifiera att **AudienceManagement** visas under Moduler
+1. Verifiera att **AudienceManagement** är listad under avsnittet Moduler
 
-   ![Validera AAM i felsökaren](images/aam-verifyAAMmodule.png)
+   ![Verifiera AAM i felsökaren](images/aam-verifyAAMmodule.png)
 
 #### Verifiera partner-ID:t i felsökaren
 
@@ -148,7 +148,7 @@ Därefter kan vi även verifiera att felsökaren hämtar rätt &quot;partner-ID&
 1. Bläddra nedåt till Audience Manager-avsnittet medan du fortfarande är i felsökningsprogrammet och fortfarande på fliken Sammanfattning
 1. Verifiera ditt partner-ID/din underdomän under &quot;Partner&quot;
 
-   ![Validera partner-ID:t i felsökaren](images/aam-verifyPartnerID.png)
+   ![Verifiera partner-ID:t i felsökaren](images/aam-verifyPartnerID.png)
 
 >[!WARNING]
 >
@@ -160,23 +160,23 @@ Okej, det här är biggie. Om du inte vidarebefordrar data från Analytics till 
 Tyvärr stöder inte felsökaren i Experience Cloud för närvarande svaret på beaconerna. Därför bör du använda en annan felsöknings-/paketutlösare, som Charles Proxy eller webbläsarens Developer Tools.
 
 1. Öppna Utvecklarverktygen i webbläsaren och gå till fliken Nätverk
-1. Skriv i filterfältet `b/ss` som begränsar vad du ser till Adobe Analytics-förfrågningar
+1. I filterfältet skriver du `b/ss` som begränsar det du ser till Adobe Analytics-begäranden
 1. Uppdatera sidan för att se Analytics-begäran
 
    ![Öppna utvecklingsverktygen](images/aam-openTheJSConsole.png)
 
-1. I Analytics-fyren (begäran) söker du efter en callback-parameter. Den kommer att se ut så här: `s_c_il[1].doPostbacks`
+1. I Analytics-fyren (begäran) söker du efter en callback-parameter. Den ställs in på något sådant: `s_c_il[1].doPostbacks`
 
-   ![En begäran - callback-param](images/aam-callbackParam.png)
+   ![En begäran - återanropsparam](images/aam-callbackParam.png)
 
 1. Du får ett svar på Analytics-fyren. Den innehåller referenser till doPostbacks, vilket anropas i begäran, och viktigast av allt, den bör ha ett&quot;stuff&quot;-objekt. Här skickas AAM segment-ID tillbaka till webbläsaren. Om du har &quot;stuff&quot;-objektet fungerar SSF!
 
-   ![Ett svar - innehåll-objekt](images/aam-stuffObjectInResponse.png)
+   ![Ett svar - grejobjekt](images/aam-stuffObjectInResponse.png)
 
 >[!WARNING]
 >
->Se upp för False&quot;Success&quot; - Om det finns ett svar och allt verkar fungera, gör **försäkra** att du har det där &quot;stuff&quot;-objektet. Annars kanske du får ett meddelande i svaret med texten&quot;status&quot;:&quot;SUCCESS&quot;. Så galet som det här låter är det faktiskt bevis på att det är **NOT** fungerar som det ska. Om du ser detta innebär det att du har slutfört det andra steget (koden i taggar), men att vidarebefordran i Analytics Admin Console (första steget i det här avsnittet) inte har slutförts ännu. I det här fallet måste du verifiera att du har aktiverat SWF i Analytics Admin Console. Om du har det, och det inte har gått 4 timmar än, var tålmodig.
+>Se upp för False &quot;Success&quot; - Om det finns ett svar och allt verkar fungera bör du **kontrollera** att du har det där &quot;stuff&quot;-objektet. Annars kanske du får ett meddelande i svaret med texten&quot;status&quot;:&quot;SUCCESS&quot;. Detta är faktiskt ett bevis på att **INTE** fungerar korrekt, eftersom det låter så galet. Om du ser detta innebär det att du har slutfört det andra steget (koden i taggar), men att vidarebefordran i Analytics Admin Console (första steget i det här avsnittet) inte har slutförts ännu. I det här fallet måste du verifiera att du har aktiverat SWF i Analytics Admin Console. Om du har det, och det inte har gått 4 timmar än, var tålmodig.
 
-![Svar - falskt klart](images/aam-responseFalseSuccess.png)
+![Ett svar - falskt resultat](images/aam-responseFalseSuccess.png)
 
 [Nästa&quot;Experience Cloud Integrations&quot; >](integrations.md)

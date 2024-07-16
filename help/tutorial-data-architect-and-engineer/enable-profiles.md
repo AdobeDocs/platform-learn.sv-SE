@@ -10,7 +10,7 @@ thumbnail: 4348-enable-profiles.jpg
 exl-id: b05f1af1-a599-42f2-8546-77453a578b92
 source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
-source-wordcount: '1103'
+source-wordcount: '1083'
 ht-degree: 0%
 
 ---
@@ -20,24 +20,24 @@ ht-degree: 0%
 <!-- 15min-->
 I den här lektionen ska du aktivera dina scheman och datauppsättningar för kundprofiler i realtid.
 
-Jag ljög när jag sa att dataset-lektionen var den kortaste lektionen i kursen - den här borde ta ännu mindre tid! Det enda du kommer att göra är att vända en massa glasögon. Men det som händer när du vänder på de här reglagen är _riktigt_ viktigt så att jag vill dedikera en hel sida till den.
+Jag ljög när jag sa att dataset-lektionen var den kortaste lektionen i kursen - den här borde ta ännu mindre tid! Det enda du kommer att göra är att vända en massa glasögon. Men det som händer när du vänder på de här växlarna är _verkligen_ viktigt, så jag vill dedikera en hel sida till den.
 
 Med kundprofilen i realtid kan ni se en helhetsbild av varje enskild kund som kombinerar data från flera kanaler, inklusive online-, offline-, CRM- och tredjepartsdata. Med hjälp av en profil kan ni sammanställa olika kunddata i en enhetlig vy som ger ett användbart, tidsstämplat konto för varje kundinteraktion.
 
-Så fantastiskt som allt det där låter, du behöver inte aktivera *alla era data* för profil. Faktum är att du endast bör aktivera de data du behöver för aktiveringsändamål. Aktivera data som ni vill använda för marknadsföringsärenden, kundtjänstintegreringar och så vidare, där ni behöver snabb tillgång till en robust kundprofil. Om du bara överför data för analys bör det förmodligen inte aktiveras för profilen.
+Så fantastiskt som allt det där låter, behöver du inte aktivera *alla dina data* för profilen. Faktum är att du endast bör aktivera de data du behöver för aktiveringsändamål. Aktivera data som ni vill använda för marknadsföringsärenden, kundtjänstintegreringar och så vidare, där ni behöver snabb tillgång till en robust kundprofil. Om du bara överför data för analys bör det förmodligen inte aktiveras för profilen.
 
-Det finns viktiga [skyddsräcken för kundprofildata i realtid](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=en) som du bör granska när du bestämmer vilken av dina egna data du ska aktivera för profil.
+Det finns viktiga [skyddsutkast för kundprofildata i realtid](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=en) som du bör granska när du avgör vilken av dina egna data du bör aktivera för profilen.
 
 <!--is this accurate. Are there other considerations to point out? -->
 
-**Dataarkitekturer** behöver aktivera kundprofil i realtid utanför den här självstudiekursen.
+**Dataarkitekturer** måste aktivera kundprofil i realtid utanför den här självstudiekursen.
 
 Innan du börjar övningarna ska du titta på den här korta videon och lära dig mer om kundprofilen i realtid:
 >[!VIDEO](https://video.tv.adobe.com/v/27251?learn=on)
 
 ## Behörigheter krävs
 
-I [Konfigurera behörigheter](configure-permissions.md) lektionen anger du alla åtkomstkontroller som krävs för att slutföra lektionen.
+I lektionen [Konfigurera behörigheter](configure-permissions.md) ställer du in alla åtkomstkontroller som krävs för att slutföra lektionen.
 
 
 <!--* Permission items **[!UICONTROL Data Modeling]** > **[!UICONTROL View Schemas]** and **[!UICONTROL Manage Schemas]**
@@ -51,16 +51,16 @@ I [Konfigurera behörigheter](configure-permissions.md) lektionen anger du alla 
 
 Låt oss börja med den enkla uppgiften att aktivera ett schema:
 
-1. I användargränssnittet för Plattform öppnar du **Luma Loyalty Schema**
-1. I **[!UICONTROL Schemaegenskaper]**, växlar **Profil** switch
-1. Tryck på knappen **[!UICONTROL Aktivera]** knapp som bekräftar
-1. Välj **[!UICONTROL Spara]** knapp för att spara ändringarna
+1. Öppna **Luma Loyalty Schema** i användargränssnittet för plattformen
+1. I **[!UICONTROL Schema Properties]** växlar du till växeln **Profil**
+1. Bekräfta genom att trycka på knappen **[!UICONTROL Enable]** i bekräftelsemodal
+1. Klicka på knappen **[!UICONTROL Save]** om du vill spara ändringarna
 
    >[!IMPORTANT]
    >
    >När ett schema har aktiverats för profilen kan det inte inaktiveras eller tas bort. Det går inte heller att ta bort fält från schemat efter den här punkten. Dessa konsekvenser är viktiga att tänka på senare när du arbetar med egna data i produktionsmiljön. Du bör använda en utvecklingssandlåda i den här självstudiekursen, som du kan ta bort när som helst.
    >
-   >I den kontrollerade miljön i den här självstudiekursen aktiverar du dina scheman och datauppsättningar för profilen, _innan data hämtas_. När du arbetar med egna data rekommenderar vi att du gör saker i följande ordning:
+   >I den kontrollerade miljön i den här självstudiekursen aktiverar du dina scheman och datauppsättningar för profilen, _innan du importerar några data_. När du arbetar med egna data rekommenderar vi att du gör saker i följande ordning:
    >
    > 1. För det första kan du importera vissa data i dina datauppsättningar.
    > 1. Åtgärda eventuella problem som uppstår under dataöverföringsprocessen (till exempel datavalidering eller mappningsproblem).
@@ -82,23 +82,23 @@ Nu är det dags att aktivera `Luma CRM Schema` med API:t. Om du vill hoppa över
 
 ### Hämta meta:altId för schemat
 
-Först hämtar vi `meta:altId` i `Luma CRM Schema`:
+Först hämtar vi `meta:altId` för `Luma CRM Schema`:
 
 1. Öppna [!DNL Postman]
-1. Öppna begäran om du inte har någon åtkomsttoken **[!DNL OAuth: Request Access Token]** och markera **Skicka** för att begära en ny åtkomsttoken, precis som i [!DNL Postman] lektion.
-1. Öppna förfrågan **[!DNL Schema Registry API > Schemas > Retrieve a list of schemas within the specified container.]**
-1. Välj **Skicka** knapp
+1. Om du inte har någon åtkomsttoken öppnar du begäran **[!DNL OAuth: Request Access Token]** och väljer **Skicka** för att begära en ny åtkomsttoken, precis som i lektionen [!DNL Postman].
+1. Öppna begäran **[!DNL Schema Registry API > Schemas > Retrieve a list of schemas within the specified container.]**
+1. Välj knappen **Skicka**
 1. Du borde få 200 svar
-1. Leta i svaret på `Luma CRM Schema` och kopiera `meta:altId` value
+1. Leta i svaret för objektet `Luma CRM Schema` och kopiera värdet `meta:altId`
    ![Kopiera meta:altIid](assets/profile-crm-getMetaAltId.png)
 
 ### Aktivera schemat
 
 Nu när vi har meta:altId för schemat kan vi aktivera det för profilen:
 
-1. Öppna förfrågan **[!DNL Schema Registry API > Schemas > Update one or more attributes of a custom schema specified by ID.]**
-1. I **Parametrar** klistra in `meta:altId` värdet som `SCHEMA_ID` param-värde
-1. I **Brödtext** -fliken, klistra in följande kod
+1. Öppna begäran **[!DNL Schema Registry API > Schemas > Update one or more attributes of a custom schema specified by ID.]**
+1. Klistra in `meta:altId`-värdet som `SCHEMA_ID`-parametervärdet i **Param**
+1. Klistra in följande kod på fliken **Brödtext**
 
    ```json
    [{
@@ -108,24 +108,24 @@ Nu när vi har meta:altId för schemat kan vi aktivera det för profilen:
    }]
    ```
 
-1. Välj **Skicka** knapp
+1. Välj knappen **Skicka**
 1. Du borde få 200 svar
 
    ![Aktivera CRM-schemat för profilen med din anpassade meta:altIid som används som SCHEMA_ID-parameter](assets/profile-crm-enableProfile.png)
 
 Du bör kunna se i användargränssnittet att alla fem scheman är aktiverade för profilen (du kan behöva SKIFT-läsa in igen för att se att `Luma CRM Schema` är aktiverat):
-![Alla scheman är aktiverade](assets/profile-allSchemasEnabled.png)
+![ Alla scheman är aktiverade ](assets/profile-allSchemasEnabled.png)
 
 
 ## Aktivera datauppsättningar för kundprofil i realtid med hjälp av användargränssnittet i plattformen
 
 Datauppsättningarna måste även aktiveras för profilen, och processen är ännu enklare:
 
-1. I användargränssnittet för Plattform öppnar du `Luma Loyalty Dataset`
-1. Växla **[!UICONTROL Profil]** switch
-1. Tryck på knappen **[!UICONTROL Aktivera]** knapp som bekräftar
+1. Öppna `Luma Loyalty Dataset` i användargränssnittet för plattformen
+1. Växla **[!UICONTROL Profile]**
+1. Bekräfta genom att trycka på knappen **[!UICONTROL Enable]** i bekräftelsemodal
 
-   ![ Växla profil](assets/profile-loyalty-enableDataset.png)
+   ![ Profilväxling ](assets/profile-loyalty-enableDataset.png)
 
 Upprepa stegen ovan för dessa andra datauppsättningar:
 
@@ -143,23 +143,23 @@ Nu ska du aktivera en datauppsättning för profil med API:t. Även om du vill a
 
 ### Hämta datauppsättningens ID
 
-Först måste vi skaffa `id` i `Luma CRM Dataset`:
+Först måste vi hämta `id` för `Luma CRM Dataset`:
 
 1. Öppna [!DNL Postman]
-1. Öppna begäran om du inte har någon åtkomsttoken **[!DNL OAuth: Request Access Token]** och markera **Skicka** för att begära en ny åtkomsttoken, precis som i [!DNL Postman] lektion.
-1. Öppna förfrågan **[!DNL Catalog Service API > Datasets > Retrieve a list of datasets.]**
-1. Välj **Skicka** knapp
+1. Om du inte har någon åtkomsttoken öppnar du begäran **[!DNL OAuth: Request Access Token]** och väljer **Skicka** för att begära en ny åtkomsttoken, precis som i lektionen [!DNL Postman].
+1. Öppna begäran **[!DNL Catalog Service API > Datasets > Retrieve a list of datasets.]**
+1. Välj knappen **Skicka**
 1. Du borde få 200 svar
-1. Leta i svaret på `Luma CRM Dataset` och kopiera ID:t:
-   ![Kopiera id:t](assets/profile-crm-copyDatasetId.png)
+1. Leta i svaret för objektet `Luma CRM Dataset` och kopiera ID:t:
+   ![Kopiera ID:t](assets/profile-crm-copyDatasetId.png)
 
 ### Aktivera datauppsättningen
 
 Nu när vi har ID:t för datauppsättningen kan vi aktivera det för profilen:
 
-1. Öppna förfrågan **[!DNL Catalog Service API > Datasets > Update one or more attributes of a dataset specified by ID.]**
-1. I **Parametrar** uppdatera `DATASET_ID` värde till din egen
-1. I **Brödtext** klistra in följande kod. Observera att de första två värdena är taggar som redan finns och som visas i det föregående svaret. De måste inkluderas i brödtexten, utöver de två nya taggarna som vi lägger till:
+1. Öppna begäran **[!DNL Catalog Service API > Datasets > Update one or more attributes of a dataset specified by ID.]**
+1. I **Params** uppdaterar du värdet `DATASET_ID` till ditt eget
+1. Klistra in följande kod på fliken **Brödtext**. Observera att de första två värdena är taggar som redan finns och som visas i det föregående svaret. De måste inkluderas i brödtexten, utöver de två nya taggarna som vi lägger till:
 
    ```json
    {
@@ -172,7 +172,7 @@ Nu när vi har ID:t för datauppsättningen kan vi aktivera det för profilen:
    }
    ```
 
-1. Välj **Skicka** knapp
+1. Välj knappen **Skicka**
 1. Du borde få 200 svar
 
    ![Aktivera CRM-datauppsättningen för profilen och se till att du använder ditt anpassade datauppsättnings-ID som DATASET_ID-parameter](assets/profile-crm-enableDataset.png)
@@ -190,5 +190,5 @@ Du kan också bekräfta att användargränssnittet visar vilken datauppsättning
 * [API-referens för kundprofil i realtid](https://www.adobe.io/experience-platform-apis/references/profile/)
 
 
-**Datatekniker** bör fortsätta med [Prenumerera på dataöverföringshändelser](subscribe-to-data-ingestion-events.md) lektion.
-**Dataarkitekturer** _kan hoppa framåt_ och går till [batchredigering](ingest-batch-data.md).
+**Datatekniker** bör fortsätta med lektionen [Prenumerera på datainmatningshändelser](subscribe-to-data-ingestion-events.md).
+**Dataarkitekter** _kan hoppa över_ och gå till lektionen [gruppinhämtning](ingest-batch-data.md).

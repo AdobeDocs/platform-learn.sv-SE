@@ -11,12 +11,12 @@ feature: Connections, Data Views, Workspace Basics, Calculated Metrics, Visualiz
 exl-id: 70b06cca-879a-451b-8126-de2f830f056a
 source-git-commit: 3c86f9b19cecf92c9a324fb6fcfcefaebf82177f
 workflow-type: tm+mt
-source-wordcount: '422'
+source-wordcount: '420'
 ht-degree: 0%
 
 ---
 
-# 4. Kundreseanalys
+# 4. Analys av kundresan
 
 Neste user flow, você terá experience encia pratica com o Customer Journey analytics.
 

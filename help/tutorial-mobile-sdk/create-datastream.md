@@ -6,7 +6,7 @@ jira: KT-14625
 exl-id: 7b83f834-d1fb-45d1-8bcf-bc621f94725c
 source-git-commit: 25f0df2ea09bb7383f45a698e75bd31be7541754
 workflow-type: tm+mt
-source-wordcount: '428'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 Lär dig hur du skapar ett datastream i Experience Platform.
 
-En datastream är en konfiguration på serversidan på Platform Edge Network. Datastream säkerställer att inkommande data till Platform Edge Network dirigeras till Adobe Experience Cloud-program och -tjänster på rätt sätt. Mer information finns i [dokumentation](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overview.html) eller [video](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/configure-datastreams.html).
+En datastream är en konfiguration på serversidan på Platform Edge Network. Datastream säkerställer att inkommande data till Platform Edge Network dirigeras till Adobe Experience Cloud-program och -tjänster på rätt sätt. Mer information finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/datastreams/overview.html) eller den här [videon](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/configure-datastreams.html).
 
 ![Arkitektur](assets/architecture.png)
 
-## Förutsättningar
+## Förhandskrav
 
-Om du vill skapa en datastream måste din organisation ha etablerats för den här funktionen i gränssnittet för datainsamling (tidigare [!UICONTROL Starta]) och du måste ha användarbehörighet för att hantera och visa datastölar.
+Om du vill skapa en datastream måste din organisation ha etablerats för den här funktionen i gränssnittet för datainsamling (tidigare [!UICONTROL Launch]) och du måste ha användarbehörighet för att hantera och visa datastreams.
 
 ## Utbildningsmål
 
@@ -33,29 +33,29 @@ I den här lektionen kommer du att:
 
 ## Skapa ett datastream
 
-Datastreams kan skapas i [!UICONTROL Datainsamling] -gränssnittet med [!UICONTROL Datastream] konfigurationsverktyg. Så här skapar du ett datastream:
+Datastreams kan skapas i [!UICONTROL Data Collection]-gränssnittet med konfigurationsverktyget [!UICONTROL Datastream]. Så här skapar du ett datastream:
 
 1. Se till att du är i rätt Experience Platform-sandlåda, eftersom datastreams definieras på en sandlådenivå.
-1. Välj **[!UICONTROL Datastreams]** till vänster.
-1. Välj **[!UICONTROL Ny datastream]**.
+1. Välj **[!UICONTROL Datastreams]** i den vänstra listen.
+1. Välj **[!UICONTROL New Datastream]**.
 
-   ![datastreams - startsida](assets/datastream-new.png)
+   ![datastreams home](assets/datastream-new.png)
 
-1. Ange en **[!UICONTROL Namn]**, till exempel `Luma Mobile App` och **[!UICONTROL Beskrivning]**, till exempel `Datastream for Luma Mobile App`.
+1. Ange **[!UICONTROL Name]**, till exempel `Luma Mobile App` och **[!UICONTROL Description]**, till exempel `Datastream for Luma Mobile App`.
 
    >[!NOTE]
    >
-   >Sista påminnelsen: Om du går igenom den här självstudiekursen med flera personer i en och samma sandlåda eller använder ett delat konto bör du överväga att lägga till eller föregå en identifiering som en del av namngivningskonventionerna. I stället för `Luma Mobile App Event Dataset`, använda `Luma Mobile App Event Dataset - Joe Smith`. Se även anteckningen i [Ökning](overview.md).
+   >Sista påminnelsen: Om du går igenom den här självstudiekursen med flera personer i en och samma sandlåda eller använder ett delat konto bör du överväga att lägga till eller föregå en identifiering som en del av namngivningskonventionerna. Använd till exempel `Luma Mobile App Event Dataset - Joe Smith` i stället för `Luma Mobile App Event Dataset`. Se även anteckningen i [Översikt](overview.md).
 
-1. Välj schemat som du skapade i föregående lektion från **Händelseschema** lista.
-1. Välj **[!UICONTROL Spara]**.
+1. Välj schemat som du skapade i föregående lektion från listan **Händelseschema**.
+1. Välj **[!UICONTROL Save]**.
 
    ![nya datastreams](assets/datastream-name.png)
 
 
 ## Lägg till tjänster
 
-När du går igenom (valfritt) [Analyser](analytics.md) och [Experience Platform](platform.md) lektioner i den här självstudiekursen lägger du till tjänster i din datastam så att data som skickas till Platform Edge Network vidarebefordras till dessa program.
+När du går igenom lektionerna [Analytics](analytics.md) och [Experience Platform](platform.md) i den här självstudiekursen (valfritt) lägger du till tjänster i ditt datastream så att data som skickas till Platform Edge Network vidarebefordras till dessa program.
 
 <!--
 
@@ -110,6 +110,6 @@ När du implementerar Platform Mobile SDK i din egen app bör du skapa tre datas
 >
 >Du har nu ett datastream att använda för resten av självstudiekursen.
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
 
 Nästa: **[Konfigurera en taggegenskap](configure-tags.md)**

@@ -18,37 +18,37 @@ Många organisationer är inte medvetna om den friktion som finns i kundresan, v
 
 Delta i det här bootlägret och lär dig hur en plattformsbaserad strategi kan hjälpa er att få de insikter ni behöver för att identifiera och ta bort friktionspunkter för att förbättra kundresan.
 
-Personalisering i stor skala börjar med att förstå vad som kan förbättras, och en realtidsbild av kunden är avgörande för detta. Insikter leder till handling, vilket leder till fler insikter. Adobe unika plattformsinriktade strategi ger er verktygen för att inte bara driva på den tekniska utvecklingen, utan även påverka er organisation, ert team och er förmåga att leverera en helhetsbild av kundupplevelsen i stället för en kanalspecifik kundupplevelse.
+Personalization i stor skala börjar med att förstå vad som kan förbättras, och en realtidsbild av kunden är avgörande för detta. Insikter leder till handling, vilket leder till fler insikter. Adobe unika plattformsinriktade strategi ger er verktygen för att inte bara driva på den tekniska utvecklingen, utan även påverka er organisation, ert team och er förmåga att leverera en helhetsbild av kundupplevelsen i stället för en kanalspecifik kundupplevelse.
 
 ## Dagordning
 
 ### Dag 1
 
-9:30: Gå in
+9:30:-promenad
 
-10:00: Kickoff / Intro &amp; Bootcamp Challenge
+10:00: Kickoff/Intro &amp; Bootcamp Challenge
 
-11:00: Personalisering, friktionsjakt, vattentäta skott, Adobe POV (whiteboard)
+11:00: 1-1-personalisering, friktionsjakt, vattentäta skott, Adobe POV (whiteboard)
 
-12:00: Brytning
+12:00: - brytning
 
 12:15: Uppdelning av lösningsarkitektur (whiteboard)
 
-13:00: Lunch
+13:00: start
 
-14:00: Användarflöde 1 -&quot;Förvärv&quot;, genomgång och handledning - Djupdykning
+14:00: Användarflöde 1 -&quot;Förvärv&quot;, genomgång och handgrepp - Djupdykning
 
-15:30: Brytning
+15:30: - brytning
 
 16:00: Användarflöde 2 - registrering och introduktion
 
-17:30: Golfklinik &amp; Borrel
+17:30: Golfklinic &amp; Borrel
 
-19:30: Middag
+19:30: middag
 
 ### Dag 2
 
-08:30: Frukostsession: Introduktion till användarbaserad resebaserad leverans, teamstruktur, eftersläpning vid leverans
+08:30: Frukost-session: Introduktion till användarbaserad resebaserad leverans, Teamstruktur, Leveranseftersläpning
 
 09.45: Förstå AEP-dataflöden genom praktiska scenarier
 
@@ -69,11 +69,11 @@ Personalisering i stor skala börjar med att förstå vad som kan förbättras, 
 15.00: Drinks &amp; ADDZON
 
 
-## Förutsättningar
+## Förhandskrav
 
-- Tillgång till Adobe Experience Platform: [https://experience.adobe.com/platform](https://experience.adobe.com/platform)
+- Åtkomst till Adobe Experience Platform: [https://experience.adobe.com/platform](https://experience.adobe.com/platform)
 - Åtkomst till Adobe Experience Platform Data Collection: [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/)
-- Åtkomst till Bootlägers webbplats på [https://bootcamp.aepdemo.net](https://bootcamp.aepdemo.net)
+- Åtkomst till startwebbplatserna på [https://bootcamp.aepdemo.net](https://bootcamp.aepdemo.net)
 
 >[!IMPORTANT]
 >
@@ -97,11 +97,11 @@ Gå till [Videor](https://experienceleague.adobe.com/docs/platform-learn/compreh
 
 ## YouTube
 
-Du kan hitta ytterligare intressanta videofilmer [på vår YouTube Channel](https://www.youtube.com/channel/UCUKG2dkZ9pYuZUPebQ21jUw).
+Du kan hitta ytterligare intressanta videor [i vår YouTube-kanal](https://www.youtube.com/channel/UCUKG2dkZ9pYuZUPebQ21jUw).
 
 ## Användarflöden
 
-[1. Förvärv](./uc/uc1/uc1.md)
+[1. Anskaffning](./uc/uc1/uc1.md)
 
 I det här användarflödet kommer du att förstå alla element du behöver för att implementera kundfokuserade användningsfall för okända, oautentiserade användare tillsammans med kända, autentiserade användare med Real-Time CDP.
 
@@ -109,7 +109,7 @@ I det här användarflödet kommer du att förstå alla element du behöver för
 
 I det här användarflödet kommer du att förstå alla element du behöver för att implementera användningsfall för registrering och introduktion med hjälp av Real-Time CDP och Adobe Journey Optimizer.
 
-[3. Blanda fysiska och digitala](./uc/uc3/uc3.md)
+[3. Blandar fysiska och digitala](./uc/uc3/uc3.md)
 
 I det här användarflödet kan ni personalisera kundupplevelsen i både online- och offlinekanaler på ett konsekvent sätt genom att använda Real-Time CDP och Adobe Journey Optimizer.
 

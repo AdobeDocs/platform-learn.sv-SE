@@ -8,21 +8,21 @@ thumbnail: 331937.jpeg
 exl-id: bd1a7414-b232-4ae3-98e8-b0ec1c60361b
 source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
-source-wordcount: '137'
-ht-degree: 45%
+source-wordcount: '131'
+ht-degree: 23%
 
 ---
 
 # Översikt över vidarebefordran av händelser
 
-Lär dig hur vidarebefordran av händelser centraliserar datainsamlingen, minskar mängden kod som krävs i dina webb- och mobila appar och strömmar data till lösningar utanför Adobe via Adobe Experience Platform Edge Network. Mer information finns på [dokumentation för vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html).
+Läs om hur händelsevidarebefordran centraliserar datainsamlingen, minskar mängden kod som krävs i dina webb- och mobilappar och strömmar data till lösningar utanför Adobe via Adobe Experience Platform Edge Network. Mer information finns i [dokumentationen för vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html).
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch håller på att integreras i Adobe Experience Platform som en serie datainsamlingstekniker. Flera terminologiska förändringar har introducerats i gränssnittet som du bör vara medveten om när du använder det här innehållet:
 >
 > * Platforma launchen (klientsidan) är nu **[!DNL tags]**
-> * Platform launch Server Side is now **[!DNL event forwarding]**
+> * Platforma launchens serversida är nu **[!DNL event forwarding]**
 > * Edge-konfigurationer är nu **[!DNL datastreams]**
 
 >[!VIDEO](https://video.tv.adobe.com/v/331937?learn=on)

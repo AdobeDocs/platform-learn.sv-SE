@@ -6,7 +6,8 @@ role: Admin, Developer
 level: Beginner
 jira: KT-14689
 last-substantial-update: 2023-12-15T00:00:00Z
-source-git-commit: 4d1a0ff598b822e2228d8719488b9dbb91c9870d
+exl-id: 4bd28867-b664-4a45-8892-91af821cbbcc
+source-git-commit: eae0910e2475ce20f7afd289005b6a8869eaa210
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 0%
@@ -15,7 +16,7 @@ ht-degree: 0%
 
 # Lägg till utvecklare och ge behörigheter till API-autentiseringsuppgifter
 
-Lär dig hur du lägger till utvecklare i Adobe Experience Platform-baserade program som Real-time Customer Data Platform och Journey Optimizer. Utvecklare läggs först till i Admin Console. När de har skapat sitt plattformsprojekt i Developer Console tilldelas API-autentiseringsuppgifterna behörigheter i Platform- eller Journey Optimizer-gränssnittet. Mer information finns på [Åtkomstkontrolldokumentation](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html).
+Lär dig hur du lägger till utvecklare i Adobe Experience Platform-baserade program som Real-time Customer Data Platform och Journey Optimizer. Utvecklare läggs först till i Admin Console. När de har skapat sitt plattformsprojekt i Developer Console tilldelas deras API-autentiseringsuppgifter behörigheter i Platform- eller Journey Optimizer-gränssnittet. Mer information finns i [Åtkomstkontrollsdokumentationen](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3426407?learn=on)
 
@@ -25,5 +26,4 @@ Lär dig hur du lägger till utvecklare i Adobe Experience Platform-baserade pro
 
 >[!TIP]
 >
->Vi rekommenderar att du också lägger till utvecklaren som **användare** till `AEP-Default-All-Users` produktprofilen i Admin Console och lägg sedan till dem i samma roll i plattformsgränssnittet som API-autentiseringsuppgifterna. Detta gör att de kan använda gränssnittet vid behov. Se [Lägg till användare](add-users.md) för mer information.
-
+>Vi rekommenderar att du också lägger till utvecklaren som **användare** i produktprofilen `AEP-Default-All-Users` i Admin Console och sedan lägger till dem i samma roll i plattformsgränssnittet som API-autentiseringsuppgifterna. Detta gör att de kan använda gränssnittet vid behov. Mer information finns i [Lägg till användare](add-users.md).

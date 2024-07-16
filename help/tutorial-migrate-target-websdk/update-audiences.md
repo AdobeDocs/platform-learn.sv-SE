@@ -1,9 +1,10 @@
 ---
 title: Uppdatera målgrupper och profilskript | Migrera mål från at.js 2.x till Web SDK
 description: Lär dig hur du uppdaterar Adobe Target målgrupper och profilskript för kompatibilitet med Experience Platform Web SDK.
-source-git-commit: 287ebcb275c4fca574dbd6cdf7e07ba4268bddb5
+exl-id: 2c0f85f7-6e8c-4d0b-8ed5-53897d06e563
+source-git-commit: 4690d41f92c83fe17eda588538d397ae1fa28af0
 workflow-type: tm+mt
-source-wordcount: '498'
+source-wordcount: '476'
 ht-degree: 0%
 
 ---
@@ -20,17 +21,17 @@ Alla Target-parametrar måste skickas i XDM-format med en Platform Web SDK-imple
 
 ## Justera målgrupper
 
-Alla målgrupper som använder anpassade mbox-parametrar bör uppdateras så att de använder de nya XDM-parameternamnen. En anpassad parameter för `page_name` skulle troligen mappas till `web.webpagedetails.pageName`.
+Alla målgrupper som använder anpassade mbox-parametrar bör uppdateras så att de använder de nya XDM-parameternamnen. En anpassad parameter för `page_name` skulle till exempel troligen mappas till `web.webpagedetails.pageName`.
 
-Ett sätt att säkerställa kompatibilitet med både at.js och Platform Web SDK är att uppdatera alla relevanta målgrupper så att `OR` villkor används, vilket visas nedan:
+Ett sätt att säkerställa kompatibilitet med både at.js och Platform Web SDK är att uppdatera alla relevanta målgrupper så att `OR`-villkor används, vilket visas nedan:
 
-![Så här uppdaterar du en målgrupp för plattformskompatibilitet för Web SDK](assets/target-audience-update.png){zoomable=&quot;yes&quot;}
+![Så här uppdaterar du en målgrupp för kompatibilitet med plattformswebbsäkra DK](assets/target-audience-update.png){zoomable="yes"}
 
 ## Redigera profilskript
 
 Profilskript ska uppdateras för att referera till nya XDM-parameternamn, som liknar målgrupper. Förutom ändringen av mbox-parameternamn finns det ingen skillnad i hur profilskript fungerar mellan en at.js och en Platform Web SDK-implementering.
 
-Ett sätt att se till att kompatibiliteten är att använda `OR` villkor i din profilskriptkod.
+Ett sätt att säkerställa kompatibilitet är att använda `OR`-villkor i din profilskriptkod.
 
 Exempel på profilskript:
 
@@ -52,7 +53,7 @@ Mer information och bästa praxis finns i den dedikerade dokumentationen om [pro
 
 ## Uppdatera parametertoken för dynamiskt innehåll
 
-Om du har erbjudanden, rekommendationer eller aktiviteter som använder [dynamisk innehållsersättning](https://experienceleague.adobe.com/docs/target/using/experiences/offers/passing-profile-attributes-to-the-html-offer.html)kan de behöva uppdateras för att ta hänsyn till de nya XDM-parameternamnen.
+Om du har erbjudanden, rekommendationer eller aktiviteter som använder [dynamisk innehållsersättning](https://experienceleague.adobe.com/docs/target/using/experiences/offers/passing-profile-attributes-to-the-html-offer.html) kan de behöva uppdateras för att ta hänsyn till de nya XDM-parameternamnen.
 
 Beroende på hur du använder tokenersättning för mbox-parametrar kan du eventuellt förbättra din befintliga konfiguration så att den tar hänsyn till både gamla och nya parameternamn. I situationer där anpassad JavaScript-kod inte är möjlig, t.ex. i JSON-erbjudanden, bör du skapa kopior och göra uppdateringar när migreringen är klar och publicerad på produktionsplatsen.
 
@@ -76,8 +77,8 @@ Exempel på JSON-erbjudande med parameternamn för Platform Web SDK:
 
 Om du väljer att göra justeringar efter migreringen för att ta hänsyn till de nya parameternamnen för XDM-mbox ska du se till att pausa alla aktiviteter som påverkas under migreringshändelsen för att förhindra aktivitetsvisningsfel för besökarna.
 
-Lär dig sedan hur du [validera Target-implementeringen](validate.md).
+Läs sedan om hur du [validerar målimplementeringen](validate.md).
 
 >[!NOTE]
 >
->Vi vill hjälpa dig att lyckas med målmigreringen från at.js till Web SDK. Om du stöter på problem med din migrering eller känner att det saknas viktig information i den här guiden ber vi dig att meddela oss genom att publicera i [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-target-from-at-js-to-web-sdk/m-p/575587#M463).
+>Vi vill hjälpa dig att lyckas med målmigreringen från at.js till Web SDK. Om du stöter på problem med din migrering eller om du känner att det saknas viktig information i den här guiden kan du meddela oss genom att publicera [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-target-from-at-js-to-web-sdk/m-p/575587#M463).

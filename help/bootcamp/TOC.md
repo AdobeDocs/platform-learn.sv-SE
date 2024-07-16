@@ -10,8 +10,8 @@ hide: true
 doc-type: multipage
 source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
 workflow-type: tm+mt
-source-wordcount: '146'
-ht-degree: 3%
+source-wordcount: '172'
+ht-degree: 2%
 
 ---
 
@@ -25,8 +25,8 @@ ht-degree: 3%
    + [1.1 Besök webbplatsen](/help/bootcamp/uc/uc1/ex1.md)
    + [1.2 Visualisera din egen kundprofil i realtid - användargränssnitt](/help/bootcamp/uc/uc1/ex2.md)
    + [1.3 Skapa ett segment - användargränssnitt](/help/bootcamp/uc/uc1/ex3.md)
-   + [1.4 Vidta åtgärder: skicka segmentet till Adobe Target](/help/bootcamp/uc/uc1/ex4.md)
-   + [1.5 Vidta åtgärder: skicka segmentet till Facebook](/help/bootcamp/uc/uc1/ex5.md)
+   + [1.4 Take Action: send your segment to Adobe Target](/help/bootcamp/uc/uc1/ex4.md)
+   + [1.5 Take Action: send your segment to Facebook](/help/bootcamp/uc/uc1/ex5.md)
 + 2 - Registrering och introduktion {#uc2}
    + [Översikt](/help/bootcamp/uc/uc2/uc2.md)
    + [2.1 Besök webbplatsen och skapa ett konto](/help/bootcamp/uc/uc2/ex1.md)
@@ -34,8 +34,8 @@ ht-degree: 3%
    + [2.3 Skapa din resa och ditt e-postmeddelande](/help/bootcamp/uc/uc2/ex3.md)
    + [2.4 Testa din resa](/help/bootcamp/uc/uc2/ex4.md)
    + [2.5 Installera och använda mobilappen](/help/bootcamp/uc/uc2/ex5.md)
-   + [2.6 Personalisering i call center](/help/bootcamp/uc/uc2/ex6.md)
-+ 3 - Blanda fysiska och digitala {#uc3}
+   + [2.6 Personalization i callcenter](/help/bootcamp/uc/uc2/ex6.md)
++ 3 - Blandar fysiska och digitala {#uc3}
    + [Översikt](/help/bootcamp/uc/uc3/uc3.md)
    + [3.1 Använda mobilappen och utlösa en fyndighetsinmatning](/help/bootcamp/uc/uc3/ex1.md)
    + [3.2 Skapa en aktivitet](/help/bootcamp/uc/uc3/ex2.md)

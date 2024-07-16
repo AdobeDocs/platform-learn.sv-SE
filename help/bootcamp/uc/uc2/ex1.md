@@ -11,7 +11,7 @@ feature: Events, Journeys, Profiles, Identities
 exl-id: a56cedba-3ac4-4a9b-aeb8-8036c527a878
 source-git-commit: 3c86f9b19cecf92c9a324fb6fcfcefaebf82177f
 workflow-type: tm+mt
-source-wordcount: '347'
+source-wordcount: '348'
 ht-degree: 0%
 
 ---
@@ -22,13 +22,13 @@ ht-degree: 0%
 
 Resan från okänd till känd är en av de viktigaste ämnena bland varumärken nuförtiden, liksom kundresan från förvärv till lojalitet.
 
-Adobe Experience Platform spelar en mycket viktig roll på den här resan. Platform är hjärnan för kommunikation, **upplevelsesystem**.
+Adobe Experience Platform spelar en mycket viktig roll på den här resan. Plattformen är hjärnan för kommunikation, **upplevelsesystemet för posten**.
 
 Plattform är en miljö där ordet kund är bredare än bara de kända kunderna. En okänd besökare på webbplatsen är också en kund ur plattformens perspektiv, och som sådan skickas även allt beteende som en okänd besökare till Platform. Tack vare den metoden kan ett varumärke, när besökaren till slut blir en känd kund, även visualisera det som hände före det ögonblicket. Detta bidrar till att optimera attribuering och upplevelser.
 
 ## Kundreseflöde
 
-Gå till [https://bootcamp.aepdemo.net](https://bootcamp.aepdemo.net). Klicka **Tillåt alla**. Beroende på ditt surfbeteende i det tidigare användarflödet kommer personalisering att ske på webbplatsens hemsida.
+Gå till [https://bootcamp.aepdemo.net](https://bootcamp.aepdemo.net). Klicka på **Tillåt alla**. Beroende på ditt surfbeteende i det tidigare användarflödet kommer personalisering att ske på webbplatsens hemsida.
 
 ![DSN](./images/web8.png)
 
@@ -40,11 +40,11 @@ Ni kan också se alla upplevelsehändelser som samlats in baserat på kundens be
 
 ![Demo](./images/pv3.png)
 
-Klicka på **Profil** i skärmens övre högra hörn.
+Klicka på ikonen **Profil** i skärmens övre högra hörn.
 
 ![Demo](./images/pv4.png)
 
-Klicka **Skapa ett konto**.
+Klicka på **Skapa ett konto**.
 
 ![Demo](./images/pv5.png)
 
@@ -52,11 +52,11 @@ Fyll i alla fält i formuläret. Använd ett reellt värde för e-postadress och
 
 ![Demo](./images/pv7.png)
 
-Bläddra nedåt och klicka **Registrera**.
+Bläddra nedåt och klicka på **Registrera**.
 
 ![Demo](./images/pv8.png)
 
-Du kommer då att se det här.
+Då ser du det här.
 
 ![Demo](./images/pv9.png)
 
@@ -70,7 +70,7 @@ Några minuter senare kommer du också att få det här mejlet:
 
 Låt oss se hur den här introduktionsresan konfigurerades härnäst.
 
-Nästa steg: [2.2 Skapa en aktivitet](./ex2.md)
+Nästa steg: [2.2 Skapa din aktivitet](./ex2.md)
 
 [Gå tillbaka till användarflöde 2](./uc2.md)
 

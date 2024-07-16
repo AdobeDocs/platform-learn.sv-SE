@@ -2,20 +2,21 @@
 title: CSC Bootcamp - Skapa sida i AEM
 description: CSC Bootcamp - Skapa sida i AEM
 doc-type: multipage-overview
-source-git-commit: 989e4e2add1d45571462eccaeebcbe66a77291db
+exl-id: 22587f83-135e-4e88-b51b-a90a4509a90f
+source-git-commit: 143da6340b932563a3309bb46c1c7091e0ab2ee2
 workflow-type: tm+mt
-source-wordcount: '1917'
+source-wordcount: '1890'
 ht-degree: 0%
 
 ---
 
 # Skapa sida i AEM
 
-AEM har två miljöer: författarmiljön och publiceringsmiljön. Dessa interagerar så att ni kan göra innehållet tillgängligt på er webbplats - så att besökarna kan uppleva det.
+AEM innehåller två miljöer: författarmiljön och Publish-miljön. Dessa interagerar så att ni kan göra innehållet tillgängligt på er webbplats - så att besökarna kan uppleva det.
 
 I redigeringsmiljön finns mekanismer för att skapa, uppdatera och granska innehållet innan det publiceras:
 
-- En författare skapar och granskar innehållet (detta kan vara av flera typer); till exempel sidor, resurser, publikationer osv.)
+- En författare skapar och granskar innehållet (detta kan vara av flera typer, t.ex. sidor, resurser, publikationer osv.)
 - som någon gång kommer att publiceras på er webbplats.
 
 Som författare måste du ordna din webbplats inom AEM. Detta innebär att du skapar och namnger innehållssidorna så att:
@@ -31,34 +32,34 @@ Vi ska granska hur man lägger till nya sidor på en befintlig webbplats och hur
 
 ## Skapa hemsidan
 
-Som förklaras i föregående avsnitt fungerar AEM sidhierarki som en trädstruktur. Det innebär att vi börjar med sidan på den högsta nivån: hemsidan.
+Så som förklaras i föregående avsnitt fungerar AEM sidhierarki som en trädstruktur. Det innebär att vi börjar med sidan på den högsta nivån: startsidan.
 
-- Gå till AEM [https://author-p71057-e991028.adobeaemcloud.com/](https://author-p71057-e991028.adobeaemcloud.com/) och logga in med de autentiseringsuppgifter som vi har angett.
+- Gå till AEM författare på [https://author-p71057-e991028.adobeaemcloud.com/](https://author-p71057-e991028.adobeaemcloud.com/) och logga in med de autentiseringsuppgifter som vi har angett.
 
 - På AEM Start-meny väljer du Navigering \> Platser
 
-![välj ikonen för webbplatser](./images/delivery-web-aem-sites.png)
+![välj platsikonen](./images/delivery-web-aem-sites.png)
 
-- Först navigerar vi den befintliga trädstrukturen till den plats där vi vill skapa vår hemsida. Navigera i trädstrukturen genom att välja &quot;AdobeCycle&quot; i den första kolumnen och sedan &quot;Bootcamp&quot; i den andra kolumnen. Om du vill skapa en sida under den här sidan klickar du på knappen &quot;Skapa&quot; och väljer &quot;Sida&quot; på menyn som visas.
+- Först navigerar vi den befintliga trädstrukturen till den plats där vi vill skapa vår hemsida. Navigera i trädstrukturen genom att välja &quot;AdobeCycle&quot; i första kolumnen och sedan &quot;Bootcamp&quot; i andra kolumnen. Om du vill skapa en sida under den här sidan klickar du på knappen &quot;Skapa&quot; och väljer &quot;Sida&quot; på menyn som visas.
 
-![hitta tillbaka till Bootlägers innehåll](./images/delivery-web-create-page.png)
+![hitta tillbaka till Bootcamp-innehållet](./images/delivery-web-create-page.png)
 
 - Då öppnas en ny skärm där du kan konfigurera den nya sidan. Först måste vi välja en sidmall. Med sidmallar i AEM kan du definiera strukturen för en sida, samt definiera vilket innehåll som kan användas på den här sidan. När vi vill skapa startsidan, som är en landningssida, väljer vi landningssidmallen och klickar sedan på Nästa för att fortsätta.
 
 ![välj rätt mall](./images/delivery-web-create-page-template.png)
 
-- På nästa skärm kan du fylla sidan med viss inledande information. Den viktigaste informationen är titeln (en obligatorisk egenskap som anges med ett \*), som är avsedd för att du ska kunna ge sidan ett beskrivande namn. Om du inte fyller i rutan Namn, kommer AEM automatiskt att generera den URL som sidan är tillgänglig på enligt SEO:s praxis. I så fall kan du lämna det här fältet tomt. Vissa andra egenskaper kan även fyllas i, men för det här bootlägret fylls inga andra egenskaper ut ännu. När du är klar klickar du bara på knappen &quot;Skapa&quot;.
+- På nästa skärm kan du fylla sidan med viss inledande information. Den viktigaste informationen är titeln (en obligatorisk egenskap som anges med ett \*), som är avsedd för att du ska kunna ge sidan ett beskrivande namn. Om du inte fyller i rutan Namn, kommer AEM automatiskt att generera den URL som sidan är tillgänglig på, enligt SEO:s bästa praxis. I så fall kan du lämna det här fältet tomt. Vissa andra egenskaper kan även fyllas i, men för det här bootlägret fylls inga andra egenskaper ut ännu. När du är klar klickar du bara på knappen &quot;Skapa&quot;.
 
-![fylla i egenskaperna](./images/delivery-web-create-page-properties.png)
+![fyll i egenskaperna](./images/delivery-web-create-page-properties.png)
 
-- AEM skapar nu sidan. När du är klar visas ett popup-fönster där du kan öppna den nya sidan genom att klicka på knappen Öppna.
+- AEM skapar nu sidan. När du är klar visas ett popup-fönster där du kan öppna den nya sidan genom att klicka på knappen&quot;Öppna&quot;.
 
-![Öppna den nya sidan](./images/delivery-web-create-page-success.png)
+![Öppna den nyskapade sidan](./images/delivery-web-create-page-success.png)
 
-- Du kommer nu till AEM Editor. Det här är en&quot;vad du ser är vad du får&quot;-redigerare (eller WYSIWYG-redigerare) där du kan dra och släppa komponenter på en sida för att skapa sidan. Låt oss titta på navigeringen:
-   ![aem&#39;s wysiwig editor](./images/delivery-web-page-editor-home.png)
-   - Till vänster finns sidopanelen med de resurser du kan använda på sidorna, komponenterna (eller byggblocken) som du kan använda på den här sidan och en praktisk trädvy som visar hur sidan är strukturerad. Klicka på någon av dessa ikoner för att öppna vyn.
-   - Till höger ser du &quot;layoutbehållaren&quot;. Det här är ett område där du kan släppa de önskade komponenterna.
+- Du kommer nu till AEM. Det här är en&quot;vad du ser är vad du får&quot;-redigerare (eller WYSIWYG-redigerare) där du kan dra och släppa komponenter på en sida för att skapa sidan. Låt oss titta på navigeringen:
+  ![aem&#39;s wysiwig editor](./images/delivery-web-page-editor-home.png)
+   - Till vänster finns sidopanelen med de resurser du kan använda på sidorna, komponenterna (eller byggblocken) som du kan använda på den här sidan och en praktisk trädvy som visar hur sidan är strukturerad. Klicka på någon av de här ikonerna för att öppna vyn.
+   - Till höger ser du &quot;layoutbehållaren&quot;. Här kan du släppa de önskade komponenterna.
    - Låt oss fylla i vår sida med lite innehåll. Du kan fylla hemsidan när du vill. I exemplet nedan har vi använt en bildkomponent som länkar till produktsidan samt två teaser-komponenter.
 
 ![hemsidan](./images/delivery-web-homepage.png)
@@ -71,11 +72,11 @@ Helst vill vi bara skapa denna unika säljpoäng en gång så att vi kan hantera
 
 Låt oss använda den här direkt:
 
-- Gå till AEM [https://author-p71057-e991028.adobeaemcloud.com/](https://author-p71057-e991028.adobeaemcloud.com/) och logga in med de autentiseringsuppgifter som vi har angett.
+- Gå till AEM författare på [https://author-p71057-e991028.adobeaemcloud.com/](https://author-p71057-e991028.adobeaemcloud.com/) och logga in med de autentiseringsuppgifter som vi har angett.
 
 - På AEM Start-meny väljer du Navigering \> Upplevelsefragment
 
-![välj ikonen XF](./images/delivery-web-xf.png)
+![välj XF-ikonen](./images/delivery-web-xf.png)
 
 - På följande skärm skapar vi en mapp som teamet kan använda för att lagra återanvändbara upplevelser. I kolumnvyn navigerar du till Adobe Cycle \> Bootcamp och klickar sedan på knappen Skapa \> Mapp.
 
@@ -93,13 +94,13 @@ Låt oss använda den här direkt:
 
 ![välj en xf-mall](./images/delivery-web-create-xf-template.png)
 
-- Ge ert upplevelsefragment en meningsfull titel, t.ex. &quot;Adocycle USPs&quot; och klicka sedan på knappen Skapa.
+- Ge ert upplevelsefragment en meningsfull titel, t.ex.&quot;Adobe-program&quot;, och klicka sedan på knappen Skapa.
 
 ![ge xf en titel](./images/create-xf-properties.png)
 
 - När ditt upplevelsefragment har skapats klickar du på knappen&quot;Öppna&quot; i modala så att vi kan lägga till en del innehåll i vårt upplevelsefragment.
 
-![klicka öppna](./images/delivery-web-create-xf-success.png)
+![klicka på öppna](./images/delivery-web-create-xf-success.png)
 
 - Precis som när du redigerar en sida kan du se en layoutbehållare där du kan lägga till innehåll.
 
@@ -115,7 +116,7 @@ Låt oss använda den här direkt:
 
 >[!NOTE]
 >
-> Tips: Med AEM kan du använda&quot;layoutläge&quot; på alla sidor och i alla upplevelsefragment. På så sätt kan ni ändra storlek på komponenterna och optimera upplevelserna för alla enheter.
+> Tips! AEM kan du använda&quot;layoutläge&quot; på valfri sida eller i något fragment. På så sätt kan ni ändra storlek på komponenterna och optimera upplevelserna för alla enheter.
 
 - Öppna listrutan på den översta menyn och välj Layout för att öppna layoutläget.
 
@@ -123,11 +124,11 @@ Låt oss använda den här direkt:
 
 - Sedan kan du markera en komponent och ändra storlek på den genom att dra i handtagen på komponentens båda sidor för att fästa mot de kolumner som visas på skärmen.
 
-![ändra storlek på komponenterna som du vill](./images/delivery-web-layout-resize.png)
+![ändra storlek på komponenter som du vill](./images/delivery-web-layout-resize.png)
 
-- Som standard redigerar du för alla brytpunkter. Om du vill redigera för en viss brytpunkt kan du välja en matchande enhet i verktygsfältet ovanför sidan. Brytpunkten som du sedan redigerar för markeras.
+- Som standard redigeras alla brytpunkter. Om du vill redigera för en viss brytpunkt kan du välja en matchande enhet i verktygsfältet överst på sidan. Brytpunkten som du sedan redigerar för markeras.
 
-![markera en brytpunkt](./images/delivery-web-bp-before.png)
+![välj en brytpunkt](./images/delivery-web-bp-before.png)
 
 - Som du ser ser ser en layout med två kolumner på mobilen inte bra ut. Låt oss skapa en enda spaltlayout på mobilen. Som du kan se på datorn är upplevelsen densamma, men på mobilen har vi nu en bättre upplevelse med bara en innehållskolumn.
 
@@ -135,7 +136,7 @@ Låt oss använda den här direkt:
 
 - Slutligen kan vi nu återanvända den här upplevelsen på hemsidan. Dra och släpp en&quot;Experience Fragment&quot;-komponent på sidan där du vill att innehållet ska visas. Du kan ta bort innehållet som vi kopierade över, eftersom vi kommer att använda det från upplevelsefragmentet.
 
-![dra och släppa en xf-komponent](./images/delivery-web-xf-on-home.png)
+![dra och släpp en xf-komponent](./images/delivery-web-xf-on-home.png)
 
 - Öppna konfigurationsdialogrutan för upplevelsefragmentkomponenten och använd sökvägsväljaren för att välja den plats där du skapade ditt upplevelsefragment.
 
@@ -151,13 +152,13 @@ Låt oss använda den här direkt:
 
 När du använder Adobe Commerce som är integrerat med AEM kan du ha en allmän produktinformationssida som används när du navigerar på webbplatsen från de genererade översikterna. Men ibland vill vi också se en inspirerande sida som kombinerar produktspecifikt innehåll med inspirerande innehåll. Låt oss kopiera över butiken så som vi har förberett, så skapar vi en inspirerande produktsida.
 
-- Gå till AEM [https://author-p71057-e991028.adobeaemcloud.com/](https://author-p71057-e991028.adobeaemcloud.com/) och logga in med de autentiseringsuppgifter som vi har angett.
+- Gå till AEM författare på [https://author-p71057-e991028.adobeaemcloud.com/](https://author-p71057-e991028.adobeaemcloud.com/) och logga in med de autentiseringsuppgifter som vi har angett.
 
 - På AEM Start-meny väljer du Navigering \> Platser
 
-![välj ikonen för webbplatser](./images/delivery-web-aem-sites.png)
+![välj platsikonen](./images/delivery-web-aem-sites.png)
 
-- I kolumnöversikten navigerar du den fördefinierade webbplatsen till butiken: Adocycle \> Language Masters \> AdobeCycle \> Shop. Markera sedan Shop-sidan med kryssrutan och klicka på Create \> Live Copy. Utan att gå in på för mycket information skapar detta en kopia av sidan som du kan använda på webbplatsen så att du kan återanvända befintliga sidor och befintligt innehåll med hjälp AEM Multi Site Manager.
+- I kolumnöversikten navigerar du till den fördefinierade webbplatsen: Adobe Cycle \> Language Masters \> Adobe Cycle \> Shop. Markera sedan Shop-sidan med kryssrutan och klicka på Create \> Live Copy. Utan att gå in på för mycket information skapar detta en kopia av sidan som du kan använda på webbplatsen, så att du kan återanvända befintliga sidor och befintligt innehåll med hjälp AEM Multi Site Manager.
 
 ![skapa en live-kopia](./images/delivery-web-create-lc.png)
 
@@ -166,16 +167,16 @@ När du använder Adobe Commerce som är integrerat med AEM kan du ha en allmän
 ![välj mål](./images/delivery-web-lc-destination.png)
 
 - Eftersom vi inte kommer att gå djupare in i Multi Site Manager kan du bara ta över den här konfigurationen.\
-   Titel: Handla\
-   Namn: shop\
-   Konfiguration för utrullning: Standardkonfiguration för utrullning\
-   När du har konfigurerat live-kopian klickar du på knappen Skapa.
+  Title: Shop\
+  Namn: shop\
+  Konfiguration för utrullning: Standardkonfiguration för utrullning\
+  När du har konfigurerat live-kopian klickar du på knappen Skapa.
 
 ![konfigurera live-kopian](./images/delivery-web-lc-config.png)
 
 >[!NOTE]
 >
-> Vill du veta mer om live-kopior? Checka ut [&quot;Skapa och synkronisera live-kopior&quot;.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/msm/creating-live-copies.html?lang=en)
+> Vill du veta mer om live-kopior? Kolla in [&quot;Skapa och synkronisera live-kopior&quot;.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/msm/creating-live-copies.html?lang=en)
 
 - När du är klar bör du nu se butiken som finns på webbplatsen. Välj den och klicka sedan på Create \> Page för att skapa vår inspirerande produktsida.
 
@@ -183,11 +184,11 @@ När du använder Adobe Commerce som är integrerat med AEM kan du ha en allmän
 
 - Eftersom vi vill visa produktinformation på sidan skapar vi nu en sida med produktsidans mall. Markera den och klicka sedan på knappen Nästa.
 
-![använda produktsidmallen](./images/delivery-web-create-pdp-template.png)
+![använd produktsidmallen](./images/delivery-web-create-pdp-template.png)
 
 - Fyll i sidans metadata och klicka sedan på knappen Skapa, precis som för hemsidan. När sidan har skapats kan du öppna den genom att klicka på knappen Öppna. Som du ser innehåller den redan en komponent med produktinformation.
 
-![slutföra konfigurationen](./images/delivery-web-pdp-initial.png)
+![Slutför konfigurationen](./images/delivery-web-pdp-initial.png)
 
 - Först lägger vi till vårt upplevelsefragment som vi skapade tidigare. Sedan kan vi lägga till ytterligare innehåll som vi fortfarande vill ha på sidan. Slutligen ska vi konfigurera produktinformationsdelen så att den visar vår Adobe-produkt genom att välja produktsökaren i konfigurationsdialogrutan, välja vår Adobe-kategori och markera rutan bredvid produkten. Klicka sedan på knappen Lägg till.
 

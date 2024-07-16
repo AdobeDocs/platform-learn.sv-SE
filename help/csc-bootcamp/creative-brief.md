@@ -2,9 +2,10 @@
 title: CSC Bootcamp - Creative Brief
 description: CSC Bootcamp - Creative Brief
 doc-type: multipage-overview
-source-git-commit: 989e4e2add1d45571462eccaeebcbe66a77291db
+exl-id: e404b54d-cdd6-4ecf-9740-838c002b7872
+source-git-commit: 143da6340b932563a3309bb46c1c7091e0ab2ee2
 workflow-type: tm+mt
-source-wordcount: '318'
+source-wordcount: '325'
 ht-degree: 0%
 
 ---

@@ -1,23 +1,23 @@
 ---
 title: Konfigurera en taggegenskap för plattformens SDK-implementeringar
-description: Lär dig konfigurera en taggegenskap i [!UICONTROL Datainsamling] gränssnitt.
+description: Lär dig hur du konfigurerar en taggegenskap i [!UICONTROL Data Collection]-gränssnittet.
 feature: Mobile SDK,Tags
 jira: KT-14626
 exl-id: 0c4b00cc-34e3-4d08-945e-3fd2bc1b6ccf
 source-git-commit: 25f0df2ea09bb7383f45a698e75bd31be7541754
 workflow-type: tm+mt
-source-wordcount: '1005'
-ht-degree: 0%
+source-wordcount: '919'
+ht-degree: 1%
 
 ---
 
 # Konfigurera en taggegenskap
 
-Lär dig konfigurera en taggegenskap i [!UICONTROL Datainsamling] gränssnitt.
+Lär dig hur du konfigurerar en taggegenskap i [!UICONTROL Data Collection]-gränssnittet.
 
 Taggar i Adobe Experience Platform är nästa generation av tagghanteringsfunktioner från Adobe. Taggar ger kunderna ett enkelt sätt att driftsätta och hantera de analyser, marknadsförings- och annonstaggar som behövs för att skapa relevanta kundupplevelser. Läs mer om [Taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv) i produktdokumentationen.
 
-## Förutsättningar
+## Förhandskrav
 
 Du måste ha behörighet att skapa en taggegenskap för att kunna slutföra lektionen. Det är också praktiskt att ha en grundläggande förståelse för taggar.
 
@@ -35,127 +35,127 @@ I den här lektionen kommer du att:
 ## Inledande konfiguration
 
 1. Skapa en ny mobil taggegenskap i datainsamlingsgränssnittet:
-   1. Välj **[!UICONTROL Taggar]** i den vänstra navigeringen.
-   1. Välj **[!UICONTROL Ny egenskap]**
+   1. Välj **[!UICONTROL Tags]** i den vänstra navigeringen.
+   1. Välj **[!UICONTROL New Property]**
       ![skapa en taggegenskap](assets/tags-new-property.png).
-   1. För **[!UICONTROL Namn]**, ange `Luma Mobile App Tutorial`.
-   1. För **[!UICONTROL Plattform]**, markera **[!UICONTROL Mobil]**.
-   1. Välj  **[!UICONTROL Spara]**.
+   1. Ange `Luma Mobile App Tutorial` för **[!UICONTROL Name]**.
+   1. För **[!UICONTROL Platform]** väljer du **[!UICONTROL Mobile]**.
+   1. Välj **[!UICONTROL Save]**.
 
       ![konfigurera taggegenskapen](assets/tags-property-config.png)
 
       >[!NOTE]
       >
-      > Standardinställningar för samtycke för de kantbaserade SDK-implementeringarna för mobiler, som den du gör i den här lektionen, kommer från [!UICONTROL Godkänn tillägg] och inte [!UICONTROL Integritet] inställning i taggegenskapskonfigurationen. Du lägger till och konfigurerar tillägget för samtycke senare i den här lektionen. Mer information finns på [dokumentationen](https://developer.adobe.com/client-sdks/edge/consent-for-edge-network/).
+      > Standardinställningar för godkännande för kantbaserade SDK-implementeringar för mobiler, som den du gör i den här lektionen, kommer från [!UICONTROL Consent extension] och inte från inställningen [!UICONTROL Privacy] i taggegenskapskonfigurationen. Du lägger till och konfigurerar tillägget för samtycke senare i den här lektionen. Mer information finns i [dokumentationen](https://developer.adobe.com/client-sdks/edge/consent-for-edge-network/).
 
 
 1. Öppna den nya egenskapen.
 1. Skapa ett bibliotek:
 
-   1. Gå till **[!UICONTROL Publiceringsflöde]** i den vänstra navigeringen.
-   1. Välj **[!UICONTROL Lägg till bibliotek]**.
+   1. Gå till **[!UICONTROL Publishing Flow]** i den vänstra navigeringen.
+   1. Välj **[!UICONTROL Add Library]**.
 
       ![Välj Lägg till bibliotek](assets/tags-create-library.png)
 
-   1. För **[!UICONTROL Namn]**, ange `Initial Build`.
-   1. För **[!UICONTROL Miljö]**, markera **[!UICONTROL Utveckling]**.
-   1. Välj  ![Knappen Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Lägg till alla ändrade resurser]**.
-   1. Välj **[!UICONTROL Spara och bygg till utveckling]**.
+   1. Ange `Initial Build` för **[!UICONTROL Name]**.
+   1. För **[!UICONTROL Environment]** väljer du **[!UICONTROL Development (development)]**.
+   1. Välj ![Lägg till knapp](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Add All Changed Resources]**.
+   1. Välj **[!UICONTROL Save and Build to Development]**.
 
-      ![Bygg biblioteket](assets/tags-save-library.png)
+      ![Skapa biblioteket](assets/tags-save-library.png)
 
-   1. Äntligen väljer du **[!UICONTROL Inledande bygge]** som ditt arbetsbibliotek från **[!UICONTROL Välj ett arbetsbibliotek]** -menyn.
+   1. Välj slutligen **[!UICONTROL Initial Build]** som ditt arbetsbibliotek på menyn **[!UICONTROL Select a working library]**.
       ![Välj som arbetsbibliotek](assets/tags-working-library.png)
 1. Kontrollera tillägg:
 
-   1. Se till att **[!UICONTROL Inledande bygge]** är markerat som standardbibliotek.
+   1. Kontrollera att **[!UICONTROL Initial Build]** är valt som standardbibliotek.
 
-   1. Välj **[!UICONTROL Tillägg]** till vänster.
+   1. Välj **[!UICONTROL Extensions]** i den vänstra listen.
 
-   1. Välj **[!UICONTROL Installerad]** -fliken.
+   1. Klicka på fliken **[!UICONTROL Installed]**.  
 
-      The [!UICONTROL Mobile Core] och [!UICONTROL Profil] tillägg bör vara förinstallerade.
+      Tilläggen [!UICONTROL Mobile Core] och [!UICONTROL Profile] bör vara förinstallerade.
 
-      ![Installerade taggar](assets/tags-installed.png)
+      ![Taggar installerade](assets/tags-installed.png)
 
 ## Tilläggskonfiguration
 
-1. Se till att du är **[!UICONTROL Tillägg]** i din mobilappsegenskap.
+1. Kontrollera att du är i **[!UICONTROL Extensions]** i din mobilappsegenskap.
 
-1. Välj **[!UICONTROL Katalog]**.
+1. Välj **[!UICONTROL Catalog]**.
 
    ![inledande konfiguration](assets/tags-starting.png)
 
-1. Använd ![Sök](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Search_18_N.svg) **[!UICONTROL Sök]** fält för att hitta **Identitet** tillägg.
+1. Använd fältet ![Sök](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Search_18_N.svg) **[!UICONTROL Search]** för att hitta tillägget **Identitet**.
 
    1. Sök efter `Identity`.
 
-   2. Välj **[!UICONTROL Identitet]** tillägg.
+   2. Välj tillägget **[!UICONTROL Identity]**.
 
-   3. Välj **[!UICONTROL Installera]**.
+   3. Välj **[!UICONTROL Install]**.
 
-      ![Installation av identitet](assets/tags-identity-install.png)
-
-   Det här tillägget kräver ingen ytterligare konfiguration.
-
-1. Använd ![Sök](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Search_18_N.svg) **[!UICONTROL Sök]** fält för att hitta och installera **AEP Assurance** tillägg.
+      ![Identitetsinstallation](assets/tags-identity-install.png)
 
    Det här tillägget kräver ingen ytterligare konfiguration.
 
-1. Använd ![Sök](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Search_18_N.svg) **[!UICONTROL Sök]** fält för att hitta och installera **Godkännande** tillägg. På konfigurationsskärmen:
+1. Använd fältet ![Sök](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Search_18_N.svg) **[!UICONTROL Search]** för att hitta och installera tillägget **AEP Assurance**.
 
-   1. Välj **[!UICONTROL Väntande]**. I den här självstudiekursen hanterar du samtycke ytterligare i programmet. Läs mer om tillägget för samtycke i [dokumentationen](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/).
-   1. Välj **[!UICONTROL Spara i bibliotek]**.
+   Det här tillägget kräver ingen ytterligare konfiguration.
+
+1. Använd fältet ![Sök](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Search_18_N.svg) **[!UICONTROL Search]** för att hitta och installera tillägget **Samtycke**. På konfigurationsskärmen:
+
+   1. Välj **[!UICONTROL Pending]**.  I den här självstudiekursen hanterar du samtycke ytterligare i programmet. Läs mer om tillägget för samtycke i [dokumentationen](https://developer.adobe.com/client-sdks/documentation/consent-for-edge-network/).
+   1. Välj **[!UICONTROL Save to Library]**.
 
       ![inställningar för samtycke](assets/tags-extension-consent.png)
 
-1. Använd ![Sök](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Search_18_N.svg) **[!UICONTROL Sök]** fält för att hitta och installera **Adobe Experience Platform Edge Network** tillägg.
+1. Använd fältet ![Sök](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Search_18_N.svg) **[!UICONTROL Search]** för att hitta och installera tillägget **Adobe Experience Platform Edge Network**.
 
-   1. I **[!UICONTROL Datastreams]** välj **[!UICONTROL Datastream]** som du skapade i [föregående steg](create-datastream.md) för varje miljö, till exempel **[!DNL Luma Mobile App]**.
+   1. I **[!UICONTROL Datastreams]** väljer du **[!UICONTROL Datastream]** som du skapade i [föregående steg](create-datastream.md) för varje miljö, till exempel **[!DNL Luma Mobile App]**.
 
-   1. Om den inte redan är ifylld anger du **[!UICONTROL Edge Network-domän]** inom **[!UICONTROL Domänkonfiguration]**. Edge Network-domänen är namnet på din organisation, följt av `data.adobedc.net`, till exempel `techmarketingdemos.data.adobedc.net`.
+   1. Om den inte redan är ifylld anger du **[!UICONTROL Edge Network domain]** i **[!UICONTROL Domain Configuration]**. Domänen Edge Network är namnet på din organisation följt av `data.adobedc.net`, till exempel `techmarketingdemos.data.adobedc.net`.
 
-   1. Från **[!UICONTROL Spara i bibliotek]** meny, välja **[!UICONTROL Spara i bibliotek och bygge]**.
+   1. Välj **[!UICONTROL Save to Library and Build]** på menyn **[!UICONTROL Save to Library]**.
 
-      ![inställningar för Edge-nätverk](assets/tags-extension-edge.png)
+      ![inställningar för gränsnätverk](assets/tags-extension-edge.png)
 
-Ditt bibliotek är byggt för de nya tilläggen och konfigurationerna. Ett lyckat bygge indikeras av en <span style="color:green">●</span> i **[!UICONTROL Inledande bygge]** -knappen.
+Ditt bibliotek är byggt för de nya tilläggen och konfigurationerna. Ett lyckat bygge indikeras av en <span style="color:green"> ●</span> i knappen **[!UICONTROL Initial Build]**.
 
 
 ## Generera installationsanvisningar för SDK
 
-1. Välj **[!UICONTROL Miljö]** från den vänstra listen.
+1. Välj **[!UICONTROL Environments]** i den vänstra listen.
 
-1. Välj **[!UICONTROL Utveckling]** installationsikon ![Box](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Box_18_N.svg) .
+1. Välj installationsikonen **[!UICONTROL Development]** ![Box](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Box_18_N.svg) .
 
-   ![miljöer, startskärm](assets/tags-environments.png)
+   ![Miljöer, startskärm](assets/tags-environments.png)
 
-1. I **[!UICONTROL Instruktioner för mobilinstallation]** väljer du **[!UICONTROL iOS]** -fliken.
+1. Välj fliken **[!UICONTROL iOS]** i dialogrutan **[!UICONTROL Mobile Install Instructions]**.
 
-1. Du kan kopiera ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) instruktionerna för att konfigurera projektet med CocoaPods. CocoaPods används för att hantera SDK-versioner och -nedladdningar. Läs mer i [CocoaPods-dokumentation](https://cocoapods.org/). Om du använder Android™ som utvecklingsplattform är Gradle verktyget för att hantera SDK-version, hämtningsbara filer och beroenden. Läs mer i [Dokumentation för grafik](https://gradle.org/)
+1. Du kan kopiera ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) instruktionerna för att konfigurera ditt projekt med CocoaPods. CocoaPods används för att hantera SDK-versioner och -nedladdningar. Mer information finns i dokumentationen för [CocoaPods](https://cocoapods.org/). Om du använder Android™ som utvecklingsplattform är Gradle verktyget för att hantera SDK-version, hämtningsbara filer och beroenden. Mer information finns i dokumentationen för [Gradle](https://gradle.org/)
 
-   Installationsanvisningarna ger dig en bra startpunkt för implementeringen. Ytterligare information finns [här](https://developer.adobe.com/client-sdks/documentation/getting-started/get-the-sdk/).
+   Installationsanvisningarna ger dig en bra startpunkt för implementeringen. Ytterligare information [finns här](https://developer.adobe.com/client-sdks/documentation/getting-started/get-the-sdk/).
 
    >[!INFO]
    >
-   >För resten av kursen ska du **not** Använd instruktionerna för CocoaPods, men använd i stället en SPM-baserad konfiguration (Swift Package Manager).
+   >För resten av den här självstudiekursen använder du **inte** instruktionerna för CocoaPods, utan i stället en SPM-baserad konfiguration (Swift Package Manager).
    >
 
-1. Välj **[!UICONTROL Swift]** flik nedan **[!UICONTROL Lägg till initieringskod]**. Det här kodblocket visar hur du importerar de SDK:er som krävs och registrerar tilläggen vid start. Detta beskrivs mer ingående i [Installera SDK:er](install-sdks.md).
+1. Välj fliken **[!UICONTROL Swift]** under **[!UICONTROL Add Initialization Code]**. Det här kodblocket visar hur du importerar de SDK:er som krävs och registrerar tilläggen vid start. Mer information finns i [Installera SDK](install-sdks.md).
 
-1. Kopiera ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) den **[!UICONTROL Miljöfil-ID]** och lagra dem där du behöver dem senare. Detta unika ID pekar på din utvecklingsmiljö. Varje miljö (produktion, mellanlagring, utveckling) har ett eget unikt ID-värde.
+1. Kopiera ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) **[!UICONTROL Environment File ID]** och lagra den på en plats som du behöver senare. Detta unika ID pekar på din utvecklingsmiljö. Varje miljö (produktion, mellanlagring, utveckling) har ett eget unikt ID-värde.
 
    ![installationsanvisningar](assets/tags-install-instructions.png)
 
 >[!NOTE]
 >
->Installationsanvisningarna ska betraktas som en startpunkt och inte som slutgiltig dokumentation. De senaste SDK-versionerna och kodexemplen finns i den officiella [dokumentation](https://developer.adobe.com/client-sdks/home/).
+>Installationsanvisningarna ska betraktas som en startpunkt och inte som slutgiltig dokumentation. De senaste SDK-versionerna och kodexemplen finns i den officiella [dokumentationen](https://developer.adobe.com/client-sdks/home/).
 
 ## Arkitektur för mobila taggar
 
 Om du är bekant med webbversionen av taggar, tidigare Launch, är det viktigt att förstå skillnaderna på mobilen.
 
-* På webben återges en taggegenskap i JavaScript som sedan (vanligtvis) finns i molnet. JavaScript-filen refereras direkt på webbplatsen.
+* På webben återges en taggegenskap i JavaScript som sedan (vanligtvis) lagras i molnet. Det finns en referens till den JavaScript-filen direkt på webbplatsen.
 
 * I en mobil taggegenskap återges regler och konfigurationer i JSON-filer som lagras i molnet. JSON-filerna hämtas och läses av tillägget Mobile Core i mobilappen. Tillägg är separata SDK:er som fungerar tillsammans. Om du lägger till ett tillägg i taggegenskapen måste du även uppdatera appen. Om du ändrar en tilläggsinställning eller skapar en regel återspeglas dessa ändringar i appen när du har publicerat det uppdaterade taggbiblioteket. Tack vare den flexibiliteten kan du ändra inställningar (som Adobe Analytics Report Suite-id) eller till och med ändra appens beteende (med dataelement och regler, som du kommer att se i senare lektioner) utan att behöva ändra koden i appen och skicka appbutiken igen.
 
@@ -163,6 +163,6 @@ Om du är bekant med webbversionen av taggar, tidigare Launch, är det viktigt a
 >
 >Du har nu en mobil taggegenskap att använda i resten av den här självstudien.
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
 
-Nästa: **[Installera SDK:er](install-sdks.md)**
+Nästa: **[Installera SDK](install-sdks.md)**

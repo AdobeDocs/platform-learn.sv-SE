@@ -33,7 +33,7 @@ Datainsamling är nästa generation av funktioner för hantering av webbplatstag
     </a>
     <div>
       <a href="https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html" target="_blank">
-    <strong>Implementera Experience Cloud med Web SDK</strong>
+    <strong> Implementera Experience Cloud med Web SDK </strong>
     </a>
     </div>
     <p>
@@ -46,7 +46,7 @@ Datainsamling är nästa generation av funktioner för hantering av webbplatstag
     </a>
     <div>
       <a href="https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/overview.html" target="_blank">
-    <strong>Implementera Experience Cloud i mobilappar</strong>
+    <strong> Implementera Experience Cloud i mobilappar </strong>
     </a>
     </div>
     <p>
@@ -59,7 +59,7 @@ Datainsamling är nästa generation av funktioner för hantering av webbplatstag
     </a>
     <div>
       <a href="https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html" target="_blank">
-    <strong>Migrera Adobe Target till Web SDK</strong>
+    <strong> Migrera Adobe Target till Web SDK </strong>
     </a>
     </div>
     <p>

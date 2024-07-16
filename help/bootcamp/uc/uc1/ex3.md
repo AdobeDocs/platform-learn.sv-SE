@@ -22,37 +22,37 @@ I den här övningen skapar du en publik genom att använda Adobe Experience Pla
 
 Gå till [Adobe Experience Platform](https://experience.adobe.com/platform). När du har loggat in loggar du in på Adobe Experience Platform hemsida.
 
-![Inmatning av data](./images/home.png)
+![Datainmatning](./images/home.png)
 
-Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``Bootcamp``. Du kan göra detta genom att klicka på texten **[!UICONTROL Production Prod]** i den blå linjen ovanför skärmen. När du har valt lämplig [!UICONTROL sandbox]kommer du att se skärmändringen och nu är du med på din [!UICONTROL sandbox].
+Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``Bootcamp``. Du kan göra detta genom att klicka på texten **[!UICONTROL Production Prod]** i den blå raden ovanför skärmen. När du har valt rätt [!UICONTROL sandbox] visas skärmändringen och nu är du i din dedikerade [!UICONTROL sandbox].
 
-![Inmatning av data](./images/sb1.png)
+![Datainmatning](./images/sb1.png)
 
-På menyn till vänster går du till **Målgrupper**. På den här sidan visas Dashboards med viktig information om **Målgrupp** prestanda.
+Gå till **Publiker** på menyn till vänster. På den här sidan visas instrumentpaneler med viktig information om **målgruppens** prestanda.
 
 ![Segmentering](./images/menuseg.png)
 
-Klicka på **Bläddra** för att få en översikt över alla befintliga målgrupper. Klicka på **+ Skapa målgrupper** för att börja skapa en ny publik.
+Klicka på **Bläddra** om du vill se en översikt över alla befintliga målgrupper. Klicka på knappen **+ Skapa målgrupp** för att börja skapa en ny målgrupp.
 
 
 ![Segmentering](./images/segmentationui.png)
 
-Ett popup-fönster visas där du tillfrågas om du vill **&#39;Disponera målgrupp&#39;** eller **&#39;Skapa regel&#39;**. Välj **&#39;Skapa regel&#39;** för att fortsätta och klicka **skapa**.
+Ett popup-fönster visas där du tillfrågas om du vill **&#39;Disponera målgrupp&#39;** eller **&#39;Build rule&#39;**. Välj **&#39;Skapa regel&#39;** för att fortsätta och klicka på **skapa**.
 
 ![Segmentering][def]
 
-När ni väl är med i målgruppsbyggaren märker ni omedelbart **Attribut** menyalternativ och **Individuell XDM-profil** referens.
+När du är i målgruppsverktyget lägger du omedelbart märke till menyalternativet **Attribut** och referensen **XDM Individual Profile** .
 
 
 Eftersom XDM är det språk som driver upplevelseverksamheten är XDM också grunden för målgruppsbyggaren. Alla data som är inkapslade i Platform ska mappas mot XDM, och som sådana blir alla data en del av samma datamodell oavsett varifrån dessa data kommer. Detta ger er en stor fördel när ni bygger målgrupper, och från det här användargränssnittet för målgruppsbyggaren kan ni kombinera data från vilket ursprung som helst i samma arbetsflöde. Publiker som byggts i Audience Builder kan skickas till lösningar som Adobe Target, Adobe Campaign eller någon annan aktiveringskanal.
 
-Nu måste ni skapa en målgrupp med alla kunder som har tittat på produkten **Real-Time CDP**.
+Nu måste du skapa en målgrupp med alla kunder som har tittat på produkten **Real-Time CDP**.
 
-Om ni vill bygga ut den här målgruppen måste ni lägga till en Experience Event. Du kan hitta alla Experience Events genom att klicka på **Händelser** ikonen i **Fält** menyraden.
+Om ni vill bygga ut den här målgruppen måste ni lägga till en Experience Event. Du kan hitta alla Experience Events genom att klicka på ikonen **Händelser** i menyfältet **Fält** .
 
 ![Segmentering](./images/findee.png)
 
-Nu kommer du att se den översta nivån, **XDM ExperienceEvents** nod. Klicka på **XDM ExperienceEvent**.
+Därefter visas noden **XDM ExperienceEvents** på den översta nivån. Klicka på **XDM ExperienceEvent**.
 
 ![Segmentering](./images/see.png)
 
@@ -60,19 +60,19 @@ Gå till **Produktlisteobjekt**.
 
 ![Segmentering](./images/plitems.png)
 
-Välj **Namn** och dra och släpp **Namn** objekt från den vänstra menyn till målgruppsarbetsytan i **Händelser** -avsnitt. Då ser du det här:
+Markera **Namn** och dra och släpp objektet **Namn** från den vänstra menyn på målgruppsarbetsytan i avsnittet **Händelser**. Då ser du det här:
 
 ![Segmentering](./images/eewebpdtlname.png)
 
-Jämförelseparametern ska vara **är lika med** och i inmatningsfältet anger du **CDP i realtid**.
+Jämförelseparametern ska vara **lika med** och i indatafältet ska du ange **CDP i realtid**.
 
 ![Segmentering](./images/pv.png)
 
-Varje gång du lägger till ett element i målgruppsverktyget kan du klicka på **Uppdatera offert** för att få en ny uppskattning av populationen i er målgrupp.
+Varje gång du lägger till ett element i målgruppsverktyget kan du klicka på knappen **Uppdatera uppskattning** för att få en ny uppskattning av målgruppspopulationen.
 
 ![Segmentering](./images/refreshest.png)
 
-Som **Utvärderingsmetod**, markera **Kant**.
+Som **Utvärderingsmetod** väljer du **Edge**.
 
 ![Segmentering](./images/evedge.png)
 
@@ -82,7 +82,7 @@ Använd följande som namnkonvention:
 
 - `yourLastName - Interest in Real-Time CDP`
 
-Klicka sedan på **Spara och stäng** för att rädda publiken.
+Klicka sedan på knappen **Spara och stäng** för att spara din publik.
 
 ![Segmentering](./images/segmentname.png)
 
@@ -92,7 +92,7 @@ Du kommer nu tillbaka till målgruppsöversikten där du ser en förhandsgranskn
 
 Du kan nu fortsätta med nästa övning och använda din publik med Adobe Target.
 
-Nästa steg: [1.4 Take Action: send your audition to Adobe Target](./ex4.md)
+Nästa steg: [1.4 Vidta åtgärd: skicka målgruppen till Adobe Target](./ex4.md)
 
 [Gå tillbaka till användarflöde 1](./uc1.md)
 

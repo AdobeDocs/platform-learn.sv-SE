@@ -10,14 +10,14 @@ thumbnail: 32666.jpg
 exl-id: f3f628ef-223a-48d9-979e-86f038268923
 source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
-source-wordcount: '58'
-ht-degree: 72%
+source-wordcount: '52'
+ht-degree: 51%
 
 ---
 
 # Använd poäng och insikter från AI för kundbenägenhet
 
-Lär dig hur du använder benägenhetspoäng och insikter från Kund-AI för att få och behålla kunder. Mer information finns på [AI-dokumentation för kund](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/customer-ai/overview.html).
+Lär dig hur ni använder AI-poängen och insikterna för att konvertera och behålla kunder. Mer information finns i [Kundens AI-dokumentation](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/customer-ai/overview.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/32666?learn=on)
 

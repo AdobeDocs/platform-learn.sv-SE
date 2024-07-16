@@ -13,7 +13,7 @@ thumbnail: 338250.jpg
 exl-id: cc432fcf-2ff3-48bc-8053-7a6d1f643869
 source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
-source-wordcount: '163'
+source-wordcount: '148'
 ht-degree: 0%
 
 ---
@@ -36,4 +36,4 @@ Lär dig hur du konfigurerar källkopplingen för Marketo med standardarbetsflö
 
 Mer information finns i följande dokumentation:
 * [Marketo Engage källanslutningsdokumentation](https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/adobe-applications/marketo/marketo.html).
-* [Skapa ett källdataflöde med mallar i användargränssnittet](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/templates.html#)
+* [Skapa ett källdataflöde med hjälp av mallar i användargränssnittet](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/templates.html#)

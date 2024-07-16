@@ -20,7 +20,7 @@ Lär dig hur du implementerar Adobe Journey Optimizer beslutsstyrningsfunktion m
 Genom att följa den här självstudiekursen är Journey Optimizer-användare utrustade att använda funktioner för beslutshantering, vilket förbättrar personaliseringen och relevansen av deras kundinteraktioner.
 
 
-![Web SDK och Adobe Analytics](assets/dc-websdk-ajo.png)
+![Web SDK och Adobe Analytics-diagram](assets/dc-websdk-ajo.png)
 
 ## Utbildningsmål
 
@@ -38,7 +38,7 @@ När lektionen är slut kan du:
 
 * Ta till vara avancerade ämnen som simuleringar och anpassad datainsamling för event, så att ni kan testa, validera och förbättra era mekanismer för leverans av erbjudanden.
 
-## Förutsättningar
+## Förhandskrav
 
 För att slutföra lektionerna i det här avsnittet måste du först:
 
@@ -46,7 +46,7 @@ För att slutföra lektionerna i det här avsnittet måste du först:
 
 * Slutför alla lektioner för den inledande konfigurationen av Platform Web SDK.
 
-* Aktivera din organisation för Edge Decisioning.
+* Aktivera er organisation för Edge-beslut.
 
 * Lär dig hur du konfigurerar en placering och instansierar placerings- och aktivitets-ID:n i din beslutsomfångs-JSON.
 
@@ -56,40 +56,40 @@ Händelsebaserade erbjudanden stöds för närvarande inte i Adobe Journey Optim
 
 ## Bevilja åtkomst till beslutsledning
 
-Om du vill ge åtkomst till funktionen Beslutshantering måste du skapa en **Produktprofil** och tilldela användarna motsvarande behörigheter. [Läs mer om hur du hanterar Journey Optimizer-användare och behörigheter i det här avsnittet](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/privacy/high-low-permissions#decisions-permissions).
+Om du vill ge åtkomst till beslutshanteringsfunktionen måste du skapa en **produktprofil** och tilldela användarna motsvarande behörigheter. [Läs mer om hur du hanterar Journey Optimizer-användare och behörigheter i det här avsnittet](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/privacy/high-low-permissions#decisions-permissions).
 
 ## Konfigurera datastream
 
-Offera decisioningen måste vara aktiverad i **datastream** konfiguration innan någon beslutshanteringsaktivitet kan levereras av Platform Web SDK.
+Offera decisioningen måste aktiveras i **datastream**-konfigurationen innan någon beslutshanteringsaktivitet kan levereras av Platform Web SDK.
 
 Så här konfigurerar du Offer decisioning i datastream:
 
-1. Gå till [Datainsamling](https://experience.adobe.com/#/data-collection) gränssnitt.
+1. Gå till gränssnittet [Datainsamling](https://experience.adobe.com/#/data-collection).
 
-1. Välj **Datastreams**.
+1. Välj **Datastreams** i den vänstra navigeringen.
 
 1. Markera tidigare skapade Luma Web SDK-dataström.
 
    ![Välj datastream](assets/decisioning-datastream-select.png)
 
-1. Välj **Redigera** inom **Adobe Experience Platform Service**.
+1. Välj **Redigera** i **Adobe Experience Platform-tjänsten**.
 
    ![Redigera tjänst](assets/decisioning-edit-datastream.png)
 
-1. Kontrollera **Offer decisioning** box.
+1. Markera rutan **Offer decisioning**.
 
    ![LÄGG TILL SKÄRMBILD](assets/decisioning-check-offer-box.png)
 
 1. Välj **Spara**.
 
-Detta säkerställer att inkommande händelser för Journey Optimizer hanteras korrekt av **Adobe Experience Platform Edge**.
+Detta garanterar att inkommande händelser för Journey Optimizer hanteras korrekt av **Adobe Experience Platform Edge**.
 
 ## Konfigurera SDK för beslutshantering
 
 Beslutshantering kräver ytterligare SDK-steg beroende på vilken implementeringstyp du har för Web SDK. Det finns två tillgängliga alternativ för att konfigurera SDK för beslutshantering.
 
 * fristående SDK-installation
-   1. Konfigurera `sendEvent` åtgärd med `decisionScopes`.
+   1. Konfigurera åtgärden `sendEvent` med din `decisionScopes`.
 
       ```javascript
       alloy("sendEvent", {
@@ -104,35 +104,35 @@ Beslutshantering kräver ytterligare SDK-steg beroende på vilken implementering
 * Installation av SDK-taggar
    1. Gå till gränssnittet Datainsamling.
 
-   1. Välj **Taggar**.
+   1. Välj **Taggar** i den vänstra navigeringen.
 
       ![Markera taggar](assets/decisioning-data-collection-tags.png)
 
-   1. Välj **Taggegenskap**.
+   1. Markera **taggegenskapen**.
 
-   1. Skapa **Regler**.
-      * Lägg till en SDK för webben **Åtgärden Skicka händelse** och lägga till relevanta `decisionScopes` till åtgärdens konfiguration.
+   1. Skapa dina **regler**.
+      * Lägg till en Platform Web SDK **Skicka händelse** och lägg till relevant `decisionScopes` i åtgärdens konfiguration.
 
-   1. Skapa och publicera **Bibliotek** som innehåller alla relevanta **Regler**, **Dataelement** och **Tillägg** du har konfigurerat.
+   1. Skapa och publicera ett **bibliotek** som innehåller alla relevanta **regler**, **dataelement** och **tillägg** som du har konfigurerat.
 
 ## Terminologi
 
 För det första bör du förstå den terminologi som används i gränssnittet för beslutshantering.
 
-* **Takning**: En begränsning som bestämmer hur ofta ett erbjudande visas. Två typer:
+* **Begränsning**: En begränsning som bestämmer hur ofta ett erbjudande visas. Två typer:
    * Total Caps: Maximalt antal gånger ett erbjudande kan visas för alla målgrupper.
    * Profilbegränsning: Ett erbjudande kan visas för en viss användare.
-* **Samlingar**: Delmängder av erbjudanden grupperade efter specifika villkor som angetts av en marknadsförare, till exempel, erbjudandekategori.
-* **Beslut**: Logik som bestämmer valet av erbjudande.
+* **Samlingar**: Delmängder av erbjudanden grupperade efter specifika villkor som angetts av en marknadsförare, till exempel en erbjudandekategori.
+* **Beslut**: En logik som bestämmer valet av erbjudande.
 * **Beslutsregel**: Begränsningar för erbjudanden för att ta reda på om en användare är berättigad.
 * **Berättigat erbjudande**: Ett erbjudande som matchar de förinställda begränsningarna och kan visas för en användare.
-* **Beslutshantering**: Systemet för att skapa och distribuera personaliserade erbjudanden med hjälp av logiska funktioner och beslutsregler.
-* **Reserverbjudanden**: Det standarderbjudande som visas när en användare inte är berättigad till erbjudanden i en samling.
-* **Erbjudande**: Ett marknadsföringsmeddelande med potentiella regler för behörighet som avgör vilka som tittar.
-* **Erbjudandebibliotek**: En central databas som hanterar erbjudanden, beslut och tillhörande regler.
-* **Personaliserade erbjudanden**: Anpassade marknadsföringsmeddelanden som är skräddarsydda baserat på behörighetskrav.
-* **Placeringar**: Den inställning eller det scenario där ett erbjudande visas för en användare.
-* **Prioritet**: Rankningsmått för erbjudanden med olika begränsningar som berättigande och begränsning.
+* **Beslutshantering**: Systemet för att skapa och distribuera personaliserade erbjudanden med hjälp av affärslogik och beslutsregler.
+* **Reserverbjudanden**: Standarderbjudandet som visas när en användare inte är berättigad till erbjudanden i en samling.
+* **Erbjudande**: Ett marknadsföringsmeddelande med potentiella berättiganderegler som avgör vilka som tittar.
+* **Erbjudandebibliotek**: En central databas som hanterar erbjudanden, beslut och associerade regler.
+* **Personaliserade erbjudanden**: Anpassade marknadsföringsmeddelanden som är anpassade efter behörighetskraven.
+* **Placeringar**: Inställningen eller scenariot där ett erbjudande visas för en användare.
+* **Prioritet**: Rankningsmått för erbjudanden som överväger olika begränsningar som berättigande och begränsning.
 * **Representationer**: Kanalspecifik information, till exempel plats eller språk, som guidar visningen av ett erbjudande.
 
 ## Use Case Overview - Loyalty Rewards
@@ -151,50 +151,50 @@ Innan du börjar skapa erbjudandena måste du definiera flera nödvändiga kompo
 
 ### Skapa en placering för lojalitetserbjudanden
 
-**Placeringar** är behållare som används för att visa upp erbjudandena. I det här exemplet skapar du en placering högst upp på Luma-webbplatsen.
+**Placeringar** är behållare som används för att visa erbjudandena. I det här exemplet skapar du en placering högst upp på Luma-webbplatsen.
 
-Listan över placeringar finns i **Komponenter** -menyn. Det finns filter som hjälper dig att hämta placeringar utifrån en viss kanal eller ett visst innehåll.
+Listan med placeringar finns på menyn **Komponenter**. Det finns filter som hjälper dig att hämta placeringar utifrån en viss kanal eller ett visst innehåll.
 
 ![Visa placeringar](assets/decisioning-placements-list.png)
 
 Så här skapar du placeringen:
 
-1. Klicka **Skapa placering**.
+1. Klicka på **Skapa placering**.
 
    ![Skapa placering](assets/decisioning-create-placement.png)
 
 1. Definiera placeringens egenskaper:
-   * **Namn**: Placeringens namn. Låt oss kalla exempelplaceringen *&#39;Homepage Banner&#39;*.
-   * **Kanaltyp**: Den kanal som placeringen används för. Låt oss använda *&#39;Webb&#39;* eftersom erbjudandena visas på Lumas webbplats.
-   * **Innehållstyp**: Den typ av innehåll som placeringen kan visa: Text, HTML, Bildlänk eller JSON. Du kan använda *HTML* för erbjudandet.
+   * **Namn**: Placeringens namn. Vi kallar exempelplaceringen *&#39;Homepage Banner&#39;*.
+   * **Kanaltyp**: Kanalen som placeringen används för. Låt oss använda *&#39;Webben&#39;*&#39; eftersom erbjudandena visas på Luma-webbplatsen.
+   * **Innehållstyp**: Den typ av innehåll som placeringen kan visa: Text, HTML, Bildlänk eller JSON. Du kan använda *&#39;HTML&#39;* för erbjudandet.
    * **Beskrivning**: En beskrivning av placeringen (valfritt).
 
    ![Lägg till information](assets/decisioning-placement-details.png)
 
-1. Klicka **Spara**.
+1. Klicka på **Spara**.
 1. När placeringen har skapats visas den i placeringslistan.
 1. Markera raden som innehåller din nya placering och notera placerings-ID, eftersom detta kan behövas för konfigurationen inom ditt beslutsomfång.
 
-   ![Se Placering-ID ](assets/decisioning-placement-id.png)
+   ![Se Placement-ID ](assets/decisioning-placement-id.png)
 
 ### Beslutsregler för lojalitetsstatus
 
-**Beslutsregler** ange villkoren för hur anbuden presenteras. I det här exemplet skapar du beslutsregler för olika erbjudanden beroende på en användares lojalitetsstatus.
+**Beslutsregler** anger villkoren för hur erbjudandena presenteras. I det här exemplet skapar du beslutsregler för olika erbjudanden beroende på en användares lojalitetsstatus.
 
-Listan över beslutsregler finns i **Komponenter** -menyn.
+Listan med beslutsregler finns på menyn **Komponenter** .
 
 Så här skapar du beslutsregler:
 
-1. Navigera till **Regler** och klicka på **Skapa regel**.
+1. Navigera till fliken **Regler** och klicka på **Skapa regel**.
 
    ![Skapa regeln](assets/decisioning-create-rule.png)
 
-1. Vi namnger den första regeln *Gold - regel för lojalitetsstatus*&#39;. Du kan använda XDM-fält för att definiera regeln. Adobe Experience Platform **Segment Builder** är ett intuitivt gränssnitt som du kan använda för att skapa regelvillkoren.
+1. Vi namnger den första regeln *Gold Loyalty Status Rule*. Du kan använda XDM-fält för att definiera regeln. Adobe Experience Platform **Segment Builder** är ett intuitivt gränssnitt som du kan använda för att skapa regelvillkoren.
 
    ![Definiera regeln](assets/decisioning-define-rule.png)
 
-1. Klicka **Spara** för att bekräfta regelvillkoret.
-1. Det nyligen sparade &#39;*Gold - regel för lojalitetsstatus* visas i **Regellista**. Markera den för att visa dess egenskaper.
+1. Klicka på **Spara** för att bekräfta regelvillkoret.
+1. Den nyligen sparade *Gold Loyalty-statusregeln* visas i **Regellistan**. Markera den för att visa dess egenskaper.
 
    ![Visa skapad regel](assets/decisioning-view-rules.png)
 
@@ -203,27 +203,27 @@ Så här skapar du beslutsregler:
 
 ### Samlingskvalificerare
 
-**Samlingskvalificerare** låter dig enkelt ordna och söka efter erbjudanden i erbjudandebiblioteket. I det här exemplet lägger du till samlingskvalificerare i Loyalty Rewards-erbjudandena för att förbättra organisationen för erbjudandet.
+Med **samlingskvalificerare** kan du enkelt ordna och söka efter erbjudanden i erbjudandebiblioteket. I det här exemplet lägger du till samlingskvalificerare i Loyalty Rewards-erbjudandena för att förbättra organisationen för erbjudandet.
 
-Listan över samlingskvalificerare finns i **Komponenter** -menyn.
+Listan med samlingskvalificerare finns på menyn **Komponenter**.
 
 Så här skapar du en kvalificerare för Loyalty Rewards-samlingen:
 
-1. Navigera till **Samlingskvalificerare** och klicka på **Skapa samlingskvalificerare**.
+1. Navigera till fliken **Samlingskvalificerare** och klicka på **Skapa samlingskvalificerare**.
 
    ![Skapa samlingskvalificerare](assets/decisioning-create-collection-qualifier.png)
 
-1. Vi namnger mängdkvalificeraren &#39;*Lojalitetsbelöningar*&#39;
+1. Vi namnger samlingskvalificeraren *Loyalty Rewards*
 
    ![Namnge samlingen](assets/decisioning-name-collection.png)
 
-1. Den nya samlingskvalificeraren ska nu visas i **Samlingskvalificerare** tab
+1. Den nya samlingskvalificeraren ska nu visas på fliken **Samlingskvalificerare**
 
 ## Erbjudanden
 
 Nu är det dags att skapa Loyalty Rewards-erbjudandena.
 
-Listan över erbjudanden finns på **Erbjudanden** -menyn.
+Listan med erbjudanden finns på menyn **Erbjudanden** .
 
 ![Visa erbjudandemenyn](assets/decisioning-offers-menu.png)
 
@@ -232,19 +232,19 @@ Listan över erbjudanden finns på **Erbjudanden** -menyn.
 
 Börja med att skapa personaliserade erbjudanden för de olika lojalitetsnivåerna i Luma.
 
-Skapa den första **erbjudande** gör du så här:
+Så här skapar du det första **erbjudandet**:
 
-1. Klicka **Skapa erbjudande** väljer **Personligt erbjudande**.
+1. Klicka på **Skapa erbjudande** och välj sedan **Personaliserat erbjudande**.
 
-1. Låt oss namnge det första erbjudandet *Luma Loyalty Tier - Gold*&#39;. Du måste ange ett start-/slutdatum och en sluttid för erbjudandet. Du bör även associera **samlingskvalificerare** &#39;*Lojalitetsbelöningar* till erbjudandet, så att ni bättre kan ordna i **Erbjudandebibliotek**. Efteråt klickar du på **Nästa**.
+1. Låt oss namnge det första erbjudandet *Luma Loyalty Tier - Gold*. Du måste ange ett start-/slutdatum och en sluttid för erbjudandet. Du bör även associera **samlingskvalificeraren** *Loyalty Rewards* med erbjudandet, så att du kan ordna materialet bättre i **Erbjudandebiblioteket**. Efteråt klickar du på **Nästa**.
 
    ![Lägg till erbjudandeinformation](assets/decisioning-add-offer-details.png)
 
-1. Nu måste du lägga till **representationer** för att definiera var erbjudandet ska visas. Låt oss välja **webbkanal**. Vi väljer också&#x200B;*Banderoll för hemsida*&#39; **placering** du redan har konfigurerat. Den markerade **placering** är av HTML-typ, så du kan lägga till HTML, JSON eller TEXT direkt i redigeraren för att skapa erbjudandet med **Egen** alternativknapp.
+1. Nu måste du lägga till **representationer** för att definiera var erbjudandet ska visas. Vi väljer **webbkanalen**. Vi väljer också *startsidesbanderollen* **placeringen** som du konfigurerade tidigare. Den markerade **placeringen** är av HTML-typ, så du kan lägga till HTML, JSON eller TEXT-innehåll direkt i redigeraren för att skapa erbjudandet med alternativknappen **Egen** .
 
-   ![Lägg till återgivningsinformation](assets/decisioning-add-representation-details.png)
+   ![Lägg till representationsinformation](assets/decisioning-add-representation-details.png)
 
-1. Redigera erbjudandeinnehållet direkt med **Uttrycksredigeraren**. Kom ihåg att du kan lägga till HTML, JSON eller TEXT i den här placeringen. Se till att du väljer rätt **läge** längst ned i redigeraren, beroende på innehållstypen. Du kan också träffas **validera** för att säkerställa att inga fel uppstår.
+1. Redigera erbjudandeinnehållet direkt med **uttrycksredigeraren**. Kom ihåg att du kan lägga till HTML, JSON eller TEXT i den här placeringen. Kontrollera att du har valt rätt **läge** längst ned i redigeraren, beroende på din innehållstyp. Du kan även trycka på **validate** för att kontrollera att det inte finns några fel.
 
    ![Lägg till erbjudande HTML](assets/decisioning-add-offer-html.png)
 
@@ -252,42 +252,42 @@ Skapa den första **erbjudande** gör du så här:
 
    ![Lägg till personlig anpassning av erbjudanden](assets/decisioning-add-offer-personalization.png)
 
-1. Lägg till begränsningar om du bara vill visa erbjudandet för profiler som är kvalificerade för *Gold - regel för lojalitetsstatus*&#39;.
+1. Lägg till begränsningar om du bara vill visa erbjudandet för profiler som är kvalificerade för *Gold Loyalty-statusregeln*.
 
    ![Lägg till regelbegränsning](assets/decisioning-add-rule-constraint.png)
 
-1. När du är klar med granskningen av erbjudandet klickar du **Slutför**. Välj **Spara och godkänn**.
+1. När du har granskat ditt erbjudande klickar du på **Slutför**. Välj **Spara och godkänn**.
 
 Skapa nu resten av erbjudandena för de olika Luma Loyalty-nivåerna
 
 ### Reserverbjudanden
 
-Du vill fortfarande erbjuda besökare som inte är Luma Loyalty till Lumas webbplats ett erbjudande. Om du vill göra det kan du konfigurera en **grunderbjudande** för kampanjen.
+Du vill fortfarande erbjuda besökare som inte är Luma Loyalty till Lumas webbplats ett erbjudande. För att göra detta kan du konfigurera ett **reserverbjudande** för kampanjen.
 
 Så här skapar du ett reserverbjudande:
 
-1. Klicka **Skapa erbjudande** väljer **Reserverbjudande**.
+1. Klicka på **Skapa erbjudande** och välj sedan **Reserverbjudande**.
    <!--
       ![ADD SCREENSHOT](#)
    -->
-1. Låt oss namnge reserverbjudandet *Lojalitet utanför Luma*&#39;. Du kan även associera tidigare skapade **samlingskvalificerare**, &#39;*Lojalitetsbelöningar* till reserverbjudandet för enkel organisation av erbjudanden.
+1. Låt oss namnge reserverbjudandet *Non-Luma Loyalty*. Du kan även associera den tidigare skapade **samlingskvalificeraren**, *Loyalty Rewards* till reserverbjudandet för att underlätta organisationen av erbjudandet.
    <!--
       ![ADD SCREENSHOT](#)
    -->
-1. Lägg till innehåll för reserverbjudandet i **Uttrycksredigeraren**. Kom ihåg att du kan lägga till HTML, JSON eller TEXT i den här placeringen. Se till att du väljer rätt **läge** längst ned i redigeraren, beroende på innehållstypen. Du kan också träffas **validera** för att säkerställa att inga fel uppstår.
+1. Lägg till reserverbjudandeinnehåll i **uttrycksredigeraren**. Kom ihåg att du kan lägga till HTML, JSON eller TEXT i den här placeringen. Kontrollera att du har valt rätt **läge** längst ned i redigeraren, beroende på din innehållstyp. Du kan även trycka på **validate** för att kontrollera att det inte finns några fel.
    <!--
       ![ADD SCREENSHOT](#)
    -->
-1. Om allt är korrekt konfigurerat trycker du på **Slutför** och sedan **Spara och godkänn**.
+1. Om allt är korrekt konfigurerat trycker du på **Slutför** och sedan på **Spara och godkänn**.
 <!--
    ![ADD SCREENSHOT](#)
 -->
 
 ## Beslut
 
-**Beslut** är behållare för erbjudanden som väljer det bästa erbjudandet som finns tillgängligt för en kund, beroende på målet.
+**Beslut** är behållare för erbjudanden som väljer det bästa erbjudandet som är tillgängligt för en kund, beroende på målet.
 
-Listan över beslut finns i **Beslut** -fliken i **Erbjudanden** -menyn.
+Listan över beslut finns på fliken **Beslut** på menyn **Erbjudanden** .
 <!--
    ![ADD SCREENSHOT](#)
 -->
@@ -298,48 +298,48 @@ Låt oss ta ett beslut om Luma Loyalty Rewards-fallet.
 
 Så här skapar du ett beslut:
 
-1. Klicka **Skapa beslut**.
+1. Klicka på **Skapa beslut**.
    <!--
       ![ADD SCREENSHOT](#)
    -->
-1. Låt oss ringa beslutet, &#39;*Lojalitetserbjudanden för december*&#39;. Erbjudandena gäller i en månad, så vi ska specificera det här.
+1. Låt oss ringa beslutet, *December Luma Loyalty Offers*. Erbjudandena gäller i en månad, så vi ska specificera det här.
    <!--
       ![ADD SCREENSHOT](#)
    -->
-1. Nu måste du definiera **beslutsomfattningar**. Välj först en placering. Du kan använda den tidigare skapade &#39;*Banderoll för hemsida*&#39;.
+1. Nu måste du definiera **beslutsomfattningarna**. Välj först en placering. Du kan använda den tidigare skapade *hemsidesbanderollen*.
    <!--
       ![ADD SCREENSHOT](#)
    -->
-1. Nästa steg du måste lägga till **utvärderingskriterier** för beslutets omfattning. Klicka **Lägg till** och välj den tidigare skapade *Lojalitetsbelöningar***collection, som innehåller alla lojalitetserbjudanden att ta hänsyn till.
+1. Därefter måste du lägga till **utvärderingskriterier** för beslutsomfånget. Klicka på **Lägg till** och välj den tidigare skapade samlingen *Loyalty Rewards* **som innehåller alla lojalitetserbjudanden som du vill ta hänsyn till.
    <!--
       ![ADD SCREENSHOT](#)
    -->
-1. Inom *Lojalitetsbelöningar*&#39; samling, du kan använda fältet för behörighet för att begränsa leveransen av erbjudandet till en delmängd av Luma-besökare. I det här fallet vill du dock att alla besökare ska få ett av erbjudandena. Kom ihåg att du konfigurerade en **grunderbjudande** för alla icke-lojalitetsbesökare. Ställ in behörigheten till Ingen.
+1. I samlingen *Loyalty Rewards* kan du använda berättigandefältet för att begränsa erbjudandeleveransen till en delmängd av Luma-besökare. I det här fallet vill du dock att alla besökare ska få ett av erbjudandena. Kom ihåg att du konfigurerade ett **reserverbjudande** för alla icke-lojalitetsbesökare. Ställ in behörigheten till Ingen.
    <!--
       ![ADD SCREENSHOT](#)
    -->
-1. Du kan även använda **rangordningsmetod** för att välja det bästa erbjudandet för varje Luma-besökare, om flera erbjudanden är berättigade till kombinationen av användare/placering. I det här fallet kan du använda **Prioritet** som använder de värden som definieras i erbjudandena för att ge det bästa erbjudandet.
+1. Du kan också använda fältet **rankningsmetod** för att välja det bästa erbjudandet för varje Luma-besökare, om flera erbjudanden är berättigade för kombinationen användare/placering. I det här fallet kan du använda metoden **Erbjudandeprioritet** som använder de värden som definieras i erbjudandena för att leverera det bästa erbjudandet.
    <!--
       ![ADD SCREENSHOT](#)
    -->
-1. Lägg till **grunderbjudande** på beslutet. Påminnelse om att reserverbjudandet är standarderbjudandet som visas för Luma-besökare om de inte faller inom någon av Lumas lojalitetsmålgrupper. Välj &#39;*Lojalitet utanför Luma*&#39; i listan över tillgängliga reserverbjudanden för &#39;*Banderoll för hemsida* placeringen.
+1. Lägg nu till **grunderbjudandet** i beslutet. Påminnelse om att reserverbjudandet är standarderbjudandet som visas för Luma-besökare om de inte faller inom någon av Lumas lojalitetsmålgrupper. Välj *Non-Luma Loyalty* i listan över tillgängliga reserverbjudanden för placeringen *Homepage Banner*.
    <!--
       ![ADD SCREENSHOT](#)
    -->
-1. Innan vi aktiverar beslutet ska vi granska beslutsomfånget, reserverbjudandet, förhandsgranska tillgängliga erbjudanden och uppskatta de kvalificerade profilerna. När allt ser bra ut kan du klicka **Slutför** och **Spara och aktivera**.
+1. Innan vi aktiverar beslutet ska vi granska beslutsomfånget, reserverbjudandet, förhandsgranska tillgängliga erbjudanden och uppskatta de kvalificerade profilerna. När allt ser bra ut kan du klicka på **Slutför** och **Spara och aktivera**.
 <!--
    ![ADD SCREENSHOT](#)
 -->
 
 ## Simuleringar
 
-Som en god praxis bör ni validera Luma Loyalty-beslutslogiken för att säkerställa att rätt erbjudanden levereras till rätt lojalitetsmålgrupper. Du kan göra valideringen med **testprofiler**. Det är också en bra idé att testa ändringar av erbjudanden via testprofiler innan nya erbjudandeversioner skickas till produktionen.
+Som en god praxis bör ni validera Luma Loyalty-beslutslogiken för att säkerställa att rätt erbjudanden levereras till rätt lojalitetsmålgrupper. Du kan göra den här valideringen med **testprofiler**. Det är också en bra idé att testa ändringar av erbjudanden via testprofiler innan nya erbjudandeversioner skickas till produktionen.
 
-Välj **Simuleringar** -fliken från **Erbjudanden** -menyn.
+Starta testningen genom att välja fliken **Simuleringar** på menyn **Erbjudanden** .
 
 ### Testa lojalitetserbjudanden
 
-1. Välj en testprofil som ska användas för simuleringen. Klicka **Hantera profil**. [Följ den här guiden för att skapa eller ange en ny testprofil för erbjudandetestning](https://experienceleague.adobe.com/en/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles#create-test-profiles-csv).
+1. Välj en testprofil som ska användas för simuleringen. Klicka på **Hantera profil**. [Följ den här guiden](https://experienceleague.adobe.com/en/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles#create-test-profiles-csv) om du vill skapa eller ange en ny testprofil för erbjudandetestning.
    <!--
       ![ADD SCREENSHOT](#)
    -->
@@ -347,19 +347,19 @@ Välj **Simuleringar** -fliken från **Erbjudanden** -menyn.
    <!--
       ![ADD SCREENSHOT](#)
    -->
-1. Välj det beslutsområde som ska testas. Välj **Lägg till beslutsomfattning**.
+1. Välj det beslutsområde som ska testas. Välj **Lägg till beslutsområde**.
    <!--
       ![ADD SCREENSHOT](#)
    -->
-1. Markera den tidigare skapade &#39;*Banderoll för hemsida* placeringen.
+1. Välj den tidigare skapade placeringen *Hemsidesbanderoll*.
    <!--
       ![ADD SCREENSHOT](#)
    -->
-1. De tillgängliga besluten visas, välj den tidigare skapade *Lojalitetserbjudanden för december*&#39; och klicka **Lägg till**.
+1. De tillgängliga besluten visas. Välj det tidigare skapade beslutet *Luma Loyalty Offers* i december och klicka sedan på **Lägg till**.
    <!--
       ![ADD SCREENSHOT](#)
    -->
-1. När du har valt en testprofil klickar du **Visa resultat**. Det bästa tillgängliga erbjudandet visas för den valda testprofilen för *Lojalitetserbjudanden för december* beslut.
+1. När du har valt en testprofil klickar du på **Visa resultat**. Det bästa tillgängliga erbjudandet visas för den valda testprofilen för beslutet *Luma Loyalty Offers* i december.
    <!--
       ![ADD SCREENSHOT](#)
    -->
@@ -367,7 +367,7 @@ Välj **Simuleringar** -fliken från **Erbjudanden** -menyn.
 
 ## Beslutsstyrningsvalidering med Adobe Experience Platform Debugger
 
-The **Adobe Experience Platform Debugger** för både Chrome och Firefox analyserar dina webbsidor för att identifiera problem med implementeringen av Adobe Experience Cloud lösningar.
+Tillägget **Adobe Experience Platform Debugger**, som är tillgängligt för både Chrome och Firefox, analyserar dina webbsidor för att identifiera problem i implementeringen av Adobe Experience Cloud lösningar.
 
 Du kan använda felsökaren på Luma-webbplatsen för att validera beslutslogiken i produktionen. Valideringen är bra att använda när Loyalty Rewards-användningsexemplet är öppet och körs för att säkerställa att allt är korrekt konfigurerat.
 
@@ -379,23 +379,23 @@ Så här börjar du valideringen med felsökaren:
    <!--
       ![ADD SCREENSHOT](#)
    -->
-1. Öppna **Adobe Experience Platform debugger**.
+1. Öppna **Adobe Experience Platform-felsökaren** när du är på webbsidan.
    <!--
       ![ADD SCREENSHOT](#)
    -->
-1. Navigera till **Sammanfattning**. Verifiera att **Dataström-ID** matchar **datastream** in **Adobe datainsamling** som du har aktiverat Offer decisioning för.
+1. Navigera till **Sammanfattning**. Kontrollera att **DataStream ID** matchar **datastream** i **Adobe datainsamling** som du har aktiverat Offer decisioning för.
    <!--
       ![ADD SCREENSHOT](#)
    -->
-1. Under **Lösningar** navigera till **Experience Platform Web SDK**.
+1. Under **Lösningar** navigerar du till **Experience Platform Web SDK**.
    <!--
       ![ADD SCREENSHOT](#)
    -->
-1. I **Konfiguration** flik, växla på **Aktivera felsökning**. Detta aktiverar loggning för sessionen i en **Adobe Experience Platform Assurance** session.
+1. På fliken **Konfiguration** växlar du till **Aktivera felsökning**. Detta aktiverar loggning för sessionen i en **Adobe Experience Platform Assurance**-session.
    <!--
       ![ADD SCREENSHOT](#)
    -->
-1. Du kan sedan logga in på webbplatsen med olika Luma-förmånskonton och använda felsökaren för att validera förfrågningar som skickas till **Adobe Experience Platform Edge-nätverk**. Alla dessa förfrågningar ska registreras i **Säkerhet** för loggspårning.
+1. Du kan sedan logga in på webbplatsen med olika Luma-förmånskonton och använda felsökaren för att validera begäranden som skickas till **Adobe Experience Platform Edge-nätverket**. Alla dessa förfrågningar ska hämtas i **Assurance** för loggspårning.
 <!--
    ![ADD SCREENSHOT](#)
 -->
@@ -404,4 +404,4 @@ Så här börjar du valideringen med felsökaren:
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

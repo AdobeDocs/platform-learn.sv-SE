@@ -2,22 +2,23 @@
 title: CSC Bootcamp - Annat förarbete
 description: CSC Bootcamp - Annat förarbete
 doc-type: multipage-overview
-source-git-commit: 989e4e2add1d45571462eccaeebcbe66a77291db
+exl-id: 76546141-68d5-4f09-b44a-e06cc08bbaa7
+source-git-commit: 143da6340b932563a3309bb46c1c7091e0ab2ee2
 workflow-type: tm+mt
-source-wordcount: '478'
+source-wordcount: '489'
 ht-degree: 0%
 
 ---
 
 # Annat förarbete
 
-## Välj varumärkesresurser
+## Select Brand Assets
 
 Enligt beskrivningen i den kreativa översikten finns det vissa resurser som behövs för att lansera vår kampanj på ett effektivt sätt. Dessa varumärkesresurser kommer att läggas till i kampanjen i Workfront så att vi har tillgång till dem centralt.
 
 - Expandera aktiviteten 1,&quot;INLEDANDE UPPGIFTER&quot;, och öppna sedan aktiviteten&quot;Välj 5 varumärkesresurser (framsida, baksida, ...)&quot; genom att klicka på den.
 
-![öppna resurser, uppgift](./images/wf-open-assets-task.png)
+![Öppna resursuppgift](./images/wf-open-assets-task.png)
 
 - Klicka på &#39;Dokument&#39; och sedan &#39;Lägg till nytt:
 
@@ -25,22 +26,22 @@ Enligt beskrivningen i den kreativa översikten finns det vissa resurser som beh
 
 - Välj Från Experience Manager. På så sätt kan vi välja varumärkesresurser som redan finns på AEM Assets:
 
-![från Experience Manager](./images/wf-from-aem.png)
+![från Experience-Manager](./images/wf-from-aem.png)
 
-- Navigera till följande sökväg när AEM mapphierarkin visas: experience-manager > Adobe Assets > Bike shots Select 5 assets and then click on &#39;Link&#39;.
+- När mapphierarkin AEM visas går du till följande sökväg: experience-manager > Adobe Cycle Assets > Bike shots Select 5 assets och klickar sedan på Link.
 
 ![markerade resurser](./images/selected-assets.png)
 
 - Nu har vi vårt varumärke på vår uppgift. Det innebär att vi kan ställa in uppgifter 2 som 100 % slutförda:
 
-![slutföra uppgift](./images/wf-task-2-complete.png)
+![slutförd uppgift](./images/wf-task-2-complete.png)
 
 
 ## Demo av Adobe Commerce
 
 Adobe Commerce är en av många produkter i Adobe Experience Cloud som kan hjälpa er att leverera de bästa digitala upplevelserna till era kunder. Men det fanns helt enkelt för lite tid för att göra allt tillsammans under bootlägret.
 
-I den här videon lär du dig Adobe Commerce och visar den produkt vi har skapat så att du kan använda den i Bootlägret. I verkligheten skulle du överföra de tidigare valda varumärkestillgångarna till Adobe Commerce till produktkonfigurationen.
+I den här videon lär du dig Adobe Commerce och visar den produkt vi har skapat så att du kan använda den i Bootlägret. I verkligheten skulle du ladda upp de tidigare valda varumärkesresurserna till Adobe Commerce till produktkonfigurationen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418945?quality=12&learn=on)
 
@@ -48,11 +49,11 @@ När uppgiften är klar kan du markera uppgift 3 som 100 % slutförd i Workfront
 
 ## Flexibla kampanjer är en förutsättning
 
-När vi gick igenom vår arbetsplan lade vi märke till ett litet problem: vår Product Manager (den begärande) har gjort en uppdatering som han har glömt att begära för en produktstartbanderoll.  Vi ska lägga till detta i vår projektplan.
+När vi gick igenom vår arbetsplan märkte vi ett litet problem: vår Product Manager (den begärande) har lagt till en uppdatering som han glömde begära för en&quot;Product Homepage Banner&quot;.  Vi ska lägga till detta i vår projektplan.
 
 - Gå till uppgiftslistan och lägg till aktiviteten&quot;Skapa produktstartsidebanderoll&quot; precis under åtgärd 4&quot;PRODUKTION&quot;. Det gör du genom att välja aktiviteten Förbered innehåll för mobilappar och klicka på ikonen Lägg till uppgift ovan:
 
-![lägg till uppgift ovan](./images/wf-add-task-above.png)
+![lägg till aktivitet ovan](./images/wf-add-task-above.png)
 
 - Ge den tillagda aktiviteten ett beskrivande namn, t.ex.&quot;Skapa produktstartsidesbanderoll&quot;.
 
@@ -77,7 +78,7 @@ När vi gick igenom vår arbetsplan lade vi märke till ett litet problem: vår 
 Nu har vi en kampanj som är färdig och planerad, vilket innebär att vi kan börja med produktionen och leveransen av vår kampanj!
 
 
-Nästa steg: [Fas 2 - Produktion: Skapa produktstartsidans banner](../production/banner.md)
+Nästa steg: [Fas 2 - Produktion: Skapa produktstartsidbanderoll](../production/banner.md)
 
 [Gå tillbaka till fas 1 - Planering: Planering](./planning.md)
 

@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Aktivera profiler och segment till ett mål
 
-Lär dig hur du aktiverar målgruppssegment för destinationer i Real-Time CDP.  Starta den här arbetsströmmen i antingen mål- eller segmentgränssnittet. Mer information finns på [dokumentation](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activation-overview.html).
+Lär dig hur du aktiverar målgruppssegment för destinationer i Real-Time CDP.  Starta den här arbetsströmmen i antingen mål- eller segmentgränssnittet. Mer information finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activation-overview.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/336046/?learn=on)
 

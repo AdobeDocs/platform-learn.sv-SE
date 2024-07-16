@@ -1,20 +1,21 @@
 ---
 title: Återge VEC-aktiviteter | Migrera mål från at.js 2.x till Web SDK
 description: Lär dig hur du hämtar och använder funktioner för visuell upplevelsedisposition med en Web SDK-implementering av Adobe Target.
-source-git-commit: ca2fade972a2f7f84134ee4ef9c0f24c5ab1c5c6
+exl-id: bbbbfada-e236-44de-a7bf-5c63ff840db4
+source-git-commit: 4690d41f92c83fe17eda588538d397ae1fa28af0
 workflow-type: tm+mt
-source-wordcount: '830'
+source-wordcount: '755'
 ht-degree: 0%
 
 ---
 
 # Återge VEC-aktiviteter (Adobe Target Visual Experience Composer)
 
-Målaktiviteter ställs in med Visual Experience Composer (VEC) eller den formulärbaserade dispositionen. Platform Web SDK kan hämta och använda VEC-baserade aktiviteter på sidan precis som at.js. För den här delen av migreringen kommer du att:
+Målaktiviteter ställs in med Visual Experience Composer (VEC) eller den formulärbaserade dispositionen. Platform Web SDK kan hämta och använda VEC-baserade aktiviteter på sidan precis som at.js. För den här delen av migreringen:
 
 * Installera webbläsartillägget Visual Editing Helper
-* Kör en `sendEvent` ringa till Platform Web SDK för att begära aktiviteter.
-* Uppdatera alla referenser från implementeringen av at.js som använder `getOffers()` köra ett mål `pageLoad` begäran.
+* Kör ett `sendEvent`-anrop med Platform Web SDK för att begära aktiviteter.
+* Uppdatera alla referenser från din at.js-implementering som använder `getOffers()` för att köra en Target `pageLoad`-begäran.
 
 ## Webbläsartillägg för hjälp för visuell redigering
 
@@ -24,24 +25,24 @@ Webbläsartillägget Visuell redigeringshjälp fungerar med webbplatser som anv�
 
 ### Hämta och installera hjälpen för visuell redigering
 
-1. Navigera till [Webbläsartillägget Adobe Experience Cloud Visual Editing Helper i Chrome Web Store](https://chrome.google.com/webstore/detail/adobe-experience-cloud-vi/kgmjjkfjacffaebgpkpcllakjifppnca).
-1. Klicka på Lägg till i **Krom** > **Lägg till tillägg**.
+1. Navigera till webbläsartillägget [Adobe Experience Cloud Visual Editing Helper i Chrome Web Store](https://chrome.google.com/webstore/detail/adobe-experience-cloud-vi/kgmjjkfjacffaebgpkpcllakjifppnca).
+1. Klicka på Lägg till i **Chrome** > **Lägg till tillägg**.
 1. Öppna VEC i Target.
-1. Om du vill använda tillägget klickar du på ikonen för tillägget Visuell redigeringshjälp ![Ikon för tillägg för visuell redigering](assets/VEC-Helper.png){zoomable=&quot;yes&quot;} i webbläsarens verktygsfält i Chrome när du är i VEC- eller QA-läge.
+1. Om du vill använda tillägget klickar du på ikonen för tillägget för visuell redigeringshjälp i webbläsaren ![Visual Editing Extension ](assets/VEC-Helper.png){zoomable="yes"} i Chrome webbläsares verktygsfält när du är i VEC- eller QA-läge.
 
 Hjälpprogrammet för visuell redigering aktiveras automatiskt när en webbplats öppnas i Target VEC för att underlätta redigeringen. Tillägget har inga villkorsinställningar. Tillägget hanterar alla inställningar automatiskt, inklusive inställningarna för cookies för samma plats.
 
-Mer information om [Hjälptillägg för visuell redigering](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension.html) och [felsöka Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/troubleshoot-composer.html).
+Mer information om tillägget [Hjälp för visuell redigering](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension.html) och [felsökning av Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/troubleshoot-composer.html) finns i den dedikerade dokumentationen.
 
 >[!IMPORTANT]
 >
->Den nya [Hjälptillägg för visuell redigering](https://chrome.google.com/webstore/detail/adobe-experience-cloud-vi/kgmjjkfjacffaebgpkpcllakjifppnca) ersätter föregående [Webbläsartillägg för målets VEC-hjälp](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html). Om det äldre VEC Helper-tillägget är installerat bör det tas bort eller inaktiveras innan tillägget Visuell redigeringshjälp används.
+>Det nya [hjälptillägget ](https://chrome.google.com/webstore/detail/adobe-experience-cloud-vi/kgmjjkfjacffaebgpkpcllakjifppnca) för visuell redigering ersätter det tidigare [målwebbläsartillägget för VEC-hjälp](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html). Om det äldre VEC Helper-tillägget är installerat bör det tas bort eller inaktiveras innan tillägget Visuell redigeringshjälp används.
 
 ## Begär och tillämpa innehåll automatiskt
 
 När Platform Web SDK har konfigurerats på sidan kan du begära innehåll från Target. Till skillnad från at.js, som kan konfigureras att automatiskt begära innehåll när biblioteket läses in, kräver Platform Web SDK att du kör ett kommando explicit.
 
-Om din at.js-implementering har `pageLoadEnabled` inställning inställd på `true` som möjliggör automatisk återgivning av VEC-baserade aktiviteter, så skulle du utföra följande `sendEvent` med Platform Web SDK:
+Om din at.js-implementering har inställningen `pageLoadEnabled` inställd på `true` som aktiverar automatisk återgivning av VEC-baserade aktiviteter kör du följande `sendEvent`-kommando med Platform Web SDK:
 
 >[!BEGINTABS]
 
@@ -55,9 +56,9 @@ alloy("sendEvent", {
 
 >[!TAB Taggar]
 
-I -taggar använder du [!UICONTROL Skicka händelse] åtgärdstyp med [!UICONTROL Återge beslut om visuell personalisering] valt alternativ:
+Använd åtgärdstypen [!UICONTROL Send event] med alternativet [!UICONTROL Render visual personalization decisions] markerat i taggar:
 
-![Skicka en händelse med Render-beslut för visuell personalisering markerade i taggar](assets/vec-sendEvent-renderTrue.png){zoomable=&quot;yes&quot;}
+![Skicka en händelse med valda beslut om visuell återgivning för återgivning i taggar](assets/vec-sendEvent-renderTrue.png){zoomable="yes"}
 
 >[!ENDTABS]
 
@@ -69,9 +70,9 @@ When the Platform Web SDK renders an activity to the page with `renderDecisions`
 
 ## Begär och tillämpa innehåll på begäran
 
-Vissa Target-implementeringar kräver viss anpassad bearbetning av VEC-erbjudanden innan de kan användas på sidan. Eller så begär de flera platser i ett enda samtal. I en at.js-implementering kan detta göras genom att ställa in `pageLoadEnabled` till `false` och använder `getOffers()` funktion för att köra en `pageLoad` begäran.
+Vissa Target-implementeringar kräver viss anpassad bearbetning av VEC-erbjudanden innan de kan användas på sidan. Eller så begär de flera platser i ett enda samtal. I en at.js-implementering kan detta göras genom att ställa in `pageLoadEnabled` på `false` och använda funktionen `getOffers()` för att köra en `pageLoad`-begäran.
 
-+++ at.js-exempel med `getOffers()` och `applyOffers()` återge VEC-baserade aktiviteter manuellt
++++ Exempel på at.js som använder `getOffers()` och `applyOffers()` för att manuellt återge VEC-baserade aktiviteter
 
 ```JavaScript
 adobe.target.getOffers({
@@ -86,13 +87,13 @@ then(response => adobe.target.applyOffers({ response: response }));
 
 +++
 
-Platform Web SDK har ingen specifik `pageLoad` -händelse. Alla förfrågningar om Target-innehåll styrs med `decisionScopes` med `sendEvent` -kommando. The `__view__` syftet med `pageLoad` begäran.
+Plattformens Web SDK har ingen specifik `pageLoad`-händelse. Alla förfrågningar om Target-innehåll styrs med alternativet `decisionScopes` med kommandot `sendEvent`. Omfånget `__view__` tjänar syftet med begäran `pageLoad`.
 
-+++ motsvarande Platform Web SDK `sendEvent` metod:
++++ En motsvarande Platform Web SDK `sendEvent`-metod:
 
-1. Kör en `sendEvent` som innehåller `__view__` beslutsområde
-1. Använd det returnerade innehållet på sidan med `applyPropositions` kommando
-1. Kör en `sendEvent` med `decisioning.propositionDisplay` händelsetyp och förslagsinformation för att öka ett intryck
+1. Kör ett `sendEvent`-kommando som innehåller beslutsområdet `__view__`
+1. Använd det returnerade innehållet på sidan med kommandot `applyPropositions`
+1. Kör ett `sendEvent`-kommando med händelsetypen `decisioning.propositionDisplay` och förslagsinformationen för att öka ett intryck
 
 ```Javascript
 alloy("sendEvent", {
@@ -127,9 +128,9 @@ alloy("sendEvent", {
 
 >[!NOTE]
 >
->Det går att [återge ändringar manuellt](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html#manually-rendering-content) i Visual Experience Composer. Manuell återgivning av VEC-baserade ändringar är inte vanligt. Kontrollera om din at.js-implementering använder `getOffers()` funktion för att manuellt köra ett mål `pageLoad` begära utan att använda `applyOffers()` för att använda innehållet på sidan.
+>Det går att [manuellt återge ändringar som gjorts ](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html#manually-rendering-content) i Visual Experience Composer. Manuell återgivning av VEC-baserade ändringar är inte vanligt. Kontrollera om din at.js-implementering använder funktionen `getOffers()` för att manuellt köra en `pageLoad` Target-begäran utan att använda `applyOffers()` för att tillämpa innehållet på sidan.
 
-Med Platform Web SDK får utvecklarna stor flexibilitet när det gäller att begära och återge innehåll. Se [dedikerad dokumentation om återgivning av personaliserat innehåll](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html) för ytterligare alternativ och information.
+Med Platform Web SDK får utvecklarna stor flexibilitet när det gäller att begära och återge innehåll. Mer information och mer information finns i [dedikerad dokumentation om återgivning av anpassat innehåll](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html).
 
 ## Implementeringsexempel
 
@@ -139,7 +140,7 @@ Implementeringen av grundplattformen Web SDK är nu klar.
 
 >[!TAB JavaScript]
 
-JavaScript-exempel med automatisk målinnehållsrendering:
+JavaScript-exempel med automatisk innehållsrendering i Target:
 
 ```HTML
 <!doctype html>
@@ -248,18 +249,18 @@ Exempelsida för taggar med automatisk återgivning av målinnehåll:
 
 Lägg till Adobe Experience Platform Web SDK-tillägget i taggar:
 
-![Lägg till Adobe Experience Platform Web SDK-tillägget](assets/library-tags-addExtension.png){zoomable=&quot;yes&quot;}
+![Lägg till Adobe Experience Platform Web SDK-tillägget](assets/library-tags-addExtension.png){zoomable="yes"}
 
 Lägg till önskade konfigurationer:
-![konfigurera migreringsalternativ för Web SDK-taggtillägg](assets/tags-config-migration.png){zoomable=&quot;yes&quot;}
+![konfigurerar migreringsalternativen för Web SDK-taggtillägg](assets/tags-config-migration.png){zoomable="yes"}
 
-Skapa en regel med en [!UICONTROL Skicka händelse] åtgärd och [!UICONTROL Återge beslut om visuell personalisering] markerat:
-![Skicka en händelse med återgivningsanpassningar markerade i taggar](assets/vec-sendEvent-renderTrue.png){zoomable=&quot;yes&quot;}
+Skapa en regel med en [!UICONTROL Send event]-åtgärd och [!UICONTROL Render visual personalization decisions] vald:
+![Skicka en händelse med återgivningsanpassningar markerade i taggar ](assets/vec-sendEvent-renderTrue.png){zoomable="yes"}
 
 >[!ENDTABS]
 
-Lär dig hur du begär och [återge formulärbaserade målaktiviteter](render-form-based-activities.md).
+Läs sedan om hur du begär och [återger formulärbaserade målaktiviteter](render-form-based-activities.md).
 
 >[!NOTE]
 >
->Vi vill hjälpa dig att lyckas med målmigreringen från at.js till Web SDK. Om du stöter på problem med din migrering eller känner att det saknas viktig information i den här guiden ber vi dig att meddela oss genom att publicera i [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-target-from-at-js-to-web-sdk/m-p/575587#M463).
+>Vi vill hjälpa dig att lyckas med målmigreringen från at.js till Web SDK. Om du stöter på problem med din migrering eller om du känner att det saknas viktig information i den här guiden kan du meddela oss genom att publicera [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-target-from-at-js-to-web-sdk/m-p/575587#M463).

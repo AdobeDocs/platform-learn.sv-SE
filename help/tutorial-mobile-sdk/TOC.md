@@ -1,7 +1,7 @@
 ---
-user-guide-title: Implementera självstudiekursen om Experience Cloud i mobilappar
-breadcrumb-title: Självstudiekurs om mobilappar
-user-guide-description: Lär dig hur du implementerar Adobe Experience Cloud-program i mobilappar med Experience Platform Mobile SDK.
+user-guide-title: Implementera självstudiekursen om Experience Cloud i mobila appar
+breadcrumb-title: Självstudiekurs om mobila appar
+user-guide-description: Lär dig hur du implementerar Adobe Experience Cloud-program i mobila appar med Experience Platform Mobile SDK.
 solution: Data Collection
 feature: Mobile SDK
 role: Developer
@@ -11,14 +11,14 @@ recommendations: noDisplay,noCatalog
 source-git-commit: 6a6d8dcceead2421c79a0727e18bec97dfe3d9cb
 workflow-type: tm+mt
 source-wordcount: '78'
-ht-degree: 11%
+ht-degree: 55%
 
 ---
 
 
 # Implementera Experience Cloud i mobilappar {#implement-mobile-sdk}
 
-+ [Översikt över självstudiekurser](overview.md)
++ [Översikt över självstudiekursen](overview.md)
 + Inledande konfiguration {#initial-configuration}
    + [Skapa ett schema](create-schema.md)
    + [Skapa ett datastream](create-datastream.md)

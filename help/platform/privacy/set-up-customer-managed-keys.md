@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # Konfigurera kundhanterade nycklar (CMK)
 
-Hantera kryptering av data i vila med dina egna krypteringsnycklar. Mer information finns på [kundhanterad dokumentation om nycklar](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/customer-managed-keys.html).
+Hantera kryptering av data i vila med dina egna krypteringsnycklar. Mer information finns i [dokumentationen för kundhanterade nycklar](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/customer-managed-keys.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3410673/?learn=on)
 

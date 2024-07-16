@@ -2,9 +2,10 @@
 title: Experience Makers Bootcamp - Brasilien
 description: Startpunkt för deltagarna i Experience Makers Bootcamp
 doc-type: multipage-overview
-source-git-commit: 5d824244766135cd4998feab48be7f6a69c42a70
+exl-id: 64effc7f-6581-49a5-a3ab-4da17bc9bd08
+source-git-commit: 4690d41f92c83fe17eda588538d397ae1fa28af0
 workflow-type: tm+mt
-source-wordcount: '777'
+source-wordcount: '790'
 ht-degree: 0%
 
 ---
@@ -25,21 +26,21 @@ A personalização em escala começa com a compreensão do que pode ser aprimora
 
 ### Dia 1
 
-9.00 - 10.00: Café da manhă &amp; Networking
+9.00-10.00: Café da manhă &amp; Networking
 
-10.00-10.30: Boas-vindas &#x200B;
+10.00 - 10.30: Boas-vindas &#x200B;
 
-10.30-11.00: Jornada do cliente: &quot;Art of the possible &quot; (sessão em inglês) &#x200B;
+10.30 - 11.00: Jornada do cliente: &quot;Art of the possible &quot; (sessão em inglês) &#x200B;
 
 11.00 - 12.00: Personalização exponencial vs. Ecossistemas em silos (sessão em inglês) &#x200B;
 
-12.00-13.30: Almoço e-&#x200B;
+12.00 - 13.30: Almoço e-nätverks-&#x200B;
 
 13.30-14.30: Arquitetura de solução (sessão em inglês) &#x200B;
 
-14.30-16.00: Gör det själv: Aquisição &#x200B;
+14.30 - 16.00: Gör det själv: Aquisição &#x200B;
 
-16.00-16.15: Bryttid
+16.00 - 16.15: Bryttid
 
 16.15 - 18.00: Gör det själv: Cadastro &amp; onboarding &#x200B;
 
@@ -48,17 +49,17 @@ A personalização em escala começa com a compreensão do que pode ser aprimora
 
 09.00-10.00: Café da manhă &amp; Networking
 
-10.00 - 10.45: Introdução: janda do cliente, estrutura de times e backlog
+10.00 - 10.45: Introdução: husnada do cliente, estrutura de times e backlog
 
-10.45 - 12.00: Gör det själv: Consoliando on online e o offline
+10.45 - 12.00: Gör det själv: Consoliando o online e eller offline
 
-12.00-13.40: Almoço e-&#x200B;
+12.00 - 13.40: Almoço e-nätverks-&#x200B;
 
-13.45 - 14.45: Gör det själv: Análise de jnadas - fidelizando e retendo clientes
+13.45 - 14.45: Gör det själv: Análise de husnadas - fidelizando e retendo clientes
 
 14.45 - 16.00: Conclusões e próximos passos
 
-16.00 - 19.00: Användarflöde 4: Nätverksbyggande och lyckad timme
+16.00 - 19.00: Användarflöde 4: Nätverk och en lyckad timme
 
 
 ## Pré-reksitos
@@ -101,10 +102,10 @@ Neste User Flow, você irá compreender todos os essários para Implementar caso
 
 Neste User Flow, você irá compreender todos os elementos necessary ários para Implementar casos de uso de cadastro e onboarding usando a Real-Time CDP e o Adobe Journey Optimizer.
 
-[3. Kombinação do físico e do digital ](./uc/uc3/uc3.md)
+[3. Kombinação do físico e do digital](./uc/uc3/uc3.md)
 
 Nesse User Flow, você irá personalizar a experience ência do cliente nos canais online e offline de maneira consistent, usando a Real-Time CDP e o Adobe Journey Optimizer.
 
-[4. Kundreseanalys](./uc/uc4/uc4.md)
+[4. Analys av kundresan](./uc/uc4/uc4.md)
 
 Neste User Flow, você irá se familjarizar com o Customer Journey Analytics e obter informações sobre como os clientes estão evoluindo de um canal para outro, do online para o offline, para o call center e muito mais.

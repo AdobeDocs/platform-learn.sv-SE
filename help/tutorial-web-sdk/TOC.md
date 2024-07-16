@@ -10,7 +10,7 @@ recommendations: noDisplay,noCatalog
 source-git-commit: 4ed0c204613e283bbd9f51f4225215068284ac69
 workflow-type: tm+mt
 source-wordcount: '95'
-ht-degree: 15%
+ht-degree: 13%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 15%
    + [Konfigurera ett identitetsnamnutrymme](configure-identities.md)
    + [Konfigurera ett datastream](configure-datastream.md)
 
-+ Märkordskonfiguration {#tags-configuration}
++ Tagskonfiguration {#tags-configuration}
    + [Installera SDK-tillägg för webben](install-web-sdk.md)
    + [Skapa dataelement](create-data-elements.md)
    + [Skapa identiteter](create-identities.md)
@@ -42,7 +42,7 @@ ht-degree: 15%
 + Hantering av samtycke {#consent-management}
    + [Ställ in samtycke](setup-consent.md)
 
-+ Vidarebefordran av händelser {#event-forwarding}
++ Händelsevidarebefordran {#event-forwarding}
    + [Konfigurera händelsevidarebefordran](setup-event-forwarding.md)
 
 + [Slutsats](conclusion.md)

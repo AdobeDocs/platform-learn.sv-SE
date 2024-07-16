@@ -2,16 +2,17 @@
 title: CSC-startläger - Insikter för en projektledare
 description: CSC-startläger - Insikter för en projektledare
 doc-type: multipage-overview
-source-git-commit: 989e4e2add1d45571462eccaeebcbe66a77291db
+exl-id: f9f552f5-b065-4246-a317-297835ea8a36
+source-git-commit: 143da6340b932563a3309bb46c1c7091e0ab2ee2
 workflow-type: tm+mt
-source-wordcount: '281'
+source-wordcount: '286'
 ht-degree: 0%
 
 ---
 
 # Insikter för en projektledare
 
-## Interaktiva projektförloppsrapporter
+## Interaktiva projektstatusrapporter
 
 På PIN-koden klickar du på&quot;Mobil appmedvetenhet&quot; och sedan på&quot;Metrics&quot;:
 
@@ -33,11 +34,11 @@ På PIN-kodsraden klickar du på Projekt:
 
 Klicka på Campaign Status i den vänstra kolumnen:
 
-Den främsta delen ger er insikter om en enda kampanj om 1/ Campaign **planerad kontra faktisk** tillbringade timmar och 2/ **Kampanjvillkor** för varje kanal:
+Den översta delen ger er insikter om 1 enskild kampanj om 1/ Campaign **planerad kontra faktisk** vistelse i timmar och 2/ **Kampanjvillkor** för varje kanal:
 
 ![Kampanjinsikter](./images/campaign-insights.png)
 
-Slutdelen ger er insikter om **Kampanjslutprodukter** status:
+Den nedre delen ger dig insikter om statusen **Kampanjslutprodukter**:
 
 ![kampanjprodukter](./images/deliverables-status.png)
 
@@ -47,11 +48,11 @@ Klicka fortfarande på Övervakning i den vänstra kolumnen
 
 ![klickövervakning](./images/monitoring.png)
 
-Den viktigaste delen ger er insikter om statusen för en grupp projekt, både från **Status för aktiviteter** synvinkel och från **Projektvillkor** synvinkel:
+Den övre delen ger dig insikter om statusen för en grupp med projekt, både från **aktivitetsstatus** -vyn och från **projektvillkoret**:
 
 ![översikt](./images/group-status.png)
 
-Den nedre delen visar alla **vid riskgodkännanden** och behöver jaga:
+I den nedre delen visas alla **som löper risk att godkännas** och som behöver jagas:
 
 ![Identifierade risker](./images/risk-approvals.png)
 
@@ -61,15 +62,15 @@ Klicka på CONTENT DASHBOARD i den vänstra kolumnen:
 
 ![klicka på innehållspanelen](./images/content-dashboard.png)
 
-Den främsta delen ger goda insikter om alla **dokumentets godkännande** status (är den godkänd, hur många versioner vi behövde, osv.)
+Den översta delen ger god insikt i hur många versioner av ditt **dokument som har godkänts** (är det godkänt, hur många versioner vi behövde, osv.)
 
-![godkännandebevis](./images/proof-of-approval.png)
+![bevis på godkännanden](./images/proof-of-approval.png)
 
-Den nedersta delen är en **Granska korrektur för godkännande** som ger en annan synvinkel till de styrkta godkännandestatusarna:
+Den nedre delen är en **korrekturgranskning av godkännande** som ger en annan synvinkel för korrekturens godkännandestatus:
 
-![korrektur för granskning](./images/poa-review.png)
+![korrektur av granskningar](./images/poa-review.png)
 
-Nästa steg: [Fas 4 - Insikter för en marknadschef](./marketing-manager.md)
+Nästa steg: [Fas 4 - Insikter för en marknadsföringsansvarig](./marketing-manager.md)
 
 [Gå tillbaka till fas 4 - Insikter: Översikt](./overview.md)
 

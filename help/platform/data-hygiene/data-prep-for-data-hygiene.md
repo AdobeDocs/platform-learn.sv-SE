@@ -8,13 +8,13 @@ doc-type: Feature Video
 duration: 337
 last-substantial-update: 2024-05-30T00:00:00Z
 jira: KT-12371
-source-git-commit: bad48d8b5845aa2812630a07cada2d465b729325
+exl-id: 7c791f8c-469d-4d90-a47e-acd2eb3a9bb3
+source-git-commit: de8e5d46b629a086c3d1912f6e2d3c0f5f037db3
 workflow-type: tm+mt
 source-wordcount: '68'
 ht-degree: 0%
 
 ---
-
 
 # Dataförberedelse för datahygien
 

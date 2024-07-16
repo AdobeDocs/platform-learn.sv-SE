@@ -2,21 +2,22 @@
 title: CSC Bootcamp - Sammanfattning
 description: CSC Bootcamp - Sammanfattning
 doc-type: multipage-overview
-source-git-commit: 989e4e2add1d45571462eccaeebcbe66a77291db
+exl-id: c1145651-1b8a-4634-87b3-db84ceaa731e
+source-git-commit: 143da6340b932563a3309bb46c1c7091e0ab2ee2
 workflow-type: tm+mt
-source-wordcount: '214'
+source-wordcount: '215'
 ht-degree: 0%
 
 ---
 
 # Slutsats
 
-Som ni har märkt under det här bootlägret handlar innehållsleveranskedjan inte om produkter, utan snarare om samverkan mellan produkter. Denna synergi leder till många fördelar, till exempel:
+Som ni har märkt under det här bootlägret handlar innehållsleveranskedjan inte om produkter, utan snarare om synergieffekter mellan produkter. Denna synergi ger till exempel många fördelar:
 
 - **Utgiftsrationalisering**
    - Lägg in material internt när det går till lägre kostnad
    - Konsolidera och fördela utgifterna effektivare mellan olika myndigheter
-- **Återanvändning av resurser**
+- **Återanvänd resurs**
    - Eliminera slöseri med att återskapa befintliga resurser genom enhetlig åtkomst
    - Öka användningen och få ut produkterna på marknaden snabbare med helhetsförbättrad global sökning
 - **Minska tiden för skapande**
@@ -25,13 +26,13 @@ Som ni har märkt under det här bootlägret handlar innehållsleveranskedjan in
 - **Optimera automatisering**
    - Generera resursvariationer automatiskt för flera kanaler och enheter
    - Generera automatiskt lokaliserade versioner av resurser för flera marknader/geografiska områden
-- **Effektiv mätning av prestanda**
-   - Optimera arbetsflöden med hjälp av budget- och projekttrestandaanalys
+- **Mät prestanda effektivt**
+   - Optimera arbetsflöden med hjälp av budget- och projektresultatbaserad analys
    - Prioritera mer värdefullt material via avancerade resultatinsikter
 
-Men det är lika viktigt att understryka att innehållsleveranskedjan inte är en magisk lösning på alla era problem. Det är ett sätt att arbeta som gör att ni kan vara mer effektiva och hantera alla upplevelser ni vill ge kunderna. Du måste krypa innan du kan gå och till slut springa.
+Men det är lika viktigt att understryka att innehållsleveranskedjan inte är en magisk lösning på alla era problem. Det är ett sätt att arbeta som gör att ni kan vara mer effektiva och hantera alla upplevelser ni vill ge kunderna. Du måste krypa innan du kan gå och så småningom springa.
 
-![Crawlgångskörning](./images/crawl-walk-run.png)
+![Kör crawlning](./images/crawl-walk-run.png)
 
 
 [Gå tillbaka till fas 4 - insikter för en marknadschef](./phases/insights/marketing-manager.md)

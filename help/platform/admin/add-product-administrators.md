@@ -17,10 +17,10 @@ ht-degree: 0%
 
 # Lägg till produktadministratörer
 
-Lär dig hur du lägger till produktadministratörer för Adobe Experience Platform. Produktadministratörer hanterar åtkomstkontroll för plattformsbaserade program som Real-time Customer Data Platform och Journey Optimizer. De kan skapa användare, utvecklare och ytterligare administratörer i Admin Console och sedan bevilja dem (och API-behörigheter) behörigheter i Platform- eller Journey Optimizer-gränssnittet. Mer information finns på [Åtkomstkontrolldokumentation](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html).
+Lär dig hur du lägger till produktadministratörer för Adobe Experience Platform. Produktadministratörer hanterar åtkomstkontroll för plattformsbaserade program som Real-time Customer Data Platform och Journey Optimizer. De kan skapa användare, utvecklare och ytterligare administratörer i Admin Console och sedan bevilja dem (och API-behörigheter) behörigheter i Platform- eller Journey Optimizer-gränssnittet. Mer information finns i [Åtkomstkontrollsdokumentationen](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/333860?learn=on)
 
 >[!TIP]
 >
->Vi rekommenderar att du också lägger till produktadministratören som **användare** till `AEP-Default-All-Users` produktprofil i Admin Console och lägg sedan till dem i en roll på behörighetsskärmen i plattformsgränssnittet. Se [Lägg till användare](add-users.md) för mer information.
+>Vi rekommenderar att du också lägger till produktadministratören som **användare** i produktprofilen `AEP-Default-All-Users` i Admin Console och sedan lägger till dem i en roll på behörighetsskärmen i plattformsgränssnittet. Mer information finns i [Lägg till användare](add-users.md).

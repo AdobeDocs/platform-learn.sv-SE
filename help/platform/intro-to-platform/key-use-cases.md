@@ -1,6 +1,6 @@
 ---
 title: Viktiga användningsfall
-description: Få en översikt över de fem viktigaste användningsområdena för Experience Platform&mdash;Intelligent återinteraktion, Missa inte kampanjer, kundkonverteringsoptimering, sammanhangsbaserad igenkänning och engångsvärde till livstid.
+description: Få en översikt över fem viktiga användningsfall för Experience Platform&mdash;Intelligent reengagement, Don't Lose Campaigns, Customer Conversion Optimization, Contextual Recognition och One-Time Value to Lifetime Value.
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
 level: Beginner
 last-substantial-update: 2023-11-01T00:00:00Z

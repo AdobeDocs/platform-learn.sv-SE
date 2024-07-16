@@ -7,7 +7,7 @@ jira: KT-14637
 exl-id: fdd2c90e-8246-4d75-a6db-df3ef31946c4
 source-git-commit: 25f0df2ea09bb7383f45a698e75bd31be7541754
 workflow-type: tm+mt
-source-wordcount: '1032'
+source-wordcount: '975'
 ht-degree: 0%
 
 ---
@@ -18,16 +18,16 @@ Lär dig hur du skickar mobilappsdata till Adobe Experience Platform.
 
 Den här valfria lektionen gäller alla kunder som har Real-time Customer Data Platform (Real-Time CDP), Journey Optimizer och Customer Journey Analytics. Experience Platform, grundvalen för Experience Cloud-produkter, är ett öppet system som omvandlar alla era data (Adobe och inte Adobe) till robusta kundprofiler. Dessa kundprofiler uppdateras i realtid och använder AI-baserade insikter för att hjälpa er att leverera rätt upplevelser i alla kanaler.
 
-The [event](events.md), [livscykel](lifecycle-data.md)och [identity](identity.md) data som du har samlat in och skickat till Platform Edge Network i tidigare lektioner vidarebefordras till de tjänster som konfigurerats i ditt datastam, inklusive Adobe Experience Platform.
+Data för [event](events.md), [lifecycle](lifecycle-data.md) och [identity](identity.md) som du har samlat in och skickat till Platform Edge Network i tidigare lektioner vidarebefordras till de tjänster som konfigurerats i ditt datastam, inklusive Adobe Experience Platform.
 
 ![Arkitektur](assets/architecture-aep.png)
 
 
-## Förutsättningar
+## Förhandskrav
 
 Din organisation måste etableras och behörigheter beviljas för Adobe Experience Platform.
 
-Om du inte har tillgång till [hoppa över den här lektionen](install-sdks.md).
+Om du inte har åtkomst kan du [hoppa över den här lektionen](install-sdks.md).
 
 ## Utbildningsmål
 
@@ -43,51 +43,51 @@ I den här lektionen kommer du att:
 
 ## Skapa en datauppsättning
 
-Alla data som har inhämtats till Adobe Experience Platform lagras i datasjön som datauppsättningar. En datauppsättning är en lagrings- och hanteringskonstruktion för en datamängd (vanligtvis en tabell) som innehåller ett schema (kolumner) och fält (rader). Datauppsättningar innehåller också metadata som beskriver olika aspekter av de data som lagras. Se [dokumentation](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/overview.html) för information.
+Alla data som har inhämtats till Adobe Experience Platform lagras i datasjön som datauppsättningar. En datauppsättning är en lagrings- och hanteringskonstruktion för en datamängd (vanligtvis en tabell) som innehåller ett schema (kolumner) och fält (rader). Datauppsättningar innehåller också metadata som beskriver olika aspekter av de data som lagras. Mer information finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/overview.html).
 
-1. Navigera till gränssnittet Experience Platform genom att välja det i Appar ![Appar](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Apps_18_N.svg) i det övre högra hörnet.
+1. Navigera till gränssnittet Experience Platform genom att markera det på menyn Appar ![Apps](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Apps_18_N.svg) i det övre högra hörnet.
 
 
-1. Välj **[!UICONTROL Datauppsättningar]** från den vänstra navigeringsmenyn.
+1. Välj **[!UICONTROL Datasets]** på den vänstra navigeringsmenyn.
 
-1. Välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Skapa datauppsättning]**.
+1. Välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Create dataset]**.
 
-1. Välj **[!UICONTROL Skapa datauppsättning från schema]**.
-   ![startsida för datauppsättning](assets/dataset-create.png)
+1. Välj **[!UICONTROL Create dataset from schema]**.
+   ![Startsida för datauppsättning](assets/dataset-create.png)
 
 1. Sök efter ditt schema. till exempel använda `Luma Mobile` i sökfältet.
 1. Välj ditt schema, till exempel **[!DNL Luma Mobile App Event Schema]**.
 
-1. Välj **[!UICONTROL Nästa]**.
-   ![konfigurera datauppsättning](assets/dataset-configure.png)
+1. Välj **[!UICONTROL Next]**.
+   ![Konfigurera datauppsättning](assets/dataset-configure.png)
 
-1. Ange en **[!UICONTROL Namn]**, till exempel `Luma Mobile App Events Dataset` och **[!UICONTROL Beskrivning]**.
+1. Ange en **[!UICONTROL Name]**, till exempel `Luma Mobile App Events Dataset` och en **[!UICONTROL Description]**.
 
-1. Välj **[!UICONTROL Slutför]**.
-   ![datauppsättningens slut](assets/dataset-finish.png)
+1. Välj **[!UICONTROL Finish]**.
+   ![datauppsättningsslut](assets/dataset-finish.png)
 
 
 ## Lägg till Adobe Experience Platform datastream-tjänst
 
-Om du vill skicka XDM-data från Edge Network till Adobe Experience Platform lägger du till Adobe Experience Platform-tjänsten i det datastream som du konfigurerat som en del av [Skapa ett datastream](create-datastream.md).
+Om du vill skicka XDM-data från Edge Network till Adobe Experience Platform lägger du till Adobe Experience Platform-tjänsten i det datastream som du konfigurerade som en del av [Skapa ett datastream](create-datastream.md).
 
 >[!IMPORTANT]
 >
 >Du kan bara aktivera Adobe Experience Platform-tjänsten när du har skapat en händelsedatamängd.
 
-1. I gränssnittet för datainsamling väljer du **[!UICONTROL Datastreams]** och din datastream.
+1. I användargränssnittet för datainsamling väljer du **[!UICONTROL Datastreams]** och ditt datastream.
 
-1. Välj sedan ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Lägg till tjänst]**.
+1. Välj sedan ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Add Service]**.
 
-1. Välj **[!UICONTROL Adobe Experience Platform]** från [!UICONTROL Tjänst] lista.
+1. Välj **[!UICONTROL Adobe Experience Platform]** i listan [!UICONTROL Service].
 
-1. Aktivera tjänsten genom att växla **[!UICONTROL Aktiverad]** på.
+1. Aktivera tjänsten genom att aktivera **[!UICONTROL Enabled]**.
 
-1. Välj **[!UICONTROL Händelsedatauppsättning]** som du skapade tidigare, till exempel **[!DNL Luma Mobile App Event Dataset]**.
+1. Markera **[!UICONTROL Event Dataset]** som du skapade tidigare, till exempel **[!DNL Luma Mobile App Event Dataset]**.
 
-1. Välj **[!UICONTROL Spara]**.
+1. Välj **[!UICONTROL Save]**.
 
-   ![Lägg till Adobe Experience Platform som datastream-tjänst](assets/datastream-service-aep.png)
+   ![Lägg till Adobe Experience Platform som en datastream-tjänst](assets/datastream-service-aep.png)
 1. Den slutliga konfigurationen bör se ut ungefär så här.
 
    ![datastream-inställningar](assets/datastream-settings.png)
@@ -101,10 +101,10 @@ Nu när du har skapat en datauppsättning och uppdaterat dataströmmen för att 
 
 Öppna datauppsättningen i plattformsgränssnittet. Du bör se data som anländer i grupper till datauppsättningen. Data hämtas vanligtvis i mikrobatchar var 15:e minut, så du kanske inte ser dina data direkt.
 
-![validera datauppsättningsbatchar för datalandningsplattform](assets/platform-dataset-batches.png)
+![validera datamängdsbatchar för datalandningsplattform](assets/platform-dataset-batches.png)
 
-Du bör också kunna se exempelposter och -fält med **[!UICONTROL Förhandsgranska datauppsättning]** funktion:
-![validera livscykeln som skickas till plattformsdatauppsättningen](assets/lifecycle-platform-dataset.png)
+Du bör också kunna se exempelposter och -fält med funktionen **[!UICONTROL Preview dataset]**:
+![validera livscykeln som skickas till plattformsdatauppsättningen ](assets/lifecycle-platform-dataset.png)
 
 Ett robustare verktyg för datavalidering är plattformens [frågetjänst](https://experienceleague.adobe.com/docs/platform-learn/tutorials/queries/explore-data.html).
 
@@ -114,17 +114,17 @@ Med Experience Platform Real-Time Customer Profile kan ni skapa en helhetsbild a
 
 ### Aktivera schemat
 
-1. Öppna schemat, till exempel **[!DNL Luma Mobile App Event Schema]**.
-1. Aktivera **[!UICONTROL Profil]**.
-1. Välj **[!UICONTROL Data för det här schemat kommer att innehålla en primär identitet i identityMap-fältet.]** i dialogrutan.
-1. **[!UICONTROL Spara]** schemat.
+1. Öppna ditt schema, till exempel **[!DNL Luma Mobile App Event Schema]**.
+1. Aktivera **[!UICONTROL Profile]**.
+1. Välj **[!UICONTROL Data for this schema will contain a primary identity in the identityMap field.]** i dialogrutan.
+1. **[!UICONTROL Save]** schemat.
 
    ![aktivera schemat för profilen](assets/platform-profile-schema.png)
 
 ### Aktivera datauppsättningen
 
-1. Öppna datauppsättningen, till exempel **[!DNL Luma Mobile App Event Dataset]**.
-1. Aktivera **[!UICONTROL Profil]**.
+1. Öppna din datauppsättning, till exempel **[!DNL Luma Mobile App Event Dataset]**.
+1. Aktivera **[!UICONTROL Profile]**.
 
    ![aktivera datauppsättningen för profilen](assets/platform-profile-dataset.png)
 
@@ -134,32 +134,32 @@ Med Experience Platform Real-Time Customer Profile kan ni skapa en helhetsbild a
 
 Använd Assurance för att hitta en av identiteterna som skickas i identityMap (Email, lumaCrmId eller ECID), till exempel CRM-ID:t.
 
-![hämta ett identitetsvärde](assets/platform-identity.png)
+![Hämta ett identitetsvärde](assets/platform-identity.png)
 
 I plattformsgränssnittet
 
-1. Navigera till **[!UICONTROL Profiler]** och markera **[!UICONTROL Bläddra]** i det övre fältet.
-1. Ange identitetsinformation som du just har gripit, till exempel `Luma CRM ID` for **[!UICONTROL Namnutrymme för identitet]** och det värde du kopierade för **[!UICONTROL Identitetsvärde]**. Välj sedan **[!UICONTROL Visa]**.
+1. Navigera till **[!UICONTROL Profiles]** och välj **[!UICONTROL Browse]** i det övre fältet.
+1. Ange den identitetsinformation som du just har gripit, till exempel `Luma CRM ID` för **[!UICONTROL Identity namespace]** och det värde som du kopierade för **[!UICONTROL Identity value]**. Välj sedan **[!UICONTROL View]**.
 1. Om du vill visa information väljer du profilen.
 
-![söka efter ett identitetsvärde](assets/platform-profile-lookup.png)
+![slå upp ett identitetsvärde](assets/platform-profile-lookup.png)
 
-På **[!UICONTROL Detalj]** på skärmen kan du se grundläggande information om användaren, inklusive **[!UICONTROL ** länkade identiteter **]**:
+På skärmen **[!UICONTROL Detail]** kan du se grundläggande information om användaren, inklusive **[!UICONTROL ** länkade identiteter **]**:
 ![profilinformation](assets/platform-profile-details.png)
 
-På **[!UICONTROL Händelser]** kan du se de händelser som samlats in från din mobilappsimplementering för den här användaren:
+På **[!UICONTROL Events]** kan du se händelser som samlats in från din mobilappsimplementering för den här användaren:
 
 ![profilhändelser](assets/platform-profile-events.png)
 
 
 Från profilinformationsskärmen:
 
-1. Om du vill visa identitetsdiagrammet klickar du på länken eller navigerar till **[!UICONTROL Identiteter]** väljer **[!UICONTROL Identitetsdiagram]** i det övre fältet.
-1. Om du vill söka efter identitetsvärdet anger du `Luma CRM ID` som **[!UICONTROL Namnutrymme för identitet]** och det kopierade värdet som **[!UICONTROL Identitetsvärde]**. Välj sedan **[!UICONTROL Visa]**.
+1. Om du vill visa identitetsdiagrammet klickar du på länken eller navigerar till **[!UICONTROL Identities]** och väljer sedan **[!UICONTROL Identity Graph]** i det övre fältet.
+1. Om du vill söka efter identitetsvärdet anger du `Luma CRM ID` som **[!UICONTROL Identity namespace]** och det kopierade värdet som **[!UICONTROL Identity value]**. Välj sedan **[!UICONTROL View]**.
 
-   Den här visualiseringen visar alla identiteter som är sammankopplade i en profil och deras ursprung. Här är ett exempel på ett identitetsdiagram som består av data som samlats in från den här självstudiekursen för Mobile SDK (datakälla 2) och [Web SDK, genomgång](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html) (datakälla 1):
+   Den här visualiseringen visar alla identiteter som är sammankopplade i en profil och deras ursprung. Här är ett exempel på ett identitetsdiagram som består av data som samlats in från en slutversion av både den här SDK-självstudiekursen (Data Source 2) och [Web SDK-självstudiekursen](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html) (Data Source 1):
 
-   ![hämta ett identitetsvärde](assets/platform-profile-identitygraph.png)
+   ![Hämta ett identitetsvärde](assets/platform-profile-identitygraph.png)
 
 
 ## Nästa steg
@@ -169,6 +169,6 @@ Det finns mycket mer som marknadsförare och analytiker kan göra med data som s
 
 >[!SUCCESS]
 >
->Du har nu konfigurerat din app så att den inte bara skickar data till Edge Network utan även till Adobe Experience Platform.<br>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
+>Du har nu konfigurerat appen så att den skickar data inte bara till Edge Network utan även till Adobe Experience Platform.<br>Tack för att du har lagt ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 
 Nästa: **[Skapa och skicka push-meddelanden](journey-optimizer-push.md)**

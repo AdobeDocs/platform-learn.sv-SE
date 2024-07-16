@@ -10,42 +10,42 @@ feature: Segments, Integrations
 exl-id: 862afd4c-1b6c-48fe-bc1f-967c065642e0
 source-git-commit: ee5c0af17c12f1d90774a3a4150c9788e2368e39
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '898'
 ht-degree: 0%
 
 ---
 
 # 1.4 Ação: envie seu segmento para o Adobe Target
 
-Åtkomst [Adobe Experience Platform](https://experience.adobe.com/platform). Depois de fazer inloggning, você irá acessar a página inicial da Adobe Experience Platform.
+Öppna [Adobe Experience Platform](https://experience.adobe.com/platform). Depois de fazer inloggning, você irá acessar a página inicial da Adobe Experience Platform.
 
 ![Datainmatning](./images/home.png)
 
-Antes de continuar, você preca selecionar um **sandlåda**. O nome do sandbox a ser selecionado é Bootcamp. É beível fazer isso clicando no texto **[!UICONTROL Produktionsprodukt]** na linha azul na parte superior da tela. Depois de selecionar o sandbox apropriado, você verá a tela mudando e agora você está em seu [!UICONTROL sandlåda] dedikat.
+Antes de continuar, você preca selecionar um **sandbox**. O nome do sandbox a ser selecionado é Bootcamp. É kapível fazer isso clicando no texto **[!UICONTROL Production Prod]** na linha azul na parte superior da tela. Depois de selecionar o sandbox apropriado, você verá a tela mudando e agora você está em seu [!UICONTROL sandbox] dedikado.
 
 ![Datainmatning](./images/sb1.png)
 
 ## 1.4.1 Ative seu segmento para o destino do Adobe Target
 
-O Adobe Target está DISonível como um destino do CDP em tempo real. Para configurar sua integração com o Adobe Target, acesse **Destinationer** e **Katalog**.
+O Adobe Target está DISonível como um destino do CDP em tempo real. Para configurar sua integração com o Adobe Target, acesse **Destinations** e **Catalog**.
 
-Clique em **Personalisering** ingen meny **Kategorier**. Você verá o cartão de destino do **Adobe Target**. Clique em **Aktivera segment**.
+Klicka på **Personalization**, ingen meny **Kategorier**. Você verá o cartão de destino do **Adobe Target**. Klicka på em **Aktivera segment**.
 
 ![AT](./images/atdest1.png)
 
-Markera som mål ``Bootcamp Target`` e kliande **Nästa**.
+Välj mål ``Bootcamp Target`` e-klient **Nästa**.
 
 ![AT](./images/atdest3.png)
 
-Na lista de segmentos disoníveis, selecione o segmento que você criou em [1.3 Krim um segmento](./ex3.md), com nome `yourLastName - Interest in Real-Time CDP`. Em seguida, clique em **Nästa**.
+Na lista de segmentos display oníveis, selecione o segmento que você criou em [1.3 Crie um segmento](./ex3.md), com o nome `yourLastName - Interest in Real-Time CDP`. Em seguida, clique em **Next**.
 
 ![AT](./images/atdest8.png)
 
-Na próxima página, clique em **Nästa**.
+Na próxima página, clique em **Next**.
 
 ![AT](./images/atdest9.png)
 
-Clique em **Slutför**.
+Klicka på **Slutför**.
 
 ![AT](./images/atdest10.png)
 
@@ -61,32 +61,32 @@ Seu segmento agora está ativado para o Adobe Target.
 
 Agora que seu segmento Real-Time CDP está configurado para ser enviado ao Adobe Target, é kapível configurar sua atividade de Segmentação por experience ência no Adobe Target. Neste övício, você irá configurar uma atividade baseada no Visual Experience Composer.
 
-Acesse a página inicial da Adobe Experience Cloud acessando [https://experiencecloud.adobe.com/](https://experiencecloud.adobe.com/). Clique em **Mål** para abrir.
+Öppna en página inicial da Adobe Experience Cloud acessando [https://experiencecloud.adobe.com/](https://experiencecloud.adobe.com/). Klicka på em **Target** para abrir.
 
 ![RTCDP](./images/excl.png)
 
-Na página inicial do **Adobe Target**, você verá todas as atividades existentes.
-Clique em **+ Skapa aktivitet** para criar uma nova atividade.
+Na página inicial do **Adobe Target**, você verá todas as atividades exists.
+Klicka på em **+ Skapa aktivitet** para criar uma nova atividade.
 
 ![RTCDP](./images/exclatov.png)
 
-Markering **Experience Targeting**.
+Välj **Experience Targeting**.
 
 ![RTCDP](./images/exclatcrxt.png)
 
-Markering **Visual** e defina a **Aktivitets-URL** como `https://bootcamp.aepdemo.net/content/aep-bootcamp-experience/language-masters/en/exercises/particpantXX.html`, mas, antes disso, substitua XX por um número entre 01 e 60.
+Selecione **Visual** e defina a **Activity URL** como `https://bootcamp.aepdemo.net/content/aep-bootcamp-experience/language-masters/en/exercises/particpantXX.html`, mas, antes disso, substitua XX por um número entre 01 e 60.
 
 >[!IMPORTANT]
 >
->Cada deltagante da Capitação deve usar uma página da Web separada para evitar a colisão de várias upplevelências do Adobe Target. É kapível escolher uma página da Web e encontrar a URL acessando: [https://bootcamp.aepdemo.net/content/aep-bootcamp-experience/language-masters/en/exercises.html](https://bootcamp.aepdemo.net/content/aep-bootcamp-experience/language-masters/en/exercises.html).
+>Cada deltagante da Capitação deve usar uma página da Web separada para evitar a colisão de várias upplevelências do Adobe Target. É kapível escolher uma página da Web e encontrar a URL acessando: [https://bootcamp.aepdemo.net/content/aep-bootcamp-experience/language-masters/en/exercises.html](https://bootcamp.aepdemo.net/content/aep-bootcamp-experience/language-masters/en/exercises.html).
 >
 >Todas as as páginas compartilham a mesma URL base e terminam com o número do deltagante.
 >
 >Por example, o deltagante 1 deve usar a URL `https://bootcamp.aepdemo.net/content/aep-bootcamp-experience/language-masters/en/exercises/particpant01.html`, o deltagante 30 deve usar a URL `https://bootcamp.aepdemo.net/content/aep-bootcamp-experience/language-masters/en/exercises/particpant30.html`.
 
-Välj en arbetsyta **AT Bootcamp**.
+Välj en av arbetsytorna **på Bootcamp**.
 
-Clique em **Nästa**.
+Klicka på **Nästa**.
 
 ![RTCDP](./images/exclatcrxtdtlform.png)
 
@@ -94,11 +94,11 @@ Agora você está no Visual Experience Composer. Pode levar de 20 a 30 segundos 
 
 ![RTCDP](./images/atform1.png)
 
-Atualmente, o público padrão são **Alla besökare**. Klick nos **3 punkter** ao lado de **Alla besökare** e clique em **Ändra målgrupp**.
+Atualmente, o público padrão são **Alla besökare**. Clique nos **3 dots** ao lado de **All Visitors** e clique em **Change Audience**.
 
 ![RTCDP](./images/atform3.png)
 
-Agora você está vendo a lista de públicos disoníveis, e o segmento da Adobe Experience Platform que você criou anteriormente e enviou ao Adobe Target agora faz parte lista. Selecione o segmento que você criou Anteriormente na Adobe Experience Platform. Clique em **Tilldela publik**.
+Agora você está vendo a lista de públicos disoníveis, e o segmento da Adobe Experience Platform que você criou anteriormente e enviou ao Adobe Target agora faz parte lista. Selecione o segmento que você criou Anteriormente na Adobe Experience Platform. Klicka på **Tilldela publik**.
 
 ![RTCDP](./images/exclatvecchaud.png)
 
@@ -106,25 +106,25 @@ Seu segmento da Adobe Experience Platform agora faz parte dessa Atividade de seg
 
 ![RTCDP](./images/atform4.png)
 
-Antes de alterar a imagem Principal, você deve clicar em **Tillåt alla** ingen banner de cookies.
+Antes de alterar a imagem Principal, você deve clicar em **Allow All** no banner de cookies.
 
-Para isso, vá para **Bläddra**
+Para isso, vá para **Browse**
 
 ![RTCDP](./images/cook1.png)
 
-Em seguida, clique em **Tillåt alla**.
+Em seguida, clique em **Allow All**.
 
 ![RTCDP](./images/cook2.png)
 
-Em seguida, retorne para **Disponera**.
+Fyrkant, retorne para **Compose**.
 
 ![RTCDP](./images/cook3.png)
 
-Agora vamos mudar a imagem Principal na página inicial do site. Clique na imagem Principal padrão no site, clique em **Ersätt innehåll** e selecione **Bild**.
+Agora vamos mudar a imagem Principal na página inicial do site. Klicka på en imagem-huvudnamn padrão ingen plats, klicka på em **Ersätt innehåll** e selecione **Bild**.
 
 ![RTCDP](./images/atform5.png)
 
-Pesquise o arquivo de imagem **rtcdp.png**. Markera en e-klickning **Spara**.
+Pesquise o arquivo de imagem **rtcdp.png**. Markera ett e-klick som **Spara**.
 
 ![RTCDP](./images/atform6.png)
 
@@ -140,27 +140,27 @@ Para nome, use:
 
 - `seuSobrenome - RTCDP - XT (VEC)`
 
-Clique em **Nästa**.
+Klicka på **Nästa**.
 
 ![RTCDP](./images/atform8.png)
 
-Clique em **Nästa**.
+Klicka på **Nästa**.
 
 ![RTCDP](./images/atform8a.png)
 
-Na página **Mål och inställningar**, acesse **Målmått**.
+Na página **Mål och inställningar**, gå till **Målmått**.
 
 ![RTCDP](./images/atform9.png)
 
-Definiera ett Meta-huvudobjekt **Engagemang** - **Tid på plats**. Clique em **Spara och stäng**.
+Definiera ett metahuvudkonto för **engagemang** - **tid på plats**. Klicka på **Spara och stäng**.
 
 ![RTCDP](./images/vec3.png)
 
-Agora você está na página **Översikt över aktivitet**. Você ainda preca ativar sua Atividade.
+Agora você está na página **Aktivitetsöversikt**. Você ainda preca ativar sua Atividade.
 
 ![RTCDP](./images/atform10.png)
 
-Clique no campo **Inaktiv** e selecione **Aktivera**.
+Klicka på ingen campo **Inaktiv** e selecone **Aktivera**.
 
 ![RTCDP](./images/atform11.png)
 

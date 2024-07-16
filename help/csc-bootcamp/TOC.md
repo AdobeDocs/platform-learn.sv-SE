@@ -10,8 +10,8 @@ hide: true
 doc-type: multipage
 source-git-commit: adbe8f4476340abddebbf9231e3dde44ba328063
 workflow-type: tm+mt
-source-wordcount: '92'
-ht-degree: 3%
+source-wordcount: '97'
+ht-degree: 2%
 
 ---
 
@@ -25,8 +25,8 @@ ht-degree: 3%
 + Fas 1 - Planering och förberedelse {#planning}
    + [Planering](/help/csc-bootcamp/phases/planning/planning.md)
    + [Annat förarbete](/help/csc-bootcamp/phases/planning/prework.md)
-+ Fas 2 - Produktion {#production}
-   + [Skapa produktstartsidans banner](/help/csc-bootcamp/phases/production/banner.md)
++ Fas 2 - produktion {#production}
+   + [Skapa produktstartsidans banderoll](/help/csc-bootcamp/phases/production/banner.md)
    + [Skapa annonser för sociala medier](/help/csc-bootcamp/phases/production/social.md)
    + [Skapa mobilappsinnehåll](/help/csc-bootcamp/phases/production/app.md)
 + Fas 3 - Leverans {#delivery}

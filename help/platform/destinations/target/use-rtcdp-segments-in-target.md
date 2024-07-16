@@ -11,10 +11,10 @@ level: Intermediate
 doc-type: Feature Video
 last-substantial-update: 2023-05-05T00:00:00Z
 jira: KT-13141
-exl-id: 4f3c41ee-ca6a-4a3b-a9af-9d9d24000b7a
-source-git-commit: bcf6079bc2e05c8c59bcc1b020ac15d1db6a02f2
+exl-id: 73e5a0fa-cf50-4e22-82ce-997fe069aa86
+source-git-commit: 143da6340b932563a3309bb46c1c7091e0ab2ee2
 workflow-type: tm+mt
-source-wordcount: '74'
+source-wordcount: '68'
 ht-degree: 1%
 
 ---

@@ -10,14 +10,14 @@ thumbnail: 40374.jpg
 exl-id: 2dc34425-62e7-4d56-ab13-6855371b1d7d
 source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
-source-wordcount: '64'
+source-wordcount: '58'
 ht-degree: 0%
 
 ---
 
 # Affärsvärde för kundens AI
 
-I den här videon visas hur kundens AI förbättrar kundprofiler med AI-baserade egenskaper och stärker kundsegmenterings- och målinriktningsarbetet. Mer information finns på [AI-dokumentation för kund](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/customer-ai/overview.html).
+I den här videon visas hur kundens AI förbättrar kundprofiler med AI-baserade egenskaper och stärker kundsegmenterings- och målinriktningsarbetet. Mer information finns i [Kundens AI-dokumentation](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/customer-ai/overview.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/40374?learn=on)
 

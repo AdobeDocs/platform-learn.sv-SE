@@ -12,7 +12,7 @@ topic: Integrations
 exl-id: 9607e641-b0d5-49c1-b319-32ed0720e715
 source-git-commit: ac07d62cf4bfb6a9a8b383bbfae093304d008b5f
 workflow-type: tm+mt
-source-wordcount: '2087'
+source-wordcount: '2086'
 ht-degree: 0%
 
 ---
@@ -39,15 +39,15 @@ Vad betyder ett ord eller en fras och hur kan jag tänka på det enkelt och enke
 
 I den här skärmbilden hovrar musmarkören över länken Adobe Experience Platform. Längst ned finns webbläsarens statusfält som visar &quot;adressen&quot; till sidan som webbläsaren kommer att få. Med andra ord: om du klickar på länken Adobe Experience Platform visas en uppmaning om att &quot;hämta den sidan åt mig så att jag kan se den här på skärmen&quot;.
 
-När användaren klickar på en länk skickar webbläsaren en begäran till en server om att hämta en sida. Det här är en `GET` request, en av de förfrågningsmetoder som ofta används med webb-API:er. En sak som webbläsaren behöver fylla i är sidan &quot;address&quot; - var finns den på webben?
+När användaren klickar på en länk skickar webbläsaren en begäran till en server om att hämta en sida. Detta är en `GET`-begäran, en av de förfrågningsmetoder som vanligtvis används med webb-API:er. En sak som webbläsaren behöver fylla i är sidan &quot;address&quot; - var finns den på webben?
 
 ### Delar av en URL
 
-![Webbläsarens adressfält med URL](../assets/api101-address-bar.png)
+![Webbläsaradressfältet med URL](../assets/api101-address-bar.png)
 
 De flesta webbläsare har ett adressfält som visar en del av eller hela adressen för en webbsida. När webbläsaren&quot;hämtar&quot; sidan för länken som vi klickade på visas&quot;adressen&quot; för sidan i det här adressfältet. Så vad är &quot;adressen&quot; för en webbsida?
 
-att `https://business.adobe.com/products/experience-platform/adobe-experience-platform.html` ovan är adressen till en sida på webben och kallas URL eller Uniform Resource Locator. URL-adresser kan referera till en sida som den här, en bildfil, en video eller andra filtyper.
+`https://business.adobe.com/products/experience-platform/adobe-experience-platform.html` ovan är adressen till en sida på webben och kallas URL eller Uniform Resource Locator. URL-adresser kan referera till en sida som den här, en bildfil, en video eller andra filtyper.
 
 ![Delar av en URL](../assets/api101-url-parts.jpg)
 
@@ -55,25 +55,25 @@ Den här adressen, URL:en, har specifika delar som är mycket relevanta för web
 
 **Schema**
 
-The `scheme` ovan kallas även `protocol` med webb-API:er och det är vanligtvis antingen `http` eller `https`. HTTP- eller HyperText Transfer Protocol är hur resurser som webbsidor överförs från en webbserver till en webbläsare. HTTPS är den säkra versionen, där överföringen sker via Internet med säkerhet som är avsedd att förhindra störningar av resursen som överförs. Det är vanligt att visa en liten låsikon i webbläsarens adressfält när du visar en sida via HTTPS.
+`scheme` ovan kallas även `protocol` med webb-API:er och är vanligtvis antingen `http` eller `https`. HTTP- eller HyperText Transfer Protocol är hur resurser som webbsidor överförs från en webbserver till en webbläsare. HTTPS är den säkra versionen, där överföringen sker via Internet med säkerhet som är avsedd att förhindra störningar av resursen som överförs. Det är vanligt att visa en liten låsikon i webbläsarens adressfält när du visar en sida via HTTPS.
 
 För webb-API:er sker överföringen av dessa resurser via HTTP-begäranden, med andra ord via HTTP.
 
 **Värdar och domäner**
 
-The `business.adobe.com` är värddatorn för resursen som begärs. När du klickar på vår exempellänk använder webbläsaren den här delen av URL:en för att hitta servern där sidan finns. Det är inte alltid exakt likadant som webbservern, men på en grundläggande nivå kan vi tänka på det som den server där webbläsaren kommer att få den begärda sidan.
+`business.adobe.com` är värddatorn för resursen som begärs. När du klickar på vår exempellänk använder webbläsaren den här delen av URL:en för att hitta servern där sidan finns. Det är inte alltid exakt likadant som webbservern, men på en grundläggande nivå kan vi tänka på det som den server där webbläsaren kommer att få den begärda sidan.
 
-Domännamn är en del av domännamnssystemet, som kallas DNS. De flesta tänker på `adobe.com` eller `example.com` som ett &quot;domännamn&quot;, men det finns delar som är relevanta för API:er. `www.adobe.com` och `business.adobe.com` kan kallas domännamn, men `www.` och `business.` kallas underdomäner. API:er interagerar ofta med en URL som innehåller en underdomän som `api.example.com` eller `sub.www.example.com`.
+Domännamn är en del av domännamnssystemet, som kallas DNS. De flesta människor ser `adobe.com` eller `example.com` som ett &quot;domännamn&quot;, men det finns delar som är relevanta för API:er. `www.adobe.com` och `business.adobe.com` kan kallas domännamn, men delarna `www.` och `business.` kallas underdomäner. API:er interagerar ofta med en URL som innehåller en underdomän som `api.example.com` eller `sub.www.example.com`.
 
-Det är mycket vanligt att se termen _värd_ referera till ett fullständigt domännamn inklusive alla underdomäner som `business.adobe.com`. Det är också vanligt att se villkoren _domän_ eller _domännamn_ när du refererar till en värd utan underdomän som `adobe.com`. Det är inte viktigt att memorera de specifika villkoren för varje del och variant av en värd här. Men det är viktigt att vara medveten om att dessa termer används ofta, så att ni kan klargöra alla relevanta detaljer för ert företag och era diskussioner.
+Det är mycket vanligt att termen _host_ refererar till ett fullständigt domännamn inklusive alla underdomäner som `business.adobe.com`. Det är också vanligt att visa termerna _domän_ eller _domännamn_ när du refererar till en värd utan underdomän som `adobe.com`. Det är inte viktigt att memorera de specifika villkoren för varje del och variant av en värd här. Men det är viktigt att vara medveten om att dessa termer används ofta, så att ni kan klargöra alla relevanta detaljer för ert företag och era diskussioner.
 
 **Ursprung**
 
-Origin är en annan term som du bör vara medveten om att den är närbesläktad med delar av en URL. På en grundläggande nivå är ett ursprung ungefär `scheme` plus `host` plus `domain` gilla `https://business.adobe.com`. Olika värden representerar ofta olika ursprung, som `https://business.adobe.com` och `http://business.adobe.com` är inte av samma ursprung eftersom de har olika system. `https://www.adobe.com` och `https://business.adobe.com` är inte heller samma ursprung i många användningsområden på grund av de olika underdomänerna.
+Origin är en annan term som du bör vara medveten om att den är närbesläktad med delar av en URL. På en grundläggande nivå är en origo ungefär `scheme` plus `host` plus `domain` som `https://business.adobe.com`. Olika värden representerar ofta olika ursprung som `https://business.adobe.com` och `http://business.adobe.com` är inte samma ursprung eftersom de har olika scheman. `https://www.adobe.com` och `https://business.adobe.com` är inte heller samma ursprung i många användningsområden på grund av de olika underdomänerna.
 
 **Sökväg**
 
-Den sista biten i URL-exemplet ovan är `path` till resursen - sidan i vårt exempel. The `/products/experience-platform/` representerar vanligtvis mappar eller kataloger på webbservern. På samma sätt som vi har mappar eller kataloger på våra datorer för dokument och foton har vi också mappar på webbservrar för att ordna innehåll. Och slutligen `/adobe-experience-platform.html` part är namnet på filen, webbsidan.
+Den sista biten i URL-exemplet ovan är `path` till resursen - sidan i vårt exempel. Delen `/products/experience-platform/` representerar vanligtvis mappar eller kataloger på webbservern. På samma sätt som vi har mappar eller kataloger på våra datorer för dokument och foton har vi också mappar på webbservrar för att ordna innehåll. Slutligen är delen `/adobe-experience-platform.html` filens namn, webbsidan.
 
 Det finns andra mer detaljerade delar av en URL som markeras i nästa del av den här serien.
 
@@ -85,7 +85,7 @@ Det är vanligt att en webbsida innehåller innehåll eller resurser från andra
 
 ## Vanliga användningsområden för webb-API:er
 
-Förutom när det gäller tid på dygnet, vädret eller personaliserat innehåll finns det många användningsområden för webb-API:er. Plattformar för sociala medier som Twitter, TikTok, Facebook, LinkedIn, Snapchat, Pinterest och andra har en mängd olika API:er som programmerare kan använda med sina program. Och Adobe har förstås också [en mängd olika API:er](https://developer.adobe.com/apis) som programmerare använder för att interagera med Adobe produkter och tjänster. Programvaruprodukter och -tjänster har åtkomst till andra programvaruprodukter och -tjänster via dessa API:er.
+Förutom när det gäller tid på dygnet, vädret eller personaliserat innehåll finns det många användningsområden för webb-API:er. Plattformar för sociala medier som Twitter, TikTok, Facebook, LinkedIn, Snapchat, Pinterest och andra har en mängd olika API:er som programmerare kan använda med sina program. Adobe har förstås också [ett stort antal API:er](https://developer.adobe.com/apis) som programmerare använder så att deras program kan interagera med Adobe produkter och tjänster. Programvaruprodukter och -tjänster har åtkomst till andra programvaruprodukter och -tjänster via dessa API:er.
 
 ## Exempel-API:er
 
@@ -95,9 +95,9 @@ Adobe Experience Platform Data Access API är ett webb-API som gör att programm
 
 ## API-slutpunkter
 
-När programmerare&quot;använder&quot; en webbläsare eller ett webb-API i sina program begär de vanligtvis att få skicka eller ta emot resurser, som vår exempelwebbläsare som begär en webbsida. I API-dokumentationen visas ofta&quot;slutpunkter&quot; för dessa begäranden, till exempel: `https://platform.adobe.io/data/foundation/export/files/{dataSetFileId}`. Detta är det specifika mönstret eller slutpunkten för det API för plattformsdataåtkomst som en programmerare använder för att hämta en datauppsättningsfil.
+När programmerare&quot;använder&quot; en webbläsare eller ett webb-API i sina program begär de vanligtvis att få skicka eller ta emot resurser, som vår exempelwebbläsare som begär en webbsida. I API-dokumentationen visas ofta slutpunkter för dessa begäranden, till exempel: `https://platform.adobe.io/data/foundation/export/files/{dataSetFileId}`. Detta är det specifika mönstret eller slutpunkten för det API för plattformsdataåtkomst som en programmerare använder för att hämta en datauppsättningsfil.
 
-The `{dataSetFileId}` omges av klammerparenteserna representerar ett värde som programmeraren behöver skicka i begäran. URL:en i den faktiska API-begäran skulle därför se ut ungefär som `https://platform.adobe.io/data/foundation/export/files/xyz123brb` där `xyz123brb` måste vara ett giltigt ID för den datauppsättningsfil som programmeraren vill ta emot.
+`{dataSetFileId}` omgiven av klammerparenteserna representerar ett värde som programmeraren måste skicka i begäran. URL:en i den faktiska API-begäran ser ut ungefär som `https://platform.adobe.io/data/foundation/export/files/xyz123brb` där `xyz123brb` måste vara ett giltigt ID för den datauppsättningsfil som programmeraren vill ta emot.
 
 På samma sätt som webbläsaren hämtar en sida på en viss URL, hämtar API-begäranden resurser från eller skickar resurser till en specifik slutpunkt som den här datauppsättningsexemplet.
 
@@ -109,23 +109,23 @@ Hela processen från begäran till svar omfattar många mindre och mycket detalj
 
 **`GET`**
 
-The `GET` begärandemetoden används när du begär ett svar som tillhandahåller en resurs, som vår webbsida och datauppsättningsexempel. När vi klickar på en länk i en webbläsare eller trycker på en länk på en mobil enhet skapar vi en `GET` begär bakom kulisserna.
+Begärandemetoden `GET` används när du begär ett svar som tillhandahåller en resurs, till exempel webbsidan och datauppsättningsexempel. När vi klickar på en länk i en webbläsare eller trycker på en länk på en mobil enhet gör vi en `GET`-begäran bakom scenerna.
 
 **`POST`**
 
-The `POST` metoden skickar data med begäran. Det kan te sig konstigt att en&quot;begäran&quot; skickar data, men idén är att när API-begäran görs ber slutpunkten (den mottagande programvaran) att godkänna begäran, och om en `POST`, för att också acceptera de data som skickas. De data som skickas skrivs vanligtvis till ett datalager, som en databas eller fil, så att de kan sparas.
+Metoden `POST` skickar data med begäran. Det kan te sig konstigt att en&quot;begäran&quot; skickar data, men idén är att när API-begäran görs, uppmanas slutpunkten (den mottagande programvaran) att acceptera begäran och, när det gäller en `POST`, att även acceptera de data som skickas. De data som skickas skrivs vanligtvis till ett datalager, som en databas eller fil, så att de kan sparas.
 
 **`PUT`**
 
-The `PUT` förfrågningsmetoden liknar `POST` eftersom data skickas, men om de data som skickas redan finns vid slutpunkten, `PUT` uppdaterar befintliga data genom att ersätta dem. A `POST` uppdaterar inte, skickar bara så att `POST` kan skapa flera poster av skickade data i stället för att uppdatera befintliga poster.
+`PUT`-förfrågningsmetoden liknar `POST` eftersom den skickar data, men om de data som skickas redan finns vid slutpunkten uppdaterar en `PUT` befintliga data genom att ersätta dem. En `POST` uppdateras inte, den skickar bara, så flera `POST`-begäranden kan skapa flera poster av skickade data i stället för att uppdatera befintliga poster.
 
 **`PATCH`**
 
-The `PATCH` förfrågningsmetod används för att skicka data som uppdaterar en del av en befintlig post, som när vi ändrar vår adress genom att uppdatera vår kontoprofil. Med `POST` begär ytterligare en profil, och `PUT`kan den befintliga profilen ersättas, men med `PATCH` metod vi bara uppdaterar den relevanta delen av den befintliga posten, som vår adress.
+Begärandemetoden `PATCH` används för att skicka data som uppdaterar en del av en befintlig post, som när vi ändrar vår adress genom att uppdatera vår kontoprofil. Med en `POST`-begäran kunde en extra profil skapas och med en `PUT` kunde den befintliga profilen ersättas, men med metoden `PATCH` uppdaterar vi bara den relevanta delen av den befintliga posten, som vår adress.
 
 **`DELETE`**
 
-The `DELETE` förfrågningsmetoden tar bort en resurs som anges i begäran, som om vi klickar på en länk för att ta bort hela vår kontoprofil.
+Begärandemetoden `DELETE` tar bort en resurs som anges i begäran, som om vi klickar på en länk för att ta bort hela vår kontoprofil.
 
 Det finns flera andra, men det här är en lista över de vanligaste metoderna när du arbetar med API:er.
 
@@ -133,7 +133,7 @@ Det finns flera andra, men det här är en lista över de vanligaste metoderna n
 
 Nu när du har de grundläggande villkoren, begreppen och stegen som ingår i API:erna kan vi titta på en exempelbegäran om API i praktiken.
 
-Sidan från webbläsarexemplet har URL:en `https://business.adobe.com/products/experience-platform/adobe-experience-platform.html`. När någon klickar på länken till Adobe Experience Platform skapas en `GET` begäran för den här sidan. Eftersom vi har webbläsaren att göra jobbet åt oss behöver vi bara klicka, men om en programmerare vill att det ska ske i ett programvaruprogram måste de ange all information som krävs för att API-begäran ska lyckas.
+Sidan från webbläsarexemplet har URL:en `https://business.adobe.com/products/experience-platform/adobe-experience-platform.html`. När du klickar på länken Adobe Experience Platform gör webbläsaren en `GET`-begäran för den här sidan. Eftersom vi har webbläsaren att göra jobbet åt oss behöver vi bara klicka, men om en programmerare vill att det ska ske i ett programvaruprogram måste de ange all information som krävs för att API-begäran ska lyckas.
 
 Så här kan det se ut i koden:
 
@@ -162,7 +162,10 @@ fetch(
 );
 ```
 
-I koden ovan kan du se `URL` webbläsaren begär, och längst ned finns `method: "GET"` begärandemetod. De andra kodraderna är också en del av begäran, men ligger utanför artikelns omfång.
+I koden ovan kan du se `URL` som webbläsaren begär, och längst ned finns förfrågningsmetoden `method: "GET"`. De andra kodraderna är också en del av begäran, men ligger utanför artikelns omfång.
 
 
-*[API]: Application Programming Interface *[URL]: Uniform Resource Locator *[HTTP]: HyperText Transfer Protocol *[DNS]: Domännamnssystem
+*[API]: Application Programming Interface
+*[URL]: Uniform Resource Locator
+*[HTTP]: HyperText Transfer Protocol
+*[DNS]: DNS

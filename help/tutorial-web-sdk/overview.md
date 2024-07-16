@@ -14,16 +14,16 @@ ht-degree: 2%
 
 Lär dig hur du implementerar Experience Cloud-program med Adobe Experience Platform Web SDK.
 
-Experience Platform Web SDK är ett JavaScript-bibliotek på klientsidan som gör att Adobe Experience Cloud kunder kan interagera med både Adobe och tredjepartstjänster via Adobe Experience Platform Edge Network. Se [Adobe Experience Platform Web SDK - översikt](https://experienceleague.adobe.com/en/docs/experience-platform/edge/home) för mer detaljerad information.
+Experience Platform Web SDK är ett klientbibliotek från JavaScript som gör att Adobe Experience Cloud kunder kan interagera med både Adobe-program och tredjepartstjänster via Adobe Experience Platform Edge Network. Mer information finns i [Adobe Experience Platform Web SDK-översikt](https://experienceleague.adobe.com/en/docs/experience-platform/edge/home).
 
 ![Experience Platform Web SDK-arkitektur](assets/dc-websdk.png)
 
-I den här självstudiekursen får du hjälp med att implementera Platform Web SDK på en exempelwebbplats som heter Luma. The [Luma-webbplats](https://luma.enablementadobe.com/content/luma/us/en.html) har ett omfattande datalager och funktioner som gör att du kan skapa en realistisk implementering. I den här självstudiekursen:
+I den här självstudiekursen får du hjälp med att implementera Platform Web SDK på en exempelwebbplats som heter Luma. [Luma-webbplatsen](https://luma.enablementadobe.com/content/luma/us/en.html) har ett omfattande datalager och funktioner som gör att du kan skapa en realistisk implementering. I den här självstudiekursen:
 
 * Skapa en egen taggegenskap, på ditt eget konto, med en Platform Web SDK-implementering för Luma-webbplatsen.
 * Konfigurera alla datainsamlingsfunktioner för Web SDK-implementeringar som datastreams, scheman och identitetsnamnutrymmen.
 * Lägg till följande Adobe Experience Cloud-program:
-   * **[Adobe Experience Platform](setup-experience-platform.md)** (och program som bygger på Platform som Adobe Real-time Customer Data Platform, Adobe Journey Optimizer och Adobe Customer Journey Analytics)
+   * **[Adobe Experience Platform](setup-experience-platform.md)** (och program som är byggda på en plattform som Adobe Real-time Customer Data Platform, Adobe Journey Optimizer och Adobe Customer Journey Analytics)
    * **[Adobe Analytics](setup-analytics.md)**
    * **[Adobe Audience Manager](setup-audience-manager.md)**
    * **[Adobe Target](setup-target.md)**
@@ -35,45 +35,45 @@ När du är klar med den här självstudiekursen kan du börja implementera alla
 
 >[!NOTE]
 >
->En liknande självstudiekurs om flera lösningar finns tillgänglig för [Mobile SDK](../tutorial-mobile-sdk/overview.md).
+>Det finns en liknande självstudiekurs om flera lösningar för [Mobile SDK](../tutorial-mobile-sdk/overview.md).
 
-## Förutsättningar
+## Förhandskrav
 
 Alla Experience Cloud-kunder kan använda Platform Web SDK. Det är inte ett krav att licensiera ett plattformsbaserat program som Real-time Customer Data Platform eller Journey Optimizer att använda Web SDK.
 
 I den här lektionen antas du ha ett Adobe-konto och de behörigheter som krävs för att slutföra lektionerna. Annars måste du kontakta en Experience Cloud-administratör på ditt företag för att få åtkomst.
 
-* För **Datainsamling** måste du ha:
-   * **[!UICONTROL Platforms]**—behörighet för **[!UICONTROL Web]** och, om licens finns, **[!UICONTROL Edge]**
-   * **[!UICONTROL Property Rights]**—behörighet till **[!UICONTROL Approve]**, **[!UICONTROL Develop]**, **[!UICONTROL Edit Property]**, **[!UICONTROL Manage Environments]**, **[!UICONTROL Manage Extensions]** och **[!UICONTROL Publish]**,
-   * **[!UICONTROL Company Rights]**—behörighet till **[!UICONTROL Manage Properties]**
+* För **datainsamling** måste du ha:
+   * **[!UICONTROL Platforms]** - behörighet för **[!UICONTROL Web]** och, om den är licensierad, **[!UICONTROL Edge]**
+   * **[!UICONTROL Property Rights]** - behörighet till **[!UICONTROL Approve]**, **[!UICONTROL Develop]**, **[!UICONTROL Edit Property]**, **[!UICONTROL Manage Environments]**, **[!UICONTROL Manage Extensions]** och **[!UICONTROL Publish]**,
+   * **[!UICONTROL Company Rights]** - behörighet till **[!UICONTROL Manage Properties]**
 
      Mer information om taggbehörigheter finns i [dokumentationen](https://experienceleague.adobe.com/en/docs/experience-platform/tags/admin/user-permissions).
 
 * För **Experience Platform** måste du ha:
 
-   * Åtkomst till **standardproduktion**, **&quot;Prod&quot;** sandlåda.
+   * Åtkomst till sandlådan **standardproduktion**, **&quot;Prod&quot;**.
    * Åtkomst till **[!UICONTROL Manage Schemas]** och **[!UICONTROL View Schemas]** under **[!UICONTROL Data Modeling]**.
    * Åtkomst till **[!UICONTROL Manage Identity Namespaces]** och **[!UICONTROL View Identity Namespaces]** under **[!UICONTROL Identity Management]**.
    * Åtkomst till **[!UICONTROL Manage Datastreams]** och **[!UICONTROL View Datastreams]** under **[!UICONTROL Data Collection]**.
-   * Om du är kund till ett plattformsbaserat program och kommer att fylla i [Konfigurera Experience Platform](setup-experience-platform.md) lektion:
-      * Åtkomst till en **utveckling** sandlåda.
+   * Om du använder ett plattformsbaserat program och kommer att slutföra lektionen [Konfigurera Experience Platform](setup-experience-platform.md) bör du även ha:
+      * Åtkomst till en **utvecklingssandlåda**.
       * Alla behörighetsobjekt under **[!UICONTROL Data Management]** och **[!UICONTROL Profile Management]**:
 
      De funktioner som krävs bör vara tillgängliga för alla Experience Cloud-kunder, även om du inte är kund till en plattformsbaserad applikation som Real-Time CDP.
 
      Mer information om plattformsåtkomstkontroll finns i [dokumentationen](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home).
 
-* För det valfria **Adobe Analytics** lektion måste du ha [administratörsåtkomst till inställningar för Report Suite, bearbetningsregler och Analysis Workspace](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-console/home)
+* För den valfria lektionen **Adobe Analytics** måste du ha [administratörsåtkomst till inställningar för Report Suite, bearbetningsregler och Analysis Workspace](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-console/home)
 
-* För det valfria **Adobe Target** lektion måste du ha [Redigerare eller godkännare](https://experienceleague.adobe.com/en/docs/target/using/administer/manage-users/enterprise/properties-overview#section_8C425E43E5DD4111BBFC734A2B7ABC80) åtkomst.
+* För den valfria **Adobe Target**-lektionen måste du ha tillgång till [redigeraren eller godkännaren](https://experienceleague.adobe.com/en/docs/target/using/administer/manage-users/enterprise/properties-overview#section_8C425E43E5DD4111BBFC734A2B7ABC80).
 
-* För det valfria **Audience Manager** lektion måste du ha tillgång till för att skapa, läsa och skriva egenskaper, segment och mål. Mer information finns i självstudiekursen [Audience Manager Role-baserad åtkomstkontroll](https://experienceleague.adobe.com/en/docs/audience-manager-learn/tutorials/setup-and-admin/user-management/setting-permissions-with-role-based-access-control).
+* För den valfria lektionen **Audience Manager** måste du ha tillgång till egenskaperna, segmenten och målgrupperna för att kunna skapa, läsa och skriva. Mer information finns i självstudiekursen om [Audience Manager Role-based Access Control](https://experienceleague.adobe.com/en/docs/audience-manager-learn/tutorials/setup-and-admin/user-management/setting-permissions-with-role-based-access-control).
 
 
 >[!NOTE]
 >
->Du måste känna till utvecklingsspråk som HTML och JavaScript. Du behöver inte vara expert på de här språken, men du får ut mer av den här självstudiekursen om du kan läsa och förstå kod.
+>Man utgår ifrån att man känner till utvecklingsspråk som HTML och JavaScript. Du behöver inte vara expert på de här språken, men du får ut mer av den här självstudiekursen om du kan läsa och förstå kod.
 
 ## Uppdateringar
 
@@ -81,9 +81,9 @@ I den här lektionen antas du ha ett Adobe-konto och de behörigheter som krävs
 
 ## Läs in Luma-webbplatsen
 
-Läs in [Lumas webbplats](https://luma.enablementadobe.com/content/luma/us/en.html){target="blank"} i en separat webbläsarflik och bokmärk den så att du enkelt kan läsa in den när det behövs under självstudiekursen. Du behöver inte ha någon annan åtkomst till Luma än att kunna läsa in vår värdbaserade produktionsplats.
+Läs in [Luma-webbplatsen](https://luma.enablementadobe.com/content/luma/us/en.html){target="blank"} på en separat webbläsarflik och skapa ett bokmärke så att du enkelt kan läsa in den när det behövs under självstudiekursen. Du behöver inte ha någon annan åtkomst till Luma än att kunna läsa in vår värdbaserade produktionsplats.
 
-[![Lumas webbplats](assets/old-overview-luma.png)](https://luma.enablementadobe.com/content/luma/us/en.html){target="blank"}
+[![Luma-webbplats](assets/old-overview-luma.png)](https://luma.enablementadobe.com/content/luma/us/en.html){target="blank"}
 
 Kom så börjar vi!
 
@@ -91,4 +91,4 @@ Kom så börjar vi!
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela med dig av dem om detta [Experience League diskussionsinlägg](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

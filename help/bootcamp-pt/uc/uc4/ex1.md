@@ -73,13 +73,13 @@ Antes de iniciar as etapas acima, não se esqueça da etapa 0, que é compreende
 
 ## 4.1.5 Etapa 0: Compreender esquemas e datasets da Adobe Experience Platform
 
-Faça loggar in som Adobe Experience Platform acessando a URL: [https://experience.adobe.com/platform](https://experience.adobe.com/platform).
+Faça loggar in på Adobe Experience Platform acessando via en URL: [https://experience.adobe.com/platform](https://experience.adobe.com/platform).
 
 Depois de fazer inloggning, você irá acessar a página inicial da Adobe Experience Platform.
 
 ![Datainmatning](../uc1/images/home.png)
 
-Antes de continuar, você preca selecionar um **sandlåda**. O nome do sandbox a ser seleconado é ``Bootcamp``. Você pode fazer isso clicando no ícone **[!UICONTROL Prod]** ingen canto superior direito da tela. Depois de selecionar o sandbox apropriado, você verá a tela mudando e agora você está em seu sandbox dedikado.
+Antes de continuar, você preca selecionar um **sandbox**. O nome do sandbox a ser selecionado é ``Bootcamp``. Você pode fazer isso clicando no ícone **[!UICONTROL Prod]** no canto superior direito da tela. Depois de selecionar o sandbox apropriado, você verá a tela mudando e agora você está em seu sandbox dedikado.
 
 ![Datainmatning](../uc1/images/sb1.png)
 
@@ -87,27 +87,27 @@ Verifique affärsscheman e datasets na Adobe Experience Platform.
 
 | Datauppsättning | Schema |
 | ----------------- |-------------| 
-| Demo System - händelsedatauppsättning för webbplats (Global v1.1) | Demonstrationssystem - händelseschema för webbplats (Global v1.1) |
+| Demo System - händelsedatauppsättning för webbplats (Global v1.1) | Demo System - händelseschema för webbplats (Global v1.1) |
 | Demo System - händelsedatauppsättning för callcenter (Global v1.1) | Demo System - händelseschema för callcenter (Global v1.1) |
-| Demonstrationssystem - händelsedatauppsättning för röstassistenter (Global v1.1) | Demonstrationssystem - händelseschema för röstassistenter (Global v1.1) |
+| Demo System - händelsedatauppsättning för röstassistenter (Global v1.1) | Demo System - händelseschema för röstassistenter (Global v1.1) |
 
 Certifique-se de ter verificado ao menos:
 
 - Identifierare: CRMID, phoneNumber, ECID, email. Quais identidades são os identificadores primários, quais são os identificadores secundários?
 
-Você pode encontrar os identificadores abrindo um schema e observando o objeto `_experienceplatform.identification.core`. Verifierat till schema [Demonstrationssystem - händelseschema för webbplats (Global v1.1)](https://experience.adobe.com/platform/schema).
+Você pode encontrar os identificadores abrindo um schema e observando o object `_experienceplatform.identification.core`. Verifierat till schemat [Demonstrationssystem - händelseschema för webbplatsen (Global v1.1)](https://experience.adobe.com/platform/schema).
 
 ![demo](./images/identity.png)
 
-- Upptäck o objeto de comércio dentro do schema [Demonstrationssystem - händelseschema för webbplats (Global v1.1)](https://experience.adobe.com/platform/schema).
+- Utforska o objeto de comércio dentro do schema [Demo System - händelseschema för webbplats (Global v1.1)](https://experience.adobe.com/platform/schema).
 
 ![demo](./images/commerce.png)
 
-- Visa uppgifter [datauppsättningar](https://experience.adobe.com/platform/dataset/browse?limit=50&amp;page=1&amp;sortDescending=1&amp;sortField=created) e verifique os dados
+- Visa uppgifter som [datauppsättningar](https://experience.adobe.com/platform/dataset/browse?limit=50&amp;page=1&amp;sortDescending=1&amp;sortField=created) e verifique os dados
 
 Agora você está pronto para começar a usar a interface do usuário do Customer Journey Analytics.
 
-Próxima etapa: [4.2 Conecte datasets da Adobe Experience Platform no Customer Journey Analytics](./ex2.md)
+Próxima-etapa: [4.2 Conecte datasets da Adobe Experience Platform no Customer Journey Analytics](./ex2.md)
 
 [Retornar para Fluxo de Usuário 4](./uc4.md)
 

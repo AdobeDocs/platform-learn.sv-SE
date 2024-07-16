@@ -17,6 +17,6 @@ ht-degree: 0%
 
 # Lägga till användare och hantera behörigheter
 
-Lär dig hur du lägger till användare och hanterar behörigheter i Adobe Experience Platform-baserade program som Real-time Customer Data Platform och Journey Optimizer. Användare läggs först till i Admin Console och beviljas sedan behörighet i Platform- eller Journey Optimizer-gränssnittet. Mer information finns på [Åtkomstkontrolldokumentation](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html).
+Lär dig hur du lägger till användare och hanterar behörigheter i Adobe Experience Platform-baserade program som Real-time Customer Data Platform och Journey Optimizer. Användare läggs först till i Admin Console och beviljas sedan behörighet i Platform- eller Journey Optimizer-gränssnittet. Mer information finns i [Åtkomstkontrollsdokumentationen](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/336081?learn=on)

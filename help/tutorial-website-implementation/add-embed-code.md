@@ -4,7 +4,7 @@ description: Lär dig hur du hämtar taggegenskapens inbäddningskoder och imple
 exl-id: a2959553-2d6a-4c94-a7df-f62b720fd230
 source-git-commit: 277f5f2c07bb5818e8c5cc129bef1ec93411c90d
 workflow-type: tm+mt
-source-wordcount: '1056'
+source-wordcount: '1034'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ I den här lektionen implementerar du den asynkrona inbäddningskoden för tagge
 >Adobe Experience Platform Launch håller på att integreras i Adobe Experience Platform som en serie datainsamlingstekniker. Flera terminologiska förändringar har introducerats i gränssnittet som du bör vara medveten om när du använder det här innehållet:
 >
 > * Platforma launchen (klientsidan) är nu **[[!DNL tags]](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv)**
-> * Platform launch Server Side is now **[[!DNL event forwarding]](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)**
+> * Platforma launchens serversida är nu **[[!DNL event forwarding]](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)**
 > * Edge-konfigurationer är nu **[[!DNL datastreams]](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html)**
 
 ## Utbildningsmål
@@ -28,13 +28,13 @@ När lektionen är klar kan du:
 * Hämta inbäddningskoden för taggegenskapen
 * Förstå skillnaden mellan en utvecklings-, mellanlagrings- och produktionsmiljö
 * Lägga till en tagginbäddningskod i ett HTML-dokument
-* Förklara den optimala platsen för taggens inbäddningskod i förhållande till annan kod i `<head>` av ett HTML-dokument
+* Förklara den optimala platsen för taggens inbäddningskod i förhållande till annan kod i `<head>` i ett HTML-dokument
 
 ## Kopiera inbäddningskoden
 
-Inbäddningskoden är en `<script>` tagg som du lägger in på dina webbsidor för att läsa in och köra logiken som du bygger in i taggar. Om du läser in biblioteket asynkront fortsätter webbläsaren att läsa in sidan, hämtar taggbiblioteket och kör det parallellt. I det här fallet finns det bara en inbäddningskod, som du placerar i `<head>`. (När taggar distribueras synkront finns det två inbäddningskoder, en som du placerar i `<head>` och en annan som du placerar före `</body>`).
+Inbäddningskoden är en `<script>`-tagg som du placerar på dina webbsidor för att läsa in och köra logiken som du bygger in i taggar. Om du läser in biblioteket asynkront fortsätter webbläsaren att läsa in sidan, hämtar taggbiblioteket och kör det parallellt. I det här fallet finns det bara en inbäddningskod, som du placerar i `<head>`. (När taggar distribueras synkront finns det två inbäddningskoder, en som du placerar i `<head>` och en som du placerar före `</body>`).
 
-På skärmen Egenskapsöversikt klickar du på **[!UICONTROL Miljö]** till vänster för att gå till miljösidan. Observera att utvecklings-, mellanlagrings- och produktionsmiljöer har skapats för dig.
+På skärmen för egenskapsöversikt klickar du på **[!UICONTROL Environments]** i den vänstra navigeringen för att gå till miljösidan. Observera att utvecklings-, mellanlagrings- och produktionsmiljöer har skapats för dig.
 
 ![Klicka på Miljöer i den övre navigeringen](images/launch-environments.png)
 
@@ -46,21 +46,21 @@ Det här är de enda miljöer som vi behöver för att slutföra självstudiekur
 
 Nu kopierar vi inbäddningskoden:
 
-1. I **[!UICONTROL Utveckling]** klickar du på ikonen Installera ![Ikonen Installera](images/launch-installIcon.png) för att öppna modal.
+1. Klicka på ikonen ![Installera ](images/launch-installIcon.png) på raden **[!UICONTROL Development]** för att öppna modalen.
 
 1. Observera att taggar som standard använder asynkrona inbäddningskoder
 
-1. Klicka på ikonen Kopiera ![Kopiera, ikon](images/launch-copyIcon.png) om du vill kopiera inbäddningskoden till Urklipp.
+1. Klicka på ikonen Kopiera ![Kopiera](images/launch-copyIcon.png) för att kopiera den inbäddade koden till Urklipp.
 
-1. Klicka **[!UICONTROL Stäng]** för att stänga modalen.
+1. Klicka på **[!UICONTROL Close]** för att stänga spärren.
 
    ![Ikonen Installera](images/launch-copyInstallCode.png)
 
-## Implementera inbäddningskoden i `<head>` på HTML-sidan
+## Implementera inbäddningskoden i `<head>` på HTML-exempelsidan
 
-Inbäddningskoden ska implementeras i `<head>` element för alla HTML-sidor som ska dela egenskapen. Du kan ha en eller flera mallfiler som styr `<head>` globalt på hela webbplatsen, vilket gör det enkelt att lägga till taggar.
+Inbäddningskoden ska implementeras i elementet `<head>` på alla HTML-sidor som delar egenskapen. Du kan ha en eller flera mallfiler som styr `<head>` globalt på webbplatsen, vilket gör det enkelt att lägga till taggar.
 
-Om du inte redan har gjort det kopierar du HTML-sidkoden och klistrar in den i en kodredigerare. [Parenteser](https://brackets.io/) är en kostnadsfri redigerare med öppen källkod om du behöver en.
+Om du inte redan har gjort det kopierar du HTML-sidkoden och klistrar in den i en kodredigerare. [Brackets](https://brackets.io/) är en kostnadsfri redigerare med öppen källkod om du behöver en.
 
 +++Exempel på HTML-sidkod
 
@@ -111,7 +111,7 @@ Om du inte redan har gjort det kopierar du HTML-sidkoden och klistrar in den i e
 
 +++
 
-Ersätt den befintliga inbäddningskoden på eller runt rad 34 med den i Urklipp och spara sidan. Öppna sidan i en webbläsare. Om du läser in sidan med `file://` måste du lägga till&quot;https:&quot; i början av inbäddningskod-URL:en i kodredigeraren). Raderna 33-36 på exempelsidan kan se ut ungefär så här:
+Ersätt den befintliga inbäddningskoden på eller runt rad 34 med den i Urklipp och spara sidan. Öppna sidan i en webbläsare. Om du läser in sidan med protokollet `file://` måste du lägga till&quot;https:&quot; i början av inbäddningskod-URL:en i kodredigeraren). Raderna 33-36 på exempelsidan kan se ut ungefär så här:
 
 ```html
     <!--Tags Header Embed Code: REPLACE LINE 39 WITH THE EMBED CODE FROM YOUR OWN DEVELOPMENT ENVIRONMENT-->
@@ -122,7 +122,7 @@ Ersätt den befintliga inbäddningskoden på eller runt rad 34 med den i Urklipp
 Öppna webbläsarens utvecklarverktyg och gå till fliken Nätverk. Nu bör du se ett 404-fel för taggmiljöens URL:
 ![404-fel](images/samplepage-404.png)
 
-Felet 404 förväntas eftersom du ännu inte har byggt ett bibliotek i den här tagg-miljön. Du kommer att göra det i nästa lektion. Om du ser ett meddelande om att det misslyckades i stället för ett 404-fel har du antagligen glömt att lägga till `https://` i inbäddningskoden. Du behöver bara ange `https://` -protokollet om du läser in exempelsidan med `file://` -protokoll. Gör den ändringen och läs in sidan igen tills felet 404 visas.
+Felet 404 förväntas eftersom du ännu inte har byggt ett bibliotek i den här tagg-miljön. Du kommer att göra det i nästa lektion. Om du ser ett meddelande om att det misslyckades i stället för ett 404-fel har du antagligen glömt att lägga till protokollet `https://` i inbäddningskoden. Du behöver bara ange protokollet `https://` igen om du läser in exempelsidan med protokollet `file://`. Gör den ändringen och läs in sidan igen tills felet 404 visas.
 
 ## Bästa praxis för taggimplementering
 
@@ -130,17 +130,17 @@ Låt oss titta lite närmare på några av de bästa metoderna för taggimplemen
 
 * **Datalager**:
 
-   * Vi *starkt* rekommenderar att du skapar ett datalager på din webbplats som innehåller alla attribut som behövs för att fylla i variabler i lösningar för analys, målgruppsanpassning och annan marknadsföring. Den här exempelsidan innehåller bara ett mycket enkelt datalager, men ett riktigt datalager kan innehålla många fler detaljer om sidan, besökaren, kundvagnen osv. Mer information om datalager finns på [Customer Experience Digital Data Layer 1.0](https://www.w3.org/2013/12/ceddl-201312.pdf)
+   * Vi *rekommenderar starkt* att du skapar ett datalager på din webbplats som innehåller alla attribut som behövs för att fylla i variabler i Analytics, Target och andra marknadsföringslösningar. Den här exempelsidan innehåller bara ett mycket enkelt datalager, men ett riktigt datalager kan innehålla många fler detaljer om sidan, besökaren, kundvagnen osv. Mer information om datalager finns i [Customer Experience Digital Data Layer 1.0](https://www.w3.org/2013/12/ceddl-201312.pdf)
 
    * Definiera datalagret före taggens inbäddningskod för att maximera det du kan göra med Experience Cloud-lösningar.
 
-* **Hjälpbibliotek för JavaScript**: Om du redan har ett bibliotek som JQuery implementerat i `<head>` av sidorna, läs in den före taggar för att använda syntaxen i taggar och Target
+* **JavaScript hjälpbibliotek**: Om du redan har ett bibliotek som JQuery implementerat i `<head>` på dina sidor läser du in det före taggar för att utnyttja syntaxen i taggar och Target
 
-* **HTML5 doctype**: Dokumenttypen HTML5 krävs av Target
+* **HTML5 doctype**: HTML5-doctype krävs av Target
 
-* **preconnect och dns-prefetch**: Använd preconnect och dns-prefetch för att förbättra sidinläsningstiden. Se även: [https://w3c.github.io/resource-hints/](https://w3c.github.io/resource-hints/)
+* **preconnect och dns-prefetch**: Använd preconnect och dns-prefetch för att förbättra sidans inläsningstid. Se även: [https://w3c.github.io/resource-hints/](https://w3c.github.io/resource-hints/)
 
-* **fördölja fragment för asynkrona målinsimplementeringar**: Du kommer att lära dig mer om detta i Target-lektionen, men när Target distribueras via asynkrona inbäddningskoder för taggar bör du hårdkoda ett fragment som döljs på sidorna före taggens inbäddningskoder för att hantera innehållsflimret
+* **fördolt fragment för asynkrona målinsimplementeringar**: Du kommer att lära dig mer om detta i Target-lektionen, men när Target distribueras via asynkrona tagginbäddningskoder bör du hårdkoda ett fragment som döljs på dina sidor före taggens inbäddningskoder för att hantera innehållsflimmer
 
 Här är en sammanfattning av hur dessa bästa metoder ser ut i den föreslagna ordningen. Observera att det finns vissa platshållare för kontospecifik information:
 

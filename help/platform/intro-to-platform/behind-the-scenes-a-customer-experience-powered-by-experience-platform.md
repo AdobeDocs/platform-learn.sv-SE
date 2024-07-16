@@ -1,5 +1,5 @@
 ---
-title: 'Bakom scenen: En kundupplevelse som drivs av Adobe Experience Platform'
+title: Bakom scenerna&#58; En kundupplevelse som drivs av Adobe Experience Platform
 description: I den föregående videon såg vi hur ett exempelvarumärke, Luma, kunde skapa en rik, givande och relevant kundupplevelse. Den här videon visar hur Adobe Experience Platform används för att klara den här resan.
 role: Leader, Architect, Developer, Data Architect, Data Engineer, Admin, User
 level: Beginner

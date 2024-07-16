@@ -18,9 +18,9 @@ ht-degree: 0%
 
 ## Utbildningsmål
 
-## Förutsättningar
+## Förhandskrav
 
-- Tillgång till Adobe Experience Platform: [https://experience.adobe.com/platform](https://experience.adobe.com/platform)
+- Åtkomst till Adobe Experience Platform: [https://experience.adobe.com/platform](https://experience.adobe.com/platform)
 - Åtkomst till Adobe Experience Platform Data Collection: [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/)
 - Tillgång till demowebbplatsen
 

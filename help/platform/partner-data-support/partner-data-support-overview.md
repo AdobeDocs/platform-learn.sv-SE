@@ -1,6 +1,6 @@
 ---
 title: Översikt över stöd för partnerdata i Real-Time CDP
-description: Lär dig mer [!DNL Real-Time Customer Data Platform] har stöd för fullkanalsmarknadsföring med partnerdata för databerikning från första part och prospektering eftersom cookies från tredje part fortfarande är inaktuella. 
+description: Läs om hur  [!DNL Real-Time Customer Data Platform] stöder fullkanalsmarknadsföring med partnerdata för databerikning från första part och prospektering eftersom cookies från tredje part fortfarande är inaktuella. 
 feature: Integrations
 topic: Integrations
 solution: Real-Time Customer Data Platform
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Översikt över stöd för partnerdata i [!DNL Real-Time CDP]
 
-Lär dig mer [!DNL Real-Time Customer Data Platform] har stöd för fullkanalsmarknadsföring med partnerdata för databerikning från första part och prospektering eftersom cookies från tredje part fortfarande är inaktuella. 
+Lär dig hur [!DNL Real-Time Customer Data Platform] stöder fullkanalsmarknadsföring med partnerdata för databerikning från första part och prospektering eftersom cookies från tredje part fortfarande är inaktuella. 
 
 >[!VIDEO](https://video.tv.adobe.com/v/3422855/?learn=on)

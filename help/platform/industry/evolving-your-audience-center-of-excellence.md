@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Utvecklar ditt högteknologiska målgruppscenter
 
-Som de plattformar som underlättar hanteringen av kunddata måste även målgrupper och aktiveringsprogram utvecklas. Det gör också de medarbetare och processer som stöder dessa plattformar. En Audience Center of Excellence-modell (COE) har länge fastställts som det optimala sättet att stödja datahanteringsplattformar (DMP). Om du vill komplettera den här videon kan du även [ladda ned en rapport](assets/whitepaper-evolving-the-audience-center-of-excellence.pdf).
+Som de plattformar som underlättar hanteringen av kunddata måste även målgrupper och aktiveringsprogram utvecklas. Det gör också de medarbetare och processer som stöder dessa plattformar. En Audience Center of Excellence-modell (COE) har länge fastställts som det optimala sättet att stödja datahanteringsplattformar (DMP). Du kan även [hämta ett whitepaper](assets/whitepaper-evolving-the-audience-center-of-excellence.pdf) om du vill komplettera videon.
 
 >[!VIDEO](https://video.tv.adobe.com/v/336938/?learn=on)
 

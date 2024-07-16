@@ -11,8 +11,8 @@ feature: Workspace Basics, Calculated Metrics
 exl-id: 6a9fc1a4-9a6a-43f2-9393-815f9dc2cb4e
 source-git-commit: 3c86f9b19cecf92c9a324fb6fcfcefaebf82177f
 workflow-type: tm+mt
-source-wordcount: '755'
-ht-degree: 7%
+source-wordcount: '768'
+ht-degree: 0%
 
 ---
 
@@ -26,7 +26,7 @@ ht-degree: 7%
 
 ## 4.4.1 Analysis Workspace-gränssnitt i CJA
 
-Med Analysis Workspace slipper ni alla de vanliga begränsningarna i en Analytics-rapport. Det utgör en robust och flexibel arbetsyta för att skapa anpassade analysprojekt. Dra och släpp valfritt antal datatabeller, visualiseringar och komponenter (mått, mått, mätvärden, segment och tidsdetaljer) till ett projekt. Skapa snabbt uppdelningar och segment, skapa kohorter för analys, skapa aviseringar, jämför segment, kör flödes- och bortfallsanalyser samt strukturera och schemalägg rapporter för delning med alla i företaget.
+Analysis Workspace tar bort alla vanliga begränsningar i en enda Analytics-rapport. Den ger en robust, flexibel arbetsyta för att skapa anpassade analysprojekt. Dra och släpp valfritt antal datatabeller, visualiseringar och komponenter (mått, mått, mätvärden, segment och tidsdetaljer) till ett projekt. Skapa snabbt indelningar och segment, skapa kohorter för analys, skapa aviseringar, jämföra segment, göra flödes- och bortfallsanalyser samt strukturera och schemalägg rapporter för delning med vem som helst i företaget.
 
 Customer Journey Analytics lägger den här lösningen ovanpå plattformsdata. Vi rekommenderar starkt att du tittar på den här fyrminutersvideon med en översikt:
 
@@ -39,11 +39,11 @@ Om du inte har använt Analysis Workspace tidigare rekommenderar vi att du titta
 ### Skapa ditt projekt
 
 Nu är det dags att skapa ditt första CJA-projekt. Gå till projektfliken i CJA.
-Klicka **Skapa nytt**.
+Klicka på **Skapa ny**.
 
 ![demo](./images/prmenu.png)
 
-Du kommer då att se det här. Välj **Tomt projekt** och sedan klicka **Skapa**.
+Då ser du det här. Välj **Tomt projekt** och klicka sedan på **Skapa**.
 
 ![demo](./images/prmenu1.png)
 
@@ -51,7 +51,7 @@ Då ser du ett tomt projekt.
 
 ![demo](./images/premptyprojects.png)
 
-Kontrollera först att du har valt rätt datavy i skärmens övre högra hörn. I det här exemplet är datavyn som ska väljas `CJA Bootcamp - Omnichannel Data View`.
+Kontrollera först att du har valt rätt datavy i skärmens övre högra hörn. I det här exemplet är den datavy som ska väljas `CJA Bootcamp - Omnichannel Data View`.
 
 Sedan sparar du projektet och ger det ett namn. Du kan använda följande kommando för att spara:
 
@@ -70,35 +70,35 @@ Använd den här namnkonventionen:
 | ----------------- |-------------| 
 | `yourLastName - Omnichannel Analysis` | `yourLastName - Omnichannel Analysis` |
 
-Klicka på **Spara**.
+Klicka sedan på **Spara**.
 
 ![demo](./images/prsave2.png)
 
 ## 4.4.2 Beräknade värden
 
-Även om vi har organiserat alla komponenter i datavyn måste du fortfarande anpassa några av dem, så att företagsanvändare är redo att börja analysera. Under alla analyser kan du också skapa beräknade mätvärden för att gå djupare på insikterna.
+Även om vi har organiserat alla komponenter i datavyn måste du fortfarande anpassa några av dem, så att företagsanvändare är redo att börja analysera. Under alla analyser kan du också skapa beräknade mätvärden för att gå djupare in på insikterna.
 
-Som exempel skapar vi en **Konverteringsgrad** med **Inköp** mått/händelse definierades i datavyn.
+Vi kommer till exempel att skapa en beräknad **konverteringsgrad** med hjälp av det mått/den händelse för **Inköp** som vi definierade i datavyn.
 
 ### Konverteringsgrad
 
-Låt oss börja öppna verktyget för beräknade mätvärden. Klicka på **+** för att skapa dina första beräknade mätvärden i Analysis Workspace.
+Låt oss börja öppna verktyget för beräknade mätvärden. Klicka på **+** för att skapa ditt första beräknade mått i Analysis Workspace.
 
 ![demo](./images/pradd.png)
 
-The **Beräknad metrisk Builder** visas:
+**Beräknad metrisk byggare** visas:
 
 ![demo](./images/prbuilder.png)
 
-Hitta **Inköp** i listan med mått på den vänstra menyn. Under **Mått** klicka **Visa alla**
+Hitta **Inköp** i listan med mått på den vänstra menyn. Under **Metrisk** klickar du på **Visa alla**
 
 ![demo](./images/calcbuildercr1.png)
 
-Dra och släpp **Inköp** mått i den beräknade måttdefinitionen.
+Dra sedan måttet **Inköp** till den beräknade måttdefinitionen.
 
 ![demo](./images/calcbuildercr2.png)
 
-Normalt innebär konverteringsgraden **Konverteringar/sessioner**. Låt oss göra samma beräkning i den beräknade arbetsytan för metrisk definition. Hitta **Sessioner** mätvärden och dra och släpp dem i definitionsverktyget, under **Inköp** -händelse.
+Oftast innebär konverteringsgraden **Konverteringar/sessioner**. Låt oss göra samma beräkning i den beräknade arbetsytan för metrisk definition. Hitta måttet **Sessioner** och dra och släpp det i definitionsbyggaren under händelsen **Inköp**.
 
 ![demo](./images/calcbuildercr3.png)
 
@@ -120,7 +120,7 @@ Du kommer att ha något liknande på din skärm:
 
 ![demo](./images/calcbuildercr6.png)
 
-Glöm inte att **Spara** Beräknade mått.
+Glöm inte att **spara** det beräknade måttet.
 
 ![demo](./images/pr9.png)
 
@@ -128,7 +128,7 @@ Glöm inte att **Spara** Beräknade mått.
 
 ### Filter: Beräknade Dimensioner
 
-Beräkningar ska inte vara enbart för Metrics. Innan du börjar någon analys är det också intressant att skapa **Beräknade Dimensioner**. Detta innebar i stort sett **segment** i Adobe Analytics. I Customer Journey Analytics anropas dessa segment **Filter**.
+Beräkningar ska inte vara enbart för Metrics. Innan du påbörjar någon analys är det också intressant att skapa några **beräknade Dimensioner**. Detta innebar i princip **segment** tillbaka i Adobe Analytics. I Customer Journey Analytics kallas dessa segment för **filter**.
 
 ![demo](./images/prfilters.png)
 

@@ -9,13 +9,13 @@ thumbnail: 336076.png
 exl-id: c5533831-5bba-45c6-8ff8-eb38accf0d42
 source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
-source-wordcount: '65'
-ht-degree: 9%
+source-wordcount: '60'
+ht-degree: 1%
 
 ---
 
 # Granska lagrade personuppgifter
 
-Lär dig viktiga koncept och beslut som rör granskning av personuppgifter och förberedelser utifrån företagets sekretessbehov. Mer information finns på [Privacy Service - dokumentation](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=sv).
+Lär dig viktiga koncept och beslut som rör granskning av personuppgifter och förberedelser utifrån företagets sekretessbehov. Mer information finns i dokumentationen för [Privacy Service](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=sv).
 
 >[!VIDEO](https://video.tv.adobe.com/v/336076?learn=on)

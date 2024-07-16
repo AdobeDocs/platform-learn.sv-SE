@@ -10,8 +10,8 @@ thumbnail: 4348-apply-data-governance-framework.jpg
 exl-id: 3cc3c794-5ffd-41bf-95d8-be5bca2e3a0f
 source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
 workflow-type: tm+mt
-source-wordcount: '634'
-ht-degree: 1%
+source-wordcount: '586'
+ht-degree: 0%
 
 ---
 
@@ -47,24 +47,24 @@ Luma lovar medlemmarna i deras lojalitetsprogram att lojalitetsdata inte delas m
 
 Det första steget i datastyrningsprocessen är att använda styrningsetiketter på dina data. Innan vi gör det ska vi ta en snabb titt på vilka etiketter som finns:
 
-1. I användargränssnittet för plattformen väljer du **[!UICONTROL Profiler]** till vänster navigering
-1. Gå till **[!UICONTROL Etiketter]** om du vill visa alla etiketter i kontot.
+1. Välj **[!UICONTROL Policies]** i den vänstra navigeringen i plattformens användargränssnitt
+1. Gå till fliken **[!UICONTROL Labels]** om du vill se alla etiketter i kontot.
 
-Det finns många färdiga etiketter, och du kan skapa egna via [!UICONTROL Skapa etikett] -knappen. Det finns tre huvudtyper: [!UICONTROL Kontraktsetiketter], [!UICONTROL Identitetsetiketter]och [!UICONTROL Känsliga etiketter] som motsvarar vanliga orsaker kan data begränsas. Varje etikett har en [!UICONTROL Eget namn] och en kort [!UICONTROL Namn] som bara är en förkortning av typen och en siffra. Till exempel [!DNL C1] label is for &quot;No third-party export&quot;, which is what we need for our Loyalty policy.
+Det finns många färdiga etiketter, och du kan skapa egna med knappen [!UICONTROL Create label]. Det finns tre huvudtyper: [!UICONTROL Contract labels], [!UICONTROL Identity labels] och [!UICONTROL Sensitive labels] som motsvarar vanliga orsaker. Data kan vara begränsade. Var och en av etiketterna har en [!UICONTROL Friendly Name] och en kort [!UICONTROL Name] som bara är en förkortning av typen och ett tal. Etiketten [!DNL C1] är till exempel för Ingen tredjepartsexport, vilket är vad vi behöver för vår lojalitetspolicy.
 
-![Datastyrningsetikett](assets/governance-policies.png)
+![Etikett för datastyrning](assets/governance-policies.png)
 
 Nu är det dags att märka de data vars användning vi vill begränsa:
 
-1. I användargränssnittet för plattformen väljer du **[!UICONTROL Datauppsättningar]** till vänster navigering
+1. Välj **[!UICONTROL Datasets]** i den vänstra navigeringen i plattformens användargränssnitt
 1. Öppna `Luma Loyalty Dataset`
-1. Gå till **[!UICONTROL Datastyrning]** tab
+1. Gå till fliken **[!UICONTROL Data Governance]**
 1. Du kan antingen använda etiketter på enskilda fält eller använda dem på hela datauppsättningen. Vi kommer att tillämpa etiketten på hela datauppsättningen. Klicka på pennikonen. Om du inte ser ikonen kan du göra webbläsaren bredare eller rulla den mellersta panelen åt höger.
    ![Datastyrning](assets/governance-dataset.png)
-1. Utöka **[!UICONTROL Kontraktsetiketter]** -avsnittet och kontrollera **[!UICONTROL C2]** label
-1. Välj **[!UICONTROL Spara ändringar]** knapp
+1. Utöka avsnittet **[!UICONTROL Contract Labels]** i modal och kontrollera etiketten **[!UICONTROL C2]**
+1. Markera knappen **[!UICONTROL Save changes]**
    ![Datastyrning](assets/governance-applyLabel.png)
-1. Återgår till huvudsidan [!UICONTROL Datastyrning] skärm, med **[!UICONTROL Visa ärvda etiketter]** om du vill aktivera kan du se hur etiketten har tillämpats på alla fält i datauppsättningen.
+1. Om du återgår till huvudskärmen [!UICONTROL Data Governance], med **[!UICONTROL Show inherited labels]** aktiverat, kan du se hur etiketten har tillämpats på alla fält i datauppsättningen.
    ![Datastyrning](assets/governance-labelsAdded.png)
 
 
@@ -75,12 +75,12 @@ Nu är det dags att märka de data vars användning vi vill begränsa:
 
 Nu när våra data är märkta kan vi skapa en politik.
 
-1. I användargränssnittet för plattformen väljer du **[!UICONTROL Profiler]** till vänster navigering
-1. På fliken Bläddra finns det redan en användningsprincip som heter &quot;Export restriction&quot; från tredje part som kopplar C2-etiketten till marknadsföringsåtgärden [!UICONTROL Exportera till tredje part]- exakt vad vi behöver!
-1. Välj profilen och aktivera den sedan via **[!UICONTROL Policystatus]** växla
+1. Välj **[!UICONTROL Policies]** i den vänstra navigeringen i plattformens användargränssnitt
+1. På fliken Bläddra finns det redan en användningsprincip som heter &quot;Export restriction&quot; från tredje part som kopplar C2-etiketten till marknadsföringsåtgärden [!UICONTROL Export to Third Party] - exakt det vi behöver!
+1. Välj profilen och aktivera den sedan via växlingsknappen **[!UICONTROL Policy status]**
    ![Datastyrning](assets/governance-enablePolicy.png)
 
-Du kan skapa egna profiler genom att välja **[!UICONTROL Skapa princip]** -knappen. Då öppnas en guide där du kan kombinera flera etiketter och begränsningar för marknadsföringsåtgärder.
+Du kan skapa egna profiler genom att välja knappen **[!UICONTROL Create policy]**. Då öppnas en guide där du kan kombinera flera etiketter och begränsningar för marknadsföringsåtgärder.
 
 ## Stärk styrningspolicyer
 
@@ -93,6 +93,6 @@ Verkställandet av styrningspolitik är uppenbarligen en viktig del av ramverket
 
 * [Dokumentation för datastyrning](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html)
 * [API-referens för datauppsättningstjänst](https://www.adobe.io/experience-platform-apis/references/dataset-service/)
-* [API-referens för principtjänst för styrning](https://www.adobe.io/experience-platform-apis/references/policy-service/)
+* [API-referens för principtjänst](https://www.adobe.io/experience-platform-apis/references/policy-service/)
 
-Nu går vi vidare till [frågetjänst](run-queries.md).
+Nu går vi vidare till [frågetjänsten](run-queries.md).

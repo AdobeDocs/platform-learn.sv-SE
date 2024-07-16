@@ -1,6 +1,6 @@
 ---
 title: Personalisera upplevelser på plats för okända besökare med partnerstödd besökarigenkänning
-description: Lär dig hur du samlar in tredjepartsattribut från [!DNL Adobe Experience Platform Web SDK] och personalisera upplevelsen på plats för okända besökare med partnerstödd besökarigenkänning.
+description: Lär dig hur du samlar in attribut från tredje part från  [!DNL Adobe Experience Platform Web SDK] och anpassar upplevelsen på plats för okända besökare med hjälp av partnerstödd besökarigenkänning.
 feature: Integrations
 topic: Integrations
 solution: Real-Time Customer Data Platform
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Personalisera upplevelser på plats för okända besökare med partnerstödd besökarigenkänning
 
-Lär dig hur du samlar in tredjepartsattribut från [!DNL Adobe Experience Platform Web SDK] och personalisera upplevelsen på plats för okända besökare med partnerstödd besökarigenkänning. Mer information finns på [Använd partnerstödd besöksigenkänning för att personalisera upplevelser på plats](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/use-cases/partner-data/onsite-personalization.html) dokumentation.
+Lär dig hur du samlar in attribut från tredje part från [!DNL Adobe Experience Platform Web SDK] och anpassar din upplevelse på plats för okända besökare med hjälp av partnerstödd besöksigenkänning. Mer information finns i [Använd partnerstödd besöksigenkänning för att anpassa upplevelser på plats](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/use-cases/partner-data/onsite-personalization.html) -dokumentationen.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3423076/?learn=on)

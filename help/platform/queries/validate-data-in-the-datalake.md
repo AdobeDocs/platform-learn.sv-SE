@@ -6,16 +6,16 @@ role: Data Engineer, Data Architect, Developer, Architect
 level: Intermediate
 last-substantial-update: 2023-07-26T00:00:00Z
 jira: KT-11948
-source-git-commit: d4d5433c2a975d5ac0011d7bdc7f590bf8146cc6
+exl-id: c6eb04c7-4f0d-4547-bc43-436278e1770f
+source-git-commit: 143da6340b932563a3309bb46c1c7091e0ab2ee2
 workflow-type: tm+mt
-source-wordcount: '65'
-ht-degree: 9%
+source-wordcount: '60'
+ht-degree: 1%
 
 ---
 
 # Validera data i dataletten
 
-Lär dig hur du validerar om data har importerats till datalagret med hjälp av Adobe Experience Platform Query Service. Detaljerad produktdokumentation finns i [Användargränssnittshandbok för frågeredigeraren](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=sv).
+Lär dig hur du validerar om data har importerats till datalagret med hjälp av Adobe Experience Platform Query Service. Detaljerad produktdokumentation finns i [Användargränssnittsguiden för frågeredigeraren](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=sv).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416130?learn=on)
-

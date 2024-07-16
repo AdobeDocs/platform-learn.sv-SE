@@ -1,6 +1,6 @@
 ---
-title: Lägg till partnerattribut i förstahandsprofiler i [!DNL Real-Time CDP]
-description: Lär dig hur du lägger till partnerattribut i dina förstahandsprofiler för att utöka räckvidden genom ytterligare kanaler i [!DNL Real-Time CDP].
+title: Lägg till partnerattribut i förstapartsprofiler i  [!DNL Real-Time CDP]
+description: Lär dig hur du lägger till partnerattribut i dina förstahandsprofiler för att utöka räckvidden genom ytterligare kanaler i  [!DNL Real-Time CDP].
 feature: Integrations
 topic: Integrations
 solution: Real-Time Customer Data Platform
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Lägg till partnerattribut i förstahandsprofiler i [!DNL Real-Time CDP]
 
-Lär dig hur du lägger till partnerattribut i dina förstahandsprofiler för att utöka räckvidden genom ytterligare kanaler i [!DNL Real-Time CDP]. Mer information finns på [Komplettera förstahandsprofiler med attribut som tillhandahålls av partner](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/use-cases/partner-data/supplement-first-party-profiles.html) dokumentation.
+Lär dig hur du lägger till partnerattribut i dina förstahandsprofiler för att utöka räckvidden genom ytterligare kanaler i [!DNL Real-Time CDP]. Mer information finns i dokumentationen för [Komplettera förstahandsprofiler med attribut från partner](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/use-cases/partner-data/supplement-first-party-profiles.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3423075/?learn=on)

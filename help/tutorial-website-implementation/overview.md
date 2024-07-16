@@ -5,20 +5,20 @@ recommendations: catalog, noDisplay
 exl-id: 1b95f0b2-3062-49d1-9b0b-e6824a54008f
 source-git-commit: 2483409b52562e13a4f557fe5bdec75b5afb4716
 workflow-type: tm+mt
-source-wordcount: '896'
-ht-degree: 2%
+source-wordcount: '851'
+ht-degree: 0%
 
 ---
 
 # Översikt
 
-_Implementera Experience Cloud på webbplatser med taggar_ är den perfekta utgångspunkten för utvecklare och teknikmarknadsförare som vill lära sig hur man implementerar Adobe Experience Cloud lösningar på sin webbplats.
+_Implementera Experience Cloud på webbplatser med taggar_ är den perfekta utgångspunkten för gränssnittsutvecklare eller teknikmarknadsförare som vill lära sig implementera Adobe Experience Cloud lösningar på sin webbplats.
 
 Varje lektion innehåller övningar och grundläggande information som hjälper dig att implementera Experience Cloud och förstå dess värde.  Demonstrationssajter tillhandahålls så att du kan slutföra självstudiekursen och lära dig underliggande tekniker i en säker miljö. När du är klar med den här självstudiekursen bör du vara redo att börja implementera alla era marknadsföringslösningar med hjälp av taggar på din egen webbplats.
 
 >[!INFO]
 >
->I den här självstudien används programspecifika tillägg och bibliotek (AppMeasurement.js för Adobe Analytics, at.js för Adobe Target). Om du vill implementera Adobe Experience Platform Web SDK går du till [Implementera Adobe Experience Cloud med Web SDK](/help/tutorial-web-sdk/overview.md) självstudie.
+>I den här självstudien används programspecifika tillägg och bibliotek (AppMeasurement.js för Adobe Analytics, at.js för Adobe Target). Om du vill implementera Adobe Experience Platform Web SDK läser du självstudiekursen [Implementera Adobe Experience Cloud med Web SDK](/help/tutorial-web-sdk/overview.md).
 
 
 När du är klar kan du:
@@ -28,7 +28,7 @@ När du är klar kan du:
 * Installera en taggegenskap på en webbplats
 
 * Lägg till följande Adobe Experience Cloud-lösningar:
-   * **[Adobe Experience Platform Identity Service](id-service.md)**
+   * **[Adobe Experience Platform identitetstjänst](id-service.md)**
    * **[Adobe Target](target.md)**
    * **[Adobe Analytics](analytics.md)**
    * **[Adobe Audience Manager](audience-manager.md)**
@@ -37,35 +37,35 @@ När du är klar kan du:
 
 * Validera implementeringen med Adobe Experience Cloud Debugger
 
-* Publicera ändringar i utvecklings-, staging- och produktionsmiljöer
+* Publish förändras genom utvecklings-, staging- och produktionsmiljöer
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch håller på att integreras i Adobe Experience Platform som en serie datainsamlingstekniker. Flera terminologiska förändringar har introducerats i gränssnittet som du bör vara medveten om när du använder det här innehållet:
 >
 > * Platforma launchen (klientsidan) är nu **[[!DNL tags]](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv)**
-> * Platform launch Server Side is now **[[!DNL event forwarding]](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)**
+> * Platforma launchens serversida är nu **[[!DNL event forwarding]](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)**
 > * Edge-konfigurationer är nu **[[!DNL datastreams]](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html)**
 
 >[!NOTE]
 >
->Liknande självstudiekurser om flera lösningar finns även för [Web SDK](../tutorial-web-sdk/overview.md) och [Mobile SDK](../tutorial-mobile-sdk/overview.md).
+>Liknande självstudier med flera lösningar finns även för [Web SDK](../tutorial-web-sdk/overview.md) och [Mobile SDK](../tutorial-mobile-sdk/overview.md).
 
-## Förutsättningar
+## Förhandskrav
 
 I den här lektionen antas du ha ett Adobe-ID och de behörigheter som krävs för att slutföra övningarna. Om du inte gör det kan du behöva kontakta din Experience Cloud-administratör för att begära åtkomst.
 
-* För taggar måste du ha behörighet att utveckla, godkänna, publicera, hantera tillägg och hantera miljöer. Mer information om att tagga användarbehörigheter finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html).
+* För taggar måste du ha behörighet att utveckla, godkänna, Publish, hantera tillägg och hantera miljöer. Mer information om tagganvändarbehörigheter finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html).
 * För Adobe Analytics måste du känna till din spårningsserver och vilka rapportsviter du kommer att använda för att slutföra kursen
 * För Audience Manager måste du känna till din Audience Manager-underdomän (även känd som &quot;Partner Name&quot;, &quot;Partner ID&quot; eller &quot;Partner Subdomain&quot;)
 
-Du måste också känna till utvecklingsspråk som HTML och JavaScript. Du behöver inte vara expert på de här språken för att slutföra lektionerna, men du får ut mer av dem om du kan läsa och förstå kod på ett bekvämt sätt.
+Man utgår också från att man känner till utvecklingsspråk som HTML och JavaScript. Du behöver inte vara expert på de här språken för att slutföra lektionerna, men du får ut mer av dem om du kan läsa och förstå kod på ett bekvämt sätt.
 
 ## Om taggar
 
 Taggfunktionen i Adobe Experience Platform är nästa generation av funktioner för hantering av webbplatstaggar och SDK för mobila enheter från Adobe. Taggar ger kunderna ett enkelt sätt att driftsätta och hantera alla analys-, marknadsförings- och annonslösningar som behövs för att skapa relevanta kundupplevelser. Taggar kostar inget extra. Den kan köpas av alla Adobe Experience Cloud-kunder.
 
-Taggar för webbplatser gör det möjligt att centralt hantera alla JavaScript-lösningar för analys, marknadsföring och annonsering som används på både dator- och mobilsajter. Om du till exempel distribuerar Adobe Analytics kommer taggar att hantera AppMeasurementets JavaScript-bibliotek, fylla i variabler och begära eld.
+Taggar för webbplatser gör det möjligt att centralt hantera alla JavaScript-lösningar för analys, marknadsföring och reklam som används på både dator- och mobilsajter. Om du till exempel distribuerar Adobe Analytics kommer taggar att hantera AppMeasurementet i JavaScript-biblioteket, fylla i variabler och utlösa brandförfrågningar.
 
 Innehållet i behållaren är minifierat, inklusive din egen kod. Allt är modulärt. Om du inte behöver något objekt inkluderas det inte i ditt bibliotek. Resultatet är en snabb och kompakt implementering.
 
@@ -73,14 +73,14 @@ Taggar är också en plattform som gör det möjligt för tredjepartsleverantör
 
 ## Om lektionerna
 
-I den här lektionen kommer du att implementera Adobe Experience Cloud i en falsk detaljhandelswebbplats som kallas Luma. The [Luma-webbplats](https://luma.enablementadobe.com/content/luma/us/en.html) har ett omfattande datalager och funktionalitet som gör att du kan skapa en realistisk implementering. Du skapar en egen taggegenskap i din egen Experience Cloud-organisation och mappar den till vår värdbaserade Luma-webbplats med Experience Cloud Debugger.
+I den här lektionen kommer du att implementera Adobe Experience Cloud i en falsk detaljhandelswebbplats som kallas Luma. [Luma-webbplatsen](https://luma.enablementadobe.com/content/luma/us/en.html) har ett omfattande datalager och funktioner som gör att du kan skapa en realistisk implementering. Du skapar en egen taggegenskap i din egen Experience Cloud-organisation och mappar den till vår värdbaserade Luma-webbplats med Experience Cloud Debugger.
 
-[![Lumas webbplats](images/overview-luma.png)](https://luma.enablementadobe.com/content/luma/us/en.html)
+[![Luma-webbplats](images/overview-luma.png)](https://luma.enablementadobe.com/content/luma/us/en.html)
 
 ## Skaffa verktygen
 
-1. Eftersom du kommer att använda vissa webbläsarspecifika tillägg rekommenderar vi att du slutför självstudiekursen med [Chrome Web Browser](https://www.google.com/chrome/)
-1. Lägg till [Adobe Experience Platform Debugger](https://chromewebstore.google.com/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) tillägg till webbläsaren Chrome
+1. Eftersom du kommer att använda vissa webbläsarspecifika tillägg rekommenderar vi att du slutför kursen med [Chrome webbläsare](https://www.google.com/chrome/)
+1. Lägg till tillägget [Adobe Experience Platform Debugger](https://chromewebstore.google.com/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) i din Chrome-webbläsare
 1. Kopiera HTML-exempelsidkoden
 
    +++Exempel på HTML-sidkod
@@ -132,12 +132,12 @@ I den här lektionen kommer du att implementera Adobe Experience Cloud i en fals
 
 +++
 
-1. Skaffa en textredigerare där du kan ändra HTML-exempelsidan. (Om du inte har någon rekommenderar vi att du försöker [Parenteser](https://brackets.io/))
-1. Bokmärk [Luma-webbplats](https://luma.enablementadobe.com/content/luma/us/en.html)
+1. Skaffa en textredigerare där du kan ändra HTML-exempelsidan. (Om du inte har någon bör du prova [hakparenteser](https://brackets.io/))
+1. Bokmärk [Luma-webbplatsen](https://luma.enablementadobe.com/content/luma/us/en.html)
 
 >[!NOTE]
 >
->Det kan vara enklare att slutföra den här självstudiekursen när Luma-webbplatsen är öppen i Chrome, medan du läser den här självstudiekursen och slutför gränssnittsstegen för datainsamling i en annan webbläsare.
+>Det kan vara enklare att slutföra den här självstudiekursen med Luma-webbplatsen öppen i Chrome, medan du läser den här självstudiekursen och slutför stegen i gränssnittet för datainsamling i en annan webbläsare.
 
 Kom så börjar vi!
 

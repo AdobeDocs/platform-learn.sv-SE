@@ -19,16 +19,16 @@ ht-degree: 0%
 
 <!--5min-->
 
-_Getting Started with Adobe Experience Platform for Data Architects and Data Engineers_ är den perfekta startpunkten för att komma i kontakt med Experience Platform.
+_Komma igång med Adobe Experience Platform för dataarkitekter och datatekniker_ är den perfekta startpunkten för att komma i kontakt med Experience Platform.
 
 
 <!--How do we address ETL-->
 
 ## Utbildningsmål
 
-Dataarkitekter och datatekniker måste samarbeta nära för en framgångsrik driftsättning i Experience Platform. Den här praktiska självstudiekursen lär dig de viktigaste uppgifterna som utförs av _båda rollerna_ så att ni vet hur ni börjar implementera Platform för ert eget företag. Du får hjälp med övningar som presenterar nyckelterminologi, funktioner, gränssnitt och API:er för Experience Platform. Kunder som använder Adobe Experience Cloud-program som Real-time Customer Data Platform, Customer Journey Analytics och Journey Optimizer tycker också att det här innehållet är användbart eftersom plattformstjänster är en viktig grund för dessa program.
+Dataarkitekter och datatekniker måste samarbeta nära för en framgångsrik driftsättning i Experience Platform. Den här praktiska självstudiekursen lär dig de viktigaste uppgifter som utförs av _båda rollerna_ så att du vet hur du börjar implementera Platform för ditt eget företag. Du får hjälp med övningar som presenterar nyckelterminologi, funktioner, gränssnitt och API:er för Experience Platform. Kunder som använder Adobe Experience Cloud-program som Real-time Customer Data Platform, Customer Journey Analytics och Journey Optimizer tycker också att det här innehållet är användbart eftersom plattformstjänster är en viktig grund för dessa program.
 
-![Adobe Experience Cloud Marknadsföring visar de plattformstjänster som ingår i kursen - identitet, profil, segmentering, intag, fråga och styrning](assets/marketecture.png)
+![Adobe Experience Cloud Marknadsföring framhäver de plattformstjänster som ingår i den här självstudiekursen: Identitet, Profil, Segmentering, Ingestion, Query och Governance](assets/marketecture.png)
 
 Ämnen:
 
@@ -48,9 +48,9 @@ Adobe Experience Platform är en teknisk plattform som hjälper er att uppnå er
 
 ## Krav
 
-* Du har slutfört [Introduktion till Adobe Experience Platform-kurs](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2020.1) på Experience League och är bekanta med plattformsfunktioner
+* Du har slutfört [introduktionen till Adobe Experience Platform-kursen](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-U-1-2020.1) på Experience League och känner till plattformsfunktionerna
 * Du har tillgång till ett konto som etablerats med Adobe Experience Platform (eller ett plattformsbaserat program som Real-Time CDP eller Journey Optimizer) och Data Collection (tidigare Launch).
-* Du är systemadministratör för det kontot eller kan ha en [konfigurera användarbehörigheter](configure-permissions.md) för dig.
+* Du är systemadministratör för det kontot eller kan ha en [konfigurera användarbehörigheter](configure-permissions.md) åt dig.
 
 ## Använda den här självstudiekursen
 
@@ -58,7 +58,7 @@ I den här självstudiekursen kombineras uppgifter för både datatekniker och d
 
 När du skapar olika plattformselement under den här självstudiekursen kan du försöka hålla dig till de namn jag rekommenderar så mycket som möjligt. Det finns dock några högnivåelementnamn som du kanske vill anpassa om det finns flera personer på din organisation som tar den här självstudiekursen samtidigt. Du kan till exempel kalla plattformssandlådan&quot;Luma Tutorial Platform - Ignatius J Reilly&quot; i stället för bara&quot;Luma Tutorial Platform&quot;.
 
-Om du fastnar kan du prova att läsa instruktionerna igen och sedan använda ![Logga ett problem](https://experienceleague.adobe.com/assets/img/feedback.svg) på sidofältet på varje sida för att kontakta mig.
+Om du fastnar kan du försöka läsa instruktionerna igen först och sedan använda länken ![Logga ett problem](https://experienceleague.adobe.com/assets/img/feedback.svg) på sidofältet på varje sida för att kontakta mig.
 
 ## Teknisk information
 
@@ -79,4 +79,4 @@ Plattformen är byggd för API. Det finns gränssnittsarbetsflöden för alla st
 * Juni 2023: Uppdaterat för att inkludera ett nytt behörighetsarbetsflöde och för att använda API-autentiseringsuppgifter för OAuth Server-till-Server
 
 
-Låt oss gå vidare till den första lektionen -[konfigurera behörigheter](configure-permissions.md).
+Låt oss nu gå vidare till den första lektionen -[konfigurera behörigheter](configure-permissions.md).
