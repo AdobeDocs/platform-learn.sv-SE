@@ -6,7 +6,7 @@ feature-set: Journey Optimizer
 feature: Web Channel,Web SDK
 jira: KT-15411
 exl-id: ab83ce56-7f54-4341-8750-b458d0db0239
-source-git-commit: c5318809bfd475463bac3c05d4f35138fb2d7f28
+source-git-commit: 9cb56b739efde38d8e85358f45ee6a35a0394e27
 workflow-type: tm+mt
 source-wordcount: '2436'
 ht-degree: 0%
@@ -123,7 +123,7 @@ Så här konfigurerar du alternativet i sammanfogningsprincipen:
 
 Om du vill använda innehållsexperiment i webbkanalskampanjer måste du se till att den webbdatauppsättning som används också ingår i rapportkonfigurationen. Journey Optimizer rapporteringssystem använder datauppsättningen i skrivskyddat läge för att fylla i användningsklara innehållsexperimenteringsrapporter.
 
-[Att lägga till datauppsättningar för rapportering av innehållsexperiment beskrivs i det här avsnittet](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/content-experiment/reporting-configuration#add-datasets).
+[Att lägga till datauppsättningar för rapportering av innehållsexperiment beskrivs i det här avsnittet](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/content-experiment/reporting-configuration#add-datasets).
 
 ## Use Case Overview - Loyalty Rewards
 
