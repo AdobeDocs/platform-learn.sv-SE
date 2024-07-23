@@ -2,7 +2,7 @@
 title: Inledande konfiguration | Migrera mål från at.js 2.x till Web SDK
 description: Lär dig mer om och konfigurera viktiga grundläggande element som krävs för implementeringen av Platform Web SDK
 exl-id: dbf9683b-1cfc-474a-9c38-432cad4d1533
-source-git-commit: 4690d41f92c83fe17eda588538d397ae1fa28af0
+source-git-commit: 2182441d992aec0602d0955d78aa85407bd770c9
 workflow-type: tm+mt
 source-wordcount: '234'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 Migrering från at.js till Platform Web SDK kräver en första konfiguration för att möjliggöra korrekt datainhämtning, funktioner och funktioner för Platform Web SDK. Följande steg från [implementeringsjälvstudiekursen för Web SDK för plattformen](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html) måste slutföras innan några webbplatsimplementeringsändringar görs:
 
-- [Konfigurera lämpliga behörigheter](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/initial-configuration/configure-permissions.html){target="_blank"} i Adobe Admin Console för datainsamling
+- [Konfigurera lämpliga behörigheter](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/overview#prerequisites){target="_blank"} i Adobe Admin Console för datainsamling
 - [Konfigurera ett XDM-schema](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/initial-configuration/configure-schemas.html){target="_blank"} för att skicka strukturerade data till Edge Network
 - [Konfigurera ett identitetsnamnområde](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/initial-configuration/configure-identities.html){target="_blank"} för enhetspersonalisering och funktionen mbox3rdPartyId
 - [Skapa en datastream](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/initial-configuration/configure-datastream.html){target="_blank"} för att aktivera vidarebefordran av data från Edge Network

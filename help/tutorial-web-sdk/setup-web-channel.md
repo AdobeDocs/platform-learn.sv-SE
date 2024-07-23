@@ -6,7 +6,7 @@ feature-set: Journey Optimizer
 feature: Web Channel,Web SDK
 jira: KT-15411
 exl-id: ab83ce56-7f54-4341-8750-b458d0db0239
-source-git-commit: 9cb56b739efde38d8e85358f45ee6a35a0394e27
+source-git-commit: 2182441d992aec0602d0955d78aa85407bd770c9
 workflow-type: tm+mt
 source-wordcount: '2436'
 ht-degree: 0%
@@ -201,7 +201,7 @@ Så här skapar du innehållsexperimentet:
 
 1. Du kan också välja att **[!UICONTROL Distribute evenly]**. Markera det här alternativet för att se till att uppdelningarna alltid är jämnt fördelade.
 
-[Läs mer om innehållsexperiment i Adobe Journey Optimizer webbkanal](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/campaigns/content-experiment/get-started-experiment).
+[Läs mer om innehållsexperiment i Adobe Journey Optimizer webbkanal](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/content-experiment/get-started-experiment).
 
 ### Redigera innehåll med hjälp av den visuella hjälpen
 

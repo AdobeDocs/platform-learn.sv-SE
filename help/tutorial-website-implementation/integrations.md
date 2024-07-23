@@ -2,9 +2,9 @@
 title: Implementera integrering av Experience Cloud med taggar
 description: Lär dig hur du validerar integreringen av målgrupper, A4T och kundattribut i din Adobe Experience Cloud-implementering. Den här lektionen är en del av självstudiekursen Implementera Experience Cloud på webbplatser.
 exl-id: 1d02efce-a50a-4f4d-a0cf-eb8275cf0faa
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 2182441d992aec0602d0955d78aa85407bd770c9
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1191'
 ht-degree: 0%
 
 ---
@@ -28,13 +28,12 @@ Du bör slutföra alla tidigare lektioner i den här självstudiekursen innan du
 >
 >Det finns många krav på användarbehörigheter, kontokonfigurationer och etableringssteg som krävs för att fullt ut kunna använda dessa integreringar och som ligger utanför kursens räckvidd. Om du inte redan använder dessa integreringar i din nuvarande implementering av Experience Cloud bör du tänka på följande:
 >
->* Granska de fullständiga kraven för [bastjänstintegreringarna](https://experienceleague.adobe.com/docs/core-services/interface/about-core-services/core-services.html)
->* Granska de fullständiga kraven för [Analytics for Target-integrering](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/before-implement.html)
->* Har en administratör för din Experience Cloud-organisation [begär etablering av dessa integreringar](https://www.adobe.com/go/audiences)
+>* Granska de fullständiga kraven för [bastjänstintegreringarna](https://experienceleague.adobe.com/en/docs/core-services/interface/services/getting-started)
+>* Granska de fullständiga kraven för [Analytics for Target-integrering](https://experienceleague.adobe.com/en/docs/target/using/integrate/a4t/before-implement)
 
 ## Målgrupper
 
-[Publiker](https://experienceleague.adobe.com/docs/core-services/interface/audiences/audience-library.html) ingår i People Core-tjänsten och gör att du kan dela målgrupper mellan olika lösningar. Du kan till exempel skapa en målgrupp i Audience Manager och använda den för att leverera personaliserat innehåll med Target.
+[Publiker](https://experienceleague.adobe.com/en/docs/core-services/interface/services/audiences/overview) ingår i People Core-tjänsten och gör att du kan dela målgrupper mellan olika lösningar. Du kan till exempel skapa en målgrupp i Audience Manager och använda den för att leverera personaliserat innehåll med Target.
 
 De viktigaste kraven för att implementera A4T, som du redan har gjort, är att:
 
