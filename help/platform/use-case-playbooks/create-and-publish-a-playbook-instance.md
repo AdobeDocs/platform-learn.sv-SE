@@ -5,11 +5,11 @@ feature: Playbooks
 role: Developer, User
 level: Beginner
 doc-type: Feature Video
-duration: 389
+duration: 434
 last-substantial-update: 2024-08-12T00:00:00Z
 jira: KT-14075
 exl-id: 31a25812-53d6-47c3-9453-35262066648e
-source-git-commit: 099e415065951582aed6b608af3f69a48f3b4efc
+source-git-commit: ad2aff295b89fd7b45df295834f41feeece52253
 workflow-type: tm+mt
 source-wordcount: '61'
 ht-degree: 0%
