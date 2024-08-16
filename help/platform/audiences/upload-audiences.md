@@ -5,10 +5,9 @@ feature: Segments
 role: User
 level: Beginner
 jira: KT-13699
-thumbnail: 3421714.jpeg
 last-substantial-update: 2023-07-19T00:00:00Z
 exl-id: 989202e3-f479-485d-aa7b-c4f345235f0b
-source-git-commit: f272df4edee0a107be4b0d3063b24e70343040d2
+source-git-commit: 21e3ce9f5ee2f34205935462f5bb548c9ba6a6db
 workflow-type: tm+mt
 source-wordcount: '46'
 ht-degree: 0%
