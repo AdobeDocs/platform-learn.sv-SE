@@ -5,9 +5,9 @@ user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
 auto-video-transcripts: true
-source-git-commit: 1a3b89f7be838aeff389e7f404114ed3fef370d7
+source-git-commit: 8f7e2699e0158bc36459bbe61a5aa8e70e8e775b
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '931'
 ht-degree: 6%
 
 ---
@@ -50,6 +50,8 @@ ht-degree: 6%
    + [Introduktion till Audience Portal and Composition](audiences/introduction-to-audience-portal-and-composition.md)
    + [Överför målgrupper](audiences/upload-audiences.md)
    + [Översikt över sammanställning av federerad publik](audiences/overview-of-federated-audience-composition.md)
+   + [Anslut och konfigurera sammanställning av federerad publik](audiences/connect-and-configure-federated-audience-composition.md)
+   + [Skapa en sammansatt publiksammansättning](audiences/create-a-federated-audience-composition.md)
    + [Översikt över verktyget Skapa målgruppsregel](audiences/audience-rule-builder-overview.md)
    + [Skapa målgrupper](audiences/create-audiences.md)
    + [Använd tidsbegränsningar](audiences/time-constraints.md)
