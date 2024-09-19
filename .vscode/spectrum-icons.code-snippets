@@ -1,0 +1,7498 @@
+{
+	// Place your platform-learn.en workspace snippets here. Each snippet is defined under a snippet name and has a scope, prefix, body and 
+	// description. Add comma separated ids of the languages where the snippet is applicable in the scope field. If scope 
+	// is left empty or omitted, the snippet gets applied to all languages. The prefix is what is 
+	// used to trigger the snippet and the body will be expanded and inserted. Possible variables are: 
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. 
+	// Placeholders with the same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"scope": "javascript,typescript",
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+	"123": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![123](/help/assets/icons/123.svg)"
+		],
+		"description": "123"
+	},
+	"3DMaterial": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![3DMaterial](/help/assets/icons/3DMaterial.svg)"
+		],
+		"description": "3DMaterial"
+	},
+	"ABC": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ABC](/help/assets/icons/ABC.svg)"
+		],
+		"description": "ABC"
+	},
+	"AEMScreen": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AEMScreen](/help/assets/icons/AEMScreen.svg)"
+		],
+		"description": "AEMScreen"
+	},
+	"AI": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AEMScreen](/help/assets/icons/AI.svg)"
+		],
+		"description": "AI"
+	},
+	"Action": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Action](/help/assets/icons/Action.svg)"
+		],
+		"description": "Action"
+	},
+	"AdDisplay": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AdDisplay](/help/assets/icons/AdDisplay.svg)"
+		],
+		"description": "AdDisplay"
+	},
+	"AdPrint": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AdPrint](/help/assets/icons/AdPrint.svg)"
+		],
+		"description": "AdPrint"
+	},
+	"Add": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Add](/help/assets/icons/Add.svg)"
+		],
+		"description": "Add"
+	},
+	"AddCircle": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AddCircle](/help/assets/icons/AddCircle.svg)"
+		],
+		"description": "AddCircle"
+	},
+	"AddTo": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AddTo](/help/assets/icons/AddTo.svg)"
+		],
+		"description": "AddTo"
+	},
+	"AddToSelection": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AddToSelection](/help/assets/icons/AddToSelection.svg)"
+		],
+		"description": "AddToSelection"
+	},
+	"AdobeLogo": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AdobeLogo](/help/assets/icons/AdobeLogo.svg)"
+		],
+		"description": "AdobeLogo"
+	},
+	"AdobeLogoSmall": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AdobeLogoSmall](/help/assets/icons/AdobeLogoSmall.svg)"
+		],
+		"description": "AdobeLogoSmall"
+	},
+	"Airplane": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Airplane](/help/assets/icons/Airplane.svg)"
+		],
+		"description": "Airplane"
+	},
+	"Alert": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Alert](/help/assets/icons/Alert.svg)"
+		],
+		"description": "Alert"
+	},
+	"AlertAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AlertAdd](/help/assets/icons/AlertAdd.svg)"
+		],
+		"description": "AlertAdd"
+	},
+	"AlertCheck": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AlertCheck](/help/assets/icons/AlertCheck.svg)"
+		],
+		"description": "AlertCheck"
+	},
+	"AlertCircle": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AlertCircle](/help/assets/icons/AlertCircle.svg)"
+		],
+		"description": "AlertCircle"
+	},
+	"AlertCircleFilled": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AlertCircleFilled](/help/assets/icons/AlertCircleFilled.svg)"
+		],
+		"description": "AlertCircleFilled"
+	},
+	"Algorithm": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Algorithm](/help/assets/icons/Algorithm.svg)"
+		],
+		"description": "Algorithm"
+	},
+	"Alia": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Alia](/help/assets/icons/Alia.svg)"
+		],
+		"description": "Alia"
+	},
+	"AlignBottom": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AlignBottom](/help/assets/icons/AlignBottom.svg)"
+		],
+		"description": "AlignBottom"
+	},
+	"AlignCenter": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AlignCenter](/help/assets/icons/AlignCenter.svg)"
+		],
+		"description": "AlignCenter"
+	},
+	"AlignLeft": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AlignLeft](/help/assets/icons/AlignLeft.svg)"
+		],
+		"description": "AlignLeft"
+	},
+	"AlignMiddle": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AlignMiddle](/help/assets/icons/AlignMiddle.svg)"
+		],
+		"description": "AlignMiddle"
+	},
+	"AlignRight": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AlignRight](/help/assets/icons/AlignRight.svg)"
+		],
+		"description": "AlignRight"
+	},
+	"AlignTop": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AlignTop](/help/assets/icons/AlignTop.svg)"
+		],
+		"description": "AlignTop"
+	},
+	"Amusementpark": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Amusementpark](/help/assets/icons/Amusementpark.svg)"
+		],
+		"description": "Amusementpark"
+	},
+	"Anchor": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Anchor](/help/assets/icons/Anchor.svg)"
+		],
+		"description": "Anchor"
+	},
+	"AnchorSelect": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AnchorSelect](/help/assets/icons/AnchorSelect.svg)"
+		],
+		"description": "AnchorSelect"
+	},
+	"Annotate": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Annotate](/help/assets/icons/Annotate.svg)"
+		],
+		"description": "Annotate"
+	},
+	"AnnotatePen": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AnnotatePen](/help/assets/icons/AnnotatePen.svg)"
+		],
+		"description": "AnnotatePen"
+	},
+	"AnnotateRange": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AnnotateRange](/help/assets/icons/AnnotateRange.svg)"
+		],
+		"description": "AnnotateRange"
+	},
+	"Answer": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Answer](/help/assets/icons/Answer.svg)"
+		],
+		"description": "Answer"
+	},
+	"AnswerFavorite": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AnswerFavorite](/help/assets/icons/AnswerFavorite.svg)"
+		],
+		"description": "AnswerFavorite"
+	},
+	"App": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![App](/help/assets/icons/App.svg)"
+		],
+		"description": "App"
+	},
+	"AppRefresh": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AppRefresh](/help/assets/icons/AppRefresh.svg)"
+		],
+		"description": "AppRefresh"
+	},
+	"AppleFile": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AppleFile](/help/assets/icons/AppleFile.svg)"
+		],
+		"description": "AppleFile"
+	},
+	"ApplicationDelivery": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ApplicationDelivery](/help/assets/icons/ApplicationDelivery.svg)"
+		],
+		"description": "ApplicationDelivery"
+	},
+	"ApproveReject": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ApproveReject](/help/assets/icons/ApproveReject.svg)"
+		],
+		"description": "ApproveReject"
+	},
+	"Apps": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![App](/help/assets/icons/Apps.svg)"
+		],
+		"description": "Apps"
+	},
+	"Archive": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Archive](/help/assets/icons/Archive.svg)"
+		],
+		"description": "Archive"
+	},
+	"ArchiveRemove": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ArchiveRemove](/help/assets/icons/ArchiveRemove.svg)"
+		],
+		"description": "ArchiveRemove"
+	},
+	"ArrowDown": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ArrowDown](/help/assets/icons/ArrowDown.svg)"
+		],
+		"description": "ArrowDown"
+	},
+	"ArrowLeft": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ArrowLeft](/help/assets/icons/ArrowLeft.svg)"
+		],
+		"description": "ArrowLeft"
+	},
+	"ArrowRight": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ArrowRight](/help/assets/icons/ArrowRight.svg)"
+		],
+		"description": "ArrowRight"
+	},
+	"ArrowUp": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ArrowUp](/help/assets/icons/ArrowUp.svg)"
+		],
+		"description": "ArrowUp"
+	},
+	"ArrowUpRight": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ArrowUpRight](/help/assets/icons/ArrowUpRight.svg)"
+		],
+		"description": "ArrowUpRight"
+	},
+	"Artboard": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Artboard](/help/assets/icons/Artboard.svg)"
+		],
+		"description": "Artboard"
+	},
+	"Article": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Article](/help/assets/icons/Article.svg)"
+		],
+		"description": "Article"
+	},
+	"Asset": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Asset](/help/assets/icons/Asset.svg)"
+		],
+		"description": "Asset"
+	},
+	"AssetCheck": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AssetCheck](/help/assets/icons/AssetCheck.svg)"
+		],
+		"description": "AssetCheck"
+	},
+	"AssetsAdded": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AssetsAdded](/help/assets/icons/AssetsAdded.svg)"
+		],
+		"description": "AssetsAdded"
+	},
+	"AssetsDownloaded": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AssetsDownloaded](/help/assets/icons/AssetsDownloaded.svg)"
+		],
+		"description": "AssetsDownloaded"
+	},
+	"AssetsExpired": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AssetsExpired](/help/assets/icons/AssetsExpired.svg)"
+		],
+		"description": "AssetsExpired"
+	},
+	"AssetsLinkedPublished": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AssetsLinkedPublished](/help/assets/icons/AssetsLinkedPublished.svg)"
+		],
+		"description": "AssetsLinkedPublished"
+	},
+	"AssetsModified": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AssetsModified](/help/assets/icons/AssetsModified.svg)"
+		],
+		"description": "AssetsModified"
+	},
+	"AssetsPublished": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AssetsPublished](/help/assets/icons/AssetsPublished.svg)"
+		],
+		"description": "AssetsPublished"
+	},
+	"Asterisk": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Asterisk](/help/assets/icons/Asterisk.svg)"
+		],
+		"description": "Asterisk"
+	},
+	"At": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![At](/help/assets/icons/At.svg)"
+		],
+		"description": "At"
+	},
+	"Attach": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Attach](/help/assets/icons/Attach.svg)"
+		],
+		"description": "Attach"
+	},
+	"AttachmentExclude": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AttachmentExclude](/help/assets/icons/AttachmentExclude.svg)"
+		],
+		"description": "AttachmentExclude"
+	},
+	"Attribute": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Attribute](/help/assets/icons/Attribute.svg)"
+		],
+		"description": "Attribute"
+	},
+	"AttributeCustom": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AttributeCustom](/help/assets/icons/AttributeCustom.svg)"
+		],
+		"description": "AttributeCustom"
+	},
+	"AttributeFirstTouch": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AttributeFirstTouch](/help/assets/icons/AttributeFirstTouch.svg)"
+		],
+		"description": "AttributeFirstTouch"
+	},
+	"AttributeInverseJ": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AttributeInverseJ](/help/assets/icons/AttributeInverseJ.svg)"
+		],
+		"description": "AttributeInverseJ"
+	},
+	"AttributeJCurve": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AttriAttributeJCurvebute](/help/assets/icons/AttributeJCurve.svg)"
+		],
+		"description": "AttributeJCurve"
+	},
+	"AttributeLastTouch": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AttributeLastTouch](/help/assets/icons/AttributeLastTouch.svg)"
+		],
+		"description": "AttributeLastTouch"
+	},
+	"AttributeLinear": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AttributeLinear](/help/assets/icons/AttributeLinear.svg)"
+		],
+		"description": "AttributeLinear"
+	},
+	"AttributeSameTouch": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AttributeSameTouch](/help/assets/icons/AttributeSameTouch.svg)"
+		],
+		"description": "AttributeSameTouch"
+	},
+	"AttributeTimeDecay": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AttributeTimeDecay](/help/assets/icons/AttributeTimeDecay.svg)"
+		],
+		"description": "AttributeTimeDecay"
+	},
+	"AttributeUShape": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AttributeUShape](/help/assets/icons/AttributeUShape.svg)"
+		],
+		"description": "AttributeUShape"
+	},
+	"AttributeParticipation": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AttributeParticipation](/help/assets/icons/AttributeParticipation.svg)"
+		],
+		"description": "AttributeParticipation"
+	},
+	"AttributeAlgorithmic": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AttributeAlgorithmic](/help/assets/icons/AttributeAlgorithmic.svg)"
+		],
+		"description": "AttributeAlgorithmic"
+	},
+	"Audio": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Audio](/help/assets/icons/Audio.svg)"
+		],
+		"description": "Audio"
+	},
+	"AutomatedSegment": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![AutomatedSegment](/help/assets/icons/AutomatedSegment.svg)"
+		],
+		"description": "AutomatedSegment"
+	},
+	"Back": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Back](/help/assets/icons/Back.svg)"
+		],
+		"description": "Back"
+	},
+	"Back30Second": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Back30Second](/help/assets/icons/Back30Second.svg)"
+		],
+		"description": "Back30Second"
+	},
+	"BackAndroid": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![BackAndroid](/help/assets/icons/BackAndroid.svg)"
+		],
+		"description": "BackAndroid"
+	},
+	"Beaker": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Beaker](/help/assets/icons/Beaker.svg)"
+		],
+		"description": "Beaker"
+	},
+	"BeakerCheck": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![BeakerCheck](/help/assets/icons/BeakerCheck.svg)"
+		],
+		"description": "BeakerCheck"
+	},
+	"BeakerShare": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![BeakerShare](/help/assets/icons/BeakerShare.svg)"
+		],
+		"description": "BeakerShare"
+	},
+	"Bell": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Bell](/help/assets/icons/Bell.svg)"
+		],
+		"description": "Bell"
+	},
+	"BidRule": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![BidRule](/help/assets/icons/BidRule.svg)"
+		],
+		"description": "BidRule"
+	},
+	"BidRuleAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![BidRuleAdd](/help/assets/icons/BidRuleAdd.svg)"
+		],
+		"description": "BidRuleAdd"
+	},
+	"Blower": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Blower](/help/assets/icons/Blower.svg)"
+		],
+		"description": "Blower"
+	},
+	"Blur": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Blur](/help/assets/icons/Blur.svg)"
+		],
+		"description": "Blur"
+	},
+	"Book": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Book](/help/assets/icons/Book.svg)"
+		],
+		"description": "Book"
+	},
+	"Bookmark": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Bookmark](/help/assets/icons/Bookmark.svg)"
+		],
+		"description": "Bookmark"
+	},
+	"BookmarkSingle": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![BookmarkSingle](/help/assets/icons/BookmarkSingle.svg)"
+		],
+		"description": "BookmarkSingle"
+	},
+	"BookmarkSingleOutline": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![BookmarkSingleOutline](/help/assets/icons/BookmarkSingleOutline.svg)"
+		],
+		"description": "BookmarkSingleOutline"
+	},
+	"BookmarkSmall": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![BookmarkSmall](/help/assets/icons/BookmarkSmall.svg)"
+		],
+		"description": "BookmarkSmall"
+	},
+	"BookmarkSmallOutline": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![BookmarkSmallOutline](/help/assets/icons/BookmarkSmallOutline.svg)"
+		],
+		"description": "BookmarkSmallOutline"
+	},
+	"Boolean": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Boolean](/help/assets/icons/Boolean.svg)"
+		],
+		"description": "Boolean"
+	},
+	"Border": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Border](/help/assets/icons/Border.svg)"
+		],
+		"description": "Border"
+	},
+	"Box": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Box](/help/assets/icons/Box.svg)"
+		],
+		"description": "Box"
+	},
+	"BoxAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![BoxAdd](/help/assets/icons/BoxAdd.svg)"
+		],
+		"description": "BoxAdd"
+	},
+	"BoxExport": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![BoxExport](/help/assets/icons/BoxExport.svg)"
+		],
+		"description": "BoxExport"
+	},
+	"BoxImport": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![BoxImport](/help/assets/icons/BoxImport.svg)"
+		],
+		"description": "BoxImport"
+	},
+	"Bracket": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Bracket](/help/assets/icons/Bracket.svg)"
+		],
+		"description": "Bracket"
+	},
+	"BracketsSquare": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![BracketsSquare](/help/assets/icons/BracketsSquare.svg)"
+		],
+		"description": "BracketsSquare"
+	},
+	"Branch1": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Branch1](/help/assets/icons/Branch1.svg)"
+		],
+		"description": "Branch1"
+	},
+	"Branch2": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Branch2](/help/assets/icons/Branch2.svg)"
+		],
+		"description": "Branch2"
+	},
+	"Branch3": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Branch3](/help/assets/icons/Branch3.svg)"
+		],
+		"description": "Branch3"
+	},
+	"BranchCircle": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![BranchCircle](/help/assets/icons/BranchCircle.svg)"
+		],
+		"description": "BranchCircle"
+	},
+	"BreadcrumbNavigation": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![BreadcrumbNavigation](/help/assets/icons/BreadcrumbNavigation.svg)"
+		],
+		"description": "BreadcrumbNavigation"
+	},
+	"Breakdown": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Breakdown](/help/assets/icons/Breakdown.svg)"
+		],
+		"description": "Breakdown"
+	},
+	"BreakdownAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![BreakdownAdd](/help/assets/icons/BreakdownAdd.svg)"
+		],
+		"description": "BreakdownAdd"
+	},
+	"Briefcase": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Briefcase](/help/assets/icons/Briefcase.svg)"
+		],
+		"description": "Briefcase"
+	},
+	"Browse": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Browse](/help/assets/icons/Browse.svg)"
+		],
+		"description": "Browse"
+	},
+	"Brush": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Brush](/help/assets/icons/Brush.svg)"
+		],
+		"description": "Brush"
+	},
+	"Bug": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Bug](/help/assets/icons/Bug.svg)"
+		],
+		"description": "Bug"
+	},
+	"Building": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Building](/help/assets/icons/Building.svg)"
+		],
+		"description": "Building"
+	},
+	"BulkEditUser": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![BulkEditUser](/help/assets/icons/BulkEditUser.svg)"
+		],
+		"description": "BulkEditUser"
+	},
+	"Button": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Button](/help/assets/icons/Button.svg)"
+		],
+		"description": "Button"
+	},
+	"CCLibrary": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CCLibrary](/help/assets/icons/CCLibrary.svg)"
+		],
+		"description": "CCLibrary"
+	},
+	"Calculator": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Calculator](/help/assets/icons/Calculator.svg)"
+		],
+		"description": "Calculator"
+	},
+	"Calendar": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Calendar](/help/assets/icons/Calendar.svg)"
+		],
+		"description": "Calendar"
+	},
+	"CalendarAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CalendarAdd](/help/assets/icons/CalendarAdd.svg)"
+		],
+		"description": "CalendarAdd"
+	},
+	"CalendarLocked": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CalendarLocked](/help/assets/icons/CalendarLocked.svg)"
+		],
+		"description": "CalendarLocked"
+	},
+	"CalendarUnlocked": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CalendarUnlocked](/help/assets/icons/CalendarUnlocked.svg)"
+		],
+		"description": "CalendarUnlocked"
+	},
+	"CallCenter": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CallCenter](/help/assets/icons/CallCenter.svg)"
+		],
+		"description": "CallCenter"
+	},
+	"Camera": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Camera](/help/assets/icons/Camera.svg)"
+		],
+		"description": "Camera"
+	},
+	"CameraFlip": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CameraFlip](/help/assets/icons/CameraFlip.svg)"
+		],
+		"description": "CameraFlip"
+	},
+	"CameraRefresh": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CameraRefresh](/help/assets/icons/CameraRefresh.svg)"
+		],
+		"description": "CameraRefresh"
+	},
+	"Campaign": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Campaign](/help/assets/icons/Campaign.svg)"
+		],
+		"description": "Campaign"
+	},
+	"CampaignAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CampaignAdd](/help/assets/icons/CampaignAdd.svg)"
+		],
+		"description": "CampaignAdd"
+	},
+	"CampaignClose": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CampaignClose](/help/assets/icons/CampaignClose.svg)"
+		],
+		"description": "CampaignClose"
+	},
+	"CampaignDelete": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CampaignDelete](/help/assets/icons/CampaignDelete.svg)"
+		],
+		"description": "CampaignDelete"
+	},
+	"CampaignEdit": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CampaignEdit](/help/assets/icons/CampaignEdit.svg)"
+		],
+		"description": "CampaignEdit"
+	},
+	"Cancel": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Cancel](/help/assets/icons/Cancel.svg)"
+		],
+		"description": "Cancel"
+	},
+	"Capital": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Capital](/help/assets/icons/Capital.svg)"
+		],
+		"description": "Capital"
+	},
+	"Captcha": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Captcha](/help/assets/icons/Captcha.svg)"
+		],
+		"description": "Captcha"
+	},
+	"Car": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Car](/help/assets/icons/Car.svg)"
+		],
+		"description": "Car"
+	},
+	"Card": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Card](/help/assets/icons/Card.svg)"
+		],
+		"description": "Card"
+	},
+	"Channel": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Channel](/help/assets/icons/Channel.svg)"
+		],
+		"description": "Channel"
+	},
+	"Chat": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Chat](/help/assets/icons/Chat.svg)"
+		],
+		"description": "Chat"
+	},
+	"ChatAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ChatAdd](/help/assets/icons/ChatAdd.svg)"
+		],
+		"description": "ChatAdd"
+	},
+	"CheckPause": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CheckPause](/help/assets/icons/CheckPause.svg)"
+		],
+		"description": "CheckPause"
+	},
+	"Checkmark": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Checkmark](/help/assets/icons/Checkmark.svg)"
+		],
+		"description": "Checkmark"
+	},
+	"CheckmarkCircle": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CheckmarkCircle](/help/assets/icons/CheckmarkCircle.svg)"
+		],
+		"description": "CheckmarkCircle"
+	},
+	"CheckmarkCircleOutline": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CheckmarkCircleOutline](/help/assets/icons/CheckmarkCircleOutline.svg)"
+		],
+		"description": "CheckmarkCircleOutline"
+	},
+	"ChevronDoubleLeft": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ChevronDoubleLeft](/help/assets/icons/ChevronDoubleLeft.svg)"
+		],
+		"description": "ChevronDoubleLeft"
+	},
+	"ChevronDoubleRight": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ChevronDoubleRight](/help/assets/icons/ChevronDoubleRight.svg)"
+		],
+		"description": "ChevronDoubleRight"
+	},
+	"ChevronDown": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ChevronDown](/help/assets/icons/ChevronDown.svg)"
+		],
+		"description": "ChevronDown"
+	},
+	"ChevronLeft": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ChevronLeft](/help/assets/icons/ChevronLeft.svg)"
+		],
+		"description": "ChevronLeft"
+	},
+	"ChevronRight": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ChevronRight](/help/assets/icons/ChevronRight.svg)"
+		],
+		"description": "ChevronRight"
+	},
+	"ChevronUp": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ChevronUp](/help/assets/icons/ChevronUp.svg)"
+		],
+		"description": "ChevronUp"
+	},
+	"ChevronUpDown": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ChevronUpDown](/help/assets/icons/ChevronUpDown.svg)"
+		],
+		"description": "ChevronUpDown"
+	},
+	"Circle": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Circle](/help/assets/icons/Circle.svg)"
+		],
+		"description": "Circle"
+	},
+	"ClassicGridView": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ClassicGridView](/help/assets/icons/ClassicGridView.svg)"
+		],
+		"description": "ClassicGridView"
+	},
+	"Clock": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Clock](/help/assets/icons/Clock.svg)"
+		],
+		"description": "Clock"
+	},
+	"ClockCheck": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ClockCheck](/help/assets/icons/ClockCheck.svg)"
+		],
+		"description": "ClockCheck"
+	},
+	"CloneStamp": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CloneStamp](/help/assets/icons/CloneStamp.svg)"
+		],
+		"description": "CloneStamp"
+	},
+	"Close": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Close](/help/assets/icons/Close.svg)"
+		],
+		"description": "Close"
+	},
+	"CloseCaption": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CloseCaption](/help/assets/icons/CloseCaption.svg)"
+		],
+		"description": "CloseCaption"
+	},
+	"CloseCircle": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CloseCircle](/help/assets/icons/CloseCircle.svg)"
+		],
+		"description": "CloseCircle"
+	},
+	"Cloud": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Cloud](/help/assets/icons/Cloud.svg)"
+		],
+		"description": "Cloud"
+	},
+	"CloudDisconnected": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CloudDisconnected](/help/assets/icons/CloudDisconnected.svg)"
+		],
+		"description": "CloudDisconnected"
+	},
+	"CloudError": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CloudError](/help/assets/icons/CloudError.svg)"
+		],
+		"description": "CloudError"
+	},
+	"CloudOutline": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CloudOutline](/help/assets/icons/CloudOutline.svg)"
+		],
+		"description": "CloudOutline"
+	},
+	"Code": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Code](/help/assets/icons/Code.svg)"
+		],
+		"description": "Code"
+	},
+	"Collection": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Collection](/help/assets/icons/Collection.svg)"
+		],
+		"description": "Collection"
+	},
+	"CollectionAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CollectionAdd](/help/assets/icons/CollectionAdd.svg)"
+		],
+		"description": "CollectionAdd"
+	},
+	"CollectionAddTo": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CollectionAddTo](/help/assets/icons/CollectionAddTo.svg)"
+		],
+		"description": "CollectionAddTo"
+	},
+	"CollectionCheck": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CollectionCheck](/help/assets/icons/CollectionCheck.svg)"
+		],
+		"description": "CollectionCheck"
+	},
+	"CollectionEdit": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CollectionEdit](/help/assets/icons/CollectionEdit.svg)"
+		],
+		"description": "CollectionEdit"
+	},
+	"CollectionExclude": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CollectionExclude](/help/assets/icons/CollectionExclude.svg)"
+		],
+		"description": "CollectionExclude"
+	},
+	"CollectionLink": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CollectionLink](/help/assets/icons/CollectionLink.svg)"
+		],
+		"description": "CollectionLink"
+	},
+	"ColorFill": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ColorFill](/help/assets/icons/ColorFill.svg)"
+		],
+		"description": "ColorFill"
+	},
+	"ColorPalette": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ColorPalette](/help/assets/icons/ColorPalette.svg)"
+		],
+		"description": "ColorPalette"
+	},
+	"ColorWheel": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ColorWheel](/help/assets/icons/ColorWheel.svg)"
+		],
+		"description": "ColorWheel"
+	},
+	"ColumnSetting": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ColumnSetting](/help/assets/icons/ColumnSetting.svg)"
+		],
+		"description": "ColumnSetting"
+	},
+	"ColumnTwoA": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ColumnTwoA](/help/assets/icons/ColumnTwoA.svg)"
+		],
+		"description": "ColumnTwoA"
+	},
+	"ColumnTwoB": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ColumnTwoB](/help/assets/icons/ColumnTwoB.svg)"
+		],
+		"description": "ColumnTwoB"
+	},
+	"ColumnTwoC": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ColumnTwoC](/help/assets/icons/ColumnTwoC.svg)"
+		],
+		"description": "ColumnTwoC"
+	},
+	"ComboChart": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Comment](/help/assets/icons/ComboChart.svg)"
+		],
+		"description": "ComboChart"
+	},
+	"Comment": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Comment](/help/assets/icons/Comment.svg)"
+		],
+		"description": "Comment"
+	},
+	"Compare": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Compare](/help/assets/icons/Compare.svg)"
+		],
+		"description": "Compare"
+	},
+	"Compas": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Compas](/help/assets/icons/Compas.svg)"
+		],
+		"description": "Compas"
+	},
+	"Condition": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Condition](/help/assets/icons/Condition.svg)"
+		],
+		"description": "Condition"
+	},
+	"ConfidenceFour": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ConfidenceFour](/help/assets/icons/ConfidenceFour.svg)"
+		],
+		"description": "ConfidenceFour"
+	},
+	"ConfidenceOne": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ConfidenceOne](/help/assets/icons/ConfidenceOne.svg)"
+		],
+		"description": "ConfidenceOne"
+	},
+	"ConfidenceThree": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ConfidenceThree](/help/assets/icons/ConfidenceThree.svg)"
+		],
+		"description": "ConfidenceThree"
+	},
+	"ConfidenceTwo": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ConfidenceTwo](/help/assets/icons/ConfidenceTwo.svg)"
+		],
+		"description": "ConfidenceTwo"
+	},
+	"Contrast": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Contrast](/help/assets/icons/Contrast.svg)"
+		],
+		"description": "Contrast"
+	},
+	"ConversionFunnel": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ConversionFunnel](/help/assets/icons/ConversionFunnel.svg)"
+		],
+		"description": "ConversionFunnel"
+	},
+	"Copy": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Copy](/help/assets/icons/Copy.svg)"
+		],
+		"description": "Copy"
+	},
+	"CoverImage": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CoverImage](/help/assets/icons/CoverImage.svg)"
+		],
+		"description": "CoverImage"
+	},
+	"CreditCard": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CreditCard](/help/assets/icons/CreditCard.svg)"
+		],
+		"description": "CreditCard"
+	},
+	"Crop": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Crop](/help/assets/icons/Crop.svg)"
+		],
+		"description": "Crop"
+	},
+	"CropLightning": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CropLightning](/help/assets/icons/CropLightning.svg)"
+		],
+		"description": "CropLightning"
+	},
+	"CropRotate": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CropRotate](/help/assets/icons/CropRotate.svg)"
+		],
+		"description": "CropRotate"
+	},
+	"Crosshair": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Crosshair](/help/assets/icons/Crosshair.svg)"
+		],
+		"description": "Crosshair"
+	},
+	"CrossSize75": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![CrossSize75](/help/assets/icons/CrossSize75.svg)"
+		],
+		"description": "CrossSize75"
+	},
+	"Curate": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Curate](/help/assets/icons/Curate.svg)"
+		],
+		"description": "Curate"
+	},
+	"Cut": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Cut](/help/assets/icons/Cut.svg)"
+		],
+		"description": "Cut"
+	},
+	"Dashboard": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Dashboard](/help/assets/icons/Dashboard.svg)"
+		],
+		"description": "Dashboard"
+	},
+	"Data": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Data](/help/assets/icons/Data.svg)"
+		],
+		"description": "Data"
+	},
+	"DataAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DataAdd](/help/assets/icons/DataAdd.svg)"
+		],
+		"description": "DataAdd"
+	},
+	"DataBook": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DataBook](/help/assets/icons/DataBook.svg)"
+		],
+		"description": "DataBook"
+	},
+	"DataCheck": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DataCheck](/help/assets/icons/DataCheck.svg)"
+		],
+		"description": "DataCheck"
+	},
+	"DataCorrelated": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DataCorrelated](/help/assets/icons/DataCorrelated.svg)"
+		],
+		"description": "DataCorrelated"
+	},
+	"DataDownload": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DataDownload](/help/assets/icons/DataDownload.svg)"
+		],
+		"description": "DataDownload"
+	},
+	"DataEdit": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DataEdit](/help/assets/icons/DataEdit.svg)"
+		],
+		"description": "DataEdit"
+	},
+	"DataMapping": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DataMapping](/help/assets/icons/DataMapping.svg)"
+		],
+		"description": "DataMapping"
+	},
+	"DataRefresh": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DataRefresh](/help/assets/icons/DataRefresh.svg)"
+		],
+		"description": "DataRefresh"
+	},
+	"DataRemove": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DataRemove](/help/assets/icons/DataRemove.svg)"
+		],
+		"description": "DataRemove"
+	},
+	"DataSetting": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DataSetting](/help/assets/icons/DataSetting.svg)"
+		],
+		"description": "DataSetting"
+	},
+	"DataUnavailable": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DataUnavailable](/help/assets/icons/DataUnavailable.svg)"
+		],
+		"description": "DataUnavailable"
+	},
+	"DataUpload": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DataUpload](/help/assets/icons/DataUpload.svg)"
+		],
+		"description": "DataUpload"
+	},
+	"DataUser": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DataUser](/help/assets/icons/DataUser.svg)"
+		],
+		"description": "DataUser"
+	},
+	"Date": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Date](/help/assets/icons/Date.svg)"
+		],
+		"description": "Date"
+	},
+	"DateInput": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DateInput](/help/assets/icons/DateInput.svg)"
+		],
+		"description": "DateInput"
+	},
+	"Deduplication": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Deduplication](/help/assets/icons/Deduplication.svg)"
+		],
+		"description": "Deduplication"
+	},
+	"Delegate": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Delegate](/help/assets/icons/Delegate.svg)"
+		],
+		"description": "Delegate"
+	},
+	"Delete": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Delete](/help/assets/icons/Delete.svg)"
+		],
+		"description": "Delete"
+	},
+	"DeleteOutline": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DeleteOutline](/help/assets/icons/DeleteOutline.svg)"
+		],
+		"description": "DeleteOutline"
+	},
+	"Demographic": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Demographic](/help/assets/icons/Demographic.svg)"
+		],
+		"description": "Demographic"
+	},
+	"Deselect": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Deselect](/help/assets/icons/Deselect.svg)"
+		],
+		"description": "Deselect"
+	},
+	"DeselectCircular": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DeselectCircular](/help/assets/icons/DeselectCircular.svg)"
+		],
+		"description": "DeselectCircular"
+	},
+	"DesktopAndMobile": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DesktopAndMobile](/help/assets/icons/DesktopAndMobile.svg)"
+		],
+		"description": "DesktopAndMobile"
+	},
+	"Device": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Device](/help/assets/icons/Device.svg)"
+		],
+		"description": "Device"
+	},
+	"DeviceDesktop": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DeviceDesktop](/help/assets/icons/DeviceDesktop.svg)"
+		],
+		"description": "DeviceDesktop"
+	},
+	"DeviceLaptop": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DeviceLaptop](/help/assets/icons/DeviceLaptop.svg)"
+		],
+		"description": "DeviceLaptop"
+	},
+	"DevicePhone": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DevicePhone](/help/assets/icons/DevicePhone.svg)"
+		],
+		"description": "DevicePhone"
+	},
+	"DevicePhoneRefresh": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DevicePhoneRefresh](/help/assets/icons/DevicePhoneRefresh.svg)"
+		],
+		"description": "DevicePhoneRefresh"
+	},
+	"DevicePreview": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DevicePreview](/help/assets/icons/DevicePreview.svg)"
+		],
+		"description": "DevicePreview"
+	},
+	"DeviceRotateLandscape": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DeviceRotateLandscape](/help/assets/icons/DeviceRotateLandscape.svg)"
+		],
+		"description": "DeviceRotateLandscape"
+	},
+	"DeviceRotatePortrait": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DeviceRotatePortrait](/help/assets/icons/DeviceRotatePortrait.svg)"
+		],
+		"description": "DeviceRotatePortrait"
+	},
+	"DeviceTV": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DeviceTV](/help/assets/icons/DeviceTV.svg)"
+		],
+		"description": "DeviceTV"
+	},
+	"DeviceTablet": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DeviceTablet](/help/assets/icons/DeviceTablet.svg)"
+		],
+		"description": "DeviceTablet"
+	},
+	"Dimensions": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Dimensions](/help/assets/icons/Dimensions.svg)"
+		],
+		"description": "Dimensions"
+	},
+	"Discover": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Discover](/help/assets/icons/Discover.svg)"
+		],
+		"description": "Discover"
+	},
+	"DiscoverOutline": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DiscoverOutline](/help/assets/icons/DiscoverOutline.svg)"
+		],
+		"description": "DiscoverOutline"
+	},
+	"DistributeBottomEdge": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DistributeBottomEdge](/help/assets/icons/DistributeBottomEdge.svg)"
+		],
+		"description": "DistributeBottomEdge"
+	},
+	"DistributeHorizontalCenter": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DistributeHorizontalCenter](/help/assets/icons/DistributeHorizontalCenter.svg)"
+		],
+		"description": "DistributeHorizontalCenter"
+	},
+	"DistributeHorizontally": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DistributeHorizontally](/help/assets/icons/DistributeHorizontally.svg)"
+		],
+		"description": "DistributeHorizontally"
+	},
+	"DistributeLeftEdge": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DistributeLeftEdge](/help/assets/icons/DistributeLeftEdge.svg)"
+		],
+		"description": "DistributeLeftEdge"
+	},
+	"DistributeRightEdge": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DistributeRightEdge](/help/assets/icons/DistributeRightEdge.svg)"
+		],
+		"description": "DistributeRightEdge"
+	},
+	"DistributeSpaceHoriz": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DistributeSpaceHoriz](/help/assets/icons/DistributeSpaceHoriz.svg)"
+		],
+		"description": "DistributeSpaceHoriz"
+	},
+	"DistributeSpaceVert": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DistributeSpaceVert](/help/assets/icons/DistributeSpaceVert.svg)"
+		],
+		"description": "DistributeSpaceVert"
+	},
+	"DistributeTopEdge": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DistributeTopEdge](/help/assets/icons/DistributeTopEdge.svg)"
+		],
+		"description": "DistributeTopEdge"
+	},
+	"DistributeVerticalCenter": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DistributeVerticalCenter](/help/assets/icons/DistributeVerticalCenter.svg)"
+		],
+		"description": "DistributeVerticalCenter"
+	},
+	"DistributeVertically": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DistributeVertically](/help/assets/icons/DistributeVertically.svg)"
+		],
+		"description": "DistributeVertically"
+	},
+	"Divide": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Divide](/help/assets/icons/Divide.svg)"
+		],
+		"description": "Divide"
+	},
+	"DividePath": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DividePath](/help/assets/icons/DividePath.svg)"
+		],
+		"description": "DividePath"
+	},
+	"Document": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Document](/help/assets/icons/Document.svg)"
+		],
+		"description": "Document"
+	},
+	"DocumentFragment": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DocumentFragment](/help/assets/icons/DocumentFragment.svg)"
+		],
+		"description": "DocumentFragment"
+	},
+	"DocumentFragmentGroup": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DocumentFragmentGroup](/help/assets/icons/DocumentFragmentGroup.svg)"
+		],
+		"description": "DocumentFragmentGroup"
+	},
+	"DocumentOutline": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DocumentOutline](/help/assets/icons/DocumentOutline.svg)"
+		],
+		"description": "DocumentOutline"
+	},
+	"DocumentRefresh": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DocumentRefresh](/help/assets/icons/DocumentRefresh.svg)"
+		],
+		"description": "DocumentRefresh"
+	},
+	"Dolly": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Dolly](/help/assets/icons/Dolly.svg)"
+		],
+		"description": "Dolly"
+	},
+	"Download": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Download](/help/assets/icons/Download.svg)"
+		],
+		"description": "Download"
+	},
+	"DownloadFromCloud": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DownloadFromCloud](/help/assets/icons/DownloadFromCloud.svg)"
+		],
+		"description": "DownloadFromCloud"
+	},
+	"DownloadFromCloudOutline": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DownloadFromCloudOutline](/help/assets/icons/DownloadFromCloudOutline.svg)"
+		],
+		"description": "DownloadFromCloudOutline"
+	},
+	"Draft": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Draft](/help/assets/icons/Draft.svg)"
+		],
+		"description": "Draft"
+	},
+	"DragHandle": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![DragHandle](/help/assets/icons/DragHandle.svg)"
+		],
+		"description": "DragHandle"
+	},
+	"Draw": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Draw](/help/assets/icons/Draw.svg)"
+		],
+		"description": "Draw"
+	},
+	"Dropdown": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Dropdown](/help/assets/icons/Dropdown.svg)"
+		],
+		"description": "Dropdown"
+	},
+	"Duplicate": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Duplicate](/help/assets/icons/Duplicate.svg)"
+		],
+		"description": "Duplicate"
+	},
+	"Edit": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Edit](/help/assets/icons/Edit.svg)"
+		],
+		"description": "Edit"
+	},
+	"EditCircle": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![EditCircle](/help/assets/icons/EditCircle.svg)"
+		],
+		"description": "EditCircle"
+	},
+	"EditExclude": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![EditExclude](/help/assets/icons/EditExclude.svg)"
+		],
+		"description": "EditExclude"
+	},
+	"EditIn": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![EditIn](/help/assets/icons/EditIn.svg)"
+		],
+		"description": "EditIn"
+	},
+	"EditInLight": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![EditInLight](/help/assets/icons/EditInLight.svg)"
+		],
+		"description": "EditInLight"
+	},
+	"Education": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Education](/help/assets/icons/Education.svg)"
+		],
+		"description": "Education"
+	},
+	"Effect": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Effect](/help/assets/icons/Effect.svg)"
+		],
+		"description": "Effect"
+	},
+	"Efficient": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Efficient](/help/assets/icons/Efficient.svg)"
+		],
+		"description": "Efficient"
+	},
+	"Ellipse": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Ellipse](/help/assets/icons/Ellipse.svg)"
+		],
+		"description": "Ellipse"
+	},
+	"Email": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Email](/help/assets/icons/Email.svg)"
+		],
+		"description": "Email"
+	},
+	"EmailCancel": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![EmailCancel](/help/assets/icons/EmailCancel.svg)"
+		],
+		"description": "EmailCancel"
+	},
+	"EmailCheck": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![EmailCheck](/help/assets/icons/EmailCheck.svg)"
+		],
+		"description": "EmailCheck"
+	},
+	"EmailExclude": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![EmailExclude](/help/assets/icons/EmailExclude.svg)"
+		],
+		"description": "EmailExclude"
+	},
+	"EmailExcludeOutline": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![EmailExcludeOutline](/help/assets/icons/EmailExcludeOutline.svg)"
+		],
+		"description": "EmailExcludeOutline"
+	},
+	"EmailGear": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![EmailGear](/help/assets/icons/EmailGear.svg)"
+		],
+		"description": "EmailGear"
+	},
+	"EmailGearOutline": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![EmailGearOutline](/help/assets/icons/EmailGearOutline.svg)"
+		],
+		"description": "EmailGearOutline"
+	},
+	"EmailKey": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![EmailKey](/help/assets/icons/EmailKey.svg)"
+		],
+		"description": "EmailKey"
+	},
+	"EmailKeyOutline": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![EmailKeyOutline](/help/assets/icons/EmailKeyOutline.svg)"
+		],
+		"description": "EmailKeyOutline"
+	},
+	"EmailLightning": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![EmailLightning](/help/assets/icons/EmailLightning.svg)"
+		],
+		"description": "EmailLightning"
+	},
+	"EmailNotification": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![EmailNotification](/help/assets/icons/EmailNotification.svg)"
+		],
+		"description": "EmailNotification"
+	},
+	"EmailOutline": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![EmailOutline](/help/assets/icons/EmailOutline.svg)"
+		],
+		"description": "EmailOutline"
+	},
+	"EmailRefresh": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![EmailRefresh](/help/assets/icons/EmailRefresh.svg)"
+		],
+		"description": "EmailRefresh"
+	},
+	"EmailSchedule": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![EmailSchedule](/help/assets/icons/EmailSchedule.svg)"
+		],
+		"description": "EmailSchedule"
+	},
+	"Engagement": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Engagement](/help/assets/icons/Engagement.svg)"
+		],
+		"description": "Engagement"
+	},
+	"Enterprise": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Enterprise](/help/assets/icons/Enterprise.svg)"
+		],
+		"description": "Enterprise"
+	},
+	"Erase": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Erase](/help/assets/icons/Erase.svg)"
+		],
+		"description": "Erase"
+	},
+	"Events": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Events](/help/assets/icons/Events.svg)"
+		],
+		"description": "Events"
+	},
+	"Event": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Event](/help/assets/icons/Event.svg)"
+		],
+		"description": "Event"
+	},
+	"EventExclude": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![EventExclude](/help/assets/icons/EventExclude.svg)"
+		],
+		"description": "EventExclude"
+	},
+	"EventShare": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![EventShare](/help/assets/icons/EventShare.svg)"
+		],
+		"description": "EventShare"
+	},
+	"ExcludeOverlap": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ExcludeOverlap](/help/assets/icons/ExcludeOverlap.svg)"
+		],
+		"description": "ExcludeOverlap"
+	},
+	"Experience": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Experience](/help/assets/icons/Experience.svg)"
+		],
+		"description": "Experience"
+	},
+	"ExperienceAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ExperienceAdd](/help/assets/icons/ExperienceAdd.svg)"
+		],
+		"description": "ExperienceAdd"
+	},
+	"ExperienceAddTo": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ExperienceAddTo](/help/assets/icons/ExperienceAddTo.svg)"
+		],
+		"description": "ExperienceAddTo"
+	},
+	"ExperienceExport": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ExperienceExport](/help/assets/icons/ExperienceExport.svg)"
+		],
+		"description": "ExperienceExport"
+	},
+	"ExperienceImport": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ExperienceImport](/help/assets/icons/ExperienceImport.svg)"
+		],
+		"description": "ExperienceImport"
+	},
+	"Export": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Export](/help/assets/icons/Export.svg)"
+		],
+		"description": "Export"
+	},
+	"ExportOriginal": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ExportOriginal](/help/assets/icons/ExportOriginal.svg)"
+		],
+		"description": "ExportOriginal"
+	},
+	"Exposure": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Exposure](/help/assets/icons/Exposure.svg)"
+		],
+		"description": "Exposure"
+	},
+	"Extension": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Extension](/help/assets/icons/Extension.svg)"
+		],
+		"description": "Extension"
+	},
+	"Fast": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Fast](/help/assets/icons/Fast.svg)"
+		],
+		"description": "Fast"
+	},
+	"FastForward": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FastForward](/help/assets/icons/FastForward.svg)"
+		],
+		"description": "FastForward"
+	},
+	"FastForwardCircle": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FastForwardCircle](/help/assets/icons/FastForwardCircle.svg)"
+		],
+		"description": "FastForwardCircle"
+	},
+	"Feature": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Feature](/help/assets/icons/Feature.svg)"
+		],
+		"description": "Feature"
+	},
+	"Feed": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Feed](/help/assets/icons/Feed.svg)"
+		],
+		"description": "Feed"
+	},
+	"FeedAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FeedAdd](/help/assets/icons/FeedAdd.svg)"
+		],
+		"description": "FeedAdd"
+	},
+	"FeedManagement": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FeedManagement](/help/assets/icons/FeedManagement.svg)"
+		],
+		"description": "FeedManagement"
+	},
+	"Feedback": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Feedback](/help/assets/icons/Feedback.svg)"
+		],
+		"description": "Feedback"
+	},
+	"FileAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FileAdd](/help/assets/icons/FileAdd.svg)"
+		],
+		"description": "FileAdd"
+	},
+	"FileCSV": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FileCSV](/help/assets/icons/FileCSV.svg)"
+		],
+		"description": "FileCSV"
+	},
+	"FileCampaign": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FileCampaign](/help/assets/icons/FileCampaign.svg)"
+		],
+		"description": "FileCampaign"
+	},
+	"FileChart": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FileChart](/help/assets/icons/FileChart.svg)"
+		],
+		"description": "FileChart"
+	},
+	"FileCheckedOut": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FileCheckedOut](/help/assets/icons/FileCheckedOut.svg)"
+		],
+		"description": "FileCheckedOut"
+	},
+	"FileCode": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FileCode](/help/assets/icons/FileCode.svg)"
+		],
+		"description": "FileCode"
+	},
+	"FileData": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FileData](/help/assets/icons/FileData.svg)"
+		],
+		"description": "FileData"
+	},
+	"FileEmail": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FileEmail](/help/assets/icons/FileEmail.svg)"
+		],
+		"description": "FileEmail"
+	},
+	"FileFolder": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FileFolder](/help/assets/icons/FileFolder.svg)"
+		],
+		"description": "FileFolder"
+	},
+	"FileGear": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FileGear](/help/assets/icons/FileGear.svg)"
+		],
+		"description": "FileGear"
+	},
+	"FileGlobe": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FileGlobe](/help/assets/icons/FileGlobe.svg)"
+		],
+		"description": "FileGlobe"
+	},
+	"FileHTML": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FileHTML](/help/assets/icons/FileHTML.svg)"
+		],
+		"description": "FileHTML"
+	},
+	"FileImportant": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FileImportant](/help/assets/icons/FileImportant.svg)"
+		],
+		"description": "FileImportant"
+	},
+	"FileJson": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FileJson](/help/assets/icons/FileJson.svg)"
+		],
+		"description": "FileJson"
+	},
+	"FileKey": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FileKey](/help/assets/icons/FileKey.svg)"
+		],
+		"description": "FileKey"
+	},
+	"FileMobile": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FileMobile](/help/assets/icons/FileMobile.svg)"
+		],
+		"description": "FileMobile"
+	},
+	"FileShare": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FileShare](/help/assets/icons/FileShare.svg)"
+		],
+		"description": "FileShare"
+	},
+	"FileSingleWebPage": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FileSingleWebPage](/help/assets/icons/FileSingleWebPage.svg)"
+		],
+		"description": "FileSingleWebPage"
+	},
+	"FileSpace": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FileSpace](/help/assets/icons/FileSpace.svg)"
+		],
+		"description": "FileSpace"
+	},
+	"FileTemplate": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FileTemplate](/help/assets/icons/FileTemplate.svg)"
+		],
+		"description": "FileTemplate"
+	},
+	"FileTxt": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FileTxt](/help/assets/icons/FileTxt.svg)"
+		],
+		"description": "FileTxt"
+	},
+	"FileUser": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FileUser](/help/assets/icons/FileUser.svg)"
+		],
+		"description": "FileUser"
+	},
+	"FileWorkflow": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FileWorkflow](/help/assets/icons/FileWorkflow.svg)"
+		],
+		"description": "FileWorkflow"
+	},
+	"FileXML": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FileXML](/help/assets/icons/FileXML.svg)"
+		],
+		"description": "FileXML"
+	},
+	"FileZip": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FileZip](/help/assets/icons/FileZip.svg)"
+		],
+		"description": "FileZip"
+	},
+	"FilingCabinet": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FilingCabinet](/help/assets/icons/FilingCabinet.svg)"
+		],
+		"description": "FilingCabinet"
+	},
+	"Filmroll": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Filmroll](/help/assets/icons/Filmroll.svg)"
+		],
+		"description": "Filmroll"
+	},
+	"FilmrollAutoAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FilmrollAutoAdd](/help/assets/icons/FilmrollAutoAdd.svg)"
+		],
+		"description": "FilmrollAutoAdd"
+	},
+	"Filter": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Filter](/help/assets/icons/Filter.svg)"
+		],
+		"description": "Filter"
+	},
+	"FilterAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FilterAdd](/help/assets/icons/FilterAdd.svg)"
+		],
+		"description": "FilterAdd"
+	},
+	"FilterCheck": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FilterCheck](/help/assets/icons/FilterCheck.svg)"
+		],
+		"description": "FilterCheck"
+	},
+	"FilterColored": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Filter](/help/assets/icons/FilterColored.svg)"
+		],
+		"description": "FilterColored"
+	},
+	"FilterDelete": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FilterDelete](/help/assets/icons/FilterDelete.svg)"
+		],
+		"description": "FilterDelete"
+	},
+	"FilterEdit": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FilterEdit](/help/assets/icons/FilterEdit.svg)"
+		],
+		"description": "FilterEdit"
+	},
+	"FilterHeart": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FilterHeart](/help/assets/icons/FilterHeart.svg)"
+		],
+		"description": "FilterHeart"
+	},
+	"FilterRemove": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FilterRemove](/help/assets/icons/FilterRemove.svg)"
+		],
+		"description": "FilterRemove"
+	},
+	"FilterStar": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FilterStar](/help/assets/icons/FilterStar.svg)"
+		],
+		"description": "FilterStar"
+	},
+	"FindAndReplace": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FindAndReplace](/help/assets/icons/FindAndReplace.svg)"
+		],
+		"description": "FindAndReplace"
+	},
+	"Flag": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Flag](/help/assets/icons/Flag.svg)"
+		],
+		"description": "Flag"
+	},
+	"FlagExclude": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FlagExclude](/help/assets/icons/FlagExclude.svg)"
+		],
+		"description": "FlagExclude"
+	},
+	"FlashAuto": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FlashAuto](/help/assets/icons/FlashAuto.svg)"
+		],
+		"description": "FlashAuto"
+	},
+	"FlashOff": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FlashOff](/help/assets/icons/FlashOff.svg)"
+		],
+		"description": "FlashOff"
+	},
+	"FlashOn": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FlashOn](/help/assets/icons/FlashOn.svg)"
+		],
+		"description": "FlashOn"
+	},
+	"Flashlight": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Flashlight](/help/assets/icons/Flashlight.svg)"
+		],
+		"description": "Flashlight"
+	},
+	"FlashlightOff": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FlashlightOff](/help/assets/icons/FlashlightOff.svg)"
+		],
+		"description": "FlashlightOff"
+	},
+	"FlashlightOn": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FlashlightOn](/help/assets/icons/FlashlightOn.svg)"
+		],
+		"description": "FlashlightOn"
+	},
+	"FlipHorizontal": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FlipHorizontal](/help/assets/icons/FlipHorizontal.svg)"
+		],
+		"description": "FlipHorizontal"
+	},
+	"FlipVertical": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FlipVertical](/help/assets/icons/FlipVertical.svg)"
+		],
+		"description": "FlipVertical"
+	},
+	"Folder": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Folder](/help/assets/icons/Folder.svg)"
+		],
+		"description": "Folder"
+	},
+	"Folder2Color": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Folder2Color](/help/assets/icons/Folder2Color.svg)"
+		],
+		"description": "Folder2Color"
+	},
+	"FolderAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FolderAdd](/help/assets/icons/FolderAdd.svg)"
+		],
+		"description": "FolderAdd"
+	},
+	"FolderAddTo": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FolderAddTo](/help/assets/icons/FolderAddTo.svg)"
+		],
+		"description": "FolderAddTo"
+	},
+	"FolderArchive": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FolderArchive](/help/assets/icons/FolderArchive.svg)"
+		],
+		"description": "FolderArchive"
+	},
+	"FolderDelete": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FolderDelete](/help/assets/icons/FolderDelete.svg)"
+		],
+		"description": "FolderDelete"
+	},
+	"FolderGear": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FolderGear](/help/assets/icons/FolderGear.svg)"
+		],
+		"description": "FolderGear"
+	},
+	"FolderLocked": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FolderLocked](/help/assets/icons/FolderLocked.svg)"
+		],
+		"description": "FolderLocked"
+	},
+	"FolderOpen": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FolderOpen](/help/assets/icons/FolderOpen.svg)"
+		],
+		"description": "FolderOpen"
+	},
+	"FolderOpenOutline": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FolderOpenOutline](/help/assets/icons/FolderOpenOutline.svg)"
+		],
+		"description": "FolderOpenOutline"
+	},
+	"FolderOutline": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FolderOutline](/help/assets/icons/FolderOutline.svg)"
+		],
+		"description": "FolderOutline"
+	},
+	"FolderRemove": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FolderRemove](/help/assets/icons/FolderRemove.svg)"
+		],
+		"description": "FolderRemove"
+	},
+	"FolderSearch": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FolderSearch](/help/assets/icons/FolderSearch.svg)"
+		],
+		"description": "FolderSearch"
+	},
+	"FolderUser": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FolderUser](/help/assets/icons/FolderUser.svg)"
+		],
+		"description": "FolderUser"
+	},
+	"Follow": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Follow](/help/assets/icons/Follow.svg)"
+		],
+		"description": "Follow"
+	},
+	"FollowOff": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FollowOff](/help/assets/icons/FollowOff.svg)"
+		],
+		"description": "FollowOff"
+	},
+	"ForPlacementOnly": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ForPlacementOnly](/help/assets/icons/ForPlacementOnly.svg)"
+		],
+		"description": "ForPlacementOnly"
+	},
+	"Forecast": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Forecast](/help/assets/icons/Forecast.svg)"
+		],
+		"description": "Forecast"
+	},
+	"Form": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Form](/help/assets/icons/Form.svg)"
+		],
+		"description": "Form"
+	},
+	"Forward": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Forward](/help/assets/icons/Forward.svg)"
+		],
+		"description": "Forward"
+	},
+	"FullScreen": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FullScreen](/help/assets/icons/FullScreen.svg)"
+		],
+		"description": "FullScreen"
+	},
+	"FullScreenExit": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![FullScreenExit](/help/assets/icons/FullScreenExit.svg)"
+		],
+		"description": "FullScreenExit"
+	},
+	"Function": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Function](/help/assets/icons/Function.svg)"
+		],
+		"description": "Function"
+	},
+	"Game": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Game](/help/assets/icons/Game.svg)"
+		],
+		"description": "Game"
+	},
+	"Gauge1": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Gauge1](/help/assets/icons/Gauge1.svg)"
+		],
+		"description": "Gauge1"
+	},
+	"Gauge2": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Gauge2](/help/assets/icons/Gauge2.svg)"
+		],
+		"description": "Gauge2"
+	},
+	"Gauge3": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Gauge3](/help/assets/icons/Gauge3.svg)"
+		],
+		"description": "Gauge3"
+	},
+	"Gauge4": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Gauge4](/help/assets/icons/Gauge4.svg)"
+		],
+		"description": "Gauge4"
+	},
+	"Gauge5": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Gauge5](/help/assets/icons/Gauge5.svg)"
+		],
+		"description": "Gauge5"
+	},
+	"Gear": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Gear](/help/assets/icons/Gear.svg)"
+		],
+		"description": "Gear"
+	},
+	"GearsAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GearsAdd](/help/assets/icons/GearsAdd.svg)"
+		],
+		"description": "GearsAdd"
+	},
+	"GearsDelete": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GearsDelete](/help/assets/icons/GearsDelete.svg)"
+		],
+		"description": "GearsDelete"
+	},
+	"GearsEdit": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GearsEdit](/help/assets/icons/GearsEdit.svg)"
+		],
+		"description": "GearsEdit"
+	},
+	"GenderFemale": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GenderFemale](/help/assets/icons/GenderFemale.svg)"
+		],
+		"description": "GenderFemale"
+	},
+	"GenderMale": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GenderMale](/help/assets/icons/GenderMale.svg)"
+		],
+		"description": "GenderMale"
+	},
+	"Gift": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Gift](/help/assets/icons/Gift.svg)"
+		],
+		"description": "Gift"
+	},
+	"Globe": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Globe](/help/assets/icons/Globe.svg)"
+		],
+		"description": "Globe"
+	},
+	"GlobeCheck": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GlobeCheck](/help/assets/icons/GlobeCheck.svg)"
+		],
+		"description": "GlobeCheck"
+	},
+	"GlobeClock": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GlobeClock](/help/assets/icons/GlobeClock.svg)"
+		],
+		"description": "GlobeClock"
+	},
+	"GlobeEnter": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GlobeEnter](/help/assets/icons/GlobeEnter.svg)"
+		],
+		"description": "GlobeEnter"
+	},
+	"GlobeExit": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GlobeExit](/help/assets/icons/GlobeExit.svg)"
+		],
+		"description": "GlobeExit"
+	},
+	"GlobeGrid": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GlobeGrid](/help/assets/icons/GlobeGrid.svg)"
+		],
+		"description": "GlobeGrid"
+	},
+	"GlobeOutline": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GlobeOutline](/help/assets/icons/GlobeOutline.svg)"
+		],
+		"description": "GlobeOutline"
+	},
+	"GlobeRemove": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GlobeRemove](/help/assets/icons/GlobeRemove.svg)"
+		],
+		"description": "GlobeRemove"
+	},
+	"GlobeSearch": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GlobeSearch](/help/assets/icons/GlobeSearch.svg)"
+		],
+		"description": "GlobeSearch"
+	},
+	"GlobeStrike": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GlobeStrike](/help/assets/icons/GlobeStrike.svg)"
+		],
+		"description": "GlobeStrike"
+	},
+	"GlobeStrikeClock": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GlobeStrikeClock](/help/assets/icons/GlobeStrikeClock.svg)"
+		],
+		"description": "GlobeStrikeClock"
+	},
+	"Government": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Government](/help/assets/icons/Government.svg)"
+		],
+		"description": "Government"
+	},
+	"Gradient": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Gradient](/help/assets/icons/Gradient.svg)"
+		],
+		"description": "Gradient"
+	},
+	"GraphArea": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GraphArea](/help/assets/icons/GraphArea.svg)"
+		],
+		"description": "GraphArea"
+	},
+	"GraphAreaStacked": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GraphAreaStacked](/help/assets/icons/GraphAreaStacked.svg)"
+		],
+		"description": "GraphAreaStacked"
+	},
+	"GraphBarHorizontal": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GraphBarHorizontal](/help/assets/icons/GraphBarHorizontal.svg)"
+		],
+		"description": "GraphBarHorizontal"
+	},
+	"GraphBarHorizontalAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GraphBarHorizontalAdd](/help/assets/icons/GraphBarHorizontalAdd.svg)"
+		],
+		"description": "GraphBarHorizontalAdd"
+	},
+	"GraphBarHorizontalStacked": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GraphBarHorizontalStacked](/help/assets/icons/GraphBarHorizontalStacked.svg)"
+		],
+		"description": "GraphBarHorizontalStacked"
+	},
+	"GraphBarVertical": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GraphBarVertical](/help/assets/icons/GraphBarVertical.svg)"
+		],
+		"description": "GraphBarVertical"
+	},
+	"GraphBarVerticalAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GraphBarVerticalAdd](/help/assets/icons/GraphBarVerticalAdd.svg)"
+		],
+		"description": "GraphBarVerticalAdd"
+	},
+	"GraphBarVerticalStacked": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GraphBarVerticalStacked](/help/assets/icons/GraphBarVerticalStacked.svg)"
+		],
+		"description": "GraphBarVerticalStacked"
+	},
+	"GraphBubble": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GraphBubble](/help/assets/icons/GraphBubble.svg)"
+		],
+		"description": "GraphBubble"
+	},
+	"GraphBullet": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GraphBullet](/help/assets/icons/GraphBullet.svg)"
+		],
+		"description": "GraphBullet"
+	},
+	"GraphConfidenceBand": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GraphConfidenceBand](/help/assets/icons/GraphConfidenceBand.svg)"
+		],
+		"description": "GraphConfidenceBand"
+	},
+	"GraphDonut": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GraphDonut](/help/assets/icons/GraphDonut.svg)"
+		],
+		"description": "GraphDonut"
+	},
+	"GraphDonutAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GraphDonutAdd](/help/assets/icons/GraphDonutAdd.svg)"
+		],
+		"description": "GraphDonutAdd"
+	},
+	"GraphGantt": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GraphGantt](/help/assets/icons/GraphGantt.svg)"
+		],
+		"description": "GraphGantt"
+	},
+	"GraphHistogram": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GraphHistogram](/help/assets/icons/GraphHistogram.svg)"
+		],
+		"description": "GraphHistogram"
+	},
+	"GraphPathing": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GraphPathing](/help/assets/icons/GraphPathing.svg)"
+		],
+		"description": "GraphPathing"
+	},
+	"GraphPie": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GraphPie](/help/assets/icons/GraphPie.svg)"
+		],
+		"description": "GraphPie"
+	},
+	"GraphProfitCurve": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GraphProfitCurve](/help/assets/icons/GraphProfitCurve.svg)"
+		],
+		"description": "GraphProfitCurve"
+	},
+	"GraphScatter": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GraphScatter](/help/assets/icons/GraphScatter.svg)"
+		],
+		"description": "GraphScatter"
+	},
+	"GraphStream": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GraphStream](/help/assets/icons/GraphStream.svg)"
+		],
+		"description": "GraphStream"
+	},
+	"GraphStreamRanked": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GraphStreamRanked](/help/assets/icons/GraphStreamRanked.svg)"
+		],
+		"description": "GraphStreamRanked"
+	},
+	"GraphStreamRankedAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GraphStreamRankedAdd](/help/assets/icons/GraphStreamRankedAdd.svg)"
+		],
+		"description": "GraphStreamRankedAdd"
+	},
+	"GraphSunburst": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GraphSunburst](/help/assets/icons/GraphSunburst.svg)"
+		],
+		"description": "GraphSunburst"
+	},
+	"GraphTree": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GraphTree](/help/assets/icons/GraphTree.svg)"
+		],
+		"description": "GraphTree"
+	},
+	"GraphTrend": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GraphTrend](/help/assets/icons/GraphTrend.svg)"
+		],
+		"description": "GraphTrend"
+	},
+	"GraphTrendAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GraphTrendAdd](/help/assets/icons/GraphTrendAdd.svg)"
+		],
+		"description": "GraphTrendAdd"
+	},
+	"GraphTrendAlert": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![GraphTrendAlert](/help/assets/icons/GraphTrendAlert.svg)"
+		],
+		"description": "GraphTrendAlert"
+	},
+	"Graphic": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Graphic](/help/assets/icons/Graphic.svg)"
+		],
+		"description": "Graphic"
+	},
+	"Group": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Group](/help/assets/icons/Group.svg)"
+		],
+		"description": "Group"
+	},
+	"Hammer": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Hammer](/help/assets/icons/Hammer.svg)"
+		],
+		"description": "Hammer"
+	},
+	"Hand": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Hand](/help/assets/icons/Hand.svg)"
+		],
+		"description": "Hand"
+	},
+	"Hand0": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Hand0](/help/assets/icons/Hand0.svg)"
+		],
+		"description": "Hand0"
+	},
+	"Hand1": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Hand1](/help/assets/icons/Hand1.svg)"
+		],
+		"description": "Hand1"
+	},
+	"Hand2": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Hand2](/help/assets/icons/Hand2.svg)"
+		],
+		"description": "Hand2"
+	},
+	"Hand3": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Hand3](/help/assets/icons/Hand3.svg)"
+		],
+		"description": "Hand3"
+	},
+	"Hand4": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Hand4](/help/assets/icons/Hand4.svg)"
+		],
+		"description": "Hand4"
+	},
+	"Heal": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Heal](/help/assets/icons/Heal.svg)"
+		],
+		"description": "Heal"
+	},
+	"Heart": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Heart](/help/assets/icons/Heart.svg)"
+		],
+		"description": "Heart"
+	},
+	"Help": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Help](/help/assets/icons/Help.svg)"
+		],
+		"description": "Help"
+	},
+	"HelpOutline": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![HelpOutline](/help/assets/icons/HelpOutline.svg)"
+		],
+		"description": "HelpOutline"
+	},
+	"Histogram": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Histogram](/help/assets/icons/Histogram.svg)"
+		],
+		"description": "Histogram"
+	},
+	"History": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![History](/help/assets/icons/History.svg)"
+		],
+		"description": "History"
+	},
+	"Home": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Home](/help/assets/icons/Home.svg)"
+		],
+		"description": "Home"
+	},
+	"Homepage": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Homepage](/help/assets/icons/Homepage.svg)"
+		],
+		"description": "Homepage"
+	},
+	"HotFixe": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![HotFixe](/help/assets/icons/HotFixe.svg)"
+		],
+		"description": "HotFixe"
+	},
+	"HotelBed": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![HotelBed](/help/assets/icons/HotelBed.svg)"
+		],
+		"description": "HotelBed"
+	},
+	"IdentityService": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![IdentityService](/help/assets/icons/IdentityService.svg)"
+		],
+		"description": "IdentityService"
+	},
+	"Images": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Images](/help/assets/icons/Images.svg)"
+		],
+		"description": "Images"
+	},
+	"Image": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Image](/help/assets/icons/Image.svg)"
+		],
+		"description": "Image"
+	},
+	"ImageAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ImageAdd](/help/assets/icons/ImageAdd.svg)"
+		],
+		"description": "ImageAdd"
+	},
+	"ImageAlbum": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ImageAlbum](/help/assets/icons/ImageAlbum.svg)"
+		],
+		"description": "ImageAlbum"
+	},
+	"ImageAutoMode": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ImageAutoMode](/help/assets/icons/ImageAutoMode.svg)"
+		],
+		"description": "ImageAutoMode"
+	},
+	"ImageCarousel": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ImageCarousel](/help/assets/icons/ImageCarousel.svg)"
+		],
+		"description": "ImageCarousel"
+	},
+	"ImageCheck": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ImageCheck](/help/assets/icons/ImageCheck.svg)"
+		],
+		"description": "ImageCheck"
+	},
+	"ImageCheckedOut": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ImageCheckedOut](/help/assets/icons/ImageCheckedOut.svg)"
+		],
+		"description": "ImageCheckedOut"
+	},
+	"ImageMapCircle": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ImageMapCircle](/help/assets/icons/ImageMapCircle.svg)"
+		],
+		"description": "ImageMapCircle"
+	},
+	"ImageMapPolygon": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ImageMapPolygon](/help/assets/icons/ImageMapPolygon.svg)"
+		],
+		"description": "ImageMapPolygon"
+	},
+	"ImageMapRectangle": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ImageMapRectangle](/help/assets/icons/ImageMapRectangle.svg)"
+		],
+		"description": "ImageMapRectangle"
+	},
+	"ImageNext": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ImageNext](/help/assets/icons/ImageNext.svg)"
+		],
+		"description": "ImageNext"
+	},
+	"ImageProfile": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ImageProfile](/help/assets/icons/ImageProfile.svg)"
+		],
+		"description": "ImageProfile"
+	},
+	"ImageSearch": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ImageSearch](/help/assets/icons/ImageSearch.svg)"
+		],
+		"description": "ImageSearch"
+	},
+	"ImageText": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ImageText](/help/assets/icons/ImageText.svg)"
+		],
+		"description": "ImageText"
+	},
+	"Import": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Import](/help/assets/icons/Import.svg)"
+		],
+		"description": "Import"
+	},
+	"Inbox": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Inbox](/help/assets/icons/Inbox.svg)"
+		],
+		"description": "Inbox"
+	},
+	"Individual": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Individual](/help/assets/icons/Individual.svg)"
+		],
+		"description": "Individual"
+	},
+	"Info": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Info](/help/assets/icons/Info.svg)"
+		],
+		"description": "Info"
+	},
+	"InfoOutline": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![InfoOutline](/help/assets/icons/InfoOutline.svg)"
+		],
+		"description": "InfoOutline"
+	},
+	"IntersectOverlap": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![IntersectOverlap](/help/assets/icons/IntersectOverlap.svg)"
+		],
+		"description": "IntersectOverlap"
+	},
+	"InvertAdj": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![InvertAdj](/help/assets/icons/InvertAdj.svg)"
+		],
+		"description": "InvertAdj"
+	},
+	"Invite": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Invite](/help/assets/icons/Invite.svg)"
+		],
+		"description": "Invite"
+	},
+	"Journey": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Journey](/help/assets/icons/Journey.svg)"
+		],
+		"description": "Journey"
+	},
+	"JourneyAction": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![JourneyAction](/help/assets/icons/JourneyAction.svg)"
+		],
+		"description": "JourneyAction"
+	},
+	"JourneyData": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![JourneyData](/help/assets/icons/JourneyData.svg)"
+		],
+		"description": "JourneyData"
+	},
+	"JourneyEvent": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![JourneyEvent](/help/assets/icons/JourneyEvent.svg)"
+		],
+		"description": "JourneyEvent"
+	},
+	"JourneyEvent2": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![JourneyEvent2](/help/assets/icons/JourneyEvent2.svg)"
+		],
+		"description": "JourneyEvent2"
+	},
+	"JourneyReport": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![JourneyReport](/help/assets/icons/JourneyReport.svg)"
+		],
+		"description": "JourneyReport"
+	},
+	"JourneyVoyager": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![JourneyVoyager](/help/assets/icons/JourneyVoyager.svg)"
+		],
+		"description": "JourneyVoyager"
+	},
+	"JumpToTop": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![JumpToTop](/help/assets/icons/JumpToTop.svg)"
+		],
+		"description": "JumpToTop"
+	},
+	"Key": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Key](/help/assets/icons/Key.svg)"
+		],
+		"description": "Key"
+	},
+	"KeyClock": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![KeyClock](/help/assets/icons/KeyClock.svg)"
+		],
+		"description": "KeyClock"
+	},
+	"KeyExclude": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![KeyExclude](/help/assets/icons/KeyExclude.svg)"
+		],
+		"description": "KeyExclude"
+	},
+	"KeyMetrics": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![KeyMetrics](/help/assets/icons/KeyMetrics.svg)"
+		],
+		"description": "KeyMetrics"
+	},
+	"Keyboard": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Keyboard](/help/assets/icons/Keyboard.svg)"
+		],
+		"description": "Keyboard"
+	},
+	"Labels2": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Labels2](/help/assets/icons/Labels2.svg)"
+		],
+		"description": "Labels2"
+	},
+	"Label": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Label](/help/assets/icons/Label.svg)"
+		],
+		"description": "Label"
+	},
+	"LabelExclude": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![LabelExclude](/help/assets/icons/LabelExclude.svg)"
+		],
+		"description": "LabelExclude"
+	},
+	"Landscape": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Landscape](/help/assets/icons/Landscape.svg)"
+		],
+		"description": "Landscape"
+	},
+	"Launch": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Launch](/help/assets/icons/Launch.svg)"
+		],
+		"description": "Launch"
+	},
+	"Layer": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Layer](/help/assets/icons/Layer.svg)"
+		],
+		"description": "Layer"
+	},
+	"LayersBackward": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![LayersBackward](/help/assets/icons/LayersBackward.svg)"
+		],
+		"description": "LayersBackward"
+	},
+	"LayersBringToFront": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![LayersBringToFront](/help/assets/icons/LayersBringToFront.svg)"
+		],
+		"description": "LayersBringToFront"
+	},
+	"LayersForward": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![LayersForward](/help/assets/icons/LayersForward.svg)"
+		],
+		"description": "LayersForward"
+	},
+	"LayersSendToBack": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![LayersSendToBack](/help/assets/icons/LayersSendToBack.svg)"
+		],
+		"description": "LayersSendToBack"
+	},
+	"Learn": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Learn](/help/assets/icons/Learn.svg)"
+		],
+		"description": "Learn"
+	},
+	"LeftRight": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![LeftRight](/help/assets/icons/LeftRight.svg)"
+		],
+		"description": "LeftRight"
+	},
+	"Light": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Light](/help/assets/icons/Light.svg)"
+		],
+		"description": "Light"
+	},
+	"Line": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Line](/help/assets/icons/Line.svg)"
+		],
+		"description": "Line"
+	},
+	"LineHeight": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![LineHeight](/help/assets/icons/LineHeight.svg)"
+		],
+		"description": "LineHeight"
+	},
+	"LinearGradient": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![LinearGradient](/help/assets/icons/LinearGradient.svg)"
+		],
+		"description": "LinearGradient"
+	},
+	"Link": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Link](/help/assets/icons/Link.svg)"
+		],
+		"description": "Link"
+	},
+	"LinkCheck": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![LinkCheck](/help/assets/icons/LinkCheck.svg)"
+		],
+		"description": "LinkCheck"
+	},
+	"LinkGlobe": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![LinkGlobe](/help/assets/icons/LinkGlobe.svg)"
+		],
+		"description": "LinkGlobe"
+	},
+	"LinkNav": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![LinkNav](/help/assets/icons/LinkNav.svg)"
+		],
+		"description": "LinkNav"
+	},
+	"LinkOff": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![LinkOff](/help/assets/icons/LinkOff.svg)"
+		],
+		"description": "LinkOff"
+	},
+	"LinkOut": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![LinkOut](/help/assets/icons/LinkOut.svg)"
+		],
+		"description": "LinkOut"
+	},
+	"LinkOutLight": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![LinkOutLight](/help/assets/icons/LinkOutLight.svg)"
+		],
+		"description": "LinkOutLight"
+	},
+	"LinkPage": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![LinkPage](/help/assets/icons/LinkPage.svg)"
+		],
+		"description": "LinkPage"
+	},
+	"LinkUser": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![LinkUser](/help/assets/icons/LinkUser.svg)"
+		],
+		"description": "LinkUser"
+	},
+	"Location": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Location](/help/assets/icons/Location.svg)"
+		],
+		"description": "Location"
+	},
+	"LocationBasedDate": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![LocationBasedDate](/help/assets/icons/LocationBasedDate.svg)"
+		],
+		"description": "LocationBasedDate"
+	},
+	"LocationBasedEvent": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![LocationBasedEvent](/help/assets/icons/LocationBasedEvent.svg)"
+		],
+		"description": "LocationBasedEvent"
+	},
+	"LocationContribution": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![LocationContribution](/help/assets/icons/LocationContribution.svg)"
+		],
+		"description": "LocationContribution"
+	},
+	"LockClosed": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![LockClosed](/help/assets/icons/LockClosed.svg)"
+		],
+		"description": "LockClosed"
+	},
+	"LockOpen": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![LockOpen](/help/assets/icons/LockOpen.svg)"
+		],
+		"description": "LockOpen"
+	},
+	"LogOut": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![LogOut](/help/assets/icons/LogOut.svg)"
+		],
+		"description": "LogOut"
+	},
+	"Login": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Login](/help/assets/icons/Login.svg)"
+		],
+		"description": "Login"
+	},
+	"Look": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Look](/help/assets/icons/Look.svg)"
+		],
+		"description": "Look"
+	},
+	"LoupeView": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![LoupeView](/help/assets/icons/LoupeView.svg)"
+		],
+		"description": "LoupeView"
+	},
+	"MBox": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![MBox](/help/assets/icons/MBox.svg)"
+		],
+		"description": "MBox"
+	},
+	"MagicWand": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![MagicWand](/help/assets/icons/MagicWand.svg)"
+		],
+		"description": "MagicWand"
+	},
+	"Magnify": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Magnify](/help/assets/icons/Magnify.svg)"
+		],
+		"description": "Magnify"
+	},
+	"Mailbox": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Mailbox](/help/assets/icons/Mailbox.svg)"
+		],
+		"description": "Mailbox"
+	},
+	"MapView": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![MapView](/help/assets/icons/MapView.svg)"
+		],
+		"description": "MapView"
+	},
+	"MarginBottom": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![MarginBottom](/help/assets/icons/MarginBottom.svg)"
+		],
+		"description": "MarginBottom"
+	},
+	"MarginLeft": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![MarginLeft](/help/assets/icons/MarginLeft.svg)"
+		],
+		"description": "MarginLeft"
+	},
+	"MarginRight": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![MarginRight](/help/assets/icons/MarginRight.svg)"
+		],
+		"description": "MarginRight"
+	},
+	"MarginTop": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![MarginTop](/help/assets/icons/MarginTop.svg)"
+		],
+		"description": "MarginTop"
+	},
+	"MarketingActivitie": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![MarketingActivitie](/help/assets/icons/MarketingActivitie.svg)"
+		],
+		"description": "MarketingActivitie"
+	},
+	"Maximize": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Maximize](/help/assets/icons/Maximize.svg)"
+		],
+		"description": "Maximize"
+	},
+	"Measure": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Measure](/help/assets/icons/Measure.svg)"
+		],
+		"description": "Measure"
+	},
+	"Menu": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Menu](/help/assets/icons/Menu.svg)"
+		],
+		"description": "Menu"
+	},
+	"Merge": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Merge](/help/assets/icons/Merge.svg)"
+		],
+		"description": "Merge"
+	},
+	"MergeLayer": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![MergeLayer](/help/assets/icons/MergeLayer.svg)"
+		],
+		"description": "MergeLayer"
+	},
+	"Messenger": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Messenger](/help/assets/icons/Messenger.svg)"
+		],
+		"description": "Messenger"
+	},
+	"Minimize": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Minimize](/help/assets/icons/Minimize.svg)"
+		],
+		"description": "Minimize"
+	},
+	"MobileService": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![MobileService](/help/assets/icons/MobileService.svg)"
+		],
+		"description": "MobileService"
+	},
+	"ModernGridView": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ModernGridView](/help/assets/icons/ModernGridView.svg)"
+		],
+		"description": "ModernGridView"
+	},
+	"Money": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Money](/help/assets/icons/Money.svg)"
+		],
+		"description": "Money"
+	},
+	"Monitoring": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Monitoring](/help/assets/icons/Monitoring.svg)"
+		],
+		"description": "Monitoring"
+	},
+	"Moon": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Moon](/help/assets/icons/Moon.svg)"
+		],
+		"description": "Moon"
+	},
+	"More": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![More](/help/assets/icons/More.svg)"
+		],
+		"description": "More"
+	},
+	"MoreCircle": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![MoreCircle](/help/assets/icons/MoreCircle.svg)"
+		],
+		"description": "MoreCircle"
+	},
+	"MoreSmall": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![MoreSmall](/help/assets/icons/MoreSmall.svg)"
+		],
+		"description": "MoreSmall"
+	},
+	"MoreSmallList": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![MoreSmallList](/help/assets/icons/MoreSmallList.svg)"
+		],
+		"description": "MoreSmallList"
+	},
+	"MoreSmallListVert": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![MoreSmallListVert](/help/assets/icons/MoreSmallListVert.svg)"
+		],
+		"description": "MoreSmallListVert"
+	},
+	"MoreVertical": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![MoreVertical](/help/assets/icons/MoreVertical.svg)"
+		],
+		"description": "MoreVertical"
+	},
+	"Move": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Move](/help/assets/icons/Move.svg)"
+		],
+		"description": "Move"
+	},
+	"MoveLeftRight": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![MoveLeftRight](/help/assets/icons/MoveLeftRight.svg)"
+		],
+		"description": "MoveLeftRight"
+	},
+	"MoveTo": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![MoveTo](/help/assets/icons/MoveTo.svg)"
+		],
+		"description": "MoveTo"
+	},
+	"MoveUpDown": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![MoveUpDown](/help/assets/icons/MoveUpDown.svg)"
+		],
+		"description": "MoveUpDown"
+	},
+	"MovieCamera": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![MovieCamera](/help/assets/icons/MovieCamera.svg)"
+		],
+		"description": "MovieCamera"
+	},
+	"Multiple": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Multiple](/help/assets/icons/Multiple.svg)"
+		],
+		"description": "Multiple"
+	},
+	"MultipleAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![MultipleAdd](/help/assets/icons/MultipleAdd.svg)"
+		],
+		"description": "MultipleAdd"
+	},
+	"MultipleCheck": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![MultipleCheck](/help/assets/icons/MultipleCheck.svg)"
+		],
+		"description": "MultipleCheck"
+	},
+	"MultipleExclude": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![MultipleExclude](/help/assets/icons/MultipleExclude.svg)"
+		],
+		"description": "MultipleExclude"
+	},
+	"NamingOrder": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![NamingOrder](/help/assets/icons/NamingOrder.svg)"
+		],
+		"description": "NamingOrder"
+	},
+	"New": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![New](/help/assets/icons/New.svg)"
+		],
+		"description": "New"
+	},
+	"NewItem": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![NewItem](/help/assets/icons/NewItem.svg)"
+		],
+		"description": "NewItem"
+	},
+	"NewPlan": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![NewPlan](/help/assets/icons/NewPlan.svg)"
+		],
+		"description": "NewPlan"
+	},
+	"NewsAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![NewsAdd](/help/assets/icons/NewsAdd.svg)"
+		],
+		"description": "NewsAdd"
+	},
+	"NoEdit": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![NoEdit](/help/assets/icons/NoEdit.svg)"
+		],
+		"description": "NoEdit"
+	},
+	"Note": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Note](/help/assets/icons/Note.svg)"
+		],
+		"description": "Note"
+	},
+	"NoteAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![NoteAdd](/help/assets/icons/NoteAdd.svg)"
+		],
+		"description": "NoteAdd"
+	},
+	"O": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![O](/help/assets/icons/O.svg)"
+		],
+		"description": "O"
+	},
+	"Offer": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Offer](/help/assets/icons/Offer.svg)"
+		],
+		"description": "Offer"
+	},
+	"OfferActivities": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![OfferActivities](/help/assets/icons/OfferActivities.svg)"
+		],
+		"description": "OfferActivities"
+	},
+	"OfferDelete": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![OfferDelete](/help/assets/icons/OfferDelete.svg)"
+		],
+		"description": "OfferDelete"
+	},
+	"Offers": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Offers](/help/assets/icons/Offers.svg)"
+		],
+		"description": "Offers"
+	},
+	"OnAir": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![OnAir](/help/assets/icons/OnAir.svg)"
+		],
+		"description": "OnAir"
+	},
+	"OpenIn": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![OpenIn](/help/assets/icons/OpenIn.svg)"
+		],
+		"description": "OpenIn"
+	},
+	"OpenInLight": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![OpenInLight](/help/assets/icons/OpenInLight.svg)"
+		],
+		"description": "OpenInLight"
+	},
+	"OpenRecent": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![OpenRecent](/help/assets/icons/OpenRecent.svg)"
+		],
+		"description": "OpenRecent"
+	},
+	"OpenRecentOutline": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![OpenRecentOutline](/help/assets/icons/OpenRecentOutline.svg)"
+		],
+		"description": "OpenRecentOutline"
+	},
+	"Orbit": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Orbit](/help/assets/icons/Orbit.svg)"
+		],
+		"description": "Orbit"
+	},
+	"Organisation": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Organisation](/help/assets/icons/Organisation.svg)"
+		],
+		"description": "Organisation"
+	},
+	"Organize": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Organize](/help/assets/icons/Organize.svg)"
+		],
+		"description": "Organize"
+	},
+	"OutlinePath": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![OutlinePath](/help/assets/icons/OutlinePath.svg)"
+		],
+		"description": "OutlinePath"
+	},
+	"PaddingBottom": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PaddingBottom](/help/assets/icons/PaddingBottom.svg)"
+		],
+		"description": "PaddingBottom"
+	},
+	"PaddingLeft": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PaddingLeft](/help/assets/icons/PaddingLeft.svg)"
+		],
+		"description": "PaddingLeft"
+	},
+	"PaddingRight": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PaddingRight](/help/assets/icons/PaddingRight.svg)"
+		],
+		"description": "PaddingRight"
+	},
+	"PaddingTop": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PaddingTop](/help/assets/icons/PaddingTop.svg)"
+		],
+		"description": "PaddingTop"
+	},
+	"PageBreak": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PageBreak](/help/assets/icons/PageBreak.svg)"
+		],
+		"description": "PageBreak"
+	},
+	"PageExclude": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PageExclude](/help/assets/icons/PageExclude.svg)"
+		],
+		"description": "PageExclude"
+	},
+	"PageGear": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PageGear](/help/assets/icons/PageGear.svg)"
+		],
+		"description": "PageGear"
+	},
+	"PageRule": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PageRule](/help/assets/icons/PageRule.svg)"
+		],
+		"description": "PageRule"
+	},
+	"PageShare": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PageShare](/help/assets/icons/PageShare.svg)"
+		],
+		"description": "PageShare"
+	},
+	"PageTag": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PageTag](/help/assets/icons/PageTag.svg)"
+		],
+		"description": "PageTag"
+	},
+	"PagesExclude": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PagesExclude](/help/assets/icons/PagesExclude.svg)"
+		],
+		"description": "PagesExclude"
+	},
+	"Pan": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Pan](/help/assets/icons/Pan.svg)"
+		],
+		"description": "Pan"
+	},
+	"Panel": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Panel](/help/assets/icons/Panel.svg)"
+		],
+		"description": "Panel"
+	},
+	"Paste": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Paste](/help/assets/icons/Paste.svg)"
+		],
+		"description": "Paste"
+	},
+	"PasteHTML": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PasteHTML](/help/assets/icons/PasteHTML.svg)"
+		],
+		"description": "PasteHTML"
+	},
+	"PasteList": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PasteList](/help/assets/icons/PasteList.svg)"
+		],
+		"description": "PasteList"
+	},
+	"PasteText": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PasteText](/help/assets/icons/PasteText.svg)"
+		],
+		"description": "PasteText"
+	},
+	"Pattern": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Pattern](/help/assets/icons/Pattern.svg)"
+		],
+		"description": "Pattern"
+	},
+	"Pause": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Pause](/help/assets/icons/Pause.svg)"
+		],
+		"description": "Pause"
+	},
+	"PauseCircle": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PauseCircle](/help/assets/icons/PauseCircle.svg)"
+		],
+		"description": "PauseCircle"
+	},
+	"Pawn": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Pawn](/help/assets/icons/Pawn.svg)"
+		],
+		"description": "Pawn"
+	},
+	"Pending": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Pending](/help/assets/icons/Pending.svg)"
+		],
+		"description": "Pending"
+	},
+	"PeopleGroup": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PeopleGroup](/help/assets/icons/PeopleGroup.svg)"
+		],
+		"description": "PeopleGroup"
+	},
+	"PersonalizationField": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PersonalizationField](/help/assets/icons/PersonalizationField.svg)"
+		],
+		"description": "PersonalizationField"
+	},
+	"Perspective": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Perspective](/help/assets/icons/Perspective.svg)"
+		],
+		"description": "Perspective"
+	},
+	"PinOff": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PinOff](/help/assets/icons/PinOff.svg)"
+		],
+		"description": "PinOff"
+	},
+	"PinOn": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PinOn](/help/assets/icons/PinOn.svg)"
+		],
+		"description": "PinOn"
+	},
+	"Pivot": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Pivot](/help/assets/icons/Pivot.svg)"
+		],
+		"description": "Pivot"
+	},
+	"Placeholder": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Placeholder](/help/assets/icons/Placeholder.svg)"
+		],
+		"description": "Placeholder"
+	},
+	"PlatformDataMapping": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PlatformDataMapping](/help/assets/icons/PlatformDataMapping.svg)"
+		],
+		"description": "PlatformDataMapping"
+	},
+	"Play": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Play](/help/assets/icons/Play.svg)"
+		],
+		"description": "Play"
+	},
+	"PlayCircle": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PlayCircle](/help/assets/icons/PlayCircle.svg)"
+		],
+		"description": "PlayCircle"
+	},
+	"Plug": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Plug](/help/assets/icons/Plug.svg)"
+		],
+		"description": "Plug"
+	},
+	"Polygon": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Polygon](/help/assets/icons/Polygon.svg)"
+		],
+		"description": "Polygon"
+	},
+	"PolygonSelect": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PolygonSelect](/help/assets/icons/PolygonSelect.svg)"
+		],
+		"description": "PolygonSelect"
+	},
+	"PopIn": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PopIn](/help/assets/icons/PopIn.svg)"
+		],
+		"description": "PopIn"
+	},
+	"Portrait": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Portrait](/help/assets/icons/Portrait.svg)"
+		],
+		"description": "Portrait"
+	},
+	"Preset": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Preset](/help/assets/icons/Preset.svg)"
+		],
+		"description": "Preset"
+	},
+	"Preview": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Preview](/help/assets/icons/Preview.svg)"
+		],
+		"description": "Preview"
+	},
+	"Print": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Print](/help/assets/icons/Print.svg)"
+		],
+		"description": "Print"
+	},
+	"PrintPreview": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PrintPreview](/help/assets/icons/PrintPreview.svg)"
+		],
+		"description": "PrintPreview"
+	},
+	"Privacy": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Privacy](/help/assets/icons/Privacy.svg)"
+		],
+		"description": "Privacy"
+	},
+	"Project": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Project](/help/assets/icons/Project.svg)"
+		],
+		"description": "Project"
+	},
+	"ProjectAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ProjectAdd](/help/assets/icons/ProjectAdd.svg)"
+		],
+		"description": "ProjectAdd"
+	},
+	"ProjectEdit": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ProjectEdit](/help/assets/icons/ProjectEdit.svg)"
+		],
+		"description": "ProjectEdit"
+	},
+	"ProjectNameEdit": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ProjectNameEdit](/help/assets/icons/ProjectNameEdit.svg)"
+		],
+		"description": "ProjectNameEdit"
+	},
+	"Promote": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Promote](/help/assets/icons/Promote.svg)"
+		],
+		"description": "Promote"
+	},
+	"Propertie": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Propertie](/help/assets/icons/Propertie.svg)"
+		],
+		"description": "Propertie"
+	},
+	"PropertiesCopy": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PropertiesCopy](/help/assets/icons/PropertiesCopy.svg)"
+		],
+		"description": "PropertiesCopy"
+	},
+	"PublishCheck": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PublishCheck](/help/assets/icons/PublishCheck.svg)"
+		],
+		"description": "PublishCheck"
+	},
+	"PublishPending": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PublishPending](/help/assets/icons/PublishPending.svg)"
+		],
+		"description": "PublishPending"
+	},
+	"PublishReject": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PublishReject](/help/assets/icons/PublishReject.svg)"
+		],
+		"description": "PublishReject"
+	},
+	"PublishRemove": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PublishRemove](/help/assets/icons/PublishRemove.svg)"
+		],
+		"description": "PublishRemove"
+	},
+	"PublishSchedule": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PublishSchedule](/help/assets/icons/PublishSchedule.svg)"
+		],
+		"description": "PublishSchedule"
+	},
+	"PushNotification": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![PushNotification](/help/assets/icons/PushNotification.svg)"
+		],
+		"description": "PushNotification"
+	},
+	"Question": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Question](/help/assets/icons/Question.svg)"
+		],
+		"description": "Question"
+	},
+	"QuickSelect": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![QuickSelect](/help/assets/icons/QuickSelect.svg)"
+		],
+		"description": "QuickSelect"
+	},
+	"RSS": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![RSS](/help/assets/icons/RSS.svg)"
+		],
+		"description": "RSS"
+	},
+	"RadialGradient": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![RadialGradient](/help/assets/icons/RadialGradient.svg)"
+		],
+		"description": "RadialGradient"
+	},
+	"Rail": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Rail](/help/assets/icons/Rail.svg)"
+		],
+		"description": "Rail"
+	},
+	"RailBottom": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![RailBottom](/help/assets/icons/RailBottom.svg)"
+		],
+		"description": "RailBottom"
+	},
+	"RailLeft": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![RailLeft](/help/assets/icons/RailLeft.svg)"
+		],
+		"description": "RailLeft"
+	},
+	"RailRight": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![RailRight](/help/assets/icons/RailRight.svg)"
+		],
+		"description": "RailRight"
+	},
+	"RailRightClose": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![RailRightClose](/help/assets/icons/RailRightClose.svg)"
+		],
+		"description": "RailRightClose"
+	},
+	"RailRightOpen": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![RailRightOpen](/help/assets/icons/RailRightOpen.svg)"
+		],
+		"description": "RailRightOpen"
+	},
+	"RailTop": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![RailTop](/help/assets/icons/RailTop.svg)"
+		],
+		"description": "RailTop"
+	},
+	"RangeMask": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![RangeMask](/help/assets/icons/RangeMask.svg)"
+		],
+		"description": "RangeMask"
+	},
+	"RealTimeCustomerProfile": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![RealTimeCustomerProfile](/help/assets/icons/RealTimeCustomerProfile.svg)"
+		],
+		"description": "RealTimeCustomerProfile"
+	},
+	"RectSelect": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![RectSelect](/help/assets/icons/RectSelect.svg)"
+		],
+		"description": "RectSelect"
+	},
+	"Rectangle": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Rectangle](/help/assets/icons/Rectangle.svg)"
+		],
+		"description": "Rectangle"
+	},
+	"Redo": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Redo](/help/assets/icons/Redo.svg)"
+		],
+		"description": "Redo"
+	},
+	"Refresh": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Refresh](/help/assets/icons/Refresh.svg)"
+		],
+		"description": "Refresh"
+	},
+	"RegionSelect": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![RegionSelect](/help/assets/icons/RegionSelect.svg)"
+		],
+		"description": "RegionSelect"
+	},
+	"Relevance": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Relevance](/help/assets/icons/Relevance.svg)"
+		],
+		"description": "Relevance"
+	},
+	"Remove": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Remove](/help/assets/icons/Remove.svg)"
+		],
+		"description": "Remove"
+	},
+	"RemoveCircle": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![RemoveCircle](/help/assets/icons/RemoveCircle.svg)"
+		],
+		"description": "RemoveCircle"
+	},
+	"Rename": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Rename](/help/assets/icons/Rename.svg)"
+		],
+		"description": "Rename"
+	},
+	"Reorder": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Reorder](/help/assets/icons/Reorder.svg)"
+		],
+		"description": "Reorder"
+	},
+	"Replay": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Replay](/help/assets/icons/Replay.svg)"
+		],
+		"description": "Replay"
+	},
+	"Replie": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Replie](/help/assets/icons/Replie.svg)"
+		],
+		"description": "Replie"
+	},
+	"Reply": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Reply](/help/assets/icons/Reply.svg)"
+		],
+		"description": "Reply"
+	},
+	"ReplyAll": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ReplyAll](/help/assets/icons/ReplyAll.svg)"
+		],
+		"description": "ReplyAll"
+	},
+	"Report": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Report](/help/assets/icons/Report.svg)"
+		],
+		"description": "Report"
+	},
+	"ReportAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ReportAdd](/help/assets/icons/ReportAdd.svg)"
+		],
+		"description": "ReportAdd"
+	},
+	"Required": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Required](/help/assets/icons/Required.svg)"
+		],
+		"description": "Required"
+	},
+	"Resize": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Resize](/help/assets/icons/Resize.svg)"
+		],
+		"description": "Resize"
+	},
+	"ResolvedComment": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ResolvedComment](/help/assets/icons/ResolvedComment.svg)"
+		],
+		"description": "ResolvedComment"
+	},
+	"Retweet": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Retweet](/help/assets/icons/Retweet.svg)"
+		],
+		"description": "Retweet"
+	},
+	"Reuse": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Reuse](/help/assets/icons/Reuse.svg)"
+		],
+		"description": "Reuse"
+	},
+	"Revenue": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Revenue](/help/assets/icons/Revenue.svg)"
+		],
+		"description": "Revenue"
+	},
+	"Revert": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Revert](/help/assets/icons/Revert.svg)"
+		],
+		"description": "Revert"
+	},
+	"Rewind": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Rewind](/help/assets/icons/Rewind.svg)"
+		],
+		"description": "Rewind"
+	},
+	"RewindCircle": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![RewindCircle](/help/assets/icons/RewindCircle.svg)"
+		],
+		"description": "RewindCircle"
+	},
+	"Ribbon": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Ribbon](/help/assets/icons/Ribbon.svg)"
+		],
+		"description": "Ribbon"
+	},
+	"RotateCCW": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![RotateCCW](/help/assets/icons/RotateCCW.svg)"
+		],
+		"description": "RotateCCW"
+	},
+	"RotateCCWBold": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![RotateCCWBold](/help/assets/icons/RotateCCWBold.svg)"
+		],
+		"description": "RotateCCWBold"
+	},
+	"RotateCW": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![RotateCW](/help/assets/icons/RotateCW.svg)"
+		],
+		"description": "RotateCW"
+	},
+	"RotateCWBold": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![RotateCWBold](/help/assets/icons/RotateCWBold.svg)"
+		],
+		"description": "RotateCWBold"
+	},
+	"RotateLeft": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![RotateLeft](/help/assets/icons/RotateLeft.svg)"
+		],
+		"description": "RotateLeft"
+	},
+	"RotateLeftOutline": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![RotateLeftOutline](/help/assets/icons/RotateLeftOutline.svg)"
+		],
+		"description": "RotateLeftOutline"
+	},
+	"RotateRight": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![RotateRight](/help/assets/icons/RotateRight.svg)"
+		],
+		"description": "RotateRight"
+	},
+	"RotateRightOutline": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![RotateRightOutline](/help/assets/icons/RotateRightOutline.svg)"
+		],
+		"description": "RotateRightOutline"
+	},
+	"SM": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SM](/help/assets/icons/SM.svg)"
+		],
+		"description": "SM"
+	},
+	"SMSKey": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SMSKey](/help/assets/icons/SMSKey.svg)"
+		],
+		"description": "SMSKey"
+	},
+	"SMSLightning": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SMSLightning](/help/assets/icons/SMSLightning.svg)"
+		],
+		"description": "SMSLightning"
+	},
+	"SMSRefresh": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SMSRefresh](/help/assets/icons/SMSRefresh.svg)"
+		],
+		"description": "SMSRefresh"
+	},
+	"SQLQuery": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SQLQuery](/help/assets/icons/SQLQuery.svg)"
+		],
+		"description": "SQLQuery"
+	},
+	"Sampler": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Sampler](/help/assets/icons/Sampler.svg)"
+		],
+		"description": "Sampler"
+	},
+	"Sandbox": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Sandbox](/help/assets/icons/Sandbox.svg)"
+		],
+		"description": "Sandbox"
+	},
+	"SaveAsFloppy": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SaveAsFloppy](/help/assets/icons/SaveAsFloppy.svg)"
+		],
+		"description": "SaveAsFloppy"
+	},
+	"SaveFloppy": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SaveFloppy](/help/assets/icons/SaveFloppy.svg)"
+		],
+		"description": "SaveFloppy"
+	},
+	"SaveTo": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SaveTo](/help/assets/icons/SaveTo.svg)"
+		],
+		"description": "SaveTo"
+	},
+	"SaveToLight": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SaveToLight](/help/assets/icons/SaveToLight.svg)"
+		],
+		"description": "SaveToLight"
+	},
+	"Schemas": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Schemas](/help/assets/icons/Schemas.svg)"
+		],
+		"description": "Schemas"
+	},
+	"Scribble": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Scribble](/help/assets/icons/Scribble.svg)"
+		],
+		"description": "Scribble"
+	},
+	"Search": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Search](/help/assets/icons/Search.svg)"
+		],
+		"description": "Search"
+	},
+	"Seat": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Seat](/help/assets/icons/Seat.svg)"
+		],
+		"description": "Seat"
+	},
+	"SeatAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SeatAdd](/help/assets/icons/SeatAdd.svg)"
+		],
+		"description": "SeatAdd"
+	},
+	"Segment": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Segment](/help/assets/icons/Segment.svg)"
+		],
+		"description": "Segment"
+	},
+	"Segmentation": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Segmentation](/help/assets/icons/Segmentation.svg)"
+		],
+		"description": "Segmentation"
+	},
+	"Select": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Select](/help/assets/icons/Select.svg)"
+		],
+		"description": "Select"
+	},
+	"SelectAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SelectAdd](/help/assets/icons/SelectAdd.svg)"
+		],
+		"description": "SelectAdd"
+	},
+	"SelectBox": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SelectBox](/help/assets/icons/SelectBox.svg)"
+		],
+		"description": "SelectBox"
+	},
+	"SelectBoxAll": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SelectBoxAll](/help/assets/icons/SelectBoxAll.svg)"
+		],
+		"description": "SelectBoxAll"
+	},
+	"SelectCircular": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SelectCircular](/help/assets/icons/SelectCircular.svg)"
+		],
+		"description": "SelectCircular"
+	},
+	"SelectContainer": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SelectContainer](/help/assets/icons/SelectContainer.svg)"
+		],
+		"description": "SelectContainer"
+	},
+	"SelectGear": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SelectGear](/help/assets/icons/SelectGear.svg)"
+		],
+		"description": "SelectGear"
+	},
+	"SelectIntersect": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SelectIntersect](/help/assets/icons/SelectIntersect.svg)"
+		],
+		"description": "SelectIntersect"
+	},
+	"SelectSubtract": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SelectSubtract](/help/assets/icons/SelectSubtract.svg)"
+		],
+		"description": "SelectSubtract"
+	},
+	"Selection": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Selection](/help/assets/icons/Selection.svg)"
+		],
+		"description": "Selection"
+	},
+	"SelectionChecked": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SelectionChecked](/help/assets/icons/SelectionChecked.svg)"
+		],
+		"description": "SelectionChecked"
+	},
+	"SelectionMove": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SelectionMove](/help/assets/icons/SelectionMove.svg)"
+		],
+		"description": "SelectionMove"
+	},
+	"Send": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Send](/help/assets/icons/Send.svg)"
+		],
+		"description": "Send"
+	},
+	"SentimentNegative": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SentimentNegative](/help/assets/icons/SentimentNegative.svg)"
+		],
+		"description": "SentimentNegative"
+	},
+	"SentimentNeutral": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SentimentNeutral](/help/assets/icons/SentimentNeutral.svg)"
+		],
+		"description": "SentimentNeutral"
+	},
+	"SentimentPositive": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SentimentPositive](/help/assets/icons/SentimentPositive.svg)"
+		],
+		"description": "SentimentPositive"
+	},
+	"Separator": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Separator](/help/assets/icons/Separator.svg)"
+		],
+		"description": "Separator"
+	},
+	"SequenceBefore": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SequenceBefore](/help/assets/icons/SequenceBefore.svg)"
+		],
+		"description": "SequenceBefore"
+	},
+	"SequenceAfter": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SequenceAfter](/help/assets/icons/SequenceAfter.svg)"
+		],
+		"description": "SequenceAfter"
+	},
+	"Server": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Server](/help/assets/icons/Server.svg)"
+		],
+		"description": "Server"
+	},
+	"Setting": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Setting](/help/assets/icons/Setting.svg)"
+		],
+		"description": "Setting"
+	},
+	"Shape": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Shape](/help/assets/icons/Shape.svg)"
+		],
+		"description": "Shape"
+	},
+	"Share": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Share](/help/assets/icons/Share.svg)"
+		],
+		"description": "Share"
+	},
+	"ShareAndroid": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ShareAndroid](/help/assets/icons/ShareAndroid.svg)"
+		],
+		"description": "ShareAndroid"
+	},
+	"ShareCheck": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ShareCheck](/help/assets/icons/ShareCheck.svg)"
+		],
+		"description": "ShareCheck"
+	},
+	"ShareLight": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ShareLight](/help/assets/icons/ShareLight.svg)"
+		],
+		"description": "ShareLight"
+	},
+	"ShareWindow": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ShareWindow](/help/assets/icons/ShareWindow.svg)"
+		],
+		"description": "ShareWindow"
+	},
+	"Sharpen": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Sharpen](/help/assets/icons/Sharpen.svg)"
+		],
+		"description": "Sharpen"
+	},
+	"Shield": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Shield](/help/assets/icons/Shield.svg)"
+		],
+		"description": "Shield"
+	},
+	"Ship": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Ship](/help/assets/icons/Ship.svg)"
+		],
+		"description": "Ship"
+	},
+	"Shop": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Shop](/help/assets/icons/Shop.svg)"
+		],
+		"description": "Shop"
+	},
+	"ShoppingCart": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ShoppingCart](/help/assets/icons/ShoppingCart.svg)"
+		],
+		"description": "ShoppingCart"
+	},
+	"ShowAllLayer": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ShowAllLayer](/help/assets/icons/ShowAllLayer.svg)"
+		],
+		"description": "ShowAllLayer"
+	},
+	"ShowMenu": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ShowMenu](/help/assets/icons/ShowMenu.svg)"
+		],
+		"description": "ShowMenu"
+	},
+	"ShowOneLayer": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ShowOneLayer](/help/assets/icons/ShowOneLayer.svg)"
+		],
+		"description": "ShowOneLayer"
+	},
+	"Shuffle": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Shuffle](/help/assets/icons/Shuffle.svg)"
+		],
+		"description": "Shuffle"
+	},
+	"Slice": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Slice](/help/assets/icons/Slice.svg)"
+		],
+		"description": "Slice"
+	},
+	"Slow": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Slow](/help/assets/icons/Slow.svg)"
+		],
+		"description": "Slow"
+	},
+	"SmallCap": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SmallCap](/help/assets/icons/SmallCap.svg)"
+		],
+		"description": "SmallCap"
+	},
+	"Snapshot": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Snapshot](/help/assets/icons/Snapshot.svg)"
+		],
+		"description": "Snapshot"
+	},
+	"SocialNetwork": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SocialNetwork](/help/assets/icons/SocialNetwork.svg)"
+		],
+		"description": "SocialNetwork"
+	},
+	"SortOrderDown": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SortOrderDown](/help/assets/icons/SortOrderDown.svg)"
+		],
+		"description": "SortOrderDown"
+	},
+	"SortOrderUp": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SortOrderUp](/help/assets/icons/SortOrderUp.svg)"
+		],
+		"description": "SortOrderUp"
+	},
+	"Spam": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Spam](/help/assets/icons/Spam.svg)"
+		],
+		"description": "Spam"
+	},
+	"Spellcheck": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Spellcheck](/help/assets/icons/Spellcheck.svg)"
+		],
+		"description": "Spellcheck"
+	},
+	"Spin": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Spin](/help/assets/icons/Spin.svg)"
+		],
+		"description": "Spin"
+	},
+	"SplitView": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SplitView](/help/assets/icons/SplitView.svg)"
+		],
+		"description": "SplitView"
+	},
+	"SpotHeal": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SpotHeal](/help/assets/icons/SpotHeal.svg)"
+		],
+		"description": "SpotHeal"
+	},
+	"Stadium": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Stadium](/help/assets/icons/Stadium.svg)"
+		],
+		"description": "Stadium"
+	},
+	"Stage": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Stage](/help/assets/icons/Stage.svg)"
+		],
+		"description": "Stage"
+	},
+	"Stamp": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Stamp](/help/assets/icons/Stamp.svg)"
+		],
+		"description": "Stamp"
+	},
+	"Star": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Star](/help/assets/icons/Star.svg)"
+		],
+		"description": "Star"
+	},
+	"StarOutline": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![StarOutline](/help/assets/icons/StarOutline.svg)"
+		],
+		"description": "StarOutline"
+	},
+	"Starburst": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Starburst](/help/assets/icons/Starburst.svg)"
+		],
+		"description": "Starburst"
+	},
+	"StatusGray": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![StatusGray](/help/assets/icons/StatusGray.svg)"
+		],
+		"description": "StatusGray"
+	},
+	"StatusGreen": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![StatusGreen](/help/assets/icons/StatusGreen.svg)"
+		],
+		"description": "StatusGreen"
+	},
+	"StatusOrange": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![StatusOrange](/help/assets/icons/StatusOrange.svg)"
+		],
+		"description": "StatusOrange"
+	},
+	"StatusRed": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![StatusRed](/help/assets/icons/StatusRed.svg)"
+		],
+		"description": "StatusRed"
+	},
+	"StatusBlue": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![StatusBlue](/help/assets/icons/StatusBlue.svg)"
+		],
+		"description": "StatusBlue"
+	},
+	"StepBackward": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![StepBackward](/help/assets/icons/StepBackward.svg)"
+		],
+		"description": "StepBackward"
+	},
+	"StepBackwardCircle": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![StepBackwardCircle](/help/assets/icons/StepBackwardCircle.svg)"
+		],
+		"description": "StepBackwardCircle"
+	},
+	"StepForward": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![StepForward](/help/assets/icons/StepForward.svg)"
+		],
+		"description": "StepForward"
+	},
+	"StepForwardCircle": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![StepForwardCircle](/help/assets/icons/StepForwardCircle.svg)"
+		],
+		"description": "StepForwardCircle"
+	},
+	"Stop": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Stop](/help/assets/icons/Stop.svg)"
+		],
+		"description": "Stop"
+	},
+	"StopCircle": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![StopCircle](/help/assets/icons/StopCircle.svg)"
+		],
+		"description": "StopCircle"
+	},
+	"Stopwatch": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Stopwatch](/help/assets/icons/Stopwatch.svg)"
+		],
+		"description": "Stopwatch"
+	},
+	"Straighten": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Straighten](/help/assets/icons/Straighten.svg)"
+		],
+		"description": "Straighten"
+	},
+	"StraightenOutline": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![StraightenOutline](/help/assets/icons/StraightenOutline.svg)"
+		],
+		"description": "StraightenOutline"
+	},
+	"StrokeWidth": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![StrokeWidth](/help/assets/icons/StrokeWidth.svg)"
+		],
+		"description": "StrokeWidth"
+	},
+	"Subscribe": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Subscribe](/help/assets/icons/Subscribe.svg)"
+		],
+		"description": "Subscribe"
+	},
+	"SubtractBackPath": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SubtractBackPath](/help/assets/icons/SubtractBackPath.svg)"
+		],
+		"description": "SubtractBackPath"
+	},
+	"SubtractFromSelection": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SubtractFromSelection](/help/assets/icons/SubtractFromSelection.svg)"
+		],
+		"description": "SubtractFromSelection"
+	},
+	"SubtractFrontPath": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SubtractFrontPath](/help/assets/icons/SubtractFrontPath.svg)"
+		],
+		"description": "SubtractFrontPath"
+	},
+	"SuccessMetric": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SuccessMetric](/help/assets/icons/SuccessMetric.svg)"
+		],
+		"description": "SuccessMetric"
+	},
+	"Summarize": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Summarize](/help/assets/icons/Summarize.svg)"
+		],
+		"description": "Summarize"
+	},
+	"Survey": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Survey](/help/assets/icons/Survey.svg)"
+		],
+		"description": "Survey"
+	},
+	"Switch": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Switch](/help/assets/icons/Switch.svg)"
+		],
+		"description": "Switch"
+	},
+	"Sync": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Sync](/help/assets/icons/Sync.svg)"
+		],
+		"description": "Sync"
+	},
+	"SyncRemove": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![SyncRemove](/help/assets/icons/SyncRemove.svg)"
+		],
+		"description": "SyncRemove"
+	},
+	"Table": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Table](/help/assets/icons/Table.svg)"
+		],
+		"description": "Table"
+	},
+	"TableAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TableAdd](/help/assets/icons/TableAdd.svg)"
+		],
+		"description": "TableAdd"
+	},
+	"TableAndChart": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TableAndChart](/help/assets/icons/TableAndChart.svg)"
+		],
+		"description": "TableAndChart"
+	},
+	"TableColumnAddLeft": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TableColumnAddLeft](/help/assets/icons/TableColumnAddLeft.svg)"
+		],
+		"description": "TableColumnAddLeft"
+	},
+	"TableColumnAddRight": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TableColumnAddRight](/help/assets/icons/TableColumnAddRight.svg)"
+		],
+		"description": "TableColumnAddRight"
+	},
+	"TableColumnMerge": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TableColumnMerge](/help/assets/icons/TableColumnMerge.svg)"
+		],
+		"description": "TableColumnMerge"
+	},
+	"TableColumnRemoveCenter": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TableColumnRemoveCenter](/help/assets/icons/TableColumnRemoveCenter.svg)"
+		],
+		"description": "TableColumnRemoveCenter"
+	},
+	"TableColumnSplit": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TableColumnSplit](/help/assets/icons/TableColumnSplit.svg)"
+		],
+		"description": "TableColumnSplit"
+	},
+	"TableEdit": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TableEdit](/help/assets/icons/TableEdit.svg)"
+		],
+		"description": "TableEdit"
+	},
+	"TableHistogram": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TableHistogram](/help/assets/icons/TableHistogram.svg)"
+		],
+		"description": "TableHistogram"
+	},
+	"TableMergeCell": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TableMergeCell](/help/assets/icons/TableMergeCell.svg)"
+		],
+		"description": "TableMergeCell"
+	},
+	"TableRowAddBottom": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TableRowAddBottom](/help/assets/icons/TableRowAddBottom.svg)"
+		],
+		"description": "TableRowAddBottom"
+	},
+	"TableRowAddTop": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TableRowAddTop](/help/assets/icons/TableRowAddTop.svg)"
+		],
+		"description": "TableRowAddTop"
+	},
+	"TableRowMerge": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TableRowMerge](/help/assets/icons/TableRowMerge.svg)"
+		],
+		"description": "TableRowMerge"
+	},
+	"TableRowRemoveCenter": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TableRowRemoveCenter](/help/assets/icons/TableRowRemoveCenter.svg)"
+		],
+		"description": "TableRowRemoveCenter"
+	},
+	"TableRowSplit": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TableRowSplit](/help/assets/icons/TableRowSplit.svg)"
+		],
+		"description": "TableRowSplit"
+	},
+	"TableSelectColumn": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TableSelectColumn](/help/assets/icons/TableSelectColumn.svg)"
+		],
+		"description": "TableSelectColumn"
+	},
+	"TableSelectRow": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TableSelectRow](/help/assets/icons/TableSelectRow.svg)"
+		],
+		"description": "TableSelectRow"
+	},
+	"Tableau": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Tableau](/help/assets/icons/Tableau.svg)"
+		],
+		"description": "Tableau"
+	},
+	"TagBold": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TagBold](/help/assets/icons/TagBold.svg)"
+		],
+		"description": "TagBold"
+	},
+	"TagItalic": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TagItalic](/help/assets/icons/TagItalic.svg)"
+		],
+		"description": "TagItalic"
+	},
+	"TagUnderline": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TagUnderline](/help/assets/icons/TagUnderline.svg)"
+		],
+		"description": "TagUnderline"
+	},
+	"Target": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Target](/help/assets/icons/Target.svg)"
+		],
+		"description": "Target"
+	},
+	"Targeted": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Targeted](/help/assets/icons/Targeted.svg)"
+		],
+		"description": "Targeted"
+	},
+	"TaskList": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TaskList](/help/assets/icons/TaskList.svg)"
+		],
+		"description": "TaskList"
+	},
+	"Teapot": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Teapot](/help/assets/icons/Teapot.svg)"
+		],
+		"description": "Teapot"
+	},
+	"Temperature": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Temperature](/help/assets/icons/Temperature.svg)"
+		],
+		"description": "Temperature"
+	},
+	"TestAB": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TestAB](/help/assets/icons/TestAB.svg)"
+		],
+		"description": "TestAB"
+	},
+	"TestABEdit": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TestABEdit](/help/assets/icons/TestABEdit.svg)"
+		],
+		"description": "TestABEdit"
+	},
+	"TestABGear": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TestABGear](/help/assets/icons/TestABGear.svg)"
+		],
+		"description": "TestABGear"
+	},
+	"TestABRemove": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TestABRemove](/help/assets/icons/TestABRemove.svg)"
+		],
+		"description": "TestABRemove"
+	},
+	"TestProfile": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TestProfile](/help/assets/icons/TestProfile.svg)"
+		],
+		"description": "TestProfile"
+	},
+	"Text": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Text](/help/assets/icons/Text.svg)"
+		],
+		"description": "Text"
+	},
+	"TextAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextAdd](/help/assets/icons/TextAdd.svg)"
+		],
+		"description": "TextAdd"
+	},
+	"TextAlignCenter": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextAlignCenter](/help/assets/icons/TextAlignCenter.svg)"
+		],
+		"description": "TextAlignCenter"
+	},
+	"TextAlignJustify": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextAlignJustify](/help/assets/icons/TextAlignJustify.svg)"
+		],
+		"description": "TextAlignJustify"
+	},
+	"TextAlignLeft": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextAlignLeft](/help/assets/icons/TextAlignLeft.svg)"
+		],
+		"description": "TextAlignLeft"
+	},
+	"TextAlignRight": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextAlignRight](/help/assets/icons/TextAlignRight.svg)"
+		],
+		"description": "TextAlignRight"
+	},
+	"TextBaselineShift": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextBaselineShift](/help/assets/icons/TextBaselineShift.svg)"
+		],
+		"description": "TextBaselineShift"
+	},
+	"TextBold": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextBold](/help/assets/icons/TextBold.svg)"
+		],
+		"description": "TextBold"
+	},
+	"TextBulleted": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextBulleted](/help/assets/icons/TextBulleted.svg)"
+		],
+		"description": "TextBulleted"
+	},
+	"TextBulletedAttach": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextBulletedAttach](/help/assets/icons/TextBulletedAttach.svg)"
+		],
+		"description": "TextBulletedAttach"
+	},
+	"TextBulletedHierarchy": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextBulletedHierarchy](/help/assets/icons/TextBulletedHierarchy.svg)"
+		],
+		"description": "TextBulletedHierarchy"
+	},
+	"TextBulletedHierarchyExclude": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextBulletedHierarchyExclude](/help/assets/icons/TextBulletedHierarchyExclude.svg)"
+		],
+		"description": "TextBulletedHierarchyExclude"
+	},
+	"TextColor": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextColor](/help/assets/icons/TextColor.svg)"
+		],
+		"description": "TextColor"
+	},
+	"TextDecrease": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextDecrease](/help/assets/icons/TextDecrease.svg)"
+		],
+		"description": "TextDecrease"
+	},
+	"TextEdit": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextEdit](/help/assets/icons/TextEdit.svg)"
+		],
+		"description": "TextEdit"
+	},
+	"TextExclude": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextExclude](/help/assets/icons/TextExclude.svg)"
+		],
+		"description": "TextExclude"
+	},
+	"TextIncrease": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextIncrease](/help/assets/icons/TextIncrease.svg)"
+		],
+		"description": "TextIncrease"
+	},
+	"TextIndentDecrease": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextIndentDecrease](/help/assets/icons/TextIndentDecrease.svg)"
+		],
+		"description": "TextIndentDecrease"
+	},
+	"TextIndentIncrease": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextIndentIncrease](/help/assets/icons/TextIndentIncrease.svg)"
+		],
+		"description": "TextIndentIncrease"
+	},
+	"TextItalic": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextItalic](/help/assets/icons/TextItalic.svg)"
+		],
+		"description": "TextItalic"
+	},
+	"TextKerning": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextKerning](/help/assets/icons/TextKerning.svg)"
+		],
+		"description": "TextKerning"
+	},
+	"TextLetteredLowerCase": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextLetteredLowerCase](/help/assets/icons/TextLetteredLowerCase.svg)"
+		],
+		"description": "TextLetteredLowerCase"
+	},
+	"TextLetteredUpperCase": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextLetteredUpperCase](/help/assets/icons/TextLetteredUpperCase.svg)"
+		],
+		"description": "TextLetteredUpperCase"
+	},
+	"TextNumbered": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextNumbered](/help/assets/icons/TextNumbered.svg)"
+		],
+		"description": "TextNumbered"
+	},
+	"TextParagraph": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextParagraph](/help/assets/icons/TextParagraph.svg)"
+		],
+		"description": "TextParagraph"
+	},
+	"TextRomanLowercase": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextRomanLowercase](/help/assets/icons/TextRomanLowercase.svg)"
+		],
+		"description": "TextRomanLowercase"
+	},
+	"TextRomanUppercase": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextRomanUppercase](/help/assets/icons/TextRomanUppercase.svg)"
+		],
+		"description": "TextRomanUppercase"
+	},
+	"TextSize": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextSize](/help/assets/icons/TextSize.svg)"
+		],
+		"description": "TextSize"
+	},
+	"TextSizeAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextSizeAdd](/help/assets/icons/TextSizeAdd.svg)"
+		],
+		"description": "TextSizeAdd"
+	},
+	"TextSpaceAfter": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextSpaceAfter](/help/assets/icons/TextSpaceAfter.svg)"
+		],
+		"description": "TextSpaceAfter"
+	},
+	"TextSpaceBefore": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextSpaceBefore](/help/assets/icons/TextSpaceBefore.svg)"
+		],
+		"description": "TextSpaceBefore"
+	},
+	"TextStrikethrough": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextStrikethrough](/help/assets/icons/TextStrikethrough.svg)"
+		],
+		"description": "TextStrikethrough"
+	},
+	"TextStroke": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextStroke](/help/assets/icons/TextStroke.svg)"
+		],
+		"description": "TextStroke"
+	},
+	"TextStyle": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextStyle](/help/assets/icons/TextStyle.svg)"
+		],
+		"description": "TextStyle"
+	},
+	"TextSubscript": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextSubscript](/help/assets/icons/TextSubscript.svg)"
+		],
+		"description": "TextSubscript"
+	},
+	"TextSuperscript": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextSuperscript](/help/assets/icons/TextSuperscript.svg)"
+		],
+		"description": "TextSuperscript"
+	},
+	"TextTracking": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextTracking](/help/assets/icons/TextTracking.svg)"
+		],
+		"description": "TextTracking"
+	},
+	"TextUnderline": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TextUnderline](/help/assets/icons/TextUnderline.svg)"
+		],
+		"description": "TextUnderline"
+	},
+	"ThumbDown": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ThumbDown](/help/assets/icons/ThumbDown.svg)"
+		],
+		"description": "ThumbDown"
+	},
+	"ThumbDownOutline": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ThumbDownOutline](/help/assets/icons/ThumbDownOutline.svg)"
+		],
+		"description": "ThumbDownOutline"
+	},
+	"ThumbUp": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ThumbUp](/help/assets/icons/ThumbUp.svg)"
+		],
+		"description": "ThumbUp"
+	},
+	"ThumbUpOutline": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ThumbUpOutline](/help/assets/icons/ThumbUpOutline.svg)"
+		],
+		"description": "ThumbUpOutline"
+	},
+	"Train": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Train](/help/assets/icons/Train.svg)"
+		],
+		"description": "Train"
+	},
+	"TransferToPlatform": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TransferToPlatform](/help/assets/icons/TransferToPlatform.svg)"
+		],
+		"description": "TransferToPlatform"
+	},
+	"Transparency": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Transparency](/help/assets/icons/Transparency.svg)"
+		],
+		"description": "Transparency"
+	},
+	"Trap": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Trap](/help/assets/icons/Trap.svg)"
+		],
+		"description": "Trap"
+	},
+	"TreeCollapse": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TreeCollapse](/help/assets/icons/TreeCollapse.svg)"
+		],
+		"description": "TreeCollapse"
+	},
+	"TreeCollapseAll": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TreeCollapseAll](/help/assets/icons/TreeCollapseAll.svg)"
+		],
+		"description": "TreeCollapseAll"
+	},
+	"TreeExpand": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TreeExpand](/help/assets/icons/TreeExpand.svg)"
+		],
+		"description": "TreeExpand"
+	},
+	"TreeExpandAll": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TreeExpandAll](/help/assets/icons/TreeExpandAll.svg)"
+		],
+		"description": "TreeExpandAll"
+	},
+	"TreeView": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TreeView](/help/assets/icons/TreeView.svg)"
+		],
+		"description": "TreeView"
+	},
+	"TrendInspect": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TrendInspect](/help/assets/icons/TrendInspect.svg)"
+		],
+		"description": "TrendInspect"
+	},
+	"TrimPath": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![TrimPath](/help/assets/icons/TrimPath.svg)"
+		],
+		"description": "TrimPath"
+	},
+	"Trophy": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Trophy](/help/assets/icons/Trophy.svg)"
+		],
+		"description": "Trophy"
+	},
+	"TwoDots": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Type](/help/assets/icons/TwoDots.svg)"
+		],
+		"description": "TwoDots"
+	},
+	"Type": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Type](/help/assets/icons/Type.svg)"
+		],
+		"description": "Type"
+	},
+	"USA": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![USA](/help/assets/icons/USA.svg)"
+		],
+		"description": "USA"
+	},
+	"Underline": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Underline](/help/assets/icons/Underline.svg)"
+		],
+		"description": "Underline"
+	},
+	"Undo": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Undo](/help/assets/icons/Undo.svg)"
+		],
+		"description": "Undo"
+	},
+	"Ungroup": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Ungroup](/help/assets/icons/Ungroup.svg)"
+		],
+		"description": "Ungroup"
+	},
+	"Unlink": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Unlink](/help/assets/icons/Unlink.svg)"
+		],
+		"description": "Unlink"
+	},
+	"Unmerge": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Unmerge](/help/assets/icons/Unmerge.svg)"
+		],
+		"description": "Unmerge"
+	},
+	"UnresolvedComment": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![UnresolvedComment](/help/assets/icons/UnresolvedComment.svg)"
+		],
+		"description": "UnresolvedComment"
+	},
+	"UploadToCloud": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![UploadToCloud](/help/assets/icons/UploadToCloud.svg)"
+		],
+		"description": "UploadToCloud"
+	},
+	"UploadToCloudOutline": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![UploadToCloudOutline](/help/assets/icons/UploadToCloudOutline.svg)"
+		],
+		"description": "UploadToCloudOutline"
+	},
+	"User": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![User](/help/assets/icons/User.svg)"
+		],
+		"description": "User"
+	},
+	"UserActivity": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![UserActivity](/help/assets/icons/UserActivity.svg)"
+		],
+		"description": "UserActivity"
+	},
+	"UserAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![UserAdd](/help/assets/icons/UserAdd.svg)"
+		],
+		"description": "UserAdd"
+	},
+	"UserAdmin": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![UserAdmin](/help/assets/icons/UserAdmin.svg)"
+		],
+		"description": "UserAdmin"
+	},
+	"UserArrow": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![UserArrow](/help/assets/icons/UserArrow.svg)"
+		],
+		"description": "UserArrow"
+	},
+	"UserCheckedOut": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![UserCheckedOut](/help/assets/icons/UserCheckedOut.svg)"
+		],
+		"description": "UserCheckedOut"
+	},
+	"UserDeveloper": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![UserDeveloper](/help/assets/icons/UserDeveloper.svg)"
+		],
+		"description": "UserDeveloper"
+	},
+	"UserEdit": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![UserEdit](/help/assets/icons/UserEdit.svg)"
+		],
+		"description": "UserEdit"
+	},
+	"UserExclude": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![UserExclude](/help/assets/icons/UserExclude.svg)"
+		],
+		"description": "UserExclude"
+	},
+	"UserGroup": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![UserGroup](/help/assets/icons/UserGroup.svg)"
+		],
+		"description": "UserGroup"
+	},
+	"UserLock": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![UserLock](/help/assets/icons/UserLock.svg)"
+		],
+		"description": "UserLock"
+	},
+	"UserShare": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![UserShare](/help/assets/icons/UserShare.svg)"
+		],
+		"description": "UserShare"
+	},
+	"UsersAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![UsersAdd](/help/assets/icons/UsersAdd.svg)"
+		],
+		"description": "UsersAdd"
+	},
+	"UsersExclude": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![UsersExclude](/help/assets/icons/UsersExclude.svg)"
+		],
+		"description": "UsersExclude"
+	},
+	"UsersLock": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![UsersLock](/help/assets/icons/UsersLock.svg)"
+		],
+		"description": "UsersLock"
+	},
+	"UsersShare": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![UsersShare](/help/assets/icons/UsersShare.svg)"
+		],
+		"description": "UsersShare"
+	},
+	"Variable": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Variable](/help/assets/icons/Variable.svg)"
+		],
+		"description": "Variable"
+	},
+	"VectorDraw": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![VectorDraw](/help/assets/icons/VectorDraw.svg)"
+		],
+		"description": "VectorDraw"
+	},
+	"VerticalMasonryGridView": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![VerticalMasonryGridView](/help/assets/icons/VerticalMasonryGridView.svg)"
+		],
+		"description": "VerticalMasonryGridView"
+	},
+	"VideoCheckedOut": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![VideoCheckedOut](/help/assets/icons/VideoCheckedOut.svg)"
+		],
+		"description": "VideoCheckedOut"
+	},
+	"VideoFilled": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![VideoFilled](/help/assets/icons/VideoFilled.svg)"
+		],
+		"description": "VideoFilled"
+	},
+	"VideoOutline": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![VideoOutline](/help/assets/icons/VideoOutline.svg)"
+		],
+		"description": "VideoOutline"
+	},
+	"ViewAllTag": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ViewAllTag](/help/assets/icons/ViewAllTag.svg)"
+		],
+		"description": "ViewAllTag"
+	},
+	"ViewBiWeek": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ViewBiWeek](/help/assets/icons/ViewBiWeek.svg)"
+		],
+		"description": "ViewBiWeek"
+	},
+	"ViewCard": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ViewCard](/help/assets/icons/ViewCard.svg)"
+		],
+		"description": "ViewCard"
+	},
+	"ViewCardOneCol": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ViewCardOneCol](/help/assets/icons/ViewCardOneCol.svg)"
+		],
+		"description": "ViewCardOneCol"
+	},
+	"ViewColumn": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ViewColumn](/help/assets/icons/ViewColumn.svg)"
+		],
+		"description": "ViewColumn"
+	},
+	"ViewDay": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ViewDay](/help/assets/icons/ViewDay.svg)"
+		],
+		"description": "ViewDay"
+	},
+	"ViewDetail": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ViewDetail](/help/assets/icons/ViewDetail.svg)"
+		],
+		"description": "ViewDetail"
+	},
+	"ViewGrid": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ViewGrid](/help/assets/icons/ViewGrid.svg)"
+		],
+		"description": "ViewGrid"
+	},
+	"ViewList": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ViewList](/help/assets/icons/ViewList.svg)"
+		],
+		"description": "ViewList"
+	},
+	"ViewRow": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ViewRow](/help/assets/icons/ViewRow.svg)"
+		],
+		"description": "ViewRow"
+	},
+	"ViewSingle": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ViewSingle](/help/assets/icons/ViewSingle.svg)"
+		],
+		"description": "ViewSingle"
+	},
+	"ViewStack": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ViewStack](/help/assets/icons/ViewStack.svg)"
+		],
+		"description": "ViewStack"
+	},
+	"ViewTable": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ViewTable](/help/assets/icons/ViewTable.svg)"
+		],
+		"description": "ViewTable"
+	},
+	"ViewWeek": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ViewWeek](/help/assets/icons/ViewWeek.svg)"
+		],
+		"description": "ViewWeek"
+	},
+	"ViewedMarkA": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ViewedMarkA](/help/assets/icons/ViewedMarkA.svg)"
+		],
+		"description": "ViewedMarkA"
+	},
+	"Vignette": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Vignette](/help/assets/icons/Vignette.svg)"
+		],
+		"description": "Vignette"
+	},
+	"Visibility": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Visibility](/help/assets/icons/Visibility.svg)"
+		],
+		"description": "Visibility"
+	},
+	"VisibilityOff": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![VisibilityOff](/help/assets/icons/VisibilityOff.svg)"
+		],
+		"description": "VisibilityOff"
+	},
+	"Visit": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Visit](/help/assets/icons/Visit.svg)"
+		],
+		"description": "Visit"
+	},
+	"VisitShare": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![VisitShare](/help/assets/icons/VisitShare.svg)"
+		],
+		"description": "VisitShare"
+	},
+	"VoiceOver": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![VoiceOver](/help/assets/icons/VoiceOver.svg)"
+		],
+		"description": "VoiceOver"
+	},
+	"VolumeMute": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![VolumeMute](/help/assets/icons/VolumeMute.svg)"
+		],
+		"description": "VolumeMute"
+	},
+	"VolumeOne": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![VolumeOne](/help/assets/icons/VolumeOne.svg)"
+		],
+		"description": "VolumeOne"
+	},
+	"VolumeThree": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![VolumeThree](/help/assets/icons/VolumeThree.svg)"
+		],
+		"description": "VolumeThree"
+	},
+	"VolumeTwo": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![VolumeTwo](/help/assets/icons/VolumeTwo.svg)"
+		],
+		"description": "VolumeTwo"
+	},
+	"Watch": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Watch](/help/assets/icons/Watch.svg)"
+		],
+		"description": "Watch"
+	},
+	"WebPages": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![WebPages](/help/assets/icons/WebPages.svg)"
+		],
+		"description": "WebPages"
+	},
+	"WebPage": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![WebPage](/help/assets/icons/WebPage.svg)"
+		],
+		"description": "WebPage"
+	},
+	"Workflow": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Workflow](/help/assets/icons/Workflow.svg)"
+		],
+		"description": "Workflow"
+	},
+	"WorkflowAdd": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![WorkflowAdd](/help/assets/icons/WorkflowAdd.svg)"
+		],
+		"description": "WorkflowAdd"
+	},
+	"Wrench": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Wrench](/help/assets/icons/Wrench.svg)"
+		],
+		"description": "Wrench"
+	},
+	"ZoomIn": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ZoomIn](/help/assets/icons/ZoomIn.svg)"
+		],
+		"description": "ZoomIn"
+	},
+	"ZoomOut": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![ZoomOut](/help/assets/icons/ZoomOut.svg)"
+		],
+		"description": "ZoomOut"
+	}
+}
