@@ -1,11 +1,11 @@
 ---
-title: Introduktion | Migrera mål från at.js 2.x till Web SDK
+title: Migrera mål från at.js 2.x till Web SDK
 description: Lär dig migrera en Adobe Target-implementering från at.js 2.x till Adobe Experience Platform Web SDK. Exempel på ämnen är att läsa in JavaScript-biblioteket, skicka parametrar, renderingsaktiviteter och andra viktiga bildtexter.
 last-substantial-update: 2023-02-23T00:00:00Z
 exl-id: c8920fde-ad6b-4f2d-a35f-ce865b35bba0
-source-git-commit: 4690d41f92c83fe17eda588538d397ae1fa28af0
+source-git-commit: eebe598e55228d038dfc2adb97df0f8ff03748ac
 workflow-type: tm+mt
-source-wordcount: '557'
+source-wordcount: '556'
 ht-degree: 0%
 
 ---
