@@ -1,8 +1,8 @@
 ---
-title: Skicka parametrar | Migrera mål från at.js 2.x till Web SDK
+title: Skicka parametrar - Migrera mål från at.js 2.x till Web SDK
 description: Lär dig hur du skickar parametrar för mbox, profile och entity till Adobe Target med Experience Platform Web SDK.
 exl-id: 7916497b-0078-4651-91b1-f53c86dd2100
-source-git-commit: 4690d41f92c83fe17eda588538d397ae1fa28af0
+source-git-commit: d4308b68d6974fe47eca668dd16555d15a8247c9
 workflow-type: tm+mt
 source-wordcount: '1478'
 ht-degree: 0%

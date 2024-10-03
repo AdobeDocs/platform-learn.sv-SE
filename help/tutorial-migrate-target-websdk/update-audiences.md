@@ -1,8 +1,8 @@
 ---
-title: Uppdatera målgrupper och profilskript | Migrera mål från at.js 2.x till Web SDK
+title: Uppdatera målgrupper och profilskript - Migrera Target från at.js 2.x till Web SDK
 description: Lär dig hur du uppdaterar Adobe Target målgrupper och profilskript för kompatibilitet med Experience Platform Web SDK.
 exl-id: 2c0f85f7-6e8c-4d0b-8ed5-53897d06e563
-source-git-commit: 4690d41f92c83fe17eda588538d397ae1fa28af0
+source-git-commit: d4308b68d6974fe47eca668dd16555d15a8247c9
 workflow-type: tm+mt
 source-wordcount: '476'
 ht-degree: 0%

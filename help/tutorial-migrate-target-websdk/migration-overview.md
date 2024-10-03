@@ -1,8 +1,8 @@
 ---
-title: Migreringsöversikt | Migrera mål från at.js 2.x till Web SDK
+title: Migreringsöversikt - Migrera mål från kl. 2.x till Web SDK
 description: Lär dig mer om de viktigaste skillnaderna mellan at.js och Platform Web SDK och hur du planerar din migrering.
 exl-id: a8ed78e4-c8c2-4505-b4b5-e5d508f5ed87
-source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
+source-git-commit: d4308b68d6974fe47eca668dd16555d15a8247c9
 workflow-type: tm+mt
 source-wordcount: '796'
 ht-degree: 0%

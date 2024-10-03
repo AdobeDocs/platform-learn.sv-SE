@@ -1,8 +1,8 @@
 ---
-title: Felsök | Migrera mål från at.js 2.x till Web SDK
+title: Felsök - Migrera mål från at.js 2.x till Web SDK
 description: Lär dig felsöka en Adobe Target-implementering med Adobe Experience Platform Web SDK. Avsnitten omfattar felsökningsalternativ, webbläsartillägg och skillnader mellan at.js och Platform Web SDK.
 exl-id: 20699551-a708-469a-8980-67586db82787
-source-git-commit: 4690d41f92c83fe17eda588538d397ae1fa28af0
+source-git-commit: d4308b68d6974fe47eca668dd16555d15a8247c9
 workflow-type: tm+mt
 source-wordcount: '1483'
 ht-degree: 0%

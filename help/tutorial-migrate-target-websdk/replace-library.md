@@ -1,8 +1,8 @@
 ---
-title: Ersätta biblioteket | Migrera mål från at.js 2.x till Web SDK
+title: Ersätt biblioteket - migrera mål från at.js 2.x till Web SDK
 description: Lär dig migrera en Adobe Target-implementering från at.js 2.x till Adobe Experience Platform Web SDK. Ämnen som omfattar biblioteksöversikt, implementeringsskillnader och andra viktiga hänvisningar.
 exl-id: dfafa132-376a-475d-a467-9bc2f0a414cf
-source-git-commit: 07c3c5b3f45eeb02e94a25dbd164b7397cb7869d
+source-git-commit: d4308b68d6974fe47eca668dd16555d15a8247c9
 workflow-type: tm+mt
 source-wordcount: '1567'
 ht-degree: 0%
