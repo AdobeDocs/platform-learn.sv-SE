@@ -4,7 +4,7 @@ description: Lär dig hur du skapar ett XDM-schema för webbdata i gränssnittet
 feature: Web SDK,Schemas
 jira: KT-15398
 exl-id: 2858ce03-4f95-43ac-966c-1b647b33ef16
-source-git-commit: 1a4f2e3813a6db4bef77753525c8a7d40692a4b2
+source-git-commit: 63987fb652a653283a05a5f35f7ce670127ae905
 workflow-type: tm+mt
 source-wordcount: '1510'
 ht-degree: 0%
@@ -58,7 +58,7 @@ Det här är målet för Adobe [Experience Data Model](https://business.adobe.co
 >
 > I demonstrationssyfte bygger övningarna i den här lektionen upp ett exempelschema för att fånga innehåll som visas och produkter som köpts av kunder på [Luma Demo-webbplatsen](https://luma.enablementadobe.com/content/luma/us/en.html). Du kan använda de här stegen för att skapa ett annat schema för dina egna syften, men vi rekommenderar att du först följer med när du skapar exempelschemat för att lära dig funktionerna i schemaredigeraren.
 
-Mer information om XDM-scheman finns i [Model Your Customer Experience Data with XDM](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-D-1-2021.1.xdm) eller i [XDM System overview](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home).
+Om du vill veta mer om XDM-scheman kan du titta på spellistan [Modellera dina kundupplevelsedata med XDM](https://experienceleague.adobe.com/en/playlists/experience-platform-model-your-customer-experience-data-with-xdm) eller se [XDM-systemöversikt](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home).
 
 ## Utbildningsmål
 

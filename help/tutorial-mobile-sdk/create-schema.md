@@ -4,7 +4,7 @@ description: Lär dig hur du skapar ett XDM-schema för mobilappshändelser.
 feature: Mobile SDK,Schemas
 jira: KT-14624
 exl-id: c6b0d030-437a-4afe-b7d5-5a7831877983
-source-git-commit: 25f0df2ea09bb7383f45a698e75bd31be7541754
+source-git-commit: 63987fb652a653283a05a5f35f7ce670127ae905
 workflow-type: tm+mt
 source-wordcount: '1313'
 ht-degree: 1%
@@ -25,7 +25,7 @@ Experience Platform använder scheman för att beskriva datastrukturen på ett k
 
 Innan data kan hämtas in till Platform måste ett schema sättas samman för att beskriva datastrukturen och tillhandahålla begränsningar för den typ av data som kan finnas i varje fält. Scheman består av en basklass och noll eller flera schemafältgrupper.
 
-Mer information om schemakompositionsmodellen, inklusive designprinciper och bästa praxis, finns i [grunderna för schemakomposition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en) eller kursen [Modellera dina kundupplevelsedata med XDM](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-D-1-2021.1.xdm).
+Mer information om schemakompositionsmodellen, inklusive designprinciper och bästa praxis, finns i [grunderna för schemakomposition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en) eller i spellistan [Modellera dina kundupplevelsedata med XDM](https://experienceleague.adobe.com/en/playlists/experience-platform-model-your-customer-experience-data-with-xdm).
 
 >[!TIP]
 >

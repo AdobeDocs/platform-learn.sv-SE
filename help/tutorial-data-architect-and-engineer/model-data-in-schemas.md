@@ -8,7 +8,7 @@ feature: Schemas
 jira: KT-4348
 thumbnail: 4348-model-data-in-schemas.jpg
 exl-id: 317f1c39-7f76-4074-a246-ef19f044cb85
-source-git-commit: 8e470d8a0c9fee7389ac60a743431fe81012fa0f
+source-git-commit: 63987fb652a653283a05a5f35f7ce670127ae905
 workflow-type: tm+mt
 source-wordcount: '2476'
 ht-degree: 0%
@@ -47,7 +47,7 @@ Innan du börjar övningarna ska du titta på den här korta videon och lära di
 
 >[!TIP]
 >
-> För en djupdykning i datamodellering i Experience Platform rekommenderar vi att du tar kursen [Model Your Customer Experience Data with XDM](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-D-1-2021.1.xdm), som är tillgänglig kostnadsfritt på Experience League!
+> För en djupdykning i datamodellering i Experience Platform rekommenderar vi att du tittar på spellistan [Modellera dina kundupplevelsedata med XDM](https://experienceleague.adobe.com/en/playlists/experience-platform-model-your-customer-experience-data-with-xdm), som är tillgänglig kostnadsfritt på Experience League!
 
 ## Behörigheter krävs
 
@@ -86,7 +86,7 @@ I den här övningen ska vi skapa ett schema för Lumas lojalitetsdata.
 
 När schemat har skapats omdirigeras du till schemaredigeraren där du kan lägga till fält i schemat. Du kan lägga till enskilda fält direkt i schemat eller använda fältgrupper. Observera att alla enskilda fält fortfarande är kopplade till en klass eller fältgrupp. Du kan välja bland en stor uppsättning standardfältgrupper från Adobe eller skapa egna. När ni börjar utforma egna data i Experience Platform är det bra att bekanta sig med de branschledande fältgrupperna från Adobe. När det är möjligt är det en god praxis att använda dem eftersom de ibland driver tjänster längre fram i kedjan, t.ex. kundens AI, Attribution AI och Adobe Analytics.
 
-När du arbetar med egna data är det viktigt att du tar reda på vilken av dina egna data som ska samlas in i Platform och hur de ska modelleras. Det här stora avsnittet diskuteras mer ingående i kursen [Modellera dina kundupplevelsedata med XDM](https://experienceleague.adobe.com/?recommended=ExperiencePlatform-D-1-2021.1.xdm). I den här självstudiekursen kommer jag att vägleda dig genom implementeringen av några förbestämda scheman.
+När du arbetar med egna data är det viktigt att du tar reda på vilken av dina egna data som ska samlas in i Platform och hur de ska modelleras. Det här stora avsnittet diskuteras mer ingående i spellistan [Modellera dina kundupplevelsedata med XDM](https://experienceleague.adobe.com/en/playlists/experience-platform-model-your-customer-experience-data-with-xdm). I den här självstudiekursen kommer jag att vägleda dig genom implementeringen av några förbestämda scheman.
 
 Så här lägger du till fältgrupper:
 
