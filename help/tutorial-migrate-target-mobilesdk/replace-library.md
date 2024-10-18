@@ -1,14 +1,14 @@
 ---
-title: Ersätt biblioteket - migrera mål från at.js 2.x till Web SDK
-description: Lär dig migrera en Adobe Target-implementering från at.js 2.x till Adobe Experience Platform Web SDK. Ämnen som omfattar biblioteksöversikt, implementeringsskillnader och andra viktiga hänvisningar.
-source-git-commit: 009548969b88d1bfa6eac23f65b1ca2144f27c34
+title: Ersätt SDK - Migrera från Adobe Target till Adobe Journey Optimizer - mobiltillägg för beslut
+description: Lär dig hur du ersätter SDK när du migrerar från Adobe Target till tillägget Adobe Journey Optimizer - Decisioning Mobile.
+source-git-commit: afbc8248ad81a5d9080a4fdba1167e09bbf3b33d
 workflow-type: tm+mt
-source-wordcount: '1533'
+source-wordcount: '1531'
 ht-degree: 0%
 
 ---
 
-# Ersätt at.js-biblioteket med Platform Web SDK
+# Ersätt mål-SDK med Optimera SDK
 
 Lär dig hur du ersätter din Adobe Target-implementering på sidan för att migrera från at.js till Platform Web SDK. En grundläggande ersättning består av följande steg:
 
@@ -399,4 +399,4 @@ Lär dig sedan [begära och använda formulärbaserade aktiviteter](render-activ
 
 >[!NOTE]
 >
->Vi vill hjälpa dig att lyckas med din migrering av mobilmål från måltillägget till optimeringstillägget. Om du stöter på problem med din migrering eller om du känner att det saknas viktig information i den här guiden kan du meddela oss genom att publicera [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-target-from-at-js-to-web-sdk/m-p/575587#M463).
+>Vi strävar efter att hjälpa dig att lyckas med din migrering av mobilmål från måltillägget till beslutstillägget. Om du stöter på problem med din migrering eller om du känner att det saknas viktig information i den här guiden kan du meddela oss genom att publicera [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-target-from-at-js-to-web-sdk/m-p/575587#M463).

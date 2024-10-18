@@ -1,9 +1,9 @@
 ---
-title: Felsök - Migrera mål från
+title: Felsök - Migrera från Adobe Target till Adobe Journey Optimizer - mobiltillägg för beslut
 description: Lär dig felsöka en Adobe Target-implementering med Adobe Experience Platform Mobile SDK.
-source-git-commit: 009548969b88d1bfa6eac23f65b1ca2144f27c34
+source-git-commit: afbc8248ad81a5d9080a4fdba1167e09bbf3b33d
 workflow-type: tm+mt
-source-wordcount: '1224'
+source-wordcount: '1234'
 ht-degree: 0%
 
 ---
@@ -159,4 +159,4 @@ Grattis, du har kommit till slutet av självstudiekursen! Lycka till med att mig
 
 >[!NOTE]
 >
->Vi vill hjälpa dig att lyckas med din migrering av mobilmål från måltillägget till optimeringstillägget. Om du stöter på problem med din migrering eller om du känner att det saknas viktig information i den här guiden kan du meddela oss genom att publicera [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-target-from-at-js-to-web-sdk/m-p/575587#M463).
+>Vi strävar efter att hjälpa dig att lyckas med din migrering av mobilmål från måltillägget till beslutstillägget. Om du stöter på problem med din migrering eller om du känner att det saknas viktig information i den här guiden kan du meddela oss genom att publicera [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-target-from-at-js-to-web-sdk/m-p/575587#M463).

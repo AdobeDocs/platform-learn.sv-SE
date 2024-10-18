@@ -1,14 +1,14 @@
 ---
-title: Uppdatera målgrupper och profilskript - Migrera Target från at.js 2.x till Web SDK
+title: Uppdatera målgrupper och profilskript - Migrera från Adobe Target till Adobe Journey Optimizer - Bestämning av mobiltillägg
 description: Lär dig hur du uppdaterar Adobe Target målgrupper och profilskript för kompatibilitet med Experience Platform Web SDK.
-source-git-commit: 009548969b88d1bfa6eac23f65b1ca2144f27c34
+source-git-commit: afbc8248ad81a5d9080a4fdba1167e09bbf3b33d
 workflow-type: tm+mt
-source-wordcount: '159'
+source-wordcount: '167'
 ht-degree: 0%
 
 ---
 
-# Uppdatera målgrupper och profilskript för kompatibilitet med Platform Web SDK
+# Uppdatera målgrupper och profilskript för Adobe Journey Optimizer - Bestämma kompatibilitet för mobiltillägg
 
 
 ## Justera målgrupper
@@ -26,4 +26,4 @@ Läs sedan om hur du [validerar målimplementeringen](validate.md).
 
 >[!NOTE]
 >
->Vi vill hjälpa dig att lyckas med din migrering av mobilmål från måltillägget till optimeringstillägget. Om du stöter på problem med din migrering eller om du känner att det saknas viktig information i den här guiden kan du meddela oss genom att publicera [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-target-from-at-js-to-web-sdk/m-p/575587#M463).
+>Vi strävar efter att hjälpa dig att lyckas med din migrering av mobilmål från måltillägget till beslutstillägget. Om du stöter på problem med din migrering eller om du känner att det saknas viktig information i den här guiden kan du meddela oss genom att publicera [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-target-from-at-js-to-web-sdk/m-p/575587#M463).

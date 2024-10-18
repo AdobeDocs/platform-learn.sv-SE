@@ -1,16 +1,16 @@
 ---
-title: Validera målimplementeringar med Web SDK - migrera mål från at.js 2.x till Web SDK
-description: Lär dig validera aktiviteter och felsöka en Adobe Target-implementering med Adobe Experience Platform Web SDK.
-source-git-commit: 009548969b88d1bfa6eac23f65b1ca2144f27c34
+title: Validera Target-implementeringar av Adobe Journey Optimizer - mobiltillägg för beslut
+description: Lär dig hur du validerar aktiviteter och felsöker en Adobe Target-implementering med tillägget Adobe Journey Optimizer - Decisioning Mobile.
+source-git-commit: afbc8248ad81a5d9080a4fdba1167e09bbf3b33d
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 0%
 
 ---
 
-# Validera implementeringen av Platform Web SDK
+# Validera implementeringen av Adobe Journey Optimizer - Bestämning av mobiltillägg
 
-När du har migrerat målinsimplementeringen från Target-tillägget till Optimera-tillägget är det viktigt att du validerar att allt fungerar som det ska innan du publicerar några ändringar i produktionsappen. Adobe rekommenderar följande, som beskrivs utförligt på denna sida:
+När du har migrerat målinsimplementeringen från måltillägget till beslutandetillägget är det viktigt att du validerar att allt fungerar som det ska innan du publicerar några ändringar i produktionsappen. Adobe rekommenderar följande, som beskrivs utförligt på denna sida:
 
 * Genomför en teknisk validering för att säkerställa att den grundläggande implementeringen och Platform Mobile SDK-begäranden och -svar ser korrekta ut
 * Se till att Target-aktiviteter levereras och återges korrekt
@@ -54,10 +54,10 @@ Alla Target-implementeringar skiljer sig åt beroende på webbplatsens arkitektu
 |---|---|
 | | |
 
-När du har utfört valideringsstegen ovan kan du vara säker på att implementeringen av plattformens mobila SDK med tillägget Optimera är klar att gå över till produktion.
+När du har utfört valideringsstegen ovan kan du känna dig säker på att implementeringen av Platform Mobile SDK med beslutstillägget är klar att gå över till produktion.
 
 Läs sedan om hur du [felsöker en målistimplementering med hjälp av Platform Web SDK](debugging.md).
 
 >[!NOTE]
 >
->Vi vill hjälpa dig att lyckas med din migrering av mobilmål från måltillägget till optimeringstillägget. Om du stöter på problem med din migrering eller om du känner att det saknas viktig information i den här guiden kan du meddela oss genom att publicera [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-target-from-at-js-to-web-sdk/m-p/575587#M463).
+>Vi strävar efter att hjälpa dig att lyckas med din migrering av mobilmål från måltillägget till beslutstillägget. Om du stöter på problem med din migrering eller om du känner att det saknas viktig information i den här guiden kan du meddela oss genom att publicera [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-target-from-at-js-to-web-sdk/m-p/575587#M463).

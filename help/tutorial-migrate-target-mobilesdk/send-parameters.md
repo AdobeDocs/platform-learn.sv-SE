@@ -1,14 +1,14 @@
 ---
-title: Skicka parametrar - Migrera mål från at.js 2.x till Web SDK
+title: Skicka parametrar - Migrera från Adobe Target till Adobe Journey Optimizer - mobiltillägg för beslut
 description: Lär dig hur du skickar parametrar för mbox, profile och entity till Adobe Target med Experience Platform Web SDK.
-source-git-commit: 009548969b88d1bfa6eac23f65b1ca2144f27c34
+source-git-commit: afbc8248ad81a5d9080a4fdba1167e09bbf3b33d
 workflow-type: tm+mt
-source-wordcount: '649'
+source-wordcount: '658'
 ht-degree: 0%
 
 ---
 
-# Skicka parametrar till Target med Platform Web SDK
+# Skicka parametrar till Target med tillägget Adobe Journey Optimizer - Decisioning Mobile
 
 Målimplementeringarna skiljer sig åt på olika webbplatser på grund av webbplatsens arkitektur, affärskrav och vilka funktioner som används. De flesta Target-implementeringar omfattar att skicka olika parametrar för sammanhangsberoende information, målgrupper och innehållsrekommendationer.
 
@@ -53,7 +53,7 @@ Entitetsparametrar för ett specifikt objekt måste ha prefixet `entity.` för k
 
 ## Inköpsparametrar
 
-Inköpsparametrar skickas till en orderbekräftelsesida efter en lyckad beställning och används för målkonverterings- och optimeringsmål. Med en plattformsbaserad SDK-implementering med tillägget Optimera, mappas dessa parametrar automatiskt från XDM-data som skickas som en del av fältgruppen `commerce`.
+Inköpsparametrar skickas till en orderbekräftelsesida efter en lyckad beställning och används för målkonverterings- och optimeringsmål. Med en plattformsbaserad SDK-implementering som använder beslutstillägget mappas dessa parametrar automatiskt från XDM-data som skickas som en del av fältgruppen `commerce`.
 
 
 Inköpsinformation skickas till mål när fältgruppen `commerce` har `purchases.value` inställt på `1`. Orderns ID och ordersumman mappas automatiskt från objektet `order`. Om `productListItems`-arrayen finns används `SKU`-värdena för `productPurchasedId`.
@@ -69,4 +69,4 @@ Läs sedan om hur du [spårar målkonverteringshändelser](track-events.md) med 
 
 >[!NOTE]
 >
->Vi vill hjälpa dig att lyckas med din migrering av mobilmål från måltillägget till optimeringstillägget. Om du stöter på problem med din migrering eller om du känner att det saknas viktig information i den här guiden kan du meddela oss genom att publicera [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-target-from-at-js-to-web-sdk/m-p/575587#M463).
+>Vi strävar efter att hjälpa dig att lyckas med din migrering av mobilmål från måltillägget till beslutstillägget. Om du stöter på problem med din migrering eller om du känner att det saknas viktig information i den här guiden kan du meddela oss genom att publicera [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-target-from-at-js-to-web-sdk/m-p/575587#M463).
