@@ -1,41 +1,41 @@
 ---
 title: Jämförelse mellan måltillägget och beslutets förlängning
-description: Läs om skillnaderna mellan at.js 2.x och Platform Web SDK, inklusive funktioner, inställningar och dataflöde.
-source-git-commit: afbc8248ad81a5d9080a4fdba1167e09bbf3b33d
+description: Lär dig mer om skillnaderna mellan Target-tillägg till beslutstillägget, inklusive funktioner, funktioner, inställningar och dataflöde.
+source-git-commit: e727fbfc82dea9ab6244b669b2f06c47987db1b1
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '468'
 ht-degree: 0%
 
 ---
 
 # Jämförelse mellan måltillägget och beslutets förlängning
 
-Det fristående Adobe Target at.js-biblioteket skiljer sig avsevärt från Platform Web SDK. Följande tabeller är en referens som hjälper dig att utvärdera områden av implementeringen som du kan behöva fokusera på under migreringsprocessen.
+Tillägget Adobe Journey Optimizer - Decisioning skiljer sig från Adobe Target-tillägget för mobilappar. Följande tabeller är en referens som hjälper dig att utvärdera områden av implementeringen som du kan behöva fokusera på under migreringsprocessen.
 
-När du har granskat informationen nedan och utvärderat din nuvarande tekniska at.js-implementering bör du förstå följande:
+När du har granskat informationen nedan och utvärderat din nuvarande implementering av det tekniska måltillägget bör du förstå följande:
 
-- Vilka målfunktioner som stöds av Platform Web SDK
-- Funktionerna at at.js har motsvarigheter för Platform Web SDK
-- Hur målinställningarna tillämpas med Platform Web SDK
-- Hur dataflödet för at.js och Platform Web SDK skiljer sig åt
+- Vilka Target-funktioner som stöds av Adobe Journey Optimizer - Decisioning
+- Vilka Adobe Target-tilläggsfunktioner som har Adobe Journey Optimizer - Beslutsmotsvarigheter
+- Hur målinställningar används med Adobe Journey Optimizer - beslut
+- Hur dataflödet för Adobe Target-tillägget och Adobe Journey Optimizer - Beslutstillägg skiljer sig åt
 
 Om du inte har använt Platform Web SDK tidigare behöver du inte bekymra dig. Objekten nedan beskrivs mer ingående i den här självstudiekursen.
 
 ## Jämförelse av funktioner
 
-| | Måltillägg | Beslutstillägg (mål via Edge) | AJO Code-based Experiences (Messaging SDK) |
+| | Måltillägg | Beslutstillägg (mål via Edge) |
 |---|---|---|---|
-| Förhämtningsläge | Stöds | Stöds | Stöds |
-| Körningsläge | Stöds | Stöds inte | Stöds inte |
-| Egna parametrar | Stöds | Parametrar per ruta stöds inte | Stöds inte |
-| Deltagande målgrupper | Stöds | Stöds | Stöds via Campaigns målgrupp och experimentets utelämnandeinställning |
-| Målgruppssegmentering med mobil Lifecycle-statistik | Stöds | Stöds via datainsamlingsregler | Upplevelseanpassning stöds för närvarande inte |
-| thirdPartyId (mbox3rdPartyId) | Stöds via konfiguration av identitetskarta och namnutrymme i datastream | Stöds inte |
-| Meddelanden (visa, klicka) | Stöds | Stöds | Stöds |
-| Svarstoken | Stöds | Stöds | Ingen motsvarighet för att returnera Campaign-specifika metadata utanför innehållet |
-| Dynamiska erbjudanden | Stöds | Stöds | Profil- och beslutsartikelrelaterad tokenåtergivning i innehåll stöds |
-| Analyser för mål (A4T) | Endast på klientsidan | Klientsida och serversida | Stöds inte |
-| Förhandsvisning av mobiler (QA-läge) | Stöds | Begränsad support | Pågår |
+| Förhämtningsläge | Stöds | Stöds |
+| Körningsläge | Stöds | Stöds inte |
+| Egna parametrar | Stöds | Parametrar per ruta stöds inte |
+| Deltagande målgrupper | Stöds | Stöds |
+| Målgruppssegmentering med mobil Lifecycle-statistik | Stöds | Stöds via datainsamlingsregler |
+| thirdPartyId (mbox3rdPartyId) | Stöds via konfiguration av identitetskarta och namnutrymme i datastream |
+| Meddelanden (visa, klicka) | Stöds | Stöds |
+| Svarstoken | Stöds | Stöds |
+| Dynamiska erbjudanden | Stöds | Stöds |
+| Analyser för mål (A4T) | Endast på klientsidan | Klientsida och serversida |
+| Förhandsvisning av mobiler (QA-läge) | Stöds | Begränsad support |
 
 
 
@@ -66,13 +66,13 @@ Måltillägget kan konfigureras och laddas ned med olika inställningar i ...
 
 ## Systemdiagramsjämförelse
 
-Följande diagram bör hjälpa dig att förstå skillnaderna i dataflöde mellan en Target-implementering med at.js och en implementering med hjälp av Platform Web SDK.
+Följande diagram bör hjälpa dig att förstå skillnaderna i dataflöde mellan en Target-implementering med tillägget Adobe Journey Optimizer - Decisioning och en implementering med tillägget Adobe Target.
 
 ### Diagram över måltilläggssystem
 
 
 
-### Avgör tilläggssystemsdiagram
+### Fastställer tilläggssystemsdiagram
 
 
 
