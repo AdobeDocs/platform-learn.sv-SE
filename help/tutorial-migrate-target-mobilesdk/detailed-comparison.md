@@ -1,9 +1,9 @@
 ---
 title: Jämförelse mellan måltillägget och beslutets förlängning
 description: Lär dig mer om skillnaderna mellan Target-tillägg till beslutstillägget, inklusive funktioner, funktioner, inställningar och dataflöde.
-source-git-commit: e727fbfc82dea9ab6244b669b2f06c47987db1b1
+source-git-commit: 78d04d625aa55ce5eb76615c220b49aefd958431
 workflow-type: tm+mt
-source-wordcount: '468'
+source-wordcount: '469'
 ht-degree: 0%
 
 ---
@@ -23,8 +23,8 @@ Om du inte har använt Platform Web SDK tidigare behöver du inte bekymra dig. O
 
 ## Jämförelse av funktioner
 
-| | Måltillägg | Beslutstillägg (mål via Edge) |
-|---|---|---|---|
+| Funktion | Måltillägg | Beslutstillägg (mål via Edge) |
+|---|---|---|
 | Förhämtningsläge | Stöds | Stöds |
 | Körningsläge | Stöds | Stöds inte |
 | Egna parametrar | Stöds | Parametrar per ruta stöds inte |
