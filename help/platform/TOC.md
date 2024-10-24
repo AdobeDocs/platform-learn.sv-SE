@@ -5,9 +5,9 @@ user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
 auto-video-transcripts: true
-source-git-commit: 8f7e2699e0158bc36459bbe61a5aa8e70e8e775b
+source-git-commit: 988e0bfbcf43d8148aac86e2b85cdaec82f19650
 workflow-type: tm+mt
-source-wordcount: '931'
+source-wordcount: '934'
 ht-degree: 6%
 
 ---
@@ -31,13 +31,12 @@ ht-degree: 6%
    + [Översikt](/help/platform/rtcdp/understanding-the-real-time-customer-data-platform.md)
    + [Komplett demo](/help/platform/rtcdp/demo.md)
    + [Arbetsflöde](/help/platform/rtcdp/understanding-the-real-time-customer-data-platform-user-interface.md)
-   + [Översikt över B2B Edition](/help/platform/rtcdp/b2b-overview.md)
+   + [Översikt över B2B edition](/help/platform/rtcdp/b2b-overview.md)
    + [Samordna kampanjer med Marketo Engage](/help/platform/rtcdp/orchestrate-campaigns-with-marketo-engage.md)
 + [Komma igång: Dataarkitekter och datatekniker](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/overview.html){target="_blank"}
 + [Autentisera till Experience Platform API:er](/help/platform/authentication/platform-api-authentication.md)
 + [Importera exempeldata till Experience Platform](/help/platform/data-generator/import-sample-data.md)
 + Administration {#admin}
-   + [Använd AI-assistenten](/help/platform/admin/ai-assistant.md)
    + [Använda varningar](/help/platform/admin/use-alerts.md)
    + [Använda sandlådor](/help/platform/admin/use-sandboxes.md)
    + [Kopiera objekt mellan sandlådor](/help/platform/admin/copy-objects-between-sandboxes.md)
@@ -46,6 +45,9 @@ ht-degree: 6%
    + [Lägg till utvecklare](/help/platform/admin/add-developers.md)
    + [Lägg till produktadministratörer](/help/platform/admin/add-product-administrators.md)
    + [Konfigurera attributbaserad åtkomstkontroll](/help/platform/admin/configure-attribute-based-access-control.md)
++ AI-assistenten {#ai-assistant}
+   + [Översikt](/help/platform/ai-assistant/overview.md)
+   + [Rensa målgrupper](/help/platform/ai-assistant/find-unused-audiences.md)
 + Målgrupper och segmentering {#audiences}
    + [Introduktion till Audience Portal and Composition](audiences/introduction-to-audience-portal-and-composition.md)
    + [Överför målgrupper](audiences/upload-audiences.md)

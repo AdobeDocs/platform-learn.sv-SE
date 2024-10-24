@@ -1,9 +1,9 @@
 ---
 title: Jämförelse mellan måltillägget och beslutets förlängning
 description: Lär dig mer om skillnaderna mellan Target-tillägg till beslutstillägget, inklusive funktioner, funktioner, inställningar och dataflöde.
-source-git-commit: 78d04d625aa55ce5eb76615c220b49aefd958431
+source-git-commit: c907ccb9163ace8272f6881638a41362090bf3e5
 workflow-type: tm+mt
-source-wordcount: '469'
+source-wordcount: '470'
 ht-degree: 0%
 
 ---
@@ -30,7 +30,7 @@ Om du inte har använt Platform Web SDK tidigare behöver du inte bekymra dig. O
 | Egna parametrar | Stöds | Parametrar per ruta stöds inte |
 | Deltagande målgrupper | Stöds | Stöds |
 | Målgruppssegmentering med mobil Lifecycle-statistik | Stöds | Stöds via datainsamlingsregler |
-| thirdPartyId (mbox3rdPartyId) | Stöds via konfiguration av identitetskarta och namnutrymme i datastream |
+| thirdPartyId (mbox3rdPartyId) | Stöds | Stöds via konfiguration av identitetskarta och namnutrymme i datastream |
 | Meddelanden (visa, klicka) | Stöds | Stöds |
 | Svarstoken | Stöds | Stöds |
 | Dynamiska erbjudanden | Stöds | Stöds |
