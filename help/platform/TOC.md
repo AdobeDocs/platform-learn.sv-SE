@@ -5,9 +5,9 @@ user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
 auto-video-transcripts: true
-source-git-commit: 988e0bfbcf43d8148aac86e2b85cdaec82f19650
+source-git-commit: f650acd67fb1097eb17ed16ef3f991c474b6d479
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '939'
 ht-degree: 6%
 
 ---
@@ -39,7 +39,8 @@ ht-degree: 6%
 + Administration {#admin}
    + [Använda varningar](/help/platform/admin/use-alerts.md)
    + [Använda sandlådor](/help/platform/admin/use-sandboxes.md)
-   + [Kopiera objekt mellan sandlådor](/help/platform/admin/copy-objects-between-sandboxes.md)
+   + [Kopiera paket mellan sandlådor](/help/platform/admin/copy-objects-between-sandboxes.md)
+   + [Dela paket mellan IMS-organisationer](/help/platform/admin/share-packages-across-orgs.md)
    + [Lägg till användare](/help/platform/admin/add-users.md)
    + [Lägg till användare i datainsamling](https://experienceleague.adobe.com/docs/platform-learn/data-collection/users-and-permissions.html)
    + [Lägg till utvecklare](/help/platform/admin/add-developers.md)
