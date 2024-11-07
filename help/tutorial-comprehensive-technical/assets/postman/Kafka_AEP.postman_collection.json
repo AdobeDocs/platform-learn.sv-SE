@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "027b7e84-e568-41bc-bbc8-ad23406e0a5a",
+		"name": "Kafka_AEP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Available Kafka Connect connectors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/connectors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"connectors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST Create AEP Sink Connector",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"aep-sink-connector\",\n  \"config\": {\n    \"topics\": \"aep\",\n    \"tasks.max\": 1,\n    \"aep.flush.interval.seconds\": 1,\n    \"aep.flush.bytes.kb\": 4,\n    \"connector.class\": \"com.adobe.platform.streaming.sink.impl.AEPSinkConnector\",\n    \"key.converter.schemas.enable\": false,\n    \"value.converter.schemas.enable\": false,\n    \"aep.endpoint\": \"\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8083/connectors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"connectors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Check Kafka Connect Connector Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8083/connectors/aep-sink-connector/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8083",
+					"path": [
+						"connectors",
+						"aep-sink-connector",
+						"status"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
