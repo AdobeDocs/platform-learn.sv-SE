@@ -1,0 +1,75 @@
+---
+title: Adobe Experience Platform Data Collection & Servervidarebefordran i realtid
+description: I den här modulen använder du de tidigare konfigurerade datauppsättningarna, scheman och Adobe Experience Platform Data Collection Server-egenskapen för att samla in data och sedan vidarebefordrar du den till en valfri slutpunkt.
+kt: 5342
+doc-type: tutorial
+source-git-commit: 2cdc145d7f3933ec593db4e6f67b60961a674405
+workflow-type: tm+mt
+source-wordcount: '480'
+ht-degree: 0%
+
+---
+
+# 2.5 Real-Time CDP Connections: Event Forwarding
+
+**Författare: [Wouter Van Geluwe](https://www.linkedin.com/in/woutervangeluwe/), [Clement Delalande](https://www.linkedin.com/in/clement-delalande/)**
+
+I den här modulen använder du de tidigare konfigurerade datauppsättningarna, scheman och klientegenskapen för Adobe Experience Platform Data Collection för att samla in data och sedan vidarebefordra den till en valfri slutpunkt.
+
+I den här modulen kommer du att:
+
+- Skapa en Adobe Experience Platform Data Collection Server-egenskap
+- Installera och använda tillägget Adobe Cloud Connector i Adobe Experience Platform Data Collection
+- Skapa en Google Function-slutpunkt och strömma data till den
+- Skapa en AWS-slutpunkt och strömma data till den
+
+Titta på den här videon för att förstå värde, kundresa och konfigurationsprocess:
+
+>[!VIDEO](https://video.tv.adobe.com/v/331987?quality=12&learn=on)
+
+## Utbildningsmål
+
+- Bekanta dig med Adobe Experience Platform Data Collection Server och det nya tillägget Adobe Cloud Connector
+- Lär dig återanvända Adobe Experience Platform Web SDK-data i tredjepartslösningar som Google och AWS
+- Förstå arkitekturen bakom Adobe Experience Platform Data Collection och Serverside Forwarding.
+
+## Förhandskrav
+
+- Tillgång till Adobe Experience Platform och Adobe Experience Platform Data Collection
+- Förståelse för Adobe Experience Platform datasets och XDM
+
+>[!NOTE]
+>
+>Glöm inte att installera, konfigurera och använda Chrome-tillägget enligt referensen i [0.1 - Installera Chrome-tillägget för Experience League-dokumentationen](../../gettingstarted/gettingstarted/ex1.md)
+
+## Utövningar
+
+[2.5.1 Skapa en händelsevidarebefordringsegenskap för datainsamling](./ex1.md)
+
+I den här övningen ska du skapa en händelsevidarebefordringsegenskap för Adobe Experience Platform Data Collection.
+
+[2.5.2 Uppdatera din datastream så att data blir tillgängliga för din Data Collection Event Forwarding-egenskap](./ex2.md)
+
+I den här övningen ska du uppdatera din befintliga datastream så att data som samlas in av din Adobe Experience Platform Data Collection Client-egenskap blir tillgängliga för din Adobe Experience Platform Data Collection Server-egenskap.
+
+[2.5.3 Skapa och konfigurera en anpassad webkrok](./ex3.md)
+
+I den här övningen skapar och konfigurerar du en anpassad webkrok och du börjar vidarebefordra data som samlas in av Web SDK till den anpassade webkroken.
+
+[2.5.4 Skapa och konfigurera en Google Cloud-funktion](./ex4.md)
+
+I den här övningen skapar och konfigurerar du en Google Cloud-funktion och du börjar vidarebefordra data som samlas in av Web SDK till Google.
+
+[2.5.5 Framåtriktade evenemang mot AWS ekosystem](./ex5.md)
+
+I den här övningen konfigurerar du AWS-miljön med AWS API Gateway, AWS Kinesis, AWS Firehose och AWS S3, varefter du börjar vidarebefordra händelsedata som samlas in av Web SDK.
+
+[Sammanfattning och fördelar](./summary.md)
+
+Sammanfattning av den här modulen och en översikt över fördelarna.
+
+>[!NOTE]
+>
+>Tack för att du lägger ned din tid på att lära dig allt om Adobe Experience Platform och dess program. Om du har frågor kan du dela allmän feedback om dina förslag på framtida innehåll. Kontakta Tech Insiders direkt genom att skicka ett e-postmeddelande till **techinsiders@adobe.com**.
+
+[Gå tillbaka till Alla moduler](../../../overview.md)

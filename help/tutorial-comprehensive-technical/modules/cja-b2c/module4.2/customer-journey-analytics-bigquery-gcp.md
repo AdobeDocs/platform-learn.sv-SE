@@ -1,0 +1,73 @@
+---
+title: Importera och analysera data från Google Analytics i Adobe Experience Platform med BigQuery Source Connector
+description: Importera och analysera data från Google Analytics i Adobe Experience Platform med BigQuery Source Connector
+kt: 5342
+doc-type: tutorial
+source-git-commit: f19f6b4a44a34af3c9545eb7f8735ef6ccf5d6c7
+workflow-type: tm+mt
+source-wordcount: '457'
+ht-degree: 0%
+
+---
+
+# 4.2 Importera och analysera data från Google Analytics i Adobe Experience Platform med BigQuery Source Connector
+
+**Författare: [Victor de la Iglesia](https://www.linkedin.com/in/victordelaiglesia/), [Wouter Van Geluwe](https://www.linkedin.com/in/woutervangeluwe/)**
+
+I den här modulen ska du konfigurera en egen instans av Google Cloud Platform, läsa in exempeldata i Google Cloud Platform och sedan använda BigQuery Source Connector för att importera data från Google Cloud Platform till Adobe Experience Platform. Slutligen använder ni Customer Journey Analytics för att visualisera dessa data.
+
+Source-kontakter i Adobe Experience Platform gör det enkelt att hämta data till Adobe Experience Platform. Google BigQuery är en av de redan tillgängliga anslutningarna. Tack vare Adobe Experience Platform och BigQuery Source Connector kan vi nu överföra Google Analytics-data till Analysis Workspace i Customer Journey Analytics.
+
+Dessutom kan vi berika Google Analytics data genom att koppla dem till andra datakällor som CRM, Call Center eller Loyalty inom Customer Journey Analytics.
+
+## Utbildningsmål
+
+- Bekanta dig med användargränssnittet i Google Cloud Platform och BigQuery
+- Importera data från Google Analytics till Adobe Experience Platform
+- Använd Customer Journey Analytics för att analysera data från Google Analytics
+- Förbättra Google Analytics data med offlinedata
+
+## Förhandskrav
+
+- Viss kunskap om Customer Journey Analytics är att föredra, men är inte nödvändig
+- Åtkomst till Adobe Experience Platform: [https://experience.adobe.com/platform](https://experience.adobe.com/platform)
+- Åtkomst till Customer Journey Analytics
+- Tillgång till Google Cloud Platform och Google BigQuery
+- **Hämta de här resurserna**:
+   - [JSON - Exempeldata: Förmånsdata](./../../../assets/json/bqLoyalty.json)
+
+>[!NOTE]
+>
+>Glöm inte att installera, konfigurera och använda Chrome-tillägget enligt referensen i [0.1 - Installera Chrome-tillägget för Experience League-dokumentationen](../../gettingstarted/gettingstarted/ex1.md)
+
+## Utövningar
+
+[4.2.1 Skapa ett Google Cloud Platform-konto](./ex1.md)
+
+Skapa ett Google Cloud Platform-konto.
+
+[4.2.2 Skapa din första fråga i BigQuery](./ex2.md)
+
+Lär dig hur du använder BigQuery för att förbereda data för inläsning till plattformen.
+
+[4.2.3 Anslut GCP och BigQuery till Adobe Experience Platform](./ex3.md)
+
+Lär dig hur du konfigurerar källkopplingen i Adobe Experience Platform.
+
+[4.2.4 Läs in data från BigQuery till Adobe Experience Platform](./ex4.md)
+
+Lär dig hur du konfigurerar BigQuery-källkopplingen i Adobe Experience Platform så att dina Google Analytics-data importeras.
+
+[4.2.5 Analysera Google Analytics-data med Customer Journey Analytics](./ex5.md)
+
+Lär dig hur du analyserar Google Analytics data i Customer Journey Analytics och kombinerar dem med lojalitetsdata.
+
+[Sammanfattning och fördelar](./summary.md)
+
+Sammanfattning av den här modulen och en översikt över fördelarna.
+
+>[!NOTE]
+>
+>Tack för att du lägger ned din tid på att lära dig allt om Adobe Experience Platform och dess program. Om du har frågor kan du dela allmän feedback om dina förslag på framtida innehåll. Kontakta Tech Insiders direkt genom att skicka ett e-postmeddelande till **techinsiders@adobe.com**.
+
+[Gå tillbaka till Alla moduler](../../../overview.md)
