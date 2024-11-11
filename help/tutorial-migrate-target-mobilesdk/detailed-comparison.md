@@ -1,9 +1,10 @@
 ---
 title: Jämförelse mellan måltillägget och beslutets förlängning
 description: Lär dig mer om skillnaderna mellan Target-tillägg till beslutstillägget, inklusive funktioner, funktioner, inställningar och dataflöde.
-source-git-commit: c907ccb9163ace8272f6881638a41362090bf3e5
+exl-id: 6c854049-4126-45cf-8b2b-683cf29549f3
+source-git-commit: 05b0146256c6f8644e42f851498a0f49ff44bf68
 workflow-type: tm+mt
-source-wordcount: '470'
+source-wordcount: '829'
 ht-degree: 0%
 
 ---
@@ -27,15 +28,22 @@ Om du inte har använt Platform Web SDK tidigare behöver du inte bekymra dig. O
 |---|---|---|
 | Förhämtningsläge | Stöds | Stöds |
 | Körningsläge | Stöds | Stöds inte |
-| Egna parametrar | Stöds | Parametrar per ruta stöds inte |
-| Deltagande målgrupper | Stöds | Stöds |
-| Målgruppssegmentering med mobil Lifecycle-statistik | Stöds | Stöds via datainsamlingsregler |
+| Egna parametrar | Stöds | Stöds* |
+| Profilparametrar | Stöds | Stöds* |
+| Enhetsparametrar | Stöds | Stöds* |
+| Målgrupper | Stöds | Stöds |
+| Real-Time CDP målgrupper | ?? | Stöds |
+| Real-Time CDP-attribut | ?? | Stöds |
+| Livscykelstatistik | Stöds | Stöds via datainsamlingsregler |
 | thirdPartyId (mbox3rdPartyId) | Stöds | Stöds via konfiguration av identitetskarta och namnutrymme i datastream |
 | Meddelanden (visa, klicka) | Stöds | Stöds |
 | Svarstoken | Stöds | Stöds |
-| Dynamiska erbjudanden | Stöds | Stöds |
 | Analyser för mål (A4T) | Endast på klientsidan | Klientsida och serversida |
-| Förhandsvisning av mobiler (QA-läge) | Stöds | Begränsad support |
+| Förhandsvisning av mobiler (QA-läge) | Stöds | Begränsad support med Assurance |
+
+>[!IMPORTANT]
+>
+> \* Parametrar som skickas i en begäran gäller alla scope i begäran. Om du behöver ange olika parametrar för olika omfattningar måste du göra ytterligare förfrågningar.
 
 
 
@@ -51,9 +59,24 @@ Om du inte har använt Platform Web SDK tidigare behöver du inte bekymra dig. O
 
 Många Target-tilläggsfunktioner har en likvärdig metod med hjälp av det beslutstillägg som beskrivs i tabellen nedan. Mer information om [funktionerna](https://developer.adobe.com/target/implement/client-side/atjs/atjs-functions/atjs-functions/) finns i Adobe Target Developer Guide.
 
-| Måltillägg | Beslutstillägg |
-| --- | --- | 
-| |  |
+| Måltillägg | Beslutstillägg | Anteckningar |
+| --- | --- | --- | 
+| `prefetchContent` | `updatePropositions` |  |
+| `retrieveLocationContent` | `getPropositions` | När du använder `getPropositions` API görs inget fjärranrop för att hämta icke-cachelagrade scope i SDK. |
+| `displayedLocations` | Erbjudande -> `displayed()` | Dessutom kan erbjudandemetoden `generateDisplayInteractionXdm` användas för att generera XDM för objektvisning. Därefter kan Edge nätverks-SDK:s sendEvent-API användas för att bifoga ytterligare XDM-data, frihandsdata och skicka en Experience Event till fjärrservern. |
+| `clickedLocation` | Erbjudande -> `tapped()` | Dessutom kan erbjudandemetoden `generateTapInteractionXdm` användas för att generera XDM för artikelknackning. Därefter kan Edge nätverks-SDK:s sendEvent-API användas för att bifoga ytterligare XDM-data, frihandsdata och skicka en Experience Event till fjärrservern. |
+| `clearPrefetchCache` | `clearCachedPropositions` |  |
+| `resetExperience` |  | Använd `removeIdentity`-API:t från Identity för Edge Network-tillägget för SDK för att sluta skicka besöksidentifieraren till Edge-nätverket. Mer information finns i [dokumentationen för API:t removeIdentity](https://developer.adobe.com/client-sdks/edge/identity-for-edge-network/api-reference/#removeidentity). <br><br>Obs! Mobile Core `resetIdentities` API tar bort alla lagrade identiteter i SDK, inklusive Experience Cloud ID (ECID), och det bör användas sparsamt! |
+| `getSessionId` |  | `state:store`-svarsreferensen innehåller sessionsrelaterad information. Edge-nätverkstillägg hjälper till att hantera det genom att koppla tillståndslagringsobjekt som inte har förfallit till efterföljande begäranden. |
+| `setSessionId` |  | `state:store`-svarsreferensen innehåller sessionsrelaterad information. Edge-nätverkstillägg hjälper till att hantera det genom att koppla tillståndslagringsobjekt som inte har förfallit till efterföljande begäranden. |
+| `getThirdPartyId` | n/a | Använd API:t updateIdentities från Identity för tillägget Edge Network för att ange ID-värdet för tredje part. Konfigurera sedan namnutrymmet för det tredje parts-ID:t i datastream. Mer information finns i [Målets mobildokumentation för tredjeparts-ID](https://developer.adobe.com/client-sdks/edge/adobe-journey-optimizer-decisioning/#target-third-party-id). |
+| `setThirdPartyId` | n/a | Använd API:t updateIdentities från Identity för tillägget Edge Network för att ange ID-värdet för tredje part. Konfigurera sedan namnutrymmet för det tredje parts-ID:t i datastream. Mer information finns i [Målets mobildokumentation för tredjeparts-ID](https://developer.adobe.com/client-sdks/edge/adobe-journey-optimizer-decisioning/#target-third-party-id). |
+| `getTntId` |  | Svarshandtaget `locationHint:result` innehåller information om målplatstips. Det antas att Target-kanten kommer att samlokaliseras med Experience Edge. <br> <br>Edge-nätverkstillägget använder platsledtråden för EdgeNetwork för att avgöra vilket Edge-nätverkskluster som begäranden ska skickas till. Använd API:erna `getLocationHint` och `setLocationHint` från tillägget Edge Network om du vill dela Edge-nätverksplatstips mellan SDK:er (hybridappar). Mer information finns i [API-dokumentationen för `getLocationHint`](https://developer.adobe.com/client-sdks/edge/edge-network/api-reference/#getlocationhint). |
+| `setTntId` |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
+|  |  |  |
 
 ## Målinställningar för tillägg och Avgörande av tilläggsekvivalenter
 
