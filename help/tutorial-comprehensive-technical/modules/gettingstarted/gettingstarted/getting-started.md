@@ -3,18 +3,17 @@ title: Komma igång - sammanfattning
 description: Komma igång - sammanfattning
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: 31616c51-01e0-4f99-91f1-4f21054b0999
+source-git-commit: 57d12036519ab066b713496669ffdc895d3b4825
 workflow-type: tm+mt
-source-wordcount: '250'
+source-wordcount: '257'
 ht-degree: 0%
 
 ---
 
-# 0. Komma igång
+# 0.1 Komma igång
 
-**Författare: [Wouter Van Geluwe](https://www.linkedin.com/in/woutervangeluwe/)**
-
-**I den här modulen** konfigurerar du allt så att du kan samla in data och få tillgång till demomiljön.
+I den här modulen ska du konfigurera allt så att du kan samla in data, få tillgång till demomiljön och anpassa de dynamiska variablerna i den här självstudiekursen.
 
 ## Utbildningsmål
 
@@ -24,28 +23,28 @@ ht-degree: 0%
 ## Förhandskrav
 
 - Åtkomst till Adobe Experience Platform: [https://experience.adobe.com/platform](https://experience.adobe.com/platform)
-- Åtkomst till Adobe Experience Platform Launch: [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/)
+- Åtkomst till Adobe Experience Platform-taggar: [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/)
 - Åtkomst till demosystemet nästa: [https://dashboard.adobedemo.com/](https://dashboard.adobedemo.com/)
 
 ## Utövningar
 
-[0.1 Installera Chrome-tillägget för dokumentationen för Experience League](./ex1.md)
+[0.1.1 Installera Chrome-tillägget för dokumentationen för Experience League](./ex1.md)
 
 I den här övningen ska du installera och konfigurera Chrome-tillägget så att du kan använda det för att anpassa självstudieinnehållet.
 
-[0.2 Använd Demo System bredvid för att konfigurera klientegenskapen för Adobe Experience Platform Data Collection](./ex2.md)
+[0.1.2 Använd Demo System bredvid för att ställa in klientegenskapen för Adobe Experience Platform Data Collection](./ex2.md)
 
 I den här övningen använder du Demo System Next för att konfigurera dina startegenskaper för webb och mobiler.
 
-[0.3 Skapa ditt datastream](./ex3.md)
+[0.1.3 Skapa ditt datastream](./ex3.md)
 
 I den här övningen använder du Demo System Next för att konfigurera dina startegenskaper för webb och mobiler.
 
-[0.4 Använda webbplatsen](./ex4.md)
+[0.1.4 Använda webbplatsen](./ex4.md)
 
 I den här övningen ska du konfigurera webbplatsen så att du kan använda den för demonstrationer och aktivering.
 
-[0.5 Använda mobilappen](./ex5.md)
+[0.1.5 Använda mobilappen](./ex5.md)
 
 I den här övningen ska du konfigurera mobilappen så att du kan använda den för demonstrationer och aktivering.
 

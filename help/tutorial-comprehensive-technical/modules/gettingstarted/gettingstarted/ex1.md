@@ -3,21 +3,22 @@ title: Komma igång - Installera Chrome-tillägget för dokumentationen för Exp
 description: Komma igång - Installera Chrome-tillägget för dokumentationen för Experience League
 kt: 5342
 doc-type: tutorial
-source-git-commit: 8d595675c09a4347c04e900414d94b6c674e20f7
+exl-id: da7aa686-7f25-49fd-af3e-d243ffda025f
+source-git-commit: 57d12036519ab066b713496669ffdc895d3b4825
 workflow-type: tm+mt
-source-wordcount: '927'
+source-wordcount: '909'
 ht-degree: 0%
 
 ---
 
-# 0.1 Installera Chrome-tillägget för dokumentationen för Experience League
+# 0.1.1 Installera Chrome-tillägget för dokumentationen för Experience League
 
-## 0.1.1 Varför har vi skapat ett Chrome-tillägg?
+## Om Chrome-tillägget
 
 Dokumentationen har gjorts generisk så att den enkelt kan återanvändas av vem som helst, med valfri Adobe Experience Platform-instans.
-Genom att göra dokumentationen återanvändbar introducerades **miljövariabler** i dokumentationen, vilket innebär att du hittar **nycklarna** nedan i dokumentationen. Varje nyckel är en specifik variabel för en viss miljö, och Chrome-tillägget ändrar variabeln åt dig och gör det därför enkelt för dig att kopiera kod och text från självstudiesidorna och klistra in den i de olika användargränssnitt som du kommer att använda som en del av självstudiekursen.
+För att dokumentationen ska kunna återanvändas introducerades **miljövariabler** i dokumentationen, vilket innebär att du hittar **platshållarna** nedan i dokumentationen. Varje platshållare är en specifik variabel för en viss miljö, och Chrome-tillägget ändrar variabeln så att du enkelt kan kopiera kod och text från självstudiesidorna och klistra in den i de olika användargränssnitt som du kommer att använda som en del av självstudiekursen.
 
-Ett exempel på sådana värden finns nedan. Dessa värden kan för närvarande inte användas än, men så fort du installerar och aktiverar Chrome-tillägget ändras dessa variabler till &quot;normal&quot; text som du kan kopiera och återanvända.
+Ett exempel på sådana värden finns nedan. Dessa värden kan för närvarande inte användas ännu, men så fort du installerar och aktiverar Chrome-tillägget kommer dessa variabler att ändras till normal text som du kan kopiera och återanvända.
 
 | Namn | Nyckel |
 |:-------------:| :---------------:|
@@ -26,7 +27,7 @@ Ett exempel på sådana värden finns nedan. Dessa värden kan för närvarande 
 | Namn på AEP-sandlåda | `--aepSandboxName--` |
 | LDAP för lärarprofil | `--aepUserLdap--` |
 
-I skärmbilden nedan visas till exempel en referens till `--aepTenantId--`.
+I skärmbilden nedan visas till exempel en referens till `aepTenantId`.
 
 ![DSN](./images/mod7before.png)
 
@@ -34,13 +35,9 @@ När tillägget har installerats ändras den texten automatiskt så att den åte
 
 ![DSN](./images/mod7.png)
 
-Tillägget gör det även möjligt för dig att:
+## 0.1.1.1 Installera Chrome-tillägget
 
-- Registrera dig för självstudiekursen
-
-## 0.1.2 Installera Chrome-tillägget
-
-Om du vill installera det Chrome-tillägget öppnar du webbläsaren i Chrome och går till: [https://chrome.google.com/webstore/detail/platform-learn-configurat/hhnbkfgioecmhimdhooigajdajplinfi/related?hl=en&amp;authuser=0](https://chrome.google.com/webstore/detail/platform-learn-configurat/hhnbkfgioecmhimdhooigajdajplinfi/related?hl=en&amp;authuser=0). Då ser du det här.
+Om du vill installera det Chrome-tillägget öppnar du webbläsaren i Chrome och går till: [https://chromewebstore.google.com/detail/tech-insiders-learning-fo/hhnbkfgioecmhimdhooigajdajplinfi](https://chromewebstore.google.com/detail/tech-insiders-learning-fo/hhnbkfgioecmhimdhooigajdajplinfi). Då ser du det här.
 
 Klicka på **Lägg till i Chrome**.
 
@@ -58,9 +55,9 @@ Klicka på ikonen **pusselbit** på menyn **extensions** och fäst tillägget **
 
 ![DSN](./images/c6.png)
 
-## 0.1.2 Konfigurera Chrome-tillägget
+## 0.1.1.2 Konfigurera Chrome-tillägget
 
-Gå till [https://experienceleague.adobe.com/docs/platform-learn/comprehensive-technical-tutorial-v22/overview.html?lang=en](https://experienceleague.adobe.com/docs/platform-learn/comprehensive-technical-tutorial-v22/overview.html?lang=en) och klicka sedan på tilläggsikonen för att öppna den.
+Gå till [https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/overview](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/overview) och klicka sedan på tilläggsikonen för att öppna den.
 
 ![DSN](./images/tuthome.png)
 
@@ -68,88 +65,81 @@ Du kommer då att se den här popup-rutan. Klicka på ikonen **+**.
 
 ![DSN](./images/c7.png)
 
-Ange ditt namn och det konfigurations-ID som skapades för din Adobe Experience Platform-miljö. Klicka på **Skapa ny**.
-
->[!IMPORTANT]
->
->Om du är Adobe-anställd: du hittar det konfigurations-ID som ska användas på den interna Github-repon (https://git.corp.adobe.com/vangeluw/platformenablement).
->
->Om du är Adobe Solution Partner kontaktar du din Solution Partner-kontakt eller mejlar **spphelp@adobe.com**.
+Ange de värden som anges nedan, som alla är relaterade till din Adobe Experience Platform-instans.
 
 ![DSN](./images/c8.png)
 
-På den vänstra menyn i tillägget visas nu en ikon med dina initialer. Klicka på den. Du ser sedan mappningen mellan **miljövariablerna** och dina specifika Adobe Experience Platform-instansvärden. Klicka på **Aktivera konfiguration**.
+Om du är osäker på vilka värden du ska ange för de här fälten följer du riktlinjerna nedan.
+
+**AEP IMS-organisationsnamn**
+
+När du loggar in på din Adobe Experience Platform-instans på [https://platform.adobe.com/](https://platform.adobe.com/) hittar du namnet på din instans i skärmens övre högra hörn.
+
+![DSN](./images/aepname.png)
+
+**AEP IMS-organisation-ID**
+
+IMS-organisations-ID är den unika identifieraren för din Adobe Experience Cloud-instans, och den refereras till på flera platser under hela kursen.
+
+Du kan söka efter ditt IMS-organisations-ID på flera sätt. Om du är osäker kan du söka efter ditt ID hos en av systemadministratörerna för instansen.
+
+Du kan hitta den genom att gå till [Admin Console](https://https://adminconsole.adobe.com/), där du kan hitta den som en del av URL:en.
+
+![DSN](./images/aepid1.png)
+
+Du kan också hitta den genom att gå till **Datahantering > Frågor** på AEP-menyn, där du hittar den under **Användarnamn**.
+
+![DSN](./images/aepid2.png)
+
+Se till att kopiera och klistra in delen **@AdobeOrg** tillsammans med ID:t.
+
+**AEP-klient-ID**
+
+Klient-ID är den unika identifieraren för organisationens AEP-instans. När du loggar in på din Adobe Experience Platform-instans på [https://platform.adobe.com/](https://platform.adobe.com/) hittar du klient-ID:t i URL:en.
+
+![DSN](./images/aeptenantid.png)
+
+När du anger det i Chrome-tillägget bör du se till att ett understreck läggs till som ett prefix, så i det här exemplet blir **ExperiencePlatform** **_experienceplatform**.
+
+**Namn på AEP-sandlåda**
+
+Ditt sandlådenamn är namnet på miljön som du kommer att använda i din AEP-instans. När du loggar in på din Adobe Experience Platform-instans på [https://platform.adobe.com/](https://platform.adobe.com/) hittar du klient-ID:t i URL:en.
+
+Innan du tar sandlådans namn från URL:en bör du kontrollera att du är i sandlådan som du bör använda för den här självstudiekursen. Du kan växla till den högra sandlådan genom att klicka på sandlådeväxlarmenyn i skärmens övre högra hörn.
+
+![DSN](./images/aepsandboxsw.png)
+
+I det här exemplet är AEP-sandlådans namn **tech-insiders**.
+
+![DSN](./images/aepsname.png)
+
+**Din LDAP**
+
+Det här är användarnamnet som kommer att användas som en del av självstudiekursen. I det här exemplet baseras LDAP på den här användarens e-postadress. E-postadressen är **vangeluw@adobe.com** så LDAP blir **vangeluw**.
+
+LDAP används för att se till att konfigurationen som du gör länkas till dig och inte hamnar i konflikt med andra användare som kanske använder samma instans och sandlåda som du använder.
+
+Dina värden bör se ut ungefär som dessa.
+Klicka slutligen på **Skapa ny**.
+
+![DSN](./images/c8a.png)
+
+
+På den vänstra menyn i tillägget visas nu en ny ikon med miljöns initialer. Klicka på den. Du ser sedan mappningen mellan **miljövariablerna** och dina specifika Adobe Experience Platform-instansvärden. Klicka på **Aktivera konfiguration**.
 
 ![DSN](./images/c9.png)
 
-När du har aktiverat konfigurationen visas en grön punkt bredvid dina initialer. Detta innebär att ditt konfigurations-ID nu är aktivt. Du kommer även att se ett antal ytterligare menyalternativ.
+När du har aktiverat konfigurationen visas en grön punkt bredvid initialerna för miljön. Det innebär att din miljö nu är aktiv.
 
 ![DSN](./images/c10.png)
 
-Nu finns det två alternativ:
+## 0.1.1.3 Verifiera kursens innehåll
 
-- Om du är en befintlig användare av aktiveringen med en befintlig konfiguration går du till **0.1.3 Befintlig användare - Logga in**
-- Om du är en helt ny användare som startar den här självstudiekursen för första gången går du till **0.1.4 Registrering** och hoppar över **0.1.3 Befintlig användare - Inloggning**
+Gå till [den här sidan](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/datadistiller/module51/ex3) som ett test.
 
-## 0.1.3 Befintlig användare - inloggning
+Du bör nu se att alla **miljövariabler** har ersatts med sina verkliga värden, baserat på den aktiverade miljön i Chrome-tillägget.
 
->[!IMPORTANT]
->
->Utför **0.1.3 Befintlig användare - Inloggning** fungerar bara om du är en befintlig användare som tidigare har registrerat sig för den här självstudien.
-
-Om du är en befintlig användare som konfigurerar det här Chrome-tillägget för första gången klickar du på den lila ikonen i den vänstra menyn. Då ser du det här.
-
-![DSN](./images/chromeret1.png)
-
-Fyll i värdena efter behov.
-
->[!IMPORTANT]
->
->**LDAP** är det viktigaste fältet: du bör använda samma LDAP som du använde när du först registrerade dig för kursen. Detta säkerställer att dina förlopp läses in. Om du är osäker på vad din ldap är kan du titta på din e-postadress. Använd texten före @-symbolen i din e-postadress som LDAP. Om din e-postadress är **techinsiders@adobe.com** bör den LDAP du anger här vara **vangeluw**).
-
-![DSN](./images/chromeret2.png)
-
-Klicka på **OK**.
-
-![DSN](./images/chromeret3.png)
-
-Efter 30 sek-1 minut ändras skärmen och du återställs till **Hem**, där du ser följande:
-
-![DSN](./images/chromeret4.png)
-
-Ditt Chrome-tillägg är nu konfigurerat och du kan nu kontrollera om allt fungerar som det ska.
-
-## 0.1.4 Ny användare - Registrering
-
->[!IMPORTANT]
->
->Utgång **0.1.4 Ny användare - Registrering** är avsedd för nya användare som startar den här självstudiekursen för första gången.
-
-Om du är en ny användare som registrerar sig för kursen första gången klickar du på den gula ikonen på menyn. Då ser du det här.
-
-![DSN](./images/c11.png)
-
-Fyll i fälten efter behov. Klicka på **Spara**.
-
->[!IMPORTANT]
->
->**LDAP** är det viktigaste fältet. Om du är osäker på vad din ldap är kan du titta på din e-postadress. Använd texten före @-symbolen i din e-postadress som LDAP. Om din e-postadress är **techinsiders@adobe.com** bör den LDAP du anger här vara **vangeluw**).
-
-![DSN](./images/chrome1.png)
-
-Efter 30 sek-1 minut ändras skärmen och du återställs till **Hem**, där du ser följande:
-
-![DSN](./images/chrome2.png)
-
-Ditt Chrome-tillägg är nu konfigurerat och du kan nu kontrollera om allt fungerar som det ska.
-
-## 0.1.5 Bekräfta självstudiekursens innehåll
-
-Gå till [den här sidan](https://experienceleague.adobe.com/docs/platform-learn/comprehensive-technical-tutorial-v22/module4/ex3.html?lang=en) som ett test.
-
-Du bör nu se att alla **miljövariabler** har ersatts med sina verkliga värden, baserat på konfigurations-ID:t i Chrome-tillägget.
-
-Du bör nu ha en liknande vy som i nedanstående exempel, där miljövariablerna `--aepTenantId--` har ersatts av ditt riktiga klient-ID, som i det här fallet är **_experienceplatform**.
+Du bör nu ha en vy som liknar den nedan, där miljövariabeln `aepTenantId` har ersatts av ditt riktiga AEP-klient-ID, som i det här fallet är **_experienceplatform**.
 
 ![DSN](./images/c12.png)
 
