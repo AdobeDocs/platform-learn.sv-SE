@@ -3,22 +3,23 @@ title: Komma igång - Använd webbplatsen
 description: Komma igång - Använd webbplatsen
 kt: 5342
 doc-type: tutorial
-source-git-commit: 2cdc145d7f3933ec593db4e6f67b60961a674405
+exl-id: 6c63a63e-551f-4568-bba5-9d61d7e6a7d1
+source-git-commit: 7f436f77ab6d7c625181304fd41be75c627c5b46
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '439'
 ht-degree: 0%
 
 ---
 
-# 0.4 Använda webbplatsen
+# Använda webbplatsen
 
-## 0.4.1 Alternativ 1: Fortsätt från föregående övning
+## Alternativ 1: Fortsätt från föregående övning
 
 >[!NOTE]
 >
->Om du inte har skärmen nedan öppen längre kan du öva på 0.4.2 istället.
+>Om du inte har skärmen nedan öppen längre går du till alternativ 2 i stället.
 
-Efter träning 0.1 fick du det här resultatet. Klicka för att öppna det **webbutiksprojekt** som skapades åt dig.
+Efter träning 0.1 fick du det här resultatet. Klicka för att öppna det **webb-Telco-projekt** som skapades åt dig.
 
 ![DSN](./images/dsn5a.png)
 
@@ -26,9 +27,17 @@ Då ser du det här. Klicka på **Integrationer**.
 
 ![DSN](./images/web1.png)
 
-På sidan **Integrationer** måste du välja den datainsamlingsegenskap som skapades i övning 0.1.
+På sidan **Integrationer** måste du välja den datainsamlingsegenskap som skapades i föregående övning. Det gör du genom att klicka på **Välj miljö**.
 
 ![DSN](./images/web2.png)
+
+Klicka på **Välj** på den datainsamlingsegenskap som skapades i föregående steg med namnet `--aepUserLdap - Demo System (DD/MM/YYYY) (web)`.
+
+![DSN](./images/web2a.png)
+
+Då ser du det här. Klicka på **Kör** för att öppna demowebbplatsen.
+
+![DSN](./images/web2b.png)
 
 Du kommer då att se din demowebbplats öppnas. Markera URL-adressen och kopiera den till Urklipp.
 
@@ -50,9 +59,9 @@ Därefter visas webbplatsen i ett inkognitivt webbläsarfönster. För varje dem
 
 ![DSN](./images/web7.png)
 
-## 0.4.2 Alternativ 2: Börja med ett nytt webbläsarfönster
+## Alternativ 2: Börja med ett nytt webbläsarfönster
 
-Om du av misstag har stängt webbläsarfönstret, eller för framtida demonstrations- eller aktiveringssessioner, kan du även komma åt webbplatsprojektet genom att gå till [https://builder.adobedemo.com/projects](https://builder.adobedemo.com/projects). När du har loggat in med din Adobe ID ser du det här. Klicka på webbplatsprojektet för att öppna det.
+Om du av misstag har stängt webbläsarfönstret eller för framtida sessioner kan du även få åtkomst till ditt webbplatsprojekt genom att gå till [https://dsn.adobe.com/](https://dsn.adobe.com/). När du har loggat in med din Adobe ID ser du det här. Klicka på de tre punkterna **..** i webbplatsprojektet och klicka sedan på **Redigera**.
 
 ![DSN](./images/web8.png)
 
@@ -60,9 +69,17 @@ Nu kan du följa nedanstående flöde för att komma åt webbplatsen. Klicka på
 
 ![DSN](./images/web1.png)
 
-På sidan **Integrationer** måste du välja den datainsamlingsegenskap som skapades i övning 0.1.
+På sidan **Integrationer** måste du välja den datainsamlingsegenskap som skapades i föregående övning. Det gör du genom att klicka på **Välj miljö**.
 
 ![DSN](./images/web2.png)
+
+Klicka på **Välj** på den datainsamlingsegenskap som skapades i föregående steg med namnet `--aepUserLdap - Demo System (DD/MM/YYYY) (web)`.
+
+![DSN](./images/web2a.png)
+
+Då ser du det här. Klicka på **Kör** för att öppna demowebbplatsen.
+
+![DSN](./images/web2b.png)
 
 Du kommer då att se din demowebbplats öppnas. Markera URL-adressen och kopiera den till Urklipp.
 
@@ -84,8 +101,8 @@ Därefter visas webbplatsen i ett inkognitivt webbläsarfönster. För varje dem
 
 ![DSN](./images/web7.png)
 
-Nästa steg: [0.5 Använd mobilappen](./ex5.md)
+Nästa steg: [Använd mobilappen](./ex5.md)
 
-[Gå tillbaka till modul 0](./getting-started.md)
+[Gå tillbaka till Komma igång](./getting-started.md)
 
 [Gå tillbaka till Alla moduler](./../../../overview.md)

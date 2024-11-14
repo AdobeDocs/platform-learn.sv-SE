@@ -4,14 +4,14 @@ description: Komma igång - Installera Chrome-tillägget för dokumentationen f�
 kt: 5342
 doc-type: tutorial
 exl-id: da7aa686-7f25-49fd-af3e-d243ffda025f
-source-git-commit: 57d12036519ab066b713496669ffdc895d3b4825
+source-git-commit: 7f436f77ab6d7c625181304fd41be75c627c5b46
 workflow-type: tm+mt
-source-wordcount: '909'
+source-wordcount: '903'
 ht-degree: 0%
 
 ---
 
-# 0.1.1 Installera Chrome-tillägget för dokumentationen för Experience League
+# Installera Chrome-tillägget för dokumentationen för Experience League
 
 ## Om Chrome-tillägget
 
@@ -35,7 +35,7 @@ När tillägget har installerats ändras den texten automatiskt så att den åte
 
 ![DSN](./images/mod7.png)
 
-## 0.1.1.1 Installera Chrome-tillägget
+## Installera Chrome-tillägget
 
 Om du vill installera det Chrome-tillägget öppnar du webbläsaren i Chrome och går till: [https://chromewebstore.google.com/detail/tech-insiders-learning-fo/hhnbkfgioecmhimdhooigajdajplinfi](https://chromewebstore.google.com/detail/tech-insiders-learning-fo/hhnbkfgioecmhimdhooigajdajplinfi). Då ser du det här.
 
@@ -55,7 +55,7 @@ Klicka på ikonen **pusselbit** på menyn **extensions** och fäst tillägget **
 
 ![DSN](./images/c6.png)
 
-## 0.1.1.2 Konfigurera Chrome-tillägget
+## Konfigurera Chrome-tillägget
 
 Gå till [https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/overview](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/overview) och klicka sedan på tilläggsikonen för att öppna den.
 
@@ -133,7 +133,7 @@ När du har aktiverat konfigurationen visas en grön punkt bredvid initialerna f
 
 ![DSN](./images/c10.png)
 
-## 0.1.1.3 Verifiera kursens innehåll
+## Verifiera självstudiekursens innehåll
 
 Gå till [den här sidan](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/datadistiller/module51/ex3) som ett test.
 
@@ -141,10 +141,10 @@ Du bör nu se att alla **miljövariabler** har ersatts med sina verkliga värden
 
 Du bör nu ha en vy som liknar den nedan, där miljövariabeln `aepTenantId` har ersatts av ditt riktiga AEP-klient-ID, som i det här fallet är **_experienceplatform**.
 
-![DSN](./images/c12.png)
+![DSN](./images/mod7.png)
 
-Nästa steg: [0.2 Använd demonstrationssystemet bredvid för att konfigurera klientegenskapen för Adobe Experience Platform Data Collection](./ex2.md)
+Nästa steg: [Använd demosystemet bredvid för att konfigurera klientegenskapen för Adobe Experience Platform Data Collection](./ex2.md)
 
-[Gå tillbaka till modul 0](./getting-started.md)
+[Gå tillbaka till Komma igång](./getting-started.md)
 
 [Gå tillbaka till Alla moduler](./../../../overview.md)

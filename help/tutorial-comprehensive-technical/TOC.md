@@ -5,9 +5,9 @@ user-guide-description: En praktisk självstudiekurs som handlar om många aspek
 hide: true
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-source-git-commit: 4df0fdc30d5027c85c9ceebafa9abf771fae1507
+source-git-commit: f79a989f01fa1c005a0c06cea81268118b2467be
 workflow-type: tm+mt
-source-wordcount: '926'
+source-wordcount: '914'
 ht-degree: 2%
 
 ---
@@ -17,14 +17,14 @@ ht-degree: 2%
 
 + [Översikt över självstudiekursen](/help/tutorial-comprehensive-technical/overview.md)
 
-+ 0 Komma igång {#gettingstarted}
-   + 0.1 Komma igång {#gettingstarted}
++ Komma igång {#gettingstarted}
+   + Komma igång {#gettingstarted}
       + [Översikt](/help/tutorial-comprehensive-technical/modules/gettingstarted/gettingstarted/getting-started.md)
-      + [0.1.1 Installera Chrome-tillägget för dokumentationen för Experience League](/help/tutorial-comprehensive-technical/modules/gettingstarted/gettingstarted/ex1.md)
-      + [0.1.2 Använd Demo System bredvid för att ställa in klientegenskapen för Adobe Experience Platform Data Collection](/help/tutorial-comprehensive-technical/modules/gettingstarted/gettingstarted/ex2.md)
-      + [0.1.3 Skapa ditt datastream](/help/tutorial-comprehensive-technical/modules/gettingstarted/gettingstarted/ex3.md)
-      + [0.1.4 Använda webbplatsen](/help/tutorial-comprehensive-technical/modules/gettingstarted/gettingstarted/ex4.md)
-      + [0.1.5 Använda mobilappen](/help/tutorial-comprehensive-technical/modules/gettingstarted/gettingstarted/ex5.md)
+      + [Installera Chrome-tillägget för dokumentationen för Experience League](/help/tutorial-comprehensive-technical/modules/gettingstarted/gettingstarted/ex1.md)
+      + [Använd Demo System bredvid för att konfigurera klientegenskapen för Adobe Experience Platform Data Collection](/help/tutorial-comprehensive-technical/modules/gettingstarted/gettingstarted/ex2.md)
+      + [Skapa ditt datastream](/help/tutorial-comprehensive-technical/modules/gettingstarted/gettingstarted/ex3.md)
+      + [Använda webbplatsen](/help/tutorial-comprehensive-technical/modules/gettingstarted/gettingstarted/ex4.md)
+      + [Använda mobilappen](/help/tutorial-comprehensive-technical/modules/gettingstarted/gettingstarted/ex5.md)
 
 + 1 datainsamling {#datacollection}
    + 1.1 Adobe Experience Platform Data Collection och Web SDK-tillägget {#module11}

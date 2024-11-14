@@ -3,40 +3,37 @@ title: Komma igång - Använd demonstrationssystemet bredvid för att konfigurer
 description: Komma igång - Använd demonstrationssystemet bredvid för att konfigurera Launch-egenskapen
 kt: 5342
 doc-type: tutorial
-source-git-commit: 2cdc145d7f3933ec593db4e6f67b60961a674405
+exl-id: f863bf1c-004a-4137-9ef2-efae76499dfa
+source-git-commit: 7f436f77ab6d7c625181304fd41be75c627c5b46
 workflow-type: tm+mt
-source-wordcount: '327'
+source-wordcount: '328'
 ht-degree: 0%
 
 ---
 
-# 0.2 Använd Demo System bredvid för att konfigurera klientegenskapen för Adobe Experience Platform Data Collection
+# Använd Demo System bredvid för att konfigurera klientegenskapen för Adobe Experience Platform Data Collection
 
-När du har registrerat dig för den omfattande tekniska självstudiekursen för Adobe Experience Platform finns det en automatiserad process som ger dig tillgång till Demo System, så att du kan komma åt och köra konfigurationen nedan.
+För att visualisera inlärningarna i den här självstudiekursen och göra det möjligt för dig att testa konfigurationen i en säker miljö använder den här självstudiekursen verktygen Adobe Demo System Next. För att få ut det mesta av den här självstudiekursen måste din AEP-instans konfigureras så att den integreras med Demo System Next.
 
-När du har tillgång till Demo System fortsätter du med stegen nedan.
+När du har tillgång till Demo System Next fortsätter du med stegen nedan.
 
-Gå till [https://dashboard.adobedemo.com/](https://dashboard.adobedemo.com/). Markera sandlådan och klicka på **Snabbinstallation**.
+Gå till [https://dsn.adobe.com/](https://dsn.adobe.com/) och navigera till **Inställningar**.
+
+![DSN](./images/dsnsetup.png)
+
+I listrutan **Miljö** väljer du AEP-instansen och sandlådan.
 
 ![DSN](./images/dsnh1.png)
 
-Du kommer att se det här:
+Välj sedan förinställningen **AEP Tutorial User**.
 
 ![DSN](./images/dsnhome.png)
 
-Under **Allmänt** - **Miljö** väljer du din Adobe Experience Platform-instans och din sandlåda, i det här fallet:
-
-- **Experience Platform International**
-- **aepenablementfy22**
-- Konfiguration: välj **Global v2.0**
-
-![DSN](./images/dsn1.png)
-
-Välj sedan förinställningen **Aktivera användare** och klicka på **Start**.
+Klicka sedan på **Start**.
 
 ![DSN](./images/dsn2.png)
 
-Ange ett namn för datainsamlingsegenskapen på popup-menyn. Använd den här namnkonventionen: **Demonstrationssystem (DD/MM/ÅÅÅÅ)**. Obs! LDAP-filen läggs till automatiskt, du behöver inte lägga till den själv.
+På popup-menyn anger du ett namn för dina datainsamlingsegenskaper och Experience Builder-projekt. Använd den här namnkonventionen: **Demonstrationssystem (DD/MM/ÅÅÅÅ)**. Obs! LDAP-filen läggs till automatiskt, du behöver inte lägga till den själv.
 
 Klicka på **Start**.
 
@@ -48,9 +45,9 @@ Du kommer då att se den här popup-rutan, som visar hur arbetet fortskrider nä
 
 När snabbinstallationsprocessen är klar får du:
 
-- 1 Web Retail-projekt, som gör det möjligt att använda en demowebbplats med varumärket Luma demo
-- 1 Mobilt detaljhandelsprojekt, som gör det möjligt att använda en demomobilapp med varumärket Luma demo
-- 1 CX App Retail-projekt, vilket gör det möjligt att använda ett callcenter och en kundapp med varumärket Luma demo
+- 1 webbprojekt, vilket gör det möjligt att använda en demowebbplats med ett telco-demomärke
+- 1 mobilappsprojekt, vilket gör det möjligt att använda en demomobilapp med ett telco-demomärke
+- 1 CX App-projekt, som gör det möjligt att använda en call center-app med ett telco-demomärke
 - 1 Datainsamlingsegenskap för webben, som du använder för att samla in data från webbplatsen
 - 1 Datainsamlingsegenskap för mobilen, som du använder för att samla in data från mobilappen
 
@@ -58,8 +55,8 @@ När snabbinstallationsprocessen är klar får du:
 
 Håll den här skärmen öppen som du vill i nästa steg.
 
-Nästa steg: [0.3 Skapa ditt datastream](./ex3.md)
+Nästa steg: [Skapa ditt datastream](./ex3.md)
 
-[Gå tillbaka till modul 0](./getting-started.md)
+[Gå tillbaka till Komma igång](./getting-started.md)
 
 [Gå tillbaka till Alla moduler](./../../../overview.md)

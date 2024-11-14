@@ -3,26 +3,31 @@ title: Komma igång - Skapa ditt dataflöde
 description: Komma igång - Skapa ditt dataflöde
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: b3e6f66d-fb7a-43ab-aedb-45141af76d3e
+source-git-commit: 7f436f77ab6d7c625181304fd41be75c627c5b46
 workflow-type: tm+mt
-source-wordcount: '816'
+source-wordcount: '824'
 ht-degree: 0%
 
 ---
 
-# 0.3 Skapa ditt datastream
+# Skapa ditt datastream
 
-Gå till [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/). Efter föregående övning har du nu två egenskaper för datainsamling: en för webben och en för mobilen.
+Gå till [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/).
 
 ![DSN](./images/launchprop.png)
 
-Dessa egenskaper är nästan klara att användas, men innan du kan börja samla in data med dessa egenskaper måste du konfigurera en datastream. Du får mer information om vad ett datastream är och vad det betyder i Exercise 1.2.
+Klicka på **[!UICONTROL Tags]** på den vänstra menyn. Efter föregående övning har du nu två egenskaper för datainsamling: en för webben och en för mobilen.
+
+![DSN](./images/launchprop1.png)
+
+Dessa egenskaper är nästan klara att användas, men innan du kan börja samla in data med dessa egenskaper måste du konfigurera en datastream. Du får mer information om vad ett datastream är och vad det innebär i en senare övning i datainsamlingsmodulen.
 
 Följ dessa steg tills vidare.
 
-## 0.3.1 Skapa ditt datastream för webben
+## Skapa ett datastream för webben
 
-Klicka på **[!UICONTROL Datastreams]** eller **[!UICONTROL Datastreams (Beta)]**.
+Klicka på **[!UICONTROL Datastreams]**.
 
 ![Klicka på ikonen Edge-konfiguration i den vänstra navigeringen](./images/edgeconfig1a.png)
 
@@ -34,7 +39,7 @@ Klicka på **[!UICONTROL New Datastream]**.
 
 ![Klicka på ikonen Edge-konfiguration i den vänstra navigeringen](./images/edgeconfig1.png)
 
-Ange `--aepUserLdap-- - Demo System Datastream` för **[!UICONTROL Friendly Name]** och den valfria beskrivningen. För händelseschema väljer du **Demonstrationssystem - händelseschema för webbplatsen (Global v1.1)**. Klicka på **Spara**.
+Ange `--aepUserLdap-- - Demo System Datastream` för **[!UICONTROL Name]** och den valfria beskrivningen. För **Mappningsschema** väljer du **Demonstrationssystem - händelseschema för webbplatsen (Global v1.1)**. Klicka på **Spara**.
 
 ![Namnge Edge-konfigurationen och spara](./images/edgeconfig2.png)
 
@@ -64,21 +69,21 @@ Då ser du det här. Klicka på **Tillägg**.
 
 ![Namnge Edge-konfigurationen och spara](./images/edgeconfig11.png)
 
-Klicka på **Konfigurera** i Adobe Experience Platform Web SDK-tillägget.
+Klicka först på Adobe Experience Platform Web SDK-tillägget och sedan på **Konfigurera**.
 
 ![Namnge Edge-konfigurationen och spara](./images/edgeconfig12.png)
 
-Då ser du det här. För **datastreams** visas för närvarande ett värde som är 1 för &quot;dummy&quot;. Du måste nu klicka på alternativknappen **Välj från listan**. I listrutan väljer du den dataström du skapade tidigare.
+Då ser du det här. Kontrollera att rätt sandlåda är markerad på menyn **Datastreams** och se till att rätt sandlåda är markerad, som i ditt fall ska vara `--aepSandboxName--`.
+
+![Namnge Edge-konfigurationen och spara](./images/edgeconfig12a.png)
+
+Öppna listrutan **Datastreams** och välj den datastream som du skapade tidigare.
 
 ![Namnge Edge-konfigurationen och spara](./images/edgeconfig13.png)
 
-Se till att du har valt din **datastream**. TIPS: Du kan enkelt filtrera resultaten i listrutan genom att skriva `--aepUserLdap--`.
+Se till att du har valt din **datastream** i alla tre olika miljöer. Klicka sedan på **Spara**.
 
 ![Namnge Edge-konfigurationen och spara](./images/edgeconfig14.png)
-
-Bläddra nedåt tills du ser **Datainsamling**. Kontrollera att kryssrutan för **Aktivera klickdatainsamling** inte är aktiverad. Klicka på **Spara** för att spara ändringarna.
-
-![Namnge Edge-konfigurationen och spara](./images/edgeconfig14a.png)
 
 Gå till **Publiceringsflöde**.
 
@@ -92,13 +97,15 @@ Klicka på **Lägg till alla ändrade resurser** och sedan på **Spara och skapa
 
 ![Namnge Edge-konfigurationen och spara](./images/edgeconfig17.png)
 
-Ändringarna publiceras nu och är klara om några minuter.
+Ändringarna publiceras nu och är klara om några minuter. Därefter visas den gröna punkten intill **Main**.
 
-## 0.3.2 Skapa ditt datastream för mobiler
+![Namnge Edge-konfigurationen och spara](./images/edgeconfig17a.png)
+
+## Skapa ditt datastream för mobilen
 
 Gå till [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/).
 
-Klicka på **[!UICONTROL Datastreams]** eller **[!UICONTROL Datastreams (Beta)]**.
+Klicka på **[!UICONTROL Datastreams]**.
 
 ![Klicka på Datastream-ikonen i den vänstra navigeringen](./images/edgeconfig1a.png)
 
@@ -110,7 +117,7 @@ Klicka på **[!UICONTROL New Datastream]**.
 
 ![Klicka på Datastream-ikonen i den vänstra navigeringen](./images/edgeconfig1.png)
 
-Ange `--aepUserLdap-- - Demo System Datastream (Mobile)` för **[!UICONTROL Friendly Name]** och den valfria beskrivningen. För händelseschema väljer du **Demonstrationssystem - händelseschema för mobilapp (Global v1.1)**. Klicka på **Spara**.
+Ange `--aepUserLdap-- - Demo System Datastream (Mobile)` för **[!UICONTROL Friendly Name]** och den valfria beskrivningen. För **Mappningsschema** väljer du **Demonstrationssystem - händelseschema för mobilapp (Global v1.1)**. Klicka på **Spara**.
 
 Klicka på **[!UICONTROL Save]**.
 
@@ -140,13 +147,13 @@ Då ser du det här. Klicka på **Tillägg**.
 
 ![Namnge Edge-konfigurationen och spara](./images/edgeconfig11m.png)
 
-Klicka på **Konfigurera** på tillägget **Adobe Experience Platform Edge Network**.
+Klicka på tillägget **Adobe Experience Platform Edge Network** och sedan på **Konfigurera**.
 
 ![Namnge Edge-konfigurationen och spara](./images/edgeconfig12m.png)
 
 Då ser du det här. Nu måste du välja rätt sandlåda och datastream som du precis konfigurerade. Sandlådan som ska användas är `--aepSandboxName--` och datastream kallas `--aepUserLdap-- - Demo System Datastream (Mobile)`.
 
-Använd standarddomänen **edge.adobedc.net** för **Edge Network-domänen**.
+Använd standarddomänen för **Edge Network**.
 
 Klicka på **Spara** för att spara ändringarna.
 
@@ -164,10 +171,12 @@ Klicka på **Lägg till alla ändrade resurser** och sedan på **Spara och skapa
 
 ![Namnge Edge-konfigurationen och spara](./images/edgeconfig17m.png)
 
-Ändringarna publiceras nu och är klara om några minuter.
+Ändringarna publiceras nu och är klara om några minuter. Därefter visas den gröna punkten intill **Main**.
 
-Nästa steg: [0.4 Använd webbplatsen](./ex4.md)
+![Namnge Edge-konfigurationen och spara](./images/edgeconfig17ma.png)
 
-[Gå tillbaka till modul 0](./getting-started.md)
+Nästa steg: [Använd webbplatsen](./ex4.md)
+
+[Gå tillbaka till Komma igång](./getting-started.md)
 
 [Gå tillbaka till Alla moduler](./../../../overview.md)
