@@ -3,7 +3,7 @@ title: Spåra händelsedata i mobilappar med Platform Mobile SDK
 description: Lär dig spåra händelsedata i en mobilapp.
 jira: KT-14631
 exl-id: 4779cf80-c143-437b-8819-1ebc11a26852
-source-git-commit: 25f0df2ea09bb7383f45a698e75bd31be7541754
+source-git-commit: afb15c561179386e7846e8cd8963f67820af09f1
 workflow-type: tm+mt
 source-wordcount: '1308'
 ht-degree: 0%
@@ -121,9 +121,9 @@ Du kommer nu att implementera den här koden i ditt Xcode-projekt.
 Du har olika affärsproduktrelaterade åtgärder i din app och du vill skicka händelser baserat på de åtgärder som användaren har utfört:
 
 * vy: inträffar när en användare tittar på en viss produkt,
-* lägg till i kundvagn: när en användare trycker <img src="assets/addtocart.png" width="20" /> i en produktinformationsskärm,
-* spara för senare: när en användare trycker <img src="assets/saveforlater.png" width="15" /> i en produktinformationsskärm,
-* köp: när en användare trycker <img src="assets/purchase.png" width="20" /> i en produktinformationsskärm.
+* lägg till i kundvagn: när en användare trycker <img src="assets/addtocart.png" width="20"/> i en produktinformationsskärm,
+* spara för senare: när en användare trycker <img src="assets/saveforlater.png" width="15"/> i en produktinformationsskärm,
+* köp: när en användare trycker <img src="assets/purchase.png" width="20"/> i en produktinformationsskärm.
 
 Om du vill implementera sändning av e-handelsrelaterade upplevelsehändelser på ett återanvändbart sätt använder du en dedikerad funktion:
 
@@ -166,23 +166,23 @@ Om du vill implementera sändning av e-handelsrelaterade upplevelsehändelser p�
       MobileSDK.shared.sendCommerceExperienceEvent(commerceEventType: "productViews", product: product)
       ```
 
-   1. För varje knapp (<img src="assets/saveforlater.png" width="15" />, <img src="assets/addtocart.png" width="20" /> och <img src="assets/purchase.png" width="20" />) i verktygsfältet lägger du till det relevanta samtalet i `ATTrackingManager.trackingAuthorizationStatus == .authorized`-stängningen:
+   1. För varje knapp (<img src="assets/saveforlater.png" width="15"/>, <img src="assets/addtocart.png" width="20"/> och <img src="assets/purchase.png" width="20"/>) i verktygsfältet lägger du till det relevanta samtalet i `ATTrackingManager.trackingAuthorizationStatus == .authorized`-stängningen:
 
-      1. För <img src="assets/saveforlater.png" width="15" />:
+      1. För <img src="assets/saveforlater.png" width="15"/>:
 
          ```swift
          // Send saveForLater commerce experience event
          MobileSDK.shared.sendCommerceExperienceEvent(commerceEventType: "saveForLaters", product: product)
          ```
 
-      1. För <img src="assets/addtocart.png" width="20" />:
+      1. För <img src="assets/addtocart.png" width="20"/>:
 
          ```swift
          // Send productListAdds commerce experience event
          MobileSDK.shared.sendCommerceExperienceEvent(commerceEventType: "productListAdds", product: product)
          ```
 
-      1. För <img src="assets/purchase.png" width="20" />:
+      1. För <img src="assets/purchase.png" width="20"/>:
 
          ```swift
          // Send purchase commerce experience event
@@ -338,20 +338,20 @@ Här kan du implementera koden i Xcode-projektet.
 
 ## Validering
 
-1. Granska avsnittet [Installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten med Assurance.
+1. Granska avsnittet [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
 
-   1. Flytta Assurance-ikonen åt vänster.
+   1. Flytta ikonen Assurance åt vänster.
    1. Välj **[!UICONTROL Home]** i flikfältet och kontrollera att du ser en **[!UICONTROL ECID]**, **[!UICONTROL Email]** och **[!UICONTROL CRM ID]** på hemskärmen.
    1. Välj **[!DNL Products]** i flikfältet.
    1. Välj en produkt.
-   1. Välj <img src="assets/saveforlater.png" width="15" />.
-   1. Välj <img src="assets/addtocart.png" width="20" />.
-   1. Välj <img src="assets/purchase.png" width="15" />.
+   1. Välj <img src="assets/saveforlater.png" width="15"/>.
+   1. Välj <img src="assets/addtocart.png" width="20"/>.
+   1. Välj <img src="assets/purchase.png" width="15"/>.
 
       <img src="./assets/mobile-app-events-3.png" width="300">
 
 
-1. Sök efter **[!UICONTROL hitReceived]**-händelserna från **[!UICONTROL com.adobe.edge.konductor]**-leverantören i försäkringsgränssnittet.
+1. I Assurance UI söker du efter **[!UICONTROL hitReceived]**-händelserna från **[!UICONTROL com.adobe.edge.konductor]**-leverantören.
 1. Markera händelsen och granska XDM-data i objektet **[!UICONTROL messages]**. Du kan också använda ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) **[!UICONTROL Copy Raw Event]** och en text- eller kodredigerare som du föredrar för att klistra in och inspektera händelsen.
 
    ![datainsamlingsvalidering](assets/datacollection-validation.png)

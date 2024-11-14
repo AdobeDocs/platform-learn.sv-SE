@@ -4,9 +4,9 @@ description: Lär dig hur du samlar in och mappar data för Adobe Analytics i en
 solution: Data Collection,Experience Platform,Analytics
 jira: KT-14636
 exl-id: 406dc687-643f-4f7b-a8e7-9aad1d0d481d
-source-git-commit: 30dd0142f1f5220f30c45d58665b710a06c827a8
+source-git-commit: 7dfa14081e87489f908084e93722f67643fd5984
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '973'
 ht-degree: 0%
 
 ---
@@ -129,9 +129,9 @@ s.events = "scAdd:321435"
 
 ## Validera med Assurance
 
-Med [Assurance](assurance.md) kan du bekräfta att du skickar en upplevelsehändelse. XDM-data är korrekta och Analytics-mappningen sker som förväntat.
+Med [Assurance](assurance.md) kan du bekräfta att du skickar en upplevelsehändelse, att XDM-data är korrekta och att analysmappningen sker som förväntat.
 
-1. Granska avsnittet [Installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
+1. Granska avsnittet [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
 
 1. Skicka en **[!UICONTROL productListAdds]**-händelse (lägg till en produkt i korgen).
 
@@ -306,6 +306,17 @@ Ytterligare information om bearbetning av regler och kontextdata finns [här](ht
 >[!TIP]
 >
 >Till skillnad från tidigare mobilappsimplementeringar finns det ingen skillnad mellan en sida-/skärmvy och andra händelser. I stället kan du öka måttet **[!UICONTROL Page View]** genom att ställa in dimensionen **[!UICONTROL Page Name]** i en bearbetningsregel. Eftersom du samlar in det anpassade fältet `screenName` i självstudiekursen rekommenderar vi att du mappar skärmnamnet till **[!UICONTROL Page Name]** i en bearbetningsregel.
+
+## Migrera från mobiltillägget Analytics
+
+Om du har utvecklat ditt mobilprogram med [Adobe Analytics-mobiltillägget](https://developer.adobe.com/client-sdks/solution/adobe-analytics/#add-analytics-to-your-application) har du troligen använt [`MobileCore.trackAction`](https://developer.adobe.com/client-sdks/home/base/mobile-core/api-reference/#trackaction) - och [`MobileCore.trackState`](https://developer.adobe.com/client-sdks/home/base/mobile-core/api-reference/#trackstate) API-anrop.
+
+Om du väljer att migrera för att använda den rekommenderade Edge Network finns det alternativ:
+
+* Implementera [Edge Network-tillägget](configure-tags.md#extension-configuration) och använd [`Edge.sendEvent`](https://developer.adobe.com/client-sdks/edge/edge-network/api-reference/#sendevent)-API:erna, som i lektionen om hur du [spårar händelsedata](events.md). Den här självstudiekursen fokuserar på den här implementeringen.
+* Implementera [Edge Bridge-tillägget](https://developer.adobe.com/client-sdks/solution/adobe-analytics/migrate-to-edge-network/#implement-the-edge-bridge-extension) och fortsätt använda dina [`MobileCore.trackAction`](https://developer.adobe.com/client-sdks/home/base/mobile-core/api-reference/#trackaction) - och [`MobileCore.trackState`](https://developer.adobe.com/client-sdks/home/base/mobile-core/api-reference/#trackstate) API-anrop. Se [Implementera Edge Bridge-tillägget](https://developer.adobe.com/client-sdks/solution/adobe-analytics/migrate-to-edge-network/#implement-the-edge-bridge-extension) om du vill ha mer information och en separat självstudiekurs.
+
+
 
 
 >[!SUCCESS]
