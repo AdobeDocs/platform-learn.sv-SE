@@ -6,9 +6,9 @@ audience: Data Engineer, Data Architect, Orchestration Engineer, Marketer
 doc-type: tutorial
 activity: develop
 exl-id: a7218d65-422b-48e5-89fa-864c5af8d1c6
-source-git-commit: 2cdc145d7f3933ec593db4e6f67b60961a674405
+source-git-commit: f4b3463ce9464c96378790bf8070504fc90cb2ff
 workflow-type: tm+mt
-source-wordcount: '366'
+source-wordcount: '365'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Titta på den här videon för att förstå värdet och kundresan:
 
 >[!NOTE]
 >
->Glöm inte att installera, konfigurera och använda Chrome-tillägget enligt referensen i [0.1 - Installera Chrome-tillägget för Experience League-dokumentationen](../../gettingstarted/gettingstarted/ex1.md)
+>Glöm inte att installera, konfigurera och använda Chrome-tillägget enligt [Installera Chrome-tillägget för Experience League-dokumentationen](../../gettingstarted/gettingstarted/ex1.md)
 
 ## Utövningar
 

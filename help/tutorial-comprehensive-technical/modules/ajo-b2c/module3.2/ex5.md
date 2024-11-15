@@ -3,9 +3,10 @@ title: Adobe Journey Optimizer - External Weather API, SMS Action med mera - Tri
 description: Adobe Journey Optimizer - External Weather API, SMS Action med mera - Trigga din orkestrerade kundresa
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: 068c8be4-2e9e-4d38-9c0e-f769ac927b57
+source-git-commit: 0dbcda0cfc9f199a44c845c1b5caf00a8d740251
 workflow-type: tm+mt
-source-wordcount: '634'
+source-wordcount: '627'
 ht-degree: 0%
 
 ---
@@ -73,10 +74,6 @@ Klicka på **Lägg till alla ändrade resurser** och sedan på **Spara och skapa
 Gå till [https://builder.adobedemo.com/projects](https://builder.adobedemo.com/projects). När du har loggat in med din Adobe ID ser du det här. Klicka på webbplatsprojektet för att öppna det.
 
 ![DSN](./../../../modules/gettingstarted/gettingstarted/images/web8.png)
-
-Klicka på **Kör** på sidan **Screens**.
-
-![DSN](./../../../modules/datacollection/module1.1/images/web2.png)
 
 Du kommer då att se din demowebbplats öppnas. Markera URL-adressen och kopiera den till Urklipp.
 

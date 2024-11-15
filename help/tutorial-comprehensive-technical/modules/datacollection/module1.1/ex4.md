@@ -3,9 +3,10 @@ title: Foundation - konfiguration av Adobe Experience Platform Data Collection o
 description: Foundation - konfiguration av Adobe Experience Platform Data Collection och Web SDK-tillägget - Web Data Collection på klientsidan
 kt: 5342
 doc-type: tutorial
-source-git-commit: c6ba1f751f18afe39fb6b746a62bc848fa8ec9bf
+exl-id: dce7f1b5-72ca-41b2-9aa8-41c13ce25c82
+source-git-commit: 0dbcda0cfc9f199a44c845c1b5caf00a8d740251
 workflow-type: tm+mt
-source-wordcount: '611'
+source-wordcount: '632'
 ht-degree: 0%
 
 ---
@@ -16,7 +17,7 @@ ht-degree: 0%
 
 ### Installera Adobe Experience Platform Debugger
 
-Felsökaren Experience Platform är ett tillägg för Chrome- och Firefox-webbläsare som gör det enklare att se hur Adobe-tekniken används på dina webbsidor. Ladda ned den version du föredrar:
+Felsökaren Experience Platform är ett tillägg för Chrome- och Firefox-webbläsare som gör det enklare att se hur Adobe-tekniken används på dina webbsidor. Installera versionen för den webbläsare du föredrar:
 
 - [Firefox-tillägg](https://addons.mozilla.org/sv-SE/firefox/addon/adobe-experience-platform-dbg/)
 
@@ -37,13 +38,9 @@ Kontrollera att dessa två inställningar är aktiverade:
 
 ### Öppna demowebbplatsen
 
-Gå till [https://builder.adobedemo.com/projects](https://builder.adobedemo.com/projects). När du har loggat in med din Adobe ID ser du det här. Klicka på webbplatsprojektet för att öppna det.
+Gå till [https://dsn.adobe.com](https://dsn.adobe.com). När du har loggat in med din Adobe ID ser du det här. Klicka på de tre punkterna **..** i webbplatsprojektet och klicka sedan på **Kör** för att öppna det.
 
-![DSN](./../../gettingstarted/gettingstarted/images/web8.png)
-
-Klicka på **Kör** på sidan **Screens**.
-
-![DSN](./images/web2.png)
+![DSN](.//images/web8.png)
 
 Du kommer då att se din demowebbplats öppnas. Markera URL-adressen och kopiera den till Urklipp.
 
@@ -77,15 +74,19 @@ Klicka på knappen **[!UICONTROL Sign In]** överst till höger för att autenti
 
 ![AEP-felsökning](./images/validate2.png)
 
+Du loggas sedan in i Felsökning.
+
+![AEP-felsökning](./images/validate2ab.png)
+
 Klicka på knappen för att ladda om på demowebbplatsen för att ansluta felsökaren till den specifika fliken.
 
 ![AEP-felsökning](./images/validate2a.png)
 
-Bekräfta att felsökaren är **[!UICONTROL Connected to Home]** enligt bilden ovan och klicka sedan på ikonen **[!UICONTROL lock]** för att låsa felsökaren till demowebbplatsen. Om du inte gör detta fortsätter felsökaren att växla för att visa implementeringsinformationen på den webbläsarflik som är i fokus, vilket kan vara förvirrande.
+Bekräfta att felsökaren är **[!UICONTROL Connected to Home]** enligt bilden ovan och klicka sedan på ikonen **[!UICONTROL lock]** för att låsa felsökaren till demowebbplatsen. Om du inte gör detta fortsätter felsökaren att växla för att visa implementeringsinformationen på den webbläsarflik som är i fokus, vilket kan vara förvirrande. När felsökaren är låst ändras ikonen till **Lås upp**.
 
 ![AEP-felsökning](./images/validate3.png)
 
-Gå sedan till valfri sida på demowebbplatsen, till exempel kategorisidan **Män**.
+Gå sedan till valfri sida på demowebbplatsen, till exempel kategorisidan **Planer**.
 
 ![AEP Debugger AEP Web SDK-tillägg](./images/validate4.png)
 
@@ -95,11 +96,11 @@ Varje begäran innehåller en **[!UICONTROL events]**-rad.
 
 ![AEP Debugger AEP Web SDK-tillägg](./images/validate5.png)
 
-Klicka för att öppna raden **[!UICONTROL events]**. Observera hur du kan se händelsen **web.webpagedetails.pageViews** samt andra variabler som inte finns i kartongen och som följer formatet **Web SDK ExperienceEvent XDM**.
+Klicka för att öppna en **[!UICONTROL events]**-rad. Observera hur du kan se händelsen **web.webpagedetails.pageViews** samt andra variabler som inte finns i kartongen och som följer formatet **Web SDK ExperienceEvent XDM**.
 
 ![Händelsevärde](./images/validate8.png)
 
-Den här typen av förfrågningsinformation visas också på fliken Nätverk. Filtrera efter förfrågningar med **interact** för att hitta förfrågningar som skickats av Web SDK. Du hittar all information om XDM-nyttolasten i Request Payload Headers:
+Den här typen av förfrågningsinformation visas också på fliken Nätverk. Filtrera efter förfrågningar med **interact** för att hitta förfrågningar som skickats av Web SDK. Du hittar all information om XDM-nyttolasten i avsnittet Nyttolast:
 
 ![Fliken Nätverk](./images/validate9.png)
 

@@ -3,9 +3,10 @@ title: Foundation - Installation av Adobe Experience Platform Data Collection oc
 description: Foundation - Installation av Adobe Experience Platform Data Collection och Web SDK-tillägget - Implementera Adobe Analytics och Adobe Audience Manager
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: a9022269-6db2-46c6-a82b-ec8d5b881a55
+source-git-commit: 0dbcda0cfc9f199a44c845c1b5caf00a8d740251
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -14,19 +15,19 @@ ht-degree: 0%
 
 ## Kontext
 
-Du vet nu att XDM-data strömmar in på plattformen. Du kommer att utforska mer om vad XDM är i [modul 2](./../module1.2/data-ingestion.md) samt hur du skapar ett eget schema för att spåra anpassade variabler. Nu ska ni titta på vad som händer när ni ställer in datastream för att vidarebefordra data till Analytics och Audience Manager.
+Du vet nu att XDM-data strömmar in på plattformen. Du kommer att utforska mer om vad XDM är i [Modul 1.2](./../module1.2/data-ingestion.md) samt hur du skapar ett eget schema för att spåra anpassade variabler. Nu ska ni titta på vad som händer när ni ställer in datastream för att vidarebefordra data till Analytics och Audience Manager.
 
 ## 1.1.5.1 Mappa variabler i Analytics
 
 Adobe Experience Platform [!DNL Web SDK] mappar vissa värden automatiskt, vilket gör en ny implementering av Analytics via Web SDK så snabbt som möjligt. De automatiskt mappade variablerna visas [här](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/adobe-analytics/automatically-mapped-vars.html#data-collection).
 
-För XDM-data som inte automatiskt mappas till [!DNL Adobe Analytics] kan du använda [kontextdata](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html?lang=sv) för att matcha ditt [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html). Sedan kan den mappas till [!DNL Analytics] med [bearbetningsregler](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html) för att fylla i [!DNL Analytics]-variabler. Kontextdata och bearbetningsregler kommer att vara välbekanta koncept som tidigare har fungerat med Analytics, men oroa dig inte för detaljerna just nu om de är nya koncept.
+För XDM-data som inte automatiskt mappas till Adobe Analytics kan du använda [kontextdata](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html?lang=sv) för att matcha ditt [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html). Sedan kan den mappas till Analytics med [bearbetningsregler](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html) för att fylla i Analytics-variabler. Kontextdata och bearbetningsregler kommer att vara välbekanta koncept som tidigare har fungerat med Analytics, men oroa dig inte för detaljerna just nu om de är nya koncept.
 
-Du kan också använda en standarduppsättning med åtgärder och produktlistor för att skicka eller hämta data med AEP [!DNL Web SDK]. Mer information finns i [Produkter](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html?lang=en#data-collection).
+Du kan också använda en standarduppsättning med åtgärder och produktlistor för att skicka eller hämta data med AEP Web SDK. Mer information finns i [Produkter](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html?lang=en#data-collection).
 
 ### Kontextdata
 
-XDM-data som ska användas av [!DNL Analytics] förenklas med punktnotation och blir tillgängliga som `contextData`. I följande lista över värdepar visas ett exempel på `context data`:
+XDM-data förenklas med punktnotation och blir tillgängliga som `contextData` om de ska användas av Analytics. I följande lista över värdepar visas ett exempel på `context data`:
 
 ```javascript
 {
@@ -53,7 +54,7 @@ XDM-data som ska användas av [!DNL Analytics] förenklas med punktnotation och 
 
 ### Bearbetar regler
 
-Alla data som samlas in av edge-nätverket kan nås via [bearbetningsregler](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html). I [!DNL Analytics] kan du använda bearbetningsregler för att införliva kontextdata i [!DNL Analytics]-variabler.
+Alla data som samlas in av edge-nätverket kan nås via [bearbetningsregler](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html). I Analytics kan ni använda bearbetningsregler för att införliva kontextdata i Analytics-variabler.
 
 ## 1.1.5.2 Audience Manager på Experience Platform Edge Network
 

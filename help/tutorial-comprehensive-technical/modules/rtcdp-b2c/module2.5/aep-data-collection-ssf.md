@@ -3,9 +3,10 @@ title: Adobe Experience Platform Data Collection & Servervidarebefordran i realt
 description: I den här modulen använder du de tidigare konfigurerade datauppsättningarna, scheman och Adobe Experience Platform Data Collection Server-egenskapen för att samla in data och sedan vidarebefordrar du den till en valfri slutpunkt.
 kt: 5342
 doc-type: tutorial
-source-git-commit: 2cdc145d7f3933ec593db4e6f67b60961a674405
+exl-id: aa3ab1eb-6fee-4ea9-9a0d-0d8ca803d7c2
+source-git-commit: 0dbcda0cfc9f199a44c845c1b5caf00a8d740251
 workflow-type: tm+mt
-source-wordcount: '480'
+source-wordcount: '479'
 ht-degree: 0%
 
 ---
@@ -40,7 +41,7 @@ Titta på den här videon för att förstå värde, kundresa och konfigurationsp
 
 >[!NOTE]
 >
->Glöm inte att installera, konfigurera och använda Chrome-tillägget enligt referensen i [0.1 - Installera Chrome-tillägget för Experience League-dokumentationen](../../gettingstarted/gettingstarted/ex1.md)
+>Glöm inte att installera, konfigurera och använda Chrome-tillägget enligt [Installera Chrome-tillägget för Experience League-dokumentationen](../../gettingstarted/gettingstarted/ex1.md)
 
 ## Utövningar
 

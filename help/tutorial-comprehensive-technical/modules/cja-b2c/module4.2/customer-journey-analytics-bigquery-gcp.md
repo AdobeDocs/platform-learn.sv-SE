@@ -3,9 +3,10 @@ title: Importera och analysera data från Google Analytics i Adobe Experience Pl
 description: Importera och analysera data från Google Analytics i Adobe Experience Platform med BigQuery Source Connector
 kt: 5342
 doc-type: tutorial
-source-git-commit: f19f6b4a44a34af3c9545eb7f8735ef6ccf5d6c7
+exl-id: b078d003-da25-44c5-b000-77e3b3188fb6
+source-git-commit: 0dbcda0cfc9f199a44c845c1b5caf00a8d740251
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '456'
 ht-degree: 0%
 
 ---
@@ -38,7 +39,7 @@ Dessutom kan vi berika Google Analytics data genom att koppla dem till andra dat
 
 >[!NOTE]
 >
->Glöm inte att installera, konfigurera och använda Chrome-tillägget enligt referensen i [0.1 - Installera Chrome-tillägget för Experience League-dokumentationen](../../gettingstarted/gettingstarted/ex1.md)
+>Glöm inte att installera, konfigurera och använda Chrome-tillägget enligt [Installera Chrome-tillägget för Experience League-dokumentationen](../../gettingstarted/gettingstarted/ex1.md)
 
 ## Utövningar
 

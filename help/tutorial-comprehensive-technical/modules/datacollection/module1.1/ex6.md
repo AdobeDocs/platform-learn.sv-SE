@@ -3,9 +3,10 @@ title: Foundation - Installation av Adobe Experience Platform Data Collection oc
 description: Foundation - Installation av Adobe Experience Platform Data Collection och Web SDK-tillägget - Implementera Adobe Target
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: 475e9a34-c80e-41e4-9660-61c79f26922d
+source-git-commit: 0dbcda0cfc9f199a44c845c1b5caf00a8d740251
 workflow-type: tm+mt
-source-wordcount: '179'
+source-wordcount: '169'
 ht-degree: 0%
 
 ---
@@ -26,7 +27,7 @@ Då ser du det här. Om du vill aktivera Adobe Target klickar du på **+Lägg ti
 
 ![AEP-felsökning](./images/aa2.png)
 
-Då ser du det här. Välj tjänsten **Adobe Target**, varefter du kan ange ytterligare information om du vill. För tillfället behöver du inte spara detta, så klicka på **Avbryt**.
+Då ser du det här. Välj tjänsten **Adobe Target**, varefter du kan ange ytterligare information om du vill. Klicka på **Spara**.
 
 ![AEP-felsökning](./images/at1.png)
 

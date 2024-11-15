@@ -6,9 +6,9 @@ audience: Data Engineer, Data Architect, Orchestration Engineer, Marketer
 doc-type: tutorial
 activity: develop
 exl-id: 7f3d6dcb-845d-4ff1-97c3-8e93b8d2c624
-source-git-commit: 2cdc145d7f3933ec593db4e6f67b60961a674405
+source-git-commit: f4b3463ce9464c96378790bf8070504fc90cb2ff
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '441'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Som varumärke förstår ni också att sammanhanget i hög grad påverkar en kun
 
 >[!NOTE]
 >
->Glöm inte att installera, konfigurera och använda Chrome-tillägget enligt referensen i [0.1 - Installera Chrome-tillägget för Experience League-dokumentationen](../../gettingstarted/gettingstarted/ex1.md)
+>Glöm inte att installera, konfigurera och använda Chrome-tillägget enligt [Installera Chrome-tillägget för Experience League-dokumentationen](../../gettingstarted/gettingstarted/ex1.md)
 
 ## Utövningar
 

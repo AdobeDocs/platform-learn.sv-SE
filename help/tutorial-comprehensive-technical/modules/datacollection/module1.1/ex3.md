@@ -3,9 +3,10 @@ title: Foundation - Installation av Adobe Experience Platform Data Collection oc
 description: Foundation - Installation av Adobe Experience Platform Data Collection och Web SDK-tillägget - Introduktion till Adobe Experience Platform Data Collection
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: 391c79d6-9c42-465e-bce8-60fa6474979c
+source-git-commit: 0dbcda0cfc9f199a44c845c1b5caf00a8d740251
 workflow-type: tm+mt
-source-wordcount: '1307'
+source-wordcount: '1250'
 ht-degree: 0%
 
 ---
@@ -26,31 +27,30 @@ Det här är egenskapssidan för Adobe Experience Platform Data Collection som d
 
 ![Sidan Egenskaper](./images/launch1.png)
 
-I modul 0 skapade Demo System två klientegenskaper åt dig: en för webbplatsen och en för mobilappen. Sök efter dem genom att söka efter `--aepUserLdap--` i rutan **[!UICONTROL Search]**.
+I **Komma igång** skapade Demo System två klientegenskaper åt dig: en för webbplatsen och en för mobilappen. Sök efter dem genom att söka efter `--aepUserLdap--` i rutan **[!UICONTROL Search]**.
+Klicka för att öppna egenskapen **Webb**.
 
 ![Sökruta](./images/property6.png)
 
-Öppna egenskapen **Webb**.
 
-Därefter visas sidan Egenskapsöversikt. Klicka på **[!UICONTROL Extensions]** i den vänstra listen. Klicka på knappen **[!UICONTROL Configure]** under Adobe Experience Platform Web SDK-tillägget.
+
+Därefter visas sidan Egenskapsöversikt. Klicka på **[!UICONTROL Extensions]** i den vänstra listen, klicka sedan på **Adobe Experience Platform Web SDK** och klicka sedan på **[!UICONTROL Configure]**.
 
 ![Sidan Egenskapsöversikt](./images/property7.png)
 
-Välkommen till Adobe Experience Platform Web SDK! Här kan du konfigurera tillägget med datastream som du skapade i [övning 0.2](./../../../modules/gettingstarted/gettingstarted/ex2.md) samt en mer avancerad konfiguration. Du kommer bara att konfigurera två inställningar för den här övningen.
+Välkommen till Adobe Experience Platform Web SDK! Här kan du konfigurera tillägget med den dataström du skapade i [Komma igång](./../../../modules/gettingstarted/gettingstarted/ex2.md) samt en mer avancerad konfiguration.
 
-Standarddomänen för Edge är alltid **edge.adobedc.net**. Om du har implementerat en CNAME-konfiguration i din Adobe Experience Cloud- eller Adobe Experience Platform-miljö måste du uppdatera **[!UICONTROL Edge Domain]**. Din Adobe Experience Platform-instans använder den här Edge-domänen: `--webSdkEdgeDomain--`.
+Standardkantdomänen är alltid **edge.adobedc.net**. Om du har implementerat en CNAME-konfiguration i din Adobe Experience Cloud- eller Adobe Experience Platform-miljö måste du uppdatera **[!UICONTROL Edge Domain]**.
 
-Om din instans Edge Domain inte är samma som standarddomänen uppdaterar du Edge Domain. Med en Edge-domän kan du konfigurera en första part-spårningsserver, som sedan använder en CNAME-konfiguration i serverdelen för att säkerställa att data samlas in i Adobe.
+Om din instans edge domain inte är samma som standard uppdaterar du edge domain här. Om du inte är säker använder du standarddomänen. En edge-domän gör det möjligt att konfigurera en första part-spårningsserver, som sedan använder en CNAME-konfiguration i serverdelen för att säkerställa att data samlas in i Adobe.
 
 ![Startsida för tillägg](./images/property9edgedomain.png)
 
-Kontrollera nu att alternativknappen **[!UICONTROL Choose from list]** är markerad under rubriken **[!UICONTROL Datastreams]** och välj ditt datastream med namnet `--aepUserLdap-- - Demo System Datastream` i listan i rutan **[!UICONTROL Datastream]**.
-
-![Startsida för tillägg](./images/property9edge.png)
+Under **[!UICONTROL Datastreams]** har du redan valt ditt datastream i avsnittet **Komma igång**. Du har valt följande datastream: `--aepUserLdap-- - Demo System Datastream`, från listan i rutan **[!UICONTROL Datastream]**, för varje miljö.
 
 Klicka på **[!UICONTROL Save]** för att gå tillbaka till vyn Tillägg.
 
-![Adobe Experience Platform Web SDK-startsida](./images/save.png)
+![Startsida för tillägg](./images/property9edge.png)
 
 ## 1.1.3.2 Dataelement
 
@@ -104,11 +104,13 @@ Klicka på regeln som returneras.
 
 ![Media - Sök efter artikelsidregel](./images/rule1.png)
 
-Låt oss titta på de enskilda elementen som utgör den här regeln. För alla regler Om en angiven **[!UICONTROL Event]** inträffar utvärderas **[!UICONTROL Conditions]** och den angivna **[!UICONTROL Actions]** utförs om det behövs.
+Låt oss titta på de enskilda elementen som utgör den här regeln.
+
+För alla regler: Om en angiven **[!UICONTROL Event]** inträffar utvärderas **[!UICONTROL Conditions]**, utförs den angivna **[!UICONTROL Actions]** om det behövs.
 
 ![Media - regel för artikelsidor](./images/rule2.png)
 
-Klicka på händelsen **Egen händelse - produktvy**. Det här är vyn som läses in.
+Klicka på händelsen **Core - Custom Event**. Det här är vyn som läses in.
 
 Klicka på listrutan **Händelsetyp**.
 
@@ -118,9 +120,11 @@ Här visas några av de standardinteraktioner som du kan använda för att signa
 
 Klicka på **[!UICONTROL Cancel]** för att gå tillbaka till regeln.
 
-Klicka på händelsen **Skicka&quot;produktvy&quot; till AEP**.
+Klicka på händelsen **Skicka &quot;produktvy&quot; för åtgärden**.
 
-Här ser du de data som skickas till Adobe Edge av Adobe Experience Platform Web SDK. Mer specifikt används **alloy** **[!UICONTROL Instance]** för Web SDK. Om du konfigurerar ytterligare **[!UICONTROL Instance]** kan olika datastreams användas, bland annat. Du har angett händelsen **[!UICONTROL Type]** som ett **commerce.productViews** och de XDM-data som du skickar är det **XDM - produktvy** -dataelement som du ändrade tidigare.
+![Åtgärden Skicka händelse](./images/rule5a.png)
+
+Här ser du de data som Adobe Experience Platform Web SDK skickar in. Mer specifikt används **alloy** **[!UICONTROL Instance]** för Web SDK. Händelsen **[!UICONTROL Type]** är inställd på **Commerce produktvy (kundvagn)** och de XDM-data som du skickar är det **XDM - produktvy** -dataelement som du ändrade tidigare.
 
 ![Åtgärden Skicka händelse](./images/rule5.png)
 
@@ -136,17 +140,14 @@ Klicka på det befintliga biblioteket med namnet **Main**.
 
 ![Biblioteksåtkomst](./images/publish1.png)
 
-Klicka på knappen **Lägg till alla ändrade resurser** .
+Klicka på knappen **Lägg till alla ändrade resurser** . Nästa,
+Klicka på knappen **Spara och bygg för utveckling**.
 
 ![Biblioteksåtkomst](./images/publish1a.png)
 
-Bläddra nedåt för att se de flesta resurser behålls som **Revision 1 (senaste)**, men de två som har ändrats - **Dataelement: ruleArticlePages** och **Extension: Adobe Experience Platform Web SDK** markeras med bara **Senaste**.
-
-Klicka på knappen **Spara och bygg för utveckling**.
+Det kan ta några minuter att skapa biblioteket och när det är klart visas en grön punkt till vänster om biblioteksnamnet.
 
 ![Innehållsbibliotek](./images/publish2.png)
-
-Det kan ta några minuter att skapa biblioteket och när det är klart visas en grön punkt till vänster om biblioteksnamnet.
 
 Som du ser på skärmen Publiceringsflöde finns det mycket mer att göra med publiceringsprocessen i Adobe Experience Platform Data Collection som ligger utanför kursens räckvidd. Vi kommer bara att använda ett enda bibliotek i vår utvecklingsmiljö.
 

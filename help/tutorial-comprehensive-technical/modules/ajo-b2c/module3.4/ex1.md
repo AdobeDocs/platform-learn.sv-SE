@@ -3,9 +3,10 @@ title: Adobe Journey Optimizer - Konfigurera en utlösarbaserad resa - orderbekr
 description: I det här avsnittet konfigurerar du en utlösarbaserad resa - orderbekräftelse
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: b9d9b357-08d1-4f65-9e0b-46224d035602
+source-git-commit: 0dbcda0cfc9f199a44c845c1b5caf00a8d740251
 workflow-type: tm+mt
-source-wordcount: '1997'
+source-wordcount: '1990'
 ht-degree: 0%
 
 ---
@@ -404,10 +405,6 @@ Låt oss testa den uppdaterade resan genom att köpa en produkt på demowebbplat
 Gå till [https://builder.adobedemo.com/projects](https://builder.adobedemo.com/projects). När du har loggat in med din Adobe ID ser du det här. Klicka på webbplatsprojektet för att öppna det.
 
 ![DSN](./../../../modules/gettingstarted/gettingstarted/images/web8.png)
-
-Klicka på **Kör** på sidan **Screens**.
-
-![DSN](./../../../modules/datacollection/module1.1/images/web2.png)
 
 Du kommer då att se din demowebbplats öppnas. Markera URL-adressen och kopiera den till Urklipp.
 

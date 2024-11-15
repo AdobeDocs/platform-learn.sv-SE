@@ -3,16 +3,15 @@ title: 1.1 Installation av Adobe Experience Platform Data Collection och Web SDK
 description: Foundation - konfigurera Adobe Experience Platform Data Collection och Web SDK-tillägget
 kt: 5342
 doc-type: tutorial
-source-git-commit: 2cdc145d7f3933ec593db4e6f67b60961a674405
+exl-id: b69ebe41-ff28-4dde-b639-198201120742
+source-git-commit: 0dbcda0cfc9f199a44c845c1b5caf00a8d740251
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '585'
 ht-degree: 0%
 
 ---
 
 # 1.1 Foundation - konfiguration av Adobe Experience Platform Data Collection och Web SDK-tillägget
-
-**Författare: [Matthew Joseph Woolley](https://www.linkedin.com/in/matthewjwoolley/), [Wouter Van Geluwe](https://www.linkedin.com/in/woutervangeluwe/)**
 
 I den här grundläggande modulen får du lära dig Adobe datainsamlingsvision och en förklaring av hur du hämtar data från en webbplats och ett mobilprogram till Adobe Experience Platform och andra program via Adobe Experience Platform Data Collection, Adobe Experience Platform SDK och Adobe Experience Platform Edge Network. I den här modulen introduceras vissa koncept och tekniker som har en effekt som inte omfattas av en teknisk självstudiekurs från Adobe Experience Platform. Det bör tydligt framgå vilka delar av övningarna som ligger till grund för resten av den omfattande självstudiekursen, som lär dig mer om Experience Edge och dess funktioner, och var ni ska gå för mer information och självstudiekurser.
 
@@ -35,7 +34,7 @@ I den här grundläggande modulen får du lära dig Adobe datainsamlingsvision o
 
 >[!NOTE]
 >
->Glöm inte att installera, konfigurera och använda Chrome-tillägget enligt referensen i [0.1 - Installera Chrome-tillägget för Experience League-dokumentationen](../../gettingstarted/gettingstarted/ex1.md)
+>Glöm inte att installera, konfigurera och använda Chrome-tillägget enligt [Installera Chrome-tillägget för Experience League-dokumentationen](../../gettingstarted/gettingstarted/ex1.md)
 
 ## Utövningar
 

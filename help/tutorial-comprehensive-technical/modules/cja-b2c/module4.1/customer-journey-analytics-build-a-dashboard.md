@@ -3,9 +3,10 @@ title: Customer Journey Analytics - Skapa en kontrollpanel med Analysis Workspac
 description: Customer Journey Analytics - Skapa en kontrollpanel med Analysis Workspace ovanpå Adobe Experience Platform
 kt: 5342
 doc-type: tutorial
-source-git-commit: 2cdc145d7f3933ec593db4e6f67b60961a674405
+exl-id: 0eef0211-bb6a-4b92-a6ce-507d928ccdea
+source-git-commit: 0dbcda0cfc9f199a44c845c1b5caf00a8d740251
 workflow-type: tm+mt
-source-wordcount: '421'
+source-wordcount: '420'
 ht-degree: 0%
 
 ---
@@ -41,7 +42,7 @@ Mer information om Customer Journey Analytics finns [här](https://spark.adobe.c
 
 >[!NOTE]
 >
->Glöm inte att installera, konfigurera och använda Chrome-tillägget enligt referensen i [0.1 - Installera Chrome-tillägget för Experience League-dokumentationen](../../gettingstarted/gettingstarted/ex1.md)
+>Glöm inte att installera, konfigurera och använda Chrome-tillägget enligt [Installera Chrome-tillägget för Experience League-dokumentationen](../../gettingstarted/gettingstarted/ex1.md)
 
 ## Utövningar
 

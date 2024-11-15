@@ -3,9 +3,10 @@ title: Foundation - datainmatning - från okänd till känd på webbplatsen
 description: Foundation - datainmatning - från okänd till känd på webbplatsen
 kt: 5342
 doc-type: tutorial
-source-git-commit: c6ba1f751f18afe39fb6b746a62bc848fa8ec9bf
+exl-id: 08cb7892-4e1c-4646-9e3b-8ab008dfd947
+source-git-commit: 0dbcda0cfc9f199a44c845c1b5caf00a8d740251
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '729'
 ht-degree: 0%
 
 ---
@@ -29,10 +30,6 @@ Du kommer nu att importera data till Adobe Experience Platform och dessa data ko
 Gå till [https://builder.adobedemo.com/projects](https://builder.adobedemo.com/projects). När du har loggat in med din Adobe ID ser du det här. Klicka på webbplatsprojektet för att öppna det.
 
 ![DSN](./../../gettingstarted/gettingstarted/images/web8.png)
-
-Klicka på **Kör** på sidan **Screens**.
-
-![DSN](../module1.1/images/web2.png)
 
 Du kommer då att se din demowebbplats öppnas. Markera URL-adressen och kopiera den till Urklipp.
 

@@ -3,9 +3,10 @@ title: Foundation - Installation av Adobe Experience Platform Data Collection oc
 description: Foundation - Installation av Adobe Experience Platform Data Collection och Web SDK-tillägget - förklarar Adobe Experience Platform Data Collection
 kt: 5342
 doc-type: tutorial
-source-git-commit: 7d2f5f842559b2d6d9f115f3993268a4b36a0fe0
+exl-id: 098031c6-4d8b-46a5-ae86-8fd7692268d3
+source-git-commit: 0dbcda0cfc9f199a44c845c1b5caf00a8d740251
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '492'
 ht-degree: 0%
 
 ---
@@ -42,7 +43,12 @@ Ta en titt på den vänstra listen.
 - **[!UICONTROL Tags]** ger en översikt över alla egenskaper på klientsidan
 - **[!UICONTROL App Surfaces]** ger en översikt över alla appkonfigurationer för att aktivera push-meddelanden (som används/aktiveras i kombination med Project Sierra)
 - **[!UICONTROL Datastreams]** utforskas i [nästa övning](./ex2.md)
-- **[!UICONTROL Event Forwarding]** ger en översikt över alla egenskaper på serversidan som utforskas i [Modul 14 - Real-Time CDP-anslutningar: Händelsevidarebefordran](./../../../modules/rtcdp-b2c/module2.5/aep-data-collection-ssf.md)
+- **[!UICONTROL Event Forwarding]** ger en översikt över alla egenskaper på serversidan som utforskas i [Modul 2.5 - Real-Time CDP-anslutningar: Händelsevidarebefordran](./../../../modules/rtcdp-b2c/module2.5/aep-data-collection-ssf.md)
+- **[!UICONTROL Monitoring]** ger en översikt över inkommande och utgående händelsetrafik via händelsevidarebefordran
+- **[!UICONTROL Assurance]** ger åtkomst till felsökning och implementering via Adobe Debugger
+- **[!UICONTROL Places]** ger åtkomst till hantering av POI:n som blir tillgängliga för platsbaserad personalisering i mobilprogram
+- **[!UICONTROL Schemas]** ger åtkomst till Adobe Experience Platform schemaredigerare
+- **[!UICONTROL Identities]** ger åtkomst till inställningarna för Adobe Experience Platform Identity Graph
 
 ## Ytterligare information
 

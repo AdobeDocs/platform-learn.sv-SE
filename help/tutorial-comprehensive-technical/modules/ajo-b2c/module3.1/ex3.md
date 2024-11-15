@@ -3,9 +3,10 @@ title: Uppdatera ditt konfigurations-ID och testa din resa
 description: Uppdatera ditt konfigurations-ID och testa din resa
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: 6807f93d-bd44-4f63-8005-6819c9f5f1ed
+source-git-commit: 0dbcda0cfc9f199a44c845c1b5caf00a8d740251
 workflow-type: tm+mt
-source-wordcount: '617'
+source-wordcount: '610'
 ht-degree: 0%
 
 ---
@@ -73,10 +74,6 @@ Biblioteket uppdateras sedan och efter 1-2 minuter kan du testa konfigurationen.
 Gå till [https://builder.adobedemo.com/projects](https://builder.adobedemo.com/projects). När du har loggat in med din Adobe ID ser du det här. Klicka på webbplatsprojektet för att öppna det.
 
 ![DSN](./../../../modules/gettingstarted/gettingstarted/images/web8.png)
-
-Klicka på **Kör** på sidan **Screens**.
-
-![DSN](./../../../modules/datacollection/module1.1/images/web2.png)
 
 Du kommer då att se din demowebbplats öppnas. Markera URL-adressen och kopiera den till Urklipp.
 
