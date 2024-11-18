@@ -4,14 +4,14 @@ description: Foundation - datainmatning - från okänd till känd på webbplatse
 kt: 5342
 doc-type: tutorial
 exl-id: 08cb7892-4e1c-4646-9e3b-8ab008dfd947
-source-git-commit: 0dbcda0cfc9f199a44c845c1b5caf00a8d740251
+source-git-commit: 8bdcd03bd38a6da98b82439ad86482cad5f4e684
 workflow-type: tm+mt
-source-wordcount: '729'
+source-wordcount: '746'
 ht-degree: 0%
 
 ---
 
-# 1.2.1 - Från okänd till känd på webbplatsen
+# 1.2.1 Från okänd till känd på webbplatsen
 
 ## Kontext
 
@@ -27,7 +27,7 @@ Du kommer nu att importera data till Adobe Experience Platform och dessa data ko
 
 ### Kundreseflöde
 
-Gå till [https://builder.adobedemo.com/projects](https://builder.adobedemo.com/projects). När du har loggat in med din Adobe ID ser du det här. Klicka på webbplatsprojektet för att öppna det.
+Gå till [https://dsn.adobe.com](https://dsn.adobe.com). När du har loggat in med din Adobe ID ser du det här. Klicka på de tre punkterna **..** i webbplatsprojektet och klicka sedan på **Redigera**.
 
 ![DSN](./../../gettingstarted/gettingstarted/images/web8.png)
 
@@ -41,12 +41,9 @@ Du kommer då att se din demowebbplats öppnas. Markera URL-adressen och kopiera
 
 Klistra in webbadressen till demowebbplatsen, som du kopierade i föregående steg. Du ombeds sedan logga in med din Adobe ID.
 
-
 Välj kontotyp och slutför inloggningsprocessen.
 
-
 Därefter visas webbplatsen i ett inkognitivt webbläsarfönster. För varje demonstration måste du använda ett nytt, inkognitivt webbläsarfönster för att läsa in webbadressen till demowebbplatsen.
-
 
 Klicka på logotypikonen för Adobe i det övre vänstra hörnet av skärmen för att öppna profilvisningsprogrammet.
 
@@ -58,43 +55,45 @@ Ta en titt på panelen Profilvisningsprogram och kundprofilen i realtid med **Ex
 
 Ni kan också se alla upplevelsehändelser som samlats in baserat på kundens beteende. Listan är för närvarande tom, men den ändras snart.
 
-![Demo](../module1.2/images/pv3.png)
+![Demo](./images/pv3.png)
 
-Gå till produktkategorin **Män**. Klicka sedan på produkten **Montana Wind Jacket**.
+Gå till produktkategorin **Telefoner och enheter**. Klicka sedan på produkten **iPhone 15 Pro**.
 
-![Demo](../module1.2/images/pv4.png)
+![Demo](./images/pv4.png)
 
-Då visas informationssidan för produkten. En upplevelsehändelse av typen **Produktvy** har nu skickats till Adobe Experience Platform med den Web SDK-implementering som du granskade i modul 1.
+Då visas informationssidan för produkten. En Experience Event av typen **Product View** har nu skickats till Adobe Experience Platform med den Web SDK-implementering som du granskade i den tidigare modulen.
 
-![Demo](../module1.2/images/pv5.png)
+![Demo](./images/pv5.png)
 
 Öppna panelen Provile Viewer och titta på **Experience Events**.
 
-![Demo](../module1.2/images/pv6.png)
+![Demo](./images/pv6.png)
 
-Gå tillbaka till kategorisidan **Kvinnor** och klicka på en annan produkt. En annan Experience Event har skickats till Adobe Experience Platform.
+Gå tillbaka till kategorisidan **Telefoner och enheter** och klicka på en annan produkt. En annan Experience Event har skickats till Adobe Experience Platform.
 
-![Demo](../module1.2/images/pv7.png)
+Öppna panelen Profilvisningsprogram. Nu visas 2 Experience Events av typen **Product View**. Beteendet är anonymt, men med rätt samtycke kan vi spåra varje klick och lagra det i Adobe Experience Platform. När den anonyma kunden blir känd kan vi automatiskt sammanfoga alla anonyma beteenden med kunskapsprofilen.
 
-Öppna panelen Profilvisningsprogram. Nu visas 2 Experience Events av typen **Product View**. Beteendet är anonymt, men vi kan spåra varje klick och lagra det i Adobe Experience Platform. När den anonyma kunden blir känd kan vi automatiskt sammanfoga alla anonyma beteenden med kunskapsprofilen.
+![Demo](./images/pv7.png)
 
-![Demo](../module1.2/images/pv8.png)
+Klicka på **Logga in** för att gå till sidan Register/Inloggning.
 
-Gå till sidan Register/Login. Klicka på **SKAPA ETT KONTO**.
+![Demo](./images/pv8.png)
 
-![Demo](../module1.2/images/pv9.png)
+Klicka på **SKAPA ETT KONTO**.
+
+![Demo](./images/pv9.png)
 
 Fyll i dina uppgifter och klicka på **Registrera**. Sedan dirigeras du om till föregående sida.
 
-![Demo](../module1.2/images/pv10.png)
+![Demo](./images/pv10.png)
 
 Öppna profilvisarpanelen och gå till kundprofilen i realtid. På panelen Profilvisningsprogram ska du se alla dina personuppgifter visas, som dina nya e-post- och telefonidentifierare.
 
-![Demo](../module1.2/images/pv11.png)
+![Demo](./images/pv11.png)
 
 Gå till Experience Events på panelen Profilvisningsprogram. Du kan se de två produkterna som du har visat tidigare på panelen Profilvisningsprogram. Båda dessa händelser är nu också anslutna till din&quot;kända&quot; profil.
 
-![Demo](../module1.2/images/pv12.png)
+![Demo](./images/pv12.png)
 
 Du har nu importerat data till Adobe Experience Platform och du har länkat dessa data till identifierare som ECID och e-postadresser. Målet med detta är att förstå affärssammanhanget för det ni ska göra. I nästa övning kommer du att börja konfigurera allt du behöver för att göra all den dataimporten möjlig.
 

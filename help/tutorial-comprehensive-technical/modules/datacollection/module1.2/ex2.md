@@ -3,20 +3,21 @@ title: Foundation - datainmatning - Konfigurera scheman och ange identifierare
 description: Foundation - datainmatning - Konfigurera scheman och ange identifierare
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: 3cc1fbe3-1f40-45a3-a123-ee6f1463e7b5
+source-git-commit: 8bdcd03bd38a6da98b82439ad86482cad5f4e684
 workflow-type: tm+mt
-source-wordcount: '3306'
+source-wordcount: '2908'
 ht-degree: 0%
 
 ---
 
 # 1.2.2 Konfigurera scheman och ange identifierare
 
-I den här övningen konfigurerar du de XDM-scheman som krävs för att klassificera profilinformation och kundbeteende. I varje XDM-schema måste du också konfigurera en primär identifierare för att länka all information till.
+I den här övningen ska du granska konfigurationen av de XDM-scheman som krävs för att klassificera profilinformation och kundbeteende. I varje XDM-schema ser du även att en primär identifierare har definierats för att länka all kundrelaterad information till.
 
 ## Artikel
 
-Innan du börjar konfigurera XDM-scheman och ställer in primära identifierare måste vi tänka på företagskontexten för det vi försöker göra:
+Innan du börjar konfigurera XDM-scheman och definierar identifierare måste du tänka på företagskontexten för det vi försöker göra:
 
 - Du vill ha data
 - Du vill länka data till en kund
@@ -27,13 +28,13 @@ Det finns två typer av data som vi vill hämta:
 - Vem är den här kunden?
 - Vad gör den här kunden?
 
-Frågan **Vem är den här kunden?** är en mycket öppen fråga som har många svar. När ditt företag vill få svar på den här frågan letar du efter demografisk information som Förnamn, Efternamn och Adress. Men även för kontaktinformation som e-postadress eller mobiltelefonnummer. Och även för information som är länkad till Språk kan du välja OptIn/OptOut och till och med Profile Pictures. Och slutligen, vad ni verkligen behöver veta, är hur vi kommer att identifiera den här kunden i de olika system som ert företag använder.
+Frågan **Vem är den här kunden?** är en mycket öppen fråga som har många svar. När din organisation vill få svar på den här frågan letar du efter demografisk information som Förnamn, Efternamn och Adress. Men även för kontaktinformation som e-postadress eller mobiltelefonnummer. Och även för information som är länkad till Språk kan du välja OptIn/OptOut och till och med Profile Pictures. Och slutligen, vad ni verkligen behöver veta, är hur vi kommer att identifiera den här kunden i de olika system som er organisation använder.
 
-Samma sak gäller frågan **Vad gör den här kunden?**. Det är en mycket öppen fråga med många svar. När ert företag vill få svar på den här frågan letar ni efter någon interaktion som kunden har haft med era online- och offlinetillgångar. Vilka sidor eller produkter har besökts? Har den här kunden lagt till en produkt i kundvagnen eller till och med köpt en artikel? Vilken enhet och webbläsare har använts för att bläddra på webbplatsen? Vilken typ av information söker den här kunden och hur kan vi använda den för att konfigurera och leverera en bra upplevelse till den här kunden? Och slutligen, vad vi verkligen behöver veta, är hur vi kommer att identifiera den här kunden i de olika system som ert företag kommer att använda.
+Samma sak gäller frågan **Vad gör den här kunden?**. Det är en mycket öppen fråga med många svar. När organisationen vill få svar på den här frågan letar ni efter någon interaktion som kunden har haft med era online- och offlinetillgångar. Vilka sidor eller produkter har besökts? Har den här kunden lagt till en produkt i kundvagnen eller till och med köpt en artikel? Vilken enhet och webbläsare har använts för att bläddra på webbplatsen? Vilken typ av information söker den här kunden och hur kan vi använda den för att konfigurera och leverera en bra upplevelse till den här kunden? Och slutligen, vad vi verkligen behöver veta, är hur vi kommer att identifiera den här kunden i de olika system som er organisation kommer att använda.
 
-## 1.2.1.1 - Vem är den här kunden
+## Vem är den här kunden?
 
-Hämtar svaret till **Vem är den här kunden?** för ditt företag görs via inloggnings-/registreringssidan.
+Hämtar svaret till **Vem är den här kunden?** för din organisation görs via inloggnings-/registreringssidan.
 
 ![Datainmatning](./images/pv10.png)
 
@@ -43,12 +44,12 @@ Så när du skapar ett XDM-schema för att hämta svaret till **Vem är den här
 
 Om du vill ange vilken typ av svar som kan ges på den frågan måste du definiera [!UICONTROL Field Groups]. [!UICONTROL Field Groups] är tillägg till klassen Profile och har mycket specifika konfigurationer. Demografisk information som Förnamn, Efternamn, Kön och Födelsedag ingår till exempel i [!UICONTROL Field Group]: **[!UICONTROL Demographic Details]**.
 
-För det andra måste företaget bestämma hur kunden ska identifieras. När det gäller ditt företag kan den huvudsakliga identifieraren för en känd kund vara ett specifikt kund-ID, till exempel en e-postadress. Men tekniskt sett finns det andra sätt att identifiera en kund på företaget, som att använda ett mobiltelefonnummer.
+För det andra måste organisationen bestämma hur kunden ska identifieras. När det gäller din organisation kan den huvudsakliga identifieraren för en känd kund vara ett specifikt kund-ID, till exempel en e-postadress. Men tekniskt sett finns det andra sätt att identifiera en kund på din organisation, som att använda ett mobiltelefonnummer.
 I det här labbet definierar vi e-postadressen som primär identifierare och telefonnumret som en sekundär identifierare.
 
 Slutligen är det viktigt att skilja på vilken kanal som data hämtades från. I det här fallet ska vi prata om webbplatsregistreringar och schemat som måste definieras måste återspegla **var** registreringsdata hämtades. Kanalen kommer också att ha en viktig roll när det gäller att påverka vilka data som hämtas. Därför är det en god vana att definiera scheman för varje kombination av kanal, primär identifierare och typ av data som samlas in.
 
-Baserat på ovanstående måste du konfigurera ett schema i Adobe Experience Platform.
+Baserat på ovanstående har scheman skapats i Adobe Experience Platform.
 
 Logga in på Adobe Experience Platform via följande URL: [https://experience.adobe.com/platform](https://experience.adobe.com/platform).
 
@@ -56,7 +57,7 @@ När du har loggat in loggar du in på Adobe Experience Platform hemsida.
 
 ![Datainmatning](./images/home.png)
 
-Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``--module2sandbox--``. Du kan göra detta genom att klicka på texten **[!UICONTROL Production Prod]** i den blå raden ovanför skärmen. När du har valt rätt sandlåda ser du skärmändringen och nu befinner du dig i din dedikerade sandlåda.
+Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``--aepSandboxName--``. Du kan göra detta genom att klicka på texten **[!UICONTROL Production Prod]** i den blå raden ovanför skärmen. När du har valt rätt sandlåda ser du skärmändringen och nu befinner du dig i din dedikerade sandlåda.
 
 ![Datainmatning](./images/sb1.png)
 
@@ -64,11 +65,23 @@ Klicka på **[!UICONTROL Schemas]** på menyn till vänster på skärmen i Adobe
 
 ![Datainmatning](./images/menuschemas.png)
 
-Du bör skapa ett nytt schema. Om du vill skapa ett nytt schema klickar du på knappen **[!UICONTROL + Create Schema]** och väljer **[!UICONTROL XDM Individual Profile]**.
+Du bör skapa ett nytt schema. Om du vill skapa ett nytt schema klickar du på **[!UICONTROL + Create Schema]**.
 
 ![Datainmatning](./images/createschema.png)
 
-När du har klickat på knappen **[!UICONTROL + Create Schema]** skapas ett nytt schema och du uppmanas att välja eller skapa **fältgrupper**.
+Välj **Manuell** och klicka på **Markera**.
+
+![Datainmatning](./images/createschemaa.png)
+
+Välj sedan **Enskild profil** och klicka på **Nästa**.
+
+![Datainmatning](./images/createschemab.png)
+
+Ange schemats namn så här: `--aepUserLdap-- - Demo System - Profile Schema for Website`. Klicka på **Slutför**.
+
+![Datainmatning](./images/createschemac.png)
+
+Ett nytt schema har skapats.
 
 ![Datainmatning](./images/emptyschema.png)
 
@@ -84,26 +97,28 @@ Om du vill göra den informationen till en del av ditt schema måste du lägga t
 
 - Demografiska detaljer (demografiska uppgifter)
 - Kontaktuppgifter (kontaktinformation)
-- Inställningsinformation (övrig information)
-- företagets anpassade profilidentifieringsfältgrupp (primära och sekundära identifierare)
+- Information om samtycke och inställningar (annan information)
+- din organisations anpassade profilidentifieringsfältgrupp (primära och sekundära identifierare)
 
-På skärmen **[!UICONTROL Add Field Group]** väljer du [!UICONTROL Field Group] **[!UICONTROL Demographic Details]**, **[!UICONTROL Personal Contact Details]** och **[!UICONTROL Preference Details]**.
+Klicka på knappen **+Lägg till** under **Fältgrupper**.
 
-![Datainmatning](./images/ppfd.png)
+![Datainmatning](./images/createschemad.png)
+
+På skärmen **[!UICONTROL Add Field Group]** väljer du [!UICONTROL Field Group] **[!UICONTROL Demographic Details]**, **[!UICONTROL Personal Contact Details]** och **[!UICONTROL Consent and Preference Details]**.
 
 Klicka på knappen **[!UICONTROL Add Field Groups]** för att lägga till [!UICONTROL Field Group] i ditt schema.
 
-![Datainmatning](./images/addmixin1.png)
+![Datainmatning](./images/ppfd.png)
 
 Nu får du den här:
 
 ![Datainmatning](./images/schemathis.png)
 
-Därefter behöver du en ny [!UICONTROL Field Group] för att hämta **[!UICONTROL Identifier]** som används för datainsamling. Som du har sett i föregående övning finns det ett koncept för primära och sekundära identifierare. En primär identifierare är den viktigaste eftersom alla insamlade data länkas till den här identifieraren.
+Därefter behöver du en ny [!UICONTROL Field Group] för att hämta **[!UICONTROL Identifier]** som används för datainsamling. Som du har sett i föregående övning finns det ett koncept för identifierare. En primär identifierare är den viktigaste eftersom alla insamlade data länkas till den här identifieraren.
 
-Du kommer nu att skapa din egen anpassade [!UICONTROL Field Group] och därför kommer du att utöka [!UICONTROL XDM Schema] för att uppfylla ditt företags krav.
+Du kommer nu att skapa din egen anpassade [!UICONTROL Field Group] och därför kommer du att utöka [!UICONTROL XDM Schema] för att uppfylla din egen organisations krav.
 
-Klicka på knappen **[!UICONTROL + Add]** för att börja lägga till en [!UICONTROL Field Group].
+Klicka på **[!UICONTROL + Add]** under **Fältgrupper** för att börja lägga till en [!UICONTROL Field Group].
 
 ![Datainmatning](./images/addmixin2.png)
 
@@ -116,19 +131,11 @@ Du måste nu ange **[!UICONTROL Display Name]** och **[!UICONTROL Description]**
 Vi kommer att använda det här som namn för vårt schema:
 `--aepUserLdap-- - Profile Identification Field Group`
 
-För ldap **[!UICONTROL vangeluw]** bör det här till exempel vara schemats namn:
-
-**[!UICONTROL vangeluw - Profile Identification Field Group]**
-
-Det borde ge dig något sådant:
+Klicka på knappen **[!UICONTROL Add Field Groups]** för att lägga till den nya [!UICONTROL Field Group] i ditt schema.
 
 ![Datainmatning](./images/mixinname.png)
 
-Klicka på knappen **[!UICONTROL Add Field Groups]** för att lägga till den nya [!UICONTROL Field Group] i ditt schema.
-
-![Datainmatning](./images/addmixin1.png)
-
-Du bör nu ha den här schemastrukturen på plats.
+Du har nu den här schemastrukturen på plats.
 
 ![Datainmatning](./images/schemastructurem.png)
 
@@ -143,80 +150,50 @@ Klicka på knappen **[!UICONTROL + Add Field]** på den översta nivån i schema
 
 ![Datainmatning](./images/clickaddfield.png)
 
-När du har klickat på knappen **[!UICONTROL + Add Field]** visas nu en ny **[!UICONTROL object]** i ditt schema. Det här objektet representerar en anpassad **[!UICONTROL object]** i ditt schema och namnges efter ditt Adobe Experience Platform Klient-ID. Ditt Adobe Experience Platform-klient-ID är `--aepTenantId--`.
+När du har klickat på knappen **[!UICONTROL + Add Field]** visas nu ett nytt namnlöst fält i ditt schema.
 
-![Datainmatning](./images/tenant.png)
+![Datainmatning](./images/tenantschema1.png)
 
-Du kommer nu att lägga till ett nytt objekt under den klienten. Det gör du genom att klicka på fältet **[!UICONTROL New Field]** under innehavarobjektet.
-
-![Datainmatning](./images/tenantfield.png)
-
-Använd dessa objektdefinitioner:
+Nu bör du ange informationen i det nya fältet med följande objektdefinitioner:
 
 - Fältnamn: **[!UICONTROL identification]**
 - Visningsnamn: **[!UICONTROL identification]**
 - Typ: **[!UICONTROL Object]**
+- Fältgrupp: **`--aepUserLdap-- - Profile Identification Field Group`**
+
+Klicka på **Använd**.
 
 ![Datainmatning](./images/tenantfielddef.png)
 
-Klicka på **[!UICONTROL Apply]** om du vill spara ändringarna.
+Du kommer nu att se ett nytt objekt i ditt schema, som representerar en anpassad **[!UICONTROL object]** i schemat och som har fått namn efter ditt Adobe Experience Platform Klient-ID. Klient-ID:t för Adobe Experience Platform är `--aepTenantId--` och det är unikt för alla AEP-instanser.
 
-![Datainmatning](./images/apply.png)
+![Datainmatning](./images/tenant.png)
 
-När du har klickat på **[!UICONTROL Apply]** ser du nu ditt **[!UICONTROL identification]**-objekt i schemat.
+Du kommer nu att lägga till tre nya fältobjekt under den innehavaren i det **identifiering** -objekt som du just har skapat. Om du vill börja lägga till var och en av dessa tre fält klickar du på **+-ikonen** under **identifiering** för varje fält.
 
-![Datainmatning](./images/schemaid.png)
+![Datainmatning](./images/tenantfield.png)
 
-Nu ska du lägga till tre nya fält under objektet **[!UICONTROL identification]**:
+Använd informationen nedan för att skapa de tre nya fälten under objektet **[!UICONTROL identification]**:
 
 - ecid:
    - Fältnamn: **[!UICONTROL ecid]**
    - Visningsnamn: **[!UICONTROL ecid]**
    - Typ: **[!UICONTROL String]**
+   - Fältgrupp: **`--aepUserLdap-- - Profile Identification Field Group`**
 
 - emailId
    - Fältnamn: **[!UICONTROL emailId]**
    - Visningsnamn: **[!UICONTROL emailId]**
    - Typ: **[!UICONTROL String]**
+   - Fältgrupp: **`--aepUserLdap-- - Profile Identification Field Group`**
 
 - mobiltelefon
    - Fältnamn: **[!UICONTROL mobilenr]**
    - Visningsnamn: **[!UICONTROL mobilenr]**
    - Typ: **[!UICONTROL String]**
-
-Varje fält definieras som typen **[!UICONTROL String]** och vi konfigurerar fälten som **[!UICONTROL Identities]**. För schemat **[!UICONTROL Website Registration Schema]** antar vi att en kund alltid identifieras av sin e-postadress, vilket innebär att du måste konfigurera fältet **[!UICONTROL emailId]** som en **[!UICONTROL primary]**-identifierare och de andra fälten som **[!UICONTROL secondary]**-identifierare.
-
-Om du vill lägga till fälten klickar du på knappen **[!UICONTROL +]** bredvid objektet **[!UICONTROL identification]**.
-
-![Datainmatning](./images/schemaid2.png)
-
-Du har nu ett tomt fält. Du måste konfigurera de tre fälten ovan enligt indikationen.
-
-![Datainmatning](./images/emptyfield.png)
+   - Fältgrupp: **`--aepUserLdap-- - Profile Identification Field Group`**
 
 Så här ska varje fält se ut efter den ursprungliga fältkonfigurationen.
-
-Klicka på knappen **[!UICONTROL +]** bredvid objektet **[!UICONTROL identification]** för att skapa ett nytt fält och fylla i fälten som anges.
-
-- ecid
-
-![Datainmatning](./images/ecidfield.png)
-
-Om du vill spara fältet rullar du nedåt i **[!UICONTROL Field Properties]** tills du ser knappen **[!UICONTROL Apply]**. Klicka på knappen **[!UICONTROL Apply]**.
-
-![Datainmatning](./images/apply.png)
-
-Klicka på knappen **[!UICONTROL +]** bredvid objektet **[!UICONTROL identification]** för att skapa ett nytt fält och fylla i fälten som anges.
-
-- emailId
-
-![Datainmatning](./images/emailidfield.png)
-
-Om du vill spara fältet rullar du nedåt i **[!UICONTROL Field Properties]** tills du ser knappen **[!UICONTROL Apply]**. Klicka på knappen **[!UICONTROL Apply]**.
-
-![Datainmatning](./images/apply.png)
-
-Klicka på knappen **[!UICONTROL +]** bredvid objektet **[!UICONTROL identification]** för att skapa ett nytt fält och fylla i fälten som anges.
 
 - mobiltelefon
 
@@ -226,7 +203,21 @@ Om du vill spara fältet rullar du nedåt i **[!UICONTROL Field Properties]** ti
 
 ![Datainmatning](./images/apply.png)
 
-Du har nu tre fält, men dessa fält har inte definierats som **[!UICONTROL Identity]**-fält än.
+- ecid
+
+![Datainmatning](./images/ecidfield.png)
+
+Glöm inte att rulla nedåt och klicka på **Använd**.
+
+- emailId
+
+![Datainmatning](./images/emailidfield.png)
+
+Glöm inte att rulla nedåt och klicka på **Använd**.
+
+Varje fält definieras som typen **[!UICONTROL String]** och du konfigurerar nu dessa fält som **[!UICONTROL Identities]**. För det här schemat antar vi att en kund alltid identifieras av sin e-postadress, vilket innebär att du måste konfigurera fältet **[!UICONTROL emailId]** som en **[!UICONTROL primary]**-identifierare och de andra fälten som vanliga identifierare.
+
+Dina tre fält måste nu definieras som **[!UICONTROL Identity]**-fält.
 
 ![Datainmatning](./images/3fields.png)
 
@@ -235,104 +226,62 @@ Så här definierar du de här fälten som **[!UICONTROL Identity]**-fält:
 - Markera fältet **[!UICONTROL emailId]**.
 - Till höger i fältegenskaperna rullar du nedåt tills du ser **[!UICONTROL Identity]**. Markera kryssrutan för **[!UICONTROL Identity]**.
 
-  ![Datainmatning](./images/emailidid.png)
+![Datainmatning](./images/emailidid.png)
 
 - Markera kryssrutan för **[!UICONTROL Primary Identity]**.
 
-  ![Datainmatning](./images/emailidprimid.png)
+![Datainmatning](./images/emailidprimid.png)
 
-- Välj sedan namnområdet **[!UICONTROL Email]** i listan med **[!UICONTROL Namespaces]**. Ett namnutrymme används av identitetsdiagrammet i Adobe Experience Platform för att klassificera identifierare i namnutrymmen och definiera relationen mellan dessa namnutrymmen.
+- Välj sedan namnområdet **[!UICONTROL Email]** i listan med **[!UICONTROL Namespaces]**. Ett namnutrymme används av identitetsdiagrammet i Adobe Experience Platform för att klassificera identifierare i namnutrymmen och definiera relationen mellan dessa namnutrymmen. Klicka på **[!UICONTROL Apply]** om du vill spara ändringarna.
 
-  ![Datainmatning](./images/emailidprimidns.png)
+![Datainmatning](./images/emailidprimidns.png)
 
-- Klicka slutligen på **[!UICONTROL Apply]** för att spara ändringarna.
+Därefter måste du definiera de andra fälten för **[!UICONTROL ecid]** och **[!UICONTROL mobilenr]** som standardidentifierare.
 
-  ![Datainmatning](./images/apply.png)
+Markera fältet **[!UICONTROL ecid]**. Till höger i fältegenskaperna rullar du nedåt tills du ser **[!UICONTROL Identity]**. Markera kryssrutan för **[!UICONTROL Identity]**.
+Välj sedan namnområdet **[!UICONTROL ECID]** i listan med **[!UICONTROL Namespaces]**.
+Klicka på **[!UICONTROL Apply]** om du vill spara ändringarna.
 
-Därefter måste du definiera de andra fälten för **[!UICONTROL ecid]** och **[!UICONTROL mobilenr]** som sekundära identifierare.
+![Datainmatning](./images/ecidid.png)
 
-- Markera fältet **[!UICONTROL ecid]**.
-- Till höger i fältegenskaperna rullar du nedåt tills du ser **[!UICONTROL Identity]**. Markera kryssrutan för **[!UICONTROL Identity]**.
+Markera fältet **[!UICONTROL mobilenr]**. Till höger i fältegenskaperna rullar du nedåt tills du ser **[!UICONTROL Identity]**. Markera kryssrutan för **[!UICONTROL Identity]**.
+Markera namnområdet **[!UICONTROL Phone]** i listan med **[!UICONTROL Namespaces]**.
+Klicka på **[!UICONTROL Apply]** om du vill spara ändringarna.
 
-  ![Datainmatning](./images/ecidid.png)
-
-- Välj sedan namnområdet **[!UICONTROL ECID]** i listan med **[!UICONTROL Namespaces]**. Ett [!UICONTROL Namespace] används av identitetsdiagrammet i Adobe Experience Platform för att klassificera identifierare i namnutrymmen och definiera relationen mellan dessa namnutrymmen.
-
-  ![Datainmatning](./images/ecidprimidns.png)
-
-- Klicka på **[!UICONTROL Apply]** om du vill spara ändringarna.
-
-  ![Datainmatning](./images/apply.png)
-
-- Markera fältet **[!UICONTROL mobilenr]**.
-- Till höger i fältegenskaperna rullar du nedåt tills du ser **[!UICONTROL Identity]**. Markera kryssrutan för **[!UICONTROL Identity]**.
-
-  ![Datainmatning](./images/mobid.png)
-
-- Se till att du väljer namnområdet **[!UICONTROL Phone]** i listan med **[!UICONTROL Namespaces]**. Ett namnutrymme används av identitetsdiagrammet i Adobe Experience Platform för att klassificera identifierare i namnutrymmen och definiera relationen mellan dessa namnutrymmen.
-
-  ![Datainmatning](./images/mobprimidns.png)
-
-- Klicka på **[!UICONTROL Apply]** om du vill spara ändringarna.
-
-  ![Datainmatning](./images/apply.png)
+![Datainmatning](./images/mobid.png)
 
 Objektet **[!UICONTROL identification]** ska nu se ut så här, med de tre ID-fälten som nu även visar en **[!UICONTROL fingerprint]** -ikon för att visa att de har definierats som identifierare.
 
 ![Datainmatning](./images/applyiden.png)
 
-Nu ger vi ditt schema ett namn. Markera fältet **Namnlöst schema**.
-
-![Datainmatning](./images/schemaname1.png)
-
-Som namn för vårt schema ska du använda följande:
-
-`--aepUserLdap-- - Demo System - Profile Schema for Website`
-
-Ersätt **[!UICONTROL ldap]** med din specifika ldap. För ldap **[!UICONTROL vangeluw]** bör det här till exempel vara schemats namn:
-
-**[!UICONTROL vangeluw - Demo System - Profile Schema for Website]**
-
-Det borde ge dig något sådant:
-
-![Datainmatning](./images/schemaname.png)
-
-Du har nu definierat ett schema, länkat befintligt och nyligen skapat [!UICONTROL Field Groups] och definierat identifierare.
-
 Klicka på **[!UICONTROL Save]** om du vill spara ändringarna.
 
-![Datainmatning](./images/save.png)
+![Datainmatning](./images/saveschema.png)
 
 Det sista du bör göra här är att aktivera schemat som ska länkas till **[!UICONTROL Profile]**.
 Genom att aktivera ditt schema för profil ser du till att alla data som skickas till Adobe Experience Platform mot det här schemat blir en del av kundprofilmiljön i realtid, vilket ser till att alla dessa data kan användas i realtid för frågor, segmentering och aktivering.
 
-Vi gör detta genom att välja namnet på ditt schema.
+Markera schemats namn för att göra detta.
 
 ![Datainmatning](./images/schemastructure.png)
 
-På den högra fliken i schemat visas en **[!UICONTROL Profile toggle]** som för närvarande är inaktiverad.
+Klicka på **[!UICONTROL Profile toggle]** på den högra fliken i schemat, som för närvarande är inaktiverad.
 
-![Datainmatning](./images/upswitcher.png)
+![Datainmatning](./images/upswitcherps.png)
 
 Aktivera [!UICONTROL Profile] - växla genom att klicka på den.
 
-Det här meddelandet visas:
-
-![Datainmatning](./images/sure.png)
-
 Klicka på **[!UICONTROL Enable]** om du vill aktivera det här schemat för profil.
 
-Schemat är nu konfigurerat att ingå i [!UICONTROL Real-time Customer Profile].
+![Datainmatning](./images/sureps.png)
 
-![Datainmatning](./images/surey.png)
+Schemat är nu konfigurerat att ingå i [!UICONTROL Real-time Customer Profile]. Klicka på **[!UICONTROL Save]** för att spara ditt schema.
 
-Klicka slutligen på **[!UICONTROL Save]** för att spara schemat.
+![Datainmatning](./images/sureyps.png)
 
-![Datainmatning](./images/save.png)
+### Vad gör en kund?
 
-### 1.2.1.2 - Vad gör den här kunden
-
-Hämtar svaret på frågan **Vad gör den här kunden?** för ditt företag görs via till exempel en produktvy på en produktsida.
+Hämtar svaret på frågan **Vad gör den här kunden?** för din organisation görs via till exempel en produktvy på en produktsida.
 
 ![Datainmatning](./images/pv7.png)
 
@@ -342,7 +291,7 @@ Så när du skapar en [!UICONTROL XDM Schema] att hämta svaret på **Vad gör d
 
 Om du vill ange vilken typ av svar som kan ges på den frågan måste du definiera [!UICONTROL Field Group]. [!UICONTROL Field Groups] är tillägg till klassen [!UICONTROL ExperienceEvent] och har mycket specifika konfigurationer. Information om vilken typ av produkter en kund har visat eller lagt till i kundvagnen ingår i [!UICONTROL Field Group] **Commerce-informationen**.
 
-För det andra måste ert företag bestämma hur ni ska identifiera kundens beteende. Eftersom vi talar om interaktioner på en webbplats är det möjligt att ert företag känner till kunden, men det är lika möjligt att en okänd anonym besökare är aktiv på webbplatsen. Så vi kan inte använda en identifierare som e-postadress. I det här fallet kommer ditt företag antagligen att välja att använda [!UICONTROL Experience Cloud ID (ECID)] som primär identifierare.
+För det andra måste ni bestämma hur ni ska identifiera kundens beteende. Eftersom vi talar om interaktioner på en webbplats är det möjligt att organisationen känner kunden, men det är lika möjligt att en okänd anonym besökare är aktiv på webbplatsen. Så vi kan inte använda en identifierare som e-postadress. I det här fallet kommer din organisation antagligen att välja att använda [!UICONTROL Experience Cloud ID (ECID)] som primär identifierare.
 
 Slutligen är det viktigt att skilja på vilken kanal som data hämtades från. I det här fallet ska vi prata om webbplatsinteraktioner och schemat som måste definieras måste återspegla **var** interaktionsdata hämtades. Kanalen kommer också att ha en viktig roll när det gäller att påverka vilka data som hämtas. Därför är det en god vana att definiera scheman för varje kombination av kanal, primär identifierare och typ av data som samlas in.
 
@@ -360,15 +309,23 @@ Klicka på **[!UICONTROL Schemas]** på menyn till vänster på skärmen i Adobe
 
 ![Datainmatning](./images/menuschemas.png)
 
-Om [!UICONTROL Schemas] visas alla befintliga scheman.
+Om [!UICONTROL Schemas] visas alla befintliga scheman. Du bör skapa ett nytt schema. Om du vill skapa ett nytt schema klickar du på knappen **[!UICONTROL + Create Schema]**.
 
 ![Datainmatning](./images/schemasee.png)
 
-Du bör skapa ett nytt schema. Om du vill skapa ett nytt schema klickar du på knappen **[!UICONTROL + Create Schema]** och väljer **[!UICONTROL XDM ExperienceEvent]**.
+Välj **Manuell** och klicka på **Markera**.
 
 ![Datainmatning](./images/createschema1.png)
 
-När du har klickat på knappen **[!UICONTROL + Create Schema]** skapas ett nytt schema och du uppmanas att välja eller skapa **fältgrupper**.
+Välj **Experience Event** och klicka på **Next**.
+
+![Datainmatning](./images/createschema1a.png)
+
+Ange ett namn för schemat enligt följande: `--aepUserLdap-- - Demo System - Event Schema for Website`. Klicka på **Slutför**.
+
+![Datainmatning](./images/schemaname1ee.png)
+
+Ett nytt schema skapas och du kan konfigurera vilka data som ska samlas in mot det.
 
 ![Datainmatning](./images/emptyschemaee.png)
 
@@ -384,26 +341,24 @@ I inledningen av labbet noterade vi att det fanns behov av följande attribut f�
 
 Om du vill göra den informationen till en del av ditt schema måste du lägga till följande [!UICONTROL Field Group] i ditt schema:
 
-- Webbinformation
-- Information om Commerce
-- Miljöinformation
-- ditt företags anpassade profilidentifiering [!UICONTROL Field Group] (primära och sekundära identifierare)
+- AEP Web SDK ExperienceEvent
+- din organisations anpassade profilidentifiering [!UICONTROL Field Group]
 
-På skärmen **[!UICONTROL Add Field Group]** väljer du [!UICONTROL Field Groups] **[!UICONTROL Web Details]**, **[!UICONTROL Commerce Details]** och **[!UICONTROL Environment Details]**.
+Klicka på **+ Lägg till** under **Fältgrupper**.
+
+![Datainmatning](./images/eeedfg.png)
+
+Markera [!UICONTROL Field Group] **[!UICONTROL AEP Web SDK ExperienceEvent]** på skärmen **[!UICONTROL Add Field Group]**. Klicka på **[!UICONTROL Add Field Groups]**.
 
 ![Datainmatning](./images/eeed.png)
-
-Klicka på knappen **[!UICONTROL Add Field Groups]** för att lägga till fältgruppen i ditt schema.
-
-![Datainmatning](./images/addmixin1.png)
 
 Då får du den här:
 
 ![Datainmatning](./images/eethis.png)
 
-Därefter måste du skapa en ny [!UICONTROL Field Group] för att kunna hämta **[!UICONTROL Identifier]** som används för datainsamling. Som du har sett i föregående övning finns det ett koncept för primära och sekundära identifierare. En primär identifierare är den viktigaste eftersom alla insamlade data länkas till den här identifieraren.
+Därefter måste du skapa en ny [!UICONTROL Field Group] för att kunna hämta **[!UICONTROL Identifier]** som används för datainsamling.
 
-Du kommer nu att skapa din egen anpassade [!UICONTROL Field Group] och därför kommer du att utöka [!UICONTROL XDM Schema] för att uppfylla ditt företags krav.
+Du kommer nu att skapa din egen anpassade [!UICONTROL Field Group] och därför kommer du att utöka [!UICONTROL XDM Schema] för att uppfylla din egen organisations krav.
 
 En [!UICONTROL Field Group] är länkad till en [!UICONTROL Class], vilket innebär att du inte kan återanvända den [!UICONTROL Field Group] som skapades tidigare.
 
@@ -411,27 +366,10 @@ Klicka på knappen **[!UICONTROL + Add]** för att börja lägga till en [!UICON
 
 ![Datainmatning](./images/addmixinee2.png)
 
-I stället för att återanvända en befintlig [!UICONTROL Field Group] skapar du nu en egen [!UICONTROL Field Group]. Du kan göra det genom att välja **[!UICONTROL Create New Field Group]**.
+I stället för att återanvända en befintlig [!UICONTROL Field Group] skapar du nu en egen [!UICONTROL Field Group]. Välj **[!UICONTROL Create New Field Group]** och ange namnet på fältgruppen, så här: `--aepUserLdap-- - ExperienceEvent Identification Field Group`.
+Klicka på **Lägg till fältgrupper**
 
-![Datainmatning](./images/createmixin.png)
-
-Du måste nu ange **[!UICONTROL Display Name]** och **[!UICONTROL Description]** för den nya fältgruppen.
-
-Använd följande som namn för fältgruppen:
-
-`--aepUserLdap-- - ExperienceEvent Identification Field Group`
-
-För ldap **[!UICONTROL vangeluw]** bör det här till exempel vara schemats namn:
-
-**[!UICONTROL vangeluw - ExperienceEvent Identification Field Group]**
-
-Det borde ge dig något sådant:
-
-![Datainmatning](./images/mixinnameee.png)
-
-Klicka på knappen **[!UICONTROL Add Field Group]** för att lägga till den nya [!UICONTROL Field Group] i ditt schema.
-
-![Datainmatning](./images/addmixin1.png)
+![Datainmatning](./images/createmixineew.png)
 
 Du bör nu ha den här [!UICONTROL Schema]-strukturen på plats.
 
@@ -448,35 +386,28 @@ Klicka på knappen **[!UICONTROL +]** bredvid schemanamnet på den översta niv�
 
 ![Datainmatning](./images/clickaddfieldee.png)
 
-När du har klickat på knappen **[!UICONTROL +]** visas nu en ny **[!UICONTROL object]** i ditt schema. Det här objektet representerar en anpassad **[!UICONTROL object]** i din [!UICONTROL Schema] och namnges efter ditt Adobe Experience Platform Klient-ID. Ditt Adobe Experience Platform-klient-ID är `--aepTenantId--`.
+När du har klickat på knappen **+** visas nu ett nytt namnlöst fält i ditt schema.
 
-![Datainmatning](./images/tenantee.png)
-
-Du kommer nu att lägga till ett nytt objekt under den klienten. Det gör du genom att klicka på fältet **[!UICONTROL New Field]** under innehavarobjektet.
-
-![Datainmatning](./images/tenantfieldee.png)
-
-Använd dessa objektdefinitioner:
+Använd detta för att definiera ditt nya fält:
 
 - Fältnamn: **[!UICONTROL identification]**
 - Visningsnamn: **[!UICONTROL identification]**
 - Typ: **[!UICONTROL Object]**
+- Fältgrupp: `--aepUserLdap-- - ExperienceEvent Identification Field Group`
+
+Klicka på **Använd**.
 
 ![Datainmatning](./images/tenantfielddefee.png)
 
-Bläddra nedåt och klicka på **[!UICONTROL Apply]** för att spara ändringarna.
+Ditt nya fält skapas nu under ditt Adobe Experience Platform Klient-ID. Ditt Adobe Experience Platform-klient-ID är `--aepTenantId--`.
 
-![Datainmatning](./images/apply.png)
-
-När du har klickat på **[!UICONTROL Apply]** ser du nu ditt **[!UICONTROL identification]**-objekt i schemat.
-
-![Datainmatning](./images/schemaidee.png)
+![Datainmatning](./images/tenantee.png)
 
 Du lägger nu till 1 nytt fält under objektet **[!UICONTROL identification]**.
 
 Klicka på knappen **[!UICONTROL +]** bredvid objektet **[!UICONTROL identification]** för att skapa ett nytt fält.
 
-![Datainmatning](./images/schemaideeplus.png)
+![Datainmatning](./images/tenantfieldeewv.png)
 
 ECID-fältet definieras som typen **[!UICONTROL String]** och du konfigurerar det här fältet som en **[!UICONTROL Identity]**. För schemat **[!UICONTROL Demo System - Event Schema for Website]** antar vi att en kund alltid identifieras av sin [!UICONTROL ECID], vilket innebär att du måste konfigurera fältet **[!UICONTROL ECID]** som en **primär**-identifierare
 
@@ -484,9 +415,10 @@ Du har nu ett tomt fält. Du måste konfigurera fältet ovan enligt anvisningarn
 
 - ecid:
 
-   - Fältnamn: **[!UICONTROL ecid]**
-   - Visningsnamn: **[!UICONTROL ecid]**
+   - Fältnamn: **[!UICONTROL ecidweb]**
+   - Visningsnamn: **[!UICONTROL ecidweb]**
    - Typ: **[!UICONTROL String]**
+   - Fältgrupp: `--aepUserLdap-- - ExperienceEvent Identification Field Group`
 
 Så här ska fältet [!UICONTROL ecid] se ut efter din ursprungliga fältkonfiguration:
 
@@ -494,88 +426,53 @@ Så här ska fältet [!UICONTROL ecid] se ut efter din ursprungliga fältkonfigu
 
 Rulla ned och klicka på **[!UICONTROL Apply]**.
 
-![Datainmatning](./images/apply.png)
+![Datainmatning](./images/applywv.png)
 
 Du har nu ett nytt fält, men det här fältet har inte definierats som ett **[!UICONTROL Identity]**-fält än.
 
 ![Datainmatning](./images/3fieldsee.png)
 
-Så här definierar du de här fälten som **[!UICONTROL Identity]**-fält:
+Om du vill börja definiera dessa fält som **[!UICONTROL Identity]**-fält markerar du fältet **[!UICONTROL ecid]**.
+Till höger i fältegenskaperna rullar du nedåt tills du ser **[!UICONTROL Identity]**. Markera kryssrutan för **[!UICONTROL Identity]** och markera kryssrutan för **[!UICONTROL Primary Identity]**.
+Markera namnområdet **[!UICONTROL ECID]** i listan med **[!UICONTROL Namespaces]**.
 
-- Markera fältet **[!UICONTROL ecid]**.
-- Till höger i fältegenskaperna rullar du nedåt tills du ser **[!UICONTROL Identity]**. Markera kryssrutan för **[!UICONTROL Identity]**.
+Klicka på **[!UICONTROL Apply]** om du vill spara ändringarna.
 
 ![Datainmatning](./images/ecididee.png)
 
-- Markera kryssrutan för **[!UICONTROL Primary Identity]**.
-
-![Datainmatning](./images/ecidprimidee.png)
-
-- Välj sedan namnområdet **[!UICONTROL ECID]** i listan med **[!UICONTROL Namespaces]**. [!UICONTROL Namespace] används av [!UICONTROL Identity Graph] i Adobe Experience Platform för att klassificera identifierare i namnutrymmen och definiera relationen mellan dessa namnutrymmen.
-
-  ![Datainmatning](./images/ecidprimidnsee.png)
-
-- Klicka slutligen på **[!UICONTROL Apply]** för att spara ändringarna.
-
-  ![Datainmatning](./images/apply.png)
-
 Objektet **[!UICONTROL identification]** ska nu se ut så här, med det eke-fältet som nu även visar en **fingerprint** -ikon som visar att de har definierats som identifierare.
-
-![Datainmatning](./images/applyidenee.png)
-
-Nu ger vi ditt schema ett namn. Markera fältet **Namnlöst schema**.
-
-![Datainmatning](./images/schemaname1ee.png)
-
-Vi kommer att använda det här som namn för vårt schema:
-`--aepUserLdap-- - Demo System - Event Schema for Website`
-
-För ldap **[!UICONTROL vangeluw]** bör det här till exempel vara schemats namn:
-
-**[!UICONTROL vangeluw - Demo System - Event Schema for Website]**
-
-Det borde ge dig något sådant:
-
-![Datainmatning](./images/schemanameee.png)
-
 Klicka på **[!UICONTROL Save]** om du vill spara ändringarna.
 
-![Datainmatning](./images/save.png)
+![Datainmatning](./images/applyidenee.png)
 
 Det är viktigt att komma ihåg att när data hämtas till det här schemat så behövs vissa fält.
 Fälten **[!UICONTROL _id]** och **[!UICONTROL timestamp]** är till exempel obligatoriska fält.
 
 - _id måste innehålla ett unikt ID för en specifik datainmatning
-- tidsstämpeln måste vara tidsstämpeln för den här träffen, i formatet **[!UICONTROL "YYYY-MM-DDTHH:MM:SSSZ"]**, till exempel: **[!UICONTROL "2019-04-08T07:20:000Z"]**
+- tidsstämpeln måste vara tidsstämpeln för den här träffen, i formatet **[!UICONTROL "YYYY-MM-DDTHH:MM:SSSZ"]**, till exempel: **[!UICONTROL "2024-11-18T07:20:000Z"]**
 
 Du har nu definierat ett schema, länkat befintligt och nyligen skapat [!UICONTROL Field Groups] och definierat identifierare.
 
 Det sista du bör göra här är att aktivera schemat som ska länkas till **[!UICONTROL Profile]**.
 Genom att aktivera ditt schema för [!UICONTROL Profile] ser du till att alla data som skickas till Adobe Experience Platform mot det här schemat blir en del av kundprofilen i realtid, vilket ser till att alla dessa data kan användas i realtid för frågor, segmentering och aktivering.
 
-Vi gör detta genom att välja namnet på ditt schema.
+Om du vill göra det klickar du på schemats namn.
 
 ![Datainmatning](./images/schemastructureeee.png)
 
-På den högra fliken i schemat visas en **[!UICONTROL Profile]-växel** som för närvarande är inaktiverad.
+På den högra fliken i schemat visas en **[!UICONTROL Profile]-växel** som för närvarande är inaktiverad. Klicka på växeln [!UICONTROL Profile] - för att aktivera den.
 
 ![Datainmatning](./images/upswitcheree.png)
 
-Aktivera [!UICONTROL Profile] - växla genom att klicka på den.
+Du kommer att se det här meddelandet. Klicka på **[!UICONTROL Enable]** om du vill aktivera det här schemat för profil.
 
-Det här meddelandet visas:
-
-![Datainmatning](./images/sure.png)
-
-Klicka på **[!UICONTROL Enable]** om du vill aktivera det här schemat för profil.
+![Datainmatning](./images/sureeewv.png)
 
 Ditt schema är nu konfigurerat att ingå i kundprofilen i realtid.
 
-![Datainmatning](./images/surey.png)
+Klicka på **[!UICONTROL Save]** för att spara ditt schema.
 
-Klicka slutligen på **[!UICONTROL Save]** för att spara schemat.
-
-![Datainmatning](./images/save.png)
+![Datainmatning](./images/saveeewv.png)
 
 Du har nu skapat scheman som har aktiverats för användning i kundprofilen i realtid.
 

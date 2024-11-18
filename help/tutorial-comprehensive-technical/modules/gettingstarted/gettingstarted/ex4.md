@@ -4,9 +4,9 @@ description: Komma igång - Använd webbplatsen
 kt: 5342
 doc-type: tutorial
 exl-id: 6c63a63e-551f-4568-bba5-9d61d7e6a7d1
-source-git-commit: 7f436f77ab6d7c625181304fd41be75c627c5b46
+source-git-commit: 8bdcd03bd38a6da98b82439ad86482cad5f4e684
 workflow-type: tm+mt
-source-wordcount: '439'
+source-wordcount: '440'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 >Om du inte har skärmen nedan öppen längre går du till alternativ 2 i stället.
 
-Efter träning 0.1 fick du det här resultatet. Klicka för att öppna det **webb-Telco-projekt** som skapades åt dig.
+Efter föregående övning fick du det här resultatet. Klicka för att öppna det **webb-Telco-projekt** som skapades åt dig.
 
 ![DSN](./images/dsn5a.png)
 

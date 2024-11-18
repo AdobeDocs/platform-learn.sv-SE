@@ -3,9 +3,10 @@ title: Foundation - datainmatning - datainmatning från offlinekällor
 description: Foundation - datainmatning - datainmatning från offlinekällor
 kt: 5342
 doc-type: tutorial
-source-git-commit: 2cdc145d7f3933ec593db4e6f67b60961a674405
+exl-id: 21b84a77-4115-4ba7-b847-b236aa14bbdd
+source-git-commit: 8bdcd03bd38a6da98b82439ad86482cad5f4e684
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '771'
 ht-degree: 0%
 
 ---
@@ -21,11 +22,11 @@ Data Landing Zone är ett Azure Blob-lagringsgränssnitt som tillhandahålls av 
 > Adobe Experience Platform **tvingar en strikt TTL** (time-to-live) på sju dagar för alla filer som överförs till en Data Landing Zone-behållare. Alla filer tas bort efter sju dagar.
 
 
-## 1.2.5.1 Krav
+## Förhandskrav
 
-Om du vill kopiera blober eller filer till din Adobe Experience Platform Data Landing Zone använder du kommandoradsverktyget AzCopy. Du kan hämta en version för ditt operativsystem via [https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10).
+Om du vill kopiera blober eller filer till din Adobe Experience Platform Data Landing Zone använder du kommandoradsverktyget AzCopy. Du kan hämta en version för ditt operativsystem via [https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10), bläddra nedåt på sidan för att **hämta den portabla AzCopy-binärfilen** och välja lämplig version för ditt operativsystem.
 
-![dlz-install-az-copy.png](./images/dlz-install-az-copy.png)
+![dlz-install-az-copy.png](./images/dlzinstallazcopy.png)
 
 - Zippa upp den hämtade filen
 
@@ -37,7 +38,7 @@ Om du vill kopiera blober eller filer till din Adobe Experience Platform Data La
 
 - Öppna ett terminalfönster och navigera till mappen på skrivbordet. Du bör se följande innehåll (azcopy och global-context-websiteinteractions.csv), till exempel på OSX:
 
-![dlz-unzip-azcopy.png](./images/dlz-unzip-azcopy.png)
+![dlz-unzip-azcopy.png](./images/dlzunzipazcopy.png)
 
 ## 1.2.5.2 Ansluta Data Landing Zone till Adobe Experience Platform
 
@@ -47,19 +48,23 @@ När du har loggat in loggar du in på Adobe Experience Platform hemsida.
 
 ![Datainmatning](./images/home.png)
 
-Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``--module2sandbox--``. Du kan göra detta genom att klicka på texten **[!UICONTROL Production Prod]** i den blå raden ovanför skärmen. När du har valt rätt sandlåda ser du skärmändringen och nu befinner du dig i din dedikerade sandlåda.
+Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``--aepSandboxName--``.  När du har valt rätt sandlåda ser du skärmändringen och nu befinner du dig i din dedikerade sandlåda.
 
 ![Datainmatning](./images/sb1.png)
 
-Gå till **Källor** på den vänstra menyn. Sök efter **datalandning** i källkatalogen. På **Data Landing Zone**-kortet klickar du på **..** och väljer **Visa autentiseringsuppgifter**.
+Gå till **Källor** på den vänstra menyn. Sök efter **datalandning** i källkatalogen.
 
-![dlz-view-credentials.png](./images/dlz-view-credentials.png)
+![Datainmatning](./images/sourcesdlz.png)
 
-Klicka på tp copy **SASUri**.
+Klicka på **Data Landing Zone** -kortet så visas inloggningsuppgifterna på den högra fliken.
 
-![dlz-copy-sas-uri.png](./images/dlz-copy-sas-uri.png)
+![dlz-view-credentials.png](./images/dlzviewcredentials.png)
 
-## 1.2.5.3 Kopiera csv-filen till AEP-datalandningszonen
+Klicka på ikonen för att kopiera **SASUri**.
+
+![dlz-copy-sas-uri.png](./images/dlzcopysasuri.png)
+
+## Kopiera csv-filen till AEP-datalandningszonen
 
 Du kommer nu att importera data till Adobe Experience Platform med Azure-kommandoradsverktyg med hjälp av AZCopy.
 
@@ -75,41 +80,41 @@ Se till att omge din SASUri med dubbla citattecken. Ersätt `<your-local-file>` 
 
 När du har kört ovanstående kommando i terminalen visas följande:
 
-![dlz-exec-copy-command.png](./images/dlz-exec-copy-command.png)
+![dlz-exec-copy-command.png](./images/dlzexeccopycommand.png)
 
-## 1.2.5.4 Söka efter filen i din Data Landing Zone
+## Sök efter filen i din Data Landing Zone
 
 Gå till din Data Landing Zone i Adobe Experience Platform.
 
 Välj **Källor**, sök efter **datalandning** och klicka på knappen **Inställningar** .
 
-![dlz-inspect-datalanding-zone.png](./images/dlz-inspect-datalanding-zone.png)
+![dlz-inspect-datalanding-zone.png](./images/dlzinspectdatalandingzone.png)
 
 Då öppnas Data Landing Zone. Du ser filen som du just överförde i datalandningszonens **valda data**-panel.
 
-![dlz-datalanding-zone-open.png](./images/dlz-datalanding-zone-open.png)
+![dlz-datalanding-zone-open.png](./images/dlzdatalandingzoneopen.png)
 
-## 1.2.5.5 Bearbeta filen
+## Bearbeta filen
 
 Markera filen och välj **Avgränsad** som dataformat. Sedan visas en förhandsgranskning av dina data. Klicka på **Nästa**.
 
-![dlz-datalanding-select-file.png](./images/dlz-datalanding-select-file.png)
+![dlz-datalanding-select-file.png](./images/dlzdatalandingselectfile.png)
 
 Nu kan du börja mappa överförda data så att de matchar XDM-schemat i datauppsättningen.
 
 Välj **Befintlig datauppsättning** och välj datauppsättningen **Demo System - händelsedatauppsättning för webbplats (Global v1.1)**. Klicka på **Nästa**.
 
-![dlz-target-dataset.png](./images/dlz-target-dataset.png)
+![dlz-target-dataset.png](./images/dlztargetdataset.png)
 
 Nu kan du mappa inkommande källdata från csv-filen till målfälten från datauppsättningens XDM-schema.
 
-![dlz-start-mapping.png](./images/dlz-start-mapping.png)
+![dlz-start-mapping.png](./images/dlzstartmapping.png)
 
 >[!NOTE]
 >
 > Glöm inte de potentiella felen med mappningen. Du korrigerar mappningen i nästa steg.
 
-## 1.2.5.6 Kartfält
+## Kartfält
 
 Klicka först på knappen **Rensa alla mappningar**. Sedan kan du börja med en ren mappning.
 
@@ -117,19 +122,19 @@ Klicka först på knappen **Rensa alla mappningar**. Sedan kan du börja med en 
 
 Klicka sedan på **Ny fälttyp** och välj **Lägg till nytt fält**.
 
-![dlz-clear-mappings.png](./images/dlz-clear-mappings.png)
+![dlz-clear-mappings.png](./images/dlzclearmappings.png)
 
 Om du vill mappa **ecid**-källfältet markerar du fältet **identities.ecid** och klickar på **Select**.
 
-![dlz-map-identity.png](./images/dlz-map-identity.png)
+![dlz-map-identity.png](./images/dlzmapidentity.png)
 
 Klicka sedan på **Mappa målfält**.
 
-![dlz-map-select-target-field.png](./images/dlz-map-select-target-field.png)
+![dlz-map-select-target-field.png](./images/dlzmapselecttargetfield.png)
 
 Markera fältet ``--aepTenantId--``.identity.core.ecid i schemastrukturen.
 
-![dlz-map-target-field.png](./images/dlz-map-target-field.png)
+![dlz-map-target-field.png](./images/dlzmaptargetfield.png)
 
 Du måste mappa några andra fält, klicka på **+ Ny fälttyp** följt av **Lägg till nytt fält** och lägga till fält för den här mappningen
 
@@ -139,29 +144,29 @@ Du måste mappa några andra fält, klicka på **+ Ny fälttyp** följt av **Lä
 | tidsstämpel | tidsstämpel |
 | tidsstämpel | _id |
 
-![dlz-add-other-mapping.png](./images/dlz-add-other-mapping.png)
+![dlz-add-other-mapping.png](./images/dlzaddothermapping.png)
 
 När skärmen är klar bör den se ut som på skärmen nedan. Klicka på **Nästa**.
 
-![dlz-mapping-result.png](./images/dlz-mapping-result.png)
+![dlz-mapping-result.png](./images/dlzmappingresult.png)
 
 Klicka på **Nästa**.
 
-![dlz-default-eduling.png](./images/dlz-default-scheduling.png)
+![dlz-default-eduling.png](./images/dlzdefaultscheduling.png)
 
 Klicka på **Slutför**.
 
-![dlz-import-finish.png](./images/dlz-import-finish.png)
+![dlz-import-finish.png](./images/dlzimportfinish.png)
 
-## 1.2.5.7 Skärmdataflöde
+## Övervaka dataflöde
 
 Om du vill övervaka dataflödet går du till **Källor**, **Dataflöden** och klickar på dataflödet:
 
-![dlz-monitor-dataflow.png](./images/dlz-monitor-dataflow.png)
+![dlz-monitor-dataflow.png](./images/dlzmonitordataflow.png)
 
 Det kan ta några minuter att läsa in data. Statusen **Slutfört** visas när det är klart:
 
-![dlz-monitor-dataflow-result.png](./images/dlz-monitor-dataflow-result.png)
+![dlz-monitor-dataflow-result.png](./images/dlzmonitordataflowresult.png)
 
 Nästa steg: [Sammanfattning och förmåner](./summary.md)
 
