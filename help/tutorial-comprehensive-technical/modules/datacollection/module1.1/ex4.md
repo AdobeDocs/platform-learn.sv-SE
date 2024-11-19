@@ -4,16 +4,16 @@ description: Foundation - konfiguration av Adobe Experience Platform Data Collec
 kt: 5342
 doc-type: tutorial
 exl-id: dce7f1b5-72ca-41b2-9aa8-41c13ce25c82
-source-git-commit: 0dbcda0cfc9f199a44c845c1b5caf00a8d740251
+source-git-commit: 3a19e88e820c63294eff38bb8f699a9f690afcb9
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '631'
 ht-degree: 0%
 
 ---
 
 # 1.1.4 Webbdatainsamling på klientsidan
 
-## 1.1.4.1 Validera data i begäran
+## Validera data i begäran
 
 ### Installera Adobe Experience Platform Debugger
 
@@ -40,7 +40,7 @@ Kontrollera att dessa två inställningar är aktiverade:
 
 Gå till [https://dsn.adobe.com](https://dsn.adobe.com). När du har loggat in med din Adobe ID ser du det här. Klicka på de tre punkterna **..** i webbplatsprojektet och klicka sedan på **Kör** för att öppna det.
 
-![DSN](.//images/web8.png)
+![DSN](./images/web8.png)
 
 Du kommer då att se din demowebbplats öppnas. Markera URL-adressen och kopiera den till Urklipp.
 

@@ -3,256 +3,25 @@ title: CDP i realtid - Destinations SDK
 description: CDP i realtid - Destinations SDK
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: 5606ca2f-85ce-41b3-80f9-3c137f66a8c0
+source-git-commit: 3a19e88e820c63294eff38bb8f699a9f690afcb9
 workflow-type: tm+mt
-source-wordcount: '2382'
+source-wordcount: '1045'
 ht-degree: 0%
 
 ---
 
 # 2.3.7 Destinations SDK
 
-## 2.3.7.1 Konfigurera ditt Adobe I/O-projekt
+## Konfigurera ditt Adobe I/O-projekt
 
->[!IMPORTANT]
->
->Om du har skapat ditt Adobe I/O-projekt efter december 2021 kan du återanvända det projektet, hoppa över den här övningen och gå direkt till övning 6.7.2.
->
->Om du skapade ditt Adobe I/O-projekt före december 2021 skapar du ett nytt projekt som är kompatibelt med API:t för målredigering.
+I den här övningen kommer du att använda Adobe I/O igen för att ställa frågor till Adobe Experience Platform API:er. Om du inte har konfigurerat ditt Adobe I/O-projekt ännu går du tillbaka till [Exercise 3 i Module 2.1](../module2.1/ex3.md) och följer instruktionerna där.
 
-I den här övningen kommer du att använda Adobe I/O intensivt för att ställa frågor mot plattformens API:er. Följ stegen nedan för att konfigurera Adobe I/O.
+## Postman-autentisering till Adobe I/O
 
-Gå till [https://developer.adobe.com/console/home](https://developer.adobe.com/console/home)
+I den här övningen kommer du att använda Postman igen för att ställa frågor till Adobe Experience Platform API:er. Om du inte har konfigurerat ditt Postman-program ännu går du tillbaka till [Utgång 3 i modul 2.1](../module2.1/ex3.md) och följer instruktionerna där.
 
-![Ny integrering för Adobe I/O](../module2.1/images/iohome.png)
-
-Se till att du väljer rätt Adobe Experience Platform-instans i skärmens övre högra hörn. Din instans är `--envName--`.
-
-![Ny integrering för Adobe I/O](../module2.1/images/iocomp.png)
-
-Klicka på **Skapa nytt projekt**.
-
-![Ny integrering för Adobe I/O](../module2.1/images/adobe_io_new_integration.png) eller
-![Adobe I/O Ny integrering](../module2.1/images/adobe_io_new_integration1.png)
-
-Välj **+ Lägg till i projekt** och välj **API**.
-
-![Ny integrering för Adobe I/O](../module2.1/images/adobe_io_access_api.png)
-
-Då ser du det här:
-
-![Ny integrering för Adobe I/O](../module2.1/images/api1.png)
-
-Klicka på ikonen **Adobe Experience Platform** .
-
-![Ny integrering för Adobe I/O](../module2.1/images/api2.png)
-
-Klicka på **Experience Platform API**.
-
-![Ny integrering för Adobe I/O](../module2.1/images/api3.png)
-
-Klicka på **Nästa**.
-
-![Ny integrering för Adobe I/O](../module2.1/images/next.png)
-
-Nu kan du välja att antingen låta Adobe I/O generera ditt nyckelpar eller överföra ett befintligt.
-
-Välj **Alternativ 1 - Generera ett nyckelpar**.
-
-![Ny integrering för Adobe I/O](../module2.1/images/api4.png)
-
-Klicka på **Skapa nyckelpar**.
-
-![Ny integrering för Adobe I/O](../module2.1/images/generate.png)
-
-Du får se en snurra i cirka 30 sekunder.
-
-![Ny integrering för Adobe I/O](../module2.1/images/spin.png)
-
-Du kommer då att se detta och det nyckelpar som genererats hämtas som en zip-fil: **config.zip**.
-
-Zippa upp filen **config.zip** på skrivbordet så ser du att den innehåller 2 filer:
-
-![Ny integrering för Adobe I/O](../module2.1/images/zip.png)
-
-- **certificate_pub.crt** är ditt certifikat för offentlig nyckel. Ur säkerhetssynpunkt är detta det certifikat som fritt används för att konfigurera integreringar med onlineprogram.
-- **private.key** är din privata nyckel. Det här ska aldrig delas med någon. Den privata nyckeln är det du använder för att autentisera din API-implementering och ska vara en hemlighet. Om du delar din privata nyckel med vem som helst kan de komma åt implementeringen och missbruka API:t för att importera skadliga data till Platform och extrahera alla data som finns i Platform.
-
-![Ny integrering för Adobe I/O](../module2.1/images/config.png)
-
-Spara filen **config.zip** på en säker plats, eftersom du behöver detta för nästa steg och för framtida åtkomst till API:er för Adobe I/O och Adobe Experience Platform.
-
-Klicka på **Nästa**.
-
-![Ny integrering för Adobe I/O](../module2.1/images/next.png)
-
-Du måste nu välja **produktprofiler** för din integrering.
-
-Välj önskade produktprofiler.
-
-**FYI**: I din Adobe Experience Platform-instans får produktprofilerna ett annat namn. Du måste välja minst en produktprofil med rätt åtkomsträttigheter, som är konfigurerad i Adobe Admin Console.
-
-![Ny integrering för Adobe I/O](../module2.1/images/api9.png)
-
-Klicka på **Spara konfigurerat API**.
-
-![Ny integrering för Adobe I/O](../module2.1/images/saveconfig.png)
-
-Du får se en snurra i några sekunder.
-
-![Ny integrering för Adobe I/O](../module2.1/images/api10.png)
-
-Och sedan ser du integreringen.
-
-![Ny integrering för Adobe I/O](../module2.1/images/api11.png)
-
-Klicka på knappen **Hämta för Postman** och sedan på **tjänstkonto (JWT)** för att hämta en Postman-miljö (vänta tills miljön har hämtats, det kan ta några sekunder).
-
-![Ny integrering för Adobe I/O](../module2.1/images/iopm.png)
-
-Bläddra nedåt tills du ser **tjänstkonto (JWT)**, där du hittar all integreringsinformation som används för att konfigurera integreringen med Adobe Experience Platform.
-
-![Ny integrering för Adobe I/O](../module2.1/images/api12.png)
-
-IO-projektet har för närvarande ett generiskt namn. Du måste ge integreringen ett eget namn. Klicka på **Projekt 1** (eller liknande namn) som anges
-
-![Ny integrering för Adobe I/O](../module2.1/images/api13.png)
-
-Klicka på **Redigera projekt**.
-
-![Ny integrering för Adobe I/O](../module2.1/images/api14.png)
-
-Ange ett namn och en beskrivning för integreringen. Som namnkonvention använder vi `AEP API --aepUserLdap--`. Ersätt ldap med din ldap.
-Om din ldap till exempel är vangeluw blir namnet och beskrivningen av din integrering AEP API-vangeluw.
-
-Ange `AEP API --aepUserLdap--` som **projekttitel**. Klicka på **Spara**.
-
-![Ny integrering för Adobe I/O](../module2.1/images/api15.png)
-
-Integreringen av Adobe I/O är nu klar.
-
-![Ny integrering för Adobe I/O](../module2.1/images/api16.png)
-
-## 2.3.7.2 Postman-autentisering till Adobe I/O
-
-Gå till [https://www.getpostman.com/](https://www.getpostman.com/).
-
-Klicka på **Kom igång**.
-
-![Ny integrering för Adobe I/O](../module2.1/images/getstarted.png)
-
-Hämta och installera sedan Postman.
-
-![Ny integrering för Adobe I/O](../module2.1/images/downloadpostman.png)
-
-Starta programmet när du har installerat Postman.
-
-I Postman finns det två koncept: Miljö och Samlingar.
-
-- Miljön innehåller alla dina miljövariabler som är mer eller mindre konsekventa. I miljön hittar du saker som IMSOrg i vår plattformsmiljö, tillsammans med säkerhetsreferenser som din privata nyckel och andra. Miljöfilen är den som du hämtade under konfigurationen för Adobe I/O i den tidigare övningen. Den har följande namn: **service.postman_environment.json**.
-
-- Samlingen innehåller ett antal API-begäranden som du kan använda. Vi kommer att använda 2 samlingar
-   - 1 samling för autentisering till Adobe I/0
-   - 1 Samling för övningar i denna modul
-   - 1 samling för övningarna i Real-Time CDP-modulen, för målredigering
-
-Hämta filen [postman.zip](./../../../assets/postman/postman_profile.zip) till ditt lokala skrivbord.
-
-I den här **postman.zip**-filen hittar du följande filer:
-
-- `_Adobe I-O - Token.postman_collection.json`
-- `_Adobe Experience Platform Enablement.postman_collection.json`
-- `Destination_Authoring_API.json`
-
-Zippa upp filen **postman.zip** och lagra dessa tre filer i en mapp på skrivbordet tillsammans med den hämtade Postman-miljön från Adobe I/O. Du måste ha dessa fyra filer i den mappen:
-
-![Ny integrering för Adobe I/O](../module2.1/images/pmfolder.png)
-
-Gå tillbaka till Postman. Klicka på **Importera**.
-
-![Ny integrering för Adobe I/O](../module2.1/images/postmanui.png)
-
-Klicka på **Överför filer**.
-
-![Ny integrering för Adobe I/O](../module2.1/images/choosefiles.png)
-
-Navigera till den mapp på skrivbordet där du extraherade de 4 hämtade filerna. Markera de här fyra filerna samtidigt och klicka på **Öppna**.
-
-![Ny integrering för Adobe I/O](../module2.1/images/selectfiles.png)
-
-När du har klickat på **Öppna** visas en översikt i Postman över miljön och de samlingar du håller på att importera. Klicka på **Importera**.
-
-![Ny integrering för Adobe I/O](../module2.1/images/impconfirm.png)
-
-Nu har du allt du behöver i Postman för att börja interagera med Adobe Experience Platform via API:erna.
-
-Det första du behöver göra är att se till att du är rätt autentiserad. Du måste begära en åtkomsttoken för att kunna autentiseras.
-
-Kontrollera att du har valt rätt miljö innan du kör någon begäran. Du kan kontrollera den valda miljön genom att verifiera listrutan Miljö i det övre högra hörnet.
-
-Den valda miljön bör ha ett namn som liknar det här:
-
-![Postman](../module2.1/images/envselemea.png)
-
-Klicka på ikonen **ögat** och sedan på **Redigera** för att uppdatera den privata nyckeln i miljöfilen.
-
-![Postman](../module2.1/images/gear.png)
-
-Då ser du det här. Alla fält är förifyllda, utom fältet **PRIVATE_KEY**.
-
-![Postman](../module2.1/images/pk2.png)
-
-Den privata nyckeln har genererats när du skapade ditt Adobe I/O-projekt. Den hämtades som en zip-fil med namnet **config.zip**. Extrahera zip-filen till skrivbordet.
-
-![Postman](../module2.1/images/pk3.png)
-
-Öppna mappen **config** och öppna filen **private.key** med valfri textredigerare.
-
-![Postman](../module2.1/images/pk4.png)
-
-Du kommer då att se något liknande, kopiera all text till Urklipp.
-
-![Postman](../module2.1/images/pk5.png)
-
-Gå tillbaka till Postman och klistra in den privata nyckeln i fälten bredvid variabeln **PRIVATE_KEY**, för båda kolumnerna **INITIAL VALUE** och **CURRENT VALUE**. Klicka på **Spara**.
-
-![Postman](../module2.1/images/pk6.png)
-
-Din Postman-miljö och dina samlingar är nu konfigurerade och fungerar. Nu kan du autentisera från Postman till Adobe I/O.
-
-För att göra det måste du läsa in ett externt bibliotek som hanterar kryptering och dekryptering av kommunikation. Om du vill läsa in det här biblioteket måste du köra begäran med namnet **INIT: Läs in krypteringsbibliotek för RS256**. Markera den här begäran i **_Adobe I/O - tokensamlingen** så visas den mitt på skärmen.
-
-![Postman](../module2.1/images/iocoll.png)
-
-![Postman](../module2.1/images/cryptolib.png)
-
-Klicka på den blå **Skicka**-knappen. Efter några sekunder bör du se ett svar i avsnittet **Brödtext** i Postman:
-
-![Postman](../module2.1/images/cryptoresponse.png)
-
-Med kryptobiblioteket inläst kan vi autentisera till Adobe I/O.
-
-I **\_Adobe I/O - Token-samlingen** markerar du begäran med namnet **IMS: JWT Generate + Auth**. Återigen visas informationen om begäran mitt på skärmen.
-
-![Postman](../module2.1/images/ioauth.png)
-
-Klicka på den blå **Skicka**-knappen. Efter några sekunder bör du se ett svar i avsnittet **Brödtext** i Postman:
-
-![Postman](../module2.1/images/ioauthresp.png)
-
-Om konfigurationen lyckades bör du se ett liknande svar som innehåller följande information:
-
-| Nyckel | Värde |
-|:-------------:| :---------------:| 
-| token_type | **bärare** |
-| access_token | **eyJ4NXUiOiJpbXNfbmEx...QT7mqZkumN1tdsPEioOEl4087Dg** |
-| förfaller_in | **86399973** |
-
-Adobe I/O har gett dig en **innehavartoken** med ett specifikt värde (denna mycket långa åtkomsttoken) och ett förfallofönster.
-
-Den token vi har fått gäller nu i 24 timmar. Det innebär att om du efter 24 timmar vill använda Postman för att autentisera till Adobe I/O måste du generera en ny token genom att köra denna begäran igen.
-
-## 2.3.7.3 Definiera slutpunkt och format
+## Definiera slutpunkt och format
 
 För den här övningen behöver du en slutpunkt för att konfigurera så att kvalificeringshändelsen kan direktuppspelas till den slutpunkten när ett segment kvalificerar sig. I den här övningen använder du en exempelslutpunkt med [https://webhook.site/](https://webhook.site/). Gå till [https://webhook.site/](https://webhook.site/), där du ser något liknande. Klicka på **Kopiera till Urklipp** för att kopiera URL:en. Du måste ange den här URL:en i nästa övning. URL:en i det här exemplet är `https://webhook.site/e0eb530c-15b4-4a29-8b50-e40877d5490a`.
 
@@ -281,7 +50,7 @@ När det gäller formatet kommer vi att använda en standardmall som direktuppsp
 }
 ```
 
-## 2.3.7.4 Skapa en server- och mallkonfiguration
+## Skapa en server- och mallkonfiguration
 
 Det första steget för att skapa ett eget mål i Adobe Experience Platform är att skapa en server- och mallkonfiguration.
 
@@ -333,7 +102,7 @@ När du har klickat på **Skicka** skapas servermallen och som en del av svaret 
 
 ![Datainmatning](./images/sdkpm6.png)
 
-## 2.3.7.5 Skapa en destinationskonfiguration
+## Skapa din destinationskonfiguration
 
 I Postman går du till **Målkonfigurationer** under **API för målredigering** och klickar för att öppna **POSTEN för begäran - Skapa en målkonfiguration**. Då ser du det här. Under **Sidhuvuden** måste du uppdatera värdet för nyckeln **x-sandbox-name** manuellt och ange den till `--aepSandboxName--`. Välj värdet **{{SANDBOX_NAME}}**.
 
@@ -436,7 +205,7 @@ Gå till **Destinationer** på den vänstra menyn, klicka på **Katalog** och bl
 
 ![Datainmatning](./images/destsdk1.png)
 
-## 2.3.7.6 Länka segmentet till målplatsen
+## Länka segmentet till målet
 
 I **Destinationer** > **Katalog** klickar du på **Konfigurera** på målet för att börja lägga till segment till det nya målet.
 
@@ -470,7 +239,7 @@ Din destination är nu aktiv, nya segmentkvalifikationer kommer att strömmas ti
 
 ![Datainmatning](./images/destsdk9.png)
 
-## 2.3.7.7 Testa aktiveringen av segmentet
+## Testa aktiveringen av ditt segment
 
 Gå till [https://builder.adobedemo.com/projects](https://builder.adobedemo.com/projects). När du har loggat in med din Adobe ID ser du det här. Klicka på webbplatsprojektet för att öppna det.
 

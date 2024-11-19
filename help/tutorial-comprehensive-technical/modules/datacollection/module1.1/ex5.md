@@ -4,20 +4,20 @@ description: Foundation - Installation av Adobe Experience Platform Data Collect
 kt: 5342
 doc-type: tutorial
 exl-id: a9022269-6db2-46c6-a82b-ec8d5b881a55
-source-git-commit: 0dbcda0cfc9f199a44c845c1b5caf00a8d740251
+source-git-commit: 3a19e88e820c63294eff38bb8f699a9f690afcb9
 workflow-type: tm+mt
-source-wordcount: '529'
+source-wordcount: '525'
 ht-degree: 0%
 
 ---
 
-# 1.1.5 - Implementera Adobe Analytics och Adobe Audience Manager
+# 1.1.5 Implementera Adobe Analytics och Adobe Audience Manager
 
 ## Kontext
 
 Du vet nu att XDM-data strömmar in på plattformen. Du kommer att utforska mer om vad XDM är i [Modul 1.2](./../module1.2/data-ingestion.md) samt hur du skapar ett eget schema för att spåra anpassade variabler. Nu ska ni titta på vad som händer när ni ställer in datastream för att vidarebefordra data till Analytics och Audience Manager.
 
-## 1.1.5.1 Mappa variabler i Analytics
+## Mappa variabler i Analytics
 
 Adobe Experience Platform [!DNL Web SDK] mappar vissa värden automatiskt, vilket gör en ny implementering av Analytics via Web SDK så snabbt som möjligt. De automatiskt mappade variablerna visas [här](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/adobe-analytics/automatically-mapped-vars.html#data-collection).
 
@@ -56,11 +56,11 @@ XDM-data förenklas med punktnotation och blir tillgängliga som `contextData` o
 
 Alla data som samlas in av edge-nätverket kan nås via [bearbetningsregler](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html). I Analytics kan ni använda bearbetningsregler för att införliva kontextdata i Analytics-variabler.
 
-## 1.1.5.2 Audience Manager på Experience Platform Edge Network
+## Audience Manager på Edge Network Experience Platform
 
 Vidarebefordran på serversidan är inte ett nytt koncept för Audience Manager, och samma process som tidigare gäller. Du kan också synkronisera identiteter.
 
-## 1.1.5.3 Granska ditt dataflöde för att skicka data till Adobe Analytics
+## Granska ditt dataflöde för att skicka data till Adobe Analytics
 
 Följ de här stegen om du vill skicka data som samlats in via Web SDK till Adobe Analytics och Adobe Audience Manager.
 
@@ -78,7 +78,7 @@ Då ser du det här. Markera tjänsten **Adobe Analytics**, därefter måste du 
 
 ![AEP-felsökning](./images/aa3.png)
 
-## 1.1.5.4 Granska ditt dataflöde för att skicka data till Adobe Audience Manager
+## Granska ditt dataflöde för att skicka data till Adobe Audience Manager
 
 Då ser du det här. Om du vill aktivera Adobe Audience Manager klickar du på **+Lägg till tjänst**.
 

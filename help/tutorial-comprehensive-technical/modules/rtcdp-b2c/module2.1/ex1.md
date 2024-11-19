@@ -3,9 +3,10 @@ title: Foundation - kundprofil i realtid - Från okänd till känd på webbplats
 description: Foundation - kundprofil i realtid - Från okänd till känd på webbplatsen
 kt: 5342
 doc-type: tutorial
-source-git-commit: 2cdc145d7f3933ec593db4e6f67b60961a674405
+exl-id: ddbf97c2-8105-42b6-b9bf-209b1df6a3b5
+source-git-commit: 3a19e88e820c63294eff38bb8f699a9f690afcb9
 workflow-type: tm+mt
-source-wordcount: '917'
+source-wordcount: '968'
 ht-degree: 0%
 
 ---
@@ -22,13 +23,9 @@ Plattform är en miljö där ordet kund är bredare än bara de kända kunderna.
 
 ## Kundreseflöde
 
-Gå till [https://builder.adobedemo.com/projects](https://builder.adobedemo.com/projects). När du har loggat in med din Adobe ID ser du det här. Klicka på webbplatsprojektet för att öppna det.
+Gå till [https://dsn.adobe.com](https://dsn.adobe.com). När du har loggat in med din Adobe ID ser du det här. Klicka på de tre punkterna **..** i webbplatsprojektet och klicka sedan på **Kör** för att öppna det.
 
-![DSN](../../gettingstarted/gettingstarted/images/web8.png)
-
-Klicka på **Kör** på sidan **Screens**.
-
-![DSN](../../gettingstarted/gettingstarted/images/web2.png)
+![DSN](./../../datacollection/module1.1/images/web8.png)
 
 Du kommer då att se din demowebbplats öppnas. Markera URL-adressen och kopiera den till Urklipp.
 
@@ -62,7 +59,7 @@ Ni kan också se alla upplevelsehändelser som samlats in baserat på kundens be
 
 ![Demo](../../datacollection/module1.2/images/pv3.png)
 
-Gå till produktkategorin **Män**. Klicka sedan på produkten **Montana Wind Jacket**.
+Gå till produktkategorin **Telefoner och enheter**. Klicka sedan på produkten **iPhone 15 Pro**.
 
 ![Demo](../../datacollection/module1.2/images/pv4.png)
 
@@ -74,15 +71,15 @@ Då visas informationssidan för produkten. En upplevelsehändelse av typen **Pr
 
 ![Demo](../../datacollection/module1.2/images/pv6.png)
 
-Gå tillbaka till kategorisidan **Kvinnor** och klicka på en annan produkt. En annan Experience Event har skickats till Adobe Experience Platform.
+Gå tillbaka till kategorisidan **Telefoner och enheter** och klicka på en annan produkt. En annan Experience Event har skickats till Adobe Experience Platform. Öppna panelen Profilvisningsprogram. Nu visas 2 Experience Events av typen **Product View**. Beteendet är anonymt, men med rätt medgivande kan du spåra varje klick och lagra det i Adobe Experience Platform. När den anonyma kunden blir känd kan vi automatiskt sammanfoga alla anonyma beteenden med kunskapsprofilen.
 
 ![Demo](../../datacollection/module1.2/images/pv7.png)
 
-Öppna panelen Profilvisningsprogram. Nu visas 2 Experience Events av typen **Product View**. Beteendet är anonymt, men vi kan spåra varje klick och lagra det i Adobe Experience Platform. När den anonyma kunden blir känd kan vi automatiskt sammanfoga alla anonyma beteenden med kunskapsprofilen.
+Gå till sidan Register/Login. Klicka på **Logga in**.
 
 ![Demo](../../datacollection/module1.2/images/pv8.png)
 
-Gå till sidan Register/Login. Klicka på **SKAPA ETT KONTO**.
+Klicka på **Skapa ett konto**.
 
 ![Demo](../../datacollection/module1.2/images/pv9.png)
 
@@ -104,11 +101,11 @@ Du har nu importerat data till Adobe Experience Platform och du har länkat dess
 
 Efter att ha blivit en känd kund är det dags att börja använda mobilappen. Öppna mobilappen på din iPhone och logga sedan in på appen.
 
-Om du inte har installerat appen längre eller om du inte kommer ihåg hur du installerar den kan du titta här: [0.5 Använd mobilappen](../../gettingstarted/gettingstarted/ex5.md)
+Om du inte har installerat appen längre eller om du inte kommer ihåg hur du installerar den kan du titta här: [Använd mobilappen](../../gettingstarted/gettingstarted/ex5.md)
 
-När du har installerat appen enligt instruktionerna ser du landningssidan för appen med Luma-märket inläst. Klicka på kontoikonen i skärmens övre vänstra del.
+När du har installerat appen enligt instruktionerna ser du landningssidan för appen med Citi Signal-märket inläst. Klicka på kontoikonen i skärmens övre vänstra del.
 
-![Demo](./images/app_hp.png)
+![Demo](./images/app_hp1.png)
 
 På inloggningsskärmen loggar du in med den e-postadress som du använde på datorwebbplatsen. Klicka på **Logga in**.
 
@@ -120,15 +117,23 @@ Gå till appens startskärm och klicka för att öppna valfri produkt.
 
 Då visas informationssidan för produkten.
 
-![Demo](./images/app_carst.png)
+![Demo](./images/app_galaxy.png)
 
 Gå till startskärmen i appen och svep åt vänster på skärmen för att visa panelen Profilvisningsprogram. Du kommer då att se produkten som du just visade i avsnittet **Experience Events**, tillsammans med alla produktvyer från webbplatssessionen tidigare.
 
-![Demo](./images/app_after_carst.png)
+>[!NOTE]
+>
+>Det kan ta några minuter innan du ser den konsoliderade vyn i appen och på webbplatsen.
+
+![Demo](./images/app_after_galaxy.png)
 
 Gå tillbaka till din stationära dator och uppdatera hemsidan. Sedan visas produkten också där.
 
-![Demo](./images/lb_x_aftermobile.png)
+>[!NOTE]
+>
+>Det kan ta några minuter innan du ser den konsoliderade vyn i appen och på webbplatsen.
+
+![Demo](./images/web_x_aftermobile.png)
 
 Du har nu importerat data till Adobe Experience Platform och du har länkat dessa data till identifierare som ECID och e-postadresser. Målet med den här övningen var att förstå affärskontexten för det du ska göra. Ni har nu effektivt byggt upp en kundprofil för olika enheter i realtid. I nästa övning ska du visualisera din profil i Adobe Experience Platform.
 

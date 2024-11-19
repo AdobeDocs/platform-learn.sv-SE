@@ -5,24 +5,21 @@ kt: 5342
 audience: Data Engineer, Data Architect, Marketer
 doc-type: tutorial
 exl-id: 79ae9722-bf38-47f7-acbc-aa5bd1289411
-source-git-commit: 0dbcda0cfc9f199a44c845c1b5caf00a8d740251
+source-git-commit: 3a19e88e820c63294eff38bb8f699a9f690afcb9
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '361'
 ht-degree: 0%
 
 ---
 
 # 2.1 Foundation - kundprofil i realtid
 
-**Författare: [Wouter Van Geluwe](https://www.linkedin.com/in/woutervangeluwe/)**
-
-I den här modulen ska vi göra en djupdykning i kundprofil och identitetsfunktioner i realtid för Adobe Experience Platform. Du får lära dig hur målgrupper kan definieras, vilken roll identitetstjänsten och Experience Cloud ID har och hur du definierar segmentbyggfrågor för att definiera egna segment.
+I den här modulen ska du göra en djupdykning i kundprofil och identitetsfunktioner i realtid för Adobe Experience Platform. Du får lära dig hur målgrupper kan definieras, vilken roll identitetstjänsten och Experience Cloud ID har och hur du definierar segmentbyggfrågor för att definiera egna segment.
 
 ## Utbildningsmål
 
 - Lär dig visualisera kundens kundprofil i realtid via Adobe Experience Platform användargränssnitt
 - Lär dig skapa ett segment med Adobe Experience Platform Segment Builder
-- Lär dig hur du skapar ett segment och lagrar segmentets resultat i en datauppsättning med Adobe Experience Platform API:er
 - Läs mer om effekten av att ha tillgång till en fullständig kundprofil, inklusive realtidsbeteende, i offline-miljöer
 
 ## Förhandskrav
@@ -54,11 +51,7 @@ I den här övningen använder du Postman och Adobe I/O för att visa din egen k
 
 I den här övningen skapar du ett segment genom att använda Adobe Experience Platform Segment Builder.
 
-[2.1.5 Skapa ett segment - API](./ex5.md)
-
-I den här övningen ska du använda Postman och Adobe I/O för att skapa ett segment och lagra resultatet av det segmentet som en datauppsättning genom att använda Adobe Experience Platform API:er.
-
-[2.1.6 Se hur kundprofilen i realtid fungerar i Call Center](./ex6.md)
+[2.1.5 Se hur kundprofilen i realtid fungerar i Call Center](./ex5.md)
 
 I den här övningen personifierar du en handläggare som får ett samtal från en kund. För att verkligen påverka kundupplevelsen måste ni ha tillgång till all tillgänglig information i realtid.
 

@@ -1,170 +1,64 @@
 ---
-title: Foundation - kundprofil i realtid - Skapa ett segment - API
-description: Foundation - kundprofil i realtid - Skapa ett segment - API
+title: Se hur kundprofilen i realtid fungerar i Call Center
+description: Se hur kundprofilen i realtid fungerar i Call Center
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: 47c96696-644a-43b9-8deb-846bd2587af0
+source-git-commit: 3a19e88e820c63294eff38bb8f699a9f690afcb9
 workflow-type: tm+mt
-source-wordcount: '706'
-ht-degree: 2%
+source-wordcount: '352'
+ht-degree: 0%
 
 ---
 
-# 2.1.5 Skapa ett segment - API
+# 2.1.5 Se hur kundprofilen i realtid fungerar i Call Center
 
-I den här övningen ska du använda Postman och Adobe I/O för att skapa ett segment och lagra resultatet av det segmentet som en datauppsättning genom att använda Adobe Experience Platform API:er.
+I den här övningen är målet att få er att gå igenom kundresan och agera som en riktig kund.
 
-## Artikel
+På denna webbplats har vi implementerat Adobe Experience Platform. Varje åtgärd betraktas som en upplevelsehändelse och skickas till Adobe Experience Platform i realtid, vilket innebär att kundprofilen i realtid hydreras.
 
-I kundprofilen i realtid visas alla profildata tillsammans med händelsedata och befintliga segmentmedlemskap. De data som visas kan komma var som helst, från Adobe-program och externa lösningar. Detta är den mest kraftfulla vyn i Adobe Experience Platform, det upplevelsesystem som finns.
+I en tidigare övning började du som anonym kund som surfade på webbplatsen, och efter ett par steg blev du en känd kund.
 
-## 2.1.5.1 - Skapa ett segment via plattforms-API
+När samma kund så småningom får tag i telefonen och ringer ert callcenter är det avgörande att informationen från andra kanaler blir tillgänglig omedelbart, så att samtalscentrets upplevelse kan vara relevant och personaliserad.
 
-Gå till Postman.
+## Använd din CX-app
 
-Leta reda på samlingen: **_Adobe Experience Platform Enablement**. I den här samlingen visas en mapp **2. Segmentering**. Vi kommer att använda de här förfrågningarna i den här övningen.
+Gå till [https://dsn.adobe.com](https://dsn.adobe.com). När du har loggat in med din Adobe ID ser du det här. Klicka på de tre punkterna **..** i ditt CX App-projekt och klicka sedan på **Redigera** för att öppna det.
 
-![Segmentering](./images/pmdtl.png)
+![Demo](./images/cxapp3.png)
 
-Vi ska nu följa alla steg som krävs för att skapa ett segment via API:t. Vi ska skapa ett enkelt segment: **ldap** - Alla kvinnliga kunder.
+Gå till **Integreringar** i ditt CX-appprojekt. Klicka på **Välj miljö**.
 
-### Steg 1 - Skapa en segmentdefinition
+![Demo](./images/cxapp3a.png)
 
-Klicka på begäran **Steg 1 - Profil: Skapa en segmentdefinition**.
+Markera den Adobe Experience Platform Data Collection-egenskap som skapades i Getting Started. Du måste markera egenskapen som har **(cx-app)** i namnet.
 
-![Segmentering](./images/s1_call.png)
+![Demo](./images/cxapp4.png)
 
-Gå till avsnittet **Brödtext** i den här begäran.
+Då ser du det här. Klicka på **Kör**.
 
-![Segmentering](./images/s1_body.png)
+![Demo](./images/cxapp4a.png)
 
-I **brödtexten** i den här begäran visas följande:
+Sedan måste du välja en av dina identiteter och enligt namnutrymmet och klicka på **sökikonen**.
 
-![Segmentering](./images/s1_bodydtl.png)
+![Kundprofil](./images/identities.png)
 
-Språket som används för denna begäran kallas Profile Query Language eller **PQL**.
+| Identitet | Namnutrymme |
+|:-------------:| :---------------:|
+| Experience Cloud ID (ECID) | 79943948563923140522865572770524243489 |
+| Experience Cloud ID (ECID) | 70559351147248820114888181867542007989 |
+| E-post-ID | woutervangeluwe+18112024-01@gmail.com |
+| Mobilnummer-ID | +32473622044+18112024-01 |
 
-Du hittar mer information och dokumentation om PQL [här](https://experienceleague.adobe.com/docs/experience-platform/segmentation/pql/overview.html?lang=en).
+När kunden ringer till er kundtjänst kan telefonnumret användas för att identifiera kunden. I den här övningen använder du telefonnumret för att hämta kundens profil i appen för kundupplevelser.
 
+![Demo](./images/19.png)
 
-Obs! Uppdatera variabeln **name** i nedanstående begäran genom att ersätta **ldap** med din specifika **ldap**.
+Nu kommer du att se den information som helst skulle visas i Samtalscentret, så att de anställda på Samtalscentret får all relevant information direkt tillgänglig när de talar till en kund.
 
-```json
-{
-    "name" : "ldap - API - All Female Customer",
-    "expression" : {"type":"PQL", "format":"pql/json", "value":"{\"nodeType\":\"fnApply\",\"fnName\":\"in\",\"params\":[{\"nodeType\":\"fieldLookup\",\"fieldName\":\"gender\",\"object\":{\"nodeType\":\"fieldLookup\",\"fieldName\":\"person\",\"object\":{\"nodeType\":\"literal\",\"literalType\":\"XDMObject\",\"value\":\"profile\"}}},{\"literalType\":\"List\",\"nodeType\":\"literal\",\"value\":[\"female\"]}]}"},
-    "createdBy": "ldap",
-    "schema" : { "name" : "_xdm.context.profile"},
-    "ttlInDays" : 90
-}
-```
+![Demo](./images/20.png)
 
-När du har lagt till din specifika **ldap** bör brödtexten se ut ungefär så här:
-
-```json
-{
-    "name" : "vangeluw - API - All Female Customer",
-    "expression" : {"type":"PQL", "format":"pql/json", "value":"{\"nodeType\":\"fnApply\",\"fnName\":\"in\",\"params\":[{\"nodeType\":\"fieldLookup\",\"fieldName\":\"gender\",\"object\":{\"nodeType\":\"fieldLookup\",\"fieldName\":\"person\",\"object\":{\"nodeType\":\"literal\",\"literalType\":\"XDMObject\",\"value\":\"profile\"}}},{\"literalType\":\"List\",\"nodeType\":\"literal\",\"value\":[\"female\"]}]}"},
-    "createdBy": "vangeluw",
-    "schema" : { "name" : "_xdm.context.profile"},
-    "ttlInDays" : 90
-}
-```
-
-Du bör även verifiera fälten **Header** - i din begäran. Gå till **Sidhuvuden**. Då ser du det här:
-
-![Postman](./images/s1_h.png)
-
-| Nyckel | Värde |
-| -------------- | ------------------ |
-| x-sandbox-name | `--aepSandboxName--` |
-
->[!NOTE]
->
->Du måste ange namnet på den Adobe Experience Platform-sandlåda som du använder. Ditt x-sandbox-namn ska vara `--aepSandboxName--`.
-
-Klicka nu på den blå **Skicka**-knappen för att skapa segmentet och visa resultatet av det.
-
-![Segmentering](./images/s1_bodydtl_results.png)
-
-Efter det här steget kan du visa din segmentdefinition i användargränssnittet för plattformen. Om du vill kontrollera detta loggar du in på Adobe Experience Platform och går till **Segment**.
-
-![Segmentering](./images/s1_segmentdef.png)
-
-### Steg 2 - Skapa ett jobb för POST av segment
-
-I den föregående övningen skapade du ett _direktuppspelat_-segment. Ett direktuppspelningssegment utvärderar kontinuerligt kvalifikationer i realtid. Det du gör här är att skapa ett _batch_-segment. Gruppsegmentet ger dig en förhandsvisning av hur segmentet kan se ut när det gäller kvalifikationer, men _betyder inte att segmentet faktiskt har körts_. _Ingen kvalificerar sig för det här segmentet_. För att göra folk kvalificerade måste gruppsegmentet köras, vilket är precis vad vi ska göra här.
-
-Nu ska vi POST ett segmentjobb.
-
-Gå till Postman.
-
-![Segmentering](./images/pmdtl.png)
-
-Öppna Postman-samlingen genom att klicka på begäran **Steg 2 - POST Segment Job**.
-
-![Segmentering](./images/s2_call.png)
-
-Du bör även verifiera fälten **Header** - i din begäran. Gå till **Sidhuvuden**. Då ser du det här:
-
-![Postman](./images/s2headers.png)
-
-| Nyckel | Värde |
-| -------------- | ------------------ |
-| x-sandbox-name | `--aepSandboxName--` |
-
->[!NOTE]
->
->Du måste ange namnet på den Adobe Experience Platform-sandlåda som du använder. Ditt x-sandbox-namn ska vara `--aepSandboxName--`.
-
-Klicka på den blå **Skicka**-knappen.
-
-Du bör få ett liknande resultat:
-
-![Segmentering](./images/s2_call_response.png)
-
-Det här segmentjobbet körs nu och det kan ta en stund. I steg 3 kan du kontrollera statusen för det här jobbet.
-
-
-### Steg 3 - Jobbstatus för GET segment
-
-Gå till Postman.
-
-![Segmentering](./images/pmdtl.png)
-
-I din Postman-samling klickar du på den begäran som heter **Steg 3 - jobbstatus för GET-segmentet**.
-
-![Segmentering](./images/s3_call.png)
-
-Du bör även verifiera fälten **Header** - i din begäran. Gå till **Sidhuvuden**. Då ser du det här:
-
-![Postman](./images/s3headers.png)
-
-| Nyckel | Värde |
-| -------------- | ------------------ |
-| x-sandbox-name | `--aepSandboxName--` |
-
->[!NOTE]
->
->Du måste ange namnet på den Adobe Experience Platform-sandlåda som du använder. Ditt x-sandbox-namn ska vara `--aepSandboxName--`.
-
-Klicka på den blå **Skicka**-knappen.
-
-Du bör få ett liknande resultat:
-
-![Segmentering](./images/s3_status.png)
-
-I det här exemplet är jobbets **status** inställd på **QUEUED**.
-
-Upprepa denna begäran genom att klicka på den blå knappen **Skicka** var minut tills **status** är inställd på **SLUTFÖRT**.
-
-![Segmentering](./images/s3_status_succeeded.png)
-
-När statusen är **SLUTFÖRD** har ditt segmentjobb körts och kunderna kvalificerar sig nu för segmentet.
-
-Grattis, du har slutfört segmenteringsövningen. Nu ska vi se hur kundprofilen i realtid kan aktiveras i hela företaget.
-
-Nästa steg: [2.1.6 Se hur kundprofilen i realtid fungerar i Call Center](./ex6.md)
+Nästa steg: [Sammanfattning och förmåner](./summary.md)
 
 [Gå tillbaka till modul 2.1](./real-time-customer-profile.md)
 

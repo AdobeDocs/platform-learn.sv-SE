@@ -4,16 +4,16 @@ description: Foundation - Installation av Adobe Experience Platform Data Collect
 kt: 5342
 doc-type: tutorial
 exl-id: 475e9a34-c80e-41e4-9660-61c79f26922d
-source-git-commit: 0dbcda0cfc9f199a44c845c1b5caf00a8d740251
+source-git-commit: 3a19e88e820c63294eff38bb8f699a9f690afcb9
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '168'
 ht-degree: 0%
 
 ---
 
 # 1.1.6 Implementera Adobe Target
 
-## 1.1.6.1 Uppdatera ditt datastream för att använda Adobe Target
+## Uppdatera ditt datastream för att använda Adobe Target
 
 Följ de här stegen om du vill skicka data som samlats in av Web SDK till Adobe Target och få ett svar från Adobe Target med en personaliserad upplevelse för varje kund.
 

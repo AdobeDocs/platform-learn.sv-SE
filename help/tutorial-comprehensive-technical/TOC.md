@@ -5,9 +5,9 @@ user-guide-description: En praktisk självstudiekurs som handlar om många aspek
 hide: true
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-source-git-commit: f79a989f01fa1c005a0c06cea81268118b2467be
+source-git-commit: 8cfe1dbb528bdf5ecc828cf67ef969c885982435
 workflow-type: tm+mt
-source-wordcount: '914'
+source-wordcount: '923'
 ht-degree: 2%
 
 ---
@@ -47,7 +47,9 @@ ht-degree: 2%
       + [Sammanfattning och fördelar](/help/tutorial-comprehensive-technical/modules/datacollection/module1.2/summary.md)
    + 1.3 - Sammansättning av federerad publik {#module13}
       + [Översikt](/help/tutorial-comprehensive-technical/modules/datacollection/module1.3/fac.md)
-      + [1.3.1 Introduktion till FAC](/help/tutorial-comprehensive-technical/modules/datacollection/module1.3/ex1.md)
+      + [1.3.1 Konfigurera ditt Snowflake-konto](/help/tutorial-comprehensive-technical/modules/datacollection/module1.3/ex1.md)
+      + [1.3.2 Skapa scheman, datamodell och länkar](/help/tutorial-comprehensive-technical/modules/datacollection/module1.3/ex2.md)
+      + [1.3.3 Skapa en federerad komposition](/help/tutorial-comprehensive-technical/modules/datacollection/module1.3/ex3.md)
       + [Sammanfattning och fördelar](/help/tutorial-comprehensive-technical/modules/datacollection/module1.3/summary.md)
 
 + 2 Real-Time CDP B2C {#rtcdpb2c}
@@ -57,8 +59,7 @@ ht-degree: 2%
       + [2.1.2 Visualisera din egen kundprofil i realtid - användargränssnitt](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.1/ex2.md)
       + [2.1.3 Visualisera din egen kundprofil i realtid - API](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.1/ex3.md)
       + [2.1.4 Skapa ett segment - användargränssnitt](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.1/ex4.md)
-      + [2.1.5 Skapa ett segment - API](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.1/ex5.md)
-      + [2.1.6 Se hur kundprofilen i realtid fungerar i callcenter](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.1/ex6.md)
+      + [2.1.5 Se hur kundprofilen i realtid fungerar i callcenter](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.1/ex5.md)
       + [Sammanfattning och fördelar](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.1/summary.md)
    + 2.2 Intelligenta tjänster {#module22}
       + [Översikt](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.2/intelligent-services.md)

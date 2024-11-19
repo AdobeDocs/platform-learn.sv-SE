@@ -4,20 +4,20 @@ description: Foundation - Installation av Adobe Experience Platform Data Collect
 kt: 5342
 doc-type: tutorial
 exl-id: 391c79d6-9c42-465e-bce8-60fa6474979c
-source-git-commit: 0dbcda0cfc9f199a44c845c1b5caf00a8d740251
+source-git-commit: 3a19e88e820c63294eff38bb8f699a9f690afcb9
 workflow-type: tm+mt
-source-wordcount: '1250'
+source-wordcount: '1246'
 ht-degree: 0%
 
 ---
 
-# 1.1.3 - Introduktion till Adobe Experience Platform Data Collection
+# 1.1.3 Introduktion till Adobe Experience Platform Data Collection
 
 ## Kontext
 
 Nu ska vi titta närmare på byggstenarna i Adobe Experience Platform Data Collection för att förstå vad som är installerat på demowebbplatsen. Du kommer att ha en närmare titt på Adobe Experience Platform Web SDK-tillägget, du kommer att konfigurera ett dataelement och en regel och du kommer att lära dig hur du publicerar ett bibliotek.
 
-## 1.1.3.1 - Adobe Experience Platform Web SDK-tillägg
+## Adobe Experience Platform Web SDK-tillägg
 
 Ett tillägg är en paketerad uppsättning kod som utökar Adobe Experience Platform Data Collection-gränssnittet och biblioteksfunktionerna. Adobe Experience Platform Data Collection är plattformen och tillägg fungerar som appar som körs på plattformen. Alla tillägg som används i självstudiekursen skapas och hanteras av Adobe, men tredjepartsleverantörer kan skapa egna tillägg för att begränsa mängden anpassad kod som Adobe Experience Platform Data Collection-användare måste hantera.
 
@@ -52,7 +52,7 @@ Klicka på **[!UICONTROL Save]** för att gå tillbaka till vyn Tillägg.
 
 ![Startsida för tillägg](./images/property9edge.png)
 
-## 1.1.3.2 Dataelement
+## Dataelement
 
 Dataelement är byggstenarna för dataordlistan (eller datamappningen). Använd dataelement för att samla in, ordna och leverera data över marknadsförings- och annonseringsteknologier.
 
@@ -88,7 +88,7 @@ Rulla uppåt och ange texten `%Product Category%`. Klicka på **[!UICONTROL Save
 
 Nu är Adobe Experience Platform Web SDK Extension installerat och du har uppdaterat ett dataelement för att samla in data mot en XDM-struktur. Nu ska vi kontrollera reglerna som skickar data vid rätt tidpunkt.
 
-## 1.1.3.3 Regler
+## Regler
 
 Adobe Experience Platform Data Collection är ett regelbaserat system. Den söker efter användarinteraktion och associerade data. När villkoren som beskrivs i reglerna är uppfyllda utlöser regeln det tillägg, skript eller den klientkod som du identifierade.
 
@@ -130,7 +130,7 @@ Här ser du de data som Adobe Experience Platform Web SDK skickar in. Mer specif
 
 Nu när du tittar på regeln kan du publicera alla ändringar i Adobe Experience Platform Data Collection.
 
-## 1.1.3.4 Publish in a Library
+## Publish i ett bibliotek
 
 Slutligen, för att kunna validera regeln och dataelementet som du just har uppdaterat måste du publicera ett bibliotek som innehåller de redigerade objekten i vår egenskap. Du måste utföra några snabba steg i avsnittet **[!UICONTROL Publishing]** i Adobe Experience Platform Data Collection.
 

@@ -3,9 +3,10 @@ title: Foundation - kundprofil i realtid - sammanfattning
 description: Foundation - kundprofil i realtid - sammanfattning
 kt: 5342
 doc-type: tutorial
-source-git-commit: 2cdc145d7f3933ec593db4e6f67b60961a674405
+exl-id: 6d5519b0-494d-4cfd-aebe-078317d753ac
+source-git-commit: 3a19e88e820c63294eff38bb8f699a9f690afcb9
 workflow-type: tm+mt
-source-wordcount: '244'
+source-wordcount: '213'
 ht-degree: 0%
 
 ---
@@ -22,7 +23,6 @@ Låt oss lyfta fram fördelarna med kundprofilen i realtid:
 - Kundprofilen i realtid bygger på ett flexibelt identitetsdiagram i realtid som gör det möjligt att dynamiskt sammanfoga profilfragment över flera datauppsättningar baserat på identifierarna.
 - När profilfragment sammanfogas med identitetsdiagrammet kan alla tillgängliga identifierare användas för att hämta en kunds profil
 - Segmenteringen görs nu med XDM som språk bakom segmentet, vilket gör segmentet enkelt att återanvända och förstå
-- Segment kan nu också skapas via API:t, vilket gör det möjligt att definiera ett segment externt på ett programmatiskt sätt och sedan infoga segmentdefinitionen via API:t.
 
 ## Kolla in det här
 

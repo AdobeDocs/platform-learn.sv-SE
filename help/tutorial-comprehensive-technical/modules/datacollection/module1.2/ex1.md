@@ -4,9 +4,9 @@ description: Foundation - datainmatning - från okänd till känd på webbplatse
 kt: 5342
 doc-type: tutorial
 exl-id: 08cb7892-4e1c-4646-9e3b-8ab008dfd947
-source-git-commit: 8bdcd03bd38a6da98b82439ad86482cad5f4e684
+source-git-commit: 3a19e88e820c63294eff38bb8f699a9f690afcb9
 workflow-type: tm+mt
-source-wordcount: '746'
+source-wordcount: '749'
 ht-degree: 0%
 
 ---
@@ -27,9 +27,9 @@ Du kommer nu att importera data till Adobe Experience Platform och dessa data ko
 
 ### Kundreseflöde
 
-Gå till [https://dsn.adobe.com](https://dsn.adobe.com). När du har loggat in med din Adobe ID ser du det här. Klicka på de tre punkterna **..** i webbplatsprojektet och klicka sedan på **Redigera**.
+Gå till [https://dsn.adobe.com](https://dsn.adobe.com). När du har loggat in med din Adobe ID ser du det här. Klicka på de tre punkterna **..** i webbplatsprojektet och klicka sedan på **Kör** för att öppna det.
 
-![DSN](./../../gettingstarted/gettingstarted/images/web8.png)
+![DSN](./../../datacollection/module1.1/images/web8.png)
 
 Du kommer då att se din demowebbplats öppnas. Markera URL-adressen och kopiera den till Urklipp.
 
@@ -79,7 +79,7 @@ Klicka på **Logga in** för att gå till sidan Register/Inloggning.
 
 ![Demo](./images/pv8.png)
 
-Klicka på **SKAPA ETT KONTO**.
+Klicka på **Skapa ett konto**.
 
 ![Demo](./images/pv9.png)
 
