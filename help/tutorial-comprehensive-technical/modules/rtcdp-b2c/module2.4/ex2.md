@@ -1,118 +1,126 @@
 ---
-title: Segmentaktivering till Microsoft Azure Event Hub - Konfigurera Event Hub RTCDP-målet i Adobe Experience Platform
-description: Segmentaktivering till Microsoft Azure Event Hub - Konfigurera Event Hub RTCDP-målet i Adobe Experience Platform
+title: Segmentaktivering till Microsoft Azure Event Hub - Konfigurera Event Hub i Azure
+description: Segmentaktivering till Microsoft Azure Event Hub - Konfigurera Event Hub i Azure
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: 0c2e94ec-00e8-4f47-add7-ca3a08151225
+source-git-commit: 216914c9d97827afaef90e21ed7d4f35eaef0cd3
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '579'
 ht-degree: 0%
 
 ---
 
-# 2.4.2 Konfigurera Azure Event Hub-målet i Adobe Experience Platform
+# 2.4.2 Konfigurera din Microsoft Azure EventHub-miljö
 
-## 2.4.2.1 Identifiera obligatoriska Azure Connection-parametrar
+Azure Event Hubs är en mycket skalbar publiceringsprenumerationstjänst som kan importera miljontals händelser per sekund och strömma dem till flera program. På så sätt kan du bearbeta och analysera den enorma mängd data som produceras av dina anslutna enheter och program.
 
-Om du vill definiera en Event Hub-destination i Adobe Experience Platform behöver du din
+## Vad är Azure Event Hubs?
 
-- Namnutrymme för händelsehubbar
-- Händelsehubb
-- Azure SAS-nyckelnamn
-- Azure SAS-nyckel
+Azure Event Hubs är en stor dataströmningsplattform och en tjänst för händelsehantering. Den kan ta emot och bearbeta miljontals händelser per sekund. Data som skickas till ett händelsehubb kan omformas och lagras med hjälp av alla realtidsanalysleverantörer eller batchnings-/lagringsadaptrar.
 
-Händelsehubben och EventHub-namnutrymmet har definierats i den föregående övningen: [Utgång 1 - Konfigurera händelsehubben i Azure](./ex1.md)
+Händelsehubbar representerar **ytterdörren** för en händelsepipeline, som ofta kallas händelseinsättare i lösningsarkitekturer. En händelseinsättare är en komponent eller tjänst som är placerad mellan händelseutgivare (som Adobe Experience Platform RTCDP) och händelsekonsumenter för att frigöra produktionen av en händelseström från förbrukningen av dessa händelser. Event Hubs utgör en enhetlig direktuppspelningsplattform med en buffert för tidsbevarande, som frigör händelseproducenter från händelsekonsumenter.
 
-### Namnutrymme för händelsehubbar
+## Skapa ett namnutrymme för händelsehubbar
 
-Om du vill söka efter ovanstående information i Azure Portal går du till [https://portal.azure.com/#home](https://portal.azure.com/#home). Kontrollera att du använder rätt Azure-konto.
+Gå till [https://portal.azure.com/#home](https://portal.azure.com/#home) och välj **Skapa en resurs**.
 
-Välj **Alla resurser** i Azure Portal:
+![1-01-open-azure-portal.png](./images/101openazureportal.png)
 
-![2-01-azure-all-resources.png](./images/2-01-azure-all-resources.png)
+Ange **Händelse** i sökfältet på resursskärmen. Leta reda på **Event Hubs**-kortet, klicka på **Skapa** och klicka sedan på **Event Hubs**.
 
-### Händelsehubb
+![1-02-search-event-hubs.png](./images/102searcheventhubs.png)
 
-Leta efter en resurs med resurstypen **Event Hubs Namespace**. Om du följt namnkonventionerna som användes i den tidigare övningen kommer du att använda Event Hubs Namespace `--aepUserLdap---aep-enablement`. Observera att du kommer att behöva det i nästa övning.
+Om det här är första gången du skapar en resurs i Azure måste du skapa en ny **resursgrupp**. Om du redan har en resursgrupp kan du markera den (eller skapa en ny).
 
-![2-02-select-event-hubs-namespace.png](./images/2-02-select-event-hubs-namespace.png)
+Klicka på **Skapa ny** och ge gruppen ett namn `--aepUserLdap---aep-enablement`. Klicka sedan på **OK**.
 
-Klicka på namnet på händelsehubbens namnområde för att få mer information:
+![1-04-create-resource-group.png](./images/104createresourcegroup.png)
 
-![2-03-select-event-hub.png](./images/2-03-select-event-hub.png)
+Fyll i resten av fälten enligt följande:
 
-Välj **Händelsehubbar** om du vill visa en lista över händelsehubbar som har definierats i namnutrymmet för händelsehubbar. Om du följde namnkonventionerna som användes i den föregående övningen hittar du en händelsehubb med namnet `--aepUserLdap---aep-enablement-event-hub`. Observera att du kommer att behöva det i nästa övning.
+- Namnområde: Definiera namnområdet, det måste vara unikt, använd följande mönster `--aepUserLdap---aep-enablement`
+- Plats: välj en plats
+- Prisnivå: **Grundläggande**
+- Genomströmningsenheter: **1**
 
-![2-04-event-hub-selected.png](./images/2-04-event-hub-selected.png)
+Klicka på **Granska + skapa**.
 
-### SAS-nyckelnamn
+![1-05-create-namespace.png](./images/105createnamespace.png)
 
-Välj **Principer för delad åtkomst** för **namnområdet för händelsehubbar**
+Klicka på **Skapa**.
 
-![2-05-select-sas.png](./images/2-05-select-sas.png)
+![1-07-namespace-create.png](./images/107namespacecreate.png)
 
-Du ser en lista över principer för delad åtkomst. SAS-nyckeln som vi letar efter är **RootManageSharedAccessKey**. Detta är namnet på SAS-nyckeln. Skriv ner det.
+Distributionen av resursgruppen kan ta 1-2 minuter, och följande skärm visas när den är klar:
 
-![2-06-sas-overview.png](./images/2-06-sas-overview.png)
+![1-08-namespace-deploy.png](./images/108namespacedeploy.png)
 
-### SAS-nyckelvärde
+## Konfigurera händelsehubben i Azure
 
-Klicka på **RootManageSharedAccessKey** för att hämta SAS-nyckelvärdet. Tryck på ikonen **Kopiera till Urklipp** för att kopiera **primärnyckeln**:
+Gå till [https://portal.azure.com/#home](https://portal.azure.com/#home) och välj **Alla resurser**.
 
-![2-07-sas-key-value.png](./images/2-07-sas-key-value.png)
+![1-09-all-resources.png](./images/109allresources.png)
 
-### Sammanfattning av målvärden
+Klicka på `--aepUserLdap---aep-enablement`-händelsehubbens namnområde i resurslistan:
 
-Nu bör du ha identifierat alla värden som behövs för att definiera Azure Event Hub-målet i Adobe Experience Platform CDP i realtid.
+![1-10-list-resources.png](./images/110listresources.png)
 
-| Namn på målattribut | Värde för målattribut | Exempelvärde |
-|---|---|---|
-| sasKeyName | SAS-nyckelnamn | RootHanteraDeladÅtkomstnyckel |
-| sasKey | SAS-nyckelvärde | srREx9ShJG1Rv7f/... |
-| namespace | Namnutrymme för händelsehubbar | `--aepUserLdap---aep-enablement` |
-| eventHubName | Händelsehubb | `--aepUserLdap---aep-enablement-event-hub` |
+Gå till **Enheter** på skärmen `--aepUserLdap---aep-enablement` och klicka på **Händelsehubbar**:
 
-## 2.4.2.2 Skapa Azure Event Hub-mål i Adobe Experience Platform
+![1-11-even-thub-namespace.png](./images/111eventhubnamespace.png)
 
-Logga in på Adobe Experience Platform via följande URL: [https://experience.adobe.com/platform](https://experience.adobe.com/platform).
+Klicka på **+ Händelsehubben**.
 
-När du har loggat in loggar du in på Adobe Experience Platform hemsida.
+![1-12-add-event-hub.png](./images/112addeventhub.png)
 
-![Datainmatning](./../../../modules/datacollection/module1.2/images/home.png)
+Använd `--aepUserLdap---aep-enablement-event-hub` som namn och klicka på **Granska + skapa**.
 
-Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``--aepSandboxName--``. Du kan göra detta genom att klicka på texten **[!UICONTROL Production Prod]** i den blå raden ovanför skärmen. När du har valt rätt sandlåda ser du skärmändringen och nu befinner du dig i din dedikerade sandlåda.
+![1-13-create-event-hub.png](./images/113createeventhub.png)
 
-![Datainmatning](./../../../modules/datacollection/module1.2/images/sb1.png)
+Klicka på **Skapa**.
 
-Gå till **Destinationer** och gå sedan till **Katalog**.
+![1-13-create-event-hub.png](./images/113createeventhub1.png)
 
-![Datainmatning](./images/sb2a.png)
+I **Händelsehubbar** under händelsehubbens namnutrymme visas nu din **händelsehubb** i listan.
 
-Välj **molnlagring** och gå till **Azure Event Hubs** och klicka på **Konfigurera** eller **Konfigurera**:
+![1-14-event-hub-list.png](./images/114eventhublist.png)
 
-![2-08-list-destination.png](./images/2-08-list-destinations.png)
+## Konfigurera ditt Azure Storage-konto
 
-Fyll i de målvärden som du har samlat in i föregående övning. Klicka sedan på **Anslut till mål**.
+Om du vill felsöka din Azure Event Hub-funktion i senare övningar måste du tillhandahålla ett Azure Storage-konto som en del av projektkonfigurationen för Visual Studio Code. Du skapar nu det Azure Storage-kontot.
 
-![2-09-destination-values.png](./images/2-09-destination-values.png)
+Gå till [https://portal.azure.com/#home](https://portal.azure.com/#home) och välj **Skapa en resurs**.
 
-Om dina autentiseringsuppgifter är korrekta visas en bekräftelse: **Ansluten**.
+![1-15-event-hub-storage.png](./images/115eventhubstorage.png)
 
-![2-09-destination-values.png](./images/2-09-destination-valuesa.png)
+Ange **lagringskontot** i sökningen, sök efter kortet för **lagringskontot** och klicka på **lagringskontot**.
 
-Du måste nu ange namn och beskrivning i formatet `--aepUserLdap---aep-enablement`. Ange **eventHubName** (se föregående övning, den ser ut så här: `--aepUserLdap---aep-enablement-event-hub`) och klicka på **Nästa**.
+![1-16-event-hub-search-storage.png](./images/116eventhubsearchstorage.png)
 
-![2-10-create-destination.png](./images/2-10-create-destination.png)
+Ange din **resursgrupp** (skapades i början av den här övningen), använd `--aepUserLdap--aepstorage` som lagringskontonamn och välj **Lokalt redundant lagring (LRS)** och klicka sedan på **Granska + skapa**.
 
-Klicka på **Spara och avsluta**.
+![1-18-event-hub-create-review-storage.png](./images/118eventhubcreatereviewstorage.png)
 
-![2-11-save-exit-activation.png](./images/2-11-save-exit-activation.png)
+Klicka på **Skapa**.
 
-Målet har nu skapats och är tillgängligt i Adobe Experience Platform.
+![1-19-event-hub-submit-storage.png](./images/119eventhubsubmitstorage.png)
 
-![2-12-destination-created.png](./images/2-12-destination-created.png)
+Det tar några sekunder att skapa ditt lagringskonto:
 
-Nästa steg: [2.4.3 Skapa ett segment](./ex3.md)
+![1-20-event-hub-deploy-storage.png](./images/120eventhubdeploystorage.png)
+
+När skärmen är klar visas knappen **Gå till resurs**.
+
+Klicka på **Hem**.
+
+![1-21-event-hub-deploy-ready-storage.png](./images/121eventhubdeployreadystorage.png)
+
+Ditt lagringskonto visas nu under **Senaste resurser**.
+
+![1-22-event-hub-deploy-resources-list.png](./images/122eventhubdeployresourceslist.png)
+
+Nästa steg: [2.4.3 Konfigurera Azure Event Hub-målet i Adobe Experience Platform](./ex3.md)
 
 [Gå tillbaka till modul 2.4](./segment-activation-microsoft-azure-eventhub.md)
 

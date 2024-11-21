@@ -4,9 +4,9 @@ description: Utgångspunkt för datatekniker, dataanalytiker, dataarkitekter, da
 doc-type: multipage-overview
 hide: false
 exl-id: 88c19383-c185-40f0-b118-6cb82db0ce0e
-source-git-commit: 7d2f5f842559b2d6d9f115f3993268a4b36a0fe0
+source-git-commit: b6c98ca773ba46205c467321a7796c29b614e75c
 workflow-type: tm+mt
-source-wordcount: '1524'
+source-wordcount: '1511'
 ht-degree: 0%
 
 ---
@@ -42,22 +42,22 @@ När du är klar med övningarna i den här självstudien kan du:
 - Strömma data i Adobe Experience Platform i realtid med Adobe Experience Platform Data Collection
 - Batchimportera data till Adobe Experience Platform med ett arbetsflöde eller med ett ETL-program (extract, transform, load)
 - Visualisera och använda kundprofilen i realtid i Adobe Experience Platform
-- Skapa segment
+- Skapa målgrupper
 - Förbruka flera Adobe Experience Platform API:er
 - Använd SQL för att fråga dina data i Adobe Experience Platform
 - Konfigurera och kör utlösarbaserade resor i realtid
-- Använd CDP i realtid för att agera genom att aktivera ett segment till olika destinationer
+- Använd CDP i realtid för att agera genom att aktivera en målgrupp till olika destinationer
 - Använd Customer Journey Analytics för att rapportera flerkanaliga kunddata från olika källor, inklusive Google BigQuery
 
 ## Förhandskrav
 
 - Åtkomst till Adobe Experience Platform: [https://experience.adobe.com/platform](https://experience.adobe.com/platform)
 - Åtkomst till Adobe Experience Platform Data Collection: [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/)
-- Åtkomst till demosystemet: [https://dashboard.adobedemo.com/](https://dashboard.adobedemo.com/)
+- Åtkomst till demosystemet: [https://dsn.adobe.com/](https://dsn.adobe.com/)
 
 ## Videor
 
-Du kan hitta många intressanta videor från våra Tech Academy-event, från Bootcamp med mera på vår [Experience Makers Community YouTube-kanal](https://www.youtube.com/channel/UCUKG2dkZ9pYuZUPebQ21jUw).
+Du kan hitta många intressanta videor från vårt Tech Academy-webbseminarium, från bootcamp med mera på vår [Experience Makers Community YouTube-kanal](https://www.youtube.com/channel/UCUKG2dkZ9pYuZUPebQ21jUw).
 
 ## Innehåll
 
@@ -84,7 +84,7 @@ Du kan hitta många intressanta videor från våra Tech Academy-event, från Boo
 - **Beskrivning:** I den här grundläggande modulen importerar du data från webbplatsen till plattformen
 - **Tidsinvestering:** 120 minuter
 
-[1.3 Sammansättning av externa målgrupper](./modules/datacollection/module1.3/fac.md)
+[1.3 Sammansatt målgrupp](./modules/datacollection/module1.3/fac.md)
 
 - **Målgrupp:** Dataanalytiker, datatekniker, dataarkitekt
 - **Krav:** Åtkomst till Adobe Experience Platform
@@ -109,19 +109,19 @@ Du kan hitta många intressanta videor från våra Tech Academy-event, från Boo
 - **Beskrivning:** I den här modulen får du lära dig hur du konfigurerar, konfigurerar och använder Adobe Experience Platform Intelligent Services.
 - **Tidsinvestering:** 60 minuter
 
-[2.3 Real-Time CDP - Bygg ett segment och agera](./modules/rtcdp-b2c/module2.3/real-time-cdp-build-a-segment-take-action.md)
+[2.3 Real-Time CDP - Bygg en målgrupp och agera](./modules/rtcdp-b2c/module2.3/real-time-cdp-build-a-segment-take-action.md)
 
 - **Målgrupp:** Dataarkitektur, Orchestration-tekniker, Marketer
 - **Krav:** Åtkomst till Adobe Experience Platform, CDP, Adobe Audience Manager, Adobe Target, AWS S3 i realtid
-- **Beskrivning:** I den här modulen ska du konfigurera ett segment, aktivera det för direktuppspelningssegmentering och aktivera det för flera mål, inklusive Google DV360, Google AdWords, Adobe Audience Manager, Adobe Target och S3-mål som Salesforce Marketing Cloud.
+- **Beskrivning:** I den här modulen konfigurerar du en målgrupp och aktiverar målgruppen till flera mål, inklusive Google DV360, Adobe Target och AWS S3.
 - **Tidsinvestering:** 90 minuter
 
-[2.4 Real-Time CDP: Segmentaktivering till Microsoft Azure Event Hub](./modules/rtcdp-b2c/module2.4/segment-activation-microsoft-azure-eventhub.md)
+[2.4 Real-Time CDP: Audience Activation till Microsoft Azure Event Hub](./modules/rtcdp-b2c/module2.4/segment-activation-microsoft-azure-eventhub.md)
 
 - **Målgrupp:** Datatekniker, dataarkitekt, dataanalytiker
 - **Krav:** Åtkomst till Adobe Experience Platform, CDP i realtid och Microsoft Azure
-- **Beskrivning:** I den här modulen konfigurerar du ett Microsoft Azure EventHub-mål som realtidsmål för Adobe Experience Platform CDP i realtid. Du kommer också att konfigurera och distribuera en Azure-funktion som aktiveras i realtid när Adobe Experience Platform levererar en segmentnyttolast till Azure EventHub-målet. Azure-funktionen som du utlöser visar mekanismen för Adobe Experience Platform CDP:s aktiveringsfunktioner i realtid.
-Som en del av den här modulen får du också en förståelse för vad som utlöser CDP i realtid för att faktiskt leverera en nyttolast till en angiven destination. Vi kommer också att diskutera statusen för en segmentkvalificering och hur den hör ihop med aktiveringen.
+- **Beskrivning:** I den här modulen konfigurerar du ett Microsoft Azure EventHub-mål som realtidsmål för Adobe Experience Platform CDP i realtid. Du kommer också att konfigurera och distribuera en Azure-funktion som aktiveras i realtid när Adobe Experience Platform levererar en målgruppsnyttolast till ditt Azure EventHub-mål. Azure-funktionen som du utlöser visar mekanismen för Adobe Experience Platform CDP:s aktiveringsfunktioner i realtid.
+Som en del av den här modulen får du också en förståelse för vad som utlöser CDP i realtid för att faktiskt leverera en nyttolast till en angiven destination. Vi kommer också att diskutera status för en målgruppskvalifikation och hur den hör ihop med aktiveringen.
 - **Tidsinvestering:** 90 minuter
 
 [2.5 Real-Time CDP Connections: Event Forwarding](./modules/rtcdp-b2c/module2.5/aep-data-collection-ssf.md)

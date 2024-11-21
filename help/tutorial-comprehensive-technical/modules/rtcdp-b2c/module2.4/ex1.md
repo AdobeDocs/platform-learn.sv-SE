@@ -1,131 +1,132 @@
 ---
-title: Segmentaktivering till Microsoft Azure Event Hub - Konfigurera Event Hub i Azure
-description: Segmentaktivering till Microsoft Azure Event Hub - Konfigurera Event Hub i Azure
+title: Segmentaktivering till Microsoft Azure Event Hub - Konfigurera din Microsoft Azure-miljö
+description: Segmentaktivering till Microsoft Azure Event Hub - Konfigurera din Microsoft Azure-miljö
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: 772b4d2b-144a-4f29-a855-8fd3493a85d2
+source-git-commit: 216914c9d97827afaef90e21ed7d4f35eaef0cd3
 workflow-type: tm+mt
-source-wordcount: '589'
+source-wordcount: '467'
 ht-degree: 0%
 
 ---
 
-# 2.4.1 Konfigurera din Microsoft Azure EventHub-miljö
+# 2.4.1 Konfigurera miljön
 
-Azure Event Hubs är en mycket skalbar publiceringsprenumerationstjänst som kan importera miljontals händelser per sekund och strömma dem till flera program. På så sätt kan du bearbeta och analysera den enorma mängd data som produceras av dina anslutna enheter och program.
+## Skapa en Azure-prenumeration
 
-## 2.4.1.1 Vad är Azure Event Hubs?
+>[!NOTE]
+>
+>Om du redan har en Azure-prenumeration kan du hoppa över det här steget. Fortsätt med nästa övning i så fall.
 
-Azure Event Hubs är en stor dataströmningsplattform och en tjänst för händelsehantering. Den kan ta emot och bearbeta miljontals händelser per sekund. Data som skickas till ett händelsehubb kan omformas och lagras med hjälp av alla realtidsanalysleverantörer eller batchnings-/lagringsadaptrar.
+Gå till [https://portal.azure.com](https://portal.azure.com) och logga in med ditt Azure-konto. Om du inte har någon, använd din personliga e-postadress för att skapa ditt Azure-konto.
 
-Händelsehubbar representerar **ytterdörren** för en händelsepipeline, som ofta kallas händelseinsättare i lösningsarkitekturer. En händelseinsättare är en komponent eller tjänst som är placerad mellan händelseutgivare (som Adobe Experience Platform RTCDP) och händelsekonsumenter för att frigöra produktionen av en händelseström från förbrukningen av dessa händelser. Event Hubs utgör en enhetlig direktuppspelningsplattform med en buffert för tidsbevarande, som frigör händelseproducenter från händelsekonsumenter.
+![02-azure-portal-email.png](./images/02azureportalemail.png)
 
-## 2.4.1.2 Skapa namnutrymmet Event Hubs
+När inloggningen är klar visas följande skärm:
 
-Gå till [https://portal.azure.com/#home](https://portal.azure.com/#home) och välj **Skapa en resurs**.
+![03-azure-logged-in.png](./images/03azureloggedin.png)
 
-![1-01-open-azure-portal.png](./images/1-01-open-azure-portal.png)
+Klicka på menyn till vänster och välj **Alla resurser**. Azure-prenumerationsskärmen visas om du inte har prenumererat ännu. I så fall väljer du **Starta med en kostnadsfri Azure-utvärderingsversion**.
 
-Ange **Händelse** i sökfältet på resursskärmen och välj **Händelsehubbar** i listrutan:
+![04-azure-start-subscribe.png](./images/04azurestartsubscribe.png)
 
-![1-02-search-event-hubs.png](./images/1-02-search-event-hubs.png)
+Fyll i Azure-prenumerationsformuläret, ange din mobiltelefon och ditt kreditkort för aktivering (du har en kostnadsfri nivå i 30 dagar och du debiteras inte om du inte uppgraderar).
 
-Klicka på **Skapa**:
+När prenumerationsprocessen är klar är du redo att gå:
 
-![1-03-event-hub-create.png](./images/1-03-event-hub-create.png)
+![06-azure-subscription-ok.png](./images/06azuresubscriptionok.png)
 
-Om det här är första gången du skapar en resurs i Azure måste du skapa en ny **resursgrupp**. Om du redan har en resursgrupp kan du markera den (eller skapa en ny).
+## Installera Visual Code Studio
 
-Välj **Skapa ny** och ge gruppen namnet `--aepUserLdap---aep-enablement`.
+Du använder Microsoft Visual Code Studio för att hantera ditt Azure-projekt. Du kan hämta den via [den här länken](https://code.visualstudio.com/download). Följ installationsanvisningarna för ditt operativsystem på samma webbplats.
 
-![1-04-create-resource-group.png](./images/1-04-create-resource-group.png)
+## Installera Visual Code Extensions
 
-Utför testet av fälten enligt följande:
+Installera Azure-funktionerna för Visual Studio-kod från [https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-azurefunctions). Klicka på installationsknappen:
 
-- Namnområde: Definiera namnområdet, det måste vara unikt, använd följande mönster `--aepUserLdap---aep-enablement`
-- Plats: **Västeuropa** refererar till Azure-datacenter i Amsterdam
-- Prisnivå: **Grundläggande**
-- Genomströmningsenheter: **1**
+![07-azure-code-extension-install.png](./images/07azurecodeextensioninstall.png)
 
-![1-05-create-namespace.png](./images/1-05-create-namespace.png)
+Installera Azure-konto och logga in för Visual Studio-kod från [https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account). Klicka på installationsknappen:
 
-Klicka på **Granska + skapa**.
+![08-azure-account-extension-install.png](./images/08azureaccountextensioninstall.png)
 
-![1-06-namespace-review-create.png](./images/1-06-namespace-review-create.png)
+## Installera node.js
 
-Klicka på **Skapa**.
+>[!NOTE]
+>
+>Om du redan har node.js installerat kan du hoppa över det här steget. Fortsätt med nästa övning i så fall.
 
-![1-07-namespace-create.png](./images/1-07-namespace-create.png)
+### macOS
 
-Distributionen av resursgruppen kan ta 1-2 minuter, och följande skärm visas när den är klar:
+Kontrollera att du har [Homebrew](https://brew.sh/) installerat först. Följ instruktionerna [här](https://brew.sh/).
 
-![1-08-namespace-deploy.png](./images/1-08-namespace-deploy.png)
+![Nod](./images/brew.png)
 
-## 2.4.1.3 Konfigurera händelsehubben i Azure
+Kör följande kommando när du har installerat Homebrew:
 
-Gå till [https://portal.azure.com/#home](https://portal.azure.com/#home) och välj **Alla resurser**.
+```javascript
+brew install node
+```
 
-![1-09-all-resources.png](./images/1-09-all-resources.png)
+### Windows
 
-Välj ditt `--aepUserLdap---aep-enablement`-namnområde i resurslistan:
+Hämta [Windows Installer](https://nodejs.org/en/#home-downloadhead) direkt från webbplatsen [nodejs.org](https://nodejs.org/en/).
 
-![1-10-list-resources.png](./images/1-10-list-resources.png)
+## Verifiera version av node.js
 
-Välj **Händelsehubbar** på `--aepUserLdap---aep-enablement`-detaljskärmen:
+För den här modulen måste du ha node.js version 18 installerat. Andra versioner av node.js kan orsaka problem med den här övningen.
 
-![1-11-even-thub-namespace.png](./images/1-11-eventhub-namespace.png)
+Kontrollera din version av node.js nu innan du fortsätter.
 
-Klicka på **+ Händelsehubben**.
+Kör det här kommandot för att verifiera din node.js-version:
 
-![1-12-add-event-hub.png](./images/1-12-add-event-hub.png)
+```javascript
+node -v
+```
 
-Använd `--aepUserLdap---aep-enablement-event-hub` som namn och klicka på **Skapa**.
+Om du har en version under eller över 18 måste du uppgradera eller nedgradera.
 
-![1-13-create-event-hub.png](./images/1-13-create-event-hub.png)
+### Uppgradera/nedgradera nod.js-version på macOS
 
-Klicka på **Händelsehubbar** i händelsehubbens namnutrymme. Du bör nu se din **händelsehubb** i listan. I så fall kan du gå vidare till nästa övning.
+Kontrollera att du har installerat paketet **n**.
 
-![1-14-event-hub-list.png](./images/1-14-event-hub-list.png)
+Kör följande kommando för att installera paketet **n**:
 
-## 2.4.1.4 Konfigurera ditt Azure Storage-konto
+```javascript
+sudo npm install -g n
+```
 
-Om du vill felsöka din Azure Event Hub-funktion i senare övningar måste du tillhandahålla ett Azure Storage-konto som en del av projektkonfigurationen för Visual Studio Code. Du skapar nu det Azure Storage-kontot.
+Om du har en version som är under eller över version 12 kör du det här kommandot för att uppgradera eller nedgradera:
 
-Gå till [https://portal.azure.com/#home](https://portal.azure.com/#home) och välj **Skapa en resurs**.
+```javascript
+sudo n 18
+```
 
-![1-15-event-hub-storage.png](./images/1-15-event-hub-storage.png)
+### Uppgradera/nedgradera nod.js-version i Windows
 
-Ange **lagring** i sökningen och välj **Lagringskonto** i listan.
+Avinstallera node.js från Windows > Kontrollpanelen > Lägg till eller ta bort program.
 
-![1-16-event-hub-search-storage.png](./images/1-16-event-hub-search-storage.png)
+Installerar den version som krävs från webbplatsen [nodatums.org](https://nodejs.org/en/).
 
-Välj **Skapa**.
+## Installera NPM-paket: begäran
 
-![1-17-event-hub-create-storage.png](./images/1-17-event-hub-create-storage.png)
+Du måste installera paketet **request** som en del av installationen av node.js.
 
-Ange din **resursgrupp** (skapad i början av den här övningen), använd `--aepUserLdap--aepstorage` som lagringskontonamn, välj **Lokalt redundant lagring (LRS)** och klicka sedan på **Granska + skapa**.
+Kör följande kommando för att installera paketet **request**:
 
-![1-18-event-hub-create-review-storage.png](./images/1-18-event-hub-create-review-storage.png)
+```javascript
+npm install request
+```
 
-Klicka på **Skapa**.
+## Installationsverktyg för Azure-funktioner:
 
-![1-19-event-hub-submit-storage.png](./images/1-19-event-hub-submit-storage.png)
+```
+brew tap azure/functions
+brew install azure-functions-core-tools@4
+```
 
-Det tar några sekunder att skapa ditt lagringskonto:
-
-![1-20-event-hub-deploy-storage.png](./images/1-20-event-hub-deploy-storage.png)
-
-När skärmen är klar visas knappen **Gå till resurs**.
-
-Klicka på **Microsoft Azure**.
-
-![1-21-event-hub-deploy-ready-storage.png](./images/1-21-event-hub-deploy-ready-storage.png)
-
-Ditt lagringskonto visas nu under **Senaste resurser**.
-
-![1-22-event-hub-deploy-resources-list.png](./images/1-22-event-hub-deploy-resources-list.png)
-
-Nästa steg: [2.4.2 Konfigurera Azure Event Hub-målet i Adobe Experience Platform](./ex2.md)
+Nästa steg: [2.4.2 Konfigurera din Microsoft Azure EventHub-miljö](./ex2.md)
 
 [Gå tillbaka till modul 2.4](./segment-activation-microsoft-azure-eventhub.md)
 

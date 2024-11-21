@@ -5,9 +5,9 @@ user-guide-description: En praktisk självstudiekurs som handlar om många aspek
 hide: true
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-source-git-commit: 8cfe1dbb528bdf5ecc828cf67ef969c885982435
+source-git-commit: b6c98ca773ba46205c467321a7796c29b614e75c
 workflow-type: tm+mt
-source-wordcount: '923'
+source-wordcount: '919'
 ht-degree: 2%
 
 ---
@@ -58,7 +58,7 @@ ht-degree: 2%
       + [2.1.1 Besök webbplatsen](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.1/ex1.md)
       + [2.1.2 Visualisera din egen kundprofil i realtid - användargränssnitt](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.1/ex2.md)
       + [2.1.3 Visualisera din egen kundprofil i realtid - API](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.1/ex3.md)
-      + [2.1.4 Skapa ett segment - användargränssnitt](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.1/ex4.md)
+      + [2.1.4 Skapa en målgrupp - användargränssnitt](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.1/ex4.md)
       + [2.1.5 Se hur kundprofilen i realtid fungerar i callcenter](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.1/ex5.md)
       + [Sammanfattning och fördelar](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.1/summary.md)
    + 2.2 Intelligenta tjänster {#module22}
@@ -67,25 +67,25 @@ ht-degree: 2%
       + [2.2.2 Kund-AI: Skapa en ny instans (Konfigurera)](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.2/ex2.md)
       + [2.2.3 Kundens AI: Resultatinstrumentpanel och segmentering (predikt &amp; Take Action)](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.2/ex3.md)
       + [Sammanfattning och fördelar](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.2/summary.md)
-   + 2.3 Real-Time CDP: Bygg ett segment och agera! {#module23}
+   + 2.3 Real-Time CDP: Bygg en målgrupp och agera! {#module23}
       + [Översikt](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.3/real-time-cdp-build-a-segment-take-action.md)
-      + [2.3.1 Bygg ett segment och aktivera strömningssegmentering](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.3/ex1.md)
+      + [2.3.1 Skapa en målgrupp](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.3/ex1.md)
       + [2.3.2 Granska hur du konfigurerar DV360-mål med hjälp av destinationer](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.3/ex2.md)
-      + [2.3.3 Vidta åtgärd: skicka segmentet till DV360](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.3/ex3.md)
-      + [2.3.4 Take Action: send your segment to an S3 destination](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.3/ex4.md)
-      + [2.3.5 Take Action: send your segment to Adobe Target](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.3/ex5.md)
+      + [2.3.3 Take Action: send your audience to DV360](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.3/ex3.md)
+      + [2.3.4 Take Action: send your audience to an S3 destination](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.3/ex4.md)
+      + [2.3.5 Take Action: send your målgrupp to Adobe Target](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.3/ex5.md)
       + [2.3.6 Externa målgrupper](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.3/ex6.md)
       + [2.3.7 Destinations SDK](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.3/ex7.md)
       + [Sammanfattning och fördelar](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.3/summary.md)
-   + 2.4 Real-Time CDP: Segmentaktivering till Microsoft Azure Event Hub {#module24}
+   + 2.4 Real-Time CDP: Audience Activation till Microsoft Azure Event Hub {#module24}
       + [Översikt](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.4/segment-activation-microsoft-azure-eventhub.md)
-      + [2.4.0 Konfigurera miljön](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.4/ex0.md)
-      + [2.4.1 Konfigurera din Microsoft Azure EventHub-miljö](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.4/ex1.md)
-      + [2.4.2 Konfigurera Azure Event Hub-målet i Adobe Experience Platform](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.4/ex2.md)
-      + [2.4.3 Skapa strömningssegment](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.4/ex3.md)
-      + [2.4.4 Aktivera segment](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.4/ex4.md)
-      + [2.4.5 Skapa ditt Microsoft Azure-projekt](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.4/ex5.md)
-      + [2.4.6 Heltäckande scenario](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.4/ex6.md)
+      + [2.4.1 Konfigurera miljön](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.4/ex1.md)
+      + [2.4.2 Konfigurera din Microsoft Azure EventHub-miljö](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.4/ex2.md)
+      + [2.4.3 Konfigurera Azure Event Hub-målet i Adobe Experience Platform](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.4/ex3.md)
+      + [2.4.4 Skapa målgrupper](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.4/ex4.md)
+      + [2.4.5 Aktivera er målgrupp](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.4/ex5.md)
+      + [2.4.6 Skapa ditt Microsoft Azure-projekt](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.4/ex6.md)
+      + [2.4.7 Heltäckande scenario](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.4/ex7.md)
       + [Sammanfattning och fördelar](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.4/summary.md)
    + 2.5 Real-Time CDP Connections: Event Forwarding{#module25}
       + [Översikt](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.5/aep-data-collection-ssf.md)

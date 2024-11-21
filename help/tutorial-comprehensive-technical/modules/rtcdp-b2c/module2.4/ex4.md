@@ -1,20 +1,38 @@
 ---
-title: Segmentaktivering till Microsoft Azure Event Hub - Aktivera segment
-description: Segmentaktivering till Microsoft Azure Event Hub - Aktivera segment
+title: Audience Activation till Microsoft Azure Event Hub - Skapa en målgrupp
+description: Audience Activation till Microsoft Azure Event Hub - Skapa en målgrupp
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: 56f6a6dc-82aa-4b64-a3f6-b6f59c484ccb
+source-git-commit: 216914c9d97827afaef90e21ed7d4f35eaef0cd3
 workflow-type: tm+mt
-source-wordcount: '345'
+source-wordcount: '338'
 ht-degree: 0%
 
 ---
 
-# 2.4.4 Aktivera segment
+# 2.4.4 Skapa en målgrupp
 
-## 2.4.4.1 Lägg till segment till Azure Event Hub-målet
+## Introduktion
 
-I den här övningen ska du lägga till ditt segment `--aepUserLdap-- - Interest in Equipment` i ditt `--aepUserLdap---aep-enablement` Azure Event Hub-mål.
+Du kommer att skapa en enkel publik:
+
+- **Intresse för planer** som kunder är kvalificerade för när de besöker sidan **Planer** på demowebbplatsen CitiSignal.
+
+### Bra att veta
+
+CDP-aktivering i realtid utlöser en aktivering till ett mål när ni kvalificerar er för en målgrupp som ingår i målets aktiveringslista. I så fall kommer målgruppsklassificeringsnyttolasten som skickas till det målet att innehålla **alla målgrupper som din kundprofil kvalificerar** för.
+
+Målet med den här modulen är att visa att kundprofilens målgruppskvalifikation skickas till din Event Hub-destination i nära realtid.
+
+### Målgruppsstatus
+
+En målgruppsklassificering i Adobe Experience Platform har alltid en **status**-egenskap och kan vara något av följande:
+
+- **realiserat**: Detta indikerar en ny publikkvalificering
+- **avslutad**: Detta anger att profilen inte längre är kvalificerad för målgruppen
+
+## Bygg publiken
 
 Logga in på Adobe Experience Platform via följande URL: [https://experience.adobe.com/platform](https://experience.adobe.com/platform).
 
@@ -22,43 +40,33 @@ När du har loggat in loggar du in på Adobe Experience Platform hemsida.
 
 ![Datainmatning](./../../../modules/datacollection/module1.2/images/home.png)
 
-Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``--aepSandboxName--``. Du kan göra detta genom att klicka på texten **[!UICONTROL Production Prod]** i den blå raden ovanför skärmen. När du har valt rätt sandlåda ser du skärmändringen och nu befinner du dig i din dedikerade sandlåda.
+Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``--aepSandboxName--``. När du har valt rätt sandlåda ser du skärmändringen och nu befinner du dig i din dedikerade sandlåda.
 
 ![Datainmatning](./../../../modules/datacollection/module1.2/images/sb1.png)
 
-Gå till **Destinationer** och klicka sedan på **Bläddra**. Då ser du alla tillgängliga destinationer. Leta upp målet och klicka på ikonen **+** enligt nedan.
+Gå till **Publiker**. Klicka på knappen **+ Skapa målgrupp**.
 
-![5-01-select-destination.png](./images/5-01-select-destination.png)
+![Datainmatning](./images/seg.png)
 
-Då ser du det här. Sök efter ditt segment med hjälp av din ldap och välj `--aepUserLdap-- - Interest in Equipment` i listan med segment.
+Välj **Skapa regel** och klicka på **Skapa**.
 
-Klicka på **Nästa**.
+![Datainmatning](./images/seg1.png)
 
-![5-04-select-segment.png](./images/5-04-select-segment.png)
+Namnge målgruppen `--aepUserLdap-- - Interest in Plans`, ange utvärderingsmetoden till **Edge** och lägg till sidnamnet från upplevelsehändelsen.
 
-Adobe Experience Platform CDP i realtid kan leverera en nyttolast till två typer av destinationer, segmentdestinationer och profildestinationer.
+Klicka på **Händelser** och dra och släpp **XDM ExperienceEvent > Webb > Information om webbsidor > Namn**. Ange **planer** som värde:
 
-Segmentdestinationer får en fördefinierad segmentkvalificeringsnyttolast som kommer att diskuteras senare. En sådan nyttolast innehåller **alla** segmentkvalifikationerna för en viss profil. Även för segment som inte finns med i målets aktiveringslista. Ett exempel på ett sådant segmentmål är **Azure Event Hubs** och **AWS Kinesis**.
+![4-05-create-ee-2.png](./images/405createee2.png)
 
-Profilbaserade mål gör att du kan välja valfritt attribut (firstName, lastName, ...) från XDM-profilens unionsschema och inkludera det i aktiveringsnyttolasten. Ett exempel på en sådan destination är **E-postmarknadsföring**.
+Dra och släpp **XDM ExperienceEvent > `--aepTenantId--` > DemoEnvironment > brandName**. Ange `--aepUserLdap--` som värde, ställ in jämförelseparametern på **contains** och klicka på **Publish**:
 
-Eftersom din Azure Event Hub-destination är ett **segment**-mål väljer du till exempel fältet `--aepTenantId--.identification.core.ecid`.
+![4-05-create-ee-2-brand.png](./images/405createee2brand.png)
 
-Klicka på **Lägg till nytt fält**, klicka på Bläddra schema och markera fältet `--aepTenantId--identification.core.ecid` (ta bort alla andra fält som skulle visas automatiskt).
+Din publik är nu publicerad.
 
-Klicka på **Nästa**.
+![4-05-create-ee-2-brand.png](./images/405createee2brand1.png)
 
-![5-05-select-attributes.png](./images/5-05-select-attributes.png)
-
-Klicka på **Slutför**.
-
-![5-06-destination-finish.png](./images/5-06-destination-finish.png)
-
-Ditt segment är nu aktiverat mot din Microsoft Event Hub-destination.
-
-![5-07-destination-segment-added.png](./images/5-07-destination-segment-added.png)
-
-Nästa steg: [2.4.5 Skapa ditt Microsoft Azure-projekt](./ex5.md)
+Nästa steg: [2.4.5 Aktivera din målgrupp](./ex5.md)
 
 [Gå tillbaka till modul 2.4](./segment-activation-microsoft-azure-eventhub.md)
 

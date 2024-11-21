@@ -1,9 +1,10 @@
 ---
-title: Segmentaktivering till Microsoft Azure Event Hub - Sammanfattning och fördelar
-description: Segmentaktivering till Microsoft Azure Event Hub - Sammanfattning och fördelar
+title: Audience Activation till Microsoft Azure Event Hub - Sammanfattning och fördelar
+description: Audience Activation till Microsoft Azure Event Hub - Sammanfattning och fördelar
 kt: 5342
 doc-type: tutorial
-source-git-commit: 2cdc145d7f3933ec593db4e6f67b60961a674405
+exl-id: 3b598ffc-875e-468d-b91c-882062e8203f
+source-git-commit: 216914c9d97827afaef90e21ed7d4f35eaef0cd3
 workflow-type: tm+mt
 source-wordcount: '291'
 ht-degree: 1%
@@ -19,13 +20,13 @@ I den här modulen får du lära dig hur du konfigurerar en Azure Event Hub-inst
 
 Låt oss lyfta fram fördelarna med att integrera Adobe Experience Platform med Microsoft Azure Event Hub:
 
-- Med Microsoft Azure Event Hubs som Adobe Experience Platform-mål kan du hämta segmentkvalificeringar i realtid och bearbeta dem med en Azure Event Hub-funktion. Med en sådan Azure Event Hub-funktion kan du skapa vilken typ av anpassad segmentaktiveringshanterare som helst och som sådan integrera alla typer av tredjepartsmål.
+- Med Microsoft Azure Event Hubs som Adobe Experience Platform-mål kan du hämta målgruppskvalifikationer i realtid och bearbeta dem med en Azure Event Hub-funktion. Med en sådan Azure Event Hub-funktion kan du skapa vilken typ av anpassad målgruppsaktiveringshanterare som helst och som sådan integrera alla typer av tredjepartsmål.
 
-- Även om destinationer endast aktiveras av angivna segment, kommer aktiveringsnyttolasten att inkludera alla segment som den angivna profilen kvalificerar för.
+- Även om destinationer endast aktiveras av angivna målgrupper, kommer aktiveringsnyttolasten att inkludera alla målgrupper som den angivna profilen kvalificerar för.
 
-- Ett segment aktiverar bara en aktivering när dess status ändras. En profil som exempelvis kvalificerar fyra gånger för ett segment under en period av tre månader, aktiveras bara de två första. Den första är en statusändring från till **realiserad**, den andra utlöses av en statusändring från **realiserad** till **befintlig**.
+- En målgrupp aktiverar bara en aktivering när dess status ändras. En profil som till exempel kvalificerar fyra gånger för en målgrupp under en period av tre månader, aktiveras bara de två första. Den första är en statusändring från till **realiserad**, den andra utlöses av en statusändring från **realiserad** till **befintlig**.
 
-- När du aktiverar segment för kända profiler inkluderas en fullständig identitetskarta i aktiveringsnyttolasten. Din Azure-funktion kan använda någon av de tillgängliga identiteterna för att mappa segmenten till en profil som hanteras i ett tredjepartsprogram, samtidigt som programmets kundidentifierare används.
+- När målgrupper aktiveras för kända profiler inkluderas en fullständig identitetskarta i aktiveringsnyttolasten. Din Azure-funktion kan använda någon av de tillgängliga identiteterna för att mappa målgrupperna till en profil som hanteras i ett tredjepartsprogram, samtidigt som programmets kundidentifierare används.
 
 - I den här modulen har händelsehubbfunktionen distribuerats lokalt (felsökningsläge i Visual Studio Code), vilket ger dig många felsöknings- och felsökningsalternativ.
 

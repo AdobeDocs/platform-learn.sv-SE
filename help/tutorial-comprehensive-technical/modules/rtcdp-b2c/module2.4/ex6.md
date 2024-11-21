@@ -1,111 +1,193 @@
 ---
-title: Segmentaktivering till Microsoft Azure Event Hub - åtgärd
-description: Segmentaktivering till Microsoft Azure Event Hub - åtgärd
+title: Audience Activation till Microsoft Azure Event Hub - Definiera en Azure-funktion
+description: Audience Activation till Microsoft Azure Event Hub - Definiera en Azure-funktion
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: c39fea54-98ec-45c3-a502-bcf518e6fd06
+source-git-commit: 216914c9d97827afaef90e21ed7d4f35eaef0cd3
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '723'
 ht-degree: 0%
 
 ---
 
-# 2.4.6 Heltäckande scenario
+# 2.4.6 Skapa ditt Microsoft Azure-projekt
 
-## 2.4.6.1 Starta Azure Event Hub-utlösaren
+## Bekanta dig med Azure Event Hub-funktioner
 
-För att visa nyttolasten som skickas av Adobe Experience Platform CDP i realtid till vår Azure Event Hub när segment kvalificeras måste vi starta vår enkla Azure Event Hub-utlösarfunktion. Den här funktionen gör att nyttolasten&quot;dumpas&quot; till konsolen i Visual Studio Code. Men kom ihåg att den här funktionen kan utökas på alla sätt för att interagera med alla typer av miljöer med hjälp av dedikerade API:er och protokoll.
+Med Azure-funktioner kan du köra små kodbitar (kallas **funktioner**) utan att behöva oroa dig för programinfrastrukturen. Med Azure-funktioner ger molninfrastrukturen alla aktuella servrar du behöver för att ditt program ska kunna köras i stor skala.
 
-### Starta Visual Studio Code och starta projektet
+En funktion är **utlöst** av en viss typ av händelse. De utlösare som stöds är bland annat att svara på dataändringar, svara på meddelanden (till exempel händelsehubbar), köra ett schema eller som ett resultat av en HTTP-begäran.
 
-Se till att du har Visual Studio Code-projektet öppet och igång
+Azure-funktioner är en serverlös beräkningstjänst som gör att du kan köra händelseutlösad kod utan att explicit behöva etablera eller hantera infrastruktur.
 
-Om du vill starta/stoppa/starta om din Azure-funktion i Visual Studio Code ska du läsa följande övningar:
+Azure Event Hubs kan integreras med Azure-funktioner för en serverlös arkitektur.
 
-- [Utgång 13.5.4 - Starta Azure Project](./ex5.md)
-- [Utövning 13.5.5 - Stoppa Azure-projekt](./ex5.md)
+## Öppna Visual Studio-kod och logga in på Azure
 
-Din Visual Studio-kods **Terminal** ska nämna något liknande:
+Visual Studio Code gör det enkelt att ...
 
-```code
-[2022-02-23T05:03:41.429Z] Worker process started and initialized.
-[2022-02-23T05:03:41.484Z] Debugger attached.
-[2022-02-23T05:03:46.401Z] Host lock lease acquired by instance ID '000000000000000000000000D90C881B'.
+- definiera och binda Azure-funktioner till Event Hubs
+- testa lokalt
+- distribuera till Azure
+- körning av fjärrloggfunktion
+
+### Öppna Visual Studio-kod
+
+### Logga in på Azure
+
+När du loggar in med ditt Azure-konto som du använde för att registrera dig i den tidigare övningen kan du hitta och binda alla Event Hub-resurser med Visual Studio Code.
+
+Öppna Visual Studio-kod och klicka på ikonen **Azure** .
+
+Välj sedan **Logga in på Azure**:
+
+![3-01-vsc-open.png](./images/301vscopen.png)
+
+Du omdirigeras till webbläsaren för att logga in. Kom ihåg att välja det Azure-konto som du använde för att registrera.
+
+När du ser följande skärm i webbläsaren loggas du in med Visual Code Studio:
+
+![3-03-vsc-login-ok.png](./images/303vscloginok.png)
+
+Återgå till Visual Code Studio (du ser namnet på din Azure-prenumeration, till exempel **Azure-prenumeration 1**):
+
+![3-04-vsc-logged-in.png](./images/304vscloggedin.png)
+
+## Skapa ett Azure-projekt
+
+Klicka på **Skapa funktionsprojekt..**:
+
+![3-05-vsc-create-project.png](./images/vsc2.png)
+
+Välj en lokal mapp som du vill spara projektet i och klicka på **Välj**:
+
+![3-06-vsc-select-folder.png](./images/vsc3.png)
+
+Du kommer nu att ange guiden Skapa projekt. Klicka på **JavaScript** som språk för ditt projekt:
+
+![3-07-vsc-select-language.png](./images/vsc4.png)
+
+Välj sedan **Modell v4**.
+
+![3-07-vsc-select-language.png](./images/vsc4a.png)
+
+Välj **Azure Event Hub-utlösaren** som projektets första funktionsmall:
+
+![3-08-vsc-function-template.png](./images/vsc5.png)
+
+Ange ett namn för funktionen, använd följande format `--aepUserLdap---aep-event-hub-trigger` och tryck på Retur:
+
+![3-09-vsc-function-name.png](./images/vsc6.png)
+
+Välj **Skapa ny inställning för lokal app**:
+
+![3-10-vsc-function-local-app-setting.png](./images/vsc7.png)
+
+Klicka för att markera det namnutrymme för händelsehubben som du skapade tidigare, med namnet `--aepUserLdap---aep-enablement`.
+
+![3-11-vsc-function-select-namespace.png](./images/vsc8.png)
+
+Klicka sedan på händelsehubben som du skapade tidigare, med namnet `--aepUserLdap---aep-enablement-event-hub`.
+
+![3-12-vsc-function-select-eventhub.png](./images/vsc9.png)
+
+Klicka för att välja **RootManageSharedAccessKey** som händelsehubbsprincip:
+
+![3-13-vsc-function-select-even-thub-policy.png](./images/vsc10.png)
+
+Välj **Lägg till på arbetsyta** om du vill öppna ditt projekt:
+
+![3-15-vsc-project-add-to-workspace.png](./images/vsc12.png)
+
+Du kan då få ett sådant här meddelande. I så fall klickar du på **Ja, jag litar på författarna**.
+
+![3-15-vsc-project-add-to-workspace.png](./images/vsc12a.png)
+
+När du har skapat projektet klickar du på **index.js** för att öppna filen i redigeraren:
+
+![3-16-vsc-open-index-js.png](./images/vsc13.png)
+
+Nyttolasten som skickas av Adobe Experience Platform till din Event Hub kommer att innehålla publikens ID:
+
+```json
+[{
+"segmentMembership": {
+"ups": {
+"ca114007-4122-4ef6-a730-4d98e56dce45": {
+"lastQualificationTime": "2020-08-31T10:59:43Z",
+"status": "realized"
+},
+"be2df7e3-a6e3-4eb4-ab12-943a4be90837": {
+"lastQualificationTime": "2020-08-31T10:59:56Z",
+"status": "realized"
+},
+"39f0feef-a8f2-48c6-8ebe-3293bc49aaef": {
+"lastQualificationTime": "2020-08-31T10:59:56Z",
+"status": "realized"
+}
+}
+},
+"identityMap": {
+"ecid": [{
+"id": "08130494355355215032117568021714632048"
+}]
+}
+}]
 ```
 
-![6-01-vsc-ready.png](./images/vsc31.png)
+Ersätt koden i Visual Studio-kodens index.js med koden nedan. Den här koden körs varje gång CDP i realtid skickar målgruppskvalifikationer till din Event Hub-destination. I vårt exempel handlar koden bara om att visa och förbättra den mottagna nyttolasten. Men du kan föreställa dig vilken funktion som helst för att bearbeta målgruppskvalifikationer i realtid.
 
-## 2.4.6.2 Läs in din Luma-webbplats
+```javascript
+// Marc Meewis - Solution Consultant Adobe - 2020
+// Adobe Experience Platform Enablement - Module 2.4
 
-Gå till [https://builder.adobedemo.com/projects](https://builder.adobedemo.com/projects). När du har loggat in med din Adobe ID ser du det här. Klicka på webbplatsprojektet för att öppna det.
+// Main function
+// -------------
+// This azure function is fired for each audience activated to the Adobe Exeperience Platform Real-time CDP Azure 
+// Eventhub destination
+// This function enriched the received audience payload with the name of the audience. 
+// You can replace this function with any logic that is require to process and deliver
+// Adobe Experience Platform audiences in real-time to any application or platform that 
+// would need to act upon an AEP audience qualification.
+// 
 
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web8.png)
+module.exports = async function (context, eventHubMessages) {
 
-Nu kan du följa nedanstående flöde för att komma åt webbplatsen. Klicka på **Integrationer**.
+    return new Promise (function (resolve, reject) {
 
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web1.png)
+        context.log('Message : ' + JSON.stringify(eventHubMessages, null, 2));
 
-På sidan **Integrationer** måste du välja den datainsamlingsegenskap som skapades i övning 0.1.
+        resolve();
 
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web2.png)
+    });    
 
-Du kommer då att se din demowebbplats öppnas. Markera URL-adressen och kopiera den till Urklipp.
+};
+```
 
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web3.png)
+Resultatet bör se ut så här:
 
-Öppna ett nytt inkognito-webbläsarfönster.
+![3-16b-vsc-edit-index-js.png](./images/vsc1.png)
 
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web4.png)
+## Kör Azure Project
 
-Klistra in webbadressen till demowebbplatsen, som du kopierade i föregående steg. Du ombeds sedan logga in med din Adobe ID.
+Nu är det dags att köra projektet. I det här skedet distribuerar vi inte projektet till Azure. Vi kör den lokalt i felsökningsläge. Välj ikonen Kör och klicka på den gröna pilen.
 
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web5.png)
+![3-17-vsc-run-project.png](./images/vsc14.png)
 
-Välj kontotyp och slutför inloggningsprocessen.
+Första gången du kör ditt projekt i felsökningsläge måste du koppla ett Azure-lagringskonto, klicka på **Välj lagringskonto** och sedan välja lagringskontot som du skapade tidigare, som har namnet `--aepUserLdap--aepstorage`.
 
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web6.png)
+Ditt projekt är nu igång och visas med en lista över händelser i händelsehubben. I nästa övning kommer du att visa hur ni beter er er på CitiSignal Demo-webbplatsen som kommer att kvalificera er för målgrupper. Därför får du en målgruppsklassificeringsnyttolast i terminalen för händelsehubbens utlösarfunktion.
 
-Därefter visas webbplatsen i ett inkognitivt webbläsarfönster. För varje demonstration måste du använda ett nytt, inkognitivt webbläsarfönster för att läsa in webbadressen till demowebbplatsen.
+![3-24-vsc-application-stop.png](./images/vsc18.png)
 
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web7.png)
+## Stoppa Azure Project
 
-## 2.4.6.3 Kvalificera för ert intresse för utrustningssegmentet
+Gå till **CALL STACK** i VSC, klicka på pilen i det projekt som körs och klicka sedan på **Stopp** för att stoppa projektet.
 
-Navigera till sidan **Utrustning** en gång och **läs inte in eller uppdatera den igen**. Den här åtgärden bör kvalificera dig för ditt `--aepUserLdap-- - Interest in Equipment`-segment.
+![3-24-vsc-application-stop.png](./images/vsc17.png)
 
-![6-04-luma-telco-nav-sport.png](./images/luma1.png)
-
-Verifiera genom att öppna profilvisarpanelen. Du bör nu vara medlem i `--aepUserLdap-- - Interest in Equipment`. Om dina segmentmedlemskap ännu inte har uppdaterats på panelen Profilvisningsprogram klickar du på knappen Läs in igen.
-
-![6-05-luma-telco-nav-bredband.png](./images/luma2.png)
-
-Växla tillbaka till Visual Studio Code och titta på fliken **TERMINAL**. Du bör se en lista över segment för ditt specifika **ECID**. Den här aktiveringsnyttolasten levereras till händelsehubben så snart du kvalificerar dig för `--aepUserLdap-- - Interest in Equipment`-segmentet.
-
-När du tittar närmare på segmentets nyttolast ser du att `--aepUserLdap-- - Interest in Equipment` har statusen **realiserad**.
-
-En segmentstatus på **realiserad** innebär att vår profil just har öppnat segmentet. Statusen **existing** innebär att vår profil fortsätter att vara i segmentet.
-
-![6-06-vsc-activation-real.png](./images/luma3.png)
-
-## 2.4.6.4 Besök utrustningssidan en andra gång
-
-Gör en hård uppdatering av sidan **Utrustning**.
-
-![6-07-back-to-sport.png](./images/luma1.png)
-
-Växla tillbaka till Visual Studio-kod och kontrollera fliken **TERMINAL**. Du kommer att se att vi fortfarande har ditt segment, men nu har statusen **befintlig**, vilket innebär att vår profil fortsätter att vara i segmentet.
-
-![6-08-vsc-activation-existing.png](./images/luma4.png)
-
-## 2.4.6.5 Besök sportsidan en tredje gång
-
-Om du skulle besöka sidan **Sport** en tredje gång, kommer ingen aktivering att göras eftersom det inte finns någon lägesändring från ett segment.
-
-Segmentaktiveringar utförs bara när segmentets status ändras:
-
-![6-09-segment-state-change.png](./images/6-09-segment-state-change.png)
-
-Nästa steg: [Sammanfattning och förmåner](./summary.md)
+Nästa steg: [2.4.7 Heltäckande scenario](./ex7.md)
 
 [Gå tillbaka till modul 2.4](./segment-activation-microsoft-azure-eventhub.md)
 
