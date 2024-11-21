@@ -4,9 +4,9 @@ description: Audience Activation till Microsoft Azure Event Hub - Definiera en A
 kt: 5342
 doc-type: tutorial
 exl-id: c39fea54-98ec-45c3-a502-bcf518e6fd06
-source-git-commit: 216914c9d97827afaef90e21ed7d4f35eaef0cd3
+source-git-commit: b4a7144217a68bc0b1bc70b19afcbc52e226500f
 workflow-type: tm+mt
-source-wordcount: '723'
+source-wordcount: '752'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ Klicka på **Skapa funktionsprojekt..**:
 
 ![3-05-vsc-create-project.png](./images/vsc2.png)
 
-Välj en lokal mapp som du vill spara projektet i och klicka på **Välj**:
+Välj eller skapa en lokal mapp som du vill spara projektet i och klicka på **Välj**:
 
 ![3-06-vsc-select-folder.png](./images/vsc3.png)
 
@@ -104,66 +104,73 @@ Du kan då få ett sådant här meddelande. I så fall klickar du på **Ja, jag 
 
 ![3-15-vsc-project-add-to-workspace.png](./images/vsc12a.png)
 
-När du har skapat projektet klickar du på **index.js** för att öppna filen i redigeraren:
+När du har skapat projektet öppnar du filen `--aepUserLdap---aep-event-hub-trigger.js` i redigeraren:
 
 ![3-16-vsc-open-index-js.png](./images/vsc13.png)
 
-Nyttolasten som skickas av Adobe Experience Platform till din Event Hub kommer att innehålla publikens ID:
+Nyttolasten som skickas av Adobe Experience Platform till din händelsehubb ser ut så här:
 
 ```json
-[{
-"segmentMembership": {
-"ups": {
-"ca114007-4122-4ef6-a730-4d98e56dce45": {
-"lastQualificationTime": "2020-08-31T10:59:43Z",
-"status": "realized"
-},
-"be2df7e3-a6e3-4eb4-ab12-943a4be90837": {
-"lastQualificationTime": "2020-08-31T10:59:56Z",
-"status": "realized"
-},
-"39f0feef-a8f2-48c6-8ebe-3293bc49aaef": {
-"lastQualificationTime": "2020-08-31T10:59:56Z",
-"status": "realized"
+{
+  "identityMap": {
+    "ecid": [
+      {
+        "id": "36281682065771928820739672071812090802"
+      }
+    ]
+  },
+  "segmentMembership": {
+    "ups": {
+      "94db5aed-b90e-478d-9637-9b0fad5bba11": {
+        "createdAt": 1732129904025,
+        "lastQualificationTime": "2024-11-21T07:33:52Z",
+        "mappingCreatedAt": 1732130611000,
+        "mappingUpdatedAt": 1732130611000,
+        "name": "vangeluw - Interest in Plans",
+        "status": "realized",
+        "updatedAt": 1732129904025
+      }
+    }
+  }
 }
-}
-},
-"identityMap": {
-"ecid": [{
-"id": "08130494355355215032117568021714632048"
-}]
-}
-}]
 ```
 
-Ersätt koden i Visual Studio-kodens index.js med koden nedan. Den här koden körs varje gång CDP i realtid skickar målgruppskvalifikationer till din Event Hub-destination. I vårt exempel handlar koden bara om att visa och förbättra den mottagna nyttolasten. Men du kan föreställa dig vilken funktion som helst för att bearbeta målgruppskvalifikationer i realtid.
+Uppdatera koden i Visual Studio-kodens `--aepUserLdap---aep-event-hub-trigger.js` med koden nedan. Den här koden körs varje gång CDP i realtid skickar målgruppskvalifikationer till din Event Hub-destination. I det här exemplet handlar koden bara om att visa inkommande nyttolast, men du kan föreställa dig vilken typ av extrafunktion som helst för att bearbeta målgruppskvalifikationer i realtid och använda dem längre ned i ert system för datarörelser.
+
+Rad 11 i filen `--aepUserLdap---aep-event-hub-trigger.js` visar för närvarande följande:
 
 ```javascript
-// Marc Meewis - Solution Consultant Adobe - 2020
-// Adobe Experience Platform Enablement - Module 2.4
-
-// Main function
-// -------------
-// This azure function is fired for each audience activated to the Adobe Exeperience Platform Real-time CDP Azure 
-// Eventhub destination
-// This function enriched the received audience payload with the name of the audience. 
-// You can replace this function with any logic that is require to process and deliver
-// Adobe Experience Platform audiences in real-time to any application or platform that 
-// would need to act upon an AEP audience qualification.
-// 
-
-module.exports = async function (context, eventHubMessages) {
-
-    return new Promise (function (resolve, reject) {
-
-        context.log('Message : ' + JSON.stringify(eventHubMessages, null, 2));
-
-        resolve();
-
-    });    
-
-};
+context.log('Event hub message:', message);
 ```
+
+Ändra rad 11 i `--aepUserLdap---aep-event-hub-trigger.js` så att den ser ut så här:
+
+```javascript
+context.log('Event hub message:', JSON.stringify(message));
+```
+
+Den totala nyttolasten bör då vara så här:
+
+```javascript
+const { app } = require('@azure/functions');
+
+app.eventHub('--aepUserLdap---aep-event-hub-trigger', {
+    connection: '--aepUserLdap--aepenablement_RootManageSharedAccessKey_EVENTHUB',
+    eventHubName: '--aepUserLdap---aep-enablement-event-hub',
+    cardinality: 'many',
+    handler: (messages, context) => {
+        if (Array.isArray(messages)) {
+            context.log(`Event hub function processed ${messages.length} messages`);
+            for (const message of messages) {
+                context.log('Event hub message:', message);
+            }
+        } else {
+            context.log('Event hub function processed message:', messages);
+        }
+    }
+});
+```
+
 
 Resultatet bör se ut så här:
 
@@ -175,7 +182,13 @@ Nu är det dags att köra projektet. I det här skedet distribuerar vi inte proj
 
 ![3-17-vsc-run-project.png](./images/vsc14.png)
 
-Första gången du kör ditt projekt i felsökningsläge måste du koppla ett Azure-lagringskonto, klicka på **Välj lagringskonto** och sedan välja lagringskontot som du skapade tidigare, som har namnet `--aepUserLdap--aepstorage`.
+Första gången du kör ditt projekt i felsökningsläge måste du koppla ett Azure-lagringskonto. Klicka sedan på **Välj lagringskonto**.
+
+![3-17-vsc-run-project.png](./images/vsc14a.png)
+
+och välj sedan lagringskontot som du skapade tidigare, med namnet `--aepUserLdap--aepstorage`.
+
+![3-17-vsc-run-project.png](./images/vsc14b.png)
 
 Ditt projekt är nu igång och visas med en lista över händelser i händelsehubben. I nästa övning kommer du att visa hur ni beter er er på CitiSignal Demo-webbplatsen som kommer att kvalificera er för målgrupper. Därför får du en målgruppsklassificeringsnyttolast i terminalen för händelsehubbens utlösarfunktion.
 

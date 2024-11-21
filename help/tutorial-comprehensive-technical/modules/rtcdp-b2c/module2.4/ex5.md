@@ -4,7 +4,7 @@ description: Audience Activation till Microsoft Azure Event Hub - Aktivera målg
 kt: 5342
 doc-type: tutorial
 exl-id: 89cfda0e-6c5e-45ab-9506-f0f0f6211e7f
-source-git-commit: 216914c9d97827afaef90e21ed7d4f35eaef0cd3
+source-git-commit: b4a7144217a68bc0b1bc70b19afcbc52e226500f
 workflow-type: tm+mt
 source-wordcount: '216'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## Lägg till målgrupp i Azure Event Hub-målet
 
-I den här övningen lägger du till din målgrupp `--aepUserLdap-- - Interest in Equipment` i ditt `--aepUserLdap---aep-enablement` Azure Event Hub-mål.
+I den här övningen lägger du till din målgrupp `--aepUserLdap-- - Interest in Plans` i ditt `--aepUserLdap---aep-enablement` Azure Event Hub-mål.
 
 Logga in på Adobe Experience Platform via följande URL: [https://experience.adobe.com/platform](https://experience.adobe.com/platform).
 

@@ -3,7 +3,8 @@ title: Audience Activation till Microsoft Azure Event Hub - åtgärd
 description: Audience Activation till Microsoft Azure Event Hub - åtgärd
 kt: 5342
 doc-type: tutorial
-source-git-commit: cefebfe0336952f0e3099fd2dd9f4395d453f713
+exl-id: f5b224bf-60b9-46e0-abdb-9d96a7e8c59f
+source-git-commit: b4a7144217a68bc0b1bc70b19afcbc52e226500f
 workflow-type: tm+mt
 source-wordcount: '418'
 ht-degree: 0%
@@ -76,11 +77,36 @@ Verifiera genom att öppna profilvisarpanelen. Du bör nu vara medlem i `--aepUs
 
 Växla tillbaka till Visual Studio Code och titta på fliken **TERMINAL**. Du bör se en lista över målgrupper för ditt specifika **ECID**. Den här aktiveringsnyttolasten levereras till händelsehubben så snart du kvalificerar dig för målgruppen `--aepUserLdap-- - Interest in Plans`.
 
+![6-06-vsc-activation-real.png](./images/cs3.png)
+
 När du tittar närmare på målgruppsnyttolasten kan du se att `--aepUserLdap-- - Interest in Plans` har statusen **realiserad**.
 
-En målgruppsstatus på **realiserad** innebär att din profil är en del av målgruppen, medan statusen **avslutad** innebär att vår profil har tagits bort från målgruppen.
+```json
+{
+  "identityMap": {
+    "ecid": [
+      {
+        "id": "36281682065771928820739672071812090802"
+      }
+    ]
+  },
+  "segmentMembership": {
+    "ups": {
+      "94db5aed-b90e-478d-9637-9b0fad5bba11": {
+        "createdAt": 1732129904025,
+        "lastQualificationTime": "2024-11-21T07:33:52Z",
+        "mappingCreatedAt": 1732130611000,
+        "mappingUpdatedAt": 1732130611000,
+        "name": "vangeluw - Interest in Plans",
+        "status": "realized",
+        "updatedAt": 1732129904025
+      }
+    }
+  }
+}
+```
 
-![6-06-vsc-activation-real.png](./images/cs3.png)
+En målgruppsstatus på **realiserad** innebär att din profil är en del av målgruppen, medan statusen **avslutad** innebär att vår profil har tagits bort från målgruppen.
 
 Nästa steg: [Sammanfattning och förmåner](./summary.md)
 

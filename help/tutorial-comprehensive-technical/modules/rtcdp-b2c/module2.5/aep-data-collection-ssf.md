@@ -4,16 +4,14 @@ description: I den här modulen använder du de tidigare konfigurerade dataupps�
 kt: 5342
 doc-type: tutorial
 exl-id: aa3ab1eb-6fee-4ea9-9a0d-0d8ca803d7c2
-source-git-commit: 0dbcda0cfc9f199a44c845c1b5caf00a8d740251
+source-git-commit: b4a7144217a68bc0b1bc70b19afcbc52e226500f
 workflow-type: tm+mt
-source-wordcount: '479'
+source-wordcount: '459'
 ht-degree: 0%
 
 ---
 
 # 2.5 Real-Time CDP Connections: Event Forwarding
-
-**Författare: [Wouter Van Geluwe](https://www.linkedin.com/in/woutervangeluwe/), [Clement Delalande](https://www.linkedin.com/in/clement-delalande/)**
 
 I den här modulen använder du de tidigare konfigurerade datauppsättningarna, scheman och klientegenskapen för Adobe Experience Platform Data Collection för att samla in data och sedan vidarebefordra den till en valfri slutpunkt.
 
@@ -23,10 +21,6 @@ I den här modulen kommer du att:
 - Installera och använda tillägget Adobe Cloud Connector i Adobe Experience Platform Data Collection
 - Skapa en Google Function-slutpunkt och strömma data till den
 - Skapa en AWS-slutpunkt och strömma data till den
-
-Titta på den här videon för att förstå värde, kundresa och konfigurationsprocess:
-
->[!VIDEO](https://video.tv.adobe.com/v/331987?quality=12&learn=on)
 
 ## Utbildningsmål
 

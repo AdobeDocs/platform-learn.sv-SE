@@ -3,9 +3,10 @@ title: Adobe Experience Platform Data Collection & Servervidarebefordring i real
 description: Uppdatera ditt datastream för att göra data tillgängliga för din Adobe Experience Platform Data Collection Server-egenskap
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: 7b5b598e-e54c-4f0f-b260-d643600ee6ca
+source-git-commit: b4a7144217a68bc0b1bc70b19afcbc52e226500f
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
@@ -14,9 +15,9 @@ ht-degree: 0%
 
 ## 2.5.2.1 Uppdatera ditt dataflöde
 
-I [övning 0.2](./../../gettingstarted/gettingstarted/ex2.md) skapade du din egen **[!UICONTROL Datastream]**. Du använde sedan namnet `--aepUserLdap-- - Demo System Datastream`.
+I [Komma igång](./../../gettingstarted/gettingstarted/ex2.md) har du skapat en egen **[!UICONTROL Datastream]**. Du använde sedan namnet `--aepUserLdap-- - Demo System Datastream`.
 
-I den här övningen måste du konfigurera den **[!UICONTROL Datastream]** så att den fungerar med din **[!DNL Data Collection Server property]**.
+I den här övningen måste du konfigurera **[!UICONTROL Datastream]** så att den fungerar med din **Data Collection Server-egenskap**.
 
 Gå till [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/) om du vill göra det. Då ser du det här. Klicka på **[!UICONTROL Datastreams]** på den vänstra menyn.
 
