@@ -4,7 +4,7 @@ description: Skapa och konfigurera en anpassad webkrok
 kt: 5342
 doc-type: tutorial
 exl-id: bb712980-5910-4f01-976b-b7fcf03f5407
-source-git-commit: b4a7144217a68bc0b1bc70b19afcbc52e226500f
+source-git-commit: 7779e249b4ca03c243cf522811cd81370002d51a
 workflow-type: tm+mt
 source-wordcount: '1107'
 ht-degree: 0%
@@ -149,7 +149,7 @@ Om du väljer oformaterad nyttolast går du till [https://jsonformatter.org/json
 
 ![Adobe Experience Platform Data Collection Setup](./images/hook2.png)
 
-Byt vy till din anpassade webkrok [https://webhook.site/](https://webhook.site/) som du använde i något av föregående steg. Nu bör du ha en vy som liknar den här, där nätverksbegäranden visas på den vänstra menyn. Du ser nyttolasten **xdm** som filtrerades bort från nätverksbegäran som visades ovan.
+Byt vy till din anpassade webkrok [https://pipedream.com/requestbin](https://pipedream.com/requestbin) som du använde i något av föregående steg. Nu bör du ha en vy som liknar den här, där nätverksbegäranden visas på den vänstra menyn. Du ser nyttolasten **xdm** som filtrerades bort från nätverksbegäran som visades ovan.
 
 ![Adobe Experience Platform Data Collection Setup](./images/hook3.png)
 
@@ -161,9 +161,9 @@ Om du nu navigerar på webbplatsen kommer du att se ytterligare nätverksförfr�
 
 ![Adobe Experience Platform Data Collection Setup](./images/hook5.png)
 
-Du har nu konfigurerat händelsevidarebefordran på serversidan av Web SDK/XDM-nyttolaster till en extern anpassad webkrok. I nästa övning kommer du att konfigurera ett liknande tillvägagångssätt, och du kommer att skicka samma data till Google- och AWS-miljöer.
+Du har nu konfigurerat händelsevidarebefordran på serversidan av Web SDK/XDM-nyttolaster till en extern anpassad webkrok. I nästa övning kommer du att konfigurera ett liknande tillvägagångssätt, och du kommer att skicka samma data till Google Cloud Platform och AWS.
 
-Nästa steg: [2.5.4 Skapa och konfigurera en Google Cloud-funktion](./ex4.md)
+Nästa steg: [2.5.4 Vidarebefordra händelser till GCP Pub/Sub](./ex4.md)
 
 [Gå tillbaka till modul 2.5](./aep-data-collection-ssf.md)
 

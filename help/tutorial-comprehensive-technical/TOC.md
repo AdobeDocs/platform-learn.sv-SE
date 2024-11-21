@@ -5,7 +5,7 @@ user-guide-description: En praktisk självstudiekurs som handlar om många aspek
 hide: true
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-source-git-commit: b6c98ca773ba46205c467321a7796c29b614e75c
+source-git-commit: f40ed48cdf9f6f05d5a5cc28d152a67448ed8a16
 workflow-type: tm+mt
 source-wordcount: '919'
 ht-degree: 2%
@@ -92,8 +92,8 @@ ht-degree: 2%
       + [2.5.1 Skapa en händelsevidarebefordringsegenskap för Adobe Experience Platform Data Collection](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.5/ex1.md)
       + [2.5.2 Uppdatera ditt dataflöde så att data blir tillgängliga för din Adobe Experience Platform Data Collection Server-egenskap](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.5/ex2.md)
       + [2.5.3 Skapa och konfigurera en anpassad webkrok](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.5/ex3.md)
-      + [2.5.4 Skapa och konfigurera en Google Cloud-funktion](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.5/ex4.md)
-      + [2.5.5 Framåtriktade evenemang mot AWS ekosystem](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.5/ex5.md)
+      + [2.5.4 Vidarebefordra händelser till GCP Pub/Sub](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.5/ex4.md)
+      + [2.5.5 Vidarebefordra event till AWS Kinesis &amp; AWS S3](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.5/ex5.md)
       + [Sammanfattning och fördelar](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.5/summary.md)
    + 2.6 Direktuppspela data från Apache Kafka till Real-Time CDP {#module26}
       + [Översikt](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.6/aep-apache-kafka.md)

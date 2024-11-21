@@ -3,215 +3,89 @@ title: Datainsamling och servervidarebefordran i realtid - Skapa och konfigurera
 description: Skapa och konfigurera en Google Cloud-funktion
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: ee73ce3a-baaa-432a-9626-249be9aaeff2
+source-git-commit: 7779e249b4ca03c243cf522811cd81370002d51a
 workflow-type: tm+mt
-source-wordcount: '1593'
+source-wordcount: '1184'
 ht-degree: 0%
 
 ---
 
-# 2.5.4 Skapa och konfigurera en Google Cloud-funktion
+# 2.5.4 Vidarebefordra händelser till GCP Pub/Sub
 
-## 2.5.4.1 Skapa en Google Cloud-funktion
+>[!NOTE]
+>
+>För den här övningen behöver du tillgång till en Google Cloud Platform-miljö. Om du inte har tillgång till GCP än skapar du ett nytt konto med din personliga e-postadress.
 
-Gå till [https://console.cloud.google.com/](https://console.cloud.google.com/). Gå till **molnfunktioner**.
+## Skapa ditt Google Cloud-ämne
+
+Gå till [https://console.cloud.google.com/](https://console.cloud.google.com/). Ange `pub/sub` i sökfältet. Klicka på sökresultatet **Pubb/Sub - Global real-time messaging**.
 
 ![GCP](./images/gcp1.png)
 
-Då ser du det här. Klicka på **SKAPA FUNKTION**.
+Då ser du det här. Klicka på **SKAPA ÄMNE**.
 
 ![GCP](./images/gcp2.png)
 
-Då ser du det här.
+Då ser du det här. Använd `--aepUserLdap---event-forwarding` för ditt ämne-ID. Klicka på **Skapa**.
 
 ![GCP](./images/gcp6.png)
 
-Gör följande val:
-
-- **Funktionsnamn**: `--aepUserLdap---event-forwarding`
-- **Region**: välj en region
-- **Utlösartyp**: välj **HTTP**
-- **Autentisering**: välj **Tillåt oautentiserade anrop**
-
-Du borde ha den här nu. Klicka på **SPARA**.
+Ämnet har skapats. Klicka på ämnets **prenumerations-ID**.
 
 ![GCP](./images/gcp7.png)
 
-Klicka på **NÄSTA**.
+Då ser du det här. Kopiera **ämnesnamnet** till Urklipp och lagra det, precis som du behöver det i nästa övning.
 
 ![GCP](./images/gcp8.png)
 
-Då ser du det här:
+Nu går vi till Adobe Experience Platform Data Collection Event Forwarding och uppdaterar egenskapen Event Forwarding så att du kan börja vidarebefordra händelser till Pub/Sub.
 
-![GCP](./images/gcp9.png)
 
-Gör följande val:
+## Uppdatera egenskapen för händelsevidarebefordran: Secrets
 
-- **Runtime**: välj **Node.js 16** (eller senare)
-- **Startpunkt**: ange **helloAEP**
+**Hemligheter** i egenskaper för händelsevidarebefordran används för att lagra autentiseringsuppgifter som ska användas för autentisering mot externa API:er. I det här exemplet måste du konfigurera en hemlighet för att lagra din OAuth-token för Google Cloud-plattformen, som ska användas för att autentisera när du använder Pub/Sub för att strömma data till GCP.
 
-Klicka på **AKTIVERA API** om du vill aktivera **API:t för molnbygge**. Då visas ett nytt fönster. Klicka på **AKTIVERA** igen i det nya fönstret.
+Gå till [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/) och gå till **Hemligheter**. Klicka på **Skapa ny hemlighet**.
 
-![GCP](./images/gcp10.png)
+![Adobe Experience Platform Data Collection SSF](./images/secret1.png)
 
-Då ser du det här. Klicka på **Aktivera**.
+Då ser du det här. Följ dessa anvisningar:
 
-![GCP](./images/gcp11.png)
+- Namn: använd `--aepUserLdap---gcp-secret`
+- Målmiljö: välj **Utveckling**
+- Typ: **Google OAuth 2**
+- Markera kryssrutan för **Pub/Sub**
 
-När **API:t för molnbygge** har aktiverats visas det här.
+Klicka på **Skapa hemlighet**.
 
-![GCP](./images/gcp12.png)
+![Adobe Experience Platform Data Collection SSF](./images/secret2.png)
 
-Gå tillbaka till din **molnfunktion**.
-Kontrollera att du har följande kod i den inbyggda redigeraren för molnfunktioner:
+När du har klickat på **Skapa hemlighet** visas en popup-meny som anger autentiseringen mellan din händelsevidarebefordringsegenskap och Google. Klicka på **Skapa och auktorisera hemlighet `--aepUserLdap---gcp-secret` med Google**.
 
-```javascript
-/**
- * Responds to any HTTP request.
- *
- * @param {!express:Request} req HTTP request context.
- * @param {!express:Response} res HTTP response context.
- */
-exports.helloAEP = (req, res) => {
-  let message = req.query.message || req.body.message || 'Hello World!';
-  res.status(200).send(message);
-};
-```
+![Adobe Experience Platform Data Collection SSF](./images/secret3.png)
 
-Klicka sedan på **DISTRIBUERA**.
+Klicka för att välja ditt Google-konto.
 
-![GCP](./images/gcp13.png)
+![Adobe Experience Platform Data Collection SSF](./images/secret4.png)
 
-Då ser du det här. Din molnfunktion skapas nu. Det här kan ta några minuter.
+Klicka på **Fortsätt**.
 
-![GCP](./images/gcp14.png)
+>[!NOTE]
+>
+>Popup-meddelandet kan variera. Godkänn/tillåt den begärda åtkomsten för att fortsätta med övningen.
 
-När funktionen har skapats och körts ser du det här. Klicka på funktionens namn för att öppna den.
+![Adobe Experience Platform Data Collection SSF](./images/secret5.png)
 
-![GCP](./images/gcp15.png)
+När autentiseringen är klar visas detta.
 
-Då ser du det här. Gå till **TRIGGER**. Du kommer då att se **Utlösar-URL** som är den du använder för att definiera slutpunkten på startserversidan.
+![Adobe Experience Platform Data Collection SSF](./images/secret6.png)
 
-![GCP](./images/gcp16.png)
+Din hemlighet har nu konfigurerats och kan användas i ett dataelement.
 
-Kopiera utlösarens URL, som ser ut så här: **https://europe-west1-dazzling-pillar-273812.cloudfunctions.net/vangeluw-event-forwarding**.
+## Uppdatera egenskapen för händelsevidarebefordran: Dataelement
 
-I nästa steg ska du konfigurera Adobe Experience Platform Data Collection Server så att specifik information om **sidvyer** direktuppspelas i din Google Cloud-funktion. I stället för att bara vidarebefordra hela nyttolasten som den är, skickar du bara saker som **ECID**, **timestamp** och **Page Name** till din Google Cloud-funktion.
-
-Här är ett exempel på en nyttolast som du måste analysera för att filtrera bort de ovannämnda variablerna:
-
-```json
-{
-  "events": [
-    {
-      "xdm": {
-        "eventType": "web.webpagedetails.pageViews",
-        "web": {
-          "webPageDetails": {
-            "URL": "https://builder.adobedemo.com/run/vangeluw-OCUC",
-            "name": "vangeluw-OCUC",
-            "viewName": "vangeluw-OCUC",
-            "pageViews": {
-              "value": 1
-            }
-          },
-          "webReferrer": {
-            "URL": "https://builder.adobedemo.com/run/vangeluw-OCUC/equipment"
-          }
-        },
-        "device": {
-          "screenHeight": 1080,
-          "screenWidth": 1920,
-          "screenOrientation": "landscape"
-        },
-        "environment": {
-          "type": "browser",
-          "browserDetails": {
-            "viewportWidth": 1920,
-            "viewportHeight": 451
-          }
-        },
-        "placeContext": {
-          "localTime": "2022-02-23T06:51:07.140+01:00",
-          "localTimezoneOffset": -60
-        },
-        "timestamp": "2022-02-23T05:51:07.140Z",
-        "implementationDetails": {
-          "name": "https://ns.adobe.com/experience/alloy/reactor",
-          "version": "2.8.0+2.9.0",
-          "environment": "browser"
-        },
-        "_experienceplatform": {
-          "identification": {
-            "core": {
-              "ecid": "08346969856929444850590365495949561249"
-            }
-          },
-          "demoEnvironment": {
-            "brandName": "vangeluw-OCUC"
-          },
-          "interactionDetails": {
-            "core": {
-              "channel": "web"
-            }
-          }
-        }
-      },
-      "query": {
-        "personalization": {
-          "schemas": [
-            "https://ns.adobe.com/personalization/html-content-item",
-            "https://ns.adobe.com/personalization/json-content-item",
-            "https://ns.adobe.com/personalization/redirect-item",
-            "https://ns.adobe.com/personalization/dom-action"
-          ],
-          "decisionScopes": [
-            "eyJ4ZG06YWN0aXZpdHlJZCI6Inhjb3JlOm9mZmVyLWFjdGl2aXR5OjE0YzA1MjM4MmUxYjY1MDUiLCJ4ZG06cGxhY2VtZW50SWQiOiJ4Y29yZTpvZmZlci1wbGFjZW1lbnQ6MTRiZjA5ZGM0MTkwZWJiYSJ9",
-            "__view__"
-          ]
-        }
-      }
-    }
-  ],
-  "query": {
-    "identity": {
-      "fetch": [
-        "ECID"
-      ]
-    }
-  },
-  "meta": {
-    "state": {
-      "domain": "adobedemo.com",
-      "cookiesEnabled": true,
-      "entries": [
-        {
-          "key": "kndctr_907075E95BF479EC0A495C73_AdobeOrg_identity",
-          "value": "CiYwODM0Njk2OTg1NjkyOTQ0NDg1MDU5MDM2NTQ5NTk0OTU2MTI0OVIPCPn66KfyLxgBKgRJUkwx8AH5-uin8i8="
-        },
-        {
-          "key": "kndctr_907075E95BF479EC0A495C73_AdobeOrg_consent_check",
-          "value": "1"
-        },
-        {
-          "key": "kndctr_907075E95BF479EC0A495C73_AdobeOrg_consent",
-          "value": "general=in"
-        }
-      ]
-    }
-  }
-}
-```
-
-Det här är de fält som innehåller den information som behöver tolkas:
-
-- ECID: **events.xdm._experiencePlatform.Identification.core.ecid**
-- tidsstämpel: **tidsstämpel**
-- Sidnamn: **events.xdm.web.webPageDetails.name**
-
-Vi går till Adobe Experience Platform Data Collection Server nu och konfigurerar dataelementen så att det blir möjligt.
-
-## 2.5.4.2 Uppdatera egenskapen för händelsevidarebefordran: Dataelement
+Om du vill använda din hemlighet i egenskapen för händelsevidarebefordring måste du skapa ett dataelement som lagrar värdet för hemligheten.
 
 Gå till [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/) och gå till **Händelsevidarebefordran**. Sök i egenskapen för vidarebefordran av händelser och klicka på den för att öppna den.
 
@@ -221,70 +95,44 @@ Gå till **Dataelement** på den vänstra menyn. Klicka på **Lägg till dataele
 
 ![Adobe Experience Platform Data Collection SSF](./images/de1gcp.png)
 
-Sedan visas ett nytt dataelement att konfigurera.
+Konfigurera dataelementet så här:
 
-![Adobe Experience Platform Data Collection SSF](./images/de2gcp.png)
+- Namn: **GCP-hemlighet**
+- Tillägg: **Core**
+- Dataelementtyp: **Hemlighet**
+- Utvecklingshemlighet: välj den hemlighet som du skapade och som har namnet `--aepUserLdap---gcp-secret`
 
-Gör följande val:
+Klicka på **Spara**
 
-- Ange **customerECID** som **Name**.
-- Som **tillägg** väljer du **kärna**.
-- Som **dataelementtyp** väljer du **Sökväg**.
-- Ange `arc.event.xdm.--aepTenantId--.identification.core.ecid` som **sökväg**. Genom att ange den här sökvägen filtrerar du ut fältet **ecid** från den händelsenyttolast som skickas av webbplatsen eller mobilappen till Adobe Edge.
+![Adobe Experience Platform Data Collection SSF](./images/secret7.png)
 
->[!NOTE]
->
->I ovanstående och under sökvägar görs en referens till **arc**. **arc** står för Adobe Resource Context och **arc** står alltid för det högsta tillgängliga objektet som är tillgängligt i Server Side-kontexten. Anrikningar och omvandlingar kan läggas till i det **arc**-objektet med Adobe Experience Platform Data Collection Server-funktioner.
->
->I sökvägarna ovan och nedanför görs en referens till **event**. **event** står för en unik händelse och Adobe Experience Platform Data Collection Server utvärderar alltid varje enskild händelse. Ibland kan du se en referens till **händelser** i nyttolasten som skickas av Web SDK-klientsidan, men i Adobe Experience Platform Data Collection Server utvärderas varje händelse individuellt.
+## Uppdatera egenskapen för händelsevidarebefordran: Tillägg
 
-Du kommer nu att ha den här. Klicka på **Spara**.
+När du har konfigurerat sekretess och dataelement kan du nu konfigurera tillägget för Google Cloud-plattformen i din händelsevidarebefordringsegenskap.
 
-![Adobe Experience Platform Data Collection SSF](./images/gcdpde1.png)
+Gå till [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/), gå till **Händelsevidarebefordran** och öppna egenskapen för händelsevidarebefordran.
 
-Klicka på **Lägg till dataelement**.
+![Adobe Experience Platform Data Collection SSF](./images/prop1.png)
 
-![Adobe Experience Platform Data Collection SSF](./images/addde.png)
+Gå sedan till **Tillägg** och till **Katalog**. Klicka på tillägget **Google Cloud Platform** och klicka på **Installera**.
 
-Sedan visas ett nytt dataelement att konfigurera.
+![Adobe Experience Platform Data Collection SSF](./images/gext2.png)
 
-![Adobe Experience Platform Data Collection SSF](./images/de2gcp.png)
+Då ser du det här. Klicka på ikonen Dataelement.
 
-Gör följande val:
+![Adobe Experience Platform Data Collection SSF](./images/gext3.png)
 
-- Ange **eventTimestamp** som **Name**.
-- Som **tillägg** väljer du **kärna**.
-- Som **dataelementtyp** väljer du **Sökväg**.
-- Ange **arc.event.xdm.timestamp** som **sökväg**. Genom att ange den här sökvägen filtrerar du ut fältet **timestamp** från den händelsenyttolast som skickas av webbplatsen eller mobilappen till Adobe Edge.
+Markera dataelementet som du skapade i föregående övning, som heter **GCP-hemlighet**. Klicka på **Markera**.
 
-Du kommer nu att ha den här. Klicka på **Spara**.
+![Adobe Experience Platform Data Collection SSF](./images/gext4.png)
 
-![Adobe Experience Platform Data Collection SSF](./images/gcdpde2.png)
+Då ser du det här. Klicka på **Spara**.
 
-Klicka på **Lägg till dataelement**.
+![Adobe Experience Platform Data Collection SSF](./images/gext5.png)
 
-![Adobe Experience Platform Data Collection SSF](./images/addde.png)
+## Uppdatera egenskapen för händelsevidarebefordran: Uppdatera en regel
 
-Sedan visas ett nytt dataelement att konfigurera.
-
-![Adobe Experience Platform Data Collection SSF](./images/de2gcp.png)
-
-Gör följande val:
-
-- Ange **pageName** som **Name**.
-- Som **tillägg** väljer du **kärna**.
-- Som **dataelementtyp** väljer du **Sökväg**.
-- Som **sökväg** anger du **.arc.event.xdm.web.webPageDetails.name**. Genom att ange den här sökvägen filtrerar du ut fältet **name** från den händelsenyttolast som skickas av webbplatsen eller mobilappen till Adobe Edge.
-
-Du kommer nu att ha den här. Klicka på **Spara**.
-
-![Adobe Experience Platform Data Collection SSF](./images/gcdpde3.png)
-
-Nu har du skapat dessa dataelement:
-
-![Adobe Experience Platform Data Collection SSF](./images/de3gcp.png)
-
-## 2.5.4.3 Uppdatera egenskapen för händelsevidarebefordran: Uppdatera en regel
+Nu när tillägget för Google Cloud-plattformen har konfigurerats kan du definiera en regel för att börja vidarebefordra händelsedata till ditt Pub/Sub-ämne. För att göra det måste du uppdatera regeln **Alla sidor** som du skapade i en av de föregående övningarna.
 
 Gå till **Regler** på den vänstra menyn. I föregående övning skapade du regeln **Alla sidor**. Klicka på den regeln för att öppna den.
 
@@ -294,49 +142,44 @@ Du kommer då att göra det här. Klicka på ikonen **+** under **Åtgärder** f
 
 ![Adobe Experience Platform Data Collection SSF](./images/rl2gcp.png)
 
-Då ser du det här.
+Då ser du det här. Gör följande val:
 
-![Adobe Experience Platform Data Collection SSF](./images/rl4gcp.png)
+- Välj **tillägget**: **Google Cloud-plattformen**.
+- Välj **åtgärdstyp**: **Skicka data till molnpub/sub**.
 
-Gör följande val:
-
-- Välj **tillägget**: **Adobe Cloud Connector**.
-- Välj **åtgärdstyp**: **Ring upp hämtning**.
-
-Det bör ge dig det här **namnet**: **Adobe Cloud Connector - ring hämtningssamtal**. Nu bör du se det här:
+Det bör ge dig detta **namn**: **Google Cloud-plattform - skicka data till molnpub/sub**. Nu bör du se det här:
 
 ![Adobe Experience Platform Data Collection SSF](./images/rl5gcp.png)
 
-Konfigurera sedan följande:
+Du måste nu konfigurera det Pub/Sub-ämne som du skapade tidigare.
 
-- Ändra begärandeprotokollet från GET till **POST**
-- Ange URL-adressen till den Google Cloud-funktion du skapade i ett av de föregående stegen som ser ut så här: **https://europe-west1-dazzling-pillar-273812.cloudfunctions.net/vangeluw-event-forwarding**
+Du kan hitta **ämnesnamnet** här och kopiera det.
 
-Du borde ha den här nu. Gå sedan till **Brödtext**.
+![GCP](./images/gcp8.png)
+
+Klistra in **ämnesnamnet** i regelkonfigurationen. Klicka sedan på ikonen för dataelement bredvid fältet **Data (krävs)**.
 
 ![Adobe Experience Platform Data Collection SSF](./images/rl6gcp.png)
 
-Då ser du det här. Klicka på alternativknappen för **JSON**.
+Välj **XDM-händelse** och klicka på **Markera**.
 
 ![Adobe Experience Platform Data Collection SSF](./images/rl7gcp.png)
 
-Konfigurera **brödtexten** enligt följande:
-
-| NYCKEL | VÄRDE |
-|--- |--- |
-| customerECID | {{customerECID}} |
-| pageName | {{pageName}} |
-| eventTimestamp | {{eventTimestamp}} |
-
 Då ser du det här. Klicka på **Behåll ändringar**.
+
+![Adobe Experience Platform Data Collection SSF](./images/rl8gcp.png)
+
+Klicka på **Spara**.
 
 ![Adobe Experience Platform Data Collection SSF](./images/rl9gcp.png)
 
-Då ser du det här. Klicka på **Spara**.
+Då ser du det här.
 
 ![Adobe Experience Platform Data Collection SSF](./images/rl10gcp.png)
 
-Du har nu uppdaterat din befintliga regel i en Adobe Experience Platform Data Collection Server-egenskap. Gå till **Publiceringsflöde** om du vill publicera ändringarna. Öppna utvecklingsbiblioteket **Main** genom att klicka på **Edit** enligt indikationen.
+## Publish dina ändringar
+
+Konfigurationen är nu klar. Gå till **Publiceringsflöde** om du vill publicera ändringarna. Öppna utvecklingsbiblioteket **Main** genom att klicka på **Edit** enligt indikationen.
 
 ![Adobe Experience Platform Data Collection SSF](./images/rl12gcp.png)
 
@@ -348,19 +191,11 @@ Efter några minuter ser du att distributionen är klar och klar att testas.
 
 ![Adobe Experience Platform Data Collection SSF](./images/rl14.png)
 
-## 2.5.3.4 Testa konfigurationen
+## Testa konfigurationen
 
-Gå till [https://builder.adobedemo.com/projects](https://builder.adobedemo.com/projects). När du har loggat in med din Adobe ID ser du det här. Klicka på webbplatsprojektet för att öppna det.
+Gå till [https://dsn.adobe.com](https://dsn.adobe.com). När du har loggat in med din Adobe ID ser du det här. Klicka på de tre punkterna **..** i webbplatsprojektet och klicka sedan på **Kör** för att öppna det.
 
-![DSN](../../gettingstarted/gettingstarted/images/web8.png)
-
-Nu kan du följa nedanstående flöde för att komma åt webbplatsen. Klicka på **Integrationer**.
-
-![DSN](../../gettingstarted/gettingstarted/images/web1.png)
-
-På sidan **Integrationer** måste du välja den datainsamlingsegenskap som skapades i övning 0.1.
-
-![DSN](../../gettingstarted/gettingstarted/images/web2.png)
+![DSN](./../../datacollection/module1.1/images/web8.png)
 
 Du kommer då att se din demowebbplats öppnas. Markera URL-adressen och kopiera den till Urklipp.
 
@@ -378,65 +213,19 @@ Välj kontotyp och slutför inloggningsprocessen.
 
 ![DSN](../../gettingstarted/gettingstarted/images/web6.png)
 
-Därefter visas webbplatsen i ett inkognitivt webbläsarfönster. För varje demonstration måste du använda ett nytt, inkognitivt webbläsarfönster för att läsa in webbadressen till demowebbplatsen.
+Därefter visas webbplatsen i ett inkognitivt webbläsarfönster. För varje övning måste du använda ett nytt, inkognitivt webbläsarfönster för att läsa in webbadressen till demowebbplatsen.
 
 ![DSN](../../gettingstarted/gettingstarted/images/web7.png)
 
-När du öppnar din webbläsarutvecklarvy kan du inspektera nätverksbegäranden enligt nedan. När du använder filtret **interact** visas nätverksbegäranden som skickas av Adobe Experience Platform Data Collection Client till Adobe Edge.
-
-![Adobe Experience Platform Data Collection Setup](./images/hook1.png)
-
-Byt vy till din Google Cloud-funktion och gå till **LOGS**. Nu bör du ha en vy som liknar den här, där ett antal loggposter visas. Varje gång du ser **Funktionskörningen startade** betyder det att inkommande trafik togs emot i din Google Cloud-funktion.
+Växla vy till Google Cloud Pub/Sub och gå till **MESSAGES**. Klicka på **PULL** så ser du några meddelanden i listan efter några sekunder. Klicka på ett meddelande för att visualisera dess innehåll.
 
 ![Adobe Experience Platform Data Collection Setup](./images/hook3gcp.png)
 
-Låt oss uppdatera funktionen lite för att arbeta med inkommande data och visa den information som togs emot från Adobe Experience Platform Data Collection Server. Gå till **SOURCE** och klicka på **REDIGERA**.
+Nu kan du se XDM-nyttolasten för din händelse i Google Pub/Sub. Du har nu skickat data som samlats in av Adobe Experience Platform Data Collection i realtid till en Google Cloud Pub/Sub-slutpunkt. Därifrån kan dessa data användas av alla Google Cloud Platform-program, som BigQuery för lagring och rapportering eller för Machine Learning-användningsfall.
 
 ![Adobe Experience Platform Data Collection Setup](./images/hook4gcp.png)
 
-Klicka på **NÄSTA** på nästa skärm.
-
-![Adobe Experience Platform Data Collection Setup](./images/gcf1.png)
-
-Uppdatera koden så här:
-
-```javascript
-/**
- * Responds to any HTTP request.
- *
- * @param {!express:Request} req HTTP request context.
- * @param {!express:Response} res HTTP response context.
- */
-exports.helloAEP = (req, res) => {
-  console.log('>>>>> Function has started. The following information was received from Event Forwarding:');
-  console.log(req.body);
-
-  let message = req.query.message || req.body.message || 'Hello World!';
-  res.status(200).send(message);
-};
-```
-
-Du får den här då. Klicka på **DISTRIBUERA**.
-
-![Adobe Experience Platform Data Collection Setup](./images/gcf2.png)
-
-Efter några minuter distribueras funktionen igen. Klicka på funktionsnamnet för att öppna det.
-
-![Adobe Experience Platform Data Collection Setup](./images/gcf3.png)
-
-Navigera till en produkt på demowebbplatsen, till exempel **DEIRDRE RELAXED-FIT CAPRI**.
-
-![Adobe Experience Platform Data Collection Setup](./images/gcf3a.png)
-
-Byt vy till din Google Cloud-funktion och gå till **LOGS**. Nu bör du ha en vy som liknar den här, där ett antal loggposter visas.
-
-För varje sidvy på demowebbplatsen bör du nu se en ny logginmatning i loggarna för Google Cloud Function som visar den mottagna informationen.
-
-![Adobe Experience Platform Data Collection Setup](./images/gcf4.png)
-
-Du har nu skickat data som samlats in av Adobe Experience Platform Data Collection i realtid till en Google Cloud Function-slutpunkt. Därifrån kan dessa data användas av alla Google Cloud Platform-program, som BigQuery för lagring och rapportering eller för Machine Learning-användningsfall.
-
-Nästa steg: [2.5.5 Vidarebefordra händelser mot AWS ekosystem](./ex5.md)
+Nästa steg: [2.5.5 Vidarebefordra händelser till AWS Kinesis &amp; AWS S3](./ex5.md)
 
 [Gå tillbaka till modul 2.5](./aep-data-collection-ssf.md)
 

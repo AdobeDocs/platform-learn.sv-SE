@@ -4,9 +4,9 @@ description: I den här modulen använder du de tidigare konfigurerade dataupps�
 kt: 5342
 doc-type: tutorial
 exl-id: aa3ab1eb-6fee-4ea9-9a0d-0d8ca803d7c2
-source-git-commit: b4a7144217a68bc0b1bc70b19afcbc52e226500f
+source-git-commit: 7779e249b4ca03c243cf522811cd81370002d51a
 workflow-type: tm+mt
-source-wordcount: '459'
+source-wordcount: '458'
 ht-degree: 0%
 
 ---
@@ -51,13 +51,13 @@ I den här övningen ska du uppdatera din befintliga datastream så att data som
 
 I den här övningen skapar och konfigurerar du en anpassad webkrok och du börjar vidarebefordra data som samlas in av Web SDK till den anpassade webkroken.
 
-[2.5.4 Skapa och konfigurera en Google Cloud-funktion](./ex4.md)
+[2.5.4 Vidarebefordra händelser till GCP Pub/Sub](./ex4.md)
 
 I den här övningen skapar och konfigurerar du en Google Cloud-funktion och du börjar vidarebefordra data som samlas in av Web SDK till Google.
 
-[2.5.5 Framåtriktade evenemang mot AWS ekosystem](./ex5.md)
+[2.5.5 Vidarebefordra event till AWS Kinesis &amp; AWS S3](./ex5.md)
 
-I den här övningen konfigurerar du AWS-miljön med AWS API Gateway, AWS Kinesis, AWS Firehose och AWS S3, varefter du börjar vidarebefordra händelsedata som samlas in av Web SDK.
+I den här övningen konfigurerar du AWS-miljön med AWS IAM, AWS Kinesis, AWS Firehose och AWS S3, varefter du börjar vidarebefordra händelsedata som samlas in av Web SDK.
 
 [Sammanfattning och fördelar](./summary.md)
 
