@@ -3,27 +3,28 @@ title: CDP i realtid - externa målgrupper
 description: CDP i realtid - externa målgrupper
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: c7e4960f-4007-4c27-b5ba-7b21cd52c2f7
+source-git-commit: acb941e4ee668248ae0767bb9f4f42e067c181ba
 workflow-type: tm+mt
-source-wordcount: '1974'
+source-wordcount: '1948'
 ht-degree: 0%
 
 ---
 
 # 2.3.6 Externa målgrupper
 
-I många fall kanske ditt företag vill använda befintliga segment från andra program för att förbättra kundprofilen i Adobe Experience Platform.
+I många fall kanske ditt företag vill använda befintliga målgrupper från andra program för att förbättra kundprofilen i Adobe Experience Platform.
 Dessa externa målgrupper kan ha definierats baserat på en datavetenskapsmodell eller externa dataplattformar.
 
-Med funktionen för externa målgrupper i Adobe Experience Platform kan ni fokusera på att ta in externa målgrupper och deras aktivering utan att behöva definiera om motsvarande segmentdefinition i detalj i Adobe Experience Platform.
+Med funktionen för externa målgrupper i Adobe Experience Platform kan ni fokusera på att ta in externa målgrupper och aktivera dem utan att behöva definiera om motsvarande målgruppsdefinition i detalj i Adobe Experience Platform.
 
 Den övergripande processen är uppdelad i tre huvudsteg:
 
 - Importera externa målgruppsmetadata: det här steget är avsett att importera externa målgruppsmetadata, som målgruppens namn, till Adobe Experience Platform.
-- Tilldela det externa målgruppsmedlemskapet till kundprofilen: det här steget ska berika kundprofilen med det externa segmentmedlemskapsattributet.
-- Skapa segmenten i Adobe Experience Platform: det här steget är tänkt att skapa åtgärdbara segment baserat på det externa målgruppsmedlemskapet.
+- Tilldela det externa målgruppsmedlemskapet till kundprofilen: det här steget ska berika kundprofilen med det externa målgruppsmedlemskapsattributet.
+- Skapa målgrupper i Adobe Experience Platform: det här steget är tänkt att skapa åtgärdbara målgrupper baserat på det externa målgruppsmedlemskapet.
 
-## 2.3.6.1 Metadata
+## Metadata
 
 Gå till [Adobe Experience Platform](https://experience.adobe.com/platform). När du har loggat in loggar du in på Adobe Experience Platform hemsida.
 
@@ -31,13 +32,13 @@ Gå till [Adobe Experience Platform](https://experience.adobe.com/platform). Nä
 
 >[!IMPORTANT]
 >
->Sandlådan som ska användas för den här övningen är ``--module2sandbox--``!
+>Sandlådan som ska användas för den här övningen är ``--aepSandboxName--``!
 
-Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``--module2sandbox--``. Du kan göra detta genom att klicka på texten **[!UICONTROL Production Prod]** i den blå raden ovanför skärmen. När du har valt rätt [!UICONTROL sandbox] visas skärmändringen och nu är du i din dedikerade [!UICONTROL sandbox].
+Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``--aepSandboxName--``. När du har valt rätt [!UICONTROL sandbox] visas skärmändringen och nu är du i din dedikerade [!UICONTROL sandbox].
 
 ![Datainmatning](./images/sb1.png)
 
-Medan segmentdata definierar villkoret för att en profil ska vara en del av ett segment, är segmentets metadata information om segmentet, till exempel namn, beskrivning och status för segmentet. När de externa målgruppsmetadata lagras i Adobe Experience Platform måste du använda ett identitetsnamnutrymme för att importera metadata i Adobe Experience Platform.
+Målgruppsdata definierar villkoret för att en profil ska vara en del av en målgrupp, men målgruppsmetadata är information om målgruppen, till exempel namn, beskrivning och status för målgruppen. När de externa målgruppsmetadata lagras i Adobe Experience Platform måste du använda ett identitetsnamnutrymme för att importera metadata i Adobe Experience Platform.
 
 ## 2.3.6.1.1 Identitetsnamnutrymme för externa målgrupper
 
@@ -47,19 +48,19 @@ Om du vill visa identiteten som redan har skapats går du till **Identiteter** o
 Observera:
 
 - Identitetssymbolen **externa målgrupper** används i nästa steg för att referera till den externa målgruppsidentiteten.
-- Typen **Identifierare för icke-personer** används för det här identitetsnamnområdet, eftersom det här namnområdet inte är avsett att identifiera kundprofiler utan segment.
+- Typen **Identifierare för icke-personer** används för det här identitetsnamnområdet, eftersom det här namnområdet inte är avsett att identifiera kundprofiler utan målgrupper.
 
 ![Identitet för externa målgrupper](images/extAudIdNS.png)
 
 ## 2.3.6.1.2 Skapa ett schema med metadata för externa målgrupper
 
-De externa målgruppsmetadata baseras på **segmentdefinitionsschemat**. Mer information finns i [XDM Github-databasen](https://github.com/adobe/xdm/blob/master/docs/reference/classes/segmentdefinition.schema.md).
+De externa målgruppsmetadata baseras på **målgruppsdefinitionsschemat**. Mer information finns i [XDM Github-databasen](https://github.com/adobe/xdm/blob/master/docs/reference/classes/segmentdefinition.schema.md).
 
 Gå till Scheman på den vänstra menyn. Klicka på **+ Skapa schema** och sedan på **Bläddra**.
 
 ![Metadataschema för externa målgrupper 1](images/extAudMDXDM1.png)
 
-Om du vill tilldela en klass söker du efter **segmentdefinitionen**. Markera klassen **Segmentdefinition** och klicka på **Tilldela klass**.
+Om du vill tilldela en klass söker du efter **målgruppsdefinition**. Markera klassen **Målgruppsdefinition** och klicka på **Tilldela klass**.
 
 ![Metadataschema för externa målgrupper 2](images/extAudMDXDM2.png)
 
@@ -203,13 +204,13 @@ I frågeresultatet ser du den externa målgruppens metadata som du har inkapslat
 
 ![Metadatastr för externa målgrupper 5](images/extAudMDstr5.png)
 
-## 2.3.6.2 Segmentmedlemskap
+## Målgruppsmedlemskap
 
-Med externa målgruppsmetadata tillgängliga kan ni nu importera segmentmedlemskapet för en viss kundprofil.
+Med de externa målgruppsmetadata tillgängliga kan ni nu importera målgruppsmedlemskapet för en viss kundprofil.
 
-Nu måste du förbereda en profildatamängd som har anrikats mot segmentmedlemskapsschemat. Mer information finns i [XDM Github-databasen](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/segmentmembership.schema.md).
+Nu måste ni förbereda en profildatamängd som har berikats mot målgruppsmedlemskapets schema. Mer information finns i [XDM Github-databasen](https://github.com/adobe/xdm/blob/master/docs/reference/datatypes/segmentmembership.schema.md).
 
-## 2.3.6.2.1 Skapa ett medlemsschema för externa målgrupper
+### Skapa medlemskapsschemat för externa målgrupper
 
 Gå till **Scheman** på den högra menyn. Klicka på **Skapa schema** och sedan på **XDM-individuell profil**.
 
@@ -237,7 +238,7 @@ Aktivera sedan växlingsknappen **Profil** och bekräfta. Klicka på **Spara**.
 
 ![Externt målgruppsprofilschema 5](images/extAudPrXDM5.png)
 
-## 2.3.6.2.2 Skapa datauppsättningen External Audiences Membership
+### Skapa datauppsättningen External Audiences Membership
 
 Gå till **Bläddra** i **Scheman**. Sök och klicka på det `--aepUserLdap-- - External Audiences Membership`-schema som du skapade i föregående steg. Klicka sedan på **Skapa datauppsättning från schema**.
 
@@ -251,7 +252,7 @@ Då ser du det här. Glöm inte att aktivera växeln **Profil**!
 
 ![Metadata för externa målgrupper DS 3](images/extAudPrDS3.png)
 
-## 2.3.6.2.3 Skapa en HTTP API Source Connection
+### Skapa en HTTP API Source Connection
 
 
 Därefter måste du konfigurera HTTP API Source Connector som du använder för att importera metadata till datauppsättningen.
@@ -294,7 +295,7 @@ Då ser du det här.
 
 ![Metadata för externa målgrupper http 4](images/extAudPrhttp4a.png)
 
-## 2.3.6.2.4 Information om medlemskap för externa målgrupper
+### Information om externa målgruppers medlemskap
 
 På översiktsfliken för Source Connector klickar du på **..** och sedan på **Kopiera schemanyttolast**.
 
@@ -346,7 +347,7 @@ Uppdatera skärmen för HTTP API Source Connector där du efter några minuter k
 
 ![Metadatastr för externa målgrupper 2](images/extAudPrstr2.png)
 
-## 2.3.6.2.5 Validera externa målgruppers medlemskap
+### Validera externa målgruppers medlemskap
 
 När bearbetningen är klar kan du kontrollera datatillgängligheten i datauppsättningen med hjälp av frågetjänsten.
 
@@ -368,7 +369,7 @@ I frågeresultatet ser du den externa målgruppens metadata som du har inkapslat
 
 ![Metadatastr för externa målgrupper 5](images/extAudPrstr5.png)
 
-## 2.3.6.3 Skapa ett segment
+## Skapa ett segment
 
 Nu är ni redo att agera utifrån de externa målgrupperna.
 Adobe Experience Platform satsar på åtgärder genom att skapa segment, fylla respektive målgrupper och dela dessa målgrupper med målgrupperna.
@@ -396,7 +397,7 @@ Då ser du det här. Du kommer också att märka att profilen som du importerade
 
 Ditt segment är klart nu och kan skickas till en destination för aktivering.
 
-## 2.3.6.4 Visualisera kundprofil
+## Visualisera kundprofilen
 
 Nu kan du även visualisera segmentkvalificeringen i din kundprofil. Gå till **Profiler**, använd identitetsnamnrymden **Demo System - CRMID** och ange identiteten `--aepUserLdap---profile-test-01` som du använde som en del av övning 6.6.2.4, och klicka på **Visa**. Klicka sedan på **profil-ID** för att öppna profilen.
 

@@ -4,7 +4,7 @@ description: Foundation - kundprofil i realtid - Från okänd till känd på web
 kt: 5342
 doc-type: tutorial
 exl-id: ddbf97c2-8105-42b6-b9bf-209b1df6a3b5
-source-git-commit: 3a19e88e820c63294eff38bb8f699a9f690afcb9
+source-git-commit: acb941e4ee668248ae0767bb9f4f42e067c181ba
 workflow-type: tm+mt
 source-wordcount: '968'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Välj kontotyp och slutför inloggningsprocessen.
 
 ![DSN](../../gettingstarted/gettingstarted/images/web6.png)
 
-Därefter visas webbplatsen i ett inkognitivt webbläsarfönster. För varje demonstration måste du använda ett nytt, inkognitivt webbläsarfönster för att läsa in webbadressen till demowebbplatsen.
+Därefter visas webbplatsen i ett inkognitivt webbläsarfönster. För varje övning måste du använda ett nytt, inkognitivt webbläsarfönster för att läsa in webbadressen till demowebbplatsen.
 
 ![DSN](../../gettingstarted/gettingstarted/images/web7.png)
 

@@ -3,9 +3,10 @@ title: Frågetjänst - Komma igång
 description: Frågetjänst - Komma igång
 kt: 5342
 doc-type: tutorial
-source-git-commit: 2cdc145d7f3933ec593db4e6f67b60961a674405
+exl-id: b8a404d1-7796-46e3-b245-553acdc753ae
+source-git-commit: acb941e4ee668248ae0767bb9f4f42e067c181ba
 workflow-type: tm+mt
-source-wordcount: '660'
+source-wordcount: '643'
 ht-degree: 0%
 
 ---
@@ -18,7 +19,7 @@ Gå till [Adobe Experience Platform](https://experience.adobe.com/platform). Nä
 
 ![Datainmatning](./../../../modules/datacollection/module1.2/images/home.png)
 
-Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``--module7sandbox--``. Du kan göra detta genom att klicka på texten **[!UICONTROL Production Prod]** i den blå raden ovanför skärmen. När du har valt rätt [!UICONTROL sandbox] visas skärmändringen och nu är du i din dedikerade [!UICONTROL sandbox].
+Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``--aepSandboxName--``. När du har valt rätt [!UICONTROL sandbox] visas skärmändringen och nu är du i din dedikerade [!UICONTROL sandbox].
 
 ![Datainmatning](./../../../modules/datacollection/module1.2/images/sb1.png)
 

@@ -4,7 +4,8 @@ description: Offer decisioning - Offer decisioning 101
 kt: 5342
 audience: Data Engineer, Data Architect, Orchestration Engineer, Marketer
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: 8a627c29-7780-455f-abe1-a69f8fe145ea
+source-git-commit: acb941e4ee668248ae0767bb9f4f42e067c181ba
 workflow-type: tm+mt
 source-wordcount: '985'
 ht-degree: 0%
@@ -92,9 +93,9 @@ Nu visas alla fält i placeringen:
 
 ## 3.3.1.4 Beslutsregler
 
-En regel (kallas även behörighetskrav) motsvarar ett **segment**. En regel är i själva verket ett segment med den enda skillnaden att en regel kan användas med ett erbjudande för att ge det bästa erbjudandet till en profil i Adobe Experience Platform.
+En regel (kallas även behörighetskrav) motsvarar en **målgrupp**. En regel är i själva verket en målgrupp med den enda skillnaden att en regel kan användas med ett erbjudande för att ge det bästa erbjudandet till en profil i Adobe Experience Platform.
 
-Som du redan vet hur man definierar segment baserat på de tidigare aktiveringsmodulerna kan vi snabbt gå tillbaka till segmenteringsmiljön:
+Som ni redan vet hur ni definierar målgrupper baserat på de tidigare aktiveringsmodulerna kan vi snabbt gå tillbaka till segmenteringsmiljön:
 
 Gå till **Regler**. Klicka på **+ Skapa regel**.
 
@@ -106,7 +107,7 @@ Då visas segmenteringsmiljön i Adobe Experience Platform.
 
 Du kan nu komma åt alla fält som ingår i unionens schema för kundprofilen i realtid och kan bygga ut alla regler.
 
-Det är också intressant att veta att du helt enkelt kan återanvända redan definierade segment i Adobe Experience Platform genom att gå till **Publiker** > ``--aepTenantId--``.
+Det är också intressant att veta att du helt enkelt kan återanvända redan definierade målgrupper i Adobe Experience Platform genom att gå till **Publiker** > ``--aepTenantId--``.
 
 ![Beslutsregel](./images/decisionruleaud.png)
 

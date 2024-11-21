@@ -1,19 +1,19 @@
 ---
-title: Foundation - kundprofil i realtid - Skapa ett segment - användargränssnitt
-description: Foundation - kundprofil i realtid - Skapa ett segment - användargränssnitt
+title: Foundation - kundprofil i realtid - Skapa en målgrupp - användargränssnitt
+description: Foundation - kundprofil i realtid - Skapa en målgrupp - användargränssnitt
 kt: 5342
 doc-type: tutorial
 exl-id: db1d744d-c4ff-4131-b104-98bb70269140
-source-git-commit: 3a19e88e820c63294eff38bb8f699a9f690afcb9
+source-git-commit: acb941e4ee668248ae0767bb9f4f42e067c181ba
 workflow-type: tm+mt
 source-wordcount: '692'
 ht-degree: 2%
 
 ---
 
-# 2.1.4 Skapa ett segment - användargränssnitt
+# 2.1.4 Skapa en målgrupp - användargränssnitt
 
-I den här övningen skapar du ett segment genom att använda Adobe Experience Platform Segment Builder.
+I den här övningen skapar du en publik genom att använda Adobe Experience Platform Audience Builder.
 
 Gå till [Adobe Experience Platform](https://experience.adobe.com/platform). När du har loggat in loggar du in på Adobe Experience Platform hemsida.
 
@@ -23,7 +23,7 @@ Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska marke
 
 ![Datainmatning](./../../../modules/datacollection/module1.2/images/sb1.png)
 
-Gå till **Publiker** på menyn till vänster. På den här sidan visas en översikt över alla befintliga segment. Klicka på knappen **+ Skapa målgrupp** för att börja skapa ett nytt segment.
+Gå till **Publiker** på menyn till vänster. På den här sidan visas en översikt över alla befintliga målgrupper. Klicka på knappen **+ Skapa målgrupp** för att börja skapa en ny målgrupp.
 
 ![Segmentering](./images/menuseg.png)
 
@@ -31,7 +31,7 @@ Välj **Skapa regel** och klicka på **Skapa**.
 
 ![Segmentering](./images/menusegbr.png)
 
-När du är i det nya segmentbyggaren lägger du omedelbart märke till menyalternativet **Attribut** och referensen **XDM Individual Profile** .
+När du är i det nya målgruppsverktyget lägger du omedelbart märke till menyalternativet **Attribut** och referensen **XDM Individual Profile** .
 
 ![Segmentering](./images/segmentationui.png)
 

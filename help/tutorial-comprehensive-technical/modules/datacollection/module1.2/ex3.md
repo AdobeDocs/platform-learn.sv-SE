@@ -4,9 +4,9 @@ description: Foundation - datainmatning - Konfigurera datauppsättningar
 kt: 5342
 doc-type: tutorial
 exl-id: 94ef3e17-af28-4549-8a08-91b129ff4c93
-source-git-commit: 8bdcd03bd38a6da98b82439ad86482cad5f4e684
+source-git-commit: acb941e4ee668248ae0767bb9f4f42e067c181ba
 workflow-type: tm+mt
-source-wordcount: '541'
+source-wordcount: '524'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ När du har loggat in loggar du in på Adobe Experience Platform hemsida.
 
 ![Datainmatning](./images/home.png)
 
-Innan du fortsätter måste du välja en **[!UICONTROL sandbox]**. Sandlådan som ska markeras har namnet ``--module2sandbox--``. Du kan göra detta genom att klicka på texten **[!UICONTROL Production Prod]** i den blå raden ovanför skärmen. När du har valt rätt [!UICONTROL sandbox] visas skärmändringen och nu är du i din dedikerade [!UICONTROL sandbox].
+Innan du fortsätter måste du välja en **[!UICONTROL sandbox]**. Sandlådan som ska markeras har namnet ``--aepSandboxName--``. När du har valt rätt [!UICONTROL sandbox] visas skärmändringen och nu är du i din dedikerade [!UICONTROL sandbox].
 
 ![Datainmatning](./images/sb1.png)
 

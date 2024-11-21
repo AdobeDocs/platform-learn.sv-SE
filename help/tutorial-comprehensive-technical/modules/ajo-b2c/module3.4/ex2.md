@@ -3,9 +3,10 @@ title: Adobe Journey Optimizer - Konfigurera en batchbaserad resa
 description: I det här avsnittet konfigurerar du en e-postgruppsresa för att skicka ett nyhetsbrev
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: 52b2e019-e408-4160-87b7-2aabd0f3c68f
+source-git-commit: acb941e4ee668248ae0767bb9f4f42e067c181ba
 workflow-type: tm+mt
-source-wordcount: '794'
+source-wordcount: '786'
 ht-degree: 0%
 
 ---
@@ -22,7 +23,7 @@ Du omdirigeras till vyn **Hem** i Journey Optimizer. Kontrollera först att du a
 
 ## 3.4.2.1 Skapa nyhetsbrev
 
-Nu kan du skapa en gruppbaserad resa. Till skillnad från den händelsebaserade resan i den föregående övningen som bygger på inkommande upplevelsehändelser eller segmentposter eller utträden för att utlösa en resa för en viss kund, riktar sig batchbaserade resor till ett helt segment med unikt innehåll som nyhetsbrev, engångskampanjer eller allmän information eller regelbundet med liknande innehåll som skickas regelbundet, till exempel födelsedagskampanjer och påminnelser.
+Nu kan du skapa en gruppbaserad resa. Till skillnad från den händelsebaserade resan i den föregående övningen, som bygger på inkommande upplevelsehändelser, målgruppsposter eller utträde för att utlösa en resa för en viss kund, riktar sig batchbaserade resor mot en hel målgrupp en gång med unikt innehåll som nyhetsbrev, engångskampanjer, allmän information eller regelbundet med liknande innehåll som skickas regelbundet, till exempel födelsedagskampanjer och påminnelser.
 
 Gå till **Resor** på menyn och klicka på **Skapa resa**.
 
@@ -37,11 +38,11 @@ Klicka på **OK**.
 
 ![Journey Optimizer](./images/batchj2.png)
 
-Under **Orchestration** drar och släpper du **Läs segment** på arbetsytan. Det innebär att resan, när den har publicerats, börjar med att hämta hela segmentets målgrupp, som sedan blir målgrupp för resan och budskapet. Klicka på **Markera ett segment**.
+Under **Orchestration** drar och släpper du **Läs målgrupp** på arbetsytan. Det innebär att resan, när den har publicerats, börjar med att hämta hela målgruppen, som sedan blir målgruppen för resan och budskapet. Klicka på **Välj en målgrupp**.
 
 ![Journey Optimizer](./images/batchj3.png)
 
-I popup-fönstret **Välj ett segment** söker du efter din ldap och väljer det segment du skapade i [Modul 2.3 - CDP i realtid - Bygg ett segment och utför åtgärden ](./../../../modules/rtcdp-b2c/module2.3/real-time-cdp-build-a-segment-take-action.md) `--aepUserLdap-- - Interest in PROTEUS FITNESS JACKSHIRT`. till exempel: vangeluw - Intresse i PROTEUS FITNESS JACKSHIRT. Klicka på **Spara**.
+I popup-fönstret **Välj en målgrupp** söker du efter din ldap och väljer målgruppen som du skapade i [Modul 2.3 - CDP i realtid - Bygg en målgrupp och utför åtgärden ](./../../../modules/rtcdp-b2c/module2.3/real-time-cdp-build-a-segment-take-action.md) med namnet `--aepUserLdap-- - Interest in Galaxy S24`. Klicka på **Spara**.
 
 ![Journey Optimizer](./images/batchj5.png)
 

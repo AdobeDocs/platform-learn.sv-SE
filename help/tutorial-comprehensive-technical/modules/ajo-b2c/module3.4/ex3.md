@@ -3,9 +3,10 @@ title: Adobe Journey Optimizer - Använd personalisering i ett e-postmeddelande
 description: Den här övningen förklarar hur du använder segmentpersonalisering i ett e-postinnehåll
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: bb5f8130-0237-4381-bc1e-f6b62950b1fc
+source-git-commit: acb941e4ee668248ae0767bb9f4f42e067c181ba
 workflow-type: tm+mt
-source-wordcount: '500'
+source-wordcount: '483'
 ht-degree: 0%
 
 ---
@@ -16,7 +17,7 @@ Logga in på Adobe Experience Cloud på [Adobe Experience Cloud](https://experie
 
 ![ACOP](./../../../modules/ajo-b2c/module3.2/images/acophome.png)
 
-Du omdirigeras till vyn **Hem** i Journey Optimizer. Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``--aepTenantId--``. Du kan göra detta genom att klicka på texten **[!UICONTROL Production Prod]** i den blå raden ovanför skärmen.
+Du omdirigeras till vyn **Hem** i Journey Optimizer. Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``--aepTenantId--``.
 
 ![ACOP](./../../../modules/ajo-b2c/module3.2/images/acoptriglp.png)
 

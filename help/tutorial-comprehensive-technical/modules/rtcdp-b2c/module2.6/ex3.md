@@ -3,9 +3,10 @@ title: Konfigurera HTTP API-slutpunkt i Adobe Experience Platform
 description: Konfigurera HTTP API-slutpunkt i Adobe Experience Platform
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: a29dd01d-4415-45d6-ad52-7f14aef60565
+source-git-commit: acb941e4ee668248ae0767bb9f4f42e067c181ba
 workflow-type: tm+mt
-source-wordcount: '320'
+source-wordcount: '303'
 ht-degree: 0%
 
 ---
@@ -20,7 +21,7 @@ När du har loggat in loggar du in på Adobe Experience Platform hemsida.
 
 ![Datainmatning](./../../../modules/datacollection/module1.2/images/home.png)
 
-Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``--aepSandboxName--``. Du kan göra detta genom att klicka på texten **[!UICONTROL Production Prod]** i den blå raden ovanför skärmen. När du har valt rätt sandlåda ser du skärmändringen och nu befinner du dig i din dedikerade sandlåda.
+Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``--aepSandboxName--``. När du har valt rätt sandlåda ser du skärmändringen och nu befinner du dig i din dedikerade sandlåda.
 
 ![Datainmatning](./../../../modules/datacollection/module1.2/images/sb1.png)
 

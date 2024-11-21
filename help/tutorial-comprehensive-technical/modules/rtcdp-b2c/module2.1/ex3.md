@@ -4,9 +4,9 @@ description: Foundation - kundprofil i realtid - Visualisera din egen kundprofil
 kt: 5342
 doc-type: tutorial
 exl-id: fe07d873-f4de-437e-815e-e6e6c06a691c
-source-git-commit: 3a19e88e820c63294eff38bb8f699a9f690afcb9
+source-git-commit: acb941e4ee668248ae0767bb9f4f42e067c181ba
 workflow-type: tm+mt
-source-wordcount: '2295'
+source-wordcount: '2287'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ I den här övningen använder du Postman och Adobe I/O för att fråga Adobe Ex
 
 ## Kontext
 
-I kundprofilen i realtid visas alla profildata tillsammans med händelsedata samt befintliga segmentmedlemskap. De data som visas kan komma var som helst, från Adobe-program och externa lösningar. Detta är den mest kraftfulla vyn i Adobe Experience Platform, det upplevelsesystem som finns.
+I kundprofilen i realtid visas alla profildata tillsammans med händelsedata samt befintliga målgruppsmedlemskap. De data som visas kan komma var som helst, från Adobe-program och externa lösningar. Detta är den mest kraftfulla vyn i Adobe Experience Platform, det upplevelsesystem som finns.
 
 Kundprofilen i realtid kan användas av alla Adobe-program, men även av externa lösningar som Call Centers eller appar för kundanpassning i butiken. Detta gör du genom att koppla dessa externa lösningar till Adobe Experience Platform API:er.
 
@@ -57,9 +57,6 @@ Välj **+ Lägg till i projekt** och välj **API**.
 Då ser du det här:
 
 ![Ny integrering för Adobe I/O](./images/api1.png)
-
-Klicka på ikonen **Adobe Experience Platform** .
-/images/api2.png)
 
 Markera **Experience Platform API** och klicka på **Nästa**.
 
@@ -150,7 +147,7 @@ I Postman finns det två koncept: Miljö och Samlingar.
 - Miljön innehåller alla dina miljövariabler som är mer eller mindre konsekventa. I miljön hittar du saker som IMSOrg i vår plattformsmiljö, tillsammans med säkerhetsreferenser som din privata nyckel och andra. Miljöfilen är den som du hämtade under Adobe I/O-konfigurationen i den tidigare övningen. Den har följande namn: **`oauth_server_to_server.postman_environment.json`**.
 
 - Samlingen innehåller ett antal API-begäranden som du kan använda. Vi kommer att använda 2 samlingar
-   - 1 samling för autentisering till Adobe I/0
+   - 1 samling för autentisering till Adobe I/O
    - 1 Samling för övningar i denna modul
    - 1 samling för övningarna i Real-Time CDP-modulen, för målredigering
 
@@ -632,7 +629,7 @@ Detta är för närvarande alla tillgängliga ExperienceEvent-data i Platform f�
 
 Du behöver inte använda ECID för att begära ExperienceEvent-data från Adobe Experience Platform realtidsprofil, du kan använda valfritt ID i valfritt namnområde för att begära dessa data.
 
-Nästa steg: [2.1.4 Skapa ett segment - användargränssnitt](./ex4.md)
+Nästa steg: [2.1.4 Skapa en målgrupp - användargränssnitt](./ex4.md)
 
 [Gå tillbaka till modul 2.1](./real-time-customer-profile.md)
 

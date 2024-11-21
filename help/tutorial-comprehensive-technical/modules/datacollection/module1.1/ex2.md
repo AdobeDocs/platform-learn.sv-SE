@@ -4,7 +4,7 @@ description: Foundation - konfiguration av Adobe Experience Platform Data Collec
 kt: 5342
 doc-type: tutorial
 exl-id: e97d40b5-616d-439c-9d6b-eaa4ebf5acb0
-source-git-commit: 0dbcda0cfc9f199a44c845c1b5caf00a8d740251
+source-git-commit: acb941e4ee668248ae0767bb9f4f42e067c181ba
 workflow-type: tm+mt
 source-wordcount: '595'
 ht-degree: 0%
@@ -59,7 +59,7 @@ För denna datastream...
 - Alla Experience Event-data samlas som standard in i datauppsättningen **Demo System - Event Dataset för webbplatsen (Global v1.1)**
 - Alla profildata samlas som standard in i datauppsättningen **Demo System - profildatauppsättning för webbplats (Global v1.1)** (Inhämtning av profildata internt med Web SDK stöds för närvarande inte av Web SDK ännu)
 - Om du vill använda programtjänsten **Offer decisioning** för det här dataflödet måste du markera rutan för Offer decisioning. (Detta ingår i [Modul 3.3](./../../../modules/ajo-b2c/module3.3/offer-decisioning.md))
-- **Edge-segmentering** är aktiverat som standard, vilket innebär att kvalificerande segment utvärderas i kanten vid inkommande trafik
+- **Edge-segmentering** är aktiverat som standard, vilket innebär att kvalificerade målgrupper utvärderas i kanten vid inkommande trafik
 - Om du vill använda **Personalization Destinations** måste du markera kryssrutan för Personalization Destinations.
 - 
    - Om du vill använda **Adobe Journey Optimizer** s funktioner i det här dataflödet måste du markera kryssrutan för Adobe Journey Optimizer.

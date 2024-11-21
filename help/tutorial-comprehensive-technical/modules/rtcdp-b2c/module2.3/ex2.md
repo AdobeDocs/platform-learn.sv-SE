@@ -1,11 +1,12 @@
 ---
-title: CDP för realtid - Bygg ett segment och vidta åtgärder - Konfigurera ett Advertising-mål som Google DV360
-description: CDP för realtid - Bygg ett segment och vidta åtgärder - Konfigurera ett Advertising-mål som Google DV360
+title: CDP i realtid - Bygg en målgrupp och vidta åtgärder - Konfigurera ett Advertising-mål som Google DV360
+description: CDP i realtid - Bygg en målgrupp och vidta åtgärder - Konfigurera ett Advertising-mål som Google DV360
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: fdc590d5-b986-422c-97ef-b5a439644439
+source-git-commit: acb941e4ee668248ae0767bb9f4f42e067c181ba
 workflow-type: tm+mt
-source-wordcount: '332'
+source-wordcount: '329'
 ht-degree: 0%
 
 ---
@@ -14,13 +15,13 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Innehållet nedan är avsett som FYI - du behöver **INTE** konfigurera ett nytt mål för DV360. Målet har redan skapats och du kan använda det i nästa övning.
+>Innehållet nedan är delvis avsett som FYI - Om det redan finns ett sådant mål i din instans måste du **INTE** konfigurera ett nytt mål för DV360. Målet har redan skapats i det fallet och du kan använda det i nästa övning.
 
 Gå till [Adobe Experience Platform](https://experience.adobe.com/platform). När du har loggat in loggar du in på Adobe Experience Platform hemsida.
 
 ![Datainmatning](./../../../modules/datacollection/module1.2/images/home.png)
 
-Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``--aepSandboxName--``. Du kan göra detta genom att klicka på texten **[!UICONTROL Production Prod]** i den blå raden ovanför skärmen. När du har valt rätt [!UICONTROL sandbox] visas skärmändringen och nu är du i din dedikerade [!UICONTROL sandbox].
+Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``--aepSandboxName--``. När du har valt rätt [!UICONTROL sandbox] visas skärmändringen och nu är du i din dedikerade [!UICONTROL sandbox].
 
 ![Datainmatning](./../../../modules/datacollection/module1.2/images/sb1.png)
 
@@ -61,9 +62,9 @@ När du har skapat målet visas det här. Du kan också välja en datastyrningsp
 ![RTCDP](./images/rtcdpcreatedest1.png)
 
 Då visas en lista med tillgängliga destinationer.
-I nästa övning ska du koppla segmentet som du skapade i föregående övning till Google DV360-målet.
+I nästa övning kopplar du den målgrupp du skapade i föregående övning till Google DV360-destinationen.
 
-Nästa steg: [2.3.3 Vidta åtgärd: skicka segmentet till DV360](./ex3.md)
+Nästa steg: [2.3.3 Vidta åtgärd: skicka målgruppen till DV360](./ex3.md)
 
 [Gå tillbaka till modul 2.3](./real-time-cdp-build-a-segment-take-action.md)
 

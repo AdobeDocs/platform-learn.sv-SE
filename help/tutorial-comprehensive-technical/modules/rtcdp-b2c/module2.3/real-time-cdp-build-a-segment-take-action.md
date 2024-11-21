@@ -6,16 +6,14 @@ audience: Data Architect, Orchestration Engineer, Marketer
 doc-type: tutorial
 activity: develop
 exl-id: 147d9153-5742-4857-aae1-0ec434a1e626
-source-git-commit: f4b3463ce9464c96378790bf8070504fc90cb2ff
+source-git-commit: b46c753a8d854b5a448d10d30c7a5701900a35b8
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '336'
 ht-degree: 0%
 
 ---
 
 # 2.3 CDP i realtid - Bygg ett segment och agera
-
-**Författare: [Wouter Van Geluwe](https://www.linkedin.com/in/woutervangeluwe/), [Alberto De Caro](https://www.linkedin.com/in/albertodecaro/), [Benedikt Wedenik](https://www.linkedin.com/in/benedikt-wedenik/)**
 
 I den här modulen ska du konfigurera ett direktuppspelningssegment och aktivera segmentet för flera mål.
 
@@ -38,25 +36,25 @@ I den här modulen ska du konfigurera ett direktuppspelningssegment och aktivera
 
 ## Utövningar
 
-[2.3.1 Skapa ett segment](./ex1.md)
+[2.3.1 Skapa en målgrupp](./ex1.md)
 
-Lär dig hur du skapar ett segment.
+Lär dig skapa en målgrupp.
 
 [2.3.2 Granska hur du konfigurerar DV360-mål med hjälp av destinationer](./ex2.md)
 
 Lär dig hur du konfigurerar ett annonsmål med hjälp av Real-Time CDP användargränssnitt.
 
-[2.3.3 Vidta åtgärd: skicka segmentet till DV360](./ex3.md)
+[2.3.3 Take Action: send your audience to DV360](./ex3.md)
 
-Anslut segmentet som du skapade i övning 6.1 till mål-DV360.
+Koppla den målgrupp du har skapat till mål-DV360.
 
-[2.3.4 Take Action: send your segment to an S3 destination](./ex4.md)
+[2.3.4 Take Action: send your audience to an S3 destination](./ex4.md)
 
-Använd segmentet som du skapade i övning 6.1 och skicka det till en S3-destination, som vanligtvis används för e-postmarknadsföring.
+Använd den målgrupp du skapat och skicka den till en S3-destination, som vanligtvis används för e-postmarknadsföring.
 
-[2.3.5 Take Action: send your segment to Adobe Target](./ex5.md)
+[2.3.5 Take Action: send your målgrupp to Adobe Target](./ex5.md)
 
-Använd det segment du skapat i övning 6.1 för att konfigurera en Experience Targeting Activity i Adobe Target.
+Använd målgruppen som du skapade för att konfigurera en Experience Targeting Activity i Adobe Target.
 
 [2.3.6 Externa målgrupper](./ex6.md)
 

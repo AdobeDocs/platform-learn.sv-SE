@@ -4,9 +4,9 @@ description: Se hur kundprofilen i realtid fungerar i Call Center
 kt: 5342
 doc-type: tutorial
 exl-id: 47c96696-644a-43b9-8deb-846bd2587af0
-source-git-commit: 3a19e88e820c63294eff38bb8f699a9f690afcb9
+source-git-commit: acb941e4ee668248ae0767bb9f4f42e067c181ba
 workflow-type: tm+mt
-source-wordcount: '352'
+source-wordcount: '317'
 ht-degree: 0%
 
 ---
@@ -50,11 +50,9 @@ Sedan måste du välja en av dina identiteter och enligt namnutrymmet och klicka
 | E-post-ID | woutervangeluwe+18112024-01@gmail.com |
 | Mobilnummer-ID | +32473622044+18112024-01 |
 
-När kunden ringer till er kundtjänst kan telefonnumret användas för att identifiera kunden. I den här övningen använder du telefonnumret för att hämta kundens profil i appen för kundupplevelser.
-
 ![Demo](./images/19.png)
 
-Nu kommer du att se den information som helst skulle visas i Samtalscentret, så att de anställda på Samtalscentret får all relevant information direkt tillgänglig när de talar till en kund.
+Du kommer nu att se den information som helst skulle visas i callcentret, så att samtalscentrets handläggare har all relevant information direkt tillgänglig när de talar till en kund.
 
 ![Demo](./images/20.png)
 

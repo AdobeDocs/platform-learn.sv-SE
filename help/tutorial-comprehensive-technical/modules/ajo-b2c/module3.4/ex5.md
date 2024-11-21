@@ -3,9 +3,10 @@ title: Adobe Journey Optimizer - affärshändelser
 description: I det här avsnittet beskrivs hur du använder funktionen för affärshändelser för att kunna utföra ett"objekt tillbaka i lager"-fall
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: 8519e17f-e050-4a06-9651-29bf67f27276
+source-git-commit: acb941e4ee668248ae0767bb9f4f42e067c181ba
 workflow-type: tm+mt
-source-wordcount: '1195'
+source-wordcount: '1187'
 ht-degree: 0%
 
 ---
@@ -98,14 +99,14 @@ På den vänstra menyn, under **Händelser**, söker du efter din ldap. Du hitta
 
 ![Journey Optimizer](./images/bej12.png)
 
-Som du ser har en **Läs segment**-aktivitet automatiskt lagts till på arbetsytan. Det beror på att affärshändelserna bara skickar en utlösare för resan för att läsa ett visst segment, som sedan hämtar listan över profiler för den resan.
+Som du ser har en **Läs målgrupp** automatiskt lagts till på arbetsytan. Det beror på att affärshändelserna bara skickar en utlösare för resan för att läsa en viss målgrupp, som sedan hämtar listan över profiler för den resan.
 
-Klicka på aktiviteten **Läs segment**.
-Konfigurationen **Läs segment** förväntar sig att du väljer det segment som du vill meddela om den affärshändelse som just har inträffat. Klicka på fältet **Markera ett segment**.
+Klicka på aktiviteten **Läs målgrupp**.
+Konfigurationen **Läs målgrupp** förväntar sig att du väljer målgrupp som du vill meddela om den affärshändelse som just har inträffat. Klicka på fältet **Välj en målgrupp**.
 
 ![Journey Optimizer](./images/bej13.png)
 
-I popup-fönstret **Välj ett segment** söker du efter din ldap och väljer det segment du skapade i [Modul 2.3 - CDP i realtid - Bygg ett segment och utför åtgärden ](./../../../modules/rtcdp-b2c/module2.3/real-time-cdp-build-a-segment-take-action.md) `--aepUserLdap-- - Interest in PROTEUS FITNESS JACKSHIRT`. till exempel: vangeluw - Intresse i PROTEUS FITNESS JACKSHIRT. Klicka på **Spara**.
+I popup-fönstret **Välj en målgrupp** söker du efter din ldap och väljer målgruppen som du skapade i [Modul 2.3 - CDP i realtid - Bygg en målgrupp och utför åtgärden ](./../../../modules/rtcdp-b2c/module2.3/real-time-cdp-build-a-segment-take-action.md) med namnet `--aepUserLdap-- - Interest in Galaxy S24`. Klicka på **Spara**.
 
 ![Journey Optimizer](./images/bej14.png)
 

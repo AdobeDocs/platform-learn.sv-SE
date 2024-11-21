@@ -1,87 +1,84 @@
 ---
-title: CDP i realtid - Bygg ett segment och agera - Bygg ett segment
-description: CDP i realtid - Bygg ett segment och agera - Bygg ett segment
+title: CDP i realtid - Bygg en målgrupp och agera - Bygg en målgrupp
+description: CDP i realtid - Bygg en målgrupp och agera - Bygg en målgrupp
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: a46b1640-769d-4fb3-97e6-beaf9706efbf
+source-git-commit: acb941e4ee668248ae0767bb9f4f42e067c181ba
 workflow-type: tm+mt
-source-wordcount: '659'
+source-wordcount: '609'
 ht-degree: 1%
 
 ---
 
-# 2.3.1 Skapa ett segment
+# 2.3.1 Skapa en målgrupp
 
-I den här övningen skapar du ett segment genom att använda Adobe Experience Platform segmentbyggare.
+I den här övningen skapar du en publik genom att använda Adobe Experience Platform målgruppsbyggare.
 
-## 2.3.1.1 Sammanhang
+## Kontext
 
-I dagens värld måste kundens beteende i realtid hanteras. Ett sätt att svara på kundbeteenden i realtid är att använda ett segment, förutsatt att segmentet kvalificeras i realtid. I den här övningen måste ni bygga ut ett segment, med hänsyn tagen till den verkliga aktiviteten på webbplatsen som vi har använt.
+Att svara på kundens intresse måste vara i realtid. Ett sätt att svara på kundbeteenden i realtid är att använda en målgrupp, förutsatt att målgruppen kvalificerar sig i realtid. I den här övningen måste ni bygga ut en målgrupp, med hänsyn tagen till den verkliga aktiviteten på den webbplats som vi har använt.
 
-## 2.3.1.2 Identifiera det beteende du vill reagera på
+## Identifiera det beteende du vill reagera på
 
-Gå till [https://builder.adobedemo.com/projects](https://builder.adobedemo.com/projects). När du har loggat in med din Adobe ID ser du det här. Klicka på webbplatsprojektet för att öppna det.
+Gå till [https://dsn.adobe.com](https://dsn.adobe.com). När du har loggat in med din Adobe ID ser du det här. Klicka på de tre punkterna **..** i webbplatsprojektet och klicka sedan på **Kör** för att öppna det.
 
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web8.png)
-
-Nu kan du följa nedanstående flöde för att komma åt webbplatsen. Klicka på **Integrationer**.
-
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web1.png)
-
-På sidan **Integrationer** måste du välja den datainsamlingsegenskap som skapades i övning 0.1.
-
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web2.png)
+![DSN](./../../datacollection/module1.1/images/web8.png)
 
 Du kommer då att se din demowebbplats öppnas. Markera URL-adressen och kopiera den till Urklipp.
 
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web3.png)
+![DSN](../../gettingstarted/gettingstarted/images/web3.png)
 
 Öppna ett nytt inkognito-webbläsarfönster.
 
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web4.png)
+![DSN](../../gettingstarted/gettingstarted/images/web4.png)
 
 Klistra in webbadressen till demowebbplatsen, som du kopierade i föregående steg. Du ombeds sedan logga in med din Adobe ID.
 
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web5.png)
+![DSN](../../gettingstarted/gettingstarted/images/web5.png)
 
 Välj kontotyp och slutför inloggningsprocessen.
 
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web6.png)
+![DSN](../../gettingstarted/gettingstarted/images/web6.png)
 
-Därefter visas webbplatsen i ett inkognitivt webbläsarfönster. För varje demonstration måste du använda ett nytt, inkognitivt webbläsarfönster för att läsa in webbadressen till demowebbplatsen.
+Därefter visas webbplatsen i ett inkognitivt webbläsarfönster. För varje övning måste du använda ett nytt, inkognitivt webbläsarfönster för att läsa in webbadressen till demowebbplatsen.
 
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web7.png)
+![DSN](../../gettingstarted/gettingstarted/images/web7.png)
 
 I det här exemplet vill du svara en viss kund som tittar på en viss produkt.
-Gå till **Män** på hemsidan **Luma** och klicka på produkten **PROTEUS FITNESS JACKSHIRT**.
+Gå till **Telefoner och enheter** på startsidan för **Citi Signal** och klicka på produkten **Galaxy S24**.
 
-![Datainmatning](./images/homenadia.png)
+![Datainmatning](./images/homegalaxy.png)
 
-Så när någon besöker produktsidan för **PROTEUS FITNESS JACKSHIRT** vill du kunna vidta åtgärder. Det första du måste göra är att definiera ett segment.
+Så när någon besöker produktsidan för **Galaxy S24** vill du kunna vidta åtgärder. Det första som måste göras är att definiera en målgrupp.
 
-![Datainmatning](./images/homenadiapp.png)
+![Datainmatning](./images/homegalaxy1.png)
 
-## 2.3.1.3 Skapa segmentet
+## Skapa målgruppen
 
 Gå till [Adobe Experience Platform](https://experience.adobe.com/platform). När du har loggat in loggar du in på Adobe Experience Platform hemsida.
 
 ![Datainmatning](./../../../modules/datacollection/module1.2/images/home.png)
 
-Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``--aepSandboxName--``. Du kan göra detta genom att klicka på texten **[!UICONTROL Production Prod]** i den blå raden ovanför skärmen. När du har valt rätt [!UICONTROL sandbox] visas skärmändringen och nu är du i din dedikerade [!UICONTROL sandbox].
+Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``--aepSandboxName--``. När du har valt rätt [!UICONTROL sandbox] visas skärmändringen och nu är du i din dedikerade [!UICONTROL sandbox].
 
 ![Datainmatning](./../../../modules/datacollection/module1.2/images/sb1.png)
 
-Gå till **Segment** på menyn till vänster och gå sedan till **Bläddra** där du kan se en översikt över alla befintliga segment. Klicka på knappen **Skapa segment** för att börja skapa ett nytt segment.
+Gå till **Publiker** på menyn till vänster och gå sedan till **Bläddra** där du kan se en översikt över alla befintliga målgrupper. Klicka på knappen **Skapa publik** för att börja skapa en ny publik.
 
 ![Segmentering](./images/menuseg.png)
 
-Som nämnts ovan måste du skapa ett segment av alla kunder som har tittat på produkten **PROTEUS FITNESS JACKSHIRT**.
+Välj **Skapa regel** och klicka på **Skapa**.
 
-Om du vill bygga ut det här segmentet måste du lägga till en händelse. Du kan hitta alla händelser genom att klicka på ikonen **Händelser** i menyraden **Segment** .
+![Segmentering](./images/menuseg1.png)
+
+Som nämnts ovan måste du skapa en målgrupp av alla kunder som har tittat på produkten **Galaxy S24**.
+
+Om du vill bygga ut den här målgruppen måste du lägga till en händelse. Du kan hitta alla händelser genom att klicka på ikonen **Händelser** i menyfältet **Publiker** .
 
 Därefter visas noden **XDM ExperienceEvent** på den översta nivån.
 
-Om du vill hitta kunder som har besökt **PROTEUS FITNESS JACKSHIRT** klickar du på **XDM ExperienceEvent**.
+Om du vill hitta kunder som har besökt produkten **Galaxy S24** klickar du på **XDM ExperienceEvent**.
 
 ![Segmentering](./images/findee.png)
 
@@ -89,32 +86,29 @@ Bläddra nedåt till **Produktlisteobjekt** och klicka på den.
 
 ![Segmentering](./images/see.png)
 
-Välj **Namn** och dra och släpp objektet **Namn** från den vänstra menyn **Produktlisteobjekt** på segmentbyggarbetsytan till avsnittet **Händelser** .
+Välj **Namn** och dra och släpp objektet **Namn** från den vänstra menyn **Produktlisteobjekt** på målgruppsarbetsytan i avsnittet **Händelser**.
 
 ![Segmentering](./images/eewebpdtlname1.png)
 
-Jämförelseparametern ska vara **lika med** och ange `PROTEUS FITNESS JACKSHIRT` i indatafältet.
+Jämförelseparametern ska vara **lika med** och ange `Galaxy S24` i indatafältet.
 
 ![Segmentering](./images/pv.png)
 
-**Händelsereglerna** bör nu se ut så här. Varje gång du lägger till ett element i segmentbyggaren kan du klicka på knappen **Uppdatera uppskattning** för att få en ny uppskattning av populationen i ditt segment.
+**Händelsereglerna** bör nu se ut så här. Varje gång du lägger till ett element i målgruppsverktyget kan du klicka på knappen **Uppdatera uppskattning** för att få en ny uppskattning av målgruppspopulationen.
 
 ![Segmentering](./images/ldap4.png)
 
-Till sist ger vi segmentet ett namn och sparar det.
+Ge målgruppen ett namn och ange **Utvärderingsmetod** till **Edge**.
 
 Använd följande som namnkonvention:
 
-- `--aepUserLdap-- - Interest in PROTEUS FITNESS JACKSHIRT`
+- `--aepUserLdap-- - Interest in Galaxy S24`
 
-Segmentnamnet ska se ut så här:
-`vangeluw - Interest in PROTEUS FITNESS JACKSHIRT`
-
-Klicka sedan på knappen **Spara och stäng** för att spara segmentet.
+Klicka sedan på knappen **Publish** för att spara din publik.
 
 ![Segmentering](./images/segmentname.png)
 
-Du kommer nu tillbaka till sidan Segmentöversikt.
+Du kommer nu tillbaka till målgruppsöversikten.
 
 ![Segmentering](./images/savedsegment.png)
 
