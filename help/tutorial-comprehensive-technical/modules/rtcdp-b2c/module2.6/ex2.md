@@ -6,24 +6,20 @@ audience: Data Engineer, Data Architect, Data Analyst
 doc-type: tutorial
 activity: develop
 exl-id: adffeead-9bcb-4632-9a2c-c6da1c40b7f2
-source-git-commit: 2cdc145d7f3933ec593db4e6f67b60961a674405
+source-git-commit: be5a7dec47a83a14d74024015a15a9c24d04cd95
 workflow-type: tm+mt
-source-wordcount: '784'
+source-wordcount: '761'
 ht-degree: 0%
 
 ---
 
 # 2.6.2 Installera och konfigurera Kafka-klustret
 
-## 2.6.2.1 Ladda ned Apache Kafka
+## Ladda ned Apache Kafka
 
-Gå till [https://kafka.apache.org/downloads](https://kafka.apache.org/downloads) och hämta den senaste versionen. Välj den senaste binära versionen, i det här fallet **Scala 2.13**.
+Gå till [https://kafka.apache.org/downloads](https://kafka.apache.org/downloads) och hämta den senaste versionen. Välj den senaste binära versionen, i det här fallet **3.9.0**. Nedladdningen startar.
 
 ![Kafka](./images/kafka1.png)
-
-Du tas sedan till en spegelplats. Klicka på den föreslagna länken för att ladda ned Kafka.
-
-![Kafka](./images/kafka2.png)
 
 Skapa en mapp med namnet **Kafka_AEP** på skrivbordet och placera den hämtade filen i den katalogen.
 
@@ -35,7 +31,7 @@ Skapa en mapp med namnet **Kafka_AEP** på skrivbordet och placera den hämtade 
 
 Kör det här kommandot i terminalfönstret för att dekomprimera den hämtade filen:
 
-`tar -xvf kafka_2.13-3.1.0.tgz`
+`tar -xvf kafka_2.13-3.9.0.tgz`
 
 >[!NOTE]
 >
@@ -57,7 +53,7 @@ I den katalogen visas följande underkataloger:
 
 Gå tillbaka till terminalfönstret. Ange följande kommando:
 
-`cd kafka_2.13-3.1.0`
+`cd kafka_2.13-3.9.0`
 
 >[!NOTE]
 >
@@ -69,15 +65,15 @@ Ange sedan kommandot `bin/kafka-topics.sh`.
 
 ![Kafka](./images/kafka10a.png)
 
-Du bör då se detta svar. Detta innebär att Kafka är korrekt installerat och att Java fungerar bra. (Påminnelse: du behöver Java 8 JDK eller Java 11 JDK installerat för att det här ska fungera! Du kan se vilken Java-version du har installerat med kommandot `java -version`.)
+Du bör då se detta svar. Detta innebär att Kafka är korrekt installerat och att Java fungerar bra. (Påminnelse: du behöver Java 23 JDK installerat för att det här ska fungera! Du kan se vilken Java-version du har installerat med kommandot `java -version`.)
 
 ![Kafka](./images/kafka10.png)
 
-## 2.6.2.2 Start Kafka
+## Starta Kafka
 
 För att kunna starta Kafka måste du starta Kafka Zookeeper och Kafka i den här ordningen.
 
-Öppna ett **Terminal**-fönster genom att högerklicka på mappen **kafka_2.13-3.1.0** och klicka på **Ny terminal i mappen**.
+Öppna ett **Terminal**-fönster genom att högerklicka på mappen **kafka_2.13-3.9.0** och klicka på **Ny terminal i mappen**.
 
 ![Kafka](./images/kafka11.png)
 
@@ -93,7 +89,7 @@ Då ser du det här:
 
 Håll det här fönstret öppet medan du går igenom övningarna!
 
-Öppna ett nytt **Terminal**-fönster genom att högerklicka på mappen **kafka_2.13-3.1.0** och klicka på **Ny terminal i mappen**.
+Öppna ett nytt **Terminal**-fönster genom att högerklicka på mappen **kafka_2.13-3.9.0** och klicka på **Ny terminal i mappen**.
 
 ![Kafka](./images/kafka11.png)
 
@@ -109,9 +105,9 @@ Då ser du det här:
 
 Håll det här fönstret öppet medan du går igenom övningarna!
 
-## 2.6.2.3 Skapa ett Kafka-ämne
+## Skapa ett Kafka-ämne
 
-Öppna ett **Terminal**-fönster genom att högerklicka på mappen **kafka_2.13-3.1.0** och klicka på **Ny terminal i mappen**.
+Öppna ett **Terminal**-fönster genom att högerklicka på mappen **kafka_2.13-3.9.0** och klicka på **Ny terminal i mappen**.
 
 ![Kafka](./images/kafka11.png)
 
@@ -119,9 +115,7 @@ Ange det här kommandot om du vill skapa ett nytt Kafka-ämne med namnet **aepte
 
 `bin/kafka-topics.sh --create --topic aeptest --bootstrap-server localhost:9092`
 
-![Kafka](./images/kafka16a.png)
-
-En liknande bekräftelse visas:
+Därefter visas en bekräftelse:
 
 ![Kafka](./images/kafka17a.png)
 
@@ -129,13 +123,11 @@ Ange det här kommandot om du vill skapa ett nytt Kafka-ämne med namnet **aep**
 
 `bin/kafka-topics.sh --create --topic aep --bootstrap-server localhost:9092`
 
-![Kafka](./images/kafka16.png)
-
 En liknande bekräftelse visas:
 
 ![Kafka](./images/kafka17.png)
 
-## 2.6.2.4 Utföra händelser
+## Skapa händelser
 
 Gå tillbaka till terminalfönstret där du skapade ditt första Kafka-avsnitt och ange följande kommando:
 
@@ -163,7 +155,7 @@ Klicka på `Control` och `C` samtidigt på tangentbordet för att stänga din pr
 
 ![Kafka](./images/kafka22.png)
 
-## 2.6.2.4 Konsumtionshändelser
+## Förbrukningshändelser
 
 I samma terminalfönster som du använde för att skapa händelser anger du följande kommando:
 

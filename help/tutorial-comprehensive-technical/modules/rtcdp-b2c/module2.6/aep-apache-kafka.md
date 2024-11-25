@@ -4,16 +4,14 @@ description: I den här modulen får du lära dig hur du konfigurerar ett eget A
 kt: 5342
 doc-type: tutorial
 exl-id: 2b7010f3-ab31-4099-aecd-fd4e73b7e96e
-source-git-commit: 0dbcda0cfc9f199a44c845c1b5caf00a8d740251
+source-git-commit: 6485bfa1c75c43bb569f77c478a273ace24a61d4
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '366'
 ht-degree: 0%
 
 ---
 
 # 2.6 Strömma data från Apache Kafka till Adobe Experience Platform
-
-**Författare: [Vivek Tiwari](https://www.linkedin.com/in/vivek-tiwari-25092656/), [Nipun Nair](https://www.linkedin.com/in/nipunnair/), [Wouter Van Geluwe](https://www.linkedin.com/in/woutervangeluwe/)**
 
 I den här modulen får du lära dig hur du konfigurerar ett eget Apache Kafka-kluster, definierar ämnen, producenter och konsumenter samt strömmar data till Adobe Experience Platform med Adobe Experience Platform Sink Connector via Kafka Connect.
 
@@ -27,7 +25,7 @@ I den här modulen får du lära dig hur du konfigurerar ett eget Apache Kafka-k
 
 ## Förhandskrav
 
-- Java JDK11 eller senare måste vara installerat på datorn. Du kan hämta JDK här: [https://www.oracle.com/java/technologies/javase-jdk11-downloads.html](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
+- Java JDK23 eller senare måste vara installerat på datorn. Du kan hämta JDK här: [https://www.oracle.com/java/technologies/javase-jdk11-downloads.html](https://www.oracle.com/java/technologies/javase-jdk11-downloads.html)
 - Tillgång till Adobe Experience Platform
 
 >[!NOTE]

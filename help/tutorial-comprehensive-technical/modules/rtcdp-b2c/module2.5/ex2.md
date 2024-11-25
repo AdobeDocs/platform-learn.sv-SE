@@ -4,16 +4,16 @@ description: Uppdatera ditt datastream för att göra data tillgängliga för di
 kt: 5342
 doc-type: tutorial
 exl-id: 7b5b598e-e54c-4f0f-b260-d643600ee6ca
-source-git-commit: b4a7144217a68bc0b1bc70b19afcbc52e226500f
+source-git-commit: 6485bfa1c75c43bb569f77c478a273ace24a61d4
 workflow-type: tm+mt
-source-wordcount: '225'
+source-wordcount: '224'
 ht-degree: 0%
 
 ---
 
 # 2.5.2 Uppdatera ditt dataflöde så att data blir tillgängliga för din Adobe Experience Platform Data Collection Server-egenskap
 
-## 2.5.2.1 Uppdatera ditt dataflöde
+## Uppdatera ditt dataflöde
 
 I [Komma igång](./../../gettingstarted/gettingstarted/ex2.md) har du skapat en egen **[!UICONTROL Datastream]**. Du använde sedan namnet `--aepUserLdap-- - Demo System Datastream`.
 

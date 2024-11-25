@@ -3,28 +3,33 @@ title: Installera och konfigurera Kafka Connect och Adobe Experience Platform Si
 description: Installera och konfigurera Kafka Connect och Adobe Experience Platform Sink Connector
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: 93ded4f9-0179-4186-9601-52f479350075
+source-git-commit: 6485bfa1c75c43bb569f77c478a273ace24a61d4
 workflow-type: tm+mt
-source-wordcount: '1304'
+source-wordcount: '1071'
 ht-degree: 0%
 
 ---
 
 # 2.6.4 Installera och konfigurera Kafka Connect och Adobe Experience Platform Sink Connector
 
-## 2.6.4.1 Hämta Adobe Experience Platform Sink Connector
+## Hämta Adobe Experience Platform Sink Connector
 
 Gå till [https://github.com/adobe/experience-platform-streaming-connect/releases](https://github.com/adobe/experience-platform-streaming-connect/releases) och hämta den senaste officiella versionen av Adobe Experience Platform Sink Connector.
 
 ![Kafka](./images/kc1.png)
 
-Placera den hämtade filen, **streaming-connect-sink-0.0.14-java-11.jar**, på skrivbordet.
+Hämta filen **streaming-connect-sink-0.0.27-java-11.jar**.
+
+![Kafka](./images/kc1a.png)
+
+Placera den hämtade filen, **streaming-connect-sink-0.0.27-java-11.jar**, på skrivbordet.
 
 ![Kafka](./images/kc2.png)
 
-## 2.6.4.2 Konfigurera Kafka Connect
+## Konfigurera Kafka Connect
 
-Gå till mappen **Kafka_AEP** på skrivbordet och navigera till mappen `kafka_2.13-3.1.0/config`.
+Gå till mappen **Kafka_AEP** på skrivbordet och navigera till mappen `kafka_2.13-3.9.0/config`.
 I den mappen öppnar du filen **connect-distributed.properties** med en textredigerare.
 
 ![Kafka](./images/kc3a.png)
@@ -44,7 +49,7 @@ Gå sedan tillbaka till mappen `kafka_2.13-3.1.0` och skapa en ny mapp manuellt 
 
 ![Kafka](./images/kc4.png)
 
-Högerklicka på mappen och klicka på **Ny terminal i mappen**.
+Högerklicka på den nya mappen och klicka på **Ny terminal i mappen**.
 
 ![Kafka](./images/kc5.png)
 
@@ -52,19 +57,19 @@ Då ser du det här. Ange kommandot `pwd` om du vill hämta den fullständiga s�
 
 ![Kafka](./images/kc6.png)
 
-Gå tillbaka till textredigeraren, till filen **connect-distributed.properties** och rulla ned till den sista raden (rad 86 i skärmbilden). Du bör avkommentera raden som börjar med `# plugin.path=` och klistra in den fullständiga sökvägen till mappen `connectors`. Resultatet bör se ut ungefär så här:
+Gå tillbaka till textredigeraren, till filen **connect-distributed.properties** och rulla ned till den sista raden (rad 89 i skärmbilden). Du bör avkommentera raden (ta bort `#`) som börjar med `# plugin.path=` och du bör klistra in den fullständiga sökvägen till mappen `connectors`. Resultatet bör se ut ungefär så här:
 
-`plugin.path=/Users/woutervangeluwe/Desktop/Kafka_AEP/kafka_2.13-3.1.0/connectors`
+`plugin.path=/Users/woutervangeluwe/Desktop/Kafka_AEP/kafka_2.13-3.9.0/connectors`
 
 Spara ändringarna i filen **connect-distributed.properties** och stäng textredigeraren.
 
 ![Kafka](./images/kc7.png)
 
-Kopiera sedan den senaste officiella versionen av Adobe Experience Platform Sink Connector som du hämtade till mappen `connectors`. Filen som du laddade ned tidigare har namnet **streaming-connect-sink-0.0.14-java-11.jar**. Du kan bara flytta den till mappen `connectors`.
+Kopiera sedan den senaste officiella versionen av Adobe Experience Platform Sink Connector som du hämtade till mappen `connectors`. Filen som du laddade ned tidigare har namnet **streaming-connect-sink-0.0.27-java-11.jar**. Du kan bara flytta den till mappen `connectors`.
 
 ![Kafka](./images/kc8.png)
 
-Öppna sedan ett nytt terminalfönster på samma nivå som mappen **kafka_2.13-3.1.0** . Högerklicka på mappen och klicka på **Ny terminal i mappen**.
+Öppna sedan ett nytt terminalfönster på samma nivå som mappen **kafka_2.13-3.9.0** . Högerklicka på mappen och klicka på **Ny terminal i mappen**.
 
 Klistra in det här kommandot i terminalfönstret: `bin/connect-distributed.sh config/connect-distributed.properties` och klicka på **Enter**. Det här kommandot startar Kafka Connect och läser in biblioteket för Adobe Experience Platform Sink Connector.
 
@@ -74,7 +79,7 @@ Efter några sekunder ser du något liknande:
 
 ![Kafka](./images/kc10.png)
 
-## 2.6.4.3 Skapa en Adobe Experience Platform Sink Connector med Postman
+## Skapa en Adobe Experience Platform Sink Connector med Postman
 
 Nu kan du interagera med Kafka Connect med Postman. Om du vill göra det hämtar du [den här Postman Collection](./../../../assets/postman/postman_kafka.zip) och dekomprimerar den till din lokala dator på skrivbordet. Du får då en fil som heter `Kafka_AEP.postman_collection.json`.
 
@@ -92,7 +97,7 @@ Då ser du det här. Klicka på den blå **Skicka**-knappen, varefter du ska se 
 
 ![Kafka](./images/kc11.png)
 
-Om du vill skapa en koppling klickar du för att öppna den andra begäran i Kafka-samlingen, **POST Create AEP Sink Connector**. Då ser du det här. På rad 11, där det står **&quot;aep.endpoint&quot;: &quot;&quot;**, måste du klistra in den URL för HTTP API-direktuppspelningens slutpunkt som du fick i slutet av övningen [ 15.3](./ex3.md). Slutpunkts-URL:en för HTTP-API-direktuppspelning ser ut så här: `https://dcs.adobedc.net/collection/d282bbfc8a540321341576275a8d052e9dc4ea80625dd9a5fe5b02397cfd80dc`.
+Om du vill skapa en koppling klickar du för att öppna den andra begäran i Kafka-samlingen, **POST Create AEP Sink Connector** och går till **Body**. Då ser du det här. På rad 11, där det står **&quot;aep.endpoint&quot;: &quot;&quot;**, måste du klistra in den URL för HTTP API-direktuppspelningsslutpunkt som du fick i slutet av en av de föregående övningarna. Slutpunkts-URL:en för HTTP-API-direktuppspelning ser ut så här: `https://dcs.adobedc.net/collection/63751d0f299eeb7aa48a2f22acb284ed64de575f8640986d8e5a935741be9067`.
 
 ![Kafka](./images/kc12a.png)
 
@@ -100,7 +105,7 @@ När du har klistrat in den bör texten i din begäran se ut så här. Klicka p�
 
 ![Kafka](./images/kc12.png)
 
-Klicka på den första begäran, **GET Available Kafka Connect Connectors**, för att öppna den igen och klicka på den blå **Skicka** igen. Nu ser du att en Kafka Connect-anslutning har skapats.
+Klicka på den första begäran, **GET Available Kafka Connect Connectors**, för att öppna den igen och klicka på den blå **Skicka** igen. Nu ser du att det finns en Kafka Connect-anslutning.
 
 ![Kafka](./images/kc13.png)
 
@@ -108,9 +113,9 @@ Klicka på den första begäran, **GET Available Kafka Connect Connectors**, fö
 
 ![Kafka](./images/kc14.png)
 
-## 2.6.4.4 Skapa en upplevelsehändelse
+## Skapa en upplevelsehändelse
 
-Öppna ett nytt **Terminal**-fönster genom att högerklicka på mappen **kafka_2.13-3.1.0** och klicka på **Ny terminal i mappen**.
+Öppna ett nytt **Terminal**-fönster genom att högerklicka på mappen **kafka_2.13-3.9.0** och klicka på **Ny terminal i mappen**.
 
 ![Kafka](./images/kafka11.png)
 
@@ -118,69 +123,11 @@ Ange följande kommando:
 
 `bin/kafka-console-producer.sh --broker-list 127.0.0.1:9092 --topic aep`
 
-![Kafka](./images/kc15.png)
-
 Då ser du det här. Varje ny rad som följs av att du trycker på Enter-knappen leder till att ett nytt meddelande skickas till ämnet **aep**.
 
 ![Kafka](./images/kc16.png)
 
 Du kan nu skicka ett meddelande som kommer att förbrukas av Adobe Experience Platform Sink Connector och som kommer att hämtas till Adobe Experience Platform i realtid.
-
-Låt oss göra lite demo för att testa det här.
-
-Gå till [https://builder.adobedemo.com/projects](https://builder.adobedemo.com/projects). När du har loggat in med din Adobe ID ser du det här. Klicka på webbplatsprojektet för att öppna det.
-
-![DSN](./../../gettingstarted/gettingstarted/images/web8.png)
-
-Klicka på **Kör** på sidan **Screens**.
-
-![DSN](./../../gettingstarted/gettingstarted/images/web2.png)
-
-Du kommer då att se din demowebbplats öppnas. Markera URL-adressen och kopiera den till Urklipp.
-
-![DSN](./../../gettingstarted/gettingstarted/images/web3.png)
-
-Öppna ett nytt inkognito-webbläsarfönster.
-
-![DSN](./../../gettingstarted/gettingstarted/images/web4.png)
-
-Klistra in webbadressen till demowebbplatsen, som du kopierade i föregående steg. Du ombeds sedan logga in med din Adobe ID.
-
-![DSN](./../../gettingstarted/gettingstarted/images/web5.png)
-
-Välj kontotyp och slutför inloggningsprocessen.
-
-![DSN](./../../gettingstarted/gettingstarted/images/web6.png)
-
-Därefter visas webbplatsen i ett inkognitivt webbläsarfönster. För varje demonstration måste du använda ett nytt, inkognitivt webbläsarfönster för att läsa in webbadressen till demowebbplatsen.
-
-![DSN](./../../gettingstarted/gettingstarted/images/web7.png)
-
-Klicka på logotypikonen för Adobe i det övre vänstra hörnet av skärmen för att öppna profilvisningsprogrammet.
-
-![Demo](./../../../modules/datacollection/module1.2/images/pv1.png)
-
-Ta en titt på panelen Profilvisningsprogram och kundprofilen i realtid med **Experience Cloud ID** som primär identifierare för den okända kunden.
-
-![Demo](./../../../modules/datacollection/module1.2/images/pv2.png)
-
-Gå till sidan Register/Login. Klicka på **SKAPA ETT KONTO**.
-
-![Demo](./../../../modules/datacollection/module1.2/images/pv9.png)
-
-Fyll i dina uppgifter och klicka på **Registrera**. Sedan dirigeras du om till föregående sida.
-
-![Demo](./../../../modules/datacollection/module1.2/images/pv10.png)
-
-Öppna profilvisarpanelen och gå till kundprofilen i realtid. På panelen Profilvisningsprogram ska du se alla dina personuppgifter visas, som dina nya e-post- och telefonidentifierare.
-
-![Demo](./../../../modules/datacollection/module1.2/images/pv11.png)
-
-Du kan se vissa upplevelsehändelser baserade på tidigare aktivitet.
-
-![Kafka](./images/kc19.png)
-
-Vi ändrar det och skickar in en Callcenter-upplevelsehändelse från Kafka till Adobe Experience Platform.
 
 Ta med exempelupplevelsehändelsenyttolasten nedan och kopiera den till en textredigerare.
 
@@ -207,7 +154,7 @@ Ta med exempelupplevelsehändelsenyttolasten nedan och kopiera den till en textr
     "xdmEntity": {
       "eventType": "callCenterInteractionKafka",
       "_id": "",
-      "timestamp": "2022-02-23T09:54:12.232Z",
+      "timestamp": "2024-11-25T09:54:12.232Z",
       "_experienceplatform": {
         "identification": {
           "core": {
@@ -233,25 +180,25 @@ Då ser du det här. Du måste uppdatera två fält manuellt:
 
 - **_id**: ange det som ett slumpmässigt ID, till exempel `--aepUserLdap--1234`
 - **tidsstämpel**: uppdatera tidsstämpeln till aktuellt datum och aktuell tid
-- **phoneNumber**: ange phoneNumber för kontot som precis skapades på demowebbplatsen. Du hittar den på panelen Profilvisningsprogram under **Identiteter**.
+- **phoneNumber**: ange telefonnumret för kontot som skapades tidigare på demowebbplatsen. Du hittar den på panelen Profilvisningsprogram under **Identiteter**.
 
 Du måste även kontrollera och kanske uppdatera dessa fält:
+
 - **datasetId**: du måste kopiera datauppsättnings-ID:t för datauppsättningens demosystem - händelsedatauppsättning för callcenter (Global v1.1)
+
+![Kafka](./images/kc20ds.png)
+
 - **imsOrgID**: ditt IMS-organisations-ID är `--aepImsOrgId--`
 
 >[!NOTE]
 >
 >Fältet **_id** måste vara unikt för varje datainmatning. Om du skapar flera händelser måste du uppdatera fältet **_id** varje gång till ett nytt, unikt värde.
 
-![Kafka](./images/kc20.png)
-
 Du borde då ha något sådant:
 
 ![Kafka](./images/kc21.png)
 
 Sedan kopierar du hela upplevelsehändelsen till Urklipp. Den tomma delen av JSON-nyttolasten måste tas bort och vi använder ett onlineverktyg för att göra det. Gå till [http://jsonviewer.stack.hu/](http://jsonviewer.stack.hu/) för att göra det.
-
-![Kafka](./images/kc22.png)
 
 Klistra in upplevelsehändelsen i redigeraren och klicka på **Ta bort tomt utrymme**.
 
@@ -269,13 +216,16 @@ Klistra in den nya nyttolasten utan blanksteg i terminalfönstret och klicka på
 
 ![Kafka](./images/kc23a.png)
 
-Gå sedan tillbaka till demowebbplatsen och uppdatera sidan. Du bör nu se en upplevelsehändelse i din profil, under **Andra händelser**, precis som den nedan:
+Gå sedan tillbaka till demowebbplatsen och uppdatera sidan. Du bör nu se en upplevelsehändelse i din profil, under **Experience Events**, precis som i den nedan:
 
 ![Kafka](./images/kc24.png)
 
 >[!NOTE]
 >
->Om du vill att interaktionen mellan callcenter ska visas på profilvisarpanelen, måste du lägga till nedanstående etikett och filtrera ditt projekt på [https://builder.adobedemo.com/projects](https://builder.adobedemo.com/projects) genom att gå till **profilvisningsprogrammet** på fliken.
+>Om du vill att interaktionen mellan callcenter ska visas på panelen Profilvisningsprogram måste du lägga till nedanstående etikett och filtrera ditt projekt på [https://dsn.adobe.com](https://dsn.adobe.com), genom att gå till **profilvisningsprogrammet** på fliken och lägga till en ny rad under **Händelser** med följande variabler:
+>- **Etikett för händelsetyp**: Interaktioner för callcenter
+>- **Händelsetypfilter**: callCenterInteractionKafka
+>- **Titel**: `--aepTenantId--.interactionDetails.core.callCenterAgent.callID`
 
 ![Kafka](./images/kc25.png)
 
