@@ -2,9 +2,9 @@
 title: Jämförelse mellan måltillägget och beslutets förlängning
 description: Lär dig mer om skillnaderna mellan Target-tillägg till beslutstillägget, inklusive funktioner, funktioner, inställningar och dataflöde.
 exl-id: 6c854049-4126-45cf-8b2b-683cf29549f3
-source-git-commit: 05b0146256c6f8644e42f851498a0f49ff44bf68
+source-git-commit: 8e4e23413c842f84159891287d09e8a6cfbbbc53
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '986'
 ht-degree: 0%
 
 ---
@@ -18,9 +18,8 @@ När du har granskat informationen nedan och utvärderat din nuvarande implement
 - Vilka Target-funktioner som stöds av Adobe Journey Optimizer - Decisioning
 - Vilka Adobe Target-tilläggsfunktioner som har Adobe Journey Optimizer - Beslutsmotsvarigheter
 - Hur målinställningar används med Adobe Journey Optimizer - beslut
-- Hur dataflödet för Adobe Target-tillägget och Adobe Journey Optimizer - Beslutstillägg skiljer sig åt
+- Hur data flödar med Adobe Journey Optimizer - Beslutstillägg
 
-Om du inte har använt Platform Web SDK tidigare behöver du inte bekymra dig. Objekten nedan beskrivs mer ingående i den här självstudiekursen.
 
 ## Jämförelse av funktioner
 
@@ -32,10 +31,10 @@ Om du inte har använt Platform Web SDK tidigare behöver du inte bekymra dig. O
 | Profilparametrar | Stöds | Stöds* |
 | Enhetsparametrar | Stöds | Stöds* |
 | Målgrupper | Stöds | Stöds |
-| Real-Time CDP målgrupper | ?? | Stöds |
-| Real-Time CDP-attribut | ?? | Stöds |
+| Real-Time CDP målgrupper | Stöds inte | Stöds |
+| Real-Time CDP-attribut | Stöds inte | Stöds |
 | Livscykelstatistik | Stöds | Stöds via datainsamlingsregler |
-| thirdPartyId (mbox3rdPartyId) | Stöds | Stöds via konfiguration av identitetskarta och namnutrymme i datastream |
+| thirdPartyId (mbox3rdPartyId) | Stöds | Stöds via Identity Map och Target Third Party ID Namespace i datastream |
 | Meddelanden (visa, klicka) | Stöds | Stöds |
 | Svarstoken | Stöds | Stöds |
 | Analyser för mål (A4T) | Endast på klientsidan | Klientsida och serversida |
@@ -51,9 +50,9 @@ Om du inte har använt Platform Web SDK tidigare behöver du inte bekymra dig. O
 
 >[!NOTE]
 >
->Det finns inte stöd för att migrera Target till Platform Web SDK med bevarad Adobe Analytics-implementering för ett visst AppMeasurement.
+>Ha konfigurationen och inställningarna för måltilläggets taggar på plats även efter att du har migrerat programkoden till beslutstillägget. Detta gör att Target fortsätter att fungera för kunder som ännu inte har uppdaterat appen till den nya versionen.
 >
-> Det går att migrera din at.js-implementering (och AppMeasurement.js) till Platform Web SDK en sida i taget. Om du väljer det här sättet är det bäst att ange alternativen [`idMigrationEnabled`](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#id-migration-enabled) och [`targetMigrationEnabled`](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#targetMigrationEnabled) till `true` med kommandot `configure`.
+>Om du använder Analytics for Target-integrering (A4T) måste du också migrera din Analytics-implementering med Edge Bridge-tillägget samtidigt som du migrerar din Target-implementering till beslutstillägget.
 
 ## Tilläggsfunktioner för mål och beslutets tilläggsekvivalenter
 
@@ -66,38 +65,35 @@ Många Target-tilläggsfunktioner har en likvärdig metod med hjälp av det besl
 | `displayedLocations` | Erbjudande -> `displayed()` | Dessutom kan erbjudandemetoden `generateDisplayInteractionXdm` användas för att generera XDM för objektvisning. Därefter kan Edge nätverks-SDK:s sendEvent-API användas för att bifoga ytterligare XDM-data, frihandsdata och skicka en Experience Event till fjärrservern. |
 | `clickedLocation` | Erbjudande -> `tapped()` | Dessutom kan erbjudandemetoden `generateTapInteractionXdm` användas för att generera XDM för artikelknackning. Därefter kan Edge nätverks-SDK:s sendEvent-API användas för att bifoga ytterligare XDM-data, frihandsdata och skicka en Experience Event till fjärrservern. |
 | `clearPrefetchCache` | `clearCachedPropositions` |  |
-| `resetExperience` |  | Använd `removeIdentity`-API:t från Identity för Edge Network-tillägget för SDK för att sluta skicka besöksidentifieraren till Edge-nätverket. Mer information finns i [dokumentationen för API:t removeIdentity](https://developer.adobe.com/client-sdks/edge/identity-for-edge-network/api-reference/#removeidentity). <br><br>Obs! Mobile Core `resetIdentities` API tar bort alla lagrade identiteter i SDK, inklusive Experience Cloud ID (ECID), och det bör användas sparsamt! |
-| `getSessionId` |  | `state:store`-svarsreferensen innehåller sessionsrelaterad information. Edge-nätverkstillägg hjälper till att hantera det genom att koppla tillståndslagringsobjekt som inte har förfallit till efterföljande begäranden. |
-| `setSessionId` |  | `state:store`-svarsreferensen innehåller sessionsrelaterad information. Edge-nätverkstillägg hjälper till att hantera det genom att koppla tillståndslagringsobjekt som inte har förfallit till efterföljande begäranden. |
+| `resetExperience` | n/a | Använd `removeIdentity`-API:t från Identity för Edge Network-tillägget för SDK för att sluta skicka besöksidentifieraren till Edge-nätverket. Mer information finns i [dokumentationen för API:t removeIdentity](https://developer.adobe.com/client-sdks/edge/identity-for-edge-network/api-reference/#removeidentity). <br><br>Obs! Mobile Core `resetIdentities` API tar bort alla lagrade identiteter i SDK, inklusive Experience Cloud ID (ECID), och det bör användas sparsamt! |
+| `getSessionId` | n/a | `state:store`-svarsreferensen innehåller sessionsrelaterad information. Edge-nätverkstillägg hjälper till att hantera det genom att koppla tillståndslagringsobjekt som inte har förfallit till efterföljande begäranden. |
+| `setSessionId` | n/a | `state:store`-svarsreferensen innehåller sessionsrelaterad information. Edge-nätverkstillägg hjälper till att hantera det genom att koppla tillståndslagringsobjekt som inte har förfallit till efterföljande begäranden. |
 | `getThirdPartyId` | n/a | Använd API:t updateIdentities från Identity för tillägget Edge Network för att ange ID-värdet för tredje part. Konfigurera sedan namnutrymmet för det tredje parts-ID:t i datastream. Mer information finns i [Målets mobildokumentation för tredjeparts-ID](https://developer.adobe.com/client-sdks/edge/adobe-journey-optimizer-decisioning/#target-third-party-id). |
 | `setThirdPartyId` | n/a | Använd API:t updateIdentities från Identity för tillägget Edge Network för att ange ID-värdet för tredje part. Konfigurera sedan namnutrymmet för det tredje parts-ID:t i datastream. Mer information finns i [Målets mobildokumentation för tredjeparts-ID](https://developer.adobe.com/client-sdks/edge/adobe-journey-optimizer-decisioning/#target-third-party-id). |
-| `getTntId` |  | Svarshandtaget `locationHint:result` innehåller information om målplatstips. Det antas att Target-kanten kommer att samlokaliseras med Experience Edge. <br> <br>Edge-nätverkstillägget använder platsledtråden för EdgeNetwork för att avgöra vilket Edge-nätverkskluster som begäranden ska skickas till. Använd API:erna `getLocationHint` och `setLocationHint` från tillägget Edge Network om du vill dela Edge-nätverksplatstips mellan SDK:er (hybridappar). Mer information finns i [API-dokumentationen för `getLocationHint`](https://developer.adobe.com/client-sdks/edge/edge-network/api-reference/#getlocationhint). |
-| `setTntId` |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| `getTntId` | n/a | Svarshandtaget `locationHint:result` innehåller information om målplatstips. Det antas att Target-kanten kommer att samlokaliseras med Experience Edge. <br> <br>Edge-nätverkstillägget använder platsledtråden för EdgeNetwork för att avgöra vilket Edge-nätverkskluster som begäranden ska skickas till. Använd API:erna `getLocationHint` och `setLocationHint` från tillägget Edge Network om du vill dela Edge-nätverksplatstips mellan SDK:er (hybridappar). Mer information finns i [API-dokumentationen för `getLocationHint`](https://developer.adobe.com/client-sdks/edge/edge-network/api-reference/#getlocationhint). |
+| `setTntId` | n/a | Svarshandtaget `locationHint:result` innehåller information om målplatstips. Det antas att Target-kanten kommer att samlokaliseras med Experience Edge. <br> <br>Edge-nätverkstillägget använder platsledtråden för EdgeNetwork för att avgöra vilket Edge-nätverkskluster som begäranden ska skickas till. Använd API:erna `getLocationHint` och `setLocationHint` från tillägget Edge Network om du vill dela Edge-nätverksplatstips mellan SDK:er (hybridappar). Mer information finns i [API-dokumentationen för `getLocationHint`](https://developer.adobe.com/client-sdks/edge/edge-network/api-reference/#getlocationhint). |
 
 ## Målinställningar för tillägg och Avgörande av tilläggsekvivalenter
 
-Måltillägget kan konfigureras och laddas ned med olika inställningar i ...
+Måltillägget har [konfigurerbara inställningar](https://developer.adobe.com/client-sdks/solution/adobe-target/#configure-the-target-extension-in-the-data-collection-ui) som är [ konfigurerade i datastream](https://developer.adobe.com/client-sdks/edge/adobe-journey-optimizer-decisioning/#adobe-experience-platform-data-collection-setup) med beslutstillägget.
 
-| Måltillägg | Beslutstillägg |
-| --- | --- | 
-| |  |
+| Måltillägg | Beslutstillägg | Anteckningar |
+| --- | --- | --- | 
+| Klientkod | n/a | Ange automatiskt efter kanten med hjälp av IMS-organisationsinformationen |
+| Miljö-ID | Målmiljö-ID | Konfigurerad i datastream |
+| Ange Workspace-egenskap | Egenskapstoken | Konfigurerad i datastream |
+| Timeout | Kan inte konfigureras | Tidsgränsen för beslutandetillägget är 10 sekunder |
+| Serverdomän | Edge Network domain | Ange i tillägget Adobe Experience Platform Edge Network |
 
+>[!IMPORTANT]
+>
+> Låt inställningarna för måltillägget vara på plats även efter att du har migrerat programkoden till beslutstillägget. Detta gör att Target fortsätter att fungera för användare som ännu inte har uppdaterat sin app.
 
-## Systemdiagramsjämförelse
+## Fastställer tilläggssystemsdiagram
 
-Följande diagram bör hjälpa dig att förstå skillnaderna i dataflöde mellan en Target-implementering med tillägget Adobe Journey Optimizer - Decisioning och en implementering med tillägget Adobe Target.
+Följande diagram bör hjälpa dig att förstå dataflödet med tillägget Adobe Journey Optimizer - Decisioning.
 
-### Diagram över måltilläggssystem
-
-
-
-### Fastställer tilläggssystemsdiagram
-
-
+![Adobe Target Edge Decisioning with client-side Mobile SDK](assets/diagram.png)
 
 
 >[!NOTE]
