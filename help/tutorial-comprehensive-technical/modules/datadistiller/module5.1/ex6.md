@@ -1,62 +1,77 @@
 ---
-title: Frågetjänst - Utforska datauppsättningen med Tablet
-description: Frågetjänst - Utforska datauppsättningen med Tablet
+title: Query Service - Utforska datauppsättningen med Power BI
+description: Query Service - Utforska datauppsättningen med Power BI
 kt: 5342
 doc-type: tutorial
-source-git-commit: 2cdc145d7f3933ec593db4e6f67b60961a674405
+exl-id: c27abd0e-e563-4702-a243-1aec84ce6116
+source-git-commit: b53ee64ae8438b8f48f842ed1f44ee7ef3e813fc
 workflow-type: tm+mt
-source-wordcount: '336'
+source-wordcount: '313'
 ht-degree: 0%
 
 ---
 
-# 5.1.6 Query Service och Tableau
+# 5.1.6 Query Service och Power BI
 
-Öppna Tableu.
+Öppna Microsoft Power BI Desktop.
 
-![start-tableau.png](./images/start-tableau.png)
+![start-power-bi.png](./images/start-power-bi.png)
 
-I **Anslut till en server** väljer du **PostgreSQL**:
+Klicka på **Hämta data**.
 
-![tableau-connect-postprogress.png](./images/tableau-connect-postgress.png)
+![power-bi-get-data.png](./images/power-bi-get-data.png)
+
+Sök efter **affischer** (1), välj **Postgres** (2) i listan och **Connect** (3).
+
+![power-bi-connect-progress.png](./images/power-bi-connect-progress.png)
 
 Gå till Adobe Experience Platform, till **Frågor** och till **Referenser**.
 
 ![query-service-credentials.png](./images/query-service-credentials.png)
 
-Kopiera **Host** från sidan **Credentials** i Adobe Experience Platform och klistra in den i fältet **Server**, kopiera **Database** och klistra in den i fältet **Database** i Tablet, kopiera **Port** och klistra in den i fältet **Port** i Tablet u gör du samma för **Användarnamn** och **Lösenord**. Klicka sedan på **Logga in**.
+Kopiera **Host** från sidan **Credentials** i Adobe Experience Platform och klistra in den i fältet **Server**. Kopiera sedan **Database** och klistra in den i fältet **Database** i PowerBI. Klicka sedan på OK (2).
 
-Logga in:
+>[!IMPORTANT]
+>
+>Se till att du inkluderar porten **:80** i slutet av servervärdet eftersom frågetjänsten för närvarande inte använder PostgreSQL-standardporten 5432.
 
-![tableau-connection-dialog.png](./images/tableau-connection-dialog.png)
+![power-bi-connect-server.png](./images/power-bi-connect-server.png)
 
-Klicka på sök (1) och ange din **ldap** i sökfältet, identifiera tabellen i resultatuppsättningen och dra (3) den till platsen **Dra tabeller hit**. När du är klar klickar du på **Blad 1** (3).
+I nästa dialogruta fyller du i användarnamnet och lösenordet med ditt användarnamn och lösenord som finns i **Autentiseringsuppgifter** för frågor i Adobe Experience Platform.
 
-![tableau-drag-table.png](./images/tableau-drag-table.png)
+![query-service-credentials.png](./images/query-service-credentials.png)
 
-För att visualisera data på kartan måste vi konvertera longitud och latitud till dimensioner. I **Mått** markerar du **Latitude** (1) och öppnar fältets listruta och väljer **Konvertera till Dimension** (2). Gör på samma sätt för måttet **Longitude**.
+I dialogrutan Överblick placerar du **LDAP** i sökfältet (1) för att hitta dina CTAS-datauppsättningar och markerar kryssrutan bredvid varje (2). Klicka sedan på Läs in (3).
 
-![table-convert-dimension.png](./images/tableau-convert-dimension.png)
+![power-bi-load-churn-data.png](./images/power-bi-load-churn-data.png)
 
-Dra måttet **Longitude** till **Columns** och måttet **Latitude** till **Rows**. Kartan för **Belgien** visas automatiskt med få punkter som representerar städerna i datauppsättningen.
+Kontrollera att fliken **Rapport** (1) är markerad.
 
-![tableau-drag-lon-lat.png](./images/tableau-drag-lon-lat.png)
+![power-bi-report-tab.png](./images/power-bi-report-tab.png)
 
-Välj **Måttnamn** (1), öppna listrutan och välj **Lägg till i blad** (2):
+Markera kartan (1) och förstora kartan (2) när den har lagts till på rapportarbetsytan.
 
-![tableau-select-measure-names.png](./images/tableau-select-measure-names.png)
+![power-bi-select-map.png](./images/power-bi-select-map.png)
 
-Nu finns det en karta med punkter av olika storlek. Storleken anger antalet kundtjänstinteraktioner för den specifika staden. Om du vill ändra storleken på punkterna går du till den högra panelen och öppnar **Måttvärden** (med listruteikonen). Välj **Redigera storlekar** i listrutan. Lek med olika storlekar.
+Därefter måste vi definiera mått och mått. Det gör du genom att dra fält från avsnittet **fält** till motsvarande platshållare (som finns under **visualiseringar**) enligt nedan:
 
-![tableau-variable-size-dots.png](./images/tableau-vary-size-dots.png)
+![power-bi-drag-lat-lon.png](./images/power-bi-drag-lat-lon.png)
 
-Om du vill visa data per **Anropa ämne** ytterligare drar du (1) dimensionen **Anropa ämne** till **Sidor**. Navigera genom de olika **samtalsämnena** med hjälp av **anropsämnet** (2) till höger på skärmen:
+Som mått använder vi antalet **customerId**. Dra fältet **crmid** från avsnittet **fields** till platshållaren **Size**:
 
-![tableau-call-topic-navigation.png](./images/tableau-call-topic-navigation.png)
+![power-bi-drag-crmid.png](./images/power-bi-drag-crmid.png)
+
+Om du vill göra en del **callTopic**-analyser drar vi fältet **callTopic** till platshållaren för **sidnivåfilter** (du kan behöva rulla i avsnittet **visualiseringar** ).
+
+![power-bi-drag-calltopic.png](./images/power-bi-drag-calltopic.png)
+
+Välj/avmarkera **callTopics** för att undersöka:
+
+![power-bi-report-select-calltopic.png](./images/power-bi-report-select-calltopic.png)
 
 Du har nu avslutat den här övningen.
 
-Nästa steg: [5.1.7 API för frågetjänst](./ex7.md)
+Nästa steg: [5.1.8 API för frågetjänst](./ex8.md)
 
 [Gå tillbaka till modul 5.1](./query-service.md)
 

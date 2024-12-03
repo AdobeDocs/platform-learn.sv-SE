@@ -1,177 +1,112 @@
 ---
-title: Frågetjänst - Använda frågetjänsten
-description: Frågetjänst - Använda frågetjänsten
+title: Frågetjänst - Komma igång
+description: Frågetjänst - Komma igång
 kt: 5342
-audience: Data Engineer, Data Architect, Data Analyst, BI Expert
 doc-type: tutorial
-source-git-commit: 2cdc145d7f3933ec593db4e6f67b60961a674405
+exl-id: 5c4615c6-41c0-465a-b9b6-f59eef388c73
+source-git-commit: b53ee64ae8438b8f48f842ed1f44ee7ef3e813fc
 workflow-type: tm+mt
-source-wordcount: '699'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
 
-# 5.1.2 Använda frågetjänsten
+# 5.1.2 Komma igång
 
-## Syfte
+## Bekanta dig med Adobe Experience Platform användargränssnitt
 
-- Hitta och utforska datauppsättningar
-- Lär dig hur du hanterar Experience Data Models-objekt och -attribut i dina frågor
+Gå till [Adobe Experience Platform](https://experience.adobe.com/platform). När du har loggat in loggar du in på Adobe Experience Platform hemsida.
 
-## Kontext
+![Datainmatning](./../../../modules/datacollection/module1.2/images/home.png)
 
-Här får du lära dig hur du använder PSQL för att hämta information om tillgängliga datauppsättningar, hur du skriver frågor för Experience Data Model (XDM) och skriver dina första enkla rapporteringsfrågor med hjälp av datamängderna Frågetjänst och Citi Signal.
+Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``--aepSandboxName--``. När du har valt rätt [!UICONTROL sandbox] visas skärmändringen och nu är du i din dedikerade [!UICONTROL sandbox].
 
-## 5.1.2.1 Grundläggande frågor
+![Datainmatning](./../../../modules/datacollection/module1.2/images/sb1.png)
 
-Här får du lära dig mer om metoderna för att hämta information om tillgängliga datauppsättningar och hur du hämtar data korrekt med en fråga från en XDM-datauppsättning.
 
-Alla datauppsättningar som vi har utforskat via Adobe Experience Platform i början av 1 är också tillgängliga som tabeller via ett SQL-gränssnitt. Om du vill visa de tabellerna kan du använda kommandot **Visa tabeller;**.
+## Utforska data på plattformen
 
-Kör **visa tabeller;** i kommandoradsgränssnittet **PSQL**. (glöm inte att avsluta kommandot med ett semikolon).
+Att samla in data från olika kanaler är en svår uppgift för alla varumärken. Och i den här övningen engagerar Citi Signal-kunder med Citi Signal på sin webbplats, på sin mobilapp, så samlas köpdata in av Citi Sigals Point of Sale-system och de har CRM- och Loyalty-data. Citi Signal använder Adobe Analytics och Adobe Launch för att samla in data på sin webbplats, i mobilappen och i POS-systemet, så dessa data flödar redan till Adobe Experience Platform. Vi börjar med att utforska alla data för Citi Signal som redan finns i Adobe Experience Platform.
 
-Kopiera kommandot **visa tabeller;** och klistra in det vid uppmaningen:
+Gå till **Datauppsättningar** på den vänstra menyn.
 
-![command-prompt-show-tables.png](./images/command-prompt-show-tables.png)
+![emea-website-interaction-dataset.png](./images/emea-website-interaction-dataset.png)
 
-Följande resultat visas:
+Citi Signal direktuppspelar data till Adobe Experience Platform och dessa data är tillgängliga i datamängden `Demo System - Event Dataset for Website (Global v1.1)`. Sök efter `Demo System - Event Dataset for Website`.
 
-```text
-aepenablementfy21:all=> show tables;
-                            name                            |        dataSetId         |                            dataSet                             | description | resolved 
-------------------------------------------------------------+--------------------------+----------------------------------------------------------------+-------------+----------
- demo_system_event_dataset_for_call_center_global_v1_1      | 5fd1a9dea30603194baeea43 | Demo System - Event Dataset for Call Center (Global v1.1)      |             | false
- demo_system_event_dataset_for_mobile_app_global_v1_1       | 5fd1a9de250e4f194bec84cd | Demo System - Event Dataset for Mobile App (Global v1.1)       |             | false
- demo_system_event_dataset_for_voice_assistants_global_v1_1 | 5fd1a9de49ee76194b85f73c | Demo System - Event Dataset for Voice Assistants (Global v1.1) |             | false
- demo_system_event_dataset_for_website_global_v1_1          | 5fd1a9dee3224d194cdfe786 | Demo System - Event Dataset for Website (Global v1.1)          |             | false
- demo_system_profile_dataset_for_loyalty_global_v1_1        | 5fd1a9de250e4f194bec84cc | Demo System - Profile Dataset for Loyalty (Global v1.1)        |             | false
- demo_system_profile_dataset_for_ml_predictions_global_v1_1 | 5fd1a9de241f58194b0cb117 | Demo System - Profile Dataset for ML Predictions (Global v1.1) |             | false
- demo_system_profile_dataset_for_mobile_app_global_v1_1     | 5fd1a9deddf353194a2e00b7 | Demo System - Profile Dataset for Mobile App (Global v1.1)     |             | false
- demo_system_profile_dataset_for_website_global_v1_1        | 5fd1a9de42a61c194dd7b810 | Demo System - Profile Dataset for Website (Global v1.1)        |             | false
- journey_step_events                                        | 5fd1a7f30268c5194bbb7e5e | Journey Step Events                                            |             | false
-```
+![emea-callcenter-interaction-dataset.png](./images/emea-website-interaction-dataset1.png)
 
-Tryck på blankstegstangenten i kolonet för att visa nästa sida i resultatuppsättningen, eller ange `q` för att återgå till kommandotolken.
+Citi Signals Callcenter Interaction-data hämtas i datamängden `Demo System - Event Dataset for Call Center (Global v1.1)`. Sök efter `Demo System - Event Dataset for Call Center` data i sökrutan. Klicka på datauppsättningens namn för att öppna den.
 
-Alla datauppsättningar i plattformen har sin motsvarande frågetjänsttabell. Du kan hitta en datamängds tabell via datauppsättningsgränssnittet:
+![emea-callcenter-interaction-dataset.png](./images/emea-callcenter-interaction-dataset.png)
 
-![ui-dataset-tablename.png](./images/ui-dataset-tablename.png)
+När du har klickat på datauppsättningen får du en översikt över datauppsättningsaktiviteten, t.ex. kapslade och misslyckade batchar.
 
-Tabellen `demo_system_event_dataset_for_website_global_v1_1` är den frågetjänsttabell som motsvarar datamängden `Demo System - Event Schema for Website (Global v1.1)`.
+![preview-interaction-dataset.png](./images/preview-interaction-dataset.png)
 
-Om du vill fråga om var en produkt har visats väljer vi **geo**-informationen.
+Klicka på **Förhandsgranska datauppsättning** om du vill se ett exempel på data som lagras i datauppsättningen `Demo System - Event Dataset for Call Center (Global v1.1)`. Den vänstra panelen visar schemastrukturen för den här datauppsättningen.
 
-Kopiera instruktionen nedan och klistra in den vid uppmaningen i **PSQL-kommandoradsgränssnittet** och tryck på Retur:
+![explore-interaction-dataset.png](./images/explore-interaction-dataset.png)
 
-```sql
-select placecontext.geo
-from   demo_system_event_dataset_for_website_global_v1_1
-where  eventType = 'commerce.productViews'
-and placecontext.geo.countryCode <> ''
-limit 1;
-```
+Klicka på knappen **Stäng** för att stänga fönstret **Förhandsgranska datauppsättning**.
 
-I frågeresultatet kommer du att märka att kolumner i Experience Data Model (XDM) kan vara komplexa typer och inte bara skalära typer. I frågan ovan vill vi identifiera geografiska platser där en **commerce.productViews** inträffade. För att kunna identifiera en **commerce.productViews** måste vi navigera genom XDM-modellen med **.** (punkt)-notation.
+## Introduktion till frågetjänsten
 
-```text
-aepenablementfy21:all=> select placecontext.geo
-aepenablementfy21:all-> from   demo_system_event_dataset_for_website_global_v1_1
-aepenablementfy21:all-> where  eventType = 'commerce.productViews'
-aepenablementfy21:all-> and placecontext.geo.countryCode <> ''
-aepenablementfy21:all-> limit 1;
-                  geo                   
-----------------------------------------
- ("(57.4694803,-3.1269422)",Tullich,GB)
-(1 row)
-```
+Du kommer åt Adobe Experience Platform Query Service genom att klicka på **Frågor** i den vänstra menyn.
 
-Observera att resultatet är ett platt objekt i stället för ett enda värde? Objektet **placecontext.geo** innehåller fyra attribut: schema, land och stad. När ett objekt deklareras som en kolumn returneras hela objektet som en sträng. XDM-schemat kan vara mer komplext än det du är van vid, men det är mycket kraftfullt och har utformats för att stödja många lösningar, kanaler och användningsfall.
+![select-queries.png](./images/select-queries.png)
 
-Om du vill välja enskilda egenskaper för ett objekt använder du **.** (punkt)-notation.
+Genom att gå till **Logg** kan du se sidan Frågelista där du får en lista över alla frågor som har körts i organisationen, med den senaste överst.
 
-Kopiera instruktionen nedan och klistra in den vid uppmaningen i **PSQL-kommandoradsgränssnittet**:
+![query-list.png](./images/query-list.png)
 
-```sql
-select placecontext.geo._schema.longitude
-      ,placecontext.geo._schema.latitude
-      ,placecontext.geo.city
-      ,placecontext.geo.countryCode
-from   demo_system_event_dataset_for_website_global_v1_1
-where  eventType = 'commerce.productViews'
-and placecontext.geo.countryCode <> ''
-limit 1;
-```
+Klicka på en SQL-fråga i listan och observera informationen i den högra listen.
 
-Resultatet av ovanstående fråga bör se ut så här.
-Resultatet är nu ett inställt enkelt värde:
+![click-sql-query.png](./images/click-sql-query.png)
 
-```text
-aepenablementfy21:all=> select placecontext.geo._schema.longitude
-aepenablementfy21:all->       ,placecontext.geo._schema.latitude
-aepenablementfy21:all->       ,placecontext.geo.city
-aepenablementfy21:all->       ,placecontext.geo.countryCode
-aepenablementfy21:all-> from   demo_system_event_dataset_for_website_global_v1_1
-aepenablementfy21:all-> where  eventType = 'commerce.productViews'
-aepenablementfy21:all-> and placecontext.geo.countryCode <> ''
-aepenablementfy21:all-> limit 1;
- longitude  |  latitude  |  city   | countrycode 
-------------+------------+---------+-------------
- -3.1269422 | 57.4694803 | Tullich | GB
-(1 row)
-```
+Du kan rulla fönstret för att se hela frågan eller klicka på ikonen som är markerad nedan för att kopiera hela frågan till anteckningsrutan. Du behöver inte kopiera frågan just nu.
 
-Oroa dig inte, det finns ett enkelt sätt att hitta vägen till en viss egenskap. Här nedan får du lära dig hur.
+![click-copy-query.png](./images/click-copy-query.png)
 
-Du måste redigera en fråga, så vi öppnar först en redigerare.
+Du kan inte bara se de frågor som har körts. Med det här användargränssnittet kan du skapa nya datauppsättningar från frågor. Dessa datauppsättningar kan länkas till Adobe Experience Platform kundprofil i realtid eller användas som indata för Adobe Experience Platform Data Science Workspace.
 
-I Windows
+## Anslut PSQL-klienten till frågetjänsten
 
-Klicka på ikonen **sök** i Windows-verktygsfältet, skriv **anteckningsblocket** i fältet **sök** och klicka på resultatet för **anteckningsblocket**:
+Frågetjänsten stöder klienter med en drivrutin för PostgreSQL. Här kommer vi att använda PSQL, ett kommandoradsgränssnitt och Power BI eller Tableau. Låt oss ansluta till PSQL.
 
-![windows-start-notepad.png](./images/windows-start-notepad.png)
+Klicka på **Autentiseringsuppgifter**.
 
-På Mac
+![queries-select-configuration.png](./images/queries-select-configuration.png)
 
-Installera [hakparenteser](https://github.com/adobe/brackets/releases/download/release-1.14/Brackets.Release.1.14.dmg) eller använd en annan textredigerare om du inte har den installerad och följ instruktionerna. Efter installationen kan du söka efter **hakparenteser** via Mac spotlight-sökning och öppna den.
+Skärmen visas nedan. Konfigurationsskärmen innehåller serverinformation och autentiseringsuppgifter för autentisering till frågetjänsten. För närvarande fokuserar vi på skärmens högra sida som innehåller ett anslutningskommando för PSQL. Klicka på knappen Kopiera för att kopiera kommandot till Urklipp.
 
-Kopiera följande programsats till anteckningsblock eller klamrar:
+![copy-psql-connection.png](./images/copy-psql-connection.png)
 
-```sql
-select your_attribute_path_here
-from   demo_system_event_dataset_for_website_global_v1_1
-where  eventType = 'commerce.productViews'
-and placecontext.geo.countryCode <> ''
-limit 1;
-```
+För Windows: Öppna kommandoraden genom att trycka på Windows-tangenten, skriva cmd och sedan klicka på resultatet av kommandotolken.
 
-Gå tillbaka till ditt Adobe Experience Platform-gränssnitt (bör vara öppet i webbläsaren) eller navigera till [https://platform.adobe.com](https://platform.adobe.com).
+![open-command-prompt.png](./images/open-command-prompt.png)
 
-Välj **Scheman**, ange `Demo System - Event Schema for Website (Global v1.1)` i fältet **search** och välj `Demo System - Event Schema for Website (Global v1.1) Schema` i listan.
+För macOS: Öppna terminal.app via spotlight-sökning:
 
-![browse-schema.png](./images/browse-schema.png)
+![open-terminal-osx.png](./images/open-terminal-osx.png)
 
-Utforska XDM-modellen för **Demonstrationssystem - händelseschema för webbplatsen (Global v1.1)** genom att klicka på ett objekt. Expandera trädet för **placecontext**, **geo** och **schema**. När du väljer det faktiska attributet **longitude** visas den fullständiga sökvägen i den markerade röda rutan. Om du vill kopiera attributets sökväg klickar du på ikonen för kopieringssökväg.
+Klistra in det anslutningskommando som du har kopierat från användargränssnittet för frågetjänsten och tryck på Retur i kommandotolken:
 
-![explore-schema-for-path.png](./images/explore-schema-for-path.png)
+Windows:
 
-Växla till din anteckningsruta/parenteser och ta bort **your_attribute_path_here** från den första raden. Placera markören efter **välj** på den första raden och klistra in (CTRL-V).
+![command-prompt-connected.png](./images/command-prompt-connected.png)
 
-Kopiera den ändrade satsen från anteckningsblock/hakparenteser och klistra in den vid uppmaningen i **PSQL-kommandoradsgränssnittet** och tryck på Retur.
+MacOS:
 
-Resultatet ska se ut så här:
+![command-prompt-paste-osx.png](./images/command-prompt-paste-osx.png)
 
-```text
-aepenablementfy21:all=> select placeContext.geo._schema.longitude
-aepenablementfy21:all-> from   demo_system_event_dataset_for_website_global_v1_1
-aepenablementfy21:all-> where  eventType = 'commerce.productViews'
-aepenablementfy21:all-> and placecontext.geo.countryCode <> ''
-aepenablementfy21:all-> limit 1;
- longitude  
-------------
- -3.1269422
-```
+Du är nu ansluten till frågetjänsten med PSQL.
 
-Nästa steg: [5.1.3 Frågor, frågor, frågor... och segmentanalys](./ex3.md)
+I de följande övningarna kommer det att finnas en hel del interaktion med detta fönster. Vi kallar det ditt **PSQL-kommandoradsgränssnitt**.
+
+Nu kan du börja skicka frågor.
+
+Nästa steg: [5.1.3 Använda frågetjänsten](./ex3.md)
 
 [Gå tillbaka till modul 5.1](./query-service.md)
 

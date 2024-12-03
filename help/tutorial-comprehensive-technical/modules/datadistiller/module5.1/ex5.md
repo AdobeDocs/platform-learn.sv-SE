@@ -1,76 +1,85 @@
 ---
-title: Query Service - Utforska datauppsättningen med Power BI
-description: Query Service - Utforska datauppsättningen med Power BI
+title: Frågetjänst - Power BI/Tableau
+description: Frågetjänst - Power BI/Tableau
 kt: 5342
 doc-type: tutorial
-source-git-commit: 2cdc145d7f3933ec593db4e6f67b60961a674405
+exl-id: c4e4f5f9-3962-4c8f-978d-059f764eee1c
+source-git-commit: b53ee64ae8438b8f48f842ed1f44ee7ef3e813fc
 workflow-type: tm+mt
-source-wordcount: '313'
+source-wordcount: '392'
 ht-degree: 0%
 
 ---
 
-# 5.1.5 Query Service och Power BI
+# 5.1.5 Generera en datauppsättning från en fråga
 
-Öppna Microsoft Power BI Desktop.
+## Syfte
 
-![start-power-bi.png](./images/start-power-bi.png)
+Lär dig hur du genererar datauppsättningar från frågeresultat
+Anslut Microsoft Power BI Desktop/Tableau direkt till Query Service
+Skapa en rapport i Microsoft Power BI Desktop/Tableau Desktop
 
-Klicka på **Hämta data**.
+## Lektionssammanhang
 
-![power-bi-get-data.png](./images/power-bi-get-data.png)
+Kommandoradsgränssnittet för att fråga efter data är spännande, men det visas inte bra. I den här lektionen vägleder vi dig genom ett rekommenderat arbetsflöde för hur du kan använda Microsoft Power BI Desktop/Tableau direkt i frågetjänsten för att skapa visuella rapporter för dina intressenter.
 
-Sök efter **affischer** (1), välj **Postgres** (2) i listan och **Connect** (3).
+## Skapa en datauppsättning från en SQL-fråga
 
-![power-bi-connect-progress.png](./images/power-bi-connect-progress.png)
+Frågans komplexitet påverkar hur lång tid det tar för frågetjänsten att returnera resultaten. Och när du frågar direkt från kommandoraden eller andra lösningar som Microsoft Power BI/Tableau konfigureras frågetjänsten med en 5-minuters timeout (600 sekunder). I vissa fall kommer dessa lösningar att konfigureras med kortare tidsgränser. Om du vill köra större frågor och läsa in den tid det tar att returnera resultaten, erbjuder vi en funktion för att generera en datauppsättning från frågeresultaten. Den här funktionen använder den vanliga SQL-funktionen som kallas Skapa tabell som markerad (CTAS). Det är tillgängligt i plattformsgränssnittet från frågelistan och kan även köras direkt från kommandoraden med PSQL.
 
-Gå till Adobe Experience Platform, till **Frågor** och till **Referenser**.
+I föregående exempel har du ersatt **Ange ditt namn** med din egen ldap innan du kör den i PSQL.
 
-![query-service-credentials.png](./images/query-service-credentials.png)
+```sql
+select /* enter your name */
+       e.--aepTenantId--.identification.core.ecid as ecid,
+       e.placeContext.geo.city as city,
+       e.placeContext.geo._schema.latitude latitude,
+       e.placeContext.geo._schema.longitude longitude,
+       e.placeContext.geo.countryCode as countrycode,
+       c.--aepTenantId--.interactionDetails.core.callCenterAgent.callFeeling as callFeeling,
+       c.--aepTenantId--.interactionDetails.core.callCenterAgent.callTopic as callTopic,
+       c.--aepTenantId--.interactionDetails.core.callCenterAgent.callContractCancelled as contractCancelled,
+       l.--aepTenantId--.loyaltyDetails.level as loyaltystatus,
+       l.--aepTenantId--.loyaltyDetails.points as loyaltypoints,
+       l.--aepTenantId--.identification.core.loyaltyId as crmid
+from   demo_system_event_dataset_for_website_global_v1_1 e
+      ,demo_system_event_dataset_for_call_center_global_v1_1 c
+      ,demo_system_profile_dataset_for_loyalty_global_v1_1 l
+where  e.--aepTenantId--.demoEnvironment.brandName IN ('Luma Telco', 'Citi Signal')
+and    e.web.webPageDetails.name in ('Cancel Service', 'Call Start')
+and    e.--aepTenantId--.identification.core.ecid = c.--aepTenantId--.identification.core.ecid
+and    l.--aepTenantId--.identification.core.ecid = e.--aepTenantId--.identification.core.ecid;
+```
 
-Kopiera **Host** från sidan **Credentials** i Adobe Experience Platform och klistra in den i fältet **Server**. Kopiera sedan **Database** och klistra in den i fältet **Database** i PowerBI. Klicka sedan på OK (2).
+Navigera till Adobe Experience Platform-gränssnittet - [https://experience.adobe.com/platform](https://experience.adobe.com/platform)
 
->[!IMPORTANT]
->
->Se till att du inkluderar porten **:80** i slutet av servervärdet eftersom frågetjänsten för närvarande inte använder PostgreSQL-standardporten 5432.
+Du söker efter den programsats som körs i användargränssnittet för Adobe Experience Platform Query genom att ange din ldap i sökfältet:
 
-![power-bi-connect-server.png](./images/power-bi-connect-server.png)
+Välj **Frågor**, gå till **Logg** och ange din ldap i sökfältet.
 
-I nästa dialogruta fyller du i användarnamnet och lösenordet med ditt användarnamn och lösenord som finns i **Autentiseringsuppgifter** för frågor i Adobe Experience Platform.
+![search-query-for-ctas.png](./images/search-query-for-ctas.png)
 
-![query-service-credentials.png](./images/query-service-credentials.png)
+Markera frågan och klicka på **Utdatauppsättning**.
 
-I dialogrutan Överblick placerar du **LDAP** i sökfältet (1) för att hitta dina CTAS-datauppsättningar och markerar kryssrutan bredvid varje (2). Klicka sedan på Läs in (3).
+![search-query-for-ctas.png](./images/search-query-for-ctasa.png)
 
-![power-bi-load-churn-data.png](./images/power-bi-load-churn-data.png)
+Ange `--aepUserLdap-- Callcenter Interaction Analysis` som namn och beskrivning för datauppsättningen och tryck på knappen **Kör fråga**
 
-Kontrollera att fliken **Rapport** (1) är markerad.
+![create-ctas-dataset.png](./images/create-ctas-dataset.png)
 
-![power-bi-report-tab.png](./images/power-bi-report-tab.png)
+Därför visas en ny fråga med statusen **Skickat**.
 
-Markera kartan (1) och förstora kartan (2) när den har lagts till på rapportarbetsytan.
+![ctas-query-submitted.png](./images/ctas-query-submitted.png)
 
-![power-bi-select-map.png](./images/power-bi-select-map.png)
+När du är klar visas en ny post för **datauppsättningen skapad** (du kan behöva uppdatera sidan).
 
-Därefter måste vi definiera mått och mått. Det gör du genom att dra fält från avsnittet **fält** till motsvarande platshållare (som finns under **visualiseringar**) enligt nedan:
+![ctas-dataset-created.png](./images/ctas-dataset-created.png)
 
-![power-bi-drag-lat-lon.png](./images/power-bi-drag-lat-lon.png)
+Så snart datauppsättningen har skapats (vilket kan ta 5-10 minuter) kan du fortsätta med övningen.
 
-Som mått använder vi antalet **customerId**. Dra fältet **crmid** från avsnittet **fields** till platshållaren **Size**:
+Nästa steg - Alternativ A: [5.1.6 Frågetjänst och Power BI](./ex6.md)
 
-![power-bi-drag-crmid.png](./images/power-bi-drag-crmid.png)
-
-Om du vill göra en del **callTopic**-analyser drar vi fältet **callTopic** till platshållaren för **sidnivåfilter** (du kan behöva rulla i avsnittet **visualiseringar** ).
-
-![power-bi-drag-calltopic.png](./images/power-bi-drag-calltopic.png)
-
-Välj/avmarkera **callTopics** för att undersöka:
-
-![power-bi-report-select-calltopic.png](./images/power-bi-report-select-calltopic.png)
-
-Du har nu avslutat den här övningen.
-
-Nästa steg: [5.1.7 API för frågetjänst](./ex7.md)
+Nästa steg - Alternativ B: [5.1.7 Query Service och Tableu](./ex7.md)
 
 [Gå tillbaka till modul 5.1](./query-service.md)
 

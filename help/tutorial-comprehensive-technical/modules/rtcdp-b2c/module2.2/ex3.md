@@ -3,10 +3,11 @@ title: Kundens AI - Instrumentpanel för bedömning och segmentering (predikt & 
 description: Kundens AI - Instrumentpanel för bedömning och segmentering (predikt & Take Action)
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: 4dd8489a-65e4-489a-9228-3c642b10e761
+source-git-commit: b53ee64ae8438b8f48f842ed1f44ee7ef3e813fc
 workflow-type: tm+mt
-source-wordcount: '335'
-ht-degree: 1%
+source-wordcount: '272'
+ht-degree: 0%
 
 ---
 
@@ -14,13 +15,13 @@ ht-degree: 1%
 
 När kundens AI-instans har slutfört en modellkörning kan ni visualisera den benägenhetspoäng som utvärderas för att förutsäga att kunden genomför ett köp inom 30 dagar.
 
-![AI](./images/caimodels.png)
+![AI](./images/caiinstancesummary1.png)
 
 >[!NOTE]
 >
 >Det är bara en kunds-AI-instans med statusen **Slutfört** som du kan förhandsgranska tjänstens insikter.
 
-## 2.2.3.1 Förutsägbarhet
+## Förutsägelse av känslighet
 
 Nu ska vi granska den förväntade benägenheten som genereras av kundens AI-instansmodell. Klicka på instansnamnet för att visa kontrollpanelen.
 
@@ -30,15 +31,13 @@ Kundens AI-instrumentpanel visar sammanfattningen om poäng, fördelning av popu
 
 ![AI-beskrivning](./images/caidescription.png)
 
-![Sammanfattning av instrumentpanelen](./images/caidashboard.png)
-
 Håll muspekaren över de inflytelserika faktorerna för att se hur datafördelningen kan fördelas ytterligare.
 
 ![Påverkansfaktorer](./images/caiinfluencefactors.png)
 
-## 2.2.3.2 Verksamhetsåtgärder
+## Affärsåtgärder
 
-### 2.2.3.2.1 Segmentera kunder
+### Segmentera kunder
 
 Med kundens AI-panel kan du definiera segment med ett enda klick. Klicka på knappen **Skapa segment** på benägenhetskorten.
 
@@ -48,33 +47,17 @@ Du ser att en segmentdefinition skapas automatiskt.
 
 ![Segmentregel](./images/caicreatesegment.png)
 
-Ge segmentet ett namn enligt följande namnkonvention: `--aepUserLdap-- - Customer AI High Propensity`. Klicka på **Spara**.
+Ge segmentet ett namn enligt följande namnkonvention: `--aepUserLdap-- - Customer AI High Propensity`. Klicka på **Publish**.
 
 ![Segmentregel](./images/caicreatesegment1.png)
 
-Du kan nu använda det här segmentet för målinriktning med till exempel CDP, Journey Orchestration och Adobe Target i realtid.
+Du kan nu använda det här segmentet för målinriktning med till exempel CDP i realtid, Journey Optimizer och Adobe Target.
 
-### 2.2.3.2.2 Profilöversikt
+## Rensa
 
-Eftersom kundens AI-benägenhetspoäng blir en del av kundprofilen i realtid kan du se enskilda kunders poäng.
+För att säkerställa att inga onödiga demodata sparas i din miljö måste du ta bort datauppsättningen `--aepUserLdap-- - Demo System - Customer Experience Event Dataset` när du har slutfört den här övningen. Om du inte tar bort demodata kommer det att påverka AEP-instansen negativt.
 
-I Adobe Experience Platform går du till **Profiler** i den vänstra menyn och väljer **Bläddra**.
-
-Sök efter en profil med hjälp av någon av identifierarna, t.ex. **EMAIL hbirkenshawa@businessweek.com**, som är tillgängliga i JSON-filen som du kapslade. Klicka på **profil-ID** för att öppna profilen.
-
-![Profil](./images/profile1.png)
-
-Då ser du det här:
-
-![Profil](./images/profile2.png)
-
-Gå till **Attribut**, som innehåller utdata från kundens AI-modell.
-
-![Profil](./images/profile3.png)
-
-Bläddra nedåt för att se hur väl dina kunder uppnår AI-modellen.
-
-![Profil](./images/profile4.png)
+![Profil](./images/cleanup.png)
 
 Nästa steg: [Sammanfattning och förmåner](./summary.md)
 

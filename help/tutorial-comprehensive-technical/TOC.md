@@ -5,9 +5,9 @@ user-guide-description: En praktisk självstudiekurs som handlar om många aspek
 hide: true
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-source-git-commit: f40ed48cdf9f6f05d5a5cc28d152a67448ed8a16
+source-git-commit: ca6370660b676cef48890d23652258015aa2b9ed
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '913'
 ht-degree: 2%
 
 ---
@@ -16,6 +16,7 @@ ht-degree: 2%
 # Omfattande teknisk självstudiekurs för Adobe Experience Platform {#tutorial-comprehensive-technical}
 
 + [Översikt över självstudiekursen](/help/tutorial-comprehensive-technical/overview.md)
++ [Slutförande](/help/tutorial-comprehensive-technical/completion.md)
 
 + Komma igång {#gettingstarted}
    + Komma igång {#gettingstarted}
@@ -27,7 +28,7 @@ ht-degree: 2%
       + [Använda mobilappen](/help/tutorial-comprehensive-technical/modules/gettingstarted/gettingstarted/ex5.md)
 
 + 1 datainsamling {#datacollection}
-   + 1.1 Adobe Experience Platform Data Collection och Web SDK-tillägget {#module11}
+   + 1.1 Adobe Experience Platform Data Collection och Web SDK {#module11}
       + [Översikt](/help/tutorial-comprehensive-technical/modules/datacollection/module1.1/data-ingestion-launch-web-sdk.md)
       + [1.1.1 Förstå Adobe Experience Platform datainsamling](/help/tutorial-comprehensive-technical/modules/datacollection/module1.1/ex1.md)
       + [1.1.2 Edge Network, datastreams och datainsamling på serversidan](/help/tutorial-comprehensive-technical/modules/datacollection/module1.1/ex2.md)
@@ -37,7 +38,7 @@ ht-degree: 2%
       + [1.1.6 Implementera Adobe Target](/help/tutorial-comprehensive-technical/modules/datacollection/module1.1/ex6.md)
       + [1.1.7 XDM-schemakrav i Adobe Experience Platform](/help/tutorial-comprehensive-technical/modules/datacollection/module1.1/ex7.md)
       + [Sammanfattning och fördelar](/help/tutorial-comprehensive-technical/modules/datacollection/module1.1/summary.md)
-   + 1.2 - Datainmatning {#module12}
+   + 1.2 Datainmatning {#module12}
       + [Översikt](/help/tutorial-comprehensive-technical/modules/datacollection/module1.2/data-ingestion.md)
       + [1.2.1 Utforska webbplatsen](/help/tutorial-comprehensive-technical/modules/datacollection/module1.2/ex1.md)
       + [1.2.2 Konfigurera scheman och ange identifierare](/help/tutorial-comprehensive-technical/modules/datacollection/module1.2/ex2.md)
@@ -45,7 +46,7 @@ ht-degree: 2%
       + [1.2.4 Datainmatning från offlinekällor](/help/tutorial-comprehensive-technical/modules/datacollection/module1.2/ex4.md)
       + [1.2.5 Data Landing Zone](/help/tutorial-comprehensive-technical/modules/datacollection/module1.2/ex5.md)
       + [Sammanfattning och fördelar](/help/tutorial-comprehensive-technical/modules/datacollection/module1.2/summary.md)
-   + 1.3 - Sammansättning av federerad publik {#module13}
+   + 1.3 Sammansättning av federerad publik {#module13}
       + [Översikt](/help/tutorial-comprehensive-technical/modules/datacollection/module1.3/fac.md)
       + [1.3.1 Konfigurera ditt Snowflake-konto](/help/tutorial-comprehensive-technical/modules/datacollection/module1.3/ex1.md)
       + [1.3.2 Skapa scheman, datamodell och länkar](/help/tutorial-comprehensive-technical/modules/datacollection/module1.3/ex2.md)
@@ -137,7 +138,7 @@ ht-degree: 2%
       + [Sammanfattning och fördelar](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.4/summary.md)
 
 + 4 Customer Journey Analytics B2C {#cjab2c}
-   + 4.1 Customer Journey Analytics: Skapa en instrumentpanel med Analysis Workspace ovanpå Adobe Experience Platform {#module41}
+   + 4.1 Customer Journey Analytics: Skapa en instrumentpanel med Analysis Workspace {#module41}
       + [Översikt](/help/tutorial-comprehensive-technical/modules/cja-b2c/module4.1/customer-journey-analytics-build-a-dashboard.md)
       + [4.1.1 Customer Journey Analytics 101](/help/tutorial-comprehensive-technical/modules/cja-b2c/module4.1/ex1.md)
       + [4.1.2 Ansluta Adobe Experience Platform-datauppsättningar i Customer Journey Analytics](/help/tutorial-comprehensive-technical/modules/cja-b2c/module4.1/ex2.md)
@@ -157,16 +158,16 @@ ht-degree: 2%
 + 5 Data Distiller {#datadistiller}
    + 5.1-frågetjänst {#module51}
       + [Översikt](/help/tutorial-comprehensive-technical/modules/datadistiller/module5.1/query-service.md)
-      + [5.1.0 Förutsättningar](/help/tutorial-comprehensive-technical/modules/datadistiller/module5.1/ex0.md)
-      + [5.1.1 Komma igång](/help/tutorial-comprehensive-technical/modules/datadistiller/module5.1/ex1.md)
-      + [5.1.2 Använda frågetjänsten](/help/tutorial-comprehensive-technical/modules/datadistiller/module5.1/ex2.md)
-      + [5.1.3 Frågor, frågor, frågor ... och kundanalys](/help/tutorial-comprehensive-technical/modules/datadistiller/module5.1/ex3.md)
-      + [5.1.4 Generera en datauppsättning från en fråga](/help/tutorial-comprehensive-technical/modules/datadistiller/module5.1/ex4.md)
-      + [5.1.5 Query Service och Power BI](/help/tutorial-comprehensive-technical/modules/datadistiller/module5.1/ex5.md)
-      + [5.1.6 Query Service och Tableau](/help/tutorial-comprehensive-technical/modules/datadistiller/module5.1/ex6.md)
-      + [5.1.7 Query Service API](/help/tutorial-comprehensive-technical/modules/datadistiller/module5.1/ex7.md)
+      + [5.1.1 Krav](/help/tutorial-comprehensive-technical/modules/datadistiller/module5.1/ex1.md)
+      + [5.1.2 Komma igång](/help/tutorial-comprehensive-technical/modules/datadistiller/module5.1/ex2.md)
+      + [5.1.3 Använda frågetjänsten](/help/tutorial-comprehensive-technical/modules/datadistiller/module5.1/ex3.md)
+      + [5.1.4 Frågor, frågor, frågor ... och kundanalys](/help/tutorial-comprehensive-technical/modules/datadistiller/module5.1/ex4.md)
+      + [5.1.5 Generera en datauppsättning från en fråga](/help/tutorial-comprehensive-technical/modules/datadistiller/module5.1/ex5.md)
+      + [5.1.6 Query Service och Power BI](/help/tutorial-comprehensive-technical/modules/datadistiller/module5.1/ex6.md)
+      + [5.1.7 Query Service och Tableau](/help/tutorial-comprehensive-technical/modules/datadistiller/module5.1/ex7.md)
+      + [5.1.8 Query Service API](/help/tutorial-comprehensive-technical/modules/datadistiller/module5.1/ex8.md)
       + [Sammanfattning och fördelar](/help/tutorial-comprehensive-technical/modules/datadistiller/module5.1/summary.md)
 
-
++ [Inställningar](/help/tutorial-comprehensive-technical/setup.md)
 
 
