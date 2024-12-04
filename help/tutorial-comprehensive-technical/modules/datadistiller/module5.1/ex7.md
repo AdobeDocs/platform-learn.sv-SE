@@ -4,9 +4,9 @@ description: Frågetjänst - Utforska datauppsättningen med Tablet
 kt: 5342
 doc-type: tutorial
 exl-id: 29525740-fe1f-4770-bcc9-f2ad499a2cb5
-source-git-commit: b53ee64ae8438b8f48f842ed1f44ee7ef3e813fc
+source-git-commit: d9d9a38c1e160950ae755e352a54667c8a7b30f7
 workflow-type: tm+mt
-source-wordcount: '336'
+source-wordcount: '402'
 ht-degree: 0%
 
 ---
@@ -15,45 +15,67 @@ ht-degree: 0%
 
 Öppna Tableu.
 
-![start-tableau.png](./images/start-tableau.png)
+![start-tableau.png](./images/starttableau.png)
 
-I **Anslut till en server** väljer du **PostgreSQL**:
+I **Anslut till en server** klickar du på **Mer** och sedan på **PostgreSQL**.
 
-![tableau-connect-postprogress.png](./images/tableau-connect-postgress.png)
+![tableau-connect-postprogress.png](./images/tableauconnectpostgress.png)
+
+Om du inte har använt PostgeSQL med Tableau än kan du se det här. Klicka på **Hämta drivrutin**.
+
+![tableau-connect-postprogress.png](./images/tableauconnectpostgress1.png)
+
+Följ instruktionerna för att hämta och installera PostgreSQL-drivrutinen.
+
+![tableau-connect-postprogress.png](./images/tableauconnectpostgress2.png)
+
+När du är klar med installationen av drivrutinen avslutar du och startar om Tableau Desktop. Efter omstarten går du till **Anslut till en server** igen, klickar på **Mer** och sedan på **PostgreSQL** igen.
+
+![tableau-connect-postprogress.png](./images/tableauconnectpostgress.png)
+
+Då ser du det här.
+
+![tableau-connect-postprogress.png](./images/tableauconnectpostgress3.png)
 
 Gå till Adobe Experience Platform, till **Frågor** och till **Referenser**.
 
-![query-service-credentials.png](./images/query-service-credentials.png)
+![query-service-credentials.png](./images/queryservicecredentials.png)
 
 Kopiera **Host** från sidan **Credentials** i Adobe Experience Platform och klistra in den i fältet **Server**, kopiera **Database** och klistra in den i fältet **Database** i Tablet, kopiera **Port** och klistra in den i fältet **Port** i Tablet u gör du samma för **Användarnamn** och **Lösenord**. Klicka sedan på **Logga in**.
 
-Logga in:
+![tableau-connection-dialog.png](./images/tableauconnectiondialog.png)
 
-![tableau-connection-dialog.png](./images/tableau-connection-dialog.png)
+I listan med tillgängliga tabeller letar du reda på tabellen som du skapade i föregående övning, som kallas `--aepUserLdap--_callcenter_interaction_analysis`. Dra den till arbetsytan.
 
-Klicka på sök (1) och ange din **ldap** i sökfältet, identifiera tabellen i resultatuppsättningen och dra (3) den till platsen **Dra tabeller hit**. När du är klar klickar du på **Blad 1** (3).
+![tableau-drag-table.png](./images/tableaudragtable.png)
 
-![tableau-drag-table.png](./images/tableau-drag-table.png)
+Då ser du det här. Klicka på **Uppdatera nu**.
 
-För att visualisera data på kartan måste vi konvertera longitud och latitud till dimensioner. I **Mått** markerar du **Latitude** (1) och öppnar fältets listruta och väljer **Konvertera till Dimension** (2). Gör på samma sätt för måttet **Longitude**.
+![tableau-drag-table.png](./images/tableaudragtable1.png)
 
-![table-convert-dimension.png](./images/tableau-convert-dimension.png)
+Du kommer då att se data från AEP bli tillgängliga i Tableau. Klicka på **Blad 1** för att börja arbeta med data.
+
+![tableau-drag-table.png](./images/tableaudragtable2.png)
+
+Om du vill visualisera data på kartan måste du konvertera longitud och latitud till dimensioner. I **Mått** högerklickar du på **Latitude** och väljer **Konvertera till Dimension** på menyn. Gör på samma sätt för måttet **Longitude**.
+
+![table-convert-dimension.png](./images/tableauconvertdimension.png)
 
 Dra måttet **Longitude** till **Columns** och måttet **Latitude** till **Rows**. Kartan för **Belgien** visas automatiskt med få punkter som representerar städerna i datauppsättningen.
 
-![tableau-drag-lon-lat.png](./images/tableau-drag-lon-lat.png)
+![tableau-drag-lon-lat.png](./images/tableaudraglonlat.png)
 
-Välj **Måttnamn** (1), öppna listrutan och välj **Lägg till i blad** (2):
+Välj **Måttnamn** och klicka på **Lägg till i blad**.
 
-![tableau-select-measure-names.png](./images/tableau-select-measure-names.png)
+![tableau-select-measure-names.png](./images/selectmeasurenames.png)
 
 Nu finns det en karta med punkter av olika storlek. Storleken anger antalet kundtjänstinteraktioner för den specifika staden. Om du vill ändra storleken på punkterna går du till den högra panelen och öppnar **Måttvärden** (med listruteikonen). Välj **Redigera storlekar** i listrutan. Lek med olika storlekar.
 
-![tableau-variable-size-dots.png](./images/tableau-vary-size-dots.png)
+![tableau-variable-size-dots.png](./images/tableauvarysizedots.png)
 
-Om du vill visa data per **Anropa ämne** ytterligare drar du (1) dimensionen **Anropa ämne** till **Sidor**. Navigera genom de olika **samtalsämnena** med hjälp av **anropsämnet** (2) till höger på skärmen:
+Om du vill visa data per **Anropa ämne** ytterligare drar du dimensionen **Anropa ämne** till **Sidor**. Navigera genom de olika **samtalsämnena** med hjälp av **anropsämnet** till höger på skärmen:
 
-![tableau-call-topic-navigation.png](./images/tableau-call-topic-navigation.png)
+![tableau-call-topic-navigation.png](./images/tableaucalltopicnavigation.png)
 
 Du har nu avslutat den här övningen.
 

@@ -5,9 +5,9 @@ kt: 5342
 audience: Data Engineer, Data Architect, Data Analyst, BI Expert
 doc-type: tutorial
 exl-id: 31c14a9b-cb62-48ab-815c-caa6e832794f
-source-git-commit: b53ee64ae8438b8f48f842ed1f44ee7ef3e813fc
+source-git-commit: d9d9a38c1e160950ae755e352a54667c8a7b30f7
 workflow-type: tm+mt
-source-wordcount: '698'
+source-wordcount: '657'
 ht-degree: 0%
 
 ---
@@ -29,40 +29,41 @@ Här får du lära dig mer om metoderna för att hämta information om tillgäng
 
 Alla datauppsättningar som vi har utforskat via Adobe Experience Platform i början av 1 är också tillgängliga som tabeller via ett SQL-gränssnitt. Om du vill visa de tabellerna kan du använda kommandot **Visa tabeller;**.
 
-Kör **visa tabeller;** i kommandoradsgränssnittet **PSQL**. (glöm inte att avsluta kommandot med ett semikolon).
+Kör `show tables;` i kommandoradsgränssnittet **PSQL**. (glöm inte att avsluta kommandot med ett semikolon).
 
-Kopiera kommandot **visa tabeller;** och klistra in det vid uppmaningen:
+Kopiera kommandot `show tables;` och klistra in det vid uppmaningen:
 
-![command-prompt-show-tables.png](./images/command-prompt-show-tables.png)
+![command-prompt-show-tables.png](./images/commandpromptshowtables.png)
 
 Följande resultat visas:
 
 ```text
-aepenablementfy21:all=> show tables;
-                            name                            |        dataSetId         |                            dataSet                             | description | resolved 
-------------------------------------------------------------+--------------------------+----------------------------------------------------------------+-------------+----------
- demo_system_event_dataset_for_call_center_global_v1_1      | 5fd1a9dea30603194baeea43 | Demo System - Event Dataset for Call Center (Global v1.1)      |             | false
- demo_system_event_dataset_for_mobile_app_global_v1_1       | 5fd1a9de250e4f194bec84cd | Demo System - Event Dataset for Mobile App (Global v1.1)       |             | false
- demo_system_event_dataset_for_voice_assistants_global_v1_1 | 5fd1a9de49ee76194b85f73c | Demo System - Event Dataset for Voice Assistants (Global v1.1) |             | false
- demo_system_event_dataset_for_website_global_v1_1          | 5fd1a9dee3224d194cdfe786 | Demo System - Event Dataset for Website (Global v1.1)          |             | false
- demo_system_profile_dataset_for_loyalty_global_v1_1        | 5fd1a9de250e4f194bec84cc | Demo System - Profile Dataset for Loyalty (Global v1.1)        |             | false
- demo_system_profile_dataset_for_ml_predictions_global_v1_1 | 5fd1a9de241f58194b0cb117 | Demo System - Profile Dataset for ML Predictions (Global v1.1) |             | false
- demo_system_profile_dataset_for_mobile_app_global_v1_1     | 5fd1a9deddf353194a2e00b7 | Demo System - Profile Dataset for Mobile App (Global v1.1)     |             | false
- demo_system_profile_dataset_for_website_global_v1_1        | 5fd1a9de42a61c194dd7b810 | Demo System - Profile Dataset for Website (Global v1.1)        |             | false
- journey_step_events                                        | 5fd1a7f30268c5194bbb7e5e | Journey Step Events                                            |             | false
+tech-insiders:all=> show tables;
+                               name                               |                                                  dataSetId                                                   |                                       dataSet                                        | description |        labels        
+------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+-------------+----------------------
+ ajo_bcc_feedback_event_dataset                                   | 672a07cb7728e82aefa1ec56                                                                                     | AJO BCC Feedback Event Dataset                                                       |             | 
+ ajo_classification_dataset                                       | 672a07cab55b0d2aef6f9626                                                                                     | AJO Classification Dataset                                                           |             | 
+ ajo_consent_service_dataset                                      | 672a07c80fd5fd2aee4155ca                                                                                     | AJO Consent Service Dataset                                                          |             | 'PROFILE'
+ ajo_email_tracking_experience_event_dataset                      | 672a07c926d57d2aef020230                                                                                     | AJO Email Tracking Experience Event Dataset                  :
+                               name                               |                                                  dataSetId                                                   |                                       dataSet                                        | description |        labels        
+------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------+-------------+----------------------
+ ajo_bcc_feedback_event_dataset                                   | 672a07cb7728e82aefa1ec56                                                                                     | AJO BCC Feedback Event Dataset                                                       |             | 
+ ajo_classification_dataset                                       | 672a07cab55b0d2aef6f9626                                                                                     | AJO Classification Dataset                                                           |             | 
+ ajo_consent_service_dataset                                      | 672a07c80fd5fd2aee4155ca                                                                                     | AJO Consent Service Dataset                                                          |             | 'PROFILE'
+ ajo_email_tracking_experience_event_dataset                      | 672a07c926d57d2aef020230                                                                                     | AJO Email Tracking Experience Event Dataset   
 ```
 
 Tryck på blankstegstangenten i kolonet för att visa nästa sida i resultatuppsättningen, eller ange `q` för att återgå till kommandotolken.
 
-Alla datauppsättningar i plattformen har sin motsvarande frågetjänsttabell. Du kan hitta en datamängds tabell via datauppsättningsgränssnittet:
+Varje datauppsättning i AEP har sin motsvarande frågetjänsttabell. Du kan hitta en datamängds tabell via användargränssnittet för datauppsättningar:
 
-![ui-dataset-tablename.png](./images/ui-dataset-tablename.png)
+![ui-dataset-tablename.png](./images/uidatasettablename.png)
 
 Tabellen `demo_system_event_dataset_for_website_global_v1_1` är den frågetjänsttabell som motsvarar datamängden `Demo System - Event Schema for Website (Global v1.1)`.
 
 Om du vill fråga om var en produkt har visats väljer vi **geo**-informationen.
 
-Kopiera instruktionen nedan och klistra in den vid uppmaningen i **PSQL-kommandoradsgränssnittet** och tryck på Retur:
+Kopiera frågan nedan och klistra in den vid uppmaningen i **PSQL-kommandoradsgränssnittet** och tryck på Retur:
 
 ```sql
 select placecontext.geo
@@ -75,14 +76,14 @@ limit 1;
 I frågeresultatet kommer du att märka att kolumner i Experience Data Model (XDM) kan vara komplexa typer och inte bara skalära typer. I frågan ovan vill vi identifiera geografiska platser där en **commerce.productViews** inträffade. För att kunna identifiera en **commerce.productViews** måste vi navigera genom XDM-modellen med **.** (punkt)-notation.
 
 ```text
-aepenablementfy21:all=> select placecontext.geo
-aepenablementfy21:all-> from   demo_system_event_dataset_for_website_global_v1_1
-aepenablementfy21:all-> where  eventType = 'commerce.productViews'
-aepenablementfy21:all-> and placecontext.geo.countryCode <> ''
-aepenablementfy21:all-> limit 1;
-                  geo                   
-----------------------------------------
- ("(57.4694803,-3.1269422)",Tullich,GB)
+tech-insiders:all=> select placecontext.geo
+from   demo_system_event_dataset_for_website_global_v1_1
+where  eventType = 'commerce.productViews'
+and placecontext.geo.countryCode <> ''
+limit 1;
+                 geo                  
+--------------------------------------
+ ("(51.59119,-1.407848)",Charlton,GB)
 (1 row)
 ```
 
@@ -107,17 +108,17 @@ Resultatet av ovanstående fråga bör se ut så här.
 Resultatet är nu ett inställt enkelt värde:
 
 ```text
-aepenablementfy21:all=> select placecontext.geo._schema.longitude
-aepenablementfy21:all->       ,placecontext.geo._schema.latitude
-aepenablementfy21:all->       ,placecontext.geo.city
-aepenablementfy21:all->       ,placecontext.geo.countryCode
-aepenablementfy21:all-> from   demo_system_event_dataset_for_website_global_v1_1
-aepenablementfy21:all-> where  eventType = 'commerce.productViews'
-aepenablementfy21:all-> and placecontext.geo.countryCode <> ''
-aepenablementfy21:all-> limit 1;
- longitude  |  latitude  |  city   | countrycode 
-------------+------------+---------+-------------
- -3.1269422 | 57.4694803 | Tullich | GB
+tech-insiders:all=> select placecontext.geo._schema.longitude
+      ,placecontext.geo._schema.latitude
+      ,placecontext.geo.city
+      ,placecontext.geo.countryCode
+from   demo_system_event_dataset_for_website_global_v1_1
+where  eventType = 'commerce.productViews'
+and placecontext.geo.countryCode <> ''
+limit 1;
+ longitude | latitude |   city   | countrycode 
+-----------+----------+----------+-------------
+ -1.407848 | 51.59119 | Charlton | GB
 (1 row)
 ```
 
@@ -125,17 +126,11 @@ Oroa dig inte, det finns ett enkelt sätt att hitta vägen till en viss egenskap
 
 Du måste redigera en fråga, så vi öppnar först en redigerare.
 
-I Windows
+I Windows: använd **Anteckningar**
 
-Klicka på ikonen **sök** i Windows-verktygsfältet, skriv **anteckningsblocket** i fältet **sök** och klicka på resultatet för **anteckningsblocket**:
+I Mac: installera valfritt textredigeringsprogram och öppna det.
 
-![windows-start-notepad.png](./images/windows-start-notepad.png)
-
-På Mac
-
-Installera [hakparenteser](https://github.com/adobe/brackets/releases/download/release-1.14/Brackets.Release.1.14.dmg) eller använd en annan textredigerare om du inte har den installerad och följ instruktionerna. Efter installationen kan du söka efter **hakparenteser** via Mac spotlight-sökning och öppna den.
-
-Kopiera följande programsats till anteckningsblock eller klamrar:
+Kopiera följande programsats till textredigeraren:
 
 ```sql
 select your_attribute_path_here
@@ -145,31 +140,34 @@ and placecontext.geo.countryCode <> ''
 limit 1;
 ```
 
-Gå tillbaka till ditt Adobe Experience Platform-gränssnitt (bör vara öppet i webbläsaren) eller navigera till [https://platform.adobe.com](https://platform.adobe.com).
+Gå tillbaka till ditt Adobe Experience Platform-gränssnitt (bör vara öppet i webbläsaren) eller navigera till [Adobe Experience Platform](https://experience.adobe.com/platform).
 
-Välj **Scheman**, ange `Demo System - Event Schema for Website (Global v1.1)` i fältet **search** och välj `Demo System - Event Schema for Website (Global v1.1) Schema` i listan.
+Välj **Scheman**, ange `Demo System - Event Schema for Website` i fältet **sök** och klicka för att öppna schemat `Demo System - Event Schema for Website (Global v1.1) Schema`.
 
-![browse-schema.png](./images/browse-schema.png)
+![browse-schema.png](./images/browseschema.png)
 
 Utforska XDM-modellen för **Demonstrationssystem - händelseschema för webbplatsen (Global v1.1)** genom att klicka på ett objekt. Expandera trädet för **placecontext**, **geo** och **schema**. När du väljer det faktiska attributet **longitude** visas den fullständiga sökvägen i den markerade röda rutan. Om du vill kopiera attributets sökväg klickar du på ikonen för kopieringssökväg.
 
-![explore-schema-for-path.png](./images/explore-schema-for-path.png)
+![explore-schema-for-path.png](./images/exploreschemaforpath.png)
 
 Växla till din anteckningsruta/parenteser och ta bort **your_attribute_path_here** från den första raden. Placera markören efter **välj** på den första raden och klistra in (CTRL-V).
 
-Kopiera den ändrade satsen från anteckningsblock/hakparenteser och klistra in den vid uppmaningen i **PSQL-kommandoradsgränssnittet** och tryck på Retur.
+![explore-schema-for-path.png](./images/exploreschemaforpath1.png)
 
-Resultatet ska se ut så här:
+Kopiera den ändrade satsen och klistra in den vid uppmaningen i **PSQL-kommandoradsgränssnittet** och tryck på Retur.
+
+Resultatet bör se ut så här:
 
 ```text
-aepenablementfy21:all=> select placeContext.geo._schema.longitude
-aepenablementfy21:all-> from   demo_system_event_dataset_for_website_global_v1_1
-aepenablementfy21:all-> where  eventType = 'commerce.productViews'
-aepenablementfy21:all-> and placecontext.geo.countryCode <> ''
-aepenablementfy21:all-> limit 1;
- longitude  
-------------
- -3.1269422
+tech-insiders:all=> select placeContext.geo._schema.longitude
+from   demo_system_event_dataset_for_website_global_v1_1
+where  eventType = 'commerce.productViews'
+and placecontext.geo.countryCode <> ''
+limit 1;
+ longitude 
+-----------
+ -1.407848
+(1 row)
 ```
 
 Nästa steg: [5.1.4 Frågor, frågor, frågor... och segmentanalys](./ex4.md)

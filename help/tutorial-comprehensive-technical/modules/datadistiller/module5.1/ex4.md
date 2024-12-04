@@ -4,9 +4,9 @@ description: Frågetjänst - Frågor, frågor, frågor.. och kundanalys
 kt: 5342
 doc-type: tutorial
 exl-id: 85a0c8ca-9727-4019-9058-8982453fa382
-source-git-commit: b53ee64ae8438b8f48f842ed1f44ee7ef3e813fc
+source-git-commit: d9d9a38c1e160950ae755e352a54667c8a7b30f7
 workflow-type: tm+mt
-source-wordcount: '890'
+source-wordcount: '895'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 0%
 
 ## Syfte
 
-* Skriv frågor för dataanalyser
-* Skriv SQL-frågor som kombinerar online-, call center- och lojalitetsdata som finns i Adobe Experience Platform
-* Läs mer om Adobe-definierade funktioner
+- Skriv frågor för dataanalyser
+- Skriv SQL-frågor som kombinerar online-, call center- och lojalitetsdata som finns i Adobe Experience Platform
+- Läs mer om Adobe-definierade funktioner
 
 ## Kontext
 
@@ -39,7 +39,7 @@ Hur många produktvisningar har vi dagligen?
 select date_format( timestamp , 'yyyy-MM-dd') AS Day,
        count(*) AS productViews
 from   demo_system_event_dataset_for_website_global_v1_1
-where  --aepTenantId--.demoEnvironment.brandName IN ('Luma Telco', 'Citi Signal')
+where  --aepTenantId--.demoEnvironment.brandName IN ('Citi Signal')
 and eventType = 'commerce.productViews'
 group by Day
 limit 10;
@@ -50,16 +50,16 @@ Kopiera satsen ovan och kör den i kommandoradsgränssnittet **PSQL**.
 **Frågeresultat**
 
 ```text
-aepenablementfy21:all=> select date_format( timestamp , 'yyyy-MM-dd') AS Day,
-aepenablementfy21:all->        count(*) AS productViews
-aepenablementfy21:all-> from   demo_system_event_dataset_for_website_global_v1_1
-aepenablementfy21:all-> where  --aepTenantId--.demoEnvironment.brandName IN ('Luma Telco', 'Citi Signal')
-aepenablementfy21:all-> and    eventType = 'commerce.productViews'
-aepenablementfy21:all-> group by Day
-aepenablementfy21:all-> limit 10;
+tech-insiders:all=> select date_format( timestamp , 'yyyy-MM-dd') AS Day,
+       count(*) AS productViews
+from   demo_system_event_dataset_for_website_global_v1_1
+where  _experienceplatform.demoEnvironment.brandName IN ('Citi Signal')
+and eventType = 'commerce.productViews'
+group by Day
+limit 10;
     Day     | productViews 
 ------------+--------------
- 2020-07-31 |         2297
+ 2024-12-04 |         2297
 (1 row)
 ```
 
@@ -72,7 +72,7 @@ Vilka är de fem främsta produkterna?
 ```sql
 select productListItems.name, count(*)
 from   demo_system_event_dataset_for_website_global_v1_1
-where  --aepTenantId--.demoEnvironment.brandName IN ('Luma Telco', 'Citi Signal')
+where  --aepTenantId--.demoEnvironment.brandName IN ('Citi Signal')
 and    eventType = 'commerce.productViews'
 group  by productListItems.name
 order  by 2 desc
@@ -84,19 +84,19 @@ Kopiera satsen ovan och kör den i kommandoradsgränssnittet **PSQL**.
 **Frågeresultat**
 
 ```text
-aepenablementfy21:all=> select productListItems.name, count(*)
-aepenablementfy21:all-> from   demo_system_event_dataset_for_website_global_v1_1
-aepenablementfy21:all-> where  --aepTenantId--.demoEnvironment.brandName IN ('Luma Telco', 'Citi Signal')
-aepenablementfy21:all-> and    eventType = 'commerce.productViews'
-aepenablementfy21:all-> group  by productListItems.name
-aepenablementfy21:all-> order  by 2 desc
-aepenablementfy21:all-> limit 5;
-                 name                  | count(1) 
----------------------------------------+----------
- Google Pixel XL 32GB Black Smartphone |      938
- SIM Only                              |      482
- Samsung Galaxy S8                     |      456
- Samsung Galaxy S7 32GB Black          |      421
+tech-insiders:all=> select productListItems.name, count(*)
+from   demo_system_event_dataset_for_website_global_v1_1
+where  _experienceplatform.demoEnvironment.brandName IN ('Citi Signal')
+and    eventType = 'commerce.productViews'
+group  by productListItems.name
+order  by 2 desc
+limit 5;
+                  name                   | count(1) 
+-----------------------------------------+----------
+ {Google Pixel XL 32GB Black Smartphone} |      938
+ {SIM Only}                              |      482
+ {Samsung Galaxy S8}                     |      456
+ {Samsung Galaxy S7 32GB Black}          |      421
 (4 rows)
 ```
 
@@ -107,7 +107,7 @@ aepenablementfy21:all-> limit 5;
 ```sql
 select eventType, count(*)
 from   demo_system_event_dataset_for_website_global_v1_1
-where  --aepTenantId--.demoEnvironment.brandName IN ('Luma Telco', 'Citi Signal')
+where  --aepTenantId--.demoEnvironment.brandName IN ('Citi Signal')
 and    eventType is not null
 and    eventType <> ''
 group  by eventType;
@@ -118,17 +118,17 @@ Kopiera satsen ovan och kör den i kommandoradsgränssnittet **PSQL**.
 **Frågeresultat**
 
 ```text
-aepenablementfy21:all=> select eventType, count(*)
-aepenablementfy21:all-> from   demo_system_event_dataset_for_website_global_v1_1
-aepenablementfy21:all-> where  --aepTenantId--.demoEnvironment.brandName IN ('Luma Telco', 'Citi Signal')
-aepenablementfy21:all-> and    eventType is not null
-aepenablementfy21:all-> and    eventType <> ''
-aepenablementfy21:all-> group  by eventType;
-          eventType           | count(1) 
-------------------------------+----------
- commerce.productViews        |     2297
- commerce.productListAdds     |      494
- commerce.purchases           |      246
+tech-insiders:all=> select eventType, count(*)
+from   demo_system_event_dataset_for_website_global_v1_1
+where  _experienceplatform.demoEnvironment.brandName IN ('Citi Signal')
+and    eventType is not null
+and    eventType <> ''
+group  by eventType;
+        eventType         | count(1) 
+--------------------------+----------
+ commerce.productListAdds |      494
+ commerce.purchases       |      246
+ commerce.productViews    |     2297
 (3 rows)
 ```
 
@@ -139,7 +139,7 @@ aepenablementfy21:all-> group  by eventType;
 ```sql
 select distinct --aepTenantId--.identification.core.ecid
 from   demo_system_event_dataset_for_website_global_v1_1
-where  --aepTenantId--.demoEnvironment.brandName IN ('Luma Telco', 'Citi Signal')
+where  --aepTenantId--.demoEnvironment.brandName IN ('Citi Signal')
 and    web.webPageDetails.name = 'Cancel Service'
 group  by --aepTenantId--.identification.core.ecid
 limit 10;
@@ -150,24 +150,24 @@ Kopiera satsen ovan och kör den i kommandoradsgränssnittet **PSQL**.
 **Frågeresultat**
 
 ```text
-aepenablementfy21:all=> select distinct --aepTenantId--.identification.core.ecid
-aepenablementfy21:all-> from   demo_system_event_dataset_for_website_global_v1_1
-aepenablementfy21:all-> where  --aepTenantId--.demoEnvironment.brandName IN ('Luma Telco', 'Citi Signal')
-aepenablementfy21:all-> and    web.webPageDetails.name = 'Cancel Service'
-aepenablementfy21:all-> group  by --aepTenantId--.identification.core.ecid
-aepenablementfy21:all-> limit 10;
+tech-insiders:all=> select distinct _experienceplatform.identification.core.ecid
+from   demo_system_event_dataset_for_website_global_v1_1
+where  _experienceplatform.demoEnvironment.brandName IN ('Citi Signal')
+and    web.webPageDetails.name = 'Cancel Service'
+group  by _experienceplatform.identification.core.ecid
+limit 10;
                ecid               
 ----------------------------------
- 67802232253493573025911610627278
- 27147331741697745713411940873426
- 19806347932758146991274525406147
- 06339676267512351981624626408225
- 23933440740775575701680766564499
- 11860828134020790182705892056898
- 04258863338643046907489131372300
- 90257333076958492787834714105751
- 66695181015407529430237951973742
- 19103852558440070949457567094096
+ 86069928882940477620713284798772
+ 75691756152042231410852704832434
+ 47381264398548915586824480724480
+ 51294194577949645447313762862726
+ 95873885060131472480685538836534
+ 71192995127345419624952514250737
+ 81469709164961922907426138040032
+ 53545252726821876244061095202780
+ 13294750130353985087337266864522
+ 58843891994459565443501421307174
 (10 rows)
 ```
 
@@ -231,7 +231,7 @@ FROM
             where  a.--aepTenantId--.identification.core.ecid in ( 
                 select b.--aepTenantId--.identification.core.ecid
                 from   demo_system_event_dataset_for_website_global_v1_1 b
-                where  b.--aepTenantId--.demoEnvironment.brandName IN ('Luma Telco', 'Citi Signal')
+                where  b.--aepTenantId--.demoEnvironment.brandName IN ('Citi Signal')
                 and    b.web.webPageDetails.name = 'Cancel Service'
             )
         )
@@ -250,16 +250,16 @@ Kopiera satsen ovan och kör den i kommandoradsgränssnittet **PSQL**.
 ```text
                 webPage                |               webPage_2               |   webPage_3    | webPage_4  | journeys 
 ---------------------------------------+---------------------------------------+----------------+------------+----------
- Citi Signal Sport                     | Google Pixel XL 32GB Black Smartphone | Cancel Service | Call Start |        2
- SIM Only                              | Citi Signal Shop                      | Cancel Service |            |        2
- SIM Only                              | Telco Home                            | Cancel Service |            |        2
- TV & Broadband Deals                  | Samsung Galaxy S7 32GB Black          | Cancel Service |            |        2
  Telco Home                            | Citi Signal Sport                     | Cancel Service | Call Start |        2
- Google Pixel XL 32GB Black Smartphone | Broadband Deals                       | Cancel Service |            |        2
+ Citi Signal Sport                     | Google Pixel XL 32GB Black Smartphone | Cancel Service | Call Start |        2
  Broadband Deals                       | Samsung Galaxy S7 32GB Black          | Cancel Service |            |        2
- Broadband Deals                       | Samsung Galaxy S8                     | Cancel Service |            |        1
- Samsung Galaxy S8                     | Google Pixel XL 32GB Black Smartphone | Cancel Service |            |        1
- SIM Only                              | Google Pixel XL 32GB Black Smartphone | Cancel Service | Call Start |        1
+ TV & Broadband Deals                  | Samsung Galaxy S7 32GB Black          | Cancel Service |            |        2
+ SIM Only                              | Citi Signal Shop                      | Cancel Service |            |        2
+ Google Pixel XL 32GB Black Smartphone | Broadband Deals                       | Cancel Service |            |        2
+ SIM Only                              | Telco Home                            | Cancel Service |            |        2
+ Citi Signal Shop                      | Samsung Galaxy S7 32GB Black          | Cancel Service | Call Start |        1
+ Google Pixel XL 32GB Black Smartphone | Citi Signal Sport                     | Cancel Service | Call Start |        1
+ Google Pixel XL 32GB Black Smartphone | Citi Signal Shop                      | Cancel Service | Call Start |        1
 (10 rows)
 ```
 
@@ -281,7 +281,7 @@ select * from (
                   ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING)
               AS contact_callcenter_after_seconds
        from   demo_system_event_dataset_for_website_global_v1_1
-       where  --aepTenantId--.demoEnvironment.brandName IN ('Luma Telco', 'Citi Signal')
+       where  --aepTenantId--.demoEnvironment.brandName IN ('Citi Signal')
        and    web.webPageDetails.name in ('Cancel Service', 'Call Start')
 ) r
 where r.webPage = 'Cancel Service'
@@ -315,7 +315,7 @@ Kopiera satsen ovan och kör den i kommandoradsgränssnittet **PSQL**.
 
 ### Och vad blir resultatet av den kontakten?
 
-Förklara att vi förenar datauppsättningar, i det här fallet förenar vi `demo_system_event_dataset_for_website_global_v1_1` med `demo_system_event_dataset_for_call_center_global_v1_1`. Vi gör detta för att veta resultatet av samspelet mellan call center.
+I den här frågan kommer du att koppla samman datauppsättningar. I det här fallet ansluter du datauppsättningen `demo_system_event_dataset_for_website_global_v1_1` med datauppsättningen `demo_system_event_dataset_for_call_center_global_v1_1`. Detta görs för att förstå resultatet av kundtjänstens interaktion.
 
 **SQL**
 
@@ -333,7 +333,7 @@ from (
                   ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING)
               AS contact_callcenter_after_seconds
        from   demo_system_event_dataset_for_website_global_v1_1
-       where  --aepTenantId--.demoEnvironment.brandName IN ('Luma Telco', 'Citi Signal')
+       where  --aepTenantId--.demoEnvironment.brandName IN ('Citi Signal')
        and    web.webPageDetails.name in ('Cancel Service', 'Call Start')
 ) r
 , demo_system_event_dataset_for_call_center_global_v1_1 c
@@ -351,27 +351,27 @@ Kopiera satsen ovan och kör den i kommandoradsgränssnittet **PSQL**.
 ```text
                ecid               |    webPage     | contact_callcenter_after_seconds | callfeeling | calltopic | callcontractcancelled 
 ----------------------------------+----------------+----------------------------------+-------------+-----------+-----------------------
- 65003638134805559755890758041032 | Cancel Service |                             -440 | negative    | contract  | true
- 24197860921105808861772992106002 | Cancel Service |                             -109 | negative    | contract  | true
- 96145097889556586310105454800766 | Cancel Service |                             -501 | neutral     | contract  | true
- 18680613140217544548647790969994 | Cancel Service |                             -502 | negative    | contract  | true
- 66121898576007921287545496624574 | Cancel Service |                             -546 | negative    | contract  | true
- 35086866174626846547860375146326 | Cancel Service |                             -493 | negative    | contract  | false
- 30502827193916828536733220567055 | Cancel Service |                             -924 | negative    | contract  | true
- 85319114253582167371394801608573 | Cancel Service |                             -267 | positive    | contract  | true
- 04258863338643046907489131372300 | Cancel Service |                             -588 | positive    | contract  | false
- 23933440740775575701680766564499 | Cancel Service |                             -261 | neutral     | contract  | true
- 17332005215125613039685855763735 | Cancel Service |                             -478 | neutral     | contract  | true
- 02666934104296797891818818456669 | Cancel Service |                             -297 | positive    | contract  | true
- 48158305927116134877913019413025 | Cancel Service |                              -47 | neutral     | contract  | false
- 13294750130353985087337266864522 | Cancel Service |                              -71 | positive    | contract  | false
- 69034679856689334967307492458080 | Cancel Service |                             -812 | negative    | contract  | true
+ 00630470663554417679969244202779 | Cancel Service |                             -797 | negative    | contract  | f
+ 00720875344152796154458668700428 | Cancel Service |                             -519 | positive    | contract  | f
+ 00746064605049656090779523644276 | Cancel Service |                              -62 | positive    | contract  | t
+ 00869613691740150556826953447162 | Cancel Service |                             -129 | negative    | contract  | t
+ 00943638725078228957873279219207 | Cancel Service |                             -750 | positive    | contract  | f
+ 01419076946514450291741574452702 | Cancel Service |                             -482 | neutral     | contract  | f
+ 01738842540109643781526526573341 | Cancel Service |                             -562 | neutral     | contract  | f
+ 02052460258994877317679083617975 | Cancel Service |                             -545 | neutral     | contract  | f
+ 02156496759733199802585567179589 | Cancel Service |                              -83 | neutral     | contract  | t
+ 02666934104296797891818818456669 | Cancel Service |                             -297 | positive    | contract  | t
+ 03059764265715537001416957172652 | Cancel Service |                             -243 | negative    | contract  | t
+ 03347899869945278660479273416679 | Cancel Service |                             -229 | positive    | contract  | t
+ 04258863338643046907489131372300 | Cancel Service |                             -588 | positive    | contract  | f
+ 04733864373954008966920919247566 | Cancel Service |                             -795 | neutral     | contract  | f
+ 05199871096822598772351169572451 | Cancel Service |                             -236 | positive    | contract  | t
 (15 rows)
 ```
 
 ### Vilken lojalitetsprofil har dessa kunder?
 
-I den här frågan ansluter vi oss till lojalitetsdata som vi har registrerat i Adobe Experience Platform. Detta gör att kundanalysen kan förbättras med lojalitetsdata.
+I den här frågan ansluter vi CRM-data som har registrerats i Adobe Experience Platform. Detta gör det möjligt att förbättra bortfallsanalysen med CRM-data.
 
 **SQL**
 
@@ -380,7 +380,7 @@ select r.*,
        c.--aepTenantId--.interactionDetails.core.callCenterAgent.callFeeling,
        c.--aepTenantId--.interactionDetails.core.callCenterAgent.callTopic,
        l.--aepTenantId--.loyaltyDetails.level,
-       l.--aepTenantId--.identification.core.loyaltyId
+       l.--aepTenantId--.identification.core.crmId
 from (
        select --aepTenantId--.identification.core.ecid ecid,
               web.webPageDetails.name as webPage,
@@ -390,11 +390,11 @@ from (
                   ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING)
               AS contact_callcenter_after_seconds
        from   demo_system_event_dataset_for_website_global_v1_1
-       where  --aepTenantId--.demoEnvironment.brandName IN ('Luma Telco', 'Citi Signal')
+       where  --aepTenantId--.demoEnvironment.brandName IN ('Citi Signal')
        and    web.webPageDetails.name in ('Cancel Service', 'Call Start')
 ) r
 , demo_system_event_dataset_for_call_center_global_v1_1 c
-, demo_system_profile_dataset_for_loyalty_global_v1_1 l
+, demo_system_profile_dataset_for_crm_global_v1_1 l
 where r.ecid = c.--aepTenantId--.identification.core.ecid
 and r.webPage = 'Cancel Service'
 and l.--aepTenantId--.identification.core.ecid = r.ecid
@@ -407,23 +407,23 @@ Kopiera satsen ovan och kör den i kommandoradsgränssnittet **PSQL**.
 **Frågeresultat**
 
 ```text
-               ecid               |    webPage     | contact_callcenter_after_seconds | callfeeling | calltopic | level  | loyaltyid 
+               ecid               |    webPage     | contact_callcenter_after_seconds | callfeeling | calltopic | level  |   crmid   
 ----------------------------------+----------------+----------------------------------+-------------+-----------+--------+-----------
- 65003638134805559755890758041032 | Cancel Service |                             -440 | negative    | contract  | Gold   | 924854108
- 65003638134805559755890758041032 | Cancel Service |                             -440 | negative    | contract  | Gold   | 924854108
- 24197860921105808861772992106002 | Cancel Service |                             -109 | negative    | contract  | Bronze | 094259678
- 24197860921105808861772992106002 | Cancel Service |                             -109 | negative    | contract  | Bronze | 094259678
- 96145097889556586310105454800766 | Cancel Service |                             -501 | neutral     | contract  | Gold   | 644887358
- 96145097889556586310105454800766 | Cancel Service |                             -501 | neutral     | contract  | Gold   | 644887358
- 18680613140217544548647790969994 | Cancel Service |                             -502 | negative    | contract  | Gold   | 205300004
- 18680613140217544548647790969994 | Cancel Service |                             -502 | negative    | contract  | Gold   | 205300004
- 66121898576007921287545496624574 | Cancel Service |                             -546 | negative    | contract  | Bronze | 095728673
- 66121898576007921287545496624574 | Cancel Service |                             -546 | negative    | contract  | Bronze | 095728673
- 35086866174626846547860375146326 | Cancel Service |                             -493 | negative    | contract  | Bronze | 453145930
- 35086866174626846547860375146326 | Cancel Service |                             -493 | negative    | contract  | Bronze | 453145930
- 30502827193916828536733220567055 | Cancel Service |                             -924 | negative    | contract  | Gold   | 269406417
- 30502827193916828536733220567055 | Cancel Service |                             -924 | negative    | contract  | Gold   | 269406417
- 85319114253582167371394801608573 | Cancel Service |                             -267 | positive    | contract  | Bronze | 899276035
+ 00630470663554417679969244202779 | Cancel Service |                             -797 | negative    | contract  | Bronze | 524483285
+ 00720875344152796154458668700428 | Cancel Service |                             -519 | positive    | contract  | Silver | 860696333
+ 00746064605049656090779523644276 | Cancel Service |                              -62 | positive    | contract  | Bronze | 072387270
+ 00869613691740150556826953447162 | Cancel Service |                             -129 | negative    | contract  | Bronze | 789347684
+ 00943638725078228957873279219207 | Cancel Service |                             -750 | positive    | contract  | Gold   | 033926162
+ 01419076946514450291741574452702 | Cancel Service |                             -482 | neutral     | contract  | Bronze | 105063634
+ 01738842540109643781526526573341 | Cancel Service |                             -562 | neutral     | contract  | Gold   | 791324509
+ 02052460258994877317679083617975 | Cancel Service |                             -545 | neutral     | contract  | Gold   | 443477555
+ 02156496759733199802585567179589 | Cancel Service |                              -83 | neutral     | contract  | Silver | 305085589
+ 02666934104296797891818818456669 | Cancel Service |                             -297 | positive    | contract  | Silver | 104266570
+ 03059764265715537001416957172652 | Cancel Service |                             -243 | negative    | contract  | Silver | 814175245
+ 03347899869945278660479273416679 | Cancel Service |                             -229 | positive    | contract  | Gold   | 377699708
+ 04258863338643046907489131372300 | Cancel Service |                             -588 | positive    | contract  | Silver | 298321657
+ 04733864373954008966920919247566 | Cancel Service |                             -795 | neutral     | contract  | Gold   | 655070958
+ 05199871096822598772351169572451 | Cancel Service |                             -236 | positive    | contract  | Gold   | 425688874
 (15 rows)
 ```
 
@@ -444,7 +444,7 @@ Här kan vi ta med geografisk information, som longitud, attityd, stad, landskod
               c.--aepTenantId--.interactionDetails.core.callCenterAgent.callTopic,
               c.--aepTenantId--.interactionDetails.core.callCenterAgent.callContractCancelled,
               l.--aepTenantId--.loyaltyDetails.level,
-              l.--aepTenantId--.identification.core.loyaltyId
+              l.--aepTenantId--.identification.core.crmId
        from (
               select --aepTenantId--.identification.core.ecid ecid,
                      placeContext.geo._schema.latitude lat,
@@ -458,11 +458,11 @@ Här kan vi ta med geografisk information, som longitud, attityd, stad, landskod
                          ROWS BETWEEN CURRENT ROW AND UNBOUNDED FOLLOWING)
                      AS contact_callcenter_after_seconds
               from   demo_system_event_dataset_for_website_global_v1_1
-              where  --aepTenantId--.demoEnvironment.brandName IN ('Luma Telco', 'Citi Signal')
+              where  --aepTenantId--.demoEnvironment.brandName IN ('Citi Signal')
               and    web.webPageDetails.name in ('Cancel Service', 'Call Start')
        ) r
        , demo_system_event_dataset_for_call_center_global_v1_1 c
-       , demo_system_profile_dataset_for_loyalty_global_v1_1 l
+       , demo_system_profile_dataset_for_crm_global_v1_1 l
        where r.ecid = c.--aepTenantId--.identification.core.ecid
        and r.webPage = 'Cancel Service'
        and l.--aepTenantId--.identification.core.ecid = r.ecid
@@ -475,23 +475,23 @@ Kopiera satsen ovan och kör den i kommandoradsgränssnittet **PSQL**.
 **Frågeresultat**
 
 ```text
-               ecid               |   city    | countrycode |  latitude  | longitude  | seconds_to_contact_callcenter | callfeeling | calltopic | callcontractcancelled | level  | loyaltyid 
-----------------------------------+-----------+-------------+------------+------------+-------------------------------+-------------+-----------+-----------------------+--------+-----------
- 00630470663554417679969244202779 | Charlton  | GB          |   51.59119 |  -1.407848 |                          -797 | negative    | contract  | false                 | Bronze | 524483285
- 00630470663554417679969244202779 | Charlton  | GB          |   51.59119 |  -1.407848 |                          -797 | negative    | contract  |                       | Bronze | 524483285
- 00720875344152796154458668700428 | Ashley    | GB          | 51.4139633 | -2.2685462 |                          -519 | positive    | contract  | false                 | Silver | 860696333
- 00720875344152796154458668700428 | Ashley    | GB          | 51.4139633 | -2.2685462 |                          -519 | positive    | contract  |                       | Silver | 860696333
- 00746064605049656090779523644276 | Liverpool | GB          | 53.4913801 |  -2.867264 |                           -62 | positive    | contract  | true                  | Bronze | 072387270
- 00746064605049656090779523644276 | Liverpool | GB          | 53.4913801 |  -2.867264 |                           -62 | positive    | contract  |                       | Bronze | 072387270
- 00869613691740150556826953447162 | Langley   | GB          |  51.888151 |   -0.23924 |                          -129 | negative    | contract  | true                  | Bronze | 789347684
- 00869613691740150556826953447162 | Langley   | GB          |  51.888151 |   -0.23924 |                          -129 | negative    | contract  |                       | Bronze | 789347684
- 00943638725078228957873279219207 | Eaton     | GB          | 53.2945961 | -0.9335791 |                          -750 | positive    | contract  | false                 | Gold   | 033926162
- 00943638725078228957873279219207 | Eaton     | GB          | 53.2945961 | -0.9335791 |                          -750 | positive    | contract  |                       | Gold   | 033926162
- 01419076946514450291741574452702 | Tullich   | GB          | 57.4694803 | -3.1269422 |                          -482 | neutral     | contract  | false                 | Bronze | 105063634
- 01419076946514450291741574452702 | Tullich   | GB          | 57.4694803 | -3.1269422 |                          -482 | neutral     | contract  |                       | Bronze | 105063634
- 01738842540109643781526526573341 | Whitwell  | GB          | 54.3886617 |  -1.555363 |                          -562 | neutral     | contract  | false                 | Gold   | 791324509
- 01738842540109643781526526573341 | Whitwell  | GB          | 54.3886617 |  -1.555363 |                          -562 | neutral     | contract  |                       | Gold   | 791324509
- 02052460258994877317679083617975 | Edinburgh | GB          | 55.9309486 | -3.1859102 |                          -545 | neutral     | contract  | false                 | Gold   | 443477555
+               ecid               |    city    | countrycode |  latitude  | longitude  | seconds_to_contact_callcenter | callfeeling | calltopic | callcontractcancelled | level  |   crmid   
+----------------------------------+------------+-------------+------------+------------+-------------------------------+-------------+-----------+-----------------------+--------+-----------
+ 00630470663554417679969244202779 | Charlton   | GB          |   51.59119 |  -1.407848 |                          -797 | negative    | contract  | f                     | Bronze | 524483285
+ 00720875344152796154458668700428 | Ashley     | GB          | 51.4139633 | -2.2685462 |                          -519 | positive    | contract  | f                     | Silver | 860696333
+ 00746064605049656090779523644276 | Liverpool  | GB          | 53.4913801 |  -2.867264 |                           -62 | positive    | contract  | t                     | Bronze | 072387270
+ 00869613691740150556826953447162 | Langley    | GB          |  51.888151 |   -0.23924 |                          -129 | negative    | contract  | t                     | Bronze | 789347684
+ 00943638725078228957873279219207 | Eaton      | GB          | 53.2945961 | -0.9335791 |                          -750 | positive    | contract  | f                     | Gold   | 033926162
+ 01419076946514450291741574452702 | Tullich    | GB          | 57.4694803 | -3.1269422 |                          -482 | neutral     | contract  | f                     | Bronze | 105063634
+ 01738842540109643781526526573341 | Whitwell   | GB          | 54.3886617 |  -1.555363 |                          -562 | neutral     | contract  | f                     | Gold   | 791324509
+ 02052460258994877317679083617975 | Edinburgh  | GB          | 55.9309486 | -3.1859102 |                          -545 | neutral     | contract  | f                     | Gold   | 443477555
+ 02156496759733199802585567179589 | West End   | GB          |   53.46464 |    0.04134 |                           -83 | neutral     | contract  | t                     | Silver | 305085589
+ 02666934104296797891818818456669 | Newtown    | GB          | 51.3684218 | -1.3218754 |                          -297 | positive    | contract  | t                     | Silver | 104266570
+ 03059764265715537001416957172652 | Edinburgh  | GB          | 55.9309486 | -3.1859102 |                          -243 | negative    | contract  | t                     | Silver | 814175245
+ 03347899869945278660479273416679 | Liverpool  | GB          | 53.4913801 |  -2.867264 |                          -229 | positive    | contract  | t                     | Gold   | 377699708
+ 04258863338643046907489131372300 | Norton     | GB          | 52.2679288 | -1.1202549 |                          -588 | positive    | contract  | f                     | Silver | 298321657
+ 04733864373954008966920919247566 | Whitchurch | GB          | 51.4057505 | -2.5573746 |                          -795 | neutral     | contract  | f                     | Gold   | 655070958
+ 05199871096822598772351169572451 | Stapleford | GB          |   53.10672 |  -0.687802 |                          -236 | positive    | contract  | t                     | Gold   | 425688874
 (15 rows)
 ```
 
@@ -523,11 +523,11 @@ select /* enter your name */
        c.--aepTenantId--.interactionDetails.core.callCenterAgent.callContractCancelled as contractCancelled,
        l.--aepTenantId--.loyaltyDetails.level as loyaltystatus,
        l.--aepTenantId--.loyaltyDetails.points as loyaltypoints,
-       l.--aepTenantId--.identification.core.loyaltyId as crmid
+       l.--aepTenantId--.identification.core.crmId as crmid
 from   demo_system_event_dataset_for_website_global_v1_1 e
       ,demo_system_event_dataset_for_call_center_global_v1_1 c
-      ,demo_system_profile_dataset_for_loyalty_global_v1_1 l
-where  e.--aepTenantId--.demoEnvironment.brandName IN ('Luma Telco', 'Citi Signal')
+      ,demo_system_profile_dataset_for_crm_global_v1_1 l
+where  e.--aepTenantId--.demoEnvironment.brandName IN ('Citi Signal')
 and    e.web.webPageDetails.name in ('Cancel Service', 'Call Start')
 and    e.--aepTenantId--.identification.core.ecid = c.--aepTenantId--.identification.core.ecid
 and    l.--aepTenantId--.identification.core.ecid = e.--aepTenantId--.identification.core.ecid;
@@ -541,62 +541,39 @@ enter your name
 
 Ta inte bort `/\*` och `\*/`. Din ändrade programsats i Anteckningsblocket ska se ut så här:
 
-![edit-query-notepad.png](./images/edit-query-notepad.png)
+![edit-query-notepad.png](./images/editquerynotepad.png)
 
 Kopiera den ändrade satsen från **anteckningsblocket** till **PSQL-kommandoradsfönstret** och tryck på Retur. Följande resultat visas i kommandoradsfönstret för PSQL:
 
 ```text
-aepenablementfy21:all=> 
-aepenablementfy21:all=> select /* vangeluw */
-aepenablementfy21:all->        e._experienceplatform.identification.core.ecid as ecid,
-aepenablementfy21:all->        e.placeContext.geo.city as city,
-aepenablementfy21:all->        e.placeContext.geo._schema.latitude latitude,
-aepenablementfy21:all->        e.placeContext.geo._schema.longitude longitude,
-aepenablementfy21:all->        e.placeContext.geo.countryCode as countrycode,
-aepenablementfy21:all->        c._experienceplatform.interactionDetails.core.callCenterAgent.callFeeling as callFeeling,
-aepenablementfy21:all->        c._experienceplatform.interactionDetails.core.callCenterAgent.callTopic as callTopic,
-aepenablementfy21:all->        c._experienceplatform.interactionDetails.core.callCenterAgent.callContractCancelled as contractCancelled,
-aepenablementfy21:all->        l._experienceplatform.loyaltyDetails.level as loyaltystatus,
-aepenablementfy21:all->        l._experienceplatform.loyaltyDetails.points as loyaltypoints,
-aepenablementfy21:all->        l._experienceplatform.identification.core.loyaltyId as crmid
-aepenablementfy21:all-> from   demo_system_event_dataset_for_website_global_v1_1 e
-aepenablementfy21:all->       ,demo_system_event_dataset_for_call_center_global_v1_1 c
-aepenablementfy21:all->       ,demo_system_profile_dataset_for_loyalty_global_v1_1 l
-aepenablementfy21:all-> where  e._experienceplatform.demoEnvironment.brandName IN ('Luma Telco', 'Citi Signal')
-aepenablementfy21:all-> and    e.web.webPageDetails.name in ('Cancel Service', 'Call Start')
-aepenablementfy21:all-> and    e._experienceplatform.identification.core.ecid = c._experienceplatform.identification.core.ecid
-aepenablementfy21:all-> and    l._experienceplatform.identification.core.ecid = e._experienceplatform.identification.core.ecid;
+tech-insiders:all=> select /* vangeluw */
+       e._experienceplatform.identification.core.ecid as ecid,
+       e.placeContext.geo.city as city,
+       e.placeContext.geo._schema.latitude latitude,
+       e.placeContext.geo._schema.longitude longitude,
+       e.placeContext.geo.countryCode as countrycode,
+       c._experienceplatform.interactionDetails.core.callCenterAgent.callFeeling as callFeeling,
+       c._experienceplatform.interactionDetails.core.callCenterAgent.callTopic as callTopic,
+       c._experienceplatform.interactionDetails.core.callCenterAgent.callContractCancelled as contractCancelled,
+       l._experienceplatform.loyaltyDetails.level as loyaltystatus,
+       l._experienceplatform.loyaltyDetails.points as loyaltypoints,
+       l._experienceplatform.identification.core.crmId as crmid
+from   demo_system_event_dataset_for_website_global_v1_1 e
+      ,demo_system_event_dataset_for_call_center_global_v1_1 c
+      ,demo_system_profile_dataset_for_crm_global_v1_1 l
+where  e._experienceplatform.demoEnvironment.brandName IN ('Citi Signal')
+and    e.web.webPageDetails.name in ('Cancel Service', 'Call Start')
+and    e._experienceplatform.identification.core.ecid = c._experienceplatform.identification.core.ecid
+and    l._experienceplatform.identification.core.ecid = e._experienceplatform.identification.core.ecid;
                ecid               |    city    |  latitude  | longitude  | countrycode | callFeeling | callTopic | contractCancelled | loyaltystatus | loyaltypoints |   crmid   
 ----------------------------------+------------+------------+------------+-------------+-------------+-----------+-------------------+---------------+---------------+-----------
- 33977405947573095768416894125891 | Tullich    | 57.4694803 | -3.1269422 | GB          | positive    | wifi      | false             | Bronze        |          73.0 | 904552921
- 33977405947573095768416894125891 | Tullich    | 57.4694803 | -3.1269422 | GB          | positive    | wifi      | false             | Bronze        |          73.0 | 904552921
- 33977405947573095768416894125891 | Tullich    | 57.4694803 | -3.1269422 | GB          | positive    | wifi      |                   | Bronze        |          73.0 | 904552921
- 33977405947573095768416894125891 | Tullich    | 57.4694803 | -3.1269422 | GB          | positive    | wifi      |                   | Bronze        |          73.0 | 904552921
- 67802232253493573025911610627278 | Linton     | 54.0542238 | -2.0215836 | GB          | none        | none      | false             | Silver        |         522.0 | 417981877
- 67802232253493573025911610627278 | Linton     | 54.0542238 | -2.0215836 | GB          | none        | none      | false             | Silver        |         522.0 | 417981877
- 67802232253493573025911610627278 | Linton     | 54.0542238 | -2.0215836 | GB          | none        | none      |                   | Silver        |         522.0 | 417981877
- 67802232253493573025911610627278 | Linton     | 54.0542238 | -2.0215836 | GB          | none        | none      |                   | Silver        |         522.0 | 417981877
- 27147331741697745713411940873426 | Langley    |  51.888151 |   -0.23924 | GB          | none        | none      | false             | Bronze        |         790.0 | 826545716
- 27147331741697745713411940873426 | Langley    |  51.888151 |   -0.23924 | GB          | none        | none      | false             | Bronze        |         790.0 | 826545716
- 27147331741697745713411940873426 | Langley    |  51.888151 |   -0.23924 | GB          | none        | none      |                   | Bronze        |         790.0 | 826545716
- 27147331741697745713411940873426 | Langley    |  51.888151 |   -0.23924 | GB          | none        | none      |                   | Bronze        |         790.0 | 826545716
- 19806347932758146991274525406147 | Edinburgh  | 55.9309486 | -3.1859102 | GB          | none        | none      | false             | Gold          |         981.0 | 412492571
- 19806347932758146991274525406147 | Edinburgh  | 55.9309486 | -3.1859102 | GB          | none        | none      | false             | Gold          |         981.0 | 412492571
- 19806347932758146991274525406147 | Edinburgh  | 55.9309486 | -3.1859102 | GB          | none        | none      |                   | Gold          |         981.0 | 412492571
- 19806347932758146991274525406147 | Edinburgh  | 55.9309486 | -3.1859102 | GB          | none        | none      |                   | Gold          |         981.0 | 412492571
- 06339676267512351981624626408225 | Edinburgh  | 55.9309486 | -3.1859102 | GB          | none        | none      | false             | Bronze        |         632.0 | 024761880
- 06339676267512351981624626408225 | Edinburgh  | 55.9309486 | -3.1859102 | GB          | none        | none      | false             | Bronze        |         632.0 | 024761880
- 06339676267512351981624626408225 | Edinburgh  | 55.9309486 | -3.1859102 | GB          | none        | none      |                   | Bronze        |         632.0 | 024761880
- 06339676267512351981624626408225 | Edinburgh  | 55.9309486 | -3.1859102 | GB          | none        | none      |                   | Bronze        |         632.0 | 024761880
- 23933440740775575701680766564499 | Whitwell   | 54.3886617 |  -1.555363 | GB          | neutral     | contract  | true              | Gold          |         853.0 | 696923821
- 23933440740775575701680766564499 | Whitwell   | 54.3886617 |  -1.555363 | GB          | neutral     | contract  | true              | Gold          |         853.0 | 696923821
- 23933440740775575701680766564499 | Whitwell   | 54.3886617 |  -1.555363 | GB          | neutral     | contract  |                   | Gold          |         853.0 | 696923821
- 23933440740775575701680766564499 | Whitwell   | 54.3886617 |  -1.555363 | GB          | neutral     | contract  |                   | Gold          |         853.0 | 696923821
- 11860828134020790182705892056898 | Norton     | 52.2679288 | -1.1202549 | GB          | none        | none      | false             | Gold          |         139.0 | 271933383
- 11860828134020790182705892056898 | Norton     | 52.2679288 | -1.1202549 | GB          | none        | none      | false             | Gold          |         139.0 | 271933383
- 11860828134020790182705892056898 | Norton     | 52.2679288 | -1.1202549 | GB          | none        | none      |                   | Gold          |         139.0 | 271933383
- 11860828134020790182705892056898 | Norton     | 52.2679288 | -1.1202549 | GB          | none        | none      |                   | Gold          |         139.0 | 271933383
-:
+ 60082543727227001177187726544992 | Normanton  |  52.643749 |  -0.622129 | GB          | neutral     | contract  | f                 | Bronze        |         430.0 | 117969439
+ 03250145103029549687906576330844 | Charlton   |   51.59119 |  -1.407848 | GB          | none        | none      | f                 | Silver        |         585.0 | 271570836
+ 87322786414150971711720565798532 | Whitwell   | 54.3886617 |  -1.555363 | GB          | none        | none      | f                 | Bronze        |         872.0 | 570762160
+ 46736059905281823751180777497223 | Edinburgh  | 55.9309486 | -3.1859102 | GB          | none        | none      | f                 | Gold          |         482.0 | 980678773
+ 81958524709959359235057647680790 | Linton     | 54.0542238 | -2.0215836 | GB          | none        | none      | f                 | Bronze        |         666.0 | 341873673
+ 24854602977644353049269284436324 | Tullich    | 57.4694803 | -3.1269422 | GB          | negative    | contract  | f                 | Bronze        |         418.0 | 831581327
+ 24854602977644353049269284436324 | Tullich    | 57.4694803 | -3.1269422 | GB          | negative    | contract  | f                 | Bronze        |         418.0 | 831581327
 ```
 
 I nästa steg kommer du att behålla frågan (kallas även **skapa tabell som markerad** eller **CTAS**) som en ny datauppsättning som du kommer att använda i Microsoft Power BI.

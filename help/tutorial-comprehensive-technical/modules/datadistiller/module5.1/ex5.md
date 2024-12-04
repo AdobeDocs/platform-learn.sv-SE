@@ -4,9 +4,9 @@ description: Frågetjänst - Power BI/Tableau
 kt: 5342
 doc-type: tutorial
 exl-id: c4e4f5f9-3962-4c8f-978d-059f764eee1c
-source-git-commit: b53ee64ae8438b8f48f842ed1f44ee7ef3e813fc
+source-git-commit: d9d9a38c1e160950ae755e352a54667c8a7b30f7
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '391'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ Lär dig hur du genererar datauppsättningar från frågeresultat
 Anslut Microsoft Power BI Desktop/Tableau direkt till Query Service
 Skapa en rapport i Microsoft Power BI Desktop/Tableau Desktop
 
-## Lektionssammanhang
+## Kontext
 
 Kommandoradsgränssnittet för att fråga efter data är spännande, men det visas inte bra. I den här lektionen vägleder vi dig genom ett rekommenderat arbetsflöde för hur du kan använda Microsoft Power BI Desktop/Tableau direkt i frågetjänsten för att skapa visuella rapporter för dina intressenter.
 
@@ -41,11 +41,11 @@ select /* enter your name */
        c.--aepTenantId--.interactionDetails.core.callCenterAgent.callContractCancelled as contractCancelled,
        l.--aepTenantId--.loyaltyDetails.level as loyaltystatus,
        l.--aepTenantId--.loyaltyDetails.points as loyaltypoints,
-       l.--aepTenantId--.identification.core.loyaltyId as crmid
+       l.--aepTenantId--.identification.core.crmId as crmid
 from   demo_system_event_dataset_for_website_global_v1_1 e
       ,demo_system_event_dataset_for_call_center_global_v1_1 c
-      ,demo_system_profile_dataset_for_loyalty_global_v1_1 l
-where  e.--aepTenantId--.demoEnvironment.brandName IN ('Luma Telco', 'Citi Signal')
+      ,demo_system_profile_dataset_for_crm_global_v1_1 l
+where  e.--aepTenantId--.demoEnvironment.brandName IN ('Citi Signal')
 and    e.web.webPageDetails.name in ('Cancel Service', 'Call Start')
 and    e.--aepTenantId--.identification.core.ecid = c.--aepTenantId--.identification.core.ecid
 and    l.--aepTenantId--.identification.core.ecid = e.--aepTenantId--.identification.core.ecid;
@@ -57,23 +57,23 @@ Du söker efter den programsats som körs i användargränssnittet för Adobe Ex
 
 Välj **Frågor**, gå till **Logg** och ange din ldap i sökfältet.
 
-![search-query-for-ctas.png](./images/search-query-for-ctas.png)
+![search-query-for-ctas.png](./images/searchqueryforctas.png)
 
-Markera frågan och klicka på **Utdatauppsättning**.
+Markera frågan och klicka på **Kör som CTAS**.
 
-![search-query-for-ctas.png](./images/search-query-for-ctasa.png)
+![search-query-for-ctas.png](./images/searchqueryforctasa.png)
 
-Ange `--aepUserLdap-- Callcenter Interaction Analysis` som namn och beskrivning för datauppsättningen och tryck på knappen **Kör fråga**
+Ange `--aepUserLdap-- Callcenter Interaction Analysis` som namn och beskrivning för datauppsättningen och klicka på **Kör som CTAS**.
 
-![create-ctas-dataset.png](./images/create-ctas-dataset.png)
+![create-ctas-dataset.png](./images/createctasdataset.png)
 
 Därför visas en ny fråga med statusen **Skickat**.
 
-![ctas-query-submitted.png](./images/ctas-query-submitted.png)
+![ctas-query-submitted.png](./images/ctasquerysubmitted.png)
 
 När du är klar visas en ny post för **datauppsättningen skapad** (du kan behöva uppdatera sidan).
 
-![ctas-dataset-created.png](./images/ctas-dataset-created.png)
+![ctas-dataset-created.png](./images/ctasdatasetcreated.png)
 
 Så snart datauppsättningen har skapats (vilket kan ta 5-10 minuter) kan du fortsätta med övningen.
 
