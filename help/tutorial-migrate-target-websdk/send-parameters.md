@@ -2,9 +2,9 @@
 title: Skicka parametrar - Migrera mål från at.js 2.x till Web SDK
 description: Lär dig hur du skickar parametrar för mbox, profile och entity till Adobe Target med Experience Platform Web SDK.
 exl-id: 7916497b-0078-4651-91b1-f53c86dd2100
-source-git-commit: d4308b68d6974fe47eca668dd16555d15a8247c9
+source-git-commit: f30d6434be69e87406326955b3821d07bd2e66c1
 workflow-type: tm+mt
-source-wordcount: '1478'
+source-wordcount: '1548'
 ht-degree: 0%
 
 ---
@@ -306,7 +306,7 @@ targetPageParams = function() {
 
 Inköpsinformation skickas till mål när fältgruppen `commerce` har `purchases.value` inställt på `1`. Orderns ID och ordersumman mappas automatiskt från objektet `order`. Om `productListItems`-arrayen finns används `SKU`-värdena för `productPurchasedId`.
 
-Exempel på SDK för plattformswebben med kommandot `sendEvent`:
+Exempel på plattformswebb-SDK med `sendEvent`:
 
 >[!BEGINTABS]
 
@@ -328,14 +328,24 @@ alloy("sendEvent", {
       "SKU": "SKU-00002"
     }, {
       "SKU": "SKU-00003"
-    }]
+    }],
+      "_experience": {
+          "decisioning": {
+              "propositions": [{
+                  "scope": "<your_mbox>"
+              }],
+              "propositionEventType": {
+                  "display": 1
+              }
+          }
+      }
   }
 });
 ```
 
 >[!TAB Taggar]
 
-I taggar använder du först ett [!UICONTROL XDM object]-dataelement för att mappa till XDM-fälten:
+I taggar använder du först ett [!UICONTROL XDM object]-dataelement för att mappa till de obligatoriska XDM-fälten (se JavaScript exempel) och valfritt anpassat omfång:
 
 ![Mappning till ett XDM-fält i ett XDM-objektdataelement](assets/params-tags-purchase.png){zoomable="yes"}
 
@@ -345,6 +355,13 @@ Ta sedan med din [!UICONTROL XDM object] i din [!UICONTROL Send event] [!UICONTR
 
 >[!ENDTABS]
 
+>[!IMPORTANT]
+>
+> `_experience.decisioning.propositionEventType` måste anges med `display: 1` för att anropet ska kunna användas för att öka ett Target-mått.
+
+>[!NOTE]
+>
+> Om du vill använda ett anpassat plats-/mbox-namn i målmåttsdefinitionen, till exempel `orderConfirmPage`, fyller du i `_experience.decisioning.propositions`-arrayen med ett anpassat omfång som i exemplet ovan.
 
 >[!NOTE]
 >
@@ -384,7 +401,8 @@ alloy("sendEvent", {
     "identityMap": {
       "GLOBAL_CUSTOMER_ID": [{
         "id": "TT8675309",
-        "authenticatedState": "authenticated"
+        "authenticatedState": "authenticated",
+        "primary": true
       }]
     }
   }
@@ -407,6 +425,12 @@ I datastreams Adobe Target-tjänst måste du ange [!UICONTROL Target Third Party
 ![Ange namnutrymmet för mål-ID för tredje part i datastream ](assets/params-tags-customerIdNamespaceInDatastream.png){zoomable="yes"}
 
 >[!ENDTABS]
+
+>[!NOTE]
+>
+> Adobe rekommenderar att du som primär identitet skickar namnutrymmen som representerar en person, t.ex. autentiserade identiteter.
+
+
 
 ## Exempel på Platform Web SDK
 
@@ -458,7 +482,8 @@ Nu när du förstår hur de olika Target-parametrarna mappas med Platform Web SD
         "identityMap": {
           "GLOBAL_CUSTOMER_ID": [{
             "id": "TT8675309",
-            "authenticatedState": "authenticated"
+            "authenticatedState": "authenticated",
+            "primary": true
           }]
         },
         "web": {
@@ -534,7 +559,8 @@ Nu när du förstår hur de olika Target-parametrarna mappas med Platform Web SD
         "identityMap": {
           "GLOBAL_CUSTOMER_ID": [{
             "id": "TT8675309",
-            "authenticatedState": "authenticated"
+            "authenticatedState": "authenticated",
+            "primary": true
           }]
         },
         "commerce": {
@@ -550,7 +576,17 @@ Nu när du förstår hur de olika Target-parametrarna mappas med Platform Web SD
           "SKU": "SKU-00002"
         }, {
           "SKU": "SKU-00003"
-        }]
+        }],
+        "_experience": {
+            "decisioning": {
+                "propositions": [{
+                    "scope": "<your_mbox>"
+                }],
+                "propositionEventType": {
+                    "display": 1
+                }
+            }
+        }
       }
     });
   </script>

@@ -5,9 +5,9 @@ user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
 auto-video-transcripts: true
-source-git-commit: b52630da0ff68b8784ebd70afd3472c39e984844
+source-git-commit: c49c3d4cdfd4fcfc930332a25b9fd5d5356e1004
 workflow-type: tm+mt
-source-wordcount: '942'
+source-wordcount: '947'
 ht-degree: 6%
 
 ---
@@ -50,6 +50,7 @@ ht-degree: 6%
    + [Översikt](/help/platform/ai-assistant/overview.md)
    + [Konfigurera åtkomst](/help/platform/ai-assistant/access.md)
    + [Rensa målgrupper](/help/platform/ai-assistant/find-unused-audiences.md)
+   + [Anmäl dig med en ny produkt](/help/platform/ai-assistant/onboard.md)
 + Målgrupper och segmentering {#audiences}
    + [Introduktion till Audience Portal and Composition](audiences/introduction-to-audience-portal-and-composition.md)
    + [Överför målgrupper](audiences/upload-audiences.md)
