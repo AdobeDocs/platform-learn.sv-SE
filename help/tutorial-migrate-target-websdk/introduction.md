@@ -3,9 +3,9 @@ title: Migrera mål från at.js 2.x till Web SDK
 description: Lär dig migrera en Adobe Target-implementering från at.js 2.x till Adobe Experience Platform Web SDK. Exempel på ämnen är att läsa in JavaScript-biblioteket, skicka parametrar, renderingsaktiviteter och andra viktiga bildtexter.
 last-substantial-update: 2023-02-23T00:00:00Z
 exl-id: c8920fde-ad6b-4f2d-a35f-ce865b35bba0
-source-git-commit: eebe598e55228d038dfc2adb97df0f8ff03748ac
+source-git-commit: 485e79e3569052184475fbc49ab5f43cebcac9a6
 workflow-type: tm+mt
-source-wordcount: '556'
+source-wordcount: '533'
 ht-degree: 0%
 
 ---
@@ -23,12 +23,10 @@ Några av fördelarna med Platform Web SDK jämfört med det fristående at.js-b
 * Snabbare delning av målgrupper från [Real-time Customer Data Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/experience-cloud/next-hit-personalization.html)
 * Integrera Target med Journey Optimizer för att stödja [leverans av Offer decisioning](https://experienceleague.adobe.com/docs/target/using/integrate/ajo/offer-decision.html)
 * Möjlighet att använda [ID:n för första part](https://experienceleague.adobe.com/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids.html) för att generera ECID:t för besöksidentifiering med längre varaktighet
-* Konsolidering av nätverksanrop mellan olika Adobe-program
 * Mindre utrymme för bättre sidhastighetsmätningar
-* Bättre integrering med Adobe Analytics som inte förlitar sig på att sammanfoga information från separata nätverksanrop
 * Ytterligare implementeringsflexibilitet för utvecklare
 
-Den största fördelen för Target-kunder med migrering är förmodligen integrering med Real-time Customer Data Platform. Real-Time CDP erbjuder enastående målgruppsfunktioner baserat på alla data som inhämtas till Experience Platform och dess kapacitet för kundprofiler i realtid. Ett inbyggt ramverk för datastyrning automatiserar ansvarsfull användning av dessa data. Med Customer AI kan ni enkelt använda maskininlärningsmodeller för att konstruera benägenhets- och bortfallsmodeller vars utdata kan delas tillbaka till Adobe Target. Slutligen kan kunder som har tillvalet Healthcare and Privacy &amp; Security Shield använda funktionen för medgivande för att enkelt tillämpa individuella kunders samtycke. Platform Web SDK är ett krav för att använda dessa RTCDP-funktioner i din webbkanal.
+Den största fördelen för Target-kunder med migrering är förmodligen integrering med Real-time Customer Data Platform. Real-Time CDP erbjuder enastående målgruppsfunktioner baserat på alla data som inhämtas till Experience Platform och dess kapacitet för kundprofiler i realtid. Ett inbyggt ramverk för datastyrning automatiserar ansvarsfull användning av dessa data. Med Customer AI kan ni enkelt använda maskininlärningsmodeller för att konstruera benägenhets- och bortfallsmodeller vars utdata kan delas tillbaka till Adobe Target. Slutligen kan kunder som har tillvalet Healthcare and Privacy &amp; Security Shield använda funktionen för medgivande för att enkelt tillämpa individuella kunders samtycke. Platform Web SDK är ett krav för att använda dessa Real-Time CDP-funktioner i din webbkanal.
 
 ## Utbildningsmål
 
