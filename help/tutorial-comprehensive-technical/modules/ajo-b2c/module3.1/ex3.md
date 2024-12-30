@@ -1,125 +1,228 @@
 ---
-title: Uppdatera ditt konfigurations-ID och testa din resa
-description: Uppdatera ditt konfigurations-ID och testa din resa
+title: Journey Optimizer Skapa en resa och ett e-postmeddelande
+description: Journey Optimizer Skapa ditt e-postmeddelande
 kt: 5342
 doc-type: tutorial
 exl-id: 6807f93d-bd44-4f63-8005-6819c9f5f1ed
-source-git-commit: 0dbcda0cfc9f199a44c845c1b5caf00a8d740251
+source-git-commit: f843c50af04d744a7d769f320b5b55a5e6d25ffd
 workflow-type: tm+mt
-source-wordcount: '610'
+source-wordcount: '1301'
 ht-degree: 0%
 
 ---
 
-# 3.1.3 Uppdatera din datainsamlingsegenskap och testa din resa
+# 3.1.3 Skapa din resa, dina fragment och ditt meddelande
 
-## 3.1.3.1 Uppdatera egenskapen för datainsamling
+I den här övningen ska du konfigurera resan och det meddelande som ska utlösas när någon skapar ett konto på demowebbplatsen.
 
-Gå till [Adobe Experience Platform Data Collection](https://experience.adobe.com/launch/) och välj **Taggar**.
+Logga in på Adobe Journey Optimizer på [Adobe Experience Cloud](https://experience.adobe.com). Klicka på **Journey Optimizer**.
 
-Det här är egenskapssidan för Adobe Experience Platform Data Collection som du såg tidigare.
+![ACOP](./images/acophome.png)
 
-![Sidan Egenskaper](./../../../modules/datacollection/module1.1/images/launch1.png)
+Du omdirigeras till vyn **Hem** i Journey Optimizer. Kontrollera först att du använder rätt sandlåda. Sandlådan som ska användas kallas `--aepSandboxName--`.
 
-I modul 0 skapade Demo System två klientegenskaper åt dig: en för webbplatsen och en för mobilappen. Sök efter dem genom att söka efter `--aepUserLdap--` i rutan **[!UICONTROL Search]**. Klicka för att öppna egenskapen **Webb**.
+![ACOP](./images/acoptriglp.png)
 
-![Sökruta](./../../../modules/datacollection/module1.1/images/property6.png)
+## 3.1.3.1 Skapa din resa
 
-Då ser du det här.
+Klicka på **Resor** på den vänstra menyn. Klicka sedan på **Skapa resa** för att skapa en ny resa.
 
-![Starta installationsprogrammet](./images/rule1.png)
+![ACOP](./images/createjourney.png)
 
-Gå till **Regler** på den vänstra menyn och sök efter regeln **Registrera profil**. Klicka på regeln **Registrera profil** för att öppna den.
+Då ser du en tom skärm för resan.
 
-![Starta installationsprogrammet](./images/rule2.png)
+![ACOP](./images/journeyempty.png)
 
-Då ser du detaljerna om den här regeln. Klicka för att öppna åtgärden **Skicka&quot;Registreringshändelse&quot; till AEP - utlösa JO**.
+I föregående övning skapade du en ny **Event**. Du gav den ett namn som detta `--aepUserLdap--AccountCreationEvent` och ersatte `ldap` med din ldap. Detta var resultatet av händelseskapandet:
 
-![Starta installationsprogrammet](./images/rule3.png)
+![ACOP](./images/eventdone.png)
 
-Du kommer då att se att när den här åtgärden utlöses används ett specifikt dataelement för att definiera XDM-datastrukturen. Du måste uppdatera det dataelementet och du måste definiera **händelse-ID** för händelsen som du konfigurerade i [övning 7.1](./ex1.md).
+Du måste nu ta det här evenemanget som början på den här resan. Du kan göra detta genom att gå till vänster på skärmen och söka efter händelsen i listan med händelser.
 
-![Starta installationsprogrammet](./images/rule4.png)
+![ACOP](./images/eventlist.png)
 
-Du måste nu uppdatera dataelementet **XDM - registreringshändelse**. Gå till **Dataelement** om du vill göra det. Sök efter **XDM - Registreringshändelse** och klicka för att öppna det dataelementet.
+Markera händelsen, dra och släpp den på arbetsytan på resan. Din resa ser nu ut så här:
 
-![Starta installationsprogrammet](./images/rule5.png)
+![ACOP](./images/journeyevent.png)
 
-Då ser du det här:
+Som det andra steget i resan måste du lägga till ett kort **Vänta**-steg. Gå till vänster på skärmen till avsnittet **Orchestration** om du vill hitta det här. Du kommer att använda profilattribut och måste se till att de är ifyllda i kundprofilen i realtid.
 
-![Starta installationsprogrammet](./images/rule6.png)
+![ACOP](./images/journeywait.png)
 
-Navigera till fältet `_experience.campaign.orchestration.eventID`. Ta bort det aktuella värdet och klistra in ditt eventID där.
+Din resa ser nu ut så här. Till höger på skärmen måste du konfigurera väntetiden. Ställ in den på 1 minut. Detta ger mycket tid för profilattributen att vara tillgängliga när händelsen har utlösts. Klicka på **Spara** för att spara ändringarna.
 
-Händelse-ID:t finns i Adobe Journey Optimizer under **Konfigurationer > Händelser** och du hittar händelse-ID:t i exempelnyttolasten för din jämna, som ser ut så här: `"eventID": "227402c540eb8f8855c6b2333adf6d54d7153d9d7d56fa475a6866081c574736"`.
+![ACOP](./images/journeywait1.png)
 
-![ACOP](./images/payloadeventID.png)
+Som det tredje steget på resan måste du lägga till en **e-poståtgärd**. Gå till vänster på skärmen till **Åtgärder**, välj åtgärden **E-post** och dra och släpp den på den andra noden på resan. Nu ser du det här.
 
-När du har klistrat in ditt eventID bör skärmen se ut så här. Klicka sedan på **Spara** eller **Spara i bibliotek**.
+![ACOP](./images/journeyactions.png)
 
-![Starta installationsprogrammet](./images/rule7.png)
+Ange **kategorin** till **Marknadsföring** och välj en e-postkonfiguration som gör att du kan skicka e-post. I det här fallet är e-postkonfigurationen som ska väljas **E-post**. Kontrollera att kryssrutorna för **klick på e-post** och **e-post** är aktiverade.
 
-Slutligen måste du publicera ändringarna. Gå till **Publiceringsflöde** på den vänstra menyn.
+![ACOP](./images/journeyactions1.png)
 
-![Starta installationsprogrammet](./images/rule8.png)
+## 3.1.3.2 Skapa ett meddelande
 
-Klicka på **Lägg till alla ändrade resurser** och sedan på **Spara och skapa i utveckling**.
+Klicka på **Redigera innehåll** om du vill skapa ditt meddelande.
 
-![Starta installationsprogrammet](./images/rule9.png)
+![ACOP](./images/journeyactions2.png)
 
-Biblioteket uppdateras sedan och efter 1-2 minuter kan du testa konfigurationen.
+Nu ser du det här.
 
-## 3.1.3.2 Testa din resa
+![ACOP](./images/journeyactions3.png)
 
-Gå till [https://builder.adobedemo.com/projects](https://builder.adobedemo.com/projects). När du har loggat in med din Adobe ID ser du det här. Klicka på webbplatsprojektet för att öppna det.
+Klicka på ikonen **Öppna dialogrutan för anpassning**.
 
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web8.png)
+![Journey Optimizer](./images/msg5.png)
 
-Du kommer då att se din demowebbplats öppnas. Markera URL-adressen och kopiera den till Urklipp.
+Skriv texten `Hi `. Därefter måste du hämta en personaliseringstoken för fältet **Förnamn** som lagras under `profile.person.name.firstName`. Navigera till fältet **Person > Fullständigt namn > Förnamn** på den vänstra menyn och klicka på ikonen **+** . Sedan visas personaliseringstoken i textfältet.
 
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web3.png)
+![Journey Optimizer](./images/msg9.png)
 
-Öppna ett nytt inkognito-webbläsarfönster.
+Lägg sedan till texten **, tack för att du registrerar dig!**. Klicka på **Spara**.
 
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web4.png)
+![Journey Optimizer](./images/msg10.png)
 
-Klistra in webbadressen till demowebbplatsen, som du kopierade i föregående steg. Du ombeds sedan logga in med din Adobe ID.
+Nu kan du börja konfigurera brödtexten i ditt e-postmeddelande. Klicka på **Redigera e-postbrödtext**.
 
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web5.png)
+![Journey Optimizer](./images/msg11.png)
 
-Välj kontotyp och slutför inloggningsprocessen.
+Innan du börjar skapa innehållet i själva meddelandet är det en bra idé att tänka på innehållet i meddelandet. En del av innehållet i meddelandet är unikt för själva meddelandet, men andra delar är standardkomponenter som troligen är desamma för alla e-postmeddelanden som du skickar till kunderna.
 
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web6.png)
+I föregående övning skapade du dessa standardkomponenter som fragment i Journey Optimizer, som du nu kan referera till i det här meddelandet och alla andra framtida meddelanden som du kommer att skapa.
 
-Därefter visas webbplatsen i ett inkognitivt webbläsarfönster. För varje demonstration måste du använda ett nytt, inkognitivt webbläsarfönster för att läsa in webbadressen till demowebbplatsen.
+På nästa skärm får du tre olika metoder för att ange e-postens innehåll:
 
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web7.png)
+- **Designa från grunden**: Börja med en tom arbetsyta och använd WYSIWYG-redigeraren för att dra och släppa struktur och innehållskomponenter för att visuellt bygga upp e-postens innehåll.
+- **Koda din egen**: Skapa en egen e-postmall genom att koda den med HTML
+- **Importera HTML**: Importera en befintlig HTML-mall som du kan redigera.
 
-Klicka på logotypikonen för Adobe i det övre vänstra hörnet av skärmen för att öppna profilvisningsprogrammet.
+Klicka på **Skapa från grunden**.
 
-![Demo](./../../../modules/datacollection/module1.2/images/pv1.png)
+![Journey Optimizer](./images/msg12.png)
 
-Ta en titt på panelen Profilvisningsprogram och kundprofilen i realtid med **Experience Cloud ID** som primär identifierare för den okända kunden.
+På den vänstra menyn hittar du de strukturkomponenter som du kan använda för att definiera e-postmeddelandets struktur (rader och kolumner).
 
-![Demo](./../../../modules/datacollection/module1.2/images/pv2.png)
+![Journey Optimizer](./images/msg13.png)
 
-Gå till sidan Register/Login. Klicka på **SKAPA ETT KONTO**.
+Du hittar också **Fragment** i den vänstra menyn, där du kan se fragmenten som du skapade tidigare.
 
-![Demo](./../../../modules/datacollection/module1.2/images/pv9.png)
+![Journey Optimizer](./images/msg14.png)
 
-Fyll i dina uppgifter och klicka på **Registrera**. Sedan dirigeras du om till föregående sida.
+Innan du kan lägga till sidhuvud och sidfot på arbetsytan måste du lägga till två strukturer i e-postmeddelandet. Klicka på ikonen **+** i den vänstra menyn och dra 2 **- kolumn** -komponenter till arbetsytan.
 
-![Demo](./../../../modules/datacollection/module1.2/images/pv10.png)
+![Journey Optimizer](./images/msg14a.png)
 
-Öppna profilvisarpanelen och gå till kundprofilen i realtid. På panelen Profilvisningsprogram ska du se alla dina personuppgifter visas, som dina nya e-post- och telefonidentifierare.
+Gå tillbaka till **Fragment** på den vänstra menyn. Dra och släpp sidhuvudsfragmentet i den första komponenten och sidfotsfragmentet i den andra komponenten. Då ser du det här.
 
-![Demo](./../../../modules/datacollection/module1.2/images/pv11.png)
+![Journey Optimizer](./images/msg15.png)
 
-1 minut efter att du har skapat ditt konto får du ett e-postmeddelande från Adobe Journey Optimizer om att du har skapat kontot.
+Klicka på ikonen **+** på den vänstra menyn och dra och släpp ytterligare två **1:1 kolumn** -komponenter på arbetsytan, mellan sidhuvudet och sidfoten.
 
-![Starta installationsprogrammet](./images/email.png)
+![Journey Optimizer](./images/msg16.png)
 
-Nästa steg: [Sammanfattning och förmåner](./summary.md)
+Dra och släpp en **bild**-komponent i den första **1:1-kolumnen** . Klicka på **Bläddra**.
+
+![Journey Optimizer](./images/msg17.png)
+
+I mappen **citi-signal-images**. Markera bilden **`welcome_email_image.png`** och klicka på **Markera**.
+
+![Journey Optimizer](./images/msg28.png)
+
+Då får du den här:
+
+![Journey Optimizer](./images/msg30.png)
+
+Gå sedan till **Innehåll** och dra och släpp en **Text** -komponent i strukturkomponenten på den fjärde raden.
+
+![Journey Optimizer](./images/msg33.png)
+
+Välj standardtexten **Skriv texten här.** som du skulle göra med en textredigerare. Skriv **Välkommen till familjen,** i stället. Klicka på ikonen **Lägg till anpassning** i verktygsfältet.
+
+![Journey Optimizer](./images/msg34.png)
+
+Därefter måste du hämta en **förnamn**-personaliseringstoken som lagras under `profile.person.name.firstName`. Leta reda på elementet **Person** på menyn, gå ned till elementet **Fullständigt namn** och klicka sedan på ikonen **+** för att lägga till fältet Förnamn i uttrycksredigeraren.
+
+Klicka på **Spara**.
+
+![Journey Optimizer](./images/msg36.png)
+
+Nu kommer du att märka hur personaliseringsfältet har lagts till i texten.
+
+![Journey Optimizer](./images/msg37.png)
+
+I samma textfält trycker du på **Retur** två gånger för att lägga till två rader och kopiera och klistra in följande text:
+
+```
+Welcome aboard! We're thrilled to have you join the CitiSignal family. 
+As a valued member of our community, you're now poised to experience top-notch telecommunications services that cater to your every need.
+
+At CitiSignal, we understand that staying connected is more than just a convenience - it's a necessity. Whether you're browsing the web, streaming your favourite content, or keeping in touch with loved ones, we're here to ensure you have the best tools and resources at your fingertips.
+```
+
+![Journey Optimizer](./images/msg38.png)
+
+Ange att **textjusteringen** ska centreras och justera sedan utseendet och känslan i meddelandet efter dina egna behov. Klicka på **Spara** när du är klar.
+
+![Journey Optimizer](./images/msg39.png)
+
+Den sista kontrollen som utförs för att se till att e-postmeddelandet är klart är att förhandsgranska det. Klicka på knappen **Simulera innehåll** .
+
+![Journey Optimizer](./images/msg50.png)
+
+Innan du kan simulera e-postmeddelandet måste du lägga till en testprofil. Klicka på **Hantera testprofiler**.
+
+![Journey Optimizer](./images/test1.png)
+
+Markera namnutrymmet **email** genom att klicka på ikonen bredvid fältet **Ange ID-namnområde**.
+
+Markera namnutrymmet **E-post** i listan med identitetsnamnutrymmen. I fältet **Identitetsvärde** anger du e-postadressen för en tidigare profil som du använde i en tidigare övning och som redan är lagrad i Adobe Experience Platform. Klicka på **Lägg till profil**. Gå tillbaka till föregående skärm.
+
+![Journey Optimizer](./images/msg53.png)
+
+Du kommer då att se ditt e-postmeddelande, som nu simuleras för den här kundprofilen. Du kan nu validera personaliseringen i ämnesraden och brödtexten och skicka ett e-postkorrektur om du vill.
+
+Klicka på **Stäng** för att stänga förhandsgranskningen.
+
+![Journey Optimizer](./images/msg54.png)
+
+Klicka på **Spara** för att spara meddelandet och gå tillbaka till meddelandeinstrumentpanelen genom att klicka på **pilen** bredvid texten på ämnesraden i det övre vänstra hörnet.
+
+![Journey Optimizer](./images/msg55.png)
+
+Klicka på **pilen** för att gå tillbaka till din resa.
+
+![Journey Optimizer](./images/msg57a.png)
+
+## 3.1.3.3 Publish din resa
+
+Klicka på **Spara**.
+
+![Journey Optimizer](./images/msg58.png)
+
+Du måste fortfarande ge din resa ett namn. Du kan göra det genom att klicka på ikonen **Egenskaper** längst upp till höger på skärmen.
+
+![ACOP](./images/journeyname.png)
+
+Du kan sedan ange resans namn här. Använd `--aepUserLdap-- - Registration Journey`. Klicka på **Spara**.
+
+![ACOP](./images/journeyname1.png)
+
+Nu kan du publicera din resa genom att klicka på **Publish**.
+
+![ACOP](./images/publishjourney.png)
+
+Klicka på **Publish** igen.
+
+![ACOP](./images/publish1.png)
+
+Efter ett par minuter ändras statusen för din resa till **Live** och du ser en realtidsöversikt över hur din resa presterar.
+
+![ACOP](./images/published.png)
+
+Du har nu avslutat den här övningen.
+
+Nästa steg: [3.1.4 Uppdatera din datainsamlingsegenskap och testa din resa](./ex4.md)
 
 [Gå tillbaka till modul 3.1](./journey-orchestration-create-account.md)
 

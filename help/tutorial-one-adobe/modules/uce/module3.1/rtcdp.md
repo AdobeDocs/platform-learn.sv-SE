@@ -1,0 +1,37 @@
+---
+title: 3.1 Adobe Real-Time CDP
+description: Adobe Real-Time CDP
+kt: 5342
+doc-type: tutorial
+source-git-commit: 1077ada5423cde76d1dd337e8a4f8f83324a8853
+workflow-type: tm+mt
+source-wordcount: '100'
+ht-degree: 1%
+
+---
+
+# 3.1 Adobe Real-Time CDP
+
+## Utbildningsmål
+
+- Lär dig använda Adobe Real-Time CDP på olika sätt.
+
+## Förhandskrav
+
+- Tillgång till Adobe Real-Time CDP
+
+## Utövningar
+
+[3.1.1 Real-Time CDP](./ex1.md)
+
+I den här övningen ...
+
+[Sammanfattning och fördelar](./summary.md)
+
+Sammanfattning av den här modulen och en översikt över fördelarna.
+
+>[!NOTE]
+>
+>Tack för att du lägger ned din tid på att lära dig allt om Adobe Experience Platform och dess program. Om du har frågor kan du dela allmän feedback om dina förslag på framtida innehåll. Kontakta Tech Insiders direkt genom att skicka ett e-postmeddelande till **techinsiders@adobe.com**.
+
+[Gå tillbaka till Alla moduler](../../../overview.md)

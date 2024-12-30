@@ -3,9 +3,10 @@ title: Journey Optimizer Create your event
 description: Journey Optimizer Create your event
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: b132ad78-aaa3-458d-9895-0935f8ba88bb
+source-git-commit: f843c50af04d744a7d769f320b5b55a5e6d25ffd
 workflow-type: tm+mt
-source-wordcount: '457'
+source-wordcount: '404'
 ht-degree: 0%
 
 ---
@@ -16,7 +17,7 @@ Logga in på Adobe Journey Optimizer på [Adobe Experience Cloud](https://experi
 
 ![ACOP](./images/acophome.png)
 
-Du omdirigeras till vyn **Hem** i Journey Optimizer. Kontrollera först att du använder rätt sandlåda. Sandlådan som ska användas kallas `--aepSandboxName--`. Om du vill ändra från en sandlåda till en annan klickar du på **PRODUKTIONSprodukt (VA7)** och väljer sandlådan i listan. I det här exemplet heter sandlådan **AEP Enablement FY22**. Du kommer sedan att vara i vyn **Hem** i din sandlåda `--aepSandboxName--`.
+Du omdirigeras till vyn **Hem** i Journey Optimizer. Kontrollera först att du använder rätt sandlåda. Sandlådan som ska användas kallas `--aepSandboxName--`.
 
 ![ACOP](./images/acoptriglp.png)
 
@@ -33,18 +34,11 @@ Ett nytt, tomt händelsefönster öppnas sedan.
 ![ACOP](./images/emptyevent1.png)
 
 Först och främst ger du evenemanget ett namn som detta: `--aepUserLdap--AccountCreationEvent`.
-
-![ACOP](./images/eventname.png)
-
-Lägg sedan till en beskrivning som denna `Account Creation Event`.
+Ange beskrivningen till `Account Creation Event`, kontrollera att **Type** är inställd på **Unitary** och välj **System Generated** för valet **Event ID Type**.
 
 ![ACOP](./images/eventdescription.png)
 
-Kontrollera sedan att **Type** är inställd på **Unitary** och välj **System Generated** för **Event ID Type** -markeringen.
-
-![ACOP](./images/eventidtype.png)
-
-Nästa steg är schemavalet. Ett schema förbereddes för den här övningen. Använd schemat `Demo System - Event Schema for Website (Global v1.1) v.1`.
+Nästa steg är schemavalet. Använd schemat `Demo System - Event Schema for Website (Global v1.1) v.1`.
 
 ![ACOP](./images/eventschema.png)
 
@@ -60,21 +54,13 @@ I objektet `--aepTenantId--.demoEnvironment` måste du markera fälten **brandLo
 
 ![ACOP](./images/eventpayloadbr.png)
 
-Markera fältet **email** i objektet `--aepTenantId--.identification.core`.
+Markera fältet **email** i objektet `--aepTenantId--.identification.core`. Klicka på **OK** om du vill spara ändringarna.
 
 ![ACOP](./images/eventpayloadbrid.png)
 
-Klicka på **OK** om du vill spara ändringarna.
-
-![ACOP](./images/saveok.png)
-
-Du bör då se det här:
+Du borde se det här då. Ange **Namespace** som **ECID (ECID)**. Klicka på **Spara**.
 
 ![ACOP](./images/eventsave.png)
-
-Klicka på **Spara** en gång till för att spara ändringarna.
-
-![ACOP](./images/save1.png)
 
 Din händelse är nu konfigurerad och sparad.
 
@@ -90,16 +76,20 @@ Nu visas ett exempel på den förväntade nyttolasten.
 
 Händelsen har ett unikt ID för Orchestration-händelse som du kan hitta genom att rulla nedåt i nyttolasten tills du ser `_experience.campaign.orchestration.eventID`.
 
+Händelse-ID är det som måste skickas till Adobe Experience Platform för att utlösa den resa som du ska bygga härnäst. Kom ihåg detta eventID, som du kommer att behöva det i någon av de följande övningarna.
+`"eventID": "5ae9b8d3f68eb555502b0c07d03ef71780600c4bd0373a4065c692ae0bfbd34d"`
+
+Klicka på **OK**.
+
 ![ACOP](./images/payloadeventID.png)
 
-Händelse-ID är det som måste skickas till Adobe Experience Platform för att utlösa den resa som du bygger i Exercise 7.2. Kom ihåg detta eventID, som du behöver det i Exercise 7.3.
-`"eventID": "227402c540eb8f8855c6b2333adf6d54d7153d9d7d56fa475a6866081c574736"`
+Klicka på **Avbryt**.
 
-Klicka på **OK** och sedan på **Avbryt**.
+![ACOP](./images/payloadeventID1.png)
 
 Du har nu avslutat den här övningen.
 
-Nästa steg: [3.1.2 Journey Optimizer: Skapa din resa och ditt e-postmeddelande](./ex2.md)
+Nästa steg: [3.1.2 Skapa fragment som ska användas i meddelandet](./ex2.md)
 
 [Gå tillbaka till modul 3.1](./journey-orchestration-create-account.md)
 

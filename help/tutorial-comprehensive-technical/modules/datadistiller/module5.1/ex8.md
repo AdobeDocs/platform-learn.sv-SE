@@ -4,7 +4,7 @@ description: Frågetjänst - API för frågetjänst
 kt: 5342
 doc-type: tutorial
 exl-id: d356f7e2-523b-41a2-9cc6-1ea2a028c3a7
-source-git-commit: d9d9a38c1e160950ae755e352a54667c8a7b30f7
+source-git-commit: f843c50af04d744a7d769f320b5b55a5e6d25ffd
 workflow-type: tm+mt
 source-wordcount: '982'
 ht-degree: 1%
@@ -91,7 +91,7 @@ Gå till avsnittet **Brödtext** i den här begäran. I **brödtexten** i den h�
     "name" : "ldap - QS API demo - Citi Signal - Product Views Per Day",
 	"description": "ldap - QS API demo - Citi Signal - Product Views Per Day",
 	"dbName": "--aepSandboxName--:all",
-	"sql": "select date_format( timestamp , 'yyyy-MM-dd') AS Day, count(*) AS productViews from demo_system_event_dataset_for_website_global_v1_1 where _experienceplatform.demoEnvironment.brandName IN ('Citi Signal') and eventType = 'commerce.productViews' group by Day limit 10"
+	"sql": "select date_format( timestamp , 'yyyy-MM-dd') AS Day, count(*) AS productViews from demo_system_event_dataset_for_website_global_v1_1 where --aepTenantId--.demoEnvironment.brandName IN ('Citi Signal') and eventType = 'commerce.productViews' group by Day limit 10"
 }
 ```
 

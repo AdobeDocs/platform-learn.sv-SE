@@ -4,18 +4,16 @@ description: Adobe Journey Optimizer
 kt: 5342
 doc-type: tutorial
 exl-id: 73812caa-29a1-4931-944d-9651c6de2c19
-source-git-commit: 0dbcda0cfc9f199a44c845c1b5caf00a8d740251
+source-git-commit: f843c50af04d744a7d769f320b5b55a5e6d25ffd
 workflow-type: tm+mt
-source-wordcount: '261'
+source-wordcount: '268'
 ht-degree: 0%
 
 ---
 
 # 3.1 Adobe Journey Optimizer: Orchestration
 
-**Författare: [Rob In der Maur](https://www.linkedin.com/in/ridmaur/), [Wouter Van Geluwe](https://www.linkedin.com/in/woutervangeluwe/)**
-
-I den här modulen går vi igenom de olika stegen för att använda Adobe Journey Optimizer. Du får tillgång till Adobe Journey Optimizer och kan konfigurera händelser och resor som börjar baserat på en utlösare från en upplevelsehändelse som skickas till Platform.
+I den här modulen går vi igenom de olika stegen för att använda Adobe Journey Optimizer. Du konfigurerar händelser och resor som börjar baserat på en utlösare från en upplevelsehändelse som skickas till AEP.
 
 ## Utbildningsmål
 
@@ -37,11 +35,15 @@ I den här modulen går vi igenom de olika stegen för att använda Adobe Journe
 
 I den här övningen får du lära dig hur du konfigurerar en händelse.
 
-[3.1.2 Skapa din resa och ditt e-postmeddelande](./ex2.md)
+[3.1.2 Skapa fragment som ska användas i ditt meddelande](./ex2.md)
+
+I den här övningen får du lära dig hur du konfigurerar återanvändbara fragment som du använder när du skapar e-postmeddelanden.
+
+[3.1.3 Skapa din resa och ditt e-postmeddelande](./ex3.md)
 
 I den här övningen får du lära dig hur du konfigurerar ett e-postmeddelande.
 
-[3.1.3 Uppdatera din datainsamlingsegenskap och testa din resa](./ex3.md)
+[3.1.3 Uppdatera din datainsamlingsegenskap och testa din resa](./ex4.md)
 
 Detta vägleder dig genom konfigurationen av Launch för att utlösa din händelse och tillhandahålla rätt nyttolast, och slutligen kan du skicka ett e-postmeddelande till dig själv.
 
