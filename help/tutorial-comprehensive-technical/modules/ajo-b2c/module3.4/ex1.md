@@ -4,9 +4,9 @@ description: I det här avsnittet konfigurerar du en utlösarbaserad resa - orde
 kt: 5342
 doc-type: tutorial
 exl-id: b9d9b357-08d1-4f65-9e0b-46224d035602
-source-git-commit: 0dbcda0cfc9f199a44c845c1b5caf00a8d740251
+source-git-commit: c531412a2c0a5c216f49560e01fb26b9b7e71869
 workflow-type: tm+mt
-source-wordcount: '1990'
+source-wordcount: '1920'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 Logga in på Adobe Journey Optimizer på [Adobe Experience Cloud](https://experience.adobe.com). Klicka på **Journey Optimizer**.
 
-![ACOP](./../../../modules/ajo-b2c/module3.2/images/acophome.png)
+![ACOP](./../../../modules/ajo-b2c/module3.1/images/acophome.png)
 
-Du omdirigeras till vyn **Hem** i Journey Optimizer. Kontrollera först att du använder rätt sandlåda. Sandlådan som ska användas kallas `--aepSandboxName--`. Om du vill ändra från en sandlåda till en annan klickar du på **PRODUKTIONSprodukt (VA7)** och väljer sandlådan i listan. I det här exemplet heter sandlådan **AEP Enablement FY22**. Du kommer sedan att vara i vyn **Hem** i din sandlåda `--aepSandboxName--`.
+Du omdirigeras till vyn **Hem** i Journey Optimizer. Kontrollera först att du använder rätt sandlåda. Sandlådan som ska användas kallas `--aepSandboxName--`. Du kommer sedan att vara i vyn **Hem** i din sandlåda `--aepSandboxName--`.
 
-![ACOP](./../../../modules/ajo-b2c/module3.2/images/acoptriglp.png)
+![ACOP](./../../../modules/ajo-b2c/module3.1/images/acoptriglp.png)
 
 ## 3.4.1.1 Skapa en händelse
 
@@ -33,23 +33,14 @@ På skärmen **Händelser** ser du en liknande vy. Klicka på **Skapa händelse*
 
 Därefter visas en tom händelsekonfiguration.
 
-![Journey Optimizer](./images/oc32.png)
-
 Först och främst ger du evenemanget ett namn som detta: `--aepUserLdap--PurchaseEvent`, och lägger till en beskrivning som detta: `Purchase Event`.
 
-![Journey Optimizer](./images/oc34.png)
-
-Nästa steg är markeringen **Händelsetyp**. Välj **Enhet**.
-
-![Journey Optimizer](./images/eventidtype1.png)
-
-Nästa steg är **Typ av händelse-ID**. Välj **Systemgenererad**
+För **Type** väljer du **Unitary**.
+Välj **System Generated** för **händelse-ID-typ**.
 
 ![Journey Optimizer](./images/eventidtype.png)
 
 Nästa steg är schemavalet. Ett schema förbereddes för den här övningen. Använd schemat `Demo System - Event Schema for Website (Global v1.1) v.1`.
-
-![Journey Optimizer](./images/oc35.png)
 
 När du har valt schemat visas ett antal fält som markeras i avsnittet **Nyttolast**. Klicka på ikonen **Redigera/Penna** om du vill lägga till fler fält i den här händelsen.
 
@@ -63,21 +54,19 @@ Markera kryssrutan på rad `--aepTenantId--` först.
 
 ![Journey Optimizer](./images/oc38.png)
 
-Bläddra sedan nedåt och markera kryssrutan på raden `productListItems`.
-
-![Journey Optimizer](./images/oc39.png)
-
 Bläddra sedan nedåt och markera kryssrutan på raden `commerce`.
 
 ![Journey Optimizer](./images/oc391.png)
 
-Klicka sedan på **OK**.
+Bläddra sedan nedåt och markera kryssrutan på raden `productListItems`. Klicka på **OK**.
+
+![Journey Optimizer](./images/oc39.png)
 
 Därefter ser du att fler fält har lagts till i händelsen. Klicka på **Spara**.
 
 ![Journey Optimizer](./images/oc40.png)
 
-Din nya aktivitet delas sedan och du ser din aktivitet i listan över tillgängliga händelser nu.
+Din nya aktivitet sparas sedan och du ser din aktivitet i listan över tillgängliga händelser nu.
 
 Klicka på aktiviteten igen för att öppna skärmen **Redigera händelse** igen.
 Håll pekaren över fältet **Nyttolast** igen för att se de tre ikonerna igen. Klicka på ikonen **Visa nyttolast** .
@@ -89,7 +78,7 @@ Nu visas ett exempel på den förväntade nyttolasten. Händelsen har ett unikt 
 ![Journey Optimizer](./images/oc42.png)
 
 Händelse-ID är det som måste skickas till Adobe Journey Optimizer för att utlösa den resa som du bygger i nästa steg. Skriv ned detta eventID, som du behöver i ett av de följande stegen.
-`"eventID": "ef6dd943c94fe1b4763c098ccd1772344662f2a9f614513106cb5ada8be36857"`
+`"eventID": "1c8148a8ab1993537d0ba4e6ac293dd4f2a88d80b2ca7be6293c3b28d4ff5ae6"`
 
 Klicka på **OK**, följt av **Avbryt**.
 
@@ -101,11 +90,11 @@ Gå till **Resor** på menyn och klicka på **Skapa resa**.
 
 ![Journey Optimizer](./images/oc43.png)
 
-Då ser du det här. Ge resan ett namn. Använd `--aepUserLdap-- - Order Confirmation journey`. Klicka på **OK**.
+Då ser du det här. Ge resan ett namn. Använd `--aepUserLdap-- - Order Confirmation journey`. Klicka på **Spara**.
 
 ![Journey Optimizer](./images/oc45.png)
 
-Först måste du lägga till din händelse som startpunkt för din resa. Sök efter din händelse `--aepUserLdap--PurchaseEvent` och dra och släpp den på arbetsytan. Klicka på **OK**.
+Först måste du lägga till din händelse som startpunkt för din resa. Sök efter din händelse `--aepUserLdap--PurchaseEvent` och dra och släpp den på arbetsytan. Klicka på **Spara**.
 
 ![Journey Optimizer](./images/oc46.png)
 
@@ -125,7 +114,7 @@ Nu ser du det här. Klicka på textfältet **Ämnesrad**.
 
 ![ACOP](./images/journeyactions3.png)
 
-Börja skriva **Tack för din beställning** i textområdet
+Börja skriva **Tack för din beställning** i textområdet och klicka på ikonen **Personalization** .
 
 ![Journey Optimizer](./images/oc5.png)
 
@@ -133,7 +122,7 @@ Börja skriva **Tack för din beställning** i textområdet
 
 ![Journey Optimizer](./images/oc6.png)
 
-Du kommer då tillbaka hit. Klicka på **E-posta Designer** för att skapa e-postens innehåll.
+Du kommer då tillbaka hit. Klicka på **Redigera e-postbrödtext** för att skapa e-postmeddelandets innehåll.
 
 ![Journey Optimizer](./images/oc7.png)
 
@@ -147,35 +136,27 @@ Dra och släpp 8 gånger en **1:1-kolumn** på arbetsytan, vilket bör ge dig f�
 
 ![Journey Optimizer](./images/oc9.png)
 
-Gå till **Innehållskomponenter**.
+Gå till **Fragment** på den vänstra menyn. Dra rubriken som du skapade tidigare i övning 3.2.2 till den första komponenten på arbetsytan. Dra sidfoten som du skapade tidigare i övning 3.2.2 till den sista komponenten på arbetsytan.
+
+![Journey Optimizer](./images/fragm1.png)
+
+Klicka på ikonen **+** i den vänstra menyn. Gå till **Innehåll** för att börja lägga till innehåll på arbetsytan.
 
 ![Journey Optimizer](./images/oc10.png)
 
-Dra och släpp en **bild**-komponent på den första raden. Klicka på **Bläddra**.
-
-![Journey Optimizer](./images/oc11.png)
-
-Gå till mappen **enablement-assets**, markera filen **luma-logo.png** och klicka på **Välj**.
-
-![Journey Optimizer](./images/oc12.png)
-
-Du är nu tillbaka här. Klicka på bilden för att markera den och använd sedan skjutreglaget **Storlek** för att göra logotypbilden lite mindre.
-
-![Journey Optimizer](./images/oc13.png)
-
-Gå till **Innehållskomponenter** och dra och släpp en **Bild** -komponent på den andra raden. Markera **bildkomponenten** men klicka inte på Bläddra.
+Gå till **Innehåll** och dra och släpp en **Bild** -komponent på den andra raden. Klicka på **Bläddra**.
 
 ![Journey Optimizer](./images/oc15.png)
 
-Klistra in bild-URL:en i fältet **Source**: `https://parsefiles.back4app.com/hgJBdVOS2eff03JCn6qXXOxT5jJFzialLAHJixD9/29043bedcde632a9cbe8a02a164189c9_preparing.png`. Den här bilden ligger utanför Adobe.
+Öppna mappen **citi-signal-images**, klicka för att välja bilden **citisignal-preparing.png** och klicka på **Select**.
 
 ![Journey Optimizer](./images/oc14.png)
 
-När du ändrar omfånget till ett annat fält återges bilden och du kommer att se följande:
+Under **Format** ändrar du bredden till **40 %**.
 
-![Journey Optimizer](./images/oc16.png)
+![Journey Optimizer](./images/oc14a.png)
 
-Gå sedan till **Innehållskomponenter** och dra och släpp en **Text** -komponent på den tredje raden.
+Gå sedan till **Innehåll** och dra och släpp en **Text** -komponent på den tredje raden.
 
 ![Journey Optimizer](./images/oc17.png)
 
@@ -207,7 +188,7 @@ Då ser du det här:
 
 ![Journey Optimizer](./images/oc21.png)
 
-Gå sedan till **Innehållskomponenter** och dra och släpp en **Text** -komponent på den fjärde raden.
+Gå sedan till **Innehåll** och dra och släpp en **Text** -komponent på den fjärde raden.
 
 ![Journey Optimizer](./images/oc22.png)
 
@@ -219,7 +200,7 @@ Markera standardtexten i komponenten **Skriv texten här.** och ersätt den med 
 
 ![Journey Optimizer](./images/oc23.png)
 
-Gå sedan till **Innehållskomponenter** och dra och släpp en **HTML** -komponent på den femte raden. Klicka på komponenten HTML och sedan på **Visa källkoden**.
+Gå sedan till **Innehåll** och dra och släpp en **HTML** -komponent på den femte raden. Klicka på komponenten HTML och sedan på **Visa källkoden**.
 
 ![Journey Optimizer](./images/oc24.png)
 
@@ -235,7 +216,7 @@ Du får den här då. Klicka på **Spara** för att spara förloppet.
 
 ![Journey Optimizer](./images/oc26.png)
 
-Gå till **Innehållskomponenter** och dra och släpp en **HTML** -komponent på den sjätte raden. Klicka på komponenten HTML och sedan på **Visa källkoden**.
+Gå till **Innehåll** och dra och släpp en **HTML** -komponent på den sjätte raden. Klicka på komponenten HTML och sedan på **Visa källkoden**.
 
 ![Journey Optimizer](./images/oc57.png)
 
@@ -257,11 +238,9 @@ Ta först bort **xxx** i HTML-koden.
 
 Klicka på **Sammanhangsberoende attribut** på den vänstra menyn. Det här sammanhanget skickas till meddelandet från resan.
 
-![Journey Optimizer](./images/oc601.png)
-
 Då ser du det här. Klicka på pilen bredvid **Journey Orchestration** för att gå djupare.
 
-![Journey Optimizer](./images/oc61.png)
+![Journey Optimizer](./images/oc601.png)
 
 Klicka på pilen bredvid **Händelser** för att gå djupare.
 
@@ -287,7 +266,7 @@ Du är tillbaka i e-postprogrammet Designer nu. Klicka på **Spara** för att sp
 
 ![Journey Optimizer](./images/oc67.png)
 
-Gå sedan till **Innehållskomponenter** och dra och släpp en **HTML** -komponent på den sjunde raden. Klicka på komponenten HTML och sedan på **Visa källkoden**.
+Gå sedan till **Innehåll** och dra och släpp en **HTML** -komponent på den sjunde raden. Klicka på komponenten HTML och sedan på **Visa källkoden**.
 
 ![Journey Optimizer](./images/oc68.png)
 
@@ -304,9 +283,6 @@ Ta först bort den första **xxx** i HTML-koden.
 ![Journey Optimizer](./images/oc71.png)
 
 Klicka på **Sammanhangsberoende attribut** på den vänstra menyn.
-
-![Journey Optimizer](./images/oc711.png)
-
 Klicka på pilen bredvid **Journey Orchestration** för att gå djupare.
 
 ![Journey Optimizer](./images/oc72.png)
@@ -336,13 +312,10 @@ Du får den här då. Ta nu bort den andra **xxx** i HTML-koden.
 ![Journey Optimizer](./images/oc76.png)
 
 Klicka på ikonen **+** bredvid **Prissumma** igen för att lägga till den på arbetsytan.
-
-![Journey Optimizer](./images/oc77.png)
-
 Du kan också lägga till fältet **Valuta** inifrån objektet **Ordning** på arbetsytan, vilket visas här.
 När du är klar klickar du på **Spara** för att spara ändringarna.
 
-![Journey Optimizer](./images/oc771.png)
+![Journey Optimizer](./images/oc77.png)
 
 Du kommer sedan tillbaka till Designer för e-post. Klicka på **Spara** igen.
 
@@ -356,7 +329,7 @@ Klicka på pilen i det övre vänstra hörnet för att gå tillbaka till din res
 
 ![Journey Optimizer](./images/oc79a.png)
 
-Klicka på **OK** för att stänga e-poståtgärden.
+Klicka på **Spara** för att stänga e-poståtgärden.
 
 ![Journey Optimizer](./images/oc79b.png)
 
@@ -380,7 +353,7 @@ Det här är egenskapssidan för Adobe Experience Platform Data Collection som d
 
 ![Sidan Egenskaper](./../../../modules/datacollection/module1.1/images/launch1.png)
 
-I modul 0 skapade Demo System två klientegenskaper åt dig: en för webbplatsen och en för mobilappen. Sök efter dem genom att söka efter `--aepUserLdap--` i rutan **[!UICONTROL Search]**. Klicka för att öppna egenskapen **Webb**.
+I **Komma igång** skapade Demo System två klientegenskaper åt dig: en för webbplatsen och en för mobilappen. Sök efter dem genom att söka efter `--aepUserLdap--` i rutan **[!UICONTROL Search]**. Klicka för att öppna egenskapen **Webb**.
 
 ![Sökruta](./../../../modules/datacollection/module1.1/images/property6.png)
 
@@ -388,11 +361,11 @@ Gå till **dataelement**. Sök efter och öppna dataelementet **XDM - Köp**.
 
 ![Journey Optimizer](./images/oc91.png)
 
-Då ser du det här. Navigera till fältet **_experience.campaign.orchestration.eventID** och fyll i ditt eventID här. Det eventID som ska fyllas i här är det eventID som du skapade som en del av övning 10.1.2. Klicka på **Spara** eller **Spara i bibliotek**.
+Då ser du det här. Navigera till fältet **_experience.campaign.orchestration.eventID** och fyll i ditt eventID här. Det eventID som ska fyllas i här är det eventID som du skapade som en del av övningen 3.4.1.1 Klicka på **Spara** eller **Spara i bibliotek**.
 
 ![Journey Optimizer](./images/oc92.png)
 
-Spara ändringarna i din klientegenskap och publicera sedan ändringarna genom att uppdatera ditt utvecklingsbibliotek.
+Spara ändringarna i din egendom och publicera sedan ändringarna genom att uppdatera ditt utvecklingsbibliotek.
 
 ![Journey Optimizer](./images/oc93.png)
 
@@ -402,33 +375,29 @@ Spara ändringarna i din klientegenskap och publicera sedan ändringarna genom a
 
 Låt oss testa den uppdaterade resan genom att köpa en produkt på demowebbplatsen.
 
-Gå till [https://builder.adobedemo.com/projects](https://builder.adobedemo.com/projects). När du har loggat in med din Adobe ID ser du det här. Klicka på webbplatsprojektet för att öppna det.
+Gå till [https://dsn.adobe.com](https://dsn.adobe.com). När du har loggat in med din Adobe ID ser du det här. Klicka på de tre punkterna **..** i webbplatsprojektet och klicka sedan på **Kör** för att öppna det.
 
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web8.png)
+![DSN](./../../datacollection/module1.1/images/web8.png)
 
 Du kommer då att se din demowebbplats öppnas. Markera URL-adressen och kopiera den till Urklipp.
 
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web3.png)
+![DSN](../../gettingstarted/gettingstarted/images/web3.png)
 
 Öppna ett nytt inkognito-webbläsarfönster.
 
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web4.png)
+![DSN](../../gettingstarted/gettingstarted/images/web4.png)
 
 Klistra in webbadressen till demowebbplatsen, som du kopierade i föregående steg. Du ombeds sedan logga in med din Adobe ID.
 
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web5.png)
+![DSN](../../gettingstarted/gettingstarted/images/web5.png)
 
 Välj kontotyp och slutför inloggningsprocessen.
 
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web6.png)
+![DSN](../../gettingstarted/gettingstarted/images/web6.png)
 
-Därefter visas webbplatsen i ett inkognitivt webbläsarfönster. För varje demonstration måste du använda ett nytt, inkognitivt webbläsarfönster för att läsa in webbadressen till demowebbplatsen.
+Därefter visas webbplatsen i ett inkognitivt webbläsarfönster. För varje övning måste du använda ett nytt, inkognitivt webbläsarfönster för att läsa in webbadressen till demowebbplatsen.
 
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web7.png)
-
-Klicka på logotypikonen för Adobe i det övre vänstra hörnet av skärmen för att öppna profilvisningsprogrammet.
-
-![Demo](./../../../modules/datacollection/module1.2/images/pv1.png)
+![DSN](../../gettingstarted/gettingstarted/images/web7.png)
 
 Ta en titt på panelen Profilvisningsprogram och kundprofilen i realtid med **Experience Cloud ID** som primär identifierare för den okända kunden.
 
@@ -442,13 +411,25 @@ Fyll i dina uppgifter och klicka på **Registrera**. Sedan dirigeras du om till 
 
 ![Demo](./../../../modules/datacollection/module1.2/images/pv10.png)
 
-Lägg till valfri produkt i kundvagnen och gå till sidan **kundvagn**. Klicka på **Fortsätt till kassan**.
+Lägg valfri produkt i kundvagnen
+
+![Journey Optimizer](./images/cart1a.png)
+
+Gå till sidan **kundvagn**. Klicka på **Utcheckning**.
 
 ![Journey Optimizer](./images/cart1.png)
 
-Verifiera sedan fälten på utcheckningssidan och klicka på **Utcheckning**.
+Verifiera sedan fälten och fyll i om det behövs. Klicka på **Fortsätt**.
 
 ![Journey Optimizer](./images/cart2.png)
+
+Klicka på **Bekräfta beställning**.
+
+![Journey Optimizer](./images/cart2a.png)
+
+Din beställning har bekräftats.
+
+![Journey Optimizer](./images/cart2b.png)
 
 Du får sedan en orderbekräftelse via e-post inom några sekunder.
 

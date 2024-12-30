@@ -3,9 +3,10 @@ title: Adobe Journey Optimizer - API för externt väder, SMS-åtgärd med mera 
 description: Adobe Journey Optimizer - External Weather API, SMS Action med mera
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: d4e37338-bde2-41b9-948c-11d9216b8cf3
+source-git-commit: c531412a2c0a5c216f49560e01fb26b9b7e71869
 workflow-type: tm+mt
-source-wordcount: '805'
+source-wordcount: '756'
 ht-degree: 0%
 
 ---
@@ -16,7 +17,7 @@ Logga in på Adobe Journey Optimizer på [Adobe Experience Cloud](https://experi
 
 ![ACOP](./../../../modules/ajo-b2c/module3.1/images/acophome.png)
 
-Du omdirigeras till vyn **Hem** i Journey Optimizer. Kontrollera först att du använder rätt sandlåda. Sandlådan som ska användas kallas `--aepSandboxName--`. Om du vill ändra från en sandlåda till en annan klickar du på **PRODUKTIONSprodukt (VA7)** och väljer sandlådan i listan. I det här exemplet heter sandlådan **AEP Enablement FY22**. Du kommer sedan att vara i vyn **Hem** i din sandlåda `--aepSandboxName--`.
+Du omdirigeras till vyn **Hem** i Journey Optimizer. Kontrollera först att du använder rätt sandlåda. Sandlådan som ska användas kallas `--aepSandboxName--`. Du kommer sedan att vara i vyn **Hem** i din sandlåda `--aepSandboxName--`.
 
 ![ACOP](./../../../modules/ajo-b2c/module3.1/images/acoptriglp.png)
 
@@ -29,18 +30,13 @@ Därefter visas en översikt över alla tillgängliga händelser. Klicka på **S
 ![ACOP](./images/emptyevent.png)
 
 Ett nytt, tomt händelsefönster öppnas sedan.
-
-![ACOP](./images/emptyevent1.png)
-
-Använd `--aepUserLdap--GeofenceEntry` som namn för händelsen. I det här exemplet är händelsenamnet `vangeluwGeofenceEntry`.
+Använd `--aepUserLdap--GeofenceEntry` som namn för händelsen.
 
 Ange Beskrivning till: `Geofence Entry Event`.
 
+Kontrollera att **Type** är inställd på **Unitary** och välj **System Generated** för **Event ID Type** -valet.
+
 ![Demo](./images/evname.png)
-
-Kontrollera sedan att **Type** är inställd på **Unitary** och välj **System Generated** för valet **Event ID Type**.
-
-![ACOP](./images/eventidtype.png)
 
 Därefter måste du välja ett schema. Alla scheman som visas här är Adobe Experience Platform Schemas.
 
@@ -92,13 +88,9 @@ När det är klart klickar du på **OK**.
 ![Demo](./images/popupok.png)
 
 Adobe Journey Optimizer behöver också en identifierare som identifierar kunden. Eftersom Adobe Journey Optimizer är länkat till Adobe Experience Platform används den primära identifieraren för ett schema automatiskt som identifierare för resan.
-Den primära identifieraren tar automatiskt hänsyn till Adobe Experience Platform fullständiga identitetsdiagram och länkar alla beteenden mellan alla tillgängliga identiteter, enheter och kanaler till samma profil, så att Adobe Journey Optimizer är sammanhangsberoende, relevant och konsekvent.
+Den primära identifieraren tar automatiskt hänsyn till Adobe Experience Platform fullständiga identitetsdiagram och länkar alla beteenden mellan alla tillgängliga identiteter, enheter och kanaler till samma profil, så att Adobe Journey Optimizer är sammanhangsberoende, relevant och konsekvent. Klicka på **Spara**.
 
 ![Demo](./images/eventidentifier.png)
-
-Klicka på **Spara** för att spara din anpassade händelse.
-
-![Demo](./images/save.png)
 
 Din aktivitet kommer sedan att ingå i listan över tillgängliga händelser.
 
@@ -109,23 +101,19 @@ Slutligen måste du återställa `Orchestration eventID` för din anpassade hän
 Öppna aktiviteten igen genom att klicka på den i listan över händelser.
 Klicka på ikonen **Visa nyttolast** bredvid **Fält** i din händelse.
 
-![Demo](./images/eventlist1.png)
-
-Om du klickar på ikonen **Visa nyttolast** öppnas ett XDM-exempel för den här händelsen.
-
 ![Demo](./images/fieldseyepayload.png)
 
-Bläddra nedåt i **nyttolasten** tills du ser raden `eventID`.
+Om du klickar på ikonen **Visa nyttolast** öppnas ett XDM-exempel för den här händelsen. Bläddra nedåt i **nyttolasten** tills du ser raden `eventID`.
 
 ![Demo](./images/fieldseyepayloadev.png)
 
 Skriv ned `eventID` så som du behöver den i den sista versionen för att testa konfigurationen.
 
-I det här exemplet är `eventID` `fa42ab7982ba55f039eacec24c1e32e5c51b310c67f0fa559ab49b89b63f4934`.
+I det här exemplet är `eventID` `4df8dc10731eba7b0c37af83a9db38d4de7aa6aebcce38196d9d47929b9c598e`.
 
 Du har definierat händelsen som ska utlösa resan vi bygger. När resan har utlösts kommer geofence-fälten, som City, och alla andra fält som du har valt (som Country, Latitude och Longitude) att göras tillgängliga för resan.
 
-Som vi nämnt i fallbeskrivningen måste vi sedan erbjuda sammanhangsbaserade kampanjer som är beroende av vädret. För att få väderinformation måste vi definiera externa datakällor som ger oss väderinformation för den platsen. Du använder tjänsten **OpenWeather** för att ge oss den informationen, som en del av 2.
+Som vi nämnt i fallbeskrivningen måste vi sedan erbjuda sammanhangsbaserade kampanjer som är beroende av vädret. För att få väderinformation måste vi definiera externa datakällor som ger oss väderinformation för den platsen. Du använder **OpenWeather API**-tjänsten för att förse oss med den informationen.
 
 Nästa steg: [3.2.2 Definiera en extern datakälla](./ex2.md)
 

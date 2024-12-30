@@ -3,7 +3,8 @@ title: Offer decisioning - Konfigurera erbjudanden och beslut-ID
 description: Offer decisioning - Konfigurera erbjudanden och beslut-ID
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: 1418398b-d192-4d0b-b372-4be73fc153ed
+source-git-commit: c531412a2c0a5c216f49560e01fb26b9b7e71869
 workflow-type: tm+mt
 source-wordcount: '1428'
 ht-degree: 1%
@@ -27,11 +28,11 @@ I den här övningen skapar du fyra **Personaliserade erbjudanden**. Här följe
 
 Logga in på Adobe Journey Optimizer på [Adobe Experience Cloud](https://experience.adobe.com). Klicka på **Journey Optimizer**.
 
-![ACOP](./../../../modules/ajo-b2c/module3.2/images/acophome.png)
+![ACOP](./../../../modules/ajo-b2c/module3.1/images/acophome.png)
 
 Du omdirigeras till vyn **Hem** i Journey Optimizer. Kontrollera först att du använder rätt sandlåda. Sandlådan som ska användas kallas `--aepSandboxName--`. Om du vill ändra från en sandlåda till en annan klickar du på **PRODUKTIONSprodukt (VA7)** och väljer sandlådan i listan. I det här exemplet heter sandlådan **AEP Enablement FY22**. Du kommer sedan att vara i vyn **Hem** i din sandlåda `--aepSandboxName--`.
 
-![ACOP](./../../../modules/ajo-b2c/module3.2/images/acoptriglp.png)
+![ACOP](./../../../modules/ajo-b2c/module3.1/images/acoptriglp.png)
 
 Klicka på **Erbjudanden** på den vänstra menyn och gå sedan till **Erbjudanden**. Klicka på **+ Skapa erbjudande**.
 
@@ -356,7 +357,7 @@ Slutligen kommer du att se ditt beslut i översikten:
 
 Du har nu konfigurerat ditt beslut. Ditt beslut är nu öppet och kan användas för att leverera optimerade och personaliserade erbjudanden till era kunder i realtid.
 
-Nästa steg: [3.3.3 Förbered klientegenskapen för datainsamling och Web SDK-konfigurationen för Offera decisioningen](./ex3.md)
+Nästa steg: [3.3.3 Förbered din datainsamling-klientegenskap och Web SDK-inställningar för Offer decisioning](./ex3.md)
 
 [Gå tillbaka till modul 3.3](./offer-decisioning.md)
 

@@ -3,14 +3,15 @@ title: Offer decisioning - Testa ditt beslut
 description: Offer decisioning - Testa ditt beslut
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: a03ec0bd-d48f-45bc-8097-ab263331b7bb
+source-git-commit: c531412a2c0a5c216f49560e01fb26b9b7e71869
 workflow-type: tm+mt
-source-wordcount: '1125'
+source-wordcount: '1096'
 ht-degree: 0%
 
 ---
 
-# 3.3.3 Förbered din klientegenskap för Adobe Experience Platform Data Collection och Web SDK-konfiguration för Offer decisioning
+# 3.3.3 Förbered Adobe Experience Platform Data Collection Client property and Web SDK setup for Offer decisioning
 
 ## 3.3.3.1 Uppdatera ditt datastam
 
@@ -77,11 +78,11 @@ Låt oss först ta en titt där du kan hitta de två elementen.
 
 Om du vill hitta [!UICONTROL Placement ID] för [!UICONTROL Web - Image] går du till Adobe Journey Optimizer genom att gå till [Adobe Experience Cloud](https://experience.adobe.com). Klicka på **Journey Optimizer**.
 
-![ACOP](./../../../modules/ajo-b2c/module3.2/images/acophome.png)
+![ACOP](./../../../modules/ajo-b2c/module3.1/images/acophome.png)
 
-Du omdirigeras till vyn **Hem** i Journey Optimizer. Kontrollera först att du använder rätt sandlåda. Sandlådan som ska användas kallas `--aepSandboxName--`. Om du vill ändra från en sandlåda till en annan klickar du på **PRODUKTIONSprodukt (VA7)** och väljer sandlådan i listan. I det här exemplet heter sandlådan **AEP Enablement FY22**. Du kommer sedan att vara i vyn **Hem** i din sandlåda `--aepSandboxName--`.
+Du omdirigeras till vyn **Hem** i Journey Optimizer. Kontrollera först att du använder rätt sandlåda. Sandlådan som ska användas kallas `--aepSandboxName--`. Du kommer sedan att vara i vyn **Hem** i din sandlåda `--aepSandboxName--`.
 
-![ACOP](./../../../modules/ajo-b2c/module3.2/images/acoptriglp.png)
+![ACOP](./../../../modules/ajo-b2c/module3.1/images/acoptriglp.png)
 
 Gå sedan till [!UICONTROL Components] och sedan till [!UICONTROL Placements]. Klicka på placeringen [!UICONTROL Web - Image] om du vill se information om den.
 
@@ -225,7 +226,7 @@ I Adobe Experience Platform Data Collection går du till **[!UICONTROL Publishin
 
 ![WebSDK](./images/decrec9.png)
 
-Denna ändring innebär att den här regeln i Adobe Experience Platform Data Collection nu lyssnar på svaret från Offera decisioningen som är en del av Web SDK-svaret, och när svaret tas emot visas bilden av erbjudandet på hemsidan.
+Denna ändring innebär att den här regeln i Adobe Experience Platform Data Collection nu lyssnar på svaret från Offera decisioningen som ingår i Web SDK-svaret, och när svaret tas emot visas bilden av erbjudandet på hemsidan.
 
 På demowebbplatsen ser du att den här bilden kommer att ersättas nu:
 
