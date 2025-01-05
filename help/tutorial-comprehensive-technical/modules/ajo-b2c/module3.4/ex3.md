@@ -4,14 +4,14 @@ description: Den här övningen förklarar hur du använder segmentpersonaliseri
 kt: 5342
 doc-type: tutorial
 exl-id: bb5f8130-0237-4381-bc1e-f6b62950b1fc
-source-git-commit: c531412a2c0a5c216f49560e01fb26b9b7e71869
+source-git-commit: 9865b5697abe2d344fb530636a1afc3f152a9e8f
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '399'
 ht-degree: 0%
 
 ---
 
-# 3.4.3 Använda personalisering i ett e-postmeddelande
+# 3.4.3 Använda segmentbaserad personalisering i ett e-postmeddelande
 
 Logga in på Adobe Experience Cloud på [Adobe Experience Cloud](https://experience.adobe.com). Klicka på **Adobe Journey Optimizer**.
 
@@ -23,25 +23,25 @@ Du omdirigeras till vyn **Hem** i Journey Optimizer. Innan du fortsätter måste
 
 ## 3.4.3.1 Segmentbaserad personalisering
 
-I den här övningen kommer du att förbättra ditt nyhetsbrev via e-post med en personlig text baserad på segmentmedlemskap.
+I den här övningen kommer du att förbättra nyhetsbrevets e-postmeddelande som du skapade i föregående övning med en personlig text baserad på segmentmedlemskap.
 
-Gå till **Resor**. Hitta den nyhetsbrevsresa du har skapat i föregående övning. Sök efter `--aepUserLdap-- - Newsletter`. Klicka på resan för att öppna den.
+Gå till **Kampanjer**. Hitta den nyhetsbrevsresa du har skapat i föregående övning. Sök efter `--aepUserLdap-- - CitiSignal Newsletter`. Högerklicka på de 3 punkterna **..** och klicka på **Duplicera**.
 
 ![Journey Optimizer](./images/sbp1.png)
 
-Då ser du det här. Klicka på **Duplicera**.
+Då ser du det här. Använd det här för **titeln**: `--aepUserLdap-- - CitiSignal Newsletter (SBP)`. Klicka på **Duplicera**.
 
 ![Journey Optimizer](./images/sbp2.png)
 
-Klicka på **Duplicera**.
+Klicka på den duplicerade kampanjen för att öppna den.
 
 ![Journey Optimizer](./images/sbp3.png)
 
-Välj åtgärden **E-post** och klicka på **Redigera innehåll**.
+Klicka på **Redigera** om du vill ändra innehållet.
 
 ![Journey Optimizer](./images/sbp3a.png)
 
-Klicka på **E-posta Designer**.
+Klicka på **Redigera e-postbrödtext**.
 
 ![Journey Optimizer](./images/sbp4.png)
 
@@ -49,88 +49,58 @@ Då ser du det här.
 
 ![Journey Optimizer](./images/sbp5.png)
 
-Öppna **Innehållskomponenter** och dra en **Text** -komponent nedanför det aktuella nyhetsbrevet.
+Öppna **Innehållskomponenter** och dra en **1:1-kolumn** ovanför erbjudandet för AirPods.
 
 ![Journey Optimizer](./images/sbp6.png)
+
+Dra och släpp en **Text** -komponent i den 1:1-kolumnen.
+
+![Journey Optimizer](./images/sbp6a.png)
 
 Markera hela standardtexten och ta bort den. Klicka sedan på knappen **Lägg till anpassning** i verktygsfältet.
 
 ![Journey Optimizer](./images/sbp7.png)
 
-Då ser du det här:
+Då ser du det här. Klicka på **Publiker** på den vänstra menyn.
 
 ![Journey Optimizer](./images/seg1.png)
 
-Klicka på **Segmentmedlemskap** på den vänstra menyn.
-
-![Journey Optimizer](./images/seg2.png)
-
->[!NOTE]
->
->Om du inte hittar ditt segment i den här listan kan du bläddra nedåt och hitta instruktioner om hur du hämtar segmentets ID manuellt.
-
-Markera segmentet `Luma - Women's Category Interest` och klicka på ikonen **+** som ska se ut så här:
+Markera segmentet `--aepUserLdap-- - Interest in Plans` och klicka på ikonen **+** för att lägga till det på arbetsytan.
 
 ![Journey Optimizer](./images/seg3.png)
 
 Sedan lämnar du den första raden som den är och ersätter rad 2 och 3 med den här koden:
 
 ``
-    Psssst... a private sale in the women category will launch soon, we will keep you posted
+    PS: It may be a good idea to check if your plan still meets your needs! Click here to be contacted by one of our experts!
 {%else%}
-    Thanks for taking the time to read our newsletter. Here is a 10% promo code to use on the website: READER10
+    PS: Thanks for taking the time to read our newsletter. Here is a 10% promo code to use on the website: NEWSLETTER10
 {%/if%}
 ``
 
-Då får du den här:
+Du får den här då. Klicka på **Spara**.
 
 ![Journey Optimizer](./images/seg4.png)
 
-Klicka på **Validera** för att kontrollera att koden är korrekt. Klicka på **Spara**.
-
-![Journey Optimizer](./images/sbp8.png)
-
-Du kan nu spara det här meddelandet genom att klicka på knappen **Spara** i det övre högra hörnet. Klicka sedan på **Simulera innehåll**.
+Ändra textjusteringen till **Centrera**.
 
 ![Journey Optimizer](./images/sbp9.png)
 
-Välj en av profilerna som du skapade som en del av den här självstudiekursen och klicka på **Förhandsgranska**. Resultatet av konfigurationen visas då.
+Du kan nu spara det här meddelandet genom att klicka på knappen **Spara** i det övre högra hörnet. Klicka sedan på **pilen** bredvid texten på ämnesraden i det övre vänstra hörnet.
 
-![Journey Optimizer](./images/sbp10.png)
+![Journey Optimizer](./images/sbp9a.png)
 
-Då ser du det här. Klicka sedan på **Stäng**.
-
-![Journey Optimizer](./images/sbp10fff.png)
-
-Gå tillbaka till meddelandekontrollpanelen genom att klicka på **pilen** intill ämnesraden i det övre vänstra hörnet.
-
-![Journey Optimizer](./images/sbp11.png)
-
-Klicka på pilen i det övre vänstra hörnet för att gå tillbaka till din resa.
+Klicka på **Granska för att aktivera**.
 
 ![Journey Optimizer](./images/oc79afff.png)
 
-Klicka på **OK** för att stänga e-poståtgärden.
+Klicka på **Aktivera**.
 
 ![Journey Optimizer](./images/oc79bfff.png)
 
-Ändra ditt **schema** till **En gång** och definiera ett **datum/tid**. Klicka på **OK**.
+Ditt nyhetsbrev med segmentbaserad personalisering publiceras nu. E-postmeddelandet med nyhetsbrevet skickas baserat på ditt schema och din resa avbryts så snart som det senaste e-postmeddelandet har skickats.
 
->[!NOTE]
->
->Datum och tid för sändning av meddelande måste vara inom mer än en timme.
-
-![Journey Optimizer](./images/sbp18.png)
-
-Klicka på knappen **Publish** på resan.
-
-![Journey Optimizer](./images/sbp19.png)
-
-Klicka på **Publish** igen i popup-fönstret.
-
-![Journey Optimizer](./images/sbp20.png)
-
-Din grundläggande nyhetsbrevsresa är nu publicerad. E-postmeddelandet med nyhetsbrevet skickas baserat på ditt schema och din resa avbryts så snart som det senaste e-postmeddelandet har skickats.
+Om du är berättigad till det segment som användes visas detta i e-postmeddelandet som du får:
 
 ![Journey Optimizer](./images/sbp20fff.png)
 

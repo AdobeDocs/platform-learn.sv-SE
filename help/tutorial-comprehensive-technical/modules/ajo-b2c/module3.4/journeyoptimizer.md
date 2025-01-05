@@ -4,16 +4,14 @@ description: I den här modulen får ni lära er allt om Journey Optimizer, som 
 kt: 5342
 doc-type: tutorial
 exl-id: f9f37817-f640-4b54-b977-13fd6cc29fcd
-source-git-commit: 0dbcda0cfc9f199a44c845c1b5caf00a8d740251
+source-git-commit: 9865b5697abe2d344fb530636a1afc3f152a9e8f
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '285'
 ht-degree: 0%
 
 ---
 
 # 3.4 Adobe Journey Optimizer
-
-**Författare: [Maxime Foutrel](https://www.linkedin.com/in/maximefoutrel/), [Wouter Van Geluwe](https://www.linkedin.com/in/woutervangeluwe/)**
 
 I den här modulen får ni lära er allt om Adobe Journey Optimizer, som hjälper företag att utforma och leverera sammankopplade, kontextuella och personaliserade upplevelser till sina kunder.
 
@@ -28,7 +26,7 @@ I den här modulen får ni lära er allt om Adobe Journey Optimizer, som hjälpe
 
 - Tillgång till Adobe Journey Optimizer
 - **Hämta de här resurserna**:
-   - [Resurser](./../../../assets/ajo/ajo_assets.zip)
+   - [Resurser](./../../../assets/ajo/CitiSignal-images.zip)
 
 >[!NOTE]
 >
@@ -40,21 +38,17 @@ I den här modulen får ni lära er allt om Adobe Journey Optimizer, som hjälpe
 
 I den här övningen konfigurerar du en utlösarbaserad resa för att skicka ut det e-postmeddelande som du skapade i föregående övning.
 
-[3.4.2 Konfigurera en gruppbaserad nyhetsbrevresa](./ex2.md)
+[3.4.2 Konfigurera en kampanj](./ex2.md)
 
-I den här övningen konfigurerar du en batchbaserad resa för att skicka ut det e-postmeddelande som du skapade i föregående övning.
+I den här övningen ska du konfigurera en traditionell e-postkampanj.
 
-[3.4.3 Använda personalisering i ett e-postmeddelande](./ex3.md)
+[3.4.3 Använda segmentbaserad personalisering i ett e-postmeddelande](./ex3.md)
 
 I den här övningen använder du segmentmedlemskap för att definiera vilket innehåll som ska visas i ett e-postmeddelande.
 
 [3.4.4 Konfigurera och använda push-meddelanden](./ex4.md)
 
 I den här övningen ska du installera ett mobilprogram på din iOS-enhet och konfigurera och leverera ett push-meddelande till din enhet.
-
-[3.4.5 Skapa en affärshändelseresa](./ex5.md)
-
-I den här övningen ska du definiera en affärshändelse som skickar ett back-in-stock-meddelande via SMS till kunder som tidigare visat intresse för produkten, men som inte kunde köpa den eftersom produkten inte fanns i lager.
 
 [Sammanfattning och fördelar](./summary.md)
 

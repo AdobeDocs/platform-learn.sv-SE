@@ -5,9 +5,9 @@ user-guide-description: En praktisk självstudiekurs som handlar om många aspek
 hide: true
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-source-git-commit: cf8b97f06bbe6741fc6dfa70c207c6a748f5fe85
+source-git-commit: c8f9d5258d530ef12905113dd2aea4e179d0cca9
 workflow-type: tm+mt
-source-wordcount: '923'
+source-wordcount: '915'
 ht-degree: 2%
 
 ---
@@ -132,10 +132,9 @@ ht-degree: 2%
    + 3.4 Adobe Journey Optimizer: Händelsebaserade resor {#module34}
       + [Översikt](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.4/journeyoptimizer.md)
       + [3.4.1 Konfigurera en utlösarbaserad resa - orderbekräftelse](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.4/ex1.md)
-      + [3.4.2 Konfigurera en gruppbaserad nyhetsbrevresa](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.4/ex2.md)
-      + [3.4.3 Använda personalisering i ett e-postmeddelande](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.4/ex3.md)
+      + [3.4.2 Konfigurera en kampanj](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.4/ex2.md)
+      + [3.4.3 Använda segmentbaserad personalisering i ett e-postmeddelande](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.4/ex3.md)
       + [3.4.4 Konfigurera och använda push-meddelanden](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.4/ex4.md)
-      + [3.4.5 Skapa en affärshändelseresa](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.4/ex5.md)
       + [Sammanfattning och fördelar](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.4/summary.md)
 
 + 4 Customer Journey Analytics B2C {#cjab2c}

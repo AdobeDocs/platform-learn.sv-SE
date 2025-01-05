@@ -4,9 +4,9 @@ description: Installera och använda push-meddelanden för iOS
 kt: 5342
 doc-type: tutorial
 exl-id: a49fa91c-5235-4814-94c1-8dcdec6358c5
-source-git-commit: c531412a2c0a5c216f49560e01fb26b9b7e71869
+source-git-commit: 9865b5697abe2d344fb530636a1afc3f152a9e8f
 workflow-type: tm+mt
-source-wordcount: '1800'
+source-wordcount: '1843'
 ht-degree: 0%
 
 ---
@@ -33,13 +33,11 @@ Du omdirigeras till vyn **Hem** i Journey Optimizer. Kontrollera först att du a
 
 ![ACOP](./../../../modules/ajo-b2c/module3.1/images/acoptriglp.png)
 
-## 3.4.4.1 Push datasets
+## 3.4.4.1 Push dataset
 
 Adobe Journey Optimizer använder datauppsättningar för att lagra saker som push-tokens från mobila enheter eller interaktioner med push-meddelanden (till exempel meddelande som skickas, meddelande som öppnas) i en datauppsättning i Adobe Journey Optimizer.
 
 Du kan hitta de här datauppsättningarna genom att gå till **[!UICONTROL Datasets]** på menyn till vänster på skärmen. Om du vill visa systemdatauppsättningar klickar du på filterikonen.
-
-![Datainmatning](./images/menudsjo.png)
 
 Aktivera alternativet **Visa systemdatauppsättningar** och sök efter **AJO**. Du kommer då att se de datauppsättningar som används för push-meddelanden.
 
@@ -49,7 +47,7 @@ Aktivera alternativet **Visa systemdatauppsättningar** och sök efter **AJO**. 
 
 Gå till [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/).
 
-Gå till **[!UICONTROL Datastream]** på den vänstra menyn och sök efter det datastream som du skapade i [Exercise 0.2](./../../../modules/gettingstarted/gettingstarted/ex2.md), som har namnet `--aepUserLdap-- - Demo System Datastream (Mobile)`. Klicka för att öppna den.
+Gå till **[!UICONTROL Datastream]** på den vänstra menyn och sök efter det dataflöde som du skapade i [Komma igång](./../../../modules/gettingstarted/gettingstarted/ex2.md), som har namnet `--aepUserLdap-- - Demo System Datastream (Mobile)`. Klicka för att öppna den.
 
 ![Klicka på Datastream-ikonen i den vänstra navigeringen](./images/edgeconfig1a.png)
 
@@ -59,13 +57,19 @@ Klicka på **Redigera** på tjänsten **Adobe Experience Platform**.
 
 Du kommer då att se de datastream-inställningar som har definierats och i vilka datamängdshändelser och profilattribut lagras.
 
-![Namnge dataströmmen och spara](./images/edgeconfig2.png)
+Du bör även aktivera följande alternativ om de inte är aktiverade än:
 
-Inga ändringar behövs. Datastream är nu klar att användas i din datainsamling-klientegenskap för Mobile.
+- **Offer decisioning**
+- **Personalization Destinations**
+- **Adobe Journey Optimizer**
+
+Klicka på **Spara**.
+
+![Namnge dataströmmen och spara](./images/edgeconfig2.png)
 
 ## 3.4.4.3 Granska din datainsamlingsegenskap för mobiler
 
-Gå till [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/). Som en del av [övningen 0.1](./../../../modules/gettingstarted/gettingstarted/ex1.md) skapades två datainsamlingsegenskaper.
+Gå till [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/). Som en del av [Komma igång](./../../../modules/gettingstarted/gettingstarted/ex1.md) skapades två datainsamlingsegenskaper.
 Du har redan använt dessa egenskaper för datainsamlingsklienten som en del av tidigare moduler.
 
 Klicka för att öppna datainsamlingsegenskapen för mobilen.
@@ -96,7 +100,7 @@ Du behöver inte göra några ändringar i din datainsamlingsegenskap.
 
 ## 3.4.4.4 Granska konfigurationen av appytan
 
-Gå till [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/). Gå till **Appytor** på den vänstra menyn och öppna appytan för **DX Demo App APNS**.
+Gå till [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/). Gå till **App Surfaces** på den vänstra menyn och öppna appytan för **DX Demo App APNS**.
 
 ![Adobe Experience Platform-datainsamling](./images/appsf.png)
 
@@ -130,21 +134,17 @@ Du kan nu läsa in ett anpassat projekt. Klicka på QR-koden för att enkelt lä
 
 ![DSN](./../../../modules/gettingstarted/gettingstarted/images/mobileappn6.png)
 
-Efter träning 0.1 fick du det här resultatet. Klicka för att öppna det **Mobile Retail-projekt** som skapades för dig.
+När du gått igenom avsnittet **Komma igång** fick du det här resultatet. Klicka för att öppna det **Mobile Retail-projekt** som skapades för dig.
 
 ![DSN](./../../../modules/gettingstarted/gettingstarted/images/dsn5b.png)
 
-Om du av misstag har stängt webbläsarfönstret, eller för framtida demonstrations- eller aktiveringssessioner, kan du även komma åt webbplatsprojektet genom att gå till [https://builder.adobedemo.com/projects](https://builder.adobedemo.com/projects). När du har loggat in med din Adobe ID ser du det här. Klicka på ditt mobilappsprojekt för att öppna det.
+Om du av misstag har stängt webbläsarfönstret, eller för framtida demonstrations- eller aktiveringssessioner, kan du även komma åt webbplatsprojektet genom att gå till [https://dsn.adobe.com/projects](https://dsn.adobe.com/projects). När du har loggat in med din Adobe ID ser du det här. Klicka på ditt mobilappsprojekt för att öppna det.
 
 ![DSN](./../../../modules/gettingstarted/gettingstarted/images/web8a.png)
 
-Då ser du det här. Klicka på **Integrationer**.
+Klicka sedan på **Kör**.
 
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web8aa.png)
-
-Du måste välja datainsamlingsegenskapen för mobilen som skapades i övning 0.1. Klicka sedan på **Kör**.
-
-![DSN](./../../../modules/gettingstarted/gettingstarted/images/web8b.png)
+![DSN](./images/web8b.png)
 
 Då visas den här popup-rutan som innehåller en QR-kod. Skanna QR-koden inifrån mobilappen.
 
@@ -160,7 +160,7 @@ Gå tillbaka till **Hem** i appen. Ditt program är nu klart att användas.
 
 Nu måste du skanna en QR-kod för att ansluta den mobila enheten till AEP Assurance-sessionen.
 
-Om du vill starta en AEP Assurance-session går du till [https://experience.adobe.com/#/@experienceplatform/griffon](https://experience.adobe.com/#/@experienceplatform/griffon). Klicka på **Skapa session**.
+Om du vill starta en AEP Assurance-session går du till [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/). Klicka på **Assurance** i den vänstra menyn. Klicka sedan på **Skapa session**.
 
 ![Adobe Experience Platform-datainsamling](./images/griffon3.png)
 
@@ -171,7 +171,7 @@ Klicka på **Start**.
 Fyll i värdena:
 
 - Sessionsnamn: använd `--aepUserLdap-- - push debugging` och ersätt ldap med din ldap
-- Bas-URL: använd **dxdemo://default**
+- Bas-URL: använd `dxdemo://default`
 
 Klicka på **Nästa**.
 
@@ -193,21 +193,27 @@ Då ser du det här.
 
 ![Adobe Experience Platform-datainsamling](./images/ipadPushTest11.png)
 
-I AEP Assurance ser du nu att en enhet går till AEP Assurance-sessionen.
+I Assurance ser du nu att en enhet är med i Assurance-sessionen. Klicka på **Klar**.
 
 ![Adobe Experience Platform-datainsamling](./images/griffon7.png)
 
-Gå till **Push Debug**. Du kommer att se något liknande.
+Gå till **Push Debug**.
+
+>[!NOTE]
+>
+>Om du inte kan hitta **Push Debug** på den vänstra menyn klickar du på **Configure** längst ned till vänster på skärmen och lägger till **Push Debug** på menyn.
+
+Du kommer att se något liknande.
 
 ![Adobe Experience Platform-datainsamling](./images/griffon10.png)
 
 Förklaring:
 
 - I den första kolumnen, **Klient**, visas tillgängliga identifierare på din iOS-enhet. Du ser ett ECID och en push-token.
+- I den andra kolumnen visas **App Store Credentials &amp; Configuration** som konfigurerades som en del av övningen **3.4.5.4 Create App Configuration i Launch**
 - I den andra kolumnen visas **profilinformation**, med ytterligare information om vilken plattform Push-token finns i (APNS eller APNSSandbox). Om du klickar på knappen **Inspect-profil** dirigeras du till Adobe Experience Platform och du ser hela kundprofilen i realtid.
-- I den tredje kolumnen visas **App Configuration** som konfigurerades som en del av övningen **3.4.5.4 Create App Configuration i Launch**
 
-Klicka på knappen **Skicka push-meddelande** om du vill testa push-konfigurationsinställningarna.
+Om du vill testa push-konfigurationsinställningarna går du till knappen **Skicka testpush-inställningar** . Klicka på **Skicka push-meddelande om testning**
 
 ![Adobe Experience Platform-datainsamling](./images/griffon11.png)
 
@@ -217,11 +223,11 @@ Du kommer då att se ett sådant här push-meddelande på din mobila enhet.
 
 ![Adobe Experience Platform-datainsamling](./images/ipadPush2.png)
 
-Om du har fått ett push-meddelande betyder det att konfigurationen är korrekt och fungerar som den ska.
+Om du har fått ett push-meddelande betyder det att konfigurationen är korrekt och fungerar bra och att du nu kan skapa en verklig resa som resulterar i att du skickar ett push-meddelande från Journey Optimizer.
 
 ## 3.4.4.6 Skapa en ny händelse
 
-Gå till **Reseadministration** på menyn och klicka på **Hantera** under **Händelser**.
+Gå till **Journey Optimizer**. Gå till **Konfigurationer** på den vänstra menyn och klicka på **Hantera** under **Händelser**.
 
 ![ACOP](./images/acopmenu.png)
 
@@ -230,32 +236,19 @@ På skärmen **Händelser** ser du en liknande vy. Klicka på **Skapa händelse*
 ![ACOP](./images/add.png)
 
 Därefter visas en tom händelsekonfiguration.
-
-![ACOP](./images/emptyevent.png)
-
 Först och främst ger du evenemanget ett namn som detta: `--aepUserLdap--StoreEntryEvent` och anger beskrivningen till `Store Entry Event`.
+Nästa steg är markeringen **Händelsetyp**. Välj **Enhet**.
+Nästa steg är **Typ av händelse-ID**. Välj **Systemgenererad**.
 
 ![ACOP](./images/eventname.png)
 
-Nästa steg är markeringen **Händelsetyp**. Välj **Enhet**.
-
-![ACOP](./images/eventidtype1.png)
-
-Nästa steg är **Typ av händelse-ID**. Välj **Systemgenererad**
-
-![ACOP](./images/eventidtype.png)
-
 Nästa steg är schemavalet. Ett schema förbereddes för den här övningen. Använd schemat `Demo System - Event Schema for Mobile App (Global v1.1) v.1`.
-
-![ACOP](./images/eventschema.png)
 
 När du har valt schemat visas ett antal fält som markeras i avsnittet **Nyttolast**. Din händelse är nu helt konfigurerad.
 
-![ACOP](./images/eventpayload.png)
+Klicka på **Spara**.
 
-Du borde se det här då. Klicka på **Spara**.
-
-![ACOP](./images/eventsave.png)
+![ACOP](./images/eventschema.png)
 
 Händelsen är nu konfigurerad och sparad. Klicka på aktiviteten igen för att öppna skärmen **Redigera händelse** igen.
 
@@ -267,14 +260,12 @@ Håll muspekaren över fältet **Nyttolast** och klicka på ikonen **Visa nyttol
 
 Nu visas ett exempel på den förväntade nyttolasten.
 
-![ACOP](./images/fullpayload.png)
-
 Händelsen har ett unikt ID för Orchestration-händelse som du kan hitta genom att rulla nedåt i nyttolasten tills du ser `_experience.campaign.orchestration.eventID`.
 
 ![ACOP](./images/payloadeventID.png)
 
 Händelse-ID är det som måste skickas till Adobe Experience Platform för att utlösa den resa som du ska bygga i nästa steg. Skriv ned detta eventID, som du behöver det i nästa steg.
-`"eventID": "e3a8f0bdc0b609667cd96a72a6b1e5aafa0ddaf6ccf121c574e6a2030860a633"`
+`"eventID": "89acd341ec2b7d1130c9a73535029debf2ac35f486bc99236b1a5091d6f4bc68"`
 
 Klicka på **OK**, följt av **Avbryt**.
 
@@ -284,20 +275,21 @@ Gå till **Resor** på menyn och klicka på **Skapa resa**.
 
 ![DSN](./images/sjourney1.png)
 
-Då ser du det här. Ge resan ett namn. Använd `--aepUserLdap-- - Store Entry journey`. Klicka på **OK**.
+Då ser du det här. Ge resan ett namn. Använd `--aepUserLdap-- - Store Entry journey`. Klicka på **Spara**.
 
 ![DSN](./images/sjourney3.png)
 
-Först måste du lägga till din händelse som startpunkt för din resa. Sök efter din händelse `--aepUserLdap--StoreEntryEvent` och dra och släpp den på arbetsytan. Klicka på **OK**.
+Först måste du lägga till din händelse som startpunkt för din resa. Sök efter din händelse `--aepUserLdap--StoreEntryEvent` och dra och släpp den på arbetsytan. Klicka på **Spara**.
 
 ![DSN](./images/sjourney4.png)
 
-Under **Åtgärder** söker du efter åtgärden **Push**.
-Dra och släpp åtgärden **Tryck** på arbetsytan.
-
-![DSN](./images/sjourney5.png)
+Under **Åtgärder** söker du efter åtgärden **Push**. Dra och släpp åtgärden **Tryck** på arbetsytan.
 
 Ange **kategorin** till **Marknadsföring** och välj en push-yta som gör att du kan skicka push-meddelanden. I det här fallet är e-postytan som ska väljas **Push-iOS-Android**.
+
+>[!NOTE]
+>
+>Det måste finnas en kanal i Journey Optimizer som använder **appytan** som granskats tidigare.
 
 ![ACOP](./images/journeyactions1push.png)
 
@@ -310,8 +302,6 @@ Då ser du det här. Klicka på ikonen **personalisering** för fältet **Titel*
 ![Tryck](./images/bp5.png)
 
 Då ser du det här. Du kan nu välja valfritt profilattribut direkt i kundprofilen i realtid.
-
-![Tryck](./images/bp6.png)
 
 Sök efter fältet **Förnamn** och klicka sedan på ikonen **+** bredvid fältet **Förnamn**. Du kommer då att se personaliseringstoken för förnamn som läggs till: **{{profile.person.name.firstName}}**.
 
@@ -335,7 +325,7 @@ Du får den här då. Klicka på pilen i det övre vänstra hörnet för att gå
 
 ![Journey Optimizer](./images/bp12a.png)
 
-Klicka på **OK** för att stänga din push-åtgärd.
+Klicka på **Spara** för att stänga din push-åtgärd.
 
 ![DSN](./images/sjourney8.png)
 
@@ -363,15 +353,13 @@ Gå till skärmen **Inställningar** i ditt DX Demo 2.0-mobilprogram. Klicka på
 
 Stäng appen omedelbart efter att du klickat på ikonen **Store Entry** (Store-post), annars visas inte push-meddelandet.
 
-![DSN](./images/demo2.png)
-
 Efter några sekunder visas meddelandet.
 
-![DSN](./images/demo3.png)
+![DSN](./images/demo2.png)
 
 Du har gjort klart den här övningen.
 
-Nästa steg: [3.4.5 Skapa en affärshändelseresa](./ex5.md)
+Nästa steg: [Sammanfattning och förmåner](./summary.md)
 
 [Gå tillbaka till modul 3.4](./journeyoptimizer.md)
 

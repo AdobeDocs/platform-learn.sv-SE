@@ -4,9 +4,9 @@ description: I det här avsnittet konfigurerar du en utlösarbaserad resa - orde
 kt: 5342
 doc-type: tutorial
 exl-id: b9d9b357-08d1-4f65-9e0b-46224d035602
-source-git-commit: c531412a2c0a5c216f49560e01fb26b9b7e71869
+source-git-commit: 9865b5697abe2d344fb530636a1afc3f152a9e8f
 workflow-type: tm+mt
-source-wordcount: '1920'
+source-wordcount: '1918'
 ht-degree: 0%
 
 ---
@@ -136,7 +136,7 @@ Dra och släpp 8 gånger en **1:1-kolumn** på arbetsytan, vilket bör ge dig f�
 
 ![Journey Optimizer](./images/oc9.png)
 
-Gå till **Fragment** på den vänstra menyn. Dra rubriken som du skapade tidigare i övning 3.2.2 till den första komponenten på arbetsytan. Dra sidfoten som du skapade tidigare i övning 3.2.2 till den sista komponenten på arbetsytan.
+Gå till **Fragment** på den vänstra menyn. Dra rubriken som du skapade tidigare i [övning 3.1.2.1](./../module3.1/ex2.md) till den första komponenten på arbetsytan. Dra sidfoten som du skapade tidigare i [övning 3.1.2.2](./../module3.1/ex2.md) till den sista komponenten på arbetsytan.
 
 ![Journey Optimizer](./images/fragm1.png)
 
