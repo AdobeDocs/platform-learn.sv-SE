@@ -6,26 +6,20 @@ audience: Data Engineer, Data Architect, Orchestration Engineer, Marketer
 doc-type: tutorial
 activity: develop
 exl-id: a7218d65-422b-48e5-89fa-864c5af8d1c6
-source-git-commit: f4b3463ce9464c96378790bf8070504fc90cb2ff
+source-git-commit: 5d7b790830a46385ca019bcb23b0032478794591
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: '344'
 ht-degree: 0%
 
 ---
 
 # 3.3 Offer decisioning
 
-**Författare: [Rob In der Maur](https://www.linkedin.com/in/ridmaur/), [Wouter Van Geluwe](https://www.linkedin.com/in/woutervangeluwe/)**
-
 I den här modulen får du en praktisk genomgång av Adobe Journey Optimizer funktioner för Offer decisioning.
 
 Adobe Journey Optimizer ger möjlighet att skapa personaliserade erbjudanden och leverera dem på ett samordnat sätt till alla destinationer som är kopplade till Adobe Journey Optimizer.
 
 Med Offer decisioning kan du välja det bästa alternativet bland en uppsättning tillgängliga alternativ. Dessa alternativ kan vara erbjudanden, produktrekommendationer, innehållskomponenter för en webbupplevelse, konversationsskript och åtgärder som ska vidtas.
-
-Titta på den här videon för att förstå värdet och kundresan:
-
->[!VIDEO](https://video.tv.adobe.com/v/328829?quality=12&learn=on)
 
 ## Utbildningsmål
 
@@ -50,7 +44,7 @@ I den här övningen får du en bättre förståelse för alla olika koncept fö
 
 I den här övningen ska ni konfigurera era egna personaliserade erbjudanden och ert eget beslut, som sedan publiceras.
 
-[3.3.3 Förbered din datainsamling-klientegenskap och Web SDK-konfiguration för Offer decisioning](./ex3.md)
+[3.3.3 Förbered din Data Collection Client-egenskap och Web SDK-konfiguration för Offer decisioning](./ex3.md)
 
 I den här övningen använder du demowebbplatsen för att testa ditt beslut.
 

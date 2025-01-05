@@ -5,9 +5,9 @@ kt: 5342
 audience: Data Engineer, Data Architect, Orchestration Engineer, Marketer
 doc-type: tutorial
 exl-id: 8a627c29-7780-455f-abe1-a69f8fe145ea
-source-git-commit: c531412a2c0a5c216f49560e01fb26b9b7e71869
+source-git-commit: 21718a7c3a4df2793ae257a9b7cbe4466f1193f5
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '948'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Klicka på **Erbjudanden** på den vänstra menyn. Nu visas menyn Erbjudanden, s
 
 ![Placeringar](./images/homedec.png)
 
-Klicka på **Komponenter**. Nu visas menyn Erbjudanden som innehåller funktioner som Placements, Tags, Rules och Rankings.
+Klicka på **Komponenter**. Du kommer nu att se saker som Placements, Collection Qualifier, Rules och Rankings.
 
 ![Placeringar](./images/components.png)
 
@@ -61,7 +61,7 @@ Gå till **Placements**.
 
 På fliken **Placements** kan du definiera dina placeringar för dina erbjudanden. När du definierar ett beslut definierar placeringen var det resulterande erbjudandet ska visas (kanaltyp) och i vilken form (innehållstyp).
 
-Om du inte ser några placeringar i din Adobe Experience Platform-instans skapar du dem enligt anvisningarna nedan och på skärmbilden.
+Om du inte ser några placeringar i din miljö skapar du dem enligt anvisningarna nedan och på skärmbilden.
 
 | Namn | Kanaltyp | Innehållstyp |
 | ---------------------- | ------------ | ------------ |
@@ -101,19 +101,17 @@ Gå till **Regler**. Klicka på **+ Skapa regel**.
 
 ![Beslutsregler](./images/rules.png)
 
-Då visas segmenteringsmiljön i Adobe Experience Platform.
+Du kommer då att se gränssnittet för att skapa en publik i Adobe Experience Platform.
 
 ![Beslutsregler](./images/createrule1.png)
 
 Du kan nu komma åt alla fält som ingår i unionens schema för kundprofilen i realtid och kan bygga ut alla regler.
 
-Det är också intressant att veta att du helt enkelt kan återanvända redan definierade målgrupper i Adobe Experience Platform genom att gå till **Publiker** > ``--aepTenantId--``.
-
-![Beslutsregel](./images/decisionruleaud.png)
+Det är också bra att veta att du helt enkelt kan återanvända redan definierade målgrupper i Adobe Experience Platform genom att gå till **Publiker** > ``--aepTenantId--``.
 
 Då ser du det här:
 
-![Beslutsregel](./images/decisionruleaud1.png)
+![Beslutsregel](./images/decisionruleaud.png)
 
 Om du vill kan du nu konfigurera egna regler. För den här övningen behöver du två regler:
 

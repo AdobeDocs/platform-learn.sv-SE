@@ -5,9 +5,9 @@ user-guide-description: En praktisk självstudiekurs som handlar om många aspek
 hide: true
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-source-git-commit: c8f9d5258d530ef12905113dd2aea4e179d0cca9
+source-git-commit: b753a930bd2d81a14a97ef59c9ffc42991f0f3f6
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '917'
 ht-degree: 2%
 
 ---
@@ -17,6 +17,7 @@ ht-degree: 2%
 
 + [Översikt över självstudiekursen](/help/tutorial-comprehensive-technical/overview.md)
 + [Slutförande](/help/tutorial-comprehensive-technical/completion.md)
++ [Innehållsstatus](/help/tutorial-comprehensive-technical/status.md)
 
 + Komma igång {#gettingstarted}
    + Komma igång {#gettingstarted}

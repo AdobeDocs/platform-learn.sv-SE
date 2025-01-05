@@ -2,9 +2,10 @@
 title: Översikt
 description: Utgångspunkt för datatekniker, dataanalytiker, dataarkitekter, datavetenskaper, Orchestration Engineers och Marketers för att få en fullständig förståelse för affärsvärdet hos Adobe Experience Platform och alla dess programtjänster.
 doc-type: multipage-overview
-source-git-commit: 8270f69dd04714e217ddbb4d125157799cba2940
+exl-id: 88c19383-c185-40f0-b118-6cb82db0ce0e
+source-git-commit: 21718a7c3a4df2793ae257a9b7cbe4466f1193f5
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1221'
 ht-degree: 0%
 
 ---
@@ -67,6 +68,8 @@ För varje modul som du slutför med hjälp av självstudiekursen nedan måste d
 
 ## Innehåll
 
+Gå till [statussidan](./status.md) om du vill kontrollera status för innehållet nedan.
+
 [0. Komma igång](./modules/gettingstarted/gettingstarted/getting-started.md)
 
 I den här grundläggande modulen kommer du att konfigurera allt så att du kan komma åt och använda demomiljön.
@@ -75,9 +78,9 @@ I den här grundläggande modulen kommer du att konfigurera allt så att du kan 
 
 ### 1. Datainsamling
 
-[1.1 Foundation - konfiguration av Adobe Experience Platform Data Collection &amp; Web SDK](./modules/datacollection/module1.1/data-ingestion-launch-web-sdk.md)
+[1.1 Foundation - installation av Adobe Experience Platform Data Collection &amp; Web SDK](./modules/datacollection/module1.1/data-ingestion-launch-web-sdk.md)
 
-I den här grundläggande modulen får du lära dig mer om Adobe Experience Platform Data Collection och det nya SDK-tillägget för webben.
+I den här grundläggande modulen får du lära dig mer om Adobe Experience Platform Data Collection och det nya Web SDK-tillägget.
 
 **Tidsinvestering:** 30 minuter
 
