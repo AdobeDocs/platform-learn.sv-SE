@@ -3,9 +3,9 @@ title: Innehållsstatus
 description: Innehållsstatus
 doc-type: multipage-overview
 exl-id: 75fe2d3d-d9f5-4e9c-8dde-928e9935c25f
-source-git-commit: d6f6423adbc8f0ce8e20e686ea9ffd9e80ebb147
+source-git-commit: 1c91cb2129f827fd39dc065baf5d8ea067a5731a
 workflow-type: tm+mt
-source-wordcount: '214'
+source-wordcount: '231'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Nedan visas en översikt över statusen för innehållet i den här självstudie
 | [3.3 Adobe Journey Optimizer: Offer decisioning](./modules/ajo-b2c/module3.3/offer-decisioning.md) | 06/01/2025 | Ja | – |
 | [3.4 Adobe Journey Optimizer: Händelsebaserade resor](./modules/ajo-b2c/module3.4/journeyoptimizer.md) | 05/01/2025 | Ja | – |
 | [4.1 Customer Journey Analytics: Skapa en kontrollpanel med Analysis Workspace ovanpå Adobe Experience Platform](./modules/cja-b2c/module4.1/customer-journey-analytics-build-a-dashboard.md) | 06/01/2025 | Ja | – |
-| [4.2 Customer Journey Analytics: Importera och analysera Google Analytics-data i Adobe Experience Platform med BigQuery Source Connector](./modules/cja-b2c/module4.2/customer-journey-analytics-bigquery-gcp.md) | 07/01/2025 | Ja | – |
+| [4.2 Customer Journey Analytics: Importera och analysera Google Analytics-data i Adobe Experience Platform med BigQuery Source Connector](./modules/cja-b2c/module4.2/customer-journey-analytics-bigquery-gcp.md) | 07/01/2025 | Nej | Det har uppstått ett problem med modelleringen av dataförberedelser för källdata. Detta väntar på en korrigering. |
 | [5.1-frågetjänst](./modules/datadistiller/module5.1/query-service.md) | 04/12/2024 | Ja | – |
 
 {style="table-layout:auto"}

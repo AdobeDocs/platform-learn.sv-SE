@@ -4,9 +4,9 @@ description: Importera och analysera Google Analytics-data i Adobe Experience Pl
 kt: 5342
 doc-type: tutorial
 exl-id: bd42d049-e2f6-45a3-82fe-e2ee530a76d7
-source-git-commit: d6f6423adbc8f0ce8e20e686ea9ffd9e80ebb147
+source-git-commit: 1c91cb2129f827fd39dc065baf5d8ea067a5731a
 workflow-type: tm+mt
-source-wordcount: '3184'
+source-wordcount: '3100'
 ht-degree: 0%
 
 ---
@@ -119,69 +119,44 @@ Klicka på **Spara och fortsätt**.
 
 ![demo](./images/22.png)
 
+Klicka på **Spara**.
+
+![demo](./images/22a.png)
+
 Nu kan du lägga till komponenter i datavyn. Som du ser läggs vissa mått och mått till automatiskt.
 
 ![demo](./images/24.png)
 
-Lägg till följande komponenter i datavyn:
+Lägg till komponenterna nedan i datavyn. Se även till att uppdatera fältnamnen till egna namn. Det gör du genom att markera måttet eller dimensionen och uppdatera fältet **Komponentnamn** på den högra menyn.
 
-| Komponentnamn | Komponenttyp | Komponentsökväg |
-| -----------------|-----------------|-----------------|
-| nivå | Dimension | _experienceplatform.loyaltyDetails.level |
-| punkter | Mått | _experienceplatform.loyaltyDetails.points |
-| commerce.checkouts.value | Mått | commerce.checkouts.value |
-| commerce.productListRemovals.value | Mått | commerce.productListRemovals.value |
-| commerce.productListAdds | Mått | commerce.productListAdds |
-| commerce.productViews.value | Mått | commerce.productViews.value |
-| commerce.purchases.value | Mått | commerce.purchases.value |
-| web.webPageDetails.pageViews | Mått | web.webPageDetails.pageViews |
-| Transaktions-ID | Dimension | commerce.order.payments.transactionID |
-| channel.mediaType | Dimension | channel.mediaType |
-| channel.typeAtSource | Dimension | channel.typeAtSource |
-| Spårningskod | Dimension | marketing.trackingCode |
-| gala | Dimension | _experience.platform.identify.core.gaid |
-| web.webPageDetails.name | Dimension | web.webPageDetails.name |
-| Händelsetyp | Dimension | eventType |
-| Leverantör | Dimension | environment.browserDetails.vendor |
-| Identifierare | Dimension | _id |
-| Tidsstämpel | Dimension | tidsstämpel |
-| Typ | Dimension | device.type |
-| loyaltyId | Dimension | _experienceplatform.Identification.core.loyaltyId |
-
-Då får du den här:
-
-![demo](./images/25.png)
-
-Därefter måste du ändra det egna namnet för några av ovanstående mått och mått så att du enkelt kan använda dem när du bygger upp din analys. Det gör du genom att markera måttet eller dimensionen och uppdatera fältet **Namn** enligt bilden nedan.
-
-![demo](./images/25a.png)
-
-| Ursprungligt komponentnamn | Visningsnamn |
-| -----------------|-----------------|
-| nivå | Lojalitetsnivå |
-| punkter | Lojalitetspunkter |
-| commerce.checkouts.value | Utcheckningar |
-| commerce.productListRemovals.value | Cart Removals |
-| commerce.productListAdds | Cart Adds |
-| commerce.productViews.value | Produktvyer |
-| commerce.purchases.value | Inköp |
-| web.webPageDetails.pageViews | Sidvyer |
-| channel.mediaType | Traffic Medium |
-| channel.typeAtSource | Traffic Source |
-| Spårningskod | Marknadsföringskanal |
-| gala | Google Analytics-ID |
-| Namn | Sidrubrik |
-| Leverantör | Webbläsare |
-| Typ | Enhetstyp |
-| loyaltyId | Förmåns-ID |
+| Komponenttyp | Ursprungligt komponentnamn | Visningsnamn | Komponentsökväg |
+| -----------------| -----------------|-----------------|-----------------|
+| Mått | commerce.checkouts.value | Utcheckningar | `commerce.checkouts.value` |
+| Mått | commerce.productListRemovals.value | Cart Removals | `commerce.productListRemovals.value` |
+| Mått | commerce.productListAdds | Cart Adds | `commerce.productListAdds` |
+| Mått | commerce.productViews.value | Produktvyer | `commerce.productViews.value` |
+| Mått | commerce.purchases.value | Inköp | `commerce.purchases.value` |
+| Mått | web.webPageDetails.pageViews | Sidvyer | `web.webPageDetails.pageViews` |
+| Mått | punkter | Lojalitetspunkter | `_experienceplatform.loyaltyDetails.points` |
+| Dimension | nivå | Lojalitetsnivå | `_experienceplatform.loyaltyDetails.level` |
+| Dimension | channel.mediaType | Traffic Medium | `channel.mediaType` |
+| Dimension | channel.typeAtSource | Traffic Source | `channel.typeAtSource` |
+| Dimension | Spårningskod | Marknadsföringskanal | `marketing.trackingCode` |
+| Dimension | gala | Google Analytics-ID | `_experienceplatform.identification.core.gaid` |
+| Dimension | web.webPageDetails.name | Sidrubrik | `web.webPageDetails.name` |
+| Dimension | Leverantör | Webbläsare | `environment.browserDetails.vendor` |
+| Dimension | Typ | Enhetstyp | `device.type` |
+| Dimension | loyaltyId | Förmåns-ID | `_experienceplatform.identification.core.loyaltyId` |
+| Dimension | commerce.order.payments.transactionID | Transaktions-ID | `commerce.order.payments.transactionID` |
+| Dimension | eventType | Händelsetyp | `eventType` |
+| Dimension | tidsstämpel | Tidsstämpel | `timestamp` |
+| Dimension | `_id` | Identifierare | `_id` |
 
 Då har du något sådant:
 
 ![demo](./images/25b.png)
 
-Därefter måste du göra några ändringar i person- och sessionskontexten för vissa av dessa komponenter genom att ändra **attributinställningarna**.
-
-![demo](./images/25c.png)
+Därefter måste du göra några ändringar i person- och sessionskontexten för vissa av de här komponenterna genom att ändra **attributs- eller PR-inställningarna**.
 
 Ändra **attribueringsinställningarna** för nedanstående komponenter:
 
@@ -193,37 +168,30 @@ Därefter måste du göra några ändringar i person- och sessionskontexten för
 | Traffic Medium |
 | Enhetstyp |
 | Google Analytics-ID |
-| Förmåns-ID |
-| Lojalitetsnivå |
-| Lojalitetspunkter |
 
-Det gör du genom att markera komponenten, klicka på **Använd anpassad attribueringsmodell** och ange **modell** till **sista beröringen** samt **Förfallotid** till **Person (rapporteringsfönster)**. Upprepa detta för alla ovannämnda komponenter.
+Det gör du genom att markera komponenten, klicka på **Använd anpassad attribueringsmodell** och ställa in **modell** på **Senaste** och **Förfallotid** på **Personrapporteringsfönster**. Upprepa detta för alla ovannämnda komponenter.
 
 ![demo](./images/27a.png)
 
-När du har gjort ändringarna i attribueringsinställningarna för alla de ovannämnda komponenterna bör du ha den här vyn:
+När du har gjort ändringarna i attribueringsinställningarna för alla de ovannämnda komponenterna bör du ha den här vyn. Klicka på **Spara och fortsätt**.
 
 ![demo](./images/27.png)
 
-Datavyn är nu konfigurerad. Klicka på **Spara**.
+Inga ändringar krävs på skärmen **Inställningar**. Klicka på **Spara och avsluta**.
 
-![demo](./images/30.png)
+![demo](./images/27b.png)
 
 Nu kan du analysera Google Analytics-data i Adobe Analytics Analysis Workspace. Låt oss gå vidare till nästa övning.
 
 ## 4.2.5.3 Skapa ett projekt
 
-Gå till **Projekt** i Customer Journey Analytics.
+Gå till **Workspace** i Customer Journey Analytics. Klicka på **Skapa projekt**
 
 ![demo](./images/pro1.png)
 
-Då ser du det här:
+Välj **Tomt Workspace-projekt** och klicka på **Skapa**.
 
 ![demo](./images/pro2.png)
-
-Skapa ett projekt genom att klicka på **Skapa nytt projekt**.
-
-![demo](./images/pro3.png)
 
 Du har nu ett tomt projekt:
 
@@ -236,27 +204,21 @@ Spara först projektet och ge det ett namn. Du kan använda följande kommando f
 | Windows | Ctrl+S |
 | Mac | Kommando + S |
 
-Den här popup-rutan visas:
-
-![demo](./images/prsave.png)
-
-Använd den här namnkonventionen:
+Du kommer att se den här popup-rutan. Använd den här namnkonventionen:
 
 | Namn | Beskrivning |
 | ----------------- |-------------| 
-| ldap - GA + Loyalty Workspace | ldap - GA + Loyalty Workspace |
+| `--aepUserLdap-- – GA + Loyalty Workspace` | `--aepUserLdap-- – GA + Loyalty Workspace` |
 
-Klicka sedan på **Spara projekt**.
+Klicka sedan på **Spara**.
 
-![demo](./images/prsave2.png)
+![demo](./images/prsave.png)
 
-Se sedan till att du väljer rätt datavy i skärmens övre högra hörn. Det här är datavyn som du skapade i föregående övning, med namnkonventionen `ldap - GA + Loyalty Data View`. I det här exemplet är den datavy som ska väljas `ldap - GA + Loyalty Data View`.
+Se sedan till att du väljer rätt datavy i skärmens övre högra hörn. Det här är datavyn som du skapade i föregående övning, med namnkonventionen `--aepUserLdap-- - GA + Loyalty Data View`.
 
 ![demo](./images/prdvlist.png)
 
-![demo](./images/prdv.png)
-
-### 12.5.3.1 Frihandstabeller
+### 4.2.5.3.1 Frihandstabeller
 
 Frihandstabeller fungerar mer eller mindre som pivottabeller i Excel. Välj något från det vänstra fältet och dra och släpp det i Frihand så får du en tabellrapport.
 
@@ -270,17 +232,13 @@ Låt oss se två exempel där du behöver använda SQL, BigQuery och lite tid f�
 
 Låt oss svara på dessa frågor och lite mer med Analysis Workspace i CJA.
 
-Välj först rätt datumintervall (**De senaste 53 fullständiga veckorna**) till höger på panelen.
+Välj först rätt datumintervall (**Idag**) till höger på panelen. CLick **Apply**.
 
 ![demo](./images/pro11.png)
 
-Klicka sedan på **Använd** för att använda datumintervallet. Kom ihåg det här steget för nästa övning.
-
-![demo](./images/apply.png)
-
 >[!NOTE]
 >
->Om du precis skapade **dataanslutningen** och **datavyn** kan du behöva vänta några timmar. CJA behöver lite tid för att fylla i historiska data när det finns en enorm mängd dataposter.
+>Om du precis skapade **dataanslutningen** och **datavyn** kan du behöva vänta några timmar. CJA behöver lite tid för att fylla i historiska data när det finns en stor mängd dataposter.
 
 Låt oss dra och släppa några dimensioner och mätvärden för att analysera marknadsföringskanalerna. Använd först dimensionen **Marknadskanal** och dra och släpp den på arbetsytan i **friformstabellen**. (Klicka på **Visa alla** om du inte ser måttet direkt på Metrisk-menyn)
 
@@ -296,9 +254,13 @@ Innan du kan göra det måste du skapa det beräknade måttet **konverteringsgra
 
 ![demo](./images/procalc1.png)
 
-Använd **Konverteringsgrad** som namn på det beräknade måttet. Dra sedan måtten **purchase** och **Sessions** till arbetsytan. Ange **Format** till **Procent** och **Decimalplatser** till **2**. Klicka slutligen på **Spara**.
+Använd **Konverteringsgrad** som namn för beräknat mått och använd **conversionRate** för **externt ID**. Dra sedan måtten **purchase** och **Sessions** till arbetsytan. Ange **Format** till **Procent** och **Decimalplatser** till **2**. Klicka slutligen på **Spara**.
 
 ![demo](./images/procalc2.png)
+
+Klicka på **Spara**.
+
+![demo](./images/procalc2a.png)
 
 Om du vill använda alla dessa mått i **frihandstabellen** drar och släpper du dem en i taget på **frihandstabellen**. Se exemplet nedan.
 

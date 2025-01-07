@@ -4,9 +4,9 @@ description: Customer Journey Analytics - Visualisering med Customer Journey Ana
 kt: 5342
 doc-type: tutorial
 exl-id: 3c928a73-b4ec-4b68-943c-c177b1e29f7b
-source-git-commit: d6f6423adbc8f0ce8e20e686ea9ffd9e80ebb147
+source-git-commit: 1c91cb2129f827fd39dc065baf5d8ea067a5731a
 workflow-type: tm+mt
-source-wordcount: '1500'
+source-wordcount: '1502'
 ht-degree: 0%
 
 ---
@@ -49,15 +49,15 @@ Dimensionen **Day** läggs automatiskt till för att skapa din första tabell. N
 
 ![demo](./images/pro3.png)
 
-Högerklicka sedan på mätsammanfattningen.
+Högerklicka sedan på mätsammanfattningen. Klicka på **Visa**.
 
 ![demo](./images/pro4.png)
 
-Klicka på **Visualisera** och välj sedan **Rad** som visualisering.
+Klicka på **Rad**.
 
 ![demo](./images/pro5.png)
 
-Du ser dina produkter per dag.
+Du ser dina produkter per timme.
 
 ![demo](./images/pro6.png)
 
@@ -90,7 +90,7 @@ Vi börjar hitta de fem bästa produkterna som visas. På den vänstra menyn hit
 
 Dra och släpp **produktnamn** för att ersätta dimensionen **Dag**:
 
-Detta blir resultatet
+Detta blir resultatet. Välj de fyra produktnamnen så ser du uppdateringen.
 
 ![demo](./images/pro10a.png)
 
@@ -110,13 +110,9 @@ Slutligen kan du lägga till fler visualiseringar. Sök efter `Donut` under visu
 
 ![demo](./images/pro18.png)
 
-I tabellen väljer du sedan de första 5 **användaragentraderna** från den uppdelning vi gjorde under **Google Pixel XL 32 GB Black Smartphone** > **Citi Signal** . Håll ned knappen **CTRL** (i Windows) eller knappen **Command** (i Mac) när du markerar de tre raderna.
+I tabellen väljer du sedan de första 5 **användaragentraderna** från den uppdelning vi gjorde under **Google Pixel XL 32 GB Black Smartphone** > **Citi Signal** . Håll ned knappen **CTRL** (i Windows) eller knappen **Command** (i Mac) när du markerar de tre raderna. Du kommer att se uppdateringen av mundiagrammet.
 
 ![demo](./images/pro20.png)
-
-Du kommer att se att mundiagrammet har ändrats:
-
-![demo](./images/pro21.png)
 
 Du kan till och med anpassa designen så att den blir mer läsbar genom att göra både diagrammet **Linje** och diagrammet **Ring** lite mindre så att de får plats bredvid varandra:
 
@@ -156,13 +152,9 @@ Då ser du det här.
 
 ![demo](./images/prodatefa.png)
 
-Hitta dimensionen **Händelsetyp** under komponenterna till vänster:
+Hitta dimensionen **Händelsetyp** under komponenterna till vänster. Klicka på pilen för att öppna dimensionen.
 
 ![demo](./images/pro26.png)
-
-Klicka på pilen för att öppna dimensionen:
-
-![demo](./images/pro27.png)
 
 Du kommer att se alla tillgängliga händelsetyper.
 
@@ -176,7 +168,7 @@ Gör samma sak med **commerce.productListAdds** och **commerce.purchase** och sl
 
 ![demo](./images/props1.png)
 
-Du kan göra många saker här. Några exempel: jämför över tid, jämför varje steg per enhet eller jämför efter lojalitet. Men om vi vill analysera intressanta saker som varför kunderna inte köper efter att ha lagt till ett objekt i kundvagnen kan vi använda det bästa verktyget i CJA: högerklicka.
+Du kan göra många saker här. Några exempel: jämför över tid, jämför varje steg per enhet eller jämför efter lojalitet. Men om du vill analysera intressanta saker som varför kunderna inte köper efter att ha lagt till ett objekt i kundvagnen kan vi använda det bästa verktyget i CJA: högerklicka.
 
 Högerklicka på kontaktytan **commerce.productListAdds**. Klicka sedan på **Brytningsutfall vid den här kontaktytan**.
 
@@ -194,36 +186,24 @@ En ny friformstabell kommer att skapas för att analysera vad personerna gjorde 
 
 Det finns många sätt att utföra den här analysen. Låt oss använda flödesanalysen för att starta identifieringsdelen.
 
-Stäng den aktuella panelen genom att klicka här:
+Stäng den aktuella panelen genom att klicka här och lägg sedan till en ny tom panel genom att klicka på **+ Lägg till tom panel**.
 
 ![demo](./images/pro0.png)
-
-Lägg till en ny tom panel genom att klicka på **+ Lägg till tom panel**.
-
-![demo](./images/pro0a.png)
 
 Klicka på visualiseringen **Flöde**.
 
 ![demo](./images/pro35.png)
 
-Då ser du det här:
-
-![demo](./images/pro351.png)
-
-Välj samma datumintervall som i föregående övning.
+Då ser du det här. Välj samma datumintervall som i föregående övning. Klicka på **Använd**.
 
 ![demo](./images/pro0b.png)
 
-Hitta dimensionen **Sidnamn** under komponenterna till vänster:
+Hitta dimensionen **Sidnamn** under komponenterna till vänster och klicka på pilen för att öppna dimensionen.
 
 ![demo](./images/pro36.png)
 
-Klicka på pilen för att öppna dimensionen:
-
-![demo](./images/pro37.png)
-
 Alla sidor visas. Hitta sidnamnet: **Avbryt tjänst**.
-Dra och släpp **Avbryt tjänst** till Flödesvisualisering i mittfältet:
+Dra och släpp **Avbryt tjänst** till Flödesvisualisering i mittfältet. Klicka på **Skapa**.
 
 ![demo](./images/pro38.png)
 
@@ -274,23 +254,15 @@ Välj nu **positiv** som värde för filtret.
 
 ![demo](./images/pro49.png)
 
-Ändra omfattningen till nivån **Person**.
+Ändra omfattningen till nivån **Person**. Klicka på **Spara**.
 
 ![demo](./images/pro50.png)
 
-Klicka på **Spara** om du vill avsluta.
-
-![demo](./images/pro51.png)
-
-Du kommer då tillbaka hit. Stäng den föregående panelen om du inte är klar ännu.
+Du kommer då tillbaka hit. Om du inte är klar ännu stänger du den föregående panelen och lägger till en ny tom panel genom att klicka på **+ Lägg till tom panel**.
 
 ![demo](./images/pro0c.png)
 
-Lägg till en ny tom panel genom att klicka på **+ Lägg till tom panel**.
-
-![demo](./images/pro24c.png)
-
-Välj samma datumintervall som i föregående övning.
+Välj samma datumintervall som i föregående övning. Klicka på **Använd**.
 
 ![demo](./images/pro24d.png)
 
