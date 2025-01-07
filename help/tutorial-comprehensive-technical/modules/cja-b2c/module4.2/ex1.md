@@ -3,20 +3,19 @@ title: Importera och analysera Google Analytics-data i Adobe Experience Platform
 description: Importera och analysera Google Analytics-data i Adobe Experience Platform med BigQuery Source Connector - Skapa ditt Google Cloud Platform-konto
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: 6dbfb5a3-adc2-4818-8f79-bbb00e56fbdf
+source-git-commit: d6f6423adbc8f0ce8e20e686ea9ffd9e80ebb147
 workflow-type: tm+mt
-source-wordcount: '663'
+source-wordcount: '666'
 ht-degree: 0%
 
 ---
 
-# 4.2.1 Skapa ett Google Cloud Platform-konto
+# 4.2.1 Börja använda Google Cloud Platform
 
-## Mål
-
-- Skapa ett Google Cloud Platform-konto
-- Bekanta dig med Google Cloud Platform Console
-- Skapa och förbered ditt BigQuery-projekt
+>[!NOTE]
+>
+>För den här övningen behöver du tillgång till en Google Cloud Platform-miljö. Om du inte har tillgång till GCP än skapar du ett nytt konto med din personliga e-postadress.
 
 ## 4.2.1.1 Varför ansluta Google BigQuery till Adobe Experience Platform för att hämta Google Analytics-data
 
@@ -33,98 +32,86 @@ GCP/BigQuery Source Connector ska användas..
 - spåra alla kundbeteenden på webbplatsen och läsa in dessa data i Adobe Experience Platform för analyser, datavetenskap och personalisering som inte kräver aktivering i realtid.
 - läsa in historiska data från Google Analytics i Adobe Experience Platform, återigen för analyser och datavetenskapliga användningsområden
 
-## 4.2.1.2 Skapa ett Google-konto
+## 4.2.1.2 Ditt Google-konto
 
-För att få ett Google Cloud Platform-konto behöver du ett Google-konto.
+>[!NOTE]
+>
+>För den här övningen behöver du tillgång till en Google Cloud Platform-miljö. Om du inte har tillgång till GCP än skapar du ett nytt konto med din personliga e-postadress.
 
-## 4.2.1.3 Aktivera ditt Google Cloud Platform-konto
+## 4.2.1.3 Välja eller skapa ett projekt
 
-Nu när du har ett Google-konto kan du skapa en plattformsmiljö för Google Cloud. Gå till [https://console.cloud.google.com/](https://console.cloud.google.com/) om du vill göra det.
+Gå till [https://console.cloud.google.com/](https://console.cloud.google.com/).
 
-Godkänn villkoren på nästa sida.
+Klicka sedan på **Välj ett projekt** eller klicka på ett befintligt projekt.
 
-![demo](./images/ex1/1.png)
+![demo](./images/ex12.png)
 
-Klicka sedan på **Välj ett projekt**.
+Om du inte har något projekt än klickar du på **NYTT PROJEKT**. Om du redan har ett projekt kan du välja att välja det och fortsätta till nästa steg.
 
-![demo](./images/ex1/2.png)
+![demo](./images/ex1createproject.png)
 
-Klicka på **NYTT PROJEKT**.
+Namnge projektet enligt den här namnkonventionen. Klicka på **SKAPA**.
 
-![demo](./images/ex1/createproject.png)
+| Konvention |
+| ----------------- |
+| `--aepUserLdap---googlecloud` |
 
-Namnge projektet enligt den här namnkonventionen:
+![demo](./images/ex13.png)
 
-| Konvention | Exempel |
-| ----------------- |-------------| 
-| `--aepUserLdap---googlecloud` | delaigle-googlecloud |
+Vänta tills meddelandet längst upp till höger på skärmen talar om att skapandet är klart. Klicka sedan på **VÄLJ PROJEKT**.
 
-![demo](./images/ex1/3.png)
-
-Klicka på **Skapa**.
-
-![demo](./images/ex1/3-1.png)
-
-Vänta tills meddelandet längst upp till höger på skärmen talar om att skapandet är klart. Klicka sedan på **Visa projekt**.
-
-![demo](./images/ex1/4.png)
+![demo](./images/ex14.png)
 
 Gå sedan till sökfältet överst på skärmen och skriv **BigQuery**. Markera det första resultatet.
 
-![demo](./images/ex1/7.png)
+![demo](./images/ex17.png)
 
-Du kommer sedan att omdirigeras till BigQuery-konsolen så visas ett popup-meddelande.
+Målet med den här modulen är att få in data från Google Analytics i Adobe Experience Platform. För att göra det behöver ni dummy-data i en datauppsättning för Google Analytics.
 
-**Klicka på Klar**.
+Klicka på **+ Lägg till** och sedan på **Offentliga datauppsättningar** på den högra menyn.
 
-![demo](./images/ex1/5.png)
-
-Målet med den här modulen är att få in data från Google Analytics i Adobe Experience Platform. För att göra det behöver vi dummydata i en datauppsättning från Google Analytics.
-
-Klicka på **Lägg till data** på den vänstra menyn och klicka sedan på **Utforska publika datauppsättningar**.
-
-![demo](./images/ex1/18.png)
+![demo](./images/ex118.png)
 
 Då visas det här fönstret:
 
-![demo](./images/ex1/19.png)
+![demo](./images/ex119.png)
 
-Ange söktermen **Exempel på Google Analytics** i sökfältet och markera det första resultatet.
+Ange söktermen **Exempel på Google Analytics** i sökfältet och klicka på det första sökresultatet.
 
-![demo](./images/ex1/20.png)
+![demo](./images/ex120.png)
 
 Följande skärm visas med en beskrivning av datauppsättningen. Klicka på **VISA DATAUPPSÄTTNING**.
 
-![demo](./images/ex1/21.png)
+![demo](./images/ex121.png)
 
 Du kommer sedan att omdirigeras till BigQuery där du kan se den här **bigquery-public-data**-datauppsättningen under **Utforskaren**.
 
-![demo](./images/ex1/22a.png)
+![demo](./images/ex122a.png)
 
 I **Utforskaren** bör du nu se ett antal tabeller. Experimentera fritt. Gå till `google_analytics_sample`.
 
-![demo](./images/ex1/22.png)
+![demo](./images/ex122.png)
 
 Klicka för att öppna tabellen `ga_sessions`.
 
-![demo](./images/ex1/23.png)
+![demo](./images/ex123.png)
 
 Innan du fortsätter med nästa övning bör du skriva följande i en separat textfil på datorn:
 
 | Autentiseringsuppgifter | Namngivning | Exempel |
 | ----------------- |-------------| -------------|
 | Projektnamn | `--aepUserLdap---googlecloud` | vangeluw-googlecloud |
-| Projekt-ID | random | sammansatt-uppgift-306413 |
+| Projekt-ID | random | possible-bee-447102-h3 |
 
 Du kan hitta ditt projektnamn och projekt-ID genom att klicka på ditt **projektnamn** i den övre menyraden:
 
-![demo](./images/ex1/projectMenu.png)
+![demo](./images/ex1projectMenu.png)
 
 Du kommer då att se ditt projekt-ID till höger:
 
-![demo](./images/ex1/projetcselection.png)
+![demo](./images/ex1projetcselection.png)
 
-Nu kan du gå över till Exercise 12.2 där du kan få dina händer smutsiga genom att fråga Google Analytics data.
+Nu kan du gå vidare till nästa övning där du kan få dina händer smutsiga genom att fråga Google Analytics data.
 
 Nästa steg: [4.2.2 Skapa din första fråga i BigQuery](./ex2.md)
 

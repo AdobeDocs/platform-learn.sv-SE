@@ -3,9 +3,10 @@ title: Customer Journey Analytics - Visualisering med Customer Journey Analytics
 description: Customer Journey Analytics - Visualisering med Customer Journey Analytics
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: 3c928a73-b4ec-4b68-943c-c177b1e29f7b
+source-git-commit: d6f6423adbc8f0ce8e20e686ea9ffd9e80ebb147
 workflow-type: tm+mt
-source-wordcount: '1497'
+source-wordcount: '1500'
 ht-degree: 0%
 
 ---
@@ -24,11 +25,11 @@ I den här övningen kommer du att använda Analysis Workspace i CJA för att an
 
 Vi tar upp några av frågorna i modul 7 - Frågetjänst så att du kan se hur enkelt det är att köra samma frågor och mer, men utan att använda SQL och bara förlita dig på Analysis Workspace dra-och-släpp-filosofi.
 
-Låt oss använda det projekt du skapade i [11.4 Dataförberedelse i Analysis Workspace](./ex4.md), så gå till [https://analytics.adobe.com](https://analytics.adobe.com).
+Låt oss använda det projekt du skapade i [4.1.4 Dataförberedelse i Analysis Workspace](./ex4.md), så gå till [https://analytics.adobe.com](https://analytics.adobe.com).
+
+Klicka för att öppna projektet `--aepUserLdap-- - Omnichannel Analysis`.
 
 ![demo](./images/prohome.png)
-
-Öppna ditt projekt `--aepUserLdap-- - Omnichannel Analysis`.
 
 När ditt projekt är öppet och datavyn `--aepUserLdap-- - Omnichannel Analysis` är markerad är du redo att börja skapa dina första visualiseringar.
 
@@ -36,7 +37,7 @@ När ditt projekt är öppet och datavyn `--aepUserLdap-- - Omnichannel Analysis
 
 ## Hur många produktvisningar har vi dagligen?
 
-Först och främst måste vi välja rätt datum för att analysera data. Gå till kalenderlistrutan till höger på arbetsytan. Klicka på den och välj ett datumintervall.
+Först och främst måste du välja rätt datum för att analysera data. Gå till kalenderlistrutan till höger på arbetsytan. Klicka på den och välj ett datumintervall.
 
 ![demo](./images/pro1.png)
 

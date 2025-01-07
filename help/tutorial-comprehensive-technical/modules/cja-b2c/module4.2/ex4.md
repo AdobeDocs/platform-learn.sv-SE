@@ -3,9 +3,10 @@ title: Importera och analysera data från Google Analytics i Adobe Experience Pl
 description: Importera och analysera data från Google Analytics i Adobe Experience Platform med BigQuery Source Connector - Läs in data från BigQuery i Adobe Experience Platform
 kt: 5342
 doc-type: tutorial
-source-git-commit: 2cdc145d7f3933ec593db4e6f67b60961a674405
+exl-id: 793b35c6-761f-4b0a-b0bc-3eab93c82162
+source-git-commit: d6f6423adbc8f0ce8e20e686ea9ffd9e80ebb147
 workflow-type: tm+mt
-source-wordcount: '767'
+source-wordcount: '710'
 ht-degree: 0%
 
 ---
@@ -20,45 +21,33 @@ ht-degree: 0%
 
 ## Innan du börjar
 
-När du har tränat 12.3 bör du ha den här sidan öppen i Adobe Experience Platform:
+Efter föregående övning bör du ha den här sidan öppen i Adobe Experience Platform:
 
 ![demo](./images/datasets.png)
 
-**Om du har den öppen fortsätter du med träning 12.4.1.**
+**Om du har den öppen fortsätter du med nästa övning.**
 
 **Om du inte har den öppen går du till [Adobe Experience Platform](https://experience.adobe.com/platform/home).**
 
-Gå till Källor på den vänstra menyn. Du kommer då att se hemsidan **Källor**. Klicka på **Databaser** på menyn **Källor**.
+Gå till Källor på den vänstra menyn. Du kommer då att se hemsidan **Källor**. Gå till **Google BigQuery**-källkopplingen på menyn **Källor** och klicka på **Konfigurera**.
 
 ![demo](./images/sourceshome.png)
 
-Markera **Google BigQuery** Source Connector och klicka på **+ Configure**.
+Då visas urvalsskärmen för Google BigQuery-konto. Välj ditt konto och klicka på **Nästa**.
 
-![demo](./images/bq.png)
+![demo](./images/0c.png)
 
-Då visas urvalsskärmen för Google BigQuery-konto.
-
-![demo](./images/0-c.png)
-
-Välj ditt konto och klicka på **Nästa**.
-
-![demo](./images/ex4/0-d.png)
-
-Du ser sedan vyn **Lägg till data**.
+Sedan visas skärmen **Markera data**.
 
 ![demo](./images/datasets.png)
 
 ## 4.2.4.1 Val av BigQuery-tabell
 
-I vyn **Lägg till data** väljer du din BigQuery-datauppsättning.
-
-![demo](./images/datasets.png)
-
-Nu kan du se en förhandsvisning av Google Analytics data i BigQuery.
+På skärmen **Välj data** väljer du din BigQuery-datamängd. Nu kan du se en förhandsvisning av Google Analytics data i BigQuery.
 
 Klicka på **Nästa**.
 
-![demo](./images/ex4/3.png)
+![demo](./images/datasets1.png)
 
 ## 4.2.4.2 XDM-mappning
 
@@ -72,7 +61,7 @@ Välj **Befintlig datauppsättning**. Öppna listrutan för att välja en dataup
 
 ![demo](./images/xdm6.png)
 
-Rulla ned. Du måste nu mappa varje **Source Field** från Google Analytics/BigQuery till ett XDM **målfält**, fält för fält.
+Rulla ned. Du måste nu mappa varje **Source Field** från Google Analytics/BigQuery till ett XDM **målfält**, fält för fält. Du kan se ett antal fel som kommer att åtgärdas i mappningsövningen nedan.
 
 ![demo](./images/xdm8.png)
 
@@ -80,43 +69,51 @@ Använd mappningstabellen nedan för den här övningen.
 
 | Source Field | Målfält |
 | ----------------- |-------------| 
-| **_id** | _id |
-| **_id** | kanal._id |
-| timeStamp | tidsstämpel |
-| GA_ID | ``--aepTenantId--``.identity.core.gaid |
-| customerID | ``--aepTenantId--``.identity.core.loyaltyId |
-| Sida | web.webPageDetails.name |
-| Enhet | device.type |
-| Webbläsare | environment.browserDetails.vendor |
-| MarketingChannel | marketing.trackingCode |
-| TrafficSource | channel.typeAtSource |
-| TrafficMedium | channel.mediaType |
-| TransactionID | commerce.order.payments.transactionID |
-| eCommerce_Action_Type | eventType |
-| Sidor | web.webPageDetails.pageViews.value |
-| Unique_Purchases | commerce.purchases.value |
-| product_detail_views | commerce.productViews.value |
-| add_to_cart | commerce.productListAdds.value |
-| product_removes_from_art | commerce.productListRemovals.value |
-| Product_Checkouts | commerce.checkouts.value |
+| `_id` | `_id` |
+| `_id` | kanal._id |
+| `timeStamp` | tidsstämpel |
+| `GA_ID` | ``--aepTenantId--``.identity.core.gaid |
+| `customerID` | ``--aepTenantId--``. identification.core.crmId |
+| `Page` | web.webPageDetails.name |
+| `Device` | device.type |
+| `Browser` | environment.browserDetails.vendor |
+| `MarketingChannel` | marketing.trackingCode |
+| `TrafficSource` | channel.typeAtSource |
+| `TrafficMedium` | channel.mediaType |
+| `TransactionID` | commerce.order.payments.transactionID |
+| `Ecommerce_Action_Type` | eventType |
+| `Pageviews` | web.webPageDetails.pageViews.value |
 
-När du har kopierat och klistrat in mappningen ovan i Adobe Experience Platform UI bör du kontrollera om det inte finns några fel på grund av stavfel eller inledande/avslutande blanksteg.
 
-Du har nu en **mappning** som den här:
+För vissa fält måste du ta bort den ursprungliga mappningen och skapa en ny för ett **beräknat fält**.
 
-![demo](./images/xdm34.png)
+| Beräknat fält | Målfält |
+| ----------------- |-------------| 
+| `iif("Ecommerce_Action_Type".equalsIgnoreCase("Product_Refunds"), 1, 0)` | commerce.purchases.value |
+| `iif("Ecommerce_Action_Type".equalsIgnoreCase("Product_Detail_Views"), 1, 0)` | commerce.productViews.value |
+| `iif("Adds_To_Cart".equalsIgnoreCase("Adds_To_Cart"), 1, 0)` | commerce.productListAdds.value |
+| `iif("Ecommerce_Action_Type".equalsIgnoreCase("Product_Removes_From_Cart"), 1, 0)` | commerce.productListRemovals.value |
+| `iif("Ecommerce_Action_Type".equalsIgnoreCase("Product_Checkouts"), 1, 0)` | commerce.checkouts.value |
+
+Om du vill skapa ett **beräknat fält** klickar du på **+ Ny fälttyp** och sedan på **Beräknat fält**.
+
+![demo](./images/xdm8a.png)
+
+Klistra in regeln ovan och klicka på **Spara** för vart och ett av fälten i tabellen ovan.
+
+![demo](./images/xdm8b.png)
+
+Du har nu en **mappning** som den här.
 
 Källfälten **GA_ID** och **customerID** mappas till en identifierare i det här XDM-schemat. På så sätt kan du förbättra Google Analytics-data (webb-/appbeteendedata) med andra datauppsättningar som Loyalty eller Call Center-data.
 
 Klicka på **Nästa**.
 
-![demo](./images/ex4/38.png)
+![demo](./images/xdm34.png)
 
 ## 4.2.4.3 Anslutning och planering av dataöverföring
 
 Fliken **Schemaläggning** visas nu:
-
-![demo](./images/xdm38a.png)
 
 På fliken **Schemaläggning** kan du definiera en frekvens för datainmatningsprocessen för den här **mappningen** och data.
 
@@ -124,59 +121,26 @@ Eftersom du använder demodata i Google BigQuery som inte kommer att uppdateras 
 
 - Frekvens: **Vecka**
 - Intervall: **200**
-
-![demo](./images/ex4/39.png)
+- Starttid: **när som helst under nästa timme**
 
 **Viktigt**: Kontrollera att du aktiverar växeln **Backfill**.
 
-![demo](./images/ex4/39a.png)
-
 Sist men inte minst måste du definiera ett **delta**-fält.
-
-![demo](./images/ex4/36.png)
 
 Fältet **delta** används för att schemalägga anslutningen och bara överföra nya rader som kommer till din BigQuery-datamängd. Ett delta-fält är vanligtvis alltid en tidsstämpelkolumn. Så för framtida schemalagda datainmatningar kommer endast rader med en ny, nyare tidsstämpel att kapslas.
 
 Välj **timeStamp** som deltafält.
-
-![demo](./images/ex4/37.png)
-
-Du har den här nu.
-
-![demo](./images/xdm37a.png)
-
 Klicka på **Nästa**.
 
-![demo](./images/ex4/42.png)
+![demo](./images/ex437.png)
 
 ## 4.2.4.4 Granska och starta anslutning
 
-I vyn **Flödesinformation för datauppsättning**. du måste namnge anslutningen, vilket hjälper dig att hitta den senare.
-
-Använd den här namnkonventionen:
-
-| Fält | Namngivning | Exempel |
-| ----------------- |-------------| -------------|
-| Namn på dataflöde | DataFlow - ldap - BigQuery Web Interaction | DataFlow - vangeluw - BigQuery-webbplatsinteraktion |
-| Beskrivning | DataFlow - ldap - BigQuery Web Interaction | DataFlow - vangeluw - BigQuery-webbplatsinteraktion |
-
-![demo](./images/xdm44.png)
-
-Klicka på **Nästa**.
-
-![demo](./images/ex4/45.png)
-
 Nu visas en detaljerad översikt över din anslutning. Kontrollera att allt är korrekt innan du fortsätter, eftersom vissa inställningar inte kan ändras längre efteråt, till exempel XDM-mappningen.
-
-![demo](./images/xdm46.png)
 
 Klicka på **Slutför**.
 
-![demo](./images/ex4/finish.png)
-
-Det kan ta ett tag att konfigurera anslutningen, så oroa dig inte om följande visas:
-
-![demo](./images/ex4/47.png)
+![demo](./images/xdm46.png)
 
 När anslutningen har skapats ser du följande:
 

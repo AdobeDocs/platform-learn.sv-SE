@@ -3,9 +3,10 @@ title: Customer Journey Analytics - Datainsamling i Analysis Workspace
 description: Customer Journey Analytics - Datainsamling i Analysis Workspace
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: aa2fab85-d56e-4a00-8b8f-8a2053d8674a
+source-git-commit: d6f6423adbc8f0ce8e20e686ea9ffd9e80ebb147
 workflow-type: tm+mt
-source-wordcount: '763'
+source-wordcount: '758'
 ht-degree: 0%
 
 ---
@@ -32,12 +33,12 @@ Om du inte har använt Analysis Workspace tidigare rekommenderar vi att du titta
 
 ### Skapa ditt projekt
 
-Nu är det dags att skapa ditt första CJA-projekt. Gå till projektfliken i CJA.
-Klicka på **Skapa ny**.
+Nu är det dags att skapa din första CJA-arbetsyta. Gå till fliken **Workspace** i CJA.
+Klicka på **Skapa projekt**.
 
 ![demo](./images/prmenu.png)
 
-Då ser du det här. Välj **Tomt projekt** och klicka sedan på **Skapa**.
+Då ser du det här. Välj **Tomt Workspace-projekt** och klicka sedan på **Skapa**.
 
 ![demo](./images/prmenu1.png)
 
@@ -45,7 +46,7 @@ Då ser du ett tomt projekt.
 
 ![demo](./images/premptyprojects.png)
 
-Kontrollera först att du har valt rätt datavy i skärmens övre högra hörn. I det här exemplet är den datavy som ska väljas `vangeluwe - Omnichannel Data View`.
+Kontrollera först att du har valt rätt datavy i skärmens övre högra hörn. Den datavy som ska väljas är `--aepUserLdap-- - Omnichannel Data View`.
 
 ![demo](./images/prdv.png)
 
@@ -108,17 +109,17 @@ Konverteringsgraden anges vanligtvis i procent. Låt oss ändra formatet så att
 
 Äntligen ändrar du namnet och beskrivningen för det beräknade måttet:
 
-| Titel | Beskrivning |
-| ----------------- |-------------| 
-| Konverteringsgrad | Konverteringsgrad |
+| Titel | Beskrivning | Externt ID |
+| ----------------- |-------------| -------------| 
+| Konverteringsgrad | Konverteringsgrad | conversionRate |
 
-Du kommer att ha något liknande på din skärm:
+Du kommer då att få den här. Klicka på **Spara**.
 
 ![demo](./images/calcbuildercr6.png)
 
-Glöm inte att **spara** det beräknade måttet.
+Klicka på **Spara** igen.
 
-![demo](./images/pr9.png)
+![demo](./images/calcbuildercr6a.png)
 
 ## 4.1.4.3 Beräknade Dimensioner: Filter (segmentering) och datumintervall
 

@@ -4,16 +4,14 @@ description: Importera och analysera data från Google Analytics i Adobe Experie
 kt: 5342
 doc-type: tutorial
 exl-id: b078d003-da25-44c5-b000-77e3b3188fb6
-source-git-commit: 0dbcda0cfc9f199a44c845c1b5caf00a8d740251
+source-git-commit: d6f6423adbc8f0ce8e20e686ea9ffd9e80ebb147
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
 
 # 4.2 Importera och analysera data från Google Analytics i Adobe Experience Platform med BigQuery Source Connector
-
-**Författare: [Victor de la Iglesia](https://www.linkedin.com/in/victordelaiglesia/), [Wouter Van Geluwe](https://www.linkedin.com/in/woutervangeluwe/)**
 
 I den här modulen ska du konfigurera en egen instans av Google Cloud Platform, läsa in exempeldata i Google Cloud Platform och sedan använda BigQuery Source Connector för att importera data från Google Cloud Platform till Adobe Experience Platform. Slutligen använder ni Customer Journey Analytics för att visualisera dessa data.
 
@@ -43,9 +41,9 @@ Dessutom kan vi berika Google Analytics data genom att koppla dem till andra dat
 
 ## Utövningar
 
-[4.2.1 Skapa ett Google Cloud Platform-konto](./ex1.md)
+[4.2.1 Börja använda Google Cloud Platform](./ex1.md)
 
-Skapa ett Google Cloud Platform-konto.
+Börja använda Google Cloud Platform-miljön.
 
 [4.2.2 Skapa din första fråga i BigQuery](./ex2.md)
 

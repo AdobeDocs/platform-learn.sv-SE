@@ -3,9 +3,10 @@ title: Importera och analysera Google Analytics-data i Adobe Experience Platform
 description: Importera och analysera Google Analytics-data i Adobe Experience Platform med BigQuery Source Connector - Skapa din första fråga i BigQuery
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: c3c06447-3096-4f55-993b-4d41bc15c4d2
+source-git-commit: d6f6423adbc8f0ce8e20e686ea9ffd9e80ebb147
 workflow-type: tm+mt
-source-wordcount: '526'
+source-wordcount: '529'
 ht-degree: 0%
 
 ---
@@ -28,42 +29,40 @@ Lösningen på det här problemet är att omvandla data från Google Analytics t
 
 Gå till [BigQuery-konsolen](https://console.cloud.google.com/bigquery).
 
-![demo](./images/ex3/1.png)
+![demo](./images/ex31.png)
 
 I **Utforskaren** visas ditt projekt-ID. Klicka på ditt projekt-ID (klicka inte på datamängden **bigquery-public-data**).
 
-![demo](./images/ex3/2.png)
+![demo](./images/ex32.png)
 
 Du ser att det inte finns någon datauppsättning än, så vi skapar en nu.
-Klicka på **SKAPA DATAUPPSÄTTNING**.
+Klicka på den 3 **..** och sedan på **SKAPA DATAUPPSÄTTNING**.
 
-![demo](./images/ex3/4.png)
+![demo](./images/ex34.png)
 
 Till höger på skärmen visas menyn **Skapa datauppsättning**.
 
-![demo](./images/ex3/5.png)
+![demo](./images/ex35.png)
 
 Använd namnkonventionen nedan för **datauppsättnings-ID**. Lämna standardinställningarna för de andra fälten.
 
 | Namngivning | Exempel |
 | ----------------- | ------------- | 
-| `--aepUserLdap--_BigQueryDataSets` | vangeluw_BigQueryDataSets |
+| `--aepUserLdap--_BigQueryDataSet` | vangeluw_BigQueryDataSet |
 
-![demo](./images/ex3/6.png)
+Klicka på **SKAPA DATAUPPSÄTTNING**.
 
-Klicka sedan på **Skapa datauppsättning**.
-
-![demo](./images/ex3/7.png)
+![demo](./images/ex36.png)
 
 Sedan är du tillbaka i BigQuery-konsolen när datauppsättningen har skapats.
 
-![demo](./images/ex3/8.png)
+![demo](./images/ex38.png)
 
 ## 4.2.2.2 Skapa din första SQL BigQuery
 
-Därefter skapar du din första fråga i BigQuery. Målet med den här frågan är att ta exempeldata för Google Analytics och omvandla dem så att de kan importeras i Adobe Experience Platform. Gå till fliken **EDITOR**.
+Därefter skapar du din första fråga i BigQuery. Målet med den här frågan är att ta exempeldata för Google Analytics och omvandla dem så att de kan importeras i Adobe Experience Platform. Gå till fliken **Namnlös fråga**.
 
-![demo](./images/ex3/9.png)
+![demo](./images/ex39.png)
 
 Kopiera följande SQL-fråga och klistra in den i den frågeredigeraren. Du kan läsa frågan och förstå Google Analytics BigQuery-syntaxen.
 
@@ -232,29 +231,29 @@ GROUP BY
 
 När du är klar klickar du på **Kör** för att köra frågan:
 
-![demo](./images/ex3/10.png)
+![demo](./images/ex310.png)
 
 Det kan ta några minuter att köra frågan.
 
 När frågan har körts klart visas utdata nedan i **frågeresultatet**.
 
-![demo](./images/ex3/12.png)
+![demo](./images/ex312.png)
 
 ## 4.2.2.3 Spara resultatet av BigQuery SQL-frågan
 
 Nästa steg är att spara frågans utdata genom att klicka på knappen **SPARA RESULTAT** .
 
-![demo](./images/ex3/13.png)
+![demo](./images/ex313.png)
 
 Välj **BigQuery-tabell** som plats för dina utdata.
 
-![demo](./images/ex3/14.png)
+![demo](./images/ex314.png)
 
 Därefter visas ett nytt popup-fönster där ditt **projektnamn** och **datauppsättningsnamn** är ifyllda i förväg. Datauppsättningsnamnet ska vara den datauppsättning som du skapade i början av den här övningen, med den här namnkonventionen:
 
 | Namngivning | Exempel |
 | ----------------- | ------------- | 
-| `--aepUserLdap--_BigQueryDataSets` | `vangeluw_BigQueryDataSets` |
+| `--aepUserLdap--_BigQueryDataSet` | `vangeluw_BigQueryDataSet` |
 
 Nu måste du ange ett tabellnamn. Använd den här namnkonventionen:
 
@@ -262,13 +261,13 @@ Nu måste du ange ett tabellnamn. Använd den här namnkonventionen:
 | ----------------- |------------- | 
 | `--aepUserLdap--_GAdataTableBigQuery` | `vangeluw_GAdataTableBigQuery` |
 
-![demo](./images/ex3/16.png)
-
 Klicka på **SPARA**.
+
+![demo](./images/ex316.png)
 
 Det kan ta en stund innan data är klara i tabellen som du har skapat. Uppdatera webbläsaren efter några minuter. I datauppsättningen ska du sedan se tabellen `--aepUserLdap--_GAdataTableBigquery` under **Utforskaren** i ditt BigQuery-projekt.
 
-![demo](./images/ex3/19.png)
+![demo](./images/ex319.png)
 
 Nu kan du fortsätta med nästa övning där du kopplar tabellen till Adobe Experience Platform.
 

@@ -3,9 +3,10 @@ title: Importera och analysera Google Analytics-data i Adobe Experience Platform
 description: Importera och analysera Google Analytics-data i Adobe Experience Platform med BigQuery Source Connector - Analysera Google Analytics-data med Customer Journey Analytics
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6962a0d37d375e751a05ae99b4f433b0283835d0
+exl-id: bd42d049-e2f6-45a3-82fe-e2ee530a76d7
+source-git-commit: d6f6423adbc8f0ce8e20e686ea9ffd9e80ebb147
 workflow-type: tm+mt
-source-wordcount: '3338'
+source-wordcount: '3184'
 ht-degree: 0%
 
 ---
@@ -26,11 +27,7 @@ Gå till [analytics.adobe.com](https://analytics.adobe.com) om du vill komma åt
 
 Gå till **Anslutningar** på Customer Journey Analytics hemsida.
 
-![demo](./images/conn1.png)
-
 Här ser du alla olika anslutningar mellan CJA och Platform. Dessa anslutningar har samma mål som rapporteringsprogram i Adobe Analytics. Insamlingen av data är dock helt annorlunda. Alla data kommer från Adobe Experience Platform datamängder.
-
-![demo](./images/2.png)
 
 Klicka på **Skapa ny anslutning**.
 
@@ -40,71 +37,45 @@ Därefter visas gränssnittet **Skapa anslutning**.
 
 ![demo](./images/5.png)
 
-Först och främst måste du välja rätt sandlåda som ska användas. Välj din sandlåda på sandlådemenyn, som ska vara `--aepSandboxName--`. I det här exemplet är sandlådan som ska användas **AEP Enablement FY21**.
+Använd följande för namnet: `--aepUserLdap-- - GA + Loyalty Data Connection`.
 
-![demo](./images/cjasb.png)
+Du måste välja rätt sandlåda att använda. Välj din sandlåda på sandlådemenyn, som ska vara `--aepSandboxName--`. I det här exemplet är sandlådan som ska användas **Tech Insiders**.
 
-När du har valt sandlådan uppdateras de tillgängliga datauppsättningarna.
+Ange **Genomsnittligt antal dagliga händelser** till **mindre än 1 miljon**.
 
-![demo](./images/cjasb1.png)
-
-På den vänstra menyn kan du se alla tillgängliga Adobe Experience Platform-datauppsättningar. Sök efter datauppsättningen `Demo System - Event Dataset for BigQuery (Global v1.1)`. Klicka på **+** för att lägga till datauppsättningen i den här anslutningen.
+Nu kan du börja lägga till datauppsättningar på datamenyn. Klicka på **Lägg till datauppsättningar**.
 
 ![demo](./images/6.png)
 
-När du har lagt till den visas datauppsättningen inuti anslutningen.
+De datauppsättningar som ska läggas till är:
+- `Demo System - Profile Dataset for CRM (Global v1.1)`
+- `Demo System - Event Dataset for BigQuery (Global v1.1)`
 
-Du måste nu välja **person-ID**. Kontrollera att **loyaltyId** har valts som person-ID.
+Sök efter båda datauppsättningarna, markera kryssrutan för dem och klicka sedan på **Nästa**.
+
+![demo](./images/d1.png)
+
+Då ser du det här:
 
 ![demo](./images/8.png)
 
-Du kommer nu att berika Google Analytics webbsajtens interaktionsdata med en annan datauppsättning från Adobe Experience Platform.
+Ändra **Person-ID** till **loyaltyId** för datauppsättningen `Demo System - Event Dataset for BigQuery (Global v1.1)` och ange **Datakälltyp** till **Webbdata**. Aktivera båda alternativen för **Importera alla nya data** och **Fyll i alla befintliga data**.
 
-Sök efter datauppsättningen `Demo System - Profile Dataset for Loyalty (Global v1.1)` och lägg till den i den här anslutningen.
+![demo](./images/d2.png)
 
-![demo](./images/10.png)
+Kontrollera att **Person-ID** är inställt på **crmId** för datauppsättningen `Demo System - Event Dataset for BigQuery (Global v1.1)` och ställ in **datakälltypen** på **webbdata**. Aktivera båda alternativen för **Importera alla nya data** och **Fyll i alla befintliga data**. Klicka på **Lägg till datauppsättningar**.
 
-Då ser du det här:
+![demo](./images/d3.png)
 
-![demo](./images/10a.png)
+Du kommer då att vara här. Klicka på **Spara**.
 
-Om du vill sammanfoga båda datauppsättningarna måste du välja ett **person-ID** som innehåller samma typ av ID. Datauppsättningen `Demo System - Profile Dataset for Loyalty (Global v1.1)` använder **loyaltyId** som Person-ID, som innehåller samma typ av ID som `Demo System - Event Dataset for BigQuery (Global v1.1)`, som även använder **loyaltyId** som ett person-ID.
-
-![demo](./images/12.png)
-
-Klicka på **Nästa**.
-
-![demo](./images/14.png)
-
-Då ser du det här:
-
-![demo](./images/15.png)
-
-Här måste du ange ett namn för anslutningen.
-
-Använd den här namnkonventionen: `ldap - GA + Loyalty Data Connection`.
-
-Exempel: `vangeluw - GA + Loyalty Data Connection`
-
-Aktivera även **Importera automatiskt alla nya data för alla datauppsättningar i den här anslutningen med början idag innan du är klar.** som i bilden nedan.
-
-![demo](./images/16.png)
-
-Detta startar ett dataflöde från Adobe Experience Platform till CJA var 60:e minut, men med stora datavolymer kan det ta upp till 24 timmar.
-
-Du måste också fylla i historiska data baklänges, så markera kryssrutan för **Importera alla befintliga data** och markera **mindre än 1 miljon** under **Genomsnittligt antal dagliga händelser**.
-
-![demo](./images/17.png)
+![demo](./images/d4.png)
 
 När du har skapat din **anslutning** kan det ta några timmar innan dina data är tillgängliga i CJA.
 
-Klicka på **Spara** och gå till nästa övning.
-
-![demo](./images/cjasave.png)
-
 Sedan visas anslutningen i listan över tillgängliga anslutningar.
 
-![demo](./images/18.png)
+![demo](./images/d5.png)
 
 ## 4.2.5.2 Skapa en datavy
 
@@ -120,13 +91,9 @@ Om ni vill att ert företag ska bli datadrivet bör ni anpassa hur data ska visa
 - Använd samma namn för KPI:er och Metrics för Google Analytics som för Customer Journey Analytics så att de digitala analysteamen bara kan tala ett språk.
 - datavy filtrerad för att exempelvis visa data för 1 marknad, 1 varumärke eller endast för mobila enheter.
 
-På skärmen **Anslutningar** markerar du kryssrutan framför den anslutning du just skapade.
+På skärmen **Anslutningar** markerar du kryssrutan framför den anslutning du just skapade. Klicka på **Skapa datavy**.
 
 ![demo](./images/exta.png)
-
-Klicka nu på **Skapa datavy**.
-
-![demo](./images/extb.png)
 
 Du omdirigeras till arbetsflödet **Skapa datavy**.
 
@@ -134,26 +101,23 @@ Du omdirigeras till arbetsflödet **Skapa datavy**.
 
 Nu kan du konfigurera de grundläggande definitionerna för datavyn. Exempel på tidszon, tidsgräns för session eller filtrering av datavyn (segmenteringsdelen liknar den för virtuella rapportsviter i Adobe Analytics).
 
-**Anslutningen** som du skapade i den föregående övningen har redan valts. Anslutningen har namnet `ldap - GA + Loyalty Data Connection`.
+**Anslutningen** som du skapade i den föregående övningen har redan valts. Anslutningen har namnet `--aepUserLdap-- - GA + Loyalty Data Connection`.
 
-![demo](./images/ext5.png)
+Ge sedan datavyn ett namn enligt följande namnkonvention: `--aepUserLdap-- - GA + Loyalty Data View`.
 
-Ge sedan datavyn ett namn enligt följande namnkonvention: `ldap - GA + Loyalty Data View`.
-
-Ange samma värde för beskrivningen: `ldap - GA + Loyalty Data View`.
+Ange samma värde för beskrivningen: `--aepUserLdap-- - GA + Loyalty Data View`.
 
 Innan vi gör någon analys eller visualisering måste vi skapa en datavy med alla fält, dimensioner och mått samt deras attribueringsinställningar.
 
-| Fält | Namngivningskonvention | Exempel |
-| ----------------- |-------------|-------------|  
-| Namnanslutning | ldap - GA + lojalitetsdatavy | vangeluw - GA + lojalitetsdatavy |
-| Beskrivning | ldap - GA + lojalitetsdatavy | vangeluw - GA + lojalitetsdatavy |
-
-![demo](./images/22.png)
+| Fält | Namngivningskonvention |
+| ----------------- |-------------|  
+| Namnanslutning | `--aepUserLdap-- - GA + Loyalty Data View` | vangeluw - GA + lojalitetsdatavy |
+| Beskrivning | `--aepUserLdap-- - GA + Loyalty Data View` |
+| Externt ID | `--aepUserLdap--GA` |
 
 Klicka på **Spara och fortsätt**.
 
-![demo](./images/23.png)
+![demo](./images/22.png)
 
 Nu kan du lägga till komponenter i datavyn. Som du ser läggs vissa mått och mått till automatiskt.
 
