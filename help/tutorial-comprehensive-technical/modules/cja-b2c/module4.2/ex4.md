@@ -4,7 +4,7 @@ description: Importera och analysera data från Google Analytics i Adobe Experie
 kt: 5342
 doc-type: tutorial
 exl-id: 793b35c6-761f-4b0a-b0bc-3eab93c82162
-source-git-commit: d6f6423adbc8f0ce8e20e686ea9ffd9e80ebb147
+source-git-commit: 608fc570f9aa172db3578664e793f35fb3f1bf50
 workflow-type: tm+mt
 source-wordcount: '710'
 ht-degree: 0%
@@ -89,11 +89,11 @@ För vissa fält måste du ta bort den ursprungliga mappningen och skapa en ny f
 
 | Beräknat fält | Målfält |
 | ----------------- |-------------| 
-| `iif("Ecommerce_Action_Type".equalsIgnoreCase("Product_Refunds"), 1, 0)` | commerce.purchases.value |
-| `iif("Ecommerce_Action_Type".equalsIgnoreCase("Product_Detail_Views"), 1, 0)` | commerce.productViews.value |
-| `iif("Adds_To_Cart".equalsIgnoreCase("Adds_To_Cart"), 1, 0)` | commerce.productListAdds.value |
-| `iif("Ecommerce_Action_Type".equalsIgnoreCase("Product_Removes_From_Cart"), 1, 0)` | commerce.productListRemovals.value |
-| `iif("Ecommerce_Action_Type".equalsIgnoreCase("Product_Checkouts"), 1, 0)` | commerce.checkouts.value |
+| `iif(Unique_Purchases == null, 0, Unique_Purchases)` | commerce.purchases.value |
+| `iif(Product_Detail_Views == null, 0, Product_Detail_Views)` | commerce.productViews.value |
+| `iif(Adds_To_Cart == null, 0, Adds_To_Cart)` | commerce.productListAdds.value |
+| `iif(Product_Removes_From_Cart == null, 0, Product_Removes_From_Cart), 1, 0)` | commerce.productListRemovals.value |
+| `iif(Product_Checkouts == null, 0, Product_Checkouts)` | commerce.checkouts.value |
 
 Om du vill skapa ett **beräknat fält** klickar du på **+ Ny fälttyp** och sedan på **Beräknat fält**.
 

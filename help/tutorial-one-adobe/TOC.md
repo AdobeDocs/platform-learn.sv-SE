@@ -4,9 +4,9 @@ breadcrumb-title: Omfattande teknisk självstudiekurs för Adobe, från Creative
 hide: true
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-source-git-commit: a1f7cea15f65ceb5c2447f2a73b504da6ab7e416
+source-git-commit: 76723130c0b817110f348a3136246d808bc7b0a9
 workflow-type: tm+mt
-source-wordcount: '88'
+source-wordcount: '94'
 ht-degree: 5%
 
 ---
@@ -20,6 +20,7 @@ ht-degree: 5%
    + 1.1 Adobe Firefly-tjänster {#module11}
       + [Översikt](/help/tutorial-one-adobe/modules/creative-cloud/module1.1/firefly-services.md)
       + [1.1.1 Komma igång med Firefly Services](/help/tutorial-one-adobe/modules/creative-cloud/module1.1/ex1.md)
+      + [1.1.2 Begär bilder med specifikationer](/help/tutorial-one-adobe/modules/creative-cloud/module1.1/ex2.md)
       + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/creative-cloud/module1.1/summary.md)
 
 + 2 Kedja för innehållsleverans {#csc}
