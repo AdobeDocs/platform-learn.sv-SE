@@ -4,9 +4,9 @@ description: Komma igång med Firefly Services
 kt: 5342
 doc-type: tutorial
 exl-id: 52385c33-f316-4fd9-905f-72d2d346f8f5
-source-git-commit: 608fc570f9aa172db3578664e793f35fb3f1bf50
+source-git-commit: ea06ca2d05195efa57643d45d7e50d3d914081d3
 workflow-type: tm+mt
-source-wordcount: '929'
+source-wordcount: '935'
 ht-degree: 0%
 
 ---
@@ -176,7 +176,7 @@ Nu visas en vacker bild som visar `horses in a field`.
 
 Du kan spela runt med API-begäran innan du fortsätter med nästa övning.
 
-Nästa steg: [1.1.2 Begär bilder med specifikationer](./ex2.md)
+Nästa steg: [1.1.2 Optimera Firefly-processen med Microsoft Azure och försignerade URL:er](./ex2.md)
 
 [Gå tillbaka till modul 1.1](./firefly-services.md)
 
