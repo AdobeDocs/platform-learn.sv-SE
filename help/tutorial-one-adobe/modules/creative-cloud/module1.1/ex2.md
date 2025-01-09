@@ -4,9 +4,9 @@ description: Komma igång med Firefly Services
 kt: 5342
 doc-type: tutorial
 exl-id: 5f9803a4-135c-4470-bfbb-a298ab1fee33
-source-git-commit: ea06ca2d05195efa57643d45d7e50d3d914081d3
+source-git-commit: 6c344db00b8296c8ea6d31c83cefd8edcddb51b1
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: '1114'
 ht-degree: 0%
 
 ---
@@ -119,13 +119,13 @@ Du hittar sedan ditt lagringskonto under **Lagringskonton**.
 
 ![Azure Storage](./images/az18.png)
 
-## 1.1.2.4 Manuell filöverföring och användning av en övertoningsfil som formatreferens
+## 1.1.2.4 Manuell filöverföring och användning av en bildfil som formatreferens
 
-Du bör nu överföra en övertoningsfil till behållaren. Du kan använda valfri övertoningsfil eller [den här filen](./images/gradient.jpg) genom att hämta den till datorn.
+Du bör nu överföra en bildfil som du väljer till behållaren. Du kan använda valfri bildfil eller så kan du använda [den här filen](./images/gradient.jpg) genom att hämta den till datorn.
 
 ![Azure Storage](./images/gradient.jpg)
 
-Släpp övertoningsfilen i behållaren i Azure Storage Explorer.
+Släpp bildfilen i din behållare i Azure Storage Explorer.
 
 När du har överfört den visas den i behållaren:
 
@@ -147,7 +147,7 @@ Gå tillbaka till Postman. Öppna begäran **POST - Firefly - T2I (styleref) V3*
 
 ![Azure Storage](./images/az23.png)
 
-Ersätt platshållarens URL med den försignerade URL:en för övertoningsfilen som du kopierade från Azure Storage Explorer. Du får den här då. Klicka på **Skicka**.
+Ersätt platshållarens URL med den försignerade URL-adressen för bildfilen som du kopierade från Azure Storage Explorer. Du får den här då. Klicka på **Skicka**.
 
 ![Azure Storage](./images/az24.png)
 
@@ -155,7 +155,7 @@ Du får sedan ett svar från Firefly Services igen, med en ny bild. Öppna bildf
 
 ![Azure Storage](./images/az25.png)
 
-Du kommer då att se en annan bild med `horses in a field`, men den här gången liknar formatet övertoningsfilen som du angav som formatreferens.
+Du kommer då att se en annan bild med `horses in a field`, men den här gången liknar stilen den bildfil som du angav som stilreferens.
 
 ![Azure Storage](./images/az26.png)
 
@@ -195,7 +195,7 @@ Klicka sedan på **Brödtext**.
 
 ![Azure Storage](./images/az31.png)
 
-Du måste nu välja en fil på den lokala datorn. Du kan använda en ny bildfil eller använda en annan övertoningsfil som du hittar [här](./images/gradient2-p.jpg).
+Du måste nu välja en fil på den lokala datorn. Du kan använda en ny bildfil eller använda en annan bildfil som du hittar [här](./images/gradient2-p.jpg).
 
 ![Övertoningsfil](./images/gradient2-p.jpg)
 
@@ -223,7 +223,10 @@ Det filnamn som ska användas är `gradient2-p.jpg`, vilket innebär att URL:en 
 
 Gå sedan till **Sidhuvuden** där du måste lägga till en ny rubrik manuellt. Använd detta:
 
-x-ms-blob-type BlockBlob
+| Nyckel | Värde |
+|:-------------:| :---------------:| 
+| `x-ms-blob-type` | `BlockBlob` |
+
 
 ![Azure Storage](./images/az35.png)
 
@@ -238,6 +241,27 @@ Du kommer då att se det tomma svaret i Postman, vilket innebär att din filöve
 Om du sedan går tillbaka till Azure Storage Explorer och uppdaterar innehållet i din mapp, kommer du nu att hitta den nyligen överförda filen där.
 
 ![Azure Storage](./images/az38.png)
+
+## 1.1.2.5 Programmatisk filanvändning
+
+Om du vill använda programmässig läsning av filer från Azure Storage-konton måste du skapa en ny **SAS**-token (Shared Access Signature) med behörighet att läsa en fil. Du kan tekniskt använda den SAS-token som du skapade i föregående övning, men det är bäst att ha en separat token med bara **läsbehörighet**.
+
+Gå tillbaka till Azure Storage Explorer om du vill göra det. Högerklicka på behållaren och klicka sedan på **Hämta signatur för delad åtkomst**.
+
+![Azure Storage](./images/az27.png)
+
+Under **Behörigheter** krävs följande behörigheter:
+
+- **Läs**
+- **Lägg till**
+- **Skapa**
+- **Skriv**
+- **Lista**
+
+Klicka på **Skapa**.
+
+![Azure Storage](./images/az28.png)
+
 
 Nästa steg: [1.1.3 ...](./ex3.md)
 
