@@ -3,9 +3,9 @@ title: Skapa ett Cloud Manager-program
 description: Skapa ett Cloud Manager-program
 kt: 5342
 doc-type: tutorial
-source-git-commit: 89611537cad42082af1b9aa753752d5450f103a5
+source-git-commit: cd7601002c7d18232fdd2e8e68cbc4315e118948
 workflow-type: tm+mt
-source-wordcount: '885'
+source-wordcount: '992'
 ht-degree: 0%
 
 ---
@@ -307,9 +307,38 @@ Din webbplats öppnas sedan i **Universal Editor**.
 
 ![AEMCS](./images/aemcssetup45.png)
 
-Du kan nu även navigera till din webbplats genom att gå till `main--citisignal--woutervangeluwe.aem.live/us/en`
+Du kan nu komma åt din webbplats genom att gå till `main--citisignal--XXX.aem.page/us/en` och/eller `main--citisignal--XXX.aem.live/us/en` efter att du ersatt XXX med ditt GitHub-användarkonto, som i det här exemplet är `woutervangeluwe`.
 
+I det här exemplet blir den fullständiga URL:en följande:
+`https://main--citisignal--woutervangeluwe.aem.page/us/en` och/eller `https://main--citisignal--woutervangeluwe.aem.live/us/en`.
 
+Det kan ta en stund innan alla resurser visas korrekt, eftersom de måste publiceras först.
+
+Då ser du det här:
+
+![AEMCS](./images/aemcssetup46.png)
+
+Efter några minuter läses alla resurser in korrekt.
+
+![AEMCS](./images/aemcssetup47.png)
+
+## 2.1.2.7 Testa sidprestanda
+
+Gå till [https://pagespeed.web.dev/](https://pagespeed.web.dev/). Ange din URL och klicka på **Analysera**.
+
+![AEMCS](./images/aemcssetup48.png)
+
+Då ser du att er webbplats, både i mobilvisualisering och i datorvisualisering, får högsta poäng:
+
+**Mobil**:
+
+![AEMCS](./images/aemcssetup49.png)
+
+**Skrivbord**:
+
+![AEMCS](./images/aemcssetup50.png)
+
+Nästa steg: [2.1.3 Konfigurera ett anpassat block](./ex3.md)
 
 [Gå tillbaka till modul 2.1](./aemcs.md)
 
