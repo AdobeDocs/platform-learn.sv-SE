@@ -5,9 +5,9 @@ user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
 auto-video-transcripts: true
-source-git-commit: c49c3d4cdfd4fcfc930332a25b9fd5d5356e1004
+source-git-commit: f64623255c045396799d0d627f199ce59c794d70
 workflow-type: tm+mt
-source-wordcount: '947'
+source-wordcount: '958'
 ht-degree: 6%
 
 ---
@@ -49,8 +49,13 @@ ht-degree: 6%
 + AI-assistenten {#ai-assistant}
    + [Översikt](/help/platform/ai-assistant/overview.md)
    + [Konfigurera åtkomst](/help/platform/ai-assistant/access.md)
-   + [Rensa målgrupper](/help/platform/ai-assistant/find-unused-audiences.md)
    + [Anmäl dig med en ny produkt](/help/platform/ai-assistant/onboard.md)
+   + [Läs mer om produkter](/help/platform/ai-assistant/product-knowledge.md)
+   + [Validera svar](/help/platform/ai-assistant/validate-responses.md)
+   + [Identifieringspanelen](/help/platform/ai-assistant/discoverability-panel.md)
+   + [Hitta oanvända målgrupper](/help/platform/ai-assistant/find-unused-audiences.md)
+   + [Effektanalys](/help/platform/ai-assistant/impact-analysis.md)
+   + [Säkerhet - översikt](/help/platform/ai-assistant/security-overview.md)
 + Målgrupper och segmentering {#audiences}
    + [Introduktion till Audience Portal and Composition](audiences/introduction-to-audience-portal-and-composition.md)
    + [Överför målgrupper](audiences/upload-audiences.md)
@@ -109,8 +114,8 @@ ht-degree: 6%
    + [Översikt över direktuppspelning](/help/platform/data-ingestion/understanding-streaming-ingestion.md)
    + [Strömma data med HTTP API](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/streaming-ingestion-http-api.html)
    + [Strömma data med Source Connectors](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/streaming-ingestion-source-connector.html)
-   + [Självstudiekurser för Web SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html){target="_blank"}
-   + [Självstudiekurser för mobil SDK](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html){target="_blank"}
+   + [Självstudiekurser för SDK på webben](https://experienceleague.adobe.com/docs/platform-learn/data-collection/web-sdk/overview.html){target="_blank"}
+   + [Mobile SDK - självstudiekurser](https://experienceleague.adobe.com/docs/platform-learn/data-collection/mobile-sdk/overview.html){target="_blank"}
 + Datas livscykel {#data-lifecycle}
    + [Förfaller datauppsättningar](/help/platform/data-lifecycle/expire-datasets.md)
 + Data Science Workspace {#data-science-workspace}
