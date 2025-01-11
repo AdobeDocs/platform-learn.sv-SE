@@ -5,9 +5,9 @@ user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
 auto-video-transcripts: true
-source-git-commit: f64623255c045396799d0d627f199ce59c794d70
+source-git-commit: e940c5c9e0a028890c6f7f68c7d32fa73515e8c3
 workflow-type: tm+mt
-source-wordcount: '958'
+source-wordcount: '957'
 ht-degree: 6%
 
 ---
@@ -48,7 +48,7 @@ ht-degree: 6%
    + [Konfigurera attributbaserad åtkomstkontroll](/help/platform/admin/configure-attribute-based-access-control.md)
 + AI-assistenten {#ai-assistant}
    + [Översikt](/help/platform/ai-assistant/overview.md)
-   + [Konfigurera åtkomst](/help/platform/ai-assistant/access.md)
+   + [Få åtkomst](/help/platform/ai-assistant/access.md)
    + [Anmäl dig med en ny produkt](/help/platform/ai-assistant/onboard.md)
    + [Läs mer om produkter](/help/platform/ai-assistant/product-knowledge.md)
    + [Validera svar](/help/platform/ai-assistant/validate-responses.md)
