@@ -4,7 +4,7 @@ description: Komma igång med Firefly Services
 kt: 5342
 doc-type: tutorial
 exl-id: 5f9803a4-135c-4470-bfbb-a298ab1fee33
-source-git-commit: 6d627312073bb2cecd724226f1730aed7133700c
+source-git-commit: d26d4735c92498d56beb7859ec67a0c3e174fc25
 workflow-type: tm+mt
 source-wordcount: '1500'
 ht-degree: 0%
@@ -242,7 +242,7 @@ Om du sedan går tillbaka till Azure Storage Explorer och uppdaterar innehållet
 
 ![Azure Storage](./images/az38.png)
 
-## 1.1.2.5 Programmatisk filanvändning
+## 1.1.2.6 Programmatisk filanvändning
 
 Om du vill använda programläst filer från Azure Storage-konton på lång sikt måste du skapa en ny **SAS**-token (Shared Access Signature) med behörighet att läsa en fil. Du kan tekniskt använda den SAS-token som du skapade i föregående övning, men det är bäst att ha en separat token med bara **läsbehörighet** och en separat token med endast **skrivbehörighet**.
 
@@ -359,7 +359,7 @@ Om variablerna har konfigurerats på rätt sätt visas en bild-URL som returnera
 
 Öppna bildens URL för att verifiera bilden.
 
-![Azure Storage](./images/az108.png)
+![Azure Storage](./images/az108.jpg)
 
 Nästa steg: [1.1.3 Adobe Firefly &amp; Adobe Photoshop](./ex3.md)
 

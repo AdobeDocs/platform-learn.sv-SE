@@ -2,10 +2,11 @@
 title: Översikt - Teknisk självstudiekurs - en Adobe
 description: Omfattande teknisk självstudiekurs - en Adobe
 doc-type: multipage-overview
-source-git-commit: b1bb17bfe451c67903424bd8da6716d0ad1c2cd3
+exl-id: 5bc0d621-0662-4d94-80a0-b6c173c0ac9e
+source-git-commit: d26d4735c92498d56beb7859ec67a0c3e174fc25
 workflow-type: tm+mt
-source-wordcount: '281'
-ht-degree: 2%
+source-wordcount: '302'
+ht-degree: 1%
 
 ---
 
@@ -62,8 +63,12 @@ I den här grundläggande modulen använder du Adobe Firefly till ...
 
 I den här grundläggande modulen kommer du att konfigurera Adobe Experience Manager Cloud Service Program, Site och Assets.
 
+[2.2 Adobe Workfront](./modules/csc/module2.2/workfront.md)
+
+I den här grundläggande modulen kommer du att konfigurera Adobe Experience Manager Cloud Service Program, Site och Assets.
+
 ### 3. Enhetlig kundupplevelse
 
-[3.1 Adobe Real-Time CDP](./modules/uce/module3.1/rtcdp.md)
+[3.1 Sammansatt målgrupp](./modules/uce/module3.1/fac.md)
 
 I den här grundläggande modulen får du lära dig mer om Adobe Experience Platform Data Collection och det nya Web SDK-tillägget.

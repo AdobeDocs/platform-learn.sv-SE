@@ -1,26 +1,29 @@
 ---
-title: Sammanfattning och fördelar
-description: Sammanfattning och fördelar
+title: Foundation - FAC - sammanfattning
+description: Foundation - FAC - sammanfattning
 kt: 5342
 doc-type: tutorial
-source-git-commit: 1077ada5423cde76d1dd337e8a4f8f83324a8853
+exl-id: 9681cceb-1d8b-48d0-b751-af98778b6acb
+source-git-commit: d26d4735c92498d56beb7859ec67a0c3e174fc25
 workflow-type: tm+mt
-source-wordcount: '21'
-ht-degree: 4%
+source-wordcount: '53'
+ht-degree: 1%
 
 ---
 
 # Sammanfattning och fördelar
 
-Grattis ...
+Grattis och tack för att du har lagt ned din tid på att lära dig om Adobe Experience Platform!
 
 ## Fördelar
 
-...
+Låt oss lyfta fram fördelarna med dataöverföringskapaciteten i Federated Audience Composition i Adobe Experience Platform:
+
+
 
 ## Kolla in det här
 
 
-[Gå tillbaka till modul 3](./rtcdp.md)
+[Gå tillbaka till modul 1.3](./fac.md)
 
 [Gå tillbaka till Alla moduler](../../../overview.md)
