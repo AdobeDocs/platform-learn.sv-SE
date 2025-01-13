@@ -4,9 +4,9 @@ breadcrumb-title: Omfattande teknisk självstudiekurs för Adobe, från Creative
 hide: true
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-source-git-commit: ab3f13389ae194519dcb9c8988ea38b89f6e5907
+source-git-commit: 1229a57730076c49adcbc168b5d73f92ad7581c9
 workflow-type: tm+mt
-source-wordcount: '160'
+source-wordcount: '180'
 ht-degree: 6%
 
 ---
@@ -25,6 +25,12 @@ ht-degree: 6%
       + [1.1.2 Optimera Firefly-processen med Microsoft Azure och försignerade URL:er](/help/tutorial-one-adobe/modules/creative-cloud/module1.1/ex2.md)
       + [1.1.3 Adobe Firefly och Adobe Photoshop](/help/tutorial-one-adobe/modules/creative-cloud/module1.1/ex3.md)
       + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/creative-cloud/module1.1/summary.md)
+   + 1.2 Automatiserar Adobe Firefly-tjänster {#module21}
+      + [Översikt](/help/tutorial-one-adobe/modules/creative-cloud/module1.2/automation.md)
+      + [1.2.1 Komma igång med Firefly Services](/help/tutorial-one-adobe/modules/creative-cloud/module1.2/ex1.md)
+      + [1.2.2 ...](/help/tutorial-one-adobe/modules/creative-cloud/module1.2/ex2.md)
+      + [1.2.3 ...](/help/tutorial-one-adobe/modules/creative-cloud/module1.2/ex3.md)
+      + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/creative-cloud/module1.2/summary.md)
 
 + 2 Kedja för innehållsleverans {#csc}
    + 2.1 Adobe Experience Manager-Cloud Service {#module21}
