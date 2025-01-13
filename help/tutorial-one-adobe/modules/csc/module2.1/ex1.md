@@ -4,10 +4,10 @@ description: Skapa ett Cloud Manager-program
 kt: 5342
 doc-type: tutorial
 exl-id: fda247eb-1865-4936-b46e-84128ccab357
-source-git-commit: 183def00c705cdc8b8e48e197c63629e803290a2
+source-git-commit: 6d627312073bb2cecd724226f1730aed7133700c
 workflow-type: tm+mt
-source-wordcount: '200'
-ht-degree: 2%
+source-wordcount: '223'
+ht-degree: 1%
 
 ---
 
@@ -31,11 +31,13 @@ Klicka på **Skapa**.
 
 ![AEMCS](./images/aemcs3.png)
 
-Det kan ta en stund att skapa miljöer.
+Det kan ta 10-20 minuter att skapa miljöer.
 
 ![AEMCS](./images/aemcs4.png)
 
-När miljöerna har skapats och är klara att användas får du en bekräftelse via e-post.
+Under tiden du väntar kan du redan börja med övning [2.1.2 Skapa din dokumentbaserade webbplats](./ex2.md).
+
+När miljöerna har skapats och är klara att användas får du en bekräftelse via e-post, varefter du kan komma tillbaka hit.
 
 ![AEMCS](./images/aemcs5.png)
 
@@ -61,7 +63,7 @@ Du kommer då att se din miljöinformation, inklusive URL:en för din **författ
 
 När din pipeline är klar kan du fortsätta med nästa övning.
 
-Nästa steg: [2.1.2 Konfigurera AEM CS-miljö](./ex2.md)
+Nästa steg: [2.1.2 Skapa en dokumentbaserad webbplats](./ex2.md)
 
 [Gå tillbaka till modul 2.1](./aemcs.md)
 

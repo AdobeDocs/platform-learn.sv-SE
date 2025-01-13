@@ -4,9 +4,9 @@ description: Adobe Experience Manager Cloud Service
 kt: 5342
 doc-type: tutorial
 exl-id: 52efb52c-103f-4171-a69e-0cddb142a0ed
-source-git-commit: ce8e9f193765f362b3ea1396626d56b453e1d5ec
+source-git-commit: 6d627312073bb2cecd724226f1730aed7133700c
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '193'
 ht-degree: 0%
 
 ---
@@ -27,11 +27,15 @@ ht-degree: 0%
 
 I den här övningen skapar du ett Cloud Manager-program som skapar Sites-, Assets- och Edge Delivery Services-produkterna åt dig.
 
-[2.1.2 Konfigurera AEM CS-miljö](./ex2.md)
+[2.1.2 Skapa en dokumentbaserad webbplats](./ex2.md)
+
+I den här övningen kommer du att skapa en egen dokumentbaserad webbplats genom att kopiera en befintlig webbplatsmall.
+
+[2.1.3 Konfigurera AEM CS-miljö](./ex3.md)
 
 I den här övningen ska du konfigurera din AEM CS-miljö och gå till din CitiSignal-webbplats.
 
-[2.1.3 Utveckla ett anpassat block](./ex3.md)
+[2.1.4 Utveckla ett anpassat block](./ex4.md)
 
 I den här övningen ska du utveckla en anpassad blockkomponent för din webbplats.
 

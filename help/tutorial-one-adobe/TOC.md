@@ -4,10 +4,10 @@ breadcrumb-title: Omfattande teknisk självstudiekurs för Adobe, från Creative
 hide: true
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-source-git-commit: cd7601002c7d18232fdd2e8e68cbc4315e118948
+source-git-commit: 5242f77e2756e1bcd9ed25a7b95b06a01114fcd5
 workflow-type: tm+mt
-source-wordcount: '135'
-ht-degree: 7%
+source-wordcount: '145'
+ht-degree: 6%
 
 ---
 
@@ -23,15 +23,16 @@ ht-degree: 7%
       + [Översikt](/help/tutorial-one-adobe/modules/creative-cloud/module1.1/firefly-services.md)
       + [1.1.1 Komma igång med Firefly Services](/help/tutorial-one-adobe/modules/creative-cloud/module1.1/ex1.md)
       + [1.1.2 Optimera Firefly-processen med Microsoft Azure och försignerade URL:er](/help/tutorial-one-adobe/modules/creative-cloud/module1.1/ex2.md)
-      + [1.1.3 ...](/help/tutorial-one-adobe/modules/creative-cloud/module1.1/ex3.md)
+      + [1.1.3 Adobe Firefly och Adobe Photoshop](/help/tutorial-one-adobe/modules/creative-cloud/module1.1/ex3.md)
       + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/creative-cloud/module1.1/summary.md)
 
 + 2 Kedja för innehållsleverans {#csc}
    + 2.1 Adobe Experience Manager-Cloud Service {#module21}
       + [Översikt](/help/tutorial-one-adobe/modules/csc/module2.1/aemcs.md)
       + [2.1.1 Skapa ett Cloud Manager-program](/help/tutorial-one-adobe/modules/csc/module2.1/ex1.md)
-      + [2.1.2 Konfigurera AEM CS-miljö](/help/tutorial-one-adobe/modules/csc/module2.1/ex2.md)
-      + [2.1.3 Utveckla ett anpassat block](/help/tutorial-one-adobe/modules/csc/module2.1/ex3.md)
+      + [2.1.2 Skapa en dokumentbaserad webbplats](/help/tutorial-one-adobe/modules/csc/module2.1/ex2.md)
+      + [2.1.3 Konfigurera AEM CS-miljö](/help/tutorial-one-adobe/modules/csc/module2.1/ex3.md)
+      + [2.1.4 Utveckla ett anpassat block](/help/tutorial-one-adobe/modules/csc/module2.1/ex4.md)
       + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/csc/module2.1/summary.md)
    + 2.2 Workfront {#module22}
       + [Översikt](/help/tutorial-one-adobe/modules/csc/module2.2/workfront.md)

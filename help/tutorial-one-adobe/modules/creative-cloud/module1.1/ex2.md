@@ -4,9 +4,9 @@ description: Komma igång med Firefly Services
 kt: 5342
 doc-type: tutorial
 exl-id: 5f9803a4-135c-4470-bfbb-a298ab1fee33
-source-git-commit: 6c344db00b8296c8ea6d31c83cefd8edcddb51b1
+source-git-commit: 6d627312073bb2cecd724226f1730aed7133700c
 workflow-type: tm+mt
-source-wordcount: '1114'
+source-wordcount: '1500'
 ht-degree: 0%
 
 ---
@@ -244,7 +244,9 @@ Om du sedan går tillbaka till Azure Storage Explorer och uppdaterar innehållet
 
 ## 1.1.2.5 Programmatisk filanvändning
 
-Om du vill använda programmässig läsning av filer från Azure Storage-konton måste du skapa en ny **SAS**-token (Shared Access Signature) med behörighet att läsa en fil. Du kan tekniskt använda den SAS-token som du skapade i föregående övning, men det är bäst att ha en separat token med bara **läsbehörighet**.
+Om du vill använda programläst filer från Azure Storage-konton på lång sikt måste du skapa en ny **SAS**-token (Shared Access Signature) med behörighet att läsa en fil. Du kan tekniskt använda den SAS-token som du skapade i föregående övning, men det är bäst att ha en separat token med bara **läsbehörighet** och en separat token med endast **skrivbehörighet**.
+
+### Långsiktig Läs SAS-token
 
 Gå tillbaka till Azure Storage Explorer om du vill göra det. Högerklicka på behållaren och klicka sedan på **Hämta signatur för delad åtkomst**.
 
@@ -253,17 +255,113 @@ Gå tillbaka till Azure Storage Explorer om du vill göra det. Högerklicka på 
 Under **Behörigheter** krävs följande behörigheter:
 
 - **Läs**
-- **Lägg till**
-- **Skapa**
-- **Skriv**
 - **Lista**
+
+Ange **Förfallotid** till 1 år från och med nu.
 
 Klicka på **Skapa**.
 
-![Azure Storage](./images/az28.png)
+![Azure Storage](./images/az100.png)
 
+Sedan får du din långsiktiga SAS-token med läsbehörighet. Kopiera URL-adressen och skriv ned den i en fil på datorn.
 
-Nästa steg: [1.1.3 ...](./ex3.md)
+![Azure Storage](./images/az101.png)
+
+URL:en ser ut så här:
+
+`https://vangeluw.blob.core.windows.net/vangeluw?sv=2023-01-03&st=2025-01-13T07%3A36%3A35Z&se=2026-01-14T07%3A36%3A00Z&sr=c&sp=rl&sig=4r%2FcSJLlt%2BSt9HdFdN0VzWURxRK6UqhB8TEvbWkmAag%3D`
+
+Du kan härleda ett par värden från ovanstående URL:
+
+- `AZURE_STORAGE_URL`: `https://vangeluw.blob.core.windows.net`
+- `AZURE_STORAGE_CONTAINER`: `vangeluw`
+- `AZURE_STORAGE_SAS_READ`: `?sv=2023-01-03&st=2025-01-13T07%3A36%3A35Z&se=2026-01-14T07%3A36%3A00Z&sr=c&sp=rl&sig=4r%2FcSJLlt%2BSt9HdFdN0VzWURxRK6UqhB8TEvbWkmAag%3D`
+
+### Långsiktig Write SAS-token
+
+Gå tillbaka till Azure Storage Explorer om du vill göra det. Högerklicka på behållaren och klicka sedan på **Hämta signatur för delad åtkomst**.
+
+![Azure Storage](./images/az27.png)
+
+Under **Behörigheter** krävs följande behörigheter:
+
+- **Lägg till**
+- **Skapa**
+- **Skriv**
+
+Ange **Förfallotid** till 1 år från och med nu.
+
+Klicka på **Skapa**.
+
+![Azure Storage](./images/az102.png)
+
+Sedan får du din långsiktiga SAS-token med läsbehörighet. Kopiera URL-adressen och skriv ned den i en fil på datorn.
+
+![Azure Storage](./images/az103.png)
+
+URL:en ser ut så här:
+
+`https://vangeluw.blob.core.windows.net/vangeluw?sv=2023-01-03&st=2025-01-13T07%3A38%3A59Z&se=2026-01-14T07%3A38%3A00Z&sr=c&sp=acw&sig=lR9%2FMUfyYLcBK7W9Kv7YJdYz5HEEEovExAdOCOCUdMk%3D`
+
+Du kan än en gång härleda ett par värden från ovanstående URL:
+
+- `AZURE_STORAGE_URL`: `https://vangeluw.blob.core.windows.net`
+- `AZURE_STORAGE_CONTAINER`: `vangeluw`
+- `AZURE_STORAGE_SAS_READ`: `?sv=2023-01-03&st=2025-01-13T07%3A36%3A35Z&se=2026-01-14T07%3A36%3A00Z&sr=c&sp=rl&sig=4r%2FcSJLlt%2BSt9HdFdN0VzWURxRK6UqhB8TEvbWkmAag%3D`
+- `AZURE_STORAGE_SAS_WRITE`: `?sv=2023-01-03&st=2025-01-13T07%3A38%3A59Z&se=2026-01-14T07%3A38%3A00Z&sr=c&sp=acw&sig=lR9%2FMUfyYLcBK7W9Kv7YJdYz5HEEEovExAdOCOCUdMk%3D`
+
+### Variabler i Postman
+
+Som du kan se i avsnittet ovan finns det några vanliga variabler i både läs- och skrivtoken.
+
+Nu måste du skapa variabler i Postman som lagrar de olika elementen i de ovan nämnda SAS-tokenerna.
+Det finns vissa värden som är desamma i båda URL-adresserna:
+
+- `AZURE_STORAGE_URL`: `https://vangeluw.blob.core.windows.net`
+- `AZURE_STORAGE_CONTAINER`: `vangeluw`
+- `AZURE_STORAGE_SAS_READ`: `?sv=2023-01-03&st=2025-01-13T07%3A36%3A35Z&se=2026-01-14T07%3A36%3A00Z&sr=c&sp=rl&sig=4r%2FcSJLlt%2BSt9HdFdN0VzWURxRK6UqhB8TEvbWkmAag%3D`
+- `AZURE_STORAGE_SAS_WRITE`: `?sv=2023-01-03&st=2025-01-13T07%3A38%3A59Z&se=2026-01-14T07%3A38%3A00Z&sr=c&sp=acw&sig=lR9%2FMUfyYLcBK7W9Kv7YJdYz5HEEEovExAdOCOCUdMk%3D`
+
+För framtida API-interaktioner är det viktigaste som ändras resursnamnet, medan variablerna ovan förblir desamma. I så fall är det bra att skapa variabler i Postman så att du inte behöver ange dem manuellt varje gång.
+
+Öppna Postman för att göra detta. Klicka på ikonen **Miljö**, öppna menyn **Alla variabler** och klicka på **Miljö**.
+
+![Azure Storage](./images/az104.png)
+
+Då ser du det här. Skapa dessa fyra variabler i tabellen som visas och ange dina specifika personliga värden för kolumnerna **Startvärde** och **Aktuellt värde**.
+
+- `AZURE_STORAGE_URL`: din URL
+- `AZURE_STORAGE_CONTAINER`: ditt behållarnamn
+- `AZURE_STORAGE_SAS_READ`: din SAS-lästoken
+- `AZURE_STORAGE_SAS_WRITE`: din SAS-skrivtoken
+
+Klicka på **Spara**.
+
+![Azure Storage](./images/az105.png)
+
+I en av de föregående övningarna såg **Body** för din begäran **Firefly - T2I (styleref) V3** ut så här:
+
+`"url": "https://vangeluw.blob.core.windows.net/vangeluw/gradient.jpg?sv=2023-01-03&st=2025-01-13T07%3A16%3A52Z&se=2026-01-14T07%3A16%3A00Z&sr=b&sp=r&sig=x4B1XZuAx%2F6yUfhb28hF0wppCOMeH7Ip2iBjNK5A%2BFw%3D"`
+
+![Azure Storage](./images/az24.png)
+
+Nu kan du ändra URL-adressen till:
+
+`"url": "{{AZURE_STORAGE_URL}}/{{AZURE_STORAGE_CONTAINER}}/gradient.jpg{{AZURE_STORAGE_SAS_READ}}"`
+
+Klicka på **Skicka** för att testa ändringarna du gjort.
+
+![Azure Storage](./images/az106.png)
+
+Om variablerna har konfigurerats på rätt sätt visas en bild-URL som returneras.
+
+![Azure Storage](./images/az107.png)
+
+Öppna bildens URL för att verifiera bilden.
+
+![Azure Storage](./images/az108.png)
+
+Nästa steg: [1.1.3 Adobe Firefly &amp; Adobe Photoshop](./ex3.md)
 
 [Gå tillbaka till modul 1.1](./firefly-services.md)
 
