@@ -3,9 +3,10 @@ title: Komma igång med Firefly Services
 description: Komma igång med Firefly Services
 kt: 5342
 doc-type: tutorial
-source-git-commit: 1229a57730076c49adcbc168b5d73f92ad7581c9
+exl-id: 42e260e0-8af0-4d71-b634-48c1966bd912
+source-git-commit: a0c16a47372d322a7931578adca30a246b537183
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '703'
 ht-degree: 0%
 
 ---
@@ -191,7 +192,7 @@ Du borde ha den här då. Klicka på **OK**.
 
 ![WF Fusion](./images/wffusion38.png)
 
-Klicka på *Kör en gång** igen.
+Klicka på **Kör en gång** igen.
 
 ![WF Fusion](./images/wffusion39.png)
 
@@ -227,7 +228,7 @@ Klicka på **Spara**.
 
 ![WF Fusion](./images/wffusion47.png)
 
-Nästa steg: [1.2.2 Använd Firefly-text till bild med Workfront Fusion](./ex2.md)
+Nästa steg: [1.2.2 Använd Adobe-API:er i Workfront Fusion](./ex2.md)
 
 [Gå tillbaka till modul 1.2](./automation.md)
 
