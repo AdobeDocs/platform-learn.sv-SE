@@ -4,9 +4,9 @@ description: Adobe Firefly Services
 kt: 5342
 doc-type: tutorial
 exl-id: 05cd8991-f77b-43c9-af1d-fcdc1f0fab4d
-source-git-commit: a0c16a47372d322a7931578adca30a246b537183
+source-git-commit: c5d015fee3650d9c5a154f0b1374d27b20d2ea42
 workflow-type: tm+mt
-source-wordcount: '155'
+source-wordcount: '175'
 ht-degree: 0%
 
 ---
@@ -30,11 +30,11 @@ Utforska Workfront Fusion i kombination med Firefly Services och få en förstå
 
 [1.2.2 Använda Adobe-API:er i Workfront Fusion](./ex2.md)
 
-I den här övningen konfigurerar och använder du Firefly Services API:er och Photoshop API:er i Workfront Fusion.
+I den här övningen konfigurerar och använder du Firefly Services API:er och Photoshop API:er i Workfront Fusion, samtidigt som du utforskar Workfront Fusions funktioner.
 
-[1.2.3 ...](./ex3.md)
+[1.2.3 Processautomatisering med Workfront Fusion](./ex3.md)
 
-I denna övning ...
+I den här övningen fortsätter du att förfina din resa för att automatisera processen för att skapa bilder.
 
 [Sammanfattning och fördelar](./summary.md)
 
