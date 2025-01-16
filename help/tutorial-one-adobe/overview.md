@@ -3,10 +3,10 @@ title: Översikt - Teknisk självstudiekurs - en Adobe
 description: Omfattande teknisk självstudiekurs - en Adobe
 doc-type: multipage-overview
 exl-id: 5bc0d621-0662-4d94-80a0-b6c173c0ac9e
-source-git-commit: d26d4735c92498d56beb7859ec67a0c3e174fc25
+source-git-commit: 0fe4bbf6bcc80d4fa88bc30718a1de6621f93f17
 workflow-type: tm+mt
-source-wordcount: '302'
-ht-degree: 1%
+source-wordcount: '342'
+ht-degree: 2%
 
 ---
 
@@ -32,6 +32,7 @@ Den här självstudiekursen fokuserar inte bara på Adobe-program utan tar häns
 - Google Cloud Platform
 - Microsoft Azure
 - Postman
+- Snowflake
 - ...
 
 När du är klar med övningarna i den här självstudien kan du:
@@ -55,7 +56,11 @@ Om du vill använda den här självstudiekursen med din egen Adobe Experience Cl
 
 [1.1 Adobe Firefly](./modules/creative-cloud/module1.1/firefly-services.md)
 
-I den här grundläggande modulen använder du Adobe Firefly till ...
+I den här modulen använder du Adobe Firefly Services API:er, Photoshop API:er och Microsoft Azure Storage Services för att generera bilder och lagra dem programmatiskt.
+
+[1.2 Automatisering av arbetsflöden med Workfront Fusion](./modules/creative-cloud/module1.2/automation.md)
+
+I den här grundläggande modulen använder du Adobe Workfront Fusion för att automatisera och skala arbetsflödena för att skapa innehåll.
 
 ### 2. Innehållsleveranskedja
 
