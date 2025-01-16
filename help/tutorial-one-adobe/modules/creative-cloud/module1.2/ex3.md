@@ -1,12 +1,12 @@
 ---
-title: Komma igång med Firefly Services
-description: Komma igång med Firefly Services
+title: Processautomatisering med Workfront Fusion
+description: Processautomatisering med Workfront Fusion
 kt: 5342
 doc-type: tutorial
 exl-id: 1b7b2630-864f-4982-be5d-c46b760739c3
-source-git-commit: 0fe4bbf6bcc80d4fa88bc30718a1de6621f93f17
+source-git-commit: a4933bd49988cd16c4382ad4327d01ae58b52bbb
 workflow-type: tm+mt
-source-wordcount: '853'
+source-wordcount: '852'
 ht-degree: 0%
 
 ---
@@ -162,10 +162,9 @@ Scenariot körs sedan igen och de två filerna skapas precis som förut.
 
 ![WF Fusion](./images/wffusion232.png)
 
-Ändra namnet på din Postman-begäran till `POST - Send Request to Workfront Fusion Webhook` innan du fortsätter.
+Äntligen ändrar du namnet på din Postman-begäran till `POST - Send Request to Workfront Fusion Webhook`.
 
 ![WF Fusion](./images/wffusion233.png)
-
 
 Nästa steg: [Sammanfattning och fördelar](./summary.md)
 

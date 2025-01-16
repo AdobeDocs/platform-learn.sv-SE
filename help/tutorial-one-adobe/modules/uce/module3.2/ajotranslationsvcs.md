@@ -1,35 +1,30 @@
 ---
-title: Arbetsflödeshantering med Adobe Workfront
-description: Arbetsflödeshantering med Adobe Workfront
+title: Adobe Journey Optimizer Translation Services
+description: Adobe Journey Optimizer Translation Services
 kt: 5342
 doc-type: tutorial
-exl-id: 96685851-b446-4bae-890e-4f96a59cedba
-source-git-commit: a4933bd49988cd16c4382ad4327d01ae58b52bbb
+source-git-commit: 91dbf1aac923c26608528b163bbd68218d45425b
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: '104'
 ht-degree: 0%
 
 ---
 
-# 2.2 Arbetsflödeshantering med Adobe Workfront
+# 3.2 Adobe Journey Optimizer Translation Services
 
 ## Utbildningsmål
 
-- Lär dig använda Adobe Workfront på olika sätt.
+- Lär dig hur du konfigurerar och använder Adobe Journey Optimizer Translation Services.
 
 ## Förhandskrav
 
-- Tillgång till Workfront och Workfront Fusion
+- Tillgång till Adobe Journey Optimizer
 
 ## Utövningar
 
-[2.2.1 Komma igång med Workfront](./ex1.md)
+[3.2.1 ...](./ex1.md)
 
 I den här övningen ...
-
-[2.2.5 Integrering med Workfront och Photoshop](./ex5.md)
-
-I den här övningen ska du konfigurera och börja använda det plugin-program som ansluter Adobe Photoshop till Adobe Workfront.
 
 [Sammanfattning och fördelar](./summary.md)
 

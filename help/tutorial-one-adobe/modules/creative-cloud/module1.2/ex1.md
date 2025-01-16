@@ -1,10 +1,10 @@
 ---
-title: Komma igång med Firefly Services
-description: Komma igång med Firefly Services
+title: Komma igång med Workfront Fusion
+description: Komma igång med Workfront Fusion
 kt: 5342
 doc-type: tutorial
 exl-id: 42e260e0-8af0-4d71-b634-48c1966bd912
-source-git-commit: a0c16a47372d322a7931578adca30a246b537183
+source-git-commit: a4933bd49988cd16c4382ad4327d01ae58b52bbb
 workflow-type: tm+mt
 source-wordcount: '703'
 ht-degree: 0%

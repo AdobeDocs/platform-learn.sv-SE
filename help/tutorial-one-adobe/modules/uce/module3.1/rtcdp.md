@@ -1,37 +1,29 @@
 ---
-title: 3.1 Adobe Real-Time CDP
-description: Adobe Real-Time CDP
+title: Foundation - FAC - sammanfattning
+description: Foundation - FAC - sammanfattning
 kt: 5342
 doc-type: tutorial
-source-git-commit: 1077ada5423cde76d1dd337e8a4f8f83324a8853
+exl-id: cab61d74-9e16-4eda-b704-e103ab5350e2
+source-git-commit: a4933bd49988cd16c4382ad4327d01ae58b52bbb
 workflow-type: tm+mt
-source-wordcount: '100'
+source-wordcount: '53'
 ht-degree: 1%
 
 ---
 
-# 3.1 Adobe Real-Time CDP
+# Sammanfattning och fördelar
 
-## Utbildningsmål
+Grattis och tack för att du har lagt ned din tid på att lära dig om Adobe Experience Platform!
 
-- Lär dig använda Adobe Real-Time CDP på olika sätt.
+## Fördelar
 
-## Förhandskrav
+Låt oss lyfta fram fördelarna med dataöverföringskapaciteten i Federated Audience Composition i Adobe Experience Platform:
 
-- Tillgång till Adobe Real-Time CDP
 
-## Utövningar
 
-[3.1.1 Real-Time CDP](./ex1.md)
+## Kolla in det här
 
-I den här övningen ...
 
-[Sammanfattning och fördelar](./summary.md)
-
-Sammanfattning av den här modulen och en översikt över fördelarna.
-
->[!NOTE]
->
->Tack för att du lägger ned din tid på att lära dig allt om Adobe Experience Platform och dess program. Om du har frågor kan du dela allmän feedback om dina förslag på framtida innehåll. Kontakta Tech Insiders direkt genom att skicka ett e-postmeddelande till **techinsiders@adobe.com**.
+[Gå tillbaka till modul 3.1](./fac.md)
 
 [Gå tillbaka till Alla moduler](../../../overview.md)

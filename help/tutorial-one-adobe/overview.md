@@ -2,10 +2,9 @@
 title: Översikt - Teknisk självstudiekurs - en Adobe
 description: Omfattande teknisk självstudiekurs - en Adobe
 doc-type: multipage-overview
-exl-id: 5bc0d621-0662-4d94-80a0-b6c173c0ac9e
-source-git-commit: 0fe4bbf6bcc80d4fa88bc30718a1de6621f93f17
+source-git-commit: 3461f494c12ee020dbea9ec3c474fe68da7357cf
 workflow-type: tm+mt
-source-wordcount: '342'
+source-wordcount: '483'
 ht-degree: 2%
 
 ---
@@ -19,8 +18,9 @@ Den här självstudiekursen är den perfekta utgångspunkten för
 Självstudiekursen är mycket varierad och ger tydliga insikter i följande program:
 
 - Adobe Firefly Services
+- Adobe Photoshop
 - Adobe Workfront &amp; Adobe Workfront Fusion
-- Adobe Experience Manager Cloud Service, Sites och Assets
+- Adobe Experience Manager Cloud Service, Sites, Assets och Edge Delivery Services
 - Adobe Experience Platform
 - Adobe Real-Time CDP
 - Adobe Journey Optimizer
@@ -35,22 +35,27 @@ Den här självstudiekursen fokuserar inte bara på Adobe-program utan tar häns
 - Snowflake
 - ...
 
-När du är klar med övningarna i den här självstudien kan du:
-
-- ...
-
 ## Förhandskrav
 
 Om du vill använda den här självstudiekursen med din egen Adobe Experience Cloud-instans måste följande program etableras i din instans och du måste kunna komma åt:
 
 - Adobe Firefly [https://firefly.adobe.com/](https://firefly.adobe.com/)
-- Adobe Express [https://new.express.adobe.com/](https://new.express.adobe.com/)
+- Adobe Photoshop
+- Adobe Workfront
 - Adobe Workfront Fusion [https://fusion.adobe.com/](https://fusion.adobe.com/)
 - Adobe Experience Platform: [https://experience.adobe.com/platform](https://experience.adobe.com/platform)
-- Åtkomst till Adobe Experience Platform Data Collection: [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/)
+- Adobe Experience Platform datainsamling: [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/)
 - Åtkomst till demosystemet: [https://dsn.adobe.com/](https://dsn.adobe.com/)
 
 ## Innehåll
+
+Gå till [statussidan](./status.md) om du vill kontrollera status för innehållet nedan.
+
+### Komma igång
+
+[Komma igång](./modules/getting-started/gettingstarted/getting-started.md)
+
+I den här grundläggande modulen kommer du att konfigurera allt så att du kan komma åt och använda demomiljön.
 
 ### 1. Adobe Creative Cloud
 
@@ -64,16 +69,28 @@ I den här grundläggande modulen använder du Adobe Workfront Fusion för att a
 
 ### 2. Innehållsleveranskedja
 
-[2.1 Adobe Experience Manager Cloud Service](./modules/csc/module2.1/aemcs.md)
+[2.1 Adobe Experience Manager Cloud Service &amp; Edge Delivery Services](./modules/csc/module2.1/aemcs.md)
 
 I den här grundläggande modulen kommer du att konfigurera Adobe Experience Manager Cloud Service Program, Site och Assets.
 
-[2.2 Adobe Workfront](./modules/csc/module2.2/workfront.md)
+[2.2 Arbetsflödeshantering med Adobe Workfront](./modules/csc/module2.2/workfront.md)
 
-I den här grundläggande modulen kommer du att konfigurera Adobe Experience Manager Cloud Service Program, Site och Assets.
+I den här grundläggande modulen kommer du att konfigurera och använda Adobe Workfront för att hantera godkännandeflöden och du kommer att använda integreringar med Adobe Experience Manager Assets, Universal Editor, Photoshop med flera.
 
 ### 3. Enhetlig kundupplevelse
 
 [3.1 Sammansatt målgrupp](./modules/uce/module3.1/fac.md)
 
 I den här grundläggande modulen får du lära dig mer om Adobe Experience Platform Data Collection och det nya Web SDK-tillägget.
+
+[3.2 Adobe Journey Optimizer: Översättningstjänster](./modules/uce/module3.2/ajotranslationsvcs.md)
+
+I den här modulen använder du Adobe Journey Optimizer för att konfigurera och använda översättningstjänster.
+
+[3.3 Adobe Journey Optimizer: Offer decisioning](./modules/uce/module3.3/offer-decisioning.md)
+
+I den här modulen kommer du att använda Adobe Journey Optimizer med offera decisioningar på ett praktiskt sätt för att konfigurera personaliserade erbjudanden och ditt eget beslut.
+
+>[!NOTE]
+>
+>Tack för att du lägger ned din tid på att lära dig allt om Adobe Experience Platform och dess program. Om du har frågor kan du dela allmän feedback om dina förslag på framtida innehåll. Kontakta Tech Insiders direkt genom att skicka ett e-postmeddelande till **techinsiders@adobe.com**.

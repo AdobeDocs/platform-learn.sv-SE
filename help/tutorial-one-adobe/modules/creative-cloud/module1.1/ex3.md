@@ -1,17 +1,17 @@
 ---
-title: Komma igång med Firefly Services
-description: Komma igång med Firefly Services
+title: Arbeta med Photoshop API:er
+description: Arbeta med Photoshop API:er
 kt: 5342
 doc-type: tutorial
 exl-id: 60eecc24-1713-4fec-9ffa-a3186db1a8ca
-source-git-commit: 0fe4bbf6bcc80d4fa88bc30718a1de6621f93f17
+source-git-commit: a4933bd49988cd16c4382ad4327d01ae58b52bbb
 workflow-type: tm+mt
-source-wordcount: '992'
+source-wordcount: '1010'
 ht-degree: 0%
 
 ---
 
-# 1.1.3 Adobe Firefly och Adobe Photoshop
+# 1.1.3 Arbeta med Photoshop API:er
 
 ## 1.1.3.1 Uppdatera integreringen med Adobe I/O
 
@@ -73,6 +73,8 @@ Sedan har du en giltig åtkomsttoken för att interagera med Photoshop API:er.
 
 ![Azure Storage](./images/ps9.png)
 
+### 1.1.3.2.1 Photoshop API - Hello World
+
 Sedan hälsar vi på Photoshop API:er för att testa om alla behörigheter och all åtkomst är korrekt inställda. Öppna begäran med namnet **Photoshop Hello (Test Auth) i samlingen** Photoshop **.**. Klicka på **Skicka**.
 
 ![Azure Storage](./images/ps10.png)
@@ -82,6 +84,8 @@ Du bör sedan få följande svar: **Välkommen till Photoshop API!**.
 ![Azure Storage](./images/ps11.png)
 
 För att programmässigt kunna interagera med PSD-filen **citisign-fiber.psd** måste du överföra den till ditt lagringskonto. Du kan göra det manuellt genom att dra och släppa det i behållaren med Azure Storage Explorer, men den här gången bör du göra det via API:t.
+
+### 1.1.3.2.2 Överför PSD till Azure
 
 Öppna begäran **Överför PSD till Azure Storage-kontot** i Postman. I föregående övning konfigurerade du dessa miljövariabler i Postman, som du nu kommer att använda:
 
@@ -109,6 +113,8 @@ Du bör sedan få tillbaka det här tomma svaret från Azure, vilket innebär at
 Om du använder Azure Storage Explorer för att få en look, kommer du att se filen när du har uppdaterat mappen.
 
 ![Azure Storage](./images/ps16.png)
+
+### 1.1.3.2.3 Photoshop API - Hämta manifest
 
 Därefter måste du hämta manifestfilen för din PSD-fil. Öppna begäran **Photoshop - Hämta PSD-manifestet** i Postman. Gå till **Body**.
 
@@ -155,6 +161,8 @@ När svaret är tillgängligt skapar du en JSON-fil som innehåller information 
 Sök till exempel efter texten `2048x2048-cta`. Du borde se det här då.
 
 ![Azure Storage](./images/ps21.png)
+
+### 1.1.3.2.4 Photoshop API - Ändra text
 
 Därefter måste du ändra texten för anropet till åtgärd med API:erna. Öppna begäran **Photoshop - Ändra text** i Postman och gå till **Brödtext**.
 
