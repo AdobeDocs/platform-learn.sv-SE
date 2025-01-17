@@ -4,9 +4,9 @@ description: Processautomatisering med Workfront Fusion
 kt: 5342
 doc-type: tutorial
 exl-id: 1b7b2630-864f-4982-be5d-c46b760739c3
-source-git-commit: a4933bd49988cd16c4382ad4327d01ae58b52bbb
+source-git-commit: f1f70a0e4ea3f59b5b121275e7db633caf953df9
 workflow-type: tm+mt
-source-wordcount: '852'
+source-wordcount: '989'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ Ta bort texten **Klicka här** och ersätt den genom att välja variabeln **Valu
 
 ![WF Fusion](./images/wffusion209.png)
 
-Du måste också uppdatera filnamnet som används för att skriva filen i ditt Azure Storage-konto. Om filnamnet är statiskt skriver varje ny upprepning helt enkelt över den tidigare filen, och därför förlorar du de anpassade filerna. Det aktuella statiska filnamnet är **sevoi-psd-changed-text.psd** och du måste nu uppdatera det. Placera markören bakom ordet `text`.
+Du måste också uppdatera filnamnet som används för att skriva filen i ditt Azure Storage-konto. Om filnamnet är statiskt skriver varje ny upprepning helt enkelt över den tidigare filen, och därför förlorar du de anpassade filerna. Det aktuella statiska filnamnet är **citisign-fiber-changed-text.psd** och du måste nu uppdatera det. Placera markören bakom ordet `text`.
 
 ![WF Fusion](./images/wffusion210.png)
 
@@ -77,11 +77,11 @@ När scenariot har körts går du tillbaka till Azure Storage Explorer och uppda
 
 ![WF Fusion](./images/wffusion213.png)
 
-Hämta och öppna varje fil. Du bör då se de olika texterna på knapparna. Det här är filen `sevoi-psd-changed-text-1.psd`.
+Hämta och öppna varje fil. Du bör då se de olika texterna på knapparna. Det här är filen `citisignal-fiber-changed-text-1.psd`.
 
 ![WF Fusion](./images/wffusion214.png)
 
-Det här är filen `sevoi-psd-changed-text-2.psd`.
+Det här är filen `citisignal-fiber-changed-text-2.psd`.
 
 ![WF Fusion](./images/wffusion215.png)
 
@@ -162,9 +162,31 @@ Scenariot körs sedan igen och de två filerna skapas precis som förut.
 
 ![WF Fusion](./images/wffusion232.png)
 
-Äntligen ändrar du namnet på din Postman-begäran till `POST - Send Request to Workfront Fusion Webhook`.
+Ändra namnet på din Postman-begäran till `POST - Send Request to Workfront Fusion Webhook`.
 
 ![WF Fusion](./images/wffusion233.png)
+
+Du måste nu börja använda variabeln **psdTemplate**. I stället för att hårdkoda indatafilens plats i noden **Photoshop Change Text** kommer du nu att använda den inkommande variabeln från Postman-begäran.
+
+Öppna noden **Photoshop Change Text** och gå till **Request content**. Markera det hårdkodade filnamnet **citisign-fiber.psd** under **input** och ta bort det.
+
+![WF Fusion](./images/wffusion234.png)
+
+Markera variabeln **psdTemplate**. Klicka på **OK** och spara sedan ditt scenario.
+
+![WF Fusion](./images/wffusion235.png)
+
+Klicka på **ON** för att aktivera ditt scenario. Scenariot körs nu utan stopp.
+
+![WF Fusion](./images/wffusion236.png)
+
+Gå tillbaka till Postman. Ange filnamnet `citisignal-fiber.psd` som värde för variabeln **psdTemplate** och klicka på **Skicka** igen för att köra scenariot igen.
+
+![WF Fusion](./images/wffusion237.png)
+
+Genom att ange PSD-mallen som en variabel som tillhandahålls av ett externt system har du nu skapat ett återanvändbart scenario.
+
+Du har nu avslutat den här övningen.
 
 Nästa steg: [Sammanfattning och fördelar](./summary.md)
 
