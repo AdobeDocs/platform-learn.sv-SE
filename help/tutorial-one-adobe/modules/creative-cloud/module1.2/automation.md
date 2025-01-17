@@ -4,7 +4,7 @@ description: Automatisering av arbetsflöden med Workfront Fusion
 kt: 5342
 doc-type: tutorial
 exl-id: 05cd8991-f77b-43c9-af1d-fcdc1f0fab4d
-source-git-commit: 71fe7b82e09aa9bc26b03dd2358d008265f54629
+source-git-commit: 9099ba1d57d59a95958f29bf226f329f057b6c0c
 workflow-type: tm+mt
 source-wordcount: '164'
 ht-degree: 0%
@@ -40,9 +40,9 @@ I den här övningen fortsätter du att förfina din resa för att automatisera 
 
 Sammanfattning av den här modulen och en översikt över fördelarna.
 
+![Tech Insiders](./../../../assets/images/techinsiders.png){width="50px" align="left"}
+
 >[!NOTE]
->
->![Tech Insiders](./../../../assets/images/techinsiders.png){width="50px" align="left"}
 >
 >Om du har frågor kan du dela allmän feedback om dina förslag på framtida innehåll. Kontakta Tech Insiders direkt genom att skicka ett e-postmeddelande till **techinsiders@adobe.com**.
 

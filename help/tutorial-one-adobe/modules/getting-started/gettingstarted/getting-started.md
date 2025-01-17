@@ -3,9 +3,10 @@ title: Komma igång - sammanfattning
 description: Komma igång - sammanfattning
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6758301f639394f0d85b685a115461a63e5d760b
+exl-id: 4b85938e-b7ee-4e05-b73d-112917beea08
+source-git-commit: 9099ba1d57d59a95958f29bf226f329f057b6c0c
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '228'
 ht-degree: 1%
 
 ---
@@ -47,8 +48,10 @@ I den här övningen ska du konfigurera webbplatsen så att du kan använda den 
 
 I den här övningen ska du konfigurera mobilappen så att du kan använda den för demonstrationer och aktivering.
 
+![Tech Insiders](./../../../assets/images/techinsiders.png){width="50px" align="left"}
+
 >[!NOTE]
 >
->Tack för att du lägger ned din tid på att lära dig allt om Adobe Experience Platform och dess program. Om du har frågor kan du dela allmän feedback om dina förslag på framtida innehåll. Kontakta Tech Insiders direkt genom att skicka ett e-postmeddelande till **techinsiders@adobe.com**.
+>Om du har frågor kan du dela allmän feedback om dina förslag på framtida innehåll. Kontakta Tech Insiders direkt genom att skicka ett e-postmeddelande till **techinsiders@adobe.com**.
 
 [Gå tillbaka till Alla moduler](../../../overview.md)

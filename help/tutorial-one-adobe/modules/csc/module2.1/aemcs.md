@@ -4,7 +4,7 @@ description: ADOBE EXPERIENCE MANAGER CLOUD SERVICE & EDGE DELIVERY SERVICES
 kt: 5342
 doc-type: tutorial
 exl-id: 52efb52c-103f-4171-a69e-0cddb142a0ed
-source-git-commit: 71fe7b82e09aa9bc26b03dd2358d008265f54629
+source-git-commit: 9099ba1d57d59a95958f29bf226f329f057b6c0c
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 0%
@@ -43,9 +43,9 @@ I den här övningen ska du utveckla en anpassad blockkomponent för din webbpla
 
 Sammanfattning av den här modulen och en översikt över fördelarna.
 
+![Tech Insiders](./../../../assets/images/techinsiders.png){width="50px" align="left"}
+
 >[!NOTE]
->
->![Tech Insiders](./../../../assets/images/techinsiders.png){width="50px" align="left"}
 >
 >Om du har frågor kan du dela allmän feedback om dina förslag på framtida innehåll. Kontakta Tech Insiders direkt genom att skicka ett e-postmeddelande till **techinsiders@adobe.com**.
 
