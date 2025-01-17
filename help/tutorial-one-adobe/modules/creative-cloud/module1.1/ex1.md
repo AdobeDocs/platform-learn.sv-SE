@@ -4,9 +4,9 @@ description: Komma igång med Firefly Services
 kt: 5342
 doc-type: tutorial
 exl-id: 52385c33-f316-4fd9-905f-72d2d346f8f5
-source-git-commit: ea06ca2d05195efa57643d45d7e50d3d914081d3
+source-git-commit: f1f70a0e4ea3f59b5b121275e7db633caf953df9
 workflow-type: tm+mt
-source-wordcount: '935'
+source-wordcount: '938'
 ht-degree: 0%
 
 ---
@@ -130,13 +130,15 @@ Det första du behöver göra är att se till att du är rätt autentiserad. Du 
 
 Kontrollera att du har valt rätt miljö innan du kör någon begäran. Du kan kontrollera den valda miljön genom att verifiera listrutan Miljö i det övre högra hörnet.
 
+![Postman](./images/envselemea1.png)
+
 Den valda miljön bör ha ett namn som liknar det här, `--aepUserLdap-- Firefly Services OAuth Credential`.
 
 ![Postman](./images/envselemea.png)
 
 Din Postman-miljö och dina samlingar är nu konfigurerade och fungerar. Nu kan du autentisera från Postman till Adobe I/O.
 
-I samlingen **Adobe IO - OAuth** markerar du begäran med namnet **POST - Get Access Token**. Du kommer att referera till två variabler under **Params**, `API_KEY` och `CLIENT_SECRET`. Dessa variabler hämtas från den valda miljön, `--aepUserLdap-- Firefly Services OAuth Credential`.
+I samlingen **Adobe IO - OAuth** markerar du begäran med namnet **POST - Get Access Token**. Du ser sedan att under **Params** refereras 2 variabler, `API_KEY` och `CLIENT_SECRET`. Dessa variabler hämtas från den valda miljön, `--aepUserLdap-- Firefly Services OAuth Credential`.
 
 Klicka på **Skicka**.
 
