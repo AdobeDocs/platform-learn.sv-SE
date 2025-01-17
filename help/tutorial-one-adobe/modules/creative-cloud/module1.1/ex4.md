@@ -3,9 +3,10 @@ title: Arbeta med Photoshop API:er
 description: Arbeta med Photoshop API:er
 kt: 5342
 doc-type: tutorial
-source-git-commit: 2fe7d2528132301f559f9d51faa9ad128f5d890f
+exl-id: 330f4492-d0df-4298-9edc-4174b0065c9a
+source-git-commit: 153b070ffeb21c7111f4b954c4ba2d7c9042db0d
 workflow-type: tm+mt
-source-wordcount: '124'
+source-wordcount: '128'
 ht-degree: 0%
 
 ---
@@ -51,6 +52,14 @@ Markera alla bilder och klicka på **Öppna**.
 Dina bilder kommer nu att överföras. Det här kan ta en stund.
 
 ![Firefly](./images/ffcm10.png)
+
+![Firefly](./images/ffcm11.png)
+
+![Firefly](./images/ffcm12.png)
+
+![Firefly](./images/ffcm13.png)
+
+![Firefly](./images/ffcm14.png)
 
 Du har nu avslutat den här övningen.
 

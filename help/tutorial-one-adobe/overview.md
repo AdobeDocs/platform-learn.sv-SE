@@ -3,7 +3,7 @@ title: Översikt - Teknisk självstudiekurs - en Adobe
 description: Omfattande teknisk självstudiekurs - en Adobe
 doc-type: multipage-overview
 exl-id: 5bc0d621-0662-4d94-80a0-b6c173c0ac9e
-source-git-commit: 6fabd01d69e01255bc45c811fa37701728e032fa
+source-git-commit: 71fe7b82e09aa9bc26b03dd2358d008265f54629
 workflow-type: tm+mt
 source-wordcount: '467'
 ht-degree: 2%
@@ -12,7 +12,7 @@ ht-degree: 2%
 
 # Omfattande teknisk självstudiekurs - en Adobe
 
-![Tech Insiders](./assets/images/techinsiders.png){width="50px" align="center"}
+![Tech Insiders](./assets/images/techinsiders.png){width="50px" align="left"}
 
 ## Översikt
 
@@ -96,5 +96,6 @@ I den här modulen kommer du att använda Adobe Journey Optimizer med offera dec
 
 >[!NOTE]
 >
->![Tech Insiders](./assets/images/techinsiders.png){width="50px" align="center"}
+>![Tech Insiders](./assets/images/techinsiders.png){width="50px" align="left"}
+>
 >Om du har frågor kan du dela allmän feedback om dina förslag på framtida innehåll. Kontakta Tech Insiders direkt genom att skicka ett e-postmeddelande till **techinsiders@adobe.com**.

@@ -2,9 +2,10 @@
 title: Innehållsstatus
 description: Innehållsstatus
 doc-type: multipage-overview
-source-git-commit: 24153b07074c053e0623a4167507d4a6aa37f212
+exl-id: 8f9ae0fa-48b2-4da5-ab21-a6cf16a0b522
+source-git-commit: 71fe7b82e09aa9bc26b03dd2358d008265f54629
 workflow-type: tm+mt
-source-wordcount: '114'
+source-wordcount: '142'
 ht-degree: 1%
 
 ---
@@ -25,5 +26,11 @@ Nedan visas en översikt över statusen för innehållet i den här självstudie
 | [3.3 Adobe Journey Optimizer: Offer decisioning](./modules/uce/module3.3/offer-decisioning.md) | 14/11/2024 | Ja | – |
 
 {style="table-layout:auto"}
+
+>[!NOTE]
+>
+>![Tech Insiders](./assets/images/techinsiders.png){width="50px" align="left"}
+>
+>Om du har frågor kan du dela allmän feedback om dina förslag på framtida innehåll. Kontakta Tech Insiders direkt genom att skicka ett e-postmeddelande till **techinsiders@adobe.com**.
 
 [Gå tillbaka till Alla moduler](./overview.md)

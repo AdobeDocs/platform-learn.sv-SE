@@ -4,7 +4,7 @@ description: Arbetsflödeshantering med Adobe Workfront
 kt: 5342
 doc-type: tutorial
 exl-id: 96685851-b446-4bae-890e-4f96a59cedba
-source-git-commit: 760271a0f1bedef7db079748776da36feef230cd
+source-git-commit: 71fe7b82e09aa9bc26b03dd2358d008265f54629
 workflow-type: tm+mt
 source-wordcount: '112'
 ht-degree: 0%
@@ -37,7 +37,8 @@ Sammanfattning av den här modulen och en översikt över fördelarna.
 
 >[!NOTE]
 >
->![Tech Insiders](./../../../assets/images/techinsiders.png){width="50px" align="center"}
+>![Tech Insiders](./../../../assets/images/techinsiders.png){width="50px" align="left"}
+>
 >Om du har frågor kan du dela allmän feedback om dina förslag på framtida innehåll. Kontakta Tech Insiders direkt genom att skicka ett e-postmeddelande till **techinsiders@adobe.com**.
 
 [Gå tillbaka till alla moduler](../../../overview.md){target="_blank"}
