@@ -4,9 +4,9 @@ description: ADOBE EXPERIENCE MANAGER CLOUD SERVICE & EDGE DELIVERY SERVICES
 kt: 5342
 doc-type: tutorial
 exl-id: 52efb52c-103f-4171-a69e-0cddb142a0ed
-source-git-commit: a4933bd49988cd16c4382ad4327d01ae58b52bbb
+source-git-commit: 760271a0f1bedef7db079748776da36feef230cd
 workflow-type: tm+mt
-source-wordcount: '201'
+source-wordcount: '183'
 ht-degree: 0%
 
 ---
@@ -23,28 +23,29 @@ ht-degree: 0%
 
 ## Utövningar
 
-[2.1.1 Skapa ett Cloud Manager-program](./ex1.md)
+[2.1.1 Skapa ditt Cloud Manager-program](./ex1.md){target="_blank"}
 
 I den här övningen skapar du ett Cloud Manager-program som skapar Sites-, Assets- och Edge Delivery Services-produkterna åt dig.
 
-[2.1.2 Skapa en dokumentbaserad webbplats](./ex2.md)
+[2.1.2 Skapa en dokumentbaserad webbplats](./ex2.md){target="_blank"}
 
 I den här övningen kommer du att skapa en egen dokumentbaserad webbplats genom att kopiera en befintlig webbplatsmall.
 
-[2.1.3 Konfigurera AEM CS-miljö](./ex3.md)
+[2.1.3 Konfigurera AEM CS-miljö](./ex3.md){target="_blank"}
 
 I den här övningen ska du konfigurera din AEM CS-miljö och gå till din CitiSignal-webbplats.
 
-[2.1.4 Utveckla ett anpassat block](./ex4.md)
+[2.1.4 Utveckla ett anpassat block](./ex4.md){target="_blank"}
 
 I den här övningen ska du utveckla en anpassad blockkomponent för din webbplats.
 
-[Sammanfattning och fördelar](./summary.md)
+[Sammanfattning och förmåner](./summary.md){target="_blank"}
 
 Sammanfattning av den här modulen och en översikt över fördelarna.
 
 >[!NOTE]
 >
->Tack för att du lägger ned din tid på att lära dig allt om Adobe Experience Platform och dess program. Om du har frågor kan du dela allmän feedback om dina förslag på framtida innehåll. Kontakta Tech Insiders direkt genom att skicka ett e-postmeddelande till **techinsiders@adobe.com**.
+>![Tech Insiders](./../../../assets/images/techinsiders.png){width="50px" align="center"}
+>Om du har frågor kan du dela allmän feedback om dina förslag på framtida innehåll. Kontakta Tech Insiders direkt genom att skicka ett e-postmeddelande till **techinsiders@adobe.com**.
 
-[Gå tillbaka till Alla moduler](../../../overview.md)
+[Gå tillbaka till alla moduler](../../../overview.md){target="_blank"}

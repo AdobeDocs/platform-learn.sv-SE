@@ -3,7 +3,7 @@ title: Arbeta med Photoshop API:er
 description: Arbeta med Photoshop API:er
 kt: 5342
 doc-type: tutorial
-source-git-commit: b7ee794e9611afc7bee35a0f471ec50caad10f85
+source-git-commit: 2fe7d2528132301f559f9d51faa9ad128f5d890f
 workflow-type: tm+mt
 source-wordcount: '124'
 ht-degree: 0%
@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # 1.1.4 Egna modeller för Firefly
 
-Gå till [https://firefly.adobe.com](https://firefly.adobe.com). Gå till **Anpassade modeller**.
+Gå till [https://firefly.adobe.com](https://firefly.adobe.com){target="_blank"}. Gå till **Anpassade modeller**.
 
 ![Firefly](./images/ffcm1.png)
 
@@ -54,8 +54,8 @@ Dina bilder kommer nu att överföras. Det här kan ta en stund.
 
 Du har nu avslutat den här övningen.
 
-Nästa steg: [Sammanfattning och fördelar](./summary.md)
+Nästa steg: [Sammanfattning och fördelar](./summary.md){target="_blank"}
 
-[Gå tillbaka till modul 1.1](./firefly-services.md)
+[Gå tillbaka till modul 1.1](./firefly-services.md){target="_blank"}
 
-[Gå tillbaka till Alla moduler](./../../../overview.md)
+[Gå tillbaka till alla moduler](./../../../overview.md){target="_blank"}

@@ -4,7 +4,7 @@ description: Optimera Firefly-processen med Microsoft Azure och försignerade UR
 kt: 5342
 doc-type: tutorial
 exl-id: 5f9803a4-135c-4470-bfbb-a298ab1fee33
-source-git-commit: f1f70a0e4ea3f59b5b121275e7db633caf953df9
+source-git-commit: 2fe7d2528132301f559f9d51faa9ad128f5d890f
 workflow-type: tm+mt
 source-wordcount: '1527'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 >
 >Om du redan har en befintlig Azure-prenumeration kan du hoppa över det här steget. Fortsätt med nästa övning i så fall.
 
-Gå till [https://portal.azure.com](https://portal.azure.com) och logga in med ditt Azure-konto. Om du inte har någon, använd din personliga e-postadress för att skapa ditt Azure-konto.
+Gå till [https://portal.azure.com](https://portal.azure.com){target="_blank"} och logga in med ditt Azure-konto. Om du inte har någon, använd din personliga e-postadress för att skapa ditt Azure-konto.
 
 ![Azure Storage](./images/02azureportalemail.png)
 
@@ -83,7 +83,7 @@ Behållaren är nu klar att användas.
 
 ## 1.1.2.3 Installera Azure Storage Explorer
 
-Du använder Microsoft Azure Storage Explorer för att hantera dina filer. Du kan hämta den via [den här länken](https://azure.microsoft.com/en-us/products/storage/storage-explorer#Download-4). Välj rätt version för ditt specifika operativsystem, hämta den och installera den.
+Du använder Microsoft Azure Storage Explorer för att hantera dina filer. Du kan hämta den via [den här länken](https://azure.microsoft.com/en-us/products/storage/storage-explorer#Download-4){target="_blank"}. Välj rätt version för ditt specifika operativsystem, hämta den och installera den.
 
 ![Azure Storage](./images/az10.png)
 
@@ -125,7 +125,7 @@ Du hittar sedan ditt lagringskonto under **Lagringskonton**.
 
 ## 1.1.2.4 Manuell filöverföring och användning av en bildfil som formatreferens
 
-Du bör nu överföra en bildfil som du väljer till behållaren. Du kan använda valfri bildfil eller så kan du använda [den här filen](./images/gradient.jpg) genom att hämta den till datorn.
+Du bör nu överföra en bildfil som du väljer till behållaren. Du kan använda valfri bildfil eller så kan du använda [den här filen](./images/gradient.jpg){target="_blank"} genom att hämta den till datorn.
 
 ![Azure Storage](./images/gradient.jpg)
 
@@ -199,7 +199,7 @@ Klicka sedan på **Brödtext**.
 
 ![Azure Storage](./images/az31.png)
 
-Du måste nu välja en fil på den lokala datorn. Du kan använda en ny bildfil eller använda en annan bildfil som du hittar [här](./images/gradient2-p.jpg).
+Du måste nu välja en fil på den lokala datorn. Du kan använda en ny bildfil eller använda en annan bildfil som du hittar [här](./images/gradient2-p.jpg){target="_blank"}.
 
 ![Övertoningsfil](./images/gradient2-p.jpg)
 
@@ -365,8 +365,8 @@ Om variablerna har konfigurerats på rätt sätt visas en bild-URL som returnera
 
 ![Azure Storage](./images/az108.jpg)
 
-Nästa steg: [1.1.3 Adobe Firefly &amp; Adobe Photoshop](./ex3.md)
+Nästa steg: [1.1.3 Adobe Firefly &amp; Adobe Photoshop](./ex3.md){target="_blank"}
 
-[Gå tillbaka till modul 1.1](./firefly-services.md)
+[Gå tillbaka till modul 1.1](./firefly-services.md){target="_blank"}
 
-[Gå tillbaka till Alla moduler](./../../../overview.md)
+[Gå tillbaka till alla moduler](./../../../overview.md){target="_blank"}

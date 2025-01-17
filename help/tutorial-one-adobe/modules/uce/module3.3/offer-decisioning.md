@@ -5,9 +5,10 @@ kt: 5342
 audience: Data Engineer, Data Architect, Orchestration Engineer, Marketer
 doc-type: tutorial
 activity: develop
-source-git-commit: 91dbf1aac923c26608528b163bbd68218d45425b
+exl-id: d52ec3c8-8628-4a52-9107-471342118a53
+source-git-commit: 432ccc96f4bc80085e7bd9cd51c3878d9090dc9d
 workflow-type: tm+mt
-source-wordcount: '344'
+source-wordcount: '326'
 ht-degree: 0%
 
 ---
@@ -65,6 +66,7 @@ Sammanfattning av den här modulen och en översikt över fördelarna.
 
 >[!NOTE]
 >
->Tack för att du lägger ned din tid på att lära dig allt om Adobe Experience Platform och dess program. Om du har frågor kan du dela allmän feedback om dina förslag på framtida innehåll. Kontakta Tech Insiders direkt genom att skicka ett e-postmeddelande till **techinsiders@adobe.com**.
+>![Tech Insiders](./../../../assets/images/techinsiders.png){width="50px" align="center"}
+>Om du har frågor kan du dela allmän feedback om dina förslag på framtida innehåll. Kontakta Tech Insiders direkt genom att skicka ett e-postmeddelande till **techinsiders@adobe.com**.
 
 [Gå tillbaka till Alla moduler](../../../overview.md)

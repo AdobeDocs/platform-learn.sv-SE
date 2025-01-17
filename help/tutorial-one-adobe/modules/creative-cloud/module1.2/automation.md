@@ -4,9 +4,9 @@ description: Automatisering av arbetsflöden med Workfront Fusion
 kt: 5342
 doc-type: tutorial
 exl-id: 05cd8991-f77b-43c9-af1d-fcdc1f0fab4d
-source-git-commit: 0fe4bbf6bcc80d4fa88bc30718a1de6621f93f17
+source-git-commit: 760271a0f1bedef7db079748776da36feef230cd
 workflow-type: tm+mt
-source-wordcount: '182'
+source-wordcount: '164'
 ht-degree: 0%
 
 ---
@@ -42,6 +42,7 @@ Sammanfattning av den här modulen och en översikt över fördelarna.
 
 >[!NOTE]
 >
->Tack för att du lägger ned din tid på att lära dig allt om Adobe Experience Platform och dess program. Om du har frågor kan du dela allmän feedback om dina förslag på framtida innehåll. Kontakta Tech Insiders direkt genom att skicka ett e-postmeddelande till **techinsiders@adobe.com**.
+>![Tech Insiders](./../../../assets/images/techinsiders.png){width="50px" align="center"}
+>Om du har frågor kan du dela allmän feedback om dina förslag på framtida innehåll. Kontakta Tech Insiders direkt genom att skicka ett e-postmeddelande till **techinsiders@adobe.com**.
 
 [Gå tillbaka till Alla moduler](../../../overview.md)

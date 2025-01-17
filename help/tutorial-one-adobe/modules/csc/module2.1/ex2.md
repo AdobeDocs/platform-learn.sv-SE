@@ -4,7 +4,7 @@ description: Skapa ett Cloud Manager-program
 kt: 5342
 doc-type: tutorial
 exl-id: db366111-3873-4504-95f1-b240836c833f
-source-git-commit: 6d627312073bb2cecd724226f1730aed7133700c
+source-git-commit: 2fe7d2528132301f559f9d51faa9ad128f5d890f
 workflow-type: tm+mt
 source-wordcount: '761'
 ht-degree: 0%
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # 2.1.2 Skapa en dokumentbaserad webbplats
 
-Medan du väntar på att ditt Cloud Manager-program ska skapas har du tillräckligt med tid för att skapa din första dokumentbaserade redigeringswebbplats. Nedanstående övning är baserad på [aem.live Developer Tutorial](https://www.aem.live/developer/tutorial). Kom igång genom att följa stegen nedan.
+Medan du väntar på att ditt Cloud Manager-program ska skapas har du tillräckligt med tid för att skapa din första dokumentbaserade redigeringswebbplats. Nedanstående övning är baserad på [aem.live Developer Tutorial](https://www.aem.live/developer/tutorial){target="_blank"}. Kom igång genom att följa stegen nedan.
 
 ## 2.1.2.1 Konfigurera Google Drive
 
-Gå till [https://drive.google.com](https://drive.google.com). Klicka på **+ Ny** och sedan på **Ny mapp**.
+Gå till [https://drive.google.com](https://drive.google.com){target="_blank"}. Klicka på **+ Ny** och sedan på **Ny mapp**.
 
 ![AEMCS](./images/googledrive1.png)
 
@@ -25,7 +25,7 @@ Namnge mappen `aemdocb-test`. Klicka på **Skapa**.
 
 ![AEMCS](./images/googledrive2.png)
 
-Hämta filen [aemboilerplate.zip](./../../../assets/aem/aemboilerplate.zip) och extrahera den på datorn.
+Hämta filen [aemboilerplate.zip](./../../../assets/aem/aemboilerplate.zip){target="_blank"} och extrahera den på datorn.
 
 ![AEMCS](./images/googledrive3.png)
 
@@ -65,7 +65,7 @@ Du bör ta bort frågesträngsparametern `?usp=drive_link` så att URL:en ser ut
 
 ## 2.1.2.2 Konfigurera GitHub-repo
 
-Gå till [https://github.com](https://github.com). Klicka på **Logga in**.
+Gå till [https://github.com](https://github.com){target="_blank"}. Klicka på **Logga in**.
 
 ![AEMCS](./images/aemcssetup1.png)
 
@@ -77,7 +77,7 @@ När du har loggat in visas din GitHub-instrumentpanel.
 
 ![AEMCS](./images/aemcssetup3.png)
 
-Gå till [https://github.com/adobe/aem-boilerplate](https://github.com/adobe/aem-boilerplate). Då ser du det här. Klicka på **Använd den här mallen** och sedan på **Skapa en ny databas**.
+Gå till [https://github.com/adobe/aem-boilerplate](https://github.com/adobe/aem-boilerplate){target="_blank"}. Då ser du det här. Klicka på **Använd den här mallen** och sedan på **Skapa en ny databas**.
 
 ![AEMCS](./images/aemdocbcssetup4.png)
 
@@ -89,7 +89,7 @@ Efter några sekunder har du skapat databasen.
 
 ![AEMCS](./images/aemdocbcssetup6.png)
 
-Gå sedan till [https://github.com/apps/aem-code-sync](https://github.com/apps/aem-code-sync). Klicka på **Konfigurera**.
+Gå sedan till [https://github.com/apps/aem-code-sync](https://github.com/apps/aem-code-sync){target="_blank"}. Klicka på **Konfigurera**.
 
 ![AEMCS](./images/aemcssetup7.png)
 
@@ -133,7 +133,7 @@ Klicka på **Verkställ ändringar**.
 
 ## 2.1.2.4 Installera AEM Sidekick-tillägg
 
-Gå till [https://chromewebstore.google.com/detail/aem-sidekick/ccfggkjabjahcjoljmgmklhpaccedipo](https://chromewebstore.google.com/detail/aem-sidekick/ccfggkjabjahcjoljmgmklhpaccedipo). Klicka på **Lägg till i Chrome**.
+Gå till [https://chromewebstore.google.com/detail/aem-sidekick/ccfggkjabjahcjoljmgmklhpaccedipo](https://chromewebstore.google.com/detail/aem-sidekick/ccfggkjabjahcjoljmgmklhpaccedipo){target="_blank"}. Klicka på **Lägg till i Chrome**.
 
 ![AEMCS](./images/aemdocbcssetup16.png)
 
@@ -205,8 +205,8 @@ Du kommer då att se liveversionen av din webbplats.
 
 Ovannämnda övning var ett bra sätt att komma igång och få en dokumentbaserad redigering själv. Du kan nu fortsätta med nästa övning där du skapar en egen demowebbplats med CitiSignal som ett demovarumärke.
 
-Nästa steg: [2.1.3 Konfigurera AEM CS-miljö](./ex3.md)
+Nästa steg: [2.1.3 Konfigurera AEM CS-miljö](./ex3.md){target="_blank"}
 
-[Gå tillbaka till modul 2.1](./aemcs.md)
+[Gå tillbaka till modul 2.1](./aemcs.md){target="_blank"}
 
-[Gå tillbaka till Alla moduler](./../../../overview.md)
+[Gå tillbaka till alla moduler](./../../../overview.md){target="_blank"}

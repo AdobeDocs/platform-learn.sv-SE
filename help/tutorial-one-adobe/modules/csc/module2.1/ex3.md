@@ -4,7 +4,7 @@ description: Skapa ett Cloud Manager-program
 kt: 5342
 doc-type: tutorial
 exl-id: 62715072-0257-4d07-af1a-8becbb793459
-source-git-commit: 6d627312073bb2cecd724226f1730aed7133700c
+source-git-commit: 2fe7d2528132301f559f9d51faa9ad128f5d890f
 workflow-type: tm+mt
 source-wordcount: '992'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## 2.1.3.1 Konfigurera GitHub-repo
 
-Gå till [https://github.com](https://github.com). Klicka på **Logga in**.
+Gå till [https://github.com](https://github.com){target="_blank"}. Klicka på **Logga in**.
 
 ![AEMCS](./images/aemcssetup1.png)
 
@@ -27,7 +27,7 @@ När du har loggat in visas din GitHub-instrumentpanel.
 
 ![AEMCS](./images/aemcssetup3.png)
 
-Gå till [https://github.com/AdobeDevXSC/citisignal-one](https://github.com/AdobeDevXSC/citisignal-one). Då ser du det här. Klicka på **Använd den här mallen** och sedan på **Skapa en ny databas**.
+Gå till [https://github.com/AdobeDevXSC/citisignal-one](https://github.com/AdobeDevXSC/citisignal-one){target="_blank"}. Då ser du det här. Klicka på **Använd den här mallen** och sedan på **Skapa en ny databas**.
 
 ![AEMCS](./images/aemcssetup4.png)
 
@@ -39,7 +39,7 @@ Efter några sekunder har du skapat databasen.
 
 ![AEMCS](./images/aemcssetup6.png)
 
-Gå sedan till [https://github.com/apps/aem-code-sync](https://github.com/apps/aem-code-sync). Klicka på **Konfigurera**.
+Gå sedan till [https://github.com/apps/aem-code-sync](https://github.com/apps/aem-code-sync){target="_blank"}. Klicka på **Konfigurera**.
 
 ![AEMCS](./images/aemcssetup7.png)
 
@@ -83,7 +83,7 @@ YYY ska ersättas med ditt GitHub-användarkonto.
 
 ZZZ ska ersättas med namnet på GitHub-databasen som du använde i föregående övning.
 
-Du kan hitta URL:en till AEM CS-redigeringsmiljö genom att gå till [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com). Klicka på ditt **program** för att öppna det.
+Du kan hitta URL:en till AEM CS-redigeringsmiljö genom att gå till [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com){target="_blank"}. Klicka på ditt **program** för att öppna det.
 
 ![AEMCS](./images/aemcs6.png)
 
@@ -125,7 +125,7 @@ Filen `fstab.yaml` har uppdaterats.
 
 ## 2.1.3.3 Överföra CitiSignal-resurser
 
-Gå till [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com). Klicka på ditt **program** för att öppna det.
+Gå till [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com){target="_blank"}. Klicka på ditt **program** för att öppna det.
 
 ![AEMCS](./images/aemcs6.png)
 
@@ -155,7 +155,7 @@ Klicka sedan på **Överför paket**.
 
 Klicka på **Bläddra** för att hitta det paket som ska överföras.
 
-Paketet som ska överföras kallas **citisign-assets.zip** och kan hämtas här: [https://tech-insiders.s3.us-west-2.amazonaws.com/one-adobe/citisignal-assets.zip](https://tech-insiders.s3.us-west-2.amazonaws.com/one-adobe/citisignal-assets.zip).
+Paketet som ska överföras kallas **citisign-assets.zip** och kan laddas ned här: [https://tech-insiders.s3.us-west-2.amazonaws.com/one-adobe/citisignal-assets.zip](https://tech-insiders.s3.us-west-2.amazonaws.com/one-adobe/citisignal-assets.zip){target="_blank"}.
 
 ![AEMCS](./images/aemcssetup23.png)
 
@@ -188,7 +188,7 @@ Du kan nu stänga det här fönstret.
 
 ## 2.1.3.4 Publish CitiSignal-material
 
-Gå till [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com). Klicka på ditt **program** för att öppna det.
+Gå till [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com){target="_blank"}. Klicka på ditt **program** för att öppna det.
 
 ![AEMCS](./images/aemcs6.png)
 
@@ -224,7 +224,7 @@ Dina resurser har nu publicerats.
 
 ## 2.1.3.5 Skapa CitiSignal-webbplats
 
-Gå till [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com). Klicka på ditt **program** för att öppna det.
+Gå till [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com){target="_blank"}. Klicka på ditt **program** för att öppna det.
 
 ![AEMCS](./images/aemcs6.png)
 
@@ -248,7 +248,7 @@ Klicka på **Importera**.
 
 ![AEMCS](./images/aemcssetup32.png)
 
-Nu måste du importera en förkonfigurerad mall för platsen. Du kan hämta mallen [här](./../../../assets/aem/citisignal-edge-delivery-services-template-0.0.4.zip). Spara filen på skrivbordet.
+Nu måste du importera en förkonfigurerad mall för platsen. Du kan hämta mallen [här](./../../../assets/aem/citisignal-edge-delivery-services-template-0.0.4.zip){target="_blank"}. Spara filen på skrivbordet.
 
 Markera sedan filen `citisignal-edge-delivery-services-template-0.0.4.zip` och klicka på **Öppna**.
 
@@ -325,7 +325,7 @@ Efter några minuter läses alla resurser in korrekt.
 
 ## 2.1.3.7 Testa sidprestanda
 
-Gå till [https://pagespeed.web.dev/](https://pagespeed.web.dev/). Ange din URL och klicka på **Analysera**.
+Gå till [https://pagespeed.web.dev/](https://pagespeed.web.dev/){target="_blank"}. Ange din URL och klicka på **Analysera**.
 
 ![AEMCS](./images/aemcssetup48.png)
 
@@ -339,8 +339,8 @@ Då ser du att er webbplats, både i mobilvisualisering och i datorvisualisering
 
 ![AEMCS](./images/aemcssetup50.png)
 
-Nästa steg: [2.1.4 Konfigurera ett anpassat block](./ex4.md)
+Nästa steg: [2.1.4 Konfigurera ett anpassat block](./ex4.md){target="_blank"}
 
-[Gå tillbaka till modul 2.1](./aemcs.md)
+[Gå tillbaka till modul 2.1](./aemcs.md){target="_blank"}
 
-[Gå tillbaka till Alla moduler](./../../../overview.md)
+[Gå tillbaka till alla moduler](./../../../overview.md){target="_blank"}

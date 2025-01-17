@@ -3,9 +3,10 @@ title: Datainsamling - sammanställning av externa målgrupper
 description: Datainsamling - sammanställning av externa målgrupper
 kt: 5342
 doc-type: tutorial
-source-git-commit: dc86e52b659d7b428aca03fdb041e7410901e1fd
+exl-id: cc2ac85e-e902-4bb7-ab54-aa39980f97aa
+source-git-commit: 760271a0f1bedef7db079748776da36feef230cd
 workflow-type: tm+mt
-source-wordcount: '623'
+source-wordcount: '605'
 ht-degree: 0%
 
 ---
@@ -53,6 +54,7 @@ Sammanfattning av den här modulen och en översikt över fördelarna.
 
 >[!NOTE]
 >
->Tack för att du lägger ned din tid på att lära dig allt om Adobe Experience Platform och dess program. Om du har frågor kan du dela allmän feedback om dina förslag på framtida innehåll. Kontakta Tech Insiders direkt genom att skicka ett e-postmeddelande till **techinsiders@adobe.com**.
+>![Tech Insiders](./../../../assets/images/techinsiders.png){width="50px" align="center"}
+>Om du har frågor kan du dela allmän feedback om dina förslag på framtida innehåll. Kontakta Tech Insiders direkt genom att skicka ett e-postmeddelande till **techinsiders@adobe.com**.
 
 [Gå tillbaka till Alla moduler](../../../overview.md)

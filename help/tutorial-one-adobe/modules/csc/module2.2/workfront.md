@@ -4,9 +4,9 @@ description: Arbetsflödeshantering med Adobe Workfront
 kt: 5342
 doc-type: tutorial
 exl-id: 96685851-b446-4bae-890e-4f96a59cedba
-source-git-commit: a4933bd49988cd16c4382ad4327d01ae58b52bbb
+source-git-commit: 760271a0f1bedef7db079748776da36feef230cd
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: '112'
 ht-degree: 0%
 
 ---
@@ -23,20 +23,21 @@ ht-degree: 0%
 
 ## Utövningar
 
-[2.2.1 Komma igång med Workfront](./ex1.md)
+[2.2.1 Komma igång med Workfront](./ex1.md){target="_blank"}
 
 I den här övningen ...
 
-[2.2.5 Integrering med Workfront och Photoshop](./ex5.md)
+[2.2.5 Integrering med Workfront + Photoshop](./ex5.md){target="_blank"}
 
 I den här övningen ska du konfigurera och börja använda det plugin-program som ansluter Adobe Photoshop till Adobe Workfront.
 
-[Sammanfattning och fördelar](./summary.md)
+[Sammanfattning och förmåner](./summary.md){target="_blank"}
 
 Sammanfattning av den här modulen och en översikt över fördelarna.
 
 >[!NOTE]
 >
->Tack för att du lägger ned din tid på att lära dig allt om Adobe Experience Platform och dess program. Om du har frågor kan du dela allmän feedback om dina förslag på framtida innehåll. Kontakta Tech Insiders direkt genom att skicka ett e-postmeddelande till **techinsiders@adobe.com**.
+>![Tech Insiders](./../../../assets/images/techinsiders.png){width="50px" align="center"}
+>Om du har frågor kan du dela allmän feedback om dina förslag på framtida innehåll. Kontakta Tech Insiders direkt genom att skicka ett e-postmeddelande till **techinsiders@adobe.com**.
 
-[Gå tillbaka till Alla moduler](../../../overview.md)
+[Gå tillbaka till alla moduler](../../../overview.md){target="_blank"}

@@ -4,7 +4,7 @@ description: Arbeta med Photoshop API:er
 kt: 5342
 doc-type: tutorial
 exl-id: 60eecc24-1713-4fec-9ffa-a3186db1a8ca
-source-git-commit: f1f70a0e4ea3f59b5b121275e7db633caf953df9
+source-git-commit: 2fe7d2528132301f559f9d51faa9ad128f5d890f
 workflow-type: tm+mt
 source-wordcount: '1013'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## 1.1.3.1 Uppdatera integreringen med Adobe I/O
 
-Gå till [https://developer.adobe.com/console/home](https://developer.adobe.com/console/home).
+Gå till [https://developer.adobe.com/console/home](https://developer.adobe.com/console/home){target="_blank"}.
 
 ![Ny integrering för Adobe I/O](./images/iohome.png)
 
@@ -49,7 +49,7 @@ Ditt Adobe I/O-projekt har nu uppdaterats för att fungera med API:er för Photo
 
 ## 1.1.3.2 Interagera med PSD
 
-Hämta filen Gå till [citisign-fiber.psd](./../../../assets/ff/citisignal-fiber.psd) till skrivbordet.
+Hämta filen Gå till [citisign-fiber.psd](./../../../assets/ff/citisignal-fiber.psd){target="_blank"} till skrivbordet.
 
 Öppna filen **citisign-fiber.psd** i Photoshop. Du borde ha den här då.
 
@@ -229,8 +229,8 @@ Slutligen kan du även se den filen i din behållare med hjälp av Azure Storage
 
 Du har nu avslutat den här övningen.
 
-Nästa steg: [1.1.4 Firefly anpassade modeller](./ex4.md)
+Nästa steg: [1.1.4 Firefly anpassade modeller](./ex4.md){target="_blank"}
 
-[Gå tillbaka till modul 1.1](./firefly-services.md)
+[Gå tillbaka till modul 1.1](./firefly-services.md){target="_blank"}
 
-[Gå tillbaka till Alla moduler](./../../../overview.md)
+[Gå tillbaka till alla moduler](./../../../overview.md){target="_blank"}
