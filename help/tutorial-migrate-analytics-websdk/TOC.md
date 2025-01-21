@@ -1,7 +1,7 @@
 ---
-user-guide-title: Migrera från tillägget Adobe Analytics Tags till tillägget Web SDK Tags
-breadcrumb-title: Migrera från tillägget Adobe Analytics Tags till tillägget Web SDK Tags
-user-guide-description: En praktisk självstudiekurs för Analytics-kunder om hur du kan migrera från tillägget Adobe Analytics Tags till tillägget Web SDK Tags
+user-guide-title: Adobe Analytics till Web SDK med taggar
+breadcrumb-title: Adobe Analytics till Web SDK med taggar
+user-guide-description: En praktisk självstudiekurs för Analytics-kunder om hur du kan migrera Adobe Analytics till Web SDK med Adobe Experience Platform Tags
 solution: Analytics,Data Collection,Experience Platform
 feature-set: Analytics,Experience Platform
 feature: Web SDK
@@ -11,15 +11,15 @@ doc-type: tutorial
 recommendations: catalog,noDisplay
 jira: KT-16755
 index: false
-source-git-commit: 7ae56d997884cf1558e72c0ad553df1c5d43c081
+source-git-commit: 7c0a6c769d56b3e56a5667d5aeff47b55ab6dc33
 workflow-type: tm+mt
-source-wordcount: '135'
+source-wordcount: '116'
 ht-degree: 0%
 
 ---
 
 
-# Migrera från tillägget Adobe Analytics Tags till tillägget Web SDK Tags {#migrate-analytics-to-websdk}
+# Migrera Adobe Analytics till Web SDK med taggar {#migrate-analytics-to-websdk}
 
 + [Migreringsöversikt](migration-to-websdk-overview.md)
 

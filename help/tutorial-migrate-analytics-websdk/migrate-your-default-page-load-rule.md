@@ -4,13 +4,13 @@ description: I den här övningen får du lära dig hur du migrerar en standardr
 solution: Data Collection, Analytics
 feature: Web SDK
 jira: KT-16760
-source-git-commit: 7ae56d997884cf1558e72c0ad553df1c5d43c081
+exl-id: 783b464e-2974-41a1-9949-ac3ac0c786fc
+source-git-commit: 7c0a6c769d56b3e56a5667d5aeff47b55ab6dc33
 workflow-type: tm+mt
-source-wordcount: '1263'
+source-wordcount: '1259'
 ht-degree: 0%
 
 ---
-
 
 # Migrera standardregel för sidinläsning
 
@@ -18,7 +18,7 @@ I den här övningen får du lära dig hur du migrerar en standardregel för sid
 
 ## Översikt
 
-Vi backar upp lite. Det är troligt att du har en regel i Taggar (tidigare kallad &quot;Launch&quot;) som utlöses på varje sida - en som ställer in en eller flera standardvariabler och sedan utlöser en fyr eller en träff till Adobe Analytics. Den här regeln använder för närvarande&quot;åtgärder&quot; i Adobe Analytics-tillägget för att göra dessa saker. När vi migrerar vår implementering till Web SDK måste vi kunna ta bort alla referenser (som åtgärderna) till Analytics-tillägget och ersätta dem med åtgärder som tillhör Web SDK. I stegen nedan antar vi ovanstående, dvs. att du har en standardregel för sidinläsning som båda anger variabler och skickar i en spårningssignal till Analytics.
+Vi backar upp lite. Det är troligt att du har en regel i Taggar som utlöses på varje sida - en som ställer in en eller flera standardvariabler och sedan utlöser en fyr, eller en träff, till Adobe Analytics. Den här regeln använder för närvarande&quot;åtgärder&quot; i Adobe Analytics-tillägget för att göra dessa saker. När vi migrerar vår implementering till Web SDK måste vi kunna ta bort alla referenser (som åtgärderna) till Analytics-tillägget och ersätta dem med åtgärder som tillhör Web SDK. I stegen nedan antar vi ovanstående, dvs. att du har en standardregel för sidinläsning som båda anger variabler och skickar i en spårningssignal till Analytics.
 
 ## Migrera åtgärden Ange variabler
 

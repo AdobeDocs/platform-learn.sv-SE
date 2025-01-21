@@ -4,13 +4,13 @@ description: Lär dig hur du felsöker och validerar data när du migrerar till 
 solution: Data Collection, Analytics
 feature: Web SDK
 jira: KT-16763
-source-git-commit: 7ae56d997884cf1558e72c0ad553df1c5d43c081
+exl-id: 68f87266-4b87-4953-8de4-6a9a62bac9e6
+source-git-commit: 7c0a6c769d56b3e56a5667d5aeff47b55ab6dc33
 workflow-type: tm+mt
 source-wordcount: '1253'
 ht-degree: 0%
 
 ---
-
 
 # Felsöka och validera din SDK-migrering på webben
 
@@ -70,7 +70,7 @@ Det finns kanske flera sätt att göra jämförelserna, men jag ska ge er två e
 1. Skapa ett nytt projekt i Analysis Workspace och lägg till två paneler
 1. Ställ in rapportsviten i panel 1 på din nuvarande Adobe Analytics-serie
 1. Ange rapportsviten i panel 2 i din nya Web SDK-utvecklingsrapportsserie
-1. Lägg in samma rapport i båda panelerna med en tidsperiod i kalendern när data flög in i Analytics med båda tilläggen
+1. Lägg in samma rapport i båda panelerna, med en tidsperiod som endast omfattar fullständiga dagar då data skickades till båda rapportsviterna
 1. Jämför data
 
 Det här kan se ut ungefär så här (eftersom det inte finns några data i dessa tomma demorapporteringsprogram):

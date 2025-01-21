@@ -4,13 +4,13 @@ description: Lär dig hur du migrerar ytterligare sidbaserade regler till Web SD
 solution: Data Collection, Analytics
 feature: Web SDK
 jira: KT-16764
-source-git-commit: 7ae56d997884cf1558e72c0ad553df1c5d43c081
+exl-id: d1345da7-018d-4c0c-ba9b-d4ff7b35df03
+source-git-commit: 7c0a6c769d56b3e56a5667d5aeff47b55ab6dc33
 workflow-type: tm+mt
-source-wordcount: '736'
+source-wordcount: '732'
 ht-degree: 0%
 
 ---
-
 
 # Migrera ytterligare sidregler
 
@@ -20,7 +20,7 @@ I den här övningen får du lära dig hur du migrerar ytterligare sidbaserade r
 
 Låt oss säkerhetskopiera lite och prata om Analytics-implementeringar som de är med Adobe Analytics-taggtillägget (kallas även&quot;AppMeasurement&quot;-implementering, eftersom det är namnet på JavaScript-filen).
 
-Jag antar inte att jag vet exakt hur du implementeras, men i många implementeringar med hjälp av Experience Platform-taggar (tidigare kallat &quot;Launch&quot;) finns det ett antal regler som bara aktiveras villkorligt, baserat på något på sidan eller i URL:en. Exempel på detta kan vara:
+Jag antar inte att jag vet exakt hur du implementeras, men i många implementeringar med Experience Platform-taggar finns det ett antal regler som bara aktiveras villkorligt, baserat på något på sidan eller i URL:en. Exempel på detta kan vara:
 
 * Sökresultatregel, som endast aktiveras när en intern sökning har utförts och sökresultatsidan visas
 * Regel för kampanjstartsida, som bara utlöses när det finns en spårningskod i URL:en
@@ -68,6 +68,3 @@ Här är ett exempel på hur du migrerar en regel som aktiveras villkorligt. Jag
 >[!IMPORTANT]
 >
 >Precis som standardregeln för sidinläsning har vi lämnat Analytics-tilläggets **Set Variable**-åtgärd i regeln så att vi kan jämföra data när vi validerar migreringen. Glöm inte att komma in igen senare och ta bort Analytics-tilläggets åtgärd när du gör den slutliga rensningen.
-
-
-
