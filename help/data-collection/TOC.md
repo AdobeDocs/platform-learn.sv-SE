@@ -6,10 +6,10 @@ solution: Data Collection,Experience Platform
 doc-type: video
 auto-video-transcripts: true
 role: Developer, Data Engineer
-source-git-commit: 38696ad5f8e151d1b7a42055d844fb98e8dccb86
+source-git-commit: 3ebcb866cd16b036d09def8cf629fd0ccb348dc7
 workflow-type: tm+mt
-source-wordcount: '191'
-ht-degree: 19%
+source-wordcount: '195'
+ht-degree: 18%
 
 ---
 
@@ -30,11 +30,12 @@ ht-degree: 19%
    + [Implementera webbplatser med Web SDK](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html){target="_blank"}
    + [Implementera webbplatser med SDK-lösningar](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/overview.html){target="_blank"}
    + [Implementering i mobilappar](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/overview.html){target="_blank"}
-+ Web SDK{#web-sdk}
++ Webb-SDK{#web-sdk}
    + [Översikt](web-sdk/overview.md)
    + [Demo](web-sdk/demo.md)
    + [Implementeringsjälvstudiekurs (med taggar)](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html){target="_blank"}
    + [Migrera mål, självstudiekurs](https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html){target="_blank"}
+   + [Migrera analyssjälvstudiekurs](https://experienceleague.adobe.com/en/docs/platform-learn/migrate-analytics-to-websdk/migration-to-websdk-overview){target="_blank"}
    + Samtycke{#consent}
       + [Översikt](web-sdk/consent/overview.md)
       + [Ange medgivandevärden med Adobe-standarden](web-sdk/consent/set-consent-adobe.md)
