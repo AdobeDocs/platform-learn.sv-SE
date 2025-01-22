@@ -4,9 +4,9 @@ description: Komma igång - Skapa ditt dataflöde
 kt: 5342
 doc-type: tutorial
 exl-id: b3e6f66d-fb7a-43ab-aedb-45141af76d3e
-source-git-commit: 7f436f77ab6d7c625181304fd41be75c627c5b46
+source-git-commit: 58e60ad8c83dcd25996e06f11c75f68eae35ef20
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '826'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Gå till [https://experience.adobe.com/#/data-collection/](https://experience.ad
 
 ![DSN](./images/launchprop.png)
 
-Klicka på **[!UICONTROL Tags]** på den vänstra menyn. Efter föregående övning har du nu två egenskaper för datainsamling: en för webben och en för mobilen.
+Klicka på **[!UICONTROL Tags]** på den vänstra menyn. Efter föregående övning har du nu tre egenskaper för datainsamling: en för webben, en för mobilen och en för CX-appen.
 
 ![DSN](./images/launchprop1.png)
 
@@ -61,7 +61,7 @@ Det är allt för tillfället. I [Modul 1.1](./../../../modules/datacollection/m
 
 Klicka på **[!UICONTROL Tags]** på den vänstra menyn.
 
-Filtrera sökresultaten så att du kan se de två datainsamlingsegenskaperna. Öppna egenskapen för **webben** genom att klicka på den.
+Filtrera sökresultaten så att du kan se dina datainsamlingsegenskaper. Öppna egenskapen för **webben** genom att klicka på den.
 
 ![Namnge Edge-konfigurationen och spara](./images/edgeconfig10a.png)
 
@@ -139,7 +139,7 @@ Då ser du det här.
 
 Din datastream är nu klar att användas i din klientegenskap för Adobe Experience Platform Data Collection för mobilen.
 
-Gå till **Taggar** och filtrera sökresultaten så att du kan se de två datainsamlingsegenskaperna. Öppna egenskapen för **Mobile** genom att klicka på den.
+Gå till **Taggar** och filtrera sökresultaten så att du kan se dina datainsamlingsegenskaper. Öppna egenskapen för **Mobile** genom att klicka på den.
 
 ![Namnge Edge-konfigurationen och spara](./images/edgeconfig10am.png)
 

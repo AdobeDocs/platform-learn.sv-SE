@@ -4,7 +4,7 @@ description: Customer AI - Data Preparation (Ingest)
 kt: 5342
 doc-type: tutorial
 exl-id: 71405859-cfc6-4991-a0b0-11c94818a0fa
-source-git-commit: b53ee64ae8438b8f48f842ed1f44ee7ef3e813fc
+source-git-commit: 58e60ad8c83dcd25996e06f11c75f68eae35ef20
 workflow-type: tm+mt
 source-wordcount: '685'
 ht-degree: 0%
@@ -84,7 +84,7 @@ Klicka på **Skapa datauppsättning från schema**.
 
 ![Datauppsättning](./images/createdatasetfromschema.png)
 
-På nästa skärm väljer du den datauppsättning som du skapade i föregående övning, med namnet **[!UICONTROL ldap - Demo System - Customer Experience Event]**. Klicka på **Nästa**.
+På nästa skärm väljer du den datauppsättning som du skapade i föregående övning, med namnet `--aepUserLdap-- - Demo System - Customer Experience Event`. Klicka på **Nästa**.
 
 ![Datauppsättning](./images/createds1.png)
 

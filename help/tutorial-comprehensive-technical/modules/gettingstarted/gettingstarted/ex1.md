@@ -4,9 +4,9 @@ description: Komma igång - Installera Chrome-tillägget för dokumentationen f�
 kt: 5342
 doc-type: tutorial
 exl-id: da7aa686-7f25-49fd-af3e-d243ffda025f
-source-git-commit: f80f9aa6d736bf07235ef52e96b027b5e5ae742e
+source-git-commit: 58e60ad8c83dcd25996e06f11c75f68eae35ef20
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '920'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ IMS-organisations-ID är den unika identifieraren för din Adobe Experience Clou
 
 Du kan söka efter ditt IMS-organisations-ID på flera sätt. Om du är osäker kan du söka efter ditt ID hos en av systemadministratörerna för instansen.
 
-Du kan hitta den genom att gå till [Admin Console](https://https://adminconsole.adobe.com/), där du kan hitta den som en del av URL:en.
+Du kan hitta den genom att gå till [Admin Console](https://adminconsole.adobe.com/), där du kan hitta den som en del av URL:en.
 
 ![DSN](./images/aepid1.png)
 
@@ -100,7 +100,7 @@ Klient-ID är den unika identifieraren för organisationens AEP-instans. När du
 
 ![DSN](./images/aeptenantid.png)
 
-När du anger det i Chrome-tillägget bör du se till att ett understreck läggs till som ett prefix, så i det här exemplet blir **ExperiencePlatform** **_experienceplatform**.
+När du anger det i Chrome-tillägget bör du se till att ett understreck läggs till som ett prefix, så i det här exemplet blir **ExperiencePlatform** **_experienceplatform**. Se även till att ta bort symbolen **@** när du kopierar från URL:en.
 
 **Namn på AEP-sandlåda**
 

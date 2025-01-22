@@ -4,16 +4,16 @@ description: Foundation - FAC - Skapa scheman, datamodell och länkar
 kt: 5342
 doc-type: tutorial
 exl-id: e863ab3a-44df-4bb4-b081-a62616aaa1f1
-source-git-commit: bec1f7253cd2d3491f875179eff2cf511104662f
+source-git-commit: 075af9deddeeaf398603f65003781ea75fe0923b
 workflow-type: tm+mt
-source-wordcount: '636'
+source-wordcount: '638'
 ht-degree: 0%
 
 ---
 
 # 1.3.2 Skapa scheman, datamodell och länkar
 
-Nu kan du konfigurera din federerade databas i AEP.
+Nu kan du konfigurera din federerade databas i Adobe Experience Platform.
 
 Logga in på Adobe Experience Platform via följande URL: [https://experience.adobe.com/platform](https://experience.adobe.com/platform).
 
