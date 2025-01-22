@@ -4,7 +4,7 @@ description: Foundation - FAC - Skapa scheman, datamodell och länkar
 kt: 5342
 doc-type: tutorial
 exl-id: e863ab3a-44df-4bb4-b081-a62616aaa1f1
-source-git-commit: a157c0874c8c21cf6481ef9f02bbf53ff7344407
+source-git-commit: bec1f7253cd2d3491f875179eff2cf511104662f
 workflow-type: tm+mt
 source-wordcount: '636'
 ht-degree: 0%
@@ -130,6 +130,8 @@ Markera dina scheman och klicka på **Lägg till**.
 
 Då ser du det här. Klicka på **Spara**.
 
+### `CK_USERS` - `CK_PERSONS`
+
 Nu kan du börja definiera länkar mellan scheman. Om du vill börja definiera en länk måste du klicka på **Skapa länkar**.
 
 ![FAC](./images/fdb16.png)
@@ -140,6 +142,9 @@ Klicka på **Lägg till**.
 
 ![FAC](./images/fdb18.png)
 
+
+### `CK_HOUSEHOLDS` - `CK_PERSONS`
+
 Du kommer då tillbaka hit. Klicka på **Skapa länkar** om du vill skapa en annan länk.
 
 ![FAC](./images/fdb17.png)
@@ -147,6 +152,8 @@ Du kommer då tillbaka hit. Klicka på **Skapa länkar** om du vill skapa en ann
 Sedan definierar vi länken mellan tabellen `CK_HOUSEHOLDS` och `CK_PERSONS`.
 
 ![FAC](./images/fdb19.png)
+
+### `CK_USERS` - `CK_MONTHLY_DATA_USAGE`
 
 Du kommer då tillbaka hit. Klicka på **Skapa länkar** om du vill skapa en annan länk.
 
@@ -156,6 +163,9 @@ Sedan definierar vi länken mellan tabellen `CK_USERS` och `CK_MONTHLY_DATA_USAG
 
 ![FAC](./images/fdb21.png)
 
+
+### `CK_USERS` - `CK_HOUSEHOLDS`
+
 Du kommer då tillbaka hit. Klicka på **Skapa länkar** om du vill skapa en annan länk.
 
 ![FAC](./images/fdb22.png)
@@ -163,6 +173,8 @@ Du kommer då tillbaka hit. Klicka på **Skapa länkar** om du vill skapa en ann
 Sedan definierar vi länken mellan tabellen `CK_USERS` och `CK_HOUSEHOLDS`.
 
 ![FAC](./images/fdb23.png)
+
+### `CK_USERS` - `CK_MOBILE_DATA_USAGE`
 
 Du kommer då tillbaka hit. Klicka på **Skapa länkar** om du vill skapa en annan länk.
 
