@@ -4,9 +4,9 @@ description: Komma igång - Installera Chrome-tillägget för dokumentationen f�
 kt: 5342
 doc-type: tutorial
 exl-id: da7aa686-7f25-49fd-af3e-d243ffda025f
-source-git-commit: 7f436f77ab6d7c625181304fd41be75c627c5b46
+source-git-commit: e505b8401509f6171d9c98f85a93af27c38a8303
 workflow-type: tm+mt
-source-wordcount: '903'
+source-wordcount: '908'
 ht-degree: 0%
 
 ---
@@ -20,12 +20,13 @@ För att dokumentationen ska kunna återanvändas introducerades **miljövariabl
 
 Ett exempel på sådana värden finns nedan. Dessa värden kan för närvarande inte användas ännu, men så fort du installerar och aktiverar Chrome-tillägget kommer dessa variabler att ändras till normal text som du kan kopiera och återanvända.
 
-| Namn | Nyckel |
-|:-------------:| :---------------:|
-| AEP IMS-organisations-ID | `--aepImsOrgId--` |
-| Klient-ID för AEP | `--aepTenantId--` |
-| Namn på AEP-sandlåda | `--aepSandboxName--` |
-| LDAP för lärarprofil | `--aepUserLdap--` |
+| Namn | Nyckel | Exempel |
+|:-------------:| :---------------:| :---------------:|
+| AEP IMS-organisations-ID | `--aepImsOrgId--` | `907075E95BF479EC0A495C73@AdobeOrg` |
+| AEP IMS-organisationsnamn | `--aepImsOrgName--` | `Experience Platform International` |
+| Klient-ID för AEP | `--aepTenantId--` | `_experienceplatform` |
+| Namn på AEP-sandlåda | `--aepSandboxName--` | `tech-insiders` |
+| LDAP för lärarprofil | `--aepUserLdap--` | `vangeluw` |
 
 I skärmbilden nedan visas till exempel en referens till `aepTenantId`.
 

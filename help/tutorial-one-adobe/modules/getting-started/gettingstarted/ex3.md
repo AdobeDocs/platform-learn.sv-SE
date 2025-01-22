@@ -3,9 +3,10 @@ title: Komma igång - Skapa ditt dataflöde
 description: Komma igång - Skapa ditt dataflöde
 kt: 5342
 doc-type: tutorial
-source-git-commit: a1cba79313a651c929d76008943c1c5f8a64a9f7
+exl-id: d36057b4-64c6-4389-9612-d3c9cf013117
+source-git-commit: e505b8401509f6171d9c98f85a93af27c38a8303
 workflow-type: tm+mt
-source-wordcount: '803'
+source-wordcount: '807'
 ht-degree: 0%
 
 ---
@@ -16,7 +17,7 @@ Gå till [https://experience.adobe.com/#/data-collection/](https://experience.ad
 
 ![DSN](./images/launchprop.png)
 
-Klicka på **[!UICONTROL Tags]** på den vänstra menyn. Efter föregående övning har du nu två egenskaper för datainsamling: en för webben och en för mobilen.
+Klicka på **[!UICONTROL Tags]** på den vänstra menyn. Efter föregående övning har du nu tre egenskaper för datainsamling: en för webben, en för mobilen och en för CX-appen.
 
 ![DSN](./images/launchprop1.png)
 
@@ -38,7 +39,7 @@ Klicka på **[!UICONTROL New Datastream]**.
 
 ![Klicka på ikonen Edge-konfiguration i den vänstra navigeringen](./images/edgeconfig1.png)
 
-Ange `--aepUserLdap-- - Demo System Datastream` för **[!UICONTROL Name]** och den valfria beskrivningen. För **Mappningsschema** väljer du **Demonstrationssystem - händelseschema för webbplatsen (Global v1.1)**. Klicka på **Spara**.
+Ange `--aepUserLdap-- - One Adobe Datastream` för **[!UICONTROL Name]** och den valfria beskrivningen. För **Mappningsschema** väljer du **Demonstrationssystem - händelseschema för webbplatsen (Global v1.1)**. Klicka på **Spara**.
 
 ![Namnge Edge-konfigurationen och spara](./images/edgeconfig2.png)
 
@@ -58,7 +59,7 @@ Du kommer att se det här.
 
 Klicka på **[!UICONTROL Tags]** på den vänstra menyn.
 
-Filtrera sökresultaten så att du kan se de två datainsamlingsegenskaperna. Öppna egenskapen för **webben** genom att klicka på den.
+Filtrera sökresultaten så att du kan se dina datainsamlingsegenskaper. Öppna egenskapen för **webben** genom att klicka på den.
 
 ![Namnge Edge-konfigurationen och spara](./images/edgeconfig10a.png)
 
@@ -70,7 +71,7 @@ Klicka först på Adobe Experience Platform Web SDK-tillägget och sedan på **K
 
 ![Namnge Edge-konfigurationen och spara](./images/edgeconfig12.png)
 
-Då ser du det här. Kontrollera att rätt sandlåda är markerad på menyn **Datastreams** och se till att rätt sandlåda är markerad, som i ditt fall ska vara `--aepSandboxName--`.
+Då ser du det här. Titta närmare på menyn **Datastreams** och se till att rätt sandlåda är markerad, som i ditt fall ska vara `--aepSandboxName--`.
 
 ![Namnge Edge-konfigurationen och spara](./images/edgeconfig12a.png)
 
@@ -114,7 +115,7 @@ Klicka på **[!UICONTROL New Datastream]**.
 
 ![Klicka på Datastream-ikonen i den vänstra navigeringen](./images/edgeconfig1.png)
 
-Ange `--aepUserLdap-- - Demo System Datastream (Mobile)` för **[!UICONTROL Friendly Name]** och den valfria beskrivningen. För **Mappningsschema** väljer du **Demonstrationssystem - händelseschema för mobilapp (Global v1.1)**. Klicka på **Spara**.
+Ange `--aepUserLdap-- - One Adobe Datastream (Mobile)` för **[!UICONTROL Friendly Name]** och den valfria beskrivningen. För **Mappningsschema** väljer du **Demonstrationssystem - händelseschema för mobilapp (Global v1.1)**. Klicka på **Spara**.
 
 Klicka på **[!UICONTROL Save]**.
 

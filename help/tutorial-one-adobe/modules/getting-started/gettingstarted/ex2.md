@@ -3,7 +3,8 @@ title: Komma igång - Använd demonstrationssystemet bredvid för att konfigurer
 description: Komma igång - Använd demonstrationssystemet bredvid för att konfigurera Launch-egenskapen
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6758301f639394f0d85b685a115461a63e5d760b
+exl-id: 455b72f6-84fd-463a-a7b5-3c4999035ab2
+source-git-commit: e505b8401509f6171d9c98f85a93af27c38a8303
 workflow-type: tm+mt
 source-wordcount: '328'
 ht-degree: 0%
@@ -32,7 +33,7 @@ Klicka sedan på **Start**.
 
 ![DSN](./images/dsn2.png)
 
-På popup-menyn anger du ett namn för dina datainsamlingsegenskaper och Experience Builder-projekt. Använd den här namnkonventionen: **Demonstrationssystem (DD/MM/ÅÅÅÅ)**. Obs! LDAP-filen läggs till automatiskt, du behöver inte lägga till den själv.
+På popup-menyn anger du ett namn för dina datainsamlingsegenskaper och Experience Builder-projekt. Använd den här namnkonventionen: **One Adobe (DD/MM/YYYY)**. Obs! LDAP-filen läggs till automatiskt, du behöver inte lägga till den själv.
 
 Klicka på **Start**.
 

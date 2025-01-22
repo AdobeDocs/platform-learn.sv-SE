@@ -4,9 +4,9 @@ description: Foundation - FAC - Skapa scheman, datamodell och länkar
 kt: 5342
 doc-type: tutorial
 exl-id: e863ab3a-44df-4bb4-b081-a62616aaa1f1
-source-git-commit: 1c91cb2129f827fd39dc065baf5d8ea067a5731a
+source-git-commit: a157c0874c8c21cf6481ef9f02bbf53ff7344407
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '636'
 ht-degree: 0%
 
 ---
@@ -152,7 +152,7 @@ Du kommer då tillbaka hit. Klicka på **Skapa länkar** om du vill skapa en ann
 
 ![FAC](./images/fdb20.png)
 
-Sedan definierar vi länken mellan tabellen `CK_MONTHLY_DATA_USAGE` och `CK_USERS`.
+Sedan definierar vi länken mellan tabellen `CK_USERS` och `CK_MONTHLY_DATA_USAGE`.
 
 ![FAC](./images/fdb21.png)
 
@@ -164,8 +164,17 @@ Sedan definierar vi länken mellan tabellen `CK_USERS` och `CK_HOUSEHOLDS`.
 
 ![FAC](./images/fdb23.png)
 
-Du kommer då tillbaka hit. Klicka på **Spara**.
+Du kommer då tillbaka hit. Klicka på **Skapa länkar** om du vill skapa en annan länk.
+
 ![FAC](./images/fdb24.png)
+
+Sedan definierar vi länken mellan tabellen `CK_USERS` och `CK_MOBILE_DATA_USAGE`.
+
+![FAC](./images/fdb25.png)
+
+Du borde se det här då. Klicka på **Spara**.
+
+![FAC](./images/fdb26.png)
 
 Din konfiguration i AEP är nu klar. Nu kan ni börja använda era federerade data i en federerad målgruppskomposition.
 

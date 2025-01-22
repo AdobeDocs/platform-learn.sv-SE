@@ -4,9 +4,9 @@ description: Foundation - FAC - Skapa en federerad komposition
 kt: 5342
 doc-type: tutorial
 exl-id: 293bf825-d0d6-48cf-9cbf-69f622597678
-source-git-commit: 1c91cb2129f827fd39dc065baf5d8ea067a5731a
+source-git-commit: d0469a38e2bef6031f796ed0946caba52c424e8c
 workflow-type: tm+mt
-source-wordcount: '492'
+source-wordcount: '493'
 ht-degree: 0%
 
 ---
@@ -140,6 +140,8 @@ Din komposition är nu färdig. Klicka på **Start** för att köra den.
 Frågan kommer nu att flyttas ned till Snowflake, som kommer att fråga efter källdata där. Resultatet överförs tillbaka till AEP men källdata finns kvar i Snowflake.
 
 Publiken är nu befolkad och målgruppen kan målgruppsanpassas inifrån AEP-ekosystemet.
+
+![FAC](./images/fedcomp22.png)
 
 Nästa steg: [Sammanfattning och fördelar](./summary.md)
 

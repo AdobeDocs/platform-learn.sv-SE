@@ -3,9 +3,10 @@ title: Komma igång - Installera Chrome-tillägget för dokumentationen för Exp
 description: Komma igång - Installera Chrome-tillägget för dokumentationen för Experience League
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6758301f639394f0d85b685a115461a63e5d760b
+exl-id: 3618dacb-2203-4d19-ae51-f78415a693fd
+source-git-commit: e505b8401509f6171d9c98f85a93af27c38a8303
 workflow-type: tm+mt
-source-wordcount: '903'
+source-wordcount: '911'
 ht-degree: 0%
 
 ---
@@ -19,14 +20,15 @@ För att dokumentationen ska kunna återanvändas introducerades **miljövariabl
 
 Ett exempel på sådana värden finns nedan. Dessa värden kan för närvarande inte användas ännu, men så fort du installerar och aktiverar Chrome-tillägget kommer dessa variabler att ändras till normal text som du kan kopiera och återanvända.
 
-| Namn | Nyckel |
-|:-------------:| :---------------:|
-| AEP IMS-organisations-ID | `--aepImsOrgId--` |
-| Klient-ID för AEP | `--aepTenantId--` |
-| Namn på AEP-sandlåda | `--aepSandboxName--` |
-| LDAP för lärarprofil | `--aepUserLdap--` |
+| Namn | Nyckel | Exempel |
+|:-------------:| :---------------:| :---------------:|
+| AEP IMS-organisations-ID | `--aepImsOrgId--` | `907075E95BF479EC0A495C73@AdobeOrg` |
+| AEP IMS-organisationsnamn | `--aepImsOrgName--` | `Experience Platform International` |
+| Klient-ID för AEP | `--aepTenantId--` | `_experienceplatform` |
+| Namn på AEP-sandlåda | `--aepSandboxName--` | `one-adobe` |
+| LDAP för lärarprofil | `--aepUserLdap--` | `vangeluw` |
 
-I skärmbilden nedan visas till exempel en referens till `aepTenantId`.
+I skärmbilden nedan visas till exempel en referens till `aepSandboxName`.
 
 ![DSN](./images/mod7before.png)
 
@@ -108,7 +110,7 @@ Innan du tar sandlådans namn från URL:en bör du kontrollera att du är i sand
 
 ![DSN](./images/aepsandboxsw.png)
 
-I det här exemplet är AEP-sandlådans namn **tech-insiders**.
+I det här exemplet är AEP-sandlådans namn **en-adobe**.
 
 ![DSN](./images/aepsname.png)
 
@@ -118,11 +120,10 @@ Det här är användarnamnet som kommer att användas som en del av självstudie
 
 LDAP används för att se till att konfigurationen som du gör länkas till dig och inte hamnar i konflikt med andra användare som kanske använder samma instans och sandlåda som du använder.
 
-Dina värden bör se ut ungefär som dessa.
+Värdena bör likna dessa.
 Klicka slutligen på **Skapa ny**.
 
 ![DSN](./images/c8a.png)
-
 
 På den vänstra menyn i tillägget visas nu en ny ikon med miljöns initialer. Klicka på den. Du ser sedan mappningen mellan **miljövariablerna** och dina specifika Adobe Experience Platform-instansvärden. Klicka på **Aktivera konfiguration**.
 
@@ -134,11 +135,11 @@ När du har aktiverat konfigurationen visas en grön punkt bredvid initialerna f
 
 ## Verifiera självstudiekursens innehåll
 
-Gå till [den här sidan](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/datadistiller/module51/ex3) som ett test.
+Gå till [den här sidan](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-one-adobe/uce/module31/ex2) som ett test.
 
-Du bör nu se att alla **miljövariabler** har ersatts med sina verkliga värden, baserat på den aktiverade miljön i Chrome-tillägget.
+Du bör nu se att alla **miljövariabler** på den här sidan har ersatts med sina verkliga värden, baserat på den aktiverade miljön i Chrome-tillägget.
 
-Du bör nu ha en vy som liknar den nedan, där miljövariabeln `aepTenantId` har ersatts av ditt riktiga AEP-klient-ID, som i det här fallet är **_experienceplatform**.
+Du bör nu ha en liknande vy som i nedanstående exempel, där miljövariabeln `aepSandboxName` har ersatts av ditt riktiga AEP-sandlådenamn, som i det här fallet är **one-adobe**.
 
 ![DSN](./images/mod7.png)
 
