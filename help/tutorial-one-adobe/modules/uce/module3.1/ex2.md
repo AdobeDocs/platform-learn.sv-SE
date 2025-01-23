@@ -3,16 +3,17 @@ title: Datainsamling - FAC - Skapa scheman, datamodell och länkar
 description: Foundation - FAC - Skapa scheman, datamodell och länkar
 kt: 5342
 doc-type: tutorial
-source-git-commit: ab3f13389ae194519dcb9c8988ea38b89f6e5907
+exl-id: 42004cb9-60b3-4ca8-97d9-3d169735c98f
+source-git-commit: 246bb91496104818f357848f41b79523b7771638
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '638'
 ht-degree: 0%
 
 ---
 
 # 3.1.2 Skapa scheman, datamodell och länkar
 
-Nu kan du konfigurera din federerade databas i AEP.
+Nu kan du konfigurera din federerade databas i Adobe Experience Platform.
 
 Logga in på Adobe Experience Platform via följande URL: [https://experience.adobe.com/platform](https://experience.adobe.com/platform).
 
@@ -129,6 +130,8 @@ Markera dina scheman och klicka på **Lägg till**.
 
 Då ser du det här. Klicka på **Spara**.
 
+### `CK_USERS` - `CK_PERSONS`
+
 Nu kan du börja definiera länkar mellan scheman. Om du vill börja definiera en länk måste du klicka på **Skapa länkar**.
 
 ![FAC](./images/fdb16.png)
@@ -139,6 +142,9 @@ Klicka på **Lägg till**.
 
 ![FAC](./images/fdb18.png)
 
+
+### `CK_HOUSEHOLDS` - `CK_PERSONS`
+
 Du kommer då tillbaka hit. Klicka på **Skapa länkar** om du vill skapa en annan länk.
 
 ![FAC](./images/fdb17.png)
@@ -147,13 +153,18 @@ Sedan definierar vi länken mellan tabellen `CK_HOUSEHOLDS` och `CK_PERSONS`.
 
 ![FAC](./images/fdb19.png)
 
+### `CK_USERS` - `CK_MONTHLY_DATA_USAGE`
+
 Du kommer då tillbaka hit. Klicka på **Skapa länkar** om du vill skapa en annan länk.
 
 ![FAC](./images/fdb20.png)
 
-Sedan definierar vi länken mellan tabellen `CK_MONTHLY_DATA_USAGE` och `CK_USERS`.
+Sedan definierar vi länken mellan tabellen `CK_USERS` och `CK_MONTHLY_DATA_USAGE`.
 
 ![FAC](./images/fdb21.png)
+
+
+### `CK_USERS` - `CK_HOUSEHOLDS`
 
 Du kommer då tillbaka hit. Klicka på **Skapa länkar** om du vill skapa en annan länk.
 
@@ -163,8 +174,19 @@ Sedan definierar vi länken mellan tabellen `CK_USERS` och `CK_HOUSEHOLDS`.
 
 ![FAC](./images/fdb23.png)
 
-Du kommer då tillbaka hit. Klicka på **Spara**.
+### `CK_USERS` - `CK_MOBILE_DATA_USAGE`
+
+Du kommer då tillbaka hit. Klicka på **Skapa länkar** om du vill skapa en annan länk.
+
 ![FAC](./images/fdb24.png)
+
+Sedan definierar vi länken mellan tabellen `CK_USERS` och `CK_MOBILE_DATA_USAGE`.
+
+![FAC](./images/fdb25.png)
+
+Du borde se det här då. Klicka på **Spara**.
+
+![FAC](./images/fdb26.png)
 
 Din konfiguration i AEP är nu klar. Nu kan ni börja använda era federerade data i en federerad målgruppskomposition.
 

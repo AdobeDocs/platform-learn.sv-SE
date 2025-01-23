@@ -4,9 +4,9 @@ description: Komma igång med Workfront
 kt: 5342
 doc-type: tutorial
 exl-id: 7ed76d37-5d3e-49c7-b3d3-ebcfe971896d
-source-git-commit: bd46be455f88007174f7e6be9a1ce5f508edc09b
+source-git-commit: ec79d3fcfe971faee584a221eb55ddcb015a1e50
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '768'
 ht-degree: 0%
 
 ---
@@ -54,9 +54,93 @@ Klicka på **Spara**.
 
 ![WF](./images/wfb6.png)
 
-Din integrering mellan Workfront och AEM Assets CS är nu konfigurerad.
+Din integrering från Workfront till AEM Assets CS är nu konfigurerad.
 
 ![WF](./images/wfb7.png)
+
+## 2.2.1.2 Konfigurera metadataintegrering med AEM Assets
+
+Därefter måste du konfigurera AEM Assets så att metadatafälten från resursen i Workfront delas med AEM.
+
+Gå till [https://experience.adobe.com/](https://experience.adobe.com/) om du vill göra det. Klicka på **Experience Manager Assets**.
+
+![WF](./images/wfbaem1.png)
+
+Klicka för att välja din AEM Assets-miljö, som ska få namnet `--aepUserLdap-- - Citi Signal dev`.
+
+![WF](./images/wfbaem2.png)
+
+Du borde se det här då. Gå till **Assets** på den vänstra menyn och klicka på **Skapa mapp**.
+
+![WF](./images/wfbaem3.png)
+
+Namnge mappen `--aepUserLdap-- - Workfront Assets` och klicka på **Skapa**.
+
+![WF](./images/wfbaem4.png)
+
+Gå sedan till **Metadata Forms** i den vänstra menyn och klicka på **Skapa**.
+
+![WF](./images/wfbaem5.png)
+
+Använd namnet `--aepUserLdap-- - Metadata Form` och klicka på **Skapa**.
+
+![WF](./images/wfbaem6.png)
+
+Lägg till tre nya **enkelradiga textfält** i formuläret och markera det första fältet. Klicka sedan på ikonen **Schema** bredvid fältet **Metadata-egenskap** .
+
+![WF](./images/wfbaem7.png)
+
+Ange `wm:project` i sökfältet och markera sedan fältet **Projektbeskrivning**. Klicka på **Markera**.
+
+![WF](./images/wfbaem8.png)
+
+Ändra fältets etikett till **Projektbeskrivning**.
+
+![WF](./images/wfbaem9.png)
+
+Markera sedan det andra **enkelradiga textfältet** och klicka på ikonen **Schema** bredvid fältet **Metadata-egenskap** igen.
+
+![WF](./images/wfbaem10b.png)
+
+Du kommer då att se den här popup-rutan igen. Ange `wm:project` i sökfältet och markera sedan fältet **Projekt-ID**. Klicka på **Markera**.
+
+![WF](./images/wfbaem10.png)
+
+Ändra fältets etikett till **projekt-ID**.
+
+![WF](./images/wfbaem10a.png)
+
+Markera det tredje fältet **Enkelradig text** och klicka på ikonen **Schema** bredvid fältet **Metadataegenskap** igen.
+
+![WF](./images/wfbaem11a.png)
+
+Du kommer då att se den här popup-rutan igen. Ange `wm:project` i sökfältet och markera sedan fältet **Projektnamn**. Klicka på **Markera**.
+
+![WF](./images/wfbaem11.png)
+
+Ändra etiketten för fältet till **Projektnamn**. Klicka på **Spara**.
+
+![WF](./images/wfbaem12.png)
+
+Ändra **fliknamnet** i formuläret till `--aepUserLdap-- - Workfront Metadata`. Klicka på **Spara** och **Stäng**.
+
+![WF](./images/wfbaem13.png)
+
+**Metadataformuläret** har konfigurerats.
+
+![WF](./images/wfbaem14.png)
+
+Därefter måste du tilldela metadataformuläret till mappen som du skapade tidigare. Markera kryssrutan för ditt metadataformulär och klicka på **Tilldela till mapp(ar)**.
+
+![WF](./images/wfbaem15.png)
+
+Välj din mapp som ska ha namnet `--aepUserLdap-- - Workfront Assets`. Klicka på **Tilldela**.
+
+![WF](./images/wfbaem16.png)
+
+Metadataformuläret har nu tilldelats mappen.
+
+![WF](./images/wfbaem17.png)
 
 ## 2.2.1.2 Konfigurera din AEM Sites-integrering
 
@@ -155,6 +239,8 @@ Klicka på **Använd**.
 Du bör sedan ha 2 anpassade formulär tillgängliga.
 
 ![WF](./images/wfb20.png)
+
+Nästa steg: [2.2.2 Korrektur med Workfront](./ex2.md){target="_blank"}
 
 [Gå tillbaka till modul 2.2](./workfront.md){target="_blank"}
 
