@@ -4,9 +4,9 @@ description: Komma igång med Workfront
 kt: 5342
 doc-type: tutorial
 exl-id: 7ed76d37-5d3e-49c7-b3d3-ebcfe971896d
-source-git-commit: 2fe7d2528132301f559f9d51faa9ad128f5d890f
+source-git-commit: bd46be455f88007174f7e6be9a1ce5f508edc09b
 workflow-type: tm+mt
-source-wordcount: '48'
+source-wordcount: '437'
 ht-degree: 0%
 
 ---
@@ -21,10 +21,140 @@ Då ser du det här.
 
 ## 2.2.1.1 Konfigurera din AEM Assets-integrering
 
-Klicka på
-
+Klicka på ikonen **hamburger** med nio punkter och välj sedan **Konfigurera**.
 
 ![WF](./images/wfb2.png)
+
+Bläddra nedåt till **Dokument** på den vänstra menyn och klicka sedan på **Experience Manager Assets**.
+
+![WF](./images/wfb3.png)
+
+Klicka på **+ Lägg till integrering med Experience Manager**.
+
+![WF](./images/wfb4.png)
+
+Använd `--aepUserLdap-- - Citi Signal AEM` för integreringens namn.
+
+Öppna listrutan **Experience Manager-databas** och markera AEM CS-instansen, som bör ha namnet `--aepUserLdap-- - Citi Signal`.
+
+![WF](./images/wfb5.png)
+
+Konfigurera följande mappning under **Metadata**:
+
+| Workfront Field | Experience Manager Assets |
+| --------------- | ------------------------------ | 
+| **Dokument** > **Namn** | **wm:documentName** |
+| **Projekt** > **Beskrivning** | **wm:projectDescription** |
+| **Aktivitet** > **Namn** | **wm:taskName** |
+| **Aktivitet** > **Beskrivning** | **wm:taskDescription** |
+
+Aktivera växeln för **Synkronisera objektmetadata**.
+
+Klicka på **Spara**.
+
+![WF](./images/wfb6.png)
+
+Din integrering mellan Workfront och AEM Assets CS är nu konfigurerad.
+
+![WF](./images/wfb7.png)
+
+## 2.2.1.2 Konfigurera din AEM Sites-integrering
+
+>[!NOTE]
+>
+>Det här plugin-programmet är för närvarande i läget **Tidig åtkomst** och är inte allmänt tillgängligt än.
+>
+>Detta plugin-program kan redan vara installerat i den Workfront-instans som du använder. Om den redan är installerad kan du läsa instruktionerna nedan, men du behöver inte ändra något i konfigurationen då.
+
+Gå till [https://experience.adobe.com/#/@experienceplatform/aem/extension-manager/universal-editor](https://experience.adobe.com/#/@experienceplatform/aem/extension-manager/universal-editor){target="_blank"}.
+
+Kontrollera att **toggle** för det här plugin-programmet är inställt på **Enabled**. Klicka sedan på ikonen **kugghjulet** .
+
+![WF](./images/wfb8.png)
+
+En popup-meny för **tilläggskonfiguration** visas. Konfigurera följande fält för att använda det här plugin-programmet.
+
+| Nyckel | Värde |
+| --------------- | ------------------------------ | 
+| **`IMS_ENV`** | **PROD** |
+| **`WORKFRONT_INSTANCE_URL`** | **https://experienceplatform.my.workfront.com** |
+| **`SHOW_CUSTOM_FORMS`** | **&#39;{&quot;previewUrl&quot;: true, &quot;publishUrl&quot;: true}&#39;** |
+
+Klicka på **Spara**.
+
+![WF](./images/wfb8.png)
+
+Gå tillbaka till ditt Workfront-gränssnitt och klicka på ikonen **hamburger** med nio punkter. Välj **Konfigurera**.
+
+![WF](./images/wfb9.png)
+
+Gå till **Anpassad Forms** på den vänstra menyn och välj **Formulär**. Klicka på **+ Nytt anpassat formulär**.
+
+![WF](./images/wfb10.png)
+
+Välj **Aktivitet** och klicka på **Fortsätt**.
+
+![WF](./images/wfb11.png)
+
+Då visas ett tomt anpassat formulär. Ange formulärnamnet `Content Fragment & Integration ID`.
+
+![WF](./images/wfb12.png)
+
+Dra och släpp ett nytt **enkelradigt textfält** på arbetsytan.
+
+![WF](./images/wfb13.png)
+
+Konfigurera det nya fältet så här:
+
+- **Etikett**: **Innehållsfragment**
+- **Namn**: **`aem_workfront_integration_content_fragment`**
+
+![WF](./images/wfb14.png)
+
+Lägg till ett nytt **enradigt textfält** på arbetsytan och konfigurera det nya fältet så här:
+
+- **Etikett**: **Integrerings-ID**
+- **Namn**: **`aem_workfront_integration_id`**
+
+Klicka på **Använd**.
+
+![WF](./images/wfb15.png)
+
+Nu måste du konfigurera ett andra anpassat formulär. Klicka på **+ Nytt anpassat formulär**.
+
+![WF](./images/wfb10.png)
+
+Välj **Aktivitet** och klicka på **Fortsätt**.
+
+![WF](./images/wfb11.png)
+
+Då visas ett tomt anpassat formulär. Ange formulärnamnet `Preview & Publish URL`.
+
+![WF](./images/wfb16.png)
+
+Dra och släpp ett nytt **enkelradigt textfält** på arbetsytan.
+
+![WF](./images/wfb17.png)
+
+Konfigurera det nya fältet så här:
+
+- **Etikett**: **URL för förhandsgranskning**
+- **Namn**: **`aem_workfront_integration_preview_url`**
+
+![WF](./images/wfb18.png)
+
+Lägg till ett nytt **enradigt textfält** på arbetsytan och konfigurera det nya fältet så här:
+
+- **Etikett**: **Publish URL**
+- **Namn**: **`aem_workfront_integration_publish_url`**
+
+Klicka på **Använd**.
+
+![WF](./images/wfb19.png)
+
+Du bör sedan ha 2 anpassade formulär tillgängliga.
+
+![WF](./images/wfb20.png)
 
 [Gå tillbaka till modul 2.2](./workfront.md){target="_blank"}
 

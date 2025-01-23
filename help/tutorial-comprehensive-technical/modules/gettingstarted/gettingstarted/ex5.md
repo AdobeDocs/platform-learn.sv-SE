@@ -4,9 +4,9 @@ description: Komma igång - Använd mobilappen
 kt: 5342
 doc-type: tutorial
 exl-id: 2b94f08f-c932-4287-9956-cfe368c96c12
-source-git-commit: 7f436f77ab6d7c625181304fd41be75c627c5b46
+source-git-commit: 007e35504d19c332da39d90d65f34960aaa9c09b
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '456'
 ht-degree: 0%
 
 ---
@@ -19,11 +19,12 @@ Gå till [https://bit.ly/dx-demo-app](https://bit.ly/dx-demo-app) på datorn. D�
 
 ![DSN](./images/mobileapp.png)
 
-Använd appen **Camera** på smarttelefonen för att installera mobilappen för operativsystemet på din enhet. För den här aktiveringen måste du installera **Version 2.x** som använder Adobe Experience Platform Mobile SDK:er.
+Använd appen **Camera** på smarttelefonen för att installera mobilappen för operativsystemet på din enhet. För den här aktiveringen måste du installera **Version 2.x** som använder Adobe Experience Platform Mobile SDK.
 
 >[!NOTE]
 >
 >När du har installerat appen för första gången på en iOS-enhet kan du få ett felmeddelande när du försöker öppna appen som säger: **Untrusted Enterprise Developer**. För att kunna åtgärda detta måste du gå till **Inställningar > Allmänt > VPN och enhetshantering > Adobe Systems Inc.** och klicka på **Lita på Adobe Systems Inc.**.
+>Din iOS-enhet kommer troligen att behöva startas om för att slutföra processen med att lita på en utvecklare.
 
 När appen har installerats hittar du den på enhetens hemskärm. Klicka på ikonen för att öppna programmet.
 

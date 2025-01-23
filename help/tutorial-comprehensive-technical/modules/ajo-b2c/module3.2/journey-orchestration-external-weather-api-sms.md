@@ -6,9 +6,9 @@ audience: Data Engineer, Data Architect, Orchestration Engineer, Marketer
 doc-type: tutorial
 activity: develop
 exl-id: 7f3d6dcb-845d-4ff1-97c3-8e93b8d2c624
-source-git-commit: 07153124eb3cd4c07bbabb6f7b137f525fa1a27f
+source-git-commit: bd46be455f88007174f7e6be9a1ce5f508edc09b
 workflow-type: tm+mt
-source-wordcount: '436'
+source-wordcount: '438'
 ht-degree: 0%
 
 ---
@@ -64,6 +64,8 @@ Utlös din resa.
 [Sammanfattning och fördelar](./summary.md)
 
 Sammanfattning av den här modulen och en översikt över fördelarna.
+
+![Tech Insiders](./../../../assets/images/techinsiders.png){width="50px" align="left"}
 
 >[!NOTE]
 >

@@ -4,9 +4,9 @@ description: Foundation - datainmatning
 kt: 5342
 doc-type: tutorial
 exl-id: 976d801a-3dcb-4cd9-8b9f-b1c964fe7c25
-source-git-commit: 8bdcd03bd38a6da98b82439ad86482cad5f4e684
+source-git-commit: bd46be455f88007174f7e6be9a1ce5f508edc09b
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '399'
 ht-degree: 0%
 
 ---
@@ -59,6 +59,8 @@ Konfigurera din Data Landing Zone Source-anslutning med Azure Blob-lagring.
 [Sammanfattning och fördelar](./summary.md)
 
 Sammanfattning av den här modulen och en översikt över fördelarna.
+
+![Tech Insiders](./../../../assets/images/techinsiders.png){width="50px" align="left"}
 
 >[!NOTE]
 >

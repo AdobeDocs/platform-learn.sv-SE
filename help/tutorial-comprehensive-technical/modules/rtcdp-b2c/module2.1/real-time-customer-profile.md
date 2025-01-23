@@ -5,9 +5,9 @@ kt: 5342
 audience: Data Engineer, Data Architect, Marketer
 doc-type: tutorial
 exl-id: 79ae9722-bf38-47f7-acbc-aa5bd1289411
-source-git-commit: acb941e4ee668248ae0767bb9f4f42e067c181ba
+source-git-commit: bd46be455f88007174f7e6be9a1ce5f508edc09b
 workflow-type: tm+mt
-source-wordcount: '357'
+source-wordcount: '359'
 ht-degree: 0%
 
 ---
@@ -57,6 +57,8 @@ I den här övningen personifierar du en handläggare som får ett samtal från 
 [Sammanfattning och fördelar](./summary.md)
 
 Sammanfattning av den här modulen och en översikt över fördelarna.
+
+![Tech Insiders](./../../../assets/images/techinsiders.png){width="50px" align="left"}
 
 >[!NOTE]
 >

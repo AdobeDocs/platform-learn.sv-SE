@@ -4,9 +4,9 @@ description: Komma igång - sammanfattning
 kt: 5342
 doc-type: tutorial
 exl-id: 31616c51-01e0-4f99-91f1-4f21054b0999
-source-git-commit: 7f436f77ab6d7c625181304fd41be75c627c5b46
+source-git-commit: bd46be455f88007174f7e6be9a1ce5f508edc09b
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '248'
 ht-degree: 1%
 
 ---
@@ -47,6 +47,8 @@ I den här övningen ska du konfigurera webbplatsen så att du kan använda den 
 [Använda mobilappen](./ex5.md)
 
 I den här övningen ska du konfigurera mobilappen så att du kan använda den för demonstrationer och aktivering.
+
+![Tech Insiders](./../../../assets/images/techinsiders.png){width="50px" align="left"}
 
 >[!NOTE]
 >

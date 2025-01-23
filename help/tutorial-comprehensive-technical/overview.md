@@ -3,14 +3,16 @@ title: Översikt
 description: Utgångspunkt för datatekniker, dataanalytiker, dataarkitekter, datavetenskaper, Orchestration Engineers och Marketers för att få en fullständig förståelse för affärsvärdet hos Adobe Experience Platform och alla dess programtjänster.
 doc-type: multipage-overview
 exl-id: 88c19383-c185-40f0-b118-6cb82db0ce0e
-source-git-commit: 21718a7c3a4df2793ae257a9b7cbe4466f1193f5
+source-git-commit: bd46be455f88007174f7e6be9a1ce5f508edc09b
 workflow-type: tm+mt
-source-wordcount: '1221'
+source-wordcount: '1251'
 ht-degree: 0%
 
 ---
 
 # Omfattande teknisk självstudiekurs för Adobe Experience Platform
+
+![Tech Insiders](./assets/images/techinsiders.png){width="50px" align="left"}
 
 ## Översikt
 
@@ -182,3 +184,9 @@ I den här modulen ska du konfigurera en egen instans av Google Cloud Platform, 
 I den här modulen får du lära dig hur du använder Adobe Experience Platform Query Service.
 
 **Tidsinvestering:** 90 minuter
+
+![Tech Insiders](./assets/images/techinsiders.png){width="50px" align="left"}
+
+>[!NOTE]
+>
+>Om du har frågor kan du dela allmän feedback om dina förslag på framtida innehåll. Kontakta Tech Insiders direkt genom att skicka ett e-postmeddelande till **techinsiders@adobe.com**.

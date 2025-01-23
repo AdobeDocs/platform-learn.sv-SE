@@ -4,9 +4,9 @@ breadcrumb-title: Omfattande teknisk självstudiekurs för Adobe, från Creative
 hide: true
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-source-git-commit: e505b8401509f6171d9c98f85a93af27c38a8303
+source-git-commit: 007e35504d19c332da39d90d65f34960aaa9c09b
 workflow-type: tm+mt
-source-wordcount: '311'
+source-wordcount: '312'
 ht-degree: 4%
 
 ---
@@ -16,6 +16,7 @@ ht-degree: 4%
 
 + [Översikt över självstudiekursen](/help/tutorial-one-adobe/overview.md)
 + [Innehållsstatus](/help/tutorial-one-adobe/status.md)
++ [Förarbete](/help/tutorial-one-adobe/prework.md)
 
 + Komma igång {#gettingstarted}
    + Komma igång {#gettingstarted}
@@ -32,7 +33,7 @@ ht-degree: 4%
       + [1.1.1 Komma igång med Firefly Services](/help/tutorial-one-adobe/modules/creative-cloud/module1.1/ex1.md)
       + [1.1.2 Optimera Firefly-processerna med Microsoft Azure och försignerade URL:er](/help/tutorial-one-adobe/modules/creative-cloud/module1.1/ex2.md)
       + [1.1.3 Adobe Firefly och Adobe Photoshop](/help/tutorial-one-adobe/modules/creative-cloud/module1.1/ex3.md)
-      + [1.1.3 API för anpassade modeller för Firefly](/help/tutorial-one-adobe/modules/creative-cloud/module1.1/ex4.md)
+      + [1.1.4 API för anpassade modeller för Firefly](/help/tutorial-one-adobe/modules/creative-cloud/module1.1/ex4.md)
       + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/creative-cloud/module1.1/summary.md)
    + 1.2 Automatisering av Creative Workflow med Workfront Fusion {#module21}
       + [Översikt](/help/tutorial-one-adobe/modules/creative-cloud/module1.2/automation.md)

@@ -4,10 +4,10 @@ description: Intelligenta tjänster
 kt: 5342
 doc-type: tutorial
 exl-id: 3668f06b-df76-43db-be6a-36c339256a22
-source-git-commit: acb941e4ee668248ae0767bb9f4f42e067c181ba
+source-git-commit: bd46be455f88007174f7e6be9a1ce5f508edc09b
 workflow-type: tm+mt
-source-wordcount: '249'
-ht-degree: 2%
+source-wordcount: '251'
+ht-degree: 1%
 
 ---
 
@@ -43,6 +43,8 @@ Marknadsföringsanalytikern konfigurerar önskade prognoser genom att specificer
 [2.2.3 Kundens AI - Instrumentpanel för bedömning och segmentering (predikt &amp; Take Action)](./ex3.md)
 
 När modellerna har avslutat utbildningen och poängsättningen skrivs poängen tillbaka till Platform. Du kan bestämma vilka åtgärder som ska vidtas med prognoserna, som att definiera segment, bygga anpassade kontrollpaneler osv.
+
+![Tech Insiders](./../../../assets/images/techinsiders.png){width="50px" align="left"}
 
 >[!NOTE]
 >

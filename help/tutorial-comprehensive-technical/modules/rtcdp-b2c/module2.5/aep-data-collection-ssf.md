@@ -4,9 +4,9 @@ description: I den här modulen använder du de tidigare konfigurerade dataupps�
 kt: 5342
 doc-type: tutorial
 exl-id: aa3ab1eb-6fee-4ea9-9a0d-0d8ca803d7c2
-source-git-commit: 7779e249b4ca03c243cf522811cd81370002d51a
+source-git-commit: bd46be455f88007174f7e6be9a1ce5f508edc09b
 workflow-type: tm+mt
-source-wordcount: '458'
+source-wordcount: '460'
 ht-degree: 0%
 
 ---
@@ -62,6 +62,8 @@ I den här övningen konfigurerar du AWS-miljön med AWS IAM, AWS Kinesis, AWS F
 [Sammanfattning och fördelar](./summary.md)
 
 Sammanfattning av den här modulen och en översikt över fördelarna.
+
+![Tech Insiders](./../../../assets/images/techinsiders.png){width="50px" align="left"}
 
 >[!NOTE]
 >
