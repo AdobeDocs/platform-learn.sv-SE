@@ -4,9 +4,9 @@ description: Utveckla ett anpassat block
 kt: 5342
 doc-type: tutorial
 exl-id: 57c08a88-d885-471b-ad78-1dba5992da9d
-source-git-commit: 2fe7d2528132301f559f9d51faa9ad128f5d890f
+source-git-commit: 7b76e7714d2a390d84393ce21a19063b56508ac1
 workflow-type: tm+mt
-source-wordcount: '89'
+source-wordcount: '106'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,21 @@ Din GitHub-repo öppnas sedan i GitHub Desktop. Du kan ändra den **lokala sökv
 
 ![Blockera](./images/block3.png)
 
-En lokal
+En lokal mapp kommer nu att skapas.
+
+![Blockera](./images/block4.png)
+
+Öppna Visual Studio-kod. Gå till **Arkiv** > **Öppna mapp**.
+
+![Blockera](./images/block5.png)
+
+
+
+![Blockera](./images/block6.png)
+
+
+
+![Blockera](./images/block7.png)
 
 
 [Gå tillbaka till modul 2.1](./aemcs.md){target="_blank"}

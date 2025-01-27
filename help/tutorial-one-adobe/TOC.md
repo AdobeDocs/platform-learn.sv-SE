@@ -4,9 +4,9 @@ breadcrumb-title: Omfattande teknisk självstudiekurs för Adobe, från Creative
 hide: true
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-source-git-commit: 55a7e6fccb0c2a91f12a3a65226097ca701e655f
+source-git-commit: 7b76e7714d2a390d84393ce21a19063b56508ac1
 workflow-type: tm+mt
-source-wordcount: '317'
+source-wordcount: '318'
 ht-degree: 4%
 
 ---
@@ -16,7 +16,6 @@ ht-degree: 4%
 
 + [Översikt över självstudiekursen](/help/tutorial-one-adobe/overview.md)
 + [Innehållsstatus](/help/tutorial-one-adobe/status.md)
-+ [Förarbete](/help/tutorial-one-adobe/prework.md)
 
 + Komma igång {#gettingstarted}
    + Komma igång {#gettingstarted}
@@ -26,6 +25,8 @@ ht-degree: 4%
       + [Skapa ditt datastream](/help/tutorial-one-adobe/modules/getting-started/gettingstarted/ex3.md)
       + [Använda webbplatsen](/help/tutorial-one-adobe/modules/getting-started/gettingstarted/ex4.md)
       + [Använda mobilappen](/help/tutorial-one-adobe/modules/getting-started/gettingstarted/ex5.md)
+   + [Förarbete](/help/tutorial-one-adobe/prework.md)
+   + [PostBuster](/help/tutorial-one-adobe/postbuster.md)
 
 + 1 Adobe Creative Cloud {#creativecloud}
    + 1.1 Adobe Firefly-tjänster {#module11}

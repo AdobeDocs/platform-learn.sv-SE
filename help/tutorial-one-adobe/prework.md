@@ -2,9 +2,10 @@
 title: Förarbete
 description: Förarbete
 doc-type: multipage-overview
-source-git-commit: 5f079d0b6f74ccc6e2cde06b32e4fd2d1f3fbcdc
+exl-id: 1799a0d1-e432-45e2-a373-192d9a351423
+source-git-commit: 8c45215e4374d8a2c1a110f2d3069c5e866767ae
 workflow-type: tm+mt
-source-wordcount: '202'
+source-wordcount: '217'
 ht-degree: 0%
 
 ---
@@ -25,7 +26,11 @@ Gå till [https://creativecloud.adobe.com/apps/download/creative-cloud](https://
 
 ![Ny integrering för Adobe I/O](./assets/images/psd.png)
 
-## 3. Postman
+## 3. API
+
+>[!NOTE]
+>
+>Om du är anställd i Adobe följer du instruktionerna här för att hämta och installera [PostBuster](./postbuster.md)
 
 Gå till [https://www.postman.com/downloads/](https://www.postman.com/downloads/).
 
