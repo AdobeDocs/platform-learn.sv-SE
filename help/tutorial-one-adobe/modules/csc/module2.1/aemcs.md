@@ -4,9 +4,9 @@ description: ADOBE EXPERIENCE MANAGER CLOUD SERVICE & EDGE DELIVERY SERVICES
 kt: 5342
 doc-type: tutorial
 exl-id: 52efb52c-103f-4171-a69e-0cddb142a0ed
-source-git-commit: 9099ba1d57d59a95958f29bf226f329f057b6c0c
+source-git-commit: cbe8d728d779795cc90ba6b3ad1b687eca5848bf
 workflow-type: tm+mt
-source-wordcount: '183'
+source-wordcount: '199'
 ht-degree: 0%
 
 ---
@@ -35,9 +35,13 @@ I den här övningen kommer du att skapa en egen dokumentbaserad webbplats genom
 
 I den här övningen ska du konfigurera din AEM CS-miljö och gå till din CitiSignal-webbplats.
 
-[2.1.4 Utveckla ett anpassat block](./ex4.md){target="_blank"}
+[2.1.4 Grundläggande anpassat block](./ex4.md){target="_blank"}
 
-I den här övningen ska du utveckla en anpassad blockkomponent för din webbplats.
+I den här övningen ska du skapa ett grundläggande anpassat block för din webbplats.
+
+[2.1.5 Avancerat anpassat block](./ex5.md){target="_blank"}
+
+I den här övningen kommer du att utveckla ett avancerat anpassat block för din webbplats.
 
 [Sammanfattning och förmåner](./summary.md){target="_blank"}
 
