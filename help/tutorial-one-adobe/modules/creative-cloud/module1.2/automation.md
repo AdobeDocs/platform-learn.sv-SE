@@ -1,42 +1,41 @@
 ---
 title: Automatisering av arbetsflöden med Workfront Fusion
-description: Automatisering av arbetsflöden med Workfront Fusion
-kt: 5342
-doc-type: tutorial
+description: Lär dig automatisera kreativa arbetsflöden med Workfront Fusion
+role: Developer
+level: Beginner
+jira: KT-5342
+doc-type: Tutorial
 exl-id: 05cd8991-f77b-43c9-af1d-fcdc1f0fab4d
-source-git-commit: 9099ba1d57d59a95958f29bf226f329f057b6c0c
+source-git-commit: 53ff5158eec2693703b20e7841fffbec72288210
 workflow-type: tm+mt
-source-wordcount: '164'
+source-wordcount: '152'
 ht-degree: 0%
 
 ---
 
-# 1.2 Automatisering av arbetsflöden med Workfront Fusion
+# Automatisering av arbetsflöden med Workfront Fusion
 
-## Utbildningsmål
-
-- Lär dig automatisera Adobe Firefly Services på olika sätt.
+Lär dig automatisera kreativa arbetsflöden med Workfront Fusion.
 
 ## Förhandskrav
 
-- Åtkomst till Adobe Firefly [https://firefly.adobe.com/](https://firefly.adobe.com/)
-- Åtkomst till Adobe Firefly [https://firefly.adobe.com/](https://firefly.adobe.com/)
+- Åtkomst till Adobe Firefly [https://firefly.adobe.com/](https://firefly.adobe.com/){target="_blank"}
 
 ## Utövningar
 
-[1.2.1 Komma igång med Workfront Fusion](./ex1.md)
+[Komma igång med Workfront Fusion](./ex1.md){target="_blank"}
 
 Utforska Workfront Fusion i kombination med Firefly Services och få en förståelse för dess funktioner.
 
-[1.2.2 Använda Adobe-API:er i Workfront Fusion](./ex2.md)
+[Använd Adobe-API:er i Workfront Fusion](./ex2.md){target="_blank"}
 
-I den här övningen konfigurerar och använder du Firefly Services API:er och Photoshop API:er i Workfront Fusion, samtidigt som du utforskar Workfront Fusions funktioner.
+I den här övningen får du lära dig hur du konfigurerar och använder API:er för Firefly Services och Photoshop i Workfront Fusion, samtidigt som du utforskar funktionerna i Workfront Fusion.
 
-[1.2.3 Processautomatisering med Workfront Fusion](./ex3.md)
+[Processautomatisering med Workfront Fusion](./ex3.md){target="_blank"}
 
-I den här övningen fortsätter du att förfina din resa för att automatisera processen för att skapa bilder.
+I den här övningen kan du fortsätta att förfina din resa för att automatisera processen för att skapa bilder.
 
-[Sammanfattning och fördelar](./summary.md)
+[Sammanfattning och förmåner](./summary.md){target="_blank"}
 
 Sammanfattning av den här modulen och en översikt över fördelarna.
 
@@ -46,4 +45,4 @@ Sammanfattning av den här modulen och en översikt över fördelarna.
 >
 >Om du har frågor kan du dela allmän feedback om dina förslag på framtida innehåll. Kontakta Tech Insiders direkt genom att skicka ett e-postmeddelande till **techinsiders@adobe.com**.
 
-[Gå tillbaka till Alla moduler](../../../overview.md)
+Gå tillbaka till [Alla moduler](../../../overview.md){target="_blank"}

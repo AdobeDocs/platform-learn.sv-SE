@@ -1,42 +1,46 @@
 ---
 title: Använda Adobe-API:er i Workfront Fusion
-description: Använda Adobe-API:er i Workfront Fusion
-kt: 5342
-doc-type: tutorial
+description: Lär dig hur du använder Adobe API:er i Workfront Fusion
+role: Developer
+level: Beginner
+jira: KT-5342
+doc-type: Tutorial
 exl-id: 23ebf8b4-3f16-474c-afe1-520d88331417
-source-git-commit: f1f70a0e4ea3f59b5b121275e7db633caf953df9
+source-git-commit: e419f07dbef519d9cf2f0100878e4cc880ad5f94
 workflow-type: tm+mt
-source-wordcount: '1761'
+source-wordcount: '1745'
 ht-degree: 0%
 
 ---
 
-# 1.2.2 Använda Adobe-API:er i Workfront Fusion
+# Använda Adobe API:er i Workfront Fusion
 
-## 1.2.2.1 Använda Firefly-text till bild-API med Workfront Fusion
+Lär dig hur du använder Adobe API:er i Workfront Fusion.
 
-Håll pekaren över den andra **Ange flera variabler**-noden och klicka på **+** för att lägga till en annan modul.
+## Använd Firefly-text till bild-API med Workfront Fusion
+
+1. Håll pekaren över den andra **Ange flera variabler**-noden och välj **+** om du vill lägga till en annan modul.
 
 ![WF Fusion](./images/wffusion48.png)
 
-Sök efter **http** och välj sedan **HTTP**.
+1. Sök efter **http** och välj **HTTP**.
 
 ![WF Fusion](./images/wffusion49.png)
 
-Välj **Gör en förfrågan**.
+1. Välj **Gör en förfrågan**.
 
 ![WF Fusion](./images/wffusion50.png)
 
-Välj dessa variabler:
+1. Välj dessa variabler:
 
 - **URL**: `https://firefly-api.adobe.io/v3/images/generate`
 - **Metod**: `POST`
 
-Klicka på **Lägg till en rubrik**.
+1. Välj **Lägg till en rubrik**.
 
 ![WF Fusion](./images/wffusion51.png)
 
-Du måste ange följande rubriker:
+1. Ange följande rubriker:
 
 | Nyckel | Värde |
 |:-------------:| :---------------:| 
@@ -45,31 +49,31 @@ Du måste ange följande rubriker:
 | `Content-Type` | `application/json` |
 | `Accept` | `*/*` |
 
-Ange information för `x-api-key`. Klicka på **Lägg till**.
+1. Ange information för `x-api-key`. Välj **Lägg till**.
 
 ![WF Fusion](./images/wffusion52.png)
 
-Klicka på **Lägg till en rubrik**.
+1. Välj **Lägg till en rubrik**.
 
 ![WF Fusion](./images/wffusion53.png)
 
-Ange information för `Authorization`. Klicka på **Lägg till**.
+1. Ange information för `Authorization`. Välj **Lägg till**.
 
 ![WF Fusion](./images/wffusion54.png)
 
-Klicka på **Lägg till en rubrik**. Ange information för `Content-Type`. Klicka på **Lägg till**.
+1. Välj **Lägg till en rubrik**. Ange information för `Content-Type`. Välj **Lägg till**.
 
 ![WF Fusion](./images/wffusion541.png)
 
-Klicka på **Lägg till en rubrik**. Ange information för `Accept`. Klicka på **Lägg till**.
+1. Välj **Lägg till en rubrik**. Ange information för `Accept`. Välj **Lägg till**.
 
 ![WF Fusion](./images/wffusion542.png)
 
-Ange **Brödtyp** till **Raw**. För **innehållstyp** väljer du **JSON (program/json)**.
+1. Ange **Brödtyp** till **Raw**. För **innehållstyp** väljer du **JSON (program/json)**.
 
 ![WF Fusion](./images/wffusion55.png)
 
-Klistra in den här nyttolasten i fältet **Begär innehåll**.
+1. Klistra in den här nyttolasten i fältet **Begär innehåll**.
 
 ```json
 {
@@ -83,55 +87,55 @@ Klistra in den här nyttolasten i fältet **Begär innehåll**.
 }
 ```
 
-Markera kryssrutan för **Analysera svar**. Klicka på **OK**.
+1. Markera rutan för **Analysera svar**. Välj **OK**.
 
 ![WF Fusion](./images/wffusion56.png)
 
-Klicka på **Kör en gång**.
+1. Välj **Kör en gång**.
 
 ![WF Fusion](./images/wffusion57.png)
 
-När ditt scenario är klart bör du se det här.
+Skärmen bör se ut så här.
 
 ![WF Fusion](./images/wffusion58.png)
 
-Klicka på **?** på den fjärde noden, HTTP, för att se svaret. Du bör se en bildfil i svaret.
+1. Välj **?** på den fjärde noden, HTTP, för att se svaret. Du bör se en bildfil i svaret.
 
 ![WF Fusion](./images/wffusion59.png)
 
-Kopiera bild-URL:en och öppna den i ett webbläsarfönster. Då ska du se något liknande:
+1. Kopiera bild-URL:en och öppna den i ett webbläsarfönster. Skärmen bör se ut så här:
 
 ![WF Fusion](./images/wffusion60.png)
 
-Högerklicka på **HTTP**-objektet och byt namn på det till **Firefly T2I**.
+1. Högerklicka på **HTTP** och byt namn till **Firefly T2I**.
 
 ![WF Fusion](./images/wffusion62.png)
 
-Klicka på **Spara** för att spara ändringarna.
+1. Välj **Spara** om du vill spara ändringarna.
 
 ![WF Fusion](./images/wffusion61.png)
 
-## 1.2.2.2 Använda Photoshop API med Workfront Fusion
+## Använda Photoshop API med Workfront Fusion
 
-Klicka på ikonen **wrench** mellan noderna **Set Bearer Token** och **Firefly T2I**. Välj **Lägg till en router**.
+1. Välj **skiftnyckel** mellan noderna **Ange stödtoken** och **Firefly T2I**. Välj **Lägg till en router**.
 
 ![WF Fusion](./images/wffusion63.png)
 
-Högerklicka på **Firefly T2I**-objektet och välj **Klona**.
+1. Högerklicka på **Firefly T2I**-objektet och välj **Klona**.
 
 ![WF Fusion](./images/wffusion64.png)
 
-Dra och släpp det klonade objektet nära **Router** -objektet så ansluts det automatiskt till **Router**. Du borde ha den här då.
+1. Dra och släpp det klonade objektet nära **Router** -objektet. Det ansluter automatiskt till **Router**. Skärmen bör se ut så här:
 
 ![WF Fusion](./images/wffusion65.png)
 
-Du har nu en identisk kopia baserad på HTTP-begäran **Firefly T2I**. Vissa av inställningarna för HTTP-begäran **Firefly T2I** liknar de som du behöver för att interagera med **Photoshop API** som är en tidsbesparande funktion. Nu behöver du bara ändra de variabler som inte är desamma, som begärande-URL:en och nyttolasten.
+Du har nu en identisk kopia baserad på HTTP-begäran **Firefly T2I**. Vissa av inställningarna för HTTP-begäran **Firefly T2I** liknar de som du behöver för att interagera med **Photoshop API** som är en tidsbesparande funktion. Nu behöver du bara ändra variablerna som inte är desamma, som begärande-URL:en och nyttolasten.
 
-Ändra **URL** till `https://image.adobe.io/pie/psdService/text`.
+1. Ändra **URL** till `https://image.adobe.io/pie/psdService/text`.
 
 ![WF Fusion](./images/wffusion66.png)
 
-Ersätt **Begär innehåll** med nyttolasten nedan:
+1. Ersätt **Begär innehåll** med nyttolasten nedan:
 
 ```json
 {
@@ -177,7 +181,7 @@ För att **Request-innehållet** ska fungera korrekt saknas vissa variabler:
 - `AZURE_STORAGE_SAS_READ`
 - `AZURE_STORAGE_SAS_WRITE`
 
-Gå tillbaka till din första nod, klicka på **Initiera konstanter** och välj sedan **Lägg till objekt** för var och en av dessa variabler.
+1. Gå tillbaka till din första nod, välj **Initiera konstanter** och välj sedan **Lägg till objekt** för var och en av dessa variabler.
 
 ![WF Fusion](./images/wffusion69.png)
 
@@ -192,254 +196,260 @@ Du kan hitta dina variabler genom att gå tillbaka till Postman och öppna dina 
 
 ![Azure Storage](./../module1.1/images/az105.png)
 
-Kopiera dessa värden till Workfront Fusion och lägg till ett nytt objekt för var och en av dessa fyra variabler.
+1. Kopiera dessa värden till Workfront Fusion och lägg till ett nytt objekt för var och en av dessa fyra variabler.
 
-Du borde ha den här då. Klicka på **OK**.
+1. Skärmen bör se ut så här. Välj **OK**.
 
 ![WF Fusion](./images/wffusion68.png)
 
-Gå sedan tillbaka till den klonade HTTP-begäran för att uppdatera **Request-innehållet**. Du kommer att lägga märke till de här svarta variablerna i **Request content** , som är de variabler som du kopierade över från Postman. Du måste nu ändra dessa variabler till de variabler du just definierade i Workfront Fusion. Ersätt varje variabel en i taget genom att ta bort den svarta texten och ersätta den med rätt variabel.
+Gå sedan tillbaka till den klonade HTTP-begäran för att uppdatera **Request-innehållet**. Observera de svarta variablerna i **Request content**, som är de variabler du kopierade över från Postman. Du måste ändra variablerna som du just definierade i Workfront Fusion. Ersätt varje variabel en i taget genom att ta bort den svarta texten och ersätta den med rätt variabel.
 
 ![WF Fusion](./images/wffusion70.png)
 
-Det finns tre ändringar att göra i avsnittet **input**.
+1. Gör dessa 3 ändringar i avsnittet **input**. Välj **OK**.
 
 ![WF Fusion](./images/wffusion71.png)
 
-Det finns också tre ändringar att göra i avsnittet **output**. Klicka på **OK**.
+1. Gör dessa 3 ändringar i avsnittet **output**. Välj **OK**.
 
 ![WF Fusion](./images/wffusion72.png)
 
-Högerklicka på den klonade noden och välj **Byt namn**. Ändra namnet till **Photoshop Change Text**.
+1. Högerklicka på den klonade noden och välj **Byt namn**. Ändra namnet till **Photoshop Change Text**.
 
 ![WF Fusion](./images/wffusion73.png)
 
-Du borde ha den här då.
+Skärmen bör se ut så här:
 
 ![WF Fusion](./images/wffusion74.png)
 
-Klicka på **Kör en gång**.
+1. Välj **Kör en gång**.
 
 ![WF Fusion](./images/wffusion75.png)
 
-Klicka på ikonen **sök** på noden **Photoshop Change Text** för att visa svaret. Du bör ha ett svar som ser ut så här, med en länk till en statusfil.
+1. Markera ikonen **sök** på noden **Photoshop Change Text** för att visa svaret. Du bör ha ett svar som ser ut så här, med en länk till en statusfil.
 
 ![WF Fusion](./images/wffusion76.png)
 
-Innan du fortsätter med Photoshop API-interaktionen kan vi inaktivera vägen till **Firefly T2I** -noden så att vi inte skickar onödiga API-anrop till den API-slutpunkten. Klicka på ikonen **skiftnyckel** och välj sedan **Inaktivera flöde**.
+1. Innan du fortsätter med Photoshop API-interaktionen inaktiverar du vägen till **Firefly T2I** -noden så att inga API-anrop skickas till API-slutpunkten som inte behövs. Markera ikonen **skiftnyckel** och välj sedan **Inaktivera flöde**.
 
 ![WF Fusion](./images/wffusion77.png)
 
-Du borde ha den här då.
+Skärmen bör se ut så här:
 
 ![WF Fusion](./images/wffusion78.png)
 
-Lägg sedan till en annan **Set multiple variables**-nod.
+1. Lägg sedan till en annan **Set multiple variables**-nod.
 
 ![WF Fusion](./images/wffusion79.png)
 
-Placera den efter noden **Photoshop Change Text** .
+1. Placera den efter noden **Photoshop Change Text** .
 
 ![WF Fusion](./images/wffusion80.png)
 
-Klicka på noden **Ange flera variabler** och välj **Lägg till objekt**. Välj variabelvärdet från svaret på föregående begäran.
+1. Markera noden **Ange flera variabler** och välj **Lägg till objekt**. Välj variabelvärdet från svaret på föregående begäran.
 
 | Variabelnamn | Variabelvärde |
 |:-------------:| :---------------:| 
 | `psdStatusUrl` | `data > _links > self > href` |
 
-Klicka på **Lägg till**.
+1. Välj **Lägg till**.
 
 ![WF Fusion](./images/wffusion81.png)
 
-Klicka på **OK**.
+1. Välj **OK**.
 
 ![WF Fusion](./images/wffusion82.png)
 
-Högerklicka på noden **Photoshop Change Text** och välj **Clone**.
+1. Högerklicka på noden **Photoshop Change Text** och välj **Clone**.
 
 ![WF Fusion](./images/wffusion83.png)
 
-Dra den klonade HTTP-begäran efter noden **Ange flera variabler** som du just skapade.
+1. Dra den klonade HTTP-begäran efter noden **Ange flera variabler** som du just skapade.
 
 ![WF Fusion](./images/wffusion83.png)
 
-Högerklicka på den klonade HTTP-begäran, välj **Byt namn** och ändra namnet till **Photoshop Check Status**.
+1. Högerklicka på den klonade HTTP-begäran, välj **Byt namn** och ändra namnet till **Photoshop Check Status**.
 
 ![WF Fusion](./images/wffusion84.png)
 
-Klicka för att öppna HTTP-begäran. Ändra URL-adressen så att den refererar till variabeln som du skapade i föregående steg och ange **Method** till **GET**.
+1. Välj att öppna HTTP-begäran. Ändra URL-adressen så att den refererar till variabeln som du skapade i föregående steg och ange **Method** till **GET**.
 
 ![WF Fusion](./images/wffusion85.png)
 
-Ta bort **brödtexten** genom att markera det tomma alternativet.
+1. Ta bort **brödtexten** genom att markera det tomma alternativet.
 
 ![WF Fusion](./images/wffusion86.png)
 
-Klicka på **OK**.
+1. Välj **OK**.
 
 ![WF Fusion](./images/wffusion87.png)
 
-Klicka på **Kör en gång**.
+1. Välj **Kör en gång**.
 
 ![WF Fusion](./images/wffusion88.png)
 
-Du bör sedan få ett svar som innehåller fältet **status** med statusen **running**. Det tar några sekunder för Photoshop att slutföra processen.
+Ett svar som innehåller fältet **status** med statusen **running** visas. Det tar några sekunder för Photoshop att slutföra processen.
 
 ![WF Fusion](./images/wffusion89.png)
 
 Nu när du vet att svaret behöver lite mer tid att slutföra, kan det vara en bra idé att lägga till en timer framför denna HTTP-begäran så att den inte körs omedelbart.
 
-Klicka på noden **Verktyg** och välj sedan **Strömsparläge**.
+1. Markera noden **Verktyg** och välj sedan **Strömsparläge**.
 
 ![WF Fusion](./images/wffusion90.png)
 
-Placera noden **Strömsparläge** mellan **Ange flera variabler** och **Photoshop Check Status**. Ange **Fördröjning** till **5** sekunder. Klicka på **OK**.
+1. Placera noden **Strömsparläge** mellan **Ange flera variabler** och **Photoshop Check Status**. Ange **Fördröjning** till **5** sekunder. Välj **OK**.
 
 ![WF Fusion](./images/wffusion91.png)
 
-Du får den här då. Utmaningen med konfigurationen nedan är att 5 sekunders väntan kan vara tillräckligt, men det kanske inte räcker. I verkligheten är det bättre att ha en mer intelligent lösning som en do.. while-slinga som kontrollerar statusen var femte sekund tills statusen är lika med **Succas**. Du kommer nu att implementera en sådan taktik i nästa steg.
+Skärmen bör se ut så här. Utmaningen med konfigurationen nedan är att 5 sekunders väntan kan vara tillräckligt, men det kanske inte räcker. I verkligheten är det bättre att ha en mer intelligent lösning som en do.. while-slinga som kontrollerar statusen var femte sekund tills statusen är lika med **Succas**. Så du kan implementera en sådan taktik i nästa steg.
 
 ![WF Fusion](./images/wffusion92.png)
 
-Klicka på ikonen **skiftnyckel** mellan **Ange flera variabler** och **viloläge**. Välj **Lägg till modul**.
+1. Välj ikonen **skiftnyckel** mellan **Ange flera variabler** och **viloläge**. Välj **Lägg till modul**.
 
 ![WF Fusion](./images/wffusion93.png)
 
-Sök efter `flow` och välj sedan **Flödeskontroll**.
+1. Sök efter `flow` och välj sedan **Flödeskontroll**.
 
 ![WF Fusion](./images/wffusion94.png)
 
-Välj **Upprepare**.
+1. Välj **Upprepare**.
 
 ![WF Fusion](./images/wffusion95.png)
 
-Ange **Upprepningar** till **20**. Klicka på **OK**.
+1. Ange **Upprepningar** till **20**. Välj **OK**.
 
 ![WF Fusion](./images/wffusion96.png)
 
-Klicka sedan på **+** på **Photoshop Check Status** för att lägga till en annan modul.
+1. Välj sedan **+** på **Photoshop Check Status** för att lägga till en annan modul.
 
 ![WF Fusion](./images/wffusion97.png)
 
-Sök efter **flow** och välj **Flow Control**.
+1. Sök efter **flow** och välj **Flow Control**.
 
 ![WF Fusion](./images/wffusion98.png)
 
-Välj **Matrisaggregering**.
+1. Välj **Matrisaggregering**.
 
 ![WF Fusion](./images/wffusion99.png)
 
-Ange **Source Module** som **Repeater**. CLick **OK**.
+1. Ange **Source Module** som **Repeater**. Välj **OK**.
 
 ![WF Fusion](./images/wffusion100.png)
 
-Du bör då ha den här:
+Skärmen bör se ut så här:
 
 ![WF Fusion](./images/wffusion101.png)
 
-Klicka på ikonen **skiftnyckel** och välj **Lägg till modul**.
+1. Markera ikonen **skiftnyckel** och välj **Lägg till modul**.
 
 ![WF Fusion](./images/wffusion102.png)
 
-Sök efter **verktyg** och välj **Verktyg**.
+1. Sök efter **verktyg** och välj **Verktyg**.
 
 ![WF Fusion](./images/wffusion103.png)
 
-Välj **Hämta flera variabler**.
+1. Välj **Hämta flera variabler**.
 
 ![WF Fusion](./images/wffusion104.png)
 
-Klicka på **+ Lägg till objekt** och ange **variabelnamnet** till `done`.
+1. Välj **+ Lägg till objekt** och ange **variabelnamnet** till `done`.
 
 ![WF Fusion](./images/wffusion105.png)
 
-Klicka på **OK**.
+1. Välj **OK**.
 
 ![WF Fusion](./images/wffusion106.png)
 
-Klicka på noden **Ange flera variabler** som du konfigurerade tidigare. För att kunna initiera variabeln **klar** måste du ange den till `false` här. Klicka på **+ Lägg till objekt**.
+1. Markera noden **Ange flera variabler** som du konfigurerade tidigare. För att kunna initiera variabeln **klar** måste du ange den till `false` här. Välj **+ Lägg till objekt**.
 
 ![WF Fusion](./images/wffusion107.png)
 
-Använd `done` för **variabelnamnet**. Ett booleskt värde krävs för att ställa in status. Om du vill hitta det booleska värdet klickar du på **kugghjulsikonen** och väljer sedan `false`. Klicka på **Lägg till**.
+1. Använd `done` som **variabelnamn**
+
+1. Ett booleskt värde krävs för att ställa in status. Om du vill hitta det booleska värdet väljer du **kugghjulet** och sedan `false`. Välj **Lägg till**.
 
 ![WF Fusion](./images/wffusion108.png)
 
-Klicka på **OK**.
+1. Välj **OK**.
 
 ![WF Fusion](./images/wffusion109.png)
 
-Klicka sedan på ikonen **wrench** efter noden **Hämta flera variabler** som du har konfigurerat.
+1. Välj sedan ikonen **wrench** efter noden **Hämta flera variabler** som du konfigurerade.
 
 ![WF Fusion](./images/wffusion110.png)
 
-Välj **Konfigurera ett filter**. Du måste nu kontrollera värdet för variabeln **klar**. Om värdet är **false** måste nästa del av slingan köras. Om värdet är **true** betyder det att processen redan har slutförts, så du behöver inte fortsätta med nästa del av slingan.
+1. Välj **Konfigurera ett filter**. Du måste nu kontrollera värdet för variabeln **klar**. Om värdet är **false** måste nästa del av slingan köras. Om värdet är **true** betyder det att processen redan har slutförts, så du behöver inte fortsätta med nästa del av slingan.
 
 ![WF Fusion](./images/wffusion111.png)
 
-Använd **Är vi klara för etiketten?**. Ange **Villkor** med den redan befintliga variabeln **made**, ange operatorn till **Lika med** och värdet ska vara den booleska variabeln `false`. Klicka på **OK**.
+1. Använd **Är vi klara för etiketten?**. Ange **Villkor** med den redan befintliga variabeln **made**, ange operatorn till **Lika med** och värdet ska vara den booleska variabeln `false`. Välj **OK**.
 
 ![WF Fusion](./images/wffusion112.png)
 
-Sedan kan du skapa utrymme mellan noderna **Photoshop Check Status** och **Array aggregator**. Klicka sedan på ikonen **skiftnyckel** och välj **Lägg till en router**. Du gör detta eftersom det ska finnas två sökvägar när du har kontrollerat Photoshop-filens status. Om statusen är `succeeded` ska variabeln **done** anges till `true`. Om statusen inte är lika med `succeeded` ska slingan fortsätta. Routern gör det möjligt att kontrollera och ställa in detta.
+1. Sedan kan du skapa utrymme mellan noderna **Photoshop Check Status** och **Array aggregator**. Välj sedan ikonen **skiftnyckel** och välj **Lägg till en router**. Du gör detta eftersom det ska finnas två sökvägar när du har kontrollerat Photoshop-filens status. Om statusen är `succeeded` ska variabeln **done** anges till `true`. Om statusen inte är lika med `succeeded` ska slingan fortsätta. Routern gör det möjligt att kontrollera och ställa in detta.
 
 ![WF Fusion](./images/wffusion113.png)
 
-När du har lagt till routern klickar du på ikonen **skiftnyckel** och väljer **Konfigurera ett filter**.
+1. När du har lagt till routern markerar du ikonen **skiftnyckel** och väljer **Konfigurera ett filter**.
 
 ![WF Fusion](./images/wffusion114.png)
 
-Använd **Vi är klara** för etiketten. Ange **Villkor** med svaret från noden **Photoshop Check Status** genom att välja svarsfältet **data.outputs[].status**, operatorn ska vara **Lika med** och värdet ska vara `succeeded`. Klicka på **OK**.
+1. Använd **Vi är klara** för etiketten. Ange **Villkor** med svaret från noden **Photoshop Check Status** genom att välja svarsfältet **data.outputs[].status**, operatorn ska vara **Lika med** och värdet ska vara `succeeded`. Välj **OK**.
 
 ![WF Fusion](./images/wffusion115.png)
 
-Klicka sedan på den tomma noden med frågetecknet och sök efter **verktyg**. Välj sedan **Verktyg**.
+1. Markera sedan den tomma noden med frågetecknet och sök efter **verktyg**. Välj sedan **Verktyg**.
 
 ![WF Fusion](./images/wffusion116.png)
 
-Välj **Ange flera variabler**.
+1. Välj **Ange flera variabler**.
 
 ![WF Fusion](./images/wffusion117.png)
 
-När den här grenen av routern används betyder det att Photoshop-filen har skapats utan fel. Det innebär att do.. while-slingan inte längre behöver fortsätta att kontrollera statusen i Photoshop, så du bör ange variabeln `done` till `true`.
+1. När den här grenen av routern används betyder det att Photoshop-filen har skapats utan fel. Det innebär att do.. while-slingan inte längre behöver fortsätta att kontrollera statusen i Photoshop, så du bör ange variabeln `done` till `true`.
 
-Använd `done` för **variabelnamnet**. För **variabelvärdet** bör du använda det booleska värdet `true`. Klicka på **kugghjulsikonen** och välj sedan `true`. Klicka på **Lägg till**.
+1. Använd `done` för **variabelnamnet**.
+
+1. För **variabelvärdet** bör du använda det booleska värdet `true`. Markera ikonen **kugghjulet** och välj sedan `true`. Välj **Lägg till**.
 
 ![WF Fusion](./images/wffusion118.png)
 
-Klicka på **OK**.
+1. Välj **OK**.
 
 ![WF Fusion](./images/wffusion119.png)
 
-Högerklicka sedan på noden **Ange flera variabler** som du nyss skapade och välj **Klona**.
+1. Högerklicka sedan på noden **Ange flera variabler** som du nyss skapade och välj **Klona**.
 
 ![WF Fusion](./images/wffusion120.png)
 
-Dra den klonade noden så att den ansluter till **arrayaggregatorn**. Högerklicka sedan på noden, välj **Byt namn** och ändra namnet till `Placeholder End`.
+1. Dra den klonade noden så att den ansluter till **arrayaggregatorn**. Högerklicka sedan på noden, välj **Byt namn** och ändra namnet till `Placeholder End`.
 
 ![WF Fusion](./images/wffusion122.png)
 
-Ta bort den befintliga variabeln och klicka på **+ Lägg till objekt**. Använd `placeholder` för **variabelvärdet** för **använd `end`.** Klicka på **Lägg till** och sedan på **OK**.
+1. Ta bort den befintliga variabeln och välj **+ Lägg till objekt**. Använd `placeholder` för **variabelvärdet** för **använd `end`.** Välj **Lägg till** och välj sedan **OK**.
 
 ![WF Fusion](./images/wffusion123.png)
 
-Klicka på **Spara** för att spara ditt scenario. Klicka sedan på **Kör en gång**.
+1. Välj **Spara** om du vill spara ditt scenario. Nästa, välj   **Kör en gång**.
 
 ![WF Fusion](./images/wffusion124.png)
 
-Scenariot kommer sedan att köras och slutföras. Du kommer att märka att do.. while-slingan som du konfigurerade fungerade bra. I körningen nedan ser du att **Repeater** kördes 20 gånger baserat på bubblan på noden **Verktyg > Hämta flera variabler** . Efter den noden konfigurerade du ett filter som kontrollerade statusen och bara om statusen inte var lika med **Success** kördes nästa nod. I den här körningen kördes delen efter filtret endast en gång eftersom statusen redan var **Successed** i den första körningen.
+Scenariot körs sedan och bör avslutas. Observera att do.. while-slingan som du konfigurerade fungerar bra. I körningen nedan ser du att **Repeater** kördes 20 gånger baserat på bubblan på noden **Verktyg > Hämta flera variabler** . Efter den noden konfigurerade du ett filter som kontrollerade statusen och bara om statusen inte var lika med **Success** kördes nästa nod. I den här körningen kördes delen efter filtret endast en gång eftersom statusen redan var **Successed** i den första körningen.
 
 ![WF Fusion](./images/wffusion125.png)
 
-Du kan kontrollera status för skapandet av din nya Photoshop-fil genom att klicka på bubblan i HTTP-begäran **Photoshop Check Status** och gå ned till fältet **status**.
+1. Du kan kontrollera status för skapandet av din nya Photoshop-fil genom att klicka på bubblan i HTTP-begäran **Photoshop Check Status** och gå ned till fältet **status**.
 
 ![WF Fusion](./images/wffusion126.png)
 
 Du har nu konfigurerat den grundläggande versionen av ett repeterbart scenario som automatiserar ett antal steg. I nästa övning kommer du att fortsätta med det genom att öka komplexiteten.
 
-Nästa steg: [1.2.3 Processautomatisering med Workfront Fusion](./ex3.md)
+## Nästa steg
 
-[Gå tillbaka till modul 1.2](./automation.md)
+Gå till [Processautomatisering med Workfront Fusion](./ex3.md){target="_blank"}
 
-[Gå tillbaka till Alla moduler](./../../../overview.md)
+Gå tillbaka till [Automatiserar Adobe Firefly-tjänster](./automation.md){target="_blank"}
+
+Gå tillbaka till [Alla moduler](./../../../overview.md){target="_blank"}
