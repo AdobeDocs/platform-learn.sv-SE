@@ -3,16 +3,16 @@ title: Självstudiekurser om datainsamling
 description: Instruktionsvideor och självstudiekurser som gör dig till en kraftfull användare av datainsamling
 mini-toc-levels: 0
 exl-id: 2d153ef8-7fba-40da-b34a-cad9b24c902c
-source-git-commit: d04a9dbe0f148e7ef210f1f4472a7771db5bb511
+source-git-commit: d6471c8e383e22fed4ad5870952d0d0470f593db
 workflow-type: tm+mt
-source-wordcount: '165'
+source-wordcount: '234'
 ht-degree: 9%
 
 ---
 
 # Självstudiekurser om datainsamling
 
-Datainsamling är nästa generation av funktioner för hantering av webbplatstaggar och SDK för mobiler från Adobe. Datainsamling ger kunderna ett enkelt sätt att driftsätta och hantera de analys-, marknadsförings- och annonslösningar som behövs för att skapa relevanta kundupplevelser. Använd dessa videor och självstudiekurser för att lära dig den här viktiga tekniken.
+Datainsamling är nästa generation av webbplatstaggar och mobila SDK-hanteringsfunktioner från Adobe. Datainsamling ger kunderna ett enkelt sätt att driftsätta och hantera de analys-, marknadsförings- och annonslösningar som behövs för att skapa relevanta kundupplevelser. Använd dessa videor och självstudiekurser för att lära dig den här viktiga tekniken.
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -23,7 +23,50 @@ Datainsamling är nästa generation av funktioner för hantering av webbplatstag
 
 <div id="staff-picks-section">
 
-## Personalval
+## Migreringsguider
+
+<table>
+<tr>
+  <td>
+    <a href="https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html" target="_blank">
+      <img alt="Migrera Target till Web SDK" src="assets/thumb_targetWebSdk.jpg" />
+    </a>
+    <div>
+      <a href="https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html" target="_blank">
+    <strong> Migrera Adobe Target till Web SDK </strong>
+    </a>
+    </div>
+    <p>
+    <em>Ersätt at.js med Web SDK</em>
+    <p>
+  </td>
+  <td>
+    <a href="https://experienceleague.adobe.com/en/docs/platform-learn/migrate-analytics-to-websdk/migration-to-websdk-overview" target="_blank">
+      <img alt="Implementera Adobe Experience Cloud med webb-SDK" src="assets/thumb_analyticsWebSdk.png" />
+    </a>
+    <div>
+      <a href="https://experienceleague.adobe.com/en/docs/platform-learn/migrate-analytics-to-websdk/migration-to-websdk-overview" target="_blank">
+    <strong> Migrera Adobe Analytics till Web SDK i taggar </strong>
+    </a>
+    </div>
+    <p>
+    <em>Ersätt AppMeasurement.js med Web SDK med taggar</em>
+    <p>
+  </td>
+  <td>
+      <img alt="Migrera Target till Web SDK" src="assets/thumb_aamWebSdk.png" />
+    </a>
+    <div>
+      <strong>Migrera Adobe Audience Manager till Web SDK</strong>
+    </div>
+    <p>
+    <em>Ersätt <a href="https://experienceleague.adobe.com/sv/docs/audience-manager/user-guide/migrate-to-web-sdk/dil-extension-to-web-sdk" target="_blank">dil.js</a> eller <a href="https://experienceleague.adobe.com/sv/docs/audience-manager/user-guide/migrate-to-web-sdk/appmeasurement-to-web-sdk" target="_blank">vidarebefordran på serversidan</a></em>
+    <p>
+  </td>
+</tr>
+</table>
+
+## Implementeringsguider
 
 <table>
 <tr>
@@ -55,15 +98,15 @@ Datainsamling är nästa generation av funktioner för hantering av webbplatstag
   </td>
   <td>
     <a href="https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html" target="_blank">
-      <img alt="Migrera mål till Web SDK" src="assets/thumb_targetWebSdk.jpg" />
+      <img alt="Migrera Target till Web SDK" src="assets/thumb_legacy.png" />
     </a>
     <div>
       <a href="https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html" target="_blank">
-    <strong> Migrera Adobe Target till Web SDK </strong>
+    <strong> Implementera äldre bibliotek med taggar </strong>
     </a>
     </div>
     <p>
-    <em>Migrera från at.js till Web SDK</em>
+    <em>Använd taggar för att implementera äldre Analytics-, Target- och Audience Manager-bibliotek</em>
     <p>
   </td>
 </tr>

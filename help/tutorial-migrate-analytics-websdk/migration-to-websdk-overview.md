@@ -5,9 +5,9 @@ solution: Data Collection, Analytics
 feature: Web SDK
 jira: KT-16755
 exl-id: e578b669-42b4-46ae-b6e6-6688e5c5c772
-source-git-commit: 47b970e3659fe7ebfdf491d9c0e9356128013fb9
+source-git-commit: d6471c8e383e22fed4ad5870952d0d0470f593db
 workflow-type: tm+mt
-source-wordcount: '1079'
+source-wordcount: '1157'
 ht-degree: 0%
 
 ---
@@ -15,6 +15,17 @@ ht-degree: 0%
 # Migrera Adobe Analytics till Web SDK med taggar
 
 Lär dig hur du migrerar en Adobe Analytics-implementering med Analytics-tillägget i Experience Platform Tags (tidigare kallad Launch) till Web SDK med hjälp av Web SDK-tillägget även i Tags. När Adobe Analytics-tillägget i Tags används, används koden&quot;AppMeasurement.js&quot; bakom scenen. Därför kan du se det som en självstudiekurs som handlar om att migrera AppMeasurement till Web SDK, men den här självstudiekursen finns helt i Taggar och omfattar INTE att gå till eller från en JavaScript-implementering (med undantag för JavaScript-kod som används i tagggränssnittet). Information om migrering av JavaScript-implementeringar finns i [dokumentationen](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/appmeasurement-to-web-sdk).
+
+>[!NOTE]
+>
+>Liknande självstudiekurser för migrering finns för:
+>
+> * [Adobe Target](../tutorial-migrate-target-websdk/introduction.md)
+> * [Adobe Audience Manager](https://experienceleague.adobe.com/sv/docs/audience-manager/user-guide/migrate-to-web-sdk/appmeasurement-to-web-sdk)
+
+>[!CAUTION]
+>
+> Eftersom Platform Web SDK stöder flera Adobe-program bör alla Adobe-bibliotek på en viss sida migreras samtidigt. En blandad implementering av Web SDK for Target och AppMeasurement for Analytics på en enskild sida _stöds till exempel inte_. Det finns dock stöd för en blandad implementering på olika sidor, till exempel Web SDK på sida A och at.js med AppMeasurementet på sida B.
 
 ## Vad du får ut av den här självstudiekursen
 
