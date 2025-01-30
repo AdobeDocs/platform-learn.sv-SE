@@ -4,16 +4,16 @@ description: Foundation - konfigurera Adobe Experience Platform Data Collection 
 kt: 5342
 doc-type: tutorial
 exl-id: 3fc4a1d6-4130-464e-98c0-5b9cac8051a0
-source-git-commit: 0dbcda0cfc9f199a44c845c1b5caf00a8d740251
+source-git-commit: 1526661a80b4d551627dfca42a7e97c9498dd1f2
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '241'
 ht-degree: 0%
 
 ---
 
 # 1.1.7 XDM-schemakrav i Adobe Experience Platform
 
-För att säkerställa att Web SDK och alloy.js kan importera data till Adobe Experience Platform finns det ett krav på att en specifik XDM-mixin ska ingå i XDM-schemat i Adobe Experience Platform.
+För att säkerställa att Web SDK kan importera data till Adobe Experience Platform måste en viss XDM-blandning ingå i XDM-schemat i Adobe Experience Platform.
 
 Gå till [https://experience.adobe.com/platform](https://experience.adobe.com/platform) och logga in.
 

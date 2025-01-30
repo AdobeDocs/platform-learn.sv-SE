@@ -1,17 +1,17 @@
 ---
-title: Komma igång - Skapa ditt dataflöde
-description: Komma igång - Skapa ditt dataflöde
+title: Komma igång - Skapa din datastream
+description: Komma igång - Skapa din datastream
 kt: 5342
 doc-type: tutorial
 exl-id: b3e6f66d-fb7a-43ab-aedb-45141af76d3e
-source-git-commit: 007e35504d19c332da39d90d65f34960aaa9c09b
+source-git-commit: 1526661a80b4d551627dfca42a7e97c9498dd1f2
 workflow-type: tm+mt
-source-wordcount: '826'
+source-wordcount: '830'
 ht-degree: 0%
 
 ---
 
-# Skapa ditt datastream
+# Skapa din datastream
 
 Gå till [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/).
 
@@ -25,7 +25,7 @@ Dessa egenskaper är nästan klara att användas, men innan du kan börja samla 
 
 Följ dessa steg tills vidare.
 
-## Skapa ett datastream för webben
+## Skapa ditt datastream för webbdatainsamling
 
 Klicka på **[!UICONTROL Datastreams]**.
 
@@ -101,7 +101,7 @@ Klicka på **Lägg till alla ändrade resurser** och sedan på **Spara och skapa
 
 ![Namnge Edge-konfigurationen och spara](./images/edgeconfig17a.png)
 
-## Skapa ditt datastream för mobilen
+## Skapa ditt datastream för mobildatainsamling
 
 Gå till [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/).
 

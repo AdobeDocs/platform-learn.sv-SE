@@ -4,9 +4,9 @@ description: Foundation - Installation av Adobe Experience Platform Data Collect
 kt: 5342
 doc-type: tutorial
 exl-id: 391c79d6-9c42-465e-bce8-60fa6474979c
-source-git-commit: 3a19e88e820c63294eff38bb8f699a9f690afcb9
+source-git-commit: 1526661a80b4d551627dfca42a7e97c9498dd1f2
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1249'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,11 @@ ht-degree: 0%
 
 ## Kontext
 
-Nu ska vi titta närmare på byggstenarna i Adobe Experience Platform Data Collection för att förstå vad som är installerat på demowebbplatsen. Du kommer att ha en närmare titt på Adobe Experience Platform Web SDK-tillägget, du kommer att konfigurera ett dataelement och en regel och du kommer att lära dig hur du publicerar ett bibliotek.
+Nu ska vi titta närmare på byggstenarna i Adobe Experience Platform Data Collection för att förstå vad som är installerat på demowebbplatsen. Du kommer närmare titta på Adobe Experience Platform Web SDK Extension, du kommer att konfigurera ett dataelement och en regel och du kommer att lära dig hur du publicerar ett bibliotek.
 
-## Adobe Experience Platform Web SDK-tillägg
+## Adobe Experience Platform Web SDK-taggtillägg
 
-Ett tillägg är en paketerad uppsättning kod som utökar Adobe Experience Platform Data Collection-gränssnittet och biblioteksfunktionerna. Adobe Experience Platform Data Collection är plattformen och tillägg fungerar som appar som körs på plattformen. Alla tillägg som används i självstudiekursen skapas och hanteras av Adobe, men tredjepartsleverantörer kan skapa egna tillägg för att begränsa mängden anpassad kod som Adobe Experience Platform Data Collection-användare måste hantera.
+Ett taggtillägg är en paketerad uppsättning kod som utökar Adobe Experience Platform Data Collection-gränssnittet och biblioteksfunktionerna. Adobe Experience Platform Data Collection är plattformen och taggtillägg fungerar som appar som körs på plattformen. Alla tillägg som används i självstudiekursen skapas och hanteras av Adobe, men tredjepartsleverantörer kan skapa egna tillägg för att begränsa mängden anpassad kod som Adobe Experience Platform Data Collection-användare måste hantera.
 
 Gå till [Adobe Experience Platform Data Collection](https://experience.adobe.com/launch/) och välj **Taggar**.
 
@@ -34,7 +34,7 @@ Klicka för att öppna egenskapen **Webb**.
 
 
 
-Därefter visas sidan Egenskapsöversikt. Klicka på **[!UICONTROL Extensions]** i den vänstra listen, klicka sedan på **Adobe Experience Platform Web SDK** och klicka sedan på **[!UICONTROL Configure]**.
+Därefter visas sidan Egenskapsöversikt. Klicka på **[!UICONTROL Extensions]** i den vänstra listen, klicka på **Adobe Experience Platform Web SDK** och sedan på **[!UICONTROL Configure]**.
 
 ![Sidan Egenskapsöversikt](./images/property7.png)
 
@@ -58,7 +58,7 @@ Dataelement är byggstenarna för dataordlistan (eller datamappningen). Använd 
 
 Ett enskilt dataelement är en variabel vars värde kan mappas till frågesträngar, URL:er, cookie-värden, JavaScript-variabler osv. Du kan referera till det här värdet med hjälp av dess variabelnamn i Adobe Experience Platform Data Collection. Den här samlingen dataelement blir en ordbok med definierade data som du kan använda för att skapa regler (händelser, villkor och åtgärder). Den här dataordlistan delas av alla Adobe Experience Platform Data Collection för användning med alla tillägg som du har lagt till i din egenskap.
 
-Du kommer nu att redigera ett befintligt dataelement i ett Web SDK-format.
+Du kommer nu att redigera ett befintligt dataelement i ett format som passar för Web SDK.
 
 Klicka på Dataelement i den vänstra listen för att gå till sidan Dataelement.
 
@@ -124,7 +124,7 @@ Klicka på händelsen **Skicka &quot;produktvy&quot; för åtgärden**.
 
 ![Åtgärden Skicka händelse](./images/rule5a.png)
 
-Här ser du de data som Adobe Experience Platform Web SDK skickar in. Mer specifikt används **alloy** **[!UICONTROL Instance]** för Web SDK. Händelsen **[!UICONTROL Type]** är inställd på **Commerce produktvy (kundvagn)** och de XDM-data som du skickar är det **XDM - produktvy** -dataelement som du ändrade tidigare.
+Här ser du de data som skickas till utkanten av Adobe Experience Platform Web SDK. Mer specifikt används **alloy** **[!UICONTROL Instance]** för Web SDK. Händelsen **[!UICONTROL Type]** är inställd på **Commerce produktvy (kundvagn)** och de XDM-data som du skickar är det **XDM - produktvy** -dataelement som du ändrade tidigare.
 
 ![Åtgärden Skicka händelse](./images/rule5.png)
 

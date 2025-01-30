@@ -4,7 +4,7 @@ description: Komma igång - sammanfattning
 kt: 5342
 doc-type: tutorial
 exl-id: 31616c51-01e0-4f99-91f1-4f21054b0999
-source-git-commit: bd46be455f88007174f7e6be9a1ce5f508edc09b
+source-git-commit: 1526661a80b4d551627dfca42a7e97c9498dd1f2
 workflow-type: tm+mt
 source-wordcount: '248'
 ht-degree: 1%
@@ -36,7 +36,7 @@ I den här övningen ska du installera och konfigurera Chrome-tillägget så att
 
 I den här övningen använder du Demo System Next för att konfigurera dina startegenskaper för webb och mobiler.
 
-[Skapa ditt datastream](./ex3.md)
+[Skapa din datastream](./ex3.md)
 
 I den här övningen använder du Demo System Next för att konfigurera dina startegenskaper för webb och mobiler.
 

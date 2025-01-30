@@ -1,16 +1,17 @@
 ---
 title: Inställningar
-description: Konfigurera din AEP-instans
+description: Konfigurera din Adobe Experience Platform-instans
 doc-type: multipage-overview
 hide: false
-source-git-commit: c0649aeacdce00e09c993f2130de3423efc352fa
+exl-id: 1150c5ec-3fba-4506-8f17-c34872f9b3ea
+source-git-commit: 1526661a80b4d551627dfca42a7e97c9498dd1f2
 workflow-type: tm+mt
-source-wordcount: '1028'
+source-wordcount: '1048'
 ht-degree: 0%
 
 ---
 
-# Inställningar
+# Konfigurera din Adobe Experience Platform-instans
 
 >[!IMPORTANT]
 >
@@ -29,9 +30,9 @@ För att kunna genomföra alla dessa självstudiekurser på ett praktiskt sätt 
 
 Om en specifik programtjänst inte har etablerats för din IMS-organisation kan du inte utföra den specifika övningen på ett praktiskt sätt.
 
-## Skapa sandlåda
+## Skapa en sandlåda
 
-Om du vill gå igenom självstudiekursen i din egen AEP-instans bör du först skapa en ny utvecklingssandlåda. Om du vill skapa en ny sandlåda går du till [https://experience.adobe.com/platform](https://experience.adobe.com/platform), går till Sandlådor och sedan till **Bläddra**. Klicka på **Skapa sandlåda**.
+Om du vill gå igenom självstudiekursen i din egen Adobe Experience Platform-instans bör du först skapa en ny utvecklingssandlåda. Om du vill skapa en ny sandlåda går du till [https://experience.adobe.com/platform](https://experience.adobe.com/platform), går till Sandlådor och sedan till **Bläddra**. Klicka på **Skapa sandlåda**.
 
 ![Skapa sandlåda](./assets/images/sandbox1.png)
 
@@ -39,7 +40,7 @@ Skapa din sandlåda så här:
 
 - Typ: **Utveckling**
 - Namn: **aep-tutorial**
-- Titel: **AEP-självstudiekurs**
+- Titel: **Adobe Experience Platform självstudiekurs**
 
 Klicka på **Skapa**.
 
@@ -57,7 +58,7 @@ Klicka för att öppna den specifika **roll** som ska användas av de studerande
 
 ![Skapa sandlåda](./assets/images/perm1.png)
 
-Ge din roll ett namn som **AEP Tutorial**, klicka på **Bekräfta**.
+Ge din roll ett namn som **Adobe Experience Platform Tutorial**, klicka på **Bekräfta**.
 
 ![Skapa sandlåda](./assets/images/perm2.png)
 
@@ -84,7 +85,7 @@ Gå till
 
 ![Skapa sandlåda](./assets/images/io1.png)
 
-Klicka på **+ Lägg till i projekt** och sedan på **API**.
+Klicka på **Lägg till i projekt** och sedan på **API**.
 
 ![Skapa sandlåda](./assets/images/io2.png)
 
@@ -100,7 +101,7 @@ Välj en av de tillgängliga produktprofilerna. Den här produktprofilen avgör 
 
 ![Skapa sandlåda](./assets/images/io5.png)
 
-Klicka på **+ Lägg till i projekt** och klicka sedan på **API** igen.
+Klicka på **Lägg till i projekt** och sedan på **API** igen.
 
 ![Skapa sandlåda](./assets/images/io6.png)
 
@@ -124,7 +125,7 @@ Klicka på **Redigera projekt**.
 
 ![Skapa sandlåda](./assets/images/io11.png)
 
-Ange en ny **projekttitel**, till exempel **DSN AEP-självstudiekurs**. Klicka på **Spara**.
+Ange en ny **projekttitel**, till exempel **DSN Adobe Experience Platform-självstudiekurs**. Klicka på **Spara**.
 
 ![Skapa sandlåda](./assets/images/io12.png)
 
@@ -237,7 +238,7 @@ Du kommer då att se förloppet för den pågående installationen, som kommer a
 
 ![Skapa sandlåda](./assets/images/dsnorg15.png)
 
-När allt är klart är AEP-instansen konfigurerad och klar att ta självstudiekursen.
+När allt är klart är din Adobe Experience Platform-instans konfigurerad och klar att användas av eleverna.
 
 >[!NOTE]
 >

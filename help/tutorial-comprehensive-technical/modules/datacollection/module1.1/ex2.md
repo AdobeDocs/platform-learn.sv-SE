@@ -4,9 +4,9 @@ description: Foundation - konfiguration av Adobe Experience Platform Data Collec
 kt: 5342
 doc-type: tutorial
 exl-id: e97d40b5-616d-439c-9d6b-eaa4ebf5acb0
-source-git-commit: acb941e4ee668248ae0767bb9f4f42e067c181ba
+source-git-commit: 1526661a80b4d551627dfca42a7e97c9498dd1f2
 workflow-type: tm+mt
-source-wordcount: '595'
+source-wordcount: '586'
 ht-degree: 0%
 
 ---
@@ -15,19 +15,21 @@ ht-degree: 0%
 
 ## Kontext
 
-I den här övningen skapar du en **datastream**. En **datastream** anger för Adobe Edge-servrarna var data ska skickas när de har samlats in av Web SDK. Vill du till exempel skicka data till Adobe Experience Platform? Adobe Analytics? Adobe Audience Manager? Adobe Target?
+I den här övningen skapar du en **datastream**. En **datastream** anger för Adobe Edge nätverksservrar var data ska skickas när de har samlats in av Web SDK. Vill du till exempel skicka data till Adobe Experience Platform? Adobe Analytics? Adobe Audience Manager? Adobe Target?
 
-Datastreams hanteras alltid i användargränssnittet i Adobe Experience Platform Data Collection och är viktiga för Adobe Experience Platform datainsamling med Web SDK. Även om du implementerar Web SDK med en tagghanteringslösning som inte är Adobe måste du ändå skapa din datastream i Adobe Experience Platform Data Collection-användargränssnittet.
+Datastreams hanteras alltid i användargränssnittet i Experience Platform Data Collection och är viktiga för datainsamlingen i Experience Platform med [Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home). Även om du implementerar Web SDK med en tagghanteringslösning som inte är Adobe måste du ändå skapa en datastream.
 
-Du implementerar Web SDK i webbläsaren i nästa övning. Då blir det tydligare för er hur de data som samlas in ser ut. För närvarande berättar vi bara för DataStream var vi ska vidarebefordra data.
+Du kommer att implementera Web SDK i webbläsaren i nästa övning. Då blir det tydligare för er hur de data som samlas in ser ut. För närvarande berättar vi bara för datastream var vi ska vidarebefordra data.
 
 ## Skapa ett datastream
 
-I [Komma igång](./../../../modules/gettingstarted/gettingstarted/ex2.md) har du redan skapat en datastream, men vi har inte diskuterat bakgrunden och anledningen till att du var med i datastream.
+I [Komma igång](./../../../modules/gettingstarted/gettingstarted/ex2.md) har du redan skapat en datastream, men vi har inte diskuterat bakgrunden och orsaken till varför du skapade den.
 
-En strömma talar om för Adobe Edge-servrarna var data ska skickas när de har samlats in av Web SDK. Vill du till exempel skicka data till Adobe Experience Platform? Adobe Analytics? Adobe Audience Manager? Adobe Target? Datastreams hanteras i användargränssnittet i Adobe Experience Platform Data Collection och är viktiga för datainsamling med Web SDK, oavsett om du implementerar Web SDK via Adobe Experience Platform Data Collection eller inte.
+En [datastream](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview) talar om för Edge Network-servrarna var data ska skickas när de har samlats in av Web SDK. Mer information om var du kan skicka dina data via datastream finns i dokumentationen om [hur du lägger till tjänster i ett datastream](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/configure#add-services).
 
-Vi granskar din **[!UICONTROL Datastream]**:
+Datastreams hanteras i användargränssnittet i Experience Platform Data Collection och är viktiga för datainsamling med Web SDK, oavsett om du implementerar Web SDK via Adobe Experience Platform Data Collection eller inte.
+
+Vi granskar din **[!UICONTROL datastream]**:
 
 Gå till [https://experience.adobe.com/launch/](https://experience.adobe.com/launch/).
 
@@ -57,12 +59,11 @@ För denna datastream...
 
 - Alla data som samlas in lagras i sandlådan `--aepSandboxName--` i Adobe Experience Platform
 - Alla Experience Event-data samlas som standard in i datauppsättningen **Demo System - Event Dataset för webbplatsen (Global v1.1)**
-- Alla profildata samlas som standard in i datauppsättningen **Demo System - profildatauppsättning för webbplats (Global v1.1)** (Inhämtning av profildata internt med Web SDK stöds för närvarande inte av Web SDK ännu)
+- Alla profildata samlas som standard in i datauppsättningen **Demo System - Profildatauppsättning för webbplats (Global v1.1)** (Inhämtning av profildata internt med Web SDK stöds för närvarande inte av Web SDK)
 - Om du vill använda programtjänsten **Offer decisioning** för det här dataflödet måste du markera rutan för Offer decisioning. (Detta ingår i [Modul 3.3](./../../../modules/ajo-b2c/module3.3/offer-decisioning.md))
 - **Edge-segmentering** är aktiverat som standard, vilket innebär att kvalificerade målgrupper utvärderas i kanten vid inkommande trafik
-- Om du vill använda **Personalization Destinations** måste du markera kryssrutan för Personalization Destinations.
-- 
-   - Om du vill använda **Adobe Journey Optimizer** s funktioner i det här dataflödet måste du markera kryssrutan för Adobe Journey Optimizer.
+- Om du vill använda [personaliseringsmål](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/personalization/overview) markerar du kryssrutan för **Personalization-mål**.
+- Om du vill använda **Adobe Journey Optimizer** s funktioner i det här datastream-objektet måste du markera kryssrutan för **Adobe Journey Optimizer**.
 
 
 För närvarande behövs ingen annan konfiguration för din datastream.

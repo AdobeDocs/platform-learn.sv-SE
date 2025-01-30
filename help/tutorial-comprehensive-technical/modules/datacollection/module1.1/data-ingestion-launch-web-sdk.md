@@ -4,16 +4,18 @@ description: Foundation - Installation av Adobe Experience Platform Data Collect
 kt: 5342
 doc-type: tutorial
 exl-id: b69ebe41-ff28-4dde-b639-198201120742
-source-git-commit: bd46be455f88007174f7e6be9a1ce5f508edc09b
+source-git-commit: 1526661a80b4d551627dfca42a7e97c9498dd1f2
 workflow-type: tm+mt
-source-wordcount: '587'
+source-wordcount: '591'
 ht-degree: 0%
 
 ---
 
-# 1.1 Foundation - Installation av Adobe Experience Platform Data Collection och Web SDK-tillägget
+# 1.1 Foundation - konfiguration av Adobe Experience Platform Data Collection och Web SDK-taggtillägget
 
-I den här grundläggande modulen får du lära dig Adobe datainsamlingsvision och en förklaring av hur du hämtar data från en webbplats och ett mobilprogram till Adobe Experience Platform och andra program via Adobe Experience Platform Data Collection, Adobe Experience Platform SDK och Adobe Experience Platform Edge Network. I den här modulen introduceras vissa koncept och tekniker som har en effekt som inte omfattas av en teknisk självstudiekurs från Adobe Experience Platform. Det bör tydligt framgå vilka delar av övningarna som ligger till grund för resten av den omfattande självstudiekursen, som lär dig mer om Experience Edge och dess funktioner, och var ni ska gå för mer information och självstudiekurser.
+I den här grundläggande modulen får du lära dig Adobe datainsamlingsvision och en förklaring av hur du hämtar data från en webbplats och ett mobilprogram till Adobe Experience Platform och andra program via Adobe Experience Platform Data Collection, Adobe Experience Platform SDK och Adobe Experience Platform Edge Network.
+
+I den här modulen introduceras vissa koncept och tekniker som har en effekt som inte omfattas av en teknisk självstudiekurs från Adobe Experience Platform. Det bör stå klart vilka delar av övningarna som ligger till grund för resten av den omfattande självstudiekursen, som lär dig mer om Edge Network och dess möjligheter, och var du ska gå för mer information och självstudiekurser.
 
 ## Utbildningsmål
 
@@ -21,9 +23,9 @@ I den här grundläggande modulen får du lära dig Adobe datainsamlingsvision o
 - Lär dig de dataflöden som ett varumärke använder för att importera data till sina Adobe-produkter.
 - Lär dig hur du skickar data till Adobe Experience Platform och andra produkter via Adobe Experience Platform Edge Network.
 - Lär dig hur du skapar dataelement och regler som samlar in data från webben och mobiler.
-- Läs mer om Web SDK tracking-händelser och hur du felsöker deras innehåll.
+- Lär dig mer om [Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home)-spårningshändelserna och hur du felsöker deras innehåll.
 - Lär dig vad ett datalager är och vad Adobe rekommenderar när du implementerar ett lager.
-- Lär dig hur du implementerar Web SDK från grunden.
+- Lär dig hur du implementerar [Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home) från grunden.
 - Lär dig skillnaden mellan webb- och mobilimplementering.
 
 ## Förhandskrav
@@ -64,7 +66,7 @@ I den här övningen ska du lägga upp en aktivitet i Adobe Target som implement
 
 [1.1.7 XDM-schemakrav i Adobe Experience Platform](./ex7.md)
 
-För att säkerställa att Web SDK och alloy.js kan importera data till Adobe Experience Platform måste en specifik XDM-mixin ingå i XDM-schemat i Adobe Experience Platform.
+För att säkerställa att Web SDK kan importera data till Adobe Experience Platform måste en viss XDM-blandning ingå i XDM-schemat i Adobe Experience Platform.
 
 [Sammanfattning och fördelar](./summary.md)
 

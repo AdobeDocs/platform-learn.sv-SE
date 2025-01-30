@@ -4,9 +4,9 @@ description: Komma igång - Installera Chrome-tillägget för dokumentationen f�
 kt: 5342
 doc-type: tutorial
 exl-id: da7aa686-7f25-49fd-af3e-d243ffda025f
-source-git-commit: 58e60ad8c83dcd25996e06f11c75f68eae35ef20
+source-git-commit: 1526661a80b4d551627dfca42a7e97c9498dd1f2
 workflow-type: tm+mt
-source-wordcount: '920'
+source-wordcount: '938'
 ht-degree: 0%
 
 ---
@@ -72,13 +72,13 @@ Ange de värden som anges nedan, som alla är relaterade till din Adobe Experien
 
 Om du är osäker på vilka värden du ska ange för de här fälten följer du riktlinjerna nedan.
 
-**AEP IMS-organisationsnamn**
+**Adobe Experience Platform IMS-organisationsnamn**
 
 När du loggar in på din Adobe Experience Platform-instans på [https://platform.adobe.com/](https://platform.adobe.com/) hittar du namnet på din instans i skärmens övre högra hörn.
 
 ![DSN](./images/aepname.png)
 
-**AEP IMS-organisation-ID**
+**Adobe Experience Platform IMS-organisation-ID**
 
 IMS-organisations-ID är den unika identifieraren för din Adobe Experience Cloud-instans, och den refereras till på flera platser under hela kursen.
 
@@ -88,29 +88,29 @@ Du kan hitta den genom att gå till [Admin Console](https://adminconsole.adobe.c
 
 ![DSN](./images/aepid1.png)
 
-Du kan också hitta den genom att gå till **Datahantering > Frågor** på AEP-menyn, där du hittar den under **Användarnamn**.
+Du kan också hitta den genom att gå till **Datahantering > Frågor** på Adobe Experience Platform-menyn, där du hittar den under **Användarnamn**.
 
 ![DSN](./images/aepid2.png)
 
 Se till att kopiera och klistra in delen **@AdobeOrg** tillsammans med ID:t.
 
-**AEP-klient-ID**
+**Adobe Experience Platform Klient-ID**
 
-Klient-ID är den unika identifieraren för organisationens AEP-instans. När du loggar in på din Adobe Experience Platform-instans på [https://platform.adobe.com/](https://platform.adobe.com/) hittar du klient-ID:t i URL:en.
+Ditt klient-ID är den unika identifieraren för din organisations Adobe Experience Platform-instans. När du loggar in på din Adobe Experience Platform-instans på [https://platform.adobe.com/](https://platform.adobe.com/) hittar du klient-ID:t i URL:en.
 
 ![DSN](./images/aeptenantid.png)
 
 När du anger det i Chrome-tillägget bör du se till att ett understreck läggs till som ett prefix, så i det här exemplet blir **ExperiencePlatform** **_experienceplatform**. Se även till att ta bort symbolen **@** när du kopierar från URL:en.
 
-**Namn på AEP-sandlåda**
+**Adobe Experience Platform Sandbox-namn**
 
-Ditt sandlådenamn är namnet på miljön som du kommer att använda i din AEP-instans. När du loggar in på din Adobe Experience Platform-instans på [https://platform.adobe.com/](https://platform.adobe.com/) hittar du klient-ID:t i URL:en.
+Ditt sandlådenamn är namnet på den miljö du kommer att använda i din Adobe Experience Platform-instans. När du loggar in på din Adobe Experience Platform-instans på [https://platform.adobe.com/](https://platform.adobe.com/) hittar du klient-ID:t i URL:en.
 
 Innan du tar sandlådans namn från URL:en bör du kontrollera att du är i sandlådan som du bör använda för den här självstudiekursen. Du kan växla till den högra sandlådan genom att klicka på sandlådeväxlarmenyn i skärmens övre högra hörn.
 
 ![DSN](./images/aepsandboxsw.png)
 
-I det här exemplet är AEP-sandlådans namn **tech-insiders**.
+I det här exemplet är Adobe Experience Platform Sandbox-namnet **tech-insiders**.
 
 ![DSN](./images/aepsname.png)
 
@@ -140,7 +140,7 @@ Gå till [den här sidan](https://experienceleague.adobe.com/en/docs/platform-le
 
 Du bör nu se att alla **miljövariabler** har ersatts med sina verkliga värden, baserat på den aktiverade miljön i Chrome-tillägget.
 
-Du bör nu ha en vy som liknar den nedan, där miljövariabeln `aepTenantId` har ersatts av ditt riktiga AEP-klient-ID, som i det här fallet är **_experienceplatform**.
+Du bör nu ha en liknande vy som i nedanstående exempel, där miljövariabeln `aepTenantId` har ersatts av ditt riktiga Adobe Experience Platform-klientorganisations-ID, som i det här fallet är **_experienceplatform**.
 
 ![DSN](./images/mod7.png)
 

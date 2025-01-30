@@ -4,7 +4,7 @@ description: Foundation - Installation av Adobe Experience Platform Data Collect
 kt: 5342
 doc-type: tutorial
 exl-id: a9022269-6db2-46c6-a82b-ec8d5b881a55
-source-git-commit: 3a19e88e820c63294eff38bb8f699a9f690afcb9
+source-git-commit: 1526661a80b4d551627dfca42a7e97c9498dd1f2
 workflow-type: tm+mt
 source-wordcount: '525'
 ht-degree: 0%
@@ -60,9 +60,9 @@ Alla data som samlas in av edge-nätverket kan nås via [bearbetningsregler](htt
 
 Vidarebefordran på serversidan är inte ett nytt koncept för Audience Manager, och samma process som tidigare gäller. Du kan också synkronisera identiteter.
 
-## Granska ditt dataflöde för att skicka data till Adobe Analytics
+## Granska ditt datastream för att skicka data till Adobe Analytics
 
-Följ de här stegen om du vill skicka data som samlats in via Web SDK till Adobe Analytics och Adobe Audience Manager.
+Följ de här stegen om du vill skicka data som samlats in av Web SDK till Adobe Analytics och Adobe Audience Manager.
 
 Gå till [https://experience.adobe.com/launch/](https://experience.adobe.com/launch/) och gå till **Datastreams**.
 
@@ -70,7 +70,7 @@ I skärmens övre högra hörn väljer du namnet på sandlådan, som ska vara `-
 
 ![Klicka på ikonen Edge-konfiguration i den vänstra navigeringen](./images/edgeconfig1b.png)
 
-Då ser du det här. Om du vill aktivera Adobe Analytics klickar du på **+Lägg till tjänst**.
+Då ser du det här. Klicka på **Lägg till tjänst** om du vill aktivera Adobe Analytics.
 
 ![AEP-felsökning](./images/aa2.png)
 
@@ -78,9 +78,9 @@ Då ser du det här. Markera tjänsten **Adobe Analytics**, därefter måste du 
 
 ![AEP-felsökning](./images/aa3.png)
 
-## Granska ditt dataflöde för att skicka data till Adobe Audience Manager
+## Granska ditt datastream för att skicka data till Adobe Audience Manager
 
-Då ser du det här. Om du vill aktivera Adobe Audience Manager klickar du på **+Lägg till tjänst**.
+Då ser du det här. Klicka på **Lägg till tjänst** om du vill aktivera Adobe Audience Manager.
 
 ![AEP-felsökning](./images/aa2.png)
 

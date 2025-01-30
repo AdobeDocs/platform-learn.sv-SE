@@ -4,7 +4,7 @@ description: Foundation - Installation av Adobe Experience Platform Data Collect
 kt: 5342
 doc-type: tutorial
 exl-id: 475e9a34-c80e-41e4-9660-61c79f26922d
-source-git-commit: 3a19e88e820c63294eff38bb8f699a9f690afcb9
+source-git-commit: 1526661a80b4d551627dfca42a7e97c9498dd1f2
 workflow-type: tm+mt
 source-wordcount: '168'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## Uppdatera ditt datastream för att använda Adobe Target
 
-Följ de här stegen om du vill skicka data som samlats in av Web SDK till Adobe Target och få ett svar från Adobe Target med en personaliserad upplevelse för varje kund.
+Följ de här stegen om du vill skicka data som samlats in av Web SDK till Adobe Target och få svar från Adobe Target med en personlig upplevelse för varje kund.
 
 Gå till [https://experience.adobe.com/launch/](https://experience.adobe.com/launch/) och gå till **Datastreams**.
 
@@ -23,7 +23,7 @@ I skärmens övre högra hörn väljer du namnet på sandlådan, som ska vara `-
 
 ![Klicka på ikonen Edge-konfiguration i den vänstra navigeringen](./images/edgeconfig1b.png)
 
-Då ser du det här. Om du vill aktivera Adobe Target klickar du på **+Lägg till tjänst**.
+Då ser du det här. Klicka på **Lägg till tjänst** om du vill aktivera Adobe Target.
 
 ![AEP-felsökning](./images/aa2.png)
 

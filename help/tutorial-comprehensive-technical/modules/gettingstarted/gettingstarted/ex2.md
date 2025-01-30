@@ -4,16 +4,16 @@ description: Komma igång - Använd demonstrationssystemet bredvid för att konf
 kt: 5342
 doc-type: tutorial
 exl-id: f863bf1c-004a-4137-9ef2-efae76499dfa
-source-git-commit: 7f436f77ab6d7c625181304fd41be75c627c5b46
+source-git-commit: 1526661a80b4d551627dfca42a7e97c9498dd1f2
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '332'
 ht-degree: 0%
 
 ---
 
 # Använd Demo System bredvid för att konfigurera klientegenskapen för Adobe Experience Platform Data Collection
 
-För att visualisera inlärningarna i den här självstudiekursen och göra det möjligt för dig att testa konfigurationen i en säker miljö använder den här självstudiekursen verktygen Adobe Demo System Next. För att få ut det mesta av den här självstudiekursen måste din AEP-instans konfigureras så att den integreras med Demo System Next.
+För att visualisera inlärningarna i den här självstudiekursen och göra det möjligt för dig att testa konfigurationen i en säker miljö använder den här självstudiekursen verktygen Adobe Demo System Next. För att få ut det mesta av den här självstudiekursen måste din Adobe Experience Platform-instans konfigureras så att den integreras med Demo System Next.
 
 När du har tillgång till Demo System Next fortsätter du med stegen nedan.
 
@@ -21,7 +21,7 @@ Gå till [https://dsn.adobe.com/](https://dsn.adobe.com/) och navigera till **In
 
 ![DSN](./images/dsnsetup.png)
 
-I listrutan **Miljö** väljer du AEP-instansen och sandlådan.
+I listrutan **Miljö** väljer du Adobe Experience Platform-instans och sandlåda.
 
 ![DSN](./images/dsnh1.png)
 

@@ -1,10 +1,10 @@
 ---
-title: Foundation - Installation av Adobe Experience Platform Data Collection och Web SDK-tillägget - förklarar Adobe Experience Platform Data Collection
-description: Foundation - Installation av Adobe Experience Platform Data Collection och Web SDK-tillägget - förklarar Adobe Experience Platform Data Collection
+title: Foundation - Installation av Adobe Experience Platform Data Collection och Web SDK-tillägget - Förklaring av Adobe Experience Platform Data Collection
+description: Foundation - Installation av Adobe Experience Platform Data Collection och Web SDK-tillägget - Förklaring av Adobe Experience Platform Data Collection
 kt: 5342
 doc-type: tutorial
 exl-id: 098031c6-4d8b-46a5-ae86-8fd7692268d3
-source-git-commit: 0dbcda0cfc9f199a44c845c1b5caf00a8d740251
+source-git-commit: 1526661a80b4d551627dfca42a7e97c9498dd1f2
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 0%
@@ -20,16 +20,16 @@ Adobe Experience Platform Data Collection används av varumärken för ett antal
 - Implementera både Adobe Experience Cloud och Adobe Experience Platform.
 - Hantera de olika kraven för olika delar av organisationen genom att ge var och en en en egen **Property** att hantera.
 - Tillåt testning och livscykelhantering.
-- Lägg in egna javascript- och tredjepartstaggar, som alla hanteras på ett och samma ställe.
+- Lägg in egna JavaScript- och tredjepartstaggar, som alla hanteras på ett och samma ställe.
 
 ## Utforska användargränssnittet
 
 Gå till [Adobe Experience Platform datainsamling](https://experience.adobe.com/#/data-collection/).
 
-Gå till **Taggar**. Du ser nu vyn **[!UICONTROL Properties]**. Egenskaper som anges här är till för självstudiekurshantering. Dessa egenskaper representerar..
+Gå till **Taggar**. Du ser nu vyn **[!UICONTROL Properties]**. Egenskaper som anges här är till för självstudiekurshantering. Dessa egenskaper representerar:
 
 - App- och webbegenskaper
-- Olika webbplatser ger kunderna olika service på olika sätt. Exempel: Luma Retail har en egenskap, Luma Travel har en annan
+- Olika webbplatser ger kunderna olika service på olika sätt. Luma Retail skulle till exempel ha en egenskap, Luma Travel skulle ha en annan.
 - Äldre såväl som aktuella webbplatser
 - En specifik Adobe Analytics-design som är gemensam för flera olika webbplatser
 - Interna intranätsidor bredvid externa platser
@@ -56,7 +56,7 @@ Adobe Experience Platform Data Collection är ett mycket avancerat verktyg som o
 Nedan finns ytterligare information för dem som är intresserade av att förstå Adobe Experience Platform Data Collection.
 
 - [Användarhandbok för Adobe Experience Platform Data Collection](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv)
-- [Implementera Adobe Experience Cloud med Web SDK, genomgång](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html)
+- [Implementera Adobe Experience Cloud med Web SDK, självstudiekurs](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html)
 - [Konfigurera användarbehörigheter](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html)
 - [API-dokumentation](https://developer.adobelaunch.com/api/)
 
