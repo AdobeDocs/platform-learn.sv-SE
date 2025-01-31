@@ -4,9 +4,9 @@ description: Foundation - datainmatning - datainmatning från offlinekällor
 kt: 5342
 doc-type: tutorial
 exl-id: a4909a47-0652-453b-ae65-ba4c261f087c
-source-git-commit: 8bdcd03bd38a6da98b82439ad86482cad5f4e684
+source-git-commit: 2f53c8da2cbe833120fa6555c65b8b753bfa4f8d
 workflow-type: tm+mt
-source-wordcount: '1380'
+source-wordcount: '1421'
 ht-degree: 0%
 
 ---
@@ -82,8 +82,11 @@ Du kommer att använda en delad datamängd. Den delade datamängden har redan sk
 
 ![Datainmatning](./images/emeacrmoverview.png)
 
-
 På översiktsskärmen ser du tre viktiga informationsdelar.
+
+>[!NOTE]
+>
+>Det är möjligt att vyn för datauppsättningen är tom, om ingen aktivitet har skett under de senaste 7 dagarna.
 
 ![Datainmatning](./images/dashboard.png)
 
@@ -146,6 +149,10 @@ Klicka på **Nästa**.
 Du måste nu mappa kolumnrubrikerna från CSV-filen med en XDM-egenskap i **[!UICONTROL Demo System - Profile Dataset for CRM]**.
 
 Adobe Experience Platform har redan gjort några förslag åt dig genom att försöka länka [!UICONTROL Source Attributes] till [!UICONTROL Target Schema Fields].
+
+>[!NOTE]
+>
+>Om du ser några fel på mappningsskärmen behöver du inte oroa dig. Efter att ha följt instruktionerna nedan kommer dessa fel att åtgärdas.
 
 ![Datainmatning](./images/mapschema.png)
 
@@ -251,7 +258,7 @@ Låt oss begränsa identitetsdata för hela datauppsättningen. Håll pekaren ö
 
 ![Datainmatning](./images/pencil.png)
 
-Gå till **[!UICONTROL Identity Data]** så ser du att alternativet **[!UICONTROL I2]** är markerat. Det förutsätter att alla informationsdelar i den här datauppsättningen åtminstone är indirekt identifierbara för personen.
+Gå till **[!UICONTROL Identity Labels]** så ser du att alternativet **[!UICONTROL I2]** är markerat. Det förutsätter att alla informationsdelar i den här datauppsättningen åtminstone är indirekt identifierbara för personen.
 
 Klicka på **[!UICONTROL Save Changes]**.
 

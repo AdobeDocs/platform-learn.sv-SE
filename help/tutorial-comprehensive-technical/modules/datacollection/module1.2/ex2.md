@@ -4,9 +4,9 @@ description: Foundation - datainmatning - Konfigurera scheman och ange identifie
 kt: 5342
 doc-type: tutorial
 exl-id: 3cc1fbe3-1f40-45a3-a123-ee6f1463e7b5
-source-git-commit: acb941e4ee668248ae0767bb9f4f42e067c181ba
+source-git-commit: 2f53c8da2cbe833120fa6555c65b8b753bfa4f8d
 workflow-type: tm+mt
-source-wordcount: '2874'
+source-wordcount: '2891'
 ht-degree: 0%
 
 ---
@@ -140,7 +140,7 @@ Du har nu den här schemastrukturen på plats.
 ![Datainmatning](./images/schemastructurem.png)
 
 Din nya [!UICONTROL Field Group] är fortfarande tom, så nu måste du lägga till fält i [!UICONTROL Field Group].
-Klicka på din anpassade [!UICONTROL Field Group] i listan [!UICONTROL Field Group].
+Klicka på din anpassade [!UICONTROL Field Group] i listan [!UICONTROL Field Group] och klicka sedan på **Bläddra**.
 
 ![Datainmatning](./images/schemastructurem.png)
 
@@ -305,7 +305,7 @@ Innan du fortsätter måste du välja en **[!UICONTROL sandbox]**. [!UICONTROL s
 
 ![Datainmatning](./images/sb1.png)
 
-Klicka på **[!UICONTROL Schemas]** på menyn till vänster på skärmen i Adobe Experience Platform.
+I Adobe Experience Platform klickar du på **[!UICONTROL Schemas]** på menyn till vänster på skärmen och går till **Bläddra**.
 
 ![Datainmatning](./images/menuschemas.png)
 
@@ -446,10 +446,10 @@ Klicka på **[!UICONTROL Save]** om du vill spara ändringarna.
 ![Datainmatning](./images/applyidenee.png)
 
 Det är viktigt att komma ihåg att när data hämtas till det här schemat så behövs vissa fält.
-Fälten **[!UICONTROL _id]** och **[!UICONTROL timestamp]** är till exempel obligatoriska fält.
+Fälten **[!UICONTROL _id]** och **[!UICONTROL timestamp]** är till exempel obligatoriska fält, vilket är ett krav som ställs av klassen ExperienceEvent.
 
 - _id måste innehålla ett unikt ID för en specifik datainmatning
-- tidsstämpeln måste vara tidsstämpeln för den här träffen, i formatet **[!UICONTROL "YYYY-MM-DDTHH:MM:SSSZ"]**, till exempel: **[!UICONTROL "2024-11-18T07:20:000Z"]**
+- tidsstämpeln måste vara tidsstämpeln för den här träffen, i formatet **`"YYYY-MM-DDTHH:MM:SSSZ"`**, till exempel: **`"2024-11-18T07:20:000Z"`**
 
 Du har nu definierat ett schema, länkat befintligt och nyligen skapat [!UICONTROL Field Groups] och definierat identifierare.
 

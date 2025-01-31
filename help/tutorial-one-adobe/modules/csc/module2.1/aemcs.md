@@ -4,9 +4,9 @@ description: ADOBE EXPERIENCE MANAGER CLOUD SERVICE & EDGE DELIVERY SERVICES
 kt: 5342
 doc-type: tutorial
 exl-id: 52efb52c-103f-4171-a69e-0cddb142a0ed
-source-git-commit: cbe8d728d779795cc90ba6b3ad1b687eca5848bf
+source-git-commit: 2f53c8da2cbe833120fa6555c65b8b753bfa4f8d
 workflow-type: tm+mt
-source-wordcount: '199'
+source-wordcount: '233'
 ht-degree: 0%
 
 ---
@@ -42,6 +42,10 @@ I den här övningen ska du skapa ett grundläggande anpassat block för din web
 [2.1.5 Avancerat anpassat block](./ex5.md){target="_blank"}
 
 I den här övningen kommer du att utveckla ett avancerat anpassat block för din webbplats.
+
+[2.1.6 AEM Edge Delivery Services MarTech plugin](./ex6.md){target="_blank"}
+
+I den här övningen implementerar du pluginmodulen AEM MarTech. Med pluginmodulen AEM MarTech kan du snabbt skapa en komplett MarTech-hög för ditt AEM.
 
 [Sammanfattning och förmåner](./summary.md){target="_blank"}
 

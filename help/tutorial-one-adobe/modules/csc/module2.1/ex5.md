@@ -3,9 +3,10 @@ title: AEM CS - avancerat anpassat block
 description: AEM CS - avancerat anpassat block
 kt: 5342
 doc-type: tutorial
-source-git-commit: baa9b176213883559fafba9be19e0c5749623d56
+exl-id: fa299668-c902-4775-a540-7555ca461d3e
+source-git-commit: 4ab2a12a71c8a89963cbd47d5df2bda97bffd318
 workflow-type: tm+mt
-source-wordcount: '990'
+source-wordcount: '996'
 ht-degree: 0%
 
 ---
@@ -91,7 +92,7 @@ Spara ändringarna.
 
 Du har nu gjort flera ändringar i ditt projekt som behöver implementeras i GitHub-databasen igen. Öppna **GitHub Desktop** om du vill göra det.
 
-Du bör sedan se de 3 filer som du just redigerade under **Ändringar**. Granska ändringarna.
+Du bör sedan se de två filer som du just redigerade under **Ändringar**. Granska ändringarna.
 
 Ange ett namn för din PR, `js css`. Klicka på **Verkställ för huvudsidan**.
 
@@ -344,7 +345,7 @@ Du borde se det här då.
 
 ![Blockera](./images/blockadv20.png)
 
-Nästa steg: [Sammanfattning och fördelar](./summary.md){target="_blank"}
+Nästa steg: [2.1.6 AEM Edge Delivery Services MarTech plugin](./ex6.md){target="_blank"}
 
 [Gå tillbaka till modul 2.1](./aemcs.md){target="_blank"}
 

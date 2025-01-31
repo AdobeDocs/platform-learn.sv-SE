@@ -4,9 +4,9 @@ description: Foundation - datainmatning - från okänd till känd på webbplatse
 kt: 5342
 doc-type: tutorial
 exl-id: 08cb7892-4e1c-4646-9e3b-8ab008dfd947
-source-git-commit: 3a19e88e820c63294eff38bb8f699a9f690afcb9
+source-git-commit: 2f53c8da2cbe833120fa6555c65b8b753bfa4f8d
 workflow-type: tm+mt
-source-wordcount: '749'
+source-wordcount: '762'
 ht-degree: 0%
 
 ---
@@ -65,7 +65,11 @@ Då visas informationssidan för produkten. En Experience Event av typen **Produ
 
 ![Demo](./images/pv5.png)
 
-Öppna panelen Provile Viewer och titta på **Experience Events**.
+Öppna panelen Profilvisningsprogram och titta på dina **Experience Events**.
+
+>[!NOTE]
+>
+>Uppdatera sidan om du inte ser att händelsen visas omedelbart.
 
 ![Demo](./images/pv6.png)
 

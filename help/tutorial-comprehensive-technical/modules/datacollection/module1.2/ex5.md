@@ -4,7 +4,7 @@ description: Foundation - datainmatning - datainmatning från offlinekällor
 kt: 5342
 doc-type: tutorial
 exl-id: 21b84a77-4115-4ba7-b847-b236aa14bbdd
-source-git-commit: 8bdcd03bd38a6da98b82439ad86482cad5f4e684
+source-git-commit: 2f53c8da2cbe833120fa6555c65b8b753bfa4f8d
 workflow-type: tm+mt
 source-wordcount: '771'
 ht-degree: 0%
@@ -32,7 +32,7 @@ Om du vill kopiera blober eller filer till din Adobe Experience Platform Data La
 
 ![dlz-install-az-copy.png](./images/dlz1.png)
 
-- Hämta exempeldatafilen global-context-websiteinteractions.csv, som innehåller exempel på webbplatsinteraktioner och spara den i den mapp där du packade upp **azcopy**.
+- Hämta exempeldatafilen [global-context-websiteinteractions.csv](./../../../assets/csv/data-ingestion/global-context-websiteinteractions.csv) som innehåller exempel på webbplatsinteraktioner och spara den i den mapp där du packade upp **azcopy**.
 
 ![dlz-install-az-copy.png](./images/dlz2.png)
 
