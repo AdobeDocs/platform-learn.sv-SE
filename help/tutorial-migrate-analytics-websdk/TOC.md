@@ -10,9 +10,9 @@ level: Intermediate,Experienced
 doc-type: tutorial
 recommendations: catalog,noDisplay
 jira: KT-16755
-source-git-commit: 477d1dc9d626f18b6b1c397202ab9ba0d9cc3521
+source-git-commit: deac800691c130033e1d4c5c7424a3a87fc40830
 workflow-type: tm+mt
-source-wordcount: '116'
+source-wordcount: '96'
 ht-degree: 0%
 
 ---
@@ -24,24 +24,24 @@ ht-degree: 0%
 
 + [Skapa en valideringsrapportssvit](create-a-validation-report-suite.md)
 
-+ [Skapa och konfigurera ett datastream](create-and-configure-the-analytics-datastream.md)
++ [Skapa ett datastream](create-and-configure-the-analytics-datastream.md)
 
-+ [Lägg till och konfigurera Web SDK-tillägget](add-and-configure-the-web-sdk-extension.md)
++ [Lägg till Web SDK-tillägget](add-and-configure-the-web-sdk-extension.md)
 
 + [Skapa ett variabeldataelement](create-a-variable-data-element.md)
 
 + [Migrera standardregel för sidinläsning](migrate-your-default-page-load-rule.md)
 
-+ [Migrera egen kod till Web SDK](migrate-custom-code-to-the-web-sdk.md)
++ [Migrera egen kod](migrate-custom-code-to-the-web-sdk.md)
 
-+ [Bygg implementeringsändringarna i utvecklingsbiblioteket](build-the-implementation-changes.md)
++ [Bygg ett utvecklingsbibliotek](build-the-implementation-changes.md)
 
-+ [Felsöka och validera din SDK-migrering på webben](debug-and-validate-your-web-sdk-migration.md)
++ [Felsök och validera](debug-and-validate-your-web-sdk-migration.md)
 
 + [Migrera ytterligare sidregler](migrate-additional-page-rules.md)
 
 + [Migrera anpassade länkregler](migrate-custom-link-rules.md)
 
-+ [Ta bort Adobe Analytics-tilläggsobjekt](delete-analytics-extension-items.md)
++ [Ta bort Analytics-tillägget](delete-analytics-extension-items.md)
 
-+ [Publish övergången till staging och produktion](publish-the-migration.md)
++ [Publish till staging och produktion](publish-the-migration.md)
