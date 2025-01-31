@@ -4,7 +4,7 @@ description: CDP i realtid - Bygg en målgrupp och vidta åtgärder - Skicka må
 kt: 5342
 doc-type: tutorial
 exl-id: b041897b-4ee8-4ff8-a3bc-d953e2e42a1a
-source-git-commit: acb941e4ee668248ae0767bb9f4f42e067c181ba
+source-git-commit: 4cb6b284f675c78b22482f17c59c0d82f82a232a
 workflow-type: tm+mt
 source-wordcount: '1069'
 ht-degree: 0%
@@ -199,7 +199,7 @@ Om du nu går tillbaka till din demowebbplats och besöker produktsidan för Gal
 
 ![RTCDP](./images/atform13.png)
 
-Nästa steg: [2.3.6 Externa målgrupper](./ex6.md)
+Nästa steg: [2.3.6 Destinations SDK](./ex6.md)
 
 [Gå tillbaka till modul 2.3](./real-time-cdp-build-a-segment-take-action.md)
 

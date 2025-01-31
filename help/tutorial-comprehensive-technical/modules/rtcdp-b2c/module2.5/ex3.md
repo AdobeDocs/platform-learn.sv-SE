@@ -4,7 +4,7 @@ description: Skapa och konfigurera en anpassad webkrok
 kt: 5342
 doc-type: tutorial
 exl-id: bb712980-5910-4f01-976b-b7fcf03f5407
-source-git-commit: 7779e249b4ca03c243cf522811cd81370002d51a
+source-git-commit: ca4c53ba88bc6a256fc540091413f5efb05945ee
 workflow-type: tm+mt
 source-wordcount: '1107'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## Skapa en egen webkrok
 
-Gå till [https://pipedream.com/requestbin](https://pipedream.com/requestbin). Du har redan använt det här programmet i [Exercise 2.3.7 Destinations SDK](./../../../modules/rtcdp-b2c/module2.3/ex7.md)
+Gå till [https://pipedream.com/requestbin](https://pipedream.com/requestbin). Du har redan använt det här programmet i [Utgång 2.3.6-mål SDK](./../../../modules/rtcdp-b2c/module2.3/ex6.md)
 
 Om du inte har använt tjänsten än skapar du ett konto och skapar sedan en arbetsyta. När arbetsytan har skapats ser du något liknande.
 
@@ -56,7 +56,7 @@ Du kommer nu att ha den här. Klicka på **Spara**.
 >
 >I ovanstående sökväg görs en referens till **arc**. **arc** står för Adobe Resource Context och **arc** står alltid för det högsta tillgängliga objektet som är tillgängligt i Server Side-kontexten. Anrikningar och omvandlingar kan läggas till i det **arc**-objektet med Adobe Experience Platform Data Collection Server-funktioner.
 >
->I ovanstående sökväg görs en referens till **event**. **event** står för en unik händelse och Adobe Experience Platform Data Collection Server utvärderar alltid varje enskild händelse. Ibland kan du se en referens till **händelser** i nyttolasten som skickas av Web SDK-klientsidan, men i Adobe Experience Platform Data Collection Server utvärderas varje händelse individuellt.
+>I ovanstående sökväg görs en referens till **event**. **event** står för en unik händelse och Adobe Experience Platform Data Collection Server utvärderar alltid varje enskild händelse. Ibland kan du se en referens till **events** i nyttolasten som skickas av Web SDK Client Side, men i Adobe Experience Platform Data Collection Server utvärderas varje händelse individuellt.
 
 ## Uppdatera din Adobe Experience Platform Data Collection Server-egenskap: Skapa en regel
 
@@ -161,7 +161,7 @@ Om du nu navigerar på webbplatsen kommer du att se ytterligare nätverksförfr�
 
 ![Adobe Experience Platform Data Collection Setup](./images/hook5.png)
 
-Du har nu konfigurerat händelsevidarebefordran på serversidan av Web SDK/XDM-nyttolaster till en extern anpassad webkrok. I nästa övning kommer du att konfigurera ett liknande tillvägagångssätt, och du kommer att skicka samma data till Google Cloud Platform och AWS.
+Du har nu konfigurerat händelsevidarebefordran på serversidan av SDK/XDM-nyttolaster för webben till en extern anpassad webkrok. I nästa övning kommer du att konfigurera ett liknande tillvägagångssätt, och du kommer att skicka samma data till Google Cloud Platform och AWS.
 
 Nästa steg: [2.5.4 Vidarebefordra händelser till GCP Pub/Sub](./ex4.md)
 

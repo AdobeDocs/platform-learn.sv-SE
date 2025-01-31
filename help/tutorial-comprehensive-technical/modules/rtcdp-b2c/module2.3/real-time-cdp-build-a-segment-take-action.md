@@ -6,9 +6,9 @@ audience: Data Architect, Orchestration Engineer, Marketer
 doc-type: tutorial
 activity: develop
 exl-id: 147d9153-5742-4857-aae1-0ec434a1e626
-source-git-commit: bd46be455f88007174f7e6be9a1ce5f508edc09b
+source-git-commit: 5c4fc7fb2635aec959b31664e354f66efac075fe
 workflow-type: tm+mt
-source-wordcount: '338'
+source-wordcount: '323'
 ht-degree: 0%
 
 ---
@@ -56,11 +56,7 @@ Använd den målgrupp du skapat och skicka den till en S3-destination, som vanli
 
 Använd målgruppen som du skapade för att konfigurera en Experience Targeting Activity i Adobe Target.
 
-[2.3.6 Externa målgrupper](./ex6.md)
-
-Importera målgrupper från ett externt källsystem till Adobe Experience Platform.
-
-[2.3.7 Destinationer SDK](./ex7.md)
+[2.3.6 Destinationer SDK](./ex6.md)
 
 Konfigurera din egen destination med Destinations SDK.
 

@@ -5,9 +5,9 @@ user-guide-description: En praktisk självstudiekurs som handlar om många aspek
 hide: true
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-source-git-commit: 7532eed1074062451d6ac171629742dbdc9c3fdc
+source-git-commit: 4cb6b284f675c78b22482f17c59c0d82f82a232a
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '912'
 ht-degree: 2%
 
 ---
@@ -76,8 +76,7 @@ ht-degree: 2%
       + [2.3.3 Take Action: send your audience to DV360](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.3/ex3.md)
       + [2.3.4 Take Action: send your audience to an S3 destination](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.3/ex4.md)
       + [2.3.5 Take Action: send your målgrupp to Adobe Target](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.3/ex5.md)
-      + [2.3.6 Externa målgrupper](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.3/ex6.md)
-      + [2.3.7 Destinationer SDK](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.3/ex7.md)
+      + [2.3.6 Destinationer SDK](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.3/ex6.md)
       + [Sammanfattning och fördelar](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.3/summary.md)
    + 2.4 Real-Time CDP: Audience Activation till Microsoft Azure Event Hub {#module24}
       + [Översikt](/help/tutorial-comprehensive-technical/modules/rtcdp-b2c/module2.4/segment-activation-microsoft-azure-eventhub.md)
