@@ -2,9 +2,10 @@
 title: Slutförande
 description: Hur mäts färdigställandet?
 doc-type: multipage-overview
-source-git-commit: 8270f69dd04714e217ddbb4d125157799cba2940
+exl-id: 862c6daa-be6d-459e-afbb-6eb3431308a0
+source-git-commit: bbbcb2e60c514aa0785c26f63c2b5b8a7e50a8db
 workflow-type: tm+mt
-source-wordcount: '673'
+source-wordcount: '889'
 ht-degree: 0%
 
 ---
@@ -21,81 +22,77 @@ Nedan visas det förväntade korrekturet för varje modul.
 
 Det förväntade slutförandebeviset för modulen **Komma igång** är ID:t för det demosystemprojekt för webben som du har skapat.
 
-ID:t för Demo System-projektet för webbformat ser ut så här: `--demoProfileLdap-- - OCUC`.
+ID:t för Demo System-projektet för webbformat ser ut så här: `--demoProfileLdap-- - QIMU`.
 
 ![3](./assets/images/module0dtl.png)
 
-## 1.1 Adobe Experience Platform Data Collection och Web SDK-tillägget
+## 1.1 Adobe Experience Platform Data Collection och Web SDK
 
-Det förväntade slutförandebeviset för modulen **Datainsamling och Web SDK** är namnet på datainsamlingsegenskapen för webben.
+Det förväntade slutförandebeviset för modulen **Datainsamling och webb-SDK** är **miljö-ID** för datainsamlingsegenskapen för webb.
 
-Namnet på datainsamlingsegenskapen för webbformat ser ut så här: `--demoProfileLdap-- - Demo System (05/02/2022) (enablement) 1644046719474`.
+Miljö-ID:t för egenskapen Datainsamling för webbformat ser ut så här: `EN5211f7792b4442f8a45deb68f8902d3a`.
 
 ![3](./assets/images/module1dtl.png)
 
 ## 1.2 Datainmatning
 
-Det förväntade beviset på slutförande för modulen **Datainmatning** är datauppsättnings-ID:t för de två datauppsättningar som du har skapat.
+Det förväntade slutförandebeviset för modulen **Datainmatning** är dataflödes-ID:t för Source-anslutningen för datalandningszonen.
 
-Datauppsättnings-ID-formatet ser ut så här: **5f069724723ef41916a8b5d2**.
-
-`--demoProfileLdap-- - Demo System - Event Dataset for Website`
+Dataflödes-ID:t ser ut så här: **374c2c6d-f39a-4b0b-b568-40c41e6c4e8e**.
 
 ![3](./assets/images/completemodule2seg.png)
 
-`--demoProfileLdap-- - Demo System - Profile Dataset for Website`
-
-![3](./assets/images/completemodule2seg1.png)
-
 ## 1.3 Sammansatt målgrupp
 
-Det förväntade slutförandebeviset för modulen **Federated Audience Composition** är...
+Det förväntade slutförandebeviset för modulen **Federated Audience Composition** är ID:t för den Federated Data-modell som du skapade.
+
+ID:t för Federated Data Model ser ut så här: **DMO5110** och kan hämtas från URL:en enligt bilden nedan.
+
+![3](./assets/images/completemodule3fac.png)
 
 ## 2.1 Kundprofil i realtid
 
-Förväntat slutförandebevis för modulen **Kundprofil i realtid** är **Segment-ID** för segmentet som du skapade via gränssnittet `--demoProfileLdap-- - Male customers with interest in Montana Wind Jacket`.
+Det förväntade beviset på slutförande för modulen **Kundprofil i realtid** är **målgrupps-ID** för målgruppen som du skapade via användargränssnittet `--demoProfileLdap-- - Male customers with interest in iPhone 15 Pro`.
 
-Formatet för segment-ID ser ut så här: **8cb7034d-d4ae-4d26-a61f-a76559c12457**.
+Audience-ID:t ser ut så här: **81a9acbe-12e6-424b-b658-abba3a435c83**.
 
 ![3](./assets/images/completemodule3seg.png)
 
-
 ## 2.2 Intelligenta tjänster
 
-Det förväntade beviset på slutförande för modulen **Intelligenta tjänster** är ID:t för din **Kundtjänst för produktinköpsförmån**.
+Det förväntade beviset på slutförande för modulen **Intelligenta tjänster** är **Audience ID** för den målgrupp som du skapade via användargränssnittet `--demoProfileLdap-- - Customer AI High Propensity`.
 
-Formatet ser ut så här: **12729** och du kan hämta det från URL:en när du har öppnat tjänsten.
+Audience ID ser ut så här: **cb6db21d-8fa3-484a-93ac-25aa1ab48412**.
 
 ![12](./assets/images/completemodule10.png)
 
 ## 2.3 Real-Time CDP: Bygg en målgrupp och agera!
 
-Det förväntade slutförandebeviset för modulen **Real-Time CDP** är ID:t för din **Adobe Target-aktivitet**.
+Förväntat slutförandebevis för modulen **Real-Time CDP: Bygg en målgrupp och vidta åtgärder!** är ID:t för ditt **mål för SDK Webkrok**.
 
-Formatet ser ut så här: **11804**.
+ID:t för webkroks mål ser ut så här: **b5b4b959-3166-40e2-8279-8223d00c3987** och kan hämtas från URL:en som anges i bilden nedan.
 
 ![12](./assets/images/vec4.png)
 
-
 ## 2.4 Real-Time CDP: Audience Activation till Microsoft Azure Event Hub
 
-Det förväntade slutförandebeviset för modulen **RTCDP: EventHub** är ID:t för ditt **Microsoft Azure Event Hub**-mål i Adobe Experience Platform.
+Det förväntade slutförandebeviset för modulen **Real-Time CDP: Audience Activation till Microsoft Azure Event Hub** är ID:t för ditt **Microsoft Azure Event Hub** -mål i Adobe Experience Platform.
 
-Du hittar **Microsoft Azure Event Hub Mål-ID**, som ser ut så här: **fa3f7ce5-86fd-4096-bf7c-e586fdc096ba**:
+Du hittar **Microsoft Azure Event Hub Destination ID**, som ser ut så här: **43cf85bc-3d01-49fd-80c9-a2913db45e3c**, i den URL som anges nedan:
 
 ![14](./assets/images/azuredestid.png)
 
 ## 2.5 Real-Time CDP Connections: Event Forwarding
 
-Det förväntade slutförandebeviset för modulen **RTCDP-anslutningar** är ditt **Egenskap-ID för vidarebefordran av händelse**.
+Förväntat slutförandebevis för modulen **Real-Time CDP-anslutningar: Händelsevidarebefordran** är ditt **egenskaps-ID för händelsevidarebefordran**.
 
-Du hittar egenskaps-ID:t **för vidarebefordran av händelser**, som ser ut så här: **PR40f44184c88472e9c19d8d602aab0de**:
+Du hittar egenskaps-ID:t **för vidarebefordran av händelser**, som ser ut så här: **PRa18819171c1241dfb16d74a4993dd5b**, i URL:en som anges i bilden nedan:
 
 ![14](./assets/images/launchssfid.png)
 
 ## 2.6 Strömma data från Apache Kafka till Real-Time CDP
 
-Det förväntade slutförandebeviset för modulen **Apache Kafka** är ID:t för din källanslutning `--demoProfileLdap-- - Kafka`.
+Det förväntade slutförandebeviset för modulen **Direktuppspelningsdata från Apache Kafka till Real-Time CDP** är ID:t för din källanslutning `--demoProfileLdap-- - Kafka`.
 
 ID:t ser ut så här: **f843d50a-ee30-4ca8-a766-0e4f3d29a2f7**:
 
@@ -103,49 +100,49 @@ ID:t ser ut så här: **f843d50a-ee30-4ca8-a766-0e4f3d29a2f7**:
 
 ## 3.1 Adobe Journey Optimizer: Orchestration
 
-Förväntat slutförandebevis för modulen **AJO: Orchestration** är eventID för din `--demoProfileLdap--AccountCreationEvent`.
+Det förväntade slutförandebeviset för modulen **Adobe Journey Optimizer: Orchestration** är ID:t om resan du skapade.
 
-Formatet ser ut så här: **227402c540eb8f8855c6b2333adf6d54d7153d9d7d56fa475a686081c5 74736** .
+ID:t för resan ser ut så här, **594fa01f-1a3b-450c-ba09-b7e3ff377c0f**, och kan hämtas från URL:en som anges i bilden nedan.
 
 ![12](./assets/images/ajoo.png)
 
 ## 3.2 Adobe Journey Optimizer: Externa datakällor och anpassade åtgärder
 
-Förväntat slutförandebevis för modulen **AJO: Anpassade åtgärder** är eventID för händelsen `--demoProfileLdap--GeofenceEntry`.
+Det förväntade slutförandebeviset för modulen **Adobe Journey Optimizer: Externa datakällor och anpassade åtgärder** är ID:t för den resa du skapade.
 
-Formatet ser ut så här: **fa42ab7982ba55f039eacec24c1e32e5c51b310c67f0fa559ab49b89b63f493 4**.
+ID:t för resan ser ut så här: **6962d3bc-4f44-4f9c-b326-83978f245f2a** och kan hämtas från URL:en som anges i bilden nedan.
 
 ![12](./assets/images/jofinal.png)
 
 ## 3.3 Adobe Journey Optimizer: Offer decisioning
 
-Det förväntade slutförandebeviset för modulen **AJO: Erbjudanden** är ID:t för det **Erbjudandebeslut** som du skapade.
+Det förväntade slutförandebeviset för modulen **Adobe Journey Optimizer: Offer decisioning** är ID:t för det **beslut** som du skapade.
 
-Du hittar ID:t för **erbjudandebeslutet**, som ser ut så här **xcore:offer-activity:1122fcc4603ea499**, här:
+Du hittar **ID:t för beslut**, som ser ut så här: **dps:offer-activity:1a08ba4b529b2fb2** här:
 
 ![14](./assets/images/offers.png)
 
 ## 3.4 Adobe Journey Optimizer: Händelsebaserade resor
 
-Förväntat slutförandebevis för modulen **AJO: Events** är eventID för din `--demoProfileLdap--StoreEntryEvent`.
+Det förväntade slutförandebeviset för modulen **Adobe Journey Optimizer: Händelsebaserade resor** är ID:t för den resa du skapade.
 
-Formatet ser ut så här: **e3a8f0bdc0b609667cd96a72a6b1e5aafa0ddaf6ccf121c574e6a2030860a63**.
+ID:t för resan ser ut så här: **5f5efc7e-49f7-44c1-85df-b23482b38d32** och kan hämtas från URL:en som anges i bilden nedan.
 
 ![14](./assets/images/jojourneyid.png)
 
 ## 4.1 Customer Journey Analytics: Bygg en kontrollpanel med Analysis Workspace
 
-Det förväntade slutförandebeviset för modulen **CJA** är ID:t för ditt projekt `--demoProfileLdap-- - Omnichannel Analysis`.
+Det förväntade slutförandebeviset för modulen **Customer Journey Analytics: Skapa en instrumentpanel med Analysis Workspace** är ID:t för ditt projekt `--demoProfileLdap-- - Omnichannel Analysis`.
 
-Formatet ser ut så här: **6217344f6249ac70c726db60**. Du hittar det i URL:en när du har öppnat ditt projekt.
+Formatet ser ut så här: **677bcb247064db3c7de2a0e4**, du hittar det i URL:en när du har öppnat ditt projekt.
 
 ![12](./assets/images/cjacompletion.png)
 
 ## 4.2 Customer Journey Analytics: Importera och analysera data från Google Analytics i Adobe Experience Platform med BigQuery Source Connector
 
-Förväntat slutförandebevis för modulen **CJA: BigQuery** är ID:t för din **BigQuery**-anslutning.
+Det förväntade slutförandebeviset för modulen **Customer Journey Analytics: Importera och analysera Google Analytics-data i Adobe Experience Platform med BigQuery Source Connector** är ID:t för **BigQuery** -källanslutningen.
 
-Du hittar **BigQuery Connection ID**, som ser ut så här: **85a2394d-8b94-410c-a239-4d8b94b10c38**:
+Du hittar **BigQuery Connection ID**, som ser ut så här: **b63a810c-a8cc-4c6b-a57e-dcb7e3368cf8**:
 
 ![14](./assets/images/bqid.png)
 
@@ -153,8 +150,14 @@ Du hittar **BigQuery Connection ID**, som ser ut så här: **85a2394d-8b94-410c-
 
 Det förväntade slutförandebeviset för modulen **Query Service** är datauppsättnings-ID för din `--demoProfileLdap--_callcenter_interaction_analysis` - datauppsättning som du får när du har slutfört modulen.
 
-Formatet ser ut så här: **62076f68f14a9d194995d4e2**.
+ID:t ser ut så här: **675033c903fb3b2aefed8a0a**.
 
 ![12](./assets/images/completemodule7.png)
+
+![Tech Insiders](./assets/images/techinsiders.png){width="50px" align="left"}
+
+>[!NOTE]
+>
+>Om du har frågor kan du dela allmän feedback om dina förslag på framtida innehåll. Kontakta Tech Insiders direkt genom att skicka ett e-postmeddelande till **techinsiders@adobe.com**.
 
 [Gå tillbaka till Alla moduler](./overview.md)

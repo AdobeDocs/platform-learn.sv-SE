@@ -3,9 +3,9 @@ title: Innehållsstatus
 description: Innehållsstatus
 doc-type: multipage-overview
 exl-id: 75fe2d3d-d9f5-4e9c-8dde-928e9935c25f
-source-git-commit: a157c0874c8c21cf6481ef9f02bbf53ff7344407
+source-git-commit: bbbcb2e60c514aa0785c26f63c2b5b8a7e50a8db
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '256'
 ht-degree: 0%
 
 ---
@@ -35,5 +35,11 @@ Nedan visas en översikt över statusen för innehållet i den här självstudie
 | [5.1-frågetjänst](./modules/datadistiller/module5.1/query-service.md) | 04/12/2024 | Ja | – |
 
 {style="table-layout:auto"}
+
+![Tech Insiders](./assets/images/techinsiders.png){width="50px" align="left"}
+
+>[!NOTE]
+>
+>Om du har frågor kan du dela allmän feedback om dina förslag på framtida innehåll. Kontakta Tech Insiders direkt genom att skicka ett e-postmeddelande till **techinsiders@adobe.com**.
 
 [Gå tillbaka till Alla moduler](./overview.md)
