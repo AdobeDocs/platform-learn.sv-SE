@@ -1,11 +1,12 @@
 ---
-title: AEM CS - avancerat anpassat block
-description: AEM CS - avancerat anpassat block
+title: AEM CS - MarTech plugin
+description: AEM CS - MarTech plugin
 kt: 5342
 doc-type: tutorial
-source-git-commit: 2f53c8da2cbe833120fa6555c65b8b753bfa4f8d
+exl-id: 8a2c6327-8d3d-4048-bf89-9d4371e18e1b
+source-git-commit: 311dd09c901f1be07a4ee20cdc1f4597bd9a9410
 workflow-type: tm+mt
-source-wordcount: '242'
+source-wordcount: '240'
 ht-degree: 2%
 
 ---

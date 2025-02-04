@@ -3,9 +3,9 @@ title: Översikt - Teknisk självstudiekurs - en Adobe
 description: Omfattande teknisk självstudiekurs - en Adobe
 doc-type: multipage-overview
 exl-id: 5bc0d621-0662-4d94-80a0-b6c173c0ac9e
-source-git-commit: 007e35504d19c332da39d90d65f34960aaa9c09b
+source-git-commit: 5b15d54af26d67b4193a1ac4d5d62f5c62a37362
 workflow-type: tm+mt
-source-wordcount: '481'
+source-wordcount: '528'
 ht-degree: 2%
 
 ---
@@ -53,6 +53,12 @@ Om du vill använda den här självstudiekursen med din egen Adobe Experience Cl
 ## Förarbete
 
 Verifiera de program som krävs och som måste installeras på datorn [här](./prework.md){target="_blank"}.
+
+## Slutförande och certifiering
+
+Den här självstudiekursen är en del av en Adobe-certifieringskurs. Du kan registrera dig för kursen tillsammans med den här självstudiekursen genom att gå till [https://certification.adobe.com](https://certification.adobe.com).
+
+För varje modul som du slutför med hjälp av självstudiekursen nedan måste du skicka in ett bevis på slutförandet enligt [här](./completion.md).
 
 ## Innehåll
 

@@ -3,7 +3,7 @@ title: Slutförande
 description: Hur mäts färdigställandet?
 doc-type: multipage-overview
 exl-id: 862c6daa-be6d-459e-afbb-6eb3431308a0
-source-git-commit: bbbcb2e60c514aa0785c26f63c2b5b8a7e50a8db
+source-git-commit: 5b15d54af26d67b4193a1ac4d5d62f5c62a37362
 workflow-type: tm+mt
 source-wordcount: '889'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Nedan visas det förväntade korrekturet för varje modul.
 
 Det förväntade slutförandebeviset för modulen **Komma igång** är ID:t för det demosystemprojekt för webben som du har skapat.
 
-ID:t för Demo System-projektet för webbformat ser ut så här: `--demoProfileLdap-- - QIMU`.
+ID:t för Demo System-projektet för webbformat ser ut så här: `--aepUserLdap-- - QIMU`.
 
 ![3](./assets/images/module0dtl.png)
 
@@ -52,7 +52,7 @@ ID:t för Federated Data Model ser ut så här: **DMO5110** och kan hämtas frå
 
 ## 2.1 Kundprofil i realtid
 
-Det förväntade beviset på slutförande för modulen **Kundprofil i realtid** är **målgrupps-ID** för målgruppen som du skapade via användargränssnittet `--demoProfileLdap-- - Male customers with interest in iPhone 15 Pro`.
+Det förväntade beviset på slutförande för modulen **Kundprofil i realtid** är **målgrupps-ID** för målgruppen som du skapade via användargränssnittet `--aepUserLdap-- - Male customers with interest in iPhone 15 Pro`.
 
 Audience-ID:t ser ut så här: **81a9acbe-12e6-424b-b658-abba3a435c83**.
 
@@ -60,7 +60,7 @@ Audience-ID:t ser ut så här: **81a9acbe-12e6-424b-b658-abba3a435c83**.
 
 ## 2.2 Intelligenta tjänster
 
-Det förväntade beviset på slutförande för modulen **Intelligenta tjänster** är **Audience ID** för den målgrupp som du skapade via användargränssnittet `--demoProfileLdap-- - Customer AI High Propensity`.
+Det förväntade beviset på slutförande för modulen **Intelligenta tjänster** är **Audience ID** för den målgrupp som du skapade via användargränssnittet `--aepUserLdap-- - Customer AI High Propensity`.
 
 Audience ID ser ut så här: **cb6db21d-8fa3-484a-93ac-25aa1ab48412**.
 
@@ -92,7 +92,7 @@ Du hittar egenskaps-ID:t **för vidarebefordran av händelser**, som ser ut så 
 
 ## 2.6 Strömma data från Apache Kafka till Real-Time CDP
 
-Det förväntade slutförandebeviset för modulen **Direktuppspelningsdata från Apache Kafka till Real-Time CDP** är ID:t för din källanslutning `--demoProfileLdap-- - Kafka`.
+Det förväntade slutförandebeviset för modulen **Direktuppspelningsdata från Apache Kafka till Real-Time CDP** är ID:t för din källanslutning `--aepUserLdap-- - Kafka`.
 
 ID:t ser ut så här: **f843d50a-ee30-4ca8-a766-0e4f3d29a2f7**:
 
@@ -132,7 +132,7 @@ ID:t för resan ser ut så här: **5f5efc7e-49f7-44c1-85df-b23482b38d32** och ka
 
 ## 4.1 Customer Journey Analytics: Bygg en kontrollpanel med Analysis Workspace
 
-Det förväntade slutförandebeviset för modulen **Customer Journey Analytics: Skapa en instrumentpanel med Analysis Workspace** är ID:t för ditt projekt `--demoProfileLdap-- - Omnichannel Analysis`.
+Det förväntade slutförandebeviset för modulen **Customer Journey Analytics: Skapa en instrumentpanel med Analysis Workspace** är ID:t för ditt projekt `--aepUserLdap-- - Omnichannel Analysis`.
 
 Formatet ser ut så här: **677bcb247064db3c7de2a0e4**, du hittar det i URL:en när du har öppnat ditt projekt.
 
@@ -148,7 +148,7 @@ Du hittar **BigQuery Connection ID**, som ser ut så här: **b63a810c-a8cc-4c6b-
 
 ## 5.1 Query Service
 
-Det förväntade slutförandebeviset för modulen **Query Service** är datauppsättnings-ID för din `--demoProfileLdap--_callcenter_interaction_analysis` - datauppsättning som du får när du har slutfört modulen.
+Det förväntade slutförandebeviset för modulen **Query Service** är datauppsättnings-ID för din `--aepUserLdap--_callcenter_interaction_analysis` - datauppsättning som du får när du har slutfört modulen.
 
 ID:t ser ut så här: **675033c903fb3b2aefed8a0a**.
 

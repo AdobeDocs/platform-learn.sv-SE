@@ -1,12 +1,12 @@
 ---
-title: Skapa ett Cloud Manager-program
-description: Skapa ett Cloud Manager-program
+title: AEM CS - Skapa en dokumentbaserad webbplats
+description: AEM CS - Skapa en dokumentbaserad webbplats
 kt: 5342
 doc-type: tutorial
 exl-id: db366111-3873-4504-95f1-b240836c833f
-source-git-commit: 2fe7d2528132301f559f9d51faa9ad128f5d890f
+source-git-commit: 5b15d54af26d67b4193a1ac4d5d62f5c62a37362
 workflow-type: tm+mt
-source-wordcount: '761'
+source-wordcount: '763'
 ht-degree: 0%
 
 ---

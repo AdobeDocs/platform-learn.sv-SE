@@ -5,9 +5,9 @@ user-guide-description: En praktisk självstudiekurs som handlar om många aspek
 hide: true
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-source-git-commit: 4cb6b284f675c78b22482f17c59c0d82f82a232a
+source-git-commit: c85cd82a8d66b456a36d4915c1067f5c195139d1
 workflow-type: tm+mt
-source-wordcount: '912'
+source-wordcount: '913'
 ht-degree: 2%
 
 ---
@@ -27,6 +27,7 @@ ht-degree: 2%
       + [Skapa ditt datastream](/help/tutorial-comprehensive-technical/modules/gettingstarted/gettingstarted/ex3.md)
       + [Använda webbplatsen](/help/tutorial-comprehensive-technical/modules/gettingstarted/gettingstarted/ex4.md)
       + [Använda mobilappen](/help/tutorial-comprehensive-technical/modules/gettingstarted/gettingstarted/ex5.md)
+   + [PostBuster](/help/tutorial-comprehensive-technical/postbuster.md)
 
 + 1 datainsamling {#datacollection}
    + 1.1 Adobe Experience Platform Data Collection och Web SDK {#module11}
