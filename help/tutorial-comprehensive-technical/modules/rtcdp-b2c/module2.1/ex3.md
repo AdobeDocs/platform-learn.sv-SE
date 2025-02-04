@@ -4,9 +4,9 @@ description: Foundation - kundprofil i realtid - Visualisera din egen kundprofil
 kt: 5342
 doc-type: tutorial
 exl-id: fe07d873-f4de-437e-815e-e6e6c06a691c
-source-git-commit: acb941e4ee668248ae0767bb9f4f42e067c181ba
+source-git-commit: c49b41e1b033573dbebc9ced3a3f4071bf94d04e
 workflow-type: tm+mt
-source-wordcount: '2287'
+source-wordcount: '2299'
 ht-degree: 0%
 
 ---
@@ -132,7 +132,11 @@ Markera det nya Adobe I/O-projektet och klicka på **Spara**.
 
 ![Behörigheter](./images/perm4.png)
 
-## Postman-autentisering till Adobe I/O
+## Autentisering till Adobe I/O
+
+>[!IMPORTANT]
+>
+>Om du är anställd i Adobe följer du instruktionerna här för att använda [PostBuster](./../../../postbuster.md).
 
 Gå till [https://www.postman.com/downloads/](https://www.postman.com/downloads/).
 

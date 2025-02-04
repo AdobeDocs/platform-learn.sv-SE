@@ -4,9 +4,9 @@ description: Testa ditt beslut med API:t
 kt: 5342
 doc-type: tutorial
 exl-id: 75515a3e-5df8-42ed-95dc-daae60ee9c72
-source-git-commit: fc24f3c9fb1683db35026dc53d0aaa055aa87e34
+source-git-commit: c49b41e1b033573dbebc9ced3a3f4071bf94d04e
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '392'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 # 3.3.6 Testa ditt beslut med API:t
 
 ## 3.3.6.1 Arbeta med Offer decisionings-API:t med Postman
+
+>[!IMPORTANT]
+>
+>Om du är anställd i Adobe följer du instruktionerna här för att använda [PostBuster](./../../../postbuster.md).
 
 Hämta [den här Postman-samlingen för Offer decisioning](./../../../assets/postman/postman_offer-decisioning.zip) till skrivbordet och zippa upp den. Då får du den här:
 

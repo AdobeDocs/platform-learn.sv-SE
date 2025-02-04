@@ -4,7 +4,7 @@ description: CDP i realtid - Bygg en målgrupp och vidta åtgärder - Skicka må
 kt: 5342
 doc-type: tutorial
 exl-id: b041897b-4ee8-4ff8-a3bc-d953e2e42a1a
-source-git-commit: 4cb6b284f675c78b22482f17c59c0d82f82a232a
+source-git-commit: 5c4d00879be343e7a6cd6a773b383bad1a24e349
 workflow-type: tm+mt
 source-wordcount: '1069'
 ht-degree: 0%
@@ -23,7 +23,7 @@ Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska marke
 
 ## Verifiera ditt dataflöde
 
-Adobe Target-målet i Real-Time CDP är anslutet till den datastream som används för att importera data till kantnätverket i Adobe. Om du vill konfigurera ditt Adobe Target-mål måste du först kontrollera om ditt datastream redan är aktiverat för Adobe Target. Ditt datastram konfigurerades i [övning 0.2 Skapa ditt datastream](./../../../modules/gettingstarted/gettingstarted/ex2.md) och namngavs `--aepUserLdap-- - Demo System Datastream`.
+Adobe Target-målet i Real-Time CDP är anslutet till den datastream som används för att importera data till Adobe Edge-nätverket. Om du vill konfigurera ditt Adobe Target-mål måste du först kontrollera om ditt datastream redan är aktiverat för Adobe Target. Ditt datastram konfigurerades i [övning 0.2 Skapa ditt datastream](./../../../modules/gettingstarted/gettingstarted/ex2.md) och namngavs `--aepUserLdap-- - Demo System Datastream`.
 
 Bläddra nedåt på den vänstra menyn och klicka på **Datastreams**. Sök efter din datastream med namnet `--aepUserLdap-- - Demo System Datastream` i Datastreams. Klicka på ditt datastream för att öppna det.
 
@@ -159,11 +159,16 @@ Därefter måste du lägga till en personaliseringstoken från Adobe Experience 
 
 Innan du klickar på knappen **Lägg till** måste du gå till raden där du ser `... > h1").innerHTML="Hi there ";` och placera markören inom hakparenteserna efter ordet `there`, så här:
 
-`... > h1").innerHTML="Hi there ";`
+```
+... > h1").innerHTML="Hi there ";
+```
 
 Klicka sedan på knappen **Lägg till** som lägger till token, som uppdaterar koden så här:
 
-`... > h1").innerHTML="Hi there ${aep.person.name.firstName}";`
+```
+... > h1").innerHTML="Hi there ${aep.person.name.firstName}";
+```
+
 
 Klicka på **Nästa**.
 

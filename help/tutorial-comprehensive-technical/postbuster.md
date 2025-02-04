@@ -2,9 +2,10 @@
 title: PostBuster - anställda i Adobe
 description: PostBuster - anställda i Adobe
 doc-type: multipage-overview
-source-git-commit: 7b559bc183dbabdb0100681b675cd3c3b8123ba6
+exl-id: a798e9d7-bb99-4390-885f-5fbd2ef4cee9
+source-git-commit: 9c1b30dc0fcca6b4324ec7c8158699fa273cdc90
 workflow-type: tm+mt
-source-wordcount: '216'
+source-wordcount: '263'
 ht-degree: 0%
 
 ---
@@ -14,6 +15,15 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >Instruktionerna nedan är endast avsedda för anställda i Adobe.
+
+>[!IMPORTANT]
+>
+>Genom att följa instruktionerna nedan har du alla nödvändiga API-samlingar tillgängliga som kommer att användas i dessa övningar:
+>
+>- [2.1.3 Visa din egen kundprofil i realtid - API](./modules/rtcdp-b2c/module2.1/ex3.md)
+>- [2.3.6 Destinations SDK](./modules/rtcdp-b2c/module2.3/ex6.md)
+>- [3.3.6 Testa ditt beslut med API](./modules/ajo-b2c/module3.3/ex6.md)
+>- [5.1.8 Query Service API](./modules/datadistiller/module5.1/ex8.md)
 
 ## Installera PostBuster
 
@@ -39,7 +49,7 @@ Klicka på **Välj en fil**.
 
 ![PostBuster](./assets/images/pb4.png)
 
-Markera filen **postbuster.json**. Klicka på **Öppna**.
+Välj filen **aep_tutorial.json**. Klicka på **Öppna**.
 
 ![PostBuster](./assets/images/pb5.png)
 
@@ -77,6 +87,9 @@ Kopiera miljöplatshållaren nedan och klistra in den i **basmiljön**.
 	"SCOPES": [
 		"openid",
 		"AdobeID",
+		"read_organizations",
+		"additional_info.projectedProductContext",
+		"session",
 		"ff_apis",
 		"firefly_api"
 	],
@@ -85,10 +98,8 @@ Kopiera miljöplatshållaren nedan och klistra in den i **basmiljön**.
 	"IMS_ORG": "",
 	"access_token": "",
 	"IMS_TOKEN": "",
-	"AZURE_STORAGE_URL": "",
-	"AZURE_STORAGE_CONTAINER": "",
-	"AZURE_STORAGE_SAS_READ": "",
-	"AZURE_STORAGE_SAS_WRITE": ""
+	"QS_QUERY_ID": "",
+	"SANDBOX_NAME": ""
 }
 ```
 
@@ -96,7 +107,7 @@ Du borde ha den här då.
 
 ![PostBuster](./assets/images/pb12.png)
 
-När du har gått igenom modulen **Firefly-tjänster** bör din miljö se ut så här. Du behöver inte göra detta nu, det kommer att behandlas i ett senare skede.
+När du har skapat ett Adobe IO-projekt bör miljön se ut så här. Du behöver inte göra detta nu, det kommer att behandlas i ett senare skede.
 
 ![PostBuster](./assets/images/pb13.png)
 

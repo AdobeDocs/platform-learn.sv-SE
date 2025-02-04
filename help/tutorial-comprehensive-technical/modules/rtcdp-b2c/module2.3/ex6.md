@@ -4,9 +4,9 @@ description: CDP i realtid - destinationer SDK
 kt: 5342
 doc-type: tutorial
 exl-id: 5606ca2f-85ce-41b3-80f9-3c137f66a8c0
-source-git-commit: 4cb6b284f675c78b22482f17c59c0d82f82a232a
+source-git-commit: c49b41e1b033573dbebc9ced3a3f4071bf94d04e
 workflow-type: tm+mt
-source-wordcount: '1096'
+source-wordcount: '1121'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,17 @@ ht-degree: 0%
 
 I den här övningen kommer du att använda Adobe I/O igen för att ställa frågor till Adobe Experience Platform API:er. Om du inte har konfigurerat ditt Adobe I/O-projekt ännu går du tillbaka till [Exercise 3 i Module 2.1](../module2.1/ex3.md) och följer instruktionerna där.
 
-## Postman-autentisering till Adobe I/O
+>[!IMPORTANT]
+>
+>Om du är anställd i Adobe följer du instruktionerna här för att använda [PostBuster](./../../../postbuster.md).
 
-I den här övningen kommer du att använda Postman igen för att ställa frågor till Adobe Experience Platform API:er. Om du inte har konfigurerat ditt Postman-program ännu går du tillbaka till [Utgång 3 i modul 2.1](../module2.1/ex3.md) och följer instruktionerna där.
+## Autentisering till Adobe I/O
+
+I den här övningen kommer du att använda Postman igen för att ställa frågor till Adobe Experience Platform API:er. Om du inte har konfigurerat ditt Postman-program ännu går du tillbaka till [Exercise 3 i Module 2.1](../module2.1/ex3.md) och följer instruktionerna där.
+
+>[!IMPORTANT]
+>
+>Om du är anställd i Adobe följer du instruktionerna här för att använda [PostBuster](./../../../postbuster.md).
 
 ## Definiera slutpunkt och format
 
@@ -101,7 +109,7 @@ När du har klistrat in ovanstående kod måste du uppdatera fältet **urlBasedD
 
 ![Datainmatning](./images/sdkpm4.png)
 
-När fältet **urlBasedDesttion.url.value** har uppdaterats bör det se ut så här. Klicka på **Skicka**.
+När fältet **urlBasedDestination.url.value** har uppdaterats bör det se ut så här. Klicka på **Skicka**.
 
 ![Datainmatning](./images/sdkpm5.png)
 
