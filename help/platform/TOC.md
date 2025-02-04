@@ -5,9 +5,9 @@ user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
 auto-video-transcripts: true
-source-git-commit: 993cd46646c1f58af12c47cd5acc194d16bded76
+source-git-commit: bc8c62e5115a2c40c54ee200df49bc88e852d7c3
 workflow-type: tm+mt
-source-wordcount: '873'
+source-wordcount: '881'
 ht-degree: 6%
 
 ---
@@ -54,6 +54,7 @@ ht-degree: 6%
    + [Validera svar](/help/platform/ai-assistant/validate-responses.md)
    + [Identifieringspanelen](/help/platform/ai-assistant/discoverability-panel.md)
    + [Hitta oanvända målgrupper](/help/platform/ai-assistant/find-unused-audiences.md)
+   + [Driftsinsikter](/help/platform/ai-assistant/operational-insights.md)
    + [Effektanalys](/help/platform/ai-assistant/impact-analysis.md)
    + [Säkerhet - översikt](/help/platform/ai-assistant/security-overview.md)
 + Målgrupper och segmentering {#audiences}
@@ -141,6 +142,8 @@ ht-degree: 6%
    + [Översikt över identitets- och identitetsdiagram](/help/platform/identities/understanding-identity-and-identity-graphs.md)
    + [Märk, importera och verifiera identitetsdata](/help/platform/identities/label-ingest-and-verify-identity-data.md)
    + [Visa identitetsdiagram](/help/platform/identities/view-identity-graphs.md)
+   + Länkningsregler för identitetsdiagram {#graph-linking-rules}
+      + [Diagramsimulering](/help/platform/identities/identity-graph-linking-rules/graph-simulation.md)
 + Intelligenta tjänster {#intelligent-services}
    + [Översikt](/help/platform/intelligent-services/introduction-to-intelligent-services.md)
    + [Översikt över AI för attribuering](/help/platform/intelligent-services/introduction-to-attribution-ai.md)
