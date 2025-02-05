@@ -5,9 +5,9 @@ solution: Data Collection, Analytics
 feature: Web SDK
 jira: KT-16760
 exl-id: 783b464e-2974-41a1-9949-ac3ac0c786fc
-source-git-commit: 7c0a6c769d56b3e56a5667d5aeff47b55ab6dc33
+source-git-commit: 2150ead50fee06b434d996183a959ad5f01dd2a8
 workflow-type: tm+mt
-source-wordcount: '1259'
+source-wordcount: '1258'
 ht-degree: 0%
 
 ---
@@ -54,11 +54,9 @@ I den här aktiviteten skapar vi en Web SDK-åtgärd som motsvarar åtgärden **
 
 1. Välj **Adobe Experience Platform Web SDK** i listrutan Tillägg.
 1. Välj **Uppdatera variabel** i listrutan Åtgärdstyp.
+1. Se till att **dataelementet** som listas högst upp på den högra panelen verkligen är ditt nya variabeldataelement.
 1. Markera objektet **Analytics** i dataobjektet på den högra panelen
-1. Se även till att det dataelement som visas högst upp på den högra panelen verkligen är ditt nya dataelement av variabeltyp.
-
-   ![Uppdatera variabelåtgärd](assets/update-variable-action-analytics.jpg)
-
+   ![Uppdatera variabelåtgärd](assets/define-update-variable-action.jpg)
 1. Ändra nu alternativknappen till **Ange JSON eller dataelement** och klistra in koden som du kopierade i föregående steg från Ange variabler i det här kodfönstret. Kom ihåg att det vi visar här i självstudiekursen bara är exempel. Du kopierar och klistrar in dina egna variabler.
 
    ![Ny inklistring av SDK-webbkod](assets/new-websdk-code-paste.jpg)
