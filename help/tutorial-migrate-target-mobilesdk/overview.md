@@ -3,9 +3,9 @@ title: Migrera från Adobe Target till Adobe Journey Optimizer - mobiltillägg f
 description: Lär dig hur du migrerar din mobilappsimplementering från Adobe Target till Adobe Journey Optimizer - Beslutstillägg
 last-substantial-update: 2023-02-23T00:00:00Z
 exl-id: 32363b95-b6ad-44af-a3b0-e1fbbbf5a8f1
-source-git-commit: 6e442413c178e76183f88454d97d3896f8efa8bc
+source-git-commit: f3fd5f45412900dcb871bc0b346ce89108fa8913
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Adobe Experience Platform Mobile SDK ger total interaktion i era mobilapplikatio
 
 ## Viktiga fördelar
 
-Några av fördelarna med förlängningen av beslutet är:
+Några av fördelarna med Adobe Journey Optimizer Decision Extension jämfört med Target-tillägget är:
 
 * Snabbare delning av målgrupper från [Real-time Customer Data Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/experience-cloud/next-hit-personalization.html)
 * Integrera Target med Journey Optimizer för att stödja [leverans av Offer decisioning](https://experienceleague.adobe.com/docs/target/using/integrate/ajo/offer-decision.html)
@@ -26,21 +26,6 @@ Några av fördelarna med förlängningen av beslutet är:
 * Ytterligare implementeringsflexibilitet för utvecklare
 
 Den största fördelen för Target-kunder med migrering är förmodligen integrering med Real-time Customer Data Platform. Real-Time CDP erbjuder enastående målgruppsfunktioner baserat på alla data som inhämtas till Experience Platform och dess kapacitet för kundprofiler i realtid. Ett inbyggt ramverk för datastyrning automatiserar ansvarsfull användning av dessa data. Med Customer AI kan ni enkelt använda maskininlärningsmodeller för att konstruera benägenhets- och bortfallsmodeller vars utdata kan delas tillbaka till Adobe Target. Slutligen kan kunder som har tillvalet Healthcare and Privacy &amp; Security Shield använda funktionen för medgivande för att enkelt tillämpa individuella kunders samtycke. Platform Mobile SDK och Decisioning är ett krav för att du ska kunna använda dessa Real-Time CDP-funktioner i din mobilkanal.
-
-## Utbildningsmål
-
-I slutet av den här självstudiekursen kan du:
-
-* Punkt 1
-* Punkt 2
-
-
-## Förhandskrav
-
-För att slutföra den här självstudiekursen bör du först:
-
-* Punkt 1
-* Punkt 2
 
 
 >[!NOTE]

@@ -1,54 +1,51 @@
 ---
-title: Planering - Migrera från Adobe Target till Adobe Journey Optimizer - mobiltillägg för beslut
-description: Lär dig planera Adobe Target-implementeringen från at.js 2.x till Adobe Experience Platform Web SDK.
-source-git-commit: afbc8248ad81a5d9080a4fdba1167e09bbf3b33d
+title: Planera migreringen - Migrera från Adobe Target till Adobe Journey Optimizer - Bestämning av mobiltillägg
+description: Lär dig mer om skillnaderna mellan at.js och Platform Web SDK och hur du planerar din migreringssatsning.
+exl-id: 86849319-d2ad-4338-aa1a-d307d8807d4a
+source-git-commit: f3fd5f45412900dcb871bc0b346ce89108fa8913
 workflow-type: tm+mt
-source-wordcount: '199'
+source-wordcount: '644'
 ht-degree: 0%
 
 ---
 
-# Planera målmigreringen till beslutstillägget
+# Planera migreringen
 
-Innan du uppgraderar Target från Target-tillägget till Decisioning-tillägget i din mobilapp bör du utvärdera den aktuella implementeringen.
+Hur stor insats du ska göra för att migrera från måltillägget till beslutstillägget beror på hur komplex din nuvarande implementering och vilka produktfunktioner som används är.
 
-## Utvärdera aktuell implementering av måltillägg
+Oavsett hur enkel eller komplex implementeringen är är det viktigt att du förstår ditt nuvarande läge fullständigt innan du migrerar. Den här guiden hjälper dig att bryta ned komponenterna i den aktuella implementeringen och utveckla en hanterbar plan för att migrera varje del.
 
-Det första steget mot en framgångsrik migrering är att ha en god förståelse för den aktuella implementeringen av måltillägget. Det finns funktioner, funktioner och anpassad kod som du kan använda och som behöver uppdateras. Tänk på följande när du utvärderar:
+Migreringsprocessen omfattar följande viktiga steg:
 
-### Vilka funktioner stöds?
+1. Utvärdera er nuvarande implementering och fastställa en migreringsstrategi
+1. Konfigurera de initiala komponenterna för anslutning till Adobe Experience Platform Edge Network
+1. Uppdatera den grundläggande implementeringen för att ersätta måltillägget och beslutstillägget
+1. Förbättra SDK-implementeringen för dina specifika användningsfall. Detta kan innebära att ytterligare parametrar skickas, att svarstoken används med mera.
+1. Uppdatera objekt i Target-gränssnittet, till exempel profilskript, aktiviteter och målgruppsdefinitioner
+1. Validera den slutliga implementeringen innan du byter i produktionsmiljön
 
-<!--Platform Web SDK is under continuous active development and features and enhancements are added regularly. As you evaluate your current at.js implementation, refer to the [supported use cases](https://github.com/orgs/adobe/projects/18/views/1) page for the latest information.-->
+## Viktiga skillnader mellan Target-tillägget och Decisioneringstillägget
 
-### Vilka funktioner använder du idag?
+Innan du startar migreringsprocessen är det viktigt att förstå skillnaderna mellan måltillägget och beslutstillägget.
 
-<!--Platform Web SDK is a new library that consolidates all Adobe solutions for the websites into a single SDK. This enables tighter integration and enables new capabilities unique to Adobe Experience Platform. However, this also means at.js functions are not backwards compatible with Platform Web SDK. As you evaluate your current implementation, make note of the following:
+### Operativa skillnader
 
-- at.js functions such as `getOffer()` and `applyOffer()`
-- Modifications to Target's global settings
-- Integration with Adobe Analytics
-- Use of a flicker mitigation script
-- Use of response tokens
-- Use of mbox, profile, and entity parameters
-- Custom code unique to your implementation-->
+| | Mål at.js 2.x | Platform Web SDK |
+|---|---|---|
+| Process | Ändringar i en Target-implementering kan följa en process som har en annan inriktning eller QA-krav än andra program som Analytics. | Ändringar av en implementering av ett beslutstillägg bör omfatta alla program i senare led och QA- och publiceringsprocessen bör anpassas i enlighet med detta. |
+| Collaboration | Data som är specifika för Target kan skickas direkt i Target-anropen. Om rapportkällan för Target är Adobe Analytics kan data som är specifika för Target också skickas till Adobe Analytics när lämpliga spårningsmetoder i tillägget Target anropas för visning av målinnehåll och interaktion. | Data som skickas i anrop till beslutstillägg kan vidarebefordras till både Target och Analytics om Target-rapportkällan är Adobe Analytics, Adobe Analytics är aktiverat i dataströmmen och lämpliga spårningsmetoder i Beslutstillägg anropas när Target-innehåll visas och interagerar med det. |
 
-### Vilken migreringsstrategi tänker du använda?
+### Tekniska skillnader
 
-<!--Once you have revisited your at.js implementation, you need to determine a migration approach. There are two options:
-
-- Migrate all Adobe applications at once across the entire site
-- Migrate on a page-by-page basis
-
-Because Platform Web SDK combines and enables multiple Adobe applications, you must coordinate the Target migration of other Adobe applications like Analytics and Audience Manager. All Adobe libraries on a given page should be migrated at the same time. A mixed implementation of Platform Web SDK for Target and AppMeasurement for Analytics on a particular page is not supported. However, a mixed implementation across different pages is supported, for example Platform Web SDK on page A, and at.js with AppMeasurement on page B.
-
-As you migrate, you should plan on following your company's process for testing and releasing new code and use things like development, qa, and staging environments before you release to production.-->
-
-<!--
->[!CAUTION]
->
->Redirect offers are not supported in page-by-page migrations if redirecting from a page with one library to a page with a different library
--->
-
+| | Måltillägg | Beslutstillägg |
+|---|---|---|
+| Beroenden | Endast SDK med Mobile Core | Använder Mobile Core och Edge Network SDK |
+| Biblioteksfunktioner | Stöder endast hämtning av innehåll från Adobe Target | Stöd för hämtning av innehåll från Adobe Target och Offer decisioning |
+| Begäranden | Målsamtal är i stort sett oberoende av andra nätverksanrop | Målnätverksanrop köas tillsammans med nätverksanrop för andra Edge-baserade lösningar som Messaging i Edge SDK och utförs seriellt. |
+| Edge Network | Använder målservervärdet eller Adobe Experience Cloud Edge Network med klientkoden (clientcode.tt.omtrdc.net), som båda anges i [målkonfigurationen](https://developer.adobe.com/client-sdks/solution/adobe-target/#configure-the-target-extension-in-the-data-collection-ui) i användargränssnittet för datainsamling | Använder den Edge-nätverksdomän som anges i Adobe Experience Platform [Edge Network-konfiguration](https://developer.adobe.com/client-sdks/edge/edge-network/#configure-the-edge-network-extension-in-data-collection-ui) i användargränssnittet för datainsamling. |
+| Grundläggande terminologi | mbox, TargetParameters | DecisionScope, Map (Android)/Dictionary (iOS) för målparametrar |
+| Standardinnehåll | Tillåter att klientsidans standardinnehåll skickas i TargetRequest, som returneras om nätverksanropet misslyckas eller resulterar i fel. | Det går inte att skicka standardinnehåll på klientsidan. Returnerar inte något innehåll om nätverksanropet misslyckas eller resulterar i fel. |
+| Målparametrar | Tillåter att globala TargetParameters skickas per begäran och olika TargetParameters per mbox | Tillåter att globala TargetParameters skickas endast per begäran |
 
 Granska sedan den detaljerade [jämförelsen av måltillägget och beslutstillägget](detailed-comparison.md) för att få en bättre förståelse för de tekniska skillnaderna och identifiera områden som kräver ytterligare fokus.
 
