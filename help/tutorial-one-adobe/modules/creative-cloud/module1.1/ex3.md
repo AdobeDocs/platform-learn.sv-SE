@@ -6,18 +6,18 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 60eecc24-1713-4fec-9ffa-a3186db1a8ca
-source-git-commit: 8e410ad378d61f23d1d880d12e57f9d5e4e523c1
+source-git-commit: e6a549441d425801f2a554da9af803dca646009e
 workflow-type: tm+mt
-source-wordcount: '935'
+source-wordcount: '952'
 ht-degree: 0%
 
 ---
 
-# Arbeta med Photoshop API:er
+# 1.1.3 Arbeta med Photoshop API:er
 
 Lär dig hur du arbetar med Photoshop API:er och Firefly Services.
 
-## Uppdatera integreringen med Adobe I/O
+## 1.1.3.1 Uppdatera integreringen med Adobe I/O
 
 1. Gå till [https://developer.adobe.com/console/home](https://developer.adobe.com/console/home){target="_blank"}.
 
@@ -51,7 +51,11 @@ Ditt Adobe I/O-projekt har nu uppdaterats för att fungera med API:er för Photo
 
 ![Azure Storage](./images/ps6.png)
 
-## Interagera programmatiskt med en PSD-fil
+## 1.1.3.2 Interagera med PSD
+
+>[!IMPORTANT]
+>
+>Om du är anställd i Adobe följer du instruktionerna här för att använda [PostBuster](./../../../postbuster.md).
 
 1. Hämta [citisign-fiber.psd](./../../../assets/ff/citisignal-fiber.psd){target="_blank"} till skrivbordet.
 

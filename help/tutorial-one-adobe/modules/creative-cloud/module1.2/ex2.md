@@ -6,18 +6,18 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 23ebf8b4-3f16-474c-afe1-520d88331417
-source-git-commit: e419f07dbef519d9cf2f0100878e4cc880ad5f94
+source-git-commit: e6a549441d425801f2a554da9af803dca646009e
 workflow-type: tm+mt
-source-wordcount: '1745'
+source-wordcount: '1749'
 ht-degree: 0%
 
 ---
 
-# Använda Adobe API:er i Workfront Fusion
+# 1.2.2 Använda Adobe API:er i Workfront Fusion
 
 Lär dig hur du använder Adobe API:er i Workfront Fusion.
 
-## Använd Firefly-text till bild-API med Workfront Fusion
+## 1.2.2.1 Använda Firefly-text till bild-API med Workfront Fusion
 
 1. Håll pekaren över den andra **Ange flera variabler**-noden och välj **+** om du vill lägga till en annan modul.
 
@@ -115,7 +115,7 @@ Skärmen bör se ut så här.
 
 ![WF Fusion](./images/wffusion61.png)
 
-## Använda Photoshop API med Workfront Fusion
+## 1.2.2.2 Använda Photoshop API med Workfront Fusion
 
 1. Välj **skiftnyckel** mellan noderna **Ange stödtoken** och **Firefly T2I**. Välj **Lägg till en router**.
 

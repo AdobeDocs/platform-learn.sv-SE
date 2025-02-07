@@ -6,18 +6,18 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 42e260e0-8af0-4d71-b634-48c1966bd912
-source-git-commit: 53ff5158eec2693703b20e7841fffbec72288210
+source-git-commit: e6a549441d425801f2a554da9af803dca646009e
 workflow-type: tm+mt
-source-wordcount: '694'
+source-wordcount: '698'
 ht-degree: 0%
 
 ---
 
-# Komma igång med Workfront Fusion
+# 1.2.1 Komma igång med Workfront Fusion
 
 Lär dig hur du använder Workfront Fusion och Adobe I/O för att hämta API:er för Adobe Firefly Services.
 
-## Skapa nytt scenario
+## 1.2.1.1 Skapa nytt scenario
 
 1. Gå till [https://experience.adobe.com/](https://experience.adobe.com/). Öppna **Workfront Fusion**.
 
@@ -59,7 +59,7 @@ Lär dig hur du använder Workfront Fusion och Adobe I/O för att hämta API:er 
 
    ![WF Fusion](./images/wffusion8.png)
 
-## Konfigurera autentisering av Adobe I/O
+## 1.2.1.2 Konfigurera autentisering med Adobe I/O
 
 Nu måste du konfigurera de variabler som behövs för att autentisera mot Adobe I/O. I föregående övning skapade du ett Adobe I/O-projekt. Variablerna i det Adobe I/O-projektet måste nu definieras i Workfront Fusion.
 

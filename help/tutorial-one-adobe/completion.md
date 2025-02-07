@@ -1,10 +1,11 @@
 ---
-title: Slutförande
+title: Slutförd - en självstudiekurs om Adobe
 description: Hur mäts färdigställandet?
 doc-type: multipage-overview
-source-git-commit: 5b15d54af26d67b4193a1ac4d5d62f5c62a37362
+exl-id: 24d0a6a8-effa-4335-881e-914305bcd348
+source-git-commit: 5c7ab69877cbfdf10088c261c0866790b0d89552
 workflow-type: tm+mt
-source-wordcount: '424'
+source-wordcount: '425'
 ht-degree: 0%
 
 ---
@@ -21,7 +22,7 @@ Nedan visas det förväntade korrekturet för varje modul.
 
 Det förväntade slutförandebeviset för modulen **Komma igång** är ID:t för det demosystemprojekt för webben som du har skapat.
 
-ID:t för Demo System-projektet för webbformat ser ut så här: `--demoProfileLdap-- - 8ERG`.
+ID:t för Demo System-projektet för webbformat ser ut så här: `--aepUserLdap-- - 8ERG`.
 
 ![3](./assets/images/module0dtl.png)
 
@@ -35,7 +36,7 @@ URL:en ser ut så här: `https://ldap.blob.core.windows.net/folder/citisignal-fi
 
 ## 1.2 Automatisering av arbetsflöden med Workfront Fusion
 
-Det förväntade slutförandebeviset för modulen **Automatisering av Creative Workflow med Workfront Fusion** är **URL** för webkroken som skapades i övning 1.2.3 efter att du gått igenom steget **Aktivera ditt scenario med en webkrok**.
+Det förväntade beviset på slutförande för modulen **Automatisering av Creative Workflow med Workfront Fusion** är **URL** för den webkrok som skapades i övning 1.2.3, efter att ha gått igenom steget **Aktivera ditt scenario med en webkrok**.
 
 URL:en ser ut så här: `https://hook.fusion.adobe.com/tuqxu1k4rbf7xdiiqheswzib8iv5t0jh`.
 
@@ -79,7 +80,7 @@ Förväntat slutförandebevis för modulen **Adobe Journey Optimizer: Översätt
 
 Det förväntade slutförandebeviset för modulen **Adobe Journey Optimizer: Offer decisioning** är ID:t för det **beslut** som du skapade.
 
-Du hittar **ID:t för beslut**, som ser ut så här: **dps:offer-activity:1a08ba4b529b2fb2** här:
+Du hittar **ID:t för beslut**, som ser ut så här **`dps:offer-activity:1a08ba4b529b2fb2`**, här:
 
 ![14](./assets/images/offers.png)
 

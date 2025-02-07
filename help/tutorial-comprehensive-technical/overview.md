@@ -1,11 +1,11 @@
 ---
-title: Översikt
+title: Översikt - Omfattande teknisk självstudiekurs för AEP och appar
 description: Utgångspunkt för datatekniker, dataanalytiker, dataarkitekter, datavetenskaper, Orchestration Engineers och Marketers för att få en fullständig förståelse för affärsvärdet hos Adobe Experience Platform och alla dess programtjänster.
 doc-type: multipage-overview
 exl-id: 88c19383-c185-40f0-b118-6cb82db0ce0e
-source-git-commit: bd46be455f88007174f7e6be9a1ce5f508edc09b
+source-git-commit: 3b3c62499bfed86ab13a657a816424879cab4f42
 workflow-type: tm+mt
-source-wordcount: '1251'
+source-wordcount: '1258'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ Du kan hitta många intressanta videor från vårt Tech Academy-webbseminarium, 
 
 ## Slutförande och certifiering
 
-Den här självstudiekursen är en del av en Adobe-certifieringskurs. Du kan registrera dig för kursen tillsammans med den här självstudiekursen genom att gå till [https://certification.adobe.com](https://certification.adobe.com).
+Den här självstudiekursen är en del av en Adobe-certifieringskurs. Du kan registrera dig för kursen tillsammans med den här självstudiekursen genom att gå till [https://certification.adobe.com/courses/1258](https://certification.adobe.com/courses/1258).
 
 För varje modul som du slutför med hjälp av självstudiekursen nedan måste du skicka in ett bevis på slutförandet enligt [här](./completion.md).
 

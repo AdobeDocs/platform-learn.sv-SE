@@ -1,18 +1,20 @@
 ---
-title: Slutförande
+title: Slutförd - Teknisk självstudiekurs för Adobe Experience Platform
 description: Hur mäts färdigställandet?
 doc-type: multipage-overview
 exl-id: 862c6daa-be6d-459e-afbb-6eb3431308a0
-source-git-commit: 5b15d54af26d67b4193a1ac4d5d62f5c62a37362
+source-git-commit: 3b3c62499bfed86ab13a657a816424879cab4f42
 workflow-type: tm+mt
-source-wordcount: '889'
+source-wordcount: '891'
 ht-degree: 0%
 
 ---
 
 # Hur mäts Slutförande?
 
-Gå till [https://certification.adobe.com](https://certification.adobe.com) och gå till kursen **XXX**.
+Gå till [https://certification.adobe.com/courses/1258](https://certification.adobe.com/courses/1258).
+
+![3](./assets/images/certcourse.png)
 
 För att slutföra en modul måste du tillhandahålla ett bevis på att du är klar.
 

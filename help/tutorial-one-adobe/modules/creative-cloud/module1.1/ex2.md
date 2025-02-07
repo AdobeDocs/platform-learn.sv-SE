@@ -1,368 +1,378 @@
 ---
-title: Optimize your Firefly Process using Microsoft Azure and Presigned URLs
-description: Learn how to optimize your Firefly process using Microsoft Azure and presigned URLs
+title: Optimera Firefly-processen med Microsoft Azure och försignerade URL:er
+description: Lär dig hur du optimerar din Firefly-process med Microsoft Azure och försignerade URL:er
 role: Developer
 level: Beginner
 jira: KT-5342
 doc-type: tutorial
 exl-id: 5f9803a4-135c-4470-bfbb-a298ab1fee33
+source-git-commit: e6a549441d425801f2a554da9af803dca646009e
+workflow-type: tm+mt
+source-wordcount: '1386'
+ht-degree: 0%
+
 ---
-# Optimize your Firefly process using Microsoft Azure and presigned URLs
 
-Learn how to optimize your Firefly process using Microsoft Azure and presigned URLs.
+# 1.1.2 Optimera Firefly-processen med Microsoft Azure och försignerade URL:er
 
-## Create an Azure Subscription
+Lär dig hur du optimerar Firefly-processen med Microsoft Azure och försignerade URL:er.
+
+## 1.1.2.1 Skapa en Azure-prenumeration
 
 >[!NOTE]
 >
->If you already have an existing Azure Subscription, you can skip this step. Please proceed with the next exercise in that case.
+>Om du redan har en befintlig Azure-prenumeration kan du hoppa över det här steget. Fortsätt med nästa övning i så fall.
 
-1. Go to [https://portal.azure.com](https://portal.azure.com){target="_blank"} and login with your Azure account. If you don't have one, please use your personal email address to create your Azure account.
+1. Gå till [https://portal.azure.com](https://portal.azure.com){target="_blank"} och logga in med ditt Azure-konto. Om du inte har någon, använd din personliga e-postadress för att skapa ditt Azure-konto.
 
-    ![Azure Storage](./images/02azureportalemail.png)
+   ![Azure Storage](./images/02azureportalemail.png)
 
-    After successful login you should see the following screen:
+   När inloggningen är klar visas följande skärm:
 
-    ![Azure Storage](./images/03azureloggedin.png)
+   ![Azure Storage](./images/03azureloggedin.png)
 
-1. On the left menu select **All Resources**, the Azure subscription screen appears if you are not yet subscribed. 
+1. På den vänstra menyn väljer du **Alla resurser**. Azure-prenumerationsskärmen visas om du inte har prenumererat ännu.
 
-1. If you are not subscribed, select **Start with an Azure free Trial**. 
+1. Om du inte prenumererar väljer du **Starta med en kostnadsfri provversion av Azure**.
 
-    ![Azure Storage](./images/04azurestartsubscribe.png)
+   ![Azure Storage](./images/04azurestartsubscribe.png)
 
-1. Fill in the Azure subscription form and provide your mobile phone and credit card for activation (you will have a free tier for 30 days and you will not be charged, unless you upgrade).
+1. Fyll i Azure-prenumerationsformuläret och ange din mobiltelefon och ditt kreditkort för aktivering (du har en kostnadsfri nivå i 30 dagar och du debiteras inte om du inte uppgraderar).
 
-    When the subscription process is finished you are good to go.
+   När prenumerationen är klar är du redo att gå.
 
-    ![Azure Storage](./images/06azuresubscriptionok.png)
+   ![Azure Storage](./images/06azuresubscriptionok.png)
 
-## Create Azure Storage Account
+## 1.1.2.2 Skapa Azure Storage-konto
 
-1. Search for `storage account` and then select **Storage accounts**.
+1. Sök efter `storage account` och välj sedan **Lagringskonton**.
 
-    ![Azure Storage](./images/azs1.png)
+   ![Azure Storage](./images/azs1.png)
 
-1. Select **+ Create**.
+1. Välj **+ Skapa**.
 
- ![Azure Storage](./images/azs2.png)
+![Azure Storage](./images/azs2.png)
 
-1. Select your **Subscription** and select (or create) a **Resource group**.
+1. Välj din **prenumeration** och välj (eller skapa) en **resursgrupp**.
 
-1. Under **Storage account name** use `--aepUserLdap--`.
+1. Under **Lagringskontots namn** använder du `--aepUserLdap--`.
 
-1. Select **Review + create**.
+1. Välj **Granska + skapa**.
 
-    ![Azure Storage](./images/azs3.png)
+   ![Azure Storage](./images/azs3.png)
 
-1. Select **Create**.
+1. Välj **Skapa**.
 
-    ![Azure Storage](./images/azs4.png)
+   ![Azure Storage](./images/azs4.png)
 
-1. After confirmation select **Go to resource**.
+1. Välj **Gå till resursen** när du har bekräftat.
 
-        ![Azure Storage](./images/azs5.png)
-
-Your Azure Storage Account is now ready to be used.
+       ![Azure Storage](./images/azs5.png)
+   
+Ditt Azure Storage-konto är nu klart att användas.
 
     ![Azure Storage](./images/azs6.png)
 
-1. Select **Data Storage**, and then go to **Containers**. Select **+ Container**.
+1. Välj **Datalagring** och gå sedan till **Behållare**. Välj **+ behållare**.
 
-    ![Azure Storage](./images/azs7.png)
+   ![Azure Storage](./images/azs7.png)
 
-1. Use `--aepUserLdap--`for the name and select **Create**.
+1. Använd `--aepUserLdap--` som namn och välj **Skapa**.
 
-    ![Azure Storage](./images/azs8.png)
+   ![Azure Storage](./images/azs8.png)
 
-    Your container is now ready to be used.
+   Behållaren är nu klar att användas.
 
-    ![Azure Storage](./images/azs9.png)
+   ![Azure Storage](./images/azs9.png)
 
-## 1.1.2.3 Install Azure Storage Explorer
+## 1.1.2.3 Installera Azure Storage Explorer
 
-1. [Download Microsoft Azure Storage Explorer to manage your files](https://azure.microsoft.com/en-us/products/storage/storage-explorer#Download-4){target="_blank"}. Select the correct version for your specific OS, download and install it.
+1. [Hämta Microsoft Azure Storage Explorer för att hantera dina filer](https://azure.microsoft.com/en-us/products/storage/storage-explorer#Download-4){target="_blank"}. Välj rätt version för ditt specifika operativsystem, hämta och installera det.
 
-    ![Azure Storage](./images/az10.png)
+   ![Azure Storage](./images/az10.png)
 
-1. Open the application and select **Sign in with Azure**.
+1. Öppna programmet och välj **Logga in med Azure**.
 
-    ![Azure Storage](./images/az11.png)
+   ![Azure Storage](./images/az11.png)
 
-1. Select **Subscription**.
+1. Välj **Prenumeration**.
 
-    ![Azure Storage](./images/az12.png)
+   ![Azure Storage](./images/az12.png)
 
-1. Select **Azure** and then **Next**.
+1. Välj **Azure** och sedan **Next**.
 
-    ![Azure Storage](./images/az13.png)
+   ![Azure Storage](./images/az13.png)
 
-1. Select your Microsoft Azure account and complete the authentication process.
+1. Välj ditt Microsoft Azure-konto och slutför autentiseringsprocessen.
 
-    ![Azure Storage](./images/az14.png)
+   ![Azure Storage](./images/az14.png)
 
-    After authentication, this message appears.
+   Efter autentiseringen visas det här meddelandet.
 
-    ![Azure Storage](./images/az15.png)
+   ![Azure Storage](./images/az15.png)
 
-1. Back in the Microsoft Azure Storage Explorer app, select your subscription and choose **Open Explorer**.
+1. Gå tillbaka till Microsoft Azure Storage Explorer-appen, välj din prenumeration och välj **Öppna Utforskaren**.
 
 >[!NOTE]
 >
->If your account isn't shown, click the **gear** icon next to your email address and select **Un-filter**.
+>Om ditt konto inte visas klickar du på **kugghjulsikonen** bredvid din e-postadress och väljer **Avfiltrera**.
 
     ![Azure Storage](./images/az16.png)
 
-   Your storage account appears under **Storage Accounts**.
+Ditt lagringskonto visas under **Lagringskonton**.
 
     ![Azure Storage](./images/az17.png)
 
-1. Open **Blob Containers** and then select the container you created in the previous exercise.
+1. Öppna **Blobbehållare** och markera sedan den behållare som du skapade i föregående övning.
 
-    ![Azure Storage](./images/az18.png)
+   ![Azure Storage](./images/az18.png)
 
-## Manual file upload and using an image file as style reference
+## 1.1.2.4 Manuell filöverföring och användning av en bildfil som formatreferens
 
-1. Upload a image file of your choice or [this file](./images/gradient.jpg){target="_blank"} into the container.
+1. Överför en bildfil eller [den här filen](./images/gradient.jpg){target="_blank"} till behållaren.
 
-    ![Azure Storage](./images/gradient.jpg)
+   ![Azure Storage](./images/gradient.jpg)
 
-    Once uploaded, you can see it in your container:
+   När du har överfört den kan du se den i behållaren:
 
-    ![Azure Storage](./images/az19.png)
+   ![Azure Storage](./images/az19.png)
 
-1. Right-click on `gradient.jpg` and then select **Get Shared Access Signature**.
+1. Högerklicka på `gradient.jpg` och välj sedan **Hämta signatur för delad åtkomst**.
 
-    ![Azure Storage](./images/az20.png)
+   ![Azure Storage](./images/az20.png)
 
-1. Under **Permissions**, only **Read** is required. Select **Create**.
+1. Under **Behörigheter** krävs bara **Läs**. Välj **Skapa**.
 
-    ![Azure Storage](./images/az21.png)
+   ![Azure Storage](./images/az21.png)
 
-1. Copy your presigned URL for this image file for the next API request to Firefly.
+1. Kopiera din försignerade URL för den här bildfilen för nästa API-begäran till Firefly.
 
-    ![Azure Storage](./images/az22.png)
+   ![Azure Storage](./images/az22.png)
 
-1. Back in Postman open the request **POST - Firefly - T2I (styleref) V3**. 
-    This appearsin **Body**.    
+1. Gå tillbaka i Postman och öppna begäran **POST - Firefly - T2I (styleref) V3**.
+Detta visas i **Brödtext**.
 
-    ![Azure Storage](./images/az23.png)
+   ![Azure Storage](./images/az23.png)
 
-1. Replace the placeholder URL with the presigned URL for your image file and select **Send**.
+1. Ersätt platshållarens URL med den försignerade URL:en för bildfilen och välj **Skicka**.
 
-    ![Azure Storage](./images/az24.png)
+   ![Azure Storage](./images/az24.png)
 
-1. Open the response Firefly Services new image in your browser.
+1. Öppna den nya Firefly Services-bilden för svaret i webbläsaren.
 
-    ![Azure Storage](./images/az25.png)
+   ![Azure Storage](./images/az25.png)
 
-    Another image appears with `horses in a field`, but this time the style is similar to the image file that you provided as style reference.
+   En annan bild visas med `horses in a field`, men den här gången liknar stilen den bildfil som du angav som stilreferens.
 
-    ![Azure Storage](./images/az26.png)
+   ![Azure Storage](./images/az26.png)
 
-## Programmatic file upload 
+## 1.1.2.5 Programmatisk filöverföring
 
-In order to use programmatic file upload with Azure Storage Accounts, you need to create a new **Shared Access Signature (SAS)** token with permissions that allow you to write a file.
+Om du vill använda programmatisk filöverföring med Azure Storage-konton måste du skapa en ny **SAS**-token (Shared Access Signature) med behörighet att skriva en fil.
 
-1. In Azure Storage Explorer, right-click your container, and select **Get Shared Access Signature**.
+1. Högerklicka på din behållare i Azure Storage Explorer och välj **Hämta signatur för delad åtkomst**.
 
-    ![Azure Storage](./images/az27.png)
+   ![Azure Storage](./images/az27.png)
 
-1. Under **Permissions**, select the following required permissions:
+1. Välj följande nödvändiga behörigheter under **Behörigheter**:
 
-    - **Read**
-    - **Add**
-    - **Create**
-    - **Write**
-    - **List**
+   - **Läs**
+   - **Lägg till**
+   - **Skapa**
+   - **Skriv**
+   - **Lista**
 
-1. Select **Create**.
+1. Välj **Skapa**.
 
-    ![Azure Storage](./images/az28.png)
+   ![Azure Storage](./images/az28.png)
 
-1. After receiving your **SAS-token**, select **Copy**.
+1. När du har tagit emot din **SAS-token** väljer du **Kopiera**.
 
-    ![Azure Storage](./images/az29.png)
+   ![Azure Storage](./images/az29.png)
 
-     Use the **SAS-token** to upload a file into your Azure Storage Account. 
+   Använd **SAS-token** för att överföra en fil till ditt Azure Storage-konto.
 
-1. Back in Postman, select the folder **FF - Firefly Services Tech Insiders**, then select **...** on the **Firefly** folder, and then select **Add request**.
+1. Gå tillbaka till Postman, markera mappen **FF - Firefly Services Tech Insiders**, markera **..** i mappen **Firefly** och välj sedan **Lägg till begäran**.
 
-    ![Azure Storage](./images/az30.png)
+   ![Azure Storage](./images/az30.png)
 
-1. Change the name of the empty request to **Upload file to Azure Storage Account**, change the **Request Type** to **PUT** and paste the SAS-token URL in the URL section, then select **Body**.
+1. Ändra namnet på den tomma begäran till **Överför fil till Azure Storage-konto**, ändra **begärantyp** till **PUT** och klistra in SAS-token-URL:en i URL-avsnittet. Välj sedan **Brödtext**.
 
-    ![Azure Storage](./images/az31.png)
+   ![Azure Storage](./images/az31.png)
 
-1. Next, select a file from your local machine or use another image file located [here](./images/gradient2-p.jpg){target="_blank"}.
+1. Välj sedan en fil från den lokala datorn eller använd en annan bildfil som finns [här](./images/gradient2-p.jpg){target="_blank"}.
 
-    ![Gradient file](./images/gradient2-p.jpg)
+   ![Övertoningsfil](./images/gradient2-p.jpg)
 
-1. In **Body**, select **binary** then **Select file**, then select **+ New file from local machine**.
+1. I **Brödtext** väljer du **binär**, sedan **Välj fil** och sedan **+ Ny fil från den lokala datorn**.
 
-    ![Azure Storage](./images/az32.png)
+   ![Azure Storage](./images/az32.png)
 
-1. Select your file of choice and select **Open**.  
+1. Välj önskad fil och välj **Öppna**.
 
-    ![Azure Storage](./images/az33.png)
+   ![Azure Storage](./images/az33.png)
 
-1. Next specify the file name to be used in your Azure Storage Account by placing your cursor in front of the question mark **?** in the URL like this:
+1. Ange sedan filnamnet som ska användas i ditt Azure Storage-konto genom att placera markören framför frågetecknet **?** i URL:en så här:
 
-    ![Azure Storage](./images/az34.png)
+   ![Azure Storage](./images/az34.png)
 
-    The URL currently looks like this, but needs to be changed. 
+   URL:en ser för närvarande ut så här, men måste ändras.
 
-    `https://vangeluw.blob.core.windows.net/vangeluw?sv=2023-01-03...`
+   `https://vangeluw.blob.core.windows.net/vangeluw?sv=2023-01-03...`
 
-1. Change the file name to `gradient2-p.jpg`, and change the URL to include the filename like this:
+1. Ändra filnamnet till `gradient2-p.jpg` och ändra URL:en så att filnamnet inkluderas:
 
-    `https://vangeluw.blob.core.windows.net/vangeluw/gradient2-p.jpg?sv=2023-01-03...`
+   `https://vangeluw.blob.core.windows.net/vangeluw/gradient2-p.jpg?sv=2023-01-03...`
 
-    ![Azure Storage](./images/az34a.png)
+   ![Azure Storage](./images/az34a.png)
 
-1. Next, go to **Headers** to add a new header manually like this:
+1. Gå sedan till **Sidhuvuden** och lägg till en ny rubrik manuellt så här:
 
-    | Key     | Value     | 
-    |:-------------:| :---------------:| 
-    | `x-ms-blob-type`          | `BlockBlob` |
+   | Nyckel | Värde |
+   |:-------------:| :---------------:| 
+   | `x-ms-blob-type` | `BlockBlob` |
 
 
-    ![Azure Storage](./images/az35.png)
+   ![Azure Storage](./images/az35.png)
 
-1. Go to **Authorization** and set the **Auth Type** to **No Auth**, and select **Send**.
+1. Gå till **Auktorisering** och ange **Autentiseringstyp** till **Ingen autentisering** och välj **Skicka**.
 
-    ![Azure Storage](./images/az36.png)
+   ![Azure Storage](./images/az36.png)
 
-1. Next, this empty response appears in Postman, which means that your file upload is fine.
+1. Därefter visas det tomma svaret i Postman, vilket innebär att filöverföringen är bra.
 
-    ![Azure Storage](./images/az37.png)
+   ![Azure Storage](./images/az37.png)
 
-1. Back in Azure Storage Explorer refresh the content of your folder, and the newly uploaded file appears.
+1. I Azure Storage Explorer uppdateras innehållet i din mapp och den nyligen överförda filen visas.
 
-    ![Azure Storage](./images/az38.png)
+   ![Azure Storage](./images/az38.png)
 
-## Programmatic file usage
+## 1.1.2.6 Programmatisk filanvändning
 
-To programmatically read files from Azure Storage Accounts in the long term, you need to create a new **Shared Access Signature (SAS)** token, with permissions that allow you to read a file. Technically you could use the SAS-token created in the previous exercise, but it's best practice to have a separate token with only **Read** permissions and separate token with only **Write** permissions.
+Om du vill läsa filer från Azure Storage-konton programmatiskt på lång sikt måste du skapa en ny **SAS**-token (Shared Access Signature) med behörighet att läsa en fil. Tekniskt sett kan du använda den SAS-token som skapades i föregående övning, men det är bäst att ha en separat token med bara **läsbehörighet** och en separat token med endast **skrivbehörighet**.
 
-### Long-term Read SAS token
+### Långsiktig Läs SAS-token
 
-1. Go back to Azure Storage Explorer, right-click your container and then select **Get Shared Access Signature**.
+1. Gå tillbaka till Azure Storage Explorer, högerklicka på din behållare och välj sedan **Hämta signatur för delad åtkomst**.
 
-    ![Azure Storage](./images/az27.png)
+   ![Azure Storage](./images/az27.png)
 
-1. Under **Permissions**, select the following required permissions:
+1. Välj följande nödvändiga behörigheter under **Behörigheter**:
 
-    - **Read**
-    - **List**
+   - **Läs**
+   - **Lista**
 
-1. Set **Expiry Time** to 1 year from now.
+1. Ange **Förfallotid** till 1 år från och med nu.
 
-1. Select **Create**.
+1. Välj **Skapa**.
 
-    ![Azure Storage](./images/az100.png)
+   ![Azure Storage](./images/az100.png)
 
-1. Copy the URL and write it down in a file on your computer to get your long-term SAS-token with Read permissions. 
+1. Kopiera URL:en och skriv ned den i en fil på datorn för att få din SAS-token med läsbehörighet.
 
-    ![Azure Storage](./images/az101.png)
+   ![Azure Storage](./images/az101.png)
 
-    Your URL should look like this:
+   URL:en ska se ut så här:
 
-    `https://vangeluw.blob.core.windows.net/vangeluw?sv=2023-01-03&st=2025-01-13T07%3A36%3A35Z&se=2026-01-14T07%3A36%3A00Z&sr=c&sp=rl&sig=4r%2FcSJLlt%2BSt9HdFdN0VzWURxRK6UqhB8TEvbWkmAag%3D`
+   `https://vangeluw.blob.core.windows.net/vangeluw?sv=2023-01-03&st=2025-01-13T07%3A36%3A35Z&se=2026-01-14T07%3A36%3A00Z&sr=c&sp=rl&sig=4r%2FcSJLlt%2BSt9HdFdN0VzWURxRK6UqhB8TEvbWkmAag%3D`
 
-    You can derive a couple of values out of the above URL:
+   Du kan härleda ett par värden från ovanstående URL:
 
-    - `AZURE_STORAGE_URL`: `https://vangeluw.blob.core.windows.net`
-    - `AZURE_STORAGE_CONTAINER`: `vangeluw`
-    - `AZURE_STORAGE_SAS_READ`: `?sv=2023-01-03&st=2025-01-13T07%3A36%3A35Z&se=2026-01-14T07%3A36%3A00Z&sr=c&sp=rl&sig=4r%2FcSJLlt%2BSt9HdFdN0VzWURxRK6UqhB8TEvbWkmAag%3D`
+   - `AZURE_STORAGE_URL`: `https://vangeluw.blob.core.windows.net`
+   - `AZURE_STORAGE_CONTAINER`: `vangeluw`
+   - `AZURE_STORAGE_SAS_READ`: `?sv=2023-01-03&st=2025-01-13T07%3A36%3A35Z&se=2026-01-14T07%3A36%3A00Z&sr=c&sp=rl&sig=4r%2FcSJLlt%2BSt9HdFdN0VzWURxRK6UqhB8TEvbWkmAag%3D`
 
-### Long-term Write SAS token
+### Långsiktig Write SAS-token
 
-1. Go back to Azure Storage Explorer, right-click your container and select **Get Shared Access Signature**.
+1. Gå tillbaka till Azure Storage Explorer, högerklicka på din behållare och välj **Hämta signatur för delad åtkomst**.
 
-    ![Azure Storage](./images/az27.png)
+   ![Azure Storage](./images/az27.png)
 
-1. Under **Permissions**, select the following required permissions:
+1. Välj följande nödvändiga behörigheter under **Behörigheter**:
 
-    - **Add**
-    - **Create**
-    - **Write**
+   - **Lägg till**
+   - **Skapa**
+   - **Skriv**
 
-1. Set the **Expiry Time** to 1 year from now.
+1. Ange **Förfallotid** till 1 år från och med nu.
 
-1. Select **Create**.
+1. Välj **Skapa**.
 
-    ![Azure Storage](./images/az102.png)
+   ![Azure Storage](./images/az102.png)
 
-1. Copy the URL and write it down in a file on your computer to get your long-term SAS-token with Read permissions.
+1. Kopiera URL:en och skriv ned den i en fil på datorn för att få din SAS-token med läsbehörighet.
 
-    ![Azure Storage](./images/az103.png)
+   ![Azure Storage](./images/az103.png)
 
-   Your URL should look like this:
+   URL:en ska se ut så här:
 
-    `https://vangeluw.blob.core.windows.net/vangeluw?sv=2023-01-03&st=2025-01-13T07%3A38%3A59Z&se=2026-01-14T07%3A38%3A00Z&sr=c&sp=acw&sig=lR9%2FMUfyYLcBK7W9Kv7YJdYz5HEEEovExAdOCOCUdMk%3D`
+   `https://vangeluw.blob.core.windows.net/vangeluw?sv=2023-01-03&st=2025-01-13T07%3A38%3A59Z&se=2026-01-14T07%3A38%3A00Z&sr=c&sp=acw&sig=lR9%2FMUfyYLcBK7W9Kv7YJdYz5HEEEovExAdOCOCUdMk%3D`
 
-You can derive a couple of values out of the above URL:
+Du kan härleda ett par värden från ovanstående URL:
 
-    - `AZURE_STORAGE_URL`: `https://vangeluw.blob.core.windows.net`
-    - `AZURE_STORAGE_CONTAINER`: `vangeluw`
-    - `AZURE_STORAGE_SAS_READ`: `?sv=2023-01-03&st=2025-01-13T07%3A36%3A35Z&se=2026-01-14T07%3A36%3A00Z&sr=c&sp=rl&sig=4r%2FcSJLlt%2BSt9HdFdN0VzWURxRK6UqhB8TEvbWkmAag%3D`
-    - `AZURE_STORAGE_SAS_WRITE`: `?sv=2023-01-03&st=2025-01-13T07%3A38%3A59Z&se=2026-01-14T07%3A38%3A00Z&sr=c&sp=acw&sig=lR9%2FMUfyYLcBK7W9Kv7YJdYz5HEEEovExAdOCOCUdMk%3D`
+    -`AZURE_STORAGE_URL`:`https://vangeluw.blob.core.windows.net`
+    -`ZURE_STORAGE_CONTAINER`:`vangeluw`
+    -`AZURE_STORAGE_SAS_READ`: `?sv=2023-01-03&amp;st=2025-01-1 3T07%3A36%3A35Z&amp;se=2026-01-14T07%3A36%3A00Z&amp;sr=c&amp;sp=rl&amp;sig=4r%2FcSJLlt%2BSt9HdFdN0n VzWURxRK6UqhB8TEvbWkmAag%3D`
+    -`AZURE_STORAGE_SAS_WRITE`: `?sv=2023-01-03&amp;st=2025-01-13T07%3A38 %3A59Z&amp;se=2026-01-14T07%3A38%3A00Z&amp;sr=c&amp;sp=acw&amp;sig=lR9%2FMUfyYLcBK7W9Kv7YJdYz5HEEEovEx AdOCOCUdMk%3D`
 
-### Variables in Postman
+### Variabler i Postman
 
-As you can see in the above section, there are some common variables in both the Read and the Write token.
+>[!IMPORTANT]
+>
+>Om du är anställd i Adobe följer du instruktionerna här för att använda [PostBuster](./../../../postbuster.md).
 
-Next you need to create variables in Postman that store the various elements of the above SAS-tokens. There are some values that are the same in both URLs:
+Som du kan se i avsnittet ovan finns det några vanliga variabler i både läs- och skrivtoken.
+
+Därefter måste du skapa variabler i Postman som lagrar de olika elementen i SAS-tokens ovan. Det finns vissa värden som är desamma i båda URL-adresserna:
 
 - `AZURE_STORAGE_URL`: `https://vangeluw.blob.core.windows.net`
 - `AZURE_STORAGE_CONTAINER`: `vangeluw`
 - `AZURE_STORAGE_SAS_READ`: `?sv=2023-01-03&st=2025-01-13T07%3A36%3A35Z&se=2026-01-14T07%3A36%3A00Z&sr=c&sp=rl&sig=4r%2FcSJLlt%2BSt9HdFdN0VzWURxRK6UqhB8TEvbWkmAag%3D`
 - `AZURE_STORAGE_SAS_WRITE`: `?sv=2023-01-03&st=2025-01-13T07%3A38%3A59Z&se=2026-01-14T07%3A38%3A00Z&sr=c&sp=acw&sig=lR9%2FMUfyYLcBK7W9Kv7YJdYz5HEEEovExAdOCOCUdMk%3D`
 
-For future API interactions, the main thing that changes is the asset name, while the above variables remain the same. In that case, it makes sense to create variables in Postman so that you don't need to specify them manually every time..
+För framtida API-interaktioner är det viktigaste som ändras resursnamnet, medan variablerna ovan förblir desamma. I så fall är det bra att skapa variabler i Postman så att du inte behöver ange dem manuellt varje gång.
 
-1. In Postman, select **Environments**, open **All variables** and select **Environment**.
+1. I Postman väljer du **Miljö**, öppnar **Alla variabler** och väljer **Miljö**.
 
-    ![Azure Storage](./images/az104.png)
+   ![Azure Storage](./images/az104.png)
 
-1. Create these 4 variables in the table that is shown and for the columns **Initial value** and **Current value**, enter your specific personal values.
+1. Skapa dessa fyra variabler i tabellen som visas och ange dina specifika personliga värden för kolumnerna **Startvärde** och **Aktuellt värde**.
 
-    - `AZURE_STORAGE_URL`: your url
-    - `AZURE_STORAGE_CONTAINER`: your container name
-    - `AZURE_STORAGE_SAS_READ`: your SAS Read token
-    - `AZURE_STORAGE_SAS_WRITE`: your SAS Write token
+   - `AZURE_STORAGE_URL`: din URL
+   - `AZURE_STORAGE_CONTAINER`: ditt behållarnamn
+   - `AZURE_STORAGE_SAS_READ`: din SAS-lästoken
+   - `AZURE_STORAGE_SAS_WRITE`: din SAS-skrivtoken
 
-1. Select **Save**.
+1. Välj **Spara**.
 
-    ![Azure Storage](./images/az105.png)
+   ![Azure Storage](./images/az105.png)
 
-    In one of the previous exercises, the **Body** of your the request **Firefly - T2I (styleref) V3** looked like this:
+   I en av de föregående övningarna såg **Body** för din begäran **Firefly - T2I (styleref) V3** ut så här:
 
-    `"url": "https://vangeluw.blob.core.windows.net/vangeluw/gradient.jpg?sv=2023-01-03&st=2025-01-13T07%3A16%3A52Z&se=2026-01-14T07%3A16%3A00Z&sr=b&sp=r&sig=x4B1XZuAx%2F6yUfhb28hF0wppCOMeH7Ip2iBjNK5A%2BFw%3D"`
+   `"url": "https://vangeluw.blob.core.windows.net/vangeluw/gradient.jpg?sv=2023-01-03&st=2025-01-13T07%3A16%3A52Z&se=2026-01-14T07%3A16%3A00Z&sr=b&sp=r&sig=x4B1XZuAx%2F6yUfhb28hF0wppCOMeH7Ip2iBjNK5A%2BFw%3D"`
 
-    ![Azure Storage](./images/az24.png)
+   ![Azure Storage](./images/az24.png)
 
-1. Change the URL to:
+1. Ändra URL:en till:
 
-    `"url": "{{AZURE_STORAGE_URL}}/{{AZURE_STORAGE_CONTAINER}}/gradient.jpg{{AZURE_STORAGE_SAS_READ}}"`
+   `"url": "{{AZURE_STORAGE_URL}}/{{AZURE_STORAGE_CONTAINER}}/gradient.jpg{{AZURE_STORAGE_SAS_READ}}"`
 
-1. Select **Send** to test the changes you made.
+1. Välj **Skicka** för att testa ändringarna du gjort.
 
-    ![Azure Storage](./images/az106.png)
+   ![Azure Storage](./images/az106.png)
 
-    If the variables were configured correctly, an image URL is returned.
+   Om variablerna har konfigurerats korrekt returneras en bild-URL.
 
-    ![Azure Storage](./images/az107.png)
+   ![Azure Storage](./images/az107.png)
 
-1. Open the image URL to verify your image.
+1. Öppna bildens URL för att verifiera bilden.
 
-    ![Azure Storage](./images/az108.jpg)
+   ![Azure Storage](./images/az108.jpg)
 
-## Next Steps
+## Nästa steg
 
-Go to [Adobe Firefly & Adobe Photoshop APIs](./ex3.md){target="_blank"}
+Gå till [Arbeta med Photoshop API:er](./ex3.md){target="_blank"}
 
-Go back to [Overview of Adobe Firefly Services](./firefly-services.md){target="_blank"}
+Gå tillbaka till [Översikt över Adobe Firefly Services](./firefly-services.md){target="_blank"}
 
-Go back to [All Modules](./../../../overview.md){target="_blank"}
+Gå tillbaka till [Alla moduler](./../../../overview.md){target="_blank"}
