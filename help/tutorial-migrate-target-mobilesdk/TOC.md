@@ -10,9 +10,9 @@ doc-type: tutorial
 recommendations: catalog,noDisplay
 jira: null
 hide: true
-source-git-commit: f3fd5f45412900dcb871bc0b346ce89108fa8913
+source-git-commit: cb08ad8a1ffd687d7748ca02643b11b2243cd1a7
 workflow-type: tm+mt
-source-wordcount: '88'
+source-wordcount: '80'
 ht-degree: 3%
 
 ---
@@ -22,9 +22,7 @@ ht-degree: 3%
 
 + [Introduktion till självstudier](overview.md)
 
-+ [Planera migreringen](plan-migration.md)
-
-+ [Jämför måltillägget med besluttillägget](detailed-comparison.md)
++ [Jämför tillägg](detailed-comparison.md)
 
 + [Utför inledande konfiguration](initial-setup.md)
 
