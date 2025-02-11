@@ -1,14 +1,15 @@
 ---
 title: Rendera Target-aktiviteter - Migrera från Adobe Target till Adobe Journey Optimizer - Bestämning av mobiltillägg
 description: Lär dig migrera en Adobe Target-implementering från at.js 2.x till Adobe Experience Platform Web SDK. Ämnen som omfattar biblioteksöversikt, implementeringsskillnader och andra viktiga hänvisningar.
-source-git-commit: afbc8248ad81a5d9080a4fdba1167e09bbf3b33d
+exl-id: 39569088-a254-4e64-9956-0c6e1a8ed2a5
+source-git-commit: 314f0279ae445f970d78511d3e2907afb9307d67
 workflow-type: tm+mt
-source-wordcount: '412'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
 
-# Återge målaktiviteter som använder den formulärbaserade dispositionen
+# Återge målaktiviteter
 
 I vissa målinriktade implementeringar kan regionala mrutor (som nu kallas omfång) användas för att leverera innehåll från aktiviteter som använder den formulärbaserade Experience Composer. Om implementeringen av at.js Target använder mboxes måste du göra följande:
 
@@ -17,186 +18,123 @@ I vissa målinriktade implementeringar kan regionala mrutor (som nu kallas omfå
 
 ## Begär och tillämpa innehåll på begäran
 
++++ Exempel på Android
+
+>[!BEGINTABS]
+
+>[!TAB SDK som mål]
+
+```Java
+// Mboxes for Target activities
+final DecisionScope decisionScope1 = DecisionScope("myTargetMbox1");
+final DecisionScope decisionScope2 = new DecisionScope("myTargetMbox2");
+ 
+final List<DecisionScope> decisionScopes = new ArrayList<>();
+decisionScopes.add(decisionScope1);
+decisionScopes.add(decisionScope2);
+ 
+// Prefetch the Target mboxes
+Optimize.updatePropositions(decisionScopes,
+                            new HashMap<String, Object>() {
+                                {
+                                    put("xdmKey", "xdmValue");
+                                }
+                            },
+                            new HashMap<String, Object>() {
+                                {
+                                    put("dataKey", "dataValue");
+                                }
+                            },
+                            new AdobeCallbackWithOptimizeError<Map<DecisionScope, OptimizeProposition>>() {
+                                @Override
+                                public void fail(AEPOptimizeError optimizeError) {
+                                    // Log in case of error
+                                    Log.d("Target Prefetch error", optimizeError.title);
+                                }
+ 
+                                @Override
+                                public void call(Map<DecisionScope, OptimizeProposition> propositionsMap) {
+                                    // Retrieve cached propositions if prefetch succeeds
+                                    Optimize.getPropositions(scopes, new AdobeCallbackWithError<Map<DecisionScope, OptimizeProposition>>() {
+                                        @Override
+                                      public void fail(final AdobeError adobeError) {
+                                              // handle error
+                                        }
+ 
+                                        @Override
+                                        public void call(Map<DecisionScope, OptimizeProposition> propositionsMap) {
+                                              if (propositionsMap != null && !propositionsMap.isEmpty()) {
+                                                // get the propositions for the given decision scopes
+                                                if (propositionsMap.contains(decisionScope1)) {
+                                                      final OptimizeProposition proposition1 = propsMap.get(decisionScope1)
+                                                      // read proposition1 offers and display them
+                                                }
+                                                if (propositionsMap.contains(decisionScope2)) {
+                                                      final OptimizeProposition proposition2 = propsMap.get(decisionScope2)
+                                                      // read proposition2 offers and display them
+                                                }
+                                              }
+                                        }
+                                      });
+                                }
+                            });
+```
+
+>[!ENDTABS]
+
++++
+
++++ Exempel på iOS
+
+>[!BEGINTABS]
+
+>[!TAB SDK som mål]
+
+```Swift
+// Mboxes for Target activities
+let decisionScope1 = DecisionScope(name: "myTargetMbox1")
+let decisionScope2 = DecisionScope(name: "myTargetMbox2")
+ 
+// Prefetch the Target mboxes
+Optimize.updatePropositions(for: [decisionScope1, decisionScope2]
+                            withXdm: ["xdmKey": "xdmValue"]
+                            andData: ["dataKey": "dataValue"]) { data, error in
+            if let error = error as? AEPOptimizeError {
+                // handle error
+                return
+            }
+            // Retrieve cached propositions if prefetch succeeds
+            Optimize.getPropositions(for: [decisionScope1, decisionScope2]) { propositionsDict, error in
+                if let error = error {
+                    // handle error
+                    return
+                }
+ 
+                if let propositionsDict = propositionsDict {
+                    // get the propositions for the given decision scopes
+ 
+                    if let proposition1 = propositionsDict[decisionScope1] {
+                        // read proposition1 offers and display them
+                    }
+ 
+                    if let proposition2 = propositionsDict[decisionScope2] {
+                        // read proposition2 offers and display them
+                    }
+                }
+            }
+        }
+```
+
+>[!ENDTABS]
+
++++
+
+
 Aktiviteter som skapats med Target formulärbaserade disposition och som levereras till regionala mrutor kan inte återges automatiskt av Platform Web SDK. På liknande sätt som at.js måste erbjudanden som levereras till specifika målplatser återges på begäran.
 
 
-+++at.js Exempel med `getOffer()` och `applyOffer()`:
 
-1. Kör `getOffer()` för att begära ett erbjudande för en plats
-1. Kör `applyOffer()` för att återge erbjudandet till en angiven väljare
-1. Ett aktivitetsintryck ökar automatiskt vid tidpunkten för `getOffer()`-begäran
-
-```JavaScript
-// Retrieve an offer for the homepage-hero location
-adobe.target.getOffer({
-  "mbox": "homepage_hero",
-
-  // Render offer to the #hero-banner selector
-  "success": function(offers) {
-    adobe.target.applyOffer({
-      "mbox": "homepage_hero",
-      "selector": "#hero-banner",
-      "offer": offers
-    });
-  },
-  "error": {
-    console.log(error);
-  },
-  "timeout": 3000
-});
-```
-
-+++
-
-+++Plattformsmotsvarighet för Web SDK med kommandot `applyPropositions`:
-
-1. Kör kommandot `sendEvent` för att begära erbjudanden (erbjudanden) för en eller flera platser (omfattningar)
-1. Kör kommandot `applyPropositions` med metadataobjekt som innehåller instruktioner för hur du använder innehåll på sidan för varje omfång
-1. Kör kommandot `sendEvent` med eventType för `decisioning.propositionDisplay` för att spåra ett intryck
-
-```JavaScript
-// Retrieve propositions for homepage_hero location (scope)
-alloy("sendEvent", {
-  "decisionScopes": ["homepage_hero"]
-}).then(function(result) {
-  var retrievedPropositions = result.propositions;
-    
-  // Render offer (proposition) to the #hero-banner selector by supplying extra metadata
-  return alloy("applyPropositions", {
-    "propositions": retrievedPropositions,
-    "metadata": {
-      // Specify each regional mbox or scope name along with a selector and actionType
-      "homepage_hero": {
-        "selector": "#hero-banner",
-        "actionType": "setHtml"
-      }
-    }
-  }).then(function(applyPropositionsResult) {
-    var renderedPropositions = applyPropositionsResult.propositions;
-
-    // Send the display notifications via sendEvent command
-    alloy("sendEvent", {
-      "xdm": {
-        "eventType": "decisioning.propositionDisplay",
-        "_experience": {
-          "decisioning": {
-            "propositions": renderedPropositions
-          }
-        }
-      }
-    });
-  });
-});
-```
-
-+++
-
-Med Platform Web SDK får du större kontroll över hur du använder formulärbaserade aktiviteter på sidan med kommandot `applyPropositions` och `actionType`:
-
-| `actionType` | Beskrivning | at.js `applyOffer()` | SDK för plattformswebben `applyPropositions` |
-| --- | --- | --- | --- |
-| `setHtml` | Rensa innehållet i behållaren och lägg sedan till erbjudandet i behållaren | Ja (används alltid) | Ja |
-| `replaceHtml` | Ta bort behållaren och ersätt den med erbjudandet | Nej | Ja |
-| `appendHtml` | Lägger till erbjudandet efter den angivna väljaren | Nej | Ja |
-
-Mer information om ytterligare återgivningsalternativ och exempel finns i [dedikerad dokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html) om hur du återger innehåll med hjälp av Platform Web SDK.
-
-## Implementeringsexempel
-
-Exemplsidan nedan bygger på implementeringen som beskrivs i föregående avsnitt, men lägger bara till ytterligare omfång till kommandot `sendEvent`.
-
-+++Platform Web SDK-exempel med flera omfattningar
-
-```HTML
-<!doctype html>
-<html>
-<head>
-  <title>Example page</title>
-  <!--Data Layer to enable rich data collection and targeting-->
-  <script>
-    var digitalData = { 
-      // Data layer information goes here
-    };
-  </script>
-
-  <!--Third party libraries that may be used by Target offers and modifications-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-
-  <!--Prehiding snippet for Target with asynchronous deployment-->
-  <script>
-    !function(e,a,n,t){var i=e.head;if(i){
-    if (a) return;
-    var o=e.createElement("style");
-    o.id="alloy-prehiding",o.innerText=n,i.appendChild(o),setTimeout(function(){o.parentNode&&o.parentNode.removeChild(o)},t)}}
-    (document, document.location.href.indexOf("mboxEdit") !== -1, ".body { opacity: 0 !important }", 3000);
-  </script>
-
-  <!--Platform Web SDK base code-->
-  <script>
-    !function(n,o){o.forEach(function(o){n[o]||((n.__alloyNS=n.__alloyNS||
-    []).push(o),n[o]=function(){var u=arguments;return new Promise(
-    function(i,l){n[o].q.push([i,l,u])})},n[o].q=[])})}
-    (window,["alloy"]);
-  </script>
-
-  <!--Platform Web SDK loaded asynchonously. Change the src to use the latest supported version.-->
-  <script src="https://cdn1.adoberesources.net/alloy/2.6.4/alloy.min.js" async></script>
-  
-  <!--Configure Platform Web SDK then send event-->
-  <script>
-    alloy("configure", {
-      "edgeConfigId": "ebebf826-a01f-4458-8cec-ef61de241c93",
-      "orgId":"ADB3LETTERSANDNUMBERS@AdobeOrg"
-    });
-    alloy("sendEvent", {
-      // Request and render VEC-based activities
-      "renderDecisions": true,
-      // Request content for form-based activities using the "homepage_hero" scope
-      "decisionScopes": ["homepage_hero"]
-    }).then(function(result) {
-      var retrievedPropositions = result.propositions;
-        
-      // Render offer (proposition) to the #hero-banner selector by supplying extra metadata
-      return alloy("applyPropositions", {
-        "propositions": retrievedPropositions,
-        "metadata": {
-          // Specify each regional mbox or scope name along with a selector and actionType
-          "homepage_hero": {
-            "selector": "#hero-banner",
-            "actionType": "setHtml"
-          }
-        }
-      }).then(function(applyPropositionsResult) {
-        var renderedPropositions = applyPropositionsResult.propositions;
-
-        // Send the display notifications via sendEvent command
-        alloy("sendEvent", {
-          "xdm": {
-            "eventType": "decisioning.propositionDisplay",
-            "_experience": {
-              "decisioning": {
-                "propositions": renderedPropositions
-              }
-            }
-          }
-        });
-      });
-    });
-  </script>
-</head>
-<body>
-  <h1 id="title">Home Page</h1><br><br>
-  <p id="bodyText">Navigation</p><br><br>
-  <a id="home" class="navigationLink" href="#">Home</a><br>
-  <a id="pageA" class="navigationLink" href="#">Page A</a><br>
-  <a id="pageB" class="navigationLink" href="#">Page B</a><br>
-  <a id="pageC" class="navigationLink" href="#">Page C</a><br>
-  <div id="homepage-hero">Homepage Hero Banner Content</div>
-</body>
-</html>
-```
-
-Läs sedan om hur du [skickar målparametrar med hjälp av Platform Web SDK](send-parameters.md).
+Läs sedan om hur du [skickar Target-parametrar med hjälp av Platform Web SDK](send-parameters.md).
 
 >[!NOTE]
 >

@@ -2,9 +2,9 @@
 title: Inledande konfiguration - Migrera från Adobe Target till Adobe Journey Optimizer - mobiltillägg för beslut
 description: Läs mer om och konfigurera de grundläggande element som krävs för implementeringen av SDK på webben på din plattform
 exl-id: dfc5abc8-0e79-454a-b1bb-6a42b1219771
-source-git-commit: a928fb5c8e48e71984b75faf4eb397814caac6aa
+source-git-commit: 314f0279ae445f970d78511d3e2907afb9307d67
 workflow-type: tm+mt
-source-wordcount: '285'
+source-wordcount: '370'
 ht-degree: 1%
 
 ---
@@ -20,6 +20,8 @@ Att migrera från Target SDK till Optimize SDK kräver en första konfiguration 
 - [Skapa en datastream](https://experienceleague.adobe.com/en/docs/platform-learn/implement-mobile-sdk/initial-configuration/create-datastream){target="_blank"} för att aktivera vidarebefordran av data från Edge Network
 - [Konfigurera datastream](https://experienceleague.adobe.com/en/docs/platform-learn/implement-mobile-sdk/experience-cloud/target#update-datastream-configuration){target="_blank"} för att aktivera vidarebefordran av data till Adobe Target
 - [Konfigurera taggegenskapen ](https://experienceleague.adobe.com/en/docs/platform-learn/implement-mobile-sdk/experience-cloud/target#install-adobe-journey-optimizer---decisioning-tags-extension){target="_blank"} för beslutstillägg
+
+## Tilläggskonfiguration
 
 >[!BEGINTABS]
 
@@ -50,7 +52,19 @@ Märkordstillägg som installeras när du använder Target-tillägget:
 
 >[!ENDTABS]
 
-Läs sedan om hur du [ersätter SDK](replace-library.md).
+## Datastream-konfiguration
+
+Måltillägget har [konfigurerbara inställningar](https://developer.adobe.com/client-sdks/solution/adobe-target/#configure-the-target-extension-in-the-data-collection-ui) som med beslutstillägget är [konfigurerade i datastream](https://developer.adobe.com/client-sdks/edge/adobe-journey-optimizer-decisioning/#adobe-experience-platform-data-collection-setup).
+
+| Måltillägg | Beslutstillägg | Anteckningar |
+| --- | --- | --- | 
+| Klientkod | n/a | Ange automatiskt efter kanten med hjälp av IMS-organisationsinformationen |
+| Miljö-ID | Målmiljö-ID | Konfigurerad i datastream |
+| Ange Workspace-egenskap | Egenskapstoken | Konfigurerad i datastream |
+| Timeout | Kan inte konfigureras | Tidsgränsen för beslutandetillägget är 10 sekunder |
+| Serverdomän | Edge Network | Ange i Adobe Experience Platform Edge Network-tillägget |
+
+Läs sedan om hur du [ersätter SDK](replace-sdk.md).
 
 >[!NOTE]
 >

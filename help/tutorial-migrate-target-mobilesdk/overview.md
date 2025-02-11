@@ -3,7 +3,7 @@ title: Migrera från Adobe Target till Adobe Journey Optimizer - mobiltillägg f
 description: Lär dig hur du migrerar din mobilappsimplementering från Adobe Target till Adobe Journey Optimizer - Beslutstillägg
 last-substantial-update: 2023-02-23T00:00:00Z
 exl-id: 32363b95-b6ad-44af-a3b0-e1fbbbf5a8f1
-source-git-commit: a928fb5c8e48e71984b75faf4eb397814caac6aa
+source-git-commit: 314f0279ae445f970d78511d3e2907afb9307d67
 workflow-type: tm+mt
 source-wordcount: '650'
 ht-degree: 0%
@@ -59,7 +59,7 @@ Migreringsprocessen omfattar följande viktiga steg:
 > * **Mål-SDK** implementerar **Adobe Target-tillägget**
 > * **Optimera SDK** implementerar tillägget **Adobe Journey Optimizer - Bestämning**
 
-Granska sedan den detaljerade [jämförelsen av måltillägget och beslutstillägget](detailed-comparison.md) för att få en bättre förståelse för de tekniska skillnaderna och identifiera områden som kräver ytterligare fokus.
+Granska sedan den detaljerade [jämförelsen av måltillägget och beslutstillägget](comparison.md) för att få en bättre förståelse för de tekniska skillnaderna och identifiera områden som kräver ytterligare fokus.
 
 >[!NOTE]
 >

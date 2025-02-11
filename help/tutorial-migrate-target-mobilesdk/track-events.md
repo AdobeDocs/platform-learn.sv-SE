@@ -1,19 +1,22 @@
 ---
 title: Spåra händelser - Migrera från Adobe Target till Adobe Journey Optimizer - Bestämning av mobiltillägg
 description: Lär dig hur du spårar konverteringshändelser för Adobe Target med tillägget Adobe Journey Optimizer - Bestämning av mobilenheter
-source-git-commit: afbc8248ad81a5d9080a4fdba1167e09bbf3b33d
+exl-id: 7b53aab1-0922-4d9f-8bf0-f5cf98ac04c4
+source-git-commit: 314f0279ae445f970d78511d3e2907afb9307d67
 workflow-type: tm+mt
-source-wordcount: '193'
+source-wordcount: '199'
 ht-degree: 0%
 
 ---
 
 # Spåra målkonverteringshändelser med Adobe Journey Optimizer - mobiltillägg för beslut
 
+Se den här sidan för innehåll: https://developer.adobe.com/client-sdks/edge/adobe-journey-optimizer-decisioning/#tracking
+
 Konverteringshändelser för Target kan spåras med ... Konverteringshändelser faller vanligtvis inom följande kategorier:
 
 * Automatiskt spårade händelser som inte kräver någon konfiguration
-* Inköpskonverteringshändelser som ska justeras för implementering av plattformens Web SDK
+* Inköpskonverteringshändelser som ska justeras för implementering av tillägg enligt metoddefinition
 * Konverteringshändelser som inte är köpta och som kräver koduppdateringar
 
 ## Målspårningsjämförelse
@@ -31,7 +34,7 @@ Följande konverteringsmål kräver inga specifika justeringar av implementering
 
 
 
-Läs sedan om hur du [aktiverar delning av korsdomän-ID](cross-domain.md) för konsekventa besökarprofiler.
+Läs sedan om hur du [aktiverar delning av korsdomän-ID](webview.md) för konsekventa besökarprofiler.
 
 >[!NOTE]
 >
