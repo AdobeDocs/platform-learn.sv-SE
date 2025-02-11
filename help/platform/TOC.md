@@ -5,7 +5,7 @@ user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
 auto-video-transcripts: true
-source-git-commit: bc8c62e5115a2c40c54ee200df49bc88e852d7c3
+source-git-commit: ce28c48d554727ce42803400373826315f5b2153
 workflow-type: tm+mt
 source-wordcount: '881'
 ht-degree: 6%
@@ -15,14 +15,14 @@ ht-degree: 6%
 
 # Självstudiekurser om Adobe Experience Platform {#tutorials}
 
-+ [Platform Tutorials](/help/platform/overview.md)
++ [Självstudiekurser för plattformar](/help/platform/overview.md)
 + Introduktion till plattformen {#intro-to-platform}
    + [En kundupplevelse som bygger på Experience Platform](/help/platform/intro-to-platform/a-customer-experience-powered-by-experience-platform.md)
-   + [Bakom kulisserna: En kundupplevelse som drivs av Experience Platform](/help/platform/intro-to-platform/behind-the-scenes-a-customer-experience-powered-by-experience-platform.md)
+   + [Bakom kulisserna: En kundupplevelse som bygger på Experience Platform](/help/platform/intro-to-platform/behind-the-scenes-a-customer-experience-powered-by-experience-platform.md)
    + [Översikt över Experience Platform](/help/platform/intro-to-platform/overview.md)
    + [Viktiga funktioner](/help/platform/intro-to-platform/key-capabilities.md)
    + [Plattformsbaserade program](/help/platform/intro-to-platform/native-applications.md)
-   + [Integrering med Experience Cloud-program](/help/platform/intro-to-platform/integrations-with-experience-cloud-applications.md)
+   + [Integrering med Experience Cloud](/help/platform/intro-to-platform/integrations-with-experience-cloud-applications.md)
    + [Viktiga användningsexempel](/help/platform/intro-to-platform/key-use-cases.md)
    + [Grundläggande arkitektur](/help/platform/intro-to-platform/basic-architecture.md)
    + [Användargränssnitt](/help/platform/intro-to-platform/interface-tour.md)
@@ -121,7 +121,7 @@ ht-degree: 6%
    + [Förfaller datauppsättningar](/help/platform/data-lifecycle/expire-datasets.md)
 + Mål {#destinations}
    + [Översikt över destinationer](/help/platform/destinations/understanding-destinations.md)
-   + [Ansluta till mål](/help/platform/destinations/connecting-to-destinations.md)
+   + [Anslut till mål](/help/platform/destinations/connecting-to-destinations.md)
    + [Skapa mål och aktivera data](/help/platform/destinations/create-destinations-and-activate-data.md)
    + [Aktivera profiler och segment till ett mål](/help/platform/destinations/activate-profiles-and-segments-to-a-destination.md)
    + [Konfigurera ett mål för datauppsättningsexport](/help/platform/destinations/configure-dataset-export-destination.md)
@@ -137,7 +137,7 @@ ht-degree: 6%
       + [Aktivera segment och profilattribut](/help/platform/destinations/target/activate-segments-and-profile-attributes.md)
       + [Använda Real-Time CDP-segment i Target](/help/platform/destinations/target/use-rtcdp-segments-in-target.md)
       + [Använd Real-Time CDP-profilattribut i Target](/help/platform/destinations/target/use-rtcdp-profile-attributes-in-target.md)
-   + [Aktivera data i webbinarium som inte är Adobe](/help/platform/destinations/activate-data-to-non-adobe-applications.md)
+   + [Aktivera data i webbinariet för program som inte kommer från Adobe](/help/platform/destinations/activate-data-to-non-adobe-applications.md)
 + Identiteter {#identities}
    + [Översikt över identitets- och identitetsdiagram](/help/platform/identities/understanding-identity-and-identity-graphs.md)
    + [Märk, importera och verifiera identitetsdata](/help/platform/identities/label-ingest-and-verify-identity-data.md)
@@ -147,7 +147,7 @@ ht-degree: 6%
 + Intelligenta tjänster {#intelligent-services}
    + [Översikt](/help/platform/intelligent-services/introduction-to-intelligent-services.md)
    + [Översikt över AI för attribuering](/help/platform/intelligent-services/introduction-to-attribution-ai.md)
-   + [Attribution AI](/help/platform/intelligent-services/business-value-of-attribution-ai.md)
+   + [AI-värde för attribut](/help/platform/intelligent-services/business-value-of-attribution-ai.md)
    + [Konfigurera AI för attribuering](/help/platform/intelligent-services/configure-attribution-ai.md)
    + [Använd poäng och insikter från AI för attribuering](/help/platform/intelligent-services/use-attribution-ai-scores-and-insights.md)
    + [Översikt över AI för kundbenägenhet](/help/platform/intelligent-services/introduction-to-customer-ai.md)
@@ -180,9 +180,9 @@ ht-degree: 6%
    + [Identitetsdata i sekretessförfrågningar](/help/platform/privacy/identity-data-in-privacy-requests.md)
    + [Sekretessbibliotek för JavaScript](/help/platform/privacy/using-privacy-javascript-library.md)
    + [Sekretessetiketter i Adobe Analytics](/help/platform/privacy/privacy-labels-in-adobe-analytics.md)
-   + [Komma igång med Privacy Services-API](/help/platform/privacy/getting-started-with-privacy-services-api.md)
-   + [Privacy Servicens användargränssnitt](/help/platform/privacy/using-privacy-services-ui.md)
-   + [Privacy Services-API](/help/platform/privacy/using-the-privacy-service-api.md)
+   + [Komma igång med Privacy Service API](/help/platform/privacy/getting-started-with-privacy-services-api.md)
+   + [Privacy Service UI](/help/platform/privacy/using-privacy-services-ui.md)
+   + [PRIVACY SERVICE API](/help/platform/privacy/using-the-privacy-service-api.md)
    + [Prenumerera på sekretesshändelser](/help/platform/privacy/subscribe-to-privacy-events.md)
    + [Ställ in kundhanterade nycklar](/help/platform/privacy/set-up-customer-managed-keys.md)
    + [10 saker att tänka på när det gäller ansvarstagande kunddatahantering](/help/platform/privacy/ten-considerations-for-responsible-customer-data-management.md)
@@ -193,7 +193,7 @@ ht-degree: 6%
    + [API för frågetjänst](/help/platform/queries/query-service-api.md)
    + [Utforska data](/help/platform/queries/explore-data.md)
    + [Förbered data](/help/platform/queries/prepare-data.md)
-   + [Funktioner som definieras av Adobe](/help/platform/queries/adobe-defined-functions.md)
+   + [Adobe-definierade funktioner](/help/platform/queries/adobe-defined-functions.md)
    + [Mönster för dataanvändning](/help/platform/queries/understanding-data-usage-patterns-with-query-service.md)
    + [Kör frågor](/help/platform/queries/run-queries.md)
    + [Generera datauppsättningar från frågeresultat](https://experienceleague.adobe.com/docs/experience-platform/query/ui/create-datasets.html){target="_blank"}
@@ -221,7 +221,7 @@ ht-degree: 6%
 + Källor {#sources}
    + [Översikt](/help/platform/sources/overview.md)
    + [Importera data från Adobe Analytics](/help/platform/sources/ingest-data-from-adobe-analytics.md)
-   + [Ingrediera data från Audience Manager](/help/platform/sources/ingest-data-from-aam.md)
+   + [Importera data från Audience Manager](/help/platform/sources/ingest-data-from-aam.md)
    + [Importera data från Marketo](/help/platform/sources/ingest-data-from-marketo.md)
    + [Importera data från molnlagring](/help/platform/sources/ingest-data-from-cloud-storage.md)
    + [Importera data från CRM](/help/platform/sources/ingest-data-from-crm.md)
@@ -233,7 +233,7 @@ ht-degree: 6%
    + [Översikt](/help/platform/use-case-playbooks/overview.md)
    + [Konfigurera en spelningsbokssandlåda](/help/platform/use-case-playbooks/configure-a-playbook-sandbox.md)
    + [Skapa och publicera en spelboksinstans](/help/platform/use-case-playbooks/create-and-publish-a-playbook-instance.md)
-+ Integreringar i Experience Cloud {#experience-cloud}
++ Experience Cloud-integreringar {#experience-cloud}
    + [Analyser](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-adobe-analytics.html)
    + [Audience Manager](https://experienceleague.adobe.com/docs/platform-learn/tutorials/sources/ingest-data-from-aam.html)
    + [Commerce](/help/platform/experience-cloud/business-value-of-platform-and-commerce.md)
