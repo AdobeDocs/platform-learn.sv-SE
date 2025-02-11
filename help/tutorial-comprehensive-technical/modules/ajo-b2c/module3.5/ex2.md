@@ -3,15 +3,15 @@ title: Skapa en kampanj med AJO Translation Services
 description: Skapa en kampanj med AJO Translation Services
 kt: 5342
 doc-type: tutorial
-exl-id: a9d674f4-6f49-4d4d-a24d-84751f3a438e
-source-git-commit: cec5abe4586f5aa73065254c5de1434c52a288be
+exl-id: 441b3b6a-74e5-4294-9a30-9c44ea4bbf84
+source-git-commit: 7438a1289689c5c3fb3deb398aa9898d7ac26cf8
 workflow-type: tm+mt
-source-wordcount: '1552'
+source-wordcount: '1596'
 ht-degree: 0%
 
 ---
 
-# 3.2.2 Skapa en kampanj
+# 3.5.2 Skapa en kampanj
 
 Gå till [https://experience.adobe.com/](https://experience.adobe.com/). Klicka på **Journey Optimizer**.
 
@@ -21,7 +21,11 @@ Du omdirigeras till vyn **Hem** i Journey Optimizer. Kontrollera först att du a
 
 ![ACOP](./images/ajolp2.png)
 
-## 3.2.2.1 Skapa rubrikfragment
+>[!NOTE]
+>
+>Om du redan har skapat dina Header- och Footer-fragment som en del av övningen [övning 3.1.2.1](./../module3.1/ex2.md) och [övning 3.1.2.2](./../module3.1/ex2.md) kan du hoppa fram till 3.5.2.3 Skapa fiberkampanj. Skapa inte sidhuvuds- och sidfotsavsnitten igen.
+
+## 3.5.2.1 Skapa rubrikfragment
 
 Klicka på **Fragment** på den vänstra menyn. Ett fragment är en återanvändbar komponent i Journey Optimizer, som undviker dubbletter och underlättar framtida ändringar som påverkar alla meddelanden, till exempel ändringar i ett sidhuvud eller en sidfot i ett e-postmeddelande.
 
@@ -76,7 +80,7 @@ Sedan bör du skapa ett nytt fragment för sidfoten i dina e-postmeddelanden. Kl
 
 ![Journey Optimizer](./images/fragm11.png)
 
-## 3.2.2.2 Skapa sidfotsavsnittet
+## 3.5.2.2 Skapa sidfotsavsnittet
 
 Klicka på **Skapa fragment**.
 
@@ -230,7 +234,7 @@ Efter några minuter ser du att sidfotens status har ändrats till **Live**.
 
 ![Journey Optimizer](./images/fragm38.png)
 
-## 3.2.2.3 Skapa fiberkampanj
+## 3.5.2.3 Skapa fiberkampanj
 
 Nu ska ni skapa en kampanj. Till skillnad från den händelsebaserade resan från föregående övning, som bygger på inkommande upplevelsehändelser, målgruppsposter eller utträde för att utlösa en resa för en viss kund, riktar kampanjer sig mot en hel målgrupp en gång med unikt innehåll som nyhetsbrev, engångskampanjer eller allmän information eller regelbundet med liknande innehåll som skickas regelbundet, till exempel födelsedagskampanjer och påminnelser.
 
@@ -262,7 +266,7 @@ Bläddra upp till **målgrupp**. Klicka på **Välj målgrupp**.
 
 ![Journey Optimizer](./images/campaign2b.png)
 
-För **målgruppen** väljer du målgruppen som du skapade i föregående steg, `--aepUserLdap-- - CitiSignal Eligible for Fiber`. Klicka på **Spara**.
+För **målgruppen** väljer du målgruppen som du skapade i [ 1.3.3 Skapa en federerad komposition ](./../../datacollection/module1.3/ex3.md) som har namnet `--aepUserLdap-- - CitiSignal Eligible for Fiber`. Klicka på **Spara**.
 
 ![Journey Optimizer](./images/campaign2a.png)
 
@@ -358,8 +362,8 @@ Du har gjort klart den här övningen.
 
 ## Nästa steg
 
-Gå till [3.2.3 Lägg till språk i e-postmeddelandet](./ex3.md)
+Gå till [3.5.3 Lägg till språk i e-postmeddelandet](./ex3.md)
 
-Gå tillbaka till [Modul 3.2](./ajotranslationsvcs.md){target="_blank"}
+Gå tillbaka till [Modul 3.5](./ajotranslationsvcs.md){target="_blank"}
 
 Gå tillbaka till [Alla moduler](./../../../overview.md){target="_blank"}

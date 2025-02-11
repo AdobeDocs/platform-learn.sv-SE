@@ -1,10 +1,10 @@
 ---
-title: AEM CS - avancerat anpassat block
-description: AEM CS - avancerat anpassat block
+title: AEM CS - Avancerat anpassat block
+description: AEM CS - Avancerat anpassat block
 kt: 5342
 doc-type: tutorial
 exl-id: fa299668-c902-4775-a540-7555ca461d3e
-source-git-commit: 4ab2a12a71c8a89963cbd47d5df2bda97bffd318
+source-git-commit: bbbe13842ac6825c6a6a933dc018fd9cdde52249
 workflow-type: tm+mt
 source-wordcount: '996'
 ht-degree: 0%
@@ -17,7 +17,7 @@ I föregående övning konfigurerade du ett enkelt anpassat block med namnet **F
 
 Du kan nu fortsätta arbeta med det här blocket.
 
-![AEMCS](./images/nav7.png)
+![AEMCS](./images/nav7.png){zoomable="yes"}
 
 ## 2.1.5.1 Formatera blocket
 
@@ -25,23 +25,23 @@ Nu när du har ett fungerande **fiberoffer** -block kan du formatera det.
 
 Gå tillbaka till Visual Studio Code och öppna mappen **blocks**. Nu bör du se flera mappar där varje mapp refererar till ett visst block. Du måste skapa en mapp för det anpassade blocket för att kunna göra ditt **fiberoffer**-block mer avancerat.
 
-![AEMCS](./images/blockadv1.png)
+![AEMCS](./images/blockadv1.png){zoomable="yes"}
 
 Markera mappen **block** och klicka sedan på ikonen **Skapa ny mapp** .
 
-![AEMCS](./images/blockadv2.png)
+![AEMCS](./images/blockadv2.png){zoomable="yes"}
 
 Namnge mappen `fiberoffer` och tryck på **enter**.
 
-![AEMCS](./images/blockadv3.png)
+![AEMCS](./images/blockadv3.png){zoomable="yes"}
 
 Markera den nya mappen **defiffer** och klicka på ikonen **Skapa ny fil** .
 
-![AEMCS](./images/blockadv4.png)
+![AEMCS](./images/blockadv4.png){zoomable="yes"}
 
 En ny fil skapas. Ange namnet **fiberoffer.js** och tryck på Retur.
 
-![AEMCS](./images/blockadv5.png)
+![AEMCS](./images/blockadv5.png){zoomable="yes"}
 
 Nu kan du implementera blockdekoration genom att lägga till följande JavaScript i filen **fiberopoffer.js**.
 
@@ -62,15 +62,15 @@ export default function decorate(block) {
 }
 ```
 
-![AEMCS](./images/blockadv6.png)
+![AEMCS](./images/blockadv6.png){zoomable="yes"}
 
 Markera den nya mappen **defiffer** och klicka på ikonen **Skapa ny fil** igen.
 
-![AEMCS](./images/blockadv7.png)
+![AEMCS](./images/blockadv7.png){zoomable="yes"}
 
 En ny fil skapas. Ange namnet **defioffer.css** och tryck på Retur.
 
-![AEMCS](./images/blockadv8.png)
+![AEMCS](./images/blockadv8.png){zoomable="yes"}
 
 Kopiera och klistra in följande CSS-kod i den nyligen skapade filen.
 
@@ -88,7 +88,7 @@ Kopiera och klistra in följande CSS-kod i den nyligen skapade filen.
 
 Spara ändringarna.
 
-![AEMCS](./images/blockadv9.png)
+![AEMCS](./images/blockadv9.png){zoomable="yes"}
 
 Du har nu gjort flera ändringar i ditt projekt som behöver implementeras i GitHub-databasen igen. Öppna **GitHub Desktop** om du vill göra det.
 
@@ -96,15 +96,15 @@ Du bör sedan se de två filer som du just redigerade under **Ändringar**. Gran
 
 Ange ett namn för din PR, `js css`. Klicka på **Verkställ för huvudsidan**.
 
-![Blockera](./images/blockadv10.png)
+![Blockera](./images/blockadv10.png){zoomable="yes"}
 
 Du borde se det här då. Klicka på **Push origin**.
 
-![Blockera](./images/blockadv11.png)
+![Blockera](./images/blockadv11.png){zoomable="yes"}
 
 Gå till ditt GitHub-konto i webbläsaren och till databasen som du skapade för CitiSignal. Du bör då se något liknande och visa att dina ändringar har tagits emot.
 
-![Blockera](./images/blockadv12.png)
+![Blockera](./images/blockadv12.png){zoomable="yes"}
 
 Du kan nu visa ändringarna av din webbplats genom att gå till `main--citisignal--XXX.aem.page/us/en` och/eller `main--citisignal--XXX.aem.live/us/en` efter att du ersatt XXX med ditt GitHub-användarkonto, som i det här exemplet är `woutervangeluwe`.
 
@@ -113,11 +113,11 @@ I det här exemplet blir den fullständiga URL:en följande:
 
 Du bör då se det här med formateringen tillämpad på sidan.
 
-![Blockera](./images/blockadv13.png)
+![Blockera](./images/blockadv13.png){zoomable="yes"}
 
 ## 2.1.5.2 Lägga till logik och läsa in data från en extern slutpunkt
 
-För den här övningen kommer du att göra en&quot;raw&quot;-konfiguration av Adobe Web SDK och du kommer att begära nästa bästa erbjudande från Adobe Journey Optimizer Offer decisioning.
+I den här övningen kommer du att göra en&quot;raw&quot;-konfiguration av Adobe Web SDK och du kommer att begära nästa bästa erbjudande från Adobe Journey Optimizer Offer Decisioning.
 
 För att vara tydlig: detta är inte avsett som en implementering av Web SDK för AEM as a Cloud Service. I nästa övning kommer du att implementera datainsamling med ett specifikt plugin-program som utvecklats för detta.
 
@@ -156,11 +156,11 @@ I modulen **Komma igång** har du redan konfigurerat ett datastream med namnet `
 
 Du behöver inte ändra fältet **edgeConfigId** för tillfället. I nästa övning kan du göra detta med plugin-programmet **MarTech**.
 
-![Blockera](./images/blockadv15.png)
+![Blockera](./images/blockadv15.png){zoomable="yes"}
 
 Du borde ha den här nu.
 
-![Blockera](./images/blockadv14.png)
+![Blockera](./images/blockadv14.png){zoomable="yes"}
 
 Lägg sedan till det här blocket under den föregående koden som du lade till i.
 
@@ -181,11 +181,11 @@ var ECID = "";
     });
 ```
 
-Det här kodblocket används för att hämta värdet för Experience Cloud-ID (ECID). ECID är webbläsarens unika enhets-ID.
+Det här kodblocket används för att hämta värdet för Experience Cloud ID (ECID). ECID är webbläsarens unika enhets-ID.
 
 Som du kan se i ovanstående kod anropas en annan funktion när ECID har hämtats. Den här funktionen kallas **getOffer()** som du lägger till härnäst.
 
-![Blockera](./images/blockadv16.png)
+![Blockera](./images/blockadv16.png){zoomable="yes"}
 
 Lägg sedan till nedanstående kod under
 
@@ -318,11 +318,11 @@ async function getOffer(ECID) {
 
 Det är viktigt att kodblocket klistras in under den avslutande parentesen som du kan se på rad 42 i det här exemplet. Koden som du just klistrade in är en separat funktion som behöver en egen plats i den här filen och kan inte kapslas i **standardfunktionen** ovan.
 
-![Blockera](./images/blockadv17.png)
+![Blockera](./images/blockadv17.png){zoomable="yes"}
 
 Kodblocket som du just klistrat in simulerar en begäran som normalt skulle göras av SDK/alloy.js. I det här exemplet kommer en **fetch**-begäran att göras till **edge.adobedc.net**.
 
-I begäran anges 2 **beslutsomfattningar** som ber Adobe Journey Optimizer Offer decisioning att fatta ett beslut om vilket erbjudande som ska ses av detta ECID.
+I begäran anges 2 **beslutsomfattningar** som ber Adobe Journey Optimizer Offer Decisioning att fatta ett beslut om vilket erbjudande som ska ses av detta ECID.
 
 När svaret har tagits emot tolkar koden svaret och filtrerar bort sådant som URL:en för den bild som ska visas samt JSON-svaret som innehåller sådant som Erbjudandetext och Erbjudande CTA, varefter koden visar dessa på webbplatsen.
 
@@ -330,11 +330,11 @@ Kom ihåg - den här metoden används endast i aktiveringssyfte och är inte det
 
 Spara ändringarna. Öppna sedan **Github Desktop**, ge din PR ett namn och klicka på **Verkställ för huvudsidan**.
 
-![Blockera](./images/blockadv18.png)
+![Blockera](./images/blockadv18.png){zoomable="yes"}
 
 Klicka sedan på **Push origin**.
 
-![Blockera](./images/blockadv19.png)
+![Blockera](./images/blockadv19.png){zoomable="yes"}
 
 Du kan nu visa ändringarna av din webbplats genom att gå till `main--citisignal--XXX.aem.page/us/en` och/eller `main--citisignal--XXX.aem.live/us/en` efter att du ersatt XXX med ditt GitHub-användarkonto, som i det här exemplet är `woutervangeluwe`.
 
@@ -343,9 +343,9 @@ I det här exemplet blir den fullständiga URL:en följande:
 
 Du borde se det här då.
 
-![Blockera](./images/blockadv20.png)
+![Blockera](./images/blockadv20.png){zoomable="yes"}
 
-Nästa steg: [2.1.6 AEM Edge Delivery Services MarTech plugin](./ex6.md){target="_blank"}
+Nästa steg: [2.1.6 AEM Edge Delivery Services SmartTech-plugin](./ex6.md){target="_blank"}
 
 [Gå tillbaka till modul 2.1](./aemcs.md){target="_blank"}
 

@@ -1,11 +1,11 @@
 ---
-title: Slutförd - en självstudiekurs om Adobe
+title: Slutförd - en självstudiekurs för Adobe
 description: Hur mäts färdigställandet?
 doc-type: multipage-overview
 exl-id: 24d0a6a8-effa-4335-881e-914305bcd348
-source-git-commit: 5c7ab69877cbfdf10088c261c0866790b0d89552
+source-git-commit: 872ef3910f7fe41b360f80ba13a3840efbfd2172
 workflow-type: tm+mt
-source-wordcount: '425'
+source-wordcount: '465'
 ht-degree: 0%
 
 ---
@@ -24,15 +24,16 @@ Det förväntade slutförandebeviset för modulen **Komma igång** är ID:t för
 
 ID:t för Demo System-projektet för webbformat ser ut så här: `--aepUserLdap-- - 8ERG`.
 
-![3](./assets/images/module0dtl.png)
+![3](./assets/images/module0dtl.png){zoomable="yes"}
 
-## 1.1 Adobe Firefly
 
-Det förväntade slutförandebeviset för modulen **Adobe Firefly Services** är **URL** för PSD-filen som skapades i slutet av övningen 1.1.3, efter att ha gått igenom **Photoshop API - Ändra text**.
+## 1.1 Adobe Firefly Services
+
+Det förväntade slutförandebeviset för modulen **Adobe Firefly Services** är **URL** för PSD-filen som genererades i slutet av övningen 1.1.3, efter att ha gått igenom **Photoshop API - Ändra text**.
 
 URL:en ser ut så här: `https://ldap.blob.core.windows.net/folder/citisignal-fiber-changed-text.psd?sv=2023-01-03&st=2025-01-31T07%3A00%3A37Z&se=2026-02-01T07%3A00%3A00Z&sr=c&sp=racwl&sig=JmGLLEBWwkddsbOS8%2F0Fo3BQEh%2F2m2E9lL70oj1Usssg%3D`.
 
-![3](./assets/images/ps24.png)
+![3](./assets/images/ps24.png){zoomable="yes"}
 
 ## 1.2 Automatisering av arbetsflöden med Workfront Fusion
 
@@ -40,7 +41,7 @@ Det förväntade beviset på slutförande för modulen **Automatisering av Creat
 
 URL:en ser ut så här: `https://hook.fusion.adobe.com/tuqxu1k4rbf7xdiiqheswzib8iv5t0jh`.
 
-![3](./assets/images/wff.png)
+![3](./assets/images/wff.png){zoomable="yes"}
 
 ## 2.1 Adobe Experience Manager Cloud Service &amp; Edge Delivery Services
 
@@ -48,7 +49,7 @@ Det förväntade slutförandebeviset för modulen **Adobe Experience Manager Clo
 
 URL:en ser ut så här: `https://main--citisignal--xxx.aem.page/us/en`.
 
-![3](./assets/images/aemcsweb.png)
+![3](./assets/images/aemcsweb.png){zoomable="yes"}
 
 ## 2.2 Arbetsflödeshantering med Adobe Workfront
 
@@ -56,13 +57,13 @@ Det förväntade beviset på slutförande för modulen **Arbetsflödeshantering 
 
 Klicka på **Dela länk** på den överförda bilden i AEM Assets för att hämta URL:en.
 
-![12](./assets/images/wflink1.png)
+![12](./assets/images/wflink1.png){zoomable="yes"}
 
 Kopiera URL-adressen genom att klicka på ikonen **kopiera** .
 
 URL:en ser ut så här: `https://author-p148121-e1511399.adobeaemcloud.com/linkshare.html?sh=d63ec826_df79_4c73_a05c_2c2115baef78.dw7JBu2VxkNZvXE2oq9J6KwFRrt5VAffkuqC0nZIjHE`.
 
-![12](./assets/images/wflink2.png)
+![12](./assets/images/wflink2.png){zoomable="yes"}
 
 ## 3.1 Sammansatt målgrupp
 
@@ -70,19 +71,23 @@ Det förväntade slutförandebeviset för modulen **Federated Audience Compositi
 
 ID:t för Federated Data Model ser ut så här: **DMO5110** och kan hämtas från URL:en enligt bilden nedan.
 
-![3](./assets/images/completemodule3fac.png)
+![3](./assets/images/completemodule3fac.png){zoomable="yes"}
 
 ## 3.2 Adobe Journey Optimizer: Översättningstjänster
 
-Förväntat slutförandebevis för modulen **Adobe Journey Optimizer: Översättningstjänster** är ...
+Det förväntade slutförandebeviset för modulen **Adobe Journey Optimizer: Translation Services** är **kampanjens version-ID** för din CitiSignal Fibre-kampanj.
 
-## 3.3 Adobe Journey Optimizer: Offer decisioning
+Kampanjversion-ID:t för den federerade datamodellen ser ut så här: **b11c998b-a345-4f8e-afb1-6285547eb693** och kan kopieras från skärmen Kampanjöversikt, som visas i bilden nedan.
 
-Det förväntade slutförandebeviset för modulen **Adobe Journey Optimizer: Offer decisioning** är ID:t för det **beslut** som du skapade.
+![3](./assets/images/completemodule32ajotransl.png){zoomable="yes"}
+
+## 3.3 Adobe Journey Optimizer: Offer Decisioning
+
+Det förväntade slutförandebeviset för modulen **Adobe Journey Optimizer: Offer Decisioning** är ID:t för det **beslut** som du skapade.
 
 Du hittar **ID:t för beslut**, som ser ut så här **`dps:offer-activity:1a08ba4b529b2fb2`**, här:
 
-![14](./assets/images/offers.png)
+![14](./assets/images/offers.png){zoomable="yes"}
 
 >[!NOTE]
 >

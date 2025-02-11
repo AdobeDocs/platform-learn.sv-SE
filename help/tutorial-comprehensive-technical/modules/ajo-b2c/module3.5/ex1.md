@@ -1,19 +1,19 @@
 ---
-title: AJO Translations Provider
-description: AJO Translations Provider
+title: Komma igång med AJO Translation Services
+description: Komma igång med AJO Translation Services
 kt: 5342
 doc-type: tutorial
-exl-id: ee0b8650-a59f-4888-8228-4caafe4143e4
-source-git-commit: 24b0b774fe19e5938555491b3dc9d04717bb95c6
+exl-id: 28c925dd-8a7b-4b9a-a128-ecbfbfbeaf04
+source-git-commit: 7438a1289689c5c3fb3deb398aa9898d7ac26cf8
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '546'
 ht-degree: 0%
 
 ---
 
-# 3.2.1 Översättningsleverantör
+# 3.5.1 Översättningsleverantör
 
-## 3.2.1.1 Konfigurera Microsoft Azure Translator
+## 3.5.1.1 Konfigurera Microsoft Azure Translator
 
 Gå till [https://portal.azure.com/#home](https://portal.azure.com/#home).
 
@@ -47,7 +47,7 @@ Gå till **Resurshantering** > **Tangenter och slutpunkt** på den vänstra meny
 
 ![Översättningar](./images/transl7.png)
 
-## 3.2.1.2 Språkordlista
+## 3.5.1.2 Språkordlista
 
 Gå till [https://experience.adobe.com/](https://experience.adobe.com/). Klicka på **Journey Optimizer**.
 
@@ -61,7 +61,7 @@ Du borde se det här då.
 
 ![Översättningar](./images/locale2.png)
 
-## 3.2.1.3 Konfigurera översättningsprovider i AJO
+## 3.5.1.3 Konfigurera översättningsprovider i AJO
 
 Gå till [https://experience.adobe.com/](https://experience.adobe.com/). Klicka på **Journey Optimizer**.
 
@@ -91,7 +91,7 @@ Bläddra uppåt och klicka på **Spara**.
 
 ![Översättningar](./images/transl13.png)
 
-## 3.2.1.4 Konfigurera översättningsprojekt
+## 3.5.1.4 Konfigurera översättningsprojekt
 
 Gå till [https://experience.adobe.com/](https://experience.adobe.com/). Klicka på **Journey Optimizer**.
 
@@ -125,7 +125,7 @@ Ditt **översättningsprojekt** är nu klart att användas.
 
 ![Översättningar](./images/ajoprovider9.png)
 
-## 3.2.1.5 Konfigurera språkinställningar
+## 3.5.1.5 Konfigurera språkinställningar
 
 Gå till **Kanaler** > **Allmänna inställningar** > **Språkinställningar**. Klicka på **Skapa språkinställningar**.
 
@@ -171,8 +171,8 @@ Du har gjort klart den här övningen.
 
 ## Nästa steg
 
-Gå till [3.2.2 Skapa din kampanj](./ex2.md)
+Gå till [3.5.2 Skapa din kampanj](./ex2.md)
 
-Gå tillbaka till [Modul 3.2](./ajotranslationsvcs.md){target="_blank"}
+Gå tillbaka till [Modul 3.5](./ajotranslationsvcs.md){target="_blank"}
 
 Gå tillbaka till [Alla moduler](./../../../overview.md){target="_blank"}

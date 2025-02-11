@@ -3,9 +3,9 @@ title: Översikt - Omfattande teknisk självstudiekurs för AEP och appar
 description: Utgångspunkt för datatekniker, dataanalytiker, dataarkitekter, datavetenskaper, Orchestration Engineers och Marketers för att få en fullständig förståelse för affärsvärdet hos Adobe Experience Platform och alla dess programtjänster.
 doc-type: multipage-overview
 exl-id: 88c19383-c185-40f0-b118-6cb82db0ce0e
-source-git-commit: 3b3c62499bfed86ab13a657a816424879cab4f42
+source-git-commit: 24b0b774fe19e5938555491b3dc9d04717bb95c6
 workflow-type: tm+mt
-source-wordcount: '1258'
+source-wordcount: '1291'
 ht-degree: 0%
 
 ---
@@ -64,7 +64,7 @@ Du kan hitta många intressanta videor från vårt Tech Academy-webbseminarium, 
 
 ## Slutförande och certifiering
 
-Den här självstudiekursen är en del av en Adobe-certifieringskurs. Du kan registrera dig för kursen tillsammans med den här självstudiekursen genom att gå till [https://certification.adobe.com/courses/1258](https://certification.adobe.com/courses/1258).
+Den här självstudiekursen ingår i en Adobe Certification-kurs. Du kan registrera dig för kursen tillsammans med den här självstudiekursen genom att gå till [https://certification.adobe.com/courses/1258](https://certification.adobe.com/courses/1258).
 
 För varje modul som du slutför med hjälp av självstudiekursen nedan måste du skicka in ett bevis på slutförandet enligt [här](./completion.md).
 
@@ -151,7 +151,7 @@ I den här modulen använder du Adobe Journey Optimizer för att lyssna på kund
 
 **Tidsinvestering:** 90 minuter
 
-[3.3 Adobe Journey Optimizer: Offer decisioning](./modules/ajo-b2c/module3.3/offer-decisioning.md)
+[3.3 Adobe Journey Optimizer: Offer Decisioning](./modules/ajo-b2c/module3.3/offer-decisioning.md)
 
 I den här modulen kommer du att använda Adobe Experience Platform - erbjudanden/beslutsprogram på ett praktiskt sätt för att konfigurera personaliserade erbjudanden och din egen erbjudandeaktivitet.
 
@@ -163,6 +163,12 @@ I den här modulen får ni lära er allt om Journey Optimizer, som hjälper för
 
 **Tidsinvestering:** 120 minuter
 
+[3.5 Adobe Journey Optimizer: Översättningstjänster](./modules/ajo-b2c/module3.5/ajotranslationsvcs.md)
+
+I den här modulen får du lära dig hur du konfigurerar och använder översättningstjänster inom Adobe Journey Optimizer för att lokalisera dina meddelanden till dina kunder.
+
+**Tidsinvestering:** 60 minuter
+
 ### 4. Adobe Customer Journey Analytics
 
 [4.1 Customer Journey Analytics: Skapa en kontrollpanel med Analysis Workspace ovanpå Adobe Experience Platform](./modules/cja-b2c/module4.1/customer-journey-analytics-build-a-dashboard.md)
@@ -171,7 +177,7 @@ I den här modulen får du information online för offlineåtkomst genom att kon
 
 **Tidsinvestering:** 120 minuter
 
-[4.2 Customer Journey Analytics: Importera och analysera data från Google Analytics i Adobe Experience Platform med BigQuery Source Connector](./modules/cja-b2c/module4.2/customer-journey-analytics-bigquery-gcp.md)
+[4.2 Customer Journey Analytics: Importera och analysera Google Analytics-data i Adobe Experience Platform med BigQuery Source Connector](./modules/cja-b2c/module4.2/customer-journey-analytics-bigquery-gcp.md)
 
 I den här modulen ska du konfigurera en egen instans av Google Cloud Platform, läsa in demodata i Google Cloud Platform och sedan använda BigQuery Source Connector för att importera data från Google Cloud Platform till Adobe Experience Platform. Slutligen använder ni Customer Journey Analytics för att visualisera dessa data.
 

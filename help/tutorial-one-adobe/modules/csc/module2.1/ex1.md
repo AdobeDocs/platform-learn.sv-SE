@@ -4,7 +4,7 @@ description: Skapa ett Cloud Manager-program
 kt: 5342
 doc-type: tutorial
 exl-id: fda247eb-1865-4936-b46e-84128ccab357
-source-git-commit: 2fe7d2528132301f559f9d51faa9ad128f5d890f
+source-git-commit: 18151b91d18ebb53fc485151effd12a6fdc2b6b8
 workflow-type: tm+mt
 source-wordcount: '223'
 ht-degree: 1%
@@ -15,11 +15,11 @@ ht-degree: 1%
 
 Gå till [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com){target="_blank"}. Organisationen som du bör välja är `--aepImsOrgName--`. Då ser du något sådant här. Klicka på **Lägg till program**.
 
-![AEMCS](./images/aemcs1.png)
+![AEMCS](./images/aemcs1.png){zoomable="yes"}
 
 Använd `--aepUserLdap-- - CitiSignal` för **programnamnet**. Klicka på **Fortsätt**.
 
-![AEMCS](./images/aemcs2.png)
+![AEMCS](./images/aemcs2.png){zoomable="yes"}
 
 Kontrollera att följande alternativ är markerade:
 
@@ -29,37 +29,37 @@ Kontrollera att följande alternativ är markerade:
 
 Klicka på **Skapa**.
 
-![AEMCS](./images/aemcs3.png)
+![AEMCS](./images/aemcs3.png){zoomable="yes"}
 
 Det kan ta 10-20 minuter att skapa miljöer.
 
-![AEMCS](./images/aemcs4.png)
+![AEMCS](./images/aemcs4.png){zoomable="yes"}
 
 Under tiden du väntar kan du redan börja med övning [2.1.2 Skapa din dokumentbaserade webbplats](./ex2.md){target="_blank"}.
 
 När miljöerna har skapats och är klara att användas får du en bekräftelse via e-post, varefter du kan komma tillbaka hit.
 
-![AEMCS](./images/aemcs5.png)
+![AEMCS](./images/aemcs5.png){zoomable="yes"}
 
 När du har fått din e-postbekräftelse går du tillbaka till [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com){target="_blank"}. Du kommer då att se att status för ditt program har ändrats till **Ready**. Klicka på programmet för att öppna det.
 
-![AEMCS](./images/aemcs6.png)
+![AEMCS](./images/aemcs6.png){zoomable="yes"}
 
 Ta en titt på fliken **Pipelines**. Klicka på de tre punkterna **..** och sedan på **Kör**.
 
-![AEMCS](./images/aemcs7.png)
+![AEMCS](./images/aemcs7.png){zoomable="yes"}
 
 Klicka på **Kör**.
 
-![AEMCS](./images/aemcs8.png)
+![AEMCS](./images/aemcs8.png){zoomable="yes"}
 
 Klicka sedan på de 3 punkterna **..** på fliken **Miljö** och klicka på **Visa detaljer**.
 
-![AEMCS](./images/aemcs9.png)
+![AEMCS](./images/aemcs9.png){zoomable="yes"}
 
 Du kommer då att se din miljöinformation, inklusive URL:en för din **författarmiljö** som du behöver i nästa övning.
 
-![AEMCS](./images/aemcs10.png)
+![AEMCS](./images/aemcs10.png){zoomable="yes"}
 
 När din pipeline är klar kan du fortsätta med nästa övning.
 

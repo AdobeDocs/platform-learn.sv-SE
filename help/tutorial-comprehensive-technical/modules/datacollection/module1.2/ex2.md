@@ -4,9 +4,9 @@ description: Foundation - datainmatning - Konfigurera scheman och ange identifie
 kt: 5342
 doc-type: tutorial
 exl-id: 3cc1fbe3-1f40-45a3-a123-ee6f1463e7b5
-source-git-commit: 2f53c8da2cbe833120fa6555c65b8b753bfa4f8d
+source-git-commit: 29d5892a98d7ac4b7d1dfe24c2b39549ee6d5c66
 workflow-type: tm+mt
-source-wordcount: '2891'
+source-wordcount: '2885'
 ht-degree: 0%
 
 ---
@@ -140,7 +140,7 @@ Du har nu den här schemastrukturen på plats.
 ![Datainmatning](./images/schemastructurem.png)
 
 Din nya [!UICONTROL Field Group] är fortfarande tom, så nu måste du lägga till fält i [!UICONTROL Field Group].
-Klicka på din anpassade [!UICONTROL Field Group] i listan [!UICONTROL Field Group] och klicka sedan på **Bläddra**.
+Klicka på din anpassade [!UICONTROL Field Group] i listan [!UICONTROL Field Group].
 
 ![Datainmatning](./images/schemastructurem.png)
 
@@ -176,26 +176,26 @@ Du kommer nu att lägga till tre nya fältobjekt under den innehavaren i det **i
 Använd informationen nedan för att skapa de tre nya fälten under objektet **[!UICONTROL identification]**:
 
 - ecid:
-   - Fältnamn: **[!UICONTROL ecid]**
-   - Visningsnamn: **[!UICONTROL ecid]**
+   - Fältnamn: **`--aepUserLdap--_ecid`**
+   - Visningsnamn: **`--aepUserLdap--ecid`**
    - Typ: **[!UICONTROL String]**
    - Fältgrupp: **`--aepUserLdap-- - Profile Identification Field Group`**
 
 - emailId
-   - Fältnamn: **[!UICONTROL emailId]**
-   - Visningsnamn: **[!UICONTROL emailId]**
+   - Fältnamn: **`--aepUserLdap--_emailId`**
+   - Visningsnamn: **`--aepUserLdap--_emailId`**
    - Typ: **[!UICONTROL String]**
    - Fältgrupp: **`--aepUserLdap-- - Profile Identification Field Group`**
 
 - mobiltelefon
-   - Fältnamn: **[!UICONTROL mobilenr]**
-   - Visningsnamn: **[!UICONTROL mobilenr]**
+   - Fältnamn: **`--aepUserLdap--_mobilenr`**
+   - Visningsnamn: **`--aepUserLdap--_mobilenr`**
    - Typ: **[!UICONTROL String]**
    - Fältgrupp: **`--aepUserLdap-- - Profile Identification Field Group`**
 
 Så här ska varje fält se ut efter den ursprungliga fältkonfigurationen.
 
-- mobiltelefon
+- `--aepUserLdap--_mobilenr`
 
 ![Datainmatning](./images/mobilenrfield.png)
 
@@ -203,13 +203,13 @@ Om du vill spara fältet rullar du nedåt i **[!UICONTROL Field Properties]** ti
 
 ![Datainmatning](./images/apply.png)
 
-- ecid
+- `--aepUserLdap--_ecid`
 
 ![Datainmatning](./images/ecidfield.png)
 
 Glöm inte att rulla nedåt och klicka på **Använd**.
 
-- emailId
+- `--aepUserLdap--_emailId`
 
 ![Datainmatning](./images/emailidfield.png)
 
@@ -223,7 +223,7 @@ Dina tre fält måste nu definieras som **[!UICONTROL Identity]**-fält.
 
 Så här definierar du de här fälten som **[!UICONTROL Identity]**-fält:
 
-- Markera fältet **[!UICONTROL emailId]**.
+- Markera fältet **`--aepUserLdap--_emailId`**.
 - Till höger i fältegenskaperna rullar du nedåt tills du ser **[!UICONTROL Identity]**. Markera kryssrutan för **[!UICONTROL Identity]**.
 
 ![Datainmatning](./images/emailidid.png)
@@ -236,15 +236,15 @@ Så här definierar du de här fälten som **[!UICONTROL Identity]**-fält:
 
 ![Datainmatning](./images/emailidprimidns.png)
 
-Därefter måste du definiera de andra fälten för **[!UICONTROL ecid]** och **[!UICONTROL mobilenr]** som standardidentifierare.
+Därefter måste du definiera de andra fälten för **`--aepUserLdap--_ecid`** och **`--aepUserLdap--_mobilenr`** som standardidentifierare.
 
-Markera fältet **[!UICONTROL ecid]**. Till höger i fältegenskaperna rullar du nedåt tills du ser **[!UICONTROL Identity]**. Markera kryssrutan för **[!UICONTROL Identity]**.
+Markera fältet **`--aepUserLdap--_ecid`**. Till höger i fältegenskaperna rullar du nedåt tills du ser **[!UICONTROL Identity]**. Markera kryssrutan för **[!UICONTROL Identity]**.
 Välj sedan namnområdet **[!UICONTROL ECID]** i listan med **[!UICONTROL Namespaces]**.
 Klicka på **[!UICONTROL Apply]** om du vill spara ändringarna.
 
 ![Datainmatning](./images/ecidid.png)
 
-Markera fältet **[!UICONTROL mobilenr]**. Till höger i fältegenskaperna rullar du nedåt tills du ser **[!UICONTROL Identity]**. Markera kryssrutan för **[!UICONTROL Identity]**.
+Markera fältet **`--aepUserLdap--_mobilenr`**. Till höger i fältegenskaperna rullar du nedåt tills du ser **[!UICONTROL Identity]**. Markera kryssrutan för **[!UICONTROL Identity]**.
 Markera namnområdet **[!UICONTROL Phone]** i listan med **[!UICONTROL Namespaces]**.
 Klicka på **[!UICONTROL Apply]** om du vill spara ändringarna.
 
@@ -415,12 +415,12 @@ Du har nu ett tomt fält. Du måste konfigurera fältet ovan enligt anvisningarn
 
 - ecid:
 
-   - Fältnamn: **[!UICONTROL ecidweb]**
-   - Visningsnamn: **[!UICONTROL ecidweb]**
+   - Fältnamn: **`--aepUserLdap--_ecidweb`**
+   - Visningsnamn: **`--aepUserLdap--_ecidweb`**
    - Typ: **[!UICONTROL String]**
    - Fältgrupp: `--aepUserLdap-- - ExperienceEvent Identification Field Group`
 
-Så här ska fältet [!UICONTROL ecid] se ut efter din ursprungliga fältkonfiguration:
+Så här ska fältet `--aepUserLdap--_ecidweb` se ut efter din ursprungliga fältkonfiguration:
 
 ![Datainmatning](./images/ecidfieldee.png)
 
@@ -432,7 +432,7 @@ Du har nu ett nytt fält, men det här fältet har inte definierats som ett **[!
 
 ![Datainmatning](./images/3fieldsee.png)
 
-Om du vill börja definiera dessa fält som **[!UICONTROL Identity]**-fält markerar du fältet **[!UICONTROL ecid]**.
+Om du vill börja definiera dessa fält som **[!UICONTROL Identity]**-fält markerar du fältet **`--aepUserLdap--_ecidweb`**.
 Till höger i fältegenskaperna rullar du nedåt tills du ser **[!UICONTROL Identity]**. Markera kryssrutan för **[!UICONTROL Identity]** och markera kryssrutan för **[!UICONTROL Primary Identity]**.
 Markera namnområdet **[!UICONTROL ECID]** i listan med **[!UICONTROL Namespaces]**.
 

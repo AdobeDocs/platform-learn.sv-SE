@@ -4,7 +4,7 @@ description: I det här avsnittet konfigurerar du en e-postgruppsresa för att s
 kt: 5342
 doc-type: tutorial
 exl-id: 52b2e019-e408-4160-87b7-2aabd0f3c68f
-source-git-commit: 9865b5697abe2d344fb530636a1afc3f152a9e8f
+source-git-commit: b2624546b221c1fd8de2b503c90e73d07ff4283b
 workflow-type: tm+mt
 source-wordcount: '878'
 ht-degree: 0%
@@ -38,7 +38,7 @@ Markera fältet **XDM Individual Profile > Personal Email > Address** och lägg 
 
 För att undvika att skicka e-postmeddelanden till andra användare i din delade utbildningsmiljö kan du även lägga till ett filter som **Förnamn är lika med -ditt förnamn-**.
 
-Ange målgruppens namn till `--aepUserLdap-- - All customers with email` och klicka på **Publish**.
+Ange målgruppens namn till `--aepUserLdap-- - All customers with email` och klicka på **Publicera**.
 
 ![Journey Optimizer](./images/audcampaign3.png)
 
@@ -176,7 +176,7 @@ Klicka på **Aktivera**.
 
 ![Journey Optimizer](./images/campaign21.png)
 
-När kampanjen är aktiverad kommer den att köras.
+När kampanjen har aktiverats schemaläggs den att köras.
 
 ![Journey Optimizer](./images/campaign22.png)
 

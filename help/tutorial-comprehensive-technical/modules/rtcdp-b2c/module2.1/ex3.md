@@ -4,9 +4,9 @@ description: Foundation - kundprofil i realtid - Visualisera din egen kundprofil
 kt: 5342
 doc-type: tutorial
 exl-id: fe07d873-f4de-437e-815e-e6e6c06a691c
-source-git-commit: c49b41e1b033573dbebc9ced3a3f4071bf94d04e
+source-git-commit: 29d5892a98d7ac4b7d1dfe24c2b39549ee6d5c66
 workflow-type: tm+mt
-source-wordcount: '2299'
+source-wordcount: '2343'
 ht-degree: 0%
 
 ---
@@ -38,33 +38,33 @@ På X-ray-panelen ser vi fyra olika kombinationer av ID:n och namnutrymmen:
 
 Kom ihåg dessa identifierare för nästa steg.
 
-## Konfigurera ditt Adobe I/O-projekt
+## Konfigurera Adobe I/O Project
 
 I den här övningen kommer du att använda Adobe I/O intensivt för att ställa frågor mot plattformens API:er. Följ stegen nedan för att konfigurera Adobe I/O.
 
 Gå till [https://developer.adobe.com/console/home](https://developer.adobe.com/console/home)
 
-![Ny integrering för Adobe I/O](./images/iohome.png)
+![Adobe I/O Ny integrering](./images/iohome.png)
 
 Se till att du väljer rätt Adobe Experience Platform-instans i skärmens övre högra hörn. Din instans är `--aepImsOrgName--`. Klicka på **Skapa nytt projekt**.
 
-![Ny integrering för Adobe I/O](./images/iocomp.png)
+![Adobe I/O Ny integrering](./images/iocomp.png)
 
 Välj **+ Lägg till i projekt** och välj **API**.
 
-![Ny integrering för Adobe I/O](./images/adobe_io_access_api.png)
+![Adobe I/O Ny integrering](./images/adobe_io_access_api.png)
 
 Då ser du det här:
 
-![Ny integrering för Adobe I/O](./images/api1.png)
+![Adobe I/O Ny integrering](./images/api1.png)
 
-Markera **Experience Platform API** och klicka på **Nästa**.
+Välj **Experience Platform API** och klicka på **Nästa**.
 
-![Ny integrering för Adobe I/O](./images/api3.png)
+![Adobe I/O Ny integrering](./images/api3.png)
 
 Du kommer att se det här. Ange ett namn för dina autentiseringsuppgifter: `--aepUserLdap-- - OAuth credential`. Klicka på **Nästa**.
 
-![Ny integrering för Adobe I/O](./images/api4.png)
+![Adobe I/O Ny integrering](./images/api4.png)
 
 Därefter måste du välja en produktprofil som definierar vilka behörigheter som är tillgängliga för den här integreringen.
 
@@ -76,39 +76,43 @@ Välj önskade produktprofiler.
 
 Klicka på **Spara konfigurerat API**.
 
-![Ny integrering för Adobe I/O](./images/api9.png)
+![Adobe I/O Ny integrering](./images/api9.png)
 
-Integreringen av Adobe I/O är nu klar.
+Nu är Adobe I/O-integreringen klar.
 
-![Ny integrering för Adobe I/O](./images/api11.png)
+![Adobe I/O Ny integrering](./images/api11.png)
 
 Klicka på knappen **Hämta för Postman** och klicka sedan på **OAuth Server-to-Server** för att hämta en Postman-miljö (vänta tills miljön har hämtats, detta kan ta några sekunder).
 
-![Ny integrering för Adobe I/O](./images/iopm.png)
+![Adobe I/O Ny integrering](./images/iopm.png)
 
 IO-projektet har för närvarande ett generiskt namn. Du måste ge integreringen ett eget namn. Klicka på **Projekt X** (eller liknande namn) som anges
 
-![Ny integrering för Adobe I/O](./images/api13.png)
+![Adobe I/O Ny integrering](./images/api13.png)
 
 Klicka på **Redigera projekt**.
 
-![Ny integrering för Adobe I/O](./images/api14.png)
+![Adobe I/O Ny integrering](./images/api14.png)
 
 Ange ett namn och en beskrivning för din integrering: `--aepUserLdap-- AEP Tutorial`.
 
 Klicka på **Spara**.
 
-![Ny integrering för Adobe I/O](./images/api15.png)
+![Adobe I/O Ny integrering](./images/api15.png)
 
-Integreringen av Adobe I/O är nu klar.
+Integreringen med Adobe I/O är nu klar.
 
-![Ny integrering för Adobe I/O](./images/api16.png)
+![Adobe I/O Ny integrering](./images/api16.png)
 
 >[!NOTE]
 >
 >Det finns ytterligare ett steg som säkerställer att det här Adobe I/O-projektet har åtkomst till Adobe Experience Platform behörighetsinställningar. API-autentiseringsuppgifterna för ditt projekt måste läggas till i Behörighetsgränssnittet för Adobe Experience Platform, som systemadministratörsbehörighet krävs för. Stegen beskrivs nedan, men du kan behöva kontakta din systemadministratör för att få detta bearbetat åt dig ifall du inte har de behörigheter som krävs.
 
 ## AEP-behörigheter för API-autentiseringsuppgifter
+
+>[!IMPORTANT]
+>
+>Om du inte har behörighet för systemadministratörsåtkomst kan du inte utföra det här steget själv och du har inte behörighet att komma åt användargränssnittet för **Behörigheter**. Kontakta då systemadministratören eller lägg upp din fråga i organisationens supportkanal.
 
 Gå till [Adobe Experience Platform](https://experience.adobe.com/platform). När du har loggat in loggar du in på Adobe Experience Platform hemsida.
 
@@ -136,13 +140,13 @@ Markera det nya Adobe I/O-projektet och klicka på **Spara**.
 
 >[!IMPORTANT]
 >
->Om du är anställd i Adobe följer du instruktionerna här för att använda [PostBuster](./../../../postbuster.md).
+>Om du är Adobe-anställd följer du instruktionerna här för att använda [PostBuster](./../../../postbuster.md).
 
 Gå till [https://www.postman.com/downloads/](https://www.postman.com/downloads/).
 
 Hämta och installera den aktuella versionen av Postman för ditt operativsystem.
 
-![Ny integrering för Adobe I/O](./images/getstarted.png)
+![Adobe I/O Ny integrering](./images/getstarted.png)
 
 Starta programmet när du har installerat Postman.
 
@@ -151,7 +155,7 @@ I Postman finns det två koncept: Miljö och Samlingar.
 - Miljön innehåller alla dina miljövariabler som är mer eller mindre konsekventa. I miljön hittar du saker som IMSOrg i vår plattformsmiljö, tillsammans med säkerhetsreferenser som din privata nyckel och andra. Miljöfilen är den som du hämtade under Adobe I/O-konfigurationen i den tidigare övningen. Den har följande namn: **`oauth_server_to_server.postman_environment.json`**.
 
 - Samlingen innehåller ett antal API-begäranden som du kan använda. Vi kommer att använda 2 samlingar
-   - 1 samling för autentisering till Adobe I/O
+   - 1 Collection for Authentication to Adobe I/O
    - 1 Samling för övningar i denna modul
    - 1 samling för övningarna i Real-Time CDP-modulen, för målredigering
 
@@ -165,23 +169,23 @@ I den här **postman.zip**-filen hittar du följande filer:
 
 Zippa upp filen **postman.zip** och lagra dessa tre filer i en mapp på skrivbordet tillsammans med den hämtade Postman-miljön från Adobe I/O. Du måste ha dessa fyra filer i den mappen:
 
-![Ny integrering för Adobe I/O](./images/pmfolder.png)
+![Adobe I/O Ny integrering](./images/pmfolder.png)
 
 Gå tillbaka till Postman. Klicka på **Importera**.
 
-![Ny integrering för Adobe I/O](./images/postmanui.png)
+![Adobe I/O Ny integrering](./images/postmanui.png)
 
 Klicka på **filer**.
 
-![Ny integrering för Adobe I/O](./images/choosefiles.png)
+![Adobe I/O Ny integrering](./images/choosefiles.png)
 
 Navigera till den mapp på skrivbordet där du extraherade de 4 hämtade filerna. Markera de här fyra filerna samtidigt och klicka på **Öppna**.
 
-![Ny integrering för Adobe I/O](./images/selectfiles.png)
+![Adobe I/O Ny integrering](./images/selectfiles.png)
 
 När du har klickat på **Öppna** visas en översikt i Postman över miljön och de samlingar du håller på att importera. Klicka på **Importera**.
 
-![Ny integrering för Adobe I/O](./images/impconfirm.png)
+![Adobe I/O Ny integrering](./images/impconfirm.png)
 
 Nu har du allt du behöver i Postman för att börja interagera med Adobe Experience Platform via API:erna.
 
@@ -211,7 +215,7 @@ Om konfigurationen lyckades bör du se ett liknande svar som innehåller följan
 | access_token | **eyJhbGciOiJSU...jrNZ6mdaQ** |
 | förfaller_in | **86399** |
 
-Adobe I/O har gett dig en **innehavartoken**, med ett specifikt värde (mycket lång access_token) och ett förfallofönster.
+Adobe I/O har gett dig en **innehavartoken**, med ett specifikt värde (den mycket långa åtkomsttoken) och ett giltighetsfönster.
 
 Den token vi har fått gäller nu i 24 timmar. Det innebär att om du efter 24 timmar vill använda Postman för att autentisera till Adobe I/O måste du generera en ny token genom att köra denna begäran igen.
 
@@ -223,7 +227,7 @@ Leta reda på samlingen **AEP Tutorial** i Postman.
 
 ![Postman](./images/coll_enablement.png)
 
-I **1. Enhetlig profiltjänst**, klicka på den första begäran med namnet **UPS - GET Profile av entitets-ID &amp; NS**.
+I **1. Enhetlig profiltjänst**, klicka på den första begäran med namnet **UPS - GET-profil av enhets-ID &amp; NS**.
 
 ![Postman](./images/upscall.png)
 
@@ -476,7 +480,7 @@ Leta reda på samlingen **AEP Tutorial** i Postman.
 
 ![Postman](./images/coll_enablement.png)
 
-I **1. Enhetlig profiltjänst**, markera den andra begäran med namnet **UPS - GET Profile &amp; EE av enhets-ID &amp; NS**.
+I **1. Enhetlig profiltjänst**, välj den andra begäran med namnet **UPS - GET Profile &amp; EE av entitets-ID &amp; NS**.
 
 ![Postman](./images/upseecall.png)
 

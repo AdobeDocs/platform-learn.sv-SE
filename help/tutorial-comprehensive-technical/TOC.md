@@ -5,9 +5,9 @@ user-guide-description: En praktisk självstudiekurs som handlar om många aspek
 hide: true
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-source-git-commit: c85cd82a8d66b456a36d4915c1067f5c195139d1
+source-git-commit: cc53577700ed66a8f3f47142e0148af34c4d9135
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '939'
 ht-degree: 2%
 
 ---
@@ -22,7 +22,7 @@ ht-degree: 2%
 + Komma igång {#gettingstarted}
    + Komma igång {#gettingstarted}
       + [Översikt](/help/tutorial-comprehensive-technical/modules/gettingstarted/gettingstarted/getting-started.md)
-      + [Installera Chrome-tillägget för dokumentationen för Experience League](/help/tutorial-comprehensive-technical/modules/gettingstarted/gettingstarted/ex1.md)
+      + [Installera Chrome-tillägget för Experience League-dokumentationen](/help/tutorial-comprehensive-technical/modules/gettingstarted/gettingstarted/ex1.md)
       + [Använd Demo System bredvid för att konfigurera klientegenskapen för Adobe Experience Platform Data Collection](/help/tutorial-comprehensive-technical/modules/gettingstarted/gettingstarted/ex2.md)
       + [Skapa ditt datastream](/help/tutorial-comprehensive-technical/modules/gettingstarted/gettingstarted/ex3.md)
       + [Använda webbplatsen](/help/tutorial-comprehensive-technical/modules/gettingstarted/gettingstarted/ex4.md)
@@ -33,7 +33,7 @@ ht-degree: 2%
    + 1.1 Adobe Experience Platform Data Collection och Web SDK {#module11}
       + [Översikt](/help/tutorial-comprehensive-technical/modules/datacollection/module1.1/data-ingestion-launch-web-sdk.md)
       + [1.1.1 Förstå Adobe Experience Platform datainsamling](/help/tutorial-comprehensive-technical/modules/datacollection/module1.1/ex1.md)
-      + [1.1.2 Edge Network, datastreams och datainsamling på serversidan](/help/tutorial-comprehensive-technical/modules/datacollection/module1.1/ex2.md)
+      + [1.1.2 Edge Network, Datastreams och Server Side Data Collection](/help/tutorial-comprehensive-technical/modules/datacollection/module1.1/ex2.md)
       + [1.1.3 Introduktion till Adobe Experience Platform Data Collection](/help/tutorial-comprehensive-technical/modules/datacollection/module1.1/ex3.md)
       + [1.1.4 Webbdatainsamling på klientsidan](/help/tutorial-comprehensive-technical/modules/datacollection/module1.1/ex4.md)
       + [1.1.5 Implementera Adobe Analytics och Adobe Audience Manager](/help/tutorial-comprehensive-technical/modules/datacollection/module1.1/ex5.md)
@@ -121,12 +121,12 @@ ht-degree: 2%
       + [3.2.4 Skapa din resa och dina meddelanden](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.2/ex4.md)
       + [3.2.5 Utlösa din resa](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.2/ex5.md)
       + [Sammanfattning och fördelar](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.2/summary.md)
-   + 3.3 Adobe Journey Optimizer: Offer decisioning {#module33}
+   + 3.3 Adobe Journey Optimizer: Offer Decisioning {#module33}
       + [Översikt](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.3/offer-decisioning.md)
-      + [3.3.1 Offer decisioning 101](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.3/ex1.md)
+      + [3.3.1 Offer Decisioning 101](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.3/ex1.md)
       + [3.3.2 Konfigurera erbjudanden och beslut](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.3/ex2.md)
-      + [3.3.3 Förbered Adobe Experience Platform Data Collection Client property and Web SDK setup for Offer decisioning](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.3/ex3.md)
-      + [3.3.4 Kombinera Adobe Target och Offer decisioning](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.3/ex4.md)
+      + [3.3.3 Förbered din Adobe Experience Platform Data Collection Client-egenskap och Web SDK-konfiguration för Offer Decisioning](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.3/ex3.md)
+      + [3.3.4 Kombinera Adobe Target och Offer Decisioning](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.3/ex4.md)
       + [3.3.5 Använd ditt beslut i ett e-postmeddelande](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.3/ex5.md)
       + [3.3.6 Testa ditt beslut med API:t](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.3/ex6.md)
       + [Sammanfattning och fördelar](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.3/summary.md)
@@ -137,17 +137,23 @@ ht-degree: 2%
       + [3.4.3 Använda segmentbaserad personalisering i ett e-postmeddelande](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.4/ex3.md)
       + [3.4.4 Konfigurera och använda push-meddelanden](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.4/ex4.md)
       + [Sammanfattning och fördelar](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.4/summary.md)
+   + 3.5 Adobe Journey Optimizer: Översättningstjänster {#module35}
+      + [Översikt](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.5/ajotranslationsvcs.md)
+      + [3.5.1 Översättningsleverantör](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.5/ex1.md)
+      + [3.5.2 Skapa en kampanj](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.5/ex2.md)
+      + [3.5.3 Lägg till språk i e-postmeddelandet](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.5/ex3.md)
+      + [Sammanfattning och fördelar](/help/tutorial-comprehensive-technical/modules/ajo-b2c/module3.5/summary.md)
 
 + 4 Customer Journey Analytics B2C {#cjab2c}
    + 4.1 Customer Journey Analytics: Skapa en instrumentpanel med Analysis Workspace {#module41}
       + [Översikt](/help/tutorial-comprehensive-technical/modules/cja-b2c/module4.1/customer-journey-analytics-build-a-dashboard.md)
       + [4.1.1 Customer Journey Analytics 101](/help/tutorial-comprehensive-technical/modules/cja-b2c/module4.1/ex1.md)
-      + [4.1.2 Ansluta Adobe Experience Platform-datauppsättningar i Customer Journey Analytics](/help/tutorial-comprehensive-technical/modules/cja-b2c/module4.1/ex2.md)
+      + [4.1.2 Koppla samman Adobe Experience Platform-datauppsättningar i Customer Journey Analytics](/help/tutorial-comprehensive-technical/modules/cja-b2c/module4.1/ex2.md)
       + [4.1.3 Skapa en datavy](/help/tutorial-comprehensive-technical/modules/cja-b2c/module4.1/ex3.md)
-      + [4.1.4 Dataförberedelse i Customer Journey Analytics](/help/tutorial-comprehensive-technical/modules/cja-b2c/module4.1/ex4.md)
+      + [4.1.4 Dataförberedelser i Customer Journey Analytics](/help/tutorial-comprehensive-technical/modules/cja-b2c/module4.1/ex4.md)
       + [4.1.5 Visualisering med Customer Journey Analytics](/help/tutorial-comprehensive-technical/modules/cja-b2c/module4.1/ex5.md)
       + [Sammanfattning och fördelar](/help/tutorial-comprehensive-technical/modules/cja-b2c/module4.1/summary.md)
-   + 4.2 Customer Journey Analytics: Importera och analysera data från Google Analytics i Adobe Experience Platform med BigQuery Source Connector {#module42}
+   + 4.2 Customer Journey Analytics: Importera och analysera Google Analytics-data i Adobe Experience Platform med BigQuery Source Connector {#module42}
       + [Översikt](/help/tutorial-comprehensive-technical/modules/cja-b2c/module4.2/customer-journey-analytics-bigquery-gcp.md)
       + [4.2.1 Börja använda Google Cloud Platform](/help/tutorial-comprehensive-technical/modules/cja-b2c/module4.2/ex1.md)
       + [4.2.2 Skapa din första fråga i BigQuery](/help/tutorial-comprehensive-technical/modules/cja-b2c/module4.2/ex2.md)

@@ -1,12 +1,12 @@
 ---
-user-guide-title: Omfattande teknisk självstudiekurs för Adobe, från Creative Cloud till Experience Cloud
-breadcrumb-title: Omfattande teknisk självstudiekurs för Adobe, från Creative Cloud till Experience Cloud
+user-guide-title: Omfattande teknisk självstudiekurs för Adobe-program, från Creative Cloud till Experience Cloud
+breadcrumb-title: Omfattande teknisk självstudiekurs för Adobe-program, från Creative Cloud till Experience Cloud
 hide: true
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-source-git-commit: 3b3c62499bfed86ab13a657a816424879cab4f42
+source-git-commit: b2624546b221c1fd8de2b503c90e73d07ff4283b
 workflow-type: tm+mt
-source-wordcount: '340'
+source-wordcount: '345'
 ht-degree: 4%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 4%
 + Komma igång {#gettingstarted}
    + Komma igång {#gettingstarted}
       + [Översikt](/help/tutorial-one-adobe/modules/getting-started/gettingstarted/getting-started.md)
-      + [Installera Chrome-tillägget för dokumentationen för Experience League](/help/tutorial-one-adobe/modules/getting-started/gettingstarted/ex1.md)
+      + [Installera Chrome-tillägget för Experience League-dokumentationen](/help/tutorial-one-adobe/modules/getting-started/gettingstarted/ex1.md)
       + [Använd Demo System bredvid för att konfigurera klientegenskapen för Adobe Experience Platform Data Collection](/help/tutorial-one-adobe/modules/getting-started/gettingstarted/ex2.md)
       + [Skapa ditt datastream](/help/tutorial-one-adobe/modules/getting-started/gettingstarted/ex3.md)
       + [Använda webbplatsen](/help/tutorial-one-adobe/modules/getting-started/gettingstarted/ex4.md)
@@ -30,29 +30,29 @@ ht-degree: 4%
    + [PostBuster](/help/tutorial-one-adobe/postbuster.md)
 
 + 1 Skapande och produktion {#production}
-   + 1.1 Översikt över Adobe Firefly-tjänster {#module11}
+   + 1.1 Översikt över Adobe Firefly Services {#module11}
       + [Översikt](/help/tutorial-one-adobe/modules/creative-cloud/module1.1/firefly-services.md)
       + [1.1.1 Komma igång med Firefly Services](/help/tutorial-one-adobe/modules/creative-cloud/module1.1/ex1.md)
-      + [1.1.2 Optimera Firefly-processerna med Microsoft Azure och försignerade URL:er](/help/tutorial-one-adobe/modules/creative-cloud/module1.1/ex2.md)
+      + [1.1.2 Optimera dina Firefly-processer med Microsoft Azure och försignerade URL:er](/help/tutorial-one-adobe/modules/creative-cloud/module1.1/ex2.md)
       + [1.1.3 Arbeta med Photoshop API:er](/help/tutorial-one-adobe/modules/creative-cloud/module1.1/ex3.md)
-      + [1.1.4 API för anpassade modeller för Firefly](/help/tutorial-one-adobe/modules/creative-cloud/module1.1/ex4.md)
+      + [1.1.4 API för anpassade Firefly-modeller](/help/tutorial-one-adobe/modules/creative-cloud/module1.1/ex4.md)
       + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/creative-cloud/module1.1/summary.md)
    + 1.2 Automatisering av Creative Workflow med Workfront Fusion {#module21}
       + [Översikt](/help/tutorial-one-adobe/modules/creative-cloud/module1.2/automation.md)
       + [1.2.1 Komma igång med Workfront Fusion](/help/tutorial-one-adobe/modules/creative-cloud/module1.2/ex1.md)
-      + [1.2.2 Använda Adobe-API:er i Workfront Fusion](/help/tutorial-one-adobe/modules/creative-cloud/module1.2/ex2.md)
+      + [1.2.2 Använda Adobe API:er i Workfront Fusion](/help/tutorial-one-adobe/modules/creative-cloud/module1.2/ex2.md)
       + [1.2.3 Processautomatisering med Workfront Fusion](/help/tutorial-one-adobe/modules/creative-cloud/module1.2/ex3.md)
       + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/creative-cloud/module1.2/summary.md)
 
 + 2 Kedja för innehållsleverans {#csc}
-   + 2.1 Adobe Experience Manager-Cloud Service {#module21}
+   + 2.1 Adobe Experience Manager Cloud Service {#module21}
       + [Översikt](/help/tutorial-one-adobe/modules/csc/module2.1/aemcs.md)
       + [2.1.1 Skapa ett Cloud Manager-program](/help/tutorial-one-adobe/modules/csc/module2.1/ex1.md)
       + [2.1.2 Skapa en dokumentbaserad webbplats](/help/tutorial-one-adobe/modules/csc/module2.1/ex2.md)
-      + [2.1.3 Konfigurera AEM CS-miljö](/help/tutorial-one-adobe/modules/csc/module2.1/ex3.md)
+      + [2.1.3 Konfigurera AEM CS-miljön](/help/tutorial-one-adobe/modules/csc/module2.1/ex3.md)
       + [2.1.4 Grundläggande anpassat block](/help/tutorial-one-adobe/modules/csc/module2.1/ex4.md)
       + [2.1.5 Avancerat anpassat block](/help/tutorial-one-adobe/modules/csc/module2.1/ex5.md)
-      + [2.1.6 AEM Edge Delivery Services MarTech plugin](/help/tutorial-one-adobe/modules/csc/module2.1/ex6.md)
+      + [2.1.6 AEM Edge Delivery Services MarTech-plugin](/help/tutorial-one-adobe/modules/csc/module2.1/ex6.md)
       + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/csc/module2.1/summary.md)
    + 2.2 Workfront {#module22}
       + [Översikt](/help/tutorial-one-adobe/modules/csc/module2.2/workfront.md)
@@ -72,14 +72,14 @@ ht-degree: 4%
       + [Översikt](/help/tutorial-one-adobe/modules/uce/module3.2/ajotranslationsvcs.md)
       + [3.2.1 Översättningsleverantör](/help/tutorial-one-adobe/modules/uce/module3.2/ex1.md)
       + [3.2.2 Skapa en kampanj](/help/tutorial-one-adobe/modules/uce/module3.2/ex2.md)
-      + [3.2.3 ...](/help/tutorial-one-adobe/modules/uce/module3.2/ex3.md)
+      + [3.2.3 Lägg till språk i e-postmeddelandet](/help/tutorial-one-adobe/modules/uce/module3.2/ex3.md)
       + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/uce/module3.2/summary.md)
-   + 3.3 Adobe Journey Optimizer: Offer decisioning {#module33}
+   + 3.3 Adobe Journey Optimizer: Offer Decisioning {#module33}
       + [Översikt](/help/tutorial-one-adobe/modules/uce/module3.3/offer-decisioning.md)
-      + [3.3.1 Offer decisioning 101](/help/tutorial-one-adobe/modules/uce/module3.3/ex1.md)
+      + [3.3.1 Offer Decisioning 101](/help/tutorial-one-adobe/modules/uce/module3.3/ex1.md)
       + [3.3.2 Konfigurera erbjudanden och beslut](/help/tutorial-one-adobe/modules/uce/module3.3/ex2.md)
-      + [3.3.3 Förbered Adobe Experience Platform Data Collection Client property and Web SDK setup for Offer decisioning](/help/tutorial-one-adobe/modules/uce/module3.3/ex3.md)
-      + [3.3.4 Kombinera Adobe Target och Offer decisioning](/help/tutorial-one-adobe/modules/uce/module3.3/ex4.md)
+      + [3.3.3 Förbered din Adobe Experience Platform Data Collection Client-egenskap och Web SDK-konfiguration för Offer Decisioning](/help/tutorial-one-adobe/modules/uce/module3.3/ex3.md)
+      + [3.3.4 Kombinera Adobe Target och Offer Decisioning](/help/tutorial-one-adobe/modules/uce/module3.3/ex4.md)
       + [3.3.5 Använd ditt beslut i ett e-postmeddelande](/help/tutorial-one-adobe/modules/uce/module3.3/ex5.md)
       + [3.3.6 Testa ditt beslut med API:t](/help/tutorial-one-adobe/modules/uce/module3.3/ex6.md)
       + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/uce/module3.3/summary.md)
