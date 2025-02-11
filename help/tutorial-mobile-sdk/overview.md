@@ -4,7 +4,7 @@ description: Lär dig hur du implementerar Adobe Experience Cloud mobilappar. De
 recommendations: noDisplay,catalog
 last-substantial-update: 2023-11-29T00:00:00Z
 exl-id: daff4214-d515-4fad-a224-f7589b685b55
-source-git-commit: 0d5914ee0e63719c0439f02a5aa2a1e1c1d11a2f
+source-git-commit: a928fb5c8e48e71984b75faf4eb397814caac6aa
 workflow-type: tm+mt
 source-wordcount: '800'
 ht-degree: 0%
@@ -15,12 +15,12 @@ ht-degree: 0%
 
 Lär dig hur du implementerar Adobe Experience Cloud-program i din mobilapp med Adobe Experience Platform Mobile SDK.
 
-Experience Platform Mobile SDK är en SDK på klientsidan som gör det möjligt för Adobe Experience Cloud kunder att interagera med både Adobe-program och tredjepartstjänster via Adobe Experience Platform Edge Network. Mer information finns i [dokumentationen för Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/home/).
+Experience Platform Mobile SDK är en SDK på klientsidan som gör det möjligt för Adobe Experience Cloud-kunder att interagera med både Adobe-program och tredjepartstjänster via Adobe Experience Platform Edge Network. Mer information finns i [dokumentationen för Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/home/).
 
 ![Arkitektur](assets/architecture.png)
 
 
-Den här självstudiekursen vägleder dig genom implementeringen av Platform Mobile SDK i ett exempel på en app för återförsäljning som kallas Luma. [Luma-appen](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App) har funktioner som gör att du kan skapa en realistisk implementering. När du är klar med den här självstudiekursen bör du vara redo att börja implementera alla marknadsföringslösningar via Experience Platform Mobile SDK i dina egna mobilappar.
+Den här självstudiekursen vägleder dig genom implementeringen av Platform Mobile SDK i ett exempel på en app för återförsäljning som kallas Luma. [Luma-appen](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App) har funktioner som gör att du kan skapa en realistisk implementering. När du är klar med den här självstudiekursen kan du börja implementera alla dina marknadsföringslösningar via Experience Platform Mobile SDK i dina egna mobilappar.
 
 Lektionerna är utformade för iOS och skrivna i Swift/SwiftUI, men många av dem gäller även Android™.
 
@@ -52,9 +52,9 @@ När du är klar med självstudiekursen kan du:
 >
 >Det finns en liknande självstudiekurs om flera lösningar för [Web SDK](../tutorial-web-sdk/overview.md).
 
-## Förhandskrav
+## Behörigheter
 
-I den här lektionen antas du ha ett Adobe-ID och de användarbehörigheter som krävs för att slutföra övningarna. Om du inte gör det bör du kontakta din Adobe-administratör för att begära åtkomst.
+I den här lektionen antas du ha ett Adobe ID och de användarbehörigheter som krävs för att slutföra övningarna. Om du inte gör det bör du kontakta Adobe Administrator för att begära åtkomst.
 
 * I Datainsamling måste du ha:
    * **[!UICONTROL Platforms]** - behörighetsobjekt **[!UICONTROL Mobile]**
@@ -92,7 +92,7 @@ I den här lektionen antas du ha ett Adobe-ID och de användarbehörigheter som 
 Det finns två versioner av exempelappen att hämta. Båda versionerna kan hämtas/klonas från [Github](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App). Du hittar två mappar:
 
 
-1. [Start](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App){target="_blank"}: Ett projekt utan kod eller med platshållarkod för den mesta SDK-koden för Experience Platform Mobile som du behöver använda för att slutföra övningarna i den här självstudien.
+1. [Start](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App){target="_blank"}: Ett projekt utan kod eller med platshållarkod för merparten av Experience Platform Mobile SDK-koden som du behöver använda för att slutföra övningarna i den här självstudien.
 1. [Slutför](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App){target="_blank"}: en version med fullständig implementering för referens.
 
 >[!NOTE]
@@ -109,6 +109,6 @@ Kom så börjar vi!
 
 >[!SUCCESS]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
+>Tack för att du har lagt ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League Community-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 
 Nästa: **[Skapa ett XDM-schema](create-schema.md)**

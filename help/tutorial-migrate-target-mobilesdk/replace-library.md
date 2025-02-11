@@ -2,26 +2,36 @@
 title: Byt ut SDK - migrera från Adobe Target till Adobe Journey Optimizer - mobiltillägg för beslut
 description: Lär dig hur du ersätter SDK när du migrerar från Adobe Target till Adobe Journey Optimizer - Decisioning Mobile.
 exl-id: f1b77cad-792b-4a80-acff-e1a2f29250e1
-source-git-commit: f3fd5f45412900dcb871bc0b346ce89108fa8913
+source-git-commit: a928fb5c8e48e71984b75faf4eb397814caac6aa
 workflow-type: tm+mt
-source-wordcount: '187'
+source-wordcount: '246'
 ht-degree: 0%
 
 ---
 
-# Ersätta måltillägget med besluttillägget
+# Byt ut SDK Target mot Optimera SDK
 
-Lär dig hur du ersätter Adobe Target-implementering på webben för att migrera från at.js till Platform Web SDK. En grundläggande ersättning består av följande steg:
+Lär dig hur du ersätter Adobe Target SDK:er med Optimera SDK:er i din mobilimplementering. En grundläggande ersättning består av följande steg:
 
+* Uppdatera beroenden i din Podfile eller `build.gradle`-fil
+* Uppdatera importer
+* Uppdatera programkod
 
-## Integrera beslutstillägg (Optimera SDK) i mobilapplikationen
+>[!INFO]
+>
+>I Adobe Experience Platform Mobile SDK-ekosystemet implementeras tillägg av SDK:er som importeras till dina program och som kan ha olika namn:
+>
+> * **Mål-SDK** implementerar **Adobe Target-tillägget**
+> * **Optimera SDK** implementerar tillägget **Adobe Journey Optimizer - Bestämning**
+
+## Uppdatera beroenden
 
 
 >[!BEGINTABS]
 
->[!TAB Appberoenden för Decisioning-tillägg - Android]
+>[!TAB Appberoenden för Optimera SDK-Android]
 
-`build.gradle` beroenden
+`build.gradle` beroenden efter migrering
 
 ```Java
 implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
@@ -36,9 +46,9 @@ implementation 'com.adobe.marketing.mobile:signal'
 implementation 'com.adobe.marketing.mobile:userprofile'
 ```
 
->[!TAB Appberoenden för Decisioning-tillägg - iOS]
+>[!TAB Appberoenden för Optimera SDK-iOS]
 
-`Podfile` beroenden
+`Podfile` beroenden efter migrering
 
 ```Swift
 use_frameworks!
@@ -51,9 +61,9 @@ pod 'AEPLifecycle', '~>5.0'
 pod 'AEPUserProfile', '~> 5.0'
 ```
 
->[!TAB Appberoenden för Target-tillägg - Android]
+>[!TAB Appberoenden för SDK-Android ]
 
-`build.gradle` beroenden
+`build.gradle` beroenden före migrering
 
 ```Java
 implementation platform('com.adobe.marketing.mobile:sdk-bom:3.+')
@@ -66,9 +76,9 @@ implementation 'com.adobe.marketing.mobile:signal'
 implementation 'com.adobe.marketing.mobile:userprofile'
 ```
 
->[!TAB Appberoenden för Target-tillägg - iOS]
+>[!TAB Appberoenden för SDK-iOS ]
 
-`Podfile` beroenden
+`Podfile` beroenden före migrering
 
 ```Swift
 use_frameworks!
@@ -84,13 +94,13 @@ pod 'AEPUserProfile', '~> 5.0'
 >[!ENDTABS]
 
 
-## Uppdatera metod för att dölja innehåll
+## Uppdatera importer och kod
 
 >[!BEGINTABS]
 
->[!TAB Bestämmer tillägg-Android]
+>[!TAB Optimera SDK-Android]
 
-Java-initieringskod
+Java-initieringskod efter migrering
 
 ```Java
 import com.adobe.marketing.mobile.AdobeCallback;
@@ -140,9 +150,9 @@ public class MainApp extends Application {
 }
 ```
 
->[!TAB Bestämmer tillägg-iOS]
+>[!TAB Optimera SDK-iOS]
 
-Swift-initieringskod
+Swift-initieringskod efter migrering
 
 ```Swift
 import AEPCore
@@ -182,9 +192,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 ```
 
->[!TAB Måltillägg - Android]
+>[!TAB Ange SDK-Android som mål]
 
-Java-initieringskod
+Java-initieringskod före migrering
 
 ```Java
 import com.adobe.marketing.mobile.AdobeCallback;
@@ -230,9 +240,9 @@ public class MainApp extends Application {
 }
 ```
 
->[!TAB Måltillägg - iOS]
+>[!TAB Ange SDK-iOS som mål]
 
-Swift-initieringskod
+Swift-initieringskod före migrering
 
 ```Swift
 import AEPCore

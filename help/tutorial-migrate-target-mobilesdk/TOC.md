@@ -10,9 +10,9 @@ doc-type: tutorial
 recommendations: catalog,noDisplay
 jira: null
 hide: true
-source-git-commit: cb08ad8a1ffd687d7748ca02643b11b2243cd1a7
+source-git-commit: a928fb5c8e48e71984b75faf4eb397814caac6aa
 workflow-type: tm+mt
-source-wordcount: '80'
+source-wordcount: '77'
 ht-degree: 3%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 3%
 
 + [Utför inledande konfiguration](initial-setup.md)
 
-+ [Ersätta bibliotek och dölja](replace-library.md)
++ [Ersätt SDK:er](replace-library.md)
 
 + [Återgivningsaktiviteter](render-activities.md)
 
@@ -34,7 +34,7 @@ ht-degree: 3%
 
 + [Spåra konverteringshändelser](track-events.md)
 
-+ [Aktivera stöd för flera domäner](cross-domain.md)
++ [Aktivera stöd för WebView](cross-domain.md)
 
 + [Uppdatera målgrupper och profilskript](update-audiences.md)
 

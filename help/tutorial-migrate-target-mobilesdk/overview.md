@@ -3,16 +3,16 @@ title: Migrera från Adobe Target till Adobe Journey Optimizer - mobiltillägg f
 description: Lär dig hur du migrerar din mobilappsimplementering från Adobe Target till Adobe Journey Optimizer - Beslutstillägg
 last-substantial-update: 2023-02-23T00:00:00Z
 exl-id: 32363b95-b6ad-44af-a3b0-e1fbbbf5a8f1
-source-git-commit: cb08ad8a1ffd687d7748ca02643b11b2243cd1a7
+source-git-commit: a928fb5c8e48e71984b75faf4eb397814caac6aa
 workflow-type: tm+mt
-source-wordcount: '655'
+source-wordcount: '650'
 ht-degree: 0%
 
 ---
 
 # Migrera från Adobe Target till Adobe Journey Optimizer - mobiltillägg för beslut
 
-Den här guiden är till för erfarna Adobe Target-implementerare som vill lära sig att migrera befintliga Adobe Experience Platfrom Mobile SDK-implementeringar från Adobe Target-tillägget till Adobe Journey Optimizer - Beslutstillägg.
+Den här guiden är till för erfarna Adobe Target-implementerare som vill lära sig hur man migrerar befintliga Adobe Experience Platfrom Mobile SDK-implementeringar från Adobe Target-tillägget till Adobe Journey Optimizer - Beslutstillägg.
 
 Adobe Experience Platform Mobile SDK ger total interaktion i era mobilapplikationer. Target-tillägget bygger på Mobile SDK för att hjälpa er att personalisera appupplevelser med Adobe Target. Beslutstillägget är ett nyare tillvägagångssätt för att implementera Adobe Target i mobilappar som använder Adobe Experience Platform Edge Network-funktioner som hjälper till att integrera Target med plattformsbaserade appar som Real-Time CDP och Journey Optimizer.
 
@@ -30,12 +30,12 @@ Adobe Experience Platform Mobile SDK ger total interaktion i era mobilapplikatio
 
 Några av fördelarna med Adobe Journey Optimizer Decision Extension jämfört med Target-tillägget är:
 
-* Snabbare delning av målgrupper från [Real-time Customer Data Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/experience-cloud/next-hit-personalization.html)
-* Integrera Target med Journey Optimizer för att stödja [leverans av Offer decisioning](https://experienceleague.adobe.com/docs/target/using/integrate/ajo/offer-decision.html)
+* Snabbare delning av målgrupper från [Real-Time Customer Data Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/experience-cloud/next-hit-personalization.html)
+* Integrera Target med Journey Optimizer för att stödja [Offer Decisioning-leverans](https://experienceleague.adobe.com/docs/target/using/integrate/ajo/offer-decision.html)
 * Bättre integrering med Adobe Analytics som inte förlitar sig på att sammanfoga information från separata nätverksanrop
 * Ytterligare implementeringsflexibilitet för utvecklare
 
-Den största fördelen för Target-kunder med migrering är förmodligen integrering med Real-time Customer Data Platform. Real-Time CDP erbjuder enastående målgruppsfunktioner baserat på alla data som inhämtas till Experience Platform och dess kapacitet för kundprofiler i realtid. Ett inbyggt ramverk för datastyrning automatiserar ansvarsfull användning av dessa data. Med Customer AI kan ni enkelt använda maskininlärningsmodeller för att konstruera benägenhets- och bortfallsmodeller vars utdata kan delas tillbaka till Adobe Target. Slutligen kan kunder som har tillvalet Healthcare and Privacy &amp; Security Shield lägga in medgivandefunktionen för att få individuella kunders samtycke. Platform Mobile SDK och Decisioning är ett krav för att du ska kunna använda dessa Real-Time CDP-funktioner i din mobilkanal.
+Den största fördelen för Target-kunder med migrering är förmodligen integrering med Real-Time Customer Data Platform. Real-Time CDP erbjuder enastående målgruppsfunktioner baserat på alla data som hämtas in till Experience Platform och dess kapacitet för kundprofiler i realtid. Ett inbyggt ramverk för datastyrning automatiserar ansvarsfull användning av dessa data. Med Customer AI kan ni enkelt använda maskininlärningsmodeller för att konstruera benägenhets- och bortfallsmodeller vars utdata kan delas tillbaka till Adobe Target. Slutligen kan kunder som har tillvalet Healthcare and Privacy &amp; Security Shield lägga in medgivandefunktionen för att få individuella kunders samtycke. Platform Mobile SDK och Decisioning är ett krav för att du ska kunna använda dessa Real-Time CDP-funktioner i din mobilkanal.
 
 ## Migreringssteg
 
@@ -45,8 +45,8 @@ Oavsett hur enkel eller komplex implementeringen är är det viktigt att du för
 
 Migreringsprocessen omfattar följande viktiga steg:
 
-1. Utvärdera er nuvarande implementering och fastställa en migreringsstrategi
-1. Konfigurera de initiala komponenterna för anslutning till Adobe Experience Platform Edge Network
+1. Utvärdera er nuvarande implementering
+1. Konfigurera de inledande komponenterna för anslutning till Adobe Experience Platform Edge Network
 1. Uppdatera den grundläggande implementeringen för att ersätta måltillägget med beslutstillägget
 1. Förbättra SDK-implementeringen för dina specifika användningsfall. Detta kan innebära att ytterligare parametrar skickas, att svarstoken används med mera.
 1. Uppdatera objekt i Target-gränssnittet, till exempel profilskript, aktiviteter och målgruppsdefinitioner
