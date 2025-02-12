@@ -6,7 +6,7 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 330f4492-d0df-4298-9edc-4174b0065c9a
-source-git-commit: 18151b91d18ebb53fc485151effd12a6fdc2b6b8
+source-git-commit: 0e9d1b5866d789ca2693d9c1a6ef7119c25ed009
 workflow-type: tm+mt
 source-wordcount: '836'
 ht-degree: 0%
