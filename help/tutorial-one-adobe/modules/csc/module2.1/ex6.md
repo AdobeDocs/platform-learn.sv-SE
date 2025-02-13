@@ -4,7 +4,7 @@ description: AEM CS - MarTech plugin
 kt: 5342
 doc-type: tutorial
 exl-id: 8a2c6327-8d3d-4048-bf89-9d4371e18e1b
-source-git-commit: b15795235d97b95ce2f81cbd747745bdb59e4067
+source-git-commit: 7afd74037138d2f9bae6e75232cd3a116e35f6e7
 workflow-type: tm+mt
 source-wordcount: '1063'
 ht-degree: 0%
@@ -188,7 +188,7 @@ const main = doc.querySelector('main');
   if (main) {
     decorateMain(main);
     document.body.classList.add('appear');
-    await loadSection(main.querySelector('.section'), waitForFirstImage);
+    await loadSection(main.querySelector('.section'), waitForFirstImage);	
   }
 ```
 
@@ -203,7 +203,7 @@ const main = doc.querySelector('main');
     document.body.classList.add('appear');
     await Promise.all([
       martechLoadedPromise.then(martechEager),
-      loadSection(main.querySelector('.section'), waitForFirstImage);
+      loadSection(main.querySelector('.section'), waitForFirstImage)
     ]);
   }
 ```

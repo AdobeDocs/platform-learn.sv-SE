@@ -4,7 +4,7 @@ description: Konfigurera AEM CS-miljön
 kt: 5342
 doc-type: tutorial
 exl-id: 62715072-0257-4d07-af1a-8becbb793459
-source-git-commit: 18151b91d18ebb53fc485151effd12a6fdc2b6b8
+source-git-commit: 0a0909b639e34d92266a326c3338d7f17db7ecc6
 workflow-type: tm+mt
 source-wordcount: '992'
 ht-degree: 0%
@@ -200,7 +200,7 @@ Klicka på **Logga in med Adobe**.
 
 ![AEMCS](./images/aemcssetup19.png){zoomable="yes"}
 
-Därefter visas din författarmiljö. Klicka på **Webbplatser**.
+Därefter visas din författarmiljö. Klicka på **Assets**.
 
 ![AEMCS](./images/aemcsassets1.png){zoomable="yes"}
 
