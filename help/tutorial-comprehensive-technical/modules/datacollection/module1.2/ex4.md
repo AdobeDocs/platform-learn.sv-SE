@@ -4,9 +4,9 @@ description: Foundation - datainmatning - datainmatning från offlinekällor
 kt: 5342
 doc-type: tutorial
 exl-id: a4909a47-0652-453b-ae65-ba4c261f087c
-source-git-commit: 2f53c8da2cbe833120fa6555c65b8b753bfa4f8d
+source-git-commit: fc5750ca614be30c3bd25b4f80ab45c5725a7649
 workflow-type: tm+mt
-source-wordcount: '1421'
+source-wordcount: '1471'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ I den här övningen är målet att lägga in externa data som CRM-data i plattf
 - Lär dig generera testdata
 - Lär dig hur du importerar CSV
 - Lär dig använda webbgränssnittet för datainmatning via arbetsflöden
-- Förstå datastyrningsfunktionerna i Experience Platform
+- Förstå funktionerna för datahantering i Experience Platform
 
 ## Resurser
 
@@ -53,6 +53,10 @@ I mallen ska du lägga märke till följande fält:
 - country_code
 - stad
 - land
+- crmId
+- consent.email
+- consent.commercialEmail
+- consent.any
 
 Alla dessa fält har definierats för att producera data som är kompatibla med plattformen.
 
@@ -68,7 +72,9 @@ När CSV-filen är klar kan du fortsätta med importen i AEP.
 
 ### Verifiera datauppsättningen
 
-Öppna [Adobe Experience Platform](https://experience.adobe.com/platform) och gå till **[!UICONTROL Datasets]**.
+Gå till [https://experience.adobe.com/platform](https://experience.adobe.com/platform).
+
+![Datainmatning](./images/home.png)
 
 Innan du fortsätter måste du välja en **[!UICONTROL sandbox]**. Sandlådan som ska markeras har namnet ``--aepSandboxName--``.
 
@@ -115,8 +121,6 @@ Alla scheman måste ha en anpassad, primär beskrivare definierad. När det gäl
 Du kan också se att vår primära identitet finns i `--aepTenantId--.identification.core.crmId`, länkad till [!UICONTROL namespace] i **[!UICONTROL Demo System - CRMID]**.
 
 ![Datainmatning](./images/schema_descriptor.png)
-
-
 
 Alla scheman och som sådana ska alla datauppsättningar som ska användas i [!UICONTROL Real-time Customer Profile] ha en [!UICONTROL Primary identifier]. [!UICONTROL Primary Identifier] är identifieraranvändaren av varumärket för en kund i den datauppsättningen. När det gäller en CRM-datauppsättning kan det vara e-postadressen eller CRM-ID:t, när det gäller en Call Center-datauppsättning kan det vara en kunds mobilnummer.
 
@@ -229,6 +233,24 @@ Source-schemafältet **id** ska länkas till målfältet **_id**.
 Source-schemafältet **last_name** ska länkas till målfältet **person.name.lastName**.
 
 ![Datainmatning](./images/tflname.png)
+
+#### consents.marketing.email.val
+
+Source-schemafältet **last_name** ska länkas till målfältet **consents.marketing.email.val**.
+
+![Datainmatning](./images/cons1.png)
+
+#### consents.marketing.commercialEmail.val
+
+Source-schemafältet **last_name** ska länkas till målfältet **consents.marketing.commercialEmail.val**.
+
+![Datainmatning](./images/cons2.png)
+
+#### consents.marketing.any.val
+
+Source Schemafältet **last_name** ska länkas till målfältet **consents.marketing.any.val**.
+
+![Datainmatning](./images/cons3.png)
 
 Du borde ha den här nu. Klicka på **Slutför**.
 
