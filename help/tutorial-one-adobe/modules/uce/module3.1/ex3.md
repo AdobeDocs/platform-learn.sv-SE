@@ -4,9 +4,9 @@ description: Foundation - FAC - Skapa en federerad komposition
 kt: 5342
 doc-type: tutorial
 exl-id: dc044a26-f16a-491e-a795-4cd16f211256
-source-git-commit: f6881cc2c993941f60e440ce0c367a139ae80b00
+source-git-commit: 50622dc6698a7e1384c4803ea40682a060a08617
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Då ser du det här. Välj **Skapa målgrupp**. Klicka på ikonen **sök** för 
 
 ![FAC](./images/fedcomp5.png)
 
-Välj schemat **CK_HOUSEHOLDS**. Klicka på **Bekräfta**.
+Välj schemat **—aepUserLdap—_HOUSEHOLDS**. Klicka på **Bekräfta**.
 
 ![FAC](./images/fedcomp6.png)
 
@@ -71,7 +71,7 @@ Klicka sedan på ikonen **+** igen och klicka på **Anpassat villkor** igen för
 
 ![FAC](./images/fedcomp11.png)
 
-Det andra villkoret som ska läggas till är: `Is the user an existing CitiSignal Mobile subscriber?`. Du kan besvara den frågan genom att använda relationen mellan hushållet och den primära kunden i hushållet, som definieras i en annan tabell, **CK_PERSONS**. Du kan detaljgranska på attributmenyn med länken **house2person** .
+Det andra villkoret som ska läggas till är: `Is the user an existing CitiSignal Mobile subscriber?`. Du kan besvara den frågan genom att använda relationen mellan hushållet och den primära kunden i hushållet, som definieras i en annan tabell, **—aepUserLdap—_PERSONS**. Du kan detaljgranska på attributmenyn med länken **house2person** .
 
 ![FAC](./images/fedcomp12.png)
 
@@ -137,7 +137,9 @@ Klicka på **Spara**.
 
 Din komposition är nu färdig. Klicka på **Start** för att köra den.
 
-Frågan kommer nu att flyttas ned till Snowflake, som kommer att fråga efter källdata där. Resultatet överförs tillbaka till AEP men källdata finns kvar i Snowflake.
+![FAC](./images/fedcomp21a.png)
+
+Frågan kommer nu att laddas ned till Snowflake, som kommer att fråga källdata där. Resultatet överförs tillbaka till AEP men källdata finns kvar i Snowflake.
 
 Publiken är nu befolkad och målgruppen kan målgruppsanpassas inifrån AEP-ekosystemet.
 

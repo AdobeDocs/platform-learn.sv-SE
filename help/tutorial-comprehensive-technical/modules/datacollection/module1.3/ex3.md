@@ -4,9 +4,9 @@ description: Foundation - FAC - Skapa en federerad komposition
 kt: 5342
 doc-type: tutorial
 exl-id: 293bf825-d0d6-48cf-9cbf-69f622597678
-source-git-commit: d0469a38e2bef6031f796ed0946caba52c424e8c
+source-git-commit: e32d415d2997b43834e9fc2495c4394b13f4d49f
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '499'
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ Då ser du det här. Välj **Skapa målgrupp**. Klicka på ikonen **sök** för 
 
 ![FAC](./images/fedcomp5.png)
 
-Välj schemat **CK_HOUSEHOLDS**. Klicka på **Bekräfta**.
+Välj schemat **—aepUserLdap—_HOUSEHOLDS**. Klicka på **Bekräfta**.
 
 ![FAC](./images/fedcomp6.png)
 
@@ -71,7 +71,7 @@ Klicka sedan på ikonen **+** igen och klicka på **Anpassat villkor** igen för
 
 ![FAC](./images/fedcomp11.png)
 
-Det andra villkoret som ska läggas till är: `Is the user an existing CitiSignal Mobile subscriber?`. Du kan besvara den frågan genom att använda relationen mellan hushållet och den primära kunden i hushållet, som definieras i en annan tabell, **CK_PERSONS**. Du kan detaljgranska på attributmenyn med länken **house2person** .
+Det andra villkoret som ska läggas till är: `Is the user an existing CitiSignal Mobile subscriber?`. Du kan besvara den frågan genom att använda relationen mellan hushållet och den primära kunden i hushållet, som definieras i en annan tabell, **—aepUserLdap—_PERSONS**. Du kan detaljgranska på attributmenyn med länken **house2person** .
 
 ![FAC](./images/fedcomp12.png)
 
@@ -129,7 +129,7 @@ Markera fältet **EMAIL**. Klicka på **Bekräfta**.
 
 ![FAC](./images/fedcomp20c.png)
 
-Då ser du det här. Du måste nu ange fältet **Primär identitet** och ställa in det på **Household2person_EMAIL**.
+Då ser du det här. Du måste nu ange fältet **Primär identitet** och ställa in det på **Household2person_EMAIL**. Ange **Identity Namespace** till **Email**.
 
 Klicka på **Spara**.
 
@@ -137,7 +137,9 @@ Klicka på **Spara**.
 
 Din komposition är nu färdig. Klicka på **Start** för att köra den.
 
-Frågan kommer nu att flyttas ned till Snowflake, som kommer att fråga efter källdata där. Resultatet överförs tillbaka till AEP men källdata finns kvar i Snowflake.
+![FAC](./images/fedcomp21a.png)
+
+Frågan kommer nu att laddas ned till Snowflake, som kommer att fråga källdata där. Resultatet överförs tillbaka till AEP men källdata finns kvar i Snowflake.
 
 Publiken är nu befolkad och målgruppen kan målgruppsanpassas inifrån AEP-ekosystemet.
 

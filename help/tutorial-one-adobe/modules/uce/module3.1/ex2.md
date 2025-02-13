@@ -4,7 +4,7 @@ description: Foundation - FAC - Skapa scheman, datamodell och länkar
 kt: 5342
 doc-type: tutorial
 exl-id: 42004cb9-60b3-4ca8-97d9-3d169735c98f
-source-git-commit: 246bb91496104818f357848f41b79523b7771638
+source-git-commit: 50622dc6698a7e1384c4803ea40682a060a08617
 workflow-type: tm+mt
 source-wordcount: '638'
 ht-degree: 0%
@@ -31,7 +31,7 @@ Klicka på **Federated databaser** på den vänstra menyn. Klicka sedan på **L�
 
 ![FAC](./images/fdb1.png)
 
-Använd **Etikett** och välj **Snowflake** som typ. `--aepUserLdap-- - CitiSignal Snowflake`
+Använd **Label** som `--aepUserLdap-- - CitiSignal Snowflake` och välj **Snowflake** som typ.
 
 Under Mer information måste du fylla i dina inloggningsuppgifter, som ser ut så här:
 
@@ -71,13 +71,13 @@ Välj din federerade databas och klicka på **+ Lägg till tabeller**.
 
 ![FAC](./images/fdb6.png)
 
-Då ser du det här. Markera de fem tabeller du skapade i Snowflake före:
+Då ser du det här. Markera de fem tabeller du har skapat i Snowflake tidigare:
 
-- `CK_HOUSEHOLDS`
-- `CK_MOBILE_DATA_USAGE`
-- `CK_MONTHLY_DATA_USAGE`
-- `CK_PERSONS`
-- `CK_USERS`
+- `--aepUserLdap--_HOUSEHOLDS`
+- `--aepUserLdap--_MOBILE_DATA_USAGE`
+- `--aepUserLdap--_MONTHLY_DATA_USAGE`
+- `--aepUserLdap--_PERSONS`
+- `--aepUserLdap--_USERS`
 
 Klicka på **Lägg till**.
 
@@ -98,11 +98,11 @@ Klicka på **Skapa**.
 
 ![FAC](./images/fdb8.png)
 
-Då ser du det här. Du kan klicka på ett schema och granska informationen. Klicka till exempel på **CK_PERSONS**.
+Då ser du det här. Du kan klicka på ett schema och granska informationen. Klicka till exempel på **—aepUserLdap—_PERSONS**.
 
 ![FAC](./images/fdb9.png)
 
-Du kommer då att se detta med möjlighet att redigera konfigurationen. Klicka på **Data** om du vill se ett exempel på data som finns i Snowflake-databasen.
+Du kommer då att se detta med möjlighet att redigera konfigurationen. Klicka på **Data** om du vill visa ett exempel på data som finns i Snowflake-databasen.
 
 ![FAC](./images/fdb10.png)
 
@@ -130,57 +130,57 @@ Markera dina scheman och klicka på **Lägg till**.
 
 Då ser du det här. Klicka på **Spara**.
 
-### `CK_USERS` - `CK_PERSONS`
+### `--aepUserLdap--_USERS` - `--aepUserLdap--_PERSONS`
 
 Nu kan du börja definiera länkar mellan scheman. Om du vill börja definiera en länk måste du klicka på **Skapa länkar**.
 
 ![FAC](./images/fdb16.png)
 
-Först definierar vi länken mellan tabellen `CK_USERS` och `CK_PERSONS`.
+Först definierar vi länken mellan tabellen `--aepUserLdap--_USERS` och `--aepUserLdap--_PERSONS`.
 
 Klicka på **Lägg till**.
 
 ![FAC](./images/fdb18.png)
 
 
-### `CK_HOUSEHOLDS` - `CK_PERSONS`
+### `--aepUserLdap--_HOUSEHOLDS` - `--aepUserLdap--_PERSONS`
 
 Du kommer då tillbaka hit. Klicka på **Skapa länkar** om du vill skapa en annan länk.
 
 ![FAC](./images/fdb17.png)
 
-Sedan definierar vi länken mellan tabellen `CK_HOUSEHOLDS` och `CK_PERSONS`.
+Sedan definierar vi länken mellan tabellen `--aepUserLdap--_HOUSEHOLDS` och `--aepUserLdap--_PERSONS`.
 
 ![FAC](./images/fdb19.png)
 
-### `CK_USERS` - `CK_MONTHLY_DATA_USAGE`
+### `--aepUserLdap--_USERS` - `--aepUserLdap--_MONTHLY_DATA_USAGE`
 
 Du kommer då tillbaka hit. Klicka på **Skapa länkar** om du vill skapa en annan länk.
 
 ![FAC](./images/fdb20.png)
 
-Sedan definierar vi länken mellan tabellen `CK_USERS` och `CK_MONTHLY_DATA_USAGE`.
+Sedan definierar vi länken mellan tabellen `--aepUserLdap--_USERS` och `--aepUserLdap--_MONTHLY_DATA_USAGE`.
 
 ![FAC](./images/fdb21.png)
 
 
-### `CK_USERS` - `CK_HOUSEHOLDS`
+### `--aepUserLdap--_USERS` - `--aepUserLdap--_HOUSEHOLDS`
 
 Du kommer då tillbaka hit. Klicka på **Skapa länkar** om du vill skapa en annan länk.
 
 ![FAC](./images/fdb22.png)
 
-Sedan definierar vi länken mellan tabellen `CK_USERS` och `CK_HOUSEHOLDS`.
+Sedan definierar vi länken mellan tabellen `--aepUserLdap--_USERS` och `--aepUserLdap--_HOUSEHOLDS`.
 
 ![FAC](./images/fdb23.png)
 
-### `CK_USERS` - `CK_MOBILE_DATA_USAGE`
+### `--aepUserLdap--_USERS` - `--aepUserLdap--_MOBILE_DATA_USAGE`
 
 Du kommer då tillbaka hit. Klicka på **Skapa länkar** om du vill skapa en annan länk.
 
 ![FAC](./images/fdb24.png)
 
-Sedan definierar vi länken mellan tabellen `CK_USERS` och `CK_MOBILE_DATA_USAGE`.
+Sedan definierar vi länken mellan tabellen `--aepUserLdap--_USERS` och `--aepUserLdap--_MOBILE_DATA_USAGE`.
 
 ![FAC](./images/fdb25.png)
 
