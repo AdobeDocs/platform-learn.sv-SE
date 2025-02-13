@@ -9,9 +9,9 @@ duration: 143
 last-substantial-update: 2024-06-14T00:00:00Z
 jira: KT-15749
 exl-id: 15b9a4e3-0971-4460-859b-45118d382f64
-source-git-commit: f02bea4a92675e284be7ca86a0fcf7c17d296482
+source-git-commit: 21e6e5a29edbd5e4c74a4f5978d54b43cafc2c03
 workflow-type: tm+mt
-source-wordcount: '485'
+source-wordcount: '494'
 ht-degree: 1%
 
 ---
@@ -28,9 +28,8 @@ Med de här resurserna får du hjälp att komma igång med AI Assistant och lär
 
 <!-- CARDS
 * access.md
-* validate-responses.md
 * discoverability-panel.md
-* security-overview.md
+* validate-responses.md
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
@@ -39,7 +38,7 @@ Med de här resurserna får du hjälp att komma igång med AI Assistant och lär
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="access.md" title="Få tillgång till AI Assistant" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3436470/?format=jpeg&nocache=1739381809946" alt="Få tillgång till AI Assistant"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3436470/?format=jpeg&nocache=1739486446641" alt="Få tillgång till AI Assistant"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -57,35 +56,12 @@ Med de här resurserna får du hjälp att komma igång med AI Assistant och lär
             </div>
         </div>
     </div>
-    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Validate responses from AI Assistant">
-        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
-            <div class="card-image">
-                <figure class="image x-is-16by9">
-                    <a href="validate-responses.md" title="Validera svar från AI Assistant" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441738/?format=jpeg&nocache=1739381809934" alt="Validera svar från AI Assistant"
-                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
-                    </a>
-                </figure>
-            </div>
-            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
-                <div class="top-card-content">
-                    <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="validate-responses.md" target="_blank" rel="referrer" title="Validera svar från AI Assistant">Validera svar från AI-assistenten</a>
-                    </p>
-                    <p class="is-size-6">Lär dig hur du verifierar och validerar de svar som AI Assistant i Adobe Experience Platform ger.</p>
-                </div>
-                <a href="validate-responses.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Bevakning</span>
-                </a>
-            </div>
-        </div>
-    </div>
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Use the discoverability panel in AI Assistant">
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="discoverability-panel.md" title="Använda identifieringspanelen i AI Assistant" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440962/?format=jpeg&nocache=1739381809959" alt="Använda identifieringspanelen i AI Assistant"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440962/?format=jpeg&nocache=1739486446652" alt="Använda identifieringspanelen i AI Assistant"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -103,12 +79,12 @@ Med de här resurserna får du hjälp att komma igång med AI Assistant och lär
             </div>
         </div>
     </div>
-    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Security overview of AI Assistant">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Validate responses from AI Assistant">
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="security-overview.md" title="Säkerhetsöversikt för AI Assistant" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441066/?format=jpeg&nocache=1739381809919" alt="Säkerhetsöversikt för AI Assistant"
+                    <a href="validate-responses.md" title="Validera svar från AI Assistant" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441738/?format=jpeg&nocache=1739486446628" alt="Validera svar från AI Assistant"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -116,11 +92,11 @@ Med de här resurserna får du hjälp att komma igång med AI Assistant och lär
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="security-overview.md" target="_blank" rel="referrer" title="Säkerhetsöversikt för AI Assistant">Säkerhetsöversikt över AI Assistant</a>
+                        <a href="validate-responses.md" target="_blank" rel="referrer" title="Validera svar från AI Assistant">Validera svar från AI-assistenten</a>
                     </p>
-                    <p class="is-size-6">Detta är en översikt över säkerhetsfunktionerna för AI-assistenten baserat på faktablad om säkerhet.</p>
+                    <p class="is-size-6">Lär dig hur du verifierar och validerar de svar som AI Assistant i Adobe Experience Platform ger.</p>
                 </div>
-                <a href="security-overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="validate-responses.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Bevakning</span>
                 </a>
             </div>
@@ -144,7 +120,7 @@ AI Assistant är ett användbart verktyg för att lära sig nya produkter eller 
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="onboard.md" title="Använd AI Assistant för att minska starttiden" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3438032/?format=jpeg&nocache=1739381811116" alt="Använd AI Assistant för att minska starttiden"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3438032/?format=jpeg&nocache=1739486446837" alt="Använd AI Assistant för att minska starttiden"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -181,7 +157,7 @@ Det finns många andra användningsområden där AI Assistant kan hjälpa dig at
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="operational-insights.md" title="Få operativa insikter med AI Assistant" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444031/?format=jpeg&nocache=1739381811248" alt="Få operativa insikter med AI Assistant"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444031/?format=jpeg&nocache=1739486447052" alt="Få operativa insikter med AI Assistant"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -204,7 +180,7 @@ Det finns många andra användningsområden där AI Assistant kan hjälpa dig at
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="find-unused-audiences.md" title="AI Assistant - Användningsexempel vid rensning av målgrupper" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435532/?format=jpeg&nocache=1739381811234" alt="AI Assistant - Användningsexempel vid rensning av målgrupper"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435532/?format=jpeg&nocache=1739486447042" alt="AI Assistant - Användningsexempel vid rensning av målgrupper"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -227,7 +203,7 @@ Det finns många andra användningsområden där AI Assistant kan hjälpa dig at
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="impact-analysis.md" title="Effektanalys med AI Assistant" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441680/?format=jpeg&nocache=1739381811261" alt="Effektanalys med AI Assistant"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441680/?format=jpeg&nocache=1739486447030" alt="Effektanalys med AI Assistant"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -240,6 +216,41 @@ Det finns många andra användningsområden där AI Assistant kan hjälpa dig at
                     <p class="is-size-6">I den här videon tittar vi på hur AI Assistant i Adobe Experience Platform kan hjälpa dig att bli effektivare med effektanalys. Ändringar av delade objekt som attribut och målgrupper kan störa arbetsflödena för andra team, komplicera processer och riskera viktiga marknadsföringssatsningar.</p>
                 </div>
                 <a href="impact-analysis.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Bevakning</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END CARDS HTML - DO NOT MODIFY BY HAND -->
+
+## Säkerhet
+
+Läs mer om säkerhetsfunktionerna i AI Assitant
+
+<!-- CARDS
+* security-overview.md
+-->
+<!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
+<div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Security overview of AI Assistant">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="security-overview.md" title="Säkerhetsöversikt för AI Assistant" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441066/?format=jpeg&nocache=1739486447236" alt="Säkerhetsöversikt för AI Assistant"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="security-overview.md" target="_blank" rel="referrer" title="Säkerhetsöversikt för AI Assistant">Säkerhetsöversikt över AI Assistant</a>
+                    </p>
+                    <p class="is-size-6">Detta är en översikt över säkerhetsfunktionerna för AI-assistenten baserat på faktablad om säkerhet.</p>
+                </div>
+                <a href="security-overview.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Bevakning</span>
                 </a>
             </div>
