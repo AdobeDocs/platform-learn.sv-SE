@@ -4,9 +4,9 @@ description: Foundation - FAC - Skapa scheman, datamodell och länkar
 kt: 5342
 doc-type: tutorial
 exl-id: e863ab3a-44df-4bb4-b081-a62616aaa1f1
-source-git-commit: e32d415d2997b43834e9fc2495c4394b13f4d49f
+source-git-commit: b78460ab562c2b435988942b219787ed07af24d4
 workflow-type: tm+mt
-source-wordcount: '639'
+source-wordcount: '649'
 ht-degree: 0%
 
 ---
@@ -132,7 +132,7 @@ Då ser du det här. Klicka på **Spara**.
 
 ![FAC](./images/fdb16.png)
 
-### `--aepUserLdap--_PERSONS` - `--aepUserLdap--_USERS`
+### PERSONER - ANVÄNDARE
 
 Nu kan du börja definiera länkar mellan scheman. Om du vill börja definiera en länk måste du klicka på **Skapa länkar**.
 
@@ -144,7 +144,7 @@ Klicka på **Lägg till**.
 
 ![FAC](./images/fdb18.png)
 
-### `--aepUserLdap--_HOUSEHOLDS` - `--aepUserLdap--_PERSONS`
+### HUSHÅLL - PERSONER
 
 Du kommer då tillbaka hit. Klicka på **Skapa länkar** om du vill skapa en annan länk.
 
@@ -154,7 +154,7 @@ Sedan definierar vi länken mellan tabellen `--aepUserLdap--_HOUSEHOLDS` och `--
 
 ![FAC](./images/fdb19.png)
 
-### `--aepUserLdap--_USERS` - `--aepUserLdap--_MONTHLY_DATA_USAGE`
+### ANVÄNDARE - MONTHLY_DATA_USAGE
 
 Du kommer då tillbaka hit. Klicka på **Skapa länkar** om du vill skapa en annan länk.
 
@@ -165,7 +165,7 @@ Sedan definierar vi länken mellan tabellen `--aepUserLdap--_USERS` och `--aepUs
 ![FAC](./images/fdb21.png)
 
 
-### `--aepUserLdap--_USERS` - `--aepUserLdap--_HOUSEHOLDS`
+### ANVÄNDARE - HUSHÅLL
 
 Du kommer då tillbaka hit. Klicka på **Skapa länkar** om du vill skapa en annan länk.
 
@@ -175,7 +175,7 @@ Sedan definierar vi länken mellan tabellen `--aepUserLdap--_USERS` och `--aepUs
 
 ![FAC](./images/fdb23.png)
 
-### `--aepUserLdap--_USERS` - `--aepUserLdap--_MOBILE_DATA_USAGE`
+### ANVÄNDARE - MOBILE_DATA_USAGE
 
 Du kommer då tillbaka hit. Klicka på **Skapa länkar** om du vill skapa en annan länk.
 

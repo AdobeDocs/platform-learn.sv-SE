@@ -4,9 +4,9 @@ description: Foundation - datainmatning - Konfigurera scheman och ange identifie
 kt: 5342
 doc-type: tutorial
 exl-id: 3cc1fbe3-1f40-45a3-a123-ee6f1463e7b5
-source-git-commit: 29d5892a98d7ac4b7d1dfe24c2b39549ee6d5c66
+source-git-commit: b78460ab562c2b435988942b219787ed07af24d4
 workflow-type: tm+mt
-source-wordcount: '2885'
+source-wordcount: '2875'
 ht-degree: 0%
 
 ---
@@ -61,13 +61,9 @@ Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska marke
 
 ![Datainmatning](./images/sb1.png)
 
-Klicka på **[!UICONTROL Schemas]** på menyn till vänster på skärmen i Adobe Experience Platform. Du ser listan över tillgängliga [!UICONTROL Schemas].
+Klicka på **[!UICONTROL Schemas]** på menyn till vänster på skärmen i Adobe Experience Platform. Du ser listan över tillgängliga [!UICONTROL Schemas]. Du bör skapa ett nytt schema. Om du vill skapa ett nytt schema klickar du på **[!UICONTROL + Create Schema]**.
 
 ![Datainmatning](./images/menuschemas.png)
-
-Du bör skapa ett nytt schema. Om du vill skapa ett nytt schema klickar du på **[!UICONTROL + Create Schema]**.
-
-![Datainmatning](./images/createschema.png)
 
 Välj **Manuell** och klicka på **Markera**.
 
@@ -156,8 +152,8 @@ När du har klickat på knappen **[!UICONTROL + Add Field]** visas nu ett nytt n
 
 Nu bör du ange informationen i det nya fältet med följande objektdefinitioner:
 
-- Fältnamn: **[!UICONTROL identification]**
-- Visningsnamn: **[!UICONTROL identification]**
+- Fältnamn: **`--aepUserLdap--_identification`**
+- Visningsnamn: **`--aepUserLdap--_identification`**
 - Typ: **[!UICONTROL Object]**
 - Fältgrupp: **`--aepUserLdap-- - Profile Identification Field Group`**
 
@@ -279,7 +275,7 @@ Schemat är nu konfigurerat att ingå i [!UICONTROL Real-time Customer Profile].
 
 ![Datainmatning](./images/sureyps.png)
 
-### Vad gör en kund?
+## Vad gör den här kunden?
 
 Hämtar svaret på frågan **Vad gör den här kunden?** för din organisation görs via till exempel en produktvy på en produktsida.
 
@@ -305,13 +301,9 @@ Innan du fortsätter måste du välja en **[!UICONTROL sandbox]**. [!UICONTROL s
 
 ![Datainmatning](./images/sb1.png)
 
-I Adobe Experience Platform klickar du på **[!UICONTROL Schemas]** på menyn till vänster på skärmen och går till **Bläddra**.
+I Adobe Experience Platform klickar du på **[!UICONTROL Schemas]** på menyn till vänster på skärmen och går till **Bläddra**. Du bör skapa ett nytt schema. Om du vill skapa ett nytt schema klickar du på knappen **[!UICONTROL + Create Schema]**.
 
 ![Datainmatning](./images/menuschemas.png)
-
-Om [!UICONTROL Schemas] visas alla befintliga scheman. Du bör skapa ett nytt schema. Om du vill skapa ett nytt schema klickar du på knappen **[!UICONTROL + Create Schema]**.
-
-![Datainmatning](./images/schemasee.png)
 
 Välj **Manuell** och klicka på **Markera**.
 
@@ -390,8 +382,8 @@ När du har klickat på knappen **+** visas nu ett nytt namnlöst fält i ditt s
 
 Använd detta för att definiera ditt nya fält:
 
-- Fältnamn: **[!UICONTROL identification]**
-- Visningsnamn: **[!UICONTROL identification]**
+- Fältnamn: **`--aepUserLdap--_identification`**
+- Visningsnamn: **`--aepUserLdap--_identification`**
 - Typ: **[!UICONTROL Object]**
 - Fältgrupp: `--aepUserLdap-- - ExperienceEvent Identification Field Group`
 
