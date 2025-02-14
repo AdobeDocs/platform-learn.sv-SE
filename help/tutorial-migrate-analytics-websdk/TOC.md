@@ -10,9 +10,9 @@ level: Intermediate,Experienced
 doc-type: tutorial
 recommendations: catalog,noDisplay
 jira: KT-16755
-source-git-commit: 6311417699d49cb2a9bbb67e221b9054a8b37605
+source-git-commit: 4fc3d8815c2f0f5bed7bb0d1fe8cfcd9b1599762
 workflow-type: tm+mt
-source-wordcount: '99'
+source-wordcount: '113'
 ht-degree: 0%
 
 ---
@@ -20,30 +20,30 @@ ht-degree: 0%
 
 # Migrera Adobe Analytics till Web SDK med taggar {#migrate-analytics-to-websdk}
 
-+ [Migreringsöversikt](migration-to-websdk-overview.md)
++ [1. Överblick](migration-to-websdk-overview.md)
 
-+ [Skapa en valideringsrapportssvit](create-a-validation-report-suite.md)
++ [2. Skapa en uppsättning valideringsrapporter](create-a-validation-report-suite.md)
 
-+ [Skapa ett datastream](create-and-configure-the-analytics-datastream.md)
++ [3. Skapa ett datastream](create-and-configure-the-analytics-datastream.md)
 
-+ [Lägg till Web SDK-tillägget](add-and-configure-the-web-sdk-extension.md)
++ [4. Lägg till Web SDK-tillägget](add-and-configure-the-web-sdk-extension.md)
 
-+ [Skapa ett variabeldataelement](create-a-variable-data-element.md)
++ [5. Skapa ett variabelt dataelement](create-a-variable-data-element.md)
 
-+ [Migrera standardregel för sidinläsning](migrate-your-default-page-load-rule.md)
++ [6. Migrera standardregeln för sidinläsning](migrate-your-default-page-load-rule.md)
 
-+ [Migrera egen kod](migrate-custom-code-to-the-web-sdk.md)
++ [7. Migrera egen kod](migrate-custom-code-to-the-web-sdk.md)
 
-+ [Bygg ett utvecklingsbibliotek](build-the-implementation-changes.md)
++ [8. Skapa ett utvecklingsbibliotek](build-the-implementation-changes.md)
 
-+ [Felsök och validera](debug-and-validate-your-web-sdk-migration.md)
++ [9. Felsök och validera](debug-and-validate-your-web-sdk-migration.md)
 
-+ [Migrera ytterligare sidregler](migrate-additional-page-rules.md)
++ [10. Migrera ytterligare sidregler](migrate-additional-page-rules.md)
 
-+ [Migrera anpassade länkregler](migrate-custom-link-rules.md)
++ [11. Migrera anpassade länkregler](migrate-custom-link-rules.md)
 
-+ [Migrera globala variabler](migrate-global-variables.md)
++ [12. Migrera globala variabler](migrate-global-variables.md)
 
-+ [Ta bort Analytics-tillägget](delete-analytics-extension-items.md)
++ [13. Ta bort analystillägget](delete-analytics-extension-items.md)
 
-+ [Publicera till staging och produktion](publish-the-migration.md)
++ [14. Publicera för staging och produktion](publish-the-migration.md)
