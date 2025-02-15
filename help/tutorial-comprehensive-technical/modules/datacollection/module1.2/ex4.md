@@ -4,7 +4,7 @@ description: Foundation - datainmatning - datainmatning från offlinekällor
 kt: 5342
 doc-type: tutorial
 exl-id: a4909a47-0652-453b-ae65-ba4c261f087c
-source-git-commit: fc5750ca614be30c3bd25b4f80ab45c5725a7649
+source-git-commit: ef26abbeb0c1076adbada57f0f18f11c7634d022
 workflow-type: tm+mt
 source-wordcount: '1471'
 ht-degree: 0%
@@ -236,19 +236,19 @@ Source-schemafältet **last_name** ska länkas till målfältet **person.name.la
 
 #### consents.marketing.email.val
 
-Source-schemafältet **last_name** ska länkas till målfältet **consents.marketing.email.val**.
+Source Schemafältet **medgivande.e-post** ska länkas till målfältet **consents.marketing.email.val**.
 
 ![Datainmatning](./images/cons1.png)
 
 #### consents.marketing.commercialEmail.val
 
-Source-schemafältet **last_name** ska länkas till målfältet **consents.marketing.commercialEmail.val**.
+Source-schemafältet **Medgivande.commercialEmail** ska länkas till målfältet **consents.marketing.commercialEmail.val**.
 
 ![Datainmatning](./images/cons2.png)
 
 #### consents.marketing.any.val
 
-Source Schemafältet **last_name** ska länkas till målfältet **consents.marketing.any.val**.
+Source Schemafältet **medgivande.any** ska länkas till målfältet **consents.marketing.any.val**.
 
 ![Datainmatning](./images/cons3.png)
 

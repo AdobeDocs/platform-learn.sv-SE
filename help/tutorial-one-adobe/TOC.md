@@ -4,10 +4,10 @@ breadcrumb-title: Omfattande teknisk självstudiekurs för Adobe-program, från 
 hide: true
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-source-git-commit: b2624546b221c1fd8de2b503c90e73d07ff4283b
+source-git-commit: e02737a6bf5cb30d4a71df417a7824b6c96bc796
 workflow-type: tm+mt
-source-wordcount: '345'
-ht-degree: 4%
+source-wordcount: '361'
+ht-degree: 3%
 
 ---
 
@@ -26,8 +26,11 @@ ht-degree: 4%
       + [Skapa ditt datastream](/help/tutorial-one-adobe/modules/getting-started/gettingstarted/ex3.md)
       + [Använda webbplatsen](/help/tutorial-one-adobe/modules/getting-started/gettingstarted/ex4.md)
       + [Använda mobilappen](/help/tutorial-one-adobe/modules/getting-started/gettingstarted/ex5.md)
+      + [Konfigurera ditt Adobe I/O-projekt](/help/tutorial-one-adobe/modules/getting-started/gettingstarted/ex6.md)
+      + [Alternativ 1: Postman](/help/tutorial-one-adobe/modules/getting-started/gettingstarted/ex7.md)
+      + [Alternativ 2: PostBuster-konfiguration](/help/tutorial-one-adobe/modules/getting-started/gettingstarted/ex8.md)
+      + [Program som ska installeras](/help/tutorial-one-adobe/modules/getting-started/gettingstarted/ex9.md)
    + [Förarbete](/help/tutorial-one-adobe/prework.md)
-   + [PostBuster](/help/tutorial-one-adobe/postbuster.md)
 
 + 1 Skapande och produktion {#production}
    + 1.1 Översikt över Adobe Firefly Services {#module11}

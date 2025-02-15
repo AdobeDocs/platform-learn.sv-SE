@@ -4,9 +4,9 @@ description: Komma igång - Använd webbplatsen
 kt: 5342
 doc-type: tutorial
 exl-id: 4d2152c9-7f9a-48e3-a8e6-4a6add034b4e
-source-git-commit: e505b8401509f6171d9c98f85a93af27c38a8303
+source-git-commit: ef26abbeb0c1076adbada57f0f18f11c7634d022
 workflow-type: tm+mt
-source-wordcount: '442'
+source-wordcount: '444'
 ht-degree: 0%
 
 ---
@@ -101,8 +101,10 @@ Därefter visas webbplatsen i ett inkognitivt webbläsarfönster. För varje dem
 
 ![DSN](./images/web7.png)
 
-Nästa steg: [Använd mobilappen](./ex5.md)
+## Nästa steg
 
-[Gå tillbaka till Komma igång](./getting-started.md)
+Gå till [Använd mobilappen](./ex5.md)
 
-[Gå tillbaka till Alla moduler](./../../../overview.md)
+Gå tillbaka till [Komma igång](./getting-started.md){target="_blank"}
+
+Gå tillbaka till [Alla moduler](./../../../overview.md){target="_blank"}

@@ -4,10 +4,10 @@ description: Komma igång - en Adobe
 kt: 5342
 doc-type: tutorial
 exl-id: 4b85938e-b7ee-4e05-b73d-112917beea08
-source-git-commit: 7b76e7714d2a390d84393ce21a19063b56508ac1
+source-git-commit: ef26abbeb0c1076adbada57f0f18f11c7634d022
 workflow-type: tm+mt
-source-wordcount: '230'
-ht-degree: 1%
+source-wordcount: '318'
+ht-degree: 0%
 
 ---
 
@@ -28,7 +28,7 @@ I den här modulen ska du konfigurera allt så att du kan samla in data, få til
 
 ## Utövningar
 
-[Installera Chrome-tillägget för dokumentationen för Experience League](./ex1.md)
+[Installera Chrome-tillägget för Experience League-dokumentationen](./ex1.md)
 
 I den här övningen ska du installera och konfigurera Chrome-tillägget så att du kan använda det för att anpassa självstudieinnehållet.
 
@@ -47,6 +47,26 @@ I den här övningen ska du konfigurera webbplatsen så att du kan använda den 
 [Använda mobilappen](./ex5.md)
 
 I den här övningen ska du konfigurera mobilappen så att du kan använda den för demonstrationer och aktivering.
+
+[Konfigurera ditt Adobe I/O-projekt](./ex6.md)
+
+I den här övningen ska du konfigurera ditt Adobe I/O-projekt som ska användas för att interagera med olika Adobe API-slutpunkter.
+
+[Alternativ 1: Postman](./ex7.md)
+
+>[!NOTE]
+>
+>Om du inte är anställd på Adobe följer du instruktionerna för att installera Postman!
+
+I den här övningen ska du förbereda din Postman-miljö för interaktion med olika Adobe API-slutpunkter
+
+[Alternativ 2: PostBuster-konfiguration](./ex8.md)
+
+>[!NOTE]
+>
+>Om du är Adobe-anställd följer du instruktionerna för att installera PostBuster!
+
+I den här övningen ska du förbereda din PostBuster-miljö för interaktion med olika Adobe API-slutpunkter
 
 ![Tech Insiders](./../../../assets/images/techinsiders.png){width="50px" align="left"}
 

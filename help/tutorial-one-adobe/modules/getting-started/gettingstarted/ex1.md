@@ -1,17 +1,17 @@
 ---
-title: Komma igång - Installera Chrome-tillägget för dokumentationen för Experience League
-description: Komma igång - Installera Chrome-tillägget för dokumentationen för Experience League
+title: Komma igång - Installera Chrome-tillägget för Experience League-dokumentationen
+description: Komma igång - Installera Chrome-tillägget för Experience League-dokumentationen
 kt: 5342
 doc-type: tutorial
 exl-id: 3618dacb-2203-4d19-ae51-f78415a693fd
-source-git-commit: e505b8401509f6171d9c98f85a93af27c38a8303
+source-git-commit: ef26abbeb0c1076adbada57f0f18f11c7634d022
 workflow-type: tm+mt
-source-wordcount: '911'
+source-wordcount: '913'
 ht-degree: 0%
 
 ---
 
-# Installera Chrome-tillägget för dokumentationen för Experience League
+# Installera Chrome-tillägget för Experience League-dokumentationen
 
 ## Om Chrome-tillägget
 
@@ -84,7 +84,7 @@ IMS-organisations-ID är den unika identifieraren för din Adobe Experience Clou
 
 Du kan söka efter ditt IMS-organisations-ID på flera sätt. Om du är osäker kan du söka efter ditt ID hos en av systemadministratörerna för instansen.
 
-Du kan hitta den genom att gå till [Admin Console](https://https://adminconsole.adobe.com/), där du kan hitta den som en del av URL:en.
+Du kan hitta den genom att gå till [Admin Console](https://https://adminconsole.adobe.com/) där du kan hitta den som en del av URL:en.
 
 ![DSN](./images/aepid1.png)
 
@@ -143,8 +143,10 @@ Du bör nu ha en liknande vy som i nedanstående exempel, där miljövariabeln `
 
 ![DSN](./images/mod7.png)
 
-Nästa steg: [Använd demosystemet bredvid för att konfigurera klientegenskapen för Adobe Experience Platform Data Collection](./ex2.md)
+## Nästa steg
 
-[Gå tillbaka till Komma igång](./getting-started.md)
+Gå till [Använd demosystemet intill för att konfigurera klientegenskapen för Adobe Experience Platform Data Collection](./ex2.md)
 
-[Gå tillbaka till Alla moduler](./../../../overview.md)
+Gå tillbaka till [Komma igång](./getting-started.md){target="_blank"}
+
+Gå tillbaka till [Alla moduler](./../../../overview.md){target="_blank"}

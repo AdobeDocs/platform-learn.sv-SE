@@ -4,9 +4,9 @@ description: Komma igång - Skapa ditt dataflöde
 kt: 5342
 doc-type: tutorial
 exl-id: d36057b4-64c6-4389-9612-d3c9cf013117
-source-git-commit: e505b8401509f6171d9c98f85a93af27c38a8303
+source-git-commit: ef26abbeb0c1076adbada57f0f18f11c7634d022
 workflow-type: tm+mt
-source-wordcount: '807'
+source-wordcount: '809'
 ht-degree: 0%
 
 ---
@@ -173,8 +173,10 @@ Klicka på **Lägg till alla ändrade resurser** och sedan på **Spara och skapa
 
 ![Namnge Edge-konfigurationen och spara](./images/edgeconfig17ma.png)
 
-Nästa steg: [Använd webbplatsen](./ex4.md)
+## Nästa steg
 
-[Gå tillbaka till Komma igång](./getting-started.md)
+Gå till [Använd webbplatsen](./ex4.md)
 
-[Gå tillbaka till Alla moduler](./../../../overview.md)
+Gå tillbaka till [Komma igång](./getting-started.md){target="_blank"}
+
+Gå tillbaka till [Alla moduler](./../../../overview.md){target="_blank"}

@@ -4,16 +4,16 @@ description: Komma igång - Använd demonstrationssystemet bredvid för att konf
 kt: 5342
 doc-type: tutorial
 exl-id: 455b72f6-84fd-463a-a7b5-3c4999035ab2
-source-git-commit: e505b8401509f6171d9c98f85a93af27c38a8303
+source-git-commit: ef26abbeb0c1076adbada57f0f18f11c7634d022
 workflow-type: tm+mt
-source-wordcount: '328'
+source-wordcount: '330'
 ht-degree: 0%
 
 ---
 
 # Använd Demo System bredvid för att konfigurera klientegenskapen för Adobe Experience Platform Data Collection
 
-För att visualisera inlärningarna i den här självstudiekursen och göra det möjligt för dig att testa konfigurationen i en säker miljö använder den här självstudiekursen verktygen Adobe Demo System Next. För att få ut det mesta av den här självstudiekursen måste din AEP-instans konfigureras så att den integreras med Demo System Next.
+För att visualisera inlärningarna i den här självstudiekursen och för att göra det möjligt för dig att testa konfigurationen i en säker miljö använder den här självstudiekursen Adobe verktyg för Demo System Next. För att få ut det mesta av den här självstudiekursen måste din AEP-instans konfigureras så att den integreras med Demo System Next.
 
 När du har tillgång till Demo System Next fortsätter du med stegen nedan.
 
@@ -33,7 +33,7 @@ Klicka sedan på **Start**.
 
 ![DSN](./images/dsn2.png)
 
-På popup-menyn anger du ett namn för dina datainsamlingsegenskaper och Experience Builder-projekt. Använd den här namnkonventionen: **One Adobe (DD/MM/YYYY)**. Obs! LDAP-filen läggs till automatiskt, du behöver inte lägga till den själv.
+På popup-menyn anger du ett namn för dina datainsamlingsegenskaper och Experience Builder-projekt. Använd den här namnkonventionen: **One Adobe (DD/MM/ÅÅÅÅ)**. Obs! LDAP-filen läggs till automatiskt, du behöver inte lägga till den själv.
 
 Klicka på **Start**.
 
@@ -55,8 +55,10 @@ När snabbinstallationsprocessen är klar får du:
 
 Håll den här skärmen öppen som du vill i nästa steg.
 
-Nästa steg: [Skapa ditt datastream](./ex3.md)
+## Nästa steg
 
-[Gå tillbaka till Komma igång](./getting-started.md)
+Gå till [Skapa ditt datastream](./ex3.md)
 
-[Gå tillbaka till Alla moduler](./../../../overview.md)
+Gå tillbaka till [Komma igång](./getting-started.md){target="_blank"}
+
+Gå tillbaka till [Alla moduler](./../../../overview.md){target="_blank"}

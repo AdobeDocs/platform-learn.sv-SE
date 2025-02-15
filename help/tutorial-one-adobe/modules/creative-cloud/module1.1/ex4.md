@@ -6,9 +6,9 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 330f4492-d0df-4298-9edc-4174b0065c9a
-source-git-commit: 0e9d1b5866d789ca2693d9c1a6ef7119c25ed009
+source-git-commit: 219945c74c620b9a4b93cb2b7462137118d42d33
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: '823'
 ht-degree: 0%
 
 ---
@@ -135,10 +135,6 @@ Klistra in ditt **tekniska konto-ID** och klicka på **Bjud in för redigering**
 ![Anpassade Firefly-modeller](./images/ffcm22.png){zoomable="yes"}
 
 ## 1.1.4.4 Interaktion med Firefly Services API för anpassade modeller
-
->[!IMPORTANT]
->
->Om du är Adobe-anställd följer du instruktionerna här för att använda [PostBuster](./../../../postbuster.md).
 
 I Exercise 1.1.1 Komma igång med Firefly Services hämtade du den här filen: [postman-ff.zip](./../../../assets/postman/postman-ff.zip) till ditt lokala skrivbord och du importerade sedan samlingen i Postman.
 

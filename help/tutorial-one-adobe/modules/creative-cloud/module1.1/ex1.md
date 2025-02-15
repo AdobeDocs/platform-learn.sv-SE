@@ -6,9 +6,9 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 52385c33-f316-4fd9-905f-72d2d346f8f5
-source-git-commit: 18151b91d18ebb53fc485151effd12a6fdc2b6b8
+source-git-commit: 219945c74c620b9a4b93cb2b7462137118d42d33
 workflow-type: tm+mt
-source-wordcount: '832'
+source-wordcount: '819'
 ht-degree: 0%
 
 ---
@@ -76,10 +76,6 @@ Installationen av Adobe I/O-integreringen är nu klar.
 ![Adobe I/O Ny integrering](./images/api16.png){zoomable="yes"}
 
 ## 1.1.1.3 Postman-autentisering till Adobe I/O
-
->[!IMPORTANT]
->
->Om du är Adobe-anställd följer du instruktionerna här för att använda [PostBuster](./../../../postbuster.md).
 
 1. Hämta och installera den aktuella versionen av Postman för ditt operativsystem på [Postman Downloads](https://www.postman.com/downloads/){target="_blank"}.
 
