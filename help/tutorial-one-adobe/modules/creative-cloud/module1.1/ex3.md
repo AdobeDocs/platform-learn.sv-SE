@@ -6,9 +6,9 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 60eecc24-1713-4fec-9ffa-a3186db1a8ca
-source-git-commit: f20a4fc49cc3f3ac411e4017179d0ae2f83df9c3
+source-git-commit: 07c890d1f3e5dbcec5b3a81badb9a7147eed72db
 workflow-type: tm+mt
-source-wordcount: '939'
+source-wordcount: '829'
 ht-degree: 0%
 
 ---
@@ -17,65 +17,27 @@ ht-degree: 0%
 
 Lär dig hur du arbetar med Photoshop API:er och Firefly Services.
 
-## 1.1.3.1 Uppdatera integreringen med Adobe I/O
+## 1.1.3.1 Krav
 
-1. Gå till [https://developer.adobe.com/console/home](https://developer.adobe.com/console/home){target="_blank"}.
+Innan du fortsätter med den här övningen måste du ha slutfört installationen av [ditt Adobe I/O-projekt](./../../../modules/getting-started/gettingstarted/ex6.md), och du måste också ha konfigurerat ett program för interaktion med API:er, som [Postman](./../../../modules/getting-started/gettingstarted/ex7.md) eller [PostBuster](./../../../modules/getting-started/gettingstarted/ex8.md).
 
-![Adobe I/O Ny integrering](./images/iohome.png){zoomable="yes"}
+## 1.1.3.2 Adobe I/O - access_token
 
-1. Gå till **Projekt** och välj det projekt du skapade i föregående övning, som kallas `--aepUserLdap-- Firefly`.
+I samlingen **Adobe IO - OAuth** markerar du begäran **POST - Get Access Token** och väljer **Skicka**. Svaret ska innehålla en ny **accestoken**.
 
-![Azure Storage](./images/ps1.png){zoomable="yes"}
+![Postman](./images/ioauthresp.png){zoomable="yes"}
 
-1. Välj **+ Lägg till i projekt** och välj sedan **API**.
+## 1.1.3.3 Interagera med en PSD-fil
 
-![Azure Storage](./images/ps2.png){zoomable="yes"}
+Hämta [citisign-fiber.psd](./../../../assets/ff/citisignal-fiber.psd){target="_blank"} till skrivbordet.
 
-1. Välj **Creative Cloud** och välj **Photoshop - Firefly Services**. Välj **Nästa**.
-
-![Azure Storage](./images/ps3.png){zoomable="yes"}
-
-1. Välj **Nästa**.
-
-![Azure Storage](./images/ps4.png){zoomable="yes"}
-
-Därefter måste du välja en produktprofil som definierar vilka behörigheter som är tillgängliga för den här integreringen.
-
-1. Välj **Standardkonfiguration för Firefly Services** och **Standardkonfiguration för Creative Cloud Automation Services**.
-
-1. Välj **Spara konfigurerat API**.
-
-![Azure Storage](./images/ps5.png){zoomable="yes"}
-
-Ditt Adobe I/O-projekt har uppdaterats för att fungera med API:er för Photoshop och Firefly Services.
-
-![Azure Storage](./images/ps6.png){zoomable="yes"}
-
-## 1.1.3.2 Interagera med en PSD-fil
-
-1. Hämta [citisign-fiber.psd](./../../../assets/ff/citisignal-fiber.psd){target="_blank"} till skrivbordet.
-
-1. Öppna **citisign-fiber.psd** i Photoshop.
+Öppna **citisign-fiber.psd** i Photoshop.
 
 ![Azure Storage](./images/ps7.png){zoomable="yes"}
 
 I rutan **Lager** har fildesignern gett varje lager ett unikt namn. Du kan se lagerinformationen genom att öppna PSD-filen i Photoshop, men du kan också göra detta programmatiskt.
 
 Låt oss skicka din första API-begäran till Photoshop API:er.
-
-1. I Postman måste du autentisera till Adobe I/O innan du skickar API-begäranden till Photoshop. Öppna föregående begäran med namnet **POST - Hämta åtkomsttoken**.
-
-1. Gå till **Parametrar** och kontrollera att parametern **Scope** är korrekt inställd. **Värdet** för **Scope** ska se ut så här:
-
-`openid,session,AdobeID,read_organizations,additional_info.projectedProductContext, ff_apis, firefly_api`
-
-1. Välj **Skicka**.
-
-![Azure Storage](./images/ps8.png){zoomable="yes"}
-
-Nu har du en giltig åtkomsttoken för att interagera med Photoshop API:er.
-
-![Azure Storage](./images/ps9.png){zoomable="yes"}
 
 ### Photoshop API - Hello World
 
