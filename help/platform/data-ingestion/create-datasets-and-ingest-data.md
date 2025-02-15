@@ -7,7 +7,7 @@ level: Beginner
 jira: KT-2700
 thumbnail: 27269.jpg
 exl-id: f01c7d88-a77e-4fb2-aa5a-d647abc41790
-source-git-commit: 29f1c26d370859fd2200610ed74a1ea744be08a8
+source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
 workflow-type: tm+mt
 source-wordcount: '76'
 ht-degree: 0%
@@ -18,5 +18,5 @@ ht-degree: 0%
 
 I den här videon visas hur du skapar datauppsättningar och importerar data i Adobe Experience Platform-gränssnittet. Mer detaljerad produktdokumentation finns i [Importera gruppdata med användargränssnittet](https://experienceleague.adobe.com/docs/experience-platform/ingestion/tutorials/ingest-batch-data.html) och [skapa en datauppsättning med API:er](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/create.html). Mer information finns i [dokumentationen för datainmatning](https://experienceleague.adobe.com/docs/experience-platform/ingestion/home.html).
 
->[!VIDEO](https://video.tv.adobe.com/v/27269?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27269?learn=on&enablevpops)
 

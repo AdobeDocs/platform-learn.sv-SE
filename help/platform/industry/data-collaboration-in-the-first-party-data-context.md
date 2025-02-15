@@ -8,7 +8,7 @@ doc-type: Event
 thumbnail: 337665.jpg
 jira: KT-9145
 exl-id: 84d900c4-662e-486c-97c9-38c55fd5bf28
-source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
+source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
 workflow-type: tm+mt
 source-wordcount: '135'
 ht-degree: 0%
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Leverera på löftet om upplevelsen, med tillgång till färre data. Vare sig du är annonsör, utgivare eller byrå kan det här webbinariet hjälpa till att frigöra möjligheter till datasamarbete i framtiden utan cookies från tredje part.
 
->[!VIDEO](https://video.tv.adobe.com/v/337665/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/337665/?learn=on&enablevpops)
 
 ## Viktiga åtgärder:
 
@@ -31,6 +31,6 @@ Leverera på löftet om upplevelsen, med tillgång till färre data. Vare sig du
 
 [Översikt över segmentmatchning](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/segment-match.html?lang=en)
 
-[Audience Marketplace för datainköpare](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/audience-marketplace/audience-marketplace-for-data-buyers/marketplace-data-buyers.html?lang=en)
+[Audience Marketplace for Data Buyers](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/audience-marketplace/audience-marketplace-for-data-buyers/marketplace-data-buyers.html?lang=en)
 
 [Personbaserade mål](https://experienceleague.adobe.com/docs/audience-manager/user-guide/features/destinations/people-based/people-based-destinations-overview.html?lang=en)

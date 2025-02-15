@@ -7,7 +7,7 @@ level: Beginner
 jira: KT-4380
 thumbnail: 33631.jpg
 exl-id: 9372f240-73a0-4262-8c23-122007786ea5
-source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
+source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
 workflow-type: tm+mt
 source-wordcount: '110'
 ht-degree: 0%
@@ -18,4 +18,4 @@ ht-degree: 0%
 
 Lär dig hur du tillämpar dataanvändningsprinciper när du aktiverar en målgrupp till ett mål. Lär dig hur du lägger till marknadsföringsåtgärder till destinationer, hur du analyserar en policyöverträdelse under aktiveringen och hur du använder datalinjen för att förstå och åtgärda regelöverträdelser. Mer information om API-baserad metod finns i [Tillämpa dataanvändningsprinciper med hjälp av API:t för principtjänsten](https://experienceleague.adobe.com/docs/experience-platform/data-governance/enforcement/api-enforcement.html).
 
->[!VIDEO](https://video.tv.adobe.com/v/33631?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33631?learn=on&enablevpops)

@@ -2,13 +2,13 @@
 title: Infoga strömmande data
 seo-title: Ingest streaming data | Getting Started with Adobe Experience Platform for Data Architects and Data Engineers
 breadcrumb-title: Infoga strömmande data
-description: I den här lektionen strömmar du data till Experience Platform med Web SDK.
+description: I den här lektionen strömmar du data till Experience Platform via Web SDK.
 role: Data Engineer
 feature: Data Ingestion
 jira: KT-4348
 thumbnail: 4348-ingest-streaming-data.jpg
 exl-id: 09c24673-af8b-40ab-b894-b4d76ea5b112
-source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
+source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
 workflow-type: tm+mt
 source-wordcount: '3082'
 ht-degree: 0%
@@ -19,11 +19,11 @@ ht-degree: 0%
 
 <!--1hr-->
 
-I den här lektionen direktuppspelar du data med Adobe Experience Platform Web SDK.
+I den här lektionen strömmar du data med Adobe Experience Platform Web SDK.
 
 Det finns två huvudsakliga uppgifter vi måste utföra i gränssnittet för datainsamling:
 
-* Vi måste implementera Web SDK på Lumas webbplats för att skicka data om besöksaktivitet från webbplatsen till Adobe Edge-nätverket. Vi ska göra en enkel implementering med hjälp av taggar (tidigare Launch)
+* Vi måste implementera Web SDK på Lumas webbplats för att skicka data om besökaraktivitet från webbplatsen till Adobe Edge-nätverket. Vi ska göra en enkel implementering med hjälp av taggar (tidigare Launch)
 
 * Vi måste konfigurera en datastream som meddelar Edge nätverk var data ska vidarebefordras. Vi kommer att konfigurera den så att den skickar data till vår `Luma Web Events`-datauppsättning i vår plattformssandlåda.
 
@@ -31,9 +31,9 @@ Det finns två huvudsakliga uppgifter vi måste utföra i gränssnittet för dat
 
 Innan du börjar övningarna ska du titta på dessa två korta videoklipp för att lära dig mer om strömmande data och Web SDK:
 
->[!VIDEO](https://video.tv.adobe.com/v/28425?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28425?learn=on&enablevpops)
 
->[!VIDEO](https://video.tv.adobe.com/v/34141?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/34141?learn=on&enablevpops)
 
 >[!NOTE]
 >
@@ -78,11 +78,11 @@ I lektionen [Konfigurera behörigheter](configure-permissions.md) ställer du in
 
 ## Konfigurera datastream
 
-Först konfigurerar vi datastream. En dataström talar om för Adobe Edge nätverk var data ska skickas när de har tagits emot från Web SDK-anropet. Vill du till exempel skicka data till Experience Platform, Adobe Analytics eller Adobe Target? Datastreams hanteras i användargränssnittet för datainsamling (tidigare Launch) och är viktiga för datainsamling med Web SDK.
+Först konfigurerar vi datastream. En datastream talar om för Adobe Edge-nätverket var data ska skickas när de har tagits emot från SDK webbsamtal. Vill du till exempel skicka data till Experience Platform, Adobe Analytics eller Adobe Target? Datastreams hanteras i användargränssnittet för datainsamling (tidigare Launch) och är viktiga för datainsamling med Web SDK.
 
 Så här skapar du din [!UICONTROL datastream]:
 
-1. Logga in i användargränssnittet för [Experience Platform datainsamling](https://experience.adobe.com/launch/)
+1. Logga in i [Experience Platform Data Collection-användargränssnittet](https://experience.adobe.com/launch/)
    <!--when will the edge config go live?-->
 
 1. Välj **[!UICONTROL Datastreams]** i den vänstra navigeringen
@@ -96,12 +96,12 @@ Så här skapar du din [!UICONTROL datastream]:
 
    ![Namnge datastrammet och spara](assets/websdk-edgeConfig-name.png)
 
-På nästa skärm anger du var du vill skicka data. Så här skickar du data till Experience Platform:
+På nästa skärm anger du var du vill skicka data. Skicka data till Experience Platform:
 
 1. Växla på **[!UICONTROL Adobe Experience Platform]** om du vill visa ytterligare fält
 1. För **[!UICONTROL Sandbox]** väljer du `Luma Tutorial`
 1. För **[!UICONTROL Event Dataset]** väljer du `Luma Web Events Dataset`
-1. Om du använder andra Adobe-program kan du utforska de andra avsnitten och se vilken information som krävs i Edge Configuration för dessa andra lösningar. Kom ihåg att Web SDK utvecklades inte bara för att strömma data till Experience Platform, utan även för att ersätta alla tidigare JavaScript-bibliotek som används av andra program från Adobe. Edge Configuration används för att ange kontoinformationen för varje program som du vill skicka data till.
+1. Om du använder andra Adobe-program kan du utforska de andra avsnitten och se vilken information som krävs i Edge Configuration för dessa andra lösningar. Kom ihåg att Web SDK utvecklades inte bara för att strömma data till Experience Platform utan även för att ersätta alla tidigare JavaScript-bibliotek som används av andra Adobe-program. Edge Configuration används för att ange kontoinformationen för varje program som du vill skicka data till.
 1. Välj **[!UICONTROL Save]**
    ![Konfigurera dataströmmen och spara](assets/websdk-edgeConfig-addEnvironment.png)
 
@@ -109,7 +109,7 @@ När Edge Configuration har sparats visas tre miljöer för utveckling, mellanla
 ![Varje Edge-konfiguration kan ha flera miljöer](assets/websdk-edgeConfig-environments.png)
 Alla tre miljöerna innehåller den plattformsinformation du just angav. Dessa uppgifter kan dock konfigureras på olika sätt i olika miljöer. Du kan till exempel låta varje miljö skicka data till en annan plattformssandlåda. I den här självstudiekursen kommer vi inte att göra någon ytterligare anpassning av vår datastream.
 
-## Installera Web SDK-tillägget
+## Installera SDK-tillägget för webben
 
 ### Lägg till en egenskap
 
@@ -157,9 +157,9 @@ Nu när du har en egenskap kan du lägga till Web SDK med ett tillägg. Ett till
 1. Det finns många tillägg för taggar. Filtrera katalogen med termen `Web SDK`
 1. Välj knappen **[!UICONTROL Install]** i tillägget **[!UICONTROL Adobe Experience Platform Web SDK]**
    ![Installera Adobe Experience Platform Web SDK-tillägget](assets/websdk-property-addExtension.png)
-1. Det finns flera konfigurationer tillgängliga för Web SDK-tillägget, men det finns bara två som vi kommer att konfigurera för den här självstudien. Uppdatera **[!UICONTROL Edge Domain]** till `data.enablementadobe.com`. Med den här inställningen kan du ange cookies från första part med Web SDK-implementeringen, vilket rekommenderas. Senare i den här lektionen mappar du en webbplats på domänen `enablementadobe.com` till din taggegenskap. CNAME för domänen `enablementadobe.com` har redan konfigurerats så att `data.enablementadobe.com` kan vidarebefordra till Adobe-servrar. När du implementerar Web SDK på din egen webbplats måste du skapa en CNAME för dina egna datainsamlingssyften, till exempel `data.YOUR_DOMAIN.com`
+1. Det finns flera konfigurationer tillgängliga för Web SDK-tillägget, men det finns bara två som vi kommer att konfigurera för den här självstudiekursen. Uppdatera **[!UICONTROL Edge Domain]** till `data.enablementadobe.com`. Med den här inställningen kan du ange cookies från första part med din Web SDK-implementering, vilket rekommenderas. Senare i den här lektionen mappar du en webbplats på domänen `enablementadobe.com` till din taggegenskap. CNAME för domänen `enablementadobe.com` har redan konfigurerats så att `data.enablementadobe.com` kan vidarebefordra till Adobe-servrar. När du implementerar Web SDK på din egen webbplats måste du skapa en CNAME för dina egna datainsamlingssyften, till exempel `data.YOUR_DOMAIN.com`
 1. I listrutan **[!UICONTROL Datastream]** väljer du `Luma Platform Tutorial`-datastream.
-1. Du kan gärna titta på andra konfigurationsalternativ (men ändra dem inte!) och välj sedan **[!UICONTROL Save]**
+1. Titta gärna på de andra konfigurationsalternativen (men ändra dem inte!) och välj sedan **[!UICONTROL Save]**
    <!--is edge domain required for first party? when will it break?-->
    <!--any other fields that should be highlighted-->
    ![](assets/websdk-property-configureExtension.png)
@@ -188,7 +188,7 @@ Nu ska vi skapa en regel för att skicka data till plattformen. En regel är en 
 1. Välj **[!UICONTROL Save]** om du vill spara regeln\
    ![Spara regeln](assets/websdk-property-saveRule.png)
 
-## Publish regeln i ett bibliotek
+## Publicera regeln i ett bibliotek
 
 Därefter ska vi publicera regeln i vår utvecklingsmiljö så att vi kan verifiera att den fungerar.
 
@@ -248,14 +248,14 @@ Som du ser på skärmen [!UICONTROL Publishing Flow] finns det mycket mer i publ
 
 ### Lägg till Adobe Experience Platform Debugger
 
-Felsökaren Experience Platform är ett tillägg för Chrome- och Firefox-webbläsare som gör det enklare att se hur Adobe-tekniken används på dina webbsidor. Ladda ned den version du föredrar:
+Experience Platform Debugger är ett tillägg för Chrome- och Firefox-webbläsare som hjälper dig att se Adobe-tekniken som är implementerad på dina webbsidor. Ladda ned den version du föredrar:
 
 * [Firefox-tillägg](https://addons.mozilla.org/sv-SE/firefox/addon/adobe-experience-platform-dbg/)
 * [Chrome-tillägg](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
 Om du aldrig har använt Felsökning tidigare - och den här är en annan än den tidigare Adobe Experience Cloud Debugger - kan du titta på den här översiktsvideon med fem minuter:
 
->[!VIDEO](https://video.tv.adobe.com/v/32156?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32156?learn=on&enablevpops)
 
 ### Öppna Lumas webbplats
 
@@ -270,9 +270,9 @@ Den här värdbaserade webbplatsen är anledningen till att vi använde `enablem
 
 ### Använd Experience Platform Debugger för att mappa till taggegenskapen
 
-Felsökaren i Experience Platform har en cool funktion som gör att du kan ersätta en befintlig taggegenskap med en annan. Detta är användbart för validering och gör att vi kan hoppa över många implementeringssteg i den här självstudiekursen.
+Experience Platform Debugger har en cool funktion som gör att du kan ersätta en befintlig taggegenskap med en annan. Detta är användbart för validering och gör att vi kan hoppa över många implementeringssteg i den här självstudiekursen.
 
-1. Kontrollera att Luma-webbplatsen är öppen och välj ikonen för Experience Platform-felsökningstillägget
+1. Kontrollera att Luma-webbplatsen är öppen och välj ikonen för Experience Platform Debugger-tillägget
 1. Felsökaren öppnar och visar information om den hårdkodade implementeringen, som inte har med den här självstudiekursen att göra (du kan behöva läsa in Luma-webbplatsen igen när du har öppnat Felsökning)
 1. Bekräfta att felsökaren är **[!UICONTROL Connected to Luma]** enligt bilden nedan och välj sedan ikonen **[!UICONTROL lock]** för att låsa felsökaren till Luma-webbplatsen.
 1. Välj knappen **[!UICONTROL Sign In]** längst upp till höger för att autentisera.
@@ -389,9 +389,9 @@ Du kan också validera de sidnamnsdata som togs emot i Platform genom att förha
 
 ## Skicka ytterligare identiteter
 
-Din Web SDK-implementering skickar nu händelser med Experience Cloud ID (ECID) som primär identifierare. ECID genereras automatiskt av Web SDK och är unikt per enhet och webbläsare. En enskild kund kan ha flera ECID:n beroende på vilken enhet och webbläsare de använder. Så hur får vi en enhetlig bild av den här kunden och kan länka deras onlineaktivitet till våra CRM-, Loyalty- och Offline Purchase-data? Det gör vi genom att samla in ytterligare identiteter under deras session och på ett avgörande sätt länka deras profil via identitetssammanfogning.
+Din implementering av Web SDK skickar nu händelser med Experience Cloud ID (ECID) som primär identifierare. ECID genereras automatiskt av Web SDK och är unikt per enhet och webbläsare. En enskild kund kan ha flera ECID:n beroende på vilken enhet och webbläsare de använder. Så hur får vi en enhetlig bild av den här kunden och kan länka deras onlineaktivitet till våra CRM-, Loyalty- och Offline Purchase-data? Det gör vi genom att samla in ytterligare identiteter under deras session och på ett avgörande sätt länka deras profil via identitetssammanfogning.
 
-Om du kommer ihåg det, nämnde jag att vi skulle använda ECID och CRM-ID som identiteter för våra webbdata i lektionen [Kartidentitet](map-identities.md). Låt oss då samla in CRM-ID:t med Web SDK!
+Om du kommer ihåg det, nämnde jag att vi skulle använda ECID och CRM-ID som identiteter för våra webbdata i lektionen [Kartidentitet](map-identities.md). Så vi samlar in CRM-ID:t med Web SDK!
 
 ### Lägg till dataelement för CRM-ID
 

@@ -8,16 +8,16 @@ doc-type: Feature Video
 duration: 0
 last-substantial-update: 2024-08-30T00:00:00Z
 jira: KT-16120
-source-git-commit: 8f7e2699e0158bc36459bbe61a5aa8e70e8e775b
+exl-id: 993b514a-67ea-4d71-8c6b-e0e4f600b603
+source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
 workflow-type: tm+mt
 source-wordcount: '54'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
-
 # Anslut och konfigurera sammanställning av federerad publik
 
-Lär dig hur du ansluter till ditt datalager och konfigurerar anslutningen för Federated Audience Composition. Mer information finns i [Dokumentation för sammanställning av externa målgrupper](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/home){target="_blank"}.
+Lär dig hur du ansluter till ditt datalager och konfigurerar anslutningen för Federated Audience Composition. Mer information finns i [Dokumentation för sammanställning av externa målgrupper](https://experienceleague.adobe.com/sv/docs/federated-audience-composition/using/home){target="_blank"}.
 
->[!VIDEO](https://video.tv.adobe.com/v/3433246/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3433246/?learn=on&enablevpops)

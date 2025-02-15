@@ -5,10 +5,10 @@ feature: Mobile SDK, Tags
 level: Beginner
 jira: KT-2636
 exl-id: c0bfdd5a-03f7-49db-9124-7d420a884048
-source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
+source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
 workflow-type: tm+mt
 source-wordcount: '85'
-ht-degree: 0%
+ht-degree: 1%
 
 ---
 
@@ -20,4 +20,4 @@ Lär dig hur du skapar en mobil taggegenskap i Datainsamling. Lägg till Mobile 
 >
 > Starta nu **[!DNL tags]**
 
->[!VIDEO](https://video.tv.adobe.com/v/26264/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26264/?learn=on&enablevpops)

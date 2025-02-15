@@ -8,7 +8,7 @@ feature: Profiles
 jira: KT-4348
 thumbnail: 4348-enable-profiles.jpg
 exl-id: b05f1af1-a599-42f2-8546-77453a578b92
-source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
+source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
 workflow-type: tm+mt
 source-wordcount: '1083'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Det finns viktiga [skyddsutkast för kundprofildata i realtid](https://experienc
 **Dataarkitekturer** måste aktivera kundprofil i realtid utanför den här självstudiekursen.
 
 Innan du börjar övningarna ska du titta på den här korta videon och lära dig mer om kundprofilen i realtid:
->[!VIDEO](https://video.tv.adobe.com/v/27251?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27251?learn=on&enablevpops)
 
 ## Behörigheter krävs
 

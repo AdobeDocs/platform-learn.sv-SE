@@ -9,7 +9,7 @@ thumbnail: 332077.jpg
 jira: KT-7333
 type: Event
 exl-id: 6704016a-a6fc-42d9-af33-761e5f4fed60
-source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
+source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 0%
@@ -20,4 +20,4 @@ ht-degree: 0%
 
 När marknadskrafterna förändrar vårt digitala landskap måste företagen anpassa sig till en ny verklighet när det gäller datastyrning, identitetsupplösning och hur de engagerar potentiella kunder och pseudonyma besökare med meningsfullt innehåll. Det finns därför många olika vägar att utnyttja varaktiga identifierare i externa system för att uppnå skalbarhet. I det här webbinariet får du se hur Adobe och 451 Research tänker på framtiden för teknik och data för att ta itu med den nya marknadsföringsmiljön och börja förbereda ert företag för den framtida datahanteringen.
 
->[!VIDEO](https://video.tv.adobe.com/v/332077/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/332077/?learn=on&enablevpops)

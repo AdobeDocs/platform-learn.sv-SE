@@ -1,10 +1,10 @@
 ---
 title: Skapa taggregler för Platform Web SDK
-description: Lär dig hur du skickar en händelse till Platform Edge Network med ditt XDM-objekt med hjälp av en taggregel. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
+description: Lär dig hur du skickar en händelse till Platform Edge Network med ditt XDM-objekt med hjälp av en taggregel. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Tags
 jira: KT-15403
 exl-id: e06bad06-3ee3-475f-9b10-f0825a48a312
-source-git-commit: a8431137e0551d1135763138da3ca262cb4bc4ee
+source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
 workflow-type: tm+mt
 source-wordcount: '1762'
 ht-degree: 0%
@@ -23,7 +23,7 @@ När lektionen är slut kan du:
 * Skicka en händelse med XDM-fält med åtgärderna Uppdatera variabel och Skicka händelse
 * Stapla flera uppsättningar XDM-fält över flera regler
 * Mappa enskilda eller hela arraydataelement till XDM-objektet
-* Publish a tag rule to a development library
+* Publicera en taggregel i ett utvecklingsbibliotek
 
 
 ## Förhandskrav
@@ -53,7 +53,7 @@ där
 
 ## Skapa taggregler
 
-I taggar används regler för att utföra åtgärder (brandanrop) under olika förhållanden. Tillägget Platform Web SDK-taggar innehåller två åtgärder som används i den här lektionen:
+I taggar används regler för att utföra åtgärder (brandanrop) under olika förhållanden. Platsens SDK-taggtillägg innehåller två åtgärder som används i den här lektionen:
 
 * **[!UICONTROL Update variable]** mappar dataelement till egenskaper i ett XDM-objekt
 * **[!UICONTROL Send Event]** skickar XDM-objektet till Experience Platform Edge Network
@@ -70,7 +70,7 @@ Alla dessa regler kommer att ordnas korrekt med alternativet [!UICONTROL order].
 
 Den här videon ger en översikt över processen:
 
->[!VIDEO](https://video.tv.adobe.com/v/3427710/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3427710/?learn=on&enablevpops)
 
 ### Globala konfigurationsfält
 
@@ -362,7 +362,7 @@ Nu när du har angett variablerna kan du skapa regeln för att skicka hela XDM-o
 
    ![Spara regeln](assets/create-rule-save-rule.png)
 
-## Publish reglerna i ett bibliotek
+## Publicera reglerna i ett bibliotek
 
 Publicera sedan regeln i utvecklingsmiljön så att du kan verifiera att den fungerar.
 
@@ -397,4 +397,4 @@ Nu kan du validera data i begäran med Adobe Experience Platform Debugger.
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du har lagt ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League diskussionsgruppsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

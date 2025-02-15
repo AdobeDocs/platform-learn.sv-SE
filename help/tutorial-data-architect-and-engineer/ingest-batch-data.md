@@ -8,7 +8,7 @@ feature: Data Ingestion
 jira: KT-4348
 thumbnail: 4348-ingest-batch-data.jpg
 exl-id: fc7db637-e191-4cc7-9eec-29f4922ae127
-source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
+source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
 workflow-type: tm+mt
 source-wordcount: '2410'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Genom att lägga in data i grupp kan du samtidigt importera en stor mängd data 
 
 Innan du börjar övningarna ska du titta på den här korta videon för att lära dig mer om datainhämtning:
 
->[!VIDEO](https://video.tv.adobe.com/v/27106?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27106?learn=on&enablevpops)
 
 
 ## Behörigheter krävs
@@ -191,7 +191,7 @@ Så här slutför du gruppen:
 1. Välj begäran **[!DNL Data Ingestion API > Batch Ingestion > Finish uploading a file to a dataset in a batch.]**
 1. Ange `COMPLETE` som **åtgärd** på fliken **Params**.
 1. Ange ditt batch-ID på fliken **Params**. Du behöver inte bekymra dig om datauppsättnings-ID eller filePath om de finns.
-1. Kontrollera att POSTENS URL är `https://platform.adobe.io/data/foundation/import/batches/:batchId?action=COMPLETE` och att det inte finns några onödiga referenser till `datasetId` eller `filePath`
+1. Kontrollera att URL:en för POST är `https://platform.adobe.io/data/foundation/import/batches/:batchId?action=COMPLETE` och att det inte finns några onödiga referenser till `datasetId` eller `filePath`
 1. Välj **Skicka** så får du ett 200 OK-svar med 1 i svarstexten
 
    ![Grupperingen har slutförts](assets/ingestion-crm-complete.png)
@@ -332,7 +332,7 @@ Slå upp profilen med värdet `5625458` i namnområdet `loyaltyId` igen för att
 
 ## ETL-verktyg
 
-Adobe samarbetar med flera ETL-leverantörer för att stödja datainhämtning till Experience Platform. På grund av de många olika tredjepartsleverantörerna ingår inte ETL i kursen, även om du gärna vill titta närmare på några av dessa resurser:
+Adobe samarbetar med flera ETL-leverantörer för att stödja datainmatning i Experience Platform. På grund av de många olika tredjepartsleverantörerna ingår inte ETL i kursen, även om du gärna vill titta närmare på några av dessa resurser:
 
 * [Utveckla ETL-integreringar för Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/etl/home.html)
 * [Informatica Adobe Experience Platform Connector-sida på Adobe Exchange](https://exchange.adobe.com/experiencecloud.details.101570.informatica-adobe-experience-cloud-connector.html)
@@ -344,4 +344,4 @@ Adobe samarbetar med flera ETL-leverantörer för att stödja datainhämtning ti
 * [Dokumentation för gruppinmatning](https://experienceleague.adobe.com/docs/experience-platform/ingestion/batch/overview.html)
 * [API-referens för gruppinmatning](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
 
-Låt nu [strömma data med Web SDK](ingest-streaming-data.md)
+Låt oss nu [strömma data med Web SDK](ingest-streaming-data.md)

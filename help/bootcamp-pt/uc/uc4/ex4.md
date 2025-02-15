@@ -1,6 +1,6 @@
 ---
-title: Bootläger - Customer Journey Analytics - Dataförberedelse i Analysis Workspace - Brasilien
-description: Bootläger - Customer Journey Analytics - Dataförberedelse i Analysis Workspace - Brasilien
+title: Bootcamp - Customer Journey Analytics - Data Preparing in Analysis Workspace - Brasilien
+description: Bootcamp - Customer Journey Analytics - Data Preparing in Analysis Workspace - Brasilien
 jira: KT-5342
 audience: Data Engineer, Data Architect, Data Analyst
 doc-type: tutorial
@@ -9,7 +9,7 @@ solution: Customer Journey Analytics
 feature-set: Customer Journey Analytics
 feature: Workspace Basics, Calculated Metrics
 exl-id: d56128af-dd1e-47ea-922f-85418e9da687
-source-git-commit: 3c86f9b19cecf92c9a324fb6fcfcefaebf82177f
+source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
 workflow-type: tm+mt
 source-wordcount: '808'
 ht-degree: 0%
@@ -30,11 +30,11 @@ O Analysis Workspace remove todas as limitações típicas de um único relório
 
 O Customer Journey Analytics traz essa solução além dos dados da plataforma. É altamente recomendável assistir a este vídeo de visão geral de quatro minutes:
 
->[!VIDEO](https://video.tv.adobe.com/v/35109?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35109?quality=12&learn=on&enablevpops)
 
 Se você nunca usou o Analysis Workspace antes, recomendamos este vídeo:
 
->[!VIDEO](https://video.tv.adobe.com/v/26266?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26266?quality=12&learn=on&enablevpops)
 
 ### Crie Seu Projeto
 
@@ -129,7 +129,7 @@ Não se esqueça de **Salvar** a Métrica calculada.
 
 ### Filtros: Dimensões calculadas
 
-Os cálculos não devem ser apenas para métricas. Antes de iniciar qualquer análise, também é interessante criar algumas **Beräknade Dimensioner**. Isso signifika, essencialmente, **segments** no Adobe Analytics. Ingen Customer Journey Analytics, använder segment são chamados de **Filters**.
+Os cálculos não devem ser apenas para métricas. Antes de iniciar qualquer análise, também é interessante criar alumas **Calculated Dimensions**. Isso signifika, essencialmente, **segments** no Adobe Analytics. Ingen Customer Journey Analytics, använder segmenterna são chamados de **Filters**.
 
 ![demo](./images/prfilters.png)
 

@@ -9,7 +9,7 @@ solution: Customer Journey Analytics
 feature-set: Customer Journey Analytics
 feature: Connections, Data Views, Workspace Basics, Calculated Metrics, Visualizations, Audiences
 exl-id: 70b06cca-879a-451b-8126-de2f830f056a
-source-git-commit: 3c86f9b19cecf92c9a324fb6fcfcefaebf82177f
+source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
 workflow-type: tm+mt
 source-wordcount: '420'
 ht-degree: 0%
@@ -20,11 +20,11 @@ ht-degree: 0%
 
 Neste user flow, você terá experience encia pratica com o Customer Journey analytics.
 
-O Customer Journey Analytics fornece uma interface em que os times de Analytics, Negócios e Tecnologia conseguem unir todos os dados da companhia e analisar a jornada cross channel (online e offline) do cliente de ponta a ponta. O Customer Journey Analytics é capaz de fornecer contexto e clareza para as jnadas de cliente multicanal complex. O contexto fornecido gera uma visão acionável em cima das dificuldades no processo de conversão e possibilita upplevelências relevant e personalizadas nos pontos mais relevant.
+O Customer Journey Analytics fornece uma interface em que os times de Analytics, Negócios e Tecnologia conseguem unir todos os dados da companhia e analisar a jornada cross channel (online e offline) do cliente de ponta a ponta. O Customer Journey Analytics é capaz de fornecer contexto e clareza para as hunadas de cliente multicanal complex. O contexto fornecido gera uma visão acionável em cima das dificuldades no processo de conversão e possibilita upplevelências relevant e personalizadas nos pontos mais relevant.
 
 Assista a este vídeo para compreender o valor, a livnada do cliente e o processo de configuração:
 
->[!VIDEO](https://video.tv.adobe.com/v/327188?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/327188?quality=12&learn=on&enablevpops)
 
 Mais informações sobre o Customer Journey Analytics podem ser enkontradas [aqui](https://spark.adobe.com/page/t62eiRu9l6iWJ/).
 
@@ -44,7 +44,7 @@ Mais informações sobre o Customer Journey Analytics podem ser enkontradas [aqu
 
 >[!IMPORTANT]
 >
->Självstudiekursen foi criado para förenkltar um formo específico de Bootcamp. Sistemas e contas específicos aos quais você pode não ter acesso são utilizados neste tutorial. Mesmo sem acesso, você ainda pode aprender muito com a leitura deste conteúdo details. Se você é um deltagante de um Bootläger e preca das credenciais de acesso, entre em contato com seu representante da Adobe para receber as informações necessary árias.
+>Självstudiekursen foi criado para förenkltar um formo específico de Bootcamp. Sistemas e contas específicos aos quais você pode não ter acesso são utilizados neste tutorial. Mesmo sem acesso, você ainda pode aprender muito com a leitura deste conteúdo details. Se você é um deltagante de um Bootcamp e preca das credenciais de acesso, entre em contato com seu representante da Adobe para receber as informações necessary árias.
 
 ## Exercícios
 

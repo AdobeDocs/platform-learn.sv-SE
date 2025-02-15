@@ -8,7 +8,7 @@ feature: Data Governance
 jira: KT-4348
 thumbnail: 4348-build-segments.jpg
 exl-id: cd05e814-1ea7-48ba-adf6-1a71504c623e
-source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
+source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
 workflow-type: tm+mt
 source-wordcount: '848'
 ht-degree: 0%
@@ -25,7 +25,7 @@ När ni har kundprofiler i realtid kan ni skapa segment för individer som delar
 **Dataarkitekter** måste skapa segment utanför den här självstudiekursen och stödja sina kollegor i den här uppgiften.
 
 Innan du börjar övningarna ska du titta på den här korta videon och lära dig mer om hur du skapar segment:
->[!VIDEO](https://video.tv.adobe.com/v/27254?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27254?learn=on&enablevpops)
 
 
 ## Behörigheter krävs

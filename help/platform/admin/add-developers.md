@@ -7,7 +7,7 @@ level: Beginner
 jira: KT-14689
 last-substantial-update: 2023-12-15T00:00:00Z
 exl-id: 4bd28867-b664-4a45-8892-91af821cbbcc
-source-git-commit: eae0910e2475ce20f7afd289005b6a8869eaa210
+source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 0%
@@ -16,9 +16,9 @@ ht-degree: 0%
 
 # Lägg till utvecklare och ge behörigheter till API-autentiseringsuppgifter
 
-Lär dig hur du lägger till utvecklare i Adobe Experience Platform-baserade program som Real-time Customer Data Platform och Journey Optimizer. Utvecklare läggs först till i Admin Console. När de har skapat sitt plattformsprojekt i Developer Console tilldelas deras API-autentiseringsuppgifter behörigheter i Platform- eller Journey Optimizer-gränssnittet. Mer information finns i [Åtkomstkontrollsdokumentationen](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html).
+Lär dig hur du lägger till utvecklare i Adobe Experience Platform-baserade program som Real-Time Customer Data Platform och Journey Optimizer. Utvecklare läggs först till i Admin Console. När de har skapat sitt plattformsprojekt i Developer Console tilldelas deras API-autentiseringsuppgifter behörigheter i Platform- eller Journey Optimizer-gränssnittet. Mer information finns i [Åtkomstkontrollsdokumentationen](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html).
 
->[!VIDEO](https://video.tv.adobe.com/v/3426407?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3426407?learn=on&enablevpops)
 
 >[!ADMIN]
 >

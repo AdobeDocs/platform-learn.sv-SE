@@ -8,7 +8,7 @@ jira: KT-3688
 thumbnail: 28832.jpeg
 last-substantial-update: 2023-06-21T00:00:00Z
 exl-id: c1774670-436e-46dd-9c9b-177bfee5f749
-source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
+source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
 workflow-type: tm+mt
 source-wordcount: '263'
 ht-degree: 6%
@@ -17,7 +17,7 @@ ht-degree: 6%
 
 # Autentisera och få åtkomst till [!DNL Experience Platform] API:er
 
-Lär dig hur du kommer igång med Adobe Experience Platform API:er. Den här självstudiekursen vägleder dig genom processen att skapa inloggningsuppgifter och börja skapa API-begäranden för Experience Platform.
+Lär dig hur du kommer igång med Adobe Experience Platform API:er. Den här självstudiekursen vägleder dig genom processen att skapa inloggningsuppgifter och börja skapa Experience Platform API-begäranden.
 
 ## Skapa ett projekt i Adobe Developer Console och exportera en Postman-miljö{#export-integration-details-to-postman}
 
@@ -31,20 +31,20 @@ Med funktionen [Adobe Developer Console](https://developer.adobe.com/console/hom
 >
 > När du har skapat API-autentiseringsuppgifterna måste systemadministratören associera dem med en roll i Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/28832/?learn=on&enablevpops)
 
 ## Generera en åtkomsttoken med Postman{#generate-an-access-token-with-postman}
 
-Använd [Adobe Identity Management tjänst-API:er](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims) för att få en åtkomsttoken för att få åtkomst till Adobe Experience Platform API:er.
+Använd [Adobe Identity Management Service API:er](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/ims) för att få en Access Token för åtkomst till Adobe Experience Platform API:er.
 
->[!VIDEO](https://video.tv.adobe.com/v/29698/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29698/?learn=on&enablevpops)
 
 
 ## Interagera med Experience Platform API:er med Postman
 
-Utforska interaktion med Adobe Experience Platform API:er med [Adobe-medföljande Postman-samlingar](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform) som bygger på [Adobe Developer Console-miljövariabler](#export-integration-details-to-postman) och [genererad åtkomsttoken](#generate-an-access-token-with-postman).
+Utforska interaktion med Adobe Experience Platform API:er med de [Adobe-tillhandahållna Experience Platform API Postman-samlingarna](https://github.com/adobe/experience-platform-postman-samples/tree/master/apis/experience-platform) som bygger på [Adobe Developer Console-miljövariabler](#export-integration-details-to-postman) och [genererad åtkomsttoken](#generate-an-access-token-with-postman).
 
->[!VIDEO](https://video.tv.adobe.com/v/29704/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29704/?learn=on&enablevpops)
 
 
 ## Resurser som refereras i dessa videoklipp

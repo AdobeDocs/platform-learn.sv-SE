@@ -8,7 +8,7 @@ feature: Data Governance
 jira: KT-4348
 thumbnail: 4348-apply-data-governance-framework.jpg
 exl-id: 3cc3c794-5ffd-41bf-95d8-be5bca2e3a0f
-source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
+source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
 workflow-type: tm+mt
 source-wordcount: '586'
 ht-degree: 0%
@@ -21,12 +21,12 @@ ht-degree: 0%
 
 I den här lektionen kommer du att använda ramverket för datastyrning på data som du har inhämtat till din sandlåda.
 
-Med Adobe Experience Platform Data Governance kan ni hantera kunddata och säkerställa att ni följer regler, begränsningar och policyer som gäller för dataanvändning. Det spelar en viktig roll inom Experience Platform på olika nivåer, bland annat när det gäller att kontrollera användningen av data.
+Med Adobe Experience Platform Data Governance kan ni hantera kunddata och säkerställa att ni följer regler, begränsningar och policyer som gäller för dataanvändning. Det spelar en nyckelroll inom Experience Platform på olika nivåer, bland annat när det gäller att kontrollera dataanvändningen.
 
 Titta på följande korta videor om datastyrning innan du börjar övningarna:
->[!VIDEO](https://video.tv.adobe.com/v/36653?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/36653?learn=on&enablevpops)
 
->[!VIDEO](https://video.tv.adobe.com/v/29708?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29708?learn=on&enablevpops)
 
 <!--
 ## Permissions required
@@ -84,9 +84,9 @@ Du kan skapa egna profiler genom att välja knappen **[!UICONTROL Create policy]
 
 ## Stärk styrningspolicyer
 
-Verkställandet av styrningspolitik är uppenbarligen en viktig del av ramverket. Tvingande åtgärder utförs längre fram i kedjan när data aktiveras och skickas från Platform, särskilt med Real-time Customer Data Platform, som du kanske inte har någon licens för. Vilket som. Det ligger utanför kursens räckvidd. Men så att du inte blir kvar kan du lära dig mer om hur policyer tillämpas i den här videon, som jag har ställt i kö upp till den relevanta delen. Den visar också vad som händer när en policy överträds.
+Verkställandet av styrningspolitik är uppenbarligen en viktig del av ramverket. Tvingande åtgärder utförs längre fram i kedjan när data aktiveras och skickas från Platform, särskilt med Real-Time Customer Data Platform, som du kanske inte har någon licens för. Vilket som. Det ligger utanför kursens räckvidd. Men så att du inte blir kvar kan du lära dig mer om hur policyer tillämpas i den här videon, som jag har ställt i kö upp till den relevanta delen. Den visar också vad som händer när en policy överträds.
 
->[!VIDEO](https://video.tv.adobe.com/v/33631/?t=151&quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/33631/?t=151&quality=12&learn=on&enablevpops)
 
 
 ## Ytterligare resurser

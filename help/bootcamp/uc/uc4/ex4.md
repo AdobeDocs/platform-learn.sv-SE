@@ -1,6 +1,6 @@
 ---
-title: Bootläger - Customer Journey Analytics - Dataförberedelse i Analysis Workspace
-description: Bootläger - Customer Journey Analytics - Dataförberedelse i Analysis Workspace
+title: Bootläger - Customer Journey Analytics - Datainsamling i Analysis Workspace
+description: Bootläger - Customer Journey Analytics - Datainsamling i Analysis Workspace
 jira: KT-5342
 audience: Data Engineer, Data Architect, Data Analyst
 doc-type: tutorial
@@ -9,7 +9,7 @@ solution: Customer Journey Analytics
 feature-set: Customer Journey Analytics
 feature: Workspace Basics, Calculated Metrics
 exl-id: 6a9fc1a4-9a6a-43f2-9393-815f9dc2cb4e
-source-git-commit: 3c86f9b19cecf92c9a324fb6fcfcefaebf82177f
+source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
 workflow-type: tm+mt
 source-wordcount: '768'
 ht-degree: 0%
@@ -28,13 +28,13 @@ ht-degree: 0%
 
 Analysis Workspace tar bort alla vanliga begränsningar i en enda Analytics-rapport. Den ger en robust, flexibel arbetsyta för att skapa anpassade analysprojekt. Dra och släpp valfritt antal datatabeller, visualiseringar och komponenter (mått, mått, mätvärden, segment och tidsdetaljer) till ett projekt. Skapa snabbt indelningar och segment, skapa kohorter för analys, skapa aviseringar, jämföra segment, göra flödes- och bortfallsanalyser samt strukturera och schemalägg rapporter för delning med vem som helst i företaget.
 
-Customer Journey Analytics lägger den här lösningen ovanpå plattformsdata. Vi rekommenderar starkt att du tittar på den här fyrminutersvideon med en översikt:
+Customer Journey Analytics lägger denna lösning ovanpå plattformsdata. Vi rekommenderar starkt att du tittar på den här fyrminutersvideon med en översikt:
 
->[!VIDEO](https://video.tv.adobe.com/v/35109?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/35109?quality=12&learn=on&enablevpops)
 
 Om du inte har använt Analysis Workspace tidigare rekommenderar vi att du tittar på den här videon:
 
->[!VIDEO](https://video.tv.adobe.com/v/26266?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/26266?quality=12&learn=on&enablevpops)
 
 ### Skapa ditt projekt
 
@@ -124,11 +124,11 @@ Glöm inte att **spara** det beräknade måttet.
 
 ![demo](./images/pr9.png)
 
-## 4.4.3 Beräknade Dimensioner: Filter (segmentering) och datumintervall
+## 4.4.3 Beräknade dimensioner: Filter (segmentering) och datumintervall
 
-### Filter: Beräknade Dimensioner
+### Filter: Beräknade dimensioner
 
-Beräkningar ska inte vara enbart för Metrics. Innan du påbörjar någon analys är det också intressant att skapa några **beräknade Dimensioner**. Detta innebar i princip **segment** tillbaka i Adobe Analytics. I Customer Journey Analytics kallas dessa segment för **filter**.
+Beräkningar ska inte vara enbart för Metrics. Innan du påbörjar någon analys är det också intressant att skapa några **beräknade dimensioner**. Detta innebar i princip **segment** tillbaka i Adobe Analytics. I Customer Journey Analytics kallas dessa segment för **filter**.
 
 ![demo](./images/prfilters.png)
 
@@ -140,11 +140,11 @@ Genom att skapa filter kan företagsanvändare påbörja analysen med några vä
 
 Dessa filter kan skapas före eller under analysdelen (som du gör i nästa övning).
 
-### Datumintervall: Dimensioner för beräknad tid
+### Datumintervall: Beräknade tidsdimensioner
 
-Dimensioner är en annan typ av beräknade dimensioner. Vissa har redan skapats, men du kan även skapa egna anpassade Dimensioner för tid i dataförberedelsefasen.
+Tidsdimensioner är en annan typ av beräknade dimensioner. Vissa har redan skapats, men du kan även skapa egna anpassade tidsdimensioner under dataförberedelsefasen.
 
-Dessa Dimensioner för beräknad tid hjälper analytiker och affärsanvändare att komma ihåg viktiga datum och använda dem för att filtrera och ändra rapporteringstiden. Typiska frågor och tvivel som kommer till vår kännedom när vi analyserar:
+Dessa beräknade tidsdimensioner hjälper analytiker och affärsanvändare att komma ihåg viktiga datum och använda dem för att filtrera och ändra rapporteringstiden. Typiska frågor och tvivel som kommer till vår kännedom när vi analyserar:
 
 - När var Black Friday förra året? 21-29?
 - När ledde vi den TV-kampanjen i december?

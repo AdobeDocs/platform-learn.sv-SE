@@ -7,7 +7,7 @@ level: Intermediate
 jira: KT-7890
 thumbnail: 333303.jpg
 exl-id: 5a4e4cce-5371-4731-978e-2ace22fb4551
-source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
+source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
 workflow-type: tm+mt
 source-wordcount: '101'
 ht-degree: 0%
@@ -22,5 +22,5 @@ I den här videon får du lära dig hur du använder funktionen för att skapa e
 >
 > [!UICONTROL Segments] har bytt namn till [!UICONTROL Audiences] i plattformsgränssnittet. Välj **[!UICONTROL Create audience]** > **[!UICONTROL Build rule]** för att ange den regelbyggare som finns i videon.
 
->[!VIDEO](https://video.tv.adobe.com/v/333303/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/333303/?learn=on&enablevpops)
 

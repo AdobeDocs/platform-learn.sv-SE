@@ -9,7 +9,7 @@ jira: KT-13945
 thumbnail: 3424392.jpg
 last-substantial-update: 2023-09-27T00:00:00Z
 exl-id: 139fc1e5-8866-4be4-b921-85443036e506
-source-git-commit: 143da6340b932563a3309bb46c1c7091e0ab2ee2
+source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
 workflow-type: tm+mt
 source-wordcount: '62'
 ht-degree: 0%
@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Lär dig mer om konfiguration, arbetsflöde och användningsexempel för att exportera datauppsättningar från [!DNL Adobe Experience Platform] till en molnlagringsplats med en målanslutning. Mer information finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/export-datasets.html).
 
->[!VIDEO](https://video.tv.adobe.com/v/3424392/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3424392/?learn=on&enablevpops)

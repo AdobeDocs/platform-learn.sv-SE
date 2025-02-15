@@ -8,7 +8,7 @@ feature: Profiles
 jira: KT-4348
 thumbnail: 4348-map-identities.jpg
 exl-id: e17ffabc-049c-42ff-bf0a-8cc31d665dfa
-source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
+source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
 workflow-type: tm+mt
 source-wordcount: '881'
 ht-degree: 0%
@@ -26,7 +26,7 @@ Adobe Experience Platform identitetstjänst hjälper er att få en bättre bild 
 **Dataarkitekter** måste mappa identiteter utanför den här självstudien.
 
 Titta på den här korta videon om du vill veta mer om din identitet i Adobe Experience Platform innan du börjar övningarna:
->[!VIDEO](https://video.tv.adobe.com/v/27841?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27841?learn=on&enablevpops)
 
 >[!NOTE]
 >
@@ -146,7 +146,7 @@ Upprepa processen för ett annat schema:
 
 >[!NOTE]
 >
->Data som samlas in med Web SDK är ett undantag från den vanliga metoden att etikettera identitetsfält i schemat. I Web SDK används identitetskartan för att etikettera identiteterna *på implementeringssidan*, och därför bestämmer vi identiteterna för `Luma Web Events Schema` när vi implementerar Web SDK på Luma-webbplatsen. I den lektionen samlar vi in Experience Cloud Visitor-ID (ECID) som primärt id och crmId som ett sekundärt id.
+>Data som samlas in med Web SDK är ett undantag från den vanliga metoden att etikettera identitetsfält i schemat. Web SDK använder identitetskartan för att etikettera identiteterna *på implementeringssidan*, och därför bestämmer vi identiteterna för `Luma Web Events Schema` när vi implementerar Web SDK på Luma-webbplatsen. I den senare lektionen samlar vi in Experience Cloud Visitor ID (ECID) som primärt id och crmId som ett sekundärt id.
 
 Med vårt urval av primära identiteter är det tydligt att se hur `Luma CRM Schema` kan ansluta till `Luma Offline Purchase Events Schema` eftersom båda använder `loyaltyId` som identifierare. Men hur kan vi koppla våra offlineköp till onlinebeteende? Hur kan vi klassificera de produkter som köpts med vår produktkatalog? Ytterligare identitetsfält och schemarelationer kommer att användas.
 

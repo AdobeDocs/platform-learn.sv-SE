@@ -3,7 +3,7 @@ title: CSC Bootcamp - Annat förarbete
 description: CSC Bootcamp - Annat förarbete
 doc-type: multipage-overview
 exl-id: 76546141-68d5-4f09-b44a-e06cc08bbaa7
-source-git-commit: 143da6340b932563a3309bb46c1c7091e0ab2ee2
+source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
 workflow-type: tm+mt
 source-wordcount: '489'
 ht-degree: 0%
@@ -28,7 +28,7 @@ Enligt beskrivningen i den kreativa översikten finns det vissa resurser som beh
 
 ![från Experience-Manager](./images/wf-from-aem.png)
 
-- När mapphierarkin AEM visas går du till följande sökväg: experience-manager > Adobe Cycle Assets > Bike shots Select 5 assets och klickar sedan på Link.
+- När mapphierarkin i AEM visas går du till följande sökväg: experience-manager > Adobe Cycle Assets > Bike shots Select 5 assets och klickar sedan på Link.
 
 ![markerade resurser](./images/selected-assets.png)
 
@@ -43,7 +43,7 @@ Adobe Commerce är en av många produkter i Adobe Experience Cloud som kan hjäl
 
 I den här videon lär du dig Adobe Commerce och visar den produkt vi har skapat så att du kan använda den i Bootlägret. I verkligheten skulle du ladda upp de tidigare valda varumärkesresurserna till Adobe Commerce till produktkonfigurationen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3418945?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3418945?quality=12&learn=on&enablevpops)
 
 När uppgiften är klar kan du markera uppgift 3 som 100 % slutförd i Workfront.
 

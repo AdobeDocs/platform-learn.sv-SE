@@ -1,10 +1,10 @@
 ---
 title: Konfigurera ett identitetsnamnutrymme
-description: Lär dig hur du konfigurerar identitetsnamnutrymmen som ska användas med Adobe Experience Platform Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
+description: Lär dig hur du konfigurerar identitetsnamnutrymmen som ska användas med Adobe Experience Platform Web SDK. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Identities
 jira: KT-15400
 exl-id: 7719dff4-6b30-4fa0-acae-7491c3208f15
-source-git-commit: 1a4f2e3813a6db4bef77753525c8a7d40692a4b2
+source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
 workflow-type: tm+mt
 source-wordcount: '644'
 ht-degree: 0%
@@ -15,13 +15,13 @@ ht-degree: 0%
 
 Lär dig hur du konfigurerar identitetsnamnutrymmen som ska användas med Adobe Experience Platform Web SDK.
 
-[Adobe Experience Cloud Identity Service](https://experienceleague.adobe.com/en/docs/id-service/using/home) ställer in ett gemensamt besökar-ID (ECID) för SDK-baserade Adobe-program för att underlätta Experience Cloud-funktioner som målgruppsdelning mellan program. Du kan också skicka dina egna kund-ID:n till tjänsten för att möjliggöra målinriktning mellan olika enheter och integrering med andra system, som CRM-systemet (Customer Relationship Management).
+[Adobe Experience Cloud identitetstjänst](https://experienceleague.adobe.com/en/docs/id-service/using/home) ställer in ett gemensamt besökar-ID (ECID) för SDK-baserade Adobe-program för att ge Experience Cloud möjligheter, som målgruppsdelning mellan program. Du kan också skicka dina egna kund-ID:n till tjänsten för att möjliggöra målinriktning mellan olika enheter och integrering med andra system, som CRM-systemet (Customer Relationship Management).
 
-[Adobe Experience Platform Identity Service](https://experienceleague.adobe.com/en/docs/experience-platform/identity/home) (ja, det finns två!) använder ECID:n och kund-ID:n för att generera identitetsdiagram, så att du kan sammanfoga attribut och beteenden i kundprofiler i realtid.
+[Adobe Experience Platform identitetstjänst](https://experienceleague.adobe.com/en/docs/experience-platform/identity/home) (ja, det finns två!) använder ECID:n och kund-ID:n för att generera identitetsdiagram, vilket gör att du kan sammanfoga attribut och beteenden i kundprofiler i realtid.
 
 >[!NOTE]
 >
->Ett anpassat identitetsnamnutrymme krävs _inte_ för att implementera Adobe Analytics, Adobe Target eller Adobe Audience Manager med Web SDK (autentiserade identiteter kan skickas i `data`-objektet i stället för `xdm`-objektet som du kommer att se senare). Identitetsnamnutrymmen krävs för plattformsspecifika program som Journey Optimizer, Real-time Customer Data Platform och Customer Journey Analytics. Även om du kanske bestämmer dig för att inte använda ett identitetsnamnutrymme i din egen implementering, förväntas du göra det som en del av den här självstudien.
+>Ett anpassat identitetsnamnutrymme krävs _inte_ för att implementera Adobe Analytics, Adobe Target eller Adobe Audience Manager med Web SDK (autentiserade identiteter kan skickas i `data`-objektet i stället för `xdm`-objektet som du kommer att se senare). Identitetsnamnutrymmen krävs för plattformsspecifika program som Journey Optimizer, Real-Time Customer Data Platform och Customer Journey Analytics. Även om du kanske bestämmer dig för att inte använda ett identitetsnamnutrymme i din egen implementering, förväntas du göra det som en del av den här självstudien.
 
 >[!NOTE]
 >
@@ -43,9 +43,9 @@ Du måste ha slutfört tidigare lektioner:
 
 >[!IMPORTANT]
 >
->[Experience Cloud ID-tillägget](https://exchange.adobe.com/apps/ec/100160/adobe-experience-cloud-id-launch-extension) behövs inte när Adobe Experience Platform Web SDK implementeras eftersom Web SDK JavaScript-biblioteket innehåller besökar-ID-tjänstfunktionen.
+>[Experience Cloud ID-tillägget](https://exchange.adobe.com/apps/ec/100160/adobe-experience-cloud-id-launch-extension) behövs inte när du implementerar Adobe Experience Platform Web SDK eftersom Web SDK JavaScript-biblioteket innehåller tjänstfunktionaliteten för besökar-ID.
 >
-> Om din webbplats redan använder Experience Cloud ID-tjänsten på din webbplats (antingen via Visitor API eller Experience Cloud ID Service Tag-tillägget) och du vill fortsätta använda den när du migrerar till Adobe Experience Platform Web SDK, måste du använda den senaste versionen av Visitor API eller Experience Cloud ID Service Tag-tillägget. Mer information finns i [ID-migrering](https://experienceleague.adobe.com/en/docs/experience-platform/edge/identity/overview).
+> Om webbplatsen redan använder Experience Cloud ID Service på webbplatsen, antingen via Visitor API eller Experience Cloud ID Service Tag-tillägget, och du vill fortsätta använda det under migreringen till Adobe Experience Platform Web SDK, måste du använda den senaste versionen av Visitor API eller Experience Cloud ID Service Tag-tillägget. Mer information finns i [ID-migrering](https://experienceleague.adobe.com/en/docs/experience-platform/edge/identity/overview).
 
 ## Skapa ett identitetsnamnutrymme
 
@@ -53,7 +53,7 @@ I den här övningen skapar du ett identitetsnamnutrymme för Lumas anpassade id
 
 Titta på den här korta videon om du vill veta mer om din identitet i Adobe Experience Platform innan du börjar övningarna:
 
->[!VIDEO](https://video.tv.adobe.com/v/27841?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/27841?learn=on&enablevpops)
 
 Skapa nu ett namnutrymme för Luma CRM-ID:
 
@@ -100,4 +100,4 @@ Nu när identiteter finns på plats kan datastream konfigureras.
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du har lagt ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League diskussionsgruppsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

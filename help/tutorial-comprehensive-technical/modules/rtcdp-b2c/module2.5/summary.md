@@ -3,7 +3,8 @@ title: Adobe Experience Platform Data Collection & Servervidarebefordran i realt
 description: Sammanfattning och fördelar
 kt: 5342
 doc-type: tutorial
-source-git-commit: 2cdc145d7f3933ec593db4e6f67b60961a674405
+exl-id: 7086f844-f21c-45d4-a7d9-3e695233b4b7
+source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
 workflow-type: tm+mt
 source-wordcount: '315'
 ht-degree: 0%
@@ -18,7 +19,7 @@ I den här modulen har du lärt dig att använda tidigare konfigurerade dataupps
 
 ## Fördelar
 
-Låt oss lyfta fram fördelarna med att använda Adobe Experience Platform Data Collection, Web SDK och Adobe Experience Platform Data Collection Server.
+Låt oss lyfta fram fördelarna med Adobe Experience Platform Data Collection, Web SDK och Adobe Experience Platform Data Collection Server.
 
 Det är enkelt att förlora direkta intäkter på grund av att webbplatser och appar har sämre prestanda, vilket beror på att för mycket kod körs på klientsidan. Lagarna om sekretess och samtycke utvecklas och ändras snabbt och kan påverka datainsamlingen drastiskt. På det hela taget har varumärken allt fler program att hantera och skicka data till.
 
@@ -28,10 +29,10 @@ Tack vare Adobe Experience Platform Data Collection kan ni som varumärke nu än
 
 ## Kolla in det här
 
-- Tech Blog: [Löser problem med implementeringen med Adobe Experience Platform Web SDK och Edge Network](https://medium.com/adobetech/solving-implementation-pain-points-with-adobe-experience-platform-web-sdk-and-edge-network-880b635e6819)
+- Tech Blog: [Löser problem med implementering med Adobe Experience Platform Web SDK och Edge Network](https://medium.com/adobetech/solving-implementation-pain-points-with-adobe-experience-platform-web-sdk-and-edge-network-880b635e6819)
 - Tech Blog: [Förbättrar webbplatsprestanda med Adobe Experience Platform Web SDK och Edge Network](https://medium.com/adobetech/boosting-website-performance-with-adobe-experience-platform-web-sdk-and-edge-network-329fcf70fdf9)
 - Dokumentation: [Adobe Experience Platform Data Collection Server - översikt](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=en#server-side-info)
-- Video: [Implementera Edge och Adobe Experience Platform Data Collection Server med en Tag Management-lösning som inte är Adobe](https://video.tv.adobe.com/v/331986?quality=12&learn=on)
+- Video: [Implementera Edge och Adobe Experience Platform Data Collection Server med en icke-Adobe Tag Management-lösning](https://video.tv.adobe.com/v/331986?quality=12&learn=on&enablevpops)
 
 [Gå tillbaka till modul 2.5](./aep-data-collection-ssf.md)
 

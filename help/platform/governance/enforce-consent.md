@@ -7,7 +7,7 @@ level: Beginner
 jira: KT-10362
 thumbnail: 345677.jpeg
 exl-id: 08213d4a-195b-4f5f-b8f6-a516e6b52df4
-source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
+source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Lär dig hur du skapar profiler för att genomdriva kundens medgivandepreferenser. Mer information finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/data-governance/enforcement/auto-enforcement.html).
 
->[!VIDEO](https://video.tv.adobe.com/v/345677?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/345677?learn=on&enablevpops)
 
 >[!IMPORTANT]
 >

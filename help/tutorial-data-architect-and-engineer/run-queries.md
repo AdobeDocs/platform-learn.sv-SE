@@ -8,7 +8,7 @@ feature: Queries
 jira: KT-4348
 thumbnail: 4348-run-queries.jpg
 exl-id: a37531cb-96ad-4547-86af-84f7ed65f019
-source-git-commit: 00ef0f40fb3d82f0c06428a35c0e402f46ab6774
+source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
 workflow-type: tm+mt
 source-wordcount: '311'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Adobe Experience Platform Query Service hjälper dig att förstå dina data geno
 **Dataarkitekter** och **Datatekniker** måste använda frågetjänsten utanför den här självstudien.
 
 Innan du börjar övningarna ska du titta på den här korta videon och lära dig mer om Query Service:
->[!VIDEO](https://video.tv.adobe.com/v/29795?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/29795?learn=on&enablevpops)
 
 ## Behörigheter krävs
 

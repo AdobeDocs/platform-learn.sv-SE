@@ -9,7 +9,7 @@ duration: 141
 last-substantial-update: 2024-01-27T00:00:00Z
 jira: KT-14806
 exl-id: 66d8992b-e812-4a5c-a696-45f29106aaab
-source-git-commit: f02bea4a92675e284be7ca86a0fcf7c17d296482
+source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
 workflow-type: tm+mt
 source-wordcount: '183'
 ht-degree: 1%
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 Läs om hur Use Case Playbooks kan hjälpa kunder som använder Real-Time Customer Data Platform och Journey Optimizer att få snabbare time-to-value. Use Case Playbooks är en katalog med dussintals mallar som täcker olika branscher och marknadsföringsmål. Playbooks genererar tekniska resurser som målgrupper, resor och scheman, som sedan kan anpassas och publiceras i andra sandlådor. Mer information finns i dokumentationen för [Använd fallspelningsböcker](https://experienceleague.adobe.com/docs/experience-platform/use-case-playbooks/playbooks/overview.html).
 
->[!VIDEO](https://video.tv.adobe.com/v/3426896/?learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/3426896/?learn=on&enablevpops)
 
 ## Kom igång
 

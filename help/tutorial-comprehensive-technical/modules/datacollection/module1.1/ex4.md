@@ -1,10 +1,10 @@
 ---
-title: Foundation - konfiguration av Adobe Experience Platform Data Collection och Web SDK-tillägget - Web Data Collection på klientsidan
-description: Foundation - konfiguration av Adobe Experience Platform Data Collection och Web SDK-tillägget - Web Data Collection på klientsidan
+title: Foundation - Installation av Adobe Experience Platform Data Collection och Web SDK-tillägget - Web Data Collection på klientsidan
+description: Foundation - Installation av Adobe Experience Platform Data Collection och Web SDK-tillägget - Web Data Collection på klientsidan
 kt: 5342
 doc-type: tutorial
 exl-id: dce7f1b5-72ca-41b2-9aa8-41c13ce25c82
-source-git-commit: 3a19e88e820c63294eff38bb8f699a9f690afcb9
+source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
 workflow-type: tm+mt
 source-wordcount: '631'
 ht-degree: 0%
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ### Installera Adobe Experience Platform Debugger
 
-Felsökaren Experience Platform är ett tillägg för Chrome- och Firefox-webbläsare som gör det enklare att se hur Adobe-tekniken används på dina webbsidor. Installera versionen för den webbläsare du föredrar:
+Experience Platform Debugger är ett tillägg för Chrome- och Firefox-webbläsare som hjälper dig att se Adobe-tekniken som är implementerad på dina webbsidor. Installera versionen för den webbläsare du föredrar:
 
 - [Firefox-tillägg](https://addons.mozilla.org/sv-SE/firefox/addon/adobe-experience-platform-dbg/)
 
@@ -25,9 +25,9 @@ Felsökaren Experience Platform är ett tillägg för Chrome- och Firefox-webbl�
 
 Om du aldrig har använt Felsökning tidigare - och den här är en annan än den tidigare Adobe Experience Cloud Debugger - kan du titta på den här fem minuter långa översiktsvideon:
 
->[!VIDEO](https://video.tv.adobe.com/v/32156?quality=12&learn=on)
+>[!VIDEO](https://video.tv.adobe.com/v/32156?quality=12&learn=on&enablevpops)
 
-Eftersom du läser in demowebbplatsen i inkognito-läge måste du se till att Experience Platform Debugger även är tillgänglig i inkognito-läge. Om du vill göra det går du till **chrome://extensions** i webbläsaren och öppnar felsökningstillägget Experience Platform.
+Eftersom du läser in demowebbplatsen i inkognitoläge måste du se till att Experience Platform Debugger även är tillgänglig i inkognitoläge. Gå till **chrome://extensions** i webbläsaren och öppna Experience Platform Debugger-tillägget.
 
 Kontrollera att dessa två inställningar är aktiverade:
 
@@ -64,7 +64,7 @@ Därefter visas webbplatsen i ett inkognitivt webbläsarfönster. För varje dem
 
 ### Använd Experience Platform Debugger för att se samtalen till Edge
 
-Kontrollera att demowebbplatsen är öppen och klicka på Experience Platform-ikonen för felsökningstillägget.
+Kontrollera att demowebbplatsen är öppen och klicka på Experience Platform Debugger-tilläggets ikon.
 
 ![EXP News Homepage](./images/ext2.png)
 
@@ -88,15 +88,15 @@ Bekräfta att felsökaren är **[!UICONTROL Connected to Home]** enligt bilden o
 
 Gå sedan till valfri sida på demowebbplatsen, till exempel kategorisidan **Planer**.
 
-![AEP Debugger AEP Web SDK-tillägg](./images/validate4.png)
+![AEP Debugger AEP Web SDK extension](./images/validate4.png)
 
 Klicka nu på **[!UICONTROL Experience Platform Web SDK]** i den vänstra navigeringen för att visa **[!UICONTROL Network Requests]**.
 
 Varje begäran innehåller en **[!UICONTROL events]**-rad.
 
-![AEP Debugger AEP Web SDK-tillägg](./images/validate5.png)
+![AEP Debugger AEP Web SDK extension](./images/validate5.png)
 
-Klicka för att öppna en **[!UICONTROL events]**-rad. Observera hur du kan se händelsen **web.webpagedetails.pageViews** samt andra variabler som inte finns i kartongen och som följer formatet **Web SDK ExperienceEvent XDM**.
+Klicka för att öppna en **[!UICONTROL events]**-rad. Observera hur du kan se händelsen **web.webpagedetails.pageViews** samt andra variabler som inte finns installerade och som följer formatet **Web SDK ExperienceEvent XDM** .
 
 ![Händelsevärde](./images/validate8.png)
 
