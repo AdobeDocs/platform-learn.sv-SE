@@ -1,12 +1,12 @@
 ---
-title: Översikt - Teknisk självstudiekurs - en Adobe
+title: Översikt - Omfattande teknisk självstudiekurs - en Adobe
 description: Omfattande teknisk självstudiekurs - en Adobe
 doc-type: multipage-overview
 exl-id: 5bc0d621-0662-4d94-80a0-b6c173c0ac9e
-source-git-commit: 5b15d54af26d67b4193a1ac4d5d62f5c62a37362
+source-git-commit: f25c1705ae6813dc744945e8a4ee9858513f7374
 workflow-type: tm+mt
-source-wordcount: '528'
-ht-degree: 2%
+source-wordcount: '957'
+ht-degree: 1%
 
 ---
 
@@ -56,7 +56,7 @@ Verifiera de program som krävs och som måste installeras på datorn [här](./p
 
 ## Slutförande och certifiering
 
-Den här självstudiekursen är en del av en Adobe-certifieringskurs. Du kan registrera dig för kursen tillsammans med den här självstudiekursen genom att gå till [https://certification.adobe.com](https://certification.adobe.com).
+Den här självstudiekursen ingår i en Adobe Certification-kurs. Du kan registrera dig för kursen tillsammans med den här självstudiekursen genom att gå till [https://certification.adobe.com](https://certification.adobe.com).
 
 För varje modul som du slutför med hjälp av självstudiekursen nedan måste du skicka in ett bevis på slutförandet enligt [här](./completion.md).
 
@@ -70,39 +70,109 @@ Gå till [statussidan](./status.md){target="_blank"} om du vill kontrollera stat
 
 I den här grundläggande modulen kommer du att konfigurera allt så att du kan komma åt och använda demomiljön.
 
-### 1. Adobe Creative Cloud
+### 1. Arbetsflöde och planering
 
-[1.1 Adobe Firefly-tjänster](./modules/creative-cloud/module1.1/firefly-services.md){target="_blank"}
+### 2. Skapa och producera
+
+[1.1 Adobe Firefly Services](./modules/creation-production/module1.1/firefly-services.md){target="_blank"}
 
 I den här modulen använder du Adobe Firefly Services API:er, Photoshop API:er och Microsoft Azure Storage Services för att generera bilder och lagra dem programmatiskt.
 
-[1.2 Automatisering av arbetsflöden med Workfront Fusion](./modules/creative-cloud/module1.2/automation.md){target="_blank"}
+[1.2 Automatisering av arbetsflöden med Workfront Fusion](./modules/creation-production/module1.2/automation.md){target="_blank"}
 
 I den här grundläggande modulen använder du Adobe Workfront Fusion för att automatisera och skala arbetsflödena för att skapa innehåll.
 
-### 2. Innehållsleveranskedja
+### 3. Resurshantering
 
-[2.1 Adobe Experience Manager Cloud Service &amp; Edge Delivery Services](./modules/csc/module2.1/aemcs.md){target="_blank"}
+[1.1 Adobe Experience Manager Cloud Service &amp; Edge Delivery Services](./modules/asset-mgmt/module2.1/aemcs.md){target="_blank"}
 
 I den här grundläggande modulen kommer du att konfigurera Adobe Experience Manager Cloud Service Program, Site och Assets.
 
-[2.2 Arbetsflödeshantering med Adobe Workfront](./modules/csc/module2.2/workfront.md){target="_blank"}
+[1.2 Arbetsflödeshantering med Adobe Workfront](./modules/asset-mgmt/module2.2/workfront.md){target="_blank"}
 
 I den här grundläggande modulen kommer du att konfigurera och använda Adobe Workfront för att hantera godkännandeflöden och du kommer att använda integreringar med Adobe Experience Manager Assets, Universal Editor, Photoshop med flera.
 
-### 3. Enhetlig kundupplevelse
+### 4. Leverans och aktivering
 
-[3.1 Federated Audience Composition](./modules/uce/module3.1/fac.md){target="_blank"}
+#### Datainsamling
+
+[1.1 Foundation - installation av Adobe Experience Platform Data Collection &amp; Web SDK](./modules/delivery-activation/datacollection/dc1.1/data-ingestion-launch-web-sdk.md)
 
 I den här grundläggande modulen får du lära dig mer om Adobe Experience Platform Data Collection och det nya Web SDK-tillägget.
 
-[3.2 Adobe Journey Optimizer: Översättningstjänster](./modules/uce/module3.2/ajotranslationsvcs.md){target="_blank"}
+[1.2 Foundation - datainmatning](./modules/delivery-activation/datacollection/dc1.2/data-ingestion.md)
 
-I den här modulen använder du Adobe Journey Optimizer för att konfigurera och använda översättningstjänster.
+I den här grundläggande modulen kommer du att importera data från olika källor till Adobe Experience Platform
 
-[3.3 Adobe Journey Optimizer: Offer decisioning](./modules/uce/module3.3/offer-decisioning.md){target="_blank"}
+[1.3 Sammansatt målgrupp](./modules/delivery-activation/datacollection/dc1.3/fac.md)
 
-I den här modulen kommer du att använda Adobe Journey Optimizer med offera decisioningar på ett praktiskt sätt för att konfigurera personaliserade erbjudanden och ditt eget beslut.
+I den här modulen får du lära dig att konfigurera en Federated Audiences-modell och generera målgrupper med federerade data.
+
+#### Real-Time CDP B2C
+
+[2.1 Foundation - kundprofil i realtid](./modules/delivery-activation/rtcdp-b2c/rtcdpb2c-1/real-time-customer-profile.md)
+
+I den här grundläggande modulen kommer du att utforska kundprofilen i realtid i Adobe Experience Platform genom att använda gränssnittet och API:t.
+
+[2.2 Intelligenta tjänster](./modules/delivery-activation/rtcdp-b2c/rtcdpb2c-2/intelligent-services.md)
+
+I den här modulen får du lära dig hur du konfigurerar, konfigurerar och använder Adobe Experience Platform Intelligent Services.
+
+[2.3 Real-Time CDP - Bygg en målgrupp och agera](./modules/delivery-activation/rtcdp-b2c/rtcdpb2c-3/real-time-cdp-build-a-segment-take-action.md)
+
+I den här modulen ska du konfigurera en målgrupp och aktivera målgruppen för flera destinationer, inklusive Google DV360, Adobe Target och AWS S3.
+
+[2.4 Real-Time CDP: Audience Activation till Microsoft Azure Event Hub](./modules/delivery-activation/rtcdp-b2c/rtcdpb2c-4/segment-activation-microsoft-azure-eventhub.md)
+
+I den här modulen konfigurerar du ett Microsoft Azure EventHub-mål som ett realtidsmål för Adobe Experience Platform CDP i realtid.
+
+[2.5 Real-Time CDP Connections: Event Forwarding](./modules/delivery-activation/rtcdp-b2c/rtcdpb2c-5/aep-data-collection-ssf.md)
+
+I den här modulen vidarebefordrar du data på serversidan till flera slutpunkter, till exempel Google Cloud Platform Pub/Sub och AWS Kinesis.
+
+[2.6 Strömma data från Apache Kafka till Real-Time CDP](./modules/delivery-activation/rtcdp-b2c/rtcdpb2c-6/aep-apache-kafka.md)
+
+I den här modulen får du lära dig hur du konfigurerar ett eget Apache Kafka-kluster och strömmar data till Adobe Experience Platform.
+
+#### Adobe Journey Optimizer B2C
+
+[3.1 Adobe Journey Optimizer: Orchestration](./modules/delivery-activation/ajo-b2c/ajob2c-1/journey-orchestration-create-account.md)
+
+I den här modulen ska du använda Adobe Journey Optimizer för att skapa en utlösarbaserad resa.
+
+[3.2 Adobe Journey Optimizer: Externa datakällor och anpassade åtgärder](./modules/delivery-activation/ajo-b2c/ajob2c-2/journey-orchestration-external-weather-api-sms.md)
+
+I den här modulen använder du Adobe Journey Optimizer för att lyssna på kundbeteenden, både online och offline, och svara på dem i en intelligent, sammanhangsbaserad och realtidsbaserad lösning över olika kanaler.
+
+[3.3 Adobe Journey Optimizer: Offer Decisioning](./modules/delivery-activation/ajo-b2c/ajob2c-3/offer-decisioning.md)
+
+I den här modulen använder du Adobe Journey Optimizer för att konfigurera anpassade erbjudanden och ditt eget beslut om erbjudanden.
+
+[3.4 Adobe Journey Optimizer: Händelsebaserade resor](./modules/delivery-activation/ajo-b2c/ajob2c-4/journeyoptimizer.md)
+
+I den här modulen får ni lära er allt om Journey Optimizer, som hjälper företag att utforma och leverera sammankopplade, kontextuella och personaliserade upplevelser till sina kunder.
+
+[3.5 Adobe Journey Optimizer: Översättningstjänster](./modules/delivery-activation/ajo-b2c/ajob2c-5/ajotranslationsvcs.md)
+
+I den här modulen får du lära dig hur du konfigurerar och använder översättningstjänster inom Adobe Journey Optimizer för att lokalisera dina meddelanden till dina kunder.
+
+### 5. Rapportering och insikter
+
+#### Adobe Customer Journey Analytics
+
+[1.1 Customer Journey Analytics: Skapa en kontrollpanel med Analysis Workspace ovanpå Adobe Experience Platform](./modules/reporting-insights/cja-b2c/cjab2c-1/customer-journey-analytics-build-a-dashboard.md)
+
+I den här modulen får du information online till offlineåtkomst genom att konfigurera en instrumentpanel som innehåller data i flera kanaler.
+
+[1.2 Customer Journey Analytics: Importera och analysera Google Analytics-data i Adobe Experience Platform med BigQuery Source Connector](./modules/reporting-insights/cja-b2c/cjab2c-2/customer-journey-analytics-bigquery-gcp.md)
+
+I den här modulen ska du konfigurera en egen instans av Google Cloud Platform, läsa in demodata i Google Cloud Platform och sedan använda BigQuery Source Connector för att importera data från Google Cloud Platform till Adobe Experience Platform.
+
+#### Data Distiller
+
+[2.1 Frågetjänst](./modules/reporting-insights/datadistiller/dd-1/query-service.md)
+
+I den här modulen får du lära dig hur du använder Adobe Experience Platform Query Service.
 
 ![Tech Insiders](./assets/images/techinsiders.png){width="50px" align="left"}
 
