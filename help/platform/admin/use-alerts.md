@@ -4,10 +4,11 @@ description: Lär dig hur du prenumererar på och administrerar aviseringar i Ad
 feature: Alerts
 role: Data Engineer, User, Admin
 level: Beginner
+doc-type: Feature Video
 jira: KT-8324
 thumbnail: 336218.jpg
 exl-id: 56f927db-1f16-4c0b-a0e0-a25e43f1a535
-source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
+source-git-commit: 64dd58999adea73cdf8b580a2e4da9f1d8944020
 workflow-type: tm+mt
 source-wordcount: '67'
 ht-degree: 0%

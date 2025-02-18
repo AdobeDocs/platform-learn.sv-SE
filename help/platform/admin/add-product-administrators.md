@@ -4,11 +4,12 @@ description: Lär dig hur du lägger till produktadministratörer för Adobe Exp
 feature: Access Control
 role: Admin
 level: Beginner
+doc-type: Feature Video
 jira: KT-7923
 thumbnail: 333860.jpg
 last-substantial-update: 2023-12-08T00:00:00Z
 exl-id: 7ede8f72-2b9d-4fb0-b176-c1e31b0e6f6e
-source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
+source-git-commit: 64dd58999adea73cdf8b580a2e4da9f1d8944020
 workflow-type: tm+mt
 source-wordcount: '125'
 ht-degree: 0%

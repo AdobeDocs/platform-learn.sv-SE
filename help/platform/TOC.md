@@ -5,15 +5,57 @@ user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
 auto-video-transcripts: true
-source-git-commit: ce28c48d554727ce42803400373826315f5b2153
+source-git-commit: 4d403a6694f856a9020fe9dfd541693603c57c69
 workflow-type: tm+mt
-source-wordcount: '881'
-ht-degree: 6%
+source-wordcount: '882'
+ht-degree: 7%
 
 ---
 
 
 # Självstudiekurser om Adobe Experience Platform {#tutorials}
+
+<!--
+
+Data Modeling
+
+Profile vs Data Lake vs Identity
+how a record becomes an audience member
+
+Profiles
+Identities
+Audience
+
+Data Lake
+
+Data Ingestion
+-Batch
+-Streaming
+-Edge (Data Collection)
+-Monitoring
+
+Data Governance
+Privacy
+Consent
+Audit logs
+
+Administration
+-Sandboxes
+-Permissions
+-License usage
+
+
+---
+App specific
+
+Destinations
+
+Journeys
+
+Campaigns
+
+-->
+
 
 + [Självstudiekurser för plattformar](/help/platform/overview.md)
 + Introduktion till plattformen {#intro-to-platform}
@@ -37,15 +79,16 @@ ht-degree: 6%
 + [Autentisera till Experience Platform API:er](/help/platform/authentication/platform-api-authentication.md)
 + [Importera exempeldata till Experience Platform](/help/platform/data-generator/import-sample-data.md)
 + Administration {#admin}
-   + [Använda varningar](/help/platform/admin/use-alerts.md)
-   + [Använda sandlådor](/help/platform/admin/use-sandboxes.md)
-   + [Kopiera paket mellan sandlådor](/help/platform/admin/copy-objects-between-sandboxes.md)
-   + [Dela paket mellan IMS-organisationer](/help/platform/admin/share-packages-across-orgs.md)
+   + [Översikt](/help/platform/admin/overview.md)
    + [Lägg till användare](/help/platform/admin/add-users.md)
-   + [Lägg till användare i datainsamling](https://experienceleague.adobe.com/docs/platform-learn/data-collection/users-and-permissions.html)
+   + [Lägg till användare i datainsamling](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/users-and-permissions)
    + [Lägg till utvecklare](/help/platform/admin/add-developers.md)
    + [Lägg till produktadministratörer](/help/platform/admin/add-product-administrators.md)
    + [Konfigurera attributbaserad åtkomstkontroll](/help/platform/admin/configure-attribute-based-access-control.md)
+   + [Använda sandlådor](/help/platform/admin/use-sandboxes.md)
+   + [Kopiera paket mellan sandlådor](/help/platform/admin/copy-objects-between-sandboxes.md)
+   + [Dela paket mellan IMS-organisationer](/help/platform/admin/share-packages-across-orgs.md)
+   + [Använda varningar](/help/platform/admin/use-alerts.md)
 + AI-assistenten {#ai-assistant}
    + [Översikt](/help/platform/ai-assistant/overview.md)
    + [Få åtkomst](/help/platform/ai-assistant/access.md)
