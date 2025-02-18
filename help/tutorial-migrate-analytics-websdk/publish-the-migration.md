@@ -1,18 +1,18 @@
 ---
-title: Publish övergången till staging och produktion
+title: Publicera migreringen till staging och produktion
 description: När all utveckling har slutförts för migreringen och validerats kan du bygga vidare till staging och sedan publicera till produktion när det är klart.
 solution: Data Collection, Analytics
 feature: Web SDK
 jira: KT-16767
-source-git-commit: 15f2122c53a3b2f3dc1942502e908403e55519ab
+exl-id: 47c86999-6a9c-4451-8a59-475e8c65ab6a
+source-git-commit: 3084590685bee9cd139c27b9a27026f08abf897f
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '562'
 ht-degree: 0%
 
 ---
 
-
-# Publish övergången till staging och produktion
+# Publicera migreringen till staging och produktion
 
 När all utveckling har slutförts för migreringen och validerats kan du bygga vidare till staging och sedan publicera till produktion när det är klart.
 
@@ -51,6 +51,6 @@ Jag ska lägga till en viktig kommentar här som vi hade i början av den här s
 
 >[!IMPORTANT]
 >
->Det är viktigt att komma ihåg att ett av de viktigaste skälen till att du migrerar din implementering är att förbereda dig för att använda Adobe Experience Platform-program som Customer Journey Analytics, Real-Time CDP eller Journey Optimizer (se #3 ovan). Om du använder webbplatsdata för det här ändamålet kommer du att behöva utföra ytterligare steg som inte ingår i den här självstudiekursen, men den här självstudiekursen kommer säkert att vara en förutsättning för den fortsatta implementeringen. Slutför därför den här självstudiekursen och fortsätt sedan med att utföra de steg som krävs för att skicka samma webbplatsdata till Experience Platform.
+>Det är viktigt att notera att ett av de viktigaste skälen till att du migrerar din implementering är att förbereda dig för att använda Adobe Experience Platform-program som Customer Journey Analytics, Real-Time CDP eller Journey Optimizer. Om du använder webbplatsdata för det här ändamålet kommer du att behöva utföra ytterligare steg som inte ingår i den här självstudiekursen, men den här självstudiekursen kommer säkert att vara en förutsättning för den fortsatta implementeringen. Nu när du är klar med den här självstudiekursen är du redo att utföra de steg som krävs för att skicka samma webbplatsdata till Experience Platform.
 
 Lycka till på resan framåt med analyser och andra innehålls- och marknadsföringssatsningar!
