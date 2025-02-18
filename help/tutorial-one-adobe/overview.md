@@ -3,9 +3,9 @@ title: Översikt - Omfattande teknisk självstudiekurs - en Adobe
 description: Omfattande teknisk självstudiekurs - en Adobe
 doc-type: multipage-overview
 exl-id: 5bc0d621-0662-4d94-80a0-b6c173c0ac9e
-source-git-commit: f25c1705ae6813dc744945e8a4ee9858513f7374
+source-git-commit: 9169b0f9be7f192fd7e16ddcc2ae32f6a8cca92c
 workflow-type: tm+mt
-source-wordcount: '957'
+source-wordcount: '936'
 ht-degree: 1%
 
 ---
@@ -15,8 +15,6 @@ ht-degree: 1%
 ![Tech Insiders](./assets/images/techinsiders.png){width="50px" align="left"}
 
 ## Översikt
-
-Den här självstudiekursen är den perfekta utgångspunkten för
 
 Självstudiekursen är mycket varierad och ger tydliga insikter i följande program:
 
@@ -50,17 +48,13 @@ Om du vill använda den här självstudiekursen med din egen Adobe Experience Cl
 - Adobe Experience Platform datainsamling: [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/){target="_blank"}
 - Åtkomst till demosystem: [https://dsn.adobe.com/](https://dsn.adobe.com/){target="_blank"}
 
-## Förarbete
-
-Verifiera de program som krävs och som måste installeras på datorn [här](./prework.md){target="_blank"}.
-
 ## Slutförande och certifiering
 
 Den här självstudiekursen ingår i en Adobe Certification-kurs. Du kan registrera dig för kursen tillsammans med den här självstudiekursen genom att gå till [https://certification.adobe.com](https://certification.adobe.com).
 
 För varje modul som du slutför med hjälp av självstudiekursen nedan måste du skicka in ett bevis på slutförandet enligt [här](./completion.md).
 
-## Innehåll
+## Innehållsstatus
 
 Gå till [statussidan](./status.md){target="_blank"} om du vill kontrollera status för innehållet nedan.
 
@@ -68,7 +62,7 @@ Gå till [statussidan](./status.md){target="_blank"} om du vill kontrollera stat
 
 [Komma igång](./modules/getting-started/gettingstarted/getting-started.md){target="_blank"}
 
-I den här grundläggande modulen kommer du att konfigurera allt så att du kan komma åt och använda demomiljön.
+I den här grundläggande modulen förbereder du allt så att du kan komma åt och använda demomiljön.
 
 ### 1. Arbetsflöde och planering
 
