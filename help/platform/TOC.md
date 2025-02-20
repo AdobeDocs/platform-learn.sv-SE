@@ -5,7 +5,7 @@ user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
 auto-video-transcripts: true
-source-git-commit: 4d403a6694f856a9020fe9dfd541693603c57c69
+source-git-commit: 90a0ac0200ebe7b87d95c829773e74f8382b8443
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 7%
@@ -166,7 +166,7 @@ Campaigns
    + [Översikt över destinationer](/help/platform/destinations/understanding-destinations.md)
    + [Anslut till mål](/help/platform/destinations/connecting-to-destinations.md)
    + [Skapa mål och aktivera data](/help/platform/destinations/create-destinations-and-activate-data.md)
-   + [Aktivera profiler och segment till ett mål](/help/platform/destinations/activate-profiles-and-segments-to-a-destination.md)
+   + [Aktivera profiler och målgrupper till ett mål](/help/platform/destinations/activate-profiles-and-segments-to-a-destination.md)
    + [Konfigurera ett mål för datauppsättningsexport](/help/platform/destinations/configure-dataset-export-destination.md)
    + [Integrera med Google kundmatchning](/help/platform/destinations/integrate-with-google-customer-match.md)
    + [Konfigurera Azure Blob-målet](/help/platform/destinations/configure-the-azure-blob-destination.md)
