@@ -4,9 +4,9 @@ breadcrumb-title: Omfattande teknisk självstudiekurs för Adobe-program, från 
 hide: true
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-source-git-commit: 792b43cc5a99b1864224fa7b028e60f9678c7495
+source-git-commit: 6ef4ce94dbbcd65ab30bcfad24f4ddd746c26b82
 workflow-type: tm+mt
-source-wordcount: '1100'
+source-wordcount: '1105'
 ht-degree: 2%
 
 ---
@@ -47,6 +47,7 @@ ht-degree: 2%
       + [1.2.1 Komma igång med Workfront Fusion](/help/tutorial-one-adobe/modules/creation-production/module1.2/ex1.md)
       + [1.2.2 Använda Adobe API:er i Workfront Fusion](/help/tutorial-one-adobe/modules/creation-production/module1.2/ex2.md)
       + [1.2.3 Processautomatisering med Workfront Fusion](/help/tutorial-one-adobe/modules/creation-production/module1.2/ex3.md)
+      + [1.2.4 Automatisering med kontakter](/help/tutorial-one-adobe/modules/creation-production/module1.2/ex4.md)
       + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/creation-production/module1.2/summary.md)
 
 + Resurshantering {#assetmgmt}

@@ -6,18 +6,18 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 1b7b2630-864f-4982-be5d-c46b760739c3
-source-git-commit: b083a817700320e8e45645702c2868423c1fae99
+source-git-commit: 6ef4ce94dbbcd65ab30bcfad24f4ddd746c26b82
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '945'
 ht-degree: 0%
 
 ---
 
 # 1.2.3 Processautomatisering med Workfront Fusion
 
-Lär dig bearbeta automatisering med Workfront Fusion.
+Lär dig automatisera processer med Workfront Fusion.
 
-## 1.2.3.1 Iterera över flera värden
+## 1.2.3.1 itererar över flera värden
 
 Scenariot bör se ut så här:
 
@@ -200,7 +200,7 @@ Hittills har du kört ditt scenario manuellt för att testa. Nu uppdaterar vi di
 
 ## Nästa steg
 
-Gå till [Sammanfattning och fördelar med Firefly Services Automation](./summary.md){target="_blank"}
+Gå till [1.2.4 Automatisering med anslutningar](./ex4.md){target="_blank"}
 
 Gå tillbaka till [Automatisera Adobe Firefly-tjänster](./automation.md){target="_blank"}
 
