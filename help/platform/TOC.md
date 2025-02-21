@@ -5,7 +5,7 @@ user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
 auto-video-transcripts: true
-source-git-commit: 90a0ac0200ebe7b87d95c829773e74f8382b8443
+source-git-commit: 7317df472ec7c72dd6ecf4c6a298ccca818d28e9
 workflow-type: tm+mt
 source-wordcount: '882'
 ht-degree: 7%
@@ -103,19 +103,19 @@ Campaigns
 + Målgrupper och segmentering {#audiences}
    + [Introduktion till Audience Portal and Composition](audiences/introduction-to-audience-portal-and-composition.md)
    + [Överför målgrupper](audiences/upload-audiences.md)
-   + [Översikt över sammanställning av federerad publik](audiences/overview-of-federated-audience-composition.md)
-   + [Anslut och konfigurera sammanställning av federerad publik](audiences/connect-and-configure-federated-audience-composition.md)
-   + [Skapa en sammansatt publiksammansättning](audiences/create-a-federated-audience-composition.md)
-   + [Översikt över verktyget Skapa målgruppsregel](audiences/audience-rule-builder-overview.md)
-   + [Skapa målgrupper](audiences/create-audiences.md)
-   + [Använd tidsbegränsningar](audiences/time-constraints.md)
-   + [Skapa innehållsbaserade målgrupper](audiences/create-content-based-audiences.md)
-   + [Skapa konverteringsmålgrupper](audiences/create-conversion-audiences.md)
-   + [Skapa målgrupper från befintliga målgrupper](audiences/create-audiences-from-existing-audiences.md)
-   + [Skapa sekventiella målgrupper](audiences/create-sequential-audiences.md)
-   + [Skapa dynamiska målgrupper](audiences/create-dynamic-audiences.md)
-   + [Skapa målgrupper med flera enheter](audiences/create-multi-entity-audiences.md)
-   + [Skapa och aktivera kontomålgrupper (B2B)](audiences/create-audiences-with-b2b-data.md)
+   + [Översikt över sammanställning av federerad publik](audiences/fac/overview-of-federated-audience-composition.md)
+   + [Anslut och konfigurera sammanställning av federerad publik](audiences/fac/connect-and-configure-federated-audience-composition.md)
+   + [Skapa en sammansatt publiksammansättning](audiences/fac/create-a-federated-audience-composition.md)
+   + [Översikt över verktyget Skapa målgruppsregel](audiences/audience-builder/audience-rule-builder-overview.md)
+   + [Skapa målgrupper](audiences/audience-builder/create-audiences.md)
+   + [Använd tidsbegränsningar](audiences/audience-builder/time-constraints.md)
+   + [Skapa innehållsbaserade målgrupper](audiences/audience-builder/create-content-based-audiences.md)
+   + [Skapa konverteringsmålgrupper](audiences/audience-builder/create-conversion-audiences.md)
+   + [Skapa målgrupper från befintliga målgrupper](audiences/audience-builder/create-audiences-from-existing-audiences.md)
+   + [Skapa sekventiella målgrupper](audiences/audience-builder/create-sequential-audiences.md)
+   + [Skapa dynamiska målgrupper](audiences/audience-builder/create-dynamic-audiences.md)
+   + [Skapa målgrupper med flera enheter](audiences/audience-builder/create-multi-entity-audiences.md)
+   + [Skapa och aktivera kontomålgrupper (B2B)](audiences/audience-builder/create-audiences-with-b2b-data.md)
    + [Demo av direktuppspelningssegmentering](/help/platform/audiences/streaming-segmentation-demo.md)
    + [Utvärdera en målgruppsregel](https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/evaluate-a-segment.html){target="_blank"}
    + [Skapa en datauppsättning för att exportera data](https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-dataset-export-segment.html){target="_blank"}

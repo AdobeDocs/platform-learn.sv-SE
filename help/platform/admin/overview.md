@@ -5,7 +5,7 @@ solution: Experience Platform, Real-Time Customer Data Platform, Journey Optimiz
 feature: Sandboxes, Access Control, Alerts
 role: Admin
 level: Beginner
-source-git-commit: 4d403a6694f856a9020fe9dfd541693603c57c69
+source-git-commit: c81ae424f501e2aa551a9f64967a71f942c388b4
 workflow-type: tm+mt
 source-wordcount: '463'
 ht-degree: 1%
@@ -22,10 +22,10 @@ Lär dig hur du hanterar användarbehörigheter.
 
 <!-- CARDS
 * add-users.md{title=Add users}
-* https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/users-and-permissions{title=Add users to Data Collection}
 * add-developers.md{title=Add developers}
 * add-product-administrators.md{title=Add administrators}
 * configure-attribute-based-access-control.md
+* https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/users-and-permissions{title=Add users to Data Collection}
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
