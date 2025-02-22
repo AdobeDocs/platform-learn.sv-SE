@@ -5,9 +5,9 @@ user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
 auto-video-transcripts: true
-source-git-commit: 7317df472ec7c72dd6ecf4c6a298ccca818d28e9
+source-git-commit: bfb079fb603702e7d07bfa74fec771503a5188df
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '883'
 ht-degree: 7%
 
 ---
@@ -137,6 +137,7 @@ Campaigns
    + [Tvinga samtycke](/help/platform/governance/enforce-consent.md)
    + [Integrera med IAB Transparency och Consent Framework 2.0](/help/platform/governance/integrate-with-iab-transparency-and-consent-framework-2.md)
 + Datahygien {#data-hygiene}
+   + [Översikt](/help/platform/data-hygiene/overview.md)
    + [Dataförberedelse för datahygien](/help/platform/data-hygiene/data-prep-for-data-hygiene.md)
    + [Ta bort datauppsättningar och grupper](/help/platform/data-hygiene/delete-datasets-and-batches.md)
    + [Förfaller datauppsättningar](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/data-lifecycle/expire-datasets)
