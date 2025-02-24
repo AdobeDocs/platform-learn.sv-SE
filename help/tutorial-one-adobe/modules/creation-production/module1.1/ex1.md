@@ -6,9 +6,9 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 52385c33-f316-4fd9-905f-72d2d346f8f5
-source-git-commit: 6ef4ce94dbbcd65ab30bcfad24f4ddd746c26b82
+source-git-commit: c5a80b87ac8e997922cb8c69b4180c4220dd9862
 workflow-type: tm+mt
-source-wordcount: '741'
+source-wordcount: '1006'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Lär dig hur du använder Postman och Adobe I/O för att fråga Adobe Firefly Se
 
 Innan du fortsätter med den här övningen måste du ha slutfört installationen av [ditt Adobe I/O-projekt](./../../../modules/getting-started/gettingstarted/ex6.md), och du måste också ha konfigurerat ett program för interaktion med API:er, som [Postman](./../../../modules/getting-started/gettingstarted/ex7.md) eller [PostBuster](./../../../modules/getting-started/gettingstarted/ex8.md).
 
-## 1.1.1.1 firefly.adobe.com
+## 1.1.1.2 firefly.adobe.com
 
 Gå till [https://firefly.adobe.com](https://firefly.adobe.com). Klicka på ikonen **profile** och kontrollera att du är inloggad på rätt **konto** som ska vara `--aepImsOrgName--`. Klicka vid behov på **Byt profil** för att växla till det kontot.
 
@@ -131,6 +131,62 @@ I **Body** för din begäran **POST - Firefly - T2I V3** klistrar du sedan in **
     "strength": 50
   }
 ```
+
+Du borde ha den här då. Klicka på **Skicka**.
+
+![Firefly](./images/ff6.png){zoomable="yes"}
+
+Klicka på bildens URL för att öppna den.
+
+![Firefly](./images/ff7.png){zoomable="yes"}
+
+Bilden har ändrats en stund. När du använder formatförinställningar används inte längre startbilden på samma sätt som tidigare.
+
+![Firefly](./images/ff8.png){zoomable="yes"}
+
+Ta bort koden för objektet **seed** från **Body** i din begäran. Klicka på **Skicka** och sedan på den bild-URL som du får från svaret.
+
+```json
+,
+  "seeds": [
+    XXX
+  ]
+```
+
+![Firefly](./images/ff9.png){zoomable="yes"}
+
+Bilden har ändrats lite igen.
+
+![Firefly](./images/ff10.png){zoomable="yes"}
+
+
+## 1.1.1.5 Firefly Services API, Gen Expandera
+
+Välj begäran **POST - Firefly - Gen Expand** i samlingen **FF - Firefly Services Tech Insiders** och gå till **Body** för begäran.
+
+- **size**: Ange önskad upplösning. Värdet som anges här måste vara större än bildens ursprungliga storlek och får inte vara större än 4 096.
+- **image.source.url**: Det här fältet kräver en länk till bilden som behöver expanderas. I det här exemplet används en variabel för att referera till bilden som skapades i föregående övning.
+
+- **vågrät justering**: Godkända värden är: `"center"`,`"left`, `"right"`.
+- **lodrät justering**: Godkända värden är: `"center"`,`"top`, `"bottom"`.
+
+![Firefly](./images/ff11.png){zoomable="yes"}
+
+Klicka på den bild-URL som är en del av svaret.
+
+![Firefly](./images/ff12.png){zoomable="yes"}
+
+Du kommer nu att se att bilden som skapades i föregående övning nu har utökats till upplösningen 3 999 × 3 999.
+
+![Firefly](./images/ff13.png){zoomable="yes"}
+
+När du ändrar placeringens justering kommer utdata också att bli något annorlunda. I det här exemplet ändras placeringen till **left, bottom**. Klicka på **Skicka** och klicka sedan för att öppna den genererade bild-URL:en.
+
+![Firefly](./images/ff14.png){zoomable="yes"}
+
+Du bör då se att originalbilden används på en annan plats, vilket påverkar hela bilden.
+
+![Firefly](./images/ff15.png){zoomable="yes"}
 
 ## Nästa steg
 
