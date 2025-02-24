@@ -5,7 +5,7 @@ solution: Experience Platform, Real-Time Customer Data Platform, Journey Optimiz
 feature: Sandboxes, Access Control, Alerts
 role: Admin
 level: Beginner
-source-git-commit: c81ae424f501e2aa551a9f64967a71f942c388b4
+source-git-commit: 112e092df6d486d8b9103013bec57d820b8ae6d7
 workflow-type: tm+mt
 source-wordcount: '463'
 ht-degree: 1%
@@ -34,7 +34,7 @@ Lär dig hur du hanterar användarbehörigheter.
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="add-users.md" title="Lägg till användare" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/336081?format=jpeg&nocache=1739899941213" alt="Lägg till användare"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/336081?format=jpeg&nocache=1740173302150" alt="Lägg till användare"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -52,35 +52,12 @@ Lär dig hur du hanterar användarbehörigheter.
             </div>
         </div>
     </div>
-    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Add users to Data Collection">
-        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
-            <div class="card-image">
-                <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/users-and-permissions" title="Lägg till användare i datainsamling" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/28734/?format=jpeg&nocache=1739899941476" alt="Lägg till användare i datainsamling"
-                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
-                    </a>
-                </figure>
-            </div>
-            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
-                <div class="top-card-content">
-                    <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/users-and-permissions" target="_blank" rel="referrer" title="Lägg till användare i datainsamling">Lägg till användare i datainsamling</a>
-                    </p>
-                    <p class="is-size-6">Lär dig hur du lägger till användare och hanterar behörigheter för Adobe Experience Platform Data Collection-funktioner så att anställda på företaget har den åtkomst de behöver för att utföra sina jobb.</p>
-                </div>
-                <a href="https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/users-and-permissions" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
-                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs mer</span>
-                </a>
-            </div>
-        </div>
-    </div>
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Add developers">
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="add-developers.md" title="Lägg till utvecklare" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3426407?format=jpeg&nocache=1739899941236" alt="Lägg till utvecklare"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3426407?format=jpeg&nocache=1740173302176" alt="Lägg till utvecklare"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -103,7 +80,7 @@ Lär dig hur du hanterar användarbehörigheter.
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="add-product-administrators.md" title="Lägg till administratörer" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/333860?format=jpeg&nocache=1739899941246" alt="Lägg till administratörer"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/333860?format=jpeg&nocache=1740173302208" alt="Lägg till administratörer"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -126,7 +103,7 @@ Lär dig hur du hanterar användarbehörigheter.
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="configure-attribute-based-access-control.md" title="Konfigurera attributbaserad åtkomstkontroll" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/345641?format=jpeg&nocache=1739899941225" alt="Konfigurera attributbaserad åtkomstkontroll"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/345641?format=jpeg&nocache=1740173302190" alt="Konfigurera attributbaserad åtkomstkontroll"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -140,6 +117,29 @@ Lär dig hur du hanterar användarbehörigheter.
                 </div>
                 <a href="configure-attribute-based-access-control.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Bevakning</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Add users to Data Collection">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/users-and-permissions" title="Lägg till användare i datainsamling" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/28734/?format=jpeg&nocache=1740173302543" alt="Lägg till användare i datainsamling"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/users-and-permissions" target="_blank" rel="referrer" title="Lägg till användare i datainsamling">Lägg till användare i datainsamling</a>
+                    </p>
+                    <p class="is-size-6">Lär dig hur du lägger till användare och hanterar behörigheter för Adobe Experience Platform Data Collection-funktioner så att anställda på företaget har den åtkomst de behöver för att utföra sina jobb.</p>
+                </div>
+                <a href="https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/users-and-permissions" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs mer</span>
                 </a>
             </div>
         </div>
@@ -163,7 +163,7 @@ Lär dig hur du hanterar sandlådemiljöer.
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="use-sandboxes.md" title="Använda sandlådor" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/29838/?format=jpeg&nocache=1739899941687" alt="Använda sandlådor"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/29838/?format=jpeg&nocache=1740173302789" alt="Använda sandlådor"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -186,7 +186,7 @@ Lär dig hur du hanterar sandlådemiljöer.
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="copy-objects-between-sandboxes.md" title="Kopiera konfigurationer mellan sandlådor" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3424763/?format=jpeg&nocache=1739899941676" alt="Kopiera konfigurationer mellan sandlådor"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3424763/?format=jpeg&nocache=1740173302776" alt="Kopiera konfigurationer mellan sandlådor"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -209,7 +209,7 @@ Lär dig hur du hanterar sandlådemiljöer.
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="share-packages-across-orgs.md" title="Dela paket mellan IMS-organisationer" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435815/?format=jpeg&nocache=1739899941663" alt="Dela paket mellan IMS-organisationer"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435815/?format=jpeg&nocache=1740173302764" alt="Dela paket mellan IMS-organisationer"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -276,7 +276,7 @@ Lär dig hur du hanterar sandlådemiljöer.
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="use-alerts.md" title="Använda varningar" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/336218?format=jpeg&nocache=1739899942212" alt="Använda varningar"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/336218?format=jpeg&nocache=1740173305172" alt="Använda varningar"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
