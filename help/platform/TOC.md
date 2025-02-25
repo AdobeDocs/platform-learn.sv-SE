@@ -5,9 +5,9 @@ user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
 auto-video-transcripts: true
-source-git-commit: 19d1ea02c33685f250e4fdf2a94c90fa66c5ee7b
+source-git-commit: eb05c2116c8890d631db4da8a174007a37470ab7
 workflow-type: tm+mt
-source-wordcount: '888'
+source-wordcount: '881'
 ht-degree: 7%
 
 ---
@@ -290,4 +290,3 @@ Campaigns
    + [En tabell med två perceptioner - varumärken jämfört med konsumenter](/help/platform/industry/brands-vs-consumers.md)
    + [Utvecklar ditt högteknologiska målgruppscenter](/help/platform/industry/evolving-your-audience-center-of-excellence.md)
    + [Skapa bättre upplevelser med kundprofiler](/help/platform/industry/building-better-experiences-with-customer-profiles.md)
-   + [Data-Collaboration i förstahandskontexten](/help/platform/industry/data-collaboration-in-the-first-party-data-context.md)
