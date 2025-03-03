@@ -3,9 +3,9 @@ title: Migrera globala variabler
 description: Lär dig hur du migrerar globala variabler från tilläggskonfigurationen för Analytics till Web SDK
 solution: Data Collection, Analytics
 feature: Web SDK
-jira: KT-16764
+jira: KT-17277
 exl-id: 0917e951-c7e0-4723-8354-d308890bdaac
-source-git-commit: d01889ca317e29ed0c37b20e17291c4cb5a3abd1
+source-git-commit: 744b26da58307f0d6f6e8715a534ca814e02371c
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 0%
