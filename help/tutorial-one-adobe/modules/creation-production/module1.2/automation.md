@@ -6,14 +6,14 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 05cd8991-f77b-43c9-af1d-fcdc1f0fab4d
-source-git-commit: 6ef4ce94dbbcd65ab30bcfad24f4ddd746c26b82
+source-git-commit: b0d81ccd3c3bf1ef2a836a3565069dd024bd90a6
 workflow-type: tm+mt
-source-wordcount: '176'
+source-wordcount: '197'
 ht-degree: 0%
 
 ---
 
-# 1.2 Automatisering av arbetsflöden med Workfront Fusion
+# 1.2 Creative Workflow Automation med Workfront Fusion
 
 Lär dig automatisera kreativa arbetsflöden med Workfront Fusion.
 
@@ -38,6 +38,10 @@ I den här övningen kan du fortsätta att förfina din resa för att automatise
 [1.2.4 Automatisering med anslutningar](./ex4.md){target="_blank"}
 
 I den här övningen kan du fortsätta att förfina din resa för att automatisera processen för att skapa bilder.
+
+[1.2.5 Bildruta-I/O och Workfront Fusion](./ex5.md){target="_blank"}
+
+I den här övningen ansluter du bildruta-I/O till ditt Workfront Fusion-scenario.
 
 [Sammanfattning och förmåner](./summary.md){target="_blank"}
 

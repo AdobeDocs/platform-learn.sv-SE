@@ -6,9 +6,9 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 330f4492-d0df-4298-9edc-4174b0065c9a
-source-git-commit: b083a817700320e8e45645702c2868423c1fae99
+source-git-commit: 35e1f0d4fb5a22a366b3fb8bc71d4ea2d26764bb
 workflow-type: tm+mt
-source-wordcount: '823'
+source-wordcount: '819'
 ht-degree: 0%
 
 ---
@@ -86,7 +86,7 @@ Stäng popup-fönstret **Dela anpassad modell**.
 
 ![Anpassade Firefly-modeller](./images/ffcm16.png){zoomable="yes"}
 
-## 1.1.4.2 Använda din anpassade modell i användargränssnittet
+## 1.1.4.2 Använd din anpassade modell i användargränssnittet
 
 Gå till [https://firefly.adobe.com/cme/train](https://firefly.adobe.com/cme/train). Klicka på din anpassade modell för att öppna den.
 
@@ -100,7 +100,7 @@ Du kommer då att se exempelmeddelandet som du angav innan du kördes.
 
 ![Anpassade Firefly-modeller](./images/ffcm18.png){zoomable="yes"}
 
-## 1.1.4.3 Aktivera din anpassade modell för API:t för anpassade Firefly-tjänster
+## 1.1.4.3 Aktivera din anpassade modell för Firefly Services API för anpassade modeller
 
 När din anpassade modell har tränats kan den också användas via API:t. I övning 1.1.1 har du redan konfigurerat ditt Adobe I/O-projekt för interaktion med Firefly Services via API:t.
 
@@ -112,9 +112,9 @@ Klicka på de tre punkterna **..** och sedan på **Dela**.
 
 ![Anpassade Firefly-modeller](./images/ffcm20.png){zoomable="yes"}
 
-Om du vill komma åt en anpassad Firefly-modell måste den anpassade modellen delas med **ID:t för tekniskt konto** i Adobe I/O-projektet.
+Om du vill komma åt en anpassad Firefly-modell måste den anpassade modellen delas med e-postadressen **för det tekniska kontot** i ditt Adobe I/O-projekt.
 
-Gå till [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects) om du vill hämta ditt **tekniska konto-ID**. Klicka för att öppna projektet med namnet `--aepUserLdap-- Firefly`.
+Gå till [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects) om du vill hämta e-postadressen för ditt **tekniska konto**. Klicka för att öppna projektet med namnet `--aepUserLdap-- One Adobe tutorial`.
 
 ![Anpassade Firefly-modeller](./images/ffcm24.png){zoomable="yes"}
 
@@ -122,19 +122,19 @@ Klicka på **OAuth Server-to-Server**.
 
 ![Anpassade Firefly-modeller](./images/ffcm25.png){zoomable="yes"}
 
-Klicka för att kopiera ditt **tekniska konto-ID**.
+Klicka för att kopiera e-postadressen till ditt **tekniska konto**.
 
 ![Anpassade Firefly-modeller](./images/ffcm23.png){zoomable="yes"}
 
-Klistra in ditt **tekniska konto-ID** och klicka på **Bjud in för redigering**.
+Klistra in e-postadressen till ditt **tekniska konto** och klicka på **Bjud in för redigering**.
 
 ![Anpassade Firefly-modeller](./images/ffcm21.png){zoomable="yes"}
 
-**ID:t för det tekniska kontot** bör nu kunna komma åt den anpassade modellen.
+**E-postadressen för det tekniska kontot** bör nu kunna komma åt den anpassade modellen.
 
 ![Anpassade Firefly-modeller](./images/ffcm22.png){zoomable="yes"}
 
-## 1.1.4.4 Interaktion med Firefly Services API för anpassade modeller
+## 1.1.4.4 Interagera med API:t för anpassade modeller i Firefly Services
 
 I Exercise 1.1.1 Komma igång med Firefly Services hämtade du den här filen: [postman-ff.zip](./../../../assets/postman/postman-ff.zip) till ditt lokala skrivbord och du importerade sedan samlingen i Postman.
 
