@@ -1,40 +1,29 @@
 ---
-title: Spåra händelser - Migrera från Adobe Target till Adobe Journey Optimizer - Bestämning av mobiltillägg
+title: Spåra konverteringshändelser - Migrera Adobe Target-implementeringen i din mobilapp till Adobe Journey Optimizer - Beslutstillägg
 description: Lär dig hur du spårar konverteringshändelser för Adobe Target med tillägget Adobe Journey Optimizer - Bestämning av mobilenheter
 exl-id: 7b53aab1-0922-4d9f-8bf0-f5cf98ac04c4
-source-git-commit: 314f0279ae445f970d78511d3e2907afb9307d67
+source-git-commit: 4bc5323e1f406b1fc9524838978ba8673e33b44e
 workflow-type: tm+mt
-source-wordcount: '199'
+source-wordcount: '373'
 ht-degree: 0%
 
 ---
 
-# Spåra målkonverteringshändelser med Adobe Journey Optimizer - mobiltillägg för beslut
+# Spåra konverteringshändelser med mobiltillägget Decisioning
 
-Se den här sidan för innehåll: https://developer.adobe.com/client-sdks/edge/adobe-journey-optimizer-decisioning/#tracking
+Målet med de flesta Target-aktiviteter är att driva värdefulla användaråtgärder i programmet, som inköp, registrering, klick med mera. Målimplementeringar använder ofta anpassade konverteringshändelser för att spåra dessa åtgärder, som ofta innehåller ytterligare information om konverteringen. Konverteringshändelser för Target kan spåras med Optimize SDK som liknar Target SDK. Specifika API:er måste anropas för att spåra konverteringshändelser enligt tabellen nedan:
 
-Konverteringshändelser för Target kan spåras med ... Konverteringshändelser faller vanligtvis inom följande kategorier:
-
-* Automatiskt spårade händelser som inte kräver någon konfiguration
-* Inköpskonverteringshändelser som ska justeras för implementering av tillägg enligt metoddefinition
-* Konverteringshändelser som inte är köpta och som kräver koduppdateringar
-
-## Målspårningsjämförelse
-
-I följande tabell jämförs hur at.js och Platform Web SDK spårar konverteringshändelser
-
-| Aktivitetsmål | Mål at.js 2.x | Platform Web SDK |
+| Aktivitetsmål | Måltillägg | Beslutstillägg |
 |---|---|---|
-| | | |
+
+| Spåra en visningskonverteringshändelse för en mbox-plats (scope) | Anropa API:t [displayedLocations](https://developer.adobe.com/client-sdks/solution/adobe-target/api-reference/#displayedlocations){target=_blank} när mbox-platsen visas | Anropa API:t [ displayed](https://developer.adobe.com/client-sdks/solution/adobe-target/api-reference/#displayedlocations){target=_blank} när erbjudandet för mbox-platsen visas. Detta skickar en händelse med händelsetypen decisioning.propositionDisplay till Experience Edge-nätverket. |
+
+| Spåra en klickkonverteringshändelse för en mbox-plats (scope) | Anropa API:t [clichedLocations](https://developer.adobe.com/client-sdks/solution/adobe-target/api-reference/#displayedlocations){target=_blank} när användaren klickar på mbox-platsen | Anropa API:t [ tap](https://developer.adobe.com/client-sdks/solution/adobe-target/api-reference/#displayedlocations) {target=_blank} när någon klickar på erbjudandet för mbox-platsen. Detta skickar en händelse med händelsetypen decisioning.propositionInteract till Experience Edge-nätverket. |
+
+| Spåra en anpassad konverteringshändelse som även kan innehålla ytterligare data, till exempel parametrar för målprofilen och orderdetaljer |Skicka ytterligare data i fältet TargetParameters som tillhandahålls av API:erna [displayedLocations](https://developer.adobe.com/client-sdks/solution/adobe-target/api-reference/#displayedlocations){target=_blank} och [clickings](https://developer.adobe.com/client-sdks/solution/adobe-target/api-reference/#displayedlocations){target=_blank} | Använd de publika metoderna [generateDisplayInteractionXdm](https://developer.adobe.com/client-sdks/edge/adobe-journey-optimizer-decisioning/#proposition-tracking-using-edge-extension-api){target=_blank} och [generateTapInteractionXdm](https://developer.adobe.com/client-sdks/edge/adobe-journey-optimizer-decisioning/#proposition-tracking-using-edge-extension-api){target=_blank} som är tillgängliga i erbjudandet för mbox-platsen för att generera XDM-formaterade data för visning respektive klicka. Anropa sedan Edge SDK [sendEvent](https://developer.adobe.com/client-sdks/edge/edge-network/api-reference/#sendevent){target=_blank}-API:t för att skicka XDM-spårningsdata tillsammans med eventuella ytterligare XDM-data och frihandsdata till Experience Edge-nätverket. |
 
 
-## Automatiskt spårade händelser
-
-Följande konverteringsmål kräver inga specifika justeringar av implementeringen:
-
-
-
-Läs sedan om hur du [aktiverar delning av korsdomän-ID](webview.md) för konsekventa besökarprofiler.
+Lär dig sedan [uppdatera målgrupper och profilskript](update-audiences.md) för att säkerställa kompatibilitet med beslutstillägget.
 
 >[!NOTE]
 >

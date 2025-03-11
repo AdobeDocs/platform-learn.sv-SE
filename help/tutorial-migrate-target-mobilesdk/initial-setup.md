@@ -1,10 +1,10 @@
 ---
-title: Inledande konfiguration - Migrera från Adobe Target till Adobe Journey Optimizer - mobiltillägg för beslut
+title: Inledande konfiguration - Migrera Adobe Target-implementeringen i din mobilapp till Adobe Journey Optimizer - Beslutstillägg
 description: Läs mer om och konfigurera de grundläggande element som krävs för implementeringen av SDK på webben på din plattform
 exl-id: dfc5abc8-0e79-454a-b1bb-6a42b1219771
-source-git-commit: 314f0279ae445f970d78511d3e2907afb9307d67
+source-git-commit: b8baa6d48b9a99d2d32fad2221413b7c10937191
 workflow-type: tm+mt
-source-wordcount: '370'
+source-wordcount: '373'
 ht-degree: 1%
 
 ---

@@ -1,10 +1,10 @@
 ---
-title: Planera migreringen - Migrera från Adobe Target till Adobe Journey Optimizer - Bestämning av mobiltillägg
+title: Planera migreringen - Migrera Adobe Target-implementeringen i din mobilapp till Adobe Journey Optimizer - Beslutstillägg
 description: Lär dig mer om skillnaderna mellan at.js och Platform Web SDK och hur du planerar din migreringssatsning.
 exl-id: 86849319-d2ad-4338-aa1a-d307d8807d4a
-source-git-commit: cb08ad8a1ffd687d7748ca02643b11b2243cd1a7
+source-git-commit: b8baa6d48b9a99d2d32fad2221413b7c10937191
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '315'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Oavsett hur enkel eller komplex implementeringen är är det viktigt att du för
 Migreringsprocessen omfattar följande viktiga steg:
 
 1. Utvärdera er nuvarande implementering och fastställa en migreringsstrategi
-1. Konfigurera de initiala komponenterna för anslutning till Adobe Experience Platform Edge Network
+1. Konfigurera de inledande komponenterna för anslutning till Adobe Experience Platform Edge Network
 1. Uppdatera den grundläggande implementeringen för att ersätta måltillägget med beslutstillägget
 1. Förbättra SDK-implementeringen för dina specifika användningsfall. Detta kan innebära att ytterligare parametrar skickas, att svarstoken används med mera.
 1. Uppdatera objekt i Target-gränssnittet, till exempel profilskript, aktiviteter och målgruppsdefinitioner

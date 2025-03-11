@@ -1,62 +1,39 @@
 ---
-title: Validera Target-implementeringar av Adobe Journey Optimizer - mobiltillägg för beslut
-description: Lär dig hur du validerar aktiviteter och felsöker en Adobe Target-implementering med tillägget Adobe Journey Optimizer - Decisioning Mobile.
-source-git-commit: afbc8248ad81a5d9080a4fdba1167e09bbf3b33d
+title: Validera och felsöka implementeringen av beslutstillägg
+description: Lär dig hur du validerar och felsöker en mobilimplementering från Adobe Target med hjälp av beslutstillägget.
+exl-id: edc6e25a-58d7-4145-97c3-bf48e980914f
+source-git-commit: a4fe85580776e5d84f6deaf3c0224f0513ba8415
 workflow-type: tm+mt
-source-wordcount: '315'
+source-wordcount: '311'
 ht-degree: 0%
 
 ---
 
-# Validera implementeringen av Adobe Journey Optimizer - Bestämning av mobiltillägg
+# Validera och felsöka implementeringen av beslutstillägg
 
 När du har migrerat målinsimplementeringen från måltillägget till beslutandetillägget är det viktigt att du validerar att allt fungerar som det ska innan du publicerar några ändringar i produktionsappen. Adobe rekommenderar följande, som beskrivs utförligt på denna sida:
 
-* Genomför en teknisk validering för att säkerställa att den grundläggande implementeringen och Platform Mobile SDK-begäranden och -svar ser korrekta ut
+* Genomför en teknisk validering för att säkerställa att den grundläggande implementeringen och förfrågningar och svar från SDK på Platform Mobile ser korrekta ut
 * Se till att Target-aktiviteter levereras och återges korrekt
 * Kontrollera att rapportering fungerar som den ska
-* Besök målgrupper och profilskript igen för att kontrollera att de är kompatibla med Platform Mobile SDK och Optimie-tillägget
-* Säkerställ att integreringen med Adobe eller program från tredje part fungerar korrekt
+* Besök målgrupper och profilskript för att kontrollera att de är kompatibla med Platform Mobile SDK och Optimie-tillägget
+* Säkerställ att integreringen med Adobe eller tredjepartsprogram fungerar som den ska
 
-Alla Target-implementeringar skiljer sig åt beroende på webbplatsens arkitektur och vilka funktioner som används. Du kan använda tabellerna nedan som utgångspunkt och lägga till objekt som är unika för implementeringen. På sidan [Felsökning](debugging.md) i den här självstudiekursen visas verktyg som du kan använda för att utföra den här valideringen.
+Alla Target-implementeringar skiljer sig åt beroende på webbplatsens arkitektur och vilka funktioner som används. Du kan använda tabellerna nedan som utgångspunkt och lägga till objekt som är unika för implementeringen.
 
-## Teknisk validering
+## Teknisk validering och felsökning
 
-| Valideringsobjekt | Anteckningar |
-|---|---|
-| | |
+Teknisk validering och felsökning med Platform Mobile SDK och beslutstillägget har förbättrats avsevärt med Assurance. Läs följande dokumentationssidor om du vill veta mer om det här viktiga verktyget:
 
+* [Konfigurera beslutsplugin-program i Assurance](https://developer.adobe.com/client-sdks/edge/adobe-journey-optimizer-decisioning/assurance-setup/){target=_blank}
 
-## Leverans och rendering av aktivitet
+* [Validerar SDK-inställningar](https://developer.adobe.com/client-sdks/edge/adobe-journey-optimizer-decisioning/optimize-configuration-view/){target=_blank}
 
-| Valideringsobjekt | Anteckningar |
-| | |
+* [Granska begäranden och simulera olika upplevelser](https://developer.adobe.com/client-sdks/edge/adobe-journey-optimizer-decisioning/review-simulate/){target=_blank}
 
-## Rapportering
+När du har utfört valideringsstegen ovan kan du vara säker på att implementeringen av Platform Mobile SDK med beslutstillägget är klar att gå över till produktion.
 
-| Valideringsobjekt | Anteckningar |
-| | |
-
-## Publiker och profilskript
-
-| Valideringsobjekt | Anteckningar |
-|---|---|
-| | |
-
-## Integrering med Adobe-program
-
-| Valideringsobjekt | Anteckningar |
-| | |
-
-## Integrering med tredjepartsprogram
-
-| Valideringsobjekt | Anteckningar |
-|---|---|
-| | |
-
-När du har utfört valideringsstegen ovan kan du känna dig säker på att implementeringen av Platform Mobile SDK med beslutstillägget är klar att gå över till produktion.
-
-Läs sedan om hur du [felsöker en målistimplementering med hjälp av Platform Web SDK](debugging.md).
+Grattis, du har kommit till slutet av självstudiekursen! Lycka till med att migrera din Adobe Target-implementering till beslutstillägget!
 
 >[!NOTE]
 >
