@@ -3,9 +3,9 @@ title: Migrera Adobe Target-implementeringen i din mobilapp till Adobe Journey O
 description: Lär dig hur du migrerar din mobilappsimplementering från Adobe Target till Adobe Journey Optimizer - Beslutstillägg
 last-substantial-update: 2023-02-23T00:00:00Z
 exl-id: 32363b95-b6ad-44af-a3b0-e1fbbbf5a8f1
-source-git-commit: b8baa6d48b9a99d2d32fad2221413b7c10937191
+source-git-commit: d2da62ed2d36f73af1c8053be5af27feea32cb14
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '690'
 ht-degree: 0%
 
 ---
@@ -45,12 +45,19 @@ Oavsett hur enkel eller komplex implementeringen är är det viktigt att du för
 
 Migreringsprocessen omfattar följande viktiga steg:
 
-1. Utvärdera er nuvarande implementering
+1. Utvärdera er nuvarande implementering, inklusive:
+   1. Alla Target-API:er som används
+   1. Ändringar av Target-ets globala inställningar
+   1. Integrering med Adobe Analytics
+   1. Användning av parametrarna mbox, profile och entity
+   1. Användning av profilskript och målgrupper
+   1. Anpassad kod som är unik för din implementering
 1. Konfigurera de inledande komponenterna för anslutning till Adobe Experience Platform Edge Network
 1. Uppdatera den grundläggande implementeringen för att ersätta måltillägget med beslutstillägget
 1. Förbättra SDK-implementeringen för dina specifika användningsfall. Detta kan innebära att ytterligare parametrar skickas, att svarstoken används med mera.
 1. Uppdatera objekt i Target-gränssnittet, till exempel profilskript, aktiviteter och målgruppsdefinitioner
 1. Validera den slutliga implementeringen innan du byter till produktionsappen
+
 
 >[!INFO]
 >

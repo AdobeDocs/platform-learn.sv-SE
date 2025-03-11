@@ -2,9 +2,9 @@
 title: Hämta Target-aktiviteter - Migrera Adobe Target-implementeringen i din mobilapp till Adobe Journey Optimizer - Beslutstillägg
 description: Lär dig hur du hämtar Adobe Target-aktiviteter när du migrerar från Adobe Target till Adobe Journey Optimizer - Decisioning Mobile-tillägget.
 exl-id: 39569088-a254-4e64-9956-0c6e1a8ed2a5
-source-git-commit: b8baa6d48b9a99d2d32fad2221413b7c10937191
+source-git-commit: d2da62ed2d36f73af1c8053be5af27feea32cb14
 workflow-type: tm+mt
-source-wordcount: '268'
+source-wordcount: '308'
 ht-degree: 0%
 
 ---
@@ -24,6 +24,11 @@ Se alltid till att ta med felhantering för att visa lämpliga upplevelser under
 
 
 ## Begär och tillämpa innehåll på begäran
+
+>[!IMPORTANT]
+>
+>När du har tillämpat innehåll i appen måste `displayed`-API aktiveras för att Target ska veta att besökaren har sett det alternativa innehållet eller standardinnehållet som anges i aktiviteten. Mer information finns på sidan [Spåra konverteringshändelser](track-events.md).
+
 
 +++ Exempel på Android
 
