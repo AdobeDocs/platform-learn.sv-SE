@@ -5,9 +5,9 @@ user-guide-description: Lär dig de många komponenterna i Experience Platform.
 audience: all
 doc-type: video
 auto-video-transcripts: true
-source-git-commit: 7d300c94d4d52ad4785908497afc5ec4ace038bf
+source-git-commit: 65b1ecd8b12173399d0e834a95f78a0d6d1bf6fe
 workflow-type: tm+mt
-source-wordcount: '882'
+source-wordcount: '897'
 ht-degree: 7%
 
 ---
@@ -127,7 +127,11 @@ Campaigns
 + [Granskningsloggar](/help/platform/governance/audit-logs.md)
 + [Datainsamling](https://experienceleague.adobe.com/docs/platform-learn/data-collection/overview.html){target="_blank"}
 + Collaboration {#collaboration}
-   + [Real-Time CDP Collaboration - översikt](/help/platform/collaboration/real-time-cdp-collaboration-overview.md)
+   + [Real-Time CDP Collaboration - översikt](collaboration/real-time-cdp-collaboration-overview.md)
+   + [Ange behörigheter](collaboration/set-permissions-for-collaboration.md)
+   + [Konfigurera ett Advertiser-konto](collaboration/set-up-an-advertiser-account.md)
+   + [Referera målgrupper som annonsörer](collaboration/reference-audiences-as-an-advertiser.md)
+   + [Kommunicera med utgivare](collaboration/connect-with-publishers.md)
 + Instrumentpaneler {#dashboards}
    + [Skapa en instrumentpanel](/help/platform/dashboards/create-a-dashboard.md)
 + Datastyrning {#data-governance}
