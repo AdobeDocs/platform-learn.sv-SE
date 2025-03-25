@@ -2,9 +2,9 @@
 title: Inledande konfiguration - Migrera Adobe Target-implementeringen i din mobilapp till Adobe Journey Optimizer - Beslutstillägg
 description: Läs mer om och konfigurera de grundläggande element som krävs för implementeringen av SDK på webben på din plattform
 exl-id: dfc5abc8-0e79-454a-b1bb-6a42b1219771
-source-git-commit: b8baa6d48b9a99d2d32fad2221413b7c10937191
+source-git-commit: 45a47cde8bb5ac3baba24d7527fc4029ca3d6596
 workflow-type: tm+mt
-source-wordcount: '373'
+source-wordcount: '379'
 ht-degree: 1%
 
 ---
@@ -61,7 +61,7 @@ Måltillägget har [konfigurerbara inställningar](https://developer.adobe.com/c
 | Klientkod | n/a | Ange automatiskt efter kanten med hjälp av IMS-organisationsinformationen |
 | Miljö-ID | Målmiljö-ID | Konfigurerad i datastream |
 | Ange Workspace-egenskap | Egenskapstoken | Konfigurerad i datastream |
-| Timeout | Kan inte konfigureras | Tidsgränsen för beslutandetillägget är 10 sekunder |
+| Timeout | Timeout | Kan konfigureras i beslutstillägget och i Optimera SDK. Standardtidsgränsen är 10 sekunder. |
 | Serverdomän | Edge Network | Ange i Adobe Experience Platform Edge Network-tillägget |
 
 Läs sedan om hur du [ersätter SDK](replace-sdk.md).
