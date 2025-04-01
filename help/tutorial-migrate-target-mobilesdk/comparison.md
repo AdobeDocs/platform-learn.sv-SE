@@ -2,9 +2,9 @@
 title: Jämförelse mellan måltillägget och beslutets förlängning
 description: Lär dig mer om skillnaderna mellan Target-tillägg till beslutstillägget, inklusive funktioner, funktioner, inställningar och dataflöde.
 exl-id: 6c854049-4126-45cf-8b2b-683cf29549f3
-source-git-commit: 314f0279ae445f970d78511d3e2907afb9307d67
+source-git-commit: 24effdb0905c6fd146a80031e0a39eed9672306d
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '791'
 ht-degree: 0%
 
 ---
@@ -57,7 +57,6 @@ När du har granskat informationen nedan och utvärderat din nuvarande implement
 | thirdPartyId (mbox3rdPartyId) | Stöds | Stöds via Identity Map och Target Third Party ID Namespace i datastream |
 | Meddelanden (visa, klicka) | Stöds | Stöds |
 | Svarstoken | Stöds | Stöds |
-| Analyser för mål (A4T) | Endast på klientsidan | Klientsida och serversida |
 | Förhandsvisning av mobiler (QA-läge) | Stöds | Begränsad support med Assurance |
 
 >[!IMPORTANT]

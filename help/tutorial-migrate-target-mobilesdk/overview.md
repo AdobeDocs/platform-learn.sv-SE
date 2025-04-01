@@ -1,30 +1,22 @@
 ---
-title: Migrera Adobe Target-implementeringen i din mobilapp till Adobe Journey Optimizer - Beslutstillägg
+title: Migrera din mobilapp från Adobe Target till Adobe Journey Optimizer - Beslutstillägg
 description: Lär dig hur du migrerar din mobilappsimplementering från Adobe Target till Adobe Journey Optimizer - Beslutstillägg
 last-substantial-update: 2023-02-23T00:00:00Z
 exl-id: 32363b95-b6ad-44af-a3b0-e1fbbbf5a8f1
-source-git-commit: d2da62ed2d36f73af1c8053be5af27feea32cb14
+source-git-commit: 24effdb0905c6fd146a80031e0a39eed9672306d
 workflow-type: tm+mt
-source-wordcount: '690'
+source-wordcount: '650'
 ht-degree: 0%
 
 ---
 
-# Migrera Adobe Target-implementeringen i din mobilapp till Adobe Journey Optimizer - Beslutstillägg
+# Migrera din mobilapp från Adobe Target till Adobe Journey Optimizer - Beslutstillägg
 
 Den här guiden är till för erfarna Adobe Target-implementerare som vill lära sig hur man migrerar befintliga Adobe Experience Platfrom Mobile SDK-implementeringar från Adobe Target-tillägget till Adobe Journey Optimizer - Beslutstillägg.
 
 Adobe Experience Platform Mobile SDK ger total interaktion i era mobilapplikationer. Target-tillägget bygger på Mobile SDK för att hjälpa er att personalisera appupplevelser med Adobe Target. Beslutstillägget är ett nyare tillvägagångssätt för att implementera Adobe Target i mobilappar som använder Adobe Experience Platform Edge Network-funktioner som hjälper till att integrera Target med plattformsbaserade appar som Real-Time CDP och Journey Optimizer.
 
 ![Bild som visar Mobile SDK som ansluter till Target via Edge Network med beslutstillägget](assets/datacollection.png)
-
->[!INFO]
->
->I Adobe Experience Platform Mobile SDK-ekosystemet implementeras tillägg av SDK:er som importeras till dina program och som kan ha olika namn:
->
-> * **Mål-SDK** implementerar **Adobe Target-tillägget**
-> * **Optimera SDK** implementerar tillägget **Adobe Journey Optimizer - Bestämning**
-
 
 ## Viktiga fördelar
 

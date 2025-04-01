@@ -1,5 +1,5 @@
 ---
-user-guide-title: Migrera från Adobe Target till Adobe Journey Optimizer - mobiltillägg för beslut
+user-guide-title: Migrera din mobilapp från Adobe Target till Adobe Journey Optimizer - Beslutstillägg
 user-guide-description: En praktisk självstudiekurs för Target-kunder som visar hur du kan migrera mobilimplementeringar av SDK från Target-tillägget till Optimie-tillägget
 solution: Target,Data Collection,Experience Platform
 feature-set: Target,Experience Platform
@@ -10,15 +10,15 @@ doc-type: tutorial
 recommendations: catalog,noDisplay
 jira: KT-17468
 hide: true
-source-git-commit: d2da62ed2d36f73af1c8053be5af27feea32cb14
+source-git-commit: 24effdb0905c6fd146a80031e0a39eed9672306d
 workflow-type: tm+mt
-source-wordcount: '72'
-ht-degree: 4%
+source-wordcount: '76'
+ht-degree: 3%
 
 ---
 
 
-# Migrera från Adobe Target till Adobe Journey Optimizer - mobiltillägg för beslut{#migrate-target-to-mobile-sdk-decisioning}
+# Migrera din mobilapp från Adobe Target till Adobe Journey Optimizer - Beslutstillägg{#migrate-target-to-mobile-sdk-decisioning}
 
 + [Introduktion till självstudier](overview.md)
 
