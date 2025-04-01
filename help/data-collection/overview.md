@@ -3,16 +3,16 @@ title: Självstudiekurser om datainsamling
 description: Instruktionsvideor och självstudiekurser som gör dig till en kraftfull användare av datainsamling
 mini-toc-levels: 0
 exl-id: 2d153ef8-7fba-40da-b34a-cad9b24c902c
-source-git-commit: d6471c8e383e22fed4ad5870952d0d0470f593db
+source-git-commit: b6b1416dfdd7077db20b7771d9bd36ca59b84ef6
 workflow-type: tm+mt
-source-wordcount: '234'
-ht-degree: 9%
+source-wordcount: '263'
+ht-degree: 8%
 
 ---
 
 # Självstudiekurser om datainsamling
 
-Datainsamling är nästa generation av webbplatstaggar och mobila SDK-hanteringsfunktioner från Adobe. Datainsamling ger kunderna ett enkelt sätt att driftsätta och hantera de analys-, marknadsförings- och annonslösningar som behövs för att skapa relevanta kundupplevelser. Använd dessa videor och självstudiekurser för att lära dig den här viktiga tekniken.
+Datainsamling är nästa generation av funktioner för webbplatstaggar och mobil SDK-hantering från Adobe. Datainsamling ger kunderna ett enkelt sätt att driftsätta och hantera de analys-, marknadsförings- och annonslösningar som behövs för att skapa relevanta kundupplevelser. Använd dessa videor och självstudiekurser för att lära dig den här viktiga tekniken.
 
 <div id="recs-overview-body-1"></div>
 <div id="recs-overview-body-2"></div>
@@ -28,11 +28,11 @@ Datainsamling är nästa generation av webbplatstaggar och mobila SDK-hanterings
 <table>
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html" target="_blank">
+    <a href="https://experienceleague.adobe.com/en/docs/platform-learn/migrate-target-to-websdk/introduction" target="_blank">
       <img alt="Migrera Target till Web SDK" src="assets/thumb_targetWebSdk.jpg" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/docs/platform-learn/migrate-target-to-websdk/introduction.html" target="_blank">
+      <a href="https://experienceleague.adobe.com/en/docs/platform-learn/migrate-target-to-websdk/introduction" target="_blank">
     <strong> Migrera Adobe Target till Web SDK </strong>
     </a>
     </div>
@@ -64,6 +64,25 @@ Datainsamling är nästa generation av webbplatstaggar och mobila SDK-hanterings
     <p>
   </td>
 </tr>
+<tr>
+  <td>
+    <a href="https://experienceleague.adobe.com/en/docs/platform-learn/migrate-target-to-mobile-sdk-decisioning/overview" target="_blank">
+      <img alt="Migrera Target till Mobile SDK på Edge Network" src="assets/thumb_targetMobileSdk.jpg" />
+    </a>
+    <div>
+      <a href="https://experienceleague.adobe.com/en/docs/platform-learn/migrate-target-to-mobile-sdk-decisioning/overview" target="_blank">
+    <strong>Migrera Adobe Target till Mobile SDK på Edge Network</strong>
+    </a>
+    </div>
+    <p>
+    <em>Ersätt måltillägget med Journey Optimizer - Beslutstillägg</em>
+    <p>
+  </td>
+  <td>
+  </td>
+  <td>
+  </td>
+  </tr>
 </table>
 
 ## Implementeringsguider

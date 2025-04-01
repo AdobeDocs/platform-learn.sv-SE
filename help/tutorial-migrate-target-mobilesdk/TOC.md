@@ -9,8 +9,7 @@ level: Intermediate,Experienced
 doc-type: tutorial
 recommendations: catalog,noDisplay
 jira: KT-17468
-hide: true
-source-git-commit: 24effdb0905c6fd146a80031e0a39eed9672306d
+source-git-commit: b6b1416dfdd7077db20b7771d9bd36ca59b84ef6
 workflow-type: tm+mt
 source-wordcount: '76'
 ht-degree: 3%
