@@ -8,9 +8,9 @@ feature: Profiles
 jira: KT-4348
 thumbnail: 4348-map-identities.jpg
 exl-id: e17ffabc-049c-42ff-bf0a-8cc31d665dfa
-source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
+source-git-commit: 73645b8b088cfdfe6f256c187b3c510dcc2386fc
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '892'
 ht-degree: 0%
 
 ---
@@ -57,16 +57,16 @@ I den här övningen skapar vi identitetsnamnutrymmen för Lumas anpassade ident
 Vi börjar med att skapa ett namnutrymme för Luma Loyalty Schema:
 
 1. Gå till **[!UICONTROL Identities]** i den vänstra navigeringen i användargränssnittet för plattformen
-1. Du kommer att märka att det finns flera färdiga ID-namnutrymmen. Markera knappen **[!UICONTROL Create identity namespace]**
-1. Ange följande information:
+1. Du kommer att märka att det finns flera färdiga identitetsnamnutrymmen tillgängliga. Välj knappen **[!UICONTROL Create identity namespace]**
+1. Ange information enligt följande
 
    | Fält | Värde |
    |---------------|-----------|
    | Visningsnamn | Lojalitets-ID för Luma |
-   | Identitetssymbol | lumaLoyaltyId |
-   | Typ | Flera enheter |
+   | Symbol för identitet | lumaLoyaltyId |
+   | Typ | Över flera enheter |
 
-1. Välj **[!UICONTROL Create]**
+1. Utvald **[!UICONTROL Create]**
 
    ![Skapa namnutrymmen](assets/identity-createNamespace.png)
 
@@ -148,20 +148,20 @@ Upprepa processen för ett annat schema:
 >
 >Data som samlas in med Web SDK är ett undantag från den vanliga metoden att etikettera identitetsfält i schemat. Web SDK använder identitetskartan för att etikettera identiteterna *på implementeringssidan*, och därför bestämmer vi identiteterna för `Luma Web Events Schema` när vi implementerar Web SDK på Luma-webbplatsen. I den senare lektionen samlar vi in Experience Cloud Visitor ID (ECID) som primärt id och crmId som ett sekundärt id.
 
-Med vårt urval av primära identiteter är det tydligt att se hur `Luma CRM Schema` kan ansluta till `Luma Offline Purchase Events Schema` eftersom båda använder `loyaltyId` som identifierare. Men hur kan vi koppla våra offlineköp till onlinebeteende? Hur kan vi klassificera de produkter som köpts med vår produktkatalog? Ytterligare identitetsfält och schemarelationer kommer att användas.
+Med vårt urval av primära identiteter är det tydligt att se hur `Luma Loyalty Schema` kan ansluta till `Luma Offline Purchase Events Schema` eftersom båda använder loyaltyId som identifierare. Men hur kan CRM ansluta till offlineköp? Hur kan vi koppla våra offlineköp till onlinebeteenden? Och hur kan vi klassificera de produkter som köpts med vår produktkatalog? Ytterligare identitetsfält och schemarelationer kommer att användas.
 
 <!--use a visual-->
 
 ### Etikettera XDM-fält för sekundär identitet
 
-Flera identitetsfält kan läggas till i ett schema. Icke-primära identiteter kallas ofta sekundära identiteter. Om du vill ansluta offlineköp till onlinebeteende lägger vi till crmId som en sekundär identifierare till `Luma Loyalty Schema` och senare i webbhändelsedata. Vi uppdaterar `Luma Loyalty Schema`:
+Flera identitetsfält kan läggas till i ett schema. Icke-primära identiteter kallas ofta för sekundära identiteter. För att koppla offlineköp till onlinebeteende kommer vi att lägga till crmId som en sekundär identifierare till vår `Luma Loyalty Schema` och senare i våra webbhändelsedata. Låt oss uppdatera:`Luma Loyalty Schema`
 
 1. Öppna `Luma Loyalty Schema`
 1. Välj `Luma Identity Profile Field group`
 1. Markera fältet `crmId`
 1. Markera rutan **[!UICONTROL Identity]**
-1. Välj namnområdet `Luma CRM Id` i listrutan **[!UICONTROL Identity namespaces]**
-1. Markera **[!UICONTROL Apply]** och välj sedan knappen **[!UICONTROL Save]** för att spara ändringarna
+1. Välj namnområdet i `Luma CRM Id` **[!UICONTROL Identity namespaces]** listrutan
+1. Välj **[!UICONTROL Apply]** och välj sedan knappen för **[!UICONTROL Save]** att spara ändringarna
 
    ![Sekundär identitet](assets/identity-loyalty-secondaryId.png)
 
@@ -175,8 +175,8 @@ Nu när vi har etiketterat våra identitetsfält kan vi slutföra konfiguratione
 1. Markera rutan **[!UICONTROL Relationship]**
 1. Välj `Luma Product Catalog Schema` som **[!UICONTROL Reference schema]**
 1. `Luma Product SKU` ska automatiskt fyllas i som **[!UICONTROL Reference Identity namespace]**
-1. Välj **[!UICONTROL Apply]**
-1. Välj **[!UICONTROL Save]**
+1. Utvald **[!UICONTROL Apply]**
+1. Utvald **[!UICONTROL Save]**
 
    ![Referensfält](assets/identity-offlinePurchase-relationship.png)
 
@@ -190,7 +190,7 @@ Observera att när du har definierat relationen anges den både i avsnittet **[!
 
 ## Ytterligare resurser
 
-* [Identitetstjänstens dokumentation](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html?lang=sv)
-* [Identitetstjänstens API](https://www.adobe.io/experience-platform-apis/references/identity-service/)
+* [Dokumentation för identitetstjänsten](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html?lang=sv)
+* [API för identitetstjänst](https://www.adobe.io/experience-platform-apis/references/identity-service/)
 
-Nu när våra identiteter är på plats kan vi [skapa våra datamängder](create-datasets.md)!
+Nu när våra identiteter är på plats kan [vi skapa våra datamängder](create-datasets.md)!
