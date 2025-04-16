@@ -1,20 +1,21 @@
 ---
-title: Automatisering med kopplingar
-description: Automatisering med kopplingar
+title: Automatisering med hjälp av anslutningsappar
+description: Automatisering med hjälp av anslutningsappar
 role: Developer
 level: Beginner
 jira: KT-5342
 doc-type: Tutorial
-source-git-commit: 6ef4ce94dbbcd65ab30bcfad24f4ddd746c26b82
+exl-id: 0b20ba91-28d4-4f4d-8abe-074f802c389e
+source-git-commit: 003c0ff26183acbafbe745276bde6f90d5adef34
 workflow-type: tm+mt
-source-wordcount: '1721'
+source-wordcount: '1722'
 ht-degree: 0%
 
 ---
 
-# 1.2.4 Automatisering med kontakter
+# 1.2.4 Automatisering med hjälp av kontaktdon
 
-Du kommer nu att börja använda de färdiga anslutningarna i Workfront Fusion för Photoshop och du kopplar ihop Firefly Text-2-Image-begäran och Photoshop-förfrågningarna till ett enda scenario.
+Nu ska du börja använda de färdiga kopplingarna i Workfront Fusion för Photoshop och du ska ansluta Firefly Text-2-Image-begäran och Photoshop-begäranden i ett scenario.
 
 ## 1.2.4.1 Duplicera och förbered ditt scenario
 
@@ -116,11 +117,11 @@ Välj **Använd PSD-redigeringar**.
 
 ![WF Fusion](./images/wffc17.png)
 
-Du borde se det här då. Klicka på **Lägg till** för att lägga till en ny anslutning till Adobe Photoshop.
+Du bör då se detta. Klicka på **Lägg till** för att lägga till en ny anslutning till Adobe Photoshop.
 
 ![WF Fusion](./images/wffc18.png)
 
-Konfigurera anslutningen enligt följande:
+Konfigurera anslutningen på följande sätt:
 
 - Anslutningstyp: välj **Adobe Photoshop (Server-till-server)**
 - Anslutningsnamn: ange `--aepUserLdap-- - Adobe IO`
@@ -131,7 +132,7 @@ Klicka på **Fortsätt**.
 
 ![WF Fusion](./images/wffc19.png)
 
-Om du vill hitta ditt **klient-ID** och **klienthemlighet** går du till [https://developer.adobe.com/console/home](https://developer.adobe.com/console/home){target="_blank"} och öppnar ditt Adobe I/O-projekt, som har namnet `--aepUserLdap-- One Adobe tutorial`. Gå till **OAuth Server-to-Server** för att hitta ditt klient-ID och din klienthemlighet. Kopiera dessa värden och klistra in dem i anslutningsinställningarna i Workfront Fusion.
+Om du vill hitta ditt klient-ID och din klienthemlighet **går du till [https://developer.adobe.com/console/home](https://developer.adobe.com/console/home){target="_blank"} och öppnar ditt Adobe I/O-projekt, som heter `--aepUserLdap-- One Adobe tutorial`.****** Gå till **OAuth Server-to-Server** för att hitta ditt klient-ID och din klienthemlighet. Kopiera dessa värden och klistra in dem i anslutningsinställningarna i Workfront Fusion.
 
 ![WF Fusion](./images/wffc20.png)
 
@@ -212,11 +213,11 @@ Du måste nu definiera platsen för **indatafilen**, som är utdata från föreg
 
 ![WF Fusion](./images/wffc37.png)
 
-För **indatafilen** väljer du **Azure** för **indatafilens lagringsutrymme** och ser till att du väljer utdata från den tidigare begäran, **Adobe Photoshop - Tillämpa PSD-redigeringar**, som du kan hämta här: `data[]._links.renditions[].href`
+För indatafilen **väljer du** Azure **för** lagring **av** indatafiler och ser till att välja utdata från den tidigare begäran, **Adobe Photoshop – Använd PSD-redigeringar**, som du kan hämta här:`data[]._links.renditions[].href`
 
 ![WF Fusion](./images/wffc37a.png)
 
-Öppna filen **citisign-fiber.psd**. I filen kommer du att märka att lagret som innehåller anropet till åtgärd har namnet **2048x2048-cta**.
+Öppna filen **citisignal-fiber.psd**. I filen ser du att lagret som innehåller uppmaningen till åtgärd heter **2048x2048-cta**.
 
 ![WF Fusion](./images/wffc38.png)
 
@@ -228,7 +229,7 @@ Bläddra nedåt tills du ser **Text** > **Innehåll**. Välj variabeln **cta** f
 
 ![WF Fusion](./images/wffc40.png)
 
-Bläddra nedåt tills du ser **Utdata**. För **Lagring** väljer du **Azure**. Ange platsen nedan för **filplatsen**. Observera att variabeln `{{timestamp}}` har lagts till i filnamnet, som används för att säkerställa att alla filer som genereras har ett unikt namn. Ange även **Type** som **vnd.adobe.photoshop**. Klicka på **OK**.
+Bläddra nedåt tills du ser **Utdata**. För **Lagring** väljer du **Azure**. För **Filplats** anger du platsen nedan. Observera att variabeln `{{timestamp}}` har lagts till i filnamnet, som används för att säkerställa att alla filer som genereras har ett unikt namn. Ange även **Type** som **vnd.adobe.photoshop**. Klicka på **OK**.
 
 `{{1.AZURE_STORAGE_URL}}/{{1.AZURE_STORAGE_CONTAINER}}/citisignal-fiber-changed-text-{{timestamp}}.psd{{1.AZURE_STORAGE_SAS_WRITE}}`
 
@@ -320,11 +321,11 @@ Gå tillbaka till Postman och klicka på **Skicka**. Uppmaningen som används h�
 
 ![WF Fusion](./images/wffc56.png)
 
-Scenariot aktiveras sedan och efter en stund visas ett svar i Postman som innehåller URL:en för den nyligen skapade PSD-filen.
+Scenariot aktiveras sedan och efter en stund visas ett svar i Postman som innehåller URL:en till den nyskapade PSD-filen.
 
 ![WF Fusion](./images/wffc58.png)
 
-Som en påminnelse: när scenariot har körts i Workfront Fusion kan du visa information om varje nod genom att klicka på bubblan ovanför varje nod.
+Vi vill påminna dig om att när scenariot har körts i Workfront Fusion kan du se information om varje nod genom att klicka på bubblan ovanför varje nod.
 
 ![WF Fusion](./images/wffc59.png)
 
@@ -336,7 +337,7 @@ Filen bör sedan se ut så här, med bakgrunden som ersätts av en bakgrund med 
 
 ![WF Fusion](./images/wffc61.png)
 
-Om du kör ditt scenario en gång till och sedan skickar en ny begäran från Postman via en annan uppmaning, kommer du att se hur enkelt och återanvändbart ditt scenario har blivit. I det här exemplet används den nya uppmaningen **solöde**.
+Om du kör ditt scenario en gång till och sedan skickar en ny begäran från Postman via en annan uppmaning, kommer du att se hur enkelt och återanvändbart ditt scenario har blivit. I det här exemplet är **den nya prompten som används solig öken**.
 
 ![WF Fusion](./images/wffc62.png)
 
@@ -346,8 +347,8 @@ Några minuter senare har en ny PSD-fil skapats med en ny bakgrund.
 
 ## Nästa steg
 
-Gå till [Sammanfattning och fördelar med Firefly Services Automation](./summary.md){target="_blank"}
+Gå till [1.2.5 Frame.io och Workfront Fusion](./ex5.md){target="_blank"}
 
-Gå tillbaka till [Automatisera Adobe Firefly-tjänster](./automation.md){target="_blank"}
+Gå tillbaka till [Creative Workflow Automation med Workfront Fusion](./automation.md){target="_blank"}
 
 Gå tillbaka till [Alla moduler](./../../../overview.md){target="_blank"}

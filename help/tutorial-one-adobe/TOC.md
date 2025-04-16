@@ -4,9 +4,9 @@ breadcrumb-title: Omfattande teknisk självstudiekurs för Adobe-program, från 
 hide: true
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-source-git-commit: b0d81ccd3c3bf1ef2a836a3565069dd024bd90a6
+source-git-commit: e6aca1f991d90beec146990ffe518a1cec333759
 workflow-type: tm+mt
-source-wordcount: '1113'
+source-wordcount: '1146'
 ht-degree: 2%
 
 ---
@@ -34,7 +34,7 @@ ht-degree: 2%
 
 + Arbetsflöde och planering {#planning}
 
-+ Skapande och produktion {#production}
++ Skapa och producera {#production}
    + 1.1 Översikt över Adobe Firefly Services {#crpr1}
       + [Översikt](/help/tutorial-one-adobe/modules/creation-production/module1.1/firefly-services.md)
       + [1.1.1 Komma igång med Firefly Services](/help/tutorial-one-adobe/modules/creation-production/module1.1/ex1.md)
@@ -42,14 +42,20 @@ ht-degree: 2%
       + [1.1.3 Arbeta med Photoshop API:er](/help/tutorial-one-adobe/modules/creation-production/module1.1/ex3.md)
       + [1.1.4 API för anpassade Firefly-modeller](/help/tutorial-one-adobe/modules/creation-production/module1.1/ex4.md)
       + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/creation-production/module1.1/summary.md)
-   + 1.2 Automatisering av Creative Workflow med Workfront Fusion {#crpr2}
+   + 1.2 Creative Workflow Automation med Workfront Fusion {#crpr2}
       + [Översikt](/help/tutorial-one-adobe/modules/creation-production/module1.2/automation.md)
       + [1.2.1 Komma igång med Workfront Fusion](/help/tutorial-one-adobe/modules/creation-production/module1.2/ex1.md)
       + [1.2.2 Använda Adobe API:er i Workfront Fusion](/help/tutorial-one-adobe/modules/creation-production/module1.2/ex2.md)
       + [1.2.3 Processautomatisering med Workfront Fusion](/help/tutorial-one-adobe/modules/creation-production/module1.2/ex3.md)
       + [1.2.4 Automatisering med kontakter](/help/tutorial-one-adobe/modules/creation-production/module1.2/ex4.md)
-      + [1.2.5 Bildruta I/O och Workfront Fusion](/help/tutorial-one-adobe/modules/creation-production/module1.2/ex5.md)
+      + [1.2.5 Frame.io och Workfront Fusion](/help/tutorial-one-adobe/modules/creation-production/module1.2/ex5.md)
+      + [1.2.6 Frame.io till Workfront Fusion to AEM Assets](/help/tutorial-one-adobe/modules/creation-production/module1.2/ex6.md)
       + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/creation-production/module1.2/summary.md)
+   + 1.3 Adobe Express och Adobe Experience Cloud {#crpr3}
+      + [Översikt](/help/tutorial-one-adobe/modules/creation-production/module1.3/express.md)
+      + [1.3.1 Komma igång med Adobe Express](/help/tutorial-one-adobe/modules/creation-production/module1.3/ex1.md)
+      + [1.3.2 Animering och video i Adobe Express](/help/tutorial-one-adobe/modules/creation-production/module1.3/ex2.md)
+      + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/creation-production/module1.3/summary.md)
 
 + Resurshantering {#assetmgmt}
    + 1.1 Adobe Experience Manager Cloud Service {#assetm1}
@@ -88,7 +94,7 @@ ht-degree: 2%
          + [1.2.4 Datainmatning från offlinekällor](/help/tutorial-one-adobe/modules/delivery-activation/datacollection/dc1.2/ex4.md)
          + [1.2.5 Data Landing Zone](/help/tutorial-one-adobe/modules/delivery-activation/datacollection/dc1.2/ex5.md)
          + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/delivery-activation/datacollection/dc1.2/summary.md)
-      + 1.3 Sammansättning av federerad publik {#dc13}
+      + 1.3 Sammansatt målgrupp {#dc13}
          + [Översikt](/help/tutorial-one-adobe/modules/delivery-activation/datacollection/dc1.3/fac.md)
          + [1.3.1 Konfigurera Snowflake-miljön](/help/tutorial-one-adobe/modules/delivery-activation/datacollection/dc1.3/ex1.md)
          + [1.3.2 Skapa scheman, datamodell och länkar](/help/tutorial-one-adobe/modules/delivery-activation/datacollection/dc1.3/ex2.md)
@@ -136,7 +142,7 @@ ht-degree: 2%
          + [2.5.4 Vidarebefordra händelser till GCP Pub/Sub](/help/tutorial-one-adobe/modules/delivery-activation/rtcdp-b2c/rtcdpb2c-5/ex4.md)
          + [2.5.5 Vidarebefordra event till AWS Kinesis &amp; AWS S3](/help/tutorial-one-adobe/modules/delivery-activation/rtcdp-b2c/rtcdpb2c-5/ex5.md)
          + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/delivery-activation/rtcdp-b2c/rtcdpb2c-5/summary.md)
-      + 2.6 Direktuppspela data från Apache Kafka till Real-Time CDP {#rtcdp26}
+      + 2.6 Strömma data från Apache Kafka till Real-Time CDP {#rtcdp26}
          + [Översikt](/help/tutorial-one-adobe/modules/delivery-activation/rtcdp-b2c/rtcdpb2c-6/aep-apache-kafka.md)
          + [2.6.1 Introduktion till Apache Kafka](/help/tutorial-one-adobe/modules/delivery-activation/rtcdp-b2c/rtcdpb2c-6/ex1.md)
          + [2.6.2 Installera och konfigurera Kafka-klustret](/help/tutorial-one-adobe/modules/delivery-activation/rtcdp-b2c/rtcdpb2c-6/ex2.md)
@@ -183,8 +189,8 @@ ht-degree: 2%
          + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-5/summary.md)
 
 + Rapportering och insikter {#reporting}
-   + Customer Journey Analytics {#cjab2c}
-      + 1.1 Customer Journey Analytics: Skapa en instrumentpanel med Analysis Workspace {#cja1}
+   + Customer Journey Analytics  {#cjab2c}
+      + 1.1 Customer Journey Analytics: Bygg en kontrollpanel med Analysis Workspace {#cja1}
          + [Översikt](/help/tutorial-one-adobe/modules/reporting-insights/cja-b2c/cjab2c-1/customer-journey-analytics-build-a-dashboard.md)
          + [1.1.1 Customer Journey Analytics 101](/help/tutorial-one-adobe/modules/reporting-insights/cja-b2c/cjab2c-1/ex1.md)
          + [1.1.2 Ansluta Adobe Experience Platform-datauppsättningar i Customer Journey Analytics](/help/tutorial-one-adobe/modules/reporting-insights/cja-b2c/cjab2c-1/ex2.md)
@@ -201,7 +207,7 @@ ht-degree: 2%
          + [1.2.5 Analysera Google Analytics-data med Customer Journey Analytics](/help/tutorial-one-adobe/modules/reporting-insights/cja-b2c/cjab2c-2/ex5.md)
          + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/reporting-insights/cja-b2c/cjab2c-2/summary.md)
    + Data Distiller {#datadistiller}
-      + 2.1-frågetjänst {#dd1}
+      + 2.1 Frågetjänst {#dd1}
          + [Översikt](/help/tutorial-one-adobe/modules/reporting-insights/datadistiller/dd-1/query-service.md)
          + [2.1.1 Krav](/help/tutorial-one-adobe/modules/reporting-insights/datadistiller/dd-1/ex1.md)
          + [2.1.2 Komma igång](/help/tutorial-one-adobe/modules/reporting-insights/datadistiller/dd-1/ex2.md)

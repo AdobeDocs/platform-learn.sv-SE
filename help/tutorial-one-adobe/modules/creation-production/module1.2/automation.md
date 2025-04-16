@@ -1,14 +1,14 @@
 ---
-title: Automatisering av arbetsflöden med Workfront Fusion
+title: Creative Workflow Automation med Workfront Fusion
 description: Lär dig automatisera kreativa arbetsflöden med Workfront Fusion
 role: Developer
 level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 05cd8991-f77b-43c9-af1d-fcdc1f0fab4d
-source-git-commit: b0d81ccd3c3bf1ef2a836a3565069dd024bd90a6
+source-git-commit: e6aca1f991d90beec146990ffe518a1cec333759
 workflow-type: tm+mt
-source-wordcount: '197'
+source-wordcount: '234'
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Utforska Workfront Fusion i kombination med Firefly Services och få en förstå
 
 [1.2.2 Använd Adobe API:er i Workfront Fusion](./ex2.md){target="_blank"}
 
-I den här övningen får du lära dig hur du konfigurerar och använder API:er för Firefly Services och Photoshop i Workfront Fusion, samtidigt som du utforskar funktionerna i Workfront Fusion.
+I den här övningen får du lära dig hur du konfigurerar och använder Firefly Services API:er och Photoshop API:er i Workfront Fusion, samtidigt som du utforskar Workfront Fusions funktioner.
 
 [1.2.3 Processautomatisering med Workfront Fusion](./ex3.md){target="_blank"}
 
@@ -39,9 +39,13 @@ I den här övningen kan du fortsätta att förfina din resa för att automatise
 
 I den här övningen kan du fortsätta att förfina din resa för att automatisera processen för att skapa bilder.
 
-[1.2.5 Bildruta-I/O och Workfront Fusion](./ex5.md){target="_blank"}
+[1.2.5 Frame.io och Workfront Fusion](./ex5.md){target="_blank"}
 
-I den här övningen ansluter du bildruta-I/O till ditt Workfront Fusion-scenario.
+I den här övningen ska du ansluta Frame.io till ditt Workfront Fusion-scenario.
+
+[1.2.6 Frame.io till Workfront Fusion till AEM Assets](./ex6.md){target="_blank"}
+
+I den här övningen ska du förfina konfigurationen ytterligare, så att den godkända resursen i Frame.io använder ett Workfront Fusion-scenario för att sedan exportera en PNG-återgivning av resursen till AEM Assets.
 
 [Sammanfattning och förmåner](./summary.md){target="_blank"}
 
