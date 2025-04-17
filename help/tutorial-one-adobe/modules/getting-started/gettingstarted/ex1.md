@@ -4,7 +4,7 @@ description: Komma igång - Installera Chrome-tillägget för Experience League-
 kt: 5342
 doc-type: tutorial
 exl-id: 3618dacb-2203-4d19-ae51-f78415a693fd
-source-git-commit: ef26abbeb0c1076adbada57f0f18f11c7634d022
+source-git-commit: 30f8ceface0b8c696da45699e2e32412413a2c96
 workflow-type: tm+mt
 source-wordcount: '913'
 ht-degree: 0%
@@ -23,9 +23,9 @@ Ett exempel på sådana värden finns nedan. Dessa värden kan för närvarande 
 | Namn | Nyckel | Exempel |
 |:-------------:| :---------------:| :---------------:|
 | AEP IMS-organisations-ID | `--aepImsOrgId--` | `907075E95BF479EC0A495C73@AdobeOrg` |
-| AEP IMS-organisationsnamn | `--aepImsOrgName--` | `Experience Platform International` |
-| Klient-ID för AEP | `--aepTenantId--` | `_experienceplatform` |
-| Namn på AEP-sandlåda | `--aepSandboxName--` | `one-adobe` |
+| Organisationsnamn för AEP IMS | `--aepImsOrgName--` | `Experience Platform International` |
+| AEP Klient-ID | `--aepTenantId--` | `_experienceplatform` |
+| Namn på AEP Sandbox | `--aepSandboxName--` | `one-adobe` |
 | LDAP för lärarprofil | `--aepUserLdap--` | `vangeluw` |
 
 I skärmbilden nedan visas till exempel en referens till `aepSandboxName`.
@@ -94,23 +94,23 @@ Du kan också hitta den genom att gå till **Datahantering > Frågor** på AEP-m
 
 Se till att kopiera och klistra in delen **@AdobeOrg** tillsammans med ID:t.
 
-**AEP-klient-ID**
+**AEP Klient-ID**
 
-Klient-ID är den unika identifieraren för organisationens AEP-instans. När du loggar in på din Adobe Experience Platform-instans på [https://platform.adobe.com/](https://platform.adobe.com/) hittar du klient-ID:t i URL:en.
+Ditt klient-ID är den unika identifieraren för din organisations AEP-instans. När du loggar in på din Adobe Experience Platform-instans på [https://platform.adobe.com/](https://platform.adobe.com/) hittar du klient-ID:t i URL:en.
 
 ![DSN](./images/aeptenantid.png)
 
 När du anger det i Chrome-tillägget bör du se till att ett understreck läggs till som ett prefix, så i det här exemplet blir **ExperiencePlatform** **_experienceplatform**.
 
-**Namn på AEP-sandlåda**
+**AEP Sandbox-namn**
 
-Ditt sandlådenamn är namnet på miljön som du kommer att använda i din AEP-instans. När du loggar in på din Adobe Experience Platform-instans på [https://platform.adobe.com/](https://platform.adobe.com/) hittar du klient-ID:t i URL:en.
+Ditt sandlådenamn är namnet på den miljö du kommer att använda i din AEP-instans. När du loggar in på din Adobe Experience Platform-instans på [https://platform.adobe.com/](https://platform.adobe.com/) hittar du klient-ID:t i URL:en.
 
 Innan du tar sandlådans namn från URL:en bör du kontrollera att du är i sandlådan som du bör använda för den här självstudiekursen. Du kan växla till den högra sandlådan genom att klicka på sandlådeväxlarmenyn i skärmens övre högra hörn.
 
 ![DSN](./images/aepsandboxsw.png)
 
-I det här exemplet är AEP-sandlådans namn **en-adobe**.
+I det här exemplet är AEP Sandbox-namnet **en-adobe**.
 
 ![DSN](./images/aepsname.png)
 
@@ -135,11 +135,11 @@ När du har aktiverat konfigurationen visas en grön punkt bredvid initialerna f
 
 ## Verifiera självstudiekursens innehåll
 
-Gå till [den här sidan](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-one-adobe/uce/module31/ex2) som ett test.
+Gå till [den här sidan](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-one-adobe/activation/dc/dc13/ex2) som ett test.
 
 Du bör nu se att alla **miljövariabler** på den här sidan har ersatts med sina verkliga värden, baserat på den aktiverade miljön i Chrome-tillägget.
 
-Du bör nu ha en liknande vy som i nedanstående exempel, där miljövariabeln `aepSandboxName` har ersatts av ditt riktiga AEP-sandlådenamn, som i det här fallet är **one-adobe**.
+Du bör nu ha en liknande vy som i nedanstående exempel, där miljövariabeln `aepSandboxName` har ersatts av ditt riktiga AEP Sandbox-namn, som i det här fallet är **one-adobe**.
 
 ![DSN](./images/mod7.png)
 

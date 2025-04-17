@@ -1,14 +1,14 @@
 ---
-title: Bildruta I/O och Workfront Fusion
-description: Bildruta I/O och Workfront Fusion
+title: Bildruta I/O till Workfront Fusion till AEM Assets
+description: Bildruta I/O till Workfront Fusion till AEM Assets
 role: Developer
 level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: f02ecbe4-f1d7-4907-9bbc-04e037546091
-source-git-commit: d47b6da364fc6ffdb0c541197edc8a9d2fd34e42
+source-git-commit: 297fba1810934e6ce4d9b8dfaea0e1250e761ab5
 workflow-type: tm+mt
-source-wordcount: '1872'
+source-wordcount: '1878'
 ht-degree: 0%
 
 ---
