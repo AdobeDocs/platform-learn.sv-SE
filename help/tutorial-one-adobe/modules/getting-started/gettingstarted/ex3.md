@@ -4,7 +4,7 @@ description: Komma igång - Skapa ditt dataflöde
 kt: 5342
 doc-type: tutorial
 exl-id: d36057b4-64c6-4389-9612-d3c9cf013117
-source-git-commit: ef26abbeb0c1076adbada57f0f18f11c7634d022
+source-git-commit: 49b8be964fe4e92e2c2c437a797ded30af0bc261
 workflow-type: tm+mt
 source-wordcount: '809'
 ht-degree: 0%
@@ -149,7 +149,7 @@ Klicka på tillägget **Adobe Experience Platform Edge Network** och sedan på *
 
 ![Namnge Edge-konfigurationen och spara](./images/edgeconfig12m.png)
 
-Då ser du det här. Nu måste du välja rätt sandlåda och datastream som du precis konfigurerade. Sandlådan som ska användas är `--aepSandboxName--` och datastream kallas `--aepUserLdap-- - Demo System Datastream (Mobile)`.
+Då ser du det här. Nu måste du välja rätt sandlåda och datastream som du precis konfigurerade. Sandlådan som ska användas är `--aepSandboxName--` och datastream kallas `--aepUserLdap-- - One Adobe Datastream (Mobile)`.
 
 Använd standarddomänen för **Edge Network**.
 
