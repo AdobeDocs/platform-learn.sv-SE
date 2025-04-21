@@ -1,12 +1,12 @@
 ---
 title: Komma igång med Workfront Fusion
-description: Lär dig hur du använder Workfront Fusion och Adobe I/O för att fråga Adobe Firefly Services API:er
+description: Lär dig hur du använder Workfront Fusion och Adobe I/O för att hämta Adobe Firefly Services API:er
 role: Developer
 level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 42e260e0-8af0-4d71-b634-48c1966bd912
-source-git-commit: 603e48e0453911177823fe7ceb340f8ca801c5e1
+source-git-commit: 3542de25dab9ca0d94928f526060d2fead2e2f34
 workflow-type: tm+mt
 source-wordcount: '705'
 ht-degree: 0%
@@ -15,15 +15,15 @@ ht-degree: 0%
 
 # 1.2.1 Komma igång med Workfront Fusion
 
-Lär dig hur du använder Workfront Fusion och Adobe I/O för att fråga Adobe Firefly Services API:er.
+Lär dig hur du använder Workfront Fusion och Adobe I/O för att hämta Adobe Firefly Services API:er.
 
 ## 1.2.1.1 Skapa nytt scenario
 
-Gå till [https://experience.adobe.com/](https://experience.adobe.com/). Öppna **Workfront Fusion**.
+Gå till [https://experience.adobe.com/](https://experience.adobe.com/){target="_blank"}. Öppna **Workfront Fusion**.
 
 ![WF Fusion](./images/wffusion1.png)
 
-Gå till **Scenarier**.
+Gå till **scenarier**.
 
 ![WF Fusion](./images/wffusion2.png)
 
@@ -35,15 +35,15 @@ Namnge mappen `--aepUserLdap--` och välj **Spara**.
 
 ![WF Fusion](./images/wffusion2b.png)
 
-Välj din mapp och välj **sedan Skapa nytt scenario**.
+Markera mappen och välj sedan **Skapa nytt scenario**.
 
 ![WF Fusion](./images/wffusion3.png)
 
-Ett tomt scenario visas, välj **verktyg och välj** Ange flera variabler ****.
+Ett tomt scenario visas. Välj **verktyg** och välj **Ange flera variabler**.
 
 ![WF Fusion](./images/wffusion4.png)
 
-**Flytta klockikonen** till den nyligen tillagda **uppsättningen** av flera variabler.
+Flytta ikonen **klocka** till **Ange flera variabler**.
 
 ![WF Fusion](./images/wffusion5.png)
 
@@ -67,23 +67,23 @@ Följande variabler måste definieras:
 
 | Nyckel | Värde |
 |:-------------:| :---------------:| 
-| `CONST_client_id` | ditt klient-ID för Adobe I/O-projektet |
-| `CONST_client_secret` | din Adobe I/O-projektklienthemlighet |
-| `CONST_scope` | ditt Adobe I/O-projekt Omfattning |
+| `CONST_client_id` | ditt Adobe I/O-projekt klient-ID |
+| `CONST_client_secret` | ditt Adobe I/O-projekt Client Secret |
+| `CONST_scope` | ditt Adobe I/O-projekts omfång |
 
-Hitta dessa variabler genom att gå till [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects) och öppna ditt Adobe I/O-projekt, som heter `--aepUserLdap-- One Adobe tutorial`.
+Du hittar dessa variabler genom att gå till [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects){target="_blank"} och öppna ditt Adobe I/O-projekt, som har namnet `--aepUserLdap-- One Adobe tutorial`.
 
 ![WF Fusion](./images/wffusion9.png)
 
-I projektet väljer du **OAuth Serverto-Server** för att se värdena för ovanstående nycklar.
+I ditt projekt väljer du **OAuth Server-Server** för att se värdena för tangenterna ovan.
 
 ![WF Fusion](./images/wffusion10.png)
 
-Med hjälp av ovanstående nycklar och värden kan du konfigurera **objektet Ange flera variabler** . Välj **Lägg till objekt**.
+Med tangenterna och värdena ovan kan du konfigurera objektet **Set multiple variables** . Välj **Lägg till objekt**.
 
 ![WF Fusion](./images/wffusion11.png)
 
-**Ange variabelnamnet**: **CONST_client_id** och dess **variabelvärde** väljer du **Lägg till**.
+Ange **variabelnamnet**: **CONST_client_id** och dess **variabelvärde**, välj **Lägg till**.
 
 ![WF Fusion](./images/wffusion12.png)
 
@@ -91,7 +91,7 @@ Välj **Lägg till objekt**.
 
 ![WF Fusion](./images/wffusion13.png)
 
-Ange Variabelnamn **:** CONST_client_secret **och dess** variabelvärde **väljer du** Lägg till **.**
+Ange **Variabelnamn**: **CONST_client_secrets** och dess **variabelvärde**, välj **Lägg till**.
 
 ![WF Fusion](./images/wffusion14.png)
 
@@ -99,27 +99,27 @@ Välj **Lägg till objekt**.
 
 ![WF Fusion](./images/wffusion15.png)
 
-Ange Variabelnamn **:** CONST_scope **och dess** variabelvärde **väljer du** Lägg till **.**
+Ange **Variabelnamn**: **CONST_scope** och dess **Variabelvärde**, välj **Lägg till**.
 
 ![WF Fusion](./images/wffusion16.png)
 
-Välj **OK.**
+Välj **OK**.
 
 ![WF Fusion](./images/wffusion17.png)
 
-Håll muspekaren över **Ange flera variabler** och välj den stora **+** -ikonen för att lägga till ytterligare en modul.
+Håll pekaren över **Ange flera variabler** och välj den stora ikonen **+** om du vill lägga till ytterligare en modul.
 
 ![WF Fusion](./images/wffusion18.png)
 
-Din skärm ska se ut så här.
+Skärmen bör se ut så här.
 
 ![WF Fusion](./images/wffusion19.png)
 
-I sökfältet anger du **http**. Välj **HTTP** för att öppna den.
+Ange **http** i sökfältet. Välj **HTTP** för att öppna den.
 
 ![WF Fusion](./images/wffusion21.png)
 
-Välj **Gör en begäran**.
+Välj **Gör en förfrågan**.
 
 ![WF Fusion](./images/wffusion20.png)
 
@@ -158,11 +158,11 @@ Konfiguration för `grant_type`.
 
 ![WF Fusion](./images/wffusion28.png)
 
-Rulla ned och markera kryssrutan för **Parsa svar**. Välj **OK**.
+Rulla ned och markera rutan för **Analysera svar**. Välj **OK**.
 
 ![WF Fusion](./images/wffusion27.png)
 
-Skärmen bör se ut så här. Välj Kör **en gång**.
+Skärmen bör se ut så här. Välj **Kör en gång**.
 
 ![WF Fusion](./images/wffusion29.png)
 
@@ -178,11 +178,11 @@ Välj ikonen **frågetecken** på **HTTP - Gör en begäran** om du vill se vad 
 
 ![WF Fusion](./images/wffusion32.png)
 
-Hovra över **HTTP – Gör en begäran** och välj ikonen **+** för att lägga till en annan modul.
+Hovra över **HTTP - Gör en förfrågan** och välj ikonen **+** för att lägga till en till modul.
 
 ![WF Fusion](./images/wffusion33.png)
 
-I sökfältet söker du efter `tools`. Välj **Verktyg**.
+Sök efter `tools` i sökfältet. Välj **Verktyg**.
 
 ![WF Fusion](./images/wffusion34.png)
 
@@ -194,7 +194,7 @@ Välj **Lägg till objekt**.
 
 ![WF Fusion](./images/wffusion36.png)
 
-Ställ in **Variabelnamn** på `bearer_token`. Välj `access_token` som dynamiskt **variabelvärde**. Välj **Lägg till**.
+Ange **Variabelnamn** till `bearer_token`. Välj `access_token` som dynamiskt **variabelvärde**. Välj **Lägg till**.
 
 ![WF Fusion](./images/wffusion37.png)
 
@@ -214,15 +214,15 @@ Högerklicka sedan på det första objektet **Ange flera värden** och välj **B
 
 ![WF Fusion](./images/wffusion41.png)
 
-Ange namnet till **Initiera konstanter**. Välj **OK.**
+Ange namnet **Initiera konstanter**. Välj **OK**.
 
 ![WF Fusion](./images/wffusion42.png)
 
-Byt namn på det andra objektet för att **autentisera till Adobe I/O**. Välj **OK.**
+Byt namn på det andra objektet till **Autentisera till Adobe I/O**. Välj **OK**.
 
 ![WF Fusion](./images/wffusion43.png)
 
-Byt namn på det tredje objektet till **Ange ägartoken**. Välj **OK.**
+Byt namn på det tredje objektet till **Ange Bearer-token**. Välj **OK**.
 
 ![WF Fusion](./images/wffusion44.png)
 
@@ -240,7 +240,7 @@ Välj **Spara**.
 
 ## Nästa steg
 
-Gå till [Använda Adobe API:er i Workfront Fusion](./ex2.md){target="_blank"}
+Gå till [Använd Adobe API:er i Workfront Fusion](./ex2.md){target="_blank"}
 
 Gå tillbaka till [Creative Workflow Automation med Workfront Fusion](./automation.md){target="_blank"}
 

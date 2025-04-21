@@ -6,7 +6,7 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 37de6ceb-833e-4e75-9201-88bddd38a817
-source-git-commit: d47b6da364fc6ffdb0c541197edc8a9d2fd34e42
+source-git-commit: 7df1daa33a67f177ba07f3ca4add08ebc317973c
 workflow-type: tm+mt
 source-wordcount: '2674'
 ht-degree: 0%
@@ -23,7 +23,7 @@ I den föregående övningen konfigurerade du scenariot `--aepUserLdap-- - Firef
 
 ## 1.2.5.1 använder Frame.io
 
-Gå till [https://app.frame.io/projects](https://app.frame.io/projects).
+Gå till [https://app.frame.io/projects](https://app.frame.io/projects){target="_blank"}.
 
 Klicka på ikonen **+** för att skapa ett eget projekt i Frame.io.
 
@@ -42,7 +42,7 @@ I en av de tidigare övningarna laddade du ned [citisign-fiber.psd](./../../../a
 
 I den föregående övningen skapade du scenariot `--aepUserLdap-- - Firefly + Photoshop`, som började med en anpassad webkrok och som slutade med ett webkrossvar. Användningen av webbhookar testades sedan med Postman, men självklart ska poängen med ett sådant scenario anropas av ett externt program. Som tidigare nämnts är Frame.io den övningen, men mellan Frame.io och `--aepUserLdap-- - Firefly + Photoshop` behövs ett annat Workfront Fusion-scenario. du kommer nu att konfigurera det scenariot.
 
-Gå till [https://experience.adobe.com/](https://experience.adobe.com/). Öppna **Workfront Fusion**.
+Gå till [https://experience.adobe.com/](https://experience.adobe.com/){target="_blank"}. Öppna **Workfront Fusion**.
 
 ![WF Fusion](./images/wffusion1.png)
 
@@ -74,7 +74,7 @@ Du borde se det här då. Lämna den här skärmen öppen och orörd så som du 
 
 ![Bildruta-I/O](./images/frame10.png)
 
-Gå till [https://developer.frame.io/](https://developer.frame.io/). Klicka på **UTVECKLINGSVERKTYG** och välj sedan **Anpassade åtgärder**.
+Gå till [https://developer.frame.io/](https://developer.frame.io/){target="_blank"}. Klicka på **UTVECKLINGSVERKTYG** och välj sedan **Anpassade åtgärder**.
 
 ![Bildruta-I/O](./images/frame11.png)
 
@@ -98,7 +98,7 @@ Du borde se det här då.
 
 ![Bildruta-I/O](./images/frame14.png)
 
-Gå tillbaka till [https://app.frame.io/projects](https://app.frame.io/projects). Uppdatera sidan.
+Gå tillbaka till [https://app.frame.io/projects](https://app.frame.io/projects){target="_blank"}. Uppdatera sidan.
 
 ![Bildruta-I/O](./images/frame16.png)
 
@@ -298,7 +298,7 @@ Välj **API-nyckeln Frame.io** och ange namnet `--aepUserLdap-- - Frame.io Token
 
 ![Bildruta-I/O](./images/frame49.png)
 
-Gå till [https://developer.frame.io/](https://developer.frame.io/) om du vill hämta en API-token. Klicka på **UTVECKLINGSVERKTYG** och välj sedan **Token**.
+Gå till [https://developer.frame.io/](https://developer.frame.io/){target="_blank"} om du vill hämta en API-token. Klicka på **UTVECKLINGSVERKTYG** och välj sedan **Token**.
 
 ![Bildruta-I/O](./images/frame50.png)
 

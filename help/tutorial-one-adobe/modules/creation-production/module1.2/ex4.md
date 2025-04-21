@@ -6,7 +6,7 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 0b20ba91-28d4-4f4d-8abe-074f802c389e
-source-git-commit: 156725fe0f89d97f109de1518f7fa79ffd7cea41
+source-git-commit: 7df1daa33a67f177ba07f3ca4add08ebc317973c
 workflow-type: tm+mt
 source-wordcount: '2050'
 ht-degree: 0%
@@ -19,7 +19,7 @@ Du kommer nu att börja använda de färdiga anslutningarna i Workfront Fusion f
 
 ## 1.2.4.1 Duplicera och förbered ditt scenario
 
-Gå till **Scenarier** på den vänstra menyn och markera mappen `--aepUserLdap--`. Du bör sedan se scenariot som du skapade tidigare, med namnet `--aepUSerLdap-- - Adobe I/O Authentication`.
+Gå till **Scenarier** på den vänstra menyn och markera mappen `--aepUserLdap--`. Du bör sedan se scenariot som du skapade tidigare, med namnet `--aepUserLdap-- - Adobe I/O Authentication`.
 
 ![WF Fusion](./images/wffc1.png)
 
@@ -113,7 +113,7 @@ Fyll i följande fält:
 - **Klient-ID**: kopiera **klient-ID** från ditt Adobe I/O-projekt med namnet `--aepUserLdap-- - One Adobe tutorial`.
 - **Klienthemlighet**: kopiera **Klienthemlighet** från ditt Adobe I/O-projekt med namnet `--aepUserLdap-- - One Adobe tutorial`.
 
-Du hittar **klient-ID** och **Klienthemlighet** för ditt Adobe I/O-projekt [här](https://developer.adobe.com/console/projects.).
+Du hittar **klient-ID** och **Klienthemlighet** för ditt Adobe I/O-projekt [här](https://developer.adobe.com/console/projects.){target="_blank"}.
 
 ![WF Fusion](./images/wffc20.png)
 

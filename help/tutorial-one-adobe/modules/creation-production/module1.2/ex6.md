@@ -6,7 +6,7 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: f02ecbe4-f1d7-4907-9bbc-04e037546091
-source-git-commit: 297fba1810934e6ce4d9b8dfaea0e1250e761ab5
+source-git-commit: 7df1daa33a67f177ba07f3ca4add08ebc317973c
 workflow-type: tm+mt
 source-wordcount: '1878'
 ht-degree: 0%
@@ -29,7 +29,7 @@ Affärsteamen behöver dock inte ha någon PSD-fil, de behöver en PNG-fil eller
 
 ## 1.2.6.1 Skapa ett nytt scenario
 
-Gå till [https://experience.adobe.com/](https://experience.adobe.com/). Öppna **Workfront Fusion**.
+Gå till [https://experience.adobe.com/](https://experience.adobe.com/){target="_blank"}. Öppna **Workfront Fusion**.
 
 ![WF Fusion](./images/wffusion1.png)
 
@@ -59,7 +59,7 @@ Du borde se det här då. Klicka på **Kopiera adress till Urklipp**.
 
 ## 1.2.6.2 Konfigurera webkrok i Frame.io
 
-Gå till [https://developer.frame.io/](https://developer.frame.io/). Klicka på **UTVECKLINGSVERKTYG** och välj sedan **Anpassade åtgärder**.
+Gå till [https://developer.frame.io/](https://developer.frame.io/){target="_blank"}. Klicka på **UTVECKLINGSVERKTYG** och välj sedan **Anpassade åtgärder**.
 
 ![Bildruta-I/O](./images/aemf7.png)
 
@@ -83,7 +83,7 @@ Du borde se det här då.
 
 ![Bildruta-I/O](./images/aemf11.png)
 
-Gå till [https://app.frame.io/projects](https://app.frame.io/projects) och gå till mappen som du skapade tidigare, som bör ha namnet `--aepUserLdap--`. Dubbelklicka för att öppna den resurs som skapades i föregående övning.
+Gå till [https://app.frame.io/projects](https://app.frame.io/projects){target="_blank"} och gå till mappen som du skapade tidigare, som bör ha namnet `--aepUserLdap--`. Dubbelklicka för att öppna den resurs som skapades i föregående övning.
 
 ![Bildruta-I/O](./images/aemf11a.png)
 
@@ -271,7 +271,7 @@ Anslutningen valideras sedan och när den lyckas väljs anslutningen automatiskt
 
 ![Bildruta-I/O](./images/aemf51.png)
 
-Om du vill skapa en ny dedikerad mapp går du till [https://experience.adobe.com](https://experience.adobe.com/). Kontrollera att rätt Experience Cloud-instans är markerad, som ska vara `--aepImsOrgName--`. Klicka sedan på **Experience Manager Assets**.
+Om du vill skapa en ny dedikerad mapp går du till [https://experience.adobe.com](https://experience.adobe.com/){target="_blank"}. Kontrollera att rätt Experience Cloud-instans är markerad, som ska vara `--aepImsOrgName--`. Klicka sedan på **Experience Manager Assets**.
 
 ![Bildruta-I/O](./images/aemf52.png)
 
