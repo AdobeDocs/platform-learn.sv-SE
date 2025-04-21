@@ -3,7 +3,7 @@ title: Migrera din mobilapp från Adobe Target till Adobe Journey Optimizer - Be
 description: Lär dig hur du migrerar din mobilappsimplementering från Adobe Target till Adobe Journey Optimizer - Beslutstillägg
 last-substantial-update: 2023-02-23T00:00:00Z
 exl-id: 32363b95-b6ad-44af-a3b0-e1fbbbf5a8f1
-source-git-commit: 2ebad2014d4c29a50af82328735258958893b42c
+source-git-commit: e0359d1bade01f79d0f7aff6a6e69f3e4d0c3b62
 workflow-type: tm+mt
 source-wordcount: '650'
 ht-degree: 0%
@@ -22,7 +22,7 @@ Adobe Experience Platform Mobile SDK ger total interaktion i era mobilapplikatio
 
 Några av fördelarna med Adobe Journey Optimizer Decision Extension jämfört med Target-tillägget är:
 
-* Snabbare delning av målgrupper från [Real-Time Customer Data Platform](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/experience-cloud/next-hit-personalization)
+* Snabbare delning av målgrupper från [Real-Time Customer Data Platform](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/destinations/target/next-hit-personalization)
 * Integrera Target med Journey Optimizer för att stödja [Offer Decisioning-leverans](https://experienceleague.adobe.com/en/docs/target/using/integrate/ajo/offer-decision)
 * Bättre integrering med Adobe Analytics som inte förlitar sig på att sammanfoga information från separata nätverksanrop
 * Ytterligare implementeringsflexibilitet för utvecklare

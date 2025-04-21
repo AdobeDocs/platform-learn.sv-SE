@@ -1,10 +1,10 @@
 ---
 title: Installera och konfigurera taggtillägget Adobe Experience Platform Web SDK
-description: Lär dig hur du installerar och konfigurerar plattformens SDK-taggtillägg i gränssnittet för datainsamling. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
+description: Lär dig hur du installerar och konfigurerar tillägget Platform Web SDK i gränssnittet för datainsamling. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK, Tags
 jira: KT-15404
 exl-id: f30a44bb-99d7-476e-873a-b7802a0fe6aa
-source-git-commit: a8431137e0551d1135763138da3ca262cb4bc4ee
+source-git-commit: e0359d1bade01f79d0f7aff6a6e69f3e4d0c3b62
 workflow-type: tm+mt
 source-wordcount: '591'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 # Installera taggtillägget Adobe Experience Platform Web SDK
 
-Lär dig installera och konfigurera taggtillägget Adobe Experience Platform Web SDK. Det enklaste sättet att implementera Web SDK är att använda tagghanteraren Adobe, taggar (tidigare kallad Launch). Taggtillägget Platform Web SDK är det _enda taggtillägget_ som krävs för att skicka data till _alla Adobe Experience Cloud-program_, inklusive [Analytics](setup-analytics.md), [Target](setup-target.md), [Audience Manager](setup-audience-manager.md), Real-time Customer Data Platform och [Journey Optimizer](setup-web-channel.md)!
+Lär dig hur du installerar och konfigurerar taggtillägget Adobe Experience Platform Web SDK. Det enklaste sättet att implementera Web SDK är att använda Adobe tagghanterare, taggar (tidigare Launch). Platsens SDK-taggtillägg är det _enda taggtillägg_ som krävs för att skicka data till _alla Adobe Experience Cloud-program_, inklusive [Analytics](setup-analytics.md), [Target](setup-target.md), [Audience Manager](setup-audience-manager.md), Real-Time Customer Data Platform och [Journey Optimizer](setup-web-channel.md)!
 
 ## Utbildningsmål
 
@@ -35,7 +35,7 @@ Först måste du ha en taggegenskap. En egenskap är en behållare för alla Jav
 
 Skapa en ny taggegenskap för självstudiekursen:
 
-1. Öppna [gränssnittet för datainsamling](https://launch.adobe.com/){target="_blank"}
+1. Öppna [gränssnittet för datainsamling](https://experience.adobe.com/data-collection/){target="_blank"}
 1. Välj **[!UICONTROL Tags]** i den vänstra navigeringen
 1. Markera knappen **[!UICONTROL New Property]**
    ![Lägg till en ny egenskap](assets/websdk-property-addNewProperty.png)
@@ -53,7 +53,7 @@ Med ditt XDM-schema, datastream och taggegenskap som nu skapas är du redo att i
 1. Sök efter `Adobe Experience Platform Web SDK`
 1. Välj **[!UICONTROL Install]**
 
-   ![Installera SDK-tillägg för webben](assets/extension-platform-web-sdk.png)
+   ![Installera SDK-tillägget för webben](assets/extension-platform-web-sdk.png)
 
 
 ## Länka tillägget till din datastream
@@ -71,7 +71,7 @@ Lämna de flesta standardinställningarna och uppdatera dem senare efter behov. 
 
    ![Val av dataström](assets/extension-luma-web-sdk-datastream-extension.png)
 
-Mer information om varje avsnitt i tillägget finns i [Konfigurera Adobe Experience Platform Web SDK-tillägget](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/web-sdk/web-sdk-extension-configuration).
+Mer information om de olika avsnitten i tillägget finns i [Konfigurera Adobe Experience Platform Web SDK-tillägget](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/web-sdk/web-sdk-extension-configuration).
 
 >[!NOTE]
 >
@@ -87,4 +87,4 @@ Nu när du har installerat Platform Web SDK och kopplat det till datastream är 
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du har lagt ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League diskussionsgruppsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

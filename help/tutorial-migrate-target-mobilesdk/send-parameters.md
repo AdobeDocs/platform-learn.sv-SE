@@ -2,7 +2,7 @@
 title: Skicka parametrar - Migrera Adobe Target-implementeringen i din mobilapp till Adobe Journey Optimizer - Beslutstillägg
 description: Lär dig hur du skickar parametrar för mbox, profile och entity till Adobe Target med Experience Platform Web SDK.
 exl-id: 927d83f9-c019-4a6b-abef-21054ce0991b
-source-git-commit: 2ebad2014d4c29a50af82328735258958893b42c
+source-git-commit: e0359d1bade01f79d0f7aff6a6e69f3e4d0c3b62
 workflow-type: tm+mt
 source-wordcount: '774'
 ht-degree: 0%
@@ -55,7 +55,7 @@ Target tillåter profilsynkronisering mellan enheter och system med ett enda kun
 
 | Exempel på parametern at.js | Platform Web SDK | Anteckningar |
 | --- | --- | --- |
-| `at_property` | N/A | Egenskapstoken har konfigurerats i [datastream](https://experienceleague.adobe.com/en/docs/experience-platform/edge/datastreams/configure#target) och kan inte anges i anropet `sendEvent`. |
+| `at_property` | N/A | Egenskapstoken har konfigurerats i [datastream](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/configure#target) och kan inte anges i anropet `sendEvent`. |
 | `pageName` | `xdm.web.webPageDetails.name` eller <br> `data.__adobe.target.pageName` | Parametrar för målmbox kan skickas antingen som en del av `xdm`-objektet eller som en del av `data.__adobe.target`-objektet. |
 | `profile.gender` | `data.__adobe.target.profile.gender` | Alla målprofilsparametrar måste skickas som en del av objektet `data` och prefixeras med `profile.` för att mappas korrekt. |
 | `user.categoryId` | `data.__adobe.target.user.categoryId` | Reserverad parameter används för målets kategoritillhörighetsfunktion som måste skickas som en del av objektet `data`. |

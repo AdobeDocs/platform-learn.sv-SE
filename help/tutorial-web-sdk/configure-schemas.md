@@ -1,10 +1,10 @@
 ---
 title: Skapa ett XDM-schema för webbdata
-description: Lär dig hur du skapar ett XDM-schema för webbdata i gränssnittet för datainsamling. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
+description: Lär dig hur du skapar ett XDM-schema för webbdata i gränssnittet för datainsamling. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Schemas
 jira: KT-15398
 exl-id: 2858ce03-4f95-43ac-966c-1b647b33ef16
-source-git-commit: 63987fb652a653283a05a5f35f7ce670127ae905
+source-git-commit: e0359d1bade01f79d0f7aff6a6e69f3e4d0c3b62
 workflow-type: tm+mt
 source-wordcount: '1510'
 ht-degree: 0%
@@ -17,11 +17,11 @@ Lär dig hur du skapar ett XDM-schema för webbdata i Adobe Experience Platform 
 
 XDM-scheman (Experience Data Model) är byggstenar, principer och bästa praxis för datainsamling i Adobe Experience Platform.
 
-Platform Web SDK använder ditt schema för att standardisera dina webbhändelsedata, skicka dem till Platform Edge Network och slutligen vidarebefordra data till alla Experience Cloud-program som konfigurerats i datastream. Det här steget är viktigt eftersom det definierar en standarddatamodell som krävs för inmatning av kundupplevelsedata i Experience Platform och möjliggör tjänster och applikationer som bygger på dessa standarder.
+Platform Web SDK använder ditt schema för att standardisera dina webbhändelsedata, skicka dem till Platform Edge Network och slutligen vidarebefordra data till alla Experience Cloud-program som är konfigurerade i datastream. Det här steget är viktigt eftersom det definierar en standarddatamodell som krävs för inmatning av kundupplevelsedata i Experience Platform och möjliggör tjänster och applikationer som bygger på dessa standarder.
 
 >[!NOTE]
 >
->Ett XDM-schema _krävs inte_ för att implementera Adobe Analytics, Adobe Target eller Adobe Audience Manager med Web SDK (data kan skickas i `data`-objektet i stället för `xdm`-objektet som du kommer att se senare). Ett XDM-schema krävs för de mest prestandaoptimerade implementeringarna av plattformsspecifika program som Journey Optimizer, Real-time Customer Data Platform, Customer Journey Analytics. Även om du kanske bestämmer dig för att inte använda ett XDM-schema i din egen implementering, så är det en del av den här självstudiekursen.
+>Ett XDM-schema _krävs inte_ för att implementera Adobe Analytics, Adobe Target eller Adobe Audience Manager med Web SDK (data kan skickas i `data`-objektet i stället för `xdm`-objektet som du kommer att se senare). Ett XDM-schema krävs för de mest prestandaoptimerade implementeringarna av plattformsspecifika program som Journey Optimizer, Real-Time Customer Data Platform, Customer Journey Analytics. Även om du kanske bestämmer dig för att inte använda ett XDM-schema i din egen implementering, så är det en del av den här självstudiekursen.
 
 ## Varför modellera data?
 
@@ -51,7 +51,7 @@ Många företag hanterar till exempel beställningar. Vad händer om dessa före
 
 Om alla företag som hanterar beställningar beslutar sig för att modellera sina beställningsdata på ett konsekvent sätt för termer som är vanliga i branschen kan magiska saker börja hända. Information skulle kunna utbytas smidigare både inom och utanför er organisation i stället för att man hela tiden tolkar och översätter data (utkast och evar, vem som helst?). Datorinlärning kan enklare förstå vad dina data _betyder_ och ge användbara insikter. Användargränssnitt för relevanta data kan bli mer intuitiva. Dina data kan integreras smidigt med partners och leverantörer som följer samma modellering.
 
-Det här är målet för Adobe [Experience Data Model](https://business.adobe.com/products/experience-platform/experience-data-model.html). XDM tillhandahåller preskriptiv modellering för data som är vanliga i branschen, samtidigt som du kan utöka modellen efter dina specifika behov. Adobe Experience Platform är byggt kring XDM och därför måste data som skickas till Experience Platform finnas i XDM. I stället för att fundera på var och hur ni kan omvandla era aktuella datamodeller till XDM innan ni skickar data till Experience Platform bör ni överväga att implementera XDM i hela organisationen så att översättningen sällan behöver ske.
+Det här är målet för Adobe [Experience Data Model](https://business.adobe.com/products/experience-platform/experience-data-model.html). XDM tillhandahåller preskriptiv modellering för data som är vanliga i branschen, samtidigt som du kan utöka modellen efter dina specifika behov. Adobe Experience Platform bygger på XDM och därför måste data som skickas till Experience Platform finnas i XDM. I stället för att fundera på var och hur ni kan omvandla era aktuella datamodeller till XDM innan ni skickar data till Experience Platform bör ni överväga att implementera XDM i hela organisationen så att översättningen sällan behöver ske.
 
 
 >[!NOTE]
@@ -78,7 +78,7 @@ XDM-scheman är standardsättet att beskriva data i Experience Platform, vilket 
 
 I den här övningen skapar du ett XDM-schema med de rekommenderade baslinjefältgrupperna för att hämta webbhändelsedata på [Luma Demo-webbplatsen](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"}:
 
-1. Öppna [gränssnittet för datainsamling](https://launch.adobe.com/){target="_blank"}
+1. Öppna [gränssnittet för datainsamling](https://experience.adobe.com/data-collection/){target="_blank"}
 1. Kontrollera att du är i rätt sandlåda. Hitta sandlådan i det övre högra hörnet
 
    >[!NOTE]
@@ -142,7 +142,7 @@ Det finns ett särskilt fält som används för att identifiera webbanvändare m
 
 ![Webbhändelsedata för luma](assets/schema-identityMap.png)
 
-Det är ett måste-ha-objekt för alla webbrelaterade datainsamlingar eftersom det innehåller det Experience Cloud-ID som krävs för att identifiera användare på webben. Det är också nyckeln till att ange interna kund-ID:n för autentiserade användare. `[!UICONTROL identityMap]` beskrivs mer i lektionen [Konfigurera identiteter](configure-identities.md). Den inkluderas automatiskt i alla scheman som använder klassen **[!UICONTROL XDM ExperienceEvent]**.
+Det är ett måste-ha-objekt för alla webbrelaterade datainsamlingar eftersom det innehåller det Experience Cloud-id som krävs för att identifiera användare på webben. Det är också nyckeln till att ange interna kund-ID:n för autentiserade användare. `[!UICONTROL identityMap]` beskrivs mer i lektionen [Konfigurera identiteter](configure-identities.md). Den inkluderas automatiskt i alla scheman som använder klassen **[!UICONTROL XDM ExperienceEvent]**.
 
 
 >[!IMPORTANT]
@@ -165,4 +165,4 @@ Nu kan du referera till det här schemat när du lägger till Web SDK-tillägget
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du har lagt ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League diskussionsgruppsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

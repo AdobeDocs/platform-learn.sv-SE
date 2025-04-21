@@ -1,12 +1,12 @@
 ---
 title: Konfigurera Journey Optimizer webbkanal med Platform Web SDK
-description: Lär dig implementera Journey Optimizer webbkanal med Platform Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
+description: Lär dig implementera Journey Optimizer webbkanal med Platform Web SDK. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 solution: Data Collection,Experience Platform,Journey Optimizer
 feature-set: Journey Optimizer
 feature: Web Channel,Web SDK
 jira: KT-15411
 exl-id: ab83ce56-7f54-4341-8750-b458d0db0239
-source-git-commit: 2182441d992aec0602d0955d78aa85407bd770c9
+source-git-commit: e0359d1bade01f79d0f7aff6a6e69f3e4d0c3b62
 workflow-type: tm+mt
 source-wordcount: '2436'
 ht-degree: 0%
@@ -20,13 +20,13 @@ Lär dig hur du implementerar Adobe Journey Optimizer [webbkanal](https://experi
 
 När du följer den här lektionen är Journey Optimizer-användare utrustade att använda webbkanalen för avancerad onlineanpassning med Journey Optimizer webbdesigner.
 
-![Web SDK och Adobe Analytics-diagram](assets/dc-websdk-ajo.png)
+![Webb-SDK och Adobe Analytics](assets/dc-websdk-ajo.png)
 
 ## Utbildningsmål
 
 När lektionen är slut kan du:
 
-* Förstå funktionen och betydelsen av Web SDK när det gäller att leverera webbkanalsupplevelsen.
+* Förstå SDK funktion och betydelse när det gäller att leverera webbkanalsupplevelsen.
 * Förstå processen med att skapa en webbkanalskampanj från början till slut med exempelexemplet Luma Loyalty Rewards.
 * Konfigurera kampanjegenskaper, åtgärder och scheman i gränssnittet.
 * Förstå funktionaliteten och fördelarna med tillägget Adobe Experience Cloud Visual Editing Helper.
@@ -38,8 +38,8 @@ När lektionen är slut kan du:
 
 För att slutföra lektionerna i det här avsnittet måste du först:
 
-* Slutför alla lektioner för den inledande konfigurationen av Platform Web SDK, inklusive inställning av dataelement och regler.
-* Kontrollera att Adobe Experience Platform Web SDK-taggtilläggets version är 2.16 eller senare.
+* Slutför alla lektioner för den första konfigurationen av Platform Web SDK, inklusive inställning av dataelement och regler.
+* Kontrollera att Adobe Experience Platform Web SDK-taggtilläggen är version 2.16 eller senare.
 * Om du använder Journey Optimizer webbdesigner för att skapa din webbkanal måste du kontrollera att du använder webbläsarna Google Chrome eller Microsoft® Edge.
 * Kontrollera också att du har hämtat och aktiverat webbläsartillägget [Adobe Experience Cloud Visual Editing Helper](https://chromewebstore.google.com/detail/adobe-experience-cloud-vi/kgmjjkfjacffaebgpkpcllakjifppnca).
 * Kontrollera att cookies från tredje part tillåts i webbläsaren. Det kan vara nödvändigt att inaktivera alla annonsblockerare i webbläsaren.
@@ -56,7 +56,7 @@ För att slutföra lektionerna i det här avsnittet måste du först:
 * Om du använder funktionen för innehållsexperimenterande ska du se till att din webbdatauppsättning också ingår i rapportkonfigurationen.
 * För närvarande finns det två typer av implementeringar som gör det möjligt att skapa och leverera webbkanalskampanjer på dina webbegenskaper:
    * Endast på klientsidan: Om du vill ändra webbplatsen måste du implementera Adobe Experience Platform Web SDK.
-   * Hybrid-läge: Du kan använda API:t för Platform Edge Network Server för att begära anpassning på serversidan. Svaret från API:t skickas sedan till Adobe Experience Platform Web SDK för återgivningsändringar på klientsidan. Mer information finns i API-dokumentationen för Adobe Experience Platform Edge Network Server. Ytterligare information och implementeringsexempel för hybridläget finns i det här blogginlägget.
+   * Hybridläge: Du kan använda Platform Edge Network Server-API:t för att begära anpassning på serversidan. Svaret från API:t skickas sedan till Adobe Experience Platform Web SDK för återgivningsändringar på klientsidan. Mer information finns i Adobe Experience Platform Edge Network Server API-dokumentationen. Ytterligare information och implementeringsexempel för hybridläget finns i det här blogginlägget.
 
   >[!NOTE]
   >
@@ -69,7 +69,7 @@ För att slutföra lektionerna i det här avsnittet måste du först:
 
 Först och främst bör ni förstå den terminologi som används i webbkanalskampanjer.
 
-* **Webbkanal**: Ett medium för kommunikation eller leverans av innehåll via webben. I den här guiden hänvisar den till den mekanism genom vilken personaliserat innehåll levereras till webbplatsbesökare som använder Platform Web SDK, inom Adobe Journey Optimizer.
+* **Webbkanal**: Ett medium för kommunikation eller leverans av innehåll via webben. I den här guiden hänvisar den till den mekanism genom vilken personaliserat innehåll levereras till webbplatsbesökare som använder Platform Web SDK i Adobe Journey Optimizer.
 * **Webbyta**: Avser en webbegenskap som identifieras av en URL där innehållet levereras. Det kan omfatta en eller flera webbsidor.
 * **Journey Optimizer webbdesigner**: Ett specifikt verktyg eller gränssnitt i Journey Optimizer där användare kan designa sina webbkanalsupplevelser.
 * **Hjälp för visuell redigering i Adobe Experience Cloud**: Ett webbläsartillägg som kan användas för visuell redigering och design av webbkanalsupplevelser.
@@ -91,7 +91,7 @@ Så här konfigurerar du Adobe Journey Optimizer i datastream:
 
 1. Gå till gränssnittet [Datainsamling](https://experience.adobe.com/#/data-collection){target="blank"}.
 1. Välj **[!UICONTROL Datastreams]** i den vänstra navigeringen.
-1. Markera tidigare skapade Luma Web SDK-dataström.
+1. Markera tidigare skapade data för Luma Web SDK.
 
    ![Välj datastream](assets/web-channel-select-datastream.png)
 
@@ -123,11 +123,11 @@ Så här konfigurerar du alternativet i sammanfogningsprincipen:
 
 Om du vill använda innehållsexperiment i webbkanalskampanjer måste du se till att den webbdatauppsättning som används också ingår i rapportkonfigurationen. Journey Optimizer rapporteringssystem använder datauppsättningen i skrivskyddat läge för att fylla i användningsklara innehållsexperimenteringsrapporter.
 
-[Att lägga till datauppsättningar för rapportering av innehållsexperiment beskrivs i det här avsnittet](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/content-experiment/reporting-configuration#add-datasets).
+[Att lägga till datauppsättningar för rapportering av innehållsexperiment beskrivs i det här avsnittet](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reporting/channel-report/reporting-configuration#add-datasets).
 
 ## Use Case Overview - Loyalty Rewards
 
-I den här lektionen används ett exempel på Loyalty Rewards-användningsexempel för att beskriva implementeringen av en webbkanalsupplevelse med hjälp av Web SDK.
+I den här lektionen används exemplet Loyalty Rewards till att beskriva implementeringen av en webbkanalsupplevelse med hjälp av Web SDK.
 
 Med detta exempel får ni en bättre förståelse för hur Journey Optimizer kan hjälpa er att leverera de bästa inkommande upplevelserna till era kunder med hjälp av Journey Optimizer kampanjer och webbdesignern.
 
@@ -191,7 +191,7 @@ Så här skapar du innehållsexperimentet:
 
    ![Skapa experiment](assets/web-channel-create-content-experiment.png)
 
-1. Välj först **[!UICONTROL Success metric]**. Detta är måttet för att avgöra innehållets effektivitet. Välj **[!UICONTROL Unique Inbound Clicks]** om du vill se vilken innehållsbehandling som genererar fler klick på CTA för webbupplevelser.
+1. Välj först **[!UICONTROL Success metric]**. Detta är måttet för att avgöra innehållets effektivitet. Välj **[!UICONTROL Unique Inbound Clicks]** om du vill se vilken innehållsbehandling som genererar fler klick på webbupplevelsen CTA.
 
    ![Välj framgångsmått](assets/web-channel-content-experiment-metric.png)
 
@@ -230,7 +230,7 @@ Låt oss nu skapa webbkanalsupplevelsen. Använd Adobe Experience Cloud **[!UICO
 1. Använd **[!UICONTROL Offer decision component]** för att infoga erbjudanden på webbsidan. Den här komponenten använder **[!UICONTROL Decision Management]** för att välja det bästa erbjudandet för Luma-besökare.
 
 
-### Designändringar för HTML
+### Ändringar i HTML Design
 
 Det finns några tillgängliga metoder om du vill göra mer avancerade eller anpassade ändringar av webbplatsen som en del av kampanjen Loyalty Rewards.
 
@@ -246,7 +246,7 @@ Du kan också lägga till HTML-redigeringar från rutan **[!UICONTROL Modificati
 
 Lägg till HTML för målgruppen `Luma Loyalty Rewards – Gold Status` i redigeraren. Välj **[!UICONTROL Validate]**.
 
-![Validera HTML](assets/web-channel-add-custom-html-validate.png)
+![Verifiera HTML](assets/web-channel-add-custom-html-validate.png)
 
 Granska nu den nya anpassade HTML-komponenten så att den passar och känns.
 
@@ -298,7 +298,7 @@ Som en god praxis bör du övervaka fliken **[!UICONTROL Web]** för kampanjens 
 
 ### Validering av webbkanaler med Adobe Experience Platform Debugger
 
-Tillägget Adobe Experience Platform Debugger, som finns för både Chrome och Firefox, analyserar dina webbsidor för att identifiera problem med implementeringen av Adobe Experience Cloud lösningar.
+Adobe Experience Platform Debugger-tillägget, som finns för både Chrome och Firefox, analyserar dina webbsidor för att identifiera problem i implementeringen av Adobe Experience Cloud lösningar.
 
 Du kan använda felsökaren på Luma-webbplatsen för att validera webbkanalsupplevelsen i produktionen. Detta är en bra metod när Loyalty Rewards-användningsexemplet är öppet och körs för att säkerställa att allt är korrekt konfigurerat.
 
@@ -339,4 +339,4 @@ Så här börjar du valideringen med felsökaren:
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du har lagt ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League diskussionsgruppsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

@@ -4,7 +4,7 @@ description: Lär dig hur du konfigurerar identitetsnamnutrymmen som ska använd
 feature: Web SDK,Identities
 jira: KT-15400
 exl-id: 7719dff4-6b30-4fa0-acae-7491c3208f15
-source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
+source-git-commit: e0359d1bade01f79d0f7aff6a6e69f3e4d0c3b62
 workflow-type: tm+mt
 source-wordcount: '644'
 ht-degree: 0%
@@ -57,7 +57,7 @@ Titta på den här korta videon om du vill veta mer om din identitet i Adobe Exp
 
 Skapa nu ett namnutrymme för Luma CRM-ID:
 
-1. Öppna [gränssnittet för datainsamling](https://launch.adobe.com/){target="_blank"}
+1. Öppna [gränssnittet för datainsamling](https://experience.adobe.com/data-collection/){target="_blank"}
 1. Välj den sandlåda som du använder för självstudiekursen
 
    >[!NOTE]
