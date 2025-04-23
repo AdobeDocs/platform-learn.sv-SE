@@ -6,16 +6,18 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: c1b1d78d-9374-4ccd-82cf-e71c682fc907
-source-git-commit: 7df1daa33a67f177ba07f3ca4add08ebc317973c
+source-git-commit: 2beb052927f88e13f42b2af940a637cbc3caa19d
 workflow-type: tm+mt
-source-wordcount: '959'
+source-wordcount: '963'
 ht-degree: 0%
 
 ---
 
 # 1.3.1 Komma igång med Adobe Express
 
-Öppna ett nytt webbläsarfönster i InDesign och gå till [https://www.adobe.com/home](https://www.adobe.com/home){target="_blank"}. Logga in med ditt **företags- eller skolkonto** och välj sedan kontot **- aepImsOrgName -**.
+## 1.3.1.1 loggar in på Adobe Express
+
+Öppna ett nytt webbläsarfönster i InDesign och gå till [https://www.adobe.com/home](https://www.adobe.com/home){target="_blank"}. Logga in med ditt **företags- eller skolkonto** och välj sedan kontot **`--aepImsOrgName--`**.
 
 ![Adobe Express](./images/express1.png)
 
@@ -37,7 +39,7 @@ Du är nu inloggad på **Adobe Express**.
 
 ![Adobe Express](./images/express5.png)
 
-## 1.3.1.1 Kom igång från en varumärkesmall
+## 1.3.1.2 Kom igång från en varumärkesmall
 
 Gå till **Varumärken** i Adobe Express. Ditt varumärkesmallbibliotek är antagligen tomt just nu. CitiSignal har definierat en varumärkesmall tidigare och du bör nu återanvända den befintliga mallen.
 

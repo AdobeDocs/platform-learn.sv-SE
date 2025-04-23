@@ -4,7 +4,7 @@ description: Komma igång - Använd demonstrationssystemet bredvid för att konf
 kt: 5342
 doc-type: tutorial
 exl-id: 455b72f6-84fd-463a-a7b5-3c4999035ab2
-source-git-commit: ef26abbeb0c1076adbada57f0f18f11c7634d022
+source-git-commit: e95acadeb7a0438f9be056dd426063ac8abc6bc0
 workflow-type: tm+mt
 source-wordcount: '330'
 ht-degree: 0%
@@ -17,11 +17,11 @@ För att visualisera inlärningarna i den här självstudiekursen och för att g
 
 När du har tillgång till Demo System Next fortsätter du med stegen nedan.
 
-Gå till [https://dsn.adobe.com/](https://dsn.adobe.com/) och navigera till **Inställningar**.
+Gå till [https://dsn.adobe.com/](https://dsn.adobe.com/){target="_blank"} och navigera till **Inställningar**.
 
 ![DSN](./images/dsnsetup.png)
 
-I listrutan **Miljö** väljer du AEP-instansen och sandlådan.
+I listrutan **Miljö** väljer du din AEP-instans och sandlåda.
 
 ![DSN](./images/dsnh1.png)
 
@@ -57,7 +57,7 @@ Håll den här skärmen öppen som du vill i nästa steg.
 
 ## Nästa steg
 
-Gå till [Skapa ditt datastream](./ex3.md)
+Gå till [Skapa ditt datastream](./ex3.md){target="_blank"}
 
 Gå tillbaka till [Komma igång](./getting-started.md){target="_blank"}
 

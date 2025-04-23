@@ -4,16 +4,16 @@ description: Foundation - FAC - Skapa en federerad komposition
 kt: 5342
 doc-type: tutorial
 exl-id: 6c1773d1-ca2e-43e5-bfa7-6e5e0fbcf859
-source-git-commit: 3d61d91111d8693ab031fbd7b26706c02818108c
+source-git-commit: 2beb052927f88e13f42b2af940a637cbc3caa19d
 workflow-type: tm+mt
-source-wordcount: '502'
+source-wordcount: '499'
 ht-degree: 0%
 
 ---
 
 # 1.3.3 Skapa en federerad komposition
 
-Nu kan du konfigurera din sammanställning av externa målgrupper i AEP.
+Nu kan ni konfigurera er sammanslagna målgruppskomposition i AEP.
 
 Logga in på Adobe Experience Platform via följande URL: [https://experience.adobe.com/platform](https://experience.adobe.com/platform).
 
@@ -21,11 +21,11 @@ När du har loggat in loggar du in på Adobe Experience Platform hemsida.
 
 ![Datainmatning](./../dc1.2/images/home.png)
 
-Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``--aepSandboxName--``. När du har valt rätt sandlåda ser du skärmändringen och nu befinner du dig i din dedikerade sandlåda.
+Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet `--aepSandboxName--`. När du har valt rätt sandlåda ser du skärmändringen och nu befinner du dig i din dedikerade sandlåda.
 
 ![Datainmatning](./../dc1.2/images/sb1.png)
 
-## 1.3.3.1 Skapa er målgrupp
+## 1.3.3.1 Skapa din publik
 
 Gå till **Publiker** på den vänstra menyn och gå sedan till **Federerade kompositioner**. Klicka på **Skapa komposition**.
 
@@ -47,7 +47,7 @@ Då ser du det här. Välj **Skapa målgrupp**. Klicka på ikonen **sök** för 
 
 ![FAC](./images/fedcomp5.png)
 
-Välj schemat **—aepUserLdap—_HOUSEHOLDS**. Klicka på **Bekräfta**.
+Välj schemat **`--aepUserLdap--_HOUSEHOLDS`**. Klicka på **Bekräfta**.
 
 ![FAC](./images/fedcomp6.png)
 
@@ -71,7 +71,7 @@ Klicka sedan på ikonen **+** igen och klicka på **Anpassat villkor** igen för
 
 ![FAC](./images/fedcomp11.png)
 
-Det andra villkoret som ska läggas till är: `Is the user an existing CitiSignal Mobile subscriber?`. Du kan besvara den frågan genom att använda relationen mellan hushållet och den primära kunden i hushållet, som definieras i en annan tabell, **—aepUserLdap—_PERSONS**. Du kan detaljgranska på attributmenyn med länken **house2person** .
+Det andra villkoret som ska läggas till är: `Is the user an existing CitiSignal Mobile subscriber?`. Du kan besvara den frågan genom att använda relationen mellan hushållet och den primära kunden i hushållet, som definieras i en annan tabell, **`--aepUserLdap--_PERSONS`**. Du kan detaljgranska på attributmenyn med länken **house2person** .
 
 ![FAC](./images/fedcomp12.png)
 
@@ -139,9 +139,9 @@ Din komposition är nu färdig. Klicka på **Start** för att köra den.
 
 ![FAC](./images/fedcomp21a.png)
 
-Frågan kommer nu att laddas ned till Snowflake, som kommer att fråga källdata där. Resultatet överförs tillbaka till AEP men källdata finns kvar i Snowflake.
+Frågan kommer nu att laddas ned till Snowflake, som kommer att fråga källdata där. Resultatet överförs tillbaka till AEP, men källdata finns kvar i Snowflake.
 
-Publiken är nu befolkad och målgruppen kan målgruppsanpassas inifrån AEP-ekosystemet.
+Publiken är nu befolkad och målgruppen kan målgruppsanpassas inifrån AEP ekosystem.
 
 ![FAC](./images/fedcomp22.png)
 

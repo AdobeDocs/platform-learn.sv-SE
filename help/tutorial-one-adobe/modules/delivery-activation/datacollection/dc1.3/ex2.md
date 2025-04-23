@@ -4,9 +4,9 @@ description: Foundation - FAC - Skapa scheman, datamodell och länkar
 kt: 5342
 doc-type: tutorial
 exl-id: 3b999c1a-cf9e-44a3-8fc1-6a070c3aeb24
-source-git-commit: 3d61d91111d8693ab031fbd7b26706c02818108c
+source-git-commit: 2beb052927f88e13f42b2af940a637cbc3caa19d
 workflow-type: tm+mt
-source-wordcount: '652'
+source-wordcount: '646'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ När du har loggat in loggar du in på Adobe Experience Platform hemsida.
 
 ![Datainmatning](./../dc1.2/images/home.png)
 
-Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet ``--aepSandboxName--``. När du har valt rätt sandlåda ser du skärmändringen och nu befinner du dig i din dedikerade sandlåda.
+Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska markeras har namnet `--aepSandboxName--`. När du har valt rätt sandlåda ser du skärmändringen och nu befinner du dig i din dedikerade sandlåda.
 
 ![Datainmatning](./../dc1.2/images/sb1.png)
 
@@ -47,8 +47,8 @@ Då ser du det här. Kopiera den **aktuella URL:en** och klistra in den i fälte
 
 ![FAC](./images/fdburl2.png)
 
-**Användare**: det användarnamn du skapade tidigare, i övning 1.3.1.1
-**Lösenord**: det lösenord du skapade tidigare, i övning 1.3.1.1
+**Användare**: användarnamnet som du skapade tidigare i övningen 1.3.1.1
+**Lösenord**: det lösenord du skapade tidigare i övning 1.3.1.1
 **Database**: use **CITISIGNAL**
 
 Till slut borde du ha den här. Klicka på **Testa anslutning**. Om testet lyckas klickar du på **Distribuera funktioner**, som skapar funktioner på Snowflake-sidan som är nödvändiga för arbetsflödesmotorn.
@@ -98,7 +98,7 @@ Klicka på **Skapa**.
 
 ![FAC](./images/fdb8.png)
 
-Då ser du det här. Du kan klicka på ett schema och granska informationen. Klicka till exempel på **—aepUserLdap—_PERSONS**.
+Då ser du det här. Du kan klicka på ett schema och granska informationen. Klicka till exempel på **`--aepUserLdap--_PERSONS`**.
 
 ![FAC](./images/fdb9.png)
 
@@ -189,7 +189,7 @@ Du borde se det här då. Klicka på **Spara**.
 
 ![FAC](./images/fdb26.png)
 
-Din konfiguration i AEP är nu klar. Nu kan ni börja använda era federerade data i en federerad målgruppskomposition.
+Din installation i AEP är nu klar. Nu kan ni börja använda era federerade data i en federerad målgruppskomposition.
 
 ## Nästa steg
 

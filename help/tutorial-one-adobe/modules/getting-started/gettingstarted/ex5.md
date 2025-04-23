@@ -4,7 +4,7 @@ description: Komma igång - Använd mobilappen
 kt: 5342
 doc-type: tutorial
 exl-id: a619dd84-5c9e-4c1e-a753-2d98f50f4cfb
-source-git-commit: ef26abbeb0c1076adbada57f0f18f11c7634d022
+source-git-commit: e95acadeb7a0438f9be056dd426063ac8abc6bc0
 workflow-type: tm+mt
 source-wordcount: '434'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 ## Hämta appen
 
-Gå till [https://bit.ly/dx-demo-app](https://bit.ly/dx-demo-app) på datorn. Då ser du det här.
+Gå till [https://bit.ly/dx-demo-app](https://bit.ly/dx-demo-app){target="_blank"} på datorn. Då ser du det här.
 
 ![DSN](./images/mobileapp.png)
 
@@ -53,7 +53,7 @@ Efter föregående övning fick du det här resultatet. Klicka för att öppna d
 
 ![DSN](./images/dsn5b.png)
 
-Om du av misstag har stängt webbläsarfönstret, eller för framtida demonstrations- eller aktiveringssessioner, kan du även komma åt webbplatsprojektet genom att gå till [https://dsn.adobe.com](https://dsn.adobe.com). När du har loggat in med din Adobe ID ser du det här. Klicka på de tre punkterna **..** i ditt mobilappsprojekt och klicka sedan på **Redigera**.
+Om du av misstag har stängt webbläsarfönstret, eller för framtida demonstrations- eller aktiveringssessioner, kan du även komma åt webbplatsprojektet genom att gå till [https://dsn.adobe.com](https://dsn.adobe.com){target="_blank"}. När du har loggat in med din Adobe ID ser du det här. Klicka på de tre punkterna **..** i ditt mobilappsprojekt och klicka sedan på **Redigera**.
 
 ![DSN](./images/web8a.png)
 
@@ -83,7 +83,7 @@ Gå tillbaka till **Hem** i appen. Ditt program är nu klart att användas.
 
 ## Nästa steg
 
-Gå till [Konfigurera ditt Adobe I/O-projekt](./ex6.md)
+Gå till [Konfigurera ditt Adobe I/O-projekt](./ex6.md){target="_blank"}
 
 Gå tillbaka till [Komma igång](./getting-started.md){target="_blank"}
 

@@ -4,7 +4,7 @@ description: Komma igång - Använd webbplatsen
 kt: 5342
 doc-type: tutorial
 exl-id: 4d2152c9-7f9a-48e3-a8e6-4a6add034b4e
-source-git-commit: 49b8be964fe4e92e2c2c437a797ded30af0bc261
+source-git-commit: e95acadeb7a0438f9be056dd426063ac8abc6bc0
 workflow-type: tm+mt
 source-wordcount: '444'
 ht-degree: 0%
@@ -61,7 +61,7 @@ Därefter visas webbplatsen i ett inkognitivt webbläsarfönster. För varje dem
 
 ## Alternativ 2: Börja med ett nytt webbläsarfönster
 
-Om du av misstag har stängt webbläsarfönstret eller för framtida sessioner kan du även få åtkomst till ditt webbplatsprojekt genom att gå till [https://dsn.adobe.com/](https://dsn.adobe.com/). När du har loggat in med din Adobe ID ser du det här. Klicka på de tre punkterna **..** i webbplatsprojektet och klicka sedan på **Redigera**.
+Om du av misstag har stängt webbläsarfönstret eller för framtida sessioner kan du även få åtkomst till ditt webbplatsprojekt genom att gå till [https://dsn.adobe.com/](https://dsn.adobe.com/){target="_blank"}. När du har loggat in med din Adobe ID ser du det här. Klicka på de tre punkterna **..** i webbplatsprojektet och klicka sedan på **Redigera**.
 
 ![DSN](./images/web8.png)
 
@@ -103,7 +103,7 @@ Därefter visas webbplatsen i ett inkognitivt webbläsarfönster. För varje dem
 
 ## Nästa steg
 
-Gå till [Använd mobilappen](./ex5.md)
+Gå till [Använd mobilappen](./ex5.md){target="_blank"}
 
 Gå tillbaka till [Komma igång](./getting-started.md){target="_blank"}
 

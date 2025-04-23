@@ -3,7 +3,8 @@ title: Komma igång - Postman-konfiguration
 description: Komma igång - Postman-konfiguration
 kt: 5342
 doc-type: tutorial
-source-git-commit: 431f7696df12c8c133aced57c0f639c682304dee
+exl-id: c2a28819-5877-4f53-96c0-e4e5095d8cec
+source-git-commit: e95acadeb7a0438f9be056dd426063ac8abc6bc0
 workflow-type: tm+mt
 source-wordcount: '519'
 ht-degree: 0%
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->Om du är Adobe-anställd följer du instruktionerna för att [installera PostBuster](./ex8.md)!
+>Om du är Adobe-anställd följer du instruktionerna för att [installera PostBuster](./ex8.md){target="_blank"}!
 
 ## Nedladdning av Postman-miljö
 
@@ -22,7 +23,7 @@ Gå till [https://developer.adobe.com/console/home](https://developer.adobe.com/
 
 ![Adobe I/O Ny integrering](./images/iopr.png){zoomable="yes"}
 
-Klicka på API:t **Firefly - Firefly Services** . Klicka sedan på **Hämta för Postman** och välj **OAuth Server-to-Server** för att hämta en Postman-miljö.
+Klicka på API:t **Firefly - Firefly Services**. Klicka sedan på **Hämta för Postman** och välj **OAuth Server-to-Server** för att hämta en Postman-miljö.
 
 ![Adobe I/O Ny integrering](./images/iopm.png){zoomable="yes"}
 
@@ -43,7 +44,7 @@ Samlingen innehåller ett antal API-begäranden som du kan använda. Vi kommer a
 - 1 Collection for Authentication to Adobe I/O
 - 1 Samling för övningar i denna modul
 
-Hämta [postman-ff.zip](./../../../assets/postman/postman-ff.zip) till ditt lokala skrivbord.
+Hämta [postman-ff.zip](./../../../assets/postman/postman-ff.zip){target="_blank"} till ditt lokala skrivbord.
 
 ![Adobe I/O Ny integrering](./images/pmfolder.png){zoomable="yes"}
 

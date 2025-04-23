@@ -4,7 +4,7 @@ description: Komma igång - Installera Chrome-tillägget för Experience League-
 kt: 5342
 doc-type: tutorial
 exl-id: 3618dacb-2203-4d19-ae51-f78415a693fd
-source-git-commit: 30f8ceface0b8c696da45699e2e32412413a2c96
+source-git-commit: e95acadeb7a0438f9be056dd426063ac8abc6bc0
 workflow-type: tm+mt
 source-wordcount: '913'
 ht-degree: 0%
@@ -38,7 +38,7 @@ När tillägget har installerats ändras den texten automatiskt så att den åte
 
 ## Installera Chrome-tillägget
 
-Om du vill installera det Chrome-tillägget öppnar du webbläsaren i Chrome och går till: [https://chromewebstore.google.com/detail/tech-insiders-learning-fo/hhnbkfgioecmhimdhooigajdajplinfi](https://chromewebstore.google.com/detail/tech-insiders-learning-fo/hhnbkfgioecmhimdhooigajdajplinfi). Då ser du det här.
+Om du vill installera det Chrome-tillägget öppnar du webbläsaren i Chrome och går till: [https://chromewebstore.google.com/detail/tech-insiders-learning-fo/hhnbkfgioecmhimdhooigajdajplinfi](https://chromewebstore.google.com/detail/tech-insiders-learning-fo/hhnbkfgioecmhimdhooigajdajplinfi){target="_blank"}. Då ser du det här.
 
 Klicka på **Lägg till i Chrome**.
 
@@ -58,7 +58,7 @@ Klicka på ikonen **pusselbit** på menyn **extensions** och fäst tillägget **
 
 ## Konfigurera Chrome-tillägget
 
-Gå till [https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/overview](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/overview) och klicka sedan på tilläggsikonen för att öppna den.
+Gå till [https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/overview](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/overview){target="_blank"} och klicka sedan på tilläggsikonen för att öppna den.
 
 ![DSN](./images/tuthome.png)
 
@@ -74,7 +74,7 @@ Om du är osäker på vilka värden du ska ange för de här fälten följer du 
 
 **AEP IMS-organisationsnamn**
 
-När du loggar in på din Adobe Experience Platform-instans på [https://platform.adobe.com/](https://platform.adobe.com/) hittar du namnet på din instans i skärmens övre högra hörn.
+När du loggar in på din Adobe Experience Platform-instans på [https://platform.adobe.com/](https://platform.adobe.com/){target="_blank"} hittar du namnet på din instans i skärmens övre högra hörn.
 
 ![DSN](./images/aepname.png)
 
@@ -84,7 +84,7 @@ IMS-organisations-ID är den unika identifieraren för din Adobe Experience Clou
 
 Du kan söka efter ditt IMS-organisations-ID på flera sätt. Om du är osäker kan du söka efter ditt ID hos en av systemadministratörerna för instansen.
 
-Du kan hitta den genom att gå till [Admin Console](https://https://adminconsole.adobe.com/) där du kan hitta den som en del av URL:en.
+Du kan hitta den genom att gå till [Admin Console](https://adminconsole.adobe.com/){target="_blank"} där du kan hitta den som en del av URL:en.
 
 ![DSN](./images/aepid1.png)
 
@@ -96,7 +96,7 @@ Se till att kopiera och klistra in delen **@AdobeOrg** tillsammans med ID:t.
 
 **AEP Klient-ID**
 
-Ditt klient-ID är den unika identifieraren för din organisations AEP-instans. När du loggar in på din Adobe Experience Platform-instans på [https://platform.adobe.com/](https://platform.adobe.com/) hittar du klient-ID:t i URL:en.
+Ditt klient-ID är den unika identifieraren för din organisations AEP-instans. När du loggar in på din Adobe Experience Platform-instans på [https://platform.adobe.com/](https://platform.adobe.com/){target="_blank"} hittar du klient-ID:t i URL:en.
 
 ![DSN](./images/aeptenantid.png)
 
@@ -104,7 +104,7 @@ När du anger det i Chrome-tillägget bör du se till att ett understreck läggs
 
 **AEP Sandbox-namn**
 
-Ditt sandlådenamn är namnet på den miljö du kommer att använda i din AEP-instans. När du loggar in på din Adobe Experience Platform-instans på [https://platform.adobe.com/](https://platform.adobe.com/) hittar du klient-ID:t i URL:en.
+Ditt sandlådenamn är namnet på den miljö du kommer att använda i din AEP-instans. När du loggar in på din Adobe Experience Platform-instans på [https://platform.adobe.com/](https://platform.adobe.com/){target="_blank"} hittar du klient-ID:t i URL:en.
 
 Innan du tar sandlådans namn från URL:en bör du kontrollera att du är i sandlådan som du bör använda för den här självstudiekursen. Du kan växla till den högra sandlådan genom att klicka på sandlådeväxlarmenyn i skärmens övre högra hörn.
 
@@ -135,7 +135,7 @@ När du har aktiverat konfigurationen visas en grön punkt bredvid initialerna f
 
 ## Verifiera självstudiekursens innehåll
 
-Gå till [den här sidan](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-one-adobe/activation/dc/dc13/ex2) som ett test.
+Gå till [den här sidan](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-one-adobe/activation/dc/dc13/ex2){target="_blank"} som ett test.
 
 Du bör nu se att alla **miljövariabler** på den här sidan har ersatts med sina verkliga värden, baserat på den aktiverade miljön i Chrome-tillägget.
 
@@ -145,7 +145,7 @@ Du bör nu ha en liknande vy som i nedanstående exempel, där miljövariabeln `
 
 ## Nästa steg
 
-Gå till [Använd demosystemet intill för att konfigurera klientegenskapen för Adobe Experience Platform Data Collection](./ex2.md)
+Gå till [Använd demosystemet intill för att konfigurera klientegenskapen för Adobe Experience Platform Data Collection](./ex2.md){target="_blank"}
 
 Gå tillbaka till [Komma igång](./getting-started.md){target="_blank"}
 

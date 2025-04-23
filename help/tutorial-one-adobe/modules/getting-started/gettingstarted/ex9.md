@@ -2,7 +2,8 @@
 title: Komma igång - Program som ska installeras
 description: Komma igång - Program som ska installeras
 doc-type: multipage-overview
-source-git-commit: e02737a6bf5cb30d4a71df417a7824b6c96bc796
+exl-id: 25f80da8-88c3-4273-962a-476675cf6047
+source-git-commit: e95acadeb7a0438f9be056dd426063ac8abc6bc0
 workflow-type: tm+mt
 source-wordcount: '186'
 ht-degree: 0%
@@ -15,7 +16,7 @@ Nedan visas en översikt över det förarbete som behövs innan du går med i en
 
 ## Adobe Creative Cloud
 
-Gå till [https://creativecloud.adobe.com/apps/download/creative-cloud](https://creativecloud.adobe.com/apps/download/creative-cloud).
+Gå till [https://creativecloud.adobe.com/apps/download/creative-cloud](https://creativecloud.adobe.com/apps/download/creative-cloud){target="_blank"}.
 
 ![Adobe I/O Ny integrering](./images/cc.png)
 
