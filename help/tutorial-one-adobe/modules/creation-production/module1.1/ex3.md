@@ -6,9 +6,9 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 60eecc24-1713-4fec-9ffa-a3186db1a8ca
-source-git-commit: b083a817700320e8e45645702c2868423c1fae99
+source-git-commit: 45f6f9db7d5b3e79e10d508a44a532261bd9cdb3
 workflow-type: tm+mt
-source-wordcount: '829'
+source-wordcount: '826'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Lär dig hur du arbetar med Photoshop API:er och Firefly Services.
 
-## 1.1.3.1 Krav
+## Förutsättningar för 1.1.3.1
 
 Innan du fortsätter med den här övningen måste du ha slutfört installationen av [ditt Adobe I/O-projekt](./../../../modules/getting-started/gettingstarted/ex6.md), och du måste också ha konfigurerat ett program för interaktion med API:er, som [Postman](./../../../modules/getting-started/gettingstarted/ex7.md) eller [PostBuster](./../../../modules/getting-started/gettingstarted/ex8.md).
 
@@ -27,7 +27,7 @@ I samlingen **Adobe IO - OAuth** markerar du begäran **POST - Get Access Token*
 
 ![Postman](./images/ioauthresp.png){zoomable="yes"}
 
-## 1.1.3.3 Interagera med en PSD-fil
+## 1.1.3.3 Interagera programmatiskt med en PSD-fil
 
 Hämta [citisign-fiber.psd](./../../../assets/ff/citisignal-fiber.psd){target="_blank"} till skrivbordet.
 
@@ -43,7 +43,7 @@ Låt oss skicka din första API-begäran till Photoshop API:er.
 
 Sedan hälsar vi på Photoshop API:er för att testa om alla behörigheter och all åtkomst är korrekt inställda.
 
-1. I samlingen **Photoshop** öppnar du begäran **Photoshop Hello (Test Auth.)**. Välj **Skicka**.
+I samlingen **Photoshop** öppnar du begäran **Photoshop Hello (Test Auth.)**. Välj **Skicka**.
 
 ![Azure Storage](./images/ps10.png){zoomable="yes"}
 
@@ -55,7 +55,7 @@ För att kunna interagera programmatiskt med PSD-filen **citisign-fiber.psd** m�
 
 ### Överför PSD till Azure
 
-1. Öppna begäran **Överför PSD till Azure Storage-kontot** i Postman. I föregående övning konfigurerade du dessa miljövariabler i Postman, som du nu kommer att använda:
+Öppna begäran **Överför PSD till Azure Storage-kontot** i Postman. I föregående övning konfigurerade du dessa miljövariabler i Postman, som du nu kommer att använda:
 
 - `AZURE_STORAGE_URL`
 - `AZURE_STORAGE_CONTAINER`
@@ -66,11 +66,11 @@ Som du kan se i begäran **Överför PSD till Azure Storage-konto**, är URL:en 
 
 ![Azure Storage](./images/ps12.png){zoomable="yes"}
 
-1. I **Body** markerar du filen **citisign-fiber.psd**.
+I **Body** markerar du filen **citisign-fiber.psd**.
 
 ![Azure Storage](./images/ps13.png){zoomable="yes"}
 
-1. Skärmen bör se ut så här. Välj **Skicka**.
+Skärmen bör se ut så här. Välj **Skicka**.
 
 ![Azure Storage](./images/ps14.png){zoomable="yes"}
 
@@ -86,33 +86,33 @@ Om du använder Azure Storage Explorer för att titta på din fil måste du uppd
 
 Därefter måste du hämta manifestfilen för din PSD-fil.
 
-1. I Postman öppnar du begäran **Photoshop - Hämta PSD Manifest**. Gå till **Body**.
+I Postman öppnar du begäran **Photoshop - Hämta PSD Manifest**. Gå till **Body**.
 
 Kroppen ska se ut så här:
 
 ```json
-{
-  "inputs": [
-    {
-      "storage": "external",
-      "href": "{{AZURE_STORAGE_URL}}/{{AZURE_STORAGE_CONTAINER}}/citisignal-fiber.psd{{AZURE_STORAGE_SAS_READ}}"
-    }
-  ],
-  "options": {
-    "thumbnails": {
-      "type": "image/jpeg"
+  {
+    "inputs": [
+      {
+        "storage": "external",
+        "href": "{{AZURE_STORAGE_URL}}/{{AZURE_STORAGE_CONTAINER}}/citisignal-fiber.psd{{AZURE_STORAGE_SAS_READ}}"
+      }
+    ],
+    "options": {
+      "thumbnails": {
+        "type": "image/jpeg"
+      }
     }
   }
-}
 ```
 
-1. Välj **Skicka**.
+Välj **Skicka**.
 
 I svaret ser du nu en länk. När åtgärder i Photoshop ibland kan ta lite tid att slutföra, tillhandahåller Photoshop en statusfil som svar på de flesta inkommande begäranden. För att förstå vad som händer med din begäran måste du läsa statusfilen.
 
 ![Azure Storage](./images/ps17.png){zoomable="yes"}
 
-1. Om du vill läsa statusfilen öppnar du begäran **Photoshop - Hämta PS-status**. Du kan se att den här begäran använder en variabel som URL, vilket är en variabel som anges av den tidigare begäran som du skickade, **Photoshop - Hämta PSD-manifest**. Variabler anges i **Skript** för varje begäran. Välj **Skicka**.
+Om du vill läsa statusfilen öppnar du begäran **Photoshop - Hämta PS-status**. Du kan se att den här begäran använder en variabel som URL, vilket är en variabel som anges av den tidigare begäran som du skickade, **Photoshop - Hämta PSD-manifest**. Variabler anges i **Skript** för varje begäran. Välj **Skicka**.
 
 ![Azure Storage](./images/ps18.png){zoomable="yes"}
 
@@ -120,7 +120,7 @@ Skärmen bör se ut så här. För närvarande är statusen inställd på **vän
 
 ![Azure Storage](./images/ps19.png){zoomable="yes"}
 
-1. Markera Skicka några gånger till på **Photoshop - Hämta PS-status** tills statusen ändras till **Slutförd**. Det här kan ta några minuter.
+Markera Skicka några gånger till på **Photoshop - Hämta PS-status** tills statusen ändras till **Slutförd**. Det här kan ta några minuter.
 
 När svaret är tillgängligt kan du se json-filen som innehåller information om alla lager i PSD-filen. Detta är användbar information eftersom exempelvis lagernamn eller lager-ID kan identifieras.
 
@@ -132,9 +132,9 @@ Sök till exempel efter texten `2048x2048-cta`. Skärmen bör se ut så här:
 
 ### Photoshop API - Ändra text
 
-Därefter måste du ändra texten för anropet till åtgärd med API:erna.
+Därefter måste du ändra texten för call to action med API:erna.
 
-1. Öppna begäran **Photoshop - Ändra text** i Postman och gå till **Brödtext**.
+Öppna begäran **Photoshop - Ändra text** i Postman och gå till **Brödtext**.
 
 Skärmen bör se ut så här:
 
@@ -143,37 +143,37 @@ Skärmen bör se ut så här:
 - För det tredje har en utdatafil angetts: `citisignal-fiber-changed-text.psd`
 
 ```json
-{
-  "inputs": [
-    {
-      "storage": "external",
-      "href": "{{AZURE_STORAGE_URL}}/{{AZURE_STORAGE_CONTAINER}}/citisignal-fiber.psd{{AZURE_STORAGE_SAS_READ}}"
-    }
-  ],
-  "options": {
-    "layers": [
+  {
+    "inputs": [
       {
-        "name": "2048x2048-cta",
-        "text": {
-          "content": "Get Fiber now!"
+        "storage": "external",
+        "href": "{{AZURE_STORAGE_URL}}/{{AZURE_STORAGE_CONTAINER}}/citisignal-fiber.psd{{AZURE_STORAGE_SAS_READ}}"
+      }
+    ],
+    "options": {
+      "layers": [
+        {
+          "name": "2048x2048-cta",
+          "text": {
+            "content": "Get Fiber now!"
+          }
         }
+      ]
+    },
+    "outputs": [
+      {
+        "storage": "azure",
+        "href": "{{AZURE_STORAGE_URL}}/{{AZURE_STORAGE_CONTAINER}}/citisignal-fiber-changed-text.psd{{AZURE_STORAGE_SAS_WRITE}}",
+        "type": "vnd.adobe.photoshop",
+        "overwrite": true
       }
     ]
-  },
-  "outputs": [
-    {
-      "storage": "azure",
-      "href": "{{AZURE_STORAGE_URL}}/{{AZURE_STORAGE_CONTAINER}}/citisignal-fiber-changed-text.psd{{AZURE_STORAGE_SAS_WRITE}}",
-      "type": "vnd.adobe.photoshop",
-      "overwrite": true
-    }
-  ]
-}
+  }
 ```
 
 Utdatafilen har ett annat namn eftersom du inte vill åsidosätta den ursprungliga indatafilen.
 
-1. Välj **Skicka**.
+Välj **Skicka**.
 
 ![Azure Storage](./images/ps23.png){zoomable="yes"}
 
@@ -181,13 +181,13 @@ Precis som tidigare innehåller svaret en länk som pekar på statusfilen som h�
 
 ![Azure Storage](./images/ps22.png){zoomable="yes"}
 
-1. Om du vill läsa statusfilen öppnar du begäran **Photoshop - Hämta PS-status** och väljer **Skicka**. Om statusen inte är inställd på **success** omedelbart, vänta några sekunder och välj sedan **Skicka** igen.
+Om du vill läsa statusfilen öppnar du begäran **Photoshop - Hämta PS-status** och väljer **Skicka**. Om statusen inte är inställd på **success** omedelbart, vänta några sekunder och välj sedan **Skicka** igen.
 
-1. Välj den URL som du vill hämta utdatafilen från.
+Välj den URL som du vill hämta utdatafilen från.
 
 ![Azure Storage](./images/ps24.png){zoomable="yes"}
 
-1. Öppna **citisign-fiber-changed-text.psd** när du har hämtat filen till datorn. Platshållaren för anropet till åtgärd har ersatts av texten **Hämta nu!**.
+Öppna **citisign-fiber-changed-text.psd** när du har hämtat filen till datorn. Platshållaren för call to action har ersatts av texten **Hämta nu!**.
 
 ![Azure Storage](./images/ps25.png){zoomable="yes"}
 
