@@ -4,9 +4,9 @@ description: Lär dig hur du implementerar Adobe Experience Cloud mobilappar. De
 recommendations: noDisplay,catalog
 last-substantial-update: 2023-11-29T00:00:00Z
 exl-id: daff4214-d515-4fad-a224-f7589b685b55
-source-git-commit: a928fb5c8e48e71984b75faf4eb397814caac6aa
+source-git-commit: c08671ae28955ff090baa7aa5a47246b2196ba20
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '792'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ I den här lektionen antas du ha ett Adobe ID och de användarbehörigheter som 
 * I Datainsamling måste du ha:
    * **[!UICONTROL Platforms]** - behörighetsobjekt **[!UICONTROL Mobile]**
    * **[!UICONTROL Property Rights]** - behörighet till objekt i **[!UICONTROL Develop]**, **[!UICONTROL Approve]**, **[!UICONTROL Publish]**, **[!UICONTROL Manage Extensions]** och **[!UICONTROL Manage Environments]**.
-   * **[!UICONTROL Company Rights]** - behörighet till objekt i **[!UICONTROL Manage Properties]** och, om du slutför den valfria lektionen för push-meddelanden, **[!UICONTROL Manage App Configurations]**
+   * **[!UICONTROL Company Rights]** - behörighet till objekt i **[!UICONTROL Manage Properties]**
 
      Mer information om taggbehörigheter finns i [Användarbehörigheter för taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html?lang=en){target="_blank"} i produktdokumentationen.
 * I Experience Platform måste du ha:
@@ -92,7 +92,7 @@ I den här lektionen antas du ha ett Adobe ID och de användarbehörigheter som 
 Det finns två versioner av exempelappen att hämta. Båda versionerna kan hämtas/klonas från [Github](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App). Du hittar två mappar:
 
 
-1. [Start](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App){target="_blank"}: Ett projekt utan kod eller med platshållarkod för merparten av Experience Platform Mobile SDK-koden som du behöver använda för att slutföra övningarna i den här självstudien.
+1. [Start](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App){target="_blank"}: Ett projekt utan kod eller med platshållarkod för merparten av Experience Platform Mobile SDK-koden som du behöver använda för att slutföra övningarna i den här kursen.
 1. [Slutför](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App){target="_blank"}: en version med fullständig implementering för referens.
 
 >[!NOTE]

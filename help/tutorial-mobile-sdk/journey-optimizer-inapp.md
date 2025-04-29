@@ -6,10 +6,10 @@ feature-set: Journey Optimizer
 feature: In App
 jira: KT-14639
 exl-id: 6cb4d031-6172-4a84-b717-e3a1f5dc7d5d
-source-git-commit: e316f881372a387b82f8af27f7f0ea032a99be99
+source-git-commit: f73f0fc345fc605e60b19be1abe2e328795898aa
 workflow-type: tm+mt
-source-wordcount: '1308'
-ht-degree: 1%
+source-wordcount: '1470'
+ht-degree: 0%
 
 ---
 
@@ -44,7 +44,7 @@ I den här lektionen ska du
 * Skapa en appyta i AJO.
 * Installera och konfigurera taggtillägget för Journey Optimizer.
 * Uppdatera appen för att registrera Journey Optimizer-taggtillägget.
-* Validera inställningar i Assurance.
+* Validera konfigurationen i Assurance.
 * Definiera er egen kampanj och upplevelse av meddelanden i appen i Journey Optimizer.
 * Skicka ditt eget meddelande i appen inifrån appen.
 
@@ -55,21 +55,40 @@ I den här lektionen ska du
 >Om du redan har konfigurerat din miljö som en del av [Journey Optimizer push messaging](journey-optimizer-push.md) -lektionen kanske du redan har utfört några av stegen i det här installationsavsnittet.
 
 
-### Lägg till en appyta i datainsamling
+### Skapa en kanalkonfiguration i Journey Optimizer
 
-1. I [gränssnittet för datainsamling](https://experience.adobe.com/data-collection/) väljer du **[!UICONTROL App Surfaces]** i den vänstra panelen.
-1. Välj **[!UICONTROL Create App Surface]** om du vill skapa en konfiguration.
-   ![appyta - startsida](assets/push-app-surface.png)
-1. Ange **[!UICONTROL Name]** som konfiguration, till exempel `Luma App Tutorial`.
-1. Välj **[!UICONTROL Apple iOS]** från **[!UICONTROL Mobile Application Configuration]**.
-1. Ange ID för mobilappspaket i fältet **[!UICONTROL App ID (iOS Bundle ID)]**. Exempel: `com.adobe.luma.tutorial.swiftui`.
-1. Välj **[!UICONTROL Save]**.
+Till att börja med måste du skapa en kanalkonfiguration som gör att du kan skicka meddelanden från Journey Optimizer i appmeddelanden.
 
-   ![appytans konfiguration](assets/push-app-surface-config-inapp.png)
+1. I Journey Optimizer-gränssnittet öppnar du menyn **[!UICONTROL Channels]** > **[!UICONTROL General settings]** > **[!UICONTROL Channel configurations]** och väljer sedan **[!UICONTROL Create channel configuration]**.
+
+   ![Skapa en kanalkonfiguration](assets/push-config-9.png)
+
+1. Ange ett namn och en beskrivning (valfritt) för konfigurationen.
+
+   >[!NOTE]
+   >
+   > Namn måste börja med en bokstav (A-Z). Det får bara innehålla alfanumeriska tecken. Du kan också använda understreck `_`, punkt `.` och bindestreck `-`.
+
+
+1. Om du vill tilldela anpassade eller grundläggande dataanvändningsetiketter till konfigurationen kan du välja **[!UICONTROL Manage access]**. [Läs mer om OLAC (Object Level Access Control)](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access).
+
+1. Välj kanalen **Meddelanden i appen**.
+
+1. Välj **[!UICONTROL Marketing action]** om du vill associera medgivandeprinciper till meddelanden som använder den här konfigurationen. Alla policyer för samtycke som är kopplade till marknadsföringsåtgärden utnyttjas för att ta hänsyn till kundernas preferenser. [Läs mer om marknadsföringsåtgärder](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/privacy/consent/consent#surface-marketing-actions).
+
+1. Välj den plattform som du vill definiera inställningarna för. På så sätt kan ni ange målappen för varje plattform och säkerställa enhetlig innehållsleverans på flera plattformar.
+
+   >[!NOTE]
+   >
+   >För iOS- och Android-plattformar baseras leveransen enbart på program-ID:t. Om båda apparna har samma program-ID levereras innehåll till båda, oavsett vilken plattform som valts i **[!UICONTROL Channel configuration]**.
+
+1. Välj **[!UICONTROL Submit]** om du vill spara ändringarna.
+
+   ![Konfigurera appkanalen](assets/inapp_config_10.png)
 
 ### Uppdatera datastream-konfiguration
 
-Uppdatera konfigurationen av Experience Edge för att se till att data som skickas från din mobilapp till Edge Network vidarebefordras till Journey Optimizer.
+Uppdatera Experience Edge-konfigurationen för att se till att data som skickas från din mobilapp till Edge Network vidarebefordras till Journey Optimizer.
 
 
 
@@ -79,7 +98,7 @@ Uppdatera konfigurationen av Experience Edge för att se till att data som skick
 1. Välj **[!UICONTROL Save]** om du vill spara dataströmskonfigurationen.
 
 
-   ![AEP-datastream-konfiguration](assets/datastream-ajo-inapp-configuration.png)
+   ![AEP datastream-konfiguration](assets/datastream-ajo-inapp-configuration.png)
 
 
 ### Installera tillägget Journey Optimizer-taggar
@@ -129,10 +148,10 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
    ```
 
 
-## Validera inställningar med Assurance
+## Validera installationen med Assurance
 
-1. Granska avsnittet [Installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
-1. Välj **[!UICONTROL Configure]** i försäkringsgränssnittet.
+1. Granska avsnittet [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
+1. I Assurance-gränssnittet väljer du **[!UICONTROL Configure]**.
    ![konfigurera klicka](assets/push-validate-config.png)
 1. Välj knappen ![Plus](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) bredvid **[!UICONTROL In-App Messaging]**.
 1. Välj **[!UICONTROL Save]**.
@@ -152,9 +171,9 @@ Om du vill skapa ett eget meddelande i appen måste du definiera en kampanj i Jo
 * livscykelhändelser, som start, installation, uppgradering, stängning eller krasch,
 * geopositioneringshändelser, som att ange eller avsluta en intressepunkt.
 
-I den här självstudiekursen ska du använda de generiska och tilläggsoberoende API:erna för Mobile Core (se [Generiska API:er för Mobile Core](https://developer.adobe.com/client-sdks/documentation/mobile-core/#mobile-core-generic-apis)) för att underlätta händelsespårning av användarskärmar, åtgärder och PII-data. Händelser som genereras av dessa API:er publiceras till SDK-händelsehubben och kan användas av tillägg. SDK-händelsehubben tillhandahåller den grundläggande datastruktur som är knuten till alla SDK-tillägg för Mobile Platform, med en lista över registrerade tillägg och interna moduler, en lista över registrerade händelseavlyssnare och en delad tillståndsdatabas.
+I den här självstudiekursen ska du använda de generiska och tilläggsoberoende API:erna för Mobile Core (se [Generiska API:er för Mobile Core](https://developer.adobe.com/client-sdks/documentation/mobile-core/#mobile-core-generic-apis)) för att underlätta händelsespårning av användarskärmar, åtgärder och PII-data. Händelser som genereras av dessa API:er publiceras till händelsehubben i SDK och kan användas av tillägg. SDK händelsehubb tillhandahåller den grundläggande datastruktur som är knuten till alla SDK-tillägg för Mobile Platform, med en lista över registrerade tillägg och interna moduler, en lista över registrerade händelseavlyssnare och en delad tillståndsdatabas.
 
-SDK-händelsehubben publicerar och tar emot händelsedata från registrerade tillägg för att förenkla integreringen med Adobe och tredjepartslösningar. När tillägget Optimera installeras hanteras till exempel alla förfrågningar och interaktioner med erbjudandemotorn Journey Optimizer - Beslutshantering av händelsehubben.
+SDK händelsehubb publicerar och tar emot händelsedata från registrerade tillägg för att förenkla integreringen med Adobe och tredjepartslösningar. När tillägget Optimera installeras hanteras till exempel alla förfrågningar och interaktioner med erbjudandemotorn Journey Optimizer - Beslutshantering av händelsehubben.
 
 1. I Journey Optimizer-gränssnittet väljer du **[!UICONTROL Campaigns]** i den vänstra listen.
 1. Välj **[!UICONTROL Create Campaign]**.
@@ -226,12 +245,12 @@ Du har alla ingredienser på plats för att skicka ett meddelande i appen. Det s
 
 Du kan validera dina meddelanden i appen i Assurance-gränssnittet.
 
-1. Granska avsnittet [Installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
+1. Granska avsnittet [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
 1. Välj **[!UICONTROL In-App Messaging]**.
 1. Välj **[!UICONTROL Event List]**.
 1. Välj en **[!UICONTROL Display message]**-post.
-1. Inspect Raw-händelsen, särskilt `html`, som innehåller den fullständiga layouten och innehållet i meddelandet i appen.
-   ![Meddelande för försäkrings-i-app](assets/assurance-in-app-display-message.png)
+1. Granska raw-händelsen, särskilt `html`, som innehåller den fullständiga layouten och innehållet i meddelandet i appen.
+   ![Assurance-meddelande i appen](assets/assurance-in-app-display-message.png)
 
 
 ## Nästa steg
@@ -242,6 +261,6 @@ Nu bör du ha alla verktyg du behöver för att börja lägga till meddelanden i
 >
 >Du har aktiverat appen för meddelanden i appen och lagt till en meddelandekampanj i appen med Journey Optimizer och Journey Optimizer-tillägget för Experience Platform Mobile SDK.
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
+>Tack för att du har lagt ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League Community-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 
 Nästa: **[Skapa och visa erbjudanden](journey-optimizer-offers.md)**

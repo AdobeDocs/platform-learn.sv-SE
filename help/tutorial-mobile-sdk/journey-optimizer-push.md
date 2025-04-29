@@ -6,9 +6,9 @@ feature-set: Journey Optimizer
 feature: Push
 jira: KT-14638
 exl-id: e8e920d5-fd36-48b7-9185-a34231c0d336
-source-git-commit: e316f881372a387b82f8af27f7f0ea032a99be99
+source-git-commit: f73f0fc345fc605e60b19be1abe2e328795898aa
 workflow-type: tm+mt
-source-wordcount: '2323'
+source-wordcount: '2599'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,8 @@ Med Journey Optimizer kan ni skapa resor och skicka meddelanden till utvalda må
 * Programmet har skapats och körts med SDK:er installerade och konfigurerade.
 * Konfigurera appen för Adobe Experience Platform.
 * Åtkomst till Journey Optimizer och tillräcklig behörighet enligt beskrivningen [här](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html?lang=en). Du behöver även tillräcklig behörighet för följande Journey Optimizer-funktioner.
-   * Skapa en appyta.
+   * Skapa en push-autentiseringsuppgift.
+   * Skapa en push-kanalskonfiguration.
    * Skapa en resa.
    * Skapa ett meddelande.
    * Skapa meddelandeförinställningar.
@@ -43,11 +44,11 @@ Med Journey Optimizer kan ni skapa resor och skicka meddelanden till utvalda må
 I den här lektionen ska du
 
 * Registrera program-ID med Apple Push Notification-tjänsten (APN:er).
-* Skapa en appyta i Journey Optimizer.
+* Skapa en kanalkonfiguration i Journey Optimizer.
 * Uppdatera ditt schema så att det inkluderar push-meddelandefält.
 * Installera och konfigurera taggtillägget för Journey Optimizer.
 * Uppdatera appen för att registrera Journey Optimizer-taggtillägget.
-* Validera inställningar i Assurance.
+* Validera konfigurationen i Assurance.
 * Skicka ett testmeddelande från Assurance
 * Definiera din egen push-meddelandehändelse, resa och upplevelse i Journey Optimizer.
 * Skicka ditt eget push-meddelande inifrån appen.
@@ -74,32 +75,79 @@ Följande steg är inte Adobe Experience Cloud-specifika och har utformats för 
 1. Välj **[!UICONTROL Continue]**.
    ![konfigurera ny nyckel](assets/mobile-push-apple-dev-config-key.png)
 1. Granska konfigurationen och välj **[!UICONTROL Register]**.
-1. Hämta den privata nyckeln `.p8`. Den används senare i konfigurationen för appytan i den här lektionen.
-1. Notera **[!UICONTROL Key ID]**. Den används i appytskonfigurationen.
-1. Notera **[!UICONTROL Team ID]**. Den används i appytskonfigurationen.
+1. Hämta den privata nyckeln `.p8`. Den används i Journey Optimizer-kanalkonfigurationen i nästa övning.
+1. Notera **[!UICONTROL Key ID]**. Den används i Journey Optimizer kanalkonfiguration.
+1. Notera **[!UICONTROL Team ID]**. Den används i Journey Optimizer kanalkonfiguration.
    ![Nyckelinformation](assets/push-apple-dev-key-details.png)
 
 Ytterligare dokumentation finns [här](https://help.apple.com/developer-account/#/devcdfbb56a3).
 
-#### Lägg till en appyta i datainsamling
 
-1. I [gränssnittet för datainsamling](https://experience.adobe.com/data-collection/) väljer du **[!UICONTROL App Surfaces]** i den vänstra panelen.
-1. Välj **[!UICONTROL Create App Surface]** om du vill skapa en konfiguration.
-   ![appyta - startsida](assets/push-app-surface.png)
-1. Ange **[!UICONTROL Name]** som konfiguration, till exempel `Luma App Tutorial`.
-1. Välj **[!UICONTROL Apple iOS]** från **[!UICONTROL Mobile Application Configuration]**.
-1. Ange ID för mobilappspaket i fältet **[!UICONTROL App ID (iOS Bundle ID)]**. Exempel: `com.adobe.luma.tutorial.swiftui`.
-1. Aktivera **[!UICONTROL Push Credentials]** för att lägga till dina autentiseringsuppgifter.
-1. Dra och släpp `.p8` **Apple Push Notification Authentication Key**-filen.
-1. Ange **[!UICONTROL Key ID]**, en sträng med 10 tecken som tilldelats när autentiseringsnyckeln `p8` skapades. Den finns på fliken **[!UICONTROL Keys]** på sidan **Certifikat, Identifierare och profiler** på sidorna på Apple Developer Portal. Se även [Skapa en privat nyckel](#create-a-private-key).
-1. Ange **[!UICONTROL Team ID]**. Team-ID är ett värde som finns på fliken **Medlemskap** eller högst upp på sidan Apple Developer Portal. Se även [Skapa en privat nyckel](#create-a-private-key).
-1. Välj **[!UICONTROL Save]**.
+#### Lägg till push-autentiseringsuppgifter för appar i Journey Optimizer
 
-   ![appytans konfiguration](assets/push-app-surface-config.png)
+Därefter måste du lägga till dina push-autentiseringsuppgifter för mobilprogram i Journey Optimizer. (I tidigare versioner av produkten lades dessa till som en del av konfigurationen &quot;App Surface&quot; i datainsamlingen).
+
+Registrering av push-autentiseringsuppgifter krävs för mobilappen för att godkänna att Adobe skickar push-meddelanden åt dig. Se stegen nedan:
+
+1. Öppna menyn **[!UICONTROL Channels]** > **[!UICONTROL Push settings]** > **[!UICONTROL Push credentials]** i Journey Optimizer-gränssnittet.
+
+1. Välj **[!UICONTROL Create push credential]**.
+
+
+   ![Skapa en ny konfiguration för push-autentiseringsuppgifter i Journey Optimizer](assets/add-push-credential-ios.png)
+
+1. I listrutan **[!UICONTROL Platform]** väljer du operativsystemet **iOS**:
+
+
+   1. Ange ID för mobilappspaket i fältet **[!UICONTROL App ID]** (iOS Bundle ID). Till exempel com.adobe.luma.tutorial.swiftui
+
+   1. Aktivera alternativet **[!UICONTROL Apply to all sandboxes]** om du vill att de här push-autentiseringsuppgifterna ska vara tillgängliga i alla sandlådor. Om en specifik sandlåda har egna autentiseringsuppgifter för samma Platform- och App ID-par har dessa sandlådespecifika autentiseringsuppgifter företräde.
+
+
+   1. Dra och släpp .p8-filen **Apple Push Notification Authentication Key** som hämtats från föregående övning.
+
+   1. Ange **[!UICONTROL Key ID]**, en sträng med 10 tecken som tilldelats när autentiseringsnyckeln `p8` skapades. Den finns på fliken **[!UICONTROL Keys]** på sidan **Certifikat, Identifierare och profiler** på sidorna på Apple Developer Portal. (Du borde ha noterat under föregående övning.)
+
+   1. Ange **[!UICONTROL Team ID]**. Team-ID är ett värde som finns på fliken **Medlemskap** eller högst upp på sidan Apple Developer Portal. (Du borde ha noterat under föregående övning.)
+
+   ![Push-konfiguration för autentiseringsuppgifter i Journey Optimizer](assets/add-app-config-ios.png)
+
+1. Klicka på **[!UICONTROL Submit]** för att skapa din konfiguration för push-autentiseringsuppgifter.
+
+#### Skapa en kanalkonfiguration för push-funktioner i Journey Optimizer
+
+När du har skapat en konfiguration för push-autentiseringsuppgifter måste du skapa en konfiguration som kan skicka push-meddelanden från Journey Optimizer.
+
+1. I Journey Optimizer-gränssnittet öppnar du menyn **[!UICONTROL Channels]** > **[!UICONTROL General settings]** > **[!UICONTROL Channel configurations]** och väljer sedan **[!UICONTROL Create channel configuration]**.
+
+   ![Skapa en ny kanalkonfiguration](assets/push-config-9.png)
+
+1. Ange ett namn och en beskrivning (valfritt) för konfigurationen.
+
+   >[!NOTE]
+   >
+   > Namn måste börja med en bokstav (A-Z). Det får bara innehålla alfanumeriska tecken. Du kan också använda understreck `_`, punkt `.` och bindestreck `-`.
+
+
+1. Om du vill tilldela anpassade eller grundläggande dataanvändningsetiketter till konfigurationen kan du välja **[!UICONTROL Manage access]**. [Läs mer om OLAC (Object Level Access Control)](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access).
+
+1. Välj kanalen **Push**.
+
+
+1. Välj **[!UICONTROL Marketing action]** om du vill associera medgivandeprinciper till meddelanden som använder den här konfigurationen. Alla policyer för samtycke som är kopplade till marknadsföringsåtgärden utnyttjas för att ta hänsyn till kundernas preferenser. [Läs mer om marknadsföringsåtgärder](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/privacy/consent/consent#surface-marketing-actions).
+
+1. Välj din **[!UICONTROL Platform]**.
+
+1. Välj samma **[!UICONTROL App id]** som för de push-autentiseringsuppgifter som konfigurerats ovan.
+
+1. Välj **[!UICONTROL Submit]** om du vill spara ändringarna.
+
+   ![Push-kanalkonfiguration](assets/push-config-10.png)
+
 
 ### Uppdatera datastream-konfiguration
 
-För att säkerställa att data som skickas från din mobilapp till Edge Network vidarebefordras till Journey Optimizer, ska du uppdatera Experience Edge-konfigurationen.
+Uppdatera Experience Edge-konfigurationen för att se till att data som skickas från din mobilapp till Edge Network vidarebefordras till Journey Optimizer.
 
 1. I användargränssnittet för datainsamling väljer du **[!UICONTROL Datastreams]** och markerar ditt datastream, till exempel **[!DNL Luma Mobile App]**.
 1. Välj ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_MoreSmallList_18_N.svg) för **[!UICONTROL Experience Platform]** och välj ![Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) **[!UICONTROL Edit]** på snabbmenyn.
@@ -111,7 +159,7 @@ För att säkerställa att data som skickas från din mobilapp till Edge Network
 
    1. Välj **[!UICONTROL Save]** om du vill spara dataströmskonfigurationen.
 
-   ![AEP-datastream-konfiguration](assets/datastream-aep-configuration.png)
+   ![AEP datastream-konfiguration](assets/datastream-aep-configuration.png)
 
 
 
@@ -135,10 +183,10 @@ För att din app ska fungera med Journey Optimizer måste du uppdatera din tagge
 >Om du inte ser **[!UICONTROL AJO Push Tracking Experience Event Dataset]** som ett alternativ kontaktar du kundtjänst.
 >
 
-## Validera inställningar med Assurance
+## Validera installationen med Assurance
 
-1. Granska avsnittet [Installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
-1. Välj **[!UICONTROL Configure]** i försäkringsgränssnittet.
+1. Granska avsnittet [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
+1. I Assurance-gränssnittet väljer du **[!UICONTROL Configure]**.
    ![konfigurera klicka](assets/push-validate-config.png)
 1. Välj ![Plus](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) bredvid **[!UICONTROL Push Debug]**.
 1. Välj **[!UICONTROL Save]**.
@@ -304,7 +352,7 @@ Med händelser i Journey Optimizer kan du utlösa resor åt gången för att ski
    1. Välj **[!UICONTROL Save]**.
       ![Redigera händelsesteg 2](assets/ajo-edit-event2.png)
 
-Du har just skapat en händelsekonfiguration som baseras på det händelseschema för mobilappsupplevelser som du skapade tidigare som en del av den här självstudien. Den här händelsekonfigurationen filtrerar inkommande upplevelsehändelser med din specifika händelsetyp (`application.test`), så bara händelser med den typen, som initieras från din mobilapp, utlöser den resa du bygger i nästa steg. I ett verkligt scenario kanske du vill skicka push-meddelanden från en extern tjänst, men samma koncept gäller: från det externa programmet skickar du en upplevelsehändelse till Experience Platform som innehåller specifika fält som du kan använda för att tillämpa villkor på innan dessa händelser utlöser en resa.
+Du har just skapat en händelsekonfiguration som baseras på det händelseschema för mobilappsupplevelser som du skapade tidigare som en del av den här självstudien. Den här händelsekonfigurationen filtrerar inkommande upplevelsehändelser med din specifika händelsetyp (`application.test`), så bara händelser med den typen, som initieras från din mobilapp, utlöser den resa du bygger i nästa steg. I ett verkligt scenario kanske du vill skicka push-meddelanden från en extern tjänst, men samma koncept gäller: från det externa programmet skickar du en upplevelsehändelse till Experience Platform med specifika fält som du kan använda för att tillämpa villkor på innan dessa händelser utlöser en resa.
 
 ### Skapa resan
 
@@ -395,7 +443,7 @@ Den här gången har den upplevelsehändelse du ska skicka inte skapats för att
    }
    ```
 
-   Den här koden skapar en `testPushPayload`-instans med de parametrar som har angetts för funktionen (`applicationId` och `eventType`) och anropar sedan `sendExperienceEvent` när nyttolasten konverteras till ett lexikon. Den här koden, den här gången, tar även hänsyn till asynkrona aspekter av att anropa Adobe Experience Platform SDK genom att använda Swift-samtidighetsmodellen som baseras på `await` och `async`.
+   Den här koden skapar en `testPushPayload`-instans med de parametrar som har angetts för funktionen (`applicationId` och `eventType`) och anropar sedan `sendExperienceEvent` när nyttolasten konverteras till ett lexikon. Den här koden, den här gången, tar även hänsyn till asynkrona aspekter av att anropa Adobe Experience Platform SDK genom att använda Swift-modellen för samtidighet som baseras på `await` och `async`.
 
 1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Views]** > **[!DNL General]** > **[!UICONTROL ConfigView]** i Xcode Project-navigatorn. I definitionen för knappen Push Notification (Push-meddelande) lägger du till följande kod för att skicka händelsenyttolasten för testpush-meddelanden för att utlösa din resa när användaren trycker på knappen.
 
@@ -428,6 +476,6 @@ Nu bör du ha alla verktyg som behövs för att hantera push-meddelanden i appen
 >
 >Du har nu aktiverat appen för push-meddelanden med Journey Optimizer och Journey Optimizer-tillägget för Experience Platform Mobile SDK.
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
+>Tack för att du har lagt ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League Community-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 
 Nästa: **[Skapa och skicka meddelanden i appen](journey-optimizer-inapp.md)**
