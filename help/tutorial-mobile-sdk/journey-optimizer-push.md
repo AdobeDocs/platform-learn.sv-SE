@@ -6,9 +6,9 @@ feature-set: Journey Optimizer
 feature: Push
 jira: KT-14638
 exl-id: e8e920d5-fd36-48b7-9185-a34231c0d336
-source-git-commit: f73f0fc345fc605e60b19be1abe2e328795898aa
+source-git-commit: 83046a6c56353ba8750c4e500f70ef2ca887fbe8
 workflow-type: tm+mt
-source-wordcount: '2599'
+source-wordcount: '2613'
 ht-degree: 0%
 
 ---
@@ -75,9 +75,9 @@ Följande steg är inte Adobe Experience Cloud-specifika och har utformats för 
 1. Välj **[!UICONTROL Continue]**.
    ![konfigurera ny nyckel](assets/mobile-push-apple-dev-config-key.png)
 1. Granska konfigurationen och välj **[!UICONTROL Register]**.
-1. Hämta den privata nyckeln `.p8`. Den används i Journey Optimizer-kanalkonfigurationen i nästa övning.
-1. Notera **[!UICONTROL Key ID]**. Den används i Journey Optimizer kanalkonfiguration.
-1. Notera **[!UICONTROL Team ID]**. Den används i Journey Optimizer kanalkonfiguration.
+1. Hämta den privata nyckeln `.p8`. Den används i nästa övning när du konfigurerar push-autentiseringsuppgifter för Journey Optimizer.
+1. Notera **[!UICONTROL Key ID]**. Den används i nästa övning när du konfigurerar push-autentiseringsuppgifter för Journey Optimizer.
+1. Notera **[!UICONTROL Team ID]**. Den används i nästa övning när du konfigurerar push-autentiseringsuppgifter för Journey Optimizer.
    ![Nyckelinformation](assets/push-apple-dev-key-details.png)
 
 Ytterligare dokumentation finns [här](https://help.apple.com/developer-account/#/devcdfbb56a3).
@@ -96,19 +96,17 @@ Registrering av push-autentiseringsuppgifter krävs för mobilappen för att god
 
    ![Skapa en ny konfiguration för push-autentiseringsuppgifter i Journey Optimizer](assets/add-push-credential-ios.png)
 
-1. I listrutan **[!UICONTROL Platform]** väljer du operativsystemet **iOS**:
+1. I listrutan **[!UICONTROL Platform]** väljer du operativsystemet **iOS**.
 
+1. Ange ID för mobilappspaket i fältet **[!UICONTROL App ID]** (iOS Bundle ID). Till exempel com.adobe.luma.tutorial.swiftui
 
-   1. Ange ID för mobilappspaket i fältet **[!UICONTROL App ID]** (iOS Bundle ID). Till exempel com.adobe.luma.tutorial.swiftui
+1. Aktivera alternativet **[!UICONTROL Apply to all sandboxes]** om du vill att de här push-autentiseringsuppgifterna ska vara tillgängliga i alla sandlådor. Om en specifik sandlåda har egna autentiseringsuppgifter för samma Platform- och App ID-par har dessa sandlådespecifika autentiseringsuppgifter företräde.
 
-   1. Aktivera alternativet **[!UICONTROL Apply to all sandboxes]** om du vill att de här push-autentiseringsuppgifterna ska vara tillgängliga i alla sandlådor. Om en specifik sandlåda har egna autentiseringsuppgifter för samma Platform- och App ID-par har dessa sandlådespecifika autentiseringsuppgifter företräde.
+1. Dra och släpp .p8-filen **Apple Push Notification Authentication Key** som hämtats från föregående övning.
 
+1. Ange **[!UICONTROL Key ID]**, en sträng med 10 tecken som tilldelats när autentiseringsnyckeln `p8` skapades. Den finns på fliken **[!UICONTROL Keys]** på sidan **Certifikat, Identifierare och profiler** på sidorna på Apple Developer Portal. (Du borde ha noterat under föregående övning.)
 
-   1. Dra och släpp .p8-filen **Apple Push Notification Authentication Key** som hämtats från föregående övning.
-
-   1. Ange **[!UICONTROL Key ID]**, en sträng med 10 tecken som tilldelats när autentiseringsnyckeln `p8` skapades. Den finns på fliken **[!UICONTROL Keys]** på sidan **Certifikat, Identifierare och profiler** på sidorna på Apple Developer Portal. (Du borde ha noterat under föregående övning.)
-
-   1. Ange **[!UICONTROL Team ID]**. Team-ID är ett värde som finns på fliken **Medlemskap** eller högst upp på sidan Apple Developer Portal. (Du borde ha noterat under föregående övning.)
+1. Ange **[!UICONTROL Team ID]**. Team-ID är ett värde som finns på fliken **Medlemskap** eller högst upp på sidan Apple Developer Portal. (Du borde ha noterat under föregående övning.)
 
    ![Push-konfiguration för autentiseringsuppgifter i Journey Optimizer](assets/add-app-config-ios.png)
 
