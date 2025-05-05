@@ -54,6 +54,7 @@ Om du inte behöver definierade steg gör du det så är du klar med lektionen. 
    1. **Händelsetypen** kan vara DOM-klar, beroende på implementeringen
    1. Expandera de **avancerade alternativen**
    1. Ställ in **Order** på ett lägre antal än dina andra regler, så att den körs först.
+
       ![Konfigurera global variabelhändelse](assets/configure-global-variable-event.jpg)
       >[!NOTE]
       >

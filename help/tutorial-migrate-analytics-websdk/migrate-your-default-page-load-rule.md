@@ -33,6 +33,7 @@ I den här aktiviteten skapar vi en Web SDK-åtgärd som motsvarar åtgärden **
 
    ![Adobe Analytics - Ange variabler](assets/aa-set-variables.jpg)
    1. Observera vilka variabler som anges i den regeln
+
       ![Variabler anges](assets/aa-vars-set.jpg)
 
 1. Överst på sidan ändrar du alternativknappen till **Ange JSON** så visas en kodvy över de variabler som har angetts. Den här kodvyn och gränssnittsvyn är utbytbara, och när du anger något i ett gränssnitt uppdateras det även i det andra användargränssnittet.

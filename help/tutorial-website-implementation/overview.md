@@ -130,7 +130,7 @@ I den här lektionen kommer du att implementera Adobe Experience Cloud i en fals
    </html>
    ```
 
-+++
+   +++
 
 1. Skaffa en textredigerare där du kan ändra HTML-exempelsidan. (Om du inte har någon bör du prova [hakparenteser](https://brackets.io/))
 1. Bokmärk [Luma-webbplatsen](https://luma.enablementadobe.com/content/luma/us/en.html)

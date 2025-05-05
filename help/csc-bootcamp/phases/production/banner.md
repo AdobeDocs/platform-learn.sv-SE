@@ -29,10 +29,13 @@ Med innehållsautomatisering får marknadsförarna tillgång till kraften i Adob
 
 - Följande är intressanta:
    - Adobe-cykelbanderoll mörk: skapar en Adobe-banderoll med en mörk övertäckning, baserat på den valda resursen
+
      ![mörk banderoll](./images/prod-banner-dark.jpg)
    - Adobe Cycle Banner Light: skapar en Adobe-banderoll med lätt övertäckning, baserat på vald mediefil
+
      ![ljusbanderoll](./images/prod-banner-light.jpg)
    - Adobe-cykelbanderollgrön: skapar en Adobe-banderoll med en grön övertäckning som baseras på den valda resursen
+
      ![grön banderoll](./images/prod-banner-green.jpg)
 
 - När du har valt vilken typ av banderoll du vill skapa markerar du den bearbetningsprofilen och väljer sedan &quot;Använd profil för mapp(ar)&quot;.

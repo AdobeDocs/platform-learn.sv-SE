@@ -180,6 +180,7 @@ SDK händelsehubb publicerar och tar emot händelsedata från registrerade till�
 1. På skärmen **[!UICONTROL Create Campaign]**:
    1. Välj **[!UICONTROL In-app message]** och välj en appyta i listan **[!UICONTROL App surface]**, till exempel **[!DNL Luma Mobile App]**.
    1. Välj **[!UICONTROL Create]**
+
       ![Kampanjegenskaper](assets/ajo-campaign-properties.png)
 1. På skärmen för Campaign-definitionen, på **[!UICONTROL Properties]**, anger du ett **[!UICONTROL Name]** för kampanjen, till exempel `Luma - In-App Messaging Campaign`, och ett **[!UICONTROL Description]**, till exempel `In-app messaging campaign for Luma app`.
    ![Kampanjnamn](assets/ajo-campaign-properties-name.png)
@@ -191,6 +192,7 @@ SDK händelsehubb publicerar och tar emot händelsedata från registrerade till�
    4. Ange **[!UICONTROL Dismiss]** som **[!UICONTROL Button #1 text (primary)]**.
    5. Observera hur förhandsgranskningen uppdateras.
    6. Välj **[!UICONTROL Review to activate]**.
+
       ![Redigerare i appen](assets/ajo-in-app-editor.png)
 1. På skärmen **[!UICONTROL Review to activate (Luma - In-App Messaging Campaign)]** väljer du ![Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) i rutan **[!UICONTROL Schedule]**.
    ![Välj Schema](assets/ajo-review-select-schedule.png) för granskning av schema
@@ -199,6 +201,7 @@ SDK händelsehubb publicerar och tar emot händelsedata från registrerade till�
    1. Om du vill ta bort **[!UICONTROL Application launch event]** väljer du ![Stäng](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Close_18_N.svg) .
    1. Använd ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Add condition]** upprepade gånger för att skapa följande logik för **[!UICONTROL Show message if]**.
    1. Klicka på **[!UICONTROL Done]**.
+
       ![Utlösarlogik](assets/ajo-trigger-logic.png)
 
    Du har definierat en spårningsåtgärd där **[!UICONTROL Action]** är lika med `in-app` och **[!UICONTROL Context data]** med åtgärden är ett nyckelvärdepar på `"showMessage" : "true"`.

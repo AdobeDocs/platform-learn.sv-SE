@@ -19,8 +19,10 @@ Följ de här stegen för att lägga till och konfigurera tillägget:
 
 1. Navigera till Experience Platform Data Collection. Detta kan göras på ett av två sätt:
    1. Gå till [Adobe Experience Platform-gränssnittet](https://platform.adobe.com/) och välj sedan **[!UICONTROL Tags]** längst ned i den vänstra navigeringen.
+
       ![Åtkomsttaggar 1](assets/access-tags-1.jpg)
    1. Om du inte har tillgång till Platform kan du använda programväljaren (9 punkter) längst upp till höger i fönstret och välja Datainsamling (efter att du har loggat in på Experience.Adobe.com).
+
       ![Åtkomsttaggar 2](assets/access-tags-2.jpg)
 1. Hitta och välj taggegenskapen som du migrerar till Web SDK.
 1. Välj **[!UICONTROL Extensions]** i den vänstra navigeringen för taggegenskapen.

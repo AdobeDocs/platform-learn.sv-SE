@@ -93,7 +93,7 @@ At.js-biblioteket kan konfigureras och laddas ned med olika inställningar i må
 | `clientCode` | Automatiskt konfigurerad |
 | `cookieDomain` | Ej tillämpligt |
 | `crossDomain` | Ange alternativet `thirdPartyCookiesEnabled` till `true` med kommandot `configure` för att aktivera cookies från första och tredje part för korsdomänsanvändning |
-| `cspScriptNonce` och `cspStyleNonce` | Läs dokumentationen om hur du konfigurerar en CSP](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-a-csp.html) i [konfigurationen. |
+| `cspScriptNonce` och `cspStyleNonce` | Läs dokumentationen om hur du konfigurerar en CSP[&#128279;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-a-csp.html) i konfigurationen. |
 | `dataProviders` | Stöds inte |
 | `decisioningMethod` | Alla Platform Web SDK `sendEvent`-kommandon använder beslut på serversidan. Hybrid- och enhetsbeslut stöds inte. |
 | `defaultContentHiddenStyle` och `defaultContentVisibleStyle` | Gäller endast med at.js 1.x. Precis som i at.js 2.x kan du använda anpassad kod för att reducera eventuella flimmer för formulärbaserade upplevelser. |

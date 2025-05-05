@@ -27,7 +27,7 @@ Innan du fortsätter måste du välja en **sandlåda**. Sandlådan som ska marke
 
 ![Datainmatning](./../../../modules/datacollection/module1.2/images/sb1.png)
 
-Gå till **Destinationer** och klicka sedan på **Bläddra**. Då ser du alla tillgängliga destinationer. Leta upp målplatsen och klicka på de 3 punkterna**..** som anges nedan och klicka sedan på **Aktivera målgrupper**.
+Gå till **Destinationer** och klicka sedan på **Bläddra**. Då ser du alla tillgängliga destinationer. Leta upp målplatsen och klicka på de 3 punkterna&#x200B;**..** som anges nedan och klicka sedan på **Aktivera målgrupper**.
 
 ![5-01-select-destination.png](./images/501selectdestination.png)
 

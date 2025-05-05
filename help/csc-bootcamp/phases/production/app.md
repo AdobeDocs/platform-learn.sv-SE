@@ -84,6 +84,7 @@ Nu när vi har en uppfattning om vad vårt innehåll bör bestå av kan vi skapa
 - I det modala som öppnas ser du att vissa fält ännu inte kan redigeras. Detta är logiskt: baserat på var vi skapar vårt fragment kommer olika modeller att vara tillgängliga.
   ![skapa innehållsfragment](./images/prod-app-create-cf-details.png)
    - Välj först var vi ska skapa fragmentet genom att klicka på mappikonen bredvid fältet Plats. Expandera innehållsträdet genom att klicka på mapparna &quot;adocycle&quot; \> &quot;en&quot; \> &quot;mobile-app&quot; och sedan bekräfta urvalet genom att klicka på knappen &quot;Choose&quot; (Välj).
+
      ![välj rätt plats](./images/prod-app-folder.png)
    - Du kommer att märka att fältet&quot;Modell för innehållsfragment&quot; nu kan redigeras. Klicka på pilen bredvid fältet för att öppna listrutan och välja den innehållsmodell som vi tittade på tidigare:&quot;Startsida för mobilapp&quot;.
    - Ge sedan ditt innehållsfragment en meningsfull titel (tips: inkludera ditt teamnummer för att enkelt hitta tillbaka till ditt innehåll). Du kommer att märka att fältet &quot;Namn&quot; automatiskt fyller i - det är för att göra ditt liv enklare: det är namnet som systemet använder för att identifiera ditt fragment och bör inte röras.
@@ -94,6 +95,7 @@ Nu när vi har en uppfattning om vad vårt innehåll bör bestå av kan vi skapa
    - Om du vill välja bildresurser klickar du på mappikonen och bläddrar till rätt bild i AEM Assets.
    - För den aktuella produkten klickar du på produktsökningsikonen så att du enkelt kan välja Commerce-produkten &quot;Adobe Cycle 1&quot;, så att den handelsrelaterade informationen läses in i appen.
    - Var noga med att klicka på knappen &quot;Spara&quot; när du är klar för att spara allt redigerat innehåll och publicera ändringarna.
+
      ![publicera ändringar](./images/prod-app-publish.png)
 
 Nu när vi har förutsett mobilappen med visst innehåll är vi redo att leverera vår kampanj.

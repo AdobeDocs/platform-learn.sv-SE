@@ -99,7 +99,7 @@ Skärmen bör se ut så här.
 
 ![WF Fusion](./images/wffusion58.png)
 
-Välj ?**** på den fjärde noden, HTTP, för att se svaret. Du bör se en bildfil i svaret.
+Välj ?**&#x200B;** på den fjärde noden, HTTP, för att se svaret. Du bör se en bildfil i svaret.
 
 ![WF Fusion](./images/wffusion59.png)
 
@@ -366,7 +366,7 @@ Select the **Set multiple variables** node that you configured before. In order 
 
 ![WF Fusion](./images/wffusion107.png)
 
-Använd `done` för variabelnamnet ****
+Använd `done` för variabelnamnet **&#x200B;**
 
 För att ställa in statusen behövs ett booleskt värde. Om du vill hitta det booleska värdet väljer du **kugghjul** och sedan .`false` Välj **Lägg till**.
 
@@ -412,7 +412,7 @@ När den här grenen av routern används betyder det att statusen för att skapa
 
 **För variabelnamnet** använder du `done`.
 
-**För variabelvärdet** bör du använda det booleska värdet `true`. Välj kugghjulsikonen **** och välj `true`sedan. Välj **Lägg till**.
+**För variabelvärdet** bör du använda det booleska värdet `true`. Välj kugghjulsikonen **&#x200B;**&#x200B;och välj `true`sedan. Välj **Lägg till**.
 
 ![WF Fusion](./images/wffusion118.png)
 

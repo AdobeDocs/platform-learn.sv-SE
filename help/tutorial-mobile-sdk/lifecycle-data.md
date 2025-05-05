@@ -93,6 +93,7 @@ I föregående övning skickas för- och bakgrundshändelserna till Adobe Experi
    1. Välj **[!UICONTROL Mobile Core]** som **[!UICONTROL Extension]**.
    1. Välj **[!UICONTROL Foreground]** som **[!UICONTROL Event Type]**.
    1. Välj **[!UICONTROL Keep Changes]**.
+
       ![Konfiguration av regelhändelse](assets/rule-event-configuration.png)
 1. Gå tillbaka till skärmen **[!UICONTROL Create Rule]** och välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Add]** intill **[!UICONTROL Mobile Core - Foreground]**.
    ![Nästa händelsekonfiguration](assets/rule-event-configuration-next.png)
@@ -100,6 +101,7 @@ I föregående övning skickas för- och bakgrundshändelserna till Adobe Experi
    1. Välj **[!UICONTROL Mobile Core]** som **[!UICONTROL Extension]**.
    1. Välj **[!UICONTROL Background]** som **[!UICONTROL Event Type]**.
    1. Välj **[!UICONTROL Keep Changes]**.
+
       ![Konfiguration av regelhändelse](assets/rule-event-configuration-background.png)
 1. Gå tillbaka till skärmen **[!UICONTROL Create Rule]** och välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Add]** under **[!UICONTROL ACTIONS]**.
    ![Lägg till åtgärd för regel](assets/rule-action-button.png)
@@ -107,6 +109,7 @@ I föregående övning skickas för- och bakgrundshändelserna till Adobe Experi
    1. Välj **[!UICONTROL Adobe Experience Edge Network]** som **[!UICONTROL Extension]**.
    1. Välj **[!UICONTROL Forward event to Edge Network]** som **[!UICONTROL Action Type]**.
    1. Välj **[!UICONTROL Keep Changes]**.
+
       ![Konfiguration av regelåtgärd](assets/rule-action-configuration.png)
 1. Välj **[!UICONTROL Save to Library]**.
    ![Regel - Spara i bibliotek](assets/rule-save-to-library.png)

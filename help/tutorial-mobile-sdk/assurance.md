@@ -146,6 +146,7 @@ I webbläsaren:
 
    1. Välj **[!UICONTROL Copy Link]**.
    1. Kopiera den djupa länken med ![Kopiera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) och använd den djupa länken för att öppna appen med Safari i simulatorn.
+
       ![Länk för säkringskopia](assets/assurance-copy-link.png)
 
 1. När appen läses in visas en modal dialogruta där du ombeds ange den PIN-kod som visas i steg 7.

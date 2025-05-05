@@ -37,6 +37,7 @@ I den här lektionen kommer du att:
 1. Skapa en ny mobil taggegenskap i datainsamlingsgränssnittet:
    1. Välj **[!UICONTROL Tags]** i den vänstra navigeringen.
    1. Välj **[!UICONTROL New Property]**
+
       ![skapa en taggegenskap](assets/tags-new-property.png).
    1. Ange `Luma Mobile App Tutorial` för **[!UICONTROL Name]**.
    1. För **[!UICONTROL Platform]** väljer du **[!UICONTROL Mobile]**.
@@ -65,6 +66,7 @@ I den här lektionen kommer du att:
       ![Skapa biblioteket](assets/tags-save-library.png)
 
    1. Välj slutligen **[!UICONTROL Initial Build]** som ditt arbetsbibliotek på menyn **[!UICONTROL Select a working library]**.
+
       ![Välj som arbetsbibliotek](assets/tags-working-library.png)
 1. Kontrollera tillägg:
 

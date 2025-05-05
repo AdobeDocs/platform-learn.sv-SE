@@ -254,7 +254,7 @@ Skapa dessa ytterligare dataelement genom att följa samma steg:
 
 >[!CAUTION]
 >
->Dataelementtypen [!UICONTROL JavaScript variable] behandlar matrisreferenser som punkter i stället för hakparenteser, så att det inte fungerar att referera användarnamnselementet som `digitalData.user[0].profile[0].attributes.username` ****.
+>Dataelementtypen [!UICONTROL JavaScript variable] behandlar matrisreferenser som punkter i stället för hakparenteser, så att det inte fungerar att referera användarnamnselementet som `digitalData.user[0].profile[0].attributes.username` **&#x200B;**.
 
 ## Skapa variabla dataelement för XDM- och dataobjekt
 

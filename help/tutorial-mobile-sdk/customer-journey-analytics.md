@@ -275,7 +275,7 @@ Så här rapporterar du skärmar som visas i appen:
 
 1. Välj **[!UICONTROL Show all]** under listan **[!UICONTROL METRICS]**.
 
-1. Dra och släpp **[!UICONTROL Screen Views]**-komponenten på [!UICONTROL _Släpp ett **mått**här (eller någon annan komponent_)].
+1. Dra och släpp **[!UICONTROL Screen Views]**-komponenten på [!UICONTROL _Släpp ett **mått**&#x200B;här (eller någon annan komponent_)].
    ![CJA-projekt 7](assets/cja-projects-7.png)
 I frihandstabellen visas nu skärmvyer för varje dag under den valda tidsperioden. Du vill dock visa antalet skärmvyer för var och en av de olika skärmar som används i programmet.
 
@@ -305,7 +305,7 @@ Därefter ska du skapa en Freeform-tabell som visar hur användarna interagerade
 
 1. Byt namn på **[!UICONTROL Freeform table (2)]** till `App Interactions`.
 
-1. Dra och släpp måttet **[!UICONTROL App Interactions]** på [!UICONTROL _Släpp ett **mått**här (eller någon annan komponent_)].
+1. Dra och släpp måttet **[!UICONTROL App Interactions]** på [!UICONTROL _Släpp ett **mått**&#x200B;här (eller någon annan komponent_)].
 
 1. Dra och släpp dimensionen **[!UICONTROL App Interaction Name]** på rubriken **[!UICONTROL Day]** om du vill ersätta den här dimensionen.
 
@@ -337,7 +337,7 @@ Nu vill du rapportera om e-handelshändelser som inträffar i appen på en separ
 
 1. Byt namn på **[!UICONTROL Freeform table]** till `Commerce Events`.
 
-1. Dra och släpp **[!UICONTROL Product Views]**-måttet på för att [!UICONTROL _släppa ett **mått**här (eller någon annan komponent_)].
+1. Dra och släpp **[!UICONTROL Product Views]**-måttet på för att [!UICONTROL _släppa ett **mått**&#x200B;här (eller någon annan komponent_)].
 
 1. Dra och släpp måttet **[!UICONTROL Product Add To Lists]** till höger om kolumnen **[!UICONTROL Product Views]** för att infoga den här kolumnen i frihandstabellen. Kontrollera att **[!UICONTROL + Add]** (i blått) visas när du infogar kolumnen.
    ![CJA-projekt 15](assets/cja-projects-15.png)
@@ -390,7 +390,7 @@ Du vill rapportera hur många erbjudanden och vilka erbjudanden som visas för a
 
 1. Byt namn på **[!UICONTROL Freeform table]** till `Monthly Overview`.
 
-1. Dra och släpp måttet **[!UICONTROL Display]** till [!UICONTROL _Släpp ett **mått**här (eller någon annan komponent_)].
+1. Dra och släpp måttet **[!UICONTROL Display]** till [!UICONTROL _Släpp ett **mått**&#x200B;här (eller någon annan komponent_)].
 
 1. Dra och släpp dimensionen **[!UICONTROL Month]** i kolumnen **[!UICONTROL Day]** för att ersätta dimensionen.
 
@@ -411,7 +411,7 @@ Du vill också ha en rapport som visar vilka erbjudanden som visades i vilka num
 
 1. Byt namn på **[!UICONTROL Freeform table (2)]** till `People`.
 
-1. Dra och släpp måttet **[!UICONTROL People]** till [!UICONTROL _Släpp ett **mått**här (eller någon annan komponent_)].
+1. Dra och släpp måttet **[!UICONTROL People]** till [!UICONTROL _Släpp ett **mått**&#x200B;här (eller någon annan komponent_)].
 
 1. Dra och släpp **[!UICONTROL Activity Name]** i kolumnen **[!UICONTROL Day]** för att ersätta dimensionen.
 
@@ -443,7 +443,7 @@ Slutligen vill ni rapportera om butiksbesök.
 
 1. Byt namn på **[!UICONTROL Freeform table]** till `Store Entries / Exits Across Cities`.
 
-1. Dra och släpp måttet **[!UICONTROL Location Events]** till [!UICONTROL _Släpp ett **mått**här (eller någon annan komponent_)]. Rapporten visar nu en daglig översikt över alla platshändelser som inträffade i appen. Kom ihåg hur du specifikt konfigurerade den här dimensionen som en del av din [datavy](#create-a-data-view).
+1. Dra och släpp måttet **[!UICONTROL Location Events]** till [!UICONTROL _Släpp ett **mått**&#x200B;här (eller någon annan komponent_)]. Rapporten visar nu en daglig översikt över alla platshändelser som inträffade i appen. Kom ihåg hur du specifikt konfigurerade den här dimensionen som en del av din [datavy](#create-a-data-view).
 
 1. Dra och släpp dimensionen **[!UICONTROL City]** på kolumnrubriken **[!UICONTROL Day]** för att ersätta dimensionen. Rapporten visar nu städerna för platshändelserna.
 

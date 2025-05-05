@@ -19,10 +19,12 @@ Med Azure-funktioner kan du köra små kodbitar (kallas **funktioner**) utan att
 En funktion är **utlöst** av en viss typ av händelse. De utlösare som stöds är bland annat att svara på dataändringar, svara på meddelanden (till exempel händelsehubbar), köra ett schema eller som ett resultat av en HTTP-begäran.
 Azure-funktioner är en serverlös beräkningstjänst som gör att du kan köra händelseutlösad kod utan att explicit behöva etablera eller hantera infrastruktur.
 Azure Event Hubs kan integreras med Azure-funktioner för en serverlös arkitektur.
+
 ## Öppna Visual Studio-kod och logga in på Azure
 
 Visual Studio Code gör det enkelt att ...
 - definiera och binda Azure-funktioner till Event Hubs- testa lokalt- distribuera till Azure- körning av fjärrloggfunktion
+
 ### Öppna Visual Studio-kod
 
 ### Logga in på Azure
@@ -36,6 +38,7 @@ När du ser följande skärm i webbläsaren loggas du in med Visual Code Studio:
 ![3-03-vsc-login-ok.png](./images/303vscloginok.png)
 Återgå till Visual Code Studio (du ser namnet på din Azure-prenumeration, till exempel **Azure-prenumeration 1**):
 ![3-04-vsc-logged-in.png](./images/304vscloggedin.png)
+
 ## Skapa ett Azure-projekt
 
 Klicka på **Skapa funktionsprojekt..**:
@@ -65,6 +68,7 @@ Du kan då få ett sådant här meddelande. I så fall klickar du på **Ja, jag 
 När du har skapat projektet öppnar du filen `--aepUserLdap---aep-event-hub-trigger.js` i redigeraren:
 ![3-16-vsc-open-index-js.png](./images/vsc13.png)
 Nyttolasten som skickas av Adobe Experience Platform till din händelsehubb ser ut så här:
+
 ```json
 {
   "identityMap": {
@@ -92,16 +96,19 @@ Nyttolasten som skickas av Adobe Experience Platform till din händelsehubb ser 
 
 Uppdatera koden i Visual Studio-kodens `--aepUserLdap---aep-event-hub-trigger.js` med koden nedan. Den här koden körs varje gång CDP i realtid skickar målgruppskvalifikationer till din Event Hub-destination. I det här exemplet handlar koden bara om att visa inkommande nyttolast, men du kan föreställa dig vilken typ av extrafunktion som helst för att bearbeta målgruppskvalifikationer i realtid och använda dem längre ned i ert system för datarörelser.
 Rad 11 i filen `--aepUserLdap---aep-event-hub-trigger.js` visar för närvarande följande:
+
 ```javascript
 context.log('Event hub message:', message);
 ```
 
 Ändra rad 11 i `--aepUserLdap---aep-event-hub-trigger.js` så att den ser ut så här:
+
 ```javascript
 context.log('Event hub message:', JSON.stringify(message));
 ```
 
 Den totala nyttolasten bör då vara så här:
+
 ```javascript
 const { app } = require('@azure/functions');
 
@@ -125,6 +132,7 @@ app.eventHub('--aepUserLdap---aep-event-hub-trigger', {
 
 Resultatet bör se ut så här:
 ![3-16b-vsc-edit-index-js.png](./images/vsc1.png)
+
 ## Kör Azure Project
 
 Nu är det dags att köra projektet. I det här skedet distribuerar vi inte projektet till Azure. Vi kör den lokalt i felsökningsläge. Välj ikonen Kör och klicka på den gröna pilen.
@@ -135,10 +143,12 @@ och välj sedan lagringskontot som du skapade tidigare, med namnet `--aepUserLda
 ![3-17-vsc-run-project.png](./images/vsc14b.png)
 Ditt projekt är nu igång och visas med en lista över händelser i händelsehubben. I nästa övning kommer du att visa hur ni beter er er på CitiSignal Demo-webbplatsen som kommer att kvalificera er för målgrupper. Därför får du en målgruppsklassificeringsnyttolast i terminalen för händelsehubbens utlösarfunktion.
 ![3-24-vsc-application-stop.png](./images/vsc18.png)
+
 ## Stoppa Azure Project
 
 Gå till **CALL STACK** i VSC, klicka på pilen i det projekt som körs och klicka sedan på **Stopp** för att stoppa projektet.
 ![3-24-vsc-application-stop.png](./images/vsc17.png)
+
 ## Nästa steg
 
 Gå till [2.4.7 från början till slut ](./ex7.md){target="_blank"}

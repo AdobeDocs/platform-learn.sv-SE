@@ -144,8 +144,10 @@ Den nya, tomma fältgruppen läggs till i ditt schema. Knapparna **[!UICONTROL +
    1. **[!UICONTROL Display name]**: `System Identifier`
    1. **[!UICONTROL Type]**: **[!UICONTROL Object]**
    1. I listrutan **[!UICONTROL Field Group]** väljer du den **Luma Identity-profilfältgrupp** som vi har skapat.
+
       ![Lägg till en ny fältgrupp](assets/schemas-loyalty-addSystemIdentifier.png)
    1. Välj **[!UICONTROL Apply]**
+
       ![Använd nya fältegenskaper](assets/schemas-loyalty-applySystemIdentifier.png)
 
 Lägg nu till två fält under objektet `systemIdentifier`:

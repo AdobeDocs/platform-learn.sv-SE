@@ -128,12 +128,12 @@ Den **goda nyheten** är att den ska köras **när som helst** när du gör en s
 
 Ja och nej. Ja, du behöver ändra några små saker, men nej, du behöver inte ändra större delen av koden så länge du ändrar dessa små saker:
 
-_**Kodändring 1:**_
+_&#x200B;**Kodändring 1:**&#x200B;_
 När du har klistrat in din plugin-kod (eller tidigare) i kodfönstret i tillägget Web SDK **tar du bort**&quot;doPlugin&quot;-linjerna från koden. Du kommer inte att behöva dem och de kommer att orsaka ett fel eftersom de är en del av appMeasurement.js men inte Web SDK-koden.
 
 ![Ta bort doPlugins-kodrader](assets/remove-doplugins.jpg)
 
-_**Kodändring 2:**_
+_&#x200B;**Kodändring 2:**&#x200B;_
 Den andra ändringen du måste göra är att lägga till kod så att objektet&quot;s&quot; definieras, mycket likt det som beskrivs ovan när det gäller koden i regelåtgärder. I det här fallet måste vi definiera koden lite annorlunda genom att lägga till en datanod som redan har definierats i regelåtgärden, men inte här.
 Den här definitionen bör placeras högst upp i kodfönstret. Koden som ska kopieras i (när koden placeras i Web SDK-tillägget) är följande:
 
@@ -143,7 +143,7 @@ content.data.__adobe.analytics = content.data.__adobe.analytics || {};
 const s = content.data.__adobe.analytics;
 ```
 
-_**Med båda kodändringarna:**_
+_&#x200B;**Med båda kodändringarna:**&#x200B;_
 Här är koden som listas ovan, men med båda ändringarna har vi just diskuterat:
 
 ![Uppdaterad kod](assets/update-code.jpg)

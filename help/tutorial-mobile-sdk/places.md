@@ -80,6 +80,7 @@ Du definierar några intressepunkter i tjänsten Platser.
    1. Välj **[!DNL Luma]** i listan **[!UICONTROL Select a Library]**.
    1. Kontrollera att du har valt ditt arbetsbibliotek, till exempel **[!UICONTROL Initial Build]**.
    1. Välj **[!UICONTROL Save to Library and Build]** från **[!UICONTROL Save to Library]**.
+
       ![Installera Platstillägg](assets/places-install-extension.png).
 
 1. Ditt bibliotek har byggts om.
@@ -139,6 +140,7 @@ Därefter ska du definiera regler som ska användas med dessa dataelement.
 1. Välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) under **[!UICONTROL EVENTS]**.
    1. Välj **[!UICONTROL Places]** i listan **[!UICONTROL Extension]** och välj **[!UICONTROL Enter POI]** i listan **[!UICONTROL Event Type]**.
    1. Välj **[!UICONTROL Keep Changes]**.
+
       ![Tagga händelse](assets/tags-event-mobile-core.png).
 1. Välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) under **[!UICONTROL ACTIONS]**.
    1. Välj **[!UICONTROL Mobile Core]** i listan **[!UICONTROL Extension]** och välj **[!UICONTROL Attach Data]** i listan **[!UICONTROL Action Type]**. Den här åtgärden kopplar nyttolastdata.
@@ -169,6 +171,7 @@ Därefter ska du definiera regler som ska användas med dessa dataelement.
       Du kan också infoga `{%% ... %%}` platshållarvärden för dataelement i JSON genom att markera ![Data](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Data_18_N.svg). I en popup-dialogruta kan du välja valfritt dataelement som du har skapat.
 
    1. Välj **[!UICONTROL Keep Changes]**.
+
       ![Tagg, åtgärd](assets/tags-action-mobile-core.png)
 
 1. Välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) bredvid åtgärden **[!UICONTROL Mobile Core - Attach Data]**.

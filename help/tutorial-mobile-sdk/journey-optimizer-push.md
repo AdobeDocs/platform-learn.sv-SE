@@ -71,7 +71,7 @@ Följande steg är inte Adobe Experience Cloud-specifika och har utformats för 
    ![skapa ny nyckel](assets/mobile-push-apple-dev-new-key.png)
 
 1. Ange en **[!UICONTROL Key Name]**.
-1. Markera kryssrutan **[!UICONTROL Apple Push Notification service](APN:er)**.
+1. Markera kryssrutan **[!UICONTROL Apple Push Notification service] (APN:er)**.
 1. Välj **[!UICONTROL Continue]**.
    ![konfigurera ny nyckel](assets/mobile-push-apple-dev-config-key.png)
 1. Granska konfigurationen och välj **[!UICONTROL Register]**.
@@ -174,6 +174,7 @@ För att din app ska fungera med Journey Optimizer måste du uppdatera din tagge
    1. Välj en miljö, till exempel **[!UICONTROL Development]**.
    1. Välj datauppsättningen **[!UICONTROL AJO Push Tracking Experience Event Dataset]** i listan **[!UICONTROL Event Dataset]**.
    1. Välj **[!UICONTROL Save to Library and Build]**.
+
       ![AJO-tilläggsinställningar](assets/push-tags-ajo.png)
 
 >[!NOTE]
@@ -307,6 +308,7 @@ Du ska definiera en ny händelsetyp som ännu inte är tillgänglig som en del a
    1. I rutan **[!UICONTROL Field properties]** rullar du nedåt för att se en lista över möjliga värden för händelsetypen. Välj **[!UICONTROL Add row]** och lägg till `application.test` som **[!UICONTROL VALUE]** och `[!UICONTROL Test event for push notification]` som `DISPLAY NAME`.
    1. Välj **[!UICONTROL Apply]**.
    1. Välj **[!UICONTROL Save]**.
+
       ![Lägg till värde i händelsetyper](assets/ajo-update-schema-eventtype-enum.png)
 
 ### Definiera en händelse
@@ -344,10 +346,12 @@ Med händelser i Journey Optimizer kan du utlösa resor åt gången för att ski
       1. Dra och släpp **[!UICONTROL Event Type (eventType)]** i dialogrutan **[!UICONTROL Add an event id condition]** till **[!UICONTROL Drag and drop an element here]**.
       1. Bläddra längst ned i povern och välj **[!UICONTROL application.test]** (som är den händelsetyp som du lade till tidigare i listan över händelsetyper som en del av [Uppdatera ditt schema](#update-your-schema)). Bläddra sedan uppåt till toppen och välj **[!UICONTROL Ok]**.
       1. Välj **[!UICONTROL Ok]** om du vill spara villkoret.
+
          ![Redigera händelsevillkor](assets/ajo-edit-condition.png)
 
    1. Välj **[!UICONTROL ECID (ECID)]** i listan **[!UICONTROL Namespace]**. Fältet **[!UICONTROL Profile identifier]** fylls i automatiskt med **[!UICONTROL The id of the first element of the key ECID for the map identityMap]**.
    1. Välj **[!UICONTROL Save]**.
+
       ![Redigera händelsesteg 2](assets/ajo-edit-event2.png)
 
 Du har just skapat en händelsekonfiguration som baseras på det händelseschema för mobilappsupplevelser som du skapade tidigare som en del av den här självstudien. Den här händelsekonfigurationen filtrerar inkommande upplevelsehändelser med din specifika händelsetyp (`application.test`), så bara händelser med den typen, som initieras från din mobilapp, utlöser den resa du bygger i nästa steg. I ett verkligt scenario kanske du vill skicka push-meddelanden från en extern tjänst, men samma koncept gäller: från det externa programmet skickar du en upplevelsehändelse till Experience Platform med specifika fält som du kan använda för att tillämpa villkor på innan dessa händelser utlöser en resa.
@@ -364,6 +368,7 @@ Nästa steg är att skapa den resa som utlöser sändningen av push-meddelandet 
    1. Ange en **[!UICONTROL Description]** för resan, till exempel `Journey for test push notifications in Luma mobile app`.
    1. Kontrollera att **[!UICONTROL Allow re-entrance]** är markerat och ange **[!UICONTROL Re-entrance wait period]** till **[!UICONTROL 30]** **[!UICONTROL Seconds]**.
    1. Välj **[!UICONTROL Ok]**.
+
       ![Resans egenskaper](assets/ajo-journey-properties.png)
 
 1. Tillbaka på arbetsytan på resan, från **[!UICONTROL EVENTS]**, dra och släpp ![ Event](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Globe_18_N.svg) **[!DNL LumaTestEvent]** på arbetsytan där den visas **[!UICONTROL Select an entry event or a read audience activity]**.
@@ -374,6 +379,7 @@ Nästa steg är att skapa den resa som utlöser sändningen av push-meddelandet 
 
    1. Ange en **[!UICONTROL Label]**, till exempel `Luma Test Push Notification`, ge en **[!UICONTROL Description]**, till exempel `Test push notification for Luma mobile app`, välj **[!UICONTROL Transactional]** i listan **[!UICONTROL Category]** och välj **[!DNL Luma]** i listan **[!UICONTROL Push surface]**.
    1. Välj ![Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) **[!UICONTROL Edit content]** om du vill börja redigera det faktiska push-meddelandet.
+
       ![Push-egenskaper](assets/ajo-push-properties.png)
 
       I **[!UICONTROL Push Notification]**-redigeraren:
@@ -381,6 +387,7 @@ Nästa steg är att skapa den resa som utlöser sändningen av push-meddelandet 
       1. Ange en **[!UICONTROL Title]**, till exempel `Luma Test Push Notification`, och ange en **[!UICONTROL Body]**, till exempel `Test push notification for Luma mobile app`.
       1. Du kan också ange en länk till en bild (.png eller .jpg) i **[!UICONTROL Add media]**. Om du gör det blir bilden en del av push-meddelandet.
       1. Om du vill spara och lämna redigeraren väljer du ![Sparron till vänster](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ChevronLeft_18_N.svg).
+
          ![Push-redigerare](assets/ajo-push-editor.png)
 
    1. Om du vill spara och slutföra definitionen av push-meddelanden väljer du **[!UICONTROL Ok]**.

@@ -90,6 +90,7 @@ Identitetstjänsttillägget är ett av de få taggtillägg som gör en begäran 
    1. Expandera `Cookies` till vänster
    1. Klicka på domänen `https://luma.enablementadobe.com`
    1. Leta efter AMCV_-cookien på höger sida. Du kan se flera saker eftersom du har läst in Luma-webbplatsen med både den hårdkodade taggegenskapen och den har mappats till din egen.
+
       ![Verifiera AMCV_cookie](images/idservice-AMCVCookie.png)
 
 Så ja! Du har lagt till ditt första tillägg! Mer information om konfigurationsalternativen för identitetstjänsten finns i [dokumentationen](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/configurations/function-vars.html).
