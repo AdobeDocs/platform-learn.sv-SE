@@ -29,7 +29,7 @@ Läs om målgrupper i Adobe Experience Platform.
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="introduction-to-audience-portal-and-composition.md" title="Introduktion till Audience Portal and Composition" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3421713/?format=jpeg&nocache=1740173577252" alt="Introduktion till Audience Portal and Composition"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3432432/?format=jpeg&nocache=1740173577252&captions=swe" alt="Introduktion till Audience Portal and Composition"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -52,7 +52,7 @@ Läs om målgrupper i Adobe Experience Platform.
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="upload-audiences.md" title="Överför målgrupper till Adobe Experience Platform" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3421714/?format=jpeg&nocache=1740173577237" alt="Överför målgrupper till Adobe Experience Platform"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3432430/?format=jpeg&nocache=1740173577237&captions=swe" alt="Överför målgrupper till Adobe Experience Platform"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -336,7 +336,7 @@ Läs om målgrupper i Adobe Experience Platform.
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="fac/create-a-federated-audience-composition.md" title="Skapa en sammansatt publiksammansättning" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3433247/?format=jpeg&nocache=1740173579467" alt="Skapa en sammansatt publiksammansättning"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3448582/?format=jpeg&nocache=1740173579467&captions=swe" alt="Skapa en sammansatt publiksammansättning"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

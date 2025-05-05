@@ -26,13 +26,13 @@ Lär dig hur du enkelt kan importera data från Marketo Engage till Real-Time Cu
 
 Lär dig konfigurera källkopplingen för Marketo med hjälp av mallarbetsflödet. Det här arbetsflödet genererar automatiskt de resurser som behövs för att hämta in Marketo-data baserat på mallar. Du sparar tid direkt och resurserna kan anpassas efter dina behov.
 
->[!VIDEO](https://video.tv.adobe.com/v/3419550?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3451864?learn=on&enablevpops&captions=swe)
 
 ## Standardarbetsflöde
 
 Lär dig hur du konfigurerar källkopplingen för Marketo med standardarbetsflödet. Standardarbetsflödet kräver att scheman och identitetsnamnutrymmen skapas i förväg.
 
->[!VIDEO](https://video.tv.adobe.com/v/338250?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3452907?learn=on&enablevpops&captions=swe)
 
 Mer information finns i följande dokumentation:
 * [Marketo Engage källanslutningsdokumentation](https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/adobe-applications/marketo/marketo.html?lang=sv-SE).

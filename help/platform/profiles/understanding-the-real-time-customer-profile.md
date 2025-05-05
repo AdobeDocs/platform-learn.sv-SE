@@ -104,7 +104,7 @@ I den här videon förklaras hur Adobe Experience Platform sammanställer och up
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="create-a-computed-attribute-for-sum-of-purchases.md" title="Skapa ett beräknat attribut för summan av inköp" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3425899?format=jpeg&nocache=1740415066775" alt="Skapa ett beräknat attribut för summan av inköp"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443555?format=jpeg&nocache=1740415066775&captions=swe" alt="Skapa ett beräknat attribut för summan av inköp"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -185,7 +185,7 @@ I den här videon förklaras hur Adobe Experience Platform sammanställer och up
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="update-a-specific-attribute-with-upsert.md" title="Uppdatera specifika profilattribut med &quot;upsert&quot;" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3416133/?format=jpeg&nocache=1740415067029" alt="Uppdatera specifika profilattribut med &quot;upsert&quot;"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443445/?format=jpeg&nocache=1740415067029&captions=swe" alt="Uppdatera specifika profilattribut med &quot;upsert&quot;"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -218,7 +218,7 @@ I den här videon förklaras hur Adobe Experience Platform sammanställer och up
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="view-account-profiles.md" title="Visa kontoprofiler" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/338251?format=jpeg&nocache=1740415067214" alt="Visa kontoprofiler"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3446581?format=jpeg&nocache=1740415067214&captions=swe" alt="Visa kontoprofiler"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

@@ -18,5 +18,5 @@ ht-degree: 0%
 
 Få en översikt över de fem viktigaste användningsområdena för Experience Platform - intelligent återanvändning,&quot;Förlora inte&quot;-kampanjer, kundkonverteringsoptimering, sammanhangsbaserad igenkänning och ett tidsvärde till livstid.
 
->[!VIDEO](https://video.tv.adobe.com/v/32806?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3430462?learn=on&enablevpops&captions=swe)
 

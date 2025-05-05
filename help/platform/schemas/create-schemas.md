@@ -18,4 +18,4 @@ ht-degree: 0%
 
 I den här videon visas hur du skapar scheman i Adobe Experience Platform med klassen XDM Individual Profile och olika fältgrupper. Detaljerad produktdokumentation finns i [Skapa ett schema i användargränssnittet](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=sv-SE) och [skapa ett schema med API:t](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-api.html?lang=sv-SE).
 
->[!VIDEO](https://video.tv.adobe.com/v/27012?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3430224?learn=on&enablevpops&captions=swe)

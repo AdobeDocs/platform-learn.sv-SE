@@ -18,4 +18,4 @@ ht-degree: 1%
 
 Lär dig viktiga koncept och beslut som rör granskning av personuppgifter och förberedelser utifrån företagets sekretessbehov. Mer information finns i [dokumentationen för sekretesstjänster](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=sv).
 
->[!VIDEO](https://video.tv.adobe.com/v/336076?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3447652?learn=on&enablevpops&captions=swe)

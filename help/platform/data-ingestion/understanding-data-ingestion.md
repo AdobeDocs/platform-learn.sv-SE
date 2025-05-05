@@ -284,7 +284,7 @@ Med Adobe Experience Platform funktioner för dataöverföring kan ni samla alla
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="../sources/ingest-data-from-adobe-analytics.md" title="Infoga data med Adobe Analytics källanslutning" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/29687?format=jpeg&nocache=1740414617197" alt="Infoga data med Adobe Analytics källanslutning"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3430253?format=jpeg&nocache=1740414617197&captions=swe" alt="Infoga data med Adobe Analytics källanslutning"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -307,7 +307,7 @@ Med Adobe Experience Platform funktioner för dataöverföring kan ni samla alla
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="../sources/ingest-data-from-marketo.md" title="Importera data från Marketo Engage" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3419550?format=jpeg&nocache=1740414617186" alt="Importera data från Marketo Engage"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3451864?format=jpeg&nocache=1740414617186&captions=swe" alt="Importera data från Marketo Engage"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

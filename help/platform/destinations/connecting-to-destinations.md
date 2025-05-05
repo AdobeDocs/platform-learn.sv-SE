@@ -20,6 +20,6 @@ ht-degree: 0%
 
 Innan du kan skicka data till målpartners från Real-Time CDP måste du först skapa en koppling till dessa partners. Den här videon går igenom processen, som vanligtvis utförs av administratörer.
 
->[!VIDEO](https://video.tv.adobe.com/v/342471/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3444272/?learn=on&enablevpops&captions=swe)
 
 Mer information finns i [dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-platform/destinations/ui/connect-destination).

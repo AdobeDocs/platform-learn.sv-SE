@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Lär dig hur du verifierar och validerar de svar som AI Assistant i Adobe Experience Platform ger. Mer information finns i [Användargränssnittshandboken för AI-assistenten](https://experienceleague.adobe.com/sv/docs/experience-platform/ai-assistant/ui-guide#verify-responses).
 
->[!VIDEO](https://video.tv.adobe.com/v/3441738/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3441742/?learn=on&enablevpops&captions=swe)

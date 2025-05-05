@@ -18,4 +18,4 @@ ht-degree: 2%
 
 Lär dig hur du konfigurerar och autentiserar till Privacy Service API. Mer information finns i [dokumentationen för sekretesstjänster](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=sv).
 
->[!VIDEO](https://video.tv.adobe.com/v/336075?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3447180?learn=on&enablevpops&captions=swe)

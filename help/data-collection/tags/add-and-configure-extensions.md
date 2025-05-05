@@ -18,4 +18,4 @@ ht-degree: 0%
 
 Lär dig hur du lägger till och konfigurerar tillägg i taggegenskapen. Tillägg är färdigpaketerade&quot;appar&quot; som du installerar på din webbplats för att ge dig den spårning, personalisering eller andra funktioner du behöver. Marknadsplatsen för tillägg växer hela tiden, eftersom Adobe, partners och kunder skapar tillägg till strömanvändningsfall. Mer information finns i dokumentationen för [extensions](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/extensions/overview.html?lang=sv-SE).
 
->[!VIDEO](https://video.tv.adobe.com/v/28732/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3428590/?learn=on&enablevpops&captions=swe)

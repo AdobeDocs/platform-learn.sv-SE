@@ -22,4 +22,4 @@ Lär dig hur du konfigurerar förfalloinställningar för pseudonyma profiler oc
 Med de här inställningarna kan datafördelningar ange förfallodatum för oautentiserade profiler och tillhörande händelser. Detta gör att [!DNL Profile Service] förblir relevant för dina användningsfall för marknadsföring och annonsering. Mer information finns i dokumentationen [Upplevelseförfallodatum](https://experienceleague.adobe.com/sv/docs/experience-platform/profile/event-expirations) och [Pseudonymous Profiles data expiration](https://experienceleague.adobe.com/sv/docs/experience-platform/profile/event-expirations) .
 
 
->[!VIDEO](https://video.tv.adobe.com/v/3428361?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3449857?learn=on&enablevpops&captions=swe)

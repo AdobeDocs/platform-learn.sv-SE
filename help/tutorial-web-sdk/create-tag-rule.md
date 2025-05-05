@@ -70,7 +70,7 @@ Alla dessa regler kommer att ordnas korrekt med alternativet [!UICONTROL order].
 
 Den här videon ger en översikt över processen:
 
->[!VIDEO](https://video.tv.adobe.com/v/3427710/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3454031/?learn=on&enablevpops&captions=swe)
 
 ### Globala konfigurationsfält
 

@@ -20,6 +20,6 @@ ht-degree: 1%
 
 Lär dig hur Experience Platform sandlådor tillhandahåller isolerade miljöer för att testa nya eller befintliga funktioner och arbeta med en&quot;felfri&quot; strategi. Lär dig hur du återställer och startar om utvecklingsmiljöer och använder sandlådor med API-anrop. Mer information finns i användarhandboken för [sandlådor](https://experienceleague.adobe.com/docs/experience-platform/sandbox/home.html?lang=sv).
 
->[!VIDEO](https://video.tv.adobe.com/v/29838/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3430296/?learn=on&enablevpops&captions=swe)
 
 

@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Lär dig hur du konfigurerar LiveRamp-destinationer i Real-Time CDP för att skicka målgrupper till dina aktiveringspartners. Mer information finns i [LiveRamp - Onboarding-anslutning](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/liveramp-onboarding.html?lang=sv-SE) och [LiveRamp - Distribution-anslutning](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/liveramp-distribution.html?lang=sv-SE).
 
->[!VIDEO](https://video.tv.adobe.com/v/3425367/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3452660/?learn=on&enablevpops&captions=swe)

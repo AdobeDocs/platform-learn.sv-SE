@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Hantera kryptering av data i vila med dina egna krypteringsnycklar. Mer information finns i [dokumentationen för kundhanterade nycklar](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/customer-managed-keys.html?lang=sv-SE).
 
->[!VIDEO](https://video.tv.adobe.com/v/3410673/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3431112/?learn=on&enablevpops&captions=swe)
 
 >[!IMPORTANT]
 >

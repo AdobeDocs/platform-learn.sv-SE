@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Utvärdera grupper av målgrupper på begäran med den flexibla funktionen för målgruppsutvärdering i Adobe Experience Platform. Mer information och skyddsförslag finns i [den flexibla utvärderingsguiden för målgrupper](https://experienceleague.adobe.com/sv/docs/experience-platform/segmentation/methods/flexible-audience-evaluation).
 
->[!VIDEO](https://video.tv.adobe.com/v/3453640/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3453644/?learn=on&enablevpops&captions=swe)

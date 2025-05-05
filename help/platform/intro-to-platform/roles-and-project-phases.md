@@ -17,5 +17,5 @@ ht-degree: 0%
 
 Läs om roller, faser och viktiga resultat i ett framgångsrikt Experience Platform-projekt.
 
->[!VIDEO](https://video.tv.adobe.com/v/32807?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3430448?learn=on&enablevpops&captions=swe)
 

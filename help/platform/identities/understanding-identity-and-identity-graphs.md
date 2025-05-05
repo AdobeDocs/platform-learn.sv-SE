@@ -18,7 +18,7 @@ ht-degree: 9%
 
 Läs om de viktigaste funktionerna för identitetsupplösning i Adobe Experience Platform - identitetssamling, identitetsdiagram och API:er. Lär dig hur identitetstjänsten länkar osammanhängande identiteter för att leverera en enhetlig, sammanhängande upplevelse genom att skapa en enhetlig profil. Mer information finns i [identitetstjänstens dokumentation](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html?lang=sv).
 
->[!VIDEO](https://video.tv.adobe.com/v/27841?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3432348?learn=on&enablevpops&captions=swe)
 
 ## Konfigurera identiteter
 
@@ -65,7 +65,7 @@ Läs om de viktigaste funktionerna för identitetsupplösning i Adobe Experience
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="identity-graph-linking-rules/graph-simulation.md" title="Länkningsregler för identitetsdiagram - diagramsimulering" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444032/?format=jpeg&nocache=1740414776009" alt="Länkningsregler för identitetsdiagram - diagramsimulering"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444047/?format=jpeg&nocache=1740414776009&captions=swe" alt="Länkningsregler för identitetsdiagram - diagramsimulering"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

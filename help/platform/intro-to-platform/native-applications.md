@@ -18,5 +18,5 @@ ht-degree: 0%
 
 Läs mer om de program som skapats internt på Adobe Experience Platform: Customer Journey Analytics, Real-Time Customer Data Platform, Journey Optimizer och Mix Modeler.
 
->[!VIDEO](https://video.tv.adobe.com/v/32554?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3428523?learn=on&enablevpops&captions=swe)
 

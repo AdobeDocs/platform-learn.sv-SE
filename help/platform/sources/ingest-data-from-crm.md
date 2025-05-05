@@ -29,7 +29,7 @@ Lär dig hur du konfigurerar källkopplingen för Salesforce CRM med standardarb
 
 Lär dig konfigurera källkopplingen för Salesforce CRM med hjälp av mallarbetsflödet. Det här arbetsflödet genererar automatiskt de resurser som behövs för att hämta in Salesforce-data baserat på mallar. Du sparar tid direkt och resurserna kan anpassas efter dina behov. Det här arbetsflödet stöds inte för alla CRM-källanslutningar.
 
->[!VIDEO](https://video.tv.adobe.com/v/3419422?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3453327?learn=on&enablevpops&captions=swe)
 
 Mer information finns i följande dokumentation:
 * [Salesforce skapar en anslutningsdokumentation](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/crm/salesforce.html?lang=sv-SE).

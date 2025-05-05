@@ -19,5 +19,5 @@ ht-degree: 2%
 
 Lär dig hur du prenumererar på Integritetshändelser för att automatisera jobbstatusbaserade arbetsflöden. Mer information finns i [dokumentationen för sekretesstjänster](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=sv).
 
->[!VIDEO](https://video.tv.adobe.com/v/336073?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3448176?learn=on&enablevpops&captions=swe)
 

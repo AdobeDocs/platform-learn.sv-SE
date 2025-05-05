@@ -19,4 +19,4 @@ ht-degree: 1%
 
 Lär dig hur du anropar API-slutpunkter, inklusive listor och uppslag, skapar en jobbbegäran och skapar en begäran om samtycke. Mer information finns i [dokumentationen för sekretesstjänster](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=sv).
 
->[!VIDEO](https://video.tv.adobe.com/v/336080?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3448877?learn=on&enablevpops&captions=swe)

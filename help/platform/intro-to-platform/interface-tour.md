@@ -18,5 +18,5 @@ ht-degree: 0%
 
 Lär dig navigera i Adobe Experience Platform användargränssnitt.
 
->[!VIDEO](https://video.tv.adobe.com/v/32792?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3430436?learn=on&enablevpops&captions=swe)
 

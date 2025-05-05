@@ -18,4 +18,4 @@ ht-degree: 0%
 
 Läs om hur B2B-marknadsförare (business-to-business) kan sammanställa personer och kontoprofiler i olika system och få en fullständig förståelse för sina kunder. Mer information finns i [Real-Time CDP B2B edition-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/b2b-overview.html?lang=sv-SE).
 
->[!VIDEO](https://video.tv.adobe.com/v/338249?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3451920?learn=on&enablevpops&captions=swe)

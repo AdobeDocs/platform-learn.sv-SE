@@ -21,4 +21,4 @@ ht-degree: 0%
 
 Lär dig hur [!DNL Real-Time Customer Data Platform] stöder fullkanalsmarknadsföring med partnerdata för databerikning från första part och prospektering eftersom cookies från tredje part fortfarande är inaktuella. 
 
->[!VIDEO](https://video.tv.adobe.com/v/3422855/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3449693/?learn=on&enablevpops&captions=swe)

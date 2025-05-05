@@ -29,7 +29,7 @@ Mer information finns i Real-Time CDP Collaboration [dokumentation](https://expe
 
 Få en introduktion till Adobe Real-Time Collaboration, en specialbyggd applikation för datasamarbete som gör att ni kan identifiera och aktivera värdefulla målgrupper och använda mätfunktioner för att få påtagliga resultat.
 
->[!VIDEO](https://video.tv.adobe.com/v/3446801?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3446805?learn=on&enablevpops&captions=swe)
 
 
 ## Inställningar
@@ -47,7 +47,7 @@ Få en introduktion till Adobe Real-Time Collaboration, en specialbyggd applikat
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="set-permissions-for-collaboration.md" title="Ange behörigheter för Real-Time CDP Collaboration" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3452216/?format=jpeg&nocache=1742338375674" alt="Ange behörigheter för Real-Time CDP Collaboration"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3452234/?format=jpeg&nocache=1742338375674&captions=swe" alt="Ange behörigheter för Real-Time CDP Collaboration"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

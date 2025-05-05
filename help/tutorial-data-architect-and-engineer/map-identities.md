@@ -26,7 +26,7 @@ Adobe Experience Platform identitetstjänst hjälper er att få en bättre bild 
 **Dataarkitekter** måste mappa identiteter utanför den här självstudien.
 
 Titta på den här korta videon om du vill veta mer om din identitet i Adobe Experience Platform innan du börjar övningarna:
->[!VIDEO](https://video.tv.adobe.com/v/27841?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3432348?learn=on&enablevpops&captions=swe)
 
 >[!NOTE]
 >

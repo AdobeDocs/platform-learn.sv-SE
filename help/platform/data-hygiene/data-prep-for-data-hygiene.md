@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Lär dig hur du stöder datamängdsprinciper med dataförberedelsefunktionen i Experience Platform. Lär dig hur du bara importerar de fält som du behöver och hash-kodar data under importen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3429485/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3449279/?learn=on&enablevpops&captions=swe)

@@ -26,7 +26,7 @@ Sandlådor har isolerade miljöer där du kan testa funktioner utan att blanda r
 **Dataarkitekter** och **datatekniker** måste skapa sandlådor utanför den här självstudien.
 
 Titta på den här korta videon för att lära dig mer om sandlådor innan du börjar övningarna:
->[!VIDEO](https://video.tv.adobe.com/v/29838/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3430296/?learn=on&enablevpops&captions=swe)
 
 ## Behörigheter krävs
 

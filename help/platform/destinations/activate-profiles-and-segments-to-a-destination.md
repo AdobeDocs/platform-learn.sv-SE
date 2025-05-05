@@ -18,5 +18,5 @@ ht-degree: 0%
 
 Lär dig hur du aktiverar profiler och målgrupper för destinationer i Real-Time CDP.  Starta det här arbetsflödet i målgrupps- eller målgruppsgränssnittet. Mer information finns i [dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-platform/destinations/ui/activate/activation-overview).
 
->[!VIDEO](https://video.tv.adobe.com/v/336046/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3445814/?learn=on&enablevpops&captions=swe)
 

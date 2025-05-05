@@ -21,4 +21,4 @@ ht-degree: 0%
 
 Med Adobe Analytics Source-kontakten kan du enkelt strömma, mappa och filtrera data från Adobe Analytics till Adobe Experience Platform kundprofil och Experience Data Lake i realtid. Lär dig hur du använder funktioner för att förbereda data för att skapa semantiska och beräknade fält för att förbättra användarupplevelsen i segmentbyggare och plattformsapplikationer. Korsregionala rapporteringsprogram stöds för den här kopplingen. Mer detaljerad produktdokumentation finns i [Skapa en Adobe Analytics-källanslutning i användargränssnittet](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/adobe-applications/analytics.html?lang=sv-SE).
 
->[!VIDEO](https://video.tv.adobe.com/v/29687?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3430253?learn=on&enablevpops&captions=swe)

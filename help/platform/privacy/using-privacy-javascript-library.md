@@ -19,4 +19,4 @@ ht-degree: 1%
 
 Lär dig hur du använder JavaScript Sekretessbibliotek för att samla in kundidentiteter i din app innan du skickar dem till Privacy Service. Lär dig till exempel hur du ställer in taggtillägget i Datainsamling (tidigare Launch). Mer information finns i [dokumentationen för sekretesstjänster](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=sv).
 
->[!VIDEO](https://video.tv.adobe.com/v/336078?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3452080?learn=on&enablevpops&captions=swe)

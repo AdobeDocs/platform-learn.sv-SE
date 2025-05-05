@@ -18,4 +18,4 @@ ht-degree: 0%
 
 Lär dig hur du använder utvecklings-, staging- och produktionsmiljöer samt bäddar in koder för att utveckla och validera taggegenskaperna. Mer information finns i dokumentationen för [miljöerna](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/environments/environments.html?lang=sv-SE).
 
->[!VIDEO](https://video.tv.adobe.com/v/28729/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3430485/?learn=on&enablevpops&captions=swe)

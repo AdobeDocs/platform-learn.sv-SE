@@ -19,4 +19,4 @@ ht-degree: 34%
 
 Lär dig navigera i användargränssnittet i Real-Time Customer Data Platform (CDP) och se hur dess funktioner samverkar för att möjliggöra aktivering i realtid under hela den digitala kundresan. Mer information finns i [Real-Time Customer Data Platform-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/overview.html?lang=sv).
 
->[!VIDEO](https://video.tv.adobe.com/v/29762?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3428469?learn=on&enablevpops&captions=swe)

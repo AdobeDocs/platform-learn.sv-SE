@@ -18,4 +18,4 @@ ht-degree: 0%
 
 Lär dig hur du skapar regler så att du kan köra kommandon i taggar. Händelser och villkor avgör *när* ska göra saker medan åtgärder bestämmer *vad* ska göra. Mer information finns i dokumentationen för [regler](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html?lang=sv-SE).
 
->[!VIDEO](https://video.tv.adobe.com/v/28730/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3430493/?learn=on&enablevpops&captions=swe)

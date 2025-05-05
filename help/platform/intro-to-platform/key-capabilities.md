@@ -18,5 +18,5 @@ ht-degree: 0%
 
 Läs mer om Experience Platform nyckelfunktioner och hur de ger ert företag mervärde.
 
->[!VIDEO](https://video.tv.adobe.com/v/32502?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3428512?learn=on&enablevpops&captions=swe)
 

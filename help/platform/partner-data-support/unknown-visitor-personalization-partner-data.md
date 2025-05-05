@@ -21,4 +21,4 @@ ht-degree: 0%
 
 Lär dig hur du samlar in attribut från tredje part från [!DNL Adobe Experience Platform Web SDK] och anpassar din upplevelse på plats för okända besökare med hjälp av partnerstödd besöksigenkänning. Mer information finns i [Använd partnerstödd besöksigenkänning för att anpassa upplevelser på plats](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/use-cases/partner-data/onsite-personalization.html?lang=sv-SE) -dokumentationen.
 
->[!VIDEO](https://video.tv.adobe.com/v/3423076/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3449256/?learn=on&enablevpops&captions=swe)

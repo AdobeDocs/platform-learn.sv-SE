@@ -16,4 +16,4 @@ ht-degree: 0%
 
 Läs mer om användningsexempel och funktioner för händelsevidarebefordran i Adobe Experience Platform, som att hantera konverterings-API-anrop till tredjepartsmål och skicka händelsedata till datalagret. Mer information finns i [dokumentationen för vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=sv-SE).
 
->[!VIDEO](https://video.tv.adobe.com/v/3434936?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3456499?learn=on&enablevpops&captions=swe)

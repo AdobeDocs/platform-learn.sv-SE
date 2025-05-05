@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Lär dig hur du använder AI Assistant för att få information om affärsobjekt som målgrupper, datauppsättningar, scheman, destinationer och resor i Adobe Experience Platform
 
->[!VIDEO](https://video.tv.adobe.com/v/3444031/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3444036/?learn=on&enablevpops&captions=swe)

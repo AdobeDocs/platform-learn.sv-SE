@@ -19,4 +19,4 @@ ht-degree: 0%
 
 Lär dig hur du staplar en taggegenskap. Regelstackning använder funktionen `order` i taggregelhändelser för att sekvensregler ska kunna hanteras så att du kan hantera skalbara taggimplementeringar. Ange vissa variabler i en global regel, lägg till och skriv över variabler i en sidspecifik regel och skicka sedan data till önskat marknadsföringsprogram. Mer information om regelordning finns i dokumentationen för [regler](https://experienceleague.adobe.com/docs/experience-platform/tags/ui/rules.html?lang=sv-SE#rule-ordering).
 
->[!VIDEO](https://video.tv.adobe.com/v/3427710/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3454031/?learn=on&enablevpops&captions=swe)

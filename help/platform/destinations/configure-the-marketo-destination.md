@@ -21,5 +21,5 @@ ht-degree: 1%
 
 Lär dig hur du konfigurerar Marketo-målet i Adobe Experience Platform så att du kan aktivera dina plattformssegment i din Marketo Engage-instans. Mer information finns i [dokumentationen för profiler](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/profile/profile-browse.html?lang=sv-SE).
 
->[!VIDEO](https://video.tv.adobe.com/v/338248?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3440162?learn=on&enablevpops&captions=swe)
 

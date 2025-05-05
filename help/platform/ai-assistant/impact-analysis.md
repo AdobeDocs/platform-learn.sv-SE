@@ -20,4 +20,4 @@ ht-degree: 0%
 
 I den här videon tittar vi på hur AI Assistant i Adobe Experience Platform kan hjälpa dig att bli effektivare med effektanalys. Ändringar av delade objekt som attribut och målgrupper kan störa arbetsflödena för andra team, komplicera processer och riskera viktiga marknadsföringssatsningar.
 
->[!VIDEO](https://video.tv.adobe.com/v/3441680/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3441684/?learn=on&enablevpops&captions=swe)

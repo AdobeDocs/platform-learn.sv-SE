@@ -57,7 +57,7 @@ Lär dig hur du hanterar användarbehörigheter.
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="add-developers.md" title="Lägg till utvecklare" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3426407?format=jpeg&nocache=1740173302176" alt="Lägg till utvecklare"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3446402?format=jpeg&nocache=1740173302176&captions=swe" alt="Lägg till utvecklare"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -103,7 +103,7 @@ Lär dig hur du hanterar användarbehörigheter.
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="configure-attribute-based-access-control.md" title="Konfigurera attributbaserad åtkomstkontroll" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/345641?format=jpeg&nocache=1740173302190" alt="Konfigurera attributbaserad åtkomstkontroll"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3451833?format=jpeg&nocache=1740173302190&captions=swe" alt="Konfigurera attributbaserad åtkomstkontroll"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -163,7 +163,7 @@ Lär dig hur du hanterar sandlådemiljöer.
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="use-sandboxes.md" title="Använda sandlådor" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/29838/?format=jpeg&nocache=1740173302789" alt="Använda sandlådor"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3430296/?format=jpeg&nocache=1740173302789&captions=swe" alt="Använda sandlådor"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -186,7 +186,7 @@ Lär dig hur du hanterar sandlådemiljöer.
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="copy-objects-between-sandboxes.md" title="Kopiera konfigurationer mellan sandlådor" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3424763/?format=jpeg&nocache=1740173302776" alt="Kopiera konfigurationer mellan sandlådor"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3446087/?format=jpeg&nocache=1740173302776&captions=swe" alt="Kopiera konfigurationer mellan sandlådor"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -209,7 +209,7 @@ Lär dig hur du hanterar sandlådemiljöer.
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="share-packages-across-orgs.md" title="Dela paket mellan IMS-organisationer" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435815/?format=jpeg&nocache=1740173302764" alt="Dela paket mellan IMS-organisationer"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443921/?format=jpeg&nocache=1740173302764&captions=swe" alt="Dela paket mellan IMS-organisationer"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

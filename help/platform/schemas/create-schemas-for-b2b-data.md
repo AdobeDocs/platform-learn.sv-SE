@@ -19,4 +19,4 @@ ht-degree: 1%
 
 Lär dig skapa scheman för dina affärsdata med Real-Time Customer Data Platform, B2B edition. Lär dig mer om affärsklasser, fältgrupper och identitetsnamnutrymmen och hur du automatiskt skapar dem i ditt konto med verktyget Postman. Mer information finns i [schemadokumentationen](https://experienceleague.adobe.com/docs/experience-platform/xdm/home.html?lang=sv).
 
->[!VIDEO](https://video.tv.adobe.com/v/338241?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3453396?learn=on&enablevpops&captions=swe)

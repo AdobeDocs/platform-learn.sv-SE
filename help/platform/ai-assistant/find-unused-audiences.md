@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Lär dig identifiera oanvända målgrupper med AI Assistant så att du kan ta bort dem och effektivisera marknadsföringsåtgärderna. Mer information om hur du frågar AI-assistenten finns i [Frågekursen för AI-assistenten](https://experienceleague.adobe.com/sv/docs/experience-platform/ai-assistant/questions).
 
->[!VIDEO](https://video.tv.adobe.com/v/3435532/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3441991/?learn=on&enablevpops&captions=swe)

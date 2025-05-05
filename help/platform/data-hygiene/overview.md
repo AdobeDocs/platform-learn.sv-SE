@@ -47,7 +47,7 @@ Funktionen för förinställningar av data hjälper dig att endast importera de 
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="data-prep-for-data-hygiene.md" title="Dataförberedelse för datahygien" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3429485/?format=jpeg&nocache=1740251397387" alt="Dataförberedelse för datahygien"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3449279/?format=jpeg&nocache=1740251397387&captions=swe" alt="Dataförberedelse för datahygien"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -109,7 +109,7 @@ Det finns många funktioner som kan hjälpa dig att ta bort data från systemet.
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="../data-lifecycle/expire-datasets.md" title="Schemalägg borttagning av datauppsättning" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/345065?format=jpeg&nocache=1740251397716" alt="Schemalägg borttagning av datauppsättning"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3430313?format=jpeg&nocache=1740251397716&captions=swe" alt="Schemalägg borttagning av datauppsättning"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -132,7 +132,7 @@ Det finns många funktioner som kan hjälpa dig att ta bort data från systemet.
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="pseudonymous-profile-and-event-expiration.md" title="Pseudonym profil och förfallodatum för upplevelsehändelser" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3428361?format=jpeg&nocache=1740251397705" alt="Pseudonym profil och förfallodatum för upplevelsehändelser"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3449857?format=jpeg&nocache=1740251397705&captions=swe" alt="Pseudonym profil och förfallodatum för upplevelsehändelser"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -216,7 +216,7 @@ Det finns många funktioner som kan hjälpa dig att ta bort data från systemet.
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="../profiles/update-a-specific-attribute-with-upsert.md" title="Uppdatera specifika profilattribut med &quot;upsert&quot;" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3416133/?format=jpeg&nocache=1740251398874" alt="Uppdatera specifika profilattribut med &quot;upsert&quot;"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443445/?format=jpeg&nocache=1740251398874&captions=swe" alt="Uppdatera specifika profilattribut med &quot;upsert&quot;"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

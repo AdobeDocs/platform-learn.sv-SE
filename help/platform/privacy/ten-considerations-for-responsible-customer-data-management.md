@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Volatila marknadskrafter och olika konsumentintegritetskrav kan presentera fantastiska scenarier för den digitala marknadsföraren. För att hålla kampanjer på rätt sida av reglerna behöver marknadsföringsteamen sina IT-motsvarigheter en smidig process för att framtidssäkra datastyrningsprocessen - en process som idealiskt ger alla möjlighet att följa och tillämpa regler för ansvarsfull användning av konsumentdata. Lyssna på Adobe och Scotiabank Digital om viktiga frågor som rör ansvarsfull datahantering.
 
->[!VIDEO](https://video.tv.adobe.com/v/332062/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3457050/?learn=on&enablevpops&captions=swe)

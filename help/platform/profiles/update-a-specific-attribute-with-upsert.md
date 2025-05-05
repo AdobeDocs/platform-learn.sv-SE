@@ -19,4 +19,4 @@ ht-degree: 0%
 
 Lär dig hur du uppdaterar ett specifikt attribut för en profil med funktionen `upsert` i Adobe Experience Platform. När du importerar en post till Platform med endast det specifika attributet, uppdateras vanligtvis värdet, men även de andra attributen uppdateras med `null`-värden. Med `Upsert` kan du uppdatera bara det önskade attributet, samtidigt som de återstående fälten behåller sina aktuella värden.
 
->[!VIDEO](https://video.tv.adobe.com/v/3416133/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3443445/?learn=on&enablevpops&captions=swe)

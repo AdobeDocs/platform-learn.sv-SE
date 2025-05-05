@@ -24,7 +24,7 @@ Den här videon utforskar:
 * Utnyttja Adobe Experience Platform funktioner för dataförberedelser
 * Ökad avkastning från Adobe Real-Time CDP, Adobe Journey Optimizer och Customer Journey Analytics
 
->[!VIDEO](https://video.tv.adobe.com/v/342533?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3454942?learn=on&enablevpops&captions=swe)
 
 ## SQL-exempel
 

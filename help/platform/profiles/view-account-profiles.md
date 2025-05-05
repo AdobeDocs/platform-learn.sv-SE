@@ -19,5 +19,5 @@ ht-degree: 0%
 
 Läs om hur du visar kontoprofiler och affärsmöjligheter i Real-Time Customer Data Platform, B2B edition och Adobe Experience Platform. Mer information finns i [dokumentationen för profiler](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/profile/profile-browse.html?lang=sv-SE).
 
->[!VIDEO](https://video.tv.adobe.com/v/338251?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3446581?learn=on&enablevpops&captions=swe)
 

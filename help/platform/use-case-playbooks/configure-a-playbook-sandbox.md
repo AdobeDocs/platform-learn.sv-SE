@@ -26,4 +26,4 @@ Lär dig hur du konfigurerar en sandlåda för Använd fallspelningsböcker. Fö
 
 Mer information finns i [Kom igång med Använd fallspelningsböcker](https://experienceleague.adobe.com/docs/experience-platform/use-case-playbooks/playbooks/get-started.html?lang=sv-SE).
 
->[!VIDEO](https://video.tv.adobe.com/v/3426987/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3449830/?learn=on&enablevpops&captions=swe)

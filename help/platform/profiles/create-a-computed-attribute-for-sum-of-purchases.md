@@ -18,4 +18,4 @@ ht-degree: 0%
 
 Lär dig hur du använder beräknade attribut för att summera de inköpsbelopp som en användare har gjort i flera försäljningskanaler. En enda kund kan köpa på din webbplats, i din mobilapp och i din fysiska butik. Med funktionen för beräknade attribut kan ni summera de inköpsbelopp som kunden har i alla dessa kanaler och använda denna summa för att definiera målgrupper och för annan personalisering. Mer information finns i [användargränssnittsguiden för beräknade attribut](https://experienceleague.adobe.com/docs/experience-platform/profile/computed-attributes/ui.html?lang=sv-SE&).
 
->[!VIDEO](https://video.tv.adobe.com/v/3425899?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3443555?learn=on&enablevpops&captions=swe)

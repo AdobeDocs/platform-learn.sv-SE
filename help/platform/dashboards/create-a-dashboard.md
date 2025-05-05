@@ -23,4 +23,4 @@ Lär dig hur du skapar en kontrollpanel i Adobe Experience Platform. Mer informa
 >
 >Funktionen för användardefinierade kontrollpaneler är i betaversion. Dess funktioner och dokumentation kan komma att ändras.
 
->[!VIDEO](https://video.tv.adobe.com/v/3409637/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3432450/?learn=on&enablevpops&captions=swe)

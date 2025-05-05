@@ -21,4 +21,4 @@ ht-degree: 0%
 
 Läs om Adobe Experience Platform-program från AI Assistant. Mer information finns i [dokumentationen för AI-assistenten](https://experienceleague.adobe.com/sv/docs/experience-platform/ai-assistant/home).
 
->[!VIDEO](https://video.tv.adobe.com/v/3441024/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3441028/?learn=on&enablevpops&captions=swe)

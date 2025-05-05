@@ -18,6 +18,6 @@ ht-degree: 0%
 
 Få en översikt över vad Experience Platform är och vilka utmaningar det klarar av.
 
->[!VIDEO](https://video.tv.adobe.com/v/32797?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3428500?learn=on&enablevpops&captions=swe)
 
 

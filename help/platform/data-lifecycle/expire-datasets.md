@@ -22,7 +22,7 @@ Lär dig hur du schemalägger borttagningar av datauppsättningar med hjälp av 
 Om du tar bort en datauppsättning kan datafördelare och datatekniker ange ett förfallodatum för en datauppsättning. Mer information finns i [dokumentationen om datahygien](https://experienceleague.adobe.com/docs/experience-platform/hygiene/home.html?lang=sv-SE).
 
 
->[!VIDEO](https://video.tv.adobe.com/v/345065?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3430313?learn=on&enablevpops&captions=swe)
 
 >[!NOTE]
 >
