@@ -23,7 +23,7 @@ I den här övningen kör du API-anrop för att hantera frågemallar och fråges
 
 ## Dokumentation
 
-- [Adobe Experience Platform Query Service - hjälp](https://experienceleague.adobe.com/docs/experience-platform/query/api/getting-started.html)
+- [Adobe Experience Platform Query Service - hjälp](https://experienceleague.adobe.com/docs/experience-platform/query/api/getting-started.html?lang=sv-SE)
 - [API för frågetjänst](https://www.adobe.io/apis/experienceplatform/home/api-reference.html#!acpdr/swagger-specs/qs-api.yaml)
 
 ## API för frågetjänst

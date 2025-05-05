@@ -108,7 +108,7 @@ Något som är mycket viktigt är **inställningarna för beständighet**. Begre
 
 Om du inte ändrar de här inställningarna tolkar CJA dimensionen som **Prop** (träffnivå). Vi kan också ändra Persistence så att dimensionen blir **eVar** (behåller värdet under hela resan).
 
-Om du inte känner till eVars och Props kan du [läsa mer om dem i dokumentationen](https://experienceleague.adobe.com/docs/analytics/landing/an-key-concepts.html).
+Om du inte känner till eVars och Props kan du [läsa mer om dem i dokumentationen](https://experienceleague.adobe.com/docs/analytics/landing/an-key-concepts.html?lang=sv-SE).
 
 Låt oss lämna sidnamnet som en propp. Därför behöver du inte ändra några **Persistence-inställningar**.
 

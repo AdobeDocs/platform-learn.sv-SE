@@ -16,7 +16,7 @@ ht-degree: 10%
 
 # Översikt över dataöverföring
 
-Med Adobe Experience Platform funktioner för dataöverföring kan ni samla alla data på en öppen och skalbar plattform för att hantera kundprofiler i realtid. Mer information finns i [dokumentationen för datainmatning](https://experienceleague.adobe.com/docs/experience-platform/ingestion/home.html).
+Med Adobe Experience Platform funktioner för dataöverföring kan ni samla alla data på en öppen och skalbar plattform för att hantera kundprofiler i realtid. Mer information finns i [dokumentationen för datainmatning](https://experienceleague.adobe.com/docs/experience-platform/ingestion/home.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/27106?learn=on&enablevpops)
 

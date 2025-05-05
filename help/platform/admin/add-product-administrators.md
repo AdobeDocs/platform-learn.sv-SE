@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Lägg till produktadministratörer
 
-Lär dig hur du lägger till produktadministratörer för Adobe Experience Platform. Produktadministratörer hanterar åtkomstkontroll för plattformsbaserade program som Real-Time Customer Data Platform och Journey Optimizer. De kan skapa användare, utvecklare och ytterligare administratörer i Admin Console och sedan bevilja dem (och API-behörigheter) behörigheter i Platform- eller Journey Optimizer-gränssnittet. Mer information finns i [Åtkomstkontrollsdokumentationen](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html).
+Lär dig hur du lägger till produktadministratörer för Adobe Experience Platform. Produktadministratörer hanterar åtkomstkontroll för plattformsbaserade program som Real-Time Customer Data Platform och Journey Optimizer. De kan skapa användare, utvecklare och ytterligare administratörer i Admin Console och sedan bevilja dem (och API-behörigheter) behörigheter i Platform- eller Journey Optimizer-gränssnittet. Mer information finns i [Åtkomstkontrollsdokumentationen](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/333860?learn=on&enablevpops)
 

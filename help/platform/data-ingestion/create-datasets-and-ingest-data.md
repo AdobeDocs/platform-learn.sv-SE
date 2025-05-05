@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Skapa datauppsättningar och importera data
 
-I den här videon visas hur du skapar datauppsättningar och importerar data i Adobe Experience Platform-gränssnittet. Mer detaljerad produktdokumentation finns i [Importera gruppdata med användargränssnittet](https://experienceleague.adobe.com/docs/experience-platform/ingestion/tutorials/ingest-batch-data.html) och [skapa en datauppsättning med API:er](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/create.html). Mer information finns i [dokumentationen för datainmatning](https://experienceleague.adobe.com/docs/experience-platform/ingestion/home.html).
+I den här videon visas hur du skapar datauppsättningar och importerar data i Adobe Experience Platform-gränssnittet. Mer detaljerad produktdokumentation finns i [Importera gruppdata med användargränssnittet](https://experienceleague.adobe.com/docs/experience-platform/ingestion/tutorials/ingest-batch-data.html?lang=sv-SE) och [skapa en datauppsättning med API:er](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/create.html?lang=sv-SE). Mer information finns i [dokumentationen för datainmatning](https://experienceleague.adobe.com/docs/experience-platform/ingestion/home.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/27269?learn=on&enablevpops)
 

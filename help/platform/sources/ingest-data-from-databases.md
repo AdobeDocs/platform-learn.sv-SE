@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Infoga data med hjälp av datakällkopplingen
 
-I den här videon går vi igenom hur du utför en batchimport av data från en datakälla till Adobe Experience Platform kundprofil i realtid och Experience Data Lake på ett smidigt och skalbart sätt. Mer detaljerad produktdokumentation finns i [databas](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=en#database) på översiktssidan för Source Connectors eller i [dokumentationen för Google Big Query-källkopplingen](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/databases/bigquery.html).
+I den här videon går vi igenom hur du utför en batchimport av data från en datakälla till Adobe Experience Platform kundprofil i realtid och Experience Data Lake på ett smidigt och skalbart sätt. Mer detaljerad produktdokumentation finns i [databas](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=sv-SE#database) på översiktssidan för Source Connectors eller i [dokumentationen för Google Big Query-källkopplingen](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/databases/bigquery.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/329317?learn=on&enablevpops)

@@ -25,11 +25,11 @@ Experience Platform använder scheman för att beskriva datastrukturen på ett k
 
 Innan data kan hämtas in till Platform måste ett schema sättas samman för att beskriva datastrukturen och tillhandahålla begränsningar för den typ av data som kan finnas i varje fält. Scheman består av en basklass och noll eller flera schemafältgrupper.
 
-Mer information om schemakompositionsmodellen, inklusive designprinciper och bästa praxis, finns i [grunderna för schemakomposition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en) eller i spellistan [Modellera dina kundupplevelsedata med XDM](https://experienceleague.adobe.com/en/playlists/experience-platform-model-your-customer-experience-data-with-xdm).
+Mer information om schemakompositionsmodellen, inklusive designprinciper och bästa praxis, finns i [grunderna för schemakomposition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=sv-SE) eller i spellistan [Modellera dina kundupplevelsedata med XDM](https://experienceleague.adobe.com/sv/playlists/experience-platform-model-your-customer-experience-data-with-xdm).
 
 >[!TIP]
 >
->Om du känner till SDR (Analytics Solution Design Reference) kan du se ett schema som en mer robust SDR. Mer information finns i [Skapa och underhåll ett SDR-dokument ](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html?lang=en).
+>Om du känner till SDR (Analytics Solution Design Reference) kan du se ett schema som en mer robust SDR. Mer information finns i [Skapa och underhåll ett SDR-dokument ](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html?lang=sv-SE).
 
 ## Förhandskrav
 
@@ -70,7 +70,7 @@ Du finns nu på huvudschemasidan och visas med en lista över befintliga scheman
 * **Klasser** definierar beteendeaspekterna för de data som schemat innehåller. Till exempel: `XDM ExperienceEvent` hämtar tidsserier, händelsedata och `XDM Individual Profile` hämtar attributdata om en individ.
 * **Datatyper** används som referensfälttyper i klasser eller fältgrupper på samma sätt som grundläggande litteralfält.
 
-Ovanstående beskrivningar är en översikt på hög nivå. Mer information finns i videon [Schemabyggande block](https://experienceleague.adobe.com/docs/platform-learn/tutorials/schemas/schema-building-blocks.html) eller i [Grundläggande om schemakomposition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=en) i produktdokumentationen.
+Ovanstående beskrivningar är en översikt på hög nivå. Mer information finns i videon [Schemabyggande block](https://experienceleague.adobe.com/docs/platform-learn/tutorials/schemas/schema-building-blocks.html?lang=sv-SE) eller i [Grundläggande om schemakomposition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=sv-SE) i produktdokumentationen.
 
 I den här självstudiekursen använder du fältgruppen Consumer Experience Event och skapar en anpassad som demonstrerar processen.
 

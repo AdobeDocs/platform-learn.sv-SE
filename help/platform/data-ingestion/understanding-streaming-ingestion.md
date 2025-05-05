@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Översikt över dataöverföring
 
-Om du använder Experience Platform direktuppspelningsuppläsning kan du vara säker på att alla data du skickar blir tillgängliga i kundprofilen i realtid. Dessa data kan hämtas från CRM- och ERP-system, eller från någon annan källa som kan kommunicera via HTTP eller en offentlig molninfrastruktur. Sedan kan ni använda dessa data för segmentering i realtid och för att aktivera andra marknadsföringsprocesser. Mer information finns i [Direktuppspelningsdokumentationen](https://experienceleague.adobe.com/en/docs/experience-platform/ingestion/streaming/overview).
+Om du använder Experience Platform direktuppspelningsuppläsning kan du vara säker på att alla data du skickar blir tillgängliga i kundprofilen i realtid. Dessa data kan hämtas från CRM- och ERP-system, eller från någon annan källa som kan kommunicera via HTTP eller en offentlig molninfrastruktur. Sedan kan ni använda dessa data för segmentering i realtid och för att aktivera andra marknadsföringsprocesser. Mer information finns i [Direktuppspelningsdokumentationen](https://experienceleague.adobe.com/sv/docs/experience-platform/ingestion/streaming/overview).
 
 >[!VIDEO](https://video.tv.adobe.com/v/28425?learn=on&enablevpops)

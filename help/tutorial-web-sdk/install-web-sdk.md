@@ -71,7 +71,7 @@ Lämna de flesta standardinställningarna och uppdatera dem senare efter behov. 
 
    ![Val av dataström](assets/extension-luma-web-sdk-datastream-extension.png)
 
-Mer information om de olika avsnitten i tillägget finns i [Konfigurera Adobe Experience Platform Web SDK-tillägget](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/web-sdk/web-sdk-extension-configuration).
+Mer information om de olika avsnitten i tillägget finns i [Konfigurera Adobe Experience Platform Web SDK-tillägget](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/extensions/client/web-sdk/web-sdk-extension-configuration).
 
 >[!NOTE]
 >

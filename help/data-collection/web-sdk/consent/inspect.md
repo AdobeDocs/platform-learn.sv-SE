@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Inspektera och validera godkännandesignaler
 
-Lär dig hur du validerar att inställningarna för samtycke används korrekt på dina data i Adobe Experience Platform. Mer information om att [testa implementeringen](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/overview.html?lang=en#test-implementation) finns i godkännandedokumentationen.
+Lär dig hur du validerar att inställningarna för samtycke används korrekt på dina data i Adobe Experience Platform. Mer information om att [testa implementeringen](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/overview.html?lang=sv-SE#test-implementation) finns i godkännandedokumentationen.
 
 >[!NOTE]
 >

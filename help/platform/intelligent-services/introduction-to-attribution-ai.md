@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Introduktion till Attribution AI
 
-En översikt på hög nivå över hur marknadsförare och analytiker kan använda Attribution AI för att förstå effekten av sina marknadsföringskanaler och kampanjer. Mer information finns i [Attribution AI-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/attribution-ai/overview.html).
+En översikt på hög nivå över hur marknadsförare och analytiker kan använda Attribution AI för att förstå effekten av sina marknadsföringskanaler och kampanjer. Mer information finns i [Attribution AI-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/attribution-ai/overview.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/32667?learn=on&enablevpops)

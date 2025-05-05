@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Säkerhetsöversikt för AI Assistant
 
-Det här är en översikt över säkerhetsfunktionerna för AI-assistenten baserat på <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf">säkerhetsfaktablad</a>.  Mer information finns i [sekretessdokumentationen för AI Assistant](https://experienceleague.adobe.com/en/docs/experience-platform/ai-assistant/privacy).
+Det här är en översikt över säkerhetsfunktionerna för AI-assistenten baserat på <a href="https://www.adobe.com/content/dam/cc/en/trust-center/ungated/whitepapers/experience-cloud/adobe-ai-assistant-in-aep-security-fact-sheet.pdf">säkerhetsfaktablad</a>.  Mer information finns i [sekretessdokumentationen för AI Assistant](https://experienceleague.adobe.com/sv/docs/experience-platform/ai-assistant/privacy).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3441066/?learn=on&enablevpops)

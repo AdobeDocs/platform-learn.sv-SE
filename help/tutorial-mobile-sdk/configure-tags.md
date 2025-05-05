@@ -23,7 +23,7 @@ Du måste ha behörighet att skapa en taggegenskap för att kunna slutföra lekt
 
 >[!NOTE]
 >
-> Platforma launchen (klientsidan) är nu [Taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=en)
+> Platforma launchen (klientsidan) är nu [Taggar](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv-SE)
 
 ## Utbildningsmål
 

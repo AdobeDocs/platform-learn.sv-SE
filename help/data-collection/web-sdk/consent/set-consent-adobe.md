@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Ange samtycke med Adobe-standarden
 
-Lär dig hur du använder Adobe Experience Platform Web SDK för att ange medgivandevärden enligt Adobe-standarden 1.0 och 2.0. Mer information om hur du använder Adobe-standarden finns i dokumentationen om [godkännandebearbetning i Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/iab/overview.html).
+Lär dig hur du använder Adobe Experience Platform Web SDK för att ange medgivandevärden enligt Adobe-standarden 1.0 och 2.0. Mer information om hur du använder Adobe-standarden finns i dokumentationen om [godkännandebearbetning i Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/iab/overview.html?lang=sv-SE).
 
 >[!NOTE]
 >

@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Använd AI Assistant för att minska starttiden
 
-Lär dig hur du använder AI Assistant för att snabbt komma igång med nya funktioner och minska starttiden. Mer information finns i [Frågekursen för AI Assistant](https://experienceleague.adobe.com/en/docs/experience-platform/ai-assistant/questions).
+Lär dig hur du använder AI Assistant för att snabbt komma igång med nya funktioner och minska starttiden. Mer information finns i [Frågekursen för AI Assistant](https://experienceleague.adobe.com/sv/docs/experience-platform/ai-assistant/questions).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on&enablevpops)

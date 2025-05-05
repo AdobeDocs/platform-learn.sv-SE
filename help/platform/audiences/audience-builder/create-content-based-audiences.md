@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Skapa innehållsbaserade målgrupper
 
-Lär dig grunderna om hur du skapar en innehållsaffinitet för målgrupper i målgruppsregelbyggaren i Experience Platform. Mer information finns i [Segment Builder-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/segment-builder.html).
+Lär dig grunderna om hur du skapar en innehållsaffinitet för målgrupper i målgruppsregelbyggaren i Experience Platform. Mer information finns i [Segment Builder-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/segment-builder.html?lang=sv-SE).
 
 >[!NOTE]
 >

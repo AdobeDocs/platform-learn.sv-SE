@@ -18,7 +18,7 @@ ht-degree: 61%
 
 # Demo av webb-SDK för Adobe Experience Platform och Edge Network
 
-Se Adobe Experience Platform Web SDK och Edge Network in action, med ett enda anrop till Adobe som skickar data till Experience Platform, Analytics, Audience Manager och Target. Mer information finns i [Adobe Experience Platform Web SDK-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html).
+Se Adobe Experience Platform Web SDK och Edge Network in action, med ett enda anrop till Adobe som skickar data till Experience Platform, Analytics, Audience Manager och Target. Mer information finns i [Adobe Experience Platform Web SDK-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/34148?learn=on&enablevpops)
 

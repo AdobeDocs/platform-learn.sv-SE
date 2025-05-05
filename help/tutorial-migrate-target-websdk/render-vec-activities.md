@@ -32,11 +32,11 @@ Webbläsartillägget Visuell redigeringshjälp fungerar med webbplatser som anv�
 
 Hjälpprogrammet för visuell redigering aktiveras automatiskt när en webbplats öppnas i Target VEC för att underlätta redigeringen. Tillägget har inga villkorsinställningar. Tillägget hanterar alla inställningar automatiskt, inklusive inställningarna för cookies för samma plats.
 
-Mer information om tillägget [Hjälp för visuell redigering](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension.html) och [felsökning av Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/troubleshoot-composer.html) finns i den dedikerade dokumentationen.
+Mer information om tillägget [Hjälp för visuell redigering](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/visual-editing-helper-extension.html?lang=sv-SE) och [felsökning av Visual Experience Composer](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/troubleshoot-composer.html?lang=sv-SE) finns i den dedikerade dokumentationen.
 
 >[!IMPORTANT]
 >
->Det nya [hjälptillägget ](https://chrome.google.com/webstore/detail/adobe-experience-cloud-vi/kgmjjkfjacffaebgpkpcllakjifppnca) för visuell redigering ersätter det tidigare [målwebbläsartillägget för VEC-hjälp](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html). Om det äldre VEC Helper-tillägget är installerat bör det tas bort eller inaktiveras innan tillägget Visuell redigeringshjälp används.
+>Det nya [hjälptillägget ](https://chrome.google.com/webstore/detail/adobe-experience-cloud-vi/kgmjjkfjacffaebgpkpcllakjifppnca) för visuell redigering ersätter det tidigare [målwebbläsartillägget för VEC-hjälp](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html?lang=sv-SE). Om det äldre VEC Helper-tillägget är installerat bör det tas bort eller inaktiveras innan tillägget Visuell redigeringshjälp används.
 
 ## Begär och tillämpa innehåll automatiskt
 
@@ -128,9 +128,9 @@ alloy("sendEvent", {
 
 >[!NOTE]
 >
->Det går att [manuellt återge ändringar som gjorts ](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html#manually-rendering-content) i Visual Experience Composer. Manuell återgivning av VEC-baserade ändringar är inte vanligt. Kontrollera om din at.js-implementering använder funktionen `getOffers()` för att manuellt köra en `pageLoad` Target-begäran utan att använda `applyOffers()` för att tillämpa innehållet på sidan.
+>Det går att [manuellt återge ändringar som gjorts ](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=sv-SE#manually-rendering-content) i Visual Experience Composer. Manuell återgivning av VEC-baserade ändringar är inte vanligt. Kontrollera om din at.js-implementering använder funktionen `getOffers()` för att manuellt köra en `pageLoad` Target-begäran utan att använda `applyOffers()` för att tillämpa innehållet på sidan.
 
-Med Platform Web SDK får utvecklarna stor flexibilitet när det gäller att begära och återge innehåll. Mer information och mer information finns i [dedikerad dokumentation om återgivning av anpassat innehåll](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html).
+Med Platform Web SDK får utvecklarna stor flexibilitet när det gäller att begära och återge innehåll. Mer information och mer information finns i [dedikerad dokumentation om återgivning av anpassat innehåll](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=sv-SE).
 
 ## Implementeringsexempel
 

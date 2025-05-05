@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Skapa en egenskap för vidarebefordring av händelser
 
-Lär dig hur du skapar en händelsevidarebefordringsegenskap i datainsamling. Mer information finns i dokumentationen [Skapa en egenskap för vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/getting-started.html#create-an-event-forwarding-property).
+Lär dig hur du skapar en händelsevidarebefordringsegenskap i datainsamling. Mer information finns i dokumentationen [Skapa en egenskap för vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/getting-started.html?lang=sv-SE#create-an-event-forwarding-property).
 
 >[!NOTE]
 >

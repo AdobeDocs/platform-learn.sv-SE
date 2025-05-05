@@ -35,7 +35,7 @@ I den här lektionen får du lära dig hur du skapar och konfigurerar systemet s
 
    >[!NOTE]
    >
-   >Du behöver bara välja ett schema om du använder funktionen [Dataprep för datainsamling](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/edge-network/data-prep) som vi inte gör i den här självstudiekursen. Klicka på länken om du vill veta mer.
+   >Du behöver bara välja ett schema om du använder funktionen [Dataprep för datainsamling](https://experienceleague.adobe.com/sv/docs/platform-learn/data-collection/edge-network/data-prep) som vi inte gör i den här självstudiekursen. Klicka på länken om du vill veta mer.
 
 1. Välj **[!UICONTROL Save]**
 

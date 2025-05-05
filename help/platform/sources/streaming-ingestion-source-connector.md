@@ -23,7 +23,7 @@ Lär dig hur du strömmar data i realtid från en molnlagringskälla till Platfo
 
 ## Ytterligare resurser
 
-* [Skapa en Amazon Kinesis-källanslutning i användargränssnittet](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/cloud-storage/kinesis.html)
-* [Skapa en Azure Event Hubs-källanslutning i gränssnittet](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/cloud-storage/eventhub.html)
+* [Skapa en Amazon Kinesis-källanslutning i användargränssnittet](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/cloud-storage/kinesis.html?lang=sv-SE)
+* [Skapa en Azure Event Hubs-källanslutning i gränssnittet](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/cloud-storage/eventhub.html?lang=sv-SE)
 * [Azure Event Hubs-dokumentation](https://docs.microsoft.com/en-us/azure/event-hubs/)
 * [Amazon Kinesis-dataströmdokumentation](https://docs.aws.amazon.com/kinesis/index.html)

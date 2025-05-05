@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Skapa konverteringsmålgrupper
 
-I den här videon får du lära dig hur du använder funktionen för att skapa en målgrupp i Experience Platform som har utfört en konverteringshändelse, antingen på en webbplats eller i andra datasystem. Mer information finns i [Segment Builder-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/segment-builder.html).
+I den här videon får du lära dig hur du använder funktionen för att skapa en målgrupp i Experience Platform som har utfört en konverteringshändelse, antingen på en webbplats eller i andra datasystem. Mer information finns i [Segment Builder-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/segment-builder.html?lang=sv-SE).
 
 >[!NOTE]
 >

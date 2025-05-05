@@ -17,7 +17,7 @@ ht-degree: 35%
 
 # Introduktion till intelligenta tjänster
 
-En introduktion på hög nivå till Intelligent Services, som ger marknadsföringsanalytiker och yrkesverksamma möjlighet att utnyttja kraften i Artificial Intelligence och Machine Learning i kundupplevelsefall utan datavetenskap. Mer information finns i [dokumentationen för intelligenta tjänster](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/home.html).
+En introduktion på hög nivå till Intelligent Services, som ger marknadsföringsanalytiker och yrkesverksamma möjlighet att utnyttja kraften i Artificial Intelligence och Machine Learning i kundupplevelsefall utan datavetenskap. Mer information finns i [dokumentationen för intelligenta tjänster](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/home.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/32654?learn=on&enablevpops)
 

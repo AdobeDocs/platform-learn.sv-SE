@@ -26,14 +26,14 @@ Den här självstudiekursen fokuserar på ett fiktivt varumärke som kallas Luma
 
 >[!NOTE]
 >
->Slutresultatet av den här självstudiekursen är en sandlåda som innehåller liknande data som [Komma igång med Adobe Experience Platform för dataarkitekter och datatekniker](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/overview.html). Den uppdaterades i april 2023 för att stödja [Journey Optimizer-utmaningarna](https://experienceleague.adobe.com/docs/journey-optimizer-learn/challenges/introduction-and-prerequisites.html). Den uppdaterades i juni 2023 för att ändra autentiseringsmetoden till OAuth.
+>Slutresultatet av den här självstudiekursen är en sandlåda som innehåller liknande data som [Komma igång med Adobe Experience Platform för dataarkitekter och datatekniker](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/overview.html?lang=sv-SE). Den uppdaterades i april 2023 för att stödja [Journey Optimizer-utmaningarna](https://experienceleague.adobe.com/docs/journey-optimizer-learn/challenges/introduction-and-prerequisites.html?lang=sv-SE). Den uppdaterades i juni 2023 för att ändra autentiseringsmetoden till OAuth.
 
 
 ## Förhandskrav
 
-* Du har tillgång till Experience Platform API:er och kan autentisera. Om inte, gå igenom den här [självstudiekursen](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html).
+* Du har tillgång till Experience Platform API:er och kan autentisera. Om inte, gå igenom den här [självstudiekursen](https://experienceleague.adobe.com/docs/platform-learn/tutorials/platform-api-authentication.html?lang=sv-SE).
 * Du har tillgång till en Experience Platform-utvecklingssandlåda.
-* Du känner till ditt Experience Platform tenant-ID. Du kan hämta den genom att göra en autentiserad [API-begäran](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/getting-started.html?lang=en#know-your-tenant_id)
+* Du känner till ditt Experience Platform tenant-ID. Du kan hämta den genom att göra en autentiserad [API-begäran](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/getting-started.html?lang=sv-SE#know-your-tenant_id)
 eller genom att extrahera det från URL:en när du loggar in på ditt plattformskonto. I följande URL är klientorganisationen till exempel `techmarketingdemos` `https://experience.adobe.com/#/@techmarketingdemos/sname:prod/platform/home`.
 
 ## Använder [!DNL Postman] {#postman}
@@ -185,18 +185,18 @@ Genom att bläddra igenom data på flikarna **[!UICONTROL Attributes]** och **[!
 
 ## Nästa steg
 
-Om du vill veta mer om Adobe Journey Optimizer innehåller den här sandlådan allt du behöver för att hantera [Journey Optimizer-utmaningar](https://experienceleague.adobe.com/docs/journey-optimizer-learn/challenges/introduction-and-prerequisites.html)
+Om du vill veta mer om Adobe Journey Optimizer innehåller den här sandlådan allt du behöver för att hantera [Journey Optimizer-utmaningar](https://experienceleague.adobe.com/docs/journey-optimizer-learn/challenges/introduction-and-prerequisites.html?lang=sv-SE)
 
-Om du vill lära dig mer om sammanfogningsprinciper, datastyrning, frågetjänst och segmentbyggaren går du till [lektion 11 i självstudiekursen Komma igång för dataarkitekter och datatekniker](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/create-merge-policies.html?lang=en). I de tidigare lektionerna av den här andra självstudiekursen kan du manuellt skapa allt som just fyllts i av de här Postman-kollektionerna - du kommer snabbt igång!
+Om du vill lära dig mer om sammanfogningsprinciper, datastyrning, frågetjänst och segmentbyggaren går du till [lektion 11 i självstudiekursen Komma igång för dataarkitekter och datatekniker](https://experienceleague.adobe.com/docs/platform-learn/getting-started-for-data-architects-and-data-engineers/create-merge-policies.html?lang=sv-SE). I de tidigare lektionerna av den här andra självstudiekursen kan du manuellt skapa allt som just fyllts i av de här Postman-kollektionerna - du kommer snabbt igång!
 
 Om du vill skapa en exempelimplementering av Web SDK för att länka till den här sandlådan går du igenom
-[Implementera Adobe Experience Cloud med Web SDK, självstudiekurs](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html). När du har konfigurerat lektionerna&quot;Inledande konfiguration&quot;,&quot;Taggkonfiguration&quot; och&quot;Konfigurera Experience Platform&quot; i självstudiekursen för Web SDK loggar du in på Lumas webbplats med hjälp av de första tio e-postadresserna i filen `luma-crm.json` med hjälp av lösenordet `test` för att se profilfragmenten sammanfogas med data som överförts i den här självstudiekursen.
+[Implementera Adobe Experience Cloud med Web SDK, självstudiekurs](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=sv-SE). När du har konfigurerat lektionerna&quot;Inledande konfiguration&quot;,&quot;Taggkonfiguration&quot; och&quot;Konfigurera Experience Platform&quot; i självstudiekursen för Web SDK loggar du in på Lumas webbplats med hjälp av de första tio e-postadresserna i filen `luma-crm.json` med hjälp av lösenordet `test` för att se profilfragmenten sammanfogas med data som överförts i den här självstudiekursen.
 
 Om du vill skapa ett exempel på en mobil SDK-implementering som länkar till den här sandlådan går du igenom
-[Implementera Adobe Experience Cloud i mobilappar, genomgång](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/overview.html). När du har konfigurerat lektionerna&quot;Inledande konfiguration&quot;,&quot;App-implementering&quot; och&quot;Experience Platform&quot; i självstudiekursen för Web SDK loggar du in på Lumas webbplats med de första e-postadresserna i filen `luma-crm.json` för att se en profilfragmentsammanslagning med data som överförts i den här självstudiekursen.
+[Implementera Adobe Experience Cloud i mobilappar, genomgång](https://experienceleague.adobe.com/docs/platform-learn/implement-mobile-sdk/overview.html?lang=sv-SE). När du har konfigurerat lektionerna&quot;Inledande konfiguration&quot;,&quot;App-implementering&quot; och&quot;Experience Platform&quot; i självstudiekursen för Web SDK loggar du in på Lumas webbplats med de första e-postadresserna i filen `luma-crm.json` för att se en profilfragmentsammanslagning med data som överförts i den här självstudiekursen.
 
 ## Återställ sandlådemiljö {#reset-sandbox}
 
 Om du återställer en icke-produktionssandlåda tas alla resurser som är associerade med den sandlådan (scheman, datauppsättningar o.s.v.) bort, samtidigt som sandlådans namn och associerade behörigheter behålls. Den här&quot;rena&quot; sandlådan är fortfarande tillgänglig under samma namn för användare som har åtkomst till den.
 
-Följ stegen [här](https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html?lang=en#reset-a-sandbox) för att återställa en sandlådemiljö.
+Följ stegen [här](https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/user-guide.html?lang=sv-SE#reset-a-sandbox) för att återställa en sandlådemiljö.

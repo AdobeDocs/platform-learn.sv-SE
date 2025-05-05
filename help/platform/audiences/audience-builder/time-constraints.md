@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Använd tidsbegränsningar i segmentdefinitioner
 
-Lär dig hur du använder de olika alternativen för datum och tid i Adobe Experience Platform målgruppsbyggare. Använd datum i profilattribut för att skapa målgrupper för personer som fyller år. Använd datum i händelser för att skapa målgrupper för personer som har gjort flera inköp inom en viss tidsram eller inte vidtagit någon åtgärd inom en viss tidsram. Mer information finns i [Användargränssnittshandboken för segmentbyggaren](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-builder).
+Lär dig hur du använder de olika alternativen för datum och tid i Adobe Experience Platform målgruppsbyggare. Använd datum i profilattribut för att skapa målgrupper för personer som fyller år. Använd datum i händelser för att skapa målgrupper för personer som har gjort flera inköp inom en viss tidsram eller inte vidtagit någon åtgärd inom en viss tidsram. Mer information finns i [Användargränssnittshandboken för segmentbyggaren](https://experienceleague.adobe.com/sv/docs/experience-platform/segmentation/ui/segment-builder).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3432259/?learn=on&enablevpops)

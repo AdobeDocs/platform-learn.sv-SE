@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Skapa dynamiska målgrupper
 
-Dynamiska målgrupper är en avancerad segmenteringsfunktion i Adobe Experience Platform som löser de skalbarhetsproblem som marknadsförare traditionellt möter när de skapar målgrupper för marknadsföringskampanjer. Mer information finns i [Segment Builder-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/segment-builder.html).
+Dynamiska målgrupper är en avancerad segmenteringsfunktion i Adobe Experience Platform som löser de skalbarhetsproblem som marknadsförare traditionellt möter när de skapar målgrupper för marknadsföringskampanjer. Mer information finns i [Segment Builder-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/segment-builder.html?lang=sv-SE).
 
 >[!NOTE]
 >

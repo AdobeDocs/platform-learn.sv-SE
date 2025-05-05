@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Översikt över batchdataöverföring
 
-Den här videon ger en översikt över batchdatainmatning i Adobe Experience Platform och visar hur du importerar batchdata med API:t. Mer information finns i [dokumentationen för datainmatning](https://experienceleague.adobe.com/docs/experience-platform/ingestion/home.html).
+Den här videon ger en översikt över batchdatainmatning i Adobe Experience Platform och visar hur du importerar batchdata med API:t. Mer information finns i [dokumentationen för datainmatning](https://experienceleague.adobe.com/docs/experience-platform/ingestion/home.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/330995?learn=on&enablevpops)

@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Överför målgrupper till Adobe Experience Platform
 
-Lär dig hur du överför målgrupper i CSV-format till Adobe Experience Platform. Mer information finns i [Segment Builder-dokumentationen](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/audience-portal#import-audience).
+Lär dig hur du överför målgrupper i CSV-format till Adobe Experience Platform. Mer information finns i [Segment Builder-dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-platform/segmentation/ui/audience-portal#import-audience).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3421714/?learn=on&enablevpops)

@@ -81,7 +81,7 @@ Just nu kommer du att lära dig mer om de här meddelandena i nästa lektion nä
 ## Ytterligare resurser
 
 * [Webkrok.site](https://webhook.site/)
-* [Dokumentation för meddelanden om dataöverföring](https://experienceleague.adobe.com/docs/experience-platform/ingestion/quality/subscribe-events.html)
+* [Dokumentation för meddelanden om dataöverföring](https://experienceleague.adobe.com/docs/experience-platform/ingestion/quality/subscribe-events.html?lang=sv-SE)
 * [Komma igång med Adobe I/O-händelsedokumentation](https://www.adobe.io/apis/experienceplatform/events/docs.html)
 
 Okej, vi börjar till slut [inhämta data](ingest-batch-data.md)!

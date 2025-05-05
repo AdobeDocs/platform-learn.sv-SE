@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Använda identifieringspanelen i AI Assistant
 
-Lär dig hur du använder panelen Discovery i AI Assistant. Mer information finns i [Användargränssnittshandboken för AI-assistenten](https://experienceleague.adobe.com/en/docs/experience-platform/ai-assistant/ui-guide#use-discoverability).
+Lär dig hur du använder panelen Discovery i AI Assistant. Mer information finns i [Användargränssnittshandboken för AI-assistenten](https://experienceleague.adobe.com/sv/docs/experience-platform/ai-assistant/ui-guide#use-discoverability).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3440962/?learn=on&enablevpops)

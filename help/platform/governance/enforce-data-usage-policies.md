@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Använd principer för dataanvändning
 
-Lär dig hur du tillämpar dataanvändningsprinciper när du aktiverar en målgrupp till ett mål. Lär dig hur du lägger till marknadsföringsåtgärder till destinationer, hur du analyserar en policyöverträdelse under aktiveringen och hur du använder datalinjen för att förstå och åtgärda regelöverträdelser. Mer information om API-baserad metod finns i [Tillämpa dataanvändningsprinciper med hjälp av API:t för principtjänsten](https://experienceleague.adobe.com/docs/experience-platform/data-governance/enforcement/api-enforcement.html).
+Lär dig hur du tillämpar dataanvändningsprinciper när du aktiverar en målgrupp till ett mål. Lär dig hur du lägger till marknadsföringsåtgärder till destinationer, hur du analyserar en policyöverträdelse under aktiveringen och hur du använder datalinjen för att förstå och åtgärda regelöverträdelser. Mer information om API-baserad metod finns i [Tillämpa dataanvändningsprinciper med hjälp av API:t för principtjänsten](https://experienceleague.adobe.com/docs/experience-platform/data-governance/enforcement/api-enforcement.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/33631?learn=on&enablevpops)

@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Referensgrupper som annonsörer i Real-Time CDP Collaboration
 
-Som annonsörer kan du lära dig att referera till målgrupper och föra in dem i ditt gränssnitt så att de kan användas när du samarbetar med partners. Mer detaljerad dokumentation finns i [Importera och hantera målgrupper](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/setup/onboard-audiences){target="_blank"}.
+Som annonsörer kan du lära dig att referera till målgrupper och föra in dem i ditt gränssnitt så att de kan användas när du samarbetar med partners. Mer detaljerad dokumentation finns i [Importera och hantera målgrupper](https://experienceleague.adobe.com/sv/docs/real-time-cdp-collaboration/using/setup/onboard-audiences){target="_blank"}.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3452217/?learn=on&enablevpops)

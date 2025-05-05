@@ -189,7 +189,7 @@ Låt oss ringa vårt första API-anrop:
 1. Importera den till [!DNL Postman]
 1. Öppna **API för schemaregister > Scheman > Lista scheman**
 1. Titta på flikarna **Parametrar** och **Sidhuvuden** och se hur de innehåller några av de miljövariabler som vi angav tidigare.
-1. Observera att fältet **Sidhuvuden > Acceptera värde** är inställt på `application/vnd.adobe.xed-id+json`. API:erna för schemaregister kräver ett av dessa [angivna värden för Acceptera sidhuvud](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/getting-started.html?lang=en#accept) som har olika format i svaret.
+1. Observera att fältet **Sidhuvuden > Acceptera värde** är inställt på `application/vnd.adobe.xed-id+json`. API:erna för schemaregister kräver ett av dessa [angivna värden för Acceptera sidhuvud](https://experienceleague.adobe.com/docs/experience-platform/xdm/api/getting-started.html?lang=sv-SE#accept) som har olika format i svaret.
 1. Välj **Skicka** för att göra ditt första Platform API-anrop!
 
 Förhoppningsvis har du fått ett `200 OK`-svar som innehåller en lista över tillgängliga XDM-scheman som tillhandahålls av Adobe i din sandlåda, enligt bilden nedan.

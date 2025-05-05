@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Övervaka datainmatning
 
-Lär dig övervaka och spåra data som hämtas till Adobe Experience Platform med kontrollpanelen. Den här kontrollpanelen ger en översiktlig vy över källdatabearbetning via datasjön till profil- och identitetstjänster, med åtgärdbara insikter. Mer information finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html).
+Lär dig övervaka och spåra data som hämtas till Adobe Experience Platform med kontrollpanelen. Den här kontrollpanelen ger en översiktlig vy över källdatabearbetning via datasjön till profil- och identitetstjänster, med åtgärdbara insikter. Mer information finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/dataflows/ui/monitor-sources.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/331776?learn=on&enablevpops)

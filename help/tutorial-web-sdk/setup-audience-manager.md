@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Lär dig hur du konfigurerar Adobe Audience Manager med Adobe Experience Platform Web SDK och validerar implementeringen med hjälp av en cookie-destination.
 
-[Adobe Audience Manager](https://experienceleague.adobe.com/en/docs/audience-manager) är en Adobe Experience Cloud-lösning som innehåller allt som krävs för att samla in kommersiellt relevant information om webbplatsbesökare, skapa marknadsföringsbara segment och leverera riktad reklam och innehåll till rätt målgrupp.
+[Adobe Audience Manager](https://experienceleague.adobe.com/sv/docs/audience-manager) är en Adobe Experience Cloud-lösning som innehåller allt som krävs för att samla in kommersiellt relevant information om webbplatsbesökare, skapa marknadsföringsbara segment och leverera riktad reklam och innehåll till rätt målgrupp.
 
 ![Web SDK och Adobe Audience Manager-diagram](assets/dc-websdk-aam.png)
 
@@ -32,11 +32,11 @@ När lektionen är klar kan du:
 För att slutföra lektionen måste du först:
 
 * Slutför de tidigare lektionerna i avsnitten Inledande konfiguration och Tagginställningar i den här självstudien.
-* ha tillgång till Adobe Audience Manager och de behörigheter som krävs för att skapa, läsa och skriva egenskaper, segment och mål. Mer information finns i [Audience Manager rollbaserad åtkomstkontroll](https://experienceleague.adobe.com/en/docs/audience-manager-learn/tutorials/setup-and-admin/user-management/setting-permissions-with-role-based-access-control).
+* ha tillgång till Adobe Audience Manager och de behörigheter som krävs för att skapa, läsa och skriva egenskaper, segment och mål. Mer information finns i [Audience Manager rollbaserad åtkomstkontroll](https://experienceleague.adobe.com/sv/docs/audience-manager-learn/tutorials/setup-and-admin/user-management/setting-permissions-with-role-based-access-control).
 
 ## Konfigurera datastream
 
-Implementeringen av Audience Manager som använder Platform Web SDK skiljer sig från implementeringen med [vidarebefordring på serversidan (SSF)](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/server-side-forwarding/ssf). Vidarebefordran på serversidan skickar Adobe Analytics data för begäran till Audience Manager. En SDK-implementering för en plattform skickar XDM-data som skickas till Platform Edge Network till Audience Manager. Audience Manager är aktiverat i datastream:
+Implementeringen av Audience Manager som använder Platform Web SDK skiljer sig från implementeringen med [vidarebefordring på serversidan (SSF)](https://experienceleague.adobe.com/sv/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/report-suite-general/server-side-forwarding/ssf). Vidarebefordran på serversidan skickar Adobe Analytics data för begäran till Audience Manager. En SDK-implementering för en plattform skickar XDM-data som skickas till Platform Edge Network till Audience Manager. Audience Manager är aktiverat i datastream:
 
 1. Gå till gränssnittet [Datainsamling](https://experience.adobe.com/#/data-collection){target="blank"}
 1. Välj **[!UICONTROL Datastreams]** i den vänstra navigeringen
@@ -53,7 +53,7 @@ Implementeringen av Audience Manager som använder Platform Web SDK skiljer sig 
 
 ## Skapa en datakälla
 
-Skapa sedan en [Data Source](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/data-sources/datasources-list-and-settings) - ett grundläggande verktyg för att ordna data i Audience Manager:
+Skapa sedan en [Data Source](https://experienceleague.adobe.com/sv/docs/audience-manager/user-guide/features/data-sources/datasources-list-and-settings) - ett grundläggande verktyg för att ordna data i Audience Manager:
 
 1. Gå till gränssnittet [Audience Manager](https://experience.adobe.com/#/audience-manager/)
 1. Välj **[!UICONTROL Audience Data]** i den övre navigeringen
@@ -73,7 +73,7 @@ Skapa sedan en [Data Source](https://experienceleague.adobe.com/en/docs/audience
 
 ## Skapa ett varumärke
 
-När Data Source har sparats konfigurerar du en [egenskap](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/features/traits/traits-overview). Traits är en kombination av en eller flera signaler i Audience Manager. Skapa ett varumärke för besökare på hemsidan.
+När Data Source har sparats konfigurerar du en [egenskap](https://experienceleague.adobe.com/sv/docs/audience-manager/user-guide/features/traits/traits-overview). Traits är en kombination av en eller flera signaler i Audience Manager. Skapa ett varumärke för besökare på hemsidan.
 
 >[!NOTE]
 >

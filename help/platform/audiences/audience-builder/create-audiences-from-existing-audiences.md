@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Skapa målgrupper från befintliga målgrupper
 
-Med målgruppsregelbyggaren i Experience Platform kan ni använda befintliga målgrupper som en del av en ny målgruppsregeldefinition. I den här videon får du tips om hur du gör det. Mer information finns i [Segment Builder-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/segment-builder.html).
+Med målgruppsregelbyggaren i Experience Platform kan ni använda befintliga målgrupper som en del av en ny målgruppsregeldefinition. I den här videon får du tips om hur du gör det. Mer information finns i [Segment Builder-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/segment-builder.html?lang=sv-SE).
 
 >[!NOTE]
 >

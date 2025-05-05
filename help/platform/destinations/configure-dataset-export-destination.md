@@ -20,6 +20,6 @@ ht-degree: 0%
 
 Lär dig hur du konfigurerar en anslutning och använder arbetsflödet för datauppsättningsexporter med hjälp av ett molntjänstmål. Fördelarna och användningsexemplen med den här funktionen beskrivs också.
 
-Mer information finns i [dokumentationen](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/activate/export-datasets).
+Mer information finns i [dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-platform/destinations/ui/activate/export-datasets).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3424392/?learn=on&enablevpops)

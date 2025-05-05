@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Komplett demo av datastyrning
 
-Läs om hur Adobe Experience Platform datastyrningsfunktioner och hur de hjälper varumärken att leverera personaliserade upplevelser till sina kunder samtidigt som de ger fullständig kontroll över kunddata. Mer information finns i [dokumentationen för datastyrning](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html).
+Läs om hur Adobe Experience Platform datastyrningsfunktioner och hur de hjälper varumärken att leverera personaliserade upplevelser till sina kunder samtidigt som de ger fullständig kontroll över kunddata. Mer information finns i [dokumentationen för datastyrning](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/36653?learn=on&enablevpops)

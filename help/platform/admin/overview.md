@@ -25,7 +25,7 @@ Lär dig hur du hanterar användarbehörigheter.
 * add-developers.md{title=Add developers}
 * add-product-administrators.md{title=Add administrators}
 * configure-attribute-based-access-control.md
-* https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/users-and-permissions{title=Add users to Data Collection}
+* https://experienceleague.adobe.com/sv/docs/platform-learn/data-collection/users-and-permissions{title=Add users to Data Collection}
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
@@ -125,7 +125,7 @@ Lär dig hur du hanterar användarbehörigheter.
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/users-and-permissions" title="Lägg till användare i datainsamling" target="_blank" rel="referrer">
+                    <a href="https://experienceleague.adobe.com/sv/docs/platform-learn/data-collection/users-and-permissions" title="Lägg till användare i datainsamling" target="_blank" rel="referrer">
                         <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/28734/?format=jpeg&nocache=1740173302543" alt="Lägg till användare i datainsamling"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
@@ -134,11 +134,11 @@ Lär dig hur du hanterar användarbehörigheter.
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/users-and-permissions" target="_blank" rel="referrer" title="Lägg till användare i datainsamling">Lägg till användare i datainsamling</a>
+                        <a href="https://experienceleague.adobe.com/sv/docs/platform-learn/data-collection/users-and-permissions" target="_blank" rel="referrer" title="Lägg till användare i datainsamling">Lägg till användare i datainsamling</a>
                     </p>
                     <p class="is-size-6">Lär dig hur du lägger till användare och hanterar behörigheter för Adobe Experience Platform Data Collection-funktioner så att anställda på företaget har den åtkomst de behöver för att utföra sina jobb.</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/users-and-permissions" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/sv/docs/platform-learn/data-collection/users-and-permissions" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs mer</span>
                 </a>
             </div>
@@ -233,7 +233,7 @@ Lär dig hur du hanterar sandlådemiljöer.
 ## Licensanvändning
 
 <!-- CARDS
-* https://experienceleague.adobe.com/en/docs/experience-platform/landing/license/license-usage-dashboard
+* https://experienceleague.adobe.com/sv/docs/experience-platform/landing/license/license-usage-dashboard
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
@@ -241,8 +241,8 @@ Lär dig hur du hanterar sandlådemiljöer.
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/experience-platform/landing/license/license-usage-dashboard" title="Kontrollpanel för licensanvändning" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/experience-platform/landing/license/license-usage-dashboard./media_15ebe5d6a87c210826e7502ba8402e61caa4a8ec8.png?width=400&format=png&optimize=medium" alt="Kontrollpanel för licensanvändning"
+                    <a href="https://experienceleague.adobe.com/sv/docs/experience-platform/landing/license/license-usage-dashboard" title="Kontrollpanel för licensanvändning" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/sv/docs/experience-platform/landing/license/license-usage-dashboard./media_15ebe5d6a87c210826e7502ba8402e61caa4a8ec8.png?width=400&format=png&optimize=medium" alt="Kontrollpanel för licensanvändning"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -250,11 +250,11 @@ Lär dig hur du hanterar sandlådemiljöer.
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/experience-platform/landing/license/license-usage-dashboard" target="_blank" rel="referrer" title="Kontrollpanel för licensanvändning">Kontrollpanel för licensanvändning</a>
+                        <a href="https://experienceleague.adobe.com/sv/docs/experience-platform/landing/license/license-usage-dashboard" target="_blank" rel="referrer" title="Kontrollpanel för licensanvändning">Kontrollpanel för licensanvändning</a>
                     </p>
                     <p class="is-size-6">Adobe Experience Platform användargränssnitt innehåller en kontrollpanel där du kan visa viktig information om din organisations licensanvändning.</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/experience-platform/landing/license/license-usage-dashboard" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/sv/docs/experience-platform/landing/license/license-usage-dashboard" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs mer</span>
                 </a>
             </div>
@@ -300,7 +300,7 @@ Lär dig hur du hanterar sandlådemiljöer.
 ## Taggar
 
 <!-- CARDS
-* https://experienceleague.adobe.com/en/docs/experience-platform/administrative-tags/ui/managing-tags
+* https://experienceleague.adobe.com/sv/docs/experience-platform/administrative-tags/ui/managing-tags
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
@@ -308,8 +308,8 @@ Lär dig hur du hanterar sandlådemiljöer.
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
-                    <a href="https://experienceleague.adobe.com/en/docs/experience-platform/administrative-tags/ui/managing-tags" title="Hantera enhetliga taggar" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/en/docs/experience-platform/administrative-tags/ui/managing-tags./media_14b5a89a9bf89cb36a9e78864b1568e59c9d9d86b.png?width=400&format=png&optimize=medium" alt="Hantera enhetliga taggar"
+                    <a href="https://experienceleague.adobe.com/sv/docs/experience-platform/administrative-tags/ui/managing-tags" title="Hantera enhetliga taggar" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://experienceleague.adobe.com/sv/docs/experience-platform/administrative-tags/ui/managing-tags./media_14b5a89a9bf89cb36a9e78864b1568e59c9d9d86b.png?width=400&format=png&optimize=medium" alt="Hantera enhetliga taggar"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -317,11 +317,11 @@ Lär dig hur du hanterar sandlådemiljöer.
             <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
                 <div class="top-card-content">
                     <p class="headline is-size-6 has-text-weight-bold">
-                        <a href="https://experienceleague.adobe.com/en/docs/experience-platform/administrative-tags/ui/managing-tags" target="_blank" rel="referrer" title="Hantera enhetliga taggar">Hantera enhetliga taggar</a>
+                        <a href="https://experienceleague.adobe.com/sv/docs/experience-platform/administrative-tags/ui/managing-tags" target="_blank" rel="referrer" title="Hantera enhetliga taggar">Hantera enhetliga taggar</a>
                     </p>
                     <p class="is-size-6">Det här dokumentet innehåller information om hur du hanterar enhetliga taggar i Adobe Experience Cloud</p>
                 </div>
-                <a href="https://experienceleague.adobe.com/en/docs/experience-platform/administrative-tags/ui/managing-tags" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                <a href="https://experienceleague.adobe.com/sv/docs/experience-platform/administrative-tags/ui/managing-tags" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Läs mer</span>
                 </a>
             </div>

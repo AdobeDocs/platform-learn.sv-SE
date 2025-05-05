@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # Skapa en instrumentpanel
 
-Lär dig hur du skapar en kontrollpanel i Adobe Experience Platform. Mer information finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/dashboards/user-defined-dashboards.html).
+Lär dig hur du skapar en kontrollpanel i Adobe Experience Platform. Mer information finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/dashboards/user-defined-dashboards.html?lang=sv-SE).
 
 >[!IMPORTANT]
 >

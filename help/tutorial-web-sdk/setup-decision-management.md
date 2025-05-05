@@ -56,7 +56,7 @@ Händelsebaserade erbjudanden stöds för närvarande inte i Adobe Journey Optim
 
 ## Bevilja åtkomst till beslutsledning
 
-Om du vill ge åtkomst till beslutshanteringsfunktionen måste du skapa en **produktprofil** och tilldela användarna motsvarande behörigheter. [Läs mer om hur du hanterar Journey Optimizer-användare och behörigheter i det här avsnittet](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/privacy/high-low-permissions#decisions-permissions).
+Om du vill ge åtkomst till beslutshanteringsfunktionen måste du skapa en **produktprofil** och tilldela användarna motsvarande behörigheter. [Läs mer om hur du hanterar Journey Optimizer-användare och behörigheter i det här avsnittet](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/access-control/privacy/high-low-permissions#decisions-permissions).
 
 ## Konfigurera datastream
 
@@ -339,7 +339,7 @@ Starta testningen genom att välja fliken **Simuleringar** på menyn **Erbjudand
 
 ### Testa lojalitetserbjudanden
 
-1. Välj en testprofil som ska användas för simuleringen. Klicka på **Hantera profil**. [Följ den här guiden](https://experienceleague.adobe.com/en/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles#create-test-profiles-csv) om du vill skapa eller ange en ny testprofil för erbjudandetestning.
+1. Välj en testprofil som ska användas för simuleringen. Klicka på **Hantera profil**. [Följ den här guiden](https://experienceleague.adobe.com/sv/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles#create-test-profiles-csv) om du vill skapa eller ange en ny testprofil för erbjudandetestning.
    <!--
       ![ADD SCREENSHOT](#)
    -->
@@ -371,7 +371,7 @@ Tillägget **Adobe Experience Platform Debugger**, som är tillgängligt för b�
 
 Du kan använda felsökaren på Luma-webbplatsen för att validera beslutslogiken i produktionen. Valideringen är bra att använda när Loyalty Rewards-användningsexemplet är öppet och körs för att säkerställa att allt är korrekt konfigurerat.
 
-[Lär dig hur du konfigurerar felsökaren i webbläsaren med hjälp av guiden här](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/debugger/overview).
+[Lär dig hur du konfigurerar felsökaren i webbläsaren med hjälp av guiden här](https://experienceleague.adobe.com/sv/docs/platform-learn/data-collection/debugger/overview).
 
 Så här börjar du valideringen med felsökaren:
 

@@ -20,7 +20,7 @@ Lär dig hur du ersätter din Adobe Target-implementering på sidan för att mig
 
 >[!NOTE]
 >
->Exemplen är till för illustrativa ändamål och den faktiska Target-implementeringen kan variera. Om din befintliga målinsimplementering använder tagghanteraren för Adobe Data Collection kan du även läsa [implementeringsjälvstudiekursen för plattforms-SDK-mål](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html) för mer information.
+>Exemplen är till för illustrativa ändamål och den faktiska Target-implementeringen kan variera. Om din befintliga målinsimplementering använder tagghanteraren för Adobe Data Collection kan du även läsa [implementeringsjälvstudiekursen för plattforms-SDK-mål](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html?lang=sv-SE) för mer information.
 
 
 ## Granska Administrationsinställningar för mål
@@ -52,7 +52,7 @@ Platform Web SDK använder en datastream-konfiguration som gör att du uttryckli
 >
 >Om inget miljö-ID anges i datastream-konfigurationen använder Target domänen-till-miljö-mappningen enligt avsnittet **Värdar**.
 
-Mer information finns i [datastream-konfigurationsguiden](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html#target) och dokumentationen för [målvärdarna](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html).
+Mer information finns i [datastream-konfigurationsguiden](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/configure.html?lang=sv-SE#target) och dokumentationen för [målvärdarna](https://experienceleague.adobe.com/docs/target/using/administer/hosts.html?lang=sv-SE).
 
 ## Distribuera Platform Web SDK
 
@@ -173,7 +173,7 @@ Lägg till Adobe Experience Platform Web SDK-tillägget i taggegenskapen:
 
 Den fördefinierade fristående versionen kräver en &quot;baskod&quot; som läggs till direkt på sidan och som skapar en global funktion med namnet alloy. Använd den här funktionen för att interagera med SDK:n. Om du vill ge den globala funktionen ett annat namn ändrar du namnet på `alloy`.
 
-Mer information och distributionsalternativ finns i [Installing the Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html) -dokumentationen.
+Mer information och distributionsalternativ finns i [Installing the Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/installing-the-sdk.html?lang=sv-SE) -dokumentationen.
 
 
 ## Uppdatera metod för att dölja innehåll
@@ -213,9 +213,9 @@ Beteendet för att dölja är styrt av två konfigurationer i slutet av fragment
 
 Adobe rekommenderar att du implementerar Platform Web SDK asynkront för bästa totala sidprestanda. Om alloy.js-biblioteket eller taggarna bäddar in kod synkront behöver du inte skriva ut predhide. I stället anges det fördolda formatet i konfigurationen för Platform Web SDK.
 
-Det tidigare dolda formatet för synkrona implementeringar kan konfigureras med alternativet [`prehidingStyle`](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#prehidingStyle). Konfiguration av Platform Web SDK beskrivs i nästa avsnitt.
+Det tidigare dolda formatet för synkrona implementeringar kan konfigureras med alternativet [`prehidingStyle`](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=sv-SE#prehidingStyle). Konfiguration av Platform Web SDK beskrivs i nästa avsnitt.
 
-Om du vill veta mer om hur Platform Web SDK kan hantera flimmer kan du läsa hjälpavsnittet: [hantera flimmer för personaliserade upplevelser](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/manage-flicker.html)
+Om du vill veta mer om hur Platform Web SDK kan hantera flimmer kan du läsa hjälpavsnittet: [hantera flimmer för personaliserade upplevelser](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/manage-flicker.html?lang=sv-SE)
 
 ## Konfigurera Platform Web SDK
 
@@ -274,7 +274,7 @@ De alternativ för konfiguration som är relaterade till Target beskrivs nedan:
 | `thirdPartyCookiesEnabled` | Aktiverar inställningen av cookies från tredje part från Adobe. SDK:n kan behålla besökar-ID:t i ett tredjepartssammanhang för att samma besökar-ID ska kunna användas på olika platser. Använd det här alternativet om du har flera webbplatser, men ibland är det här alternativet inte önskvärt av sekretesskäl. | `true` |
 | `prehidingStyle` | Används för att skapa en CSS-formatdefinition som döljer innehållsområden på webbsidan när anpassat innehåll läses in från servern. Detta används endast med synkrona distributioner av SDK. | `body { opacity: 0 !important }` |
 
-En fullständig lista med alternativ finns i guiden [Konfigurera Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html) .
+En fullständig lista med alternativ finns i guiden [Konfigurera Platform Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=sv-SE) .
 
 ## Implementeringsexempel
 

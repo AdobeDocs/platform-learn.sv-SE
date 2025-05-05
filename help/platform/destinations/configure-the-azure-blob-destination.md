@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Lär dig hur du konfigurerar en anslutning och skickar data till Azure Blob Storage-målet i Real-Time Customer Data Platform. Det här målet stöder export av datauppsättningar och målgrupper och gör att du kan anpassa filhuvuden och dataattribut.
 
-Mer information finns i [dokumentationen](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/cloud-storage/azure-blob).
+Mer information finns i [dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-platform/destinations/catalog/cloud-storage/azure-blob).
 
 >[!VIDEO](https://video.tv.adobe.com/v/331082/?learn=on&enablevpops)
 

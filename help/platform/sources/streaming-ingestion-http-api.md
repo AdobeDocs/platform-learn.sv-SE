@@ -21,7 +21,7 @@ I den här videon visas hur du direktuppspelar data till Adobe Experience Platfo
 
 ## Ytterligare information
 
-* [Skapa en direktuppspelningsanslutning med API-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/create/streaming/http.html).
-* [Strömma postdata med dokumentation för API:er för direktuppspelning](https://experienceleague.adobe.com/docs/experience-platform/ingestion/tutorials/streaming-record-data.html)
-* [Strömma tidsseriedata med dokumentation för API:er för direktuppspelning](https://experienceleague.adobe.com/docs/experience-platform/ingestion/tutorials/streaming-time-series-data.html)
-* [Skicka flera meddelanden i en enda HTTP-begärandedokumentation](https://experienceleague.adobe.com/docs/experience-platform/ingestion/tutorials/streaming-multiple-messages.html)
+* [Skapa en direktuppspelningsanslutning med API-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/sources/api-tutorials/create/streaming/http.html?lang=sv-SE).
+* [Strömma postdata med dokumentation för API:er för direktuppspelning](https://experienceleague.adobe.com/docs/experience-platform/ingestion/tutorials/streaming-record-data.html?lang=sv-SE)
+* [Strömma tidsseriedata med dokumentation för API:er för direktuppspelning](https://experienceleague.adobe.com/docs/experience-platform/ingestion/tutorials/streaming-time-series-data.html?lang=sv-SE)
+* [Skicka flera meddelanden i en enda HTTP-begärandedokumentation](https://experienceleague.adobe.com/docs/experience-platform/ingestion/tutorials/streaming-multiple-messages.html?lang=sv-SE)

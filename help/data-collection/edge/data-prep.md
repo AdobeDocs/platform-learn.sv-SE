@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Dataförberedelse för datainsamling
 
-Lär dig hur du lägger till ditt datalager i ett nytt datastam i datainsamlingen. Lär dig även hur du utför grundläggande mappningsfunktioner med funktionen Dataprep för datainsamling. Mer information finns i [dokumentationen för datainsamling](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html#data-prep).
+Lär dig hur du lägger till ditt datalager i ett nytt datastam i datainsamlingen. Lär dig även hur du utför grundläggande mappningsfunktioner med funktionen Dataprep för datainsamling. Mer information finns i [dokumentationen för datainsamling](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=sv-SE#data-prep).
 
 >[!VIDEO](https://video.tv.adobe.com/v/342120/?learn=on&enablevpops)

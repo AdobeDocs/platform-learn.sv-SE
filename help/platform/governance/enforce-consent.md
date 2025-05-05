@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Tvinga samtycke
 
-Lär dig hur du skapar profiler för att genomdriva kundens medgivandepreferenser. Mer information finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/data-governance/enforcement/auto-enforcement.html).
+Lär dig hur du skapar profiler för att genomdriva kundens medgivandepreferenser. Mer information finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/data-governance/enforcement/auto-enforcement.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/345677?learn=on&enablevpops)
 

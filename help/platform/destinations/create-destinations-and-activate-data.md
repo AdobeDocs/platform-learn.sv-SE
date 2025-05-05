@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Skapa mål och aktivera data
 
-Lär dig hur du skapar mål och aktiverar data i Adobe Real-Time Customer Data Platform. Mer detaljerad produktdokumentation finns i [Aktivera profiler och segment till ett mål](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/dest-tutorials/activate-destinations.html), [Ansluta ett mål](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/dest-tutorials/connect-destination.html) och [Ansluta till direktuppspelade mål och aktivera data med API:t](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/api-tutorials/streaming-destinations-api-tutorial.html).
+Lär dig hur du skapar mål och aktiverar data i Adobe Real-Time Customer Data Platform. Mer detaljerad produktdokumentation finns i [Aktivera profiler och segment till ett mål](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/dest-tutorials/activate-destinations.html?lang=sv-SE), [Ansluta ett mål](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/dest-tutorials/connect-destination.html?lang=sv-SE) och [Ansluta till direktuppspelade mål och aktivera data med API:t](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/destinations/api-tutorials/streaming-destinations-api-tutorial.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/29710?learn=on&enablevpops)
 

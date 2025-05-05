@@ -56,8 +56,8 @@ Adobe Experience Platform Data Collection är ett mycket avancerat verktyg som o
 Nedan finns ytterligare information för dem som är intresserade av att förstå Adobe Experience Platform Data Collection.
 
 - [Användarhandbok för Adobe Experience Platform Data Collection](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv)
-- [Implementera Adobe Experience Cloud med Web SDK, självstudiekurs](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html)
-- [Konfigurera användarbehörigheter](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html)
+- [Implementera Adobe Experience Cloud med Web SDK, självstudiekurs](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=sv-SE)
+- [Konfigurera användarbehörigheter](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html?lang=sv-SE)
 - [API-dokumentation](https://developer.adobelaunch.com/api/)
 
 Nästa steg: [1.1.2 Edge Network, datastreams och datainsamling på serversidan](./ex2.md)

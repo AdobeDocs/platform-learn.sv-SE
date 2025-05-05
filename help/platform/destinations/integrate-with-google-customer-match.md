@@ -17,6 +17,6 @@ ht-degree: 0%
 
 # Integrera Google kundmatchning
 
-Läs om hur Adobe Real-Time Customer Data Platform och Google kundmatchningsfunktioner hjälper varumärken att interagera med kunder på Google egna och driftsatta egendomar för att skala sina utåtriktade kampanjer. Mer information finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-customer-match.html).
+Läs om hur Adobe Real-Time Customer Data Platform och Google kundmatchningsfunktioner hjälper varumärken att interagera med kunder på Google egna och driftsatta egendomar för att skala sina utåtriktade kampanjer. Mer information finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/advertising/google-customer-match.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/38180?learn=on&enablevpops)

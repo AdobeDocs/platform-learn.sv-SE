@@ -34,9 +34,9 @@ Adobe Experience Platform Web SDK är ett JavaScript-bibliotek på klientsidan s
 
 Några av fördelarna med Platform Web SDK jämfört med det fristående at.js-biblioteket är:
 
-* Snabbare delning av målgrupper från [Real-Time Customer Data Platform](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/destinations/target/next-hit-personalization)
-* Integrera Target med Journey Optimizer för att stödja [Offer Decisioning-leverans](https://experienceleague.adobe.com/en/docs/target/using/integrate/ajo/offer-decision)
-* Möjlighet att använda [ID:n för första part](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids) för att generera ECID:t för besöksidentifiering med längre varaktighet
+* Snabbare delning av målgrupper från [Real-Time Customer Data Platform](https://experienceleague.adobe.com/sv/docs/platform-learn/tutorials/destinations/target/next-hit-personalization)
+* Integrera Target med Journey Optimizer för att stödja [Offer Decisioning-leverans](https://experienceleague.adobe.com/sv/docs/target/using/integrate/ajo/offer-decision)
+* Möjlighet att använda [ID:n för första part](https://experienceleague.adobe.com/sv/docs/platform-learn/data-collection/edge-network/generate-first-party-device-ids) för att generera ECID:t för besöksidentifiering med längre varaktighet
 * Mindre utrymme för bättre sidhastighetsmätningar
 * Ytterligare implementeringsflexibilitet för utvecklare
 
@@ -63,11 +63,11 @@ I slutet av den här självstudiekursen kan du:
 För att slutföra den här självstudiekursen bör du först:
 
 * Ha en teknisk förståelse för er nuvarande implementering av Target at.js
-* Se till att du har en [redigerare- eller utgivarroll](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html#section_8C425E43E5DD4111BBFC734A2B7ABC80) för din Target-instans så att du kan testa exempel själv
+* Se till att du har en [redigerare- eller utgivarroll](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/properties-overview.html?lang=sv-SE#section_8C425E43E5DD4111BBFC734A2B7ABC80) för din Target-instans så att du kan testa exempel själv
 * Lär dig hur du ställer in aktiviteter i Adobe Target. Om du behöver en uppdaterare kan du använda följande självstudiekurser och guider för den här lektionen:
-   * [Använd Visual Experience Composer](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer.html)
-   * [Använd den formulärbaserade Experience Composer](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-form-based-experience-composer.html)
-   * [Skapa aktiviteter för målinriktning av upplevelser](https://experienceleague.adobe.com/docs/target-learn/tutorials/activities/create-experience-targeting-activities.html)
+   * [Använd Visual Experience Composer](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer.html?lang=sv-SE)
+   * [Använd den formulärbaserade Experience Composer](https://experienceleague.adobe.com/docs/target-learn/tutorials/experiences/use-the-form-based-experience-composer.html?lang=sv-SE)
+   * [Skapa aktiviteter för målinriktning av upplevelser](https://experienceleague.adobe.com/docs/target-learn/tutorials/activities/create-experience-targeting-activities.html?lang=sv-SE)
 
 När du är klar är det första steget mot en lyckad migrering att [lära dig mer om migreringsprocessen](migration-overview.md) och hur at.js och Platform Web SDK skiljer sig åt.
 

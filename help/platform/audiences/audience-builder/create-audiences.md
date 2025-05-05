@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Skapa målgrupper
 
-Lär dig skapa målgrupper i Adobe Experience Platform. Bygg målgruppsregler och tillämpa dem på era kundprofiler i realtid för att skapa målgrupper som stärker kundupplevelserna. Detaljerad produktdokumentation finns i [Skapa ett segment i användargränssnittet](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html) och [skapa ett segment med API](https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html).
+Lär dig skapa målgrupper i Adobe Experience Platform. Bygg målgruppsregler och tillämpa dem på era kundprofiler i realtid för att skapa målgrupper som stärker kundupplevelserna. Detaljerad produktdokumentation finns i [Skapa ett segment i användargränssnittet](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/overview.html?lang=sv-SE) och [skapa ett segment med API](https://experienceleague.adobe.com/docs/experience-platform/segmentation/tutorials/create-a-segment.html?lang=sv-SE).
 
 >[!NOTE]
 >

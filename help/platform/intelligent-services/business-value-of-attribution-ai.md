@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Affärsvärde för attribut-AI
 
-Den här videon visar hur marknadsförare kan mäta och optimera marknadsförings- och annonskostnader genom att förstå effekten av varje enskild kundinteraktion i varje fas av kundresan med Attribution AI. Mer information finns i [Attribution AI-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/attribution-ai/overview.html).
+Den här videon visar hur marknadsförare kan mäta och optimera marknadsförings- och annonskostnader genom att förstå effekten av varje enskild kundinteraktion i varje fas av kundresan med Attribution AI. Mer information finns i [Attribution AI-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/attribution-ai/overview.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/40375?learn=on&enablevpops)
 

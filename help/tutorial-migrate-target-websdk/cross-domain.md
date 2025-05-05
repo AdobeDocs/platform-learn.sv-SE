@@ -62,11 +62,11 @@ document.addEventListener("click", event => {
 
 >[!TIP]
 >
->När du använder taggfunktionen (tidigare Launch) för att implementera Web SDK kan delning av domänöverskridande ID göras utan anpassad kod. Mer information finns i den [dedikerade dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/id-sharing.html#tags-extension).
+>När du använder taggfunktionen (tidigare Launch) för att implementera Web SDK kan delning av domänöverskridande ID göras utan anpassad kod. Mer information finns i den [dedikerade dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/id-sharing.html?lang=sv-SE#tags-extension).
 
 >[!NOTE]
 >
->Platform Web SDK har också stöd för delning av mobil-till-webb-ID för användning av inbyggda mobilappar. Mer information finns i den dedikerade dokumentationen om [mobil-till-webb- och korsdomän-ID-delning](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/id-sharing.html).
+>Platform Web SDK har också stöd för delning av mobil-till-webb-ID för användning av inbyggda mobilappar. Mer information finns i den dedikerade dokumentationen om [mobil-till-webb- och korsdomän-ID-delning](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/id-sharing.html?lang=sv-SE).
 
 Lär dig sedan [uppdatera målgrupper och profilskript](update-audiences.md) för att säkerställa kompatibilitet med Platform Web SDK.
 

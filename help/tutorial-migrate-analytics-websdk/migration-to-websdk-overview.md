@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Migrera Adobe Analytics till Web SDK med taggar
 
-Lär dig hur du migrerar en Adobe Analytics-implementering med Analytics-tillägget i Experience Platform Tags (tidigare kallad Launch) till Web SDK med hjälp av Web SDK-tillägget även i Tags. När Adobe Analytics-tillägget i Tags används, används koden&quot;AppMeasurement.js&quot; bakom scenen. Därför kan du se det som en självstudiekurs som handlar om att migrera AppMeasurement till Web SDK, men den här självstudiekursen finns helt i Taggar och omfattar INTE att gå till eller från en JavaScript-implementering (med undantag för JavaScript-kod som används i tagggränssnittet). Information om migrering av JavaScript-implementeringar finns i [dokumentationen](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/web-sdk/appmeasurement-to-web-sdk).
+Lär dig hur du migrerar en Adobe Analytics-implementering med Analytics-tillägget i Experience Platform Tags (tidigare kallad Launch) till Web SDK med hjälp av Web SDK-tillägget även i Tags. När Adobe Analytics-tillägget i Tags används, används koden&quot;AppMeasurement.js&quot; bakom scenen. Därför kan du se det som en självstudiekurs som handlar om att migrera AppMeasurement till Web SDK, men den här självstudiekursen finns helt i Taggar och omfattar INTE att gå till eller från en JavaScript-implementering (med undantag för JavaScript-kod som används i tagggränssnittet). Information om migrering av JavaScript-implementeringar finns i [dokumentationen](https://experienceleague.adobe.com/sv/docs/analytics/implementation/aep-edge/web-sdk/appmeasurement-to-web-sdk).
 
 >[!NOTE]
 >

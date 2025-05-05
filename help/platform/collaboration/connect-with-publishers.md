@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Kommunicera med utgivare i Real-Time CDP Collaboration
 
-Som annonsörer kan du lära dig att skapa en anslutning till en utgivare för att kunna samarbeta med dem. Mer detaljerad dokumentation finns i [Anslut till annonsörer eller utgivare](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/connect/establishing-connections){target="_blank"}.
+Som annonsörer kan du lära dig att skapa en anslutning till en utgivare för att kunna samarbeta med dem. Mer detaljerad dokumentation finns i [Anslut till annonsörer eller utgivare](https://experienceleague.adobe.com/sv/docs/real-time-cdp-collaboration/using/connect/establishing-connections){target="_blank"}.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3452218/?learn=on&enablevpops)

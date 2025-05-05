@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Få tillgång till AI Assistant
 
-Lär dig hur du ställer in åtkomst och behörigheter för AI Assistant i Adobe Experience Platform. Mer information finns i [Åtkomst till AI-assistenten i Experience Platform](https://experienceleague.adobe.com/en/docs/experience-platform/ai-assistant/access).
+Lär dig hur du ställer in åtkomst och behörigheter för AI Assistant i Adobe Experience Platform. Mer information finns i [Åtkomst till AI-assistenten i Experience Platform](https://experienceleague.adobe.com/sv/docs/experience-platform/ai-assistant/access).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3436470/?learn=on&enablevpops)

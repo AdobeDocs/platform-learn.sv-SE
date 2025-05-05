@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Konfigurera attributbaserad åtkomstkontroll
 
-Lär dig hur du konfigurerar attributbaserad åtkomstkontroll för att begränsa åtkomsten till specifika Experience Platform-resurser. Mer information finns i [åtkomstkontrollsdokumentationen](https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/overview.html).
+Lär dig hur du konfigurerar attributbaserad åtkomstkontroll för att begränsa åtkomsten till specifika Experience Platform-resurser. Mer information finns i [åtkomstkontrollsdokumentationen](https://experienceleague.adobe.com/docs/experience-platform/access-control/abac/overview.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/345641?learn=on&enablevpops)

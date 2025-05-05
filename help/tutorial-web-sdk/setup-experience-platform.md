@@ -44,7 +44,7 @@ För att slutföra lektionen måste du först:
 
 ## Skapa en datauppsättning
 
-Alla data som har inhämtats till Adobe Experience Platform lagras i datasjön som datauppsättningar. En [datamängd](https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/overview) är en lagrings- och hanteringskonstruktion för en datamängd, vanligtvis en tabell som innehåller ett schema (kolumner) och fält (rader). Datauppsättningar innehåller också metadata som beskriver olika aspekter av de data som lagras.
+Alla data som har inhämtats till Adobe Experience Platform lagras i datasjön som datauppsättningar. En [datamängd](https://experienceleague.adobe.com/sv/docs/experience-platform/catalog/datasets/overview) är en lagrings- och hanteringskonstruktion för en datamängd, vanligtvis en tabell som innehåller ett schema (kolumner) och fält (rader). Datauppsättningar innehåller också metadata som beskriver olika aspekter av de data som lagras.
 
 Låt oss skapa en datauppsättning för dina webbhändelsedata för Luma:
 
@@ -160,7 +160,7 @@ För att bekräfta att data har landat i plattformens datalinje är ett snabbt a
 
 >[!INFO]
 >
->  Mer information om Adobe Experience Platform frågetjänst finns i [Utforska data](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/queries/explore-data) i självstudiekurserna för plattformen.
+>  Mer information om Adobe Experience Platform frågetjänst finns i [Utforska data](https://experienceleague.adobe.com/sv/docs/platform-learn/tutorials/queries/explore-data) i självstudiekurserna för plattformen.
 
 
 ## Aktivera datauppsättningen och schemat för kundprofil i realtid

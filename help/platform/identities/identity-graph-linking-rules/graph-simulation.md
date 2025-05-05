@@ -22,7 +22,7 @@ ht-degree: 0%
 >
 >Regler för länkning av identitetsdiagram är för närvarande begränsade. Kontakta ditt Adobe-kontoteam om du vill ha information om hur du kommer åt funktionen i utvecklingssandlådor.
 
-Lär dig hur du använder diagramsimulatorn för att testa länkningsregler för identitetsdiagram i Adobe Experience Platform. Experimentera med olika scenarier och spela upp med&quot;unika per diagram&quot; och prioritetsinställningar för att kontrollera vilka regler du behöver för din verksamhet för att undvika att graferna kollapsar. Mer information finns i [Användargränssnittsguiden för diagramsimulering](https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-graph-linking-rules/graph-simulation).
+Lär dig hur du använder diagramsimulatorn för att testa länkningsregler för identitetsdiagram i Adobe Experience Platform. Experimentera med olika scenarier och spela upp med&quot;unika per diagram&quot; och prioritetsinställningar för att kontrollera vilka regler du behöver för din verksamhet för att undvika att graferna kollapsar. Mer information finns i [Användargränssnittsguiden för diagramsimulering](https://experienceleague.adobe.com/sv/docs/experience-platform/identity/features/identity-graph-linking-rules/graph-simulation).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3444032/?learn=on&enablevpops)
 

@@ -108,14 +108,14 @@ Du skapar nästa segment genom att tillämpa relationen som du skapade mellan di
 Klicka på **[!UICONTROL Segments]** i den vänstra navigeringen och låt oss titta lite närmare på våra tre segment:
 
 * Två av våra segment är gruppsegment och ett är ett direktuppspelningssegment.
-* Som standard används direktuppspelningssegmentering när det är möjligt, vilket kvalificerar kunden för ett segment så fort de uppfyller kriterierna. När segmentdefinitioner är för komplexa för direktuppspelning, konverteras de automatiskt till batch. I det här fallet valde de två segmenten att gruppera eftersom kontrollfönstret för köphändelserna var större än sju dagar. En fullständig och aktuell lista över begränsningar för direktuppspelning finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/streaming-segmentation.html).
+* Som standard används direktuppspelningssegmentering när det är möjligt, vilket kvalificerar kunden för ett segment så fort de uppfyller kriterierna. När segmentdefinitioner är för komplexa för direktuppspelning, konverteras de automatiskt till batch. I det här fallet valde de två segmenten att gruppera eftersom kontrollfönstret för köphändelserna var större än sju dagar. En fullständig och aktuell lista över begränsningar för direktuppspelning finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/streaming-segmentation.html?lang=sv-SE).
 * Batchjobben körs enligt ett dagligt schema som kan stängas av.
 
 ![Köpte samma produkt under de senaste 30 dagarna](assets/segment-review.png)
 
 ## Ytterligare resurser
 
-* [Dokumentation för segmenteringstjänsten](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html)
+* [Dokumentation för segmenteringstjänsten](https://experienceleague.adobe.com/docs/experience-platform/segmentation/home.html?lang=sv-SE)
 * [API-referens för segmenteringstjänst](https://www.adobe.io/experience-platform-apis/references/segmentation/)
 
 Det finns mer att segmentera, särskilt när det gäller att aktivera segment. Dessa ämnen kommer att behandlas i en annan självstudiekurs.

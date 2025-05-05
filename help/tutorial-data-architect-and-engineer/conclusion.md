@@ -47,8 +47,8 @@ Jag föreslår att du behåller den och använder den för ytterligare experimen
 
 De viktigaste resurserna:
 
-* [Självstudiekurser för Experience Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html)
-* [Dokumentation om Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/home.html)
-* [Experience League-kurser](https://experienceleague.adobe.com/#dashboard/learning)
+* [Självstudiekurser för Experience Platform](https://experienceleague.adobe.com/docs/platform-learn/tutorials/overview.html?lang=sv-SE)
+* [Dokumentation om Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=sv-SE)
+* [Experience League-kurser](https://experienceleague.adobe.com/sv#dashboard/learning)
 
 Tack för ditt arbete och lycka till på din resa med Adobe Experience Platform!

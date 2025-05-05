@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Dela paket mellan IMS-organisationer
 
-Lär dig hur du kopierar Experience Platform-konfigurationer mellan IMS-organisationer med hjälp av paket. Kopiera enkelt scheman, datauppsättningar, resor med mera mellan flera IMS-organisationer för att stödja releaseprocesser och distributioner av flera regioner/varumärken. Mer detaljerad information finns i [dokumentationen för sandlådeverktyg](https://experienceleague.adobe.com/en/docs/experience-platform/sandbox/ui/sharing-packages-across-orgs).
+Lär dig hur du kopierar Experience Platform-konfigurationer mellan IMS-organisationer med hjälp av paket. Kopiera enkelt scheman, datauppsättningar, resor med mera mellan flera IMS-organisationer för att stödja releaseprocesser och distributioner av flera regioner/varumärken. Mer detaljerad information finns i [dokumentationen för sandlådeverktyg](https://experienceleague.adobe.com/sv/docs/experience-platform/sandbox/ui/sharing-packages-across-orgs).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3435815/?learn=on&enablevpops)

@@ -17,6 +17,6 @@ ht-degree: 0%
 
 # Hantera känsliga data i datastreams
 
-Lär dig hur du hanterar känsliga data i dataströmmar.  Mer information finns i [dokumentationen för datastreams](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/overview.html).
+Lär dig hur du hanterar känsliga data i dataströmmar.  Mer information finns i [dokumentationen för datastreams](https://experienceleague.adobe.com/docs/experience-platform/edge/datastreams/overview.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409588/?learn=on&enablevpops)

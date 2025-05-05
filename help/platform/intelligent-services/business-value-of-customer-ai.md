@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # Affärsvärde för kundens AI
 
-I den här videon visas hur kundens AI förbättrar kundprofiler med AI-baserade egenskaper och stärker kundsegmenterings- och målinriktningsarbetet. Mer information finns i [Kundens AI-dokumentation](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/customer-ai/overview.html).
+I den här videon visas hur kundens AI förbättrar kundprofiler med AI-baserade egenskaper och stärker kundsegmenterings- och målinriktningsarbetet. Mer information finns i [Kundens AI-dokumentation](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/customer-ai/overview.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/40374?learn=on&enablevpops)
 

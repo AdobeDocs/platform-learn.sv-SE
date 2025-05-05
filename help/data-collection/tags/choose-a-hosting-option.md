@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Välj ett värdalternativ
 
-Lär dig hur du väljer det bästa värdalternativet för ditt taggbibliotek. Mer information finns i dokumentationen för [värdarna](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/hosts/hosts-overview.html).
+Lär dig hur du väljer det bästa värdalternativet för ditt taggbibliotek. Mer information finns i dokumentationen för [värdarna](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/hosts/hosts-overview.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/28728/?learn=on&enablevpops)

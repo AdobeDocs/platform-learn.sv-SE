@@ -21,28 +21,28 @@ Många juridiska sekretessbestämmelser har infört krav på aktivt och specifik
 >Adobe Experience Platform Launch håller på att integreras i Adobe Experience Platform som en serie datainsamlingstekniker. Flera terminologiska förändringar har introducerats i gränssnittet som du bör vara medveten om när du använder det här innehållet:
 >
 > * Platforma launchen (klientsidan) är nu **[[!DNL tags]](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv)**
-> * Platforma launchens serversida är nu **[[!DNL event forwarding]](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)**
-> * Edge-konfigurationer är nu **[[!DNL datastreams]](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html)**
+> * Platforma launchens serversida är nu **[[!DNL event forwarding]](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=sv-SE)**
+> * Edge-konfigurationer är nu **[[!DNL datastreams]](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=sv-SE)**
 
 I den här självstudiekursen visas hur du implementerar och aktiverar data som inhämtats från en CMP (Consent Management Platform) med plattformstillägget för Web SDK i datainsamling. Vi gör detta med hjälp av båda Adobe-standarderna och IAB TCF 2.0-medgivandestandarden, med OneTrust eller SourcePoint som exempel på CMP.
 
-I den här självstudiekursen används tillägget Platform Web SDK för att skicka data om samtycke till plattformen. En översikt över Web SDK finns på [den här sidan](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html).
+I den här självstudiekursen används tillägget Platform Web SDK för att skicka data om samtycke till plattformen. En översikt över Web SDK finns på [den här sidan](https://experienceleague.adobe.com/docs/experience-platform/edge/home.html?lang=sv-SE).
 
 ## Förhandskrav
 
-Kraven för att använda Web SDK visas [här](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/prerequisite.html#fundamentals).
+Kraven för att använda Web SDK visas [här](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/prerequisite.html?lang=sv-SE#fundamentals).
 
-På den sidan finns det ett krav på en&quot;händelsedatauppsättning&quot; och, precis som den låter, är detta en datauppsättning som innehåller data för upplevelsehändelser. Om du vill skicka medgivandeinformation med händelser måste fältgruppen [IAB TCF 2.0 Consent Details](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/iab/dataset.html) läggas till i Experience Event-schemat:
+På den sidan finns det ett krav på en&quot;händelsedatauppsättning&quot; och, precis som den låter, är detta en datauppsättning som innehåller data för upplevelsehändelser. Om du vill skicka medgivandeinformation med händelser måste fältgruppen [IAB TCF 2.0 Consent Details](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/iab/dataset.html?lang=sv-SE) läggas till i Experience Event-schemat:
 
 ![](./images/event-schema.png)
 
-För standard v2.0 för plattformsgodkännande behöver vi även tillgång till Adobe Experience Platform för att skapa ett enskilt XDM-profilschema och datauppsättning. En självstudiekurs om hur du skapar scheman finns i [Skapa ett schema med Schemaredigeraren](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html#tutorials) och för den obligatoriska fältgruppen för samtycke och inställningsinformation i [Konfigurera en datauppsättning för insamling av samtycke och inställningsdata](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/dataset.html).
+För standard v2.0 för plattformsgodkännande behöver vi även tillgång till Adobe Experience Platform för att skapa ett enskilt XDM-profilschema och datauppsättning. En självstudiekurs om hur du skapar scheman finns i [Skapa ett schema med Schemaredigeraren](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/create-schema-ui.html?lang=sv-SE#tutorials) och för den obligatoriska fältgruppen för samtycke och inställningsinformation i [Konfigurera en datauppsättning för insamling av samtycke och inställningsdata](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/dataset.html?lang=sv-SE).
 
 I den här självstudien förutsätts att du har tillgång till datainsamling och har skapat en taggegenskap på klientsidan med tillägget Web SDK installerat och ett arbetsbibliotek som skapats och byggts för utveckling. Dessa ämnen är detaljerade och demonstrerade i följande dokument:
 
-* [Skapa eller konfigurera en egenskap](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html?lang=en#create-or-configure-a-property)
-* [Översikt över bibliotek](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html)
-* [Översikt över publicering](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/overview.html)
+* [Skapa eller konfigurera en egenskap](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html?lang=sv-SE#create-or-configure-a-property)
+* [Översikt över bibliotek](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/libraries.html?lang=sv-SE)
+* [Översikt över publicering](https://experienceleague.adobe.com/docs/experience-platform/tags/publish/overview.html?lang=sv-SE)
 
 Vi använder också Chrome-tillägget [Platform Debugger](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob) för att inspektera och validera implementeringen.
 
@@ -52,9 +52,9 @@ Om du vill implementera IAB TCF-exemplet med en CMP på din egen webbplats behö
 
 >[!NOTE]
 >
->1.0-standarden fasas ut till förmån för v2.0. Med standarden 2.0 kan du lägga till ytterligare data om samtycke som kan användas för att manuellt tillämpa medgivandeinställningar. Skärmbilderna nedan för plattformens Web SDK-tillägg är från version [2.4.0](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html#version-2.4.0) av tillägget som är kompatibelt med antingen v1.0 eller v2.0 av Adobe Consent Standard.
+>1.0-standarden fasas ut till förmån för v2.0. Med standarden 2.0 kan du lägga till ytterligare data om samtycke som kan användas för att manuellt tillämpa medgivandeinställningar. Skärmbilderna nedan för plattformens Web SDK-tillägg är från version [2.4.0](https://experienceleague.adobe.com/docs/experience-platform/edge/release-notes.html?lang=sv-SE#version-2.4.0) av tillägget som är kompatibelt med antingen v1.0 eller v2.0 av Adobe Consent Standard.
 
-Mer information om de här standarderna finns i [Supporting customer medgivande preferences](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html).
+Mer information om de här standarderna finns i [Supporting customer medgivande preferences](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?lang=sv-SE).
 
 ### Steg 1: Konfigurera samtycke i Web SDK-tillägget
 
@@ -83,7 +83,7 @@ När en CMP samlar in användarens inställningar kan vi meddela dessa inställn
 
 Obs! Den här konfigurationsinställningen för SDK bevaras inte för användarprofiler, den är specifik för att ställa in SDK:s beteende innan besökaren anger explicit samtycke.
 
-Mer information om hur du konfigurerar Web SDK-tillägget finns i översikten över [plattformstillägget för Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-extension-configuration.html?lang=en#configure-the-extension) och [Supporting customer medgivande preferences](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html) (Stöd för kundens samtycke).
+Mer information om hur du konfigurerar Web SDK-tillägget finns i översikten över [plattformstillägget för Web SDK](https://experienceleague.adobe.com/docs/experience-platform/edge/extension/web-sdk-extension-configuration.html?lang=sv-SE#configure-the-extension) och [Supporting customer medgivande preferences](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?lang=sv-SE) (Stöd för kundens samtycke).
 
 I det här exemplet väljer vi alternativet Väntande och väljer **Spara** för att spara konfigurationsinställningarna.
 
@@ -105,17 +105,17 @@ I det här exemplet väljer vi&quot;In&quot; för att ange att besökaren har go
 
 Obs! När en webbplatsbesökare har avanmält sig kan du inte ange användarens samtycke i SDK.
 
-Dina taggregler kan aktiveras av en mängd inbyggda eller anpassade [händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/core/overview.html) som kan användas för att skicka medgivandedata vid lämplig tidpunkt under en besökarsession. I exemplet ovan använde vi händelsen loaded för fönstret för att utlösa regeln. I ett senare avsnitt kommer vi att använda en medgivandeinställningshändelse från en CMP för att utlösa en Set Consent-åtgärd. Du kan använda åtgärden Ange samtycke i en regel som aktiveras av en händelse som du föredrar som anger en inställning för deltagande.
+Dina taggregler kan aktiveras av en mängd inbyggda eller anpassade [händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/core/overview.html?lang=sv-SE) som kan användas för att skicka medgivandedata vid lämplig tidpunkt under en besökarsession. I exemplet ovan använde vi händelsen loaded för fönstret för att utlösa regeln. I ett senare avsnitt kommer vi att använda en medgivandeinställningshändelse från en CMP för att utlösa en Set Consent-åtgärd. Du kan använda åtgärden Ange samtycke i en regel som aktiveras av en händelse som du föredrar som anger en inställning för deltagande.
 
 #### Ställa in samtycke med plattformsgodkännande Standard 2.0
 
-Version 2.0 av plattformens medgivandestandard fungerar med [XDM](https://experienceleague.adobe.com/docs/platform-learn/tutorials/schemas/schemas-and-experience-data-model.html)-data. Du måste också lägga till fältgruppen för samtycke och inställningsinformation i ditt profilschema i plattformen. Mer information om standardversionen 2.0 och den här fältgruppen finns i [Samtyckesbearbetning i plattformen](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/overview.html).
+Version 2.0 av plattformens medgivandestandard fungerar med [XDM](https://experienceleague.adobe.com/docs/platform-learn/tutorials/schemas/schemas-and-experience-data-model.html?lang=sv-SE)-data. Du måste också lägga till fältgruppen för samtycke och inställningsinformation i ditt profilschema i plattformen. Mer information om standardversionen 2.0 och den här fältgruppen finns i [Samtyckesbearbetning i plattformen](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/adobe/overview.html?lang=sv-SE).
 
 Vi skapar ett anpassat kodelement för att skicka data till egenskaperna collect och metadata för det innehållsobjekt som visas i schemat nedan:
 
 ![](./images/collect-metadata.png)
 
-Den här fältgruppen för innehåll- och inställningsinformation innehåller fält för XDM-datatypen [Consents &amp; Preferences](https://experienceleague.adobe.com/docs/experience-platform/xdm/data-types/consents.html#prerequisites) som kommer att innehålla de data för medgivandeinställningar som vi skickar till plattformen med plattformens SDK-tillägg i vår regelåtgärd. För närvarande är de enda nödvändiga egenskaperna för att implementera Platform Consent Standard 2.0 insamlingsvärdet (val) och tidsvärdet för metadata, som markeras ovan med rött.
+Den här fältgruppen för innehåll- och inställningsinformation innehåller fält för XDM-datatypen [Consents &amp; Preferences](https://experienceleague.adobe.com/docs/experience-platform/xdm/data-types/consents.html?lang=sv-SE#prerequisites) som kommer att innehålla de data för medgivandeinställningar som vi skickar till plattformen med plattformens SDK-tillägg i vår regelåtgärd. För närvarande är de enda nödvändiga egenskaperna för att implementera Platform Consent Standard 2.0 insamlingsvärdet (val) och tidsvärdet för metadata, som markeras ovan med rött.
 
 Låt oss skapa ett dataelement för dessa data. Välj Dataelement och den blå knappen Lägg till dataelement. Låt oss ringa detta &quot;xdm-medgivande 2.0&quot; och använda Core-tillägget, vi väljer en anpassad kodtyp. Du kan ange eller kopiera och klistra in följande data i det anpassade kodredigeringsfönstret:
 
@@ -174,7 +174,7 @@ Vi ställer in alla medgivandeSträngar enligt följande:
 
 Fälten `consentStandard` och `consentStandardVersion` är båda bara textsträngar för den standard som vi använder, som är IAB TCF version 2.0. `consentStringValue` refererar till ett dataelement med namnet&quot;IAB TCF Consent String&quot;. Procenttecknen som omger texten anger namnet på ett dataelement, och vi tittar på det om en stund. Fältet `containsPersonalData` anger om IAB TCF 2.0-medgivandesträngen innehåller några personliga data med antingen True eller False. Fältet `gdprApplies` anger antingen &quot;true&quot; för GDPR gäller, &quot;false&quot; för GDPR gäller inte, eller &quot;undefined&quot; för okänd om GDPR gäller. För närvarande kommer Web SDK att behandla&quot;undefined&quot; som&quot;true&quot;, vilket innebär att data om samtycke som skickas med&quot;gdprApplies: undefined&quot; kommer att behandlas som om besökaren befinner sig i ett område där GDPR gäller.
 
-Mer information om de här egenskaperna och om IAB TCF 2.0 i taggar finns i [medgivandedokumentationen](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/iab-tcf/with-launch.html#getting-started).
+Mer information om de här egenskaperna och om IAB TCF 2.0 i taggar finns i [medgivandedokumentationen](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/iab-tcf/with-launch.html?lang=sv-SE#getting-started).
 
 ### Steg 2: Skapa en regel för att ställa in samtycke med IAB TCF 2.0-standarden
 
@@ -230,7 +230,7 @@ Välj den blå knappen Spara för att spara funktionsmakrot och den blå knappen
 
 ### Steg 3: Spara i bibliotek och bygg
 
-Om du använder förutsättningen för [arbetsbiblioteket](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/add-data-elements-rules.html#use-the-working-library-feature) har du redan sparat dessa ändringar och byggt ditt utvecklingsbibliotek:
+Om du använder förutsättningen för [arbetsbiblioteket](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/configure-tags/add-data-elements-rules.html?lang=sv-SE#use-the-working-library-feature) har du redan sparat dessa ändringar och byggt ditt utvecklingsbibliotek:
 
 ![](./images/save-library.png)
 

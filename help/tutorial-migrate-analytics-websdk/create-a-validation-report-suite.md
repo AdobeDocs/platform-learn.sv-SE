@@ -35,5 +35,5 @@ Beroende på hur stor och komplex er Analytics-implementering är kan det ta en 
 
 >[!TIP]
 >
->En demonstrationsvideo om hur du skapar rapportsviter finns i [Förstå och skapa rapportsviter](https://experienceleague.adobe.com/en/docs/analytics-learn/tutorials/intro-to-analytics/analytics-basics/understanding-and-creating-report-suites){target="_blank"}.
+>En demonstrationsvideo om hur du skapar rapportsviter finns i [Förstå och skapa rapportsviter](https://experienceleague.adobe.com/sv/docs/analytics-learn/tutorials/intro-to-analytics/analytics-basics/understanding-and-creating-report-suites){target="_blank"}.
 

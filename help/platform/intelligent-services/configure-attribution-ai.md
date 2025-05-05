@@ -16,6 +16,6 @@ ht-degree: 46%
 
 # Konfigurera AI för attribuering
 
-Lär dig hur du skapar en instans av Attribution AI för att förstå effekten av era marknadsföringskanaler och kampanjer. Mer information finns i [Attribution AI-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/attribution-ai/overview.html).
+Lär dig hur du skapar en instans av Attribution AI för att förstå effekten av era marknadsföringskanaler och kampanjer. Mer information finns i [Attribution AI-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/attribution-ai/overview.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/32668?learn=on&enablevpops)

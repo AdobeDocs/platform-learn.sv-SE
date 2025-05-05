@@ -28,7 +28,7 @@ Låt oss lyfta fram fördelarna med att använda Adobe Journey Optimizer och Ado
 - Tech Blog: [Adobe Journey Optimizer in an Omnichannel World](https://medium.com/adobetech/journey-orchestration-in-an-omnichannel-world-3a2d32d556d9)
 - Tech Blog: [Demonstrerar kraften i Adobe nya Adobe Journey Optimizer-tjänst för att skapa personaliserade flerkanalsupplevelser i realtid](https://medium.com/adobetech/demonstrating-the-power-of-adobes-new-journey-orchestration-service-to-build-personalized-aa60d88cd34)
 - Tutorials: [Adobe Journey Optimizer Tutorials](https://experienceleague.adobe.com/docs/journey-orchestration-learn/tutorials/understanding-journey-orchestration.html?lang=sv)
-- Experience Platform-dokumentation: [Hjälp för Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journeys/using/journey-orchestration-home.html)
+- Experience Platform-dokumentation: [Hjälp för Adobe Journey Optimizer](https://experienceleague.adobe.com/docs/journeys/using/journey-orchestration-home.html?lang=sv-SE)
 
 [Gå tillbaka till modul 3.2](journey-orchestration-external-weather-api-sms.md)
 

@@ -54,7 +54,7 @@ Det finns flera sätt att mappa data från datalagret till XDM med taggfunktione
 
 ### Implementera XDM i datalagret
 
-Detta innebär att det fullständigt definierade XDM-objektet används som struktur för datalagret. Därefter mappar du hela datalagret till ett XDM-objektdataelement i -taggar. Om implementeringen inte använder en tagghanterare kan det här tillvägagångssättet vara idealiskt eftersom du kan skicka data till XDM direkt från programmet med kommandot [XDM sendEvent](https://experienceleague.adobe.com/en/docs/experience-platform/edge/fundamentals/tracking-events#sending-xdm-data). Om du använder taggar kan du skapa ett anpassat kodelement som hämtar hela datalagret som ett genomströmningsJSON-objekt till XDM-filen. Därefter mappar du genomströmnings-JSON till XDM-objektfältet i åtgärden Skicka händelse.
+Detta innebär att det fullständigt definierade XDM-objektet används som struktur för datalagret. Därefter mappar du hela datalagret till ett XDM-objektdataelement i -taggar. Om implementeringen inte använder en tagghanterare kan det här tillvägagångssättet vara idealiskt eftersom du kan skicka data till XDM direkt från programmet med kommandot [XDM sendEvent](https://experienceleague.adobe.com/sv/docs/experience-platform/edge/fundamentals/tracking-events#sending-xdm-data). Om du använder taggar kan du skapa ett anpassat kodelement som hämtar hela datalagret som ett genomströmningsJSON-objekt till XDM-filen. Därefter mappar du genomströmnings-JSON till XDM-objektfältet i åtgärden Skicka händelse.
 
 Nedan visas ett exempel på hur datalagret skulle se ut med formatet Adobe Client Data Layer:
 
@@ -129,17 +129,17 @@ Detta innebär att mappa enskilda datalagervariabler ELLER datalagerobjekt till 
 >
 > Google datalager
 > 
-> Om din organisation redan använder Google Analytics och har det traditionella Google dataLayer-objektet på din webbplats kan du använda [Google datalagertillägg](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/google-data-layer/overview) i taggar. På så sätt kan ni driftsätta Adobe-teknik snabbare utan att behöva be IT-avdelningen om support. Om datalagret för Google mappas till XDM följer du samma steg som ovan.
+> Om din organisation redan använder Google Analytics och har det traditionella Google dataLayer-objektet på din webbplats kan du använda [Google datalagertillägg](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/extensions/client/google-data-layer/overview) i taggar. På så sätt kan ni driftsätta Adobe-teknik snabbare utan att behöva be IT-avdelningen om support. Om datalagret för Google mappas till XDM följer du samma steg som ovan.
 
 ### Mappa till XDM i datastream
 
-Den här metoden använder inbyggda funktioner i datastream-konfigurationen [Data Prep för datainsamling](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/data-prep) och hoppar över mappning av datalagervariabler till XDM i taggar.
+Den här metoden använder inbyggda funktioner i datastream-konfigurationen [Data Prep för datainsamling](https://experienceleague.adobe.com/sv/docs/experience-platform/datastreams/data-prep) och hoppar över mappning av datalagervariabler till XDM i taggar.
 
 #### Proffs
 
 * Flexibelt eftersom du kan mappa enskilda variabler till XDM
-* Möjlighet att [beräkna nya värden](https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/functions) eller [omvandla datatyper](https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/data-handling) från ett datalager innan det går till XDM
-* Använd ett [mappningsgränssnitt](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/data-prep#create-mapping) för att mappa fält i källdata till XDM med ett peka-och-klicka-gränssnitt
+* Möjlighet att [beräkna nya värden](https://experienceleague.adobe.com/sv/docs/experience-platform/data-prep/functions) eller [omvandla datatyper](https://experienceleague.adobe.com/sv/docs/experience-platform/data-prep/data-handling) från ett datalager innan det går till XDM
+* Använd ett [mappningsgränssnitt](https://experienceleague.adobe.com/sv/docs/experience-platform/datastreams/data-prep#create-mapping) för att mappa fält i källdata till XDM med ett peka-och-klicka-gränssnitt
 
 #### Kon
 

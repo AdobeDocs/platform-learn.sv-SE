@@ -160,7 +160,7 @@ Du måste nu ersätta platshållaren **{{body}}** med följande kod:
         }
     ],
     "uiAttributes": {
-        "documentationLink": "https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html?lang=en",
+        "documentationLink": "https://experienceleague.adobe.com/docs/experience-platform/destinations/home.html?lang=sv-SE",
         "category": "streaming",
         "connectionType": "Server-to-server",
         "frequency": "Streaming"

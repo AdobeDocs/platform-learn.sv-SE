@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Felsökning: Det går inte att ansluta till SFTP-källkopplingen
 
-Lär dig de bästa sätten att undvika anslutningsproblem med SFTP-källkopplingen. Granska specifika kontrollpunkter för att ansluta SFTP-servern till Adobe Experience Platform. Mer information finns i dokumentationen för [SFTP-källkopplingen](https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/cloud-storage/sftp.html).
+Lär dig de bästa sätten att undvika anslutningsproblem med SFTP-källkopplingen. Granska specifika kontrollpunkter för att ansluta SFTP-servern till Adobe Experience Platform. Mer information finns i dokumentationen för [SFTP-källkopplingen](https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/cloud-storage/sftp.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3416134?learn=on&enablevpops)

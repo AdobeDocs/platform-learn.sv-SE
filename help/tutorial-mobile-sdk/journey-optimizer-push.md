@@ -17,7 +17,7 @@ ht-degree: 0%
 
 Lär dig skapa push-meddelanden för mobilappar med Experience Platform Mobile SDK och Journey Optimizer.
 
-Med Journey Optimizer kan ni skapa resor och skicka meddelanden till utvalda målgrupper. Innan du skickar push-meddelanden med Journey Optimizer måste du se till att rätt konfigurationer och integreringar finns på plats. Mer information om dataflödet för push-meddelanden i Journey Optimizer finns i [dokumentationen](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-gs.html).
+Med Journey Optimizer kan ni skapa resor och skicka meddelanden till utvalda målgrupper. Innan du skickar push-meddelanden med Journey Optimizer måste du se till att rätt konfigurationer och integreringar finns på plats. Mer information om dataflödet för push-meddelanden i Journey Optimizer finns i [dokumentationen](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-gs.html?lang=sv-SE).
 
 ![Arkitektur](assets/architecture-ajo.png)
 
@@ -30,7 +30,7 @@ Med Journey Optimizer kan ni skapa resor och skicka meddelanden till utvalda må
 
 * Programmet har skapats och körts med SDK:er installerade och konfigurerade.
 * Konfigurera appen för Adobe Experience Platform.
-* Åtkomst till Journey Optimizer och tillräcklig behörighet enligt beskrivningen [här](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html?lang=en). Du behöver även tillräcklig behörighet för följande Journey Optimizer-funktioner.
+* Åtkomst till Journey Optimizer och tillräcklig behörighet enligt beskrivningen [här](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html?lang=sv-SE). Du behöver även tillräcklig behörighet för följande Journey Optimizer-funktioner.
    * Skapa en push-autentiseringsuppgift.
    * Skapa en push-kanalskonfiguration.
    * Skapa en resa.
@@ -127,12 +127,12 @@ När du har skapat en konfiguration för push-autentiseringsuppgifter måste du 
    > Namn måste börja med en bokstav (A-Z). Det får bara innehålla alfanumeriska tecken. Du kan också använda understreck `_`, punkt `.` och bindestreck `-`.
 
 
-1. Om du vill tilldela anpassade eller grundläggande dataanvändningsetiketter till konfigurationen kan du välja **[!UICONTROL Manage access]**. [Läs mer om OLAC (Object Level Access Control)](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access).
+1. Om du vill tilldela anpassade eller grundläggande dataanvändningsetiketter till konfigurationen kan du välja **[!UICONTROL Manage access]**. [Läs mer om OLAC (Object Level Access Control)](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/access-control/object-based-access).
 
 1. Välj kanalen **Push**.
 
 
-1. Välj **[!UICONTROL Marketing action]** om du vill associera medgivandeprinciper till meddelanden som använder den här konfigurationen. Alla policyer för samtycke som är kopplade till marknadsföringsåtgärden utnyttjas för att ta hänsyn till kundernas preferenser. [Läs mer om marknadsföringsåtgärder](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/privacy/consent/consent#surface-marketing-actions).
+1. Välj **[!UICONTROL Marketing action]** om du vill associera medgivandeprinciper till meddelanden som använder den här konfigurationen. Alla policyer för samtycke som är kopplade till marknadsföringsåtgärden utnyttjas för att ta hänsyn till kundernas preferenser. [Läs mer om marknadsföringsåtgärder](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/privacy/consent/consent#surface-marketing-actions).
 
 1. Välj din **[!UICONTROL Platform]**.
 
@@ -153,7 +153,7 @@ Uppdatera Experience Edge-konfigurationen för att se till att data som skickas 
 
    1. Om det inte redan är markerat väljer du **[!UICONTROL AJO Push Profile Dataset]** från **[!UICONTROL Profile Dataset]**. Den här profildatauppsättningen krävs när du använder API-anropet `MobileCore.setPushIdentifier` (se [ Registrera enhetstoken för push-meddelanden ](#register-device-token-for-push-notifications)) som ser till att den unika identifieraren för push-meddelanden (t.ex. push-identifierare) lagras som en del av användarens profil.
 
-   1. **[!UICONTROL Adobe Journey Optimizer]** har valts. Mer information finns i [Adobe Experience Platform-inställningar](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=en#aep).
+   1. **[!UICONTROL Adobe Journey Optimizer]** har valts. Mer information finns i [Adobe Experience Platform-inställningar](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=sv-SE#aep).
 
    1. Välj **[!UICONTROL Save]** om du vill spara dataströmskonfigurationen.
 
@@ -313,7 +313,7 @@ Du ska definiera en ny händelsetyp som ännu inte är tillgänglig som en del a
 
 ### Definiera en händelse
 
-Med händelser i Journey Optimizer kan du utlösa resor åt gången för att skicka meddelanden, till exempel push-meddelanden. Mer information finns i [Om händelser](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/events-journeys/about-events.html?lang=en).
+Med händelser i Journey Optimizer kan du utlösa resor åt gången för att skicka meddelanden, till exempel push-meddelanden. Mer information finns i [Om händelser](https://experienceleague.adobe.com/docs/journey-optimizer/using/configuration/configure-journeys/events-journeys/about-events.html?lang=sv-SE).
 
 1. I Journey Optimizer-gränssnittet väljer du **[!UICONTROL Configurations]** i den vänstra listen.
 

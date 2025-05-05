@@ -22,4 +22,4 @@ Innan du kan skicka data till målpartners från Real-Time CDP måste du först 
 
 >[!VIDEO](https://video.tv.adobe.com/v/342471/?learn=on&enablevpops)
 
-Mer information finns i [dokumentationen](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/ui/connect-destination).
+Mer information finns i [dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-platform/destinations/ui/connect-destination).

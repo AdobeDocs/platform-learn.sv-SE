@@ -54,11 +54,11 @@ Om du vill skicka XDM-data från Edge Network till Adobe Analytics konfigurerar 
 
 ## Automatisk mappning
 
-Många av XDM-standardfälten mappas automatiskt till analysvariabler. Se den fullständiga listan [här](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html?lang=en).
+Många av XDM-standardfälten mappas automatiskt till analysvariabler. Se den fullständiga listan [här](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html?lang=sv-SE).
 
 ### Exempel 1 - s.products
 
-Ett bra exempel är variabeln [products](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/products.html?lang=en) som inte kan fyllas med bearbetningsregler. Med en XDM-implementering skickas alla nödvändiga data i `productListItems` och `s.products` fylls i automatiskt via Analytics-mappning.
+Ett bra exempel är variabeln [products](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/products.html?lang=sv-SE) som inte kan fyllas med bearbetningsregler. Med en XDM-implementering skickas alla nödvändiga data i `productListItems` och `s.products` fylls i automatiskt via Analytics-mappning.
 
 Det här objektet:
 
@@ -87,7 +87,7 @@ s.products = ";5829;1;49.99,9841;3;30.00"
 
 >[!NOTE]
 >
->Om både `productListItems[].SKU` och `productListItems[].name` innehåller data används värdet i `productListItems[].SKU`. Mer information finns i [Variabelmappning för analys i Adobe Experience Edge](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html?lang=en).
+>Om både `productListItems[].SKU` och `productListItems[].name` innehåller data används värdet i `productListItems[].SKU`. Mer information finns i [Variabelmappning för analys i Adobe Experience Edge](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html?lang=sv-SE).
 
 
 ### Exempel 2 - scAdd
@@ -171,7 +171,7 @@ Observera följande i Analytics-mappningen:
 
 ## Mappa med kontextdata
 
-XDM-data som vidarebefordras till Analytics konverteras till [kontextdata](https://experienceleague.adobe.com/docs/mobile-services/ios/getting-started-ios/proc-rules.html?lang=en), inklusive både standardfält och anpassade fält.
+XDM-data som vidarebefordras till Analytics konverteras till [kontextdata](https://experienceleague.adobe.com/docs/mobile-services/ios/getting-started-ios/proc-rules.html?lang=sv-SE), inklusive både standardfält och anpassade fält.
 
 Kontextens datanyckel konstrueras enligt den här syntaxen:
 
@@ -211,7 +211,7 @@ Om du vill mappa dessa XDM-kontextdata till analysdata i rapportsviten kan du:
 
 ### Merchandising eVars
 
-Om du använder [Varor](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/merchandising-evars.html?lang=en) för marknadsföring i Analytics-konfigurationen, till exempel för att hämta färgen för produkter, som `&&products = ...;evar1=red;event10=50,...;evar1=blue;event10=60`, måste du utöka din XDM-nyttolast som du definierade i [Spåra händelsedata](events.md) för att kunna hämta försäljningsinformationen.
+Om du använder [Varor](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/merchandising-evars.html?lang=sv-SE) för marknadsföring i Analytics-konfigurationen, till exempel för att hämta färgen för produkter, som `&&products = ...;evar1=red;event10=50,...;evar1=blue;event10=60`, måste du utöka din XDM-nyttolast som du definierade i [Spåra händelsedata](events.md) för att kunna hämta försäljningsinformationen.
 
 * I JSON:
 
@@ -301,7 +301,7 @@ Så här ser en bearbetningsregel ut när den här informationen används:
 >Första gången du mappar till en bearbetningsregel visas inte kontextdatavariablerna från XDM-objektet. Om du vill åtgärda det väljer du ett värde, Spara och återgå till att redigera. Alla XDM-variabler ska nu visas.
 
 
-Ytterligare information om bearbetning av regler och kontextdata finns [här](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/map-contextdata-variables-into-props-and-evars-with-processing-rules.html?lang=en).
+Ytterligare information om bearbetning av regler och kontextdata finns [här](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/map-contextdata-variables-into-props-and-evars-with-processing-rules.html?lang=sv-SE).
 
 >[!TIP]
 >

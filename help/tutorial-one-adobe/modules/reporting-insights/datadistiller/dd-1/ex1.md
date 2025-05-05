@@ -16,7 +16,7 @@ ht-degree: 0%
 ## Installera PSQL Command Line Utility
 
 Följ instruktionerna i Adobe Experience Platform-dokumentationen för att installera psql-klienten:
-[PSQL - installationshandbok](https://experienceleague.adobe.com/docs/experience-platform/query/clients/psql.html)
+[PSQL - installationshandbok](https://experienceleague.adobe.com/docs/experience-platform/query/clients/psql.html?lang=sv-SE)
 
 När du har installerat PSQL kan du behöva uppdatera din **PATH** genom att köra nedanstående kommando i ett terminalfönster:
 
@@ -28,7 +28,7 @@ För macOS (ersätt XX i nedanstående kommando med det PSQL-versionsnummer som 
 
 Endast för Windows-användare
 
-[Installera Microsoft Power BI](https://experienceleague.adobe.com/docs/experience-platform/query/clients/power-bi.html)
+[Installera Microsoft Power BI](https://experienceleague.adobe.com/docs/experience-platform/query/clients/power-bi.html?lang=sv-SE)
 
 Kontrollera att du har installerat den exakta versionen av **npgsql** som anges i dokumentet, annars kan du inte ansluta Power BI till Adobe Experience Platform Query Service.
 
@@ -36,7 +36,7 @@ Kontrollera att du har installerat den exakta versionen av **npgsql** som anges 
 
 För Windows- och Mac-användare
 
-[Installera skrivbordet ](https://experienceleague.adobe.com/docs/experience-platform/query/clients/tableau.html) enligt dokumentationen.
+[Installera skrivbordet ](https://experienceleague.adobe.com/docs/experience-platform/query/clients/tableau.html?lang=sv-SE) enligt dokumentationen.
 
 En 14-dagars testperiod automatiskt.
 

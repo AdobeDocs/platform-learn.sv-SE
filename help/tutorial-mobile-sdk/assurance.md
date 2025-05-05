@@ -17,7 +17,7 @@ Lär dig hur du konfigurerar Adobe Experience Platform Assurance i en mobilapp.
 
 Assurance, som formellt kallas Project Griffon, är utformat för att hjälpa er att inspektera, verifiera, simulera och validera hur ni samlar in data eller levererar upplevelser i er mobilapp.
 
-Med Assurance kan du inspektera SDK-råhändelser som genererats av Adobe Experience Platform Mobile SDK. Alla händelser som samlas in av SDK är tillgängliga för inspektion. SDK-händelser läses in i en listvy, sorterade efter tid. Varje händelse har en detaljerad vy som ger mer information. Det finns även ytterligare vyer för att bläddra bland SDK-konfigurationer, dataelement, delade lägen och SDK-tilläggsversioner. Läs mer om [försäkringen](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html) i produktdokumentationen.
+Med Assurance kan du inspektera SDK-råhändelser som genererats av Adobe Experience Platform Mobile SDK. Alla händelser som samlas in av SDK är tillgängliga för inspektion. SDK-händelser läses in i en listvy, sorterade efter tid. Varje händelse har en detaljerad vy som ger mer information. Det finns även ytterligare vyer för att bläddra bland SDK-konfigurationer, dataelement, delade lägen och SDK-tilläggsversioner. Läs mer om [försäkringen](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html?lang=sv-SE) i produktdokumentationen.
 
 
 ## Förhandskrav
@@ -35,7 +35,7 @@ I den här lektionen kommer du att:
 
 ## Bekräfta åtkomst
 
-Bekräfta att din organisation har åtkomst till Assurance. Som användare bör du läggas till i profilen för Adobe Experience Platform. Mer information finns i [Användaråtkomst](https://experienceleague.adobe.com/docs/experience-platform/assurance/user-access.html?lang=en) i kontrollguiden.
+Bekräfta att din organisation har åtkomst till Assurance. Som användare bör du läggas till i profilen för Adobe Experience Platform. Mer information finns i [Användaråtkomst](https://experienceleague.adobe.com/docs/experience-platform/assurance/user-access.html?lang=sv-SE) i kontrollguiden.
 
 ## Implementera
 
@@ -169,7 +169,7 @@ I webbläsaren:
 
          ![säkringshändelser](assets/assurance-events.png)
 
-Om du stöter på några problem kan du läsa [teknisk](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/){target="_blank"} och [allmän dokumentation](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html){target="_blank"}.
+Om du stöter på några problem kan du läsa [teknisk](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/){target="_blank"} och [allmän dokumentation](https://experienceleague.adobe.com/docs/experience-platform/assurance/home.html?lang=sv-SE){target="_blank"}.
 
 
 ## Verifiera tillägg

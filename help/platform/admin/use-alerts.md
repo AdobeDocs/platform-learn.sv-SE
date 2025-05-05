@@ -17,6 +17,6 @@ ht-degree: 0%
 
 # Använda varningar
 
-Lär dig hur du prenumererar på och administrerar aviseringar i Adobe Experience Platform. Varningar hjälper dig att övervaka olika processer för att säkerställa att plattformsimplementeringen fungerar smidigt. Mer information finns i [Varningsdokumentationen](https://experienceleague.adobe.com/docs/experience-platform/observability/alerts/overview.html).
+Lär dig hur du prenumererar på och administrerar aviseringar i Adobe Experience Platform. Varningar hjälper dig att övervaka olika processer för att säkerställa att plattformsimplementeringen fungerar smidigt. Mer information finns i [Varningsdokumentationen](https://experienceleague.adobe.com/docs/experience-platform/observability/alerts/overview.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/336218?learn=on&enablevpops)

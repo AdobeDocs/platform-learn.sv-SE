@@ -15,6 +15,6 @@ ht-degree: 0%
 
 # Adobe Experience Platform Edge Network Server API - översikt
 
-Läs om fördelarna med att skicka data till Platform Edge Network med ett säkert, autentiserat server-API. Mer information finns i [Server API-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html).
+Läs om fördelarna med att skicka data till Platform Edge Network med ett säkert, autentiserat server-API. Mer information finns i [Server API-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/edge-network-server-api/overview.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/341448?learn=on&enablevpops)

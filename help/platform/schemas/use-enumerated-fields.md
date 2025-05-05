@@ -17,6 +17,6 @@ ht-degree: 0%
 
 # Använd uppräknade fält och föreslagna värden
 
-Lär dig hur du använder uppräknade fält och föreslagna värden för att skapa egna listrutor i segmentbyggargränssnittet. Mer information finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/enum.html).
+Lär dig hur du använder uppräknade fält och föreslagna värden för att skapa egna listrutor i segmentbyggargränssnittet. Mer information finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/xdm/ui/fields/enum.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3409501/?learn=on&enablevpops)

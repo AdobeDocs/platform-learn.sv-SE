@@ -19,11 +19,11 @@ Du vet nu att XDM-data strömmar in på plattformen. Du kommer att utforska mer 
 
 ## Mappa variabler i Analytics
 
-Adobe Experience Platform [!DNL Web SDK] mappar vissa värden automatiskt, vilket gör en ny implementering av Analytics via Web SDK så snabbt som möjligt. De automatiskt mappade variablerna visas [här](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/adobe-analytics/automatically-mapped-vars.html#data-collection).
+Adobe Experience Platform [!DNL Web SDK] mappar vissa värden automatiskt, vilket gör en ny implementering av Analytics via Web SDK så snabbt som möjligt. De automatiskt mappade variablerna visas [här](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/adobe-analytics/automatically-mapped-vars.html?lang=sv-SE#data-collection).
 
-För XDM-data som inte automatiskt mappas till Adobe Analytics kan du använda [kontextdata](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html?lang=sv) för att matcha ditt [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html). Sedan kan den mappas till Analytics med [bearbetningsregler](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html) för att fylla i Analytics-variabler. Kontextdata och bearbetningsregler kommer att vara välbekanta koncept som tidigare har fungerat med Analytics, men oroa dig inte för detaljerna just nu om de är nya koncept.
+För XDM-data som inte automatiskt mappas till Adobe Analytics kan du använda [kontextdata](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/contextdata.html?lang=sv) för att matcha ditt [schema](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=sv-SE). Sedan kan den mappas till Analytics med [bearbetningsregler](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html?lang=sv-SE) för att fylla i Analytics-variabler. Kontextdata och bearbetningsregler kommer att vara välbekanta koncept som tidigare har fungerat med Analytics, men oroa dig inte för detaljerna just nu om de är nya koncept.
 
-Du kan också använda en standarduppsättning med åtgärder och produktlistor för att skicka eller hämta data med AEP Web SDK. Mer information finns i [Produkter](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html?lang=en#data-collection).
+Du kan också använda en standarduppsättning med åtgärder och produktlistor för att skicka eller hämta data med AEP Web SDK. Mer information finns i [Produkter](https://experienceleague.adobe.com/docs/experience-platform/edge/data-collection/collect-commerce-data.html?lang=sv-SE#data-collection).
 
 ### Kontextdata
 
@@ -54,7 +54,7 @@ XDM-data förenklas med punktnotation och blir tillgängliga som `contextData` o
 
 ### Bearbetar regler
 
-Alla data som samlas in av edge-nätverket kan nås via [bearbetningsregler](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html). I Analytics kan ni använda bearbetningsregler för att införliva kontextdata i Analytics-variabler.
+Alla data som samlas in av edge-nätverket kan nås via [bearbetningsregler](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/processing-rules/processing-rules-configuration/t-processing-rules.html?lang=sv-SE). I Analytics kan ni använda bearbetningsregler för att införliva kontextdata i Analytics-variabler.
 
 ## Audience Manager på Edge Network Experience Platform
 

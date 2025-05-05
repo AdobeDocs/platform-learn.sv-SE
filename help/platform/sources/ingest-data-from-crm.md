@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # Infoga data med CRM-källkopplingar
 
-Lär dig hur enkelt det är att batchimportera data från CRM-källor till Adobe Experience Platform kundprofil i realtid och datasjön sömlöst. Mer detaljerad produktdokumentation finns i [CRM](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=en#access-control-for-sources-in-data-ingestion) på översiktssidan för Source Connectors.
+Lär dig hur enkelt det är att batchimportera data från CRM-källor till Adobe Experience Platform kundprofil i realtid och datasjön sömlöst. Mer detaljerad produktdokumentation finns i [CRM](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=sv-SE#access-control-for-sources-in-data-ingestion) på översiktssidan för Source Connectors.
 
 ## Standardarbetsflöde
 
@@ -32,6 +32,6 @@ Lär dig konfigurera källkopplingen för Salesforce CRM med hjälp av mallarbet
 >[!VIDEO](https://video.tv.adobe.com/v/3419422?learn=on&enablevpops)
 
 Mer information finns i följande dokumentation:
-* [Salesforce skapar en anslutningsdokumentation](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/crm/salesforce.html).
-* [Skapa ett källdataflöde med hjälp av mallar i användargränssnittet](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/templates.html#).
+* [Salesforce skapar en anslutningsdokumentation](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/crm/salesforce.html?lang=sv-SE).
+* [Skapa ett källdataflöde med hjälp av mallar i användargränssnittet](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/templates.html?lang=sv-SE#).
 

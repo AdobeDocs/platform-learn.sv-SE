@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Skapa sekventiella målgrupper
 
-I den här videon får du lära dig hur du lägger till Experience Events i en tidslinje för att skapa en målgrupp som har utfört åtgärder i en viss ordning inom en viss tid. Mer information finns i [Segment Builder-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/segment-builder.html).
+I den här videon får du lära dig hur du lägger till Experience Events i en tidslinje för att skapa en målgrupp som har utfört åtgärder i en viss ordning inom en viss tid. Mer information finns i [Segment Builder-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/segment-builder.html?lang=sv-SE).
 
 >[!NOTE]
 >

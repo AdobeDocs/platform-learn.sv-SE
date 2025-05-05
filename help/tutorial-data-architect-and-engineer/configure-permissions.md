@@ -21,7 +21,7 @@ ht-degree: 1%
 
 I den här lektionen ska du konfigurera Adobe Experience Platform användarbehörigheter med [!DNL Adobe's Admin Console] och skärmen [!UICONTROL Permissions] i plattformsgränssnittet.
 
-Åtkomstkontroll är en viktig sekretessfunktion i Experience Platform och vi rekommenderar att behörigheter begränsas till det minimum som krävs för att människor ska kunna utföra sina arbetsuppgifter. Mer information finns i [Åtkomstkontrolldokumentationen](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html).
+Åtkomstkontroll är en viktig sekretessfunktion i Experience Platform och vi rekommenderar att behörigheter begränsas till det minimum som krävs för att människor ska kunna utföra sina arbetsuppgifter. Mer information finns i [Åtkomstkontrolldokumentationen](https://experienceleague.adobe.com/docs/experience-platform/access-control/home.html?lang=sv-SE).
 
 Dataarkitekter och datatekniker är kraftfulla användare av Adobe Experience Platform och du behöver många behörigheter för att kunna slutföra den här självstudiekursen och senare i ditt dagliga arbete. Dataarkitekter är troligen involverade i administrationen av *andra plattformsanvändare* på deras företag, till exempel marknadsförare, analytiker och datavetare. När du är klar med den här lektionen bör du tänka på hur du kan använda de här funktionerna för att hantera andra användare på ditt företag.
 

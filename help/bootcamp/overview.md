@@ -83,7 +83,7 @@ Personalization i stor skala börjar med att förstå vad som kan förbättras, 
 
 Innan du börjar med övningarna bör du ta en titt på arkitekturen som ligger bakom kursen. Det här Bootlägret kommer att innehålla ett antal funktioner och funktioner runt om i Adobe Experience Platform och kommer även att innehålla en rad integreringar från olika källor och destinationer. För att du ska förstå arkitekturen bakom den här självstudiekursen och den övergripande placeringen av Adobe Experience Platform i företagets ekosystem börjar du med att titta på arkitekturvideon och diagrammet.
 
-Gå till [Arkitektur](https://experienceleague.adobe.com/docs/platform-learn/comprehensive-technical-tutorial-v22/architecture.html?lang=en).
+Gå till [Arkitektur](https://experienceleague.adobe.com/docs/platform-learn/comprehensive-technical-tutorial-v22/architecture.html?lang=sv-SE).
 
 ## Videor
 
@@ -93,7 +93,7 @@ Huvudmålet för vårt Experience Makers Bootcamp är att hjälpa organisationer
 
 Flera andra videofilmer har skapats som visar olika delar av bootlägret och kraftfulla integreringar mellan Adobe Experience Platform och andra program än Adobe. Klicka på länken nedan om du vill visa en översikt över dessa videofilmer.
 
-Gå till [Videor](https://experienceleague.adobe.com/docs/platform-learn/comprehensive-technical-tutorial-v22/videos.html?lang=en).
+Gå till [Videor](https://experienceleague.adobe.com/docs/platform-learn/comprehensive-technical-tutorial-v22/videos.html?lang=sv-SE).
 
 ## YouTube
 

@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Visa identitetsdiagram
 
-Lär dig hur du använder visningsfunktionen för identitetsdiagram för att söka, utforska och filtrera identitetsdiagram för validering och felsökning. Mer information finns i dokumentationen för [identitetsdiagramvisningsprogrammet](https://experienceleague.adobe.com/docs/experience-platform/identity/ui/identity-graph-viewer.html).
+Lär dig hur du använder visningsfunktionen för identitetsdiagram för att söka, utforska och filtrera identitetsdiagram för validering och felsökning. Mer information finns i dokumentationen för [identitetsdiagramvisningsprogrammet](https://experienceleague.adobe.com/docs/experience-platform/identity/ui/identity-graph-viewer.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/331030?learn=on&enablevpops)
 

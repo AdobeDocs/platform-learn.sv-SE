@@ -11,13 +11,13 @@ ht-degree: 0%
 
 # Utför den första datainsamlingsinställningen
 
-Migrering från at.js till Platform Web SDK kräver en första konfiguration för att möjliggöra korrekt datainhämtning, funktioner och funktioner för Platform Web SDK. Följande steg från [implementeringsjälvstudiekursen för Web SDK för plattformen](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html) måste slutföras innan några webbplatsimplementeringsändringar görs:
+Migrering från at.js till Platform Web SDK kräver en första konfiguration för att möjliggöra korrekt datainhämtning, funktioner och funktioner för Platform Web SDK. Följande steg från [implementeringsjälvstudiekursen för Web SDK för plattformen](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=sv-SE) måste slutföras innan några webbplatsimplementeringsändringar görs:
 
-- [Konfigurera lämpliga behörigheter](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/overview#prerequisites){target="_blank"} i Adobe Admin Console för datainsamling
-- [Konfigurera ett XDM-schema](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/initial-configuration/configure-schemas.html){target="_blank"} för att skicka strukturerade data till Edge Network
-- [Konfigurera ett identitetsnamnområde](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/initial-configuration/configure-identities.html){target="_blank"} för enhetspersonalisering och funktionen mbox3rdPartyId
-- [Skapa en datastream](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/initial-configuration/configure-datastream.html){target="_blank"} för att aktivera vidarebefordran av data från Edge Network
-- [Konfigurera datastream](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html#configure-the-datastream){target="_blank"} för att aktivera vidarebefordran av data till Adobe Target
+- [Konfigurera lämpliga behörigheter](https://experienceleague.adobe.com/sv/docs/platform-learn/implement-web-sdk/overview#prerequisites){target="_blank"} i Adobe Admin Console för datainsamling
+- [Konfigurera ett XDM-schema](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/initial-configuration/configure-schemas.html?lang=sv-SE){target="_blank"} för att skicka strukturerade data till Edge Network
+- [Konfigurera ett identitetsnamnområde](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/initial-configuration/configure-identities.html?lang=sv-SE){target="_blank"} för enhetspersonalisering och funktionen mbox3rdPartyId
+- [Skapa en datastream](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/initial-configuration/configure-datastream.html?lang=sv-SE){target="_blank"} för att aktivera vidarebefordran av data från Edge Network
+- [Konfigurera datastream](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html?lang=sv-SE#configure-the-datastream){target="_blank"} för att aktivera vidarebefordran av data till Adobe Target
 
 >[!CAUTION]
 >

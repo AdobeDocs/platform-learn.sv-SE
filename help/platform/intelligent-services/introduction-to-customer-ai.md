@@ -17,6 +17,6 @@ ht-degree: 0%
 
 # Introduktion till AI för kunder
 
-En översikt på hög nivå över hur marknadsförare kan använda kundens AI för att generera kundprognoser. Mer information finns i [Kundens AI-dokumentation](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/customer-ai/overview.html).
+En översikt på hög nivå över hur marknadsförare kan använda kundens AI för att generera kundprognoser. Mer information finns i [Kundens AI-dokumentation](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/customer-ai/overview.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/32664?learn=on&enablevpops)

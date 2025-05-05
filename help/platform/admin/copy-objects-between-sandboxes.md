@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Kopiera konfigurationer mellan sandlådor
 
-Lär dig hur du kopierar konfigurationer mellan Experience Platform sandlådor med hjälp av paket. Kopiera enkelt scheman, datauppsättningar, resor med mera mellan sandlådor för att stödja releaseprocesser och driftsättningar för flera regioner/varumärken. Mer detaljerad information finns i [dokumentationen för sandlådeverktyg](https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/sandbox-tooling.html).
+Lär dig hur du kopierar konfigurationer mellan Experience Platform sandlådor med hjälp av paket. Kopiera enkelt scheman, datauppsättningar, resor med mera mellan sandlådor för att stödja releaseprocesser och driftsättningar för flera regioner/varumärken. Mer detaljerad information finns i [dokumentationen för sandlådeverktyg](https://experienceleague.adobe.com/docs/experience-platform/sandbox/ui/sandbox-tooling.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3424763/?learn=on&enablevpops)

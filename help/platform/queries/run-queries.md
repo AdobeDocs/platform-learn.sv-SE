@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Kör frågor
 
-I den här videon visas hur du kör frågor i Adobe Experience Platform-gränssnittet och i en PSQL-klient. Dessutom visas hur du använder enskilda egenskaper i ett XDM-objekt, använder Adobe-definierade funktioner och använder CREATE TABLE AS SELECT (CTAS). Detaljerad produktdokumentation finns i [Användargränssnittsguiden för frågeredigeraren](https://experienceleague.adobe.com/docs/experience-platform/query/ui/user-guide.html).
+I den här videon visas hur du kör frågor i Adobe Experience Platform-gränssnittet och i en PSQL-klient. Dessutom visas hur du använder enskilda egenskaper i ett XDM-objekt, använder Adobe-definierade funktioner och använder CREATE TABLE AS SELECT (CTAS). Detaljerad produktdokumentation finns i [Användargränssnittsguiden för frågeredigeraren](https://experienceleague.adobe.com/docs/experience-platform/query/ui/user-guide.html?lang=sv-SE).
 Mer information finns i [dokumentationen för frågetjänsten](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=sv).
 
 >[!VIDEO](https://video.tv.adobe.com/v/29796?learn=on&enablevpops)

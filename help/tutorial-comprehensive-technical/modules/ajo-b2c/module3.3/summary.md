@@ -22,8 +22,8 @@ Högdagrar kommer att nämnas när denna övning publiceras.
 
 ## Kolla in det här
 
-- Produktdokumentation: [Offera decisioningens ordlista](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html#glossary?lang=en)
-- Produktdokumentation: [Web SDK - Offer decisioning, översikt](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/offer-decisioning/offer-decisioning-overview.html?lang=en)
+- Produktdokumentation: [Offera decisioningens ordlista](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html#glossary?lang=sv-SE)
+- Produktdokumentation: [Web SDK - Offer decisioning, översikt](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/offer-decisioning/offer-decisioning-overview.html?lang=sv-SE)
 
 [Gå tillbaka till modul 3.3](./offer-decisioning.md)
 

@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## 3.3.1.1 Terminologi
 
-För att få en bättre förståelse för Offer decisioning rekommenderar vi att du läser [översikten](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=en) om hur Offer decisioning Application Service fungerar med Adobe Experience Platform.
+För att få en bättre förståelse för Offer decisioning rekommenderar vi att du läser [översikten](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=sv-SE) om hur Offer decisioning Application Service fungerar med Adobe Experience Platform.
 
 När du arbetar med Offer decisioning måste du förstå följande koncept:
 

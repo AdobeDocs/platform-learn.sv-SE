@@ -41,7 +41,7 @@ AEM as a Cloud Service är ett flexibelt verktyg för en headless-implementering
 1. Innehålls-API för leverans
    - AEM GraphQL API stöder leverans av innehållsfragment.
    - AEM Assets REST API stöder CRUD-åtgärder för innehållsfragment.
-   - Direktleverans av innehåll är också möjligt med [JSON-exporten av kärnkomponenten för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=en).
+   - Direktleverans av innehåll är också möjligt med [JSON-exporten av kärnkomponenten för innehållsfragment](https://experienceleague.adobe.com/docs/experience-manager-core-components/using/components/content-fragment-component.html?lang=sv-SE).
 
 ## Utövning
 

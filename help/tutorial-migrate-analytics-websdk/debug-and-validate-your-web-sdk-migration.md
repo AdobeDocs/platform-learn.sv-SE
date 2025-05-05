@@ -21,7 +21,7 @@ I den här övningen får du lära dig att felsöka och validera data när du mi
 
 ## Adobe Experience Platform Debugger
 
-Felsökaren är ett webbläsartillägg och finns på Chrome Store. Det finns en [videosjälvstudiekurs](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/debugger/overview) som förklarar hur du hämtar och använder felsökaren, och vi rekommenderar att du först går igenom den för att ta reda på den grundläggande användningen.
+Felsökaren är ett webbläsartillägg och finns på Chrome Store. Det finns en [videosjälvstudiekurs](https://experienceleague.adobe.com/sv/docs/platform-learn/data-collection/debugger/overview) som förklarar hur du hämtar och använder felsökaren, och vi rekommenderar att du först går igenom den för att ta reda på den grundläggande användningen.
 
 När du har startat felsökningen kan du använda den för att se till att data flödar från din plats och från Edge Network korrekt. Den här självstudiekursen kommer att användas i ganska grundläggande utsträckning, men använd felsökaren till fullo för att kontrollera dina data.
 

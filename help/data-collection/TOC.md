@@ -27,15 +27,15 @@ ht-degree: 18%
    + [Skapa regler](tags/build-rules.md)
    + [Stapelregler](tags/stack-rules.md)
    + [Skapa och publicera ett bibliotek](tags/build-and-publish-a-library.md)
-   + [Implementera webbplatser med Web SDK](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/overview){target="_blank"}
-   + [Implementera webbplatser med SDK-lösningar](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/overview.html){target="_blank"}
-   + [Implementering i mobilappar](https://experienceleague.adobe.com/en/docs/platform-learn/implement-mobile-sdk/overview){target="_blank"}
+   + [Implementera webbplatser med Web SDK](https://experienceleague.adobe.com/sv/docs/platform-learn/implement-web-sdk/overview){target="_blank"}
+   + [Implementera webbplatser med SDK-lösningar](https://experienceleague.adobe.com/docs/platform-learn/implement-in-websites/overview.html?lang=sv-SE){target="_blank"}
+   + [Implementering i mobilappar](https://experienceleague.adobe.com/sv/docs/platform-learn/implement-mobile-sdk/overview){target="_blank"}
 + Webb-SDK{#web-sdk}
    + [Översikt](web-sdk/overview.md)
    + [Demo](web-sdk/demo.md)
-   + [Implementeringsjälvstudiekurs (med taggar)](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/overview){target="_blank"}
-   + [Migrera mål, självstudiekurs](https://experienceleague.adobe.com/en/docs/platform-learn/migrate-target-to-websdk/introduction){target="_blank"}
-   + [Migrera analyssjälvstudiekurs](https://experienceleague.adobe.com/en/docs/platform-learn/migrate-analytics-to-websdk/migration-to-websdk-overview){target="_blank"}
+   + [Implementeringsjälvstudiekurs (med taggar)](https://experienceleague.adobe.com/sv/docs/platform-learn/implement-web-sdk/overview){target="_blank"}
+   + [Migrera mål, självstudiekurs](https://experienceleague.adobe.com/sv/docs/platform-learn/migrate-target-to-websdk/introduction){target="_blank"}
+   + [Migrera analyssjälvstudiekurs](https://experienceleague.adobe.com/sv/docs/platform-learn/migrate-analytics-to-websdk/migration-to-websdk-overview){target="_blank"}
    + Samtycke{#consent}
       + [Översikt](web-sdk/consent/overview.md)
       + [Ange medgivandevärden med Adobe-standarden](web-sdk/consent/set-consent-adobe.md)
@@ -46,9 +46,9 @@ ht-degree: 18%
    + [Översikt](mobile-sdk/overview.md)
    + [Skapa mobila egenskaper](mobile-sdk/create-mobile-properties.md)
    + [Använd beroendehanterare](mobile-sdk/use-dependency-managers.md)
-   + [Implementering i mobilappar](https://experienceleague.adobe.com/en/docs/platform-learn/implement-mobile-sdk/overview){target="_blank"}
+   + [Implementering i mobilappar](https://experienceleague.adobe.com/sv/docs/platform-learn/implement-mobile-sdk/overview){target="_blank"}
 
-   + [Migrera mål, självstudiekurs](https://experienceleague.adobe.com/en/docs/platform-learn/migrate-target-to-mobile-sdk-decisioning/overview){target="_blank"}
+   + [Migrera mål, självstudiekurs](https://experienceleague.adobe.com/sv/docs/platform-learn/migrate-target-to-mobile-sdk-decisioning/overview){target="_blank"}
 + Server-API{#server-api}
    + [Översikt](server-api/overview.md)
    + [Grunderna i API:er](server-api/introduction.md)

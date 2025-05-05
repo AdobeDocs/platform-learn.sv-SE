@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Stöd för användningsfall för offsitprospektering med partnerdata i [!DNL Real-Time CDP]
 
-Läs om arbetsflödet som används för att importera nya potentiella kunder från partner i [!DNL Real-Time CDP] för målgruppsanpassning före besök. Mer information finns i dokumentationen för [Engagera och få nya kunder genom prospektering av användningsexempel](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/use-cases/partner-data/prospecting.html) .
+Läs om arbetsflödet som används för att importera nya potentiella kunder från partner i [!DNL Real-Time CDP] för målgruppsanpassning före besök. Mer information finns i dokumentationen för [Engagera och få nya kunder genom prospektering av användningsexempel](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/use-cases/partner-data/prospecting.html?lang=sv-SE) .
 
 >[!VIDEO](https://video.tv.adobe.com/v/3423071/?learn=on&enablevpops)

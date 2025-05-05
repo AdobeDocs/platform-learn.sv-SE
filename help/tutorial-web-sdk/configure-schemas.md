@@ -58,7 +58,7 @@ Det här är målet för Adobe [Experience Data Model](https://business.adobe.co
 >
 > I demonstrationssyfte bygger övningarna i den här lektionen upp ett exempelschema för att fånga innehåll som visas och produkter som köpts av kunder på [Luma Demo-webbplatsen](https://luma.enablementadobe.com/content/luma/us/en.html). Du kan använda de här stegen för att skapa ett annat schema för dina egna syften, men vi rekommenderar att du först följer med när du skapar exempelschemat för att lära dig funktionerna i schemaredigeraren.
 
-Om du vill veta mer om XDM-scheman kan du titta på spellistan [Modellera dina kundupplevelsedata med XDM](https://experienceleague.adobe.com/en/playlists/experience-platform-model-your-customer-experience-data-with-xdm) eller se [XDM-systemöversikt](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/home).
+Om du vill veta mer om XDM-scheman kan du titta på spellistan [Modellera dina kundupplevelsedata med XDM](https://experienceleague.adobe.com/sv/playlists/experience-platform-model-your-customer-experience-data-with-xdm) eller se [XDM-systemöversikt](https://experienceleague.adobe.com/sv/docs/experience-platform/xdm/home).
 
 ## Utbildningsmål
 
@@ -74,7 +74,7 @@ Alla nödvändiga etablerings- och användarbehörigheter för datainsamling och
 
 ## Skapa ett XDM-schema
 
-XDM-scheman är standardsättet att beskriva data i Experience Platform, vilket gör att alla data som överensstämmer med scheman kan återanvändas i en organisation utan konflikter, eller till och med delas mellan flera organisationer. Mer information finns i [Grunderna för schemakomposition](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/schema/composition).
+XDM-scheman är standardsättet att beskriva data i Experience Platform, vilket gör att alla data som överensstämmer med scheman kan återanvändas i en organisation utan konflikter, eller till och med delas mellan flera organisationer. Mer information finns i [Grunderna för schemakomposition](https://experienceleague.adobe.com/sv/docs/experience-platform/xdm/schema/composition).
 
 I den här övningen skapar du ett XDM-schema med de rekommenderade baslinjefältgrupperna för att hämta webbhändelsedata på [Luma Demo-webbplatsen](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"}:
 
@@ -107,9 +107,9 @@ I den här övningen skapar du ett XDM-schema med de rekommenderade baslinjefäl
 
 ## Lägg till fältgrupper
 
-Som tidigare nämnts är XDM det centrala ramverket som standardiserar kundupplevelsedata genom att tillhandahålla gemensamma strukturer och definitioner för användning i Adobe Experience Platform-tjänster längre fram i kedjan. Genom att följa XDM-standarder kan _alla kundupplevelsedata_ införlivas i en gemensam representation. Med den här metoden kan ni få värdefulla insikter från kundåtgärder, definiera kundmålgrupper genom segment och uttrycka kundattribut för personalisering med hjälp av data från flera olika källor. Mer information finns i [Bästa tillvägagångssätt för datamodellering](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/schema/best-practices).
+Som tidigare nämnts är XDM det centrala ramverket som standardiserar kundupplevelsedata genom att tillhandahålla gemensamma strukturer och definitioner för användning i Adobe Experience Platform-tjänster längre fram i kedjan. Genom att följa XDM-standarder kan _alla kundupplevelsedata_ införlivas i en gemensam representation. Med den här metoden kan ni få värdefulla insikter från kundåtgärder, definiera kundmålgrupper genom segment och uttrycka kundattribut för personalisering med hjälp av data från flera olika källor. Mer information finns i [Bästa tillvägagångssätt för datamodellering](https://experienceleague.adobe.com/sv/docs/experience-platform/xdm/schema/best-practices).
 
-När det är möjligt bör du använda befintliga fältgrupper och följa en produktmedveten modell och namnkonventioner. För alla data som är specifika för din organisation och som inte passar in i de fördefinierade fältgrupperna ovan kan du skapa en anpassad fältgrupp. Mer information om anpassade scheman finns i [Skapa ett schema med Schemaredigeraren](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/tutorials/create-schema-ui#create).
+När det är möjligt bör du använda befintliga fältgrupper och följa en produktmedveten modell och namnkonventioner. För alla data som är specifika för din organisation och som inte passar in i de fördefinierade fältgrupperna ovan kan du skapa en anpassad fältgrupp. Mer information om anpassade scheman finns i [Skapa ett schema med Schemaredigeraren](https://experienceleague.adobe.com/sv/docs/experience-platform/xdm/tutorials/create-schema-ui#create).
 
 >[!TIP]
 > 
@@ -133,7 +133,7 @@ Observera att du har tillgång till de mest använda nyckelvärdepar som krävs 
 
 ![Schemafältgrupper](assets/schema-consumer-experience-event.png)
 
-Den här lektionen är bara en startpunkt. När du skapar ett eget webbeventschema måste du utforska och dokumentera dina affärskrav. Den här processen påminner om att skapa ett [dokument för affärskrav](https://experienceleague.adobe.com/en/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-a-business-requirements-document) och en [referens för lösningsdesign](https://experienceleague.adobe.com/en/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr) för en Adobe Analytics-implementering, men den bör innehålla krav för _alla datamottagare i senare led_, t.ex. för plattforms-, mål- och händelsevidarebefordringsmål.
+Den här lektionen är bara en startpunkt. När du skapar ett eget webbeventschema måste du utforska och dokumentera dina affärskrav. Den här processen påminner om att skapa ett [dokument för affärskrav](https://experienceleague.adobe.com/sv/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-a-business-requirements-document) och en [referens för lösningsdesign](https://experienceleague.adobe.com/sv/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr) för en Adobe Analytics-implementering, men den bör innehålla krav för _alla datamottagare i senare led_, t.ex. för plattforms-, mål- och händelsevidarebefordringsmål.
 
 
 ### identityMap-objektet
@@ -147,7 +147,7 @@ Det är ett måste-ha-objekt för alla webbrelaterade datainsamlingar eftersom d
 
 >[!IMPORTANT]
 >
-> Det går att aktivera **[!UICONTROL Profile]** för ett schema innan du sparar schemat. **Aktivera det inte** just nu. När ett schema har aktiverats för profilen kan det inte inaktiveras eller tas bort utan att hela sandlådan har återställts. Fält kan inte heller tas bort från scheman just nu, även om det går att [Föråldra fält i användargränssnittet](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/tutorials/field-deprecation-ui#deprecate). Dessa konsekvenser är viktiga att tänka på senare när du arbetar med egna data i produktionsmiljön.
+> Det går att aktivera **[!UICONTROL Profile]** för ett schema innan du sparar schemat. **Aktivera det inte** just nu. När ett schema har aktiverats för profilen kan det inte inaktiveras eller tas bort utan att hela sandlådan har återställts. Fält kan inte heller tas bort från scheman just nu, även om det går att [Föråldra fält i användargränssnittet](https://experienceleague.adobe.com/sv/docs/experience-platform/xdm/tutorials/field-deprecation-ui#deprecate). Dessa konsekvenser är viktiga att tänka på senare när du arbetar med egna data i produktionsmiljön.
 >
 >
 >Den här inställningen beskrivs mer under lektionen [Konfigurera Experience Platform](setup-experience-platform.md).

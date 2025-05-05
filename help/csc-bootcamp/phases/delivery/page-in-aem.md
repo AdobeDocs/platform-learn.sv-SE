@@ -176,7 +176,7 @@ När du använder Adobe Commerce som är integrerat med AEM kan du ha en allmän
 
 >[!NOTE]
 >
-> Vill du veta mer om live-kopior? Kolla in [&quot;Skapa och synkronisera live-kopior&quot;.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/msm/creating-live-copies.html?lang=en)
+> Vill du veta mer om live-kopior? Kolla in [&quot;Skapa och synkronisera live-kopior&quot;.](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/sites/administering/reusing-content/msm/creating-live-copies.html?lang=sv-SE)
 
 - När du är klar bör du nu se butiken som finns på webbplatsen. Välj den och klicka sedan på Create \> Page för att skapa vår inspirerande produktsida.
 

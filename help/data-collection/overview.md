@@ -28,11 +28,11 @@ Datainsamling är nästa generation av funktioner för webbplatstaggar och mobil
 <table>
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/en/docs/platform-learn/migrate-target-to-websdk/introduction" target="_blank">
+    <a href="https://experienceleague.adobe.com/sv/docs/platform-learn/migrate-target-to-websdk/introduction" target="_blank">
       <img alt="Migrera Target till Web SDK" src="assets/thumb_targetWebSdk.jpg" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/en/docs/platform-learn/migrate-target-to-websdk/introduction" target="_blank">
+      <a href="https://experienceleague.adobe.com/sv/docs/platform-learn/migrate-target-to-websdk/introduction" target="_blank">
     <strong> Migrera Adobe Target till Web SDK </strong>
     </a>
     </div>
@@ -41,11 +41,11 @@ Datainsamling är nästa generation av funktioner för webbplatstaggar och mobil
     <p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/en/docs/platform-learn/migrate-analytics-to-websdk/migration-to-websdk-overview" target="_blank">
+    <a href="https://experienceleague.adobe.com/sv/docs/platform-learn/migrate-analytics-to-websdk/migration-to-websdk-overview" target="_blank">
       <img alt="Implementera Adobe Experience Cloud med webb-SDK" src="assets/thumb_analyticsWebSdk.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/en/docs/platform-learn/migrate-analytics-to-websdk/migration-to-websdk-overview" target="_blank">
+      <a href="https://experienceleague.adobe.com/sv/docs/platform-learn/migrate-analytics-to-websdk/migration-to-websdk-overview" target="_blank">
     <strong> Migrera Adobe Analytics till Web SDK i taggar </strong>
     </a>
     </div>
@@ -66,11 +66,11 @@ Datainsamling är nästa generation av funktioner för webbplatstaggar och mobil
 </tr>
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/en/docs/platform-learn/migrate-target-to-mobile-sdk-decisioning/overview" target="_blank">
+    <a href="https://experienceleague.adobe.com/sv/docs/platform-learn/migrate-target-to-mobile-sdk-decisioning/overview" target="_blank">
       <img alt="Migrera Target till Mobile SDK på Edge Network" src="assets/thumb_targetMobileSdk.jpg" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/en/docs/platform-learn/migrate-target-to-mobile-sdk-decisioning/overview" target="_blank">
+      <a href="https://experienceleague.adobe.com/sv/docs/platform-learn/migrate-target-to-mobile-sdk-decisioning/overview" target="_blank">
     <strong>Migrera Adobe Target till Mobile SDK på Edge Network</strong>
     </a>
     </div>
@@ -90,11 +90,11 @@ Datainsamling är nästa generation av funktioner för webbplatstaggar och mobil
 <table>
 <tr>
   <td>
-    <a href="https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/overview" target="_blank">
+    <a href="https://experienceleague.adobe.com/sv/docs/platform-learn/implement-web-sdk/overview" target="_blank">
       <img alt="Implementera Adobe Experience Cloud med webb-SDK" src="assets/thumb_websdk.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/overview" target="_blank">
+      <a href="https://experienceleague.adobe.com/sv/docs/platform-learn/implement-web-sdk/overview" target="_blank">
     <strong> Implementera Experience Cloud med Web SDK </strong>
     </a>
     </div>
@@ -103,11 +103,11 @@ Datainsamling är nästa generation av funktioner för webbplatstaggar och mobil
     <p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/en/docs/platform-learn/implement-mobile-sdk/overview" target="_blank">
+    <a href="https://experienceleague.adobe.com/sv/docs/platform-learn/implement-mobile-sdk/overview" target="_blank">
       <img alt="Implementera i mobilappar" src="assets/thumb_swift.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/en/docs/platform-learn/implement-mobile-sdk/overview" target="_blank">
+      <a href="https://experienceleague.adobe.com/sv/docs/platform-learn/implement-mobile-sdk/overview" target="_blank">
     <strong> Implementera Experience Cloud i mobilappar </strong>
     </a>
     </div>
@@ -116,11 +116,11 @@ Datainsamling är nästa generation av funktioner för webbplatstaggar och mobil
     <p>
   </td>
   <td>
-    <a href="https://experienceleague.adobe.com/en/docs/platform-learn/migrate-target-to-websdk/introduction" target="_blank">
+    <a href="https://experienceleague.adobe.com/sv/docs/platform-learn/migrate-target-to-websdk/introduction" target="_blank">
       <img alt="Migrera Target till Web SDK" src="assets/thumb_legacy.png" />
     </a>
     <div>
-      <a href="https://experienceleague.adobe.com/en/docs/platform-learn/migrate-target-to-websdk/introduction" target="_blank">
+      <a href="https://experienceleague.adobe.com/sv/docs/platform-learn/migrate-target-to-websdk/introduction" target="_blank">
     <strong> Implementera äldre bibliotek med taggar </strong>
     </a>
     </div>

@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Konfigurera Journey Optimizer webbkanal med Web SDK
 
-Lär dig hur du implementerar Adobe Journey Optimizer [webbkanal](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/web/get-started-web) med Adobe Experience Platform Web SDK. Den här lektionen handlar om grundläggande krav för webbkanaler, detaljerade konfigurationssteg och en djupdykning i ett användningsexempel som fokuserar på lojalitetsstatus.
+Lär dig hur du implementerar Adobe Journey Optimizer [webbkanal](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/web/get-started-web) med Adobe Experience Platform Web SDK. Den här lektionen handlar om grundläggande krav för webbkanaler, detaljerade konfigurationssteg och en djupdykning i ett användningsexempel som fokuserar på lojalitetsstatus.
 
 När du följer den här lektionen är Journey Optimizer-användare utrustade att använda webbkanalen för avancerad onlineanpassning med Journey Optimizer webbdesigner.
 
@@ -52,7 +52,7 @@ För att slutföra lektionerna i det här avsnittet måste du först:
   > 1. Webbplatsen är inbäddad i en iframe.
   > 1. Kundens QA- eller stage-sajt är inte externt tillgänglig (det är en intern sajt).
 
-* När du skapar webbupplevelser och inkluderar innehåll från Adobe Experience Manager Assets Essentials-biblioteket måste du [konfigurera underdomänen för publicering av det här innehållet](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/web/configure-web-channel/web-delegated-subdomains).
+* När du skapar webbupplevelser och inkluderar innehåll från Adobe Experience Manager Assets Essentials-biblioteket måste du [konfigurera underdomänen för publicering av det här innehållet](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/web/configure-web-channel/web-delegated-subdomains).
 * Om du använder funktionen för innehållsexperimenterande ska du se till att din webbdatauppsättning också ingår i rapportkonfigurationen.
 * För närvarande finns det två typer av implementeringar som gör det möjligt att skapa och leverera webbkanalskampanjer på dina webbegenskaper:
    * Endast på klientsidan: Om du vill ändra webbplatsen måste du implementera Adobe Experience Platform Web SDK.
@@ -123,7 +123,7 @@ Så här konfigurerar du alternativet i sammanfogningsprincipen:
 
 Om du vill använda innehållsexperiment i webbkanalskampanjer måste du se till att den webbdatauppsättning som används också ingår i rapportkonfigurationen. Journey Optimizer rapporteringssystem använder datauppsättningen i skrivskyddat läge för att fylla i användningsklara innehållsexperimenteringsrapporter.
 
-[Att lägga till datauppsättningar för rapportering av innehållsexperiment beskrivs i det här avsnittet](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reporting/channel-report/reporting-configuration#add-datasets).
+[Att lägga till datauppsättningar för rapportering av innehållsexperiment beskrivs i det här avsnittet](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/reporting/channel-report/reporting-configuration#add-datasets).
 
 ## Use Case Overview - Loyalty Rewards
 
@@ -201,7 +201,7 @@ Så här skapar du innehållsexperimentet:
 
 1. Du kan också välja att **[!UICONTROL Distribute evenly]**. Markera det här alternativet för att se till att uppdelningarna alltid är jämnt fördelade.
 
-[Läs mer om innehållsexperiment i Adobe Journey Optimizer webbkanal](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/content-experiment/get-started-experiment).
+[Läs mer om innehållsexperiment i Adobe Journey Optimizer webbkanal](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/content-management/content-experiment/get-started-experiment).
 
 ### Redigera innehåll med hjälp av den visuella hjälpen
 
@@ -302,7 +302,7 @@ Adobe Experience Platform Debugger-tillägget, som finns för både Chrome och F
 
 Du kan använda felsökaren på Luma-webbplatsen för att validera webbkanalsupplevelsen i produktionen. Detta är en bra metod när Loyalty Rewards-användningsexemplet är öppet och körs för att säkerställa att allt är korrekt konfigurerat.
 
-[Lär dig hur du konfigurerar felsökaren i webbläsaren med hjälp av guiden här](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/debugger/overview).
+[Lär dig hur du konfigurerar felsökaren i webbläsaren med hjälp av guiden här](https://experienceleague.adobe.com/sv/docs/platform-learn/data-collection/debugger/overview).
 
 Så här börjar du valideringen med felsökaren:
 

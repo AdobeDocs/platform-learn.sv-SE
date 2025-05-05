@@ -48,7 +48,7 @@ Adobe Experience Platform är en teknisk plattform som hjälper er att uppnå er
 
 ## Krav
 
-* Du har tittat på [Introduktionen till Adobe Experience Platform-spellistan](https://experienceleague.adobe.com/en/playlists/experience-platform-introduction) på Experience League och känner till plattformsfunktionerna
+* Du har tittat på [Introduktionen till Adobe Experience Platform-spellistan](https://experienceleague.adobe.com/sv/playlists/experience-platform-introduction) på Experience League och känner till plattformsfunktionerna
 * Du har tillgång till ett konto som etablerats med Adobe Experience Platform (eller ett plattformsbaserat program som Real-Time CDP eller Journey Optimizer) och Data Collection (tidigare Launch).
 * Du är systemadministratör för det kontot eller kan ha en [konfigurera användarbehörigheter](configure-permissions.md) åt dig.
 
@@ -58,7 +58,7 @@ I den här självstudiekursen kombineras uppgifter för både datatekniker och d
 
 När du skapar olika plattformselement under den här självstudiekursen kan du försöka hålla dig till de namn jag rekommenderar så mycket som möjligt. Det finns dock några högnivåelementnamn som du kanske vill anpassa om det finns flera personer på din organisation som tar den här självstudiekursen samtidigt. Du kan till exempel kalla plattformssandlådan&quot;Luma Tutorial Platform - Ignatius J Reilly&quot; i stället för bara&quot;Luma Tutorial Platform&quot;.
 
-Om du fastnar kan du försöka läsa instruktionerna igen först och sedan använda länken ![Logga ett problem](https://experienceleague.adobe.com/assets/img/feedback.svg) på sidofältet på varje sida för att kontakta mig.
+Om du fastnar kan du försöka läsa instruktionerna igen först och sedan använda länken ![Logga ett problem](https://experienceleague.adobe.com/assets/img/feedback.svg?lang=sv-SE) på sidofältet på varje sida för att kontakta mig.
 
 ## Teknisk information
 

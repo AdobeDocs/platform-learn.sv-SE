@@ -35,5 +35,5 @@ Lär dig hur du konfigurerar källkopplingen för Marketo med standardarbetsflö
 >[!VIDEO](https://video.tv.adobe.com/v/338250?learn=on&enablevpops)
 
 Mer information finns i följande dokumentation:
-* [Marketo Engage källanslutningsdokumentation](https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/adobe-applications/marketo/marketo.html).
-* [Skapa ett källdataflöde med hjälp av mallar i användargränssnittet](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/templates.html#)
+* [Marketo Engage källanslutningsdokumentation](https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/adobe-applications/marketo/marketo.html?lang=sv-SE).
+* [Skapa ett källdataflöde med hjälp av mallar i användargränssnittet](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/templates.html?lang=sv-SE#)

@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Samtyckesöversikt
 
-Se hur samtyckeshantering i Adobe Experience Platform Web SDK kan hjälpa er att uppfylla juridiska sekretessregler och följa era kunders önskemål. Mer information finns i översikten om [styrning, sekretess och säkerhet i plattformen](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/overview.html?lang=en#consent).
+Se hur samtyckeshantering i Adobe Experience Platform Web SDK kan hjälpa er att uppfylla juridiska sekretessregler och följa era kunders önskemål. Mer information finns i översikten om [styrning, sekretess och säkerhet i plattformen](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/overview.html?lang=sv-SE#consent).
 
 >[!NOTE]
 >

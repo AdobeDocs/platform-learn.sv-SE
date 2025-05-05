@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Granskningsloggar
 
-Läs om hur granskningsloggen kan hjälpa dig att uppfylla dina krav på regelefterlevnad och felsöka implementeringen av Adobe Experience Platform. Mer information finns i [granskningsloggsdokumentationen](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html) eller [API-referensen](https://developer.adobe.com/experience-platform-apis/references/audit-query/).
+Läs om hur granskningsloggen kan hjälpa dig att uppfylla dina krav på regelefterlevnad och felsöka implementeringen av Adobe Experience Platform. Mer information finns i [granskningsloggsdokumentationen](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/audit-logs/overview.html?lang=sv-SE) eller [API-referensen](https://developer.adobe.com/experience-platform-apis/references/audit-query/).
 
 >[!VIDEO](https://video.tv.adobe.com/v/341450?learn=on&enablevpops)
 

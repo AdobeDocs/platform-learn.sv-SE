@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # Använd fallspelningsböcker - översikt
 
-Läs om hur Use Case Playbooks kan hjälpa kunder som använder Real-Time Customer Data Platform och Journey Optimizer att få snabbare time-to-value. Use Case Playbooks är en katalog med dussintals mallar som täcker olika branscher och marknadsföringsmål. Playbooks genererar tekniska resurser som målgrupper, resor och scheman, som sedan kan anpassas och publiceras i andra sandlådor. Mer information finns i dokumentationen för [Använd fallspelningsböcker](https://experienceleague.adobe.com/docs/experience-platform/use-case-playbooks/playbooks/overview.html).
+Läs om hur Use Case Playbooks kan hjälpa kunder som använder Real-Time Customer Data Platform och Journey Optimizer att få snabbare time-to-value. Use Case Playbooks är en katalog med dussintals mallar som täcker olika branscher och marknadsföringsmål. Playbooks genererar tekniska resurser som målgrupper, resor och scheman, som sedan kan anpassas och publiceras i andra sandlådor. Mer information finns i dokumentationen för [Använd fallspelningsböcker](https://experienceleague.adobe.com/docs/experience-platform/use-case-playbooks/playbooks/overview.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3426896/?learn=on&enablevpops)
 

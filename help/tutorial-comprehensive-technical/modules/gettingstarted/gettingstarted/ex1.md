@@ -58,7 +58,7 @@ Klicka på ikonen **pusselbit** på menyn **extensions** och fäst tillägget **
 
 ## Konfigurera Chrome-tillägget
 
-Gå till [https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/overview](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/overview) och klicka sedan på tilläggsikonen för att öppna den.
+Gå till [https://experienceleague.adobe.com/sv/docs/platform-learn/tutorial-comprehensive-technical/overview](https://experienceleague.adobe.com/sv/docs/platform-learn/tutorial-comprehensive-technical/overview) och klicka sedan på tilläggsikonen för att öppna den.
 
 ![DSN](./images/tuthome.png)
 
@@ -136,7 +136,7 @@ När du har aktiverat konfigurationen visas en grön punkt bredvid initialerna f
 
 ## Verifiera självstudiekursens innehåll
 
-Gå till [den här sidan](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/datadistiller/module51/ex4) som ett test.
+Gå till [den här sidan](https://experienceleague.adobe.com/sv/docs/platform-learn/tutorial-comprehensive-technical/datadistiller/module51/ex4) som ett test.
 
 Du bör nu se att alla **miljövariabler** har ersatts med sina verkliga värden, baserat på den aktiverade miljön i Chrome-tillägget.
 

@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Skapa och publicera spelboksinstanser
 
-Lär dig hur du identifierar, skapar, publicerar och felsöker en instans av en Use Case Playbook från den här demonstrationsvideon. Mer information finns i [Skapa, dela och återanvända spelningsboksinstanser](https://experienceleague.adobe.com/docs/experience-platform/use-case-playbooks/playbooks/create-share-reuse.html).
+Lär dig hur du identifierar, skapar, publicerar och felsöker en instans av en Use Case Playbook från den här demonstrationsvideon. Mer information finns i [Skapa, dela och återanvända spelningsboksinstanser](https://experienceleague.adobe.com/docs/experience-platform/use-case-playbooks/playbooks/create-share-reuse.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3427058/?learn=on&enablevpops)

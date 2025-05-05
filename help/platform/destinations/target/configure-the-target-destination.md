@@ -21,6 +21,6 @@ ht-degree: 1%
 
 # Konfigurera Adobe Target-målet i Real-Time Customer Data Platform
 
-Lär dig hur du integrerar Adobe Target och Real-Time Customer Data Platform för att börja skicka segment och profilattribut från Real-Time CDP till Target. Mer information finns i [Adobe Target-anslutningsdokumentationen](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html).
+Lär dig hur du integrerar Adobe Target och Real-Time Customer Data Platform för att börja skicka segment och profilattribut från Real-Time CDP till Target. Mer information finns i [Adobe Target-anslutningsdokumentationen](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/personalization/adobe-target-connection.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3418799/?learn=on&enablevpops)

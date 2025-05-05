@@ -38,7 +38,7 @@ Ge marknadsförarna möjlighet att komma igång med AI/ML direkt och börja för
 
 ## Kolla in det här
 
-- Intelligent Services - översikt: [https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/home.html?lang=en](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/home.html?lang=en)
+- Intelligent Services - översikt: [https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/home.html?lang=sv-SE](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/home.html?lang=sv-SE)
 
 [Gå tillbaka till modul 2.2](./intelligent-services.md)
 

@@ -91,7 +91,7 @@ Verkställandet av styrningspolitik är uppenbarligen en viktig del av ramverket
 
 ## Ytterligare resurser
 
-* [Dokumentation för datastyrning](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html)
+* [Dokumentation för datastyrning](https://experienceleague.adobe.com/docs/experience-platform/data-governance/home.html?lang=sv-SE)
 * [API-referens för datauppsättningstjänst](https://www.adobe.io/experience-platform-apis/references/dataset-service/)
 * [API-referens för principtjänst](https://www.adobe.io/experience-platform-apis/references/policy-service/)
 

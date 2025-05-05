@@ -43,7 +43,7 @@ I den här lektionen kommer du att:
 
 ## Skapa en datauppsättning
 
-Alla data som har inhämtats till Adobe Experience Platform lagras i datasjön som datauppsättningar. En datauppsättning är en lagrings- och hanteringskonstruktion för en datamängd (vanligtvis en tabell) som innehåller ett schema (kolumner) och fält (rader). Datauppsättningar innehåller också metadata som beskriver olika aspekter av de data som lagras. Mer information finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/overview.html).
+Alla data som har inhämtats till Adobe Experience Platform lagras i datasjön som datauppsättningar. En datauppsättning är en lagrings- och hanteringskonstruktion för en datamängd (vanligtvis en tabell) som innehåller ett schema (kolumner) och fält (rader). Datauppsättningar innehåller också metadata som beskriver olika aspekter av de data som lagras. Mer information finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/overview.html?lang=sv-SE).
 
 1. Navigera till gränssnittet Experience Platform genom att markera det på menyn Appar ![Apps](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Apps_18_N.svg) i det övre högra hörnet.
 
@@ -106,7 +106,7 @@ Nu när du har skapat en datauppsättning och uppdaterat dataströmmen för att 
 Du bör också kunna se exempelposter och -fält med funktionen **[!UICONTROL Preview dataset]**:
 ![validera livscykeln som skickas till plattformsdatauppsättningen ](assets/lifecycle-platform-dataset.png)
 
-Ett robustare verktyg för datavalidering är plattformens [frågetjänst](https://experienceleague.adobe.com/docs/platform-learn/tutorials/queries/explore-data.html).
+Ett robustare verktyg för datavalidering är plattformens [frågetjänst](https://experienceleague.adobe.com/docs/platform-learn/tutorials/queries/explore-data.html?lang=sv-SE).
 
 ## Aktivera kundprofil i realtid
 
@@ -157,7 +157,7 @@ Från profilinformationsskärmen:
 1. Om du vill visa identitetsdiagrammet klickar du på länken eller navigerar till **[!UICONTROL Identities]** och väljer sedan **[!UICONTROL Identity Graph]** i det övre fältet.
 1. Om du vill söka efter identitetsvärdet anger du `Luma CRM ID` som **[!UICONTROL Identity namespace]** och det kopierade värdet som **[!UICONTROL Identity value]**. Välj sedan **[!UICONTROL View]**.
 
-   Den här visualiseringen visar alla identiteter som är sammankopplade i en profil och deras ursprung. Här är ett exempel på ett identitetsdiagram som består av data som samlats in från en slutversion av både den här SDK-självstudiekursen (Data Source 2) och [Web SDK-självstudiekursen](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html) (Data Source 1):
+   Den här visualiseringen visar alla identiteter som är sammankopplade i en profil och deras ursprung. Här är ett exempel på ett identitetsdiagram som består av data som samlats in från en slutversion av både den här SDK-självstudiekursen (Data Source 2) och [Web SDK-självstudiekursen](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=sv-SE) (Data Source 1):
 
    ![Hämta ett identitetsvärde](assets/platform-profile-identitygraph.png)
 

@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Konfigurera ett Advertiser-konto i Real-Time CDP Collaboration
 
-Lär dig hur du skapar ett Advertiser-konto (organisation) i Real-Time CDP Collaboration. Mer detaljerad dokumentation finns i [Anlita och hantera organisation](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/setup/onboard-organization){target="_blank"}.
+Lär dig hur du skapar ett Advertiser-konto (organisation) i Real-Time CDP Collaboration. Mer detaljerad dokumentation finns i [Anlita och hantera organisation](https://experienceleague.adobe.com/sv/docs/real-time-cdp-collaboration/using/setup/onboard-organization){target="_blank"}.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3452264/?learn=on&enablevpops)

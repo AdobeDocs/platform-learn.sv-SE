@@ -15,6 +15,6 @@ ht-degree: 0%
 
 # Övervaka händelsevidarebefordran
 
-Lär dig hur du övervakar vidarebefordran av händelser i gränssnittet för datainsamling. Mer information finns i [dokumentationen för vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html).
+Lär dig hur du övervakar vidarebefordran av händelser i gränssnittet för datainsamling. Mer information finns i [dokumentationen för vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/343999?learn=on&enablevpops)

@@ -24,6 +24,6 @@ Lär dig hur du konfigurerar en sandlåda för Använd fallspelningsböcker. Fö
 1. Lägga till behörigheter och användare i sandlådan
 1. Konfigurera kanalytor för e-post, push och SMS
 
-Mer information finns i [Kom igång med Använd fallspelningsböcker](https://experienceleague.adobe.com/docs/experience-platform/use-case-playbooks/playbooks/get-started.html).
+Mer information finns i [Kom igång med Använd fallspelningsböcker](https://experienceleague.adobe.com/docs/experience-platform/use-case-playbooks/playbooks/get-started.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3426987/?learn=on&enablevpops)

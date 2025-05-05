@@ -20,6 +20,6 @@ I den här videon visas hur du kopierar ett schema från en sandlåda till en an
 
 >[!TIP]
 >
->En mycket enklare, gränssnittscentrerad process för att flytta scheman och andra objekt mellan sandlådor introducerades i slutet av 2023, som vi rekommenderar att du använder istället. Se [Kopiera objekt mellan sandlådor](https://experienceleague.adobe.com/docs/platform-learn/tutorials/admin/copy-objects-between-sandboxes.html).
+>En mycket enklare, gränssnittscentrerad process för att flytta scheman och andra objekt mellan sandlådor introducerades i slutet av 2023, som vi rekommenderar att du använder istället. Se [Kopiera objekt mellan sandlådor](https://experienceleague.adobe.com/docs/platform-learn/tutorials/admin/copy-objects-between-sandboxes.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/333592?learn=on&enablevpops)

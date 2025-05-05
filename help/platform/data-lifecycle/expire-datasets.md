@@ -19,11 +19,11 @@ ht-degree: 0%
 
 Lär dig hur du schemalägger borttagningar av datauppsättningar med hjälp av funktionen Adobe Experience Platform Data Hygiene.
 
-Om du tar bort en datauppsättning kan datafördelare och datatekniker ange ett förfallodatum för en datauppsättning. Mer information finns i [dokumentationen om datahygien](https://experienceleague.adobe.com/docs/experience-platform/hygiene/home.html).
+Om du tar bort en datauppsättning kan datafördelare och datatekniker ange ett förfallodatum för en datauppsättning. Mer information finns i [dokumentationen om datahygien](https://experienceleague.adobe.com/docs/experience-platform/hygiene/home.html?lang=sv-SE).
 
 
 >[!VIDEO](https://video.tv.adobe.com/v/345065?learn=on&enablevpops)
 
 >[!NOTE]
 >
-> Alla plattformskunder kan [ta bort datauppsättningar på begäran](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/user-guide.html#delete). Schemaläggning av borttagningar av datauppsättningar är för närvarande endast tillgängligt för kunder som har skölden för hälso- och sjukvård eller skölden för skydd av privatlivet och säkerheten.
+> Alla plattformskunder kan [ta bort datauppsättningar på begäran](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/user-guide.html?lang=sv-SE#delete). Schemaläggning av borttagningar av datauppsättningar är för närvarande endast tillgängligt för kunder som har skölden för hälso- och sjukvård eller skölden för skydd av privatlivet och säkerheten.

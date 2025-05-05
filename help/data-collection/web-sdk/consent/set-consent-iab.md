@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Ange samtycke med IAB TCF 2.0-standarden
 
-Lär dig hur du använder Adobe Experience Platform Web SDK för att ange medgivandevärden enligt IAB TCF 2.0-standarden. Mer information finns i dokumentationen om [IAB FCF 2.0-stöd i Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/iab/overview.html).
+Lär dig hur du använder Adobe Experience Platform Web SDK för att ange medgivandevärden enligt IAB TCF 2.0-standarden. Mer information finns i dokumentationen om [IAB FCF 2.0-stöd i Platform](https://experienceleague.adobe.com/docs/experience-platform/landing/governance-privacy-security/consent/iab/overview.html?lang=sv-SE).
 
 >[!NOTE]
 >

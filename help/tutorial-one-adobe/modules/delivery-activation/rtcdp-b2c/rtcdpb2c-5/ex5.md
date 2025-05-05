@@ -20,7 +20,7 @@ ht-degree: 0%
 ## Bra att veta
 
 Adobe Experience Platform har stöd för olika Amazon-tjänster som mål.
-Kinesis och S3 är båda [profilexportmål](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html?lang=en) och kan användas som en del av Adobe Experience Platform Real-Time CDP.
+Kinesis och S3 är båda [profilexportmål](https://experienceleague.adobe.com/docs/experience-platform/destinations/destination-types.html?lang=sv-SE) och kan användas som en del av Adobe Experience Platform Real-Time CDP.
 Du kan enkelt mata in värdefulla segmenthändelser och tillhörande profilattribut i valfritt system.
 
 I den här övningen får du lära dig hur du konfigurerar en egen Amazon Kinesis-ström för att strömma händelsedata från Adobe Experience Platform Edge-ekosystemet till ett molnlagringsmål, som Amazon S3. Detta är användbart om du vill samla in upplevelsehändelser från webb- och mobilsajter och överföra dem till datalagret för analys och operativ rapportering. I allmänhet importeras data batchvis med stora dagliga filimporter, men de visar inte offentliga http-slutpunkter som kan användas i samband med händelsevidarebefordran.

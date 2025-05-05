@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # Konfigurera ett socialt mål
 
-Lär dig hur du konfigurerar en social destination i Adobe Experience Platform, inklusive autentisering, segmenttilldelning, ID-mappning osv. Mer information finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/social/overview.html).
+Lär dig hur du konfigurerar en social destination i Adobe Experience Platform, inklusive autentisering, segmenttilldelning, ID-mappning osv. Mer information finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/destinations/catalog/social/overview.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/332599/?learn=on&enablevpops)
 

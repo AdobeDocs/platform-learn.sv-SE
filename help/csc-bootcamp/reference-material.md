@@ -39,17 +39,17 @@ Adobe vill också att det ska vara enkelt för kunderna att beställa cykeln onl
 
 ### Adobe Experience Manager
 
-- [Översikt över innehållsautomatisering med Creative Cloud-tjänster](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/content-automation/overview.html?lang=en)
-- [Komma igång med AEM Commerce as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/storefront/getting-started.html)
-- [Introduktion till Adobe Experience Manager som headless CMS](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/introduction.html?lang=en)
+- [Översikt över innehållsautomatisering med Creative Cloud-tjänster](https://experienceleague.adobe.com/docs/experience-manager-learn/assets/content-automation/overview.html?lang=sv-SE)
+- [Komma igång med AEM Commerce as a Cloud Service](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/content-and-commerce/storefront/getting-started.html?lang=sv-SE)
+- [Introduktion till Adobe Experience Manager som headless CMS](https://experienceleague.adobe.com/docs/experience-manager-cloud-service/content/headless/introduction.html?lang=sv-SE)
 
 ### Adobe Express
 
-- [Komma igång med Adobe Expresser](https://helpx.adobe.com/express/using/work-with-templates.html)
+- [Komma igång med Adobe Expresser](https://helpx.adobe.com/se/express/using/work-with-templates.html)
 
 ### Adobe Workfront
 
-- [Produktdokumentation Adobe Workfront](https://experienceleague.adobe.com/docs/workfront/using/home.html?lang=en)
+- [Produktdokumentation Adobe Workfront](https://experienceleague.adobe.com/docs/workfront/using/home.html?lang=sv-SE)
 - [Workfront för AEM Assets](https://exchange.adobe.com/apps/ec/101385/workfront-for-aem-assets)
 
 

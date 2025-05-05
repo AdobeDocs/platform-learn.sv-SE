@@ -35,7 +35,7 @@ Profilparametrar lagrar data för en längre tidsperiod i användarens målprofi
 
 ## Enhetsparametrar
 
-[Entitetsparametrar](https://experienceleague.adobe.com/en/docs/target/using/recommendations/entities/entity-attributes) används för att skicka beteendedata och kompletterande kataloginformation för målrekommendationer. Ungefär som profilparametrar ska de flesta enhetsparametrar skickas under objektet `data.__adobe.target`. Det enda undantaget är att `xdm.productListItems`-arrayen finns, och det första `SKU`-värdet används som `entity.id`.
+[Entitetsparametrar](https://experienceleague.adobe.com/sv/docs/target/using/recommendations/entities/entity-attributes) används för att skicka beteendedata och kompletterande kataloginformation för målrekommendationer. Ungefär som profilparametrar ska de flesta enhetsparametrar skickas under objektet `data.__adobe.target`. Det enda undantaget är att `xdm.productListItems`-arrayen finns, och det första `SKU`-värdet används som `entity.id`.
 
 Entitetsparametrar för ett specifikt objekt måste ha prefixet `entity.` för korrekt datainhämtning. De reserverade parametrarna `cartIds` och `excludedIds` för rekommendationsalgoritmer ska inte prefixas och värdet för var och en måste innehålla en kommaavgränsad lista med entitets-ID:n.
 
@@ -55,7 +55,7 @@ Target tillåter profilsynkronisering mellan enheter och system med ett enda kun
 
 | Exempel på parametern at.js | Platform Web SDK | Anteckningar |
 | --- | --- | --- |
-| `at_property` | N/A | Egenskapstoken har konfigurerats i [datastream](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/configure#target) och kan inte anges i anropet `sendEvent`. |
+| `at_property` | N/A | Egenskapstoken har konfigurerats i [datastream](https://experienceleague.adobe.com/sv/docs/experience-platform/datastreams/configure#target) och kan inte anges i anropet `sendEvent`. |
 | `pageName` | `xdm.web.webPageDetails.name` eller <br> `data.__adobe.target.pageName` | Parametrar för målmbox kan skickas antingen som en del av `xdm`-objektet eller som en del av `data.__adobe.target`-objektet. |
 | `profile.gender` | `data.__adobe.target.profile.gender` | Alla målprofilsparametrar måste skickas som en del av objektet `data` och prefixeras med `profile.` för att mappas korrekt. |
 | `user.categoryId` | `data.__adobe.target.user.categoryId` | Reserverad parameter används för målets kategoritillhörighetsfunktion som måste skickas som en del av objektet `data`. |
@@ -64,11 +64,11 @@ Target tillåter profilsynkronisering mellan enheter och system med ett enda kun
 | `entity.customEntity` | `data.__adobe.target.entity.customEntity` | Anpassade enhetsparametrar används för att uppdatera produktkatalogen Recommendations. Dessa anpassade parametrar måste skickas som en del av objektet `data`. |
 | `cartIds` | `data.__adobe.target.cartIds` | Används för Target-s kundvagnsbaserade rekommendationsalgoritmer. |
 | `excludedIds` | `data.__adobe.target.excludedIds` | Används för att förhindra att specifika enhets-ID returneras i en rekommendationsdesign. |
-| `mbox3rdPartyId` | Ange i objektet `xdm.identityMap` | Används för synkronisering av målprofiler mellan enheter och kundattribut. Namnområdet som ska användas för kund-ID:t måste anges i [målkonfigurationen för datastream](https://experienceleague.adobe.com/en/docs/experience-platform/edge/personalization/adobe-target/using-mbox-3rdpartyid). |
+| `mbox3rdPartyId` | Ange i objektet `xdm.identityMap` | Används för synkronisering av målprofiler mellan enheter och kundattribut. Namnområdet som ska användas för kund-ID:t måste anges i [målkonfigurationen för datastream](https://experienceleague.adobe.com/sv/docs/experience-platform/edge/personalization/adobe-target/using-mbox-3rdpartyid). |
 | `orderId` | `xdm.commerce.order.purchaseID`<br> (när `commerce.purchases.value` är inställd på `1`)<br> eller <br> `data.__adobe.target.orderId` | Används för att identifiera en unik order för målkonverteringsspårning. |
 | `orderTotal` | `xdm.commerce.order.priceTotal`<br> (när `commerce.purchases.value` är inställd på `1`)<br> eller <br> `data.__adobe.target.orderTotal` | Används för att spåra ordersummor för målkonverterings- och optimeringsmål. |
 | `productPurchasedId` | `xdm.productListItems[0-n].SKU`<br> (när `commerce.purchases.value` är inställd på `1`) <br>OR<br> `data.__adobe.target.productPurchasedId` | Används för spårning av målkonvertering och rekommendationer. |
-| `mboxPageValue` | `data.__adobe.target.mboxPageValue` | Används för aktivitetsmålet [för anpassad poängsättning](https://experienceleague.adobe.com/en/docs/target/using/activities/success-metrics/capture-score). |
+| `mboxPageValue` | `data.__adobe.target.mboxPageValue` | Används för aktivitetsmålet [för anpassad poängsättning](https://experienceleague.adobe.com/sv/docs/target/using/activities/success-metrics/capture-score). |
 
 {style="table-layout:auto"}
 

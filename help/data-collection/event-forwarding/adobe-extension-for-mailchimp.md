@@ -15,6 +15,6 @@ ht-degree: 0%
 
 # Adobe-tillägg för Mailchimp
 
-Översikt över videon om Adobe-tillägget för vidarebefordran av händelser för Mailchimp. Mer information finns i [dokumentationen för tillägget för vidarebefordran av Mailchimp-händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/mailchimp-edge/overview.html).
+Översikt över videon om Adobe-tillägget för vidarebefordran av händelser för Mailchimp. Mer information finns i [dokumentationen för tillägget för vidarebefordran av Mailchimp-händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/mailchimp-edge/overview.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/345140/?learn=on&enablevpops)

@@ -17,11 +17,11 @@ ht-degree: 0%
 
 Det finns flera goda skäl att överväga att flytta leverantörstaggar på klientsidan från webbläsare och enheter och till en server. I den här artikeln diskuterar vi hur du utvärderar en leverantörstagg på klientsidan för att kunna flytta den till en händelsevidarebefordringsegenskap.
 
-Den här utvärderingen är bara nödvändig om du överväger att ta bort en leverantörstagg på klientsidan och ersätta den med datadistribution på serversidan i en händelsevidarebefordringsegenskap. I den här artikeln förutsätts du känna till grunderna för [datainsamling](https://experienceleague.adobe.com/docs/data-collection.html) och [vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html).
+Den här utvärderingen är bara nödvändig om du överväger att ta bort en leverantörstagg på klientsidan och ersätta den med datadistribution på serversidan i en händelsevidarebefordringsegenskap. I den här artikeln förutsätts du känna till grunderna för [datainsamling](https://experienceleague.adobe.com/docs/data-collection.html?lang=sv-SE) och [vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=sv-SE).
 
 >[!NOTE]
 >
->Adobe Experience Platform Launch har omklassificerats som en serie datainsamlingstekniker i Adobe Experience Platform. Som ett resultat av detta har flera terminologiska förändringar införts i produktdokumentationen. I följande [dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) finns en konsoliderad referens till de ändrade terminologin.
+>Adobe Experience Platform Launch har omklassificerats som en serie datainsamlingstekniker i Adobe Experience Platform. Som ett resultat av detta har flera terminologiska förändringar införts i produktdokumentationen. I följande [dokument](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=sv-SE) finns en konsoliderad referens till de ändrade terminologin.
 
 Webbläsarleverantörer ändrar hur de hanterar cookies från tredje part. Advertising och marknadsföringsleverantörer och marknadsföringsteknologier kräver ofta användning av många taggar på klientsidan. Dessa utmaningar är bara två övertygande skäl till att våra kunder lägger till datadistribution på serversidan.
 
@@ -69,8 +69,8 @@ Har leverantören API:er som är utformade för överföring av händelsedata fr
 
 - Finns API-slutpunkterna för att skicka nödvändiga data? Om du vill hitta slutpunkter som stöder dina användningsfall kan du titta i leverantörens dokumentation för utvecklare eller API.
 - Tillåter de strömmande händelsedata eller endast batchdata?
-- Vilka autentiseringsmetoder stöder de? Token, HTTP, OAuth client credentials version eller annan? Se [här](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html) för metoder som stöds av händelsevidarebefordran.
-- Vad är uppdateringsförskjutningen för deras API? Är den begränsningen kompatibel med minimumen för händelsespridning? Information [här](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html#:~:text=you%20can%20configure%20the%20Refresh%20Offset%20value%20for%20the%20secret).
+- Vilka autentiseringsmetoder stöder de? Token, HTTP, OAuth client credentials version eller annan? Se [här](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=sv-SE) för metoder som stöds av händelsevidarebefordran.
+- Vad är uppdateringsförskjutningen för deras API? Är den begränsningen kompatibel med minimumen för händelsespridning? Information [här](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/secrets.html?lang=sv-SE#:~:text=you%20can%20configure%20the%20Refresh%20Offset%20value%20for%20the%20secret).
 - Vilka data kräver de för de relevanta slutpunkterna?
 - Kräver de en leverantörsspecifik användaridentifierare för varje anrop till slutpunkten?
 - Om de behöver den identifieraren, var och hur kan den genereras eller hämtas, utan kod på klientsidan?
@@ -87,11 +87,11 @@ Om leverantören inte har API-slutpunkterna som stöd för våra användningsfal
 
 Vad händer om de har API:er, men också behöver ett unikt besökar- eller användar-ID för varje API-anrop? Hur kommer vi åt det ID:t om vi inte har leverantörens klientkod (tagg) på webbplatsen?
 
-Vissa leverantörer förändrar sina system för den nya världen utan cookies från tredje part. Dessa ändringar inkluderar användning av alternativa unika identifierare, som ett [UID](https://developer.mozilla.org/en-US/docs/Glossary/UUID) eller annat [kundgenererat ID](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html). Om leverantören tillåter ett kundgenererat ID kan vi antingen skicka det från klienten till Platform Edge Network med Web eller Mobile SDK, eller eventuellt hämta det från ett API-anrop vid händelsevidarebefordran. När vi skickar data till den leverantören i en regel för vidarebefordran av händelser, tar vi bara med den identifieraren vid behov.
+Vissa leverantörer förändrar sina system för den nya världen utan cookies från tredje part. Dessa ändringar inkluderar användning av alternativa unika identifierare, som ett [UID](https://developer.mozilla.org/en-US/docs/Glossary/UUID) eller annat [kundgenererat ID](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html?lang=sv-SE). Om leverantören tillåter ett kundgenererat ID kan vi antingen skicka det från klienten till Platform Edge Network med Web eller Mobile SDK, eller eventuellt hämta det från ett API-anrop vid händelsevidarebefordran. När vi skickar data till den leverantören i en regel för vidarebefordran av händelser, tar vi bara med den identifieraren vid behov.
 
 Om leverantören kräver data (t.ex. ett leverantörsspecifikt unikt ID) som bara kan genereras eller kommas åt av deras egen tagg på klientsidan, är det troligt att den leverantörstaggen inte är en bra kandidat att flytta. _Försök att bakåtkompilera en klientsidestagg med tanken att flytta den datainsamlingen till händelsevidarebefordran utan lämpliga API:er rekommenderas inte._
 
-Tillägget [Adobe Experience Platform Cloud Connector](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/cloud-connector/overview.html) kan göra HTTP-begäranden vid behov med leverantörer som har rätt API:er för överföring av händelsedata från server till server. Även om leverantörsspecifika tillägg är bra att ha och fler tillägg håller på att utvecklas just nu, kan vi implementera regler för vidarebefordran av händelser i dag med Cloud Connector-tillägget, utan att vänta på ytterligare leverantörstillägg.
+Tillägget [Adobe Experience Platform Cloud Connector](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/cloud-connector/overview.html?lang=sv-SE) kan göra HTTP-begäranden vid behov med leverantörer som har rätt API:er för överföring av händelsedata från server till server. Även om leverantörsspecifika tillägg är bra att ha och fler tillägg håller på att utvecklas just nu, kan vi implementera regler för vidarebefordran av händelser i dag med Cloud Connector-tillägget, utan att vänta på ytterligare leverantörstillägg.
 
 ## Verktyg {#tools}
 
@@ -102,5 +102,5 @@ Det är enklare att undersöka och testa leverantörs-API-slutpunkter med verkty
 I den här artikeln finns en serie steg för att utvärdera en leverantörs klientsidestagg och eventuellt flytta den på serversidan i en egenskap för vidarebefordring av händelser. Mer information om relaterade ämnen finns i följande länkar:
 
 - [Tagghantering](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv) i Adobe Experience Platform
-- [Vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html) för bearbetning på serversidan
-- [Terminologiska uppdateringar](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html) i datainsamling
+- [Vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=sv-SE) för bearbetning på serversidan
+- [Terminologiska uppdateringar](https://experienceleague.adobe.com/docs/experience-platform/tags/term-updates.html?lang=sv-SE) i datainsamling

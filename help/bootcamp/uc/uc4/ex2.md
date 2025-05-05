@@ -89,7 +89,7 @@ Som vi nämnt kan du ange olika person-ID:n för varje datauppsättning. På så
 
 Namnet på fältet för person-ID är inte viktigt, så länge som värdet i fälten för person-ID motsvarar det. Om till exempel person-ID:t är `email` i en datauppsättning och `emailAddress` i en annan, och `dnb-bootcamp@adobe.com` är samma värde för person-ID-fältet i båda datauppsättningarna, kan CJA sätta ihop data.
 
-För närvarande finns det några andra begränsningar som att knyta det anonyma beteendet till kända. Granska de vanliga frågorna här: [Vanliga frågor](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-faq.html).
+För närvarande finns det några andra begränsningar som att knyta det anonyma beteendet till kända. Granska de vanliga frågorna här: [Vanliga frågor](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-faq.html?lang=sv-SE).
 
 ### Ställa in data med användar-ID
 

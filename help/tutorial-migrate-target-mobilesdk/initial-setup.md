@@ -13,13 +13,13 @@ ht-degree: 1%
 
 Att migrera från Target SDK till Optimize SDK kräver en första konfiguration för att möjliggöra korrekt datainhämtning, funktioner och funktioner i Optimize SDK. Följande steg måste slutföras innan implementeringen av webbplatsen kan ändras:
 
-- [Konfigurera lämpliga behörigheter](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/overview#permissions){target="_blank"} i Adobe Admin Console för datainsamling
-- [Konfigurera ett XDM-schema](https://experienceleague.adobe.com/en/docs/platform-learn/implement-mobile-sdk/initial-configuration/create-schema){target="_blank"} för att skicka strukturerade data till Edge Network
-- [Konfigurera schemat](https://experienceleague.adobe.com/en/docs/platform-learn/implement-mobile-sdk/experience-cloud/target#update-your-schema){target="_blank"} för att ta emot Adobe Target-data
-- [Konfigurera ett ID-namnområde](https://experienceleague.adobe.com/en/docs/platform-learn/implement-mobile-sdk/app-implementation/identity#set-up-a-custom-identity-namespace){target="_blank"} för anpassning av olika enheter och mbox3rdPartyId-funktioner
-- [Skapa en datastream](https://experienceleague.adobe.com/en/docs/platform-learn/implement-mobile-sdk/initial-configuration/create-datastream){target="_blank"} för att aktivera vidarebefordran av data från Edge Network
-- [Konfigurera datastream](https://experienceleague.adobe.com/en/docs/platform-learn/implement-mobile-sdk/experience-cloud/target#update-datastream-configuration){target="_blank"} för att aktivera vidarebefordran av data till Adobe Target
-- [Konfigurera taggegenskapen](https://experienceleague.adobe.com/en/docs/platform-learn/implement-mobile-sdk/experience-cloud/target#install-adobe-journey-optimizer---decisioning-tags-extension){target="_blank"} för beslutstillägg
+- [Konfigurera lämpliga behörigheter](https://experienceleague.adobe.com/sv/docs/platform-learn/implement-web-sdk/overview#permissions){target="_blank"} i Adobe Admin Console för datainsamling
+- [Konfigurera ett XDM-schema](https://experienceleague.adobe.com/sv/docs/platform-learn/implement-mobile-sdk/initial-configuration/create-schema){target="_blank"} för att skicka strukturerade data till Edge Network
+- [Konfigurera schemat](https://experienceleague.adobe.com/sv/docs/platform-learn/implement-mobile-sdk/experience-cloud/target#update-your-schema){target="_blank"} för att ta emot Adobe Target-data
+- [Konfigurera ett ID-namnområde](https://experienceleague.adobe.com/sv/docs/platform-learn/implement-mobile-sdk/app-implementation/identity#set-up-a-custom-identity-namespace){target="_blank"} för anpassning av olika enheter och mbox3rdPartyId-funktioner
+- [Skapa en datastream](https://experienceleague.adobe.com/sv/docs/platform-learn/implement-mobile-sdk/initial-configuration/create-datastream){target="_blank"} för att aktivera vidarebefordran av data från Edge Network
+- [Konfigurera datastream](https://experienceleague.adobe.com/sv/docs/platform-learn/implement-mobile-sdk/experience-cloud/target#update-datastream-configuration){target="_blank"} för att aktivera vidarebefordran av data till Adobe Target
+- [Konfigurera taggegenskapen](https://experienceleague.adobe.com/sv/docs/platform-learn/implement-mobile-sdk/experience-cloud/target#install-adobe-journey-optimizer---decisioning-tags-extension){target="_blank"} för beslutstillägg
 
 ## Tilläggskonfiguration
 

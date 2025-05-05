@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Översikt över unionens scheman
 
-I den här videon får du en översikt över fackliga scheman som används av Adobe Experience Platform kundprofil i realtid. Med unionskartor kan du se en sammanslagning av alla fält i scheman som delar samma klass. Kundprofilen i realtid använder föreningsscheman för att skapa en helhetsbild av varje enskild kund. Mer information finns i [dokumentationen för unionens schema](https://experienceleague.adobe.com/docs/experience-platform/profile/union-schemas/union-schema.html).
+I den här videon får du en översikt över fackliga scheman som används av Adobe Experience Platform kundprofil i realtid. Med unionskartor kan du se en sammanslagning av alla fält i scheman som delar samma klass. Kundprofilen i realtid använder föreningsscheman för att skapa en helhetsbild av varje enskild kund. Mer information finns i [dokumentationen för unionens schema](https://experienceleague.adobe.com/docs/experience-platform/profile/union-schemas/union-schema.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/329940?learn=on&enablevpops)

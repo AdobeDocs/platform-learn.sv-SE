@@ -15,7 +15,7 @@ ht-degree: 0%
 
 # Lägg till ett tillägg för händelsevidarebefordring
 
-Lär dig hur du lägger till ett tillägg för händelsevidarebefordran i datainsamling. Mer information finns i [dokumentationen för vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html).
+Lär dig hur du lägger till ett tillägg för händelsevidarebefordran i datainsamling. Mer information finns i [dokumentationen för vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=sv-SE).
 
 >[!NOTE]
 >

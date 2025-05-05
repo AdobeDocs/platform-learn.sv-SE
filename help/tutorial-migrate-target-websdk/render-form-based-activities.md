@@ -100,7 +100,7 @@ Med Platform Web SDK får du större kontroll över hur du använder formulärba
 | `replaceHtml` | Ta bort behållaren och ersätt den med erbjudandet | Nej | Ja |
 | `appendHtml` | Lägger till erbjudandet efter den angivna väljaren | Nej | Ja |
 
-Mer information om ytterligare återgivningsalternativ och exempel finns i [dedikerad dokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html) om hur du återger innehåll med hjälp av Platform Web SDK.
+Mer information om ytterligare återgivningsalternativ och exempel finns i [dedikerad dokumentation](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=sv-SE) om hur du återger innehåll med hjälp av Platform Web SDK.
 
 ## Implementeringsexempel
 

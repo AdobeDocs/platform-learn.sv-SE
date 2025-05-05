@@ -23,9 +23,9 @@ I den här modulen introduceras vissa koncept och tekniker som har en effekt som
 - Lär dig de dataflöden som ett varumärke använder för att importera data till sina Adobe-produkter.
 - Lär dig skicka data till Adobe Experience Platform och andra produkter via Adobe Experience Platform Edge Network.
 - Lär dig hur du skapar dataelement och regler som samlar in data från webben och mobiler.
-- Lär dig mer om [Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home)-spårningshändelserna och hur du felsöker deras innehåll.
+- Lär dig mer om [Web SDK](https://experienceleague.adobe.com/sv/docs/experience-platform/web-sdk/home)-spårningshändelserna och hur du felsöker deras innehåll.
 - Lär dig vad ett datalager är och vad Adobe rekommenderar när du implementerar ett lager.
-- Lär dig hur du implementerar [Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home) från grunden.
+- Lär dig hur du implementerar [Web SDK](https://experienceleague.adobe.com/sv/docs/experience-platform/web-sdk/home) från grunden.
 - Lär dig skillnaden mellan webb- och mobilimplementering.
 
 ## Förhandskrav

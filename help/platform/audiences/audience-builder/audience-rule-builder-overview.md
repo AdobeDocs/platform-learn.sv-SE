@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Översikt över verktyget Skapa målgruppsregel
 
-Få en introduktion till Audience rule builder i Experience Platform, inklusive målgruppsbyggen, användargränssnittet och några tips om hur ni kommer igång med att skapa målgruppsregler. Mer information finns i [Segment Builder-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/segment-builder.html).
+Få en introduktion till Audience rule builder i Experience Platform, inklusive målgruppsbyggen, användargränssnittet och några tips om hur ni kommer igång med att skapa målgruppsregler. Mer information finns i [Segment Builder-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/segment-builder.html?lang=sv-SE).
 
 >[!NOTE]
 >

@@ -14,7 +14,7 @@ ht-degree: 2%
 
 Lär dig hur du implementerar Experience Cloud-program med Adobe Experience Platform Web SDK.
 
-Experience Platform Web SDK är ett klientbibliotek från JavaScript som gör att Adobe Experience Cloud kunder kan interagera med både Adobe-program och tredjepartstjänster via Adobe Experience Platform Edge Network. Mer information finns i [Adobe Experience Platform Web SDK-översikt](https://experienceleague.adobe.com/en/docs/experience-platform/edge/home).
+Experience Platform Web SDK är ett klientbibliotek från JavaScript som gör att Adobe Experience Cloud kunder kan interagera med både Adobe-program och tredjepartstjänster via Adobe Experience Platform Edge Network. Mer information finns i [Adobe Experience Platform Web SDK-översikt](https://experienceleague.adobe.com/sv/docs/experience-platform/edge/home).
 
 ![Experience Platform Web SDK-arkitektur](assets/dc-websdk.png)
 
@@ -48,7 +48,7 @@ I den här lektionen antas du ha ett Adobe-konto och de behörigheter som krävs
    * **[!UICONTROL Property Rights]** - behörighet till **[!UICONTROL Approve]**, **[!UICONTROL Develop]**, **[!UICONTROL Edit Property]**, **[!UICONTROL Manage Environments]**, **[!UICONTROL Manage Extensions]** och **[!UICONTROL Publish]**,
    * **[!UICONTROL Company Rights]** - behörighet till **[!UICONTROL Manage Properties]**
 
-     Mer information om taggbehörigheter finns i [dokumentationen](https://experienceleague.adobe.com/en/docs/experience-platform/tags/admin/user-permissions).
+     Mer information om taggbehörigheter finns i [dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/admin/user-permissions).
 
 * För **Experience Platform** måste du ha:
 
@@ -62,13 +62,13 @@ I den här lektionen antas du ha ett Adobe-konto och de behörigheter som krävs
 
      De funktioner som krävs bör vara tillgängliga för alla Experience Cloud-kunder, även om du inte är kund till en plattformsbaserad applikation som Real-Time CDP.
 
-     Mer information om plattformsåtkomstkontroll finns i [dokumentationen](https://experienceleague.adobe.com/en/docs/experience-platform/access-control/home).
+     Mer information om plattformsåtkomstkontroll finns i [dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-platform/access-control/home).
 
-* För den valfria lektionen **Adobe Analytics** måste du ha [administratörsåtkomst till inställningar för Report Suite, bearbetningsregler och Analysis Workspace](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-console/home)
+* För den valfria lektionen **Adobe Analytics** måste du ha [administratörsåtkomst till inställningar för Report Suite, bearbetningsregler och Analysis Workspace](https://experienceleague.adobe.com/sv/docs/analytics/admin/admin-console/home)
 
-* För den valfria **Adobe Target**-lektionen måste du ha tillgång till [redigeraren eller godkännaren](https://experienceleague.adobe.com/en/docs/target/using/administer/manage-users/enterprise/properties-overview#section_8C425E43E5DD4111BBFC734A2B7ABC80).
+* För den valfria **Adobe Target**-lektionen måste du ha tillgång till [redigeraren eller godkännaren](https://experienceleague.adobe.com/sv/docs/target/using/administer/manage-users/enterprise/properties-overview#section_8C425E43E5DD4111BBFC734A2B7ABC80).
 
-* För den valfria lektionen **Audience Manager** måste du ha tillgång till egenskaperna, segmenten och målgrupperna för att kunna skapa, läsa och skriva. Mer information finns i självstudiekursen om [Audience Manager Role-based Access Control](https://experienceleague.adobe.com/en/docs/audience-manager-learn/tutorials/setup-and-admin/user-management/setting-permissions-with-role-based-access-control).
+* För den valfria lektionen **Audience Manager** måste du ha tillgång till egenskaperna, segmenten och målgrupperna för att kunna skapa, läsa och skriva. Mer information finns i självstudiekursen om [Audience Manager Role-based Access Control](https://experienceleague.adobe.com/sv/docs/audience-manager-learn/tutorials/setup-and-admin/user-management/setting-permissions-with-role-based-access-control).
 
 
 >[!NOTE]

@@ -15,7 +15,7 @@ ht-degree: 23%
 
 # Översikt över vidarebefordran av händelser
 
-Läs om hur händelsevidarebefordran centraliserar datainsamlingen, minskar mängden kod som krävs i dina webb- och mobilappar och strömmar data till lösningar från andra företag via Adobe Experience Platform Edge Network. Mer information finns i [dokumentationen för vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html).
+Läs om hur händelsevidarebefordran centraliserar datainsamlingen, minskar mängden kod som krävs i dina webb- och mobilappar och strömmar data till lösningar från andra företag via Adobe Experience Platform Edge Network. Mer information finns i [dokumentationen för vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=sv-SE).
 
 >[!NOTE]
 >

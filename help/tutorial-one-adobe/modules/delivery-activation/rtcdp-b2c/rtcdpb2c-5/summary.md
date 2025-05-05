@@ -31,7 +31,7 @@ Tack vare Adobe Experience Platform Data Collection kan ni som varumärke nu än
 
 - Tech Blog: [Löser problem med implementering med Adobe Experience Platform Web SDK och Edge Network](https://medium.com/adobetech/solving-implementation-pain-points-with-adobe-experience-platform-web-sdk-and-edge-network-880b635e6819)
 - Tech Blog: [Förbättrar webbplatsprestanda med Adobe Experience Platform Web SDK och Edge Network](https://medium.com/adobetech/boosting-website-performance-with-adobe-experience-platform-web-sdk-and-edge-network-329fcf70fdf9)
-- Dokumentation: [Adobe Experience Platform Data Collection Server - översikt](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=en#server-side-info)
+- Dokumentation: [Adobe Experience Platform Data Collection Server - översikt](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=sv-SE#server-side-info)
 - Video: [Implementera Edge och Adobe Experience Platform Data Collection Server med en icke-Adobe Tag Management-lösning](https://video.tv.adobe.com/v/331986?quality=12&learn=on)
 
 ## Nästa steg

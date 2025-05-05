@@ -128,7 +128,7 @@ Du kan gå tillbaka till skärmen **[!UICONTROL Datasets]** i användargränssni
 
 ## Ytterligare resurser
 
-* [Dokumentation för datauppsättningar](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/overview.html)
+* [Dokumentation för datauppsättningar](https://experienceleague.adobe.com/docs/experience-platform/catalog/datasets/overview.html?lang=sv-SE)
 * [API för datauppsättningar (ingår i katalogtjänsten), referens](https://www.adobe.io/experience-platform-apis/references/catalog/#tag/Datasets)
 
 Nu när alla våra scheman, identiteter och datauppsättningar finns på plats kan vi [aktivera dem för kundprofil i realtid](enable-profiles.md).

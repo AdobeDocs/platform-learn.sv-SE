@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Infoga data med hjälp av källanslutningar för molnlagring
 
-Den här videon visar hur enkelt det är att batchimportera data från molnlagringstjänster till Adobe Experience Platform kundprofil och datalinje i realtid, på ett smidigt och skalbart sätt. Mer detaljerad produktdokumentation finns i [molnlagring](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=en#cloud-storage) på översiktssidan för Source Connectors eller i [dokumentationen för Amazon S3-källanslutningen](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/cloud-storage/s3.html).
+Den här videon visar hur enkelt det är att batchimportera data från molnlagringstjänster till Adobe Experience Platform kundprofil och datalinje i realtid, på ett smidigt och skalbart sätt. Mer detaljerad produktdokumentation finns i [molnlagring](https://experienceleague.adobe.com/docs/experience-platform/sources/home.html?lang=sv-SE#cloud-storage) på översiktssidan för Source Connectors eller i [dokumentationen för Amazon S3-källanslutningen](https://experienceleague.adobe.com/docs/experience-platform/sources/ui-tutorials/create/cloud-storage/s3.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/29695?learn=on&enablevpops)

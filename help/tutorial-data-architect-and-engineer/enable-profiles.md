@@ -26,7 +26,7 @@ Med kundprofilen i realtid kan ni se en helhetsbild av varje enskild kund som ko
 
 Så fantastiskt som allt det där låter, behöver du inte aktivera *alla dina data* för profilen. Faktum är att du endast bör aktivera de data du behöver för aktiveringsändamål. Aktivera data som ni vill använda för marknadsföringsärenden, kundtjänstintegreringar och så vidare, där ni behöver snabb tillgång till en robust kundprofil. Om du bara överför data för analys bör det förmodligen inte aktiveras för profilen.
 
-Det finns viktiga [skyddsutkast för kundprofildata i realtid](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=en) som du bör granska när du avgör vilken av dina egna data du bör aktivera för profilen.
+Det finns viktiga [skyddsutkast för kundprofildata i realtid](https://experienceleague.adobe.com/docs/experience-platform/profile/guardrails.html?lang=sv-SE) som du bör granska när du avgör vilken av dina egna data du bör aktivera för profilen.
 
 <!--is this accurate. Are there other considerations to point out? -->
 

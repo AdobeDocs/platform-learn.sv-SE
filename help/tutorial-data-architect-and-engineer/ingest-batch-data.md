@@ -79,8 +79,8 @@ Börja med att hämta exempeldata och anpassa dem för din klientorganisation:
 >
 >Det finns några alternativ, **[!UICONTROL Error diagnostics]** och **[!UICONTROL Partial ingestion]**, som du kan se på olika skärmar i den här lektionen. De här alternativen beskrivs inte i självstudiekursen. Snabb information:
 >
->* Om du aktiverar feldiagnostik genereras data om inmatningen av data, som du sedan kan granska med hjälp av API:t för dataåtkomst. Läs mer om det i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/data-access/home.html).
->* Delvis intag gör att du kan importera data som innehåller fel, upp till ett visst tröskelvärde som du kan ange. Läs mer om det i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/ingestion/batch/partial.html)
+>* Om du aktiverar feldiagnostik genereras data om inmatningen av data, som du sedan kan granska med hjälp av API:t för dataåtkomst. Läs mer om det i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/data-access/home.html?lang=sv-SE).
+>* Delvis intag gör att du kan importera data som innehåller fel, upp till ett visst tröskelvärde som du kan ange. Läs mer om det i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/ingestion/batch/partial.html?lang=sv-SE)
 
 ### Validera data
 
@@ -115,7 +115,7 @@ Om du prenumererar på dataöverföringshändelser i den föregående lektionen 
 
 ![Webbkrok för dataöverföring](assets/ingestion-loyalty-webhook.png)
 
-Mer information om meddelanden finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/ingestion/quality/subscribe-events.html#available-status-notification-events).
+Mer information om meddelanden finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/ingestion/quality/subscribe-events.html?lang=sv-SE#available-status-notification-events).
 
 ## Importera data gruppvis med Platform API
 
@@ -226,7 +226,7 @@ Om du prenumererar på dataöverföringshändelser i den föregående lektionen 
 
 ![Webbkrok för dataöverföring](assets/ingestion-crm-webhook.png)
 
-Mer information om meddelanden finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/ingestion/quality/subscribe-events.html#available-status-notification-events).
+Mer information om meddelanden finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/ingestion/quality/subscribe-events.html?lang=sv-SE#available-status-notification-events).
 
 ## Importera data med arbetsflöden
 
@@ -282,7 +282,7 @@ Många av källorna har ett liknande konfigurationsarbetsflöde där du:
 
 >[!NOTE]
 >
->De offlineinköpsdata som vi kommer att använda i den här övningen innehåller data för datetime. Datumtidsdata ska vara i antingen [ISO 8061-formaterade strängar](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) eller Unix Time i millisekunder (1531263955 9000) och konverteras vid intag till mål-XDM-typen. Mer information om datakonvertering och andra begränsningar finns i [dokumentationen för API:t för gruppinmatning](https://experienceleague.adobe.com/docs/experience-platform/ingestion/batch/api-overview.html#types).
+>De offlineinköpsdata som vi kommer att använda i den här övningen innehåller data för datetime. Datumtidsdata ska vara i antingen [ISO 8061-formaterade strängar](https://www.iso.org/iso-8601-date-and-time-format.html) (&quot;2018-07-10T15:05:59.000-08:00&quot;) eller Unix Time i millisekunder (1531263955 9000) och konverteras vid intag till mål-XDM-typen. Mer information om datakonvertering och andra begränsningar finns i [dokumentationen för API:t för gruppinmatning](https://experienceleague.adobe.com/docs/experience-platform/ingestion/batch/api-overview.html?lang=sv-SE#types).
 
 ### Hämta, förbered och överföra data till den molnlagringsleverantör du föredrar
 
@@ -334,12 +334,12 @@ Slå upp profilen med värdet `5625458` i namnområdet `loyaltyId` igen för att
 
 Adobe samarbetar med flera ETL-leverantörer för att stödja datainmatning i Experience Platform. På grund av de många olika tredjepartsleverantörerna ingår inte ETL i kursen, även om du gärna vill titta närmare på några av dessa resurser:
 
-* [Utveckla ETL-integreringar för Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/etl/home.html)
+* [Utveckla ETL-integreringar för Adobe Experience Platform](https://experienceleague.adobe.com/docs/experience-platform/etl/home.html?lang=sv-SE)
 * [[!DNL Snaplogic] Adobe Experience Platform Snap Pack](https://www.snaplogic.com/resources/videos/august-2020-aep)
 
 ## Ytterligare resurser
 
-* [Dokumentation för gruppinmatning](https://experienceleague.adobe.com/docs/experience-platform/ingestion/batch/overview.html)
+* [Dokumentation för gruppinmatning](https://experienceleague.adobe.com/docs/experience-platform/ingestion/batch/overview.html?lang=sv-SE)
 * [API-referens för gruppinmatning](https://developer.adobe.com/experience-platform-apis/references/batch-ingestion/)
 
 Låt oss nu [strömma data med Web SDK](ingest-streaming-data.md)

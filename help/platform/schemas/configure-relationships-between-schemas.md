@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Konfigurera relationer mellan scheman
 
-I den här videon visas hur du konfigurerar en relation mellan två scheman i Adobe Experience Platform. Med relationer kan du använda en datauppsättning som sökregister för en annan. Detaljerad produktdokumentation finns i [Definiera en relation mellan två scheman med Schemaredigeraren](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/relationship-ui.html) och [Definiera en relation mellan två scheman med API:t för schemaregister](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/relationship-api.html)
+I den här videon visas hur du konfigurerar en relation mellan två scheman i Adobe Experience Platform. Med relationer kan du använda en datauppsättning som sökregister för en annan. Detaljerad produktdokumentation finns i [Definiera en relation mellan två scheman med Schemaredigeraren](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/relationship-ui.html?lang=sv-SE) och [Definiera en relation mellan två scheman med API:t för schemaregister](https://experienceleague.adobe.com/docs/experience-platform/xdm/tutorials/relationship-api.html?lang=sv-SE)
 
 >[!VIDEO](https://video.tv.adobe.com/v/333536?learn=on&enablevpops)
 

@@ -27,7 +27,7 @@ I den här lektionen kommer du att:
 
 ## Potentiella spårningsproblem
 
-Om du skickar data från appens inbyggda del och från en WebView i appen, genererar varje sitt eget Experience Cloud-ID (ECID), vilket resulterar i frånkopplade träffar och uppblåsta besöksdata. Mer information om ECID finns i [ECID-översikten](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=en).
+Om du skickar data från appens inbyggda del och från en WebView i appen, genererar varje sitt eget Experience Cloud-ID (ECID), vilket resulterar i frånkopplade träffar och uppblåsta besöksdata. Mer information om ECID finns i [ECID-översikten](https://experienceleague.adobe.com/docs/experience-platform/identity/ecid.html?lang=sv-SE).
 
 För att lösa den oönskade situationen är det viktigt att skicka användarens ECID från den inbyggda delen av appen till en WebView som du kanske vill använda i appen.
 

@@ -49,11 +49,11 @@ if((mbox.param('pageName') == 'Product Details') || (mbox.param('web.webPageDeta
 }
 ```
 
-Mer information och bästa praxis finns i den dedikerade dokumentationen om [profilskript](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html).
+Mer information och bästa praxis finns i den dedikerade dokumentationen om [profilskript](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/profile-parameters.html?lang=sv-SE).
 
 ## Uppdatera parametertoken för dynamiskt innehåll
 
-Om du har erbjudanden, rekommendationer eller aktiviteter som använder [dynamisk innehållsersättning](https://experienceleague.adobe.com/docs/target/using/experiences/offers/passing-profile-attributes-to-the-html-offer.html) kan de behöva uppdateras för att ta hänsyn till de nya XDM-parameternamnen.
+Om du har erbjudanden, rekommendationer eller aktiviteter som använder [dynamisk innehållsersättning](https://experienceleague.adobe.com/docs/target/using/experiences/offers/passing-profile-attributes-to-the-html-offer.html?lang=sv-SE) kan de behöva uppdateras för att ta hänsyn till de nya XDM-parameternamnen.
 
 Beroende på hur du använder tokenersättning för mbox-parametrar kan du eventuellt förbättra din befintliga konfiguration så att den tar hänsyn till både gamla och nya parameternamn. I situationer där anpassad JavaScript-kod inte är möjlig, t.ex. i JSON-erbjudanden, bör du skapa kopior och göra uppdateringar när migreringen är klar och publicerad på produktionsplatsen.
 
