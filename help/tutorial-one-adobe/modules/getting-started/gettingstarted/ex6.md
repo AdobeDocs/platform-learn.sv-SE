@@ -3,9 +3,10 @@ title: Komma igång - Adobe I/O
 description: Komma igång - Adobe I/O
 kt: 5342
 doc-type: tutorial
-source-git-commit: 431f7696df12c8c133aced57c0f639c682304dee
+exl-id: 00f17d4f-a2c8-4e8e-a1ff-556037a60629
+source-git-commit: cc8efbdbcf90607f5a9bc98a2e787b61b4cd66d9
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '435'
 ht-degree: 0%
 
 ---
@@ -21,11 +22,16 @@ Gå till [https://developer.adobe.com/console/home](https://developer.adobe.com/
 ![Adobe I/O Ny integrering](./images/iohome.png){zoomable="yes"}
 
 Se till att du väljer rätt instans i skärmens övre högra hörn. Din instans är `--aepImsOrgName--`.
+
+>[!NOTE]
+>
+> På skärmbilden nedan visas en viss organisation som valts. När du går igenom den här självstudiekursen är det troligt att din organisation har ett annat namn. När du registrerade dig för den här självstudiekursen fick du den information om miljön som du skulle använda. Följ dessa instruktioner.
+
 Välj sedan **Skapa nytt projekt**.
 
 ![Adobe I/O Ny integrering](./images/iocomp.png){zoomable="yes"}
 
-### Firefly Services API
+### FIREFLY SERVICES API
 
 Du borde se det här då. Välj **+ Lägg till i projekt** och välj **API**.
 
@@ -35,7 +41,7 @@ Skärmen bör se ut så här.
 
 ![Adobe I/O Ny integrering](./images/api1.png){zoomable="yes"}
 
-Välj **Creative Cloud** och välj **Firefly - Firefly Services**. Välj sedan **Nästa**.
+Markera **Creative Cloud** och välj **Firefly - Firefly Services**. Välj sedan **Nästa**.
 
 ![Adobe I/O Ny integrering](./images/api3.png){zoomable="yes"}
 
@@ -57,7 +63,7 @@ Välj **+ Lägg till i projekt** och välj sedan **API**.
 
 ![Azure Storage](./images/ps2.png){zoomable="yes"}
 
-Välj **Creative Cloud** och välj **Photoshop - Firefly Services**. Välj **Nästa**.
+Markera **Creative Cloud** och välj **Photoshop - Firefly Services**. Välj **Nästa**.
 
 ![Azure Storage](./images/ps3.png){zoomable="yes"}
 

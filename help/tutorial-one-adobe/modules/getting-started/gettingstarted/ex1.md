@@ -4,9 +4,9 @@ description: Komma igång - Installera Chrome-tillägget för Experience League-
 kt: 5342
 doc-type: tutorial
 exl-id: 3618dacb-2203-4d19-ae51-f78415a693fd
-source-git-commit: e95acadeb7a0438f9be056dd426063ac8abc6bc0
+source-git-commit: cc8efbdbcf90607f5a9bc98a2e787b61b4cd66d9
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '911'
 ht-degree: 0%
 
 ---
@@ -15,15 +15,16 @@ ht-degree: 0%
 
 ## Om Chrome-tillägget
 
-Dokumentationen har gjorts generisk så att den enkelt kan återanvändas av vem som helst, med valfri Adobe Experience Platform-instans.
-För att dokumentationen ska kunna återanvändas introducerades **miljövariabler** i dokumentationen, vilket innebär att du hittar **platshållarna** nedan i dokumentationen. Varje platshållare är en specifik variabel för en viss miljö, och Chrome-tillägget ändrar variabeln så att du enkelt kan kopiera kod och text från självstudiesidorna och klistra in den i de olika användargränssnitt som du kommer att använda som en del av självstudiekursen.
+Den här självstudiekursen har gjorts generisk så att den enkelt kan återanvändas av vem som helst, oavsett Adobe Experience Cloud-instans.
+
+För att dokumentationen ska kunna återanvändas introducerades **miljövariabler** i självstudiekursen, vilket betyder att du hittar **platshållarna** nedan i dokumentationen. Varje platshållare är en specifik variabel för en viss miljö, och Chrome-tillägget ändrar variabeln så att du enkelt kan kopiera kod och text från självstudiesidorna och klistra in den i de olika användargränssnitt som du kommer att använda som en del av självstudiekursen.
 
 Ett exempel på sådana värden finns nedan. Dessa värden kan för närvarande inte användas ännu, men så fort du installerar och aktiverar Chrome-tillägget kommer dessa variabler att ändras till normal text som du kan kopiera och återanvända.
 
 | Namn | Nyckel | Exempel |
 |:-------------:| :---------------:| :---------------:|
-| AEP IMS-organisations-ID | `--aepImsOrgId--` | `907075E95BF479EC0A495C73@AdobeOrg` |
-| Organisationsnamn för AEP IMS | `--aepImsOrgName--` | `Experience Platform International` |
+| IMS-organisations-ID | `--aepImsOrgId--` | `907075E95BF479EC0A495C73@AdobeOrg` |
+| IMS-organisationsnamn | `--aepImsOrgName--` | `Experience Platform International` |
 | AEP Klient-ID | `--aepTenantId--` | `_experienceplatform` |
 | Namn på AEP Sandbox | `--aepSandboxName--` | `one-adobe` |
 | LDAP för lärarprofil | `--aepUserLdap--` | `vangeluw` |
@@ -58,7 +59,7 @@ Klicka på ikonen **pusselbit** på menyn **extensions** och fäst tillägget **
 
 ## Konfigurera Chrome-tillägget
 
-Gå till [https://experienceleague.adobe.com/sv/docs/platform-learn/tutorial-comprehensive-technical/overview](https://experienceleague.adobe.com/sv/docs/platform-learn/tutorial-comprehensive-technical/overview){target="_blank"} och klicka sedan på tilläggsikonen för att öppna den.
+Gå till [https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/overview](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-comprehensive-technical/overview){target="_blank"} och klicka sedan på tilläggsikonen för att öppna den.
 
 ![DSN](./images/tuthome.png)
 
@@ -135,7 +136,7 @@ När du har aktiverat konfigurationen visas en grön punkt bredvid initialerna f
 
 ## Verifiera självstudiekursens innehåll
 
-Gå till [den här sidan](https://experienceleague.adobe.com/sv/docs/platform-learn/tutorial-one-adobe/activation/dc/dc13/ex2){target="_blank"} som ett test.
+Gå till [den här sidan](https://experienceleague.adobe.com/en/docs/platform-learn/tutorial-one-adobe/activation/dc/dc13/ex2){target="_blank"} som ett test.
 
 Du bör nu se att alla **miljövariabler** på den här sidan har ersatts med sina verkliga värden, baserat på den aktiverade miljön i Chrome-tillägget.
 

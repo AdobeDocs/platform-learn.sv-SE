@@ -4,9 +4,9 @@ description: Komma igång - Skapa ditt dataflöde
 kt: 5342
 doc-type: tutorial
 exl-id: d36057b4-64c6-4389-9612-d3c9cf013117
-source-git-commit: e95acadeb7a0438f9be056dd426063ac8abc6bc0
+source-git-commit: cc8efbdbcf90607f5a9bc98a2e787b61b4cd66d9
 workflow-type: tm+mt
-source-wordcount: '809'
+source-wordcount: '984'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,15 @@ ht-degree: 0%
 Gå till [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/){target="_blank"}.
 
 ![DSN](./images/launchprop.png)
+
+Innan du fortsätter kontrollerar du att du har valt rätt miljö med hjälp av miljöväljaren i skärmens övre högra hörn. Rätt miljö att använda kallas `--aepImsOrgName--`.
+
+>[!NOTE]
+>
+> På skärmbilden nedan visas en viss organisation som valts. När du går igenom den här självstudiekursen är det troligt att din organisation har ett annat namn. När du registrerade dig för den här självstudiekursen fick du den information om miljön som du skulle använda. Följ dessa instruktioner.
+
+
+![DSN](./images/org.png)
 
 Klicka på **[!UICONTROL Tags]** på den vänstra menyn. Efter föregående övning har du nu tre egenskaper för datainsamling: en för webben, en för mobilen och en för CX-appen.
 
@@ -33,13 +42,17 @@ Klicka på **[!UICONTROL Datastreams]**.
 
 I skärmens övre högra hörn väljer du namnet på sandlådan, som ska vara `--aepSandboxName--`.
 
+>[!NOTE]
+>
+> Skärmbilden nedan visar att en viss sandlåda har valts. När du går igenom den här självstudiekursen är det troligt att din sandlåda har ett annat namn. När du registrerade dig för den här självstudiekursen fick du den information om miljön som du skulle använda. Följ dessa instruktioner.
+
 ![Klicka på ikonen Edge-konfiguration i den vänstra navigeringen](./images/edgeconfig1b.png)
 
 Klicka på **[!UICONTROL New Datastream]**.
 
 ![Klicka på ikonen Edge-konfiguration i den vänstra navigeringen](./images/edgeconfig1.png)
 
-Ange `--aepUserLdap-- - One Adobe Datastream` för **[!UICONTROL Name]** och den valfria beskrivningen. För **Mappningsschema** väljer du **Demonstrationssystem - händelseschema för webbplatsen (Global v1.1)**. Klicka på **Spara**.
+Ange `--aepUserLdap-- - One Adobe Datastream` för **Namn** och den valfria beskrivningen. För **Mappningsschema** väljer du **Demonstrationssystem - händelseschema för webbplatsen (Global v1.1)**. Klicka på **Spara**.
 
 ![Namnge Edge-konfigurationen och spara](./images/edgeconfig2.png)
 
@@ -108,6 +121,10 @@ Klicka på **[!UICONTROL Datastreams]**.
 ![Klicka på Datastream-ikonen i den vänstra navigeringen](./images/edgeconfig1a.png)
 
 I skärmens övre högra hörn väljer du namnet på sandlådan, som ska vara `--aepSandboxName--`.
+
+>[!NOTE]
+>
+> Skärmbilden nedan visar att en viss sandlåda har valts. När du går igenom den här självstudiekursen är det troligt att din sandlåda har ett annat namn. När du registrerade dig för den här självstudiekursen fick du den information om miljön som du skulle använda. Följ dessa instruktioner.
 
 ![Klicka på ikonen Edge-konfiguration i den vänstra navigeringen](./images/edgeconfig1b.png)
 
