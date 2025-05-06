@@ -2,24 +2,24 @@
 title: Inledande konfiguration - Migrera Adobe Target-implementeringen i din mobilapp till Adobe Journey Optimizer - Beslutstillägg
 description: Läs mer om och konfigurera de grundläggande element som krävs för implementeringen av SDK på webben på din plattform
 exl-id: dfc5abc8-0e79-454a-b1bb-6a42b1219771
-source-git-commit: 2ebad2014d4c29a50af82328735258958893b42c
+source-git-commit: cc2c72ec0a339254c49867c3616eb43c7c16aafa
 workflow-type: tm+mt
-source-wordcount: '379'
+source-wordcount: '380'
 ht-degree: 1%
 
 ---
 
 # Utför den första datainsamlingsinställningen
 
-Att migrera från Target SDK till Optimize SDK kräver en första konfiguration för att möjliggöra korrekt datainhämtning, funktioner och funktioner i Optimize SDK. Följande steg måste slutföras innan implementeringen av webbplatsen kan ändras:
+Att migrera från Target SDK till Optimize SDK kräver en första konfiguration för att möjliggöra korrekt datainhämtning, funktioner och funktioner i Optimize SDK. Följande steg måste slutföras innan implementeringen av mobilappar kan ändras:
 
-- [Konfigurera lämpliga behörigheter](https://experienceleague.adobe.com/sv/docs/platform-learn/implement-web-sdk/overview#permissions){target="_blank"} i Adobe Admin Console för datainsamling
-- [Konfigurera ett XDM-schema](https://experienceleague.adobe.com/sv/docs/platform-learn/implement-mobile-sdk/initial-configuration/create-schema){target="_blank"} för att skicka strukturerade data till Edge Network
-- [Konfigurera schemat](https://experienceleague.adobe.com/sv/docs/platform-learn/implement-mobile-sdk/experience-cloud/target#update-your-schema){target="_blank"} för att ta emot Adobe Target-data
-- [Konfigurera ett ID-namnområde](https://experienceleague.adobe.com/sv/docs/platform-learn/implement-mobile-sdk/app-implementation/identity#set-up-a-custom-identity-namespace){target="_blank"} för anpassning av olika enheter och mbox3rdPartyId-funktioner
-- [Skapa en datastream](https://experienceleague.adobe.com/sv/docs/platform-learn/implement-mobile-sdk/initial-configuration/create-datastream){target="_blank"} för att aktivera vidarebefordran av data från Edge Network
-- [Konfigurera datastream](https://experienceleague.adobe.com/sv/docs/platform-learn/implement-mobile-sdk/experience-cloud/target#update-datastream-configuration){target="_blank"} för att aktivera vidarebefordran av data till Adobe Target
-- [Konfigurera taggegenskapen](https://experienceleague.adobe.com/sv/docs/platform-learn/implement-mobile-sdk/experience-cloud/target#install-adobe-journey-optimizer---decisioning-tags-extension){target="_blank"} för beslutstillägg
+- [Konfigurera lämpliga behörigheter](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/overview#permissions){target="_blank"} i Adobe Admin Console för datainsamling
+- [Konfigurera ett XDM-schema](https://experienceleague.adobe.com/en/docs/platform-learn/implement-mobile-sdk/initial-configuration/create-schema){target="_blank"} för att skicka strukturerade data till Edge Network
+- [Konfigurera schemat](https://experienceleague.adobe.com/en/docs/platform-learn/implement-mobile-sdk/experience-cloud/target#update-your-schema){target="_blank"} för att ta emot Adobe Target-data
+- [Konfigurera ett ID-namnområde](https://experienceleague.adobe.com/en/docs/platform-learn/implement-mobile-sdk/app-implementation/identity#set-up-a-custom-identity-namespace){target="_blank"} för anpassning av olika enheter och mbox3rdPartyId-funktioner
+- [Skapa en datastream](https://experienceleague.adobe.com/en/docs/platform-learn/implement-mobile-sdk/initial-configuration/create-datastream){target="_blank"} för att aktivera vidarebefordran av data från Edge Network
+- [Konfigurera datastream](https://experienceleague.adobe.com/en/docs/platform-learn/implement-mobile-sdk/experience-cloud/target#update-datastream-configuration){target="_blank"} för att aktivera vidarebefordran av data till Adobe Target
+- [Konfigurera taggegenskapen](https://experienceleague.adobe.com/en/docs/platform-learn/implement-mobile-sdk/experience-cloud/target#install-adobe-journey-optimizer---decisioning-tags-extension){target="_blank"} för beslutstillägg
 
 ## Tilläggskonfiguration
 
@@ -35,7 +35,7 @@ Märkordstillägg som installeras när du använder tillägget Beslutsfattning:
 1. Profil
 1. Godkännande
 1. Identitet
-1. AEP Assurance (valfritt, krävs för felsökning)
+1. AEP Assurance (tillval, krävs för felsökning)
 
 ![Tagga tillägg som installeras när du använder beslutstillägget](assets/tag-extensions-decisioning.png)
 
