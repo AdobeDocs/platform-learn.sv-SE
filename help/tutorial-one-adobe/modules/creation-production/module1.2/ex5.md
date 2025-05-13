@@ -6,7 +6,7 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 37de6ceb-833e-4e75-9201-88bddd38a817
-source-git-commit: 7df1daa33a67f177ba07f3ca4add08ebc317973c
+source-git-commit: da6917ec8c4e863e80eef91280e46b20816a5426
 workflow-type: tm+mt
 source-wordcount: '2674'
 ht-degree: 0%
@@ -250,7 +250,7 @@ Nu bör du se en uppmaning i Frame.io. Fyll inte i fälten än och skicka inte f
 
 ![Bildruta-I/O](./images/frame38.png)
 
-Växla tillbaka till Workfront Fusion och klicka på bubblan i modulen **Webkrok-svar** . Du kommer att se att under **UTPUT** visas brödtexten som innehåller JSON-nyttolasten för formuläret. Klicka på **Kör en gång** igen.
+Växla tillbaka till Workfront Fusion och klicka på bubblan i modulen **Webkrok-svar** . Du kommer att se att under **INPUT** visas brödtexten som innehåller JSON-nyttolasten för formuläret. Klicka på **Kör en gång** igen.
 
 ![Bildruta-I/O](./images/frame40.png)
 
@@ -468,7 +468,7 @@ Använd JSON-koden nedan för fältet **Source URL**.
 
 >[!NOTE]
 >
->Variabler i Workfront Fusion kan anges manuellt med följande syntax: `{{6.data.newPsdTemplate}}`. Talet i variabeln refererar till modulen i scenariot. I det här exemplet ser du att den sjätte modulen i scenariot kallas **HTTP - Gör en begäran** och har sekvensnumret **&#x200B;**. Det innebär att variabeln `{{6.data.newPsdTemplate}}` kommer åt fältet **data.newPsdTemplate** från modulen med sekvensnummer 6. Sekvensnummer kan ibland vara olika, så var uppmärksam när du kopierar/klistrar in sådana variabler och kontrollera alltid att det sekvensnummer som används är det rätta.
+>Variabler i Workfront Fusion kan anges manuellt med följande syntax: `{{6.data.newPsdTemplate}}`. Talet i variabeln refererar till modulen i scenariot. I det här exemplet ser du att den sjätte modulen i scenariot kallas **HTTP - Gör en begäran** och har sekvensnumret ****. Det innebär att variabeln `{{6.data.newPsdTemplate}}` kommer åt fältet **data.newPsdTemplate** från modulen med sekvensnummer 6. Sekvensnummer kan ibland vara olika, så var uppmärksam när du kopierar/klistrar in sådana variabler och kontrollera alltid att det sekvensnummer som används är det rätta.
 
 Klicka på **OK**.
 

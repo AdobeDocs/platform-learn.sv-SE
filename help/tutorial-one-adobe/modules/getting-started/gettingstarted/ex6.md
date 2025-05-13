@@ -4,9 +4,9 @@ description: Komma igång - Adobe I/O
 kt: 5342
 doc-type: tutorial
 exl-id: 00f17d4f-a2c8-4e8e-a1ff-556037a60629
-source-git-commit: cc8efbdbcf90607f5a9bc98a2e787b61b4cd66d9
+source-git-commit: 3b6ae4bb4eb2d9f189438dddc461bb0f2a0a9aac
 workflow-type: tm+mt
-source-wordcount: '435'
+source-wordcount: '486'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ Markera **Creative Cloud** och välj **Firefly - Firefly Services**. Välj sedan
 
 ![Adobe I/O Ny integrering](./images/api3.png){zoomable="yes"}
 
-Ange ett namn för dina autentiseringsuppgifter: `--aepUserLdap-- - One Adobe OAuth credential`och välj **Nästa**.
+Ange ett namn för dina autentiseringsuppgifter: `--aepUserLdap-- - One Adobe OAuth credential` och välj **Nästa**.
 
 ![Adobe I/O Ny integrering](./images/api4.png){zoomable="yes"}
 
@@ -101,6 +101,10 @@ Därefter måste du välja en produktprofil som definierar vilka behörigheter s
 
 Välj **Adobe Experience Platform - Alla användare - PROD**.
 
+>[!NOTE]
+>
+>Namnet på produktprofilen för AEP beror på hur miljön konfigurerades. Om du inte ser produktprofilen ovan kan du ha en produktprofil som kallas **Standardåtkomst för produktion**. Om du är osäker på vilken du ska välja frågar du AEP systemadministratör.
+
 Välj **Spara konfigurerat API**.
 
 ![Azure Storage](./images/aep4.png){zoomable="yes"}
@@ -119,7 +123,7 @@ Välj **Redigera projekt**.
 
 ![Adobe I/O Ny integrering](./images/api14.png){zoomable="yes"}
 
-Ange ett eget namn för integreringen: `--aepUserLdap-- One Adobe tutorial`och välj **Spara**.
+Ange ett eget namn för integreringen: `--aepUserLdap-- One Adobe tutorial` och välj **Spara**.
 
 ![Adobe I/O Ny integrering](./images/api15.png){zoomable="yes"}
 

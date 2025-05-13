@@ -6,9 +6,9 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 0b20ba91-28d4-4f4d-8abe-074f802c389e
-source-git-commit: 7df1daa33a67f177ba07f3ca4add08ebc317973c
+source-git-commit: da6917ec8c4e863e80eef91280e46b20816a5426
 workflow-type: tm+mt
-source-wordcount: '2050'
+source-wordcount: '2109'
 ht-degree: 0%
 
 ---
@@ -28,6 +28,10 @@ Klicka på pilen för att öppna listrutan och välj **Klona**.
 ![WF Fusion](./images/wffc2.png)
 
 Ange **namnet** för det klonade scenariot till `--aepUserLdap-- - Firefly + Photoshop` och välj lämpligt **målteam**. Klicka på **Lägg till** om du vill lägga till en ny webkrok.
+
+>[!NOTE]
+>
+>Du kanske inte ser alternativet att välja ett **målteam**. Det här alternativet visas bara om du är användare i mer än ett team i Workfront Fusion. Om du inte ser det här alternativet betyder det bara att du bara har lagts till i 1 team, så du behöver inte göra något val.
 
 ![WF Fusion](./images/wffc3.png)
 
@@ -214,7 +218,7 @@ Klistra in namnet **2048x2048-background** i dialogrutan Workfront Fusion.
 
 Bläddra nedåt tills du ser **indata**. Nu måste du definiera vad som ska infogas i bakgrundslagret. I det här fallet måste du välja utdata från modulen **Adobe Firefly** som innehåller den dynamiskt genererade bilden.
 
-För **Lagring** väljer du **Extern**. Kopiera och klistra in variabeln `{{XX.details[].url}}` från utdata från modulen **Adobe Firefly** för **filplats**. Ersätt **XX** i variabeln med sekvensnumret för modulen **Adobe Firefly** som i det här exemplet är **22**.
+För **Lagring** väljer du **Extern**. För **filplats** måste du kopiera och klistra in variabeln `{{XX.details[].url}}` från utdata från modulen **Adobe Firefly**, men du måste ersätta **XX** i variabeln med sekvensnumret för modulen **Adobe Firefly** som i det här exemplet är **22**.
 
 ![WF Fusion](./images/wffc28.png)
 
