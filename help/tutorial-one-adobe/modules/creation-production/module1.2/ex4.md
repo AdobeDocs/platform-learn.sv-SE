@@ -6,9 +6,9 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 0b20ba91-28d4-4f4d-8abe-074f802c389e
-source-git-commit: da6917ec8c4e863e80eef91280e46b20816a5426
+source-git-commit: 9ddabdf0b66ea4772352f5aa82c612fa07891db3
 workflow-type: tm+mt
-source-wordcount: '2109'
+source-wordcount: '2058'
 ht-degree: 0%
 
 ---
@@ -125,9 +125,13 @@ När du har fyllt i alla fält klickar du på **Fortsätt**. Anslutningen valide
 
 ![WF Fusion](./images/wffcff6.png)
 
-Välj sedan variabeln **prompt** som tillhandahålls till scenariot av den inkommande **anpassade webkroken**. Klicka på **OK**.
+Välj sedan variabeln **prompt** som tillhandahålls till scenariot av den inkommande **anpassade webkroken**.
 
 ![WF Fusion](./images/wffcff7.png)
+
+Ange sedan **modellversionen** **prompt** som **image4-standard**. Klicka på **OK**.
+
+![WF Fusion](./images/wffcff7b.png)
 
 Innan du fortsätter måste du inaktivera den gamla vägen i scenariot som i den här övningen, du använder bara den nya vägen som du konfigurerar för tillfället. Det gör du genom att klicka på ikonen **skiftnyckel** mellan modulen **Router** och modulen **iterator** och välja **Inaktivera flöde** .
 
@@ -261,8 +265,6 @@ Du kan nu se att en ny PSD-fil har skapats och sparats i ditt Microsoft Azure St
 
 ## 1.2.4.3 Ändra textlager i PSD-filen
 
-### Text för uppmaning
-
 Håll sedan pekaren över modulen **Adobe Photoshop - Tillämpa PSD-redigeringar** och klicka på ikonen **+** .
 
 ![WF Fusion](./images/wffc34.png)
@@ -277,67 +279,59 @@ Välj **Redigera textlager**.
 
 Du borde se det här då. Välj först din tidigare konfigurerade Adobe Photoshop-anslutning, som ska heta `--aepUserLdap-- Adobe IO`.
 
-Du måste nu definiera platsen för **indatafilen**, som är utdata från föregående steg och under **Lager**, måste du ange **namnet** för textlagret som du vill ändra.
+Du måste nu definiera platsen för **indatafilen**, som är utdata från föregående steg och under **Lager**, måste du klicka på **+ Lägg till objekt** för varje lager som texten behöver ändras för.
 
 ![WF Fusion](./images/wffc37.png)
 
-För **indatafilen** väljer du **Azure** för **indatafilens lagringsutrymme** och ser till att du väljer utdata från den tidigare begäran, **Adobe Photoshop - Tillämpa PSD-redigeringar**, som du kan hämta här: `data[]._links.renditions[].href`
+För **indatafilen** väljer du **Azure** för **indatafilens lagringsutrymme** och ser till att du väljer utdata från den tidigare begäran, **Adobe Photoshop - Tillämpa PSD-redigeringar**, som du kan definiera så här: ``{{XX.data[].`_links`.renditions[].href}}`` (ersätt XX med sekvensnumret för den tidigare modulen Adobe Photoshop - Tillämpa PSD-redigeringar).
+
+Klicka sedan på **+Lägg till objekt** under **Lager** för att börja lägga till de textlager som behöver uppdateras.
 
 ![WF Fusion](./images/wffc37a.png)
 
-Öppna filen **citisign-fiber.psd**. I filen kommer du att märka att lagret som innehåller anropet till åtgärd har namnet **2048x2048-cta**.
+Det finns två ändringar att göra, CTA-texten och knapptexten i filen **citisign-fiber.psd** måste uppdateras.
+
+Om du vill hitta lagernamnen öppnar du filen **citisign-fiber.psd**. I filen kommer du att märka att lagret som innehåller anropet till åtgärd har namnet **2048x2048-cta**.
 
 ![WF Fusion](./images/wffc38.png)
 
-Ange namnet **2048x2048-cta** under **Namn** i dialogrutan.
+I filen **citisign-fiber.psd** kommer du också att märka att lagret som innehåller call to action har namnet **2048x2048-button-text**.
+
+![WF Fusion](./images/wffc44.png)
+
+Du måste först konfigurera de ändringar som ska göras i lagret **2048x2048-cta**. Ange namnet **2048x2048-cta** under **Namn** i dialogrutan.
 
 ![WF Fusion](./images/wffc39.png)
 
-Bläddra nedåt tills du ser **Text** > **Innehåll**. Välj variabeln **cta** från Webkroks nyttolast.
+Bläddra nedåt tills du ser **Text** > **Innehåll**. Välj variabeln **cta** från Webkroks nyttolast. Klicka på **Lägg till**.
 
 ![WF Fusion](./images/wffc40.png)
 
-Bläddra nedåt tills du ser **Utdata**. För **Lagring** väljer du **Azure**. Ange platsen nedan för **filplatsen**. Observera att variabeln `{{timestamp}}` har lagts till i filnamnet, som används för att säkerställa att alla filer som genereras har ett unikt namn. Ange även **Type** som **vnd.adobe.photoshop**. Klicka på **OK**.
+Du borde se det här då. Klicka på **+Lägg till objekt** under **Lager** för att börja lägga till de textlager som behöver uppdateras.
+
+![WF Fusion](./images/wffc40a.png)
+
+Ange namnet **2048x2048-button-text** under **Namn** i dialogrutan.
+
+![WF Fusion](./images/wffc40b.png)
+
+Bläddra nedåt tills du ser **Text** > **Innehåll**. Välj variabeln **button** från Webkroks nyttolast. Klicka på **Lägg till**.
+
+![WF Fusion](./images/wffc40c.png)
+
+Du borde se det här då.
+
+![WF Fusion](./images/wffc40d.png)
+
+Bläddra nedåt tills du ser **Utdata**. För **Lagring** väljer du **Azure**. Ange platsen nedan för **filplatsen**. Observera att variabeln `{{timestamp}}` har lagts till i filnamnet, som används för att säkerställa att alla filer som genereras har ett unikt namn. Ange även **Type** som **vnd.adobe.photoshop**.
 
 `{{1.AZURE_STORAGE_URL}}/{{1.AZURE_STORAGE_CONTAINER}}/citisignal-fiber-changed-text-{{timestamp}}.psd{{1.AZURE_STORAGE_SAS_WRITE}}`
 
 ![WF Fusion](./images/wffc41.png)
 
-### Knapptext
+Ange **Type** till **vnd.adobe.photoshop**. Klicka på **OK**.
 
-Högerklicka på modulen som du just skapade och välj **Klona**. Då skapas en andra liknande modul.
-
-![WF Fusion](./images/wffc42.png)
-
-Anslut den klonade modulen till föregående **Adobe Photoshop - Redigera textlager** -modul.
-
-![WF Fusion](./images/wffc42a.png)
-
-Du borde se det här då. Välj först din tidigare konfigurerade Adobe Photoshop-anslutning, som ska heta `--aepUserLdap-- Adobe IO`.
-
-Du måste nu definiera platsen för **indatafilen**, som är utdata från föregående steg och under **Lager**, måste du ange **namnet** för textlagret som du vill ändra.
-
-![WF Fusion](./images/wffc43.png)
-
-För **indatafilen** väljer du **Azure** för **indatafilens lagringsutrymme** och ser till att du väljer utdata från den tidigare begäran, **Adobe Photoshop - Redigera textlager**, som du kan ta här: `data[]._links.renditions[].href`
-
-Öppna filen **citisign-fiber.psd**. I filen kommer du att märka att lagret som innehåller anropet till åtgärd har namnet **2048x2048-button-text**.
-
-![WF Fusion](./images/wffc44.png)
-
-Ange namnet **2048x2048-button-text** under **Namn** i dialogrutan.
-
-![WF Fusion](./images/wffc43.png)
-
-Bläddra nedåt tills du ser **Text** > **Innehåll**. Välj variabeln **button** från Webkroks nyttolast.
-
-![WF Fusion](./images/wffc45.png)
-
-Bläddra nedåt tills du ser **Utdata**. För **Lagring** väljer du **Azure**. Ange platsen nedan för **filplatsen**. Observera att variabeln `{{timestamp}}` har lagts till i filnamnet, som används för att säkerställa att alla filer som genereras har ett unikt namn. Ange även **Type** som **vnd.adobe.photoshop**. Klicka på **OK**.
-
-`{{1.AZURE_STORAGE_URL}}/{{1.AZURE_STORAGE_CONTAINER}}/citisignal-fiber-changed-text-{{timestamp}}.psd{{1.AZURE_STORAGE_SAS_WRITE}}`
-
-![WF Fusion](./images/wffc46.png)
+![WF Fusion](./images/wffc41a.png)
 
 Klicka på **Spara** för att spara ändringarna.
 
@@ -369,9 +363,13 @@ Du borde se det här då. Klistra in nyttolasten nedan i **Body**.
 
 ![WF Fusion](./images/wffc51.png)
 
-Kopiera och klistra in variabeln `{{XX.data[]._links.renditions[].href}}` och ersätt **XX** med sekvensnumret för den sista **Adobe Photoshop - Redigera textlager** -modulen, som i det här fallet är **25**. Aktivera kryssrutan för **Visa avancerade inställningar** och klicka sedan på **Lägg till objekt**.
+Kopiera och klistra in variabeln `{{XX.data[]._links.renditions[].href}}` och ersätt **XX** med sekvensnumret för den sista **Adobe Photoshop - Redigera textlager** -modulen, som i det här fallet är **30**.
 
 ![WF Fusion](./images/wffc52.png)
+
+Aktivera kryssrutan för **Visa avancerade inställningar** och klicka sedan på **Lägg till objekt**.
+
+![WF Fusion](./images/wffc52b.png)
 
 Ange `Content-Type` i fältet **Nyckel**. Ange `application/json` i fältet **Värde**. Klicka på **Lägg till**.
 
