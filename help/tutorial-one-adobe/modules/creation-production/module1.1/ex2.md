@@ -6,9 +6,9 @@ level: Beginner
 jira: KT-5342
 doc-type: tutorial
 exl-id: 5f9803a4-135c-4470-bfbb-a298ab1fee33
-source-git-commit: da6917ec8c4e863e80eef91280e46b20816a5426
+source-git-commit: e7f83f362e5c9b2dff93d43a7819f6c23186b456
 workflow-type: tm+mt
-source-wordcount: '1438'
+source-wordcount: '1918'
 ht-degree: 0%
 
 ---
@@ -17,11 +17,47 @@ ht-degree: 0%
 
 Lär dig hur du optimerar din Firefly-process med Microsoft Azure och försignerade URL:er.
 
-## 1.1.2.1 Skapa en Azure-prenumeration
+## 1.1.2.1 Vad är försignerade URL:er?
+
+En försignerad URL är en URL som ger dig tillfällig åtkomst till ett specifikt objekt på en lagringsplats. Med hjälp av URL:en kan en användare till exempel antingen LÄSA objektet eller SKRIVA ett objekt (eller uppdatera ett befintligt objekt). URL:en innehåller specifika parametrar som anges av programmet.
+
+När det gäller att skapa automatisering i innehållsförsörjningskedjan finns det ofta flera filåtgärder som måste utföras för ett visst ändamål. Till exempel kan bakgrunden i en fil behöva ändras, texten i olika lager kan behöva ändras osv. Det är inte alltid möjligt att utföra alla filåtgärder samtidigt, vilket skapar ett behov av en strategi i flera steg. Efter varje steg är utdata sedan en temporär fil som behövs för nästa steg som ska köras. När nästa steg är klart förlorar den temporära filen snabbt värde och behövs ofta inte längre, så den bör tas bort.
+
+Adobe Firefly Services har för närvarande stöd för dessa domäner:
+
+- Amazon AWS: *.amazonaws.com
+- Microsoft Azure: *.windows.net
+- Dropbox: *.dropboxusercontent.com
+
+Orsaken till att molnlagringslösningar används ofta är att de mellanliggande resurserna som skapas snabbt förlorar värde. Det problem som löses av försignerade URL:er löses ofta bäst med en lagringslösning för produkter, som vanligtvis är en av de ovanstående molntjänsterna.
+
+Inom Adobe ekosystem finns det också lagringslösningar som Frame.io, Workfront Fusion och Adobe Experience Manager Assets. Dessa lösningar har också stöd för försignerade URL:er, så det blir ofta ett val som måste göras under implementeringen. Valet baseras då ofta på en kombination av redan tillgängliga program och lagringskostnad.
+
+Därför används försignerade URL:er i kombination med Adobe Firefly Services-åtgärder eftersom:
+
+- många gånger behöver man bearbeta olika ändringar av samma bild i mellanliggande steg, och mellanlagring krävs för att göra detta möjligt.
+- åtkomst till läsning och skrivning från molnlagringsplatser bör vara säker och i en serversidesmiljö går det inte att logga in manuellt, så säkerheten måste bakas direkt till webbadressen.
+
+En försignerad URL använder tre parametrar för att begränsa användarens åtkomst:
+
+- Lagringsplats: detta kan vara en AWS S3-bucketplats, en Microsoft Azure-lagringskontoplats med behållare
+- Filnamn: den specifika fil som ska läsas, uppdateras, tas bort.
+- Frågesträngsparameter: en frågesträngsparameter börjar alltid med ett frågetecken och följs av en komplex serie med parametrar
+
+Exempel:
+
+- **Amazon AWS**: `https://bucket.s3.eu-west-2.amazonaws.com/image.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AXXXXXXXXXX%2Feu-west-2%2Fs3%2Faws4_request&X-Amz-Date=20250510T171315Z&X-Amz-Expires=1800&X-Amz-Signature=XXXXXXXXX&X-Amz-SignedHeaders=host`
+- **Microsoft Azure**: `https://storageaccount.blob.core.windows.net/container/image.png?sv=2023-01-03&st=2025-01-13T07%3A16%3A52Z&se=2026-01-14T07%3A16%3A00Z&sr=b&sp=r&sig=XXXXXX%3D`
+
+## 1.1.2.2 Skapa en Azure-prenumeration
 
 >[!NOTE]
 >
 >Om du redan har en befintlig Azure-prenumeration kan du hoppa över det här steget. Fortsätt med nästa övning i så fall.
+
+>[!NOTE]
+>
+>Om du följer den här självstudiekursen som en del av en personlig guidad workshop eller en guidad on-demand-utbildning har du troligen redan tillgång till ett Microsoft Azure Storage-konto. I så fall behöver du inte skapa ett eget konto - använd det konto som du fått som en del av kursen.
 
 Gå till [https://portal.azure.com](https://portal.azure.com){target="_blank"} och logga in med ditt Azure-konto. Om du inte har någon, använd din personliga e-postadress för att skapa ditt Azure-konto.
 
@@ -43,7 +79,7 @@ När prenumerationen är klar är du redo att gå.
 
 ![Azure Storage](./images/06azuresubscriptionok.png){zoomable="yes"}
 
-## 1.1.2.2 Skapa Azure Storage-konto
+## 1.1.2.3 Skapa Azure Storage-konto
 
 Sök efter `storage account` och välj sedan **Lagringskonton**.
 
@@ -85,7 +121,7 @@ Behållaren är nu klar att användas.
 
 ![Azure Storage](./images/azs9.png){zoomable="yes"}
 
-## 1.1.2.3 Installera Azure Storage Explorer
+## 1.1.2.4 Installera Azure Storage Explorer
 
 [Hämta Microsoft Azure Storage Explorer för att hantera dina filer](https://azure.microsoft.com/en-us/products/storage/storage-explorer#Download-4){target="_blank"}. Välj rätt version för ditt specifika operativsystem, hämta och installera det.
 
@@ -127,7 +163,7 @@ Ditt lagringskonto visas under **Lagringskonton**.
 
 ![Azure Storage](./images/az18.png){zoomable="yes"}
 
-## 1.1.2.4 Manuell filöverföring och användning av en bildfil som formatreferens
+## 1.1.2.5 Manuell filöverföring och användning av en bildfil som formatreferens
 
 Överför en bildfil eller [den här filen](./images/gradient.jpg){target="_blank"} till behållaren.
 
@@ -166,7 +202,7 @@ En annan bild visas med `horses in a field`, men den här gången liknar stilen 
 
 ![Azure Storage](./images/az26.png){zoomable="yes"}
 
-## 1.1.2.5 Programmatisk filöverföring
+## 1.1.2.6 Programmatisk filöverföring
 
 Om du vill använda programmatisk filöverföring med Azure Storage-konton måste du skapa en ny **SAS**-token (Shared Access Signature) med behörighet att skriva en fil.
 
@@ -247,7 +283,7 @@ I Azure Storage Explorer uppdateras innehållet i din mapp och den nyligen över
 
 ![Azure Storage](./images/az38.png){zoomable="yes"}
 
-## 1.1.2.6 Programmatisk filanvändning
+## 1.1.2.7 Programmatisk filanvändning
 
 Om du vill läsa filer från Azure Storage-konton programmatiskt på lång sikt måste du skapa en ny **SAS**-token (Shared Access Signature) med behörighet att läsa en fil. Tekniskt sett kan du använda den SAS-token som skapades i föregående övning, men det är bäst att ha en separat token med bara **läsbehörighet** och en separat token med endast **skrivbehörighet**.
 
