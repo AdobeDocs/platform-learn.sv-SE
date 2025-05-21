@@ -9,22 +9,18 @@ duration: 262
 last-substantial-update: 2025-02-27T00:00:00Z
 jira: KT-16731
 exl-id: a61a83fe-76af-4b29-95ee-2fdb9b6bc096
-source-git-commit: 90671959b653e120f93bca216a4da116a8f1c3bb
+source-git-commit: 837c9b4386fbca106db313ee4e27fc7b69ea54ff
 workflow-type: tm+mt
-source-wordcount: '208'
+source-wordcount: '183'
 ht-degree: 0%
 
 ---
 
 # Översikt över regler för länkning av identitetsdiagram
 
->[!AVAILABILITY]
->
->Regler för länkning av identitetsdiagram är för närvarande begränsade. Kontakta ditt Adobe-kontoteam för information om hur du får tillgång till funktionen i utvecklingssandlådor.
+Få en översikt över hur regler för länkning av identitetsdiagram hjälper dataarkitekter att bibehålla korrekta kundprofiler och förhindra att diagram komprimeras. Mer information finns i [dokumentationen om att länka regler för identitetsdiagram](https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/identity-graph-linking-rules/overview).
 
-Få en översikt över hur regler för länkning av identitetsdiagram hjälper dataarkitekter att bibehålla korrekta kundprofiler och förhindra att diagram komprimeras. Mer information finns i [dokumentationen om att länka regler för identitetsdiagram](https://experienceleague.adobe.com/sv/docs/experience-platform/identity/features/identity-graph-linking-rules/overview).
-
->[!VIDEO](https://video.tv.adobe.com/v/3448276/?learn=on&enablevpops&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3448250/?learn=on&enablevpops)
 
 ## Konfiguration
 
@@ -41,7 +37,7 @@ Lär dig hur du simulerar och tillämpar dina regler.
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="graph-simulation.md" title="Länkningsregler för identitetsdiagram - diagramsimulering" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444047/?format=jpeg&nocache=1747355376342&captions=swe" alt="Länkningsregler för identitetsdiagram - diagramsimulering"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444032/?format=jpeg&nocache=1747355376342" alt="Länkningsregler för identitetsdiagram - diagramsimulering"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
