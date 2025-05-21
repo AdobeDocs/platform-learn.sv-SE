@@ -6,16 +6,31 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 52385c33-f316-4fd9-905f-72d2d346f8f5
-source-git-commit: e7f83f362e5c9b2dff93d43a7819f6c23186b456
+source-git-commit: e22ec4d64c60fdc720896bd8b339f49b05d7e48d
 workflow-type: tm+mt
-source-wordcount: '2596'
+source-wordcount: '3182'
 ht-degree: 0%
 
 ---
 
 # 1.1.1 Komma igång med Firefly Services
 
-Lär dig hur du använder Postman och Adobe I/O för att hämta Adobe Firefly Services API:er.
+Firefly Services innehåller **Firefly API:er**, **Lightroom API:er**, **Photoshop API:er**, **InDesign API:er** och **innehållstaggnings-API:er**.
+
+Dessa API:er kombinerar kraften i Adobe kreativa verktyg som Photoshop och Lightroom med avancerade AI/ML-funktioner som Content Tagging, Generative Fill, Text to Image med flera.
+
+Med Firefly Services skapar du inte bara - du automatiserar, skalar innehållsproduktionen och använder den senaste AI/ML-tekniken för att snabba upp arbetsflödena.
+
+I den här övningen får du lära dig hur du använder Postman och Adobe I/O för att arbeta med de olika Adobe Firefly Services API:erna.
+
+Den här övningen fokuserar särskilt på Firefly API:er, som:
+
+- **Firefly Generate Images API**: detta API används för att generera bilder med Firefly Models
+- **Firefly Generera API för liknande bilder**: detta API används för genererade bilder som liknar en befintlig bild
+- **Firefly Expandera bild-API**: det här API:t används för att expandera en befintlig bild till ett större proportioner/en större storlek
+- **Firefly Fill Image API**: detta API fyller i ett område i en befintlig bild baserat på bilder som Firefly genererar baserat på uppmaningen. Detta uppnås med en mask som definierar det område som behöver fyllas.
+- **Firefly Generate Object Composite API**: Med detta API kan du själv tillhandahålla en indatabild, som sedan kombinerar din bild med bilder som genererats av Firefly för att skapa en sammansatt bild eller en scen.
+- **Firefly API för anpassade modeller**: Med det här API:t kan du arbeta med egna anpassade Firefly-modeller för att generera nya bilder baserat på din anpassade Firefly-modell
 
 ## Förutsättningar för 1.1.1.1
 
@@ -216,7 +231,7 @@ I nästa övning ska du göra liknande saker med Firefly Services, men sedan med
 
 ## 1.1.1.5 Adobe I/O - access_token
 
-I samlingen **Adobe IO - OAuth** markerar du begäran **POST - Get Access Token** och väljer **Skicka**. Svaret ska innehålla en ny **accestoken**.
+I samlingen **Adobe IO - OAuth** markerar du begäran **POST - Get Access Token** och väljer **Skicka**. Svaret ska innehålla en ny **access_token**.
 
 ![Postman](./images/ioauthresp.png)
 
@@ -224,13 +239,26 @@ I samlingen **Adobe IO - OAuth** markerar du begäran **POST - Get Access Token*
 
 Nu när du har en giltig och ny åtkomsttoken kan du skicka din första begäran till Firefly Services API:er.
 
-Välj begäran **POST - Firefly - T2I V3** i samlingen **FF - Firefly Services Tech Insiders** . Gå till **Body** och verifiera uppmaningen. Klicka på **Skicka**.
-
 Den begäran som du använder här är en **synkron**-begäran som ger dig ett svar som innehåller den begärda bilden inom några sekunder.
 
 >[!NOTE]
 >
 >I och med lanseringen av Firefly Image 4 och Image 4 Ultra kommer synkrona begäranden att tas bort till förmån för asynkrona begäranden. Du hittar övningar på asynkrona förfrågningar längre ned i den här självstudien.
+
+Välj begäran **POST - Firefly - T2I V3** i samlingen **FF - Firefly Services Tech Insiders** . Gå till **Sidhuvuden** och verifiera kombinationerna av nyckel/värde-par.
+
+| Nyckel | Värde |
+|:-------------:| :---------------:| 
+| `x-api-key` | `{{API_KEY}}` |
+| `Authorization` | `Bearer {{ACCESS_TOKEN}}` |
+
+Båda värdena i den här begäran refererar till miljövariabler som har definierats i förväg. `{{API_KEY}}` refererar till fältet **Klient-ID** i ditt Adobe I/O-projekt. Som en del av avsnittet **Komma igång** i den här självstudiekursen konfigurerade du det i Postman.
+
+Värdet för fältet **Authorization** är lite speciellt: `Bearer {{ACCESS_TOKEN}}`. Den innehåller en referens till **åtkomsttoken** som du skapade i föregående steg. När du fick din **åtkomsttoken** med hjälp av **POST - Get Access Token** i samlingen **Adobe IO - OAuth** kördes ett skript i Postman som lagrade fältet **access_token** som en miljövariabel, som nu hänvisas till i begäran **POST - Firefly - T2I V3**. Observera det specifika tillägget av ordet **Bearer** och ett mellanslag före `{{ACCESS_TOKEN}}`. Ordet bärare är skiftlägeskänsligt och blanksteget krävs. Om detta inte görs korrekt returnerar Adobe I/O ett **401 Unauthorized** -fel eftersom det inte kommer att kunna behandla din **Access-token** korrekt.
+
+![Firefly](./images/ff0.png)
+
+Gå sedan till **Body** och verifiera uppmaningen. Klicka på **Skicka**.
 
 ![Firefly](./images/ff1.png)
 
@@ -400,6 +428,30 @@ Därefter visas statusrapporten för det bildgenereringsjobb som du just har sta
 Du bör då se en hyperrealistisk bild av **hästar i ett fält**.
 
 ![Firefly](./images/ffim4_16.png)
+
+### Negativ fråga
+
+Om du vill begära att Firefly inte ska inkludera något i bilden som ska genereras, kan du inkludera fältet `negativePrompt` när du använder API:t (det här alternativet visas för närvarande inte för användargränssnittet). Om du till exempel inte vill att några blommor ska inkluderas när uppmaningen **hästar i ett fält** körs, kan du ange detta i **Body** i din API-begäran:
+
+```
+"negativePrompt": "no flowers",
+```
+
+Gå till begäran **POST - Firefly - T2I V4** från samlingen **FF - Firefly Services Tech Insiders** och gå till **Body** för begäran. Klistra in texten ovan i texten i begäran. Klicka på **Skicka**.
+
+![Firefly](./images/ffim4_17.png)
+
+Du borde se det här då.
+
+![Firefly](./images/ffim4_18.png)
+
+Om du vill kontrollera statusrapporten för ditt pågående jobb väljer du begäran **GET - Firefly - Hämta statusrapport** i samlingen **FF - Firefly Services Tech Insiders** . Klicka för att öppna den och klicka sedan på **Skicka**. Välj URL-adressen för den genererade bilden och öppna den i webbläsaren.
+
+![Firefly](./images/ffim4_19.png)
+
+Sedan visas den genererade bilden, som inte ska innehålla några blommor.
+
+![Firefly](./images/ffim4_20.png)
 
 ## Nästa steg
 
