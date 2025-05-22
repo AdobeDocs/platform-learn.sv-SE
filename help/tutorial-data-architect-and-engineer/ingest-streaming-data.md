@@ -8,9 +8,9 @@ feature: Data Ingestion
 jira: KT-4348
 thumbnail: 4348-ingest-streaming-data.jpg
 exl-id: 09c24673-af8b-40ab-b894-b4d76ea5b112
-source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
+source-git-commit: e26f2add184031fd95561bd560b24ad73bb73d01
 workflow-type: tm+mt
-source-wordcount: '3082'
+source-wordcount: '3042'
 ht-degree: 0%
 
 ---
@@ -418,7 +418,14 @@ Nu när vi har hämtat CRM-ID-värdet måste vi associera det med ett särskilt 
 
 1. Som **[!UICONTROL ID]** markerar du ikonen för att öppna det modala dataelementet och väljer `CRM Id` -dataelementet
 1. Som **[!UICONTROL Authenticated State]** väljer du **[!UICONTROL Authenticated]**
-1. Lämna **[!UICONTROL Primary]** _omarkerad_. Eftersom CRM-ID:t inte finns för de flesta besökare på Luma-webbplatsen vill du definitivt _inte åsidosätta ECID:t som primär identifierare_. Det skulle vara sällsynt att använda något annat än ECID som primär identifierare. Vanligtvis anger jag inte standardinställningarna i dessa instruktioner, men jag ringer upp den här för att hjälpa dig att undvika problem senare i din egen implementering.
+1. Kontrollera **[!UICONTROL Primary]**
+
+   >[!TIP]
+   >
+   > Adobe rekommenderar att du skickar identiteter som representerar en person, till exempel `Luma CRM Id`, som [!UICONTROL primary]-identitet.
+   >
+   > Om identitetskartan innehåller personidentifieraren (till exempel `Luma CRM Id`) blir personidentifieraren [!UICONTROL primary]-identiteten. Annars blir `ECID` [!UICONTROL primary]-identiteten.
+
 1. Välj knappen **[!UICONTROL Save to Library]** (`Luma Platform Tutorial` bör fortfarande vara ditt arbetsbibliotek)
    ![Lägg till CRM-ID i identitetskartelementet](assets/websdk-property-dataElement-identityMap.png)
 
