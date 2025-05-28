@@ -18,7 +18,7 @@ ht-degree: 1%
 
 # AI-assistenten
 
-Läs om vad du kan göra med AI Assistant i Adobe Experience Platform-baserade program som Real-Time Customer Data Platform, Journey Optimizer och Customer Journey Analytics. Mer information finns i [dokumentationen för AI-assistenten](https://experienceleague.adobe.com/en/docs/experience-platform/ai-assistant/home).
+Läs om vad du kan göra med AI Assistant i Adobe Experience Platform-baserade program som Real-Time Customer Data Platform, Journey Optimizer och Customer Journey Analytics. Mer information finns i [dokumentationen för AI-assistenten](https://experienceleague.adobe.com/sv/docs/experience-platform/ai-assistant/home).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3429845/?learn=on&enablevpops)
 
