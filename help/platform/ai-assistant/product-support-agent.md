@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Product Support Agent är en AI-agent som alltid kan hjälpa dig att lösa kundvårdsproblem genom att utnyttja en mängd olika kunskapskällor från Adobe expertsupportteam och till och med dina egna data så att du kan felsöka i dina arbetsflöden. Om du behöver ytterligare hjälp kan en supporttekniker skapa ett supportärende med detaljerad sammanhangsbaserad information, vilket avsevärt minskar tiden och arbetet som krävs för att skapa supportärenden.
 
->[!VIDEO](https://video.tv.adobe.com/v/3443183/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3443187/?learn=on&enablevpops&captions=swe)
