@@ -4,9 +4,9 @@ description: Foundation - kundprofil i realtid - Skapa en målgrupp - användarg
 kt: 5342
 doc-type: tutorial
 exl-id: 4870ea42-810b-400b-8285-ab1f89c6a018
-source-git-commit: 3d61d91111d8693ab031fbd7b26706c02818108c
+source-git-commit: 9c4d585d99920f0cdfd9de083c3f020f0d8171ab
 workflow-type: tm+mt
-source-wordcount: '695'
+source-wordcount: '707'
 ht-degree: 2%
 
 ---
@@ -31,7 +31,7 @@ Välj **Skapa regel** och klicka på **Skapa**.
 
 ![Segmentering](./images/menusegbr.png)
 
-När du är i det nya målgruppsverktyget lägger du omedelbart märke till menyalternativet **Attribut** och referensen **XDM Individual Profile** .
+När du är i målgruppsverktyget lägger du omedelbart märke till menyalternativet **Attribut** och referensen **XDM Individual Profile** .
 
 ![Segmentering](./images/segmentationui.png)
 
@@ -83,6 +83,10 @@ Jämförelseparametern ska vara **lika med** och i indatafältet anger du **iPho
 
 ![Segmentering](./images/pv.png)
 
+Ange tidsvillkoret för ditt segment till **Under de senaste 24 timmarna**.
+
+![Segmentering](./images/pv1.png)
+
 Varje gång du lägger till ett element i målgruppsverktyget kan du klicka på knappen **Uppdatera uppskattning** för att få en ny uppskattning av målgruppspopulationen.
 
 Hittills har ni bara använt användargränssnittet för att skapa er målgrupp, men det finns också ett kodalternativ för att skapa en målgrupp.
@@ -102,7 +106,7 @@ Du kan också förhandsgranska ett exempel på kundprofiler som är en del av de
 ![Segmentering](./images/previewprofilesdtl.png)
 
 Äntligen får ni ett namn
-Ange **Utvärderingsmetoden** till **Direktuppspelning** och klicka på **Publicera**.
+Ange **Utvärderingsmetoden** till **Edge** och klicka på **Publicera**.
 
 Använd följande som namnkonvention:
 

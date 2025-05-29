@@ -4,9 +4,9 @@ description: Foundation - Installation av Adobe Experience Platform Data Collect
 kt: 5342
 doc-type: tutorial
 exl-id: 1f5dd730-d84a-4d3a-b5ef-2be3e089c7fd
-source-git-commit: 3d61d91111d8693ab031fbd7b26706c02818108c
+source-git-commit: 9c4d585d99920f0cdfd9de083c3f020f0d8171ab
 workflow-type: tm+mt
-source-wordcount: '505'
+source-wordcount: '561'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,13 @@ Adobe Experience Platform Data Collection används av varumärken för ett antal
 
 ## Utforska användargränssnittet
 
-Gå till [Adobe Experience Platform datainsamling](https://experience.adobe.com/#/data-collection/).
+Gå till [Adobe Experience Platform datainsamling](https://experience.adobe.com/#/data-collection/). Kontrollera att du använder rätt miljö, som bör vara `--aepImsOrgName--`.
+
+>[!NOTE]
+>
+>Den här självstudiekursen dokumenteras med miljön **Experience Platform International**. Ditt miljönamn är troligtvis annorlunda, så när du ser namnet **Experience Platform International** i en skärmbild bör du ersätta det med namnet på din egen miljö, som ska vara `--aepImsOrgName--`.
+
+![Starta egenskapsvyn](./images/launch0.png)
 
 Gå till **Taggar**. Du ser nu vyn **[!UICONTROL Properties]**. Egenskaper som anges här är till för självstudiekurshantering. Dessa egenskaper representerar:
 
@@ -56,8 +62,8 @@ Adobe Experience Platform Data Collection är ett mycket avancerat verktyg som o
 Nedan finns ytterligare information för dem som är intresserade av att förstå Adobe Experience Platform Data Collection.
 
 - [Användarhandbok för Adobe Experience Platform Data Collection](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv)
-- [Implementera Adobe Experience Cloud med Web SDK, självstudiekurs](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html?lang=sv-SE)
-- [Konfigurera användarbehörigheter](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html?lang=sv-SE)
+- [Implementera Adobe Experience Cloud med Web SDK, självstudiekurs](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/overview.html)
+- [Konfigurera användarbehörigheter](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/user-permissions.html)
 - [API-dokumentation](https://developer.adobelaunch.com/api/)
 
 ## Nästa steg

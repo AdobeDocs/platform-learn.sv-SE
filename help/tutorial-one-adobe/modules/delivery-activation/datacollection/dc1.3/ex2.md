@@ -4,9 +4,9 @@ description: Foundation - FAC - Skapa scheman, datamodell och länkar
 kt: 5342
 doc-type: tutorial
 exl-id: 3b999c1a-cf9e-44a3-8fc1-6a070c3aeb24
-source-git-commit: 2beb052927f88e13f42b2af940a637cbc3caa19d
+source-git-commit: 915054a0342a0e5bb003d2fbc73d1540725aa5f0
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: '683'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,7 @@ Klicka på **Modeller** på den vänstra menyn och gå sedan till **Scheman**. K
 
 ![FAC](./images/fdb5.png)
 
-Välj din federerade databas och klicka på **+ Lägg till tabeller**.
+Välj din federerade databas och klicka på **Nästa**.
 
 ![FAC](./images/fdb6.png)
 
@@ -79,7 +79,7 @@ Då ser du det här. Markera de fem tabeller du har skapat i Snowflake tidigare:
 - `--aepUserLdap--_PERSONS`
 - `--aepUserLdap--_USERS`
 
-Klicka på **Lägg till**.
+Klicka på **Nästa**.
 
 ![FAC](./images/fdb7.png)
 
@@ -94,7 +94,7 @@ För varje tabell kan du:
 
 För denna övning behövs inga ändringar.
 
-Klicka på **Skapa**.
+Klicka på **Klar**.
 
 ![FAC](./images/fdb8.png)
 
@@ -106,7 +106,7 @@ Du kommer då att se detta med möjlighet att redigera konfigurationen. Klicka p
 
 ![FAC](./images/fdb10.png)
 
-Sedan visas ett exempel på data.
+Sedan visas ett exempel på data. Dessa data läses in direkt från Snowflake och lagras inte i AEP.
 
 ![FAC](./images/fdb11.png)
 
@@ -136,9 +136,9 @@ Då ser du det här. Klicka på **Spara**.
 
 Nu kan du börja definiera länkar mellan scheman. Om du vill börja definiera en länk måste du klicka på **Skapa länkar**.
 
-![FAC](./images/fdb16.png)
+![FAC](./images/fdb16a.png)
 
-Först definierar vi länken mellan tabellen `--aepUserLdap--_USERS` och `--aepUserLdap--_PERSONS`.
+Först måste du definiera länken mellan tabellen `--aepUserLdap--_USERS` och `--aepUserLdap--_PERSONS`.
 
 Klicka på **Lägg till**.
 
@@ -150,7 +150,9 @@ Du kommer då tillbaka hit. Klicka på **Skapa länkar** om du vill skapa en ann
 
 ![FAC](./images/fdb17.png)
 
-Sedan definierar vi länken mellan tabellen `--aepUserLdap--_HOUSEHOLDS` och `--aepUserLdap--_PERSONS`.
+Därefter måste du definiera länken mellan tabellen `--aepUserLdap--_HOUSEHOLDS` och `--aepUserLdap--_PERSONS`.
+
+Klicka på **Lägg till**.
 
 ![FAC](./images/fdb19.png)
 
@@ -160,10 +162,11 @@ Du kommer då tillbaka hit. Klicka på **Skapa länkar** om du vill skapa en ann
 
 ![FAC](./images/fdb20.png)
 
-Sedan definierar vi länken mellan tabellen `--aepUserLdap--_USERS` och `--aepUserLdap--_MONTHLY_DATA_USAGE`.
+Därefter måste du definiera länken mellan tabellen `--aepUserLdap--_USERS` och `--aepUserLdap--_MONTHLY_DATA_USAGE`.
+
+Klicka på **Lägg till**.
 
 ![FAC](./images/fdb21.png)
-
 
 ### ANVÄNDARE - HUSHÅLL
 
@@ -171,7 +174,9 @@ Du kommer då tillbaka hit. Klicka på **Skapa länkar** om du vill skapa en ann
 
 ![FAC](./images/fdb22.png)
 
-Sedan definierar vi länken mellan tabellen `--aepUserLdap--_USERS` och `--aepUserLdap--_HOUSEHOLDS`.
+Därefter måste du definiera länken mellan tabellen `--aepUserLdap--_USERS` och `--aepUserLdap--_HOUSEHOLDS`.
+
+Klicka på **Lägg till**.
 
 ![FAC](./images/fdb23.png)
 
@@ -181,7 +186,9 @@ Du kommer då tillbaka hit. Klicka på **Skapa länkar** om du vill skapa en ann
 
 ![FAC](./images/fdb24.png)
 
-Sedan definierar vi länken mellan tabellen `--aepUserLdap--_USERS` och `--aepUserLdap--_MOBILE_DATA_USAGE`.
+Därefter måste du definiera länken mellan tabellen `--aepUserLdap--_USERS` och `--aepUserLdap--_MOBILE_DATA_USAGE`.
+
+Klicka på **Lägg till**.
 
 ![FAC](./images/fdb25.png)
 
@@ -189,7 +196,7 @@ Du borde se det här då. Klicka på **Spara**.
 
 ![FAC](./images/fdb26.png)
 
-Din installation i AEP är nu klar. Nu kan ni börja använda era federerade data i en federerad målgruppskomposition.
+Konfigurationen av din Federated Database i Adobe Experience Platform är nu klar. Nu kan ni börja använda era federerade data i en federerad målgruppskomposition.
 
 ## Nästa steg
 
