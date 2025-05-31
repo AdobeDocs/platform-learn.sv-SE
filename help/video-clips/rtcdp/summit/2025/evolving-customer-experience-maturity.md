@@ -20,4 +20,4 @@ ht-degree: 0%
 Utforska crawlning, promenad, körningsramverk för att ta fram data, målgrupper, resor, mått och innehållspersonalisering.
 
 <!-- 85_S651_3442537_240_evolving-customer-experience-maturity -->
->[!VIDEO](https://video.tv.adobe.com/v/3458293/?learn=on&enablevpops=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3460173/?learn=on&enablevpops=true&captions=swe)

@@ -20,4 +20,4 @@ ht-degree: 0%
 Upptäck hur Adobe Experience Platform möjliggör uppkopplade kundresor genom data, innehåll och flerkanalsaktivering.
 
 <!-- 62_S655_3442541_51_adobe-experience-platform-building-connected-customer-journeys -->
->[!VIDEO](https://video.tv.adobe.com/v/3458326/?learn=on&enablevpops=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3459628/?learn=on&enablevpops=true&captions=swe)

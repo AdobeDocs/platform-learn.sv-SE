@@ -20,4 +20,4 @@ ht-degree: 0%
 Utforska de unika funktionerna i Adobe Real-Time CDP Collaboration, inklusive dess marknadsföringsvänliga gränssnitt, interoperabilitet och sekretesscentrerad design.
 
 <!-- 62_OS511_3442426_75_key-differentiators-of-realtime-cdp-collaboration -->
->[!VIDEO](https://video.tv.adobe.com/v/3458280/?learn=on&enablevpops=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3460545/?learn=on&enablevpops=true&captions=swe)

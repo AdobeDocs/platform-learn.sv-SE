@@ -20,4 +20,4 @@ ht-degree: 0%
 Se hur Adobe AI Assistant förenklar målgruppshanteringen, ger insikter och prognostrender för marknadsförare.
 
 <!-- 82_OS512_3442427_158_ai-assistant-boosting-productivity-in-audience-management -->
->[!VIDEO](https://video.tv.adobe.com/v/3458182/?learn=on&enablevpops=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3459598/?learn=on&enablevpops=true&captions=swe)

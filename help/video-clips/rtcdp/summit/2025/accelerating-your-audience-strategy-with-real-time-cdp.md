@@ -20,4 +20,4 @@ ht-degree: 0%
 Lär dig hur ni kan snabba upp er målgruppsstrategi genom att utnyttja Real-Time CDP för att sammanställa data, personalisera upplevelser och öka engagemanget.
 
 <!-- 62_S508_3442517_45_accelerating-your-audience-strategy-with-realtime-cdp -->
->[!VIDEO](https://video.tv.adobe.com/v/3458220/?learn=on&enablevpops=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3459609/?learn=on&enablevpops=true&captions=swe)

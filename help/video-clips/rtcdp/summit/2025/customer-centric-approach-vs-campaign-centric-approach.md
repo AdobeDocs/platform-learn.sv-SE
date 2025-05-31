@@ -20,4 +20,4 @@ ht-degree: 0%
 Lär dig hur ni övergår från en kampanjfokuserad till en kundfokuserad strategi för att få en hållbar tillväxt och förbättra kundupplevelserna.
 
 <!-- 85_S651_3442537_125_customercentric-approach-vs-campaigncentric-approach -->
->[!VIDEO](https://video.tv.adobe.com/v/3458235/?learn=on&enablevpops=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3460102/?learn=on&enablevpops=true&captions=swe)

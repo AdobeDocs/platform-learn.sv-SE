@@ -20,4 +20,4 @@ ht-degree: 0%
 Upptäck hur Adobe använder datadrivna insikter och AJO för att förbättra medlemskaps-introduktion och lojalitet.
 
 <!-- 62_S655_3442541_35_adobes-approach-to-member-onboarding-and-retention -->
->[!VIDEO](https://video.tv.adobe.com/v/3458282/?learn=on&enablevpops=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3459642/?learn=on&enablevpops=true&captions=swe)

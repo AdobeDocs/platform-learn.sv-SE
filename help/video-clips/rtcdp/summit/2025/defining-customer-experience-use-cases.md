@@ -20,4 +20,4 @@ ht-degree: 0%
 Upptäck Adobe ramverk med fem frågor för att definiera användningsfall för kundupplevelser för att anpassa team och få affärsresultat.
 
 <!-- 85_S651_3442537_47_defining-customer-experience-use-cases -->
->[!VIDEO](https://video.tv.adobe.com/v/3458292/?learn=on&enablevpops=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3459784/?learn=on&enablevpops=true&captions=swe)

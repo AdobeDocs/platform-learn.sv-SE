@@ -20,4 +20,4 @@ ht-degree: 0%
 Lär dig den stegvisa processen för att nå ut till målgrupper, samarbeta med utgivare och aktivera kampanjer med Adobe Real-Time CDP Collaboration.
 
 <!-- 62_OS511_3442426_61_how-realtime-cdp-collaboration-works -->
->[!VIDEO](https://video.tv.adobe.com/v/3458278/?learn=on&enablevpops=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3459949/?learn=on&enablevpops=true&captions=swe)

@@ -20,4 +20,4 @@ ht-degree: 0%
 Förstå viktiga aspekter av driftsättningen av Adobe Experience Platform, inklusive styrning, tillväxtplanering och arkitektur.
 
 <!-- 62_S601_3442532_72_key-takeaways-for-deploying-aep-at-scale -->
->[!VIDEO](https://video.tv.adobe.com/v/3458314/?learn=on&enablevpops=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3460518/?learn=on&enablevpops=true&captions=swe)

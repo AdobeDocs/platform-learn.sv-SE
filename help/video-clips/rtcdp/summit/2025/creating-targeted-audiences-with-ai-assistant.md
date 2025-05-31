@@ -20,4 +20,4 @@ ht-degree: 0%
 Se hur AI Assistant hjälper marknadsförare att skapa prediktiva modeller och skapa välriktade målgrupper för kampanjer.
 
 <!-- 62_OS512_3442427_175_creating-targeted-audiences-with-ai-assistant -->
->[!VIDEO](https://video.tv.adobe.com/v/3458186/?learn=on&enablevpops=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3460191/?learn=on&enablevpops=true&captions=swe)

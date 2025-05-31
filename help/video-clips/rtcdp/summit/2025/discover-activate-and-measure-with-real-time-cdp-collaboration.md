@@ -20,4 +20,4 @@ ht-degree: 0%
 Utnyttja kärnfunktionerna i Adobe Real-Time CDP Collaboration: målgruppsidentifiering, säker aktivering och prestandamätning.
 
 <!-- 72_OS511_3442426_179_discover-activate-and-measure-with-realtime-cdp-collaboration -->
->[!VIDEO](https://video.tv.adobe.com/v/3458275/?learn=on&enablevpops=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3460172/?learn=on&enablevpops=true&captions=swe)

@@ -20,4 +20,4 @@ ht-degree: 0%
 Lär dig de bästa sätten att strukturera och kommunicera i Tiger Teams för att förbättra samarbetet och minska ineffektiviteten i AEP-projekt.
 
 <!-- 62_S926_3442625_155_how-to-operate-and-communicate-effectively-in-tiger-teams -->
->[!VIDEO](https://video.tv.adobe.com/v/3458270/?learn=on&enablevpops=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3460215/?learn=on&enablevpops=true&captions=swe)

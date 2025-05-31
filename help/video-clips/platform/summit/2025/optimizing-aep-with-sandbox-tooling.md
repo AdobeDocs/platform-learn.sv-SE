@@ -20,4 +20,4 @@ ht-degree: 0%
 Lär dig använda sandlådeverktyg för att effektivisera arbetsflöden och möjliggöra samarbete mellan team i Adobe Experience Platform.
 
 <!-- 62_S601_3442532_175_optimizing-aep-with-sandbox-tooling -->
->[!VIDEO](https://video.tv.adobe.com/v/3458320/?learn=on&enablevpops=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3460556/?learn=on&enablevpops=true&captions=swe)

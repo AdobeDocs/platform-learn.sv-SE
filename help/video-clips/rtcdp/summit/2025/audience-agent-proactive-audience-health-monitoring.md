@@ -20,4 +20,4 @@ ht-degree: 0%
 Se hur Adobe Audience Agent proaktivt övervakar målgruppens hälsa, identifierar problem och föreslår åtgärdbara lösningar för att optimera engagemanget.
 
 <!-- 65_S653_3442539_53_audience-agent-proactive-audience-health-monitoring -->
->[!VIDEO](https://video.tv.adobe.com/v/3458184/?learn=on&enablevpops=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3459752/?learn=on&enablevpops=true&captions=swe)

@@ -20,4 +20,4 @@ ht-degree: 0%
 Läs om hur Adobe använder enhetliga profiler för att utveckla samarbetet mellan över 70 team och leverera personaliserade upplevelser för Creative Cloud-användare.
 
 <!-- 62_S655_3442541_146_adobes-internal-use-of-unified-profiles-for-creative-cloud -->
->[!VIDEO](https://video.tv.adobe.com/v/3458283/?learn=on&enablevpops=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3459675/?learn=on&enablevpops=true&captions=swe)

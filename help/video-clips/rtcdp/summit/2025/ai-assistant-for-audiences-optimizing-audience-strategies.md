@@ -20,4 +20,4 @@ ht-degree: 0%
 Se hur AI Assistant for Audiences hjälper er att identifiera värdefulla segment, optimera målgruppsstrategier och spara tid.
 
 <!-- 62_S508_3442517_109_ai-assistant-for-audiences-optimizing-audience-strategies -->
->[!VIDEO](https://video.tv.adobe.com/v/3458285/?learn=on&enablevpops=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3459664/?learn=on&enablevpops=true&captions=swe)

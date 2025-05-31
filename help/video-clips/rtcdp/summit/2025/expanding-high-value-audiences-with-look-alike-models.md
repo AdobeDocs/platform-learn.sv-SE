@@ -20,4 +20,4 @@ ht-degree: 0%
 Läs om hur lookalike-målgruppsmodeller i Real-Time CDP hjälper marknadsförare att nå ut bättre genom att identifiera liknande värdefulla kunder.
 
 <!-- 82_OS512_3442427_58_expanding-highvalue-audiences-with-lookalike-models -->
->[!VIDEO](https://video.tv.adobe.com/v/3458190/?learn=on&enablevpops=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3459927/?learn=on&enablevpops=true&captions=swe)

@@ -20,4 +20,4 @@ ht-degree: 0%
 Upptäck hur Adobe prediktiva AI-funktioner i Real-Time CDP hjälper marknadsförare att optimera segmentering, personalisering och målgruppsinsikter.
 
 <!-- 85_OS512_3442427_65_how-ai-enhances-realtime-cdp-with-predictive-insights -->
->[!VIDEO](https://video.tv.adobe.com/v/3458200/?learn=on&enablevpops=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3459960/?learn=on&enablevpops=true&captions=swe)

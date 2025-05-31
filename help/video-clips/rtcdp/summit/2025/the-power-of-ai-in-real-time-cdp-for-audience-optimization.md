@@ -20,4 +20,4 @@ ht-degree: 0%
 Upptäck hur AI Assistant for Audiences i Adobe Real-Time CDP hjälper marknadsförare att optimera målgruppsstrategier med storleksuppskattning, känslighetsbedömning och realtidsinsikter.
 
 <!-- 62_S508_3442517_109_the-power-of-ai-in-realtime-cdp-for-audience-optimization -->
->[!VIDEO](https://video.tv.adobe.com/v/3458207/?learn=on&enablevpops=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3463017/?learn=on&enablevpops=true&captions=swe)

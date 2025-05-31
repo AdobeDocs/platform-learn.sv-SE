@@ -20,4 +20,4 @@ ht-degree: 0%
 Upptäck hur ni effektivt styr data i Adobe Experience Platform med rollbaserade och attributbaserade åtkomstkontroller.
 
 <!-- 62_S601_3442532_118_managing-data-governance-and-access-in-aep -->
->[!VIDEO](https://video.tv.adobe.com/v/3458316/?learn=on&enablevpops=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3460534/?learn=on&enablevpops=true&captions=swe)

@@ -20,4 +20,4 @@ ht-degree: 0%
 Läs om hur ni med Federated Audience Composition kan koppla externa datalager till Real-Time CDP för marknadsföring i nuläget.
 
 <!-- 62_S508_3442517_87_federated-audience-composition-expanding-audience-reach -->
->[!VIDEO](https://video.tv.adobe.com/v/3458295/?learn=on&enablevpops=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3459795/?learn=on&enablevpops=true&captions=swe)

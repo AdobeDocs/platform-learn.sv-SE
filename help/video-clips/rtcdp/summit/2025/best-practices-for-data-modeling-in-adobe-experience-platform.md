@@ -20,4 +20,4 @@ ht-degree: 0%
 Förstå vikten av schemadesign, utbyggbarhet och undvika kostsamma misstag i Adobe Experience Platform.
 
 <!-- 85_S655_3442541_276_best-practices-for-data-modeling-in-adobe-experience-platform -->
->[!VIDEO](https://video.tv.adobe.com/v/3458291/?learn=on&enablevpops=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3460136/?learn=on&enablevpops=true&captions=swe)

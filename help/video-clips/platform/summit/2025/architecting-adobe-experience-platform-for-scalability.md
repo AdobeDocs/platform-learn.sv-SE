@@ -20,4 +20,4 @@ ht-degree: 0%
 Lär dig strukturera Adobe Experience Platform för effektiv implementering, balansera centraliserade och decentraliserade strategier.
 
 <!-- 62_S601_3442532_176_architecting-adobe-experience-platform-for-scalability -->
->[!VIDEO](https://video.tv.adobe.com/v/3458321/?learn=on&enablevpops=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3459708/?learn=on&enablevpops=true&captions=swe)

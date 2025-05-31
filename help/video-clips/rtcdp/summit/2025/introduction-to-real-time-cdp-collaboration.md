@@ -20,4 +20,4 @@ ht-degree: 0%
 Upptäck hur Adobe Real-Time CDP Collaboration förenklar dataröten för marknadsförare, vilket möjliggör smidig identifiering, aktivering och mätning av målgrupper.
 
 <!-- 65_OS511_3442426_34_introduction-to-realtime-cdp-collaboration -->
->[!VIDEO](https://video.tv.adobe.com/v/3458279/?learn=on&enablevpops=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3459969/?learn=on&enablevpops=true&captions=swe)

@@ -20,4 +20,4 @@ ht-degree: 0%
 Förstå de sex faserna i Adobe kompletta process för ärendeaktivering, från idé till optimering.
 
 <!-- 65_S651_3442537_212_endtoend-use-case-activation-process -->
->[!VIDEO](https://video.tv.adobe.com/v/3458248/?learn=on&enablevpops=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3460246/?learn=on&enablevpops=true&captions=swe)
