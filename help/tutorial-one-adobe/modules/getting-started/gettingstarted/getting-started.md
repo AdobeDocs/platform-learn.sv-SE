@@ -4,9 +4,9 @@ description: Komma igång - en Adobe
 kt: 5342
 doc-type: tutorial
 exl-id: 4b85938e-b7ee-4e05-b73d-112917beea08
-source-git-commit: 9169b0f9be7f192fd7e16ddcc2ae32f6a8cca92c
+source-git-commit: a45283bf5263a6de5c2f83f5be35b7d03ce04d7d
 workflow-type: tm+mt
-source-wordcount: '319'
+source-wordcount: '583'
 ht-degree: 0%
 
 ---
@@ -20,13 +20,49 @@ I den här modulen ska du konfigurera allt så att du kan samla in data, få til
 - Lär dig hur du konfigurerar din aktiveringsmiljö
 - Lär dig hur du använder webbplatsen och mobilappen
 
-## Förhandskrav
+## Utbildningsvägar
 
-- Åtkomst till Adobe Experience Platform: [https://experience.adobe.com/platform](https://experience.adobe.com/platform)
-- Åtkomst till Adobe Experience Platform Data Collection: [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/)
-- Åtkomst till demosystemet nästa: [https://dsn.adobe.com](https://dsn.adobe.com)
+### Sökväg: Firefly Services
+
+Om du har registrerat dig för en on-demand-utbildning med fokus på **Adobe Firefly Services** krävs endast följande övningar:
+
+- [Installera Chrome-tillägget för Experience League-dokumentationen](./ex1.md)
+- [Konfigurera ditt Adobe I/O-projekt](./ex6.md)
+- [Alternativ 1: Postman-konfiguration](./ex7.md) ELLER [Alternativ 2: PostBuster-installation](./ex8.md)
+- [Program som ska installeras](./ex9.md)
+
+### Sökväg: Workfront Fusion
+
+Om du har registrerat dig för en on-demand-utbildning med fokus på **Adobe Workfront Fusion** krävs endast följande övningar:
+
+- [Installera Chrome-tillägget för Experience League-dokumentationen](./ex1.md)
+- [Konfigurera ditt Adobe I/O-projekt](./ex6.md)
+- [Alternativ 1: Postman-konfiguration](./ex7.md) ELLER [Alternativ 2: PostBuster-installation](./ex8.md)
+- [Program som ska installeras](./ex9.md)
+
+### Sökväg: AEM CS + EDS
+
+Om du har registrerat dig för en on-demand-utbildning med fokus på **Adobe Experience Manager Cloud Service** och **Edge Delivery Services** krävs endast följande övningar:
+
+- [Installera Chrome-tillägget för Experience League-dokumentationen](./ex1.md)
+- [Program som ska installeras](./ex9.md)
+
+### Sökväg: LIVE, ALL eller AEP + Apps
+
+Om du deltar i ett **live-seminarium**, eller om du har registrerat dig för en on-demand-utbildning som fokuserar på **ALL**, eller om du har registrerat dig för en on-demand-utbildning som fokuserar på **AEP + Apps**, krävs följande övningar:
+
+- [Installera Chrome-tillägget för Experience League-dokumentationen](./ex1.md)
+- [Använd Demo System bredvid för att konfigurera klientegenskapen för Adobe Experience Platform Data Collection](./ex2.md)
+- [Skapa ditt datastream](./ex3.md)
+- [Använda webbplatsen](./ex4.md)
+- [Använda mobilappen](./ex5.md)
+- [Konfigurera ditt Adobe I/O-projekt](./ex6.md)
+- [Alternativ 1: Postman-konfiguration](./ex7.md) ELLER [Alternativ 2: PostBuster-installation](./ex8.md)
+- [Program som ska installeras](./ex9.md)
 
 ## Utövningar
+
+Beroende på vilken inlärningsväg du väljer kommer en del av övningarna nedan att behövas, medan andra kanske inte behövs.
 
 [Installera Chrome-tillägget för Experience League-dokumentationen](./ex1.md)
 
@@ -67,6 +103,10 @@ I den här övningen ska du förbereda din Postman-miljö för interaktion med o
 >Om du är Adobe-anställd följer du instruktionerna för att installera PostBuster!
 
 I den här övningen ska du förbereda din PostBuster-miljö för interaktion med olika Adobe API-slutpunkter
+
+[Program som ska installeras](./ex9.md)
+
+I den här övningen hittar du anvisningar om hur du installerar alla program du behöver på datorn innan du startar självstudiekursen.
 
 ![Tech Insiders](./../../../assets/images/techinsiders.png){width="50px" align="left"}
 

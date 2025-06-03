@@ -4,9 +4,9 @@ description: Komma igång - Adobe I/O
 kt: 5342
 doc-type: tutorial
 exl-id: 00f17d4f-a2c8-4e8e-a1ff-556037a60629
-source-git-commit: 3b6ae4bb4eb2d9f189438dddc461bb0f2a0a9aac
+source-git-commit: a45283bf5263a6de5c2f83f5be35b7d03ce04d7d
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: '661'
 ht-degree: 0%
 
 ---
@@ -32,6 +32,10 @@ Välj sedan **Skapa nytt projekt**.
 ![Adobe I/O Ny integrering](./images/iocomp.png){zoomable="yes"}
 
 ### FIREFLY SERVICES API
+
+>[!IMPORTANT]
+>
+>Beroende på vilken utbildningsväg du valt kanske du inte har tillgång till Firefly Services API. Du har bara åtkomst till Firefly Services API om du är på utbildningsvägen **Firefly**, **Workfront Fusion**, **ALL** eller när du deltar i ett **direktsänt, personligt seminarium**. Du kan hoppa över det här steget om du inte är på någon av dessa inlärningsvägar.
 
 Du borde se det här då. Välj **+ Lägg till i projekt** och välj **API**.
 
@@ -59,6 +63,10 @@ Du borde se det här då.
 
 ### PHOTOSHOP SERVICES API
 
+>[!IMPORTANT]
+>
+>Beroende på vilken utbildningsväg du valt kanske du inte har tillgång till Photoshop Services API. Du har bara åtkomst till Photoshop Services API om du är på utbildningsvägen **Firefly**, **Workfront Fusion**, **ALL** eller när du deltar i ett **direktsänt, personligt seminarium**. Du kan hoppa över det här steget om du inte är på någon av dessa inlärningsvägar.
+
 Välj **+ Lägg till i projekt** och välj sedan **API**.
 
 ![Azure Storage](./images/ps2.png){zoomable="yes"}
@@ -84,6 +92,10 @@ Du borde se det här då.
 ![Adobe I/O Ny integrering](./images/ps7.png){zoomable="yes"}
 
 ### ADOBE EXPERIENCE PLATFORM API
+
+>[!IMPORTANT]
+>
+>Beroende på vilken utbildningsväg du valt kanske du inte har tillgång till Adobe Experience Platform API. Du har bara åtkomst till Adobe Experience Platform API om du är på utbildningsvägen **AEP + appar**, **ALL** eller om du deltar i en **personlig**-workshop. Du kan hoppa över det här steget om du inte är på någon av dessa inlärningsvägar.
 
 Välj **+ Lägg till i projekt** och välj sedan **API**.
 

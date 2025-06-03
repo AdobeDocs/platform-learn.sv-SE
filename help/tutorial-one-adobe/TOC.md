@@ -4,9 +4,9 @@ breadcrumb-title: Omfattande teknisk självstudiekurs för Adobe-program, från 
 hide: true
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-source-git-commit: 3542de25dab9ca0d94928f526060d2fead2e2f34
+source-git-commit: a45283bf5263a6de5c2f83f5be35b7d03ce04d7d
 workflow-type: tm+mt
-source-wordcount: '1154'
+source-wordcount: '1153'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,6 @@ ht-degree: 2%
 + [Översikt över självstudiekursen](/help/tutorial-one-adobe/overview.md)
 + [Innehållsstatus](/help/tutorial-one-adobe/status.md)
 + [Slutförande](/help/tutorial-one-adobe/completion.md)
-+ [Förarbete](/help/tutorial-one-adobe/prework.md)
 
 + Komma igång {#gettingstarted}
    + Komma igång {#gettingstarted}

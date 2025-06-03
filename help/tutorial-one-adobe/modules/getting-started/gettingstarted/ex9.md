@@ -3,16 +3,16 @@ title: Komma igång - Program som ska installeras
 description: Komma igång - Program som ska installeras
 doc-type: multipage-overview
 exl-id: 25f80da8-88c3-4273-962a-476675cf6047
-source-git-commit: e95acadeb7a0438f9be056dd426063ac8abc6bc0
+source-git-commit: a45283bf5263a6de5c2f83f5be35b7d03ce04d7d
 workflow-type: tm+mt
-source-wordcount: '186'
+source-wordcount: '190'
 ht-degree: 0%
 
 ---
 
 # Program som ska installeras
 
-Nedan visas en översikt över det förarbete som behövs innan du går med i en live-workshop.
+Nedan visas en översikt över de program du behöver ha installerade på datorn innan du startar självstudiekursen.
 
 ## Adobe Creative Cloud
 
