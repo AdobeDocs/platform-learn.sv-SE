@@ -3,7 +3,7 @@ title: Lägg till Adobe Experience Platform Identity Service med taggar
 description: Lär dig hur du lägger till tillägget Adobe Experience Platform Identity Service och använder åtgärden Ange kund-ID för att samla in kund-ID:n. Den här lektionen är en del av självstudiekursen Implementera Experience Cloud på webbplatser.
 solution: Data Collection, Experience Cloud Services
 exl-id: f226c171-2bd2-44fa-ae2e-cbfa2fe882f0
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: d73f9b3eafb327783d6bfacaf4d57cf8881479f7
 workflow-type: tm+mt
 source-wordcount: '1847'
 ht-degree: 0%
@@ -12,17 +12,17 @@ ht-degree: 0%
 
 # Lägg till Adobe Experience Platform identitetstjänst
 
-I den här lektionen får du hjälp att följa de steg som krävs för att implementera [Adobe Experience Platform Identity Service-tillägget](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/id-service/overview.html?lang=sv-SE) och skicka kund-ID:n.
+I den här lektionen får du hjälp att följa de steg som krävs för att implementera [Adobe Experience Platform Identity Service-tillägget](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/id-service/overview.html) och skicka kund-ID:n.
 
-[Adobe Experience Platform Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=sv-SE) ställer in ett gemensamt besökar-ID för alla Adobe-lösningar för att driva Experience Cloud-funktioner som målgruppsdelning mellan olika lösningar. Du kan också skicka dina egna kund-ID:n till tjänsten för att möjliggöra målinriktning och integrering mellan olika enheter med CRM-systemet (Customer Relationship Management).
+[Adobe Experience Platform Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html) ställer in ett gemensamt besökar-ID för alla Adobe-lösningar för att driva Experience Cloud-funktioner som målgruppsdelning mellan lösningar. Du kan också skicka dina egna kund-ID:n till tjänsten för att möjliggöra målinriktning och integrering mellan olika enheter med CRM-systemet (Customer Relationship Management).
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch håller på att integreras i Adobe Experience Platform som en serie datainsamlingstekniker. Flera terminologiska förändringar har introducerats i gränssnittet som du bör vara medveten om när du använder det här innehållet:
 >
-> * Platforma launchen (klientsidan) är nu **[[!DNL tags]](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv)**
-> * Platforma launchens serversida är nu **[[!DNL event forwarding]](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=sv-SE)**
-> * Edge-konfigurationer är nu **[[!DNL datastreams]](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=sv-SE)**
+> * Platform Launch (klientsidan) är nu **[[!DNL tags]](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv)**
+> * Platform Launch Server Side is now **[[!DNL event forwarding]](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)**
+> * Edge-konfigurationer är nu **[[!DNL datastreams]](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html)**
 
 ## Utbildningsmål
 
@@ -39,7 +39,7 @@ Du bör redan ha slutfört lektionerna i avsnittet [Konfigurera taggar](create-a
 
 ## Lägg till identitetstjänsttillägget
 
-Eftersom det här är det första tillägget som du lägger till finns det en snabb översikt över tilläggen. Tillägg är en av de viktigaste funktionerna i taggar. Ett tillägg är en integrering som byggts av Adobe, en partner i Adobe eller en Adobe-kund som lägger till nya och oändliga alternativ för de taggar som du kan distribuera på din webbplats. Om du tänker på taggar som ett operativsystem är tillägg de program du installerar så att taggarna kan göra det du behöver för att göra det.
+Eftersom det här är det första tillägget som du lägger till finns det en snabb översikt över tilläggen. Tillägg är en av de viktigaste funktionerna i taggar. Ett tillägg är en integrering som byggts av Adobe, en Adobe-partner eller någon annan Adobe-kund som lägger till nya och oändliga alternativ för de taggar som du kan distribuera på din webbplats. Om du tänker på taggar som ett operativsystem är tillägg de program du installerar så att taggarna kan göra det du behöver för att göra det.
 
 **Lägga till identitetstjänsttillägget**
 
@@ -55,7 +55,7 @@ Eftersom det här är det första tillägget som du lägger till finns det en sn
 
    ![Installera identitetstjänsttillägget](images/idservice-install.png)
 
-1. Observera att ditt organisations-ID för Experience Cloud har identifierats automatiskt.
+1. Observera att ditt Experience Cloud Organization ID automatiskt har identifierats för dig.
 
 1. Lämna alla standardinställningar och klicka på **[!UICONTROL Save to Library and Build]**
 
@@ -90,14 +90,13 @@ Identitetstjänsttillägget är ett av de få taggtillägg som gör en begäran 
    1. Expandera `Cookies` till vänster
    1. Klicka på domänen `https://luma.enablementadobe.com`
    1. Leta efter AMCV_-cookien på höger sida. Du kan se flera saker eftersom du har läst in Luma-webbplatsen med både den hårdkodade taggegenskapen och den har mappats till din egen.
-
       ![Verifiera AMCV_cookie](images/idservice-AMCVCookie.png)
 
-Så ja! Du har lagt till ditt första tillägg! Mer information om konfigurationsalternativen för identitetstjänsten finns i [dokumentationen](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/configurations/function-vars.html?lang=sv-SE).
+Så ja! Du har lagt till ditt första tillägg! Mer information om konfigurationsalternativen för identitetstjänsten finns i [dokumentationen](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/configurations/function-vars.html).
 
 ## Skicka kund-ID:n
 
-Därefter skickar du ett [kund-ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=sv-SE) till identitetstjänsten. På så sätt kan du [integrera CRM](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html?lang=sv-SE) med Experience Cloud och spåra besökare på olika enheter.
+Därefter skickar du ett [kund-ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html) till identitetstjänsten. På så sätt kan du [integrera CRM](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html) med Experience Cloud och spåra besökare på olika enheter.
 
 I den tidigare lektionen [Lägg till dataelement, regler och bibliotek](add-data-elements-rules.md) skapade du ett dataelement och använde det i en regel. Nu ska du använda samma tekniker för att skicka ett kund-ID när besökaren autentiseras.
 
@@ -237,7 +236,7 @@ För att validera ditt arbete loggar du in på Luma-webbplatsen för att bekräf
 
    ![Klicka på Logga in i den översta navigeringen](images/idservice-loginNav.png)
 
-1. Ange `test@adobe.com` som användarnamn
+1. Ange `test@test.com` som användarnamn
 1. Ange `test` som lösenord
 1. Klicka på knappen **[!UICONTROL LOGIN]**
 

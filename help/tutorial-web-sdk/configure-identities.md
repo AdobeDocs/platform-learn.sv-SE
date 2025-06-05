@@ -4,7 +4,7 @@ description: Lär dig hur du konfigurerar identitetsnamnutrymmen som ska använd
 feature: Web SDK,Identities
 jira: KT-15400
 exl-id: 7719dff4-6b30-4fa0-acae-7491c3208f15
-source-git-commit: e0359d1bade01f79d0f7aff6a6e69f3e4d0c3b62
+source-git-commit: d73f9b3eafb327783d6bfacaf4d57cf8881479f7
 workflow-type: tm+mt
 source-wordcount: '644'
 ht-degree: 0%
@@ -15,9 +15,9 @@ ht-degree: 0%
 
 Lär dig hur du konfigurerar identitetsnamnutrymmen som ska användas med Adobe Experience Platform Web SDK.
 
-[Adobe Experience Cloud identitetstjänst](https://experienceleague.adobe.com/sv/docs/id-service/using/home) ställer in ett gemensamt besökar-ID (ECID) för SDK-baserade Adobe-program för att ge Experience Cloud möjligheter, som målgruppsdelning mellan program. Du kan också skicka dina egna kund-ID:n till tjänsten för att möjliggöra målinriktning mellan olika enheter och integrering med andra system, som CRM-systemet (Customer Relationship Management).
+[Adobe Experience Cloud identitetstjänst](https://experienceleague.adobe.com/en/docs/id-service/using/home) ställer in ett gemensamt besökar-ID (ECID) för SDK-baserade Adobe-program för att ge Experience Cloud möjligheter, som målgruppsdelning mellan program. Du kan också skicka dina egna kund-ID:n till tjänsten för att möjliggöra målinriktning mellan olika enheter och integrering med andra system, som CRM-systemet (Customer Relationship Management).
 
-[Adobe Experience Platform identitetstjänst](https://experienceleague.adobe.com/sv/docs/experience-platform/identity/home) (ja, det finns två!) använder ECID:n och kund-ID:n för att generera identitetsdiagram, vilket gör att du kan sammanfoga attribut och beteenden i kundprofiler i realtid.
+[Adobe Experience Platform identitetstjänst](https://experienceleague.adobe.com/en/docs/experience-platform/identity/home) (ja, det finns två!) använder ECID:n och kund-ID:n för att generera identitetsdiagram, vilket gör att du kan sammanfoga attribut och beteenden i kundprofiler i realtid.
 
 >[!NOTE]
 >
@@ -25,7 +25,7 @@ Lär dig hur du konfigurerar identitetsnamnutrymmen som ska användas med Adobe 
 
 >[!NOTE]
 >
-> I demonstrationssyfte kan du i övningarna i den här lektionen fånga identitetsinformationen för en fiktiv kund som är inloggad på [Luma Demo Site](https://luma.enablementadobe.com/content/luma/us/en.html) med hjälp av inloggningsuppgifterna **user: `test@adobe.com` / password: test**.
+> I demonstrationssyfte kan du i övningarna i den här lektionen fånga identitetsinformationen för en fiktiv kund som är inloggad på [Luma Demo Site](https://luma.enablementadobe.com/content/luma/us/en.html) med hjälp av inloggningsuppgifterna **user: `test@test.com` / password: test**.
 
 ## Utbildningsmål
 
@@ -45,7 +45,7 @@ Du måste ha slutfört tidigare lektioner:
 >
 >[Experience Cloud ID-tillägget](https://exchange.adobe.com/apps/ec/100160/adobe-experience-cloud-id-launch-extension) behövs inte när du implementerar Adobe Experience Platform Web SDK eftersom Web SDK JavaScript-biblioteket innehåller tjänstfunktionaliteten för besökar-ID.
 >
-> Om webbplatsen redan använder Experience Cloud ID Service på webbplatsen, antingen via Visitor API eller Experience Cloud ID Service Tag-tillägget, och du vill fortsätta använda det under migreringen till Adobe Experience Platform Web SDK, måste du använda den senaste versionen av Visitor API eller Experience Cloud ID Service Tag-tillägget. Mer information finns i [ID-migrering](https://experienceleague.adobe.com/sv/docs/experience-platform/edge/identity/overview).
+> Om webbplatsen redan använder Experience Cloud ID Service på webbplatsen, antingen via Visitor API eller Experience Cloud ID Service Tag-tillägget, och du vill fortsätta använda det under migreringen till Adobe Experience Platform Web SDK, måste du använda den senaste versionen av Visitor API eller Experience Cloud ID Service Tag-tillägget. Mer information finns i [ID-migrering](https://experienceleague.adobe.com/en/docs/experience-platform/edge/identity/overview).
 
 ## Skapa ett identitetsnamnutrymme
 
@@ -53,7 +53,7 @@ I den här övningen skapar du ett identitetsnamnutrymme för Lumas anpassade id
 
 Titta på den här korta videon om du vill veta mer om din identitet i Adobe Experience Platform innan du börjar övningarna:
 
->[!VIDEO](https://video.tv.adobe.com/v/3432348?learn=on&enablevpops&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/27841?learn=on&enablevpops)
 
 Skapa nu ett namnutrymme för Luma CRM-ID:
 

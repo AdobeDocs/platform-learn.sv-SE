@@ -1,15 +1,15 @@
 ---
-title: Implementera integrering av Experience Cloud med taggar
+title: Implementera Experience Cloud Integrations med taggar
 description: Lär dig hur du validerar integreringen av målgrupper, A4T och kundattribut i din Adobe Experience Cloud-implementering. Den här lektionen är en del av självstudiekursen Implementera Experience Cloud på webbplatser.
 exl-id: 1d02efce-a50a-4f4d-a0cf-eb8275cf0faa
-source-git-commit: 2182441d992aec0602d0955d78aa85407bd770c9
+source-git-commit: d73f9b3eafb327783d6bfacaf4d57cf8881479f7
 workflow-type: tm+mt
 source-wordcount: '1191'
 ht-degree: 0%
 
 ---
 
-# Integrering med Experience Cloud
+# Experience Cloud Integrations
 
 I den här lektionen ska du läsa om de viktigaste integreringarna mellan de lösningar du just implementerat. Den goda nyheten är att genom att komplettera de tidigare lektionerna har du redan implementerat kodaspekterna för integreringarna! Du behöver inte göra något annat i den här lektionen förutom att läsa och validera.
 
@@ -28,12 +28,12 @@ Du bör slutföra alla tidigare lektioner i den här självstudiekursen innan du
 >
 >Det finns många krav på användarbehörigheter, kontokonfigurationer och etableringssteg som krävs för att fullt ut kunna använda dessa integreringar och som ligger utanför kursens räckvidd. Om du inte redan använder dessa integreringar i din nuvarande implementering av Experience Cloud bör du tänka på följande:
 >
->* Granska de fullständiga kraven för [bastjänstintegreringarna](https://experienceleague.adobe.com/sv/docs/core-services/interface/services/getting-started)
->* Granska de fullständiga kraven för [Analytics for Target-integrering](https://experienceleague.adobe.com/sv/docs/target/using/integrate/a4t/before-implement)
+>* Granska de fullständiga kraven för [bastjänstintegreringarna](https://experienceleague.adobe.com/en/docs/core-services/interface/services/getting-started)
+>* Granska de fullständiga kraven för [Analytics for Target-integrering](https://experienceleague.adobe.com/en/docs/target/using/integrate/a4t/before-implement)
 
 ## Målgrupper
 
-[Publiker](https://experienceleague.adobe.com/sv/docs/core-services/interface/services/audiences/overview) ingår i People Core-tjänsten och gör att du kan dela målgrupper mellan olika lösningar. Du kan till exempel skapa en målgrupp i Audience Manager och använda den för att leverera personaliserat innehåll med Target.
+[Publiker](https://experienceleague.adobe.com/en/docs/core-services/interface/services/audiences/overview) ingår i People Core-tjänsten och gör att du kan dela målgrupper mellan olika lösningar. Du kan till exempel skapa en målgrupp i Audience Manager och använda den för att leverera personaliserat innehåll med Target.
 
 De viktigaste kraven för att implementera A4T, som du redan har gjort, är att:
 
@@ -43,7 +43,7 @@ De viktigaste kraven för att implementera A4T, som du redan har gjort, är att:
 
 ### Validera publikintegreringen
 
-Det bästa sättet att validera målgruppsintegreringen är att faktiskt skapa en målgrupp, dela den med en annan lösning och sedan använda den fullt ut i den andra lösningen (t.ex. bekräfta att en besökare som kvalificerar sig för ett AAM kan kvalificera sig för en målaktivitet som är riktad mot det segmentet). Detta ligger dock utanför kursens räckvidd.
+Det bästa sättet att validera målgruppsintegreringen är att bygga en målgrupp, dela den med en annan lösning och sedan använda den fullt ut i den andra lösningen (t.ex. bekräfta att en besökare som kvalificerar sig för ett AAM-segment kan kvalificera sig för en Target-aktivitet som är riktad till det segmentet). Detta ligger dock utanför kursens räckvidd.
 
 Dessa valideringssteg fokuserar på den kritiska delen som visas i implementeringen på klientsidan, besökar-ID:t.
 
@@ -63,7 +63,7 @@ Dessa valideringssteg fokuserar på den kritiska delen som visas i implementerin
 
 1. Du bör nu se fyra förfrågningar på fliken Nätverk i Felsökning - två för Target och två för Analytics
 
-1. Titta på raden med namnet&quot;Experience Cloud Visitor ID&quot;. ID:n i varje begäran från varje lösning ska alltid vara desamma.
+1. Leta i raden med namnet&quot;Experience Cloud Visitor ID&quot;. ID:n i varje begäran från varje lösning ska alltid vara desamma.
 
    ![Bekräfta matchande SDID](images/integrations-matchingECIDs.png)
 
@@ -71,7 +71,7 @@ Dessa valideringssteg fokuserar på den kritiska delen som visas i implementerin
 
 ## Analyser för mål (A4T)
 
-Integreringen [Analytics för Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=sv-SE) gör att du kan använda dina Analytics-data som källa för rapportering av mått i Target.
+Integreringen [Analytics för Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) gör att du kan använda dina Analytics-data som källa för rapportering av mått i Target.
 
 De viktigaste kraven för att implementera A4T, som du redan har gjort, är att:
 
@@ -110,7 +110,7 @@ Om du gör ytterligare Target-begäranden inom omfånget för en sidinläsning (
 
 ## Kundattribut
 
-[Kundattribut](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html?lang=sv-SE) är en del av People Core-tjänsten som gör att du kan överföra data från CRM-databasen (customer relationship management) och använda dem i Adobe Analytics och Adobe Target.
+[Kundattribut](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html) är en del av People Core-tjänsten som gör att du kan överföra data från CRM-databasen (customer relationship management) och använda dem i Adobe Analytics och Adobe Target.
 
 De viktigaste kraven för att implementera kundattribut - som du redan har gjort - är att:
 
@@ -133,7 +133,7 @@ För närvarande är Kund-ID en av de få parametrar som inte visas i Experience
 
    ![Klicka på Logga in överst till höger](images/idservice-loginNav.png)
 
-1. Ange `test@adobe.com` som användarnamn
+1. Ange `test@test.com` som användarnamn
 1. Ange `test` som lösenord
 1. Klicka på knappen **[!UICONTROL LOGIN]**
 
@@ -149,4 +149,4 @@ För närvarande är Kund-ID en av de få parametrar som inte visas i Experience
 
    ![Verifiering av kund-ID för analys](images/integrations-analyticsCustomerIDValidation.png)
 
-[Nästa&quot;Publish your Property&quot; >](publish.md)
+[Nästa&quot;Publicera din egenskap&quot; >](publish.md)

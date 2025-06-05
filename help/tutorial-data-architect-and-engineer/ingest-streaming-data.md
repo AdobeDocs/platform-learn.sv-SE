@@ -8,7 +8,7 @@ feature: Data Ingestion
 jira: KT-4348
 thumbnail: 4348-ingest-streaming-data.jpg
 exl-id: 09c24673-af8b-40ab-b894-b4d76ea5b112
-source-git-commit: e26f2add184031fd95561bd560b24ad73bb73d01
+source-git-commit: d73f9b3eafb327783d6bfacaf4d57cf8881479f7
 workflow-type: tm+mt
 source-wordcount: '3042'
 ht-degree: 0%
@@ -348,7 +348,7 @@ Nu ska vi mappa vårt sidnamn till Web SDK.
 >[!IMPORTANT]
 >
 >För att kunna utföra den här uppgiften måste vi se till att din användare först har tillgång till sandlådan Prod. Om du inte redan har åtkomst till Prod-sandlådan från en annan produktprofil öppnar du snabbt din `Luma Tutorial Platform`-profil och lägger till behörighetsobjektet **[!UICONTROL Sandboxes]** > **[!UICONTROL Prod]**. När du har gjort det kan du göra en SKIFT-omläsning på dataelementsidan för att rensa cachen
->![Lägg till Prod-sandlådan ](assets/websdk-property-permissionToLoadSchema.png)
+>>![Lägg till Prod-sandlådan ](assets/websdk-property-permissionToLoadSchema.png)
 
 På sidan **[!UICONTROL Data Elements]**:
 
@@ -451,7 +451,7 @@ Så här verifierar du att CRM-ID:t nu skickas av Web SDK:
 1. Öppna [Luma-webbplatsen](https://luma.enablementadobe.com/content/luma/us/en.html)
 1. Mappa den till taggegenskapen med hjälp av Felsökning, enligt tidigare instruktioner
 1. Välj länken **Inloggning** längst upp till höger på Luma-webbplatsen
-1. Logga in med inloggningsuppgifterna `test@adobe.com`/`test`
+1. Logga in med inloggningsuppgifterna `test@test.com`/`test`
 1. Kontrollera Experience Platform Web SDK-anropet i felsökaren (**[!UICONTROL Adobe Experience Platform Web SDK]** > **[!UICONTROL Network Requests]** > **[!UICONTROL events]** för den senaste begäran) när du har autentiserats och se `lumaCrmId`:
    ![Verifiera identiteten i felsökaren](assets/websdk-debugger-confirmIdentity.png)
 1. Slå upp användarprofilen med ECID-namnutrymmet och ange ett nytt värde. I profilen visas CRM-ID:t och även lojalitets-ID:t samt profilinformation som namn och telefonnummer. Alla identiteter och data har sammanfogats till en enda kundprofil i realtid!

@@ -4,7 +4,7 @@ description: Lär dig hur du validerar din Platform Web SDK-implementering med A
 feature: Web SDK,Tags,Debugger
 jira: KT-15405
 exl-id: 150bb1b1-4523-4b44-bd4e-6cabc468fc04
-source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
+source-git-commit: d73f9b3eafb327783d6bfacaf4d57cf8881479f7
 workflow-type: tm+mt
 source-wordcount: '1131'
 ht-degree: 0%
@@ -52,7 +52,7 @@ Du är bekant med datainsamlingstaggar och [Luma demo-webbplatsen](https://luma.
 
 Experience Platform Debugger har en cool funktion som gör att du kan ersätta ett befintligt taggbibliotek med ett annat. Den här tekniken är användbar vid validering och gör att vi kan hoppa över många implementeringssteg i den här självstudiekursen.
 
-1. Kontrollera att du har webbplatsen [Luma demo](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"} öppen och välj ikonen för Experience Platform Debugger-tillägget
+1. Kontrollera att du har [webbplatsen för Luma-demo](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"} öppen och välj ikonen för Experience Platform-felsökningstillägget
 1. Felsökaren öppnas och visar information om den hårdkodade implementeringen (du kan behöva läsa in Luma-webbplatsen igen när du har öppnat felsökaren)
 1. Bekräfta att felsökaren är **[!UICONTROL Connected to Luma]** enligt bilden nedan och välj sedan ikonen **[!UICONTROL lock]** för att låsa felsökaren till Luma-webbplatsen.
 1. Välj knappen **[!UICONTROL Sign In]** och logga in på Adobe Experience Cloud med ditt Adobe ID.
@@ -108,7 +108,7 @@ Du kan använda felsökaren för att validera klientsidesbeacons som aktiveras f
 
 Du kan även validera informationen i identitetskartan:
 
-1. Logga in på Luma-webbplatsen med inloggningsuppgifterna `test@adobe.com`/`test`
+1. Logga in på Luma-webbplatsen med inloggningsuppgifterna `test@test.com`/`test`
 
 1. Återgå till [Lumas hemsida](https://luma.enablementadobe.com/content/luma/us/en.html)
 
@@ -143,7 +143,7 @@ Den här typen av begärandeinformation visas också på fliken **Nätverk** i w
 
 Som du lär dig i lektionen [Konfigurera en datastream](configure-datastream.md) skickar Platform Web SDK först data från din digitala egenskap till Platform Edge Network. Sedan gör Platform Edge Network ytterligare serverförfrågningar till motsvarande tjänster som är aktiverade i din datastream. Du kan validera de serverförfrågningar som gjorts av Platform Edge Network med Edge Trace i felsökningsprogrammet.
 
-<!--Furthermore, you can also validate the fully processed payload after it reaches an Adobe application by using [Adobe Experience Platform Assurance](https://experienceleague.adobe.com/sv/docs/experience-platform/assurance/home). -->
+<!--Furthermore, you can also validate the fully processed payload after it reaches an Adobe application by using [Adobe Experience Platform Assurance](https://experienceleague.adobe.com/en/docs/experience-platform/assurance/home). -->
 
 
 ### Aktivera Edge Trace

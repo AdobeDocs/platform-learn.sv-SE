@@ -4,7 +4,7 @@ description: Lär dig hur du samlar in identitetsdata i en mobilapp.
 feature: Mobile SDK,Identities
 jira: KT-14633
 exl-id: cbcd1708-29e6-4d74-be7a-f75c917ba2fa
-source-git-commit: 25f0df2ea09bb7383f45a698e75bd31be7541754
+source-git-commit: d73f9b3eafb327783d6bfacaf4d57cf8881479f7
 workflow-type: tm+mt
 source-wordcount: '779'
 ht-degree: 0%
@@ -35,11 +35,11 @@ I den här lektionen kommer du att:
 
 ## Konfigurera ett anpassat ID-namnutrymme
 
-Identitetsnamnutrymmen är komponenter i [identitetstjänsten](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html?lang=sv-SE) som fungerar som indikatorer för det sammanhang som en identitet relateras till. De särskiljer till exempel värdet `name@email.com` som en e-postadress eller `443522` som ett numeriskt CRM-ID.
+Identitetsnamnutrymmen är komponenter i [identitetstjänsten](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html?lang=en) som fungerar som indikatorer för det sammanhang som en identitet relateras till. De särskiljer till exempel värdet `name@email.com` som en e-postadress eller `443522` som ett numeriskt CRM-ID.
 
 >[!NOTE]
 >
->Mobile SDK genererar en unik identitet i sitt eget namnutrymme med namnet Experience Cloud ID (ECID) när programmet installeras. Detta ECID lagras i beständigt minne på den mobila enheten och skickas med varje träff. ECID tas bort när användaren avinstallerar programmet eller när användaren ställer in den globala sekretessstatusen för Mobile SDK på avanmälan. I exempelappen Luma bör du ta bort och installera om appen för att skapa en ny profil med ett eget unikt ECID.
+>Mobile SDK genererar en unik identitet i sitt eget namnutrymme med namnet Experience Cloud ID (ECID) när appen installeras. Detta ECID lagras i beständigt minne på den mobila enheten och skickas med varje träff. ECID tas bort när användaren avinstallerar programmet eller när användaren anger Mobile SDK globala sekretessstatus som avanmälan. I exempelappen Luma bör du ta bort och installera om appen för att skapa en ny profil med ett eget unikt ECID.
 
 
 Så här skapar du ett nytt identitetsnamnutrymme:
@@ -116,7 +116,7 @@ Du vill uppdatera både standardidentiteten (e-post) och den anpassade identitet
 
 ## Ta bort en identitet
 
-Du kan använda API:t [`Identity.removeIdentity`](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#removeidentity) för att ta bort identiteten från den lagrade identitetskartan på klientsidan. Identitetstillägget slutar skicka identifieraren till Edge Network. Om du använder detta API tas inte identifieraren bort från serversidans identitetsdiagram. Mer information om identitetsdiagram finns i [Visa identitetsdiagram](https://experienceleague.adobe.com/docs/platform-learn/tutorials/identities/view-identity-graphs.html?lang=sv-SE).
+Du kan använda API:t [`Identity.removeIdentity`](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#removeidentity) för att ta bort identiteten från den lagrade identitetskartan på klientsidan. Identitetstillägget slutar skicka identifieraren till Edge Network. Om du använder detta API tas inte identifieraren bort från serversidans identitetsdiagram. Mer information om identitetsdiagram finns i [Visa identitetsdiagram](https://experienceleague.adobe.com/docs/platform-learn/tutorials/identities/view-identity-graphs.html?lang=en).
 
 1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project-navigatorn och lägg till följande kod i funktionen `func removeIdentities(emailAddress: String, crmId: String)`:
 
@@ -125,7 +125,7 @@ Du kan använda API:t [`Identity.removeIdentity`](https://developer.adobe.com/cl
    Identity.removeIdentity(item: IdentityItem(id: emailAddress), withNamespace: "Email")
    Identity.removeIdentity(item: IdentityItem(id: crmId), withNamespace: "lumaCRMId")
    currentEmailId = "testUser@gmail.com"
-   currentCRMId = "112ca06ed53d3db37e4cea49cc45b71e"
+   currentCRMId = "b642b4217b34b1e8d3bd915fc65c4452"
    ```
 
 1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Views]** > **[!DNL General]** > **[!UICONTROL LoginSheet]** i Xcode-projektnavigeraren och sök efter koden som ska köras när du väljer knappen **[!UICONTROL Logout]**. Lägg till följande kod:
@@ -138,9 +138,9 @@ Du kan använda API:t [`Identity.removeIdentity`](https://developer.adobe.com/cl
 
 ## Validera med Assurance
 
-1. Granska avsnittet [Installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
+1. Granska avsnittet [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
 1. I Luma-appen
-   1. Välj fliken **[!UICONTROL Home]** och flytta Assurance-ikonen till vänster.
+   1. Markera fliken **[!UICONTROL Home]** och flytta Assurance-ikonen åt vänster.
    1. Välj Ikonen <img src="assets/login.png" width="15" /> uppifrån till höger.
 
       <img src="./assets/identity1.png" width="300">
@@ -152,7 +152,7 @@ Du kan använda API:t [`Identity.removeIdentity`](https://developer.adobe.com/cl
       <img src="./assets/identity2.png" width="300">
 
 
-1. Sök efter händelsen **[!UICONTROL Edge Identity Update Identities]** från leverantören **[!UICONTROL com.adobe.griffon.mobile]** i kontrollwebbgränssnittet.
+1. Leta i Assurance webbgränssnitt efter händelsen **[!UICONTROL Edge Identity Update Identities]** från leverantören **[!UICONTROL com.adobe.griffon.mobile]**.
 1. Markera händelsen och granska data i objektet **[!UICONTROL ACPExtensionEventData]**. Du bör se de identiteter som du har uppdaterat.
    ![validera identitetsuppdatering](assets/identity-validate-assurance.png)
 
@@ -174,8 +174,8 @@ När du har slutfört stegen i [Experience Platform-lektionen](platform.md) kan 
 
 >[!SUCCESS]
 >
->Du har nu konfigurerat din app för att uppdatera identiteter i Edge Network och (när den har konfigurerats) med Adobe Experience Platform.
+>Du har nu konfigurerat din app för att uppdatera identiteter i Edge Network och (när du konfigurerar den) med Adobe Experience Platform.
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
+>Tack för att du har lagt ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League Community-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796)
 
 Nästa: **[Samla in profildata](profile.md)**

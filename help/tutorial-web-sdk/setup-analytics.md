@@ -1,10 +1,10 @@
 ---
 title: Konfigurera Adobe Analytics med Experience Platform Web SDK
-description: Lär dig hur du konfigurerar Adobe Analytics med Experience Platform Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
+description: Lär dig hur du konfigurerar Adobe Analytics med Experience Platform Web SDK. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 solution: Data Collection, Analytics
 jira: KT-15408
 exl-id: de86b936-0a47-4ade-8ca7-834c6ed0f041
-source-git-commit: a8431137e0551d1135763138da3ca262cb4bc4ee
+source-git-commit: d73f9b3eafb327783d6bfacaf4d57cf8881479f7
 workflow-type: tm+mt
 source-wordcount: '2732'
 ht-degree: 0%
@@ -13,11 +13,11 @@ ht-degree: 0%
 
 # Konfigurera Adobe Analytics med Adobe Experience Platform Web SDK
 
-Lär dig hur du konfigurerar Adobe Analytics med [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/sv/docs/platform-learn/data-collection/web-sdk/overview), skapar taggregler för att skicka data till Adobe Analytics och validerar att Analytics hämtar data som förväntat.
+Lär dig hur du konfigurerar Adobe Analytics med [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/web-sdk/overview), skapar taggregler för att skicka data till Adobe Analytics och validerar att Analytics hämtar data som förväntat.
 
-[Adobe Analytics](https://experienceleague.adobe.com/sv/docs/analytics) är ett branschledande program som gör att du kan förstå dina kunder som människor och styra din verksamhet med kundanalys.
+[Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics) är ett branschledande program som gör att du kan förstå dina kunder som människor och styra din verksamhet med kundanalys.
 
-![Web SDK till Adobe Analytics-diagram](assets/dc-websdk-aa.png)
+![SDK för webben till Adobe Analytics](assets/dc-websdk-aa.png)
 
 ## Utbildningsmål
 
@@ -27,7 +27,7 @@ När lektionen är klar kan du:
 * Ta reda på vilka XDM-standardfält som automatiskt mappas till analysvariabler
 * Ange analysvariabler i dataobjektet
 * Skicka data till en annan rapportserie genom att åsidosätta datastream
-* Validera Adobe Analytics-variabler med Felsökning och Assurance
+* Validera Adobe Analytics-variabler med Debugger och Assurance
 
 ## Förhandskrav
 
@@ -35,19 +35,19 @@ För att slutföra lektionen måste du först:
 
 * Bekanta dig med och få tillgång till Adobe Analytics.
 
-* Ha minst ett test-/dev-rapportpaket-ID. Om du inte har någon test-/dev-rapportsserie som du kan använda för den här självstudiekursen [skapar du en](https://experienceleague.adobe.com/sv/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite).
+* Ha minst ett test-/dev-rapportpaket-ID. Om du inte har någon test-/dev-rapportsserie som du kan använda för den här självstudiekursen [skapar du en](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite).
 
 * Slutför de tidigare lektionerna i avsnitten Inledande konfiguration och Tagginställningar i den här självstudien.
 
 ## Konfigurera datastream
 
-Platform Web SDK skickar data från din webbplats till Platform Edge Network. Din datastream talar sedan om för Platform Edge Network till vilken Adobe Analytics-rapport säger att dina data ska skickas.
+Platform Web SDK skickar data från er webbplats till Platform Edge Network. Din datastream talar sedan om för Platform Edge Network till vilken Adobe Analytics-rapport säger att dina data ska skickas.
 
 1. Gå till gränssnittet [Datainsamling](https://experience.adobe.com/#/data-collection){target="blank"}
 1. Välj **[!UICONTROL Datastreams]** i den vänstra navigeringen
 1. Markera den tidigare skapade `Luma Web SDK: Development Environment`-datastream
 
-   ![Välj Luma Web SDK-datastream](assets/datastream-luma-web-sdk-development.png)
+   ![Markera dataströmmen för Luma Web SDK](assets/datastream-luma-web-sdk-development.png)
 
 1. Välj **[!UICONTROL Add Service]**
    ![Lägg till en tjänst i datastream](assets/datastream-analytics-addService.png)
@@ -74,15 +74,15 @@ Det finns flera sätt att ställa in Analytics-variabler i en Web SDK-implemente
 1. Mappa XDM-fält till Analytics-variabler i Analytics-bearbetningsregler (rekommenderas inte längre).
 1. Mappa till Analytics-variabler direkt i XDM-schemat (rekommenderas inte längre).
 
-Från maj 2024 behöver du inte längre skapa ett XDM-schema för att implementera Adobe Analytics med Platform Web SDK. Objektet `data` (och dataelementet `data.variable` som du skapade i lektionen [Skapa dataelement](create-data-elements.md)) kan användas för att ställa in alla anpassade Analytics-variabler. Att ställa in dessa variabler i dataobjektet kommer att kännas bekant för befintliga analyskunder, är mer effektivt än att använda gränssnittet för bearbetningsregler och förhindrar att onödiga data tar upp utrymme i kundprofiler i realtid (viktigt om du har Real-time Customer Data Platform eller Journey Optimizer).
+Från maj 2024 behöver du inte längre skapa ett XDM-schema för att implementera Adobe Analytics med Platform Web SDK. Objektet `data` (och dataelementet `data.variable` som du skapade i lektionen [Skapa dataelement](create-data-elements.md)) kan användas för att ställa in alla anpassade Analytics-variabler. Att ställa in dessa variabler i dataobjektet kommer att kännas bekant för befintliga analyskunder, är mer effektivt än att använda gränssnittet för bearbetningsregler och förhindrar att onödiga data tar upp utrymme i kundprofiler i realtid (viktigt om du har Real-Time Customer Data Platform eller Journey Optimizer).
 
 ### Automatiskt mappade fält
 
-Många XDM-fält mappas automatiskt till analysvariabler. Den senaste listan över mappningar finns i [Variabelmappning i Adobe Experience Edge](https://experienceleague.adobe.com/sv/docs/experience-platform/edge/data-collection/adobe-analytics/automatically-mapped-vars).
+Många XDM-fält mappas automatiskt till analysvariabler. Den senaste listan över mappningar finns i [Variabelmappning i Analytics i Adobe Experience Edge](https://experienceleague.adobe.com/en/docs/experience-platform/edge/data-collection/adobe-analytics/automatically-mapped-vars).
 
-Detta inträffar om _även om du inte har definierat ett anpassat schema_. Experience Platform Web SDK samlar automatiskt in vissa data och skickar dem till Platform Edge Network som XDM-fält. Web SDK läser till exempel den aktuella sidans URL och skickar den som XDM-fältet `web.webPageDetails.URL`. Det här fältet vidarebefordras till Adobe Analytics och fyller automatiskt i sidans URL-rapporter i Adobe Analytics.
+Detta inträffar om _även om du inte har definierat ett anpassat schema_. Experience Platform Web SDK samlar automatiskt in vissa data och skickar dem till Platform Edge Network som XDM-fält. Web SDK läser till exempel den aktuella sidans URL och skickar den som XDM-fält `web.webPageDetails.URL`. Det här fältet vidarebefordras till Adobe Analytics och fyller automatiskt i sidans URL-rapporter i Adobe Analytics.
 
-Om du implementerar Web SDK för Adobe Analytics med ett XDM-schema, som du har gjort i den här självstudiekursen, har du några av de XDM-fält som du har anpassat automatiskt mappa till Analytics-variabler, vilket beskrivs i följande tabell:
+Om du implementerar Web SDK för Adobe Analytics med ett XDM-schema, som du har gjort i den här självstudiekursen, har du några av XDM-fälten som du har anpassat automatiskt mappa till Analytics-variabler, vilket beskrivs i följande tabell:
 
 | XDM till Analytics - automappade variabler | Adobe Analytics-variabel |
 |-------|---------|
@@ -106,15 +106,15 @@ De enskilda avsnitten i Analytics-produktsträngen ställs in via olika XDM-vari
 >[!NOTE]
 >
 >Från och med den 18 augusti 2022 prioriterar `productListItems[].SKU` mappning till produktnamnet i variabeln s.products.
->Värdet `productListItems[].name` mappas bara till produktnamnet om `productListItems[].SKU` inte finns. Annars är den omappad och tillgänglig i kontextdata.
->Ange inte en tom sträng eller null till `productListItems[].SKU`. Detta har den oönskade effekten av att mappa till produktnamnet i variabeln s.products.
+>>Värdet `productListItems[].name` mappas bara till produktnamnet om `productListItems[].SKU` inte finns. Annars är den omappad och tillgänglig i kontextdata.
+>>Ange inte en tom sträng eller null till `productListItems[].SKU`. Detta har den oönskade effekten av att mappa till produktnamnet i variabeln s.products.
 
 
 ### Ange variabler i dataobjektet
 
 Men evar, props och händelser då? Vi rekommenderar att du anger variabler i objektet `data` för att ställa in dessa Analytics-variabler med Web SDK. Om du ställer in variabler i dataobjektet kan även alla automatiskt mappade variabler skrivas över.
 
-För det första, vad är objektet `data`? I alla Web SDK-händelser kan du skicka två objekt med anpassade data, `xdm`-objektet och `data`-objektet. Båda skickas till Platform Edge Network, men bara `xdm`-objektet skickas till datauppsättningen Experience Platform. Egenskaper i `data`-objektet kan mappas på Edge till `xdm`-fält med hjälp av dataprep för datainsamling, men skickas annars inte till Experience Platform. Detta gör det till ett idealiskt sätt att skicka data till program som Analytics, som inte är inbyggt i Experience Platform.
+För det första, vad är objektet `data`? I alla Web SDK-händelser kan du skicka två objekt med anpassade data, `xdm`-objektet och `data`-objektet. Båda skickas till Platform Edge Network, men endast objektet `xdm` skickas till Experience Platform datamängd. Egenskaper i `data`-objektet kan mappas på Edge till `xdm`-fält med hjälp av dataprep för datainsamling, men skickas annars inte till Experience Platform. Detta gör det till ett idealiskt sätt att skicka data till program som Analytics, som inte är inbyggt i Experience Platform.
 
 Här är de två objekten i ett generiskt Web SDK-anrop:
 
@@ -300,27 +300,27 @@ Låt oss skapa en regel för att skicka ytterligare ett sidvisningsanrop till en
 
 Lägg till dina uppdaterade regler i `Luma Web SDK Tutorial`-taggbiblioteket och återskapa utvecklingsmiljön.
 
-Grattis! Nästa steg är att validera din Adobe Analytics-implementering via Experience Platform Web SDK.
+Grattis! Nästa steg är att validera Adobe Analytics-implementeringen via Experience Platform Web SDK.
 
 ## Validera Adobe Analytics med felsökning
 
-Lär dig hur du validerar att Adobe Analytics spelar in ECID, sidvisningar, produktsträngar och e-handelshändelser med Edge Trace-funktionen i felsökningsprogrammet för Experience Platform.
+Lär dig hur du validerar att Adobe Analytics spelar in ECID, sidvisningar, produktsträngar och e-handelshändelser med Edge Trace-funktionen i Experience Platform Debugger.
 
-I lektionen [Felsökning](validate-with-debugger.md) lärde du dig att inspektera XDM-begäran på klientsidan med plattformsfelsökaren och webbläsarutvecklarkonsolen, som liknar hur du felsöker en `AppMeasurement.js` -analysimplementering. Du har också lärt dig att validera begäranden på serversidan för Platform Edge Network som skickas till Adobe-program och hur du visar en fullt bearbetad nyttolast med hjälp av Assurance.
+I lektionen [Felsökning](validate-with-debugger.md) lärde du dig att inspektera XDM-begäran på klientsidan med plattformsfelsökaren och webbläsarutvecklarkonsolen, som liknar hur du felsöker en `AppMeasurement.js` -analysimplementering. Du har också lärt dig att validera de Edge Network-begäranden på serversidan som skickas till Adobe-program och hur du visar en fullt bearbetad nyttolast med Assurance.
 
-För att validera att Analytics hämtar in data korrekt via Experience Platform Web SDK måste du gå två steg längre:
+För att validera att Analytics hämtar in data på rätt sätt via Experience Platform Web SDK måste ni gå ytterligare två steg:
 
 1. Validera hur data bearbetas av XDM-objektet på Platform Edge Network med hjälp av Experience Platform Debugger Edge Trace-funktionen
 1. Validera hur data bearbetas fullt ut av Analytics med Adobe Experience Platform Assurance
 
 ### Experience Cloud ID-validering
 
-1. Gå till [demowebbplatsen för luma](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"}
-1. Välj inloggningsknappen högst upp till höger och använd inloggningsuppgifterna u: test@adobe.com p: test to authenticate
-1. Öppna felsökaren i Experience Platform och [växla taggegenskapen på webbplatsen till din egen utvecklingsegenskap](validate-with-debugger.md#use-the-experience-platform-debugger-to-map-to-your-tags-property)
+1. Gå till webbplatsen [Luma demo](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"}
+1. Välj inloggningsknappen högst upp till höger och använd inloggningsuppgifterna u: test@test.com p: test to authenticate
+1. Öppna Experience Platform Debugger och [växla taggegenskapen på webbplatsen till din egen utvecklingsegenskap](validate-with-debugger.md#use-the-experience-platform-debugger-to-map-to-your-tags-property)
 
 
-1. Om du vill aktivera Edge Trace går du till Felsökning i Experience Platform, väljer **[!UICONTROL Logs]** i den vänstra navigeringen, sedan fliken **[!UICONTROL Edge]** och väljer **[!UICONTROL Connect]**
+1. Om du vill aktivera Edge Trace går du till Experience Platform Debugger, i den vänstra navigeringen väljer du **[!UICONTROL Logs]**, sedan fliken **[!UICONTROL Edge]** och väljer **[!UICONTROL Connect]**
 
    ![Anslut Edge Trace](assets/analytics-debugger-edgeTrace.png)
 
@@ -328,7 +328,7 @@ För att validera att Analytics hämtar in data korrekt via Experience Platform 
 
    ![Ansluten Edge Trace](assets/analytics-debugger-edge-connected.png)
 
-1. Uppdatera Luma-sidan och kontrollera felsökaren i Experience Platform igen. Du bör se data som skickats. Raden som börjar med **[!UICONTROL Analytics Automatic Mapping]** är Adobe Analytics-fyren
+1. Uppdatera Luma-sidan och kontrollera Experience Platform Debugger igen. Du bör se data som skickats. Raden som börjar med **[!UICONTROL Analytics Automatic Mapping]** är Adobe Analytics-fyren
 1. Välj att öppna både listrutan `[!UICONTROL mappedQueryParams]` och den andra listrutan för att visa Analytics-variabler
 
    ![Analysfyr för Edge Trace](assets/analytics-debugger-edge-analytics.png)
@@ -338,14 +338,14 @@ För att validera att Analytics hämtar in data korrekt via Experience Platform 
    >Den andra listrutan motsvarar det ID för analysrapportsserie som du skickar data till. Det ska matcha din egen rapportsserie, inte den i skärmbilden.
 
 1. Bläddra ned för att hitta `[!UICONTROL c.a.x.identitymap.ecid.[0].id]`. Det är en kontextdatavariabel som hämtar ECID
-1. Fortsätt rulla nedåt tills du ser variabeln `[!UICONTROL mid]` i Analytics. Båda ID:n överensstämmer med enhetens Experience Cloud ID.
-1. På Lumas webbplats
+1. Fortsätt rulla nedåt tills du ser variabeln `[!UICONTROL mid]` i Analytics. Båda ID:n överensstämmer med din enhets Experience Cloud ID.
+1. På Luma-webbplatsen:
 
    ![Analytics ECID](assets/analytics-debugger-ecid.png)
 
    >[!NOTE]
    >
-   >Eftersom du är inloggad kan du ägna en stund åt att validera att det autentiserade ID:t `112ca06ed53d3db37e4cea49cc45b71e` för användaren **`test@adobe.com`** också har hämtats i `[!UICONTROL c.a.x.identitymap.lumacrmid.[0].id]`
+   >Eftersom du är inloggad kan du ägna en stund åt att validera att det autentiserade ID:t `b642b4217b34b1e8d3bd915fc65c4452` för användaren **`test@test.com`** också har hämtats i `[!UICONTROL c.a.x.identitymap.lumacrmid.[0].id]`
 
 ### Åsidosättningsvalidering av rapportsviten
 
@@ -383,7 +383,7 @@ Eftersom du redan är på en produktsida fortsätter den här övningen att anv�
 
    Edge Trace hanterar `commerce` händelser något annorlunda än `productList` dimensioner. Du ser ingen kontextdatavariabel som har mappats på samma sätt som du ser produktnamnet som har mappats till `[!UICONTROL c.a.x.productlistitem.[0].name]` ovan. I stället visar Edge Trace den slutliga automatiska händelsemappningen i variabeln `event` för analysen. Platform Edge Network mappar den därefter så länge du mappar till rätt XDM `commerce`-variabel medan [schemat för Adobe Analytics](setup-analytics.md#configure-an-xdm-schema-for-adobe-analytics) konfigureras, i det här fallet `commerce.productViews.value=1`.
 
-1. Gå tillbaka till felsökningsfönstret i Experience Platform, rulla ned till variabeln `[!UICONTROL events]`, det är inställt på `[!UICONTROL prodView]`
+1. Gå tillbaka till Experience Platform Debugger-fönstret, bläddra nedåt till variabeln `[!UICONTROL events]`, den är inställd på `[!UICONTROL prodView]`
 
 1. Observera också att `[!UICONTROL c.a.x.eventType]` är inställt på `commerce.productViews` eftersom du är på en produktsida.
 
@@ -428,15 +428,15 @@ Eftersom du redan är på en produktsida fortsätter den här övningen att anv�
 
 ## Validera Adobe Analytics med Assurance
 
-Adobe Experience Platform Assurance hjälper er att inspektera, bevisa, simulera och validera hur ni samlar in data eller levererar upplevelser via er webbplats och mobilapplikation.
+Adobe Experience Platform Assurance hjälper er att inspektera, bevisa, simulera och validera hur ni samlar in data eller levererar upplevelser med er webbplats och mobilapplikation.
 
-I den föregående övningen validerade du att Adobe Analytics spelar in ECID, sidvisningar, produktsträngen och e-handelshändelser med Edge Trace-funktionen i felsökaren för Experience Platform.  Sedan validerar du dessa händelser med Adobe Experience Platform Assurance, ett alternativt gränssnitt för att få tillgång till samma data i Edge Trace.
+I den föregående övningen validerade du att Adobe Analytics spelar in ECID, sidvisningar, produktsträngen och e-handelshändelser med Edge Trace-funktionen i Experience Platform Debugger.  Sedan validerar du dessa händelser med Adobe Experience Platform Assurance, ett alternativt gränssnitt för att få tillgång till samma data i Edge Trace.
 
-Som du lärde dig i lektionen [Assurance](validate-with-assurance.md) finns det flera sätt att initiera en Assurance-session. Eftersom du redan har Adobe Experience Platform Debugger öppet med en Edge Trace-session som initierats från den senaste övningen rekommenderar vi att du får åtkomst till Assurance via Felsökning:
-![Säkerhet via Adobe Experience Platform Data Collection](assets/assurance-open-aep-debugger.png)
+Som du har lärt dig i lektionen [Assurance](validate-with-assurance.md) finns det flera sätt att initiera en Assurance-session. Eftersom du redan har Adobe Experience Platform Debugger öppet med en Edge Trace-session som initierats från den senaste övningen rekommenderar vi att du kommer åt Assurance via Felsökning:
+![Assurance via Adobe Experience Platform Data Collection](assets/assurance-open-aep-debugger.png)
 
-I **[!UICONTROL "Web SDK Tutorial 3"]** Assurance-sessionen anger du **[!UICONTROL "hitdebugger"]** i sökfältet för händelser för att filtrera resultaten till Adobe Analytics Post Bearbetade data.
-![Assurance Adobe Analytics Post Bearbetade data](assets/assurance-hitdebugger.png)
+I **[!UICONTROL "Web SDK Tutorial 3"]** Assurance Session anger du **[!UICONTROL "hitdebugger"]** i sökfältet för händelser för att filtrera resultaten till data som bearbetats efter Adobe Analytics.
+![Assurance Adobe Analytics: Efterbearbetade data](assets/assurance-hitdebugger.png)
 
 ### Experience Cloud ID-validering
 
@@ -444,7 +444,7 @@ Om du vill validera att Adobe Analytics hämtar ECID-numret markerar du en fyr o
 ![ Adobe Analytics-validering med Assurance ](assets/assurance-hitdebugger-payload.png)
 
 Bläddra sedan nedåt till **[!UICONTROL mcvisId]** för att verifiera att ECID:t har hämtats korrekt
-![Experience Cloud ID-validering med Assurance](assets/assurance-hitdebugger-mcvisId.png)
+![ Experience Cloud ID-validering med Assurance ](assets/assurance-hitdebugger-mcvisId.png)
 
 ### Validering av vyer av innehållssidor
 
@@ -454,14 +454,14 @@ Bläddra ned till **[!UICONTROL pageName]** för att verifiera att `Page Name` h
 
 ### Produktsträng och validering av e-handelshändelser
 
-Efter samma valideringsanvändningsfall som användes vid valideringen med Experience Platform Debugger ovan, fortsätter du att använda samma fyr för att validera `Ecommerce Events` och `Product String`.
+Efter samma valideringsanvändningsfall som användes vid valideringen med Experience Platform Debugger ovan kan du fortsätta använda samma fyr för att validera `Ecommerce Events` och `Product String`.
 
 1. Leta efter nyttolast där **[!UICONTROL events]** innehåller `prodView`
    ![Produktsträngsvalidering med Assurance](assets/assurance-hitdebugger-prodView-event.png)
 1. Bläddra ned till **[!UICONTROL product-string]** för att validera `Product String`.
    * Observera `Product SKU` och `Merchandizing eVar1`.
 1. Bläddra nedåt och validera att `prop1`, som du konfigurerade med bearbetningsreglerna i föregående avsnitt, innehåller `Product SKU`\
-   ![Produktsträng med verifiering av variabler vid förmedling med Assurance](assets/assurance-hitdebugger-prodView-productString-merchVar.png)
+   ![Produktsträng med verifiering av variabler för marknadsföring med Assurance](assets/assurance-hitdebugger-prodView-productString-merchVar.png)
 
 Fortsätt att validera implementeringen genom att granska kundvagnen, kassan och köphändelserna.
 
@@ -481,4 +481,4 @@ Grattis! Du lyckades! Det här är slutet av lektionen och nu är du redo att im
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du har lagt ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League diskussionsgruppsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

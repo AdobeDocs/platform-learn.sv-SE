@@ -11,7 +11,7 @@ doc-type: tutorial
 activity: implement
 thumbnail: 4348-create-merge-policies.jpg
 exl-id: ec862bb2-7aa2-4157-94eb-f5af3a94295f
-source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
+source-git-commit: d73f9b3eafb327783d6bfacaf4d57cf8881479f7
 workflow-type: tm+mt
 source-wordcount: '913'
 ht-degree: 0%
@@ -83,7 +83,7 @@ Låt oss se om sammanfogningspolicyn gör vad vi kan förvänta oss:
 1. Gå till fliken **[!UICONTROL Browse]**
 1. Ändra **[!UICONTROL Merge policy]** till din nya `Loyalty Prioritized`-princip
 1. Använd din `Luma CRM Id` som **[!UICONTROL Identity namespace]**
-1. Som **[!UICONTROL Identity value]** använder du `112ca06ed53d3db37e4cea49cc45b71e`
+1. Som **[!UICONTROL Identity value]** använder du `b642b4217b34b1e8d3bd915fc65c4452`
 1. Markera knappen **[!UICONTROL Show profile]**
 1. `Daniel` är tillbaka!
 
@@ -110,7 +110,7 @@ Nu ska vi titta på vad den här sammanfogningspolicyn gör:
 1. Gå till fliken **[!UICONTROL Browse]**
 1. Ändra **[!UICONTROL Merge policy]** till din nya `Loyalty Only`-princip
 1. Använd din `Luma CRM Id` som **[!UICONTROL Identity namespace]**
-1. Som **[!UICONTROL Identity value]** använder du `112ca06ed53d3db37e4cea49cc45b71e`
+1. Som **[!UICONTROL Identity value]** använder du `b642b4217b34b1e8d3bd915fc65c4452`
 1. Markera knappen **[!UICONTROL Show profile]**
 1. Bekräfta att inga profiler hittas:
    ![Lojalitet Endast ingen CRM-ID-sökning.](assets/mergepolicies-loyaltyOnly-noCrmLookup.png)
@@ -140,7 +140,7 @@ Ett viktigt användningsexempel för sammanfogningsprinciper är datastyrning. E
 
 ## Ytterligare resurser
 
-* [Dokumentation för kopplingsprofiler](https://experienceleague.adobe.com/docs/experience-platform/profile/merge-policies/overview.html?lang=sv-SE)
+* [Dokumentation för kopplingsprofiler](https://experienceleague.adobe.com/docs/experience-platform/profile/merge-policies/overview.html)
 * [API-referens för sammanslagningsprinciper (ingår i kundprofils-API:t i realtid)](https://www.adobe.io/experience-platform-apis/references/profile/#tag/Merge-policies)
 
 Låt oss nu gå vidare till [ramverket för datastyrning](apply-data-governance-framework.md).
