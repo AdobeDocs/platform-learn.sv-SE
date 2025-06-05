@@ -12,17 +12,17 @@ ht-degree: 0%
 
 # Lägg till Adobe Experience Platform identitetstjänst
 
-I den här lektionen får du hjälp att följa de steg som krävs för att implementera [Adobe Experience Platform Identity Service-tillägget](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/id-service/overview.html) och skicka kund-ID:n.
+I den här lektionen får du hjälp att följa de steg som krävs för att implementera [Adobe Experience Platform Identity Service-tillägget](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/id-service/overview.html?lang=sv-SE) och skicka kund-ID:n.
 
-[Adobe Experience Platform Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html) ställer in ett gemensamt besökar-ID för alla Adobe-lösningar för att driva Experience Cloud-funktioner som målgruppsdelning mellan lösningar. Du kan också skicka dina egna kund-ID:n till tjänsten för att möjliggöra målinriktning och integrering mellan olika enheter med CRM-systemet (Customer Relationship Management).
+[Adobe Experience Platform Identity Service](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=sv-SE) ställer in ett gemensamt besökar-ID för alla Adobe-lösningar för att driva Experience Cloud-funktioner som målgruppsdelning mellan lösningar. Du kan också skicka dina egna kund-ID:n till tjänsten för att möjliggöra målinriktning och integrering mellan olika enheter med CRM-systemet (Customer Relationship Management).
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch håller på att integreras i Adobe Experience Platform som en serie datainsamlingstekniker. Flera terminologiska förändringar har introducerats i gränssnittet som du bör vara medveten om när du använder det här innehållet:
 >
 > * Platform Launch (klientsidan) är nu **[[!DNL tags]](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv)**
-> * Platform Launch Server Side is now **[[!DNL event forwarding]](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)**
-> * Edge-konfigurationer är nu **[[!DNL datastreams]](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html)**
+> * Platform Launch Server Side is now **[[!DNL event forwarding]](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=sv-SE)**
+> * Edge-konfigurationer är nu **[[!DNL datastreams]](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=sv-SE)**
 
 ## Utbildningsmål
 
@@ -93,11 +93,11 @@ Identitetstjänsttillägget är ett av de få taggtillägg som gör en begäran 
 
       ![Verifiera AMCV_cookie](images/idservice-AMCVCookie.png)
 
-Så ja! Du har lagt till ditt första tillägg! Mer information om konfigurationsalternativen för identitetstjänsten finns i [dokumentationen](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/configurations/function-vars.html).
+Så ja! Du har lagt till ditt första tillägg! Mer information om konfigurationsalternativen för identitetstjänsten finns i [dokumentationen](https://experienceleague.adobe.com/docs/id-service/using/id-service-api/configurations/function-vars.html?lang=sv-SE).
 
 ## Skicka kund-ID:n
 
-Därefter skickar du ett [kund-ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html) till identitetstjänsten. På så sätt kan du [integrera CRM](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html) med Experience Cloud och spåra besökare på olika enheter.
+Därefter skickar du ett [kund-ID](https://experienceleague.adobe.com/docs/id-service/using/reference/authenticated-state.html?lang=sv-SE) till identitetstjänsten. På så sätt kan du [integrera CRM](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html?lang=sv-SE) med Experience Cloud och spåra besökare på olika enheter.
 
 I den tidigare lektionen [Lägg till dataelement, regler och bibliotek](add-data-elements-rules.md) skapade du ett dataelement och använde det i en regel. Nu ska du använda samma tekniker för att skicka ett kund-ID när besökaren autentiseras.
 

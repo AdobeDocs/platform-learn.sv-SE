@@ -15,9 +15,9 @@ ht-degree: 0%
 
 Lär dig hur du konfigurerar identitetsnamnutrymmen som ska användas med Adobe Experience Platform Web SDK.
 
-[Adobe Experience Cloud identitetstjänst](https://experienceleague.adobe.com/en/docs/id-service/using/home) ställer in ett gemensamt besökar-ID (ECID) för SDK-baserade Adobe-program för att ge Experience Cloud möjligheter, som målgruppsdelning mellan program. Du kan också skicka dina egna kund-ID:n till tjänsten för att möjliggöra målinriktning mellan olika enheter och integrering med andra system, som CRM-systemet (Customer Relationship Management).
+[Adobe Experience Cloud identitetstjänst](https://experienceleague.adobe.com/sv/docs/id-service/using/home) ställer in ett gemensamt besökar-ID (ECID) för SDK-baserade Adobe-program för att ge Experience Cloud möjligheter, som målgruppsdelning mellan program. Du kan också skicka dina egna kund-ID:n till tjänsten för att möjliggöra målinriktning mellan olika enheter och integrering med andra system, som CRM-systemet (Customer Relationship Management).
 
-[Adobe Experience Platform identitetstjänst](https://experienceleague.adobe.com/en/docs/experience-platform/identity/home) (ja, det finns två!) använder ECID:n och kund-ID:n för att generera identitetsdiagram, vilket gör att du kan sammanfoga attribut och beteenden i kundprofiler i realtid.
+[Adobe Experience Platform identitetstjänst](https://experienceleague.adobe.com/sv/docs/experience-platform/identity/home) (ja, det finns två!) använder ECID:n och kund-ID:n för att generera identitetsdiagram, vilket gör att du kan sammanfoga attribut och beteenden i kundprofiler i realtid.
 
 >[!NOTE]
 >
@@ -45,7 +45,7 @@ Du måste ha slutfört tidigare lektioner:
 >
 >[Experience Cloud ID-tillägget](https://exchange.adobe.com/apps/ec/100160/adobe-experience-cloud-id-launch-extension) behövs inte när du implementerar Adobe Experience Platform Web SDK eftersom Web SDK JavaScript-biblioteket innehåller tjänstfunktionaliteten för besökar-ID.
 >
-> Om webbplatsen redan använder Experience Cloud ID Service på webbplatsen, antingen via Visitor API eller Experience Cloud ID Service Tag-tillägget, och du vill fortsätta använda det under migreringen till Adobe Experience Platform Web SDK, måste du använda den senaste versionen av Visitor API eller Experience Cloud ID Service Tag-tillägget. Mer information finns i [ID-migrering](https://experienceleague.adobe.com/en/docs/experience-platform/edge/identity/overview).
+> Om webbplatsen redan använder Experience Cloud ID Service på webbplatsen, antingen via Visitor API eller Experience Cloud ID Service Tag-tillägget, och du vill fortsätta använda det under migreringen till Adobe Experience Platform Web SDK, måste du använda den senaste versionen av Visitor API eller Experience Cloud ID Service Tag-tillägget. Mer information finns i [ID-migrering](https://experienceleague.adobe.com/sv/docs/experience-platform/edge/identity/overview).
 
 ## Skapa ett identitetsnamnutrymme
 

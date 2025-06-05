@@ -28,12 +28,12 @@ Du bör slutföra alla tidigare lektioner i den här självstudiekursen innan du
 >
 >Det finns många krav på användarbehörigheter, kontokonfigurationer och etableringssteg som krävs för att fullt ut kunna använda dessa integreringar och som ligger utanför kursens räckvidd. Om du inte redan använder dessa integreringar i din nuvarande implementering av Experience Cloud bör du tänka på följande:
 >
->* Granska de fullständiga kraven för [bastjänstintegreringarna](https://experienceleague.adobe.com/en/docs/core-services/interface/services/getting-started)
->* Granska de fullständiga kraven för [Analytics for Target-integrering](https://experienceleague.adobe.com/en/docs/target/using/integrate/a4t/before-implement)
+>* Granska de fullständiga kraven för [bastjänstintegreringarna](https://experienceleague.adobe.com/sv/docs/core-services/interface/services/getting-started)
+>* Granska de fullständiga kraven för [Analytics for Target-integrering](https://experienceleague.adobe.com/sv/docs/target/using/integrate/a4t/before-implement)
 
 ## Målgrupper
 
-[Publiker](https://experienceleague.adobe.com/en/docs/core-services/interface/services/audiences/overview) ingår i People Core-tjänsten och gör att du kan dela målgrupper mellan olika lösningar. Du kan till exempel skapa en målgrupp i Audience Manager och använda den för att leverera personaliserat innehåll med Target.
+[Publiker](https://experienceleague.adobe.com/sv/docs/core-services/interface/services/audiences/overview) ingår i People Core-tjänsten och gör att du kan dela målgrupper mellan olika lösningar. Du kan till exempel skapa en målgrupp i Audience Manager och använda den för att leverera personaliserat innehåll med Target.
 
 De viktigaste kraven för att implementera A4T, som du redan har gjort, är att:
 
@@ -71,7 +71,7 @@ Dessa valideringssteg fokuserar på den kritiska delen som visas i implementerin
 
 ## Analyser för mål (A4T)
 
-Integreringen [Analytics för Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html) gör att du kan använda dina Analytics-data som källa för rapportering av mått i Target.
+Integreringen [Analytics för Target (A4T)](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=sv-SE) gör att du kan använda dina Analytics-data som källa för rapportering av mått i Target.
 
 De viktigaste kraven för att implementera A4T, som du redan har gjort, är att:
 
@@ -110,7 +110,7 @@ Om du gör ytterligare Target-begäranden inom omfånget för en sidinläsning (
 
 ## Kundattribut
 
-[Kundattribut](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html) är en del av People Core-tjänsten som gör att du kan överföra data från CRM-databasen (customer relationship management) och använda dem i Adobe Analytics och Adobe Target.
+[Kundattribut](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/attributes.html?lang=sv-SE) är en del av People Core-tjänsten som gör att du kan överföra data från CRM-databasen (customer relationship management) och använda dem i Adobe Analytics och Adobe Target.
 
 De viktigaste kraven för att implementera kundattribut - som du redan har gjort - är att:
 

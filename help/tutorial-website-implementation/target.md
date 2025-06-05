@@ -12,9 +12,9 @@ ht-degree: 0%
 
 # Lägg till Adobe Target
 
-I den här lektionen implementerar vi [Adobe Target-tillägget](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/target/overview.html) med en sidinläsningsbegäran och anpassade parametrar.
+I den här lektionen implementerar vi [Adobe Target-tillägget](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/target/overview.html?lang=sv-SE) med en sidinläsningsbegäran och anpassade parametrar.
 
-[Adobe Target](https://experienceleague.adobe.com/docs/target/using/target-home.html) är en Adobe Experience Cloud-lösning som innehåller allt du behöver för att skräddarsy och personalisera kundupplevelsen, så att du kan maximera intäkterna på webbplatser, mobilsajter, appar, sociala medier och andra digitala kanaler.
+[Adobe Target](https://experienceleague.adobe.com/docs/target/using/target-home.html?lang=sv-SE) är en Adobe Experience Cloud-lösning som innehåller allt du behöver för att skräddarsy och personalisera kundupplevelsen, så att du kan maximera intäkterna på webbplatser, mobilsajter, appar, sociala medier och andra digitala kanaler.
 
 >[!NOTE]
 >
@@ -91,11 +91,11 @@ Läs in exempelsidan igen. Du kommer att märka att sidan kommer att vara dold i
 * `body {opacity: 0 !important}` anger den CSS-definition som ska användas för pre-hide tills Target läses in. Som standard döljs hela brödtexten. Om du har en konsekvent DOM-struktur med ett enkelt identifierbart behållarelement som omsluter allt innehåll under navigeringen, till exempel, och du aldrig vill testa eller anpassa navigeringen, kan du använda den här inställningen för att begränsa det som döljs till behållarelementet.
 * `3000` som anger timeoutinställningen för fördöljning. Som standard visas sidan om Target inte har lästs in på tre sekunder. Detta bör vara extremt sällsynt.
 
-Mer information och information om hur du hämtar det icke-minifierade fördolda fragmentet finns i [Adobe Target-tillägget med en asynkron distribution &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/target/overview.html#adobe-target-extension-with-an-asynchronous-deployment).
+Mer information och information om hur du hämtar det icke-minifierade fördolda fragmentet finns i [Adobe Target-tillägget med en asynkron distribution &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/target/overview.html?lang=sv-SE#adobe-target-extension-with-an-asynchronous-deployment).
 
 ## Lägg till måltillägget
 
-Adobe Target-tillägget stöder implementeringar på klientsidan med Target JavaScript SDK för den moderna webben, at.js. Kunder som fortfarande använder Target:s äldre bibliotek, mbox.js, [bör uppgradera till at.js 2.x](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/migrate-mbox/target-atjs-implementation.html) för att kunna använda taggar.
+Adobe Target-tillägget stöder implementeringar på klientsidan med Target JavaScript SDK för den moderna webben, at.js. Kunder som fortfarande använder Target:s äldre bibliotek, mbox.js, [bör uppgradera till at.js 2.x](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/mbox-implement/migrate-mbox/target-atjs-implementation.html?lang=sv-SE) för att kunna använda taggar.
 
 Tillägget Target v2 består av två huvuddelar:
 
@@ -208,9 +208,9 @@ Grattis! Du har implementerat Target!
 
 Genom att skicka parametrar i Target-begäran får ni kraftfulla funktioner för målinriktning, testning och personalisering. Taggtillägget innehåller två åtgärder för att skicka parametrar:
 
-1. `Add Params to Page Load Request`, som lägger till parametrar i sidinläsningsbegäranden (motsvarande metoden [ targetPageParams()](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/functions-overview/cmp-atjs-functions.html)))
+1. `Add Params to Page Load Request`, som lägger till parametrar i sidinläsningsbegäranden (motsvarande metoden [ targetPageParams()](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/functions-overview/cmp-atjs-functions.html?lang=sv-SE)))
 
-1. `Add Params to All Requests`, som lägger till parametrar i alla Target-begäranden, t.ex. sidinläsningsbegäran plus ytterligare begäranden från åtgärder för anpassad kod eller hårdkodade på din plats (motsvarar metoden [ targetPageParamsAll()](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/functions-overview/cmp-atjs-functions.html) )
+1. `Add Params to All Requests`, som lägger till parametrar i alla Target-begäranden, t.ex. sidinläsningsbegäran plus ytterligare begäranden från åtgärder för anpassad kod eller hårdkodade på din plats (motsvarar metoden [ targetPageParamsAll()](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/functions-overview/cmp-atjs-functions.html?lang=sv-SE) )
 
 Dessa åtgärder kan användas *före* åtgärden `Load Target` och kan ange olika parametrar på olika sidor baserat på dina regelkonfigurationer. Använd funktionen för regelordning som du använde när du ställde in kund-ID:n med identitetstjänsten för att ställa in ytterligare parametrar för händelsen `Library Loaded` innan regeln som startar sidinläsningsbegäran.
 >[!TIP]
@@ -277,7 +277,7 @@ För närvarande är anpassade parametrar som skickas med at.js 2.x-begäranden 
 
 ### Profilparametrar
 
-Profilparametrar skickas också via Target-begäran, på samma sätt som begärandeparametrar. Profilparametrar lagras emellertid i målets databas för besökarprofiler och kommer att finnas kvar under [varaktigheten för besökarens profil](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html). Du kan ange dem på en sida på webbplatsen och använda dem i Target-aktiviteter på en annan sida. Här är ett exempel från en bilwebbplats. När en besökare går till en fordonssida kan du skicka profilparametern &quot;profile.lastViewed=sportscar&quot; för att registrera deras intresse för just det fordonet. När besökaren bläddrar till andra sidor som inte är avsedda för fordon kan du rikta innehåll baserat på det senast visade fordonet.  Profilparametrar är idealiska för attribut som sällan ändras eller bara är tillgängliga på vissa sidor
+Profilparametrar skickas också via Target-begäran, på samma sätt som begärandeparametrar. Profilparametrar lagras emellertid i målets databas för besökarprofiler och kommer att finnas kvar under [varaktigheten för besökarens profil](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/visitor-profile-lifetime.html?lang=sv-SE). Du kan ange dem på en sida på webbplatsen och använda dem i Target-aktiviteter på en annan sida. Här är ett exempel från en bilwebbplats. När en besökare går till en fordonssida kan du skicka profilparametern &quot;profile.lastViewed=sportscar&quot; för att registrera deras intresse för just det fordonet. När besökaren bläddrar till andra sidor som inte är avsedda för fordon kan du rikta innehåll baserat på det senast visade fordonet.  Profilparametrar är idealiska för attribut som sällan ändras eller bara är tillgängliga på vissa sidor
 
 Du skickar inga profilparametrar i den här självstudien, men arbetsflödet är nästan identiskt med det du gjorde när du skickade parametern `pageName`. Den enda skillnaden är att du måste ge profilparameternamn ett `profile.`-prefix. Så här ser en profilparameter som kallas userType ut i åtgärden `Add Params to Page Load Request`:
 
@@ -285,7 +285,7 @@ Du skickar inga profilparametrar i den här självstudien, men arbetsflödet är
 
 ### Enhetsparametrar
 
-Enhetsparametrar är särskilda parametrar som används i [Rekommendationer och implementeringar](https://experienceleague.adobe.com/docs/target/using/recommendations/plan-implement.html) av tre huvudorsaker:
+Enhetsparametrar är särskilda parametrar som används i [Rekommendationer och implementeringar](https://experienceleague.adobe.com/docs/target/using/recommendations/plan-implement.html?lang=sv-SE) av tre huvudorsaker:
 
 1. Som en nyckel för att utlösa produktrekommendationer. Om du till exempel använder en rekommendationsalgoritm som&quot;Personer som visade produkt X, även visade Y&quot;, är&quot;X&quot; rekommendationens&quot;nyckel&quot;. Det är vanligtvis den produktsku (`entity.id`) eller kategori (`entity.categoryId`) som besökaren för närvarande visar.
 1. Samla in besökares beteende för att driva rekommendationer som&quot;Senast visade produkter&quot; eller&quot;De mest visade produkterna&quot;
@@ -297,7 +297,7 @@ Du behöver inte skicka några enhetsparametrar i den här självstudiekursen, m
 
 ### Lägg till parametrar för kund-ID
 
-Samlingen av kund-ID:n med Adobe Experience Platform Identity Service gör det enkelt att importera CRM-data till Target med funktionen [Kundattribut](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/working-with-customer-attributes.html) i Adobe Experience Cloud. Det möjliggör även sammanfogning av [besökare mellan olika enheter](https://experienceleague.adobe.com/docs/target/using/integrate/experience-cloud-device-co-op.html), vilket gör att du kan upprätthålla en konsekvent användarupplevelse när dina kunder växlar mellan sina bärbara datorer och sina mobila enheter.
+Samlingen av kund-ID:n med Adobe Experience Platform Identity Service gör det enkelt att importera CRM-data till Target med funktionen [Kundattribut](https://experienceleague.adobe.com/docs/target/using/audiences/visitor-profiles/working-with-customer-attributes.html?lang=sv-SE) i Adobe Experience Cloud. Det möjliggör även sammanfogning av [besökare mellan olika enheter](https://experienceleague.adobe.com/docs/target/using/integrate/experience-cloud-device-co-op.html?lang=sv-SE), vilket gör att du kan upprätthålla en konsekvent användarupplevelse när dina kunder växlar mellan sina bärbara datorer och sina mobila enheter.
 
 Du måste ange kund-ID:t i identitetstjänstens `Set Customer IDs`-åtgärd innan sidinläsningsbegäran aktiveras. Kontrollera därför att du har följande funktioner på din webbplats:
 
@@ -334,7 +334,7 @@ För närvarande är anpassade parametrar som skickas med at.js 2.x-begäranden 
 1. Open the Debugger
 1. Go to the Target tab
 1. Expand your client code
-1. You should see parameters in the latest Target request for `vst.crm_id.id` and `vst.crm_id.authState`. `vst.crm_id.id` should have a value of the hashed email address and `vst.crm_id.authState` should have a value of `1` to represent `authenticated`. Note that `crm_id` is the `Integration Code` you specified in the Identity Service configuration and must align with the key you use in your [Customer Attributes data file](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/t-crs-usecase.html):
+1. You should see parameters in the latest Target request for `vst.crm_id.id` and `vst.crm_id.authState`. `vst.crm_id.id` should have a value of the hashed email address and `vst.crm_id.authState` should have a value of `1` to represent `authenticated`. Note that `crm_id` is the `Integration Code` you specified in the Identity Service configuration and must align with the key you use in your [Customer Attributes data file](https://experienceleague.adobe.com/docs/core-services/interface/customer-attributes/t-crs-usecase.html?lang=sv-SE):
 
 ![The Customer Id details should be visible as custom parameters in the Target request](images/target-debugger-customerId.png)
 -->
@@ -349,7 +349,7 @@ För närvarande är anpassade parametrar som skickas med at.js 2.x-begäranden 
 >
 >Detta är en valfri övning för Target Premium-kunder.
 
-Egenskapstoken är en reserverad parameter som används med Target Premium [Enterprise User Permissions](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html) -funktionen. Det används för att definiera olika digitala egenskaper så att olika medlemmar i en Experience Cloud-organisation kan tilldelas olika behörigheter för varje egenskap. Du kanske till exempel vill att en grupp användare ska kunna konfigurera Target-aktiviteter på din webbplats, men inte i ditt mobilprogram.
+Egenskapstoken är en reserverad parameter som används med Target Premium [Enterprise User Permissions](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=sv-SE) -funktionen. Det används för att definiera olika digitala egenskaper så att olika medlemmar i en Experience Cloud-organisation kan tilldelas olika behörigheter för varje egenskap. Du kanske till exempel vill att en grupp användare ska kunna konfigurera Target-aktiviteter på din webbplats, men inte i ditt mobilprogram.
 
 Målegenskaperna motsvarar taggegenskaper och analysrapportsviter. Ett företag med flera varumärken, webbplatser och marknadsföringsteam kan använda olika Target-egenskaper, taggegenskap och Analytics-rapporteringsprogram för varje webbplats eller mobilapp. Taggegenskaperna skiljs åt med hjälp av deras inbäddningskoder, Analytics-rapportsviterna skiljs åt med hjälp av deras rapportritets-ID och Target-egenskaperna skiljs åt med deras egenskapstokenparameter.
 
@@ -430,7 +430,7 @@ Begäran om orderbekräftelse är en särskild typ av begäran som används för
 
 Det bästa sättet är att använda en orderbekräftelsebegäran i alla ordergrupper, även på icke-butikssajter. Exempelvis har leadgenereringswebbplatser vanligtvis lead-trattar med ett unikt lead-id som genereras i slutet. Dessa platser bör implementera en beställningsbegäran med ett statiskt värde (t.ex. &quot;1&quot;) för orderTotal.
 
-Kunder som använder integreringen med Analytics for Target (A4T) för de flesta rapporter kanske också vill implementera beställningsförfrågan om de använder Automated Personalization-aktiviteter, som inte har stöd för A4T. Dessutom är beställningsbegäran en viktig del i rekommendationer-implementeringar, som styr algoritmer baserat på inköpsbeteende. Den senaste informationen om A4T-stöd finns i [dokumentationen](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=en#section_F487896214BF4803AF78C552EF1669AA).
+Kunder som använder integreringen med Analytics for Target (A4T) för de flesta rapporter kanske också vill implementera beställningsförfrågan om de använder Automated Personalization-aktiviteter, som inte har stöd för A4T. Dessutom är beställningsbegäran en viktig del i rekommendationer-implementeringar, som styr algoritmer baserat på inköpsbeteende. Den senaste informationen om A4T-stöd finns i [dokumentationen](https://experienceleague.adobe.com/docs/target/using/integrate/a4t/a4t.html?lang=sv-SE#section_F487896214BF4803AF78C552EF1669AA).
 
 Begäran om orderbekräftelse ska utlösas från en regel som bara aktiveras på din orderbekräftelsesida eller -händelse. Den kan ofta kombineras med en regel som ställer in Adobe Analytics-händelsen purchase. Den måste konfigureras med åtgärden Custom Code för Core-tillägget, med lämpliga dataelement för att ställa in parametrarna orderId, orderTotal och productPurchasedId.
 
@@ -564,12 +564,12 @@ För närvarande är anpassade parametrar som skickas med at.js 2.x-begäranden 
 
 Det finns sällsynta tillfällen när du behöver göra andra Target-begäranden än sidinläsning och beställningsbekräftelsebegäran. Ibland definieras inte viktiga data som du vill använda för personalisering på sidan före taggens inbäddningskoder. De kan vara hårdkodade längst ned på sidan eller returneras från en asynkron API-begäran. Dessa data kan skickas till Target med en extra begäran, men det är inte optimalt att använda denna begäran för innehållsleverans eftersom sidan redan är synlig. Dessa data kan användas för att förbättra besökarprofilen för senare bruk (med hjälp av profilparametrar) eller för att fylla i katalogen Rekommendationer.
 
-I dessa fall använder du åtgärden Egen kod i Core-tillägget för att utlösa en begäran med metoderna [getOffer()](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/adobe-target-getoffer.html)/[applyOffer()](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/adobe-target-applyoffer.html) och [trackEvent()](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html) . Detta liknar mycket det du gjorde i [beställningsbekräftelsebegäran](#order-confirmation-request), men du använder bara ett annat begärandenamn och kommer inte att använda de särskilda orderparametrarna. Var noga med att använda åtgärden **[!UICONTROL Load Target]** innan du gör Target-begäranden från anpassad kod.
+I dessa fall använder du åtgärden Egen kod i Core-tillägget för att utlösa en begäran med metoderna [getOffer()](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/adobe-target-getoffer.html?lang=sv-SE)/[applyOffer()](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/adobe-target-applyoffer.html?lang=sv-SE) och [trackEvent()](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/adobe-target-trackevent.html?lang=sv-SE) . Detta liknar mycket det du gjorde i [beställningsbekräftelsebegäran](#order-confirmation-request), men du använder bara ett annat begärandenamn och kommer inte att använda de särskilda orderparametrarna. Var noga med att använda åtgärden **[!UICONTROL Load Target]** innan du gör Target-begäranden från anpassad kod.
 
 ## Bibliotekshuvud och bibliotekets sidfot
 
 Skärmen Edit at.js i användargränssnittet Target har platser där du kan klistra in anpassad JavaScript som körs omedelbart före eller efter filen at.js. Library Header används ibland för att åsidosätta at.js-inställningarna via
-Funktionen [targetGlobalSettings()](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/functions-overview/targetgobalsettings.html) eller skicka data från tredje part med funktionen [Data Providers](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/use-data-providers-to-integrate-third-party-data.html) . Library Footer används ibland för att lägga till [at.js-avlyssnare för anpassade händelser](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/atjs-custom-events.html).
+Funktionen [targetGlobalSettings()](https://experienceleague.adobe.com/docs/target/using/implement-target/client-side/functions-overview/targetgobalsettings.html?lang=sv-SE) eller skicka data från tredje part med funktionen [Data Providers](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/use-data-providers-to-integrate-third-party-data.html?lang=sv-SE) . Library Footer används ibland för att lägga till [at.js-avlyssnare för anpassade händelser](https://experienceleague.adobe.com/docs/target-dev/developer/client-side/at-js-implementation/functions-overview/atjs-custom-events.html?lang=sv-SE).
 
 Om du vill replikera den här funktionen i taggar behöver du bara använda åtgärden Anpassad kod i Core-tillägget och sekvensera åtgärden före (Bibliotekshuvud) eller efter (Biblioteksfot) åtgärden Läs in mål. Detta kan göras i samma regel som åtgärden `Load Target` (se bilden nedan) eller i separata regler med händelser eller orderinställningar som kommer att aktiveras före eller efter regeln som innehåller `Load Target`:
 
@@ -577,8 +577,8 @@ Om du vill replikera den här funktionen i taggar behöver du bara använda åtg
 
 Mer information om användningsexempel för anpassade sidhuvuden och sidfötter finns i följande resurser:
 
-* [Använd dataProviders för att integrera tredjepartsdata i Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/use-data-providers-to-integrate-third-party-data.html)
-* [Implementera dataProviders för att integrera tredjepartsdata i Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/implement-data-providers-to-integrate-third-party-data.html)
-* [Använd svarstoken och anpassade at.js-händelser med Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/use-response-tokens-and-atjs-custom-events.html)
+* [Använd dataProviders för att integrera tredjepartsdata i Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/use-data-providers-to-integrate-third-party-data.html?lang=sv-SE)
+* [Implementera dataProviders för att integrera tredjepartsdata i Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/implement-data-providers-to-integrate-third-party-data.html?lang=sv-SE)
+* [Använd svarstoken och anpassade at.js-händelser med Adobe Target](https://experienceleague.adobe.com/docs/target-learn/tutorials/integrations/use-response-tokens-and-atjs-custom-events.html?lang=sv-SE)
 
 [Nästa&quot;Lägg till Adobe Analytics&quot; >](analytics.md)

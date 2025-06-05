@@ -143,7 +143,7 @@ Den här typen av begärandeinformation visas också på fliken **Nätverk** i w
 
 Som du lär dig i lektionen [Konfigurera en datastream](configure-datastream.md) skickar Platform Web SDK först data från din digitala egenskap till Platform Edge Network. Sedan gör Platform Edge Network ytterligare serverförfrågningar till motsvarande tjänster som är aktiverade i din datastream. Du kan validera de serverförfrågningar som gjorts av Platform Edge Network med Edge Trace i felsökningsprogrammet.
 
-<!--Furthermore, you can also validate the fully processed payload after it reaches an Adobe application by using [Adobe Experience Platform Assurance](https://experienceleague.adobe.com/en/docs/experience-platform/assurance/home). -->
+<!--Furthermore, you can also validate the fully processed payload after it reaches an Adobe application by using [Adobe Experience Platform Assurance](https://experienceleague.adobe.com/sv/docs/experience-platform/assurance/home). -->
 
 
 ### Aktivera Edge Trace

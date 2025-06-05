@@ -35,7 +35,7 @@ I den här lektionen kommer du att:
 
 ## Konfigurera ett anpassat ID-namnutrymme
 
-Identitetsnamnutrymmen är komponenter i [identitetstjänsten](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html?lang=en) som fungerar som indikatorer för det sammanhang som en identitet relateras till. De särskiljer till exempel värdet `name@email.com` som en e-postadress eller `443522` som ett numeriskt CRM-ID.
+Identitetsnamnutrymmen är komponenter i [identitetstjänsten](https://experienceleague.adobe.com/docs/experience-platform/identity/home.html?lang=sv-SE) som fungerar som indikatorer för det sammanhang som en identitet relateras till. De särskiljer till exempel värdet `name@email.com` som en e-postadress eller `443522` som ett numeriskt CRM-ID.
 
 >[!NOTE]
 >
@@ -116,7 +116,7 @@ Du vill uppdatera både standardidentiteten (e-post) och den anpassade identitet
 
 ## Ta bort en identitet
 
-Du kan använda API:t [`Identity.removeIdentity`](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#removeidentity) för att ta bort identiteten från den lagrade identitetskartan på klientsidan. Identitetstillägget slutar skicka identifieraren till Edge Network. Om du använder detta API tas inte identifieraren bort från serversidans identitetsdiagram. Mer information om identitetsdiagram finns i [Visa identitetsdiagram](https://experienceleague.adobe.com/docs/platform-learn/tutorials/identities/view-identity-graphs.html?lang=en).
+Du kan använda API:t [`Identity.removeIdentity`](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#removeidentity) för att ta bort identiteten från den lagrade identitetskartan på klientsidan. Identitetstillägget slutar skicka identifieraren till Edge Network. Om du använder detta API tas inte identifieraren bort från serversidans identitetsdiagram. Mer information om identitetsdiagram finns i [Visa identitetsdiagram](https://experienceleague.adobe.com/docs/platform-learn/tutorials/identities/view-identity-graphs.html?lang=sv-SE).
 
 1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project-navigatorn och lägg till följande kod i funktionen `func removeIdentities(emailAddress: String, crmId: String)`:
 

@@ -13,9 +13,9 @@ ht-degree: 0%
 
 # Konfigurera Adobe Analytics med Adobe Experience Platform Web SDK
 
-Lär dig hur du konfigurerar Adobe Analytics med [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/web-sdk/overview), skapar taggregler för att skicka data till Adobe Analytics och validerar att Analytics hämtar data som förväntat.
+Lär dig hur du konfigurerar Adobe Analytics med [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/sv/docs/platform-learn/data-collection/web-sdk/overview), skapar taggregler för att skicka data till Adobe Analytics och validerar att Analytics hämtar data som förväntat.
 
-[Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics) är ett branschledande program som gör att du kan förstå dina kunder som människor och styra din verksamhet med kundanalys.
+[Adobe Analytics](https://experienceleague.adobe.com/sv/docs/analytics) är ett branschledande program som gör att du kan förstå dina kunder som människor och styra din verksamhet med kundanalys.
 
 ![SDK för webben till Adobe Analytics](assets/dc-websdk-aa.png)
 
@@ -35,7 +35,7 @@ För att slutföra lektionen måste du först:
 
 * Bekanta dig med och få tillgång till Adobe Analytics.
 
-* Ha minst ett test-/dev-rapportpaket-ID. Om du inte har någon test-/dev-rapportsserie som du kan använda för den här självstudiekursen [skapar du en](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite).
+* Ha minst ett test-/dev-rapportpaket-ID. Om du inte har någon test-/dev-rapportsserie som du kan använda för den här självstudiekursen [skapar du en](https://experienceleague.adobe.com/sv/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite).
 
 * Slutför de tidigare lektionerna i avsnitten Inledande konfiguration och Tagginställningar i den här självstudien.
 
@@ -78,7 +78,7 @@ Från maj 2024 behöver du inte längre skapa ett XDM-schema för att implemente
 
 ### Automatiskt mappade fält
 
-Många XDM-fält mappas automatiskt till analysvariabler. Den senaste listan över mappningar finns i [Variabelmappning i Analytics i Adobe Experience Edge](https://experienceleague.adobe.com/en/docs/experience-platform/edge/data-collection/adobe-analytics/automatically-mapped-vars).
+Många XDM-fält mappas automatiskt till analysvariabler. Den senaste listan över mappningar finns i [Variabelmappning i Analytics i Adobe Experience Edge](https://experienceleague.adobe.com/sv/docs/experience-platform/edge/data-collection/adobe-analytics/automatically-mapped-vars).
 
 Detta inträffar om _även om du inte har definierat ett anpassat schema_. Experience Platform Web SDK samlar automatiskt in vissa data och skickar dem till Platform Edge Network som XDM-fält. Web SDK läser till exempel den aktuella sidans URL och skickar den som XDM-fält `web.webPageDetails.URL`. Det här fältet vidarebefordras till Adobe Analytics och fyller automatiskt i sidans URL-rapporter i Adobe Analytics.
 

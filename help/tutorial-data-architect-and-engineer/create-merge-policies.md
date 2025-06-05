@@ -140,7 +140,7 @@ Ett viktigt användningsexempel för sammanfogningsprinciper är datastyrning. E
 
 ## Ytterligare resurser
 
-* [Dokumentation för kopplingsprofiler](https://experienceleague.adobe.com/docs/experience-platform/profile/merge-policies/overview.html)
+* [Dokumentation för kopplingsprofiler](https://experienceleague.adobe.com/docs/experience-platform/profile/merge-policies/overview.html?lang=sv-SE)
 * [API-referens för sammanslagningsprinciper (ingår i kundprofils-API:t i realtid)](https://www.adobe.io/experience-platform-apis/references/profile/#tag/Merge-policies)
 
 Låt oss nu gå vidare till [ramverket för datastyrning](apply-data-governance-framework.md).
