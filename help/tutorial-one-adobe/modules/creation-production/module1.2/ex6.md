@@ -6,9 +6,9 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: f02ecbe4-f1d7-4907-9bbc-04e037546091
-source-git-commit: da6917ec8c4e863e80eef91280e46b20816a5426
+source-git-commit: 1d1ee3462bd890556037c8e24ba2fe94c3423187
 workflow-type: tm+mt
-source-wordcount: '1877'
+source-wordcount: '1981'
 ht-degree: 0%
 
 ---
@@ -59,35 +59,27 @@ Du borde se det här då. Klicka på **Kopiera adress till Urklipp**.
 
 ## 1.2.6.2 Konfigurera webkrok i Frame.io
 
-Gå till [https://developer.frame.io/](https://developer.frame.io/){target="_blank"}. Klicka på **UTVECKLINGSVERKTYG** och välj sedan **Webhooks**.
+Gå till Postman och öppna begäran **POST - Get Access Token** i samlingen **Adobe IO - OAuth**. Klicka sedan på **Skicka** för att begära en ny **access_token**.
 
-![Bildruta-I/O](./images/aemf7.png)
+![Bildruta-I/O](./images/frameV4api2.png)
 
-Klicka på **Skapa en webkrok**.
+Gå tillbaka till **Samlingar** på den vänstra menyn. Öppna förfrågan **POST - Create Webkroks** i samlingen **Frame.io V4 - Tech Insiders** i mappen **Webhooks**.
 
-![Bildruta-I/O](./images/aemf8.png)
+Gå till **brödtexten** för begäran. Ändra fältet **name** till `--aepUserLdap--  - Fusion to AEM Assets` och ändra sedan fältet **url** till värdet för den webkrok-URL som du kopierade från Workfront Fusion.
 
-Ange följande värden:
+Klicka på **Skicka**.
 
-- **NAME**: använd `--aepUserLdap-- - Asset Labels Updated`
-- **URL**: Ange URL:en för den webkrok som du nyss skapade i Workfront Fusion
-- **TEAM**: välj lämpligt Frame.io-team, i det här fallet **One Adobe Tutorial**.
+![Bildruta-I/O](./images/framewh1.png)
 
-![Bildruta-I/O](./images/aemf9.png)
+Den anpassade åtgärden Frame.io V4 har skapats.
 
-Bläddra nedåt och aktivera kryssrutan intill **Resursetiketter - uppdaterad**. Klicka på **Skicka**.
+![Bildruta-I/O](./images/framewh2.png)
 
-![Bildruta-I/O](./images/aemf10.png)
-
-Du borde se det här då.
-
-![Bildruta-I/O](./images/aemf11.png)
-
-Gå till [https://app.frame.io/projects](https://app.frame.io/projects){target="_blank"} och gå till mappen som du skapade tidigare, som bör ha namnet `--aepUserLdap--`. Dubbelklicka för att öppna den resurs som skapades i föregående övning.
+Gå till [https://next.frame.io/project](https://next.frame.io/project){target="_blank"} och gå till det projekt som du skapade tidigare, som bör ha namnet `--aepUserLdap--` och öppna mappen **CitiSignal Fibre Campaign**. Du bör nu se resurserna som skapades i den föregående övningen.
 
 ![Bildruta-I/O](./images/aemf11a.png)
 
-Då borde du se något sådant här. Klicka på fältet **Ingen status** och ändra statusen till **Pågår**.
+Klicka på fältet **Status** och ändra statusen till **Pågår**.
 
 ![Bildruta-I/O](./images/aemf12.png)
 
@@ -113,23 +105,45 @@ Detaljerad vy av bubblan visar data som tagits emot från Frame.io. Du bör se o
 
 Nu när kommunikationen mellan Frame.io och Workfront Fusion har upprättats via en anpassad webkrok bör du få mer information om resursen som statusetiketten uppdaterades för. För att göra detta använder du återigen kontakten Frame.io i Workfront Fusion, som i föregående övning.
 
-Klicka på **?** och ange söktermen `frame`. Klicka på **Frame.io**.
+Håll pekaren över det **anpassade webkrokobjektet** och klicka på ikonen **+** för att lägga till en annan modul.
+
+![Bildruta-I/O](./images/aemf18a.png)
+
+Ange söktermen `frame`. Klicka på **Frame.io**.
 
 ![Bildruta-I/O](./images/aemf18.png)
 
-Klicka på **Frame.io (äldre)**.
+Klicka på **Frame.io**.
 
 ![Bildruta-I/O](./images/aemf19.png)
 
-Klicka på **Hämta en resurs**.
+Klicka på **Gör ett anpassat API-anrop**.
 
 ![Bildruta-I/O](./images/aemf20.png)
 
-Kontrollera att anslutningen är inställd på samma anslutning som du skapade i den tidigare övningen, som bör ha namnet `--aepUserLdap-- - Frame.io Token`.
+Kontrollera att anslutningen är inställd på samma anslutning som du skapade i den tidigare övningen, som bör ha namnet `--aepUserLdap-- - Adobe I/O - Frame.io S2S`.
 
 ![Bildruta-I/O](./images/aemf21.png)
 
-Därefter måste du ange **resurs-ID**. **Resurs-ID:t** delas av Frame.io till Workfront Fusion som en del av den inledande **anpassade webkrockkommunikationen** och finns under fältet **resource.id**. Välj **resource.id** och klicka på **OK**.
+Använd URL:en `/v4/accounts/{{1.account.id}}/files/{{1.resource.id}}` för konfigurationen av modulen **Frame.io - gör ett anpassat API-anrop**.
+
+>[!NOTE]
+>
+>Variabler i Workfront Fusion kan anges manuellt med följande syntax: `{{1.account.id}}` och `{{1.resource.id}}`. Talet i variabeln refererar till modulen i scenariot. I det här exemplet ser du att den första modulen i scenariot kallas **Webhooks** och har sekvensnumret **1**. Det innebär att variablerna `{{1.account.id}}` och `{{1.resource.id}}` kommer åt fältet från modulen med sekvensnummer 1. Sekvensnummer kan ibland vara olika, så var uppmärksam när du kopierar/klistrar in sådana variabler och kontrollera alltid att det sekvensnummer som används är det rätta.
+
+Klicka sedan på **+ Lägg till objekt** under **Frågesträng**.
+
+![Bildruta-I/O](./images/aemf21a.png)
+
+Ange dessa värden och klicka på **Lägg till**.
+
+| Nyckel | Värde |
+|:-------------:| :---------------:| 
+| `include` | `media_links.original` |
+
+![Bildruta-I/O](./images/aemf21b.png)
+
+Du borde ha den här nu. Klicka på **OK**.
 
 ![Bildruta-I/O](./images/aemf22.png)
 
@@ -137,21 +151,36 @@ Klicka på **Spara** för att spara ändringarna och klicka sedan på **Kör en 
 
 ![Bildruta-I/O](./images/aemf23.png)
 
-Växla tillbaka till Frame.io och klicka på fältet **Behöver granskas** och ändra statusen till **Pågår**.
+Växla tillbaka till Frame.io och ändra status till **Pågår**.
 
 ![Bildruta-I/O](./images/aemf24.png)
 
-Gå tillbaka till Workfront Fusion och klicka på bubblan i modulen **Frame.io - Hämta en resurs**. Du bör då se en liknande översikt.
+Gå tillbaka till Workfront Fusion och klicka på bubblan i **Frame.io - Gör ett anpassat API-anrop** . Du bör då se en liknande översikt.
 
 ![Bildruta-I/O](./images/aemf25.png)
 
-I resursinformationen som tillhandahålls av Frame.io hittar du ett fält med namnet **Label** som är inställt på **in_progress**. Du måste använda det fältet i ett senare skede för att konfigurera ett filter.
+Därefter bör du konfigurera ett filter så att bara en PNG-fil återges för resurser som har statusen **Godkänd**. Det gör du genom att klicka på ikonen **Förnya** mellan modulerna **Anpassad webkrok** och **Frame.io - Gör ett anpassat API-anrop** och sedan välja **Konfigurera ett filter** .
 
-![Bildruta-I/O](./images/aemf26.png)
+![Bildruta-I/O](./images/aemf25a.png)
+
+Konfigurera följande fält:
+
+- **Etikett**: använd `Status = Approved`.
+- **Villkor**: `{{1.metadata.value[]}}`.
+- **Grundläggande operatorer**: välj **Lika med**.
+- **Värde**: `Approved`.
+
+Klicka på **OK**.
+
+![Bildruta-I/O](./images/aemf35.png)
+
+Du borde ha den här då. Klicka på **Spara** för att spara ändringarna.
+
+![Bildruta-I/O](./images/aemf35a.png)
 
 ## 1.2.6.4 Konvertera till PNG
 
-Håll pekaren över modulen **Frame.io - Hämta en resurs** och klicka på ikonen **+** .
+Hovra över modulen **Frame.io - Gör ett anpassat API-anrop** och klicka på ikonen **+** .
 
 ![Bildruta-I/O](./images/aemf27.png)
 
@@ -165,13 +194,13 @@ Klicka på **Konvertera bildformat**.
 
 Kontrollera att fältet **Connection** använder din tidigare skapade anslutning, som har namnet `--aepUserLdap-- - Adobe IO`.
 
-Under **Indata** ställer du in fältet **Lagring** till **Extern** och ställer in **Filplats** till att använda variabeln **Original** som returneras av modulen **Frame.io - Hämta en resurs**.
+Under **Indata** ställer du in fältet **Lagring** till **Extern** och ställer in **Filplats** till att använda variabeln **Original** som returneras av modulen **Frame.io - gör ett anpassat API-anrop**.
 
 Klicka sedan på **Lägg till objekt** under **Utdata**.
 
 ![Bildruta-I/O](./images/aemf30.png)
 
-För konfigurationen **Utdata** anger du **Lagring** till **Fusion internal storage** och **Type** till **image/png**. Klicka på **Spara**.
+För konfigurationen **Utdata** anger du **Lagring** till **Fusion internal storage** och **Type** till **image/png**. Klicka på **Lägg till**.
 
 ![Bildruta-I/O](./images/aemf31.png)
 
@@ -179,28 +208,9 @@ Klicka på **OK**.
 
 ![Bildruta-I/O](./images/aemf33.png)
 
-Klicka på **Spara** för att spara ändringarna.
-
-![Bildruta-I/O](./images/aemf32.png)
-
-Därefter bör du konfigurera ett filter så att bara en PNG-fil återges för resurser som har statusen **Godkänd**. Det gör du genom att klicka på ikonen **Rench** mellan modulerna **Frame.io - Hämta en resurs** och **Adobe Photoshop - Konvertera bildformat** och sedan välja **Konfigurera ett filter**.
-
-![Bildruta-I/O](./images/aemf34.png)
-
-Konfigurera följande fält:
-
-- **Etikett**: använd `Is Asset Approved`.
-- **Villkor**: markera fältet **Etikett** i svaret från modulen **Frame.io - Hämta en resurs**.
-- **Grundläggande operatorer**: välj **Lika med**.
-- **Värde**: `approved`.
-
-Klicka på **OK**.
-
-![Bildruta-I/O](./images/aemf35.png)
-
 Klicka på **Spara** för att spara ändringarna och klicka sedan på **Kör en gång** för att testa konfigurationen.
 
-![Bildruta-I/O](./images/aemf36.png)
+![Bildruta-I/O](./images/aemf32.png)
 
 Växla tillbaka till Frame.io och klicka på fältet **Pågår** och ändra statusen till **Godkänd**.
 
@@ -255,11 +265,19 @@ Klicka på **Logga in med Adobe**.
 
 ![Bildruta-I/O](./images/aemf47.png)
 
-Du dirigeras sedan till **Developer Console**. Klicka på **Skapa nytt tekniskt konto**.
+Gå till **Verktyg** > **Integreringar**.
+
+![Bildruta-I/O](./images/aemf47a.png)
+
+Klicka på **Skapa nytt tekniskt konto**.
 
 ![Bildruta-I/O](./images/aemf48.png)
 
-Då borde du se något sådant här. Kopiera den fullständiga JSON-nyttolasten till Urklipp.
+Då borde du se något sådant här. Öppna det nya tekniska kontot. Klicka på de tre punkterna **..** och välj sedan **Visa**.
+
+![Bildruta-I/O](./images/aemf48a.png)
+
+Du bör då se en liknande nyttolast för token för tekniskt konto. Kopiera den fullständiga JSON-nyttolasten till Urklipp.
 
 ![Bildruta-I/O](./images/aemf50.png)
 
@@ -283,7 +301,7 @@ Gå till **Resurser** och klicka på **Skapa mapp**.
 
 ![Bildruta-I/O](./images/aemf54.png)
 
-Ange namnet `--aepUserLdap-- - Frame.io PNG` och klicka på **Skapa**.
+Ange namnet `--aepUserLdap-- - CitiSignal Fiber Campaign` och klicka på **Skapa**.
 
 ![Bildruta-I/O](./images/aemf55.png)
 
@@ -291,19 +309,19 @@ Mappen skapas sedan.
 
 ![Bildruta-I/O](./images/aemf56.png)
 
-Gå tillbaka till Workfront Fusion, klicka **Klicka här för att välja mapp** och välj sedan mappen `--aepUserLdap-- - Frame.io PNG`.
+Gå tillbaka till Workfront Fusion, välj **Klicka här för att välja mapp** och välj sedan mappen `--aepUserLdap-- - CitiSignal Fiber Campaign`.
 
 ![Bildruta-I/O](./images/aemf57.png)
 
-Kontrollera att målet är inställt på `--aepUserLdap-- - Frame.io PNG`. Välj sedan **Karta** under **Source-fil**.
+Kontrollera att målet är inställt på `--aepUserLdap-- - CitiSignal Fiber Campaign`. Välj sedan **Karta** under **Source-fil**.
 
-Välj variabeln `{{3.filenames[]}}` under **Filnamn**.
+Välj variabeln `{{3.filenames[1]}}` under **Filnamn**.
 
-Välj variabeln `{{3.files[]}}` under **Data**.
+Välj variabeln `{{3.files[1]}}` under **Data**.
 
 >[!NOTE]
 >
->Variabler i Workfront Fusion kan anges manuellt med följande syntax: `{{3.filenames[]}}`. Talet i variabeln refererar till modulen i scenariot. I det här exemplet ser du att den tredje modulen i scenariot heter **Adobe Photoshop - Konvertera bildformat** och har sekvensnumret **3**. Det innebär att variabeln `{{3.filenames[]}}` kommer åt fältet **filnamn[]** från modulen med sekvensnummer 3. Sekvensnummer kan ibland vara olika, så var uppmärksam när du kopierar/klistrar in sådana variabler och kontrollera alltid att det sekvensnummer som används är det rätta.
+>Variabler i Workfront Fusion kan anges manuellt med följande syntax: `{{3.filenames[1]}}`. Talet i variabeln refererar till modulen i scenariot. I det här exemplet ser du att den tredje modulen i scenariot heter **Adobe Photoshop - Konvertera bildformat** och har sekvensnumret **3**. Det innebär att variabeln `{{3.filenames[1]}}` kommer åt fältet **filnamn[]** från modulen med sekvensnummer 3. Sekvensnummer kan ibland vara olika, så var uppmärksam när du kopierar/klistrar in sådana variabler och kontrollera alltid att det sekvensnummer som används är det rätta.
 
 Klicka på **OK**.
 

@@ -4,9 +4,9 @@ description: Konfigurera AEM CS-miljön
 kt: 5342
 doc-type: tutorial
 exl-id: 62715072-0257-4d07-af1a-8becbb793459
-source-git-commit: dd075b0296c6ba06d72b229145635060c2c6abb1
+source-git-commit: 457e7d0dec233edf75717fb9930585a3511bdc65
 workflow-type: tm+mt
-source-wordcount: '998'
+source-wordcount: '991'
 ht-degree: 0%
 
 ---
@@ -123,7 +123,7 @@ Klicka på **Verkställ ändringar**.
 
 Filen `fstab.yaml` har uppdaterats.
 
-## 1.1.3.3 Överföra CitiSignal-resurser
+## 1.1.3.3 Överför CitiSignal-resurser
 
 Gå till [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com){target="_blank"}. Klicka på ditt **program** för att öppna det.
 
@@ -155,7 +155,7 @@ Klicka sedan på **Överför paket**.
 
 Klicka på **Bläddra** för att hitta det paket som ska överföras.
 
-Paketet som ska överföras kallas **citisign-assets.zip** och kan laddas ned här: [https://tech-insiders.s3.us-west-2.amazonaws.com/one-adobe/citisignal-assets.zip](https://tech-insiders.s3.us-west-2.amazonaws.com/one-adobe/citisignal-assets.zip){target="_blank"}.
+Paketet som ska överföras kallas **citisign-assets.zip** och kan hämtas här: [https://tech-insiders.s3.us-west-2.amazonaws.com/one-adobe/citisignal-assets.zip](https://tech-insiders.s3.us-west-2.amazonaws.com/one-adobe/citisignal-assets.zip){target="_blank"}.
 
 ![AEMCS](./images/aemcssetup23.png){zoomable="yes"}
 
@@ -186,7 +186,7 @@ Efter några minuter installeras ditt paket.
 Du kan nu stänga det här fönstret.
 
 
-## 1.1.3.4 Publicera tillgångar i CitiSignal
+## 1.1.3.4 Publicera CitiSignal-resurser
 
 Gå till [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com){target="_blank"}. Klicka på ditt **program** för att öppna det.
 
@@ -278,7 +278,7 @@ Uppdatera skärmen efter några minuter så ser du din nya CitiSignal-webbplats.
 
 ![AEMCS](./images/aemcssetup38.png){zoomable="yes"}
 
-## 1.1.3.6 Publicera CitiSignal-webbplatsen
+## 1.1.3.6 Publicera CitiSignal-webbplats
 
 Klicka sedan på kryssrutan framför **CitiSignal**. Klicka sedan på **Hantera publikation**.
 
@@ -308,10 +308,10 @@ Din webbplats öppnas sedan i **Universal Editor**.
 
 ![AEMCS](./images/aemcssetup45.png){zoomable="yes"}
 
-Du kan nu komma åt din webbplats genom att gå till `main--citisignal--XXX.aem.page/us/en` och/eller `main--citisignal--XXX.aem.live/us/en` efter att du ersatt XXX med ditt GitHub-användarkonto, som i det här exemplet är `woutervangeluwe`.
+Du kan nu komma åt din webbplats genom att gå till `main--citisignal--XXX.aem.page/us/en/` och/eller `main--citisignal--XXX.aem.live/us/en/` efter att du ersatt XXX med ditt GitHub-användarkonto, som i det här exemplet är `woutervangeluwe`.
 
 I det här exemplet blir den fullständiga URL:en följande:
-`https://main--citisignal--woutervangeluwe.aem.page/us/en` och/eller `https://main--citisignal--woutervangeluwe.aem.live/us/en`.
+`https://main--citisignal--woutervangeluwe.aem.page/us/en/` och/eller `https://main--citisignal--woutervangeluwe.aem.live/us/en/`.
 
 Det kan ta en stund innan alla resurser visas korrekt, eftersom de måste publiceras först.
 

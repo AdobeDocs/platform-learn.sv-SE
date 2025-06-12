@@ -4,16 +4,16 @@ description: AEM CS - grundläggande anpassat block
 kt: 5342
 doc-type: tutorial
 exl-id: 57c08a88-d885-471b-ad78-1dba5992da9d
-source-git-commit: dd075b0296c6ba06d72b229145635060c2c6abb1
+source-git-commit: 457e7d0dec233edf75717fb9930585a3511bdc65
 workflow-type: tm+mt
-source-wordcount: '819'
+source-wordcount: '814'
 ht-degree: 1%
 
 ---
 
 # 1.1.4 Utveckla ett enkelt anpassat block
 
-## 1.1.4.1 Konfigurera den lokala utvecklingsmiljön
+## 1.1.4.1 Konfigurera din lokala utvecklingsmiljö
 
 Gå till [https://desktop.github.com/download/](https://desktop.github.com/download/){target="_blank"}, hämta och installera **Github Desktop**.
 
@@ -145,7 +145,7 @@ Spara ändringarna.
 
 ![Blockera](./images/block15.png){zoomable="yes"}
 
-## 1.1.4.3 Verkställ ändringarna
+## 1.1.4.3 Genomför dina ändringar
 
 Du har nu gjort flera ändringar i ditt projekt som behöver implementeras i GitHub-databasen igen. Öppna **GitHub Desktop** om du vill göra det.
 
@@ -249,7 +249,7 @@ Klicka på **Publicera** igen.
 
 Din nya sida har publicerats.
 
-## 1.1.4.5 Lägg till den nya sidan på navigeringsmenyn
+## 1.1.4.5 Lägg till din nya sida på navigeringsmenyn
 
 Gå till **CitiSignal** > **Fragment** i AEM Sites-översikten och markera kryssrutan för **Header**. Klicka på **Redigera**.
 
@@ -259,7 +259,7 @@ Lägg till ett menyalternativ på navigeringsmenyn med texten `Fiber`. Markera t
 
 ![AEMCS](./images/nav1.png){zoomable="yes"}
 
-Ange den här för **URL** `/us/en/citisignal-fiber` och klicka på ikonen **V** för att bekräfta.
+Ange den här för **URL** `/us/en//citisignal-fiber` och klicka på ikonen **V** för att bekräfta.
 
 ![AEMCS](./images/nav3.png){zoomable="yes"}
 
@@ -271,10 +271,10 @@ Klicka på **Publicera** igen.
 
 ![AEMCS](./images/nav5.png){zoomable="yes"}
 
-Du kan nu visa ändringarna av din webbplats genom att gå till `main--citisignal--XXX.aem.page/us/en` och/eller `main--citisignal--XXX.aem.live/us/en` efter att du ersatt XXX med ditt GitHub-användarkonto, som i det här exemplet är `woutervangeluwe`.
+Du kan nu visa ändringarna av din webbplats genom att gå till `main--citisignal--XXX.aem.page/us/en/` och/eller `main--citisignal--XXX.aem.live/us/en/` efter att du ersatt XXX med ditt GitHub-användarkonto, som i det här exemplet är `woutervangeluwe`.
 
 I det här exemplet blir den fullständiga URL:en följande:
-`https://main--citisignal--woutervangeluwe.aem.page/us/en` och/eller `https://main--citisignal--woutervangeluwe.aem.live/us/en`.
+`https://main--citisignal--woutervangeluwe.aem.page/us/en/` och/eller `https://main--citisignal--woutervangeluwe.aem.live/us/en/`.
 
 Du borde se det här då. Klicka på **Fiber**.
 

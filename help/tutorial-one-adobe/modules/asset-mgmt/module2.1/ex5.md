@@ -4,9 +4,9 @@ description: AEM CS - Avancerat anpassat block
 kt: 5342
 doc-type: tutorial
 exl-id: 31fd1dea-70c9-4f82-87ad-16276ffa7f5b
-source-git-commit: 1e3a8d585503eddad4c642a3b13d2b5f7ddc9943
+source-git-commit: 457e7d0dec233edf75717fb9930585a3511bdc65
 workflow-type: tm+mt
-source-wordcount: '1002'
+source-wordcount: '1000'
 ht-degree: 0%
 
 ---
@@ -106,16 +106,16 @@ Gå till ditt GitHub-konto i webbläsaren och till databasen som du skapade för
 
 ![Blockera](./images/blockadv12.png){zoomable="yes"}
 
-Du kan nu visa ändringarna av din webbplats genom att gå till `main--citisignal--XXX.aem.page/us/en` och/eller `main--citisignal--XXX.aem.live/us/en` efter att du ersatt XXX med ditt GitHub-användarkonto, som i det här exemplet är `woutervangeluwe`.
+Du kan nu visa ändringarna av din webbplats genom att gå till `main--citisignal--XXX.aem.page/us/en/` och/eller `main--citisignal--XXX.aem.live/us/en/` efter att du ersatt XXX med ditt GitHub-användarkonto, som i det här exemplet är `woutervangeluwe`.
 
 I det här exemplet blir den fullständiga URL:en följande:
-`https://main--citisignal--woutervangeluwe.aem.page/us/en` och/eller `https://main--citisignal--woutervangeluwe.aem.live/us/en`.
+`https://main--citisignal--woutervangeluwe.aem.page/us/en/` och/eller `https://main--citisignal--woutervangeluwe.aem.live/us/en/`.
 
 Du bör då se det här med formateringen tillämpad på sidan.
 
 ![Blockera](./images/blockadv13.png){zoomable="yes"}
 
-## 1.1.5.2 Lägga till logik och läsa in data från en extern slutpunkt
+## 1.1.5.2 Lägg till logik och läsa in data från en extern slutpunkt
 
 I den här övningen kommer du att göra en&quot;raw&quot;-konfiguration av Adobe Web SDK och du kommer att begära nästa bästa erbjudande från Adobe Journey Optimizer Offer Decisioning.
 
@@ -336,10 +336,10 @@ Klicka sedan på **Push origin**.
 
 ![Blockera](./images/blockadv19.png){zoomable="yes"}
 
-Du kan nu visa ändringarna av din webbplats genom att gå till `main--citisignal--XXX.aem.page/us/en` och/eller `main--citisignal--XXX.aem.live/us/en` efter att du ersatt XXX med ditt GitHub-användarkonto, som i det här exemplet är `woutervangeluwe`.
+Du kan nu visa ändringarna av din webbplats genom att gå till `main--citisignal--XXX.aem.page/us/en/` och/eller `main--citisignal--XXX.aem.live/us/en/` efter att du ersatt XXX med ditt GitHub-användarkonto, som i det här exemplet är `woutervangeluwe`.
 
 I det här exemplet blir den fullständiga URL:en följande:
-`https://main--citisignal--woutervangeluwe.aem.page/us/en` och/eller `https://main--citisignal--woutervangeluwe.aem.live/us/en`.
+`https://main--citisignal--woutervangeluwe.aem.page/us/en/` och/eller `https://main--citisignal--woutervangeluwe.aem.live/us/en/`.
 
 Du borde se det här då.
 

@@ -6,9 +6,9 @@ level: Beginner
 jira: KT-5342
 doc-type: tutorial
 exl-id: 5f9803a4-135c-4470-bfbb-a298ab1fee33
-source-git-commit: a5742f724a818b05f30d7550f36c162223855d66
+source-git-commit: a1da1c73cbddacde00211190a1ca3d36f7a2c329
 workflow-type: tm+mt
-source-wordcount: '1942'
+source-wordcount: '1944'
 ht-degree: 0%
 
 ---
@@ -233,7 +233,7 @@ När du har tagit emot din **signatur för delad åtkomst** väljer du **Kopiera
 
 ![Azure Storage](./images/az29.png){zoomable="yes"}
 
-Använd **SAS-token** för att överföra en fil till ditt Azure Storage-konto.
+Använd **SAS-token-URL** för att överföra en fil till ditt Azure Storage-konto.
 
 Gå tillbaka till Postman, markera mappen **FF - Firefly Services Tech Insiders**, markera **..** i mappen **Firefly** och välj sedan **Lägg till begäran**.
 
@@ -345,7 +345,7 @@ Välj **Skapa**.
 
 ![Azure Storage](./images/az102.png){zoomable="yes"}
 
-Kopiera URL:en och skriv ned den i en fil på datorn för att få din SAS-token med läsbehörighet.
+Kopiera URL:en och skriv ned den i en fil på datorn för att få en SAS-token med lång varaktighet och läs-/skrivbehörighet.
 
 ![Azure Storage](./images/az103.png){zoomable="yes"}
 

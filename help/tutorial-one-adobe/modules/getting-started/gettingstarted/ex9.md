@@ -3,9 +3,9 @@ title: Komma igång - Program som ska installeras
 description: Komma igång - Program som ska installeras
 doc-type: multipage-overview
 exl-id: 25f80da8-88c3-4273-962a-476675cf6047
-source-git-commit: a45283bf5263a6de5c2f83f5be35b7d03ce04d7d
+source-git-commit: a1da1c73cbddacde00211190a1ca3d36f7a2c329
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '212'
 ht-degree: 0%
 
 ---
@@ -20,9 +20,15 @@ Gå till [https://creativecloud.adobe.com/apps/download/creative-cloud](https://
 
 ![Adobe I/O Ny integrering](./images/cc.png)
 
-## Photoshop
+## Adobe Photoshop
 
 Öppna appen **Adobe Creative Cloud** och gå till **Appar**. Installera Photoshop på datorn.
+
+![Adobe I/O Ny integrering](./images/psd.png)
+
+## Adobe Illustrator
+
+Öppna appen **Adobe Creative Cloud** och gå till **Appar**. Installera Illustrator på datorn.
 
 ![Adobe I/O Ny integrering](./images/psd.png)
 

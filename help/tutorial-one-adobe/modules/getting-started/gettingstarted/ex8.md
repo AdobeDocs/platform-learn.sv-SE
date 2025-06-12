@@ -4,9 +4,9 @@ description: Komma igång - Postman-konfiguration
 kt: 5342
 doc-type: tutorial
 exl-id: fc1ee238-cce8-40a9-aba7-3605019a0077
-source-git-commit: e95acadeb7a0438f9be056dd426063ac8abc6bc0
+source-git-commit: a1da1c73cbddacde00211190a1ca3d36f7a2c329
 workflow-type: tm+mt
-source-wordcount: '430'
+source-wordcount: '440'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## Installera PostBuster
 
-Gå till [https://adobe.service-now.com/esc?id=adb_esc_kb_article&amp;sysparm_article=KB0020542](https://adobe.service-now.com/esc?id=adb_esc_kb_article&amp;sysparm_article=KB0020542){target="_blank"}.
+Gå till [https://adobe.service-now.com/esc?id=adb_esc_kb_article&amp;sysparm_article=KB0020542](https://adobe.service-now.com/esc?id=adb_esc_kb_article&sysparm_article=KB0020542){target="_blank"}.
 
 Klicka för att hämta den senaste versionen av **PostBuster**.
 
@@ -69,7 +69,7 @@ Du borde se det här då.
 
 ![PostBuster](./images/pb11.png)
 
-Kopiera miljöplatshållaren nedan och klistra in den i **basmiljön**.
+Kopiera miljöplatshållaren nedan och klistra in den i **basmiljön** genom att ersätta det som finns där.
 
 ```json
 {
@@ -83,7 +83,8 @@ Kopiera miljöplatshållaren nedan och klistra in den i **basmiljön**.
 		"additional_info.projectedProductContext", 
 		"session",
 		"ff_apis",
-		"firefly_api"
+		"firefly_api",
+		"frame.s2s.all"
 	],
 	"TECHNICAL_ACCOUNT_ID": "",
 	"IMS": "ims-na1.adobelogin.com",
@@ -93,7 +94,10 @@ Kopiera miljöplatshållaren nedan och klistra in den i **basmiljön**.
 	"AZURE_STORAGE_URL": "",
 	"AZURE_STORAGE_CONTAINER": "",
 	"AZURE_STORAGE_SAS_READ": "",
-	"AZURE_STORAGE_SAS_WRITE": ""
+	"AZURE_STORAGE_SAS_WRITE": "",
+	"FRAME_IO_BASE_URL": "https://api.frame.io",
+	"FRAME_IO_ACCOUNT_ID": "",
+	"FRAME_IO_WORKSPACE_ID": ""
 }
 ```
 
@@ -105,11 +109,11 @@ Du borde ha den här då.
 
 Gå till [https://developer.adobe.com/console/home](https://developer.adobe.com/console/home){target="_blank"} och öppna projektet.
 
-![Adobe I/O Ny integrering](./images/iopr.png){zoomable="yes"}
+![Adobe I/O Ny integrering](./images/iopr.png)
 
 Gå till **OAuth Server-to-Server**.
 
-![Adobe I/O Ny integrering](./images/iopbvar1.png){zoomable="yes"}
+![Adobe I/O Ny integrering](./images/iopbvar1.png)
 
 Du måste nu kopiera följande värden från ditt Adobe I/O-projekt och klistra in dem i din PostBuster-basmiljö.
 
@@ -118,7 +122,7 @@ Du måste nu kopiera följande värden från ditt Adobe I/O-projekt och klistra 
 - Tekniskt konto-ID
 - Organisations-ID (bläddra nedåt för att hitta ditt organisations-ID)
 
-![Adobe I/O Ny integrering](./images/iopbvar2.png){zoomable="yes"}
+![Adobe I/O Ny integrering](./images/iopbvar2.png)
 
 Kopiera variablerna ovan en i taget och klistra in dem i din **basmiljö** i PostBuster.
 
@@ -129,11 +133,15 @@ Kopiera variablerna ovan en i taget och klistra in dem i din **basmiljö** i Pos
 | Tekniskt konto-ID | `TECHNICAL_ACCOUNT_ID` |
 | Organisations-ID | `IMS_ORG` |
 
-När du har kopierat variablerna på en av dem bör PostBuster-basmiljön se ut så här:
+När du har kopierat variablerna en och en bör PostBuster-basmiljön se ut så här.
 
-![Adobe I/O Ny integrering](./images/iopbvar3.png){zoomable="yes"}
+Klicka på **Stäng**.
+
+![Adobe I/O Ny integrering](./images/iopbvar3.png)
 
 I samlingen **Adobe IO - OAuth** markerar du begäran **POST - Get Access Token** och väljer **Skicka**.
+
+![Adobe I/O Ny integrering](./images/iopbvar3a.png)
 
 Du bör se ett liknande svar som innehåller följande information:
 
@@ -145,9 +153,9 @@ Du bör se ett liknande svar som innehåller följande information:
 
 Adobe I/O **Bearer-token** har ett specifikt värde (den mycket långa access_token) och ett giltighetsfönster och är nu giltigt i 24 timmar. Det innebär att om du efter 24 timmar vill använda Postman för att interagera med Adobe API:er måste du generera en ny token genom att köra denna begäran igen.
 
-![Adobe I/O Ny integrering](./images/iopbvar4.png){zoomable="yes"}
+![Adobe I/O Ny integrering](./images/iopbvar4.png)
 
-PostBuster-miljön är nu konfigurerad och fungerar. Du har nu slutfört modulen Komma igång.
+PostBuster-miljön är nu konfigurerad och fungerar. Du har nu avslutat den här övningen.
 
 ## Nästa steg
 

@@ -6,7 +6,7 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 330f4492-d0df-4298-9edc-4174b0065c9a
-source-git-commit: 29a0f77f113daace66ffbba63fabac7237f7d5f3
+source-git-commit: a1da1c73cbddacde00211190a1ca3d36f7a2c329
 workflow-type: tm+mt
 source-wordcount: '1253'
 ht-degree: 0%
@@ -79,7 +79,7 @@ Ge det nya projektet ett namn: `--aepUserLdap-- - Custom Models`. Klicka på **S
 
 ![Anpassade Firefly-modeller](./images/ffcm5.png){zoomable="yes"}
 
-Du borde se det här då. Klicka på **Skapa**.
+Du borde se det här då. Klicka på **Fortsätt**.
 
 ![Anpassade Firefly-modeller](./images/ffcm6.png){zoomable="yes"}
 

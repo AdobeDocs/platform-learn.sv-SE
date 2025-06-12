@@ -4,9 +4,9 @@ description: AEM CS - MarTech plugin
 kt: 5342
 doc-type: tutorial
 exl-id: 77dc780b-ce6c-403f-847d-8eb64cbe2a97
-source-git-commit: 1e3a8d585503eddad4c642a3b13d2b5f7ddc9943
+source-git-commit: 457e7d0dec233edf75717fb9930585a3511bdc65
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: '1063'
 ht-degree: 0%
 
 ---
@@ -82,31 +82,31 @@ const AUDIENCES = {
 };
 ```
 
-Under **const AUDIENCES = {..};** klistrar du in nedanstående kod:
+Under **const AUDIENCES = {...};** klistrar du in nedanstående kod:
 
 ```javascript
   const isConsentGiven = true;
   const martechLoadedPromise = initMartech(
     // The WebSDK config
-    // Documentation: https://experienceleague.adobe.com/sv/docs/experience-platform/web-sdk/commands/configure/overview#configure-js
+    // Documentation: https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/configure/overview#configure-js
     {
       datastreamId: "XXX",
       orgId: "XXX",
       defaultConsent: 'in',
       onBeforeEventSend: (payload) => {
         // set custom Target params 
-        // see doc at https://experienceleague.adobe.com/sv/docs/platform-learn/migrate-target-to-websdk/send-parameters#parameter-mapping-summary
+        // see doc at https://experienceleague.adobe.com/en/docs/platform-learn/migrate-target-to-websdk/send-parameters#parameter-mapping-summary
         payload.data.__adobe.target ||= {};
 
         // set custom Analytics params
-        // see doc at https://experienceleague.adobe.com/sv/docs/analytics/implementation/aep-edge/data-var-mapping
+        // see doc at https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping
         payload.data.__adobe.analytics ||= {};
       },
 
       // set custom datastream overrides
       // see doc at:
-      // - https://experienceleague.adobe.com/sv/docs/experience-platform/web-sdk/commands/datastream-overrides
-      // - https://experienceleague.adobe.com/sv/docs/experience-platform/datastreams/overrides
+      // - https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/datastream-overrides
+      // - https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overrides
       edgeConfigOverrides: {
         // Override the datastream id
         // datastreamId: '...'
@@ -315,7 +315,7 @@ Klicka på **Push origin** om du vill överföra dina ändringar till GitHub-dat
 
 ![AEMCS](./images/mtplugin13.png){zoomable="yes"}
 
-## 1.1.6.4 ACDL-tillägg i taggegenskapen
+## 1.1.6.4 ACDL-tillägg i taggegenskap
 
 För att AEM Edge Delivery Services MarTech-pluginprogrammet ska fungera på rätt sätt måste du lägga till tillägget för
 
@@ -343,10 +343,10 @@ Gå till **Publiceringsflöde** och öppna ditt **huvudbibliotek**. Klicka på *
 
 ## 1.1.6.5 Skicka data till Adobe Experience Platform Edge Network
 
-Du kan nu visa ändringarna av din webbplats genom att gå till `main--citisignal--XXX.aem.page/us/en` och/eller `main--citisignal--XXX.aem.live/us/en` efter att du ersatt XXX med ditt GitHub-användarkonto, som i det här exemplet är `woutervangeluwe`.
+Du kan nu visa ändringarna av din webbplats genom att gå till `main--citisignal--XXX.aem.page/us/en/` och/eller `main--citisignal--XXX.aem.live/us/en/` efter att du ersatt XXX med ditt GitHub-användarkonto, som i det här exemplet är `woutervangeluwe`.
 
 I det här exemplet blir den fullständiga URL:en följande:
-`https://main--citisignal--woutervangeluwe.aem.page/us/en` och/eller `https://main--citisignal--woutervangeluwe.aem.live/us/en`.
+`https://main--citisignal--woutervangeluwe.aem.page/us/en/` och/eller `https://main--citisignal--woutervangeluwe.aem.live/us/en/`.
 
 >[!NOTE]
 >

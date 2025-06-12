@@ -4,9 +4,9 @@ description: Komma igång - Adobe I/O
 kt: 5342
 doc-type: tutorial
 exl-id: 00f17d4f-a2c8-4e8e-a1ff-556037a60629
-source-git-commit: a45283bf5263a6de5c2f83f5be35b7d03ce04d7d
+source-git-commit: a1da1c73cbddacde00211190a1ca3d36f7a2c329
 workflow-type: tm+mt
-source-wordcount: '661'
+source-wordcount: '797'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ I den här övningen används Adobe I/O för att fråga olika Adobe-slutpunkter.
 
 Gå till [https://developer.adobe.com/console/home](https://developer.adobe.com/console/home){target="_blank"}.
 
-![Adobe I/O Ny integrering](./images/iohome.png){zoomable="yes"}
+![Adobe I/O Ny integrering](./images/iohome.png)
 
 Se till att du väljer rätt instans i skärmens övre högra hörn. Din instans är `--aepImsOrgName--`.
 
@@ -29,7 +29,7 @@ Se till att du väljer rätt instans i skärmens övre högra hörn. Din instans
 
 Välj sedan **Skapa nytt projekt**.
 
-![Adobe I/O Ny integrering](./images/iocomp.png){zoomable="yes"}
+![Adobe I/O Ny integrering](./images/iocomp.png)
 
 ### FIREFLY SERVICES API
 
@@ -39,45 +39,45 @@ Välj sedan **Skapa nytt projekt**.
 
 Du borde se det här då. Välj **+ Lägg till i projekt** och välj **API**.
 
-![Adobe I/O Ny integrering](./images/adobe_io_access_api.png){zoomable="yes"}
+![Adobe I/O Ny integrering](./images/adobe_io_access_api.png)
 
 Skärmen bör se ut så här.
 
-![Adobe I/O Ny integrering](./images/api1.png){zoomable="yes"}
+![Adobe I/O Ny integrering](./images/api1.png)
 
 Markera **Creative Cloud** och välj **Firefly - Firefly Services**. Välj sedan **Nästa**.
 
-![Adobe I/O Ny integrering](./images/api3.png){zoomable="yes"}
+![Adobe I/O Ny integrering](./images/api3.png)
 
 Ange ett namn för dina autentiseringsuppgifter: `--aepUserLdap-- - One Adobe OAuth credential` och välj **Nästa**.
 
-![Adobe I/O Ny integrering](./images/api4.png){zoomable="yes"}
+![Adobe I/O Ny integrering](./images/api4.png)
 
 Välj standardprofilen **Standardkonfiguration för Firefly Services** och välj **Spara konfigurerat API**.
 
-![Adobe I/O Ny integrering](./images/api9.png){zoomable="yes"}
+![Adobe I/O Ny integrering](./images/api9.png)
 
 Du borde se det här då.
 
-![Adobe I/O Ny integrering](./images/api10.png){zoomable="yes"}
+![Adobe I/O Ny integrering](./images/api10.png)
 
 ### PHOTOSHOP SERVICES API
 
 >[!IMPORTANT]
 >
 >Beroende på vilken utbildningsväg du valt kanske du inte har tillgång till Photoshop Services API. Du har bara åtkomst till Photoshop Services API om du är på utbildningsvägen **Firefly**, **Workfront Fusion**, **ALL** eller när du deltar i ett **direktsänt, personligt seminarium**. Du kan hoppa över det här steget om du inte är på någon av dessa inlärningsvägar.
-
+>
 Välj **+ Lägg till i projekt** och välj sedan **API**.
 
-![Azure Storage](./images/ps2.png){zoomable="yes"}
+![Azure Storage](./images/ps2.png)
 
 Markera **Creative Cloud** och välj **Photoshop - Firefly Services**. Välj **Nästa**.
 
-![Azure Storage](./images/ps3.png){zoomable="yes"}
+![Azure Storage](./images/ps3.png)
 
 Välj **Nästa**.
 
-![Azure Storage](./images/ps4.png){zoomable="yes"}
+![Azure Storage](./images/ps4.png)
 
 Därefter måste du välja en produktprofil som definierar vilka behörigheter som är tillgängliga för den här integreringen.
 
@@ -85,11 +85,11 @@ Välj **Standardkonfiguration för Firefly Services** och **Standardkonfiguratio
 
 Välj **Spara konfigurerat API**.
 
-![Azure Storage](./images/ps5.png){zoomable="yes"}
+![Azure Storage](./images/ps5.png)
 
 Du borde se det här då.
 
-![Adobe I/O Ny integrering](./images/ps7.png){zoomable="yes"}
+![Adobe I/O Ny integrering](./images/ps7.png)
 
 ### ADOBE EXPERIENCE PLATFORM API
 
@@ -99,15 +99,15 @@ Du borde se det här då.
 
 Välj **+ Lägg till i projekt** och välj sedan **API**.
 
-![Azure Storage](./images/aep1.png){zoomable="yes"}
+![Azure Storage](./images/aep1.png)
 
 Välj **Adobe Experience Platfrom** och välj **Experience Platform API**. Välj **Nästa**.
 
-![Azure Storage](./images/aep2.png){zoomable="yes"}
+![Azure Storage](./images/aep2.png)
 
 Välj **Nästa**.
 
-![Azure Storage](./images/aep3.png){zoomable="yes"}
+![Azure Storage](./images/aep3.png)
 
 Därefter måste du välja en produktprofil som definierar vilka behörigheter som är tillgängliga för den här integreringen.
 
@@ -119,11 +119,43 @@ Välj **Adobe Experience Platform - Alla användare - PROD**.
 
 Välj **Spara konfigurerat API**.
 
-![Azure Storage](./images/aep4.png){zoomable="yes"}
+![Azure Storage](./images/aep4.png)
 
 Du borde se det här då.
 
-![Adobe I/O Ny integrering](./images/aep5.png){zoomable="yes"}
+![Adobe I/O Ny integrering](./images/aep5.png)
+
+### Frame.io API
+
+>[!IMPORTANT]
+>
+>Beroende på vilken utbildningsväg du valt kanske du inte har tillgång till Frame.io API. Du har bara åtkomst till Frame.io API om du är på utbildningsvägen **Workfront Fusion**, **ALL** eller om du deltar i en **personlig**-workshop. Du kan hoppa över det här steget om du inte är på någon av dessa inlärningsvägar.
+
+Välj **+ Lägg till i projekt** och välj sedan **API**.
+
+![Azure Storage](./images/fiops2.png)
+
+Markera **Creative Cloud** och välj **API:t Frame.io**. Välj **Nästa**.
+
+![Azure Storage](./images/fiops3.png)
+
+Välj **Server-till-server-autentisering** och klicka sedan på **Nästa**.
+
+![Azure Storage](./images/fiops4.png)
+
+Välj **OAuth Server-to-Server** och klicka sedan på **Nästa**.
+
+![Azure Storage](./images/fiops5.png)
+
+Därefter måste du välja en produktprofil som definierar vilka behörigheter som är tillgängliga för den här integreringen.
+
+Välj **Default Frame.io Enterprise - Prime Configuration** och klicka på **Spara konfigurerat API**.
+
+![Azure Storage](./images/fiops6.png)
+
+Du borde se det här då.
+
+![Adobe I/O Ny integrering](./images/fiops7.png)
 
 ### Projektnamn
 

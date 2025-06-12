@@ -3,9 +3,9 @@ title: Slutförd - en självstudiekurs för Adobe
 description: Hur mäts färdigställandet?
 doc-type: multipage-overview
 exl-id: 24d0a6a8-effa-4335-881e-914305bcd348
-source-git-commit: 872ef3910f7fe41b360f80ba13a3840efbfd2172
+source-git-commit: 457e7d0dec233edf75717fb9930585a3511bdc65
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '464'
 ht-degree: 0%
 
 ---
@@ -29,15 +29,15 @@ ID:t för Demo System-projektet för webbformat ser ut så här: `--aepUserLdap-
 
 ## 1.1 Adobe Firefly Services
 
-Det förväntade slutförandebeviset för modulen **Adobe Firefly Services** är **URL** för PSD-filen som genererades i slutet av övningen 1.1.3, efter att ha gått igenom **Photoshop API - Ändra text**.
+Det förväntade slutförandebeviset för modulen **Adobe Firefly Services** är **URL** för PSD-filen som genererades i slutet av övningen 1.1.3, efter att ha gått igenom **Photoshop API - Ändra text** .
 
 URL:en ser ut så här: `https://ldap.blob.core.windows.net/folder/citisignal-fiber-changed-text.psd?sv=2023-01-03&st=2025-01-31T07%3A00%3A37Z&se=2026-02-01T07%3A00%3A00Z&sr=c&sp=racwl&sig=JmGLLEBWwkddsbOS8%2F0Fo3BQEh%2F2m2E9lL70oj1Usssg%3D`.
 
 ![3](./assets/images/ps24.png){zoomable="yes"}
 
-## 1.2 Automatisering av arbetsflöden med Workfront Fusion
+## 1.2 Creative Workflow Automation med Workfront Fusion
 
-Det förväntade beviset på slutförande för modulen **Automatisering av Creative Workflow med Workfront Fusion** är **URL** för den webkrok som skapades i övning 1.2.3, efter att ha gått igenom steget **Aktivera ditt scenario med en webkrok**.
+Det förväntade beviset på slutförande för modulen **Creative Workflow Automation med Workfront Fusion** är **URL** för den webkrok som skapades i övning 1.2.3 efter att du gått igenom steget **Aktivera ditt scenario med en webkrok**.
 
 URL:en ser ut så här: `https://hook.fusion.adobe.com/tuqxu1k4rbf7xdiiqheswzib8iv5t0jh`.
 
@@ -47,13 +47,13 @@ URL:en ser ut så här: `https://hook.fusion.adobe.com/tuqxu1k4rbf7xdiiqheswzib8
 
 Det förväntade slutförandebeviset för modulen **Adobe Experience Manager Cloud Service &amp; Edge Delivery Services** är **URL** för webbplatsen som skapades.
 
-URL:en ser ut så här: `https://main--citisignal--xxx.aem.page/us/en`.
+URL:en ser ut så här: `https://main--citisignal--xxx.aem.page/us/en/`.
 
 ![3](./assets/images/aemcsweb.png){zoomable="yes"}
 
 ## 2.2 Arbetsflödeshantering med Adobe Workfront
 
-Det förväntade beviset på slutförande för modulen **Arbetsflödeshantering med Adobe Workfront** är **URL** för bilden som överfördes till AEM Assets som en del av övningen **2.2.2.5 Visa filen i AEM Assets**.
+Det förväntade slutförandebeviset för modulen **Arbetsflödeshantering med Adobe Workfront** är **URL** för bilden som överfördes till AEM Assets som en del av övningen **2.2.2.5Visa filen i AEM Assets**.
 
 Klicka på **Dela länk** på den överförda bilden i AEM Assets för att hämta URL:en.
 
