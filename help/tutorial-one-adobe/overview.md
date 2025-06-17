@@ -3,9 +3,9 @@ title: Översikt - Omfattande teknisk självstudiekurs - en Adobe
 description: Omfattande teknisk självstudiekurs - en Adobe
 doc-type: multipage-overview
 exl-id: 5bc0d621-0662-4d94-80a0-b6c173c0ac9e
-source-git-commit: a45283bf5263a6de5c2f83f5be35b7d03ce04d7d
+source-git-commit: 174c818dfc9edd78afd32cb919f14acc4aabca72
 workflow-type: tm+mt
-source-wordcount: '944'
+source-wordcount: '986'
 ht-degree: 1%
 
 ---
@@ -65,9 +65,13 @@ I den här modulen använder du Adobe Firefly Services API:er, Photoshop API:er 
 
 [1.2 Automatisering av Creative-arbetsflöden med Workfront Fusion](./modules/creation-production/module1.2/automation.md){target="_blank"}
 
-I den här grundläggande modulen använder du Adobe Workfront Fusion för att automatisera och skala arbetsflödena för att skapa innehåll.
+I den här modulen använder du Adobe Workfront Fusion för att automatisera och skala arbetsflödena för att skapa innehåll.
 
-[1.3 Adobe Express och Adobe Experience Cloud](./modules/creation-production/module1.3/express.md){target="_blank"}
+[1.3 GenStudio for Performance Marketing](./modules/creation-production/module1.3/genstudio.md){target="_blank"}
+
+I den här modulen kommer du att använda Adobe GenStudio for Performance Marketing, en Gen AI-program som ett led i arbetsflödet för marknadsföringsteam och kreativa team, för att skapa, aktivera och optimera flerkanalsinnehåll med företagsstyrning för digitala marknadsföringskampanjer.
+
+[1.4 Adobe Express och Adobe Experience Cloud](./modules/creation-production/module1.4/express.md){target="_blank"}
 
 I den här grundläggande modulen kommer du att använda Adobe Express för att skapa bilder och videor, och du kommer att dela dessa resurser med hela Adobe Experience Cloud ekosystem.
 

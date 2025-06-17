@@ -6,9 +6,9 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 52385c33-f316-4fd9-905f-72d2d346f8f5
-source-git-commit: e22ec4d64c60fdc720896bd8b339f49b05d7e48d
+source-git-commit: a9f2e42d001e260f79439850bc5a364a64d1fc0e
 workflow-type: tm+mt
-source-wordcount: '3182'
+source-wordcount: '3788'
 ht-degree: 0%
 
 ---
@@ -239,13 +239,13 @@ I samlingen **Adobe IO - OAuth** markerar du begäran **POST - Get Access Token*
 
 Nu när du har en giltig och ny åtkomsttoken kan du skicka din första begäran till Firefly Services API:er.
 
-Den begäran som du använder här är en **synkron**-begäran som ger dig ett svar som innehåller den begärda bilden inom några sekunder.
+Den begäran som du använder här är en **asynkron**-begäran, som ger dig ett svar som innehåller URL:en för jobbet som har skickats, vilket innebär att du måste använda en andra begäran för att kontrollera statusen för jobbet och få åtkomst till bilden som skapades.
 
 >[!NOTE]
 >
->I och med lanseringen av Firefly Image 4 och Image 4 Ultra kommer synkrona begäranden att tas bort till förmån för asynkrona begäranden. Du hittar övningar på asynkrona förfrågningar längre ned i den här självstudien.
+>I och med lanseringen av Firefly Image 4 och Image 4 Ultra kommer synkrona begäranden att tas bort till förmån för asynkrona begäranden.
 
-Välj begäran **POST - Firefly - T2I V3** i samlingen **FF - Firefly Services Tech Insiders** . Gå till **Sidhuvuden** och verifiera kombinationerna av nyckel/värde-par.
+Välj begäran **POST - Firefly - T2I V3 async** i samlingen **FF - Firefly Services Tech Insiders**. Gå till **Sidhuvuden** och verifiera kombinationerna av nyckel/värde-par.
 
 | Nyckel | Värde |
 |:-------------:| :---------------:| 
@@ -254,7 +254,7 @@ Välj begäran **POST - Firefly - T2I V3** i samlingen **FF - Firefly Services T
 
 Båda värdena i den här begäran refererar till miljövariabler som har definierats i förväg. `{{API_KEY}}` refererar till fältet **Klient-ID** i ditt Adobe I/O-projekt. Som en del av avsnittet **Komma igång** i den här självstudiekursen konfigurerade du det i Postman.
 
-Värdet för fältet **Authorization** är lite speciellt: `Bearer {{ACCESS_TOKEN}}`. Den innehåller en referens till **åtkomsttoken** som du skapade i föregående steg. När du fick din **åtkomsttoken** med hjälp av **POST - Get Access Token** i samlingen **Adobe IO - OAuth** kördes ett skript i Postman som lagrade fältet **access_token** som en miljövariabel, som nu hänvisas till i begäran **POST - Firefly - T2I V3**. Observera det specifika tillägget av ordet **Bearer** och ett mellanslag före `{{ACCESS_TOKEN}}`. Ordet bärare är skiftlägeskänsligt och blanksteget krävs. Om detta inte görs korrekt returnerar Adobe I/O ett **401 Unauthorized** -fel eftersom det inte kommer att kunna behandla din **Access-token** korrekt.
+Värdet för fältet **Authorization** är lite speciellt: `Bearer {{ACCESS_TOKEN}}`. Den innehåller en referens till **åtkomsttoken** som du skapade i föregående steg. När du fick din **åtkomsttoken** med hjälp av **POST - Get Access Token** i samlingen **Adobe IO - OAuth** kördes ett skript i Postman som lagrade fältet **access_token** som en miljövariabel, som nu refereras i begäran **POST - Firefly - T2I V3 async**. Observera det specifika tillägget av ordet **Bearer** och ett mellanslag före `{{ACCESS_TOKEN}}`. Ordet bärare är skiftlägeskänsligt och blanksteget krävs. Om detta inte görs korrekt returnerar Adobe I/O ett **401 Unauthorized** -fel eftersom det inte kommer att kunna behandla din **Access-token** korrekt.
 
 ![Firefly](./images/ff0.png)
 
@@ -262,7 +262,23 @@ Gå sedan till **Body** och verifiera uppmaningen. Klicka på **Skicka**.
 
 ![Firefly](./images/ff1.png)
 
-Kopiera (eller klicka) bildens URL från svaret och öppna den i webbläsaren för att visa bilden.
+Du får då ett omedelbart svar. Det här svaret innehåller inte bildens URL:er för den genererade bilden. Det innehåller i stället en URL-adress till statusrapporten för jobbet som du startade och en annan URL-adress som gör att du kan avbryta det jobb som körs.
+
+>[!NOTE]
+>
+>Postman-samlingen som du använder har konfigurerats att använda dynamiska variabler. Fältet **statusUrl** har till exempel lagrats som en dynamisk variabel i Postman tack vare **skripten** som har konfigurerats i Postman.
+
+![Firefly](./images/ff1a.png)
+
+Om du vill kontrollera statusrapporten för ditt pågående jobb väljer du begäran **GET - Firefly - Hämta statusrapport** i samlingen **FF - Firefly Services Tech Insiders** . Klicka för att öppna den och klicka sedan på **Skicka**. Välj URL-adressen för den genererade bilden och öppna den i webbläsaren.
+
+>[!NOTE]
+>
+>Postman-samlingen som du använder har konfigurerats att använda dynamiska variabler. Fältet **statusUrl** för den föregående begäran lagrades som en dynamisk variabel i Postman och används nu som URL för **GET - Firefly - Get Status Report** -begäran.
+
+![Firefly](./images/ff1b.png)
+
+Du borde ha fått ett liknande svar. Detta är en översikt över jobbet som kördes. Du kan se fältet **url** som innehåller den genererade bilden. Kopiera (eller klicka) bildens URL från svaret och öppna den i webbläsaren för att visa bilden.
 
 ![Firefly](./images/ff2.png)
 
@@ -270,7 +286,7 @@ Du bör se en vacker bild som visar `horses in a field`.
 
 ![Firefly](./images/ff3.png)
 
-I **Body** i din begäran **POST - Firefly - T2I V3** lägger du till följande under fältet `"promptBiasingLocaleCode": "en-US"` och ersätter variabeln `XXX` med ett av de startvärden som slumpmässigt användes av Firefly Services-gränssnittet. I det här exemplet är **seed**-talet `142194`.
+I **Body** i din begäran **POST - Firefly - T2I V3 async** lägger du till följande under fältet `"promptBiasingLocaleCode": "en-US"` och ersätter variabeln `XXX` med ett av de dirigeringsnummer som slumpmässigt användes av Firefly Services användargränssnitt. I det här exemplet är **seed**-talet `142194`.
 
 ```json
 ,
@@ -279,7 +295,11 @@ I **Body** i din begäran **POST - Firefly - T2I V3** lägger du till följande 
   ]
 ```
 
-Klicka på **Skicka**. Du får sedan ett svar med en ny bild som genererats av Firefly Services. Öppna bilden för att visa den.
+Klicka på **Skicka**. Du får sedan ett svar igen med en länk till statusrapporten för jobbet du just skickat.
+
+![Firefly](./images/ff3a.png)
+
+Om du vill kontrollera statusrapporten för ditt pågående jobb väljer du begäran **GET - Firefly - Hämta statusrapport** i samlingen **FF - Firefly Services Tech Insiders** . Klicka för att öppna den och klicka sedan på **Skicka**. Välj URL-adressen för den genererade bilden och öppna den i webbläsaren.
 
 ![Firefly](./images/ff4.png)
 
@@ -287,7 +307,7 @@ Du bör då se en ny bild med små skillnader, baserat på **seed** som använde
 
 ![Firefly](./images/ff5.png)
 
-I **Body** för din begäran **POST - Firefly - T2I V3** klistrar du sedan in **styles** nedan-objektet under **seed** -objektet. Detta ändrar den genererade bildens format till **art_deco**.
+I **Body** för din begäran **POST - Firefly - T2I V3 async** klistrar du sedan in **styles** nedan-objektet under **seed** -objektet. Detta ändrar den genererade bildens format till **art_deco**.
 
 ```json
 ,
@@ -300,11 +320,11 @@ I **Body** för din begäran **POST - Firefly - T2I V3** klistrar du sedan in **
   }
 ```
 
-Du borde ha den här då. Klicka på **Skicka**.
+Du borde ha den här då. Klicka på **Skicka**. Du får sedan ett svar igen med en länk till statusrapporten för jobbet du just skickat.
 
 ![Firefly](./images/ff6.png)
 
-Klicka på bildens URL för att öppna den.
+Om du vill kontrollera statusrapporten för ditt pågående jobb väljer du begäran **GET - Firefly - Hämta statusrapport** i samlingen **FF - Firefly Services Tech Insiders** . Klicka för att öppna den och klicka sedan på **Skicka**. Välj URL-adressen för den genererade bilden och öppna den i webbläsaren.
 
 ![Firefly](./images/ff7.png)
 
@@ -312,7 +332,7 @@ Bilden har ändrats en stund. När du använder formatförinställningar använd
 
 ![Firefly](./images/ff8.png)
 
-Ta bort koden för objektet **seed** från **Body** i din begäran. Klicka på **Skicka** och sedan på den bild-URL som du får från svaret.
+Ta bort koden för **seed**-objektet från **Body** i din **POST - Firefly - T2I V3 async** -begäran. Klicka på **Skicka** och sedan på den bild-URL som du får från svaret. Du får sedan ett svar igen med en länk till statusrapporten för jobbet du just skickat.
 
 ```json
 ,
@@ -323,13 +343,17 @@ Ta bort koden för objektet **seed** från **Body** i din begäran. Klicka på *
 
 ![Firefly](./images/ff9.png)
 
+Om du vill kontrollera statusrapporten för ditt pågående jobb väljer du begäran **GET - Firefly - Hämta statusrapport** i samlingen **FF - Firefly Services Tech Insiders** . Klicka för att öppna den och klicka sedan på **Skicka**. Välj URL-adressen för den genererade bilden och öppna den i webbläsaren.
+
+![Firefly](./images/ff9a.png)
+
 Bilden har ändrats lite igen.
 
 ![Firefly](./images/ff10.png)
 
 ## 1.1.1.7 Firefly Services-API, Gen-utökning
 
-Välj begäran **POST - Firefly - Gen Expand** i samlingen **FF - Firefly Services Tech Insiders** och gå till **Body** för begäran.
+Välj begäran **POST - Firefly - Gen Expandera asynkront** i samlingen **FF - Firefly Services Tech Insiders** och gå till **Body** för begäran.
 
 - **size**: Ange önskad upplösning. Värdet som anges här måste vara större än bildens ursprungliga storlek och får inte vara större än 3999.
 - **image.source.url**: Det här fältet kräver en länk till bilden som behöver expanderas. I det här exemplet används en variabel för att referera till bilden som skapades i föregående övning.
@@ -339,7 +363,11 @@ Välj begäran **POST - Firefly - Gen Expand** i samlingen **FF - Firefly Servic
 
 ![Firefly](./images/ff11.png)
 
-Klicka på den bild-URL som är en del av svaret.
+Du får sedan ett svar igen med en länk till statusrapporten för jobbet du just skickat.
+
+![Firefly](./images/ff11a.png)
+
+Om du vill kontrollera statusrapporten för ditt pågående jobb väljer du begäran **GET - Firefly - Hämta statusrapport** i samlingen **FF - Firefly Services Tech Insiders** . Klicka för att öppna den och klicka sedan på **Skicka**. Välj URL-adressen för den genererade bilden och öppna den i webbläsaren.
 
 ![Firefly](./images/ff12.png)
 
@@ -347,9 +375,27 @@ Du kommer nu att se att bilden som skapades i föregående övning nu har utöka
 
 ![Firefly](./images/ff13.png)
 
-När du ändrar placeringens justering kommer utdata också att bli något annorlunda. I det här exemplet ändras placeringen till **left, bottom**. Klicka på **Skicka** och klicka sedan för att öppna den genererade bild-URL:en.
+Generera en ny bild med begäran **Firefly - T2I V3 async** .
+
+![Firefly](./images/ff13a.png)
+
+Om du vill kontrollera statusrapporten för ditt pågående jobb väljer du begäran **GET - Firefly - Hämta statusrapport** i samlingen **FF - Firefly Services Tech Insiders** . Klicka för att öppna den och klicka sedan på **Skicka**. Välj URL-adressen för den genererade bilden och öppna den i webbläsaren.
+
+![Firefly](./images/ff13b.png)
+
+Du bör då se en liknande bild.
+
+![Firefly](./images/ff13c.png)
+
+Välj begäran **POST - Firefly - Gen Expandera asynkront** i samlingen **FF - Firefly Services Tech Insiders** och gå till **Body** för begäran.
+
+När du ändrar placeringens justering kommer utdata också att bli något annorlunda. I det här exemplet ändras placeringen till **left, bottom**. Klicka på **Skicka**. Du får sedan ett svar igen med en länk till statusrapporten för jobbet du just skickat.
 
 ![Firefly](./images/ff14.png)
+
+Om du vill kontrollera statusrapporten för ditt pågående jobb väljer du begäran **GET - Firefly - Hämta statusrapport** i samlingen **FF - Firefly Services Tech Insiders** . Klicka för att öppna den och klicka sedan på **Skicka**. Välj URL-adressen för den genererade bilden och öppna den i webbläsaren.
+
+![Firefly](./images/ff14a.png)
 
 Du bör då se att originalbilden används på en annan plats, vilket påverkar hela bilden.
 
@@ -381,7 +427,7 @@ Gå till **brödtexten** för begäran. Du bör se att i brödtexten begärs fyr
 
 ![Firefly](./images/ffim4_2.png)
 
-Du får då ett omedelbart svar. I motsats till tidigare synkrona begäranden som du använde innehåller det här svaret inga bild-URL:er för genererade bilder. Den innehåller en URL för statusrapporten för det jobb som du startade och den innehåller en annan URL som gör att du kan avbryta det jobb som körs.
+Du får då ett omedelbart svar. Det här svaret innehåller inte bildens URL:er för den genererade bilden. Det innehåller i stället en URL-adress till statusrapporten för jobbet som du startade och en annan URL-adress som gör att du kan avbryta det jobb som körs.
 
 ![Firefly](./images/ffim4_3.png)
 

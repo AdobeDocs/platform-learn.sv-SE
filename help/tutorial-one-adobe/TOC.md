@@ -4,9 +4,9 @@ breadcrumb-title: Omfattande teknisk självstudiekurs för Adobe-program, från 
 hide: true
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-source-git-commit: a45283bf5263a6de5c2f83f5be35b7d03ce04d7d
+source-git-commit: 174c818dfc9edd78afd32cb919f14acc4aabca72
 workflow-type: tm+mt
-source-wordcount: '1153'
+source-wordcount: '1171'
 ht-degree: 2%
 
 ---
@@ -50,12 +50,16 @@ ht-degree: 2%
       + [1.2.5 Frame.io och Workfront Fusion](/help/tutorial-one-adobe/modules/creation-production/module1.2/ex5.md)
       + [1.2.6 Frame.io till Workfront Fusion to AEM Assets](/help/tutorial-one-adobe/modules/creation-production/module1.2/ex6.md)
       + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/creation-production/module1.2/summary.md)
-   + 1.3 Adobe Express och Adobe Experience Cloud {#crpr3}
-      + [Översikt](/help/tutorial-one-adobe/modules/creation-production/module1.3/express.md)
-      + [1.3.1 Komma igång med Adobe Express](/help/tutorial-one-adobe/modules/creation-production/module1.3/ex1.md)
-      + [1.3.2 Animering och video i Adobe Express](/help/tutorial-one-adobe/modules/creation-production/module1.3/ex2.md)
-      + [1.3.3 Skapa Assets satsvis i Adobe Express](/help/tutorial-one-adobe/modules/creation-production/module1.3/ex3.md)
+   + 1.3 GenStudio for Performance Marketing {#crpr3}
+      + [Översikt](/help/tutorial-one-adobe/modules/creation-production/module1.3/genstudio.md)
+      + [1.3.1 Komma igång med GenStudio for Performance Marketing](/help/tutorial-one-adobe/modules/creation-production/module1.3/ex1.md)
       + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/creation-production/module1.3/summary.md)
+   + 1.4 Adobe Express och Adobe Experience Cloud {#crpr4}
+      + [Översikt](/help/tutorial-one-adobe/modules/creation-production/module1.4/express.md)
+      + [1.4.1 Komma igång med Adobe Express](/help/tutorial-one-adobe/modules/creation-production/module1.4/ex1.md)
+      + [1.4.2 Animering och video i Adobe Express](/help/tutorial-one-adobe/modules/creation-production/module1.4/ex2.md)
+      + [1.4.3 Skapa Assets satsvis i Adobe Express](/help/tutorial-one-adobe/modules/creation-production/module1.4/ex3.md)
+      + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/creation-production/module1.4/summary.md)
 
 + Resurshantering {#assetmgmt}
    + 1.1 Adobe Experience Manager Cloud Service {#assetm1}
