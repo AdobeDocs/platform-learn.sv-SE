@@ -5,14 +5,21 @@ role: Developer
 level: Beginner
 jira: KT-5342
 doc-type: Tutorial
-source-git-commit: 51ad32eb3a017c973d0822b6d1e5a39d5c3947b7
+exl-id: b34c6bbf-4c47-4791-b15e-73b8ba059434
+source-git-commit: b18b2e00f22c0a5ce2f17a95892be344387718e3
 workflow-type: tm+mt
-source-wordcount: '465'
+source-wordcount: '548'
 ht-degree: 0%
 
 ---
 
 # 1.3.1 Konfiguration: Varumärke
+
+Ett varumärke skiljer en organisation, produkt, tjänst eller koncept från andra. Vissa delar av ett varumärke är objektiva, till exempel en logotyp, medan andra är subjektiva, till exempel en viss ton.
+
+GenStudio for Performance Marketing använder den stora mängden varumärkesinformation som ert varumärke förmedlar till sina partners med produkt- och personinformation och bygger ut en heltäckande varumärkesidentitet. Varumärkesidentiteten används för att skapa varumärkesanpassat innehåll med Adobe generativa AI-teknik.
+
+Följ stegen nedan för att börja skapa ett eget varumärke.
 
 Gå till [https://experience.adobe.com/](https://experience.adobe.com/){target="_blank"}. Öppna **GenStudio**.
 

@@ -5,18 +5,27 @@ role: Developer
 level: Beginner
 jira: KT-5342
 doc-type: Tutorial
-source-git-commit: 32f7cfc1aafb7a58dca99be3be9149c90bcfd040
+exl-id: 181c1623-eb47-47e0-889b-6e9ebb6a143c
+source-git-commit: b18b2e00f22c0a5ce2f17a95892be344387718e3
 workflow-type: tm+mt
-source-wordcount: '707'
+source-wordcount: '948'
 ht-degree: 0%
 
 ---
 
 # 1.3.2 Konfiguration: Personas, Produkter och mallar
 
+Gå till [https://experience.adobe.com/](https://experience.adobe.com/){target="_blank"}. Öppna **GenStudio**.
+
+![SGPeM](./images/gspem1.png)
+
 ## 1.3.2.1 produkter
 
-Klicka på de tre punkterna **..** och välj sedan **Produkter**.
+Produkterna i GenStudio for Performance Marketing har en djupgående förståelse för produktspecifikationer, fördelar och differentierande faktorer för att skapa slagkraftigt innehåll.
+
+Produkterna omfattar alla delar i en viss produkt, t.ex. bilder, beskrivningar och värdeförslag, för att skapa en sammanhängande varumärkesrepresentation. Genom att utnyttja Adobe avancerade AI-teknologi kan GenStudio for Performance Marketing riktlinjer - varumärken, produkter och personer - tillsammans generera övertygande material som visar upp vilka styrkor era produkter har och säkerställer enhetlighet i alla budskap.
+
+Om du vill börja skapa egna produkter klickar du på de tre punkterna **..** och väljer sedan **Produkter**.
 
 ![SGPeM](./images/gspem101.png)
 
@@ -102,7 +111,11 @@ Du bör då se de två produkter som du har konfigurerat.
 
 ## 1.3.2.2 personas
 
-Klicka på de tre punkterna **..** och välj sedan **Personas**.
+Personerna utgör en autentisk bild av era kundsegment, med information, intressen, smärtor, preferenser och beteenden.
+
+GenStudio for Performance Marketing utnyttjar riktlinjerna - varumärken, produkter och personligheter - och Adobe generativa AI-teknik för att strukturera personaliserat marknadsföringsmaterial för era målkunder. &#x200B;
+
+Klicka på de tre punkterna **..** och välj sedan **Personas** för att börja skapa dina profiler.
 
 ![SGPeM](./images/gspem111.png)
 
@@ -213,6 +226,10 @@ Du bör sedan se de 3 personerna som du konfigurerade.
 ![SGPeM](./images/gspem124.png)
 
 ## Mallar för 1.3.2.3
+
+Med GenStudio for Performance Marketing kan innehållsskapare snabbt producera enhetligt marknadsföringsmaterial med hjälp av mallar. En mall minskar tiden och arbetet som krävs för att generera nytt innehåll avsevärt genom att tillhandahålla en startpunkt som inkluderar förkonfigurerade layouter och designelement.
+
+GenStudio for Performance Marketing stöder inte direkt framtagning av mallar i programmet, men du kan enkelt utforma och förbereda mallar med vanliga designverktyg som Adobe InDesign, Illustrator eller Express. När designen är klar kan du anpassa den för användning i GenStudio for Performance Marketing. I den här övningen importerar du ett antal fördefinierade mallar till GenStudio for Performance Marketing.
 
 I föregående övning laddade du ned filen [CitiSignal-SGPeM-assets.zip](../../../assets/gspem/CitiSignal-GSPeM-assets.zip) till skrivbordet och packade upp den. Mappen innehåller fyra exempelmallar som du nu behöver importera i GenStudio.
 
