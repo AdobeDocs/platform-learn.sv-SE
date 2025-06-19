@@ -527,9 +527,9 @@ Använd URL:en `/v4/accounts/{{1.account_id}}/folders/{{4.body.data.parent_id}}/
 >[!NOTE]
 >
 >Som tidigare nämnts kan variabler i Workfront Fusion anges manuellt med följande syntax: `{{1.account_id}}` och `{{4.body.data.parent_id}}`. Talet i variabeln refererar till modulen i scenariot.
->>I det här exemplet ser du att den första modulen i scenariot kallas **Webhooks** och har sekvensnumret **1**. Det innebär att variabeln `{{1.account_id}}` kommer åt det fältet från modulen med sekvensnummer 1.
->>I det här exemplet ser du att den fjärde modulen i scenariot kallas **Frame.io - gör ett anpassat API-anrop** och har sekvensnumret **4**. Det innebär att variabeln `{{4.body.data.parent_id}}` kommer åt det fältet från modulen med sekvensnummer 4.
->>Om serienumren för modulerna är olika måste du uppdatera variablerna i ovanstående URL för att kunna länkas till rätt modul.
+>&#x200B;>I det här exemplet ser du att den första modulen i scenariot kallas **Webhooks** och har sekvensnumret **1**. Det innebär att variabeln `{{1.account_id}}` kommer åt det fältet från modulen med sekvensnummer 1.
+>&#x200B;>I det här exemplet ser du att den fjärde modulen i scenariot kallas **Frame.io - gör ett anpassat API-anrop** och har sekvensnumret **4**. Det innebär att variabeln `{{4.body.data.parent_id}}` kommer åt det fältet från modulen med sekvensnummer 4.
+>&#x200B;>Om serienumren för modulerna är olika måste du uppdatera variablerna i ovanstående URL för att kunna länkas till rätt modul.
 
 ![Bildruta-I/O](./images/frame78.png)
 
@@ -548,8 +548,8 @@ Kopiera och klistra in nedanstående JSON-kodfragment i fältet **Body**.
 
 >[!NOTE]
 >
->Variabler i Workfront Fusion kan anges manuellt med följande syntax: `{{6.data.newPsdTemplate}}`. Talet i variabeln refererar till modulen i scenariot. I det här exemplet ser du att den sjätte modulen i scenariot kallas **HTTP - Gör en begäran** och har sekvensnumret ****. Det innebär att variabeln `{{6.data.newPsdTemplate}}` kommer åt fältet **data.newPsdTemplate** från modulen med sekvensnummer 6.
->>Om modulens sekvensnummer är olika måste du uppdatera variabeln i ovanstående URL för att kunna länkas till rätt modul.
+>Variabler i Workfront Fusion kan anges manuellt med följande syntax: `{{6.data.newPsdTemplate}}`. Talet i variabeln refererar till modulen i scenariot. I det här exemplet ser du att den sjätte modulen i scenariot kallas **HTTP - Gör en begäran** och har sekvensnumret **&#x200B;**. Det innebär att variabeln `{{6.data.newPsdTemplate}}` kommer åt fältet **data.newPsdTemplate** från modulen med sekvensnummer 6.
+>&#x200B;>Om modulens sekvensnummer är olika måste du uppdatera variabeln i ovanstående URL för att kunna länkas till rätt modul.
 
 Klicka på **OK**.
 
