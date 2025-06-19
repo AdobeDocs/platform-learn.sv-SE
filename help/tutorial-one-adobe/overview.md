@@ -3,7 +3,7 @@ title: Översikt - Omfattande teknisk självstudiekurs - en Adobe
 description: Omfattande teknisk självstudiekurs - en Adobe
 doc-type: multipage-overview
 exl-id: 5bc0d621-0662-4d94-80a0-b6c173c0ac9e
-source-git-commit: 174c818dfc9edd78afd32cb919f14acc4aabca72
+source-git-commit: 31ff3c9764b07f29d1235ac146d1631529b6038f
 workflow-type: tm+mt
 source-wordcount: '986'
 ht-degree: 1%
@@ -41,9 +41,9 @@ Den här självstudiekursen fokuserar inte bara på Adobe-program utan tar häns
 När du är klar med några av modulerna i den här självstudiekursen kan du göra en Adobe Credential-tentamen för att få ett **Adobe Qualified**-märke.
 
 - När du är klar med modulen [Översikt över Adobe Firefly Services](./modules/creation-production/module1.1/firefly-services.md){target="_blank"} kan du genomföra och godkänna **Adobe Qualified**-provet **AD2-E901**:
-  [https://certification.adobe.com/certification/services-qualified-credential](https://certification.adobe.com/certification/services-qualified-credential).
-- När du har slutfört modulen [Creative Workflow Automation med Workfront Fusion](./modules/creation-production/module1.2/automation.md){target="_blank"} kan du genomföra och godkänna **Adobe Qualified**-provet **XXX**:
-  [TBC](https://certification.adobe.com/certification/services-qualified-credential).
+  [https://certification.adobe.com/certification/services-qualified-credential](https://certification.adobe.com/certification/services-qualified-credential){target="_blank"}.
+- När du har slutfört modulen [Creative Workflow Automation med Workfront Fusion](./modules/creation-production/module1.2/automation.md){target="_blank"} kan du genomföra och godkänna **Adobe Qualified**-provet **AD2-E902**:
+  [https://certification.adobe.com/certification/fusion-qualified-credential](https://certification.adobe.com/certification/fusion-qualified-credential){target="_blank"}.
 
 ## Innehållsstatus
 

@@ -5,10 +5,10 @@ role: Developer
 level: Beginner
 jira: KT-5342
 doc-type: Tutorial
-source-git-commit: 174c818dfc9edd78afd32cb919f14acc4aabca72
+source-git-commit: 51ad32eb3a017c973d0822b6d1e5a39d5c3947b7
 workflow-type: tm+mt
-source-wordcount: '86'
-ht-degree: 10%
+source-wordcount: '106'
+ht-degree: 8%
 
 ---
 
@@ -21,9 +21,13 @@ ht-degree: 10%
 
 ## Utövningar
 
-[1.3.1 Komma igång med GenStudio for Performance Marketing](./ex1.md){target="_blank"}
+[1.3.1 Konfiguration: Varumärken](./ex1.md){target="_blank"}
 
-Utforska GenStudio for Performance Marketing i den här övningen.
+I den här övningen ska du konfigurera ett CitiSignal-varumärke i GenStudio for Performance Marketing.
+
+[1.3.2 Konfiguration: Personas, Produkter och mallar](./ex2.md){target="_blank"}
+
+I den här övningen ska du konfigurera personifieringar och produkter i GenStudio for Performance Marketing.
 
 [Sammanfattning och förmåner](./summary.md){target="_blank"}
 
