@@ -6,10 +6,10 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 6c0051e8-3dce-4b1f-a9fa-e86565a9fff4
-source-git-commit: b18b2e00f22c0a5ce2f17a95892be344387718e3
+source-git-commit: b8f7b370a5aba82a0dcd6e7f4f0222fe209976f7
 workflow-type: tm+mt
-source-wordcount: '437'
-ht-degree: 2%
+source-wordcount: '462'
+ht-degree: 1%
 
 ---
 
@@ -30,7 +30,9 @@ I den här modulen får du lära dig hur du utför alla ovanstående steg själv
 
 ## Förhandskrav
 
-- Åtkomst till Adobe GenStudio for Performance Marketing [https://new.express.adobe.com/](https://new.express.adobe.com/){target="_blank"}
+- Tillgång till Adobe GenStudio for Performance Marketing
+- Tillgång till Adobe Workfront och Adobe Workfront Planning
+- Åtkomst till en Adobe Experience Manager Cloud Service-sandlåda med Content Hub aktiverat
 
 ## Utövningar
 
@@ -40,11 +42,11 @@ I den här övningen ska du konfigurera ett CitiSignal-varumärke i GenStudio fo
 
 [1.3.2 Konfiguration: Personas, Produkter och mallar](./ex2.md){target="_blank"}
 
-I den här övningen ska du konfigurera personifieringar och produkter i GenStudio for Performance Marketing.
+I den här övningen ska du konfigurera profiler, produkter och mallar i GenStudio for Performance Marketing.
 
 [1.3.3 Kampanjaktivering till Meta](./ex3.md){target="_blank"}
 
-I den här övningen ska du konfigurera en anslutning till Meta och gå igenom alla steg som behövs för att skapa en annons, godkänna en annons med Adobe Workfront och publicera en annons på Meta.
+I den här övningen ska ni skapa en Campaign. Du kommer också att konfigurera en anslutning till Meta och du kommer att gå igenom alla steg som behövs för att kunna skapa en annons, godkänna en annons med Adobe Workfront och publicera en annons på Meta.
 
 [Sammanfattning och förmåner](./summary.md){target="_blank"}
 

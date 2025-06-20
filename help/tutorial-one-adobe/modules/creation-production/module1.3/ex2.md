@@ -1,23 +1,21 @@
 ---
-title: Komma igång med Adobe Express
-description: Komma igång med Adobe Express
+title: GenStudio for Performance Marketing Configuration Personas Products Templates
+description: GenStudio for Performance Marketing Configuration Personas Products Templates
 role: Developer
 level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 181c1623-eb47-47e0-889b-6e9ebb6a143c
-source-git-commit: b18b2e00f22c0a5ce2f17a95892be344387718e3
+source-git-commit: b8f7b370a5aba82a0dcd6e7f4f0222fe209976f7
 workflow-type: tm+mt
-source-wordcount: '948'
+source-wordcount: '961'
 ht-degree: 0%
 
 ---
 
 # 1.3.2 Konfiguration: Personas, Produkter och mallar
 
-Gå till [https://experience.adobe.com/](https://experience.adobe.com/){target="_blank"}. Öppna **GenStudio**.
-
-![SGPeM](./images/gspem1.png)
+I den här övningen ska du konfigurera profiler, produkter och mallar i GenStudio for Performance Marketing.
 
 ## 1.3.2.1 produkter
 

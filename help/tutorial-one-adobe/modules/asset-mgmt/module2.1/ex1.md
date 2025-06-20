@@ -4,10 +4,10 @@ description: Skapa ett Cloud Manager-program
 kt: 5342
 doc-type: tutorial
 exl-id: fda247eb-1865-4936-b46e-84128ccab357
-source-git-commit: 1bcc5123f16dbde30877662159e06d61d75e7287
+source-git-commit: 7b9df90424c1d8c2fbe7672f00e9b2ce0ec66d19
 workflow-type: tm+mt
-source-wordcount: '273'
-ht-degree: 2%
+source-wordcount: '360'
+ht-degree: 1%
 
 ---
 
@@ -76,7 +76,34 @@ Klicka sedan på de 3 punkterna **..** på fliken **Miljö** och klicka på **Vi
 
 Du kommer då att se din miljöinformation, inklusive URL:en för din **författarmiljö** som du behöver i nästa övning.
 
+Titta närmare på raden **Content Hub** och välj **Klicka för att aktivera**.
+
 ![AEMCS](./images/aemcs10.png)
+
+Klicka på **Aktivera**.
+
+![AEMCS](./images/aemcsact1.png)
+
+**Content Hub**-aktiveringen har startats. Detta kan ta minst 10 minuter.
+
+![AEMCS](./images/aemcsact2.png)
+
+Efter cirka 10 minuter aktiveras **Content Hub**.
+Titta sedan på raden **Dynamiska media** och välj **Klicka för att aktivera**.
+
+![AEMCS](./images/aemcsact3.png)
+
+Klicka på **Aktivera**.
+
+![AEMCS](./images/aemcsact4.png)
+
+Aktiveringen av **Dynamiska media** har startats. Detta kan ta minst 10 minuter.
+
+![AEMCS](./images/aemcsact5.png)
+
+Efter cirka 10 minuter aktiveras **Dynamic Media**.
+
+![AEMCS](./images/aemcsact6.png)
 
 När din pipeline är klar kan du fortsätta med nästa övning.
 

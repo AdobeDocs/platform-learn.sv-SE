@@ -1,12 +1,13 @@
 ---
 title: Sammanfattning och fördelar med GenStudio for Performance Marketing
-description: GenStudio för prestationsbaserad marknadsföring
+description: Sammanfattning och fördelar med GenStudio for Performance Marketing
 kt: 5342
 doc-type: tutorial
-source-git-commit: 174c818dfc9edd78afd32cb919f14acc4aabca72
+exl-id: 041a66b5-2089-4bb2-a2f5-819b3d879003
+source-git-commit: b8f7b370a5aba82a0dcd6e7f4f0222fe209976f7
 workflow-type: tm+mt
-source-wordcount: '42'
-ht-degree: 9%
+source-wordcount: '46'
+ht-degree: 0%
 
 ---
 
