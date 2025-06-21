@@ -18,4 +18,4 @@ ht-degree: 1%
 
 I den här videon får du en översikt som visar hur Adobe Experience Platform kundprofil kan användas i realtid. Mer information finns i [dokumentationen för kundprofilen i realtid](https://experienceleague.adobe.com/docs/experience-platform/profile/home.html?lang=sv).
 
->[!VIDEO](https://video.tv.adobe.com/v/33600?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3463973?learn=on&enablevpops&captions=swe)

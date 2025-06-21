@@ -35,7 +35,7 @@ I den här videon förklaras hur Adobe Experience Platform sammanställer och up
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="overview-diagram.md" title="Översikt Diagram över kundprofil i realtid" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/33600?format=jpeg&nocache=1740415066741" alt="Översikt Diagram över kundprofil i realtid"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3463973?format=jpeg&nocache=1740415066741&captions=swe" alt="Översikt Diagram över kundprofil i realtid"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

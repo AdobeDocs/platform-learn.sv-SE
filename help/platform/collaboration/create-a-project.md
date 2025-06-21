@@ -20,6 +20,6 @@ ht-degree: 0%
 
 Lär dig grunderna i hur du skapar projekt i Collaboration, inklusive en kort titt på upptäckt, aktivering och mätning.
 
->[!VIDEO](https://video.tv.adobe.com/v/3464033/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3464038/?learn=on&enablevpops&captions=swe)
 
 Mer information finns i [dokumentationen](https://experienceleague.adobe.com/sv/docs/real-time-cdp-collaboration/using/collaborate/manage-projects){target="_blank"}.
