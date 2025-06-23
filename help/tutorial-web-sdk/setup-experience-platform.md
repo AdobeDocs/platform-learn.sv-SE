@@ -3,10 +3,10 @@ title: Strömma data till Adobe Experience Platform med Platform Web SDK
 description: Lär dig att strömma webbdata till Adobe Experience Platform med Web SDK. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 jira: KT-15407
 exl-id: 4d749ffa-e1c0-4498-9b12-12949807b369
-source-git-commit: d73f9b3eafb327783d6bfacaf4d57cf8881479f7
+source-git-commit: 7c302bf9503e7a95162ab83af59d466bb4ff1f7e
 workflow-type: tm+mt
-source-wordcount: '1994'
-ht-degree: 0%
+source-wordcount: '2172'
+ht-degree: 1%
 
 ---
 
@@ -44,7 +44,7 @@ För att slutföra lektionen måste du först:
 
 ## Skapa en datauppsättning
 
-Alla data som har inhämtats till Adobe Experience Platform lagras i datasjön som datauppsättningar. En [datamängd](https://experienceleague.adobe.com/sv/docs/experience-platform/catalog/datasets/overview) är en lagrings- och hanteringskonstruktion för en datamängd, vanligtvis en tabell som innehåller ett schema (kolumner) och fält (rader). Datauppsättningar innehåller också metadata som beskriver olika aspekter av de data som lagras.
+Alla data som har inhämtats till Adobe Experience Platform lagras i datasjön som datauppsättningar. En [datamängd](https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/overview) är en lagrings- och hanteringskonstruktion för en datamängd, vanligtvis en tabell som innehåller ett schema (kolumner) och fält (rader). Datauppsättningar innehåller också metadata som beskriver olika aspekter av de data som lagras.
 
 Låt oss skapa en datauppsättning för dina webbhändelsedata för Luma:
 
@@ -160,7 +160,7 @@ För att bekräfta att data har landat i plattformens datalinje är ett snabbt a
 
 >[!INFO]
 >
->  Mer information om Adobe Experience Platform frågetjänst finns i [Utforska data](https://experienceleague.adobe.com/sv/docs/platform-learn/tutorials/queries/explore-data) i självstudiekurserna för plattformen.
+>  Mer information om Adobe Experience Platform frågetjänst finns i [Utforska data](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/queries/explore-data) i självstudiekurserna för plattformen.
 
 
 ## Aktivera datauppsättningen och schemat för kundprofil i realtid
@@ -252,11 +252,15 @@ Först måste du generera fler exempeldata. Upprepa stegen tidigare i den här l
 
 Du har nu aktiverat Platform Web SDK för Experience Platform (och Real-Time CDP)! Och Journey Optimizer! Och Customer Journey Analytics!).
 
+## Skapa en Edge-utvärderad publik
+
+Vi rekommenderar att du slutför den här övningen för kunder som har Real-Time Customer Data Platform och Journey Optimizer.
+
+När Web SDK-data hämtas in till Adobe Experience Platform kan de berikas av andra datakällor som du har inkapslat i Platform. När en användare till exempel loggar in på Luma-webbplatsen skapas ett identitetsdiagram i Experience Platform och alla andra profilaktiverade datauppsättningar kan sammanfogas för att skapa kundprofiler i realtid. För att se hur detta fungerar kommer du snabbt att skapa ytterligare en datauppsättning i Adobe Experience Platform med några exempel på lojalitetsdata så att du kan använda kundprofiler i realtid med Real-Time Customer Data Platform och Journey Optimizer. Sedan kommer ni att bygga upp en målgrupp baserat på dessa data.
+
 ### Skapa ett bonusschema och importera exempeldata
 
-Kunder som använder Real-Time Customer Data Platform och Journey Optimizer förväntas bli klara.
-
-När Web SDK-data hämtas in till Adobe Experience Platform kan de berikas av andra datakällor som du har inkapslat i Platform. När en användare till exempel loggar in på Luma-webbplatsen skapas ett identitetsdiagram i Experience Platform och alla andra profilaktiverade datauppsättningar kan sammanfogas för att skapa kundprofiler i realtid. Om du vill se hur detta fungerar skapar du snabbt en ny datauppsättning i Adobe Experience Platform med några exempel på lojalitetsdata så att du kan använda kundprofiler i realtid med Real-Time Customer Data Platform och Journey Optimizer. Eftersom du redan har gjort liknande övningar kommer instruktionerna att vara korta.
+Eftersom du redan har gjort liknande övningar kommer instruktionerna att vara korta.
 
 Skapa bonusschemat:
 
@@ -282,9 +286,33 @@ Så här skapar du datauppsättningen och importerar exempeldata:
 
    ![Bonusschema](assets/web-channel-loyalty-dataset.png)
 
+
+### Ange en sammanfogningspolicy som är aktiv på Edge
+
+Alla målgrupper skapas med en sammanfogningspolicy. Sammanslagningsprinciper skapar olika&quot;vyer&quot; av en profil, kan innehålla en delmängd av datauppsättningar och anger en prioritetsordning när olika datauppsättningar bidrar med samma profilattribut. För att kunna utvärderas vid kanten måste en målgrupp använda en sammanfogningsprincip med inställningen **[!UICONTROL Active-On-Edge Merge Policy]**.
+
+
+>[!IMPORTANT]
+>
+>Endast en sammanfogningsprincip per sandlåda kan ha inställningen **[!UICONTROL Active-On-Edge Merge Policy]**
+
+
+1. Öppna Experience Platform- eller Journey Optimizer-gränssnittet och kontrollera att du är i den utvecklingsmiljö du använder för självstudiekursen.
+1. Navigera till sidan **[!UICONTROL Customer]** > **[!UICONTROL Profiles]** > **[!UICONTROL Merge Policies]**
+1. Öppna **[!UICONTROL Default Merge Policy]** (förmodligen `Default Timebased`)
+   ![Skapa en målgrupp](assets/merge-policy-open-default.png)
+1. Aktivera inställningen **[!UICONTROL Active-On-Edge Merge Policy]**
+1. Välj **[!UICONTROL Next]**
+
+   ![Skapa en målgrupp](assets/merge-policy-set-active-on-edge.png)
+1. Fortsätt välja **[!UICONTROL Next]** för att fortsätta genom de andra stegen i arbetsflödet och välj **[!UICONTROL Finish]** för att spara inställningarna
+   ![Skapa en målgrupp](assets/merge-policy-finish.png)
+
+Nu kan ni skapa målgrupper som utvärderas på Edge.
+
 ### Skapa en målgrupp
 
-Målgruppsprofiler samlas kring gemensamma egenskaper. Skapa en snabb målgrupp som ni kan använda i er webbkampanj:
+Målgruppsprofiler samlas kring gemensamma egenskaper. Skapa en enkel målgrupp som du kan använda i Real-Time CDP eller Journey Optimizer:
 
 1. I Experience Platform- eller Journey Optimizer-gränssnittet går du till **[!UICONTROL Customer]** > **[!UICONTROL Audiences]** i den vänstra navigeringen
 1. Välj **[!UICONTROL Create audience]**
@@ -301,6 +329,11 @@ Målgruppsprofiler samlas kring gemensamma egenskaper. Skapa en snabb målgrupp 
 1. Välj **[!UICONTROL Save]**
 
    ![Definiera målgruppen](assets/web-campaign-define-audience.png)
+
+>[!NOTE]
+>
+> Eftersom vi har angett standardsammanslagningsprincipen som **[!UICONTROL Active-On-Edge Merge Policy]** kopplas målgruppen som du skapade automatiskt till den här sammanfogningsprincipen.
+
 
 Eftersom detta är en mycket enkel publik kan vi använda Edge utvärderingsmetod. Edge målgrupper utvärderas i det närmaste, så i samma begäran som Web SDK gör till Platform Edge Network kan vi utvärdera målgruppsdefinitionen och omedelbart bekräfta om användaren är berättigad.
 
