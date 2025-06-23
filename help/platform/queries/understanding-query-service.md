@@ -186,7 +186,7 @@ Med Adobe Experience Platform Query Service kan man utforska, validera och omvan
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="validate-data-in-the-datalake.md" title="Validera data i datalagret med frågetjänsten" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3416130?format=jpeg&nocache=1740415312076" alt="Validera data i datalagret med frågetjänsten"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3445681?format=jpeg&nocache=1740415312076&captions=swe" alt="Validera data i datalagret med frågetjänsten"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -326,7 +326,7 @@ Med Adobe Experience Platform Query Service kan man utforska, validera och omvan
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="recharge-your-customer-data.md" title="Använd era kunddata för att leverera strömmande upplevelser" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/342533?format=jpeg&nocache=1740415313218" alt="Använd era kunddata för att leverera strömmande upplevelser"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3454942?format=jpeg&nocache=1740415313218&captions=swe" alt="Använd era kunddata för att leverera strömmande upplevelser"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
