@@ -5,9 +5,9 @@ feature: Queries
 role: Data Engineer, Developer
 level: Beginner
 jira: KT-3139
-thumbnail: 29795.jpg
+last-substantial-update: 2025-06-23T00:00:00Z
 exl-id: 988bc316-9eec-4dca-8049-95c2d613379d
-source-git-commit: 8092c5f120a51b35f068261b70131ef303b4c51d
+source-git-commit: b0466e114d657c2584b23bfd76e4f6c185c83c06
 workflow-type: tm+mt
 source-wordcount: '727'
 ht-degree: 0%
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Query Service och Data Distiller - översikt
 
-Med Adobe Experience Platform Query Service kan man utforska, validera och omvandla kundupplevelsedata som lagras i datasjön med hjälp av SQL, med utökade funktioner som data och schemaläggning som är tillgängliga via Data Distiller-tillägget. Den här videon ger en översikt över viktiga funktioner som hjälper användarna att förstå hur de kan utnyttja frågetjänsten i olika plattformsbaserade program. Mer information finns i [dokumentationen för frågetjänsten](https://experienceleague.adobe.com/sv/docs/experience-platform/query/home).
+Med Adobe Experience Platform Query Service kan man utforska, validera och omvandla kundupplevelsedata som lagras i datasjön med hjälp av SQL, med utökade funktioner som data och schemaläggning som är tillgängliga via Data Distiller-tillägget. Den här videon ger en översikt över viktiga funktioner som hjälper användarna att förstå hur de kan utnyttja frågetjänsten i olika plattformsbaserade program. Mer information finns i [dokumentationen för frågetjänsten](https://experienceleague.adobe.com/en/docs/experience-platform/query/home).
 
 >[!VIDEO](https://video.tv.adobe.com/v/29795?learn=on&enablevpops)
 
@@ -186,7 +186,7 @@ Med Adobe Experience Platform Query Service kan man utforska, validera och omvan
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="validate-data-in-the-datalake.md" title="Validera data i datalagret med frågetjänsten" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3445681?format=jpeg&nocache=1740415312076&captions=swe" alt="Validera data i datalagret med frågetjänsten"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3416130?format=jpeg&nocache=1740415312076" alt="Validera data i datalagret med frågetjänsten"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -326,7 +326,7 @@ Med Adobe Experience Platform Query Service kan man utforska, validera och omvan
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="recharge-your-customer-data.md" title="Använd era kunddata för att leverera strömmande upplevelser" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3454942?format=jpeg&nocache=1740415313218&captions=swe" alt="Använd era kunddata för att leverera strömmande upplevelser"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/342533?format=jpeg&nocache=1740415313218" alt="Använd era kunddata för att leverera strömmande upplevelser"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
