@@ -19,4 +19,4 @@ ht-degree: 0%
 
 Lär dig att samordna B2B-kampanjer med Marketo Engage och Real-Time Customer Data Platform (CDP), B2B edition. Se hur datainmatning, kontoprofiler, segmentering och destinationer samverkar för att underlätta samordningen av B2B-kampanjer. Få svar på vanliga frågor. Mer information finns i [Real-Time CDP B2B edition-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/b2b-overview.html?lang=sv-SE).
 
->[!VIDEO](https://video.tv.adobe.com/v/338254?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3450792?learn=on&enablevpops&captions=swe)

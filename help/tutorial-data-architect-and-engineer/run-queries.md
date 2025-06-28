@@ -25,7 +25,7 @@ Adobe Experience Platform Query Service hjälper dig att förstå dina data geno
 **Dataarkitekter** och **Datatekniker** måste använda frågetjänsten utanför den här självstudien.
 
 Innan du börjar övningarna ska du titta på den här korta videon och lära dig mer om Query Service:
->[!VIDEO](https://video.tv.adobe.com/v/29795?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3464265?learn=on&enablevpops&captions=swe)
 
 ## Behörigheter krävs
 
