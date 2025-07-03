@@ -17,7 +17,7 @@ ht-degree: 0%
 
 I den här övningen skapar du en **datastream**. En **datastream** anger för Adobe Edge Network-servrarna var data ska skickas när de har samlats in av Web SDK. Vill du till exempel skicka data till Adobe Experience Platform? Adobe Analytics? Adobe Audience Manager? Adobe Target?
 
-Datastammar hanteras alltid i Experience Platform Data Collection-användargränssnittet och är viktiga för Experience Platform datainsamling med [Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/home). Även om du implementerar Web SDK med en tagghanteringslösning som inte kommer från Adobe måste du ändå skapa en datastream.
+Datastammar hanteras alltid i Experience Platform Data Collection-användargränssnittet och är viktiga för Experience Platform datainsamling med [Web SDK](https://experienceleague.adobe.com/sv/docs/experience-platform/web-sdk/home). Även om du implementerar Web SDK med en tagghanteringslösning som inte kommer från Adobe måste du ändå skapa en datastream.
 
 Du kommer att implementera Web SDK i webbläsaren i nästa övning. Då blir det tydligare för er hur de data som samlas in ser ut. För närvarande berättar vi bara för datastream var vi ska vidarebefordra data.
 
@@ -25,7 +25,7 @@ Du kommer att implementera Web SDK i webbläsaren i nästa övning. Då blir det
 
 I [Komma igång](./../../../../modules/getting-started/gettingstarted/ex2.md) har du redan skapat en datastream, men vi har inte diskuterat bakgrunden och orsaken till varför du skapade den.
 
-En [datastream](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview) anger för Edge Network-servrarna var data ska skickas när de har samlats in av Web SDK. Mer information om var du kan skicka dina data via datastream finns i dokumentationen om [hur du lägger till tjänster i ett datastream](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/configure#add-services).
+En [datastream](https://experienceleague.adobe.com/sv/docs/experience-platform/datastreams/overview) anger för Edge Network-servrarna var data ska skickas när de har samlats in av Web SDK. Mer information om var du kan skicka dina data via datastream finns i dokumentationen om [hur du lägger till tjänster i ett datastream](https://experienceleague.adobe.com/sv/docs/experience-platform/datastreams/configure#add-services).
 
 Datastreams hanteras i användargränssnittet i Experience Platform Data Collection och är avgörande för datainsamling med Web SDK, oavsett om du implementerar Web SDK via Adobe Experience Platform Data Collection eller inte.
 
@@ -61,7 +61,7 @@ För denna datastream...
 - Alla Experience Event-data samlas som standard in i datauppsättningen **Demo System - Event Dataset för webbplatsen (Global v1.1)**
 - Alla profildata samlas som standard in i datauppsättningen **Demo System - Profildatauppsättning för webbplats (Global v1.1)** (Inhämtning av profildata internt med Web SDK stöds för närvarande inte av Web SDK)
 - **Edge-segmentering** är aktiverat som standard, vilket innebär att kvalificerade målgrupper utvärderas i kanten vid inkommande trafik
-- Om du vill använda [personaliseringsmål](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/personalization/overview) markerar du kryssrutan för **Personalization-mål**.
+- Om du vill använda [personaliseringsmål](https://experienceleague.adobe.com/sv/docs/experience-platform/destinations/catalog/personalization/overview) markerar du kryssrutan för **Personalization-mål**.
 - Om du vill använda **Adobe Journey Optimizer** s funktioner i det här datastream-objektet måste du markera kryssrutan för **Adobe Journey Optimizer**.
 
 För närvarande behövs ingen annan konfiguration för din datastream.
