@@ -4,22 +4,22 @@ description: Uppdatera ditt konfigurations-ID och testa din resa
 kt: 5342
 doc-type: tutorial
 exl-id: da018975-7421-4d70-b04d-ad8b0597f460
-source-git-commit: 3d61d91111d8693ab031fbd7b26706c02818108c
+source-git-commit: d19bd2e39c7ff5eb5c99fc7c747671fb80e125ee
 workflow-type: tm+mt
-source-wordcount: '631'
+source-wordcount: '633'
 ht-degree: 0%
 
 ---
 
 # 3.1.3 Uppdatera din datainsamlingsegenskap och testa din resa
 
-## 3.1.3.1 Uppdatera egenskapen för datainsamling
+## 3.1.3.1 Uppdatera din datainsamlingsegenskap
 
-Gå till [Adobe Experience Platform Data Collection](https://experience.adobe.com/launch/) och välj **Taggar**.
+Gå till [Adobe Experience Platform Data Collection](https://experience.adobe.com/data-collection/home) och välj **Taggar**.
 
 ![Sidan Egenskaper](./../../../../modules/delivery-activation/datacollection/dc1.1/images/launch1.png)
 
-I **Komma igång** skapade Demo System två klientegenskaper åt dig: en för webbplatsen och en för mobilappen. Sök efter dem genom att söka efter `--aepUserLdap--` i rutan **[!UICONTROL Search]**. Klicka för att öppna egenskapen **Webb**.
+I **Komma igång** skapade Demo System ett par taggegenskaper åt dig, bland annat en för webbplatsen och en för mobilappen. Sök efter dem genom att söka efter `--aepUserLdap-- - One Adobe` i rutan **[!UICONTROL Search]**. Klicka för att öppna egenskapen **Webb**.
 
 ![Sökruta](./../../../../modules/delivery-activation/datacollection/dc1.1/images/property6.png)
 
@@ -49,7 +49,7 @@ Då ser du det här:
 
 Navigera till fältet `_experience.campaign.orchestration.eventID`. Ta bort det aktuella värdet och klistra in ditt eventID där.
 
-Händelse-ID:t finns i Adobe Journey Optimizer under **Konfigurationer > Händelser** och du hittar händelse-ID:t i exempelnyttolasten för din jämna, som ser ut så här: `"eventID": "5ae9b8d3f68eb555502b0c07d03ef71780600c4bd0373a4065c692ae0bfbd34d"`.
+Händelse-ID:t finns i Adobe Journey Optimizer under **Konfigurationer > Händelser** och du hittar händelse-ID:t i exempelnyttolasten för din jämna, som ser ut så här: `"eventID": "d40815dbcd6ffd813035b4b590b181be21f5305328e16c5b75e4f32fd9e98557"`.
 
 ![ACOP](./images/payloadeventID.png)
 

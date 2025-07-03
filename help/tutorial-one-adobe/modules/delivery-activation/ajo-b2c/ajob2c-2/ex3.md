@@ -4,9 +4,9 @@ description: Adobe Journey Optimizer - API för externt väder, SMS-åtgärd med
 kt: 5342
 doc-type: tutorial
 exl-id: 92752e84-3bbe-4d11-b187-bd9fdbbee709
-source-git-commit: 3d61d91111d8693ab031fbd7b26706c02818108c
+source-git-commit: e3d3b8e3abdea1766594eca53255df024129cb2c
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '416'
 ht-degree: 0%
 
 ---
@@ -54,10 +54,6 @@ Använd följande för **URL-konfigurationen**:
 
 ![Demo](./images/slackname.png)
 
-Du behöver inte ändra rubrikfälten.
-
-![Demo](./images/slackurl.png)
-
 **Autentisering** ska anges till **Ingen autentisering**.
 
 ![Demo](./images/slackauth.png)
@@ -84,7 +80,7 @@ Kopiera texten nedan och klistra in den i det tomma popup-fönstret.
 }
 ```
 
-Då ser du det här:
+Då ser du det här. Klicka på **Spara**.
 
 ![Demo](./images/slackmsgpopup1.png)
 
@@ -96,7 +92,7 @@ Din anpassade åtgärd ingår nu i listan **Åtgärder**.
 
 ![Demo](./images/slackdone.png)
 
-Du har definierat händelser, en extern datakälla och åtgärder. Nu ska vi konsolidera allt det på en enda resa.
+Du har definierat händelser, en extern datakälla och åtgärder. Sedan kombinerar du allt det på en enda resa.
 
 ## Nästa steg
 

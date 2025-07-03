@@ -4,9 +4,9 @@ description: Journey Optimizer - Skapa dina fragment
 kt: 5342
 doc-type: tutorial
 exl-id: 4e71164d-9e25-46aa-a4b8-a2f6535c491e
-source-git-commit: 3d61d91111d8693ab031fbd7b26706c02818108c
+source-git-commit: d19bd2e39c7ff5eb5c99fc7c747671fb80e125ee
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1052'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Då visas ett popup-fönster som visar AEM Assets Media Library. Gå till mappen
 
 >[!NOTE]
 >
->Om du inte ser Citi Signal-bilderna i ditt AEM Assets-bibliotek hittar du dem [här](./../../../../assets/ajo/CitiSignal-images.zip). Hämta dem till skrivbordet, skapa mappen **citi-signal-images** och överför alla bilder i mappen.
+>Om du inte ser CitiSignal-bilderna i ditt AEM Assets-bibliotek hittar du dem [här](./../../../../assets/ajo/CitiSignal-images.zip). Hämta dem till skrivbordet, skapa mappen **citi-signal-images** och överför alla bilder i mappen.
 
 ![Journey Optimizer](./images/fragm5.png)
 
@@ -78,7 +78,7 @@ Sedan bör du skapa ett nytt fragment för sidfoten i dina e-postmeddelanden. Kl
 
 ![Journey Optimizer](./images/fragm11.png)
 
-## 3.1.2.2 Skapa sidfotsavsnittet
+## 3.1.2.2 Skapa sidfotsfragment
 
 Klicka på **Skapa fragment**.
 
@@ -231,8 +231,6 @@ Klicka på **Publicera** för att publicera sidfoten så att den kan användas i
 Efter några minuter ser du att sidfotens status har ändrats till **Live**.
 
 ![Journey Optimizer](./images/fragm38.png)
-
-Du har nu avslutat den här övningen.
 
 ## Nästa steg
 

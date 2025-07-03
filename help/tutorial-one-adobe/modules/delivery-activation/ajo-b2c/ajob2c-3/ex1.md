@@ -1,41 +1,29 @@
 ---
-title: Offer Decisioning - Offer Decisioning 101
-description: Offer Decisioning - Offer Decisioning 101
+title: Komma igång med push-meddelanden
+description: Komma igång med push-meddelanden
 kt: 5342
 audience: Data Engineer, Data Architect, Orchestration Engineer, Marketer
 doc-type: tutorial
-exl-id: b46e0205-b0a1-4a14-95f6-9afe21cd2b5e
-source-git-commit: 3d61d91111d8693ab031fbd7b26706c02818108c
+source-git-commit: 203590e3289d2e5342085bf8b6b4e3cd11859539
 workflow-type: tm+mt
-source-wordcount: '950'
+source-wordcount: '1262'
 ht-degree: 0%
 
 ---
 
-# 3.3.1 Offer Decisioning 101
+# 3.3.1 Komma igång med push-meddelanden
 
-## 3.3.1.1 Terminologi
+Om du vill använda push-meddelanden med Adobe Journey Optimizer finns det ett antal inställningar att kontrollera och känna till.
 
-För att få en bättre förståelse för Offer Decisioning rekommenderar vi att du läser [översikten](https://experienceleague.adobe.com/docs/journey-optimizer/using/offer-decisioniong/get-started-decision/starting-offer-decisioning.html?lang=sv-SE) om hur Offer Decisioning programtjänst fungerar med Adobe Experience Platform.
+Här följer alla inställningar som ska verifieras:
 
-När du arbetar med Offer Decisioning måste du förstå följande koncept:
+- Datauppsättningar och scheman i Adobe Experience Platform
+- Datastream för mobiler
+- Datainsamlingsegenskap för mobil
+- Appyta för push-certifikat
+- Testa push-konfigurationen med AEP Assurance
 
-| Villkor | Förklaring |
-| ------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Erbjudande** | Ett erbjudande är ett marknadsföringsmeddelande som kan ha kopplade regler som anger vem som kan se erbjudandet. Ett erbjudande har status: utkast, godkänt eller arkiverat. |
-| **Placement** | Den kombination av plats (eller kanaltyp) och kontext (eller innehållstyp) i vilken ett erbjudande visas för en slutanvändare. Det är en kombination av kanalerna Text, HTML, Image, JSON för mobiler, webben, sociala medier, snabbmeddelanden och icke-digitala. |
-| **Regel** | Den logik som definierar och styr slutanvändarnas rätt till ett erbjudande. |
-| **Personaliserat erbjudande** | Ett anpassningsbart marknadsföringsmeddelande baserat på regler och begränsningar för behörighet. |
-| **Reserverbjudande** | Det standarderbjudande som visas när en slutanvändare inte är berättigad till något av erbjudandena i den mängd som används. |
-| **Hämtning** | Används i en offertdefinition för att definiera hur många gånger ett erbjudande kan presenteras totalt och för en viss användare. |
-| **Prioritet** | Nivå för att fastställa prioritetsrangordningen utifrån en resultatmängd med erbjudanden. |
-| **Samling** | Används för att filtrera bort en delmängd av erbjudanden från listan över personaliserade erbjudanden för att snabba upp beslutsprocessen för erbjudanden. |
-| **Beslut** | En kombination av en uppsättning erbjudanden, placering och profil marknadsföraren vill att beslutsmotorn ska erbjuda det bästa erbjudandet. |
-| **AEM Assets Essentials** | En universell och centraliserad upplevelse för lagring, sökning och val av mediefiler i Adobe Experience Cloud Solutions och Adobe Experience Platform. |
-
-{style="table-layout:auto"}
-
-## 3.3.1.2 Offer Decisioning
+Vi granskar dem en i taget.
 
 Logga in på Adobe Journey Optimizer på [Adobe Experience Cloud](https://experience.adobe.com). Klicka på **Journey Optimizer**.
 
@@ -45,126 +33,202 @@ Du omdirigeras till vyn **Hem** i Journey Optimizer. Kontrollera först att du a
 
 ![ACOP](./../../../../modules/delivery-activation/ajo-b2c/ajob2c-1/images/acoptriglp.png)
 
-Klicka på **Erbjudanden** på den vänstra menyn. Nu visas menyn Erbjudanden, som innehåller saker som Erbjudanden, Samlingar och Beslut.
+## 3.4.4.1 push-datauppsättning
 
-![Placeringar](./images/homedec.png)
+Adobe Journey Optimizer använder datauppsättningar för att lagra saker som push-tokens från mobila enheter eller interaktioner med push-meddelanden (till exempel meddelande som skickas, meddelande som öppnas) i en datauppsättning i Adobe Journey Optimizer.
 
-Klicka på **Komponenter**. Du kommer nu att se saker som Placements, Collection Qualifier, Rules och Rankings.
+Du kan hitta de här datauppsättningarna genom att gå till **[!UICONTROL Datasets]** på menyn till vänster på skärmen. Om du vill visa systemdatauppsättningar klickar du på filterikonen.
 
-![Placeringar](./images/components.png)
+Aktivera alternativet **Visa systemdatauppsättningar** och sök efter **AJO**. Du kommer då att se de datauppsättningar som används för push-meddelanden.
 
-## 3.3.1.3 Placeringar
+![Datainmatning](./images/menudsjo1.png)
 
-Gå till **Placements**.
+## 3.4.4.2 Datastream för mobilen
 
-![Placeringar](./images/placements.png)
+Gå till [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/).
 
-På fliken **Placements** kan du definiera dina placeringar för dina erbjudanden. När du definierar ett beslut definierar placeringen var det resulterande erbjudandet ska visas (kanaltyp) och i vilken form (innehållstyp).
+Gå till **[!UICONTROL Datastream]** på den vänstra menyn och sök efter det dataflöde som du skapade i [Komma igång](./../../../../modules/getting-started/gettingstarted/ex2.md), som har namnet `--aepUserLdap-- - Demo System Datastream (Mobile)`. Klicka för att öppna den.
 
-Om du inte ser några placeringar i din miljö skapar du dem enligt anvisningarna nedan och på skärmbilden.
+![Klicka på Datastream-ikonen i den vänstra navigeringen](./images/edgeconfig1a.png)
 
-| Namn | Kanaltyp | Innehållstyp |
-| ---------------------- | ------------ | ------------ |
-| **Icke-digital - text** | Icke-digital | Text |
-| **Webb - JSON** | Webb | JSON |
-| **Webb - HTML** | Webb | HTML |
-| **Webb - Text** | Webb | Text |
-| **Webb - bild** | Webb | Bild |
-| **E-post - JSON** | E-post | JSON |
-| **E-post - HTML** | E-post | HTML |
-| **E-post - text** | E-post | Text |
-| **E-post - bild** | E-post | Bild |
+Klicka på **Redigera** på tjänsten **Adobe Experience Platform**.
 
-{style="table-layout:auto"}
+![Klicka på Datastream-ikonen i den vänstra navigeringen](./images/edgeconfig1.png)
 
-**Obs!** Ändra ingenting till de placeringar som redan är tillgängliga.
+Du kommer då att se de datastream-inställningar som har definierats och i vilka datamängdshändelser och profilattribut lagras.
 
-Klicka på en placering för att visa dess inställningar.
+Du bör även aktivera följande alternativ om de inte är aktiverade än:
 
-![Placeringar](./images/placement1.png)
+- **Offer Decisioning**
+- **Personalization Destinations**
+- **Adobe Journey Optimizer**
 
-Nu visas alla fält i placeringen:
+Klicka på **Spara**.
 
-- **Namn** på placeringen
-- **Placement-ID**
-- **Kanaltyp** för placeringen
-- **Innehållstyp** för placeringen, som kan vara **Text**, **HTML**, **Bild** eller **JSON**
-- **Beskrivningsfält** som tillåter att ytterligare beskrivning för placeringen läggs till
+![Namnge dataströmmen och spara](./images/edgeconfig2.png)
 
-## 3.3.1.4 Beslutsregler
+## 3.4.4.3 Granska din datainsamlingsegenskap för Mobile
 
-En regel (kallas även behörighetskrav) motsvarar en **målgrupp**. En regel är i själva verket en målgrupp med den enda skillnaden att en regel kan användas med ett erbjudande för att ge det bästa erbjudandet till en profil i Adobe Experience Platform.
+Gå till [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/). Som en del av [Komma igång](./../../../../modules/getting-started/gettingstarted/ex1.md) skapades två datainsamlingsegenskaper.
+Du har redan använt dessa egenskaper för datainsamlingsklienten som en del av tidigare moduler.
 
-Som ni redan vet hur ni definierar målgrupper baserat på de tidigare aktiveringsmodulerna kan vi snabbt gå tillbaka till segmenteringsmiljön:
+Klicka för att öppna datainsamlingsegenskapen för mobilen.
 
-Gå till **Regler**. Klicka på **+ Skapa regel**.
+![DSN](./images/launchprop.png)
 
-![Beslutsregler](./images/rules.png)
+Gå till **Tillägg** i din datainsamlingsegenskap. Du kommer då att se de olika tillägg som behövs för mobilappen. Klicka för att öppna tillägget **Adobe Experience Platform Edge Network**.
 
-Du kommer då att se gränssnittet för att skapa en publik i Adobe Experience Platform.
+![Adobe Experience Platform-datainsamling](./images/launchprop1.png)
 
-![Beslutsregler](./images/createrule1.png)
+Du kommer då att se att ditt datastream för mobilen är länkat här. Klicka sedan på **Avbryt** för att gå tillbaka till översikten över dina tillägg.
 
-Du kan nu komma åt alla fält som ingår i unionens schema för kundprofilen i realtid och kan bygga ut alla regler.
+![Adobe Experience Platform-datainsamling](./images/launchprop2.png)
 
-Det är också bra att veta att du helt enkelt kan återanvända redan definierade målgrupper i Adobe Experience Platform genom att gå till **Publiker** > ``--aepTenantId--``.
+Du kommer då tillbaka hit. Tillägget för **AEP Assurance** visas. AEP Assurance hjälper er att inspektera, bevisa, simulera och validera hur ni samlar in data eller levererar upplevelser i er mobilapp. Du kan läsa mer om AEP Assurance och Project Griffon här [https://aep-sdks.gitbook.io/docs/beta/project-griffon](https://aep-sdks.gitbook.io/docs/beta/project-griffon).
 
-Då ser du det här:
+![Adobe Experience Platform-datainsamling](./images/launchprop8.png)
 
-![Beslutsregel](./images/decisionruleaud.png)
+Klicka sedan på **Konfigurera** för att öppna tillägget **Adobe Journey Optimizer**.
 
-Om du vill kan du nu konfigurera egna regler. För den här övningen behöver du två regler:
+![Adobe Experience Platform-datainsamling](./images/launchprop9.png)
 
-- alla - Manliga kunder
-- alla - kvinnliga kunder
+Du kommer då att se att det är här som datauppsättningen för spårning av push-händelser är länkad.
 
-Om dessa regler inte finns än, var vänlig och skapa dem. Använd dessa regler om de redan finns och skapa inga nya regler.
+![Adobe Experience Platform-datainsamling](./images/launchprop10.png)
 
-Attributet som ska användas för att skapa regeln är **XDM Individual Profile** > **Person** > **Kön**.
+Du behöver inte göra några ändringar i din datainsamlingsegenskap.
 
-Här är till exempel regeldefinitionen för regeln **all - hanterade kunder**:
+## 3.4.4.4 Granska konfigurationen av appytan
 
-![Beslutsregel](./images/allmale.png)
+Gå till [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/). Gå till **App Surfaces** på den vänstra menyn och öppna appytan för **DX Demo App APNS**.
 
-Här är till exempel regeldefinitionen för regeln **all - kvinnliga kunder**:
+![Adobe Experience Platform-datainsamling](./images/appsf.png)
 
-![Beslutsregel](./images/allfemale.png)
+Sedan visas den konfigurerade appytan för iOS och Android.
 
-## 3.3.1.5 Erbjudanden
+![Adobe Experience Platform-datainsamling](./images/appsf1.png)
 
-Gå till **Erbjudanden** och välj **Erbjudanden**. Klicka på **+ Skapa erbjudande**.
+## 3.4.4.5 Testa konfigurationen av push-meddelanden med AEP Assurance.
 
-![Beslutsregel](./images/offers1.png)
+När appen har installerats hittar du den på enhetens hemskärm. Klicka på ikonen för att öppna programmet.
 
-Du kommer då att se den här popup-rutan.
+![DSN](./../../../../modules/getting-started/gettingstarted/images/mobileappn1.png)
 
-![Beslutsregel](./images/offers2.png)
+När du använder appen första gången ombeds du logga in med din Adobe ID. Slutför inloggningsprocessen.
 
-Skapa inga erbjudanden nu - det gör du i nästa övning.
+![DSN](./../../../modules/../getting-started/gettingstarted/images/mobileappn2.png)
 
-Du ser nu att det finns två typer av erbjudanden:
+När du har loggat in visas ett meddelande som ber dig att skicka meddelanden. Vi skickar meddelanden som en del av självstudiekursen, så klicka på **Tillåt**.
 
-- Personaliserade erbjudanden
-- Reserverbjudanden
+![DSN](./../../../modules/../getting-started/gettingstarted/images/mobileappn3.png)
 
-Ett personaliserat erbjudande är specifikt innehåll som ska visas i en viss situation. Ett personaliserat erbjudande är särskilt utformat för att leverera en personlig och sammanhangsberoende upplevelse om specifika kriterier uppfylls.
+Då ser du appens hemsida. Gå till **Inställningar**.
 
-Ett reserverbjudande är ett erbjudande som visas om villkoren för personaliserade erbjudanden inte uppfylls.
+![DSN](./../../../modules/../getting-started/gettingstarted/images/mobileappn4.png)
 
-## 3.3.1.6 Beslut
+I inställningarna ser du att ett **offentligt projekt** har lästs in i appen. Klicka på **Eget projekt**.
 
-I ett beslut kombineras placeringar, en samling personaliserade erbjudanden och ett reserverbjudande som i slutändan ska användas av Offer Decisioning-motorn för att hitta det bästa erbjudandet för en viss profil, baserat på varje enskild personaliserad erbjudandeegenskap som prioritet, behörighetsbegränsning och total-/användarbegränsning.
+![DSN](./../../../modules/../getting-started/gettingstarted/images/mobileappn5.png)
 
-Klicka på **Beslut** om du vill konfigurera ditt **beslut**.
+Du kan nu läsa in ett anpassat projekt. Klicka på QR-koden för att enkelt läsa in ditt projekt.
 
-![Beslutsregel](./images/activity.png)
+![DSN](./../../../modules/../getting-started/gettingstarted/images/mobileappn6.png)
 
-I nästa övning kommer ni att konfigurera era egna erbjudanden och beslut.
+När du gått igenom avsnittet **Komma igång** fick du det här resultatet. Klicka för att öppna det **Mobile Retail-projekt** som skapades för dig.
+
+![DSN](./../../../modules/../getting-started/gettingstarted/images/dsn5b.png)
+
+Om du av misstag har stängt webbläsarfönstret, eller för framtida demonstrations- eller aktiveringssessioner, kan du även komma åt webbplatsprojektet genom att gå till [https://dsn.adobe.com/projects](https://dsn.adobe.com/projects). När du har loggat in med din Adobe ID ser du det här. Klicka på ditt mobilappsprojekt för att öppna det.
+
+![DSN](./../../../modules/../getting-started/gettingstarted/images/web8a.png)
+
+Klicka sedan på **Kör**.
+
+![DSN](./images/web8b.png)
+
+Då visas den här popup-rutan som innehåller en QR-kod. Skanna QR-koden inifrån mobilappen.
+
+![DSN](./../../../modules/../getting-started/gettingstarted/images/web8c.png)
+
+Sedan visas ditt projekt-ID i appen. Sedan kan du klicka på **Spara**.
+
+![DSN](./../../../modules/../getting-started/gettingstarted/images/mobileappn7.png)
+
+Gå tillbaka till **Hem** i appen. Ditt program är nu klart att användas.
+
+![DSN](./../../../modules/../getting-started/gettingstarted/images/mobileappn8.png)
+
+Nu måste du skanna en QR-kod för att ansluta den mobila enheten till AEP Assurance-sessionen.
+
+Om du vill starta en AEP Assurance-session går du till [https://experience.adobe.com/#/data-collection/](https://experience.adobe.com/#/data-collection/). Klicka på **Assurance** i den vänstra menyn. Klicka sedan på **Skapa session**.
+
+![Adobe Experience Platform-datainsamling](./images/griffon3.png)
+
+Klicka på **Start**.
+
+![Adobe Experience Platform-datainsamling](./images/griffon5.png)
+
+Fyll i värdena:
+
+- Sessionsnamn: använd `--aepUserLdap-- - push debugging` och ersätt ldap med din ldap
+- Bas-URL: använd `dxdemo://default`
+
+Klicka på **Nästa**.
+
+![Adobe Experience Platform-datainsamling](./images/griffon4.png)
+
+Sedan visas en QR-kod på skärmen som du bör skanna med din iOS-enhet.
+
+![Adobe Experience Platform-datainsamling](./images/griffon6.png)
+
+Öppna kameramappen på din mobila enhet och skanna QR-koden som visas av AEP Assurance.
+
+![Adobe Experience Platform-datainsamling](./images/ipadPushTest8a.png)
+
+Då visas en popup-skärm där du ombeds ange PIN-koden. Kopiera PIN-koden från AEP Assurance-skärmen och klicka på **Anslut**.
+
+![Adobe Experience Platform-datainsamling](./images/ipadPushTest9.png)
+
+Då ser du det här.
+
+![Adobe Experience Platform-datainsamling](./images/ipadPushTest11.png)
+
+I Assurance ser du nu att en enhet är med i Assurance-sessionen. Klicka på **Klar**.
+
+![Adobe Experience Platform-datainsamling](./images/griffon7.png)
+
+Gå till **Push Debug**.
+
+>[!NOTE]
+>
+>Om du inte kan hitta **Push Debug** på den vänstra menyn klickar du på **Configure** längst ned till vänster på skärmen och lägger till **Push Debug** på menyn.
+
+Du kommer att se något liknande.
+
+![Adobe Experience Platform-datainsamling](./images/griffon10.png)
+
+Förklaring:
+
+- I den första kolumnen, **Klient**, visas tillgängliga identifierare på din iOS-enhet. Du ser ett ECID och en push-token.
+- I den andra kolumnen visas **App Store Credentials &amp; Configuration** som konfigurerades som en del av övningen **3.4.5.4Skapa appkonfiguration i Launch**
+- I den andra kolumnen visas **profilinformation**, med ytterligare information om vilken plattform Push-token finns i (APNS eller APNSSandbox). Om du klickar på knappen **Inspektera profil** dirigeras du till Adobe Experience Platform och du ser hela kundprofilen i realtid.
+
+Om du vill testa push-konfigurationsinställningarna går du till knappen **Skicka testpush-inställningar** . Klicka på **Skicka push-meddelande om testning**
+
+![Adobe Experience Platform-datainsamling](./images/griffon11.png)
+
+Du måste kontrollera att appen **DX Demo** inte är öppen när du klickar på knappen **Skicka push-meddelande** . Om appen är öppen kan push-meddelandet tas emot i bakgrunden och inte visas.
+
+Du kommer då att se ett sådant här push-meddelande på din mobila enhet.
+
+![Adobe Experience Platform-datainsamling](./images/ipadPush2.png)
+
+Om du har fått ett push-meddelande betyder det att konfigurationen är korrekt och fungerar bra och att du nu kan skapa en verklig resa som resulterar i att du skickar ett push-meddelande från Journey Optimizer.
 
 ## Nästa steg
 
-Gå till [3.3.2 Konfigurera erbjudanden och beslut](./ex2.md){target="_blank"}
+Gå till [3.3.2 Konfigurera en resa med push-meddelanden](./ex2.md){target="_blank"}
 
-Gå tillbaka till [Offer Decisioning](offer-decisioning.md){target="_blank"}
+Gå tillbaka till [Adobe Journey Optimizer: Push och In-app Messages](ajopushinapp.md){target="_blank"}
 
 Gå tillbaka till [Alla moduler](./../../../../overview.md){target="_blank"}

@@ -4,9 +4,9 @@ description: Adobe Journey Optimizer - Externa datakällor och anpassade åtgär
 kt: 5342
 doc-type: tutorial
 exl-id: 5c8cbec6-58c1-4992-a0c7-1a2b7c34e5b6
-source-git-commit: 3d61d91111d8693ab031fbd7b26706c02818108c
+source-git-commit: e3d3b8e3abdea1766594eca53255df024129cb2c
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '637'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ Det här är egenskapssidan för Adobe Experience Platform Data Collection som d
 
 ![Sidan Egenskaper](./../../../../modules/delivery-activation/datacollection/dc1.1/images/launch1.png)
 
-I **Komma igång** skapade Demo System två klientegenskaper åt dig: en för webbplatsen och en för mobilappen. Sök efter dem genom att söka efter `--aepUserLdap--` i rutan **[!UICONTROL Search]**. Klicka för att öppna egenskapen **Webb**.
+I **Getting Started** skapade Demo System sedan taggegenskaper åt dig: en för webbplatsen och en för mobilappen. Sök efter dem genom att söka efter `--aepUserLdap--` i rutan **[!UICONTROL Search]**. Klicka för att öppna egenskapen **Webb**.
 
 ![Sökruta](./../../../../modules/delivery-activation/datacollection/dc1.1/images/property6.png)
 
@@ -53,7 +53,7 @@ Då ser du det här:
 
 Navigera till fältet `_experience.campaign.orchestration.eventID`. Ta bort det aktuella värdet och klistra in ditt eventID där.
 
-Händelse-ID:t finns i Adobe Journey Optimizer under **Konfigurationer > Händelser** och du hittar händelse-ID:t i exempelnyttolasten för din jämna, som ser ut så här: `"eventID": "4df8dc10731eba7b0c37af83a9db38d4de7aa6aebcce38196d9d47929b9c598e"`.
+Händelse-ID:t finns i Adobe Journey Optimizer under **Konfigurationer > Händelser** och du hittar händelse-ID:t i exempelnyttolasten för din jämna, som ser ut så här: `"eventID": "209a2eecb641e20a517909e186a559ced155384a26429a557eb259e5a470bca7"`.
 
 ![ACOP](./images/payloadeventID.png)
 
@@ -103,11 +103,17 @@ Klicka på ikonen för Adobe logotyp i det övre vänstra hörnet av skärmen f�
 
 ![Demo](./images/pv2.png)
 
-Klicka på **VERKTYG** på panelen Profilvisningsprogram. Ange `geofenceevent` och klicka på **Skicka**.
+Klicka på **VERKTYG** på panelen Profilvisningsprogram och välj sedan **Direktsamtal**.
 
 >[!NOTE]
 >
 >Om du inte har möjlighet att skicka en direktanropshändelse på panelen Profilvisningsprogram kan du skicka en händelse manuellt genom att öppna utvecklarvyn i din webbläsare och gå till **Konsol** och sedan klistra in och skicka det här kommandot: `_satellite.track('geofenceevent')`.
+
+![Demo](./images/pv3.png)
+
+Ange `geofenceevent` och klicka på **Skicka**.
+
+![Demo](./images/pv4.png)
 
 Några sekunder senare visas meddelandet från Adobe Journey Optimizer i Slack-kanalen.
 

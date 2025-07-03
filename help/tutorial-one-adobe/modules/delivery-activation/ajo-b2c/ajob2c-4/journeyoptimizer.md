@@ -4,14 +4,14 @@ description: I den här modulen får ni lära er allt om Journey Optimizer, som 
 kt: 5342
 doc-type: tutorial
 exl-id: b1422971-ffce-4f4f-9bd8-986f5f1537c3
-source-git-commit: 3d61d91111d8693ab031fbd7b26706c02818108c
+source-git-commit: 203590e3289d2e5342085bf8b6b4e3cd11859539
 workflow-type: tm+mt
-source-wordcount: '288'
+source-wordcount: '263'
 ht-degree: 0%
 
 ---
 
-# 3.4 Adobe Journey Optimizer
+# 3.4 Adobe Journey Optimizer: Marknadsföring med orderbekräftelse och kampanjer
 
 I den här modulen får ni lära er allt om Adobe Journey Optimizer, som hjälper företag att utforma och leverera sammankopplade, kontextuella och personaliserade upplevelser till sina kunder.
 
@@ -45,10 +45,6 @@ I den här övningen ska du konfigurera en traditionell e-postkampanj.
 [3.4.3 Använda segmentbaserad personalisering i ett e-postmeddelande](./ex3.md)
 
 I den här övningen använder du segmentmedlemskap för att definiera vilket innehåll som ska visas i ett e-postmeddelande.
-
-[3.4.4 Konfigurera och använda push-meddelanden](./ex4.md)
-
-I den här övningen ska du installera ett mobilprogram på din iOS-enhet och konfigurera och leverera ett push-meddelande till din enhet.
 
 [Sammanfattning och fördelar](./summary.md)
 

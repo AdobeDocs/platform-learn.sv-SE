@@ -4,9 +4,9 @@ description: Adobe Journey Optimizer - External Weather API, SMS Action med mera
 kt: 5342
 doc-type: tutorial
 exl-id: bde4290a-59d1-4471-83a7-1cad69f94ff1
-source-git-commit: 3d61d91111d8693ab031fbd7b26706c02818108c
+source-git-commit: d19bd2e39c7ff5eb5c99fc7c747671fb80e125ee
 workflow-type: tm+mt
-source-wordcount: '765'
+source-wordcount: '754'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Kontrollera att **Type** är inställd på **Unitary** och välj **System Genera
 
 ![Demo](./images/evname.png)
 
-Därefter måste du välja ett schema. Alla scheman som visas här är Adobe Experience Platform Schemas.
+Därefter måste du välja ett schema.
 
 ![Demo](./images/evschema.png)
 
@@ -109,7 +109,7 @@ Om du klickar på ikonen **Visa nyttolast** öppnas ett XDM-exempel för den hä
 
 Skriv ned `eventID` så som du behöver den i den sista versionen för att testa konfigurationen.
 
-I det här exemplet är `eventID` `4df8dc10731eba7b0c37af83a9db38d4de7aa6aebcce38196d9d47929b9c598e`.
+I det här exemplet är `eventID` `209a2eecb641e20a517909e186a559ced155384a26429a557eb259e5a470bca7`.
 
 Du har definierat händelsen som ska utlösa resan vi bygger. När resan har utlösts kommer geofence-fälten, som City, och alla andra fält som du har valt (som Country, Latitude och Longitude) att göras tillgängliga för resan.
 

@@ -4,9 +4,9 @@ description: Journey Optimizer Create your event
 kt: 5342
 doc-type: tutorial
 exl-id: 2c03cc8d-0106-4fa5-80c6-e25712ca2eab
-source-git-commit: 3d61d91111d8693ab031fbd7b26706c02818108c
+source-git-commit: d19bd2e39c7ff5eb5c99fc7c747671fb80e125ee
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '410'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ När du har valt schemat visas ett antal fält som markeras i avsnittet **Nyttol
 
 ![ACOP](./images/eventpayload.png)
 
-Du kommer att se en popup-meny i fönstret **Fält** där du måste markera några fält som vi behöver för att anpassa e-postmeddelandet.  Vi väljer andra profilattribut senare med de data som redan finns i Adobe Experience Platform.
+Du kommer att se en popup-meny i fönstret **Fält** där du måste markera några fält som vi behöver för att anpassa e-postmeddelandet.  Du väljer andra profilattribut senare med de data som redan finns i Adobe Experience Platform.
 
 ![ACOP](./images/eventfields.png)
 
@@ -54,11 +54,11 @@ I objektet `--aepTenantId--.demoEnvironment` måste du markera fälten **brandLo
 
 ![ACOP](./images/eventpayloadbr.png)
 
-Markera fältet **email** i objektet `--aepTenantId--.identification.core`. Klicka på **OK** om du vill spara ändringarna.
+Markera fältet `--aepTenantId--.identification.core`email **i objektet**. Klicka på **OK** om du vill spara ändringarna.
 
 ![ACOP](./images/eventpayloadbrid.png)
 
-Du borde se det här då. Ange **Namespace** som **ECID (ECID)**. Klicka på **Spara**.
+Du borde se det här då. Kontrollera att **Namespace** är inställt på **ECID (ECID)**. Klicka på **Spara**.
 
 ![ACOP](./images/eventsave.png)
 
@@ -77,17 +77,15 @@ Nu visas ett exempel på den förväntade nyttolasten.
 Händelsen har ett unikt ID för Orchestration-händelse som du kan hitta genom att rulla nedåt i nyttolasten tills du ser `_experience.campaign.orchestration.eventID`.
 
 Händelse-ID är det som måste skickas till Adobe Experience Platform för att utlösa den resa som du ska bygga härnäst. Kom ihåg detta eventID, som du kommer att behöva det i någon av de följande övningarna.
-`"eventID": "5ae9b8d3f68eb555502b0c07d03ef71780600c4bd0373a4065c692ae0bfbd34d"`
+`"eventID": "d40815dbcd6ffd813035b4b590b181be21f5305328e16c5b75e4f32fd9e98557"`
 
 Klicka på **OK**.
 
 ![ACOP](./images/payloadeventID.png)
 
-Klicka på **Avbryt**.
+Klicka på **Avbryt** för att stänga det här fönstret.
 
 ![ACOP](./images/payloadeventID1.png)
-
-Du har nu avslutat den här övningen.
 
 ## Nästa steg
 

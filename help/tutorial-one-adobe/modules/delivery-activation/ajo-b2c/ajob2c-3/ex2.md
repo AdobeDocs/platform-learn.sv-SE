@@ -1,341 +1,156 @@
 ---
-title: Offer Decisioning - Konfigurera erbjudanden och beslut-ID
-description: Offer Decisioning - Konfigurera erbjudanden och beslut-ID
+title: Konfigurera en resa med push-meddelanden
+description: Konfigurera en resa med push-meddelanden
 kt: 5342
 doc-type: tutorial
-exl-id: 63d7ee24-b6b5-4503-b104-a345c2b26960
-source-git-commit: 3d61d91111d8693ab031fbd7b26706c02818108c
+source-git-commit: 203590e3289d2e5342085bf8b6b4e3cd11859539
 workflow-type: tm+mt
-source-wordcount: '1427'
-ht-degree: 1%
+source-wordcount: '622'
+ht-degree: 0%
 
 ---
 
-# 3.3.2 Konfigurera erbjudanden och beslut
+# 3.3.2 Konfigurera en resa med push-meddelanden
 
-## 3.3.2.1 Skapa personaliserade erbjudanden
 
-I den här övningen skapar du fyra **Personaliserade erbjudanden**. Här följer de uppgifter som ska beaktas när erbjudandena skapas:
+## 3.4.4.6 Skapa en ny händelse
 
-| Namn | Datumintervall | Bildlänk för e-post | Bildlänk för webben | Text | Prioritet | Kvalificering | Språk | Begränsningsfrekvens | Bildnamn |
-|-----|------------|----------------------|--------------------|------|:--------:|--------------|:-------:|:-------:|:-------:|
-| `--aepUserLdap-- - AirPods Max` | idag - 1 månad senare | https://bit.ly/4a9RJ5d | Välj från Assets Library | `{{ profile.person.name.firstName }}, 10% discount on AirPods Max` | 25 | alla - kvinnliga kunder | Engelska (USA) | 3 | Apple AirPods Max- Female.jpg |
-| `--aepUserLdap-- - Galaxy S24` | idag - 1 månad senare | https://bit.ly/3W8yuDv | Välj från Assets Library | `{{ profile.person.name.firstName }}, 5% discount on Galaxy S24` | 15 | alla - kvinnliga kunder | Engelska (USA) | 3 | Galaxy S24 - Female.jpg |
-| `--aepUserLdap-- - Apple Watch` | idag - 1 månad senare | https://bit.ly/4fGwfxX | https://bit.ly/4fGwfxX | `{{ profile.person.name.firstName }}, 10% discount on Apple Watch` | 25 | alla - Manliga kunder | Engelska (USA) | 3 | Apple Watch - Male.jpg |
-| `--aepUserLdap-- - Galaxy Watch 7` | idag - 1 månad senare | https://bit.ly/4gTrkeo | Välj från Assets Library | `{{ profile.person.name.firstName }}, 5% discount on Galaxy Watch 7` | 15 | alla - Manliga kunder | Engelska (USA) | 3 | Galaxy Watch7 - Male.jpg |
+Gå till **Journey Optimizer**. Gå till **Konfigurationer** på den vänstra menyn och klicka på **Hantera** under **Händelser**.
 
-{style="table-layout:auto"}
+![ACOP](./images/acopmenu.png)
 
-Logga in på Adobe Journey Optimizer på [Adobe Experience Cloud](https://experience.adobe.com). Klicka på **Journey Optimizer**.
+På skärmen **Händelser** ser du en liknande vy. Klicka på **Skapa händelse**.
 
-![ACOP](./../../../../modules/delivery-activation/ajo-b2c/ajob2c-1/images/acophome.png)
+![ACOP](./images/add.png)
 
-Du omdirigeras till vyn **Hem** i Journey Optimizer. Kontrollera först att du använder rätt sandlåda. Sandlådan som ska användas kallas `--aepSandboxName--`. Du kommer sedan att vara i vyn **Hem** i din sandlåda `--aepSandboxName--`.
+Därefter visas en tom händelsekonfiguration.
+Först och främst ger du evenemanget ett namn som detta: `--aepUserLdap--StoreEntryEvent` och anger beskrivningen till `Store Entry Event`.
+Nästa steg är markeringen **Händelsetyp**. Välj **Enhet**.
+Nästa steg är **Typ av händelse-ID**. Välj **Systemgenererad**.
 
-![ACOP](./../../../../modules/delivery-activation/ajo-b2c/ajob2c-1/images/acoptriglp.png)
+![ACOP](./images/eventname.png)
 
-Klicka på **Erbjudanden** på den vänstra menyn och gå sedan till **Erbjudanden**. Klicka på **+ Skapa erbjudande**.
+Nästa steg är schemavalet. Ett schema förbereddes för den här övningen. Använd schemat `Demo System - Event Schema for Mobile App (Global v1.1) v.1`.
 
-![Beslutsregel](./images/offers1.png)
+När du har valt schemat visas ett antal fält som markeras i avsnittet **Nyttolast**. Din händelse är nu helt konfigurerad.
 
-Du kommer då att se den här popup-rutan. Välj **Personaliserat erbjudande** och klicka på **Nästa**.
+Klicka på **Spara**.
 
-![Beslutsregel](./images/offers2.png)
+![ACOP](./images/eventschema.png)
 
-Du finns nu i vyn **Detaljer**.
+Händelsen är nu konfigurerad och sparad. Klicka på aktiviteten igen för att öppna skärmen **Redigera händelse** igen.
 
-![Beslutsregel](./images/offers3.png)
+![ACOP](./images/eventdone.png)
 
-I det här fallet måste du konfigurera erbjudandet `--aepUserLdap-- - AirPods Max`. Använd informationen i tabellen ovan för att fylla i fälten. I det här exemplet är namnet på det anpassade erbjudandet **vangeluw - AirPods Max**. Ange även **Startdatum och starttid** till idag och **Slutdatum och sluttid** till ett datum om en månad från och med nu.
+Håll muspekaren över fältet **Nyttolast** och klicka på ikonen **Visa nyttolast** .
 
-När du är klar, borde du ha den här. Klicka på **Nästa**.
+![ACOP](./images/hover.png)
 
-![Beslutsregel](./images/offers4.png)
+Nu visas ett exempel på den förväntade nyttolasten.
 
-Då ser du det här:
+Händelsen har ett unikt ID för Orchestration-händelse som du kan hitta genom att rulla nedåt i nyttolasten tills du ser `_experience.campaign.orchestration.eventID`.
 
-![Beslutsregel](./images/constraints.png)
+![ACOP](./images/payloadeventID.png)
 
-Välj **Efter definierad beslutsregel** och klicka på ikonen **+** för att lägga till regeln **alla - kvinnliga kunder**.
+Händelse-ID är det som måste skickas till Adobe Experience Platform för att utlösa den resa som du ska bygga i nästa steg. Skriv ned detta eventID, som du behöver det i nästa steg.
+`"eventID": "89acd341ec2b7d1130c9a73535029debf2ac35f486bc99236b1a5091d6f4bc68"`
 
-Fyll i **Prioritet** enligt tabellen ovan. Klicka sedan på **+ Skapa begränsning** för att definiera hur många gånger det här erbjudandet kan visas för en kund.
+Klicka på **OK**, följt av **Avbryt**.
 
-![Beslutsregel](./images/constraints1.png)
+## 3.4.4.7 Skapa en resa
 
-Välj följande för capping:
+Gå till **Resor** på menyn och klicka på **Skapa resa**.
 
-- **Välj en klipphändelse**: **Beslutshändelse**
-- **Taktyp**: **Per profil (använd begränsning för varje profil)**
-- **Antal takthändelser**: **3**
-- **Återställ taktfrekvens**: **Dagligen**
-- **Var**: **1 dag**
+![DSN](./images/sjourney1.png)
 
-Detta säkerställer att erbjudandet inte visas mer än 3 gånger per dag per kund.
+Då ser du det här. Ge resan ett namn. Använd `--aepUserLdap-- - Store Entry journey`. Klicka på **Spara**.
 
-Klicka på **Skapa**.
+![DSN](./images/sjourney3.png)
 
-![Beslutsregel](./images/constraints2.png)
+Först måste du lägga till din händelse som startpunkt för din resa. Sök efter din händelse `--aepUserLdap--StoreEntryEvent` och dra och släpp den på arbetsytan. Klicka på **Spara**.
 
-Du kommer då tillbaka hit. Klicka på **Nästa**.
+![DSN](./images/sjourney4.png)
 
-![Beslutsregel](./images/constraints3.png)
+Under **Åtgärder** söker du efter åtgärden **Push**. Dra och släpp åtgärden **Tryck** på arbetsytan.
 
-Du måste nu skapa **representationer**. Representationer är en kombination av en **placering** och en verklig resurs.
+Ange **kategorin** till **Marknadsföring** och välj en push-yta som gör att du kan skicka push-meddelanden. I det här fallet är e-postytan som ska väljas **Push-iOS-Android**.
 
-För **Representation 1** väljer du:
+>[!NOTE]
+>
+>Det måste finnas en kanal i Journey Optimizer som använder **appytan** som granskats tidigare.
 
-- Kanal: Webb
-- Placering: Webb - Bild
-- Innehåll: URL
-- Offentlig plats: kopiera URL:en från kolumnen **Bildlänk för webben** i tabellen ovan
+![ACOP](./images/journeyactions1push.png)
 
-![Beslutsregel](./images/addcontent1.png)
+Nästa steg är att skapa ett meddelande. Det gör du genom att klicka på **Redigera innehåll**.
 
-Du kan också välja **Resursbibliotek** för innehållet och sedan klicka på **Bläddra**.
+![ACOP](./images/journeyactions2push.png)
 
-![Beslutsregel](./images/addcontent2.png)
+Då ser du det här. Klicka på ikonen **personalisering** för fältet **Titel**.
 
-Därefter visas ett popup-fönster i Assets-biblioteket, gå till mappen **enablement-assets** och markera bildfilen **Apple AirPods Max - Honale.jpg**. Klicka sedan på **Markera**.
+![Tryck](./images/bp5.png)
 
-![Beslutsregel](./images/addcontent3.png)
+Då ser du det här. Du kan nu välja valfritt profilattribut direkt i kundprofilen i realtid.
 
-Då ser du det här. Klicka på **+ Lägg till representation**.
+Sök efter fältet **Förnamn** och klicka sedan på ikonen **+** bredvid fältet **Förnamn**. Du kommer då att se personaliseringstoken för förnamn som läggs till: **{{profile.person.name.firstName}}**.
 
-![Beslutsregel](./images/addcontentrep20.png)
+![Tryck](./images/bp9.png)
 
-Välj **Representation 2**:
+Lägg sedan till texten **, välkommen till vår butik!** bakom **{{profile.person.name.firstName}}**.
 
-- Kanal: E-post
-- Placering: E-post - bild
-- Innehåll: URL
-- Offentlig plats: välj **Resursbibliotek**. Klicka på **Bläddra**
+Klicka på **Spara**.
 
-![Beslutsregel](./images/addcontentrep21.png)
+![Tryck](./images/bp10.png)
 
-Därefter visas ett popup-fönster i Assets-biblioteket, gå till mappen **enablement-assets** och markera bildfilen **Apple AirPods Max - Honale.jpg**. Klicka sedan på **Markera**.
+Du har den här nu. Klicka på ikonen **personalisering** för fältet **Brödtext**.
 
-![Beslutsregel](./images/addcontent3b.png)
+![Tryck](./images/bp11.png)
 
-Då ser du det här. Klicka sedan på **+ Lägg till representation**.
+Ange den här texten **Klicka här för att få 10 % rabatt när du köper idag!** och klicka på **Spara**.
 
-![Beslutsregel](./images/addcontentrep20b.png)
+![Tryck](./images/bp12.png)
 
-För **representation 3** väljer du:
+Du får den här då. Klicka på pilen i det övre vänstra hörnet för att gå tillbaka till din resa.
 
-- Kanal: Icke-digital
-- Placement: Non-digital - Text
+![Journey Optimizer](./images/bp12a.png)
 
-Sedan måste du lägga till innehåll. I det här fallet innebär det att du lägger till texten som ska användas som en uppmaning till åtgärd.
+Klicka på **Spara** för att stänga din push-åtgärd.
 
-Välj **Egen** och klicka på **Lägg till innehåll**.
+![DSN](./images/sjourney8.png)
 
-![Beslutsregel](./images/addcontentrep31.png)
+Klicka på **Publicera**.
 
-Du kommer då att se den här popup-rutan.
+![DSN](./images/sjourney10.png)
 
-![Beslutsregel](./images/addcontent3text.png)
+Klicka på **Publicera** igen.
 
-Titta på fältet **Text** från tabellen ovan och ange den texten här, i det här fallet: `{{ profile.person.name.firstName }}, 10% discount on AirPods Max`.
+![DSN](./images/sjourney10a.png)
 
-Du kommer också att märka att du kan välja valfritt profilattribut och inkludera det som ett dynamiskt fält i erbjudandetexten. I det här exemplet ser fältet `{{ profile.person.name.firstName }}` till att förnamnet på kunden som ska få erbjudandet inkluderas i erbjudandetexten.
+Din resa är nu publicerad.
 
-Då ser du det här. Klicka på **Spara**.
+![DSN](./images/sjourney11.png)
 
-![Beslutsregel](./images/addcontentrep3text.png)
+## 3.4.4.8 Testa din resa och skicka ett push-meddelande
 
-Du har den här nu. Klicka på **Nästa**.
+Gå till skärmen **Inställningar** i ditt DX Demo 2.0-mobilprogram. Klicka på knappen **Butikspost**.
 
-![Beslutsregel](./images/addcontentrep3textdone.png)
+>[!NOTE]
+>
+>Knappen **Butikspost** implementeras. Du hittar det inte i appen än.
 
-Därefter visas en översikt över ditt nya **personaliserade erbjudande**. Klicka på **Slutför**.
+![DSN](./images/demo1b.png)
 
-![Beslutsregel](./images/offeroverview.png)
+Stäng appen omedelbart efter att du klickat på ikonen **Store Entry** (Store-post), annars visas inte push-meddelandet.
 
-Klicka på **Spara och godkänn**.
+Efter några sekunder visas meddelandet.
 
-![Beslutsregel](./images/saveapprove.png)
+![DSN](./images/demo2.png)
 
-Du kommer då att se att ditt nya personaliserade erbjudande blir tillgängligt i Översikt över erbjudanden:
-
-![Beslutsregel](./images/offeroverview1.png)
-
-Du bör nu upprepa stegen ovan för att skapa de tre andra personliga erbjudandena för de produkter du hittar i tabellen ovan.
-
-När du är klar bör du visa alla dina erbjudanden på skärmen **Erbjud översikter** för **personaliserade erbjudanden**.
-
-![Slutliga erbjudanden](./images/finaloffers.png)
-
-## 3.3.2.2 Skapa ett reserverbjudande
-
-När du har skapat fyra anpassade erbjudanden bör du nu konfigurera ett **Reserverbjudande**.
-
-Se till att du är i vyn **Erbjudanden**. Klicka på **+ Skapa erbjudande**.
-
-![Beslutsregel](./images/createoffer.png)
-
-Du kommer då att se den här popup-rutan. Välj **Reserverbjudande** och klicka på **Nästa**.
-
-![Beslutsregel](./images/foffers2.png)
-
-Då ser du det här. Ange det här namnet för ditt reserverbjudande: `--aepUserLdap-- - CitiSignal Fallback Offer`. Klicka på **Nästa**.
-
-![Beslutsregel](./images/foffers4.png)
-
-Du måste nu skapa **representationer**. Representationer är en kombination av en **placering** och en verklig resurs.
-
-För **Representation 1** väljer du:
-
-- **Kanal**: **Webb**
-- **Placement**: **Webb - Bild**
-- **Innehåll**: **Resursbibliotek**
-
-Klicka på **Bläddra** för att välja bilden.
-
-![Beslutsregel](./images/addcontent1fb.png)
-
-Därefter visas ett popup-fönster i Assets-biblioteket, gå till mappen **citi-signal-images** och välj bildfilen **App-Banner-Ad.jpg**. Klicka sedan på **Markera**.
-
-![Beslutsregel](./images/addcontent3fb.png)
-
-Då ser du det här. Klicka på **+ Lägg till representation**.
-
-![Beslutsregel](./images/addcontentrep20fb.png)
-
-Välj **Representation 2**:
-
-- **Kanal**: **E-post**
-- **Placement**: **Email - Image**
-- **Innehåll**: **Resursbibliotek**
-
-Klicka på **Bläddra** för att välja bilden.
-
-![Beslutsregel](./images/addcontentrep21fb.png)
-
-Därefter visas ett popup-fönster i Assets-biblioteket, gå till mappen **citi-signal-images** och välj bildfilen **App-Banner-Ad.jpg**. Klicka sedan på **Markera**.
-
-![Beslutsregel](./images/addcontent3bfb.png)
-
-Då ser du det här. Klicka på **+ Lägg till representation**.
-
-![Beslutsregel](./images/addcontentrep20bfb.png)
-
-För **representation 3** väljer du:
-
-- **Kanal**: **Icke-digital**
-- **Placement**: **Icke-digital - text**
-- **Innehåll**: **Egen**
-
-Klicka på **Lägg till innehåll**.
-
-![Beslutsregel](./images/addcontentrep21text.png)
-
-Du kommer då att se den här popup-rutan. Ange texten `{{ profile.person.name.firstName }}, download the CitiSignal app now!` och klicka på **Spara**.
-
-![Beslutsregel](./images/faddcontent3text.png)
-
-Då ser du det här. Klicka på **Nästa**.
-
-![Beslutsregel](./images/faddcontentrep3.png)
-
-Därefter visas en översikt över ditt nya **Reserverbjudande**. Klicka på **Slutför**.
-
-![Beslutsregel](./images/fofferoverview.png)
-
-Klicka slutligen på **Spara och godkänn**.
-
-![Beslutsregel](./images/saveapprovefb.png)
-
-På skärmen **Erbjudandeöversikter** ser du nu följande:
-
-![Slutliga erbjudanden](./images/ffinaloffers.png)
-
-## 3.3.2.3 Skapa din samling
-
-En samling används för att **filtrera** ut en delmängd av erbjudanden från listan med personaliserade erbjudanden och använda den som en del av ett beslut för att snabba upp beslutsprocessen.
-
-Gå till **Samlingar**. Klicka på **+ Skapa samling**.
-
-![Beslutsregel](./images/collections.png)
-
-Du kommer då att se den här popup-rutan. Konfigurera din samling så här. Klicka på **Nästa**.
-
-- Samlingsnamn: använd `--aepUserLdap-- - CitiSignal Collection`
-- Välj **Skapa statisk samling**.
-
-Klicka på **Nästa**.
-
-![Beslutsregel](./images/createcollectionpopup1.png)
-
-På nästa skärm väljer du de fyra **Personaliserade erbjudanden** som du skapade i föregående övning. Klicka på **Spara**.
-
-![Beslutsregel](./images/createcollectionpopup2.png)
-
-Nu ser du det här:
-
-![Beslutsregel](./images/colldone.png)
-
-## 3.3.2.4 Ta ett beslut
-
-I ett beslut kombineras placeringar, en samling personaliserade erbjudanden och ett reserverbjudande som i slutändan ska användas av Offer Decisioning-motorn för att hitta det bästa erbjudandet för en viss profil, baserat på varje enskild personaliserad erbjudandeegenskap, som prioritet, begränsning av behörighet och begränsning av antal/användare.
-
-Gå till **Beslut** om du vill konfigurera ditt **beslut**. Klicka på **+ Skapa beslut**.
-
-![Beslutsregel](./images/activitydd.png)
-
-Då ser du det här. Fyll i fälten så här. Klicka på **Nästa**.
-
-- Namn: `--aepUserLdap-- - CitiSignal Decision`
-- Startdatum och -tid: idag
-- Slutdatum och sluttid: idag + 1 månad
-
-![Beslutsregel](./images/activity2.png)
-
-På nästa skärm måste du lägga till praktik i beslutsomfattningar. Du måste skapa beslutsomfattningar för placeringarna **Webb - Bild**, **E-post - Bild** och **Ej digital - Text**.
-
-![Beslutsregel](./images/addplacements.png)
-
-Skapa först beslutsomfånget för **Icke-digital - text** genom att välja platsen i listrutan. Klicka sedan på knappen **Lägg till** för att lägga till utvärderingskriterier.
-
-![Beslutsregel](./images/activity3.png)
-
-Markera din samling `--aepUserLdap-- - CitiSignal Collection` och klicka på **Lägg till**.
-
-![Beslutsregel](./images/activity4text.png)
-
-Då ser du det här. Klicka på knappen **+** för att lägga till ett nytt beslutsomfång.
-
-![Beslutsregel](./images/activity5text.png)
-
-Välj placeringen **Webb - bild** och lägg till din samling `--aepUserLdap-- - CitiSignal Collection` under utvärderingskriterier. Klicka sedan på knappen **+** igen för att lägga till ett nytt beslutsområde.
-
-![Beslutsregel](./images/activity6text.png)
-
-Välj placeringen **E-post - bild** och lägg till din samling `--aepUserLdap-- - CitiSignal Collection` under utvärderingskriterier. Klicka sedan på **Nästa**.
-
-![Beslutsregel](./images/activity4.png)
-
-Du måste nu välja ditt **Reserverbjudande**, som har namnet `--aepUserLdap-- - CitiSignal Fallback Offer`. Klicka på **Nästa**.
-
-![Beslutsregel](./images/activity10.png)
-
-Granska ditt beslut. Klicka på **Slutför**.
-
-![Beslutsregel](./images/activity11.png)
-
-Klicka på **Spara och aktivera** på popup-menyn.
-
-![Beslutsregel](./images/activity12.png)
-
-Slutligen kommer du att se ditt beslut i översikten:
-
-![Beslutsregel](./images/activity13.png)
-
-Du har nu konfigurerat ditt beslut. Ditt beslut är nu öppet och kan användas för att leverera optimerade och personaliserade erbjudanden till era kunder i realtid.
+Du har gjort klart den här övningen.
 
 ## Nästa steg
 
-Gå till [3.3.3 Förbered din datainsamling-klientegenskap och Web SDK-inställningar för Offer Decisioning](./ex3.md){target="_blank"}
+Gå till [3.3.3 Konfigurera en kampanj med meddelanden i appen](./ex3.md){target="_blank"}
 
-Gå tillbaka till [Offer Decisioning](offer-decisioning.md){target="_blank"}
+Gå tillbaka till [Adobe Journey Optimizer: Push och In-app Messages](ajopushinapp.md){target="_blank"}
 
 Gå tillbaka till [Alla moduler](./../../../../overview.md){target="_blank"}

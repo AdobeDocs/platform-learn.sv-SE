@@ -4,10 +4,10 @@ breadcrumb-title: Omfattande teknisk självstudiekurs för Adobe-program, från 
 hide: true
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-source-git-commit: 51ad32eb3a017c973d0822b6d1e5a39d5c3947b7
+source-git-commit: decd2a5545cf3bb856d893d6af178b1f96ae20ae
 workflow-type: tm+mt
-source-wordcount: '1179'
-ht-degree: 2%
+source-wordcount: '1217'
+ht-degree: 3%
 
 ---
 
@@ -171,21 +171,17 @@ ht-degree: 2%
          + [3.2.4 Skapa din resa och dina meddelanden](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-2/ex4.md)
          + [3.2.5 Utlösa din resa](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-2/ex5.md)
          + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-2/summary.md)
-      + 3.3 Adobe Journey Optimizer: Offer Decisioning {#ajo33}
-         + [Översikt](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-3/offer-decisioning.md)
-         + [3.3.1 Offer Decisioning 101](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-3/ex1.md)
-         + [3.3.2 Konfigurera erbjudanden och beslut](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-3/ex2.md)
-         + [3.3.3 Förbered din Adobe Experience Platform Data Collection Client-egenskap och Web SDK-konfiguration för Offer Decisioning](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-3/ex3.md)
-         + [3.3.4 Kombinera Adobe Target och Offer Decisioning](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-3/ex4.md)
-         + [3.3.5 Använd ditt beslut i ett e-postmeddelande](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-3/ex5.md)
-         + [3.3.6 Testa ditt beslut med API:t](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-3/ex6.md)
+      + 3.3 Adobe Journey Optimizer: Push- och In-app-meddelanden {#ajo33}
+         + [Översikt](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-3/ajopushinapp.md)
+         + [3.3.1 Komma igång med push-meddelanden](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-3/ex1.md)
+         + [3.3.2 Konfigurera en resa med push-meddelanden](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-3/ex2.md)
+         + [3.3.3 Konfigurera en kampanj med meddelanden i appen](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-3/ex3.md)
          + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-3/summary.md)
-      + 3.4 Adobe Journey Optimizer: Händelsebaserade resor {#ajo34}
+      + 3.4 Adobe Journey Optimizer: Marknadsföring med orderbekräftelse och kampanjer {#ajo34}
          + [Översikt](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-4/journeyoptimizer.md)
          + [3.4.1 Konfigurera en utlösarbaserad resa - orderbekräftelse](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-4/ex1.md)
          + [3.4.2 Konfigurera en kampanj](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-4/ex2.md)
          + [3.4.3 Använda segmentbaserad personalisering i ett e-postmeddelande](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-4/ex3.md)
-         + [3.4.4 Konfigurera och använda push-meddelanden](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-4/ex4.md)
          + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-4/summary.md)
       + 3.5 Adobe Journey Optimizer: Översättningstjänster {#ajo35}
          + [Översikt](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-5/ajotranslationsvcs.md)
@@ -193,6 +189,22 @@ ht-degree: 2%
          + [3.5.2 Skapa en kampanj](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-5/ex2.md)
          + [3.5.3 Lägg till språk i e-postmeddelandet](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-5/ex3.md)
          + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-5/summary.md)
+      + 3.6 Adobe Journey Optimizer: Innehållshantering  {#ajo36}
+         + [Översikt](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-6/ajocontent.md)
+         + [3.6.1 Innehållskort](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-6/ex1.md)
+         + [3.6.2 Landing Pages](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-6/ex2.md)
+         + [3.6.3 AJO och GenStudio for Performance Marketing](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-6/ex3.md)
+         + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-6/summary.md)
+      + 3.7 Adobe Journey Optimizer: Experience Decision {#ajo37}
+         + [Översikt](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-7/ajo-decisioning.md)
+         + [3.7.1 Experience Decision 101](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-7/ex1.md)
+         + [3.7.2 Konfigurera erbjudanden och beslut](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-7/ex2.md)
+         + [3.7.3 Web SDK setup for Experience Decisioning](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-7/ex3.md)
+         + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-7/summary.md)
+      + 3.8 Adobe Journey Optimizer: Kampanjer {#ajo38}
+         + [Översikt](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-8/ajocampaigns.md)
+         + [3.8.1 Komma igång med kampanjer](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-8/ex1.md)
+         + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/delivery-activation/ajo-b2c/ajob2c-8/summary.md)
 
 + Rapportering och insikter {#reporting}
    + Customer Journey Analytics  {#cjab2c}

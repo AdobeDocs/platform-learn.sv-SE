@@ -4,9 +4,9 @@ description: Adobe Journey Optimizer - Konfigurera din resa och ditt meddelande
 kt: 5342
 doc-type: tutorial
 exl-id: 687eb818-2d50-4293-88e6-7e5945b91db6
-source-git-commit: 3d61d91111d8693ab031fbd7b26706c02818108c
+source-git-commit: e3d3b8e3abdea1766594eca53255df024129cb2c
 workflow-type: tm+mt
-source-wordcount: '1479'
+source-wordcount: '1484'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ Använd `--aepUserLdap-- - Geofence Entry Journey` som namn för resan. Inga and
 
 ![Demo](./images/joname.png)
 
-Titta på **Händelser** till vänster på skärmen. Du bör se den händelse du skapade tidigare i den listan. Markera den och dra den sedan och släpp den på arbetsytan. Din resa ser då ut så här. Klicka på **Spara**.
+Titta på **Händelser** till vänster på skärmen. Du bör se din tidigare skapade händelse i den listan, som har namnet `--aepUserLdap--GeofenceEntry`. Markera den och dra den sedan och släpp den på arbetsytan. Din resa ser då ut så här.
 
 ![Demo](./images/joevents.png)
 
@@ -201,7 +201,7 @@ Gå tillbaka till **Åtgärder** på den vänstra menyn, markera åtgärden `--a
 
 ![Demo](./images/joa18.png)
 
-Gå till **åtgärdsparametrar** och klicka på ikonen **Redigera** för parametern `textToSlack`.
+Bläddra ned till **Begäranparametrar** och klicka på ikonen **Redigera** för parametern `textToSlack`.
 
 ![Demo](./images/joa19.png)
 
@@ -215,13 +215,13 @@ Markera nedanstående kod, kopiera den och klistra in den i **redigeraren för a
 
 ![Demo](./images/joa21.png)
 
-Du kommer att se den slutförda åtgärden. Klicka på **Spara**.
+Du kommer att se den slutförda åtgärden. Bläddra uppåt och klicka på **Spara**.
 
 ![Demo](./images/joa22.png)
 
 Den här vägen på resan är nu färdig.
 
-## 3.2.4.3 Skicka meddelanden för sökväg: mellan 10° och 25° Celsius
+## 3.2.4.3 Skicka meddelanden för sökväg: 10 till 25 grader Celsius
 
 För varje temperatursammanhang försöker ni skicka ett meddelande till kunden. För den här övningen ska du skicka ett meddelande till en Slack-kanal i stället för ett mobiltelefonnummer.
 
@@ -233,7 +233,7 @@ Gå tillbaka till **Åtgärder** på den vänstra menyn, markera åtgärden `--a
 
 ![Demo](./images/jop18.png)
 
-Gå till **åtgärdsparametrar** och klicka på ikonen **Redigera** för parametern `textToSlack`.
+Bläddra ned till **Begäranparametrar** och klicka på ikonen **Redigera** för parametern `textToSlack`.
 
 ![Demo](./images/joa19z.png)
 
@@ -247,7 +247,7 @@ Markera nedanstående kod, kopiera den och klistra in den i **redigeraren för a
 
 ![Demo](./images/jop21.png)
 
-Du kommer att se den slutförda åtgärden. Klicka på **OK**.
+Du kommer att se den slutförda åtgärden. Bläddra uppåt och klicka på **Spara**.
 
 ![Demo](./images/jop22.png)
 
@@ -265,7 +265,7 @@ Gå tillbaka till **Åtgärder** på den vänstra menyn, markera åtgärden `--a
 
 ![Demo](./images/jod18.png)
 
-Gå till **åtgärdsparametrar** och klicka på ikonen **Redigera** för parametern `textToSlack`.
+Bläddra ned till **Begäranparametrar** och klicka på ikonen **Redigera** för parametern `textToSlack`.
 
 ![Demo](./images/joa19zzz.png)
 

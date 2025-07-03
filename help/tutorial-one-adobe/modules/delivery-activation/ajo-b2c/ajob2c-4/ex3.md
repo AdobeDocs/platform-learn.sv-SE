@@ -4,9 +4,9 @@ description: Den här övningen förklarar hur du använder segmentpersonaliseri
 kt: 5342
 doc-type: tutorial
 exl-id: a1ad649e-d0c4-4e87-b784-1e2d99f34a2e
-source-git-commit: 3d61d91111d8693ab031fbd7b26706c02818108c
+source-git-commit: 203590e3289d2e5342085bf8b6b4e3cd11859539
 workflow-type: tm+mt
-source-wordcount: '402'
+source-wordcount: '395'
 ht-degree: 0%
 
 ---
@@ -71,12 +71,12 @@ Markera segmentet `--aepUserLdap-- - Interest in Plans` och klicka på ikonen **
 
 Sedan lämnar du den första raden som den är och ersätter rad 2 och 3 med den här koden:
 
-&grave;&grave;
+``
     PS: It may be a good idea to check if your plan still meets your needs! Click here to be contacted by one of our experts!
 {%else%}
     PS: Thanks for taking the time to read our newsletter. Here is a 10% promo code to use on the website: NEWSLETTER10
 {%/if%}
-&grave;&grave;
+``
 
 Du får den här då. Klicka på **Spara**.
 
@@ -108,7 +108,7 @@ Du har gjort klart den här övningen.
 
 ## Nästa steg
 
-Gå till installationsprogrammet för [3.4.4 och använd push-meddelanden för iOS](./ex4.md){target="_blank"}
+Gå till [Sammanfattning och förmåner](./summary.md){target="_blank"}
 
 Gå tillbaka till [Adobe Journey Optimizer](journeyoptimizer.md){target="_blank"}
 

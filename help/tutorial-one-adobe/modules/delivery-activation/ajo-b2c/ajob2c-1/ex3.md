@@ -4,14 +4,14 @@ description: Journey Optimizer Skapa ditt e-postmeddelande
 kt: 5342
 doc-type: tutorial
 exl-id: e264ab9e-e7f1-4a0b-b3b7-17003c40f17a
-source-git-commit: 3d61d91111d8693ab031fbd7b26706c02818108c
+source-git-commit: d19bd2e39c7ff5eb5c99fc7c747671fb80e125ee
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1283'
 ht-degree: 0%
 
 ---
 
-# 3.1.3 Skapa din resa, dina fragment och ditt meddelande
+# 3.1.3 Skapa din resa och ditt e-postmeddelande
 
 I den här övningen ska du konfigurera resan och det meddelande som ska utlösas när någon skapar ett konto på demowebbplatsen.
 
@@ -33,7 +33,7 @@ Då ser du en tom skärm för resan.
 
 ![ACOP](./images/journeyempty.png)
 
-I föregående övning skapade du en ny **Event**. Du gav den ett namn som detta `--aepUserLdap--AccountCreationEvent` och ersatte `ldap` med din ldap. Detta var resultatet av händelseskapandet:
+I föregående övning skapade du en ny **Event**. Du namngav den så här `--aepUserLdap--AccountCreationEvent`. Detta var resultatet av händelseskapandet:
 
 ![ACOP](./images/eventdone.png)
 
@@ -41,7 +41,7 @@ Du måste nu ta det här evenemanget som början på den här resan. Du kan gör
 
 ![ACOP](./images/eventlist.png)
 
-Markera händelsen, dra och släpp den på arbetsytan på resan. Din resa ser nu ut så här:
+Markera händelsen, dra och släpp den på arbetsytan för resan. Din resa ser nu ut så här:
 
 ![ACOP](./images/journeyevent.png)
 
@@ -57,11 +57,11 @@ Som det tredje steget på resan måste du lägga till en **e-poståtgärd**. Gå
 
 ![ACOP](./images/journeyactions.png)
 
-Ange **kategorin** till **Marknadsföring** och välj en e-postkonfiguration som gör att du kan skicka e-post. I det här fallet är e-postkonfigurationen som ska väljas **E-post**. Kontrollera att kryssrutorna för **klick på e-post** och **e-post** är aktiverade.
+Ange **kategorin** till **Marknadsföring** och välj en e-postkonfiguration som gör att du kan skicka e-post. I det här fallet är e-postkonfigurationen som ska väljas **E-post-TI**.
 
 ![ACOP](./images/journeyactions1.png)
 
-## 3.1.3.2 Skapa ett meddelande
+## 3.1.3.2 Skapa ditt meddelande
 
 Klicka på **Redigera innehåll** om du vill skapa ditt meddelande.
 
