@@ -86,7 +86,7 @@ Du kommer då att se att ditt datastream för mobilen är länkat här. Klicka s
 
 ![Adobe Experience Platform-datainsamling](./images/launchprop2.png)
 
-Du kommer då tillbaka hit. Tillägget för **AEP Assurance** visas. AEP Assurance hjälper er att inspektera, bevisa, simulera och validera hur ni samlar in data eller levererar upplevelser i er mobilapp. Du kan läsa mer om AEP Assurance här: [https://experienceleague.adobe.com/en/docs/experience-platform/assurance/home](https://experienceleague.adobe.com/en/docs/experience-platform/assurance/home).
+Du kommer då tillbaka hit. Tillägget för **AEP Assurance** visas. AEP Assurance hjälper er att inspektera, bevisa, simulera och validera hur ni samlar in data eller levererar upplevelser i er mobilapp. Du kan läsa mer om AEP Assurance här: [https://experienceleague.adobe.com/sv/docs/experience-platform/assurance/home](https://experienceleague.adobe.com/sv/docs/experience-platform/assurance/home).
 
 ![Adobe Experience Platform-datainsamling](./images/launchprop8.png)
 
