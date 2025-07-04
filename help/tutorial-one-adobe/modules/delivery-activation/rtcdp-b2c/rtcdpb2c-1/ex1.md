@@ -4,9 +4,9 @@ description: Foundation - kundprofil i realtid - Från okänd till känd på web
 kt: 5342
 doc-type: tutorial
 exl-id: f33a7448-e1b9-47e7-97c7-509ad36cf991
-source-git-commit: 3d61d91111d8693ab031fbd7b26706c02818108c
+source-git-commit: 2264f26a0778c2570c36abe1bae4d6a1dc3a465c
 workflow-type: tm+mt
-source-wordcount: '971'
+source-wordcount: '1002'
 ht-degree: 0%
 
 ---
@@ -59,41 +59,39 @@ Ni kan också se alla upplevelsehändelser som samlats in baserat på kundens be
 
 ![Demo](../../datacollection/dc1.2/images/pv3.png)
 
-Gå till produktkategorin **Telefoner och enheter**. Klicka sedan på produkten **iPhone 15 Pro**.
+Gå till produktkategorin **Telefoner och enheter**. Klicka sedan på produkten **iPhone 16 Pro**.
 
 ![Demo](../../datacollection/dc1.2/images/pv4.png)
 
-Då visas informationssidan för produkten. En Experience Event av typen **Product View** har nu skickats till Adobe Experience Platform med den Web SDK-implementering som du granskade i modul 1.
+Då visas informationssidan för produkten. En händelse av typen **Produktvy** har nu skickats till Adobe Experience Platform med den Web SDK-implementering som du granskade i modul 1.
 
 ![Demo](../../datacollection/dc1.2/images/pv5.png)
 
-Öppna panelen Provile Viewer och titta på **Experience Events**.
+Öppna panelen Provile Viewer och titta på dina **Events**.
 
 ![Demo](../../datacollection/dc1.2/images/pv6.png)
 
-Gå tillbaka till kategorisidan **Telefoner och enheter** och klicka på en annan produkt. En annan Experience Event har skickats till Adobe Experience Platform. Öppna panelen Profilvisningsprogram. Nu visas 2 Experience Events av typen **Product View**. Beteendet är anonymt, men med rätt medgivande kan du spåra varje klick och lagra det i Adobe Experience Platform. När den anonyma kunden blir känd kan vi automatiskt sammanfoga alla anonyma beteenden med kunskapsprofilen.
+Gå tillbaka till kategorisidan **Telefoner och enheter** och klicka på en annan produkt. En annan Experience Event har skickats till Adobe Experience Platform. Öppna panelen Profilvisningsprogram. Nu visas två händelser av typen **Produktvy**. Beteendet är anonymt, men med rätt medgivande kan du spåra varje klick och lagra det i Adobe Experience Platform. När den anonyma kunden blir känd kan vi automatiskt sammanfoga alla anonyma beteenden med kunskapsprofilen.
+
+Klicka på **Logga in**.
 
 ![Demo](../../datacollection/dc1.2/images/pv7.png)
 
-Gå till sidan Register/Login. Klicka på **Logga in**.
+Klicka på **Skapa ett konto**.
 
 ![Demo](../../datacollection/dc1.2/images/pv8.png)
 
-Klicka på **Skapa ett konto**.
+Fyll i dina uppgifter och klicka på **Registrera**. Sedan dirigeras du om till föregående sida.
 
 ![Demo](../../datacollection/dc1.2/images/pv9.png)
 
-Fyll i dina uppgifter och klicka på **Registrera**. Sedan dirigeras du om till föregående sida.
+Öppna profilvisarpanelen och gå till kundprofilen i realtid. På panelen Profilvisningsprogram ska du se alla dina personuppgifter visas, som dina nya e-post- och telefonidentifierare.
 
 ![Demo](../../datacollection/dc1.2/images/pv10.png)
 
-Öppna profilvisarpanelen och gå till kundprofilen i realtid. På panelen Profilvisningsprogram ska du se alla dina personuppgifter visas, som dina nya e-post- och telefonidentifierare.
-
-![Demo](../../datacollection/dc1.2/images/pv11.png)
-
 Gå till Experience Events på panelen Profilvisningsprogram. Du kan se de två produkterna som du har visat tidigare på panelen Profilvisningsprogram. Båda dessa händelser är nu också anslutna till din&quot;kända&quot; profil.
 
-![Demo](../../datacollection/dc1.2/images/pv12.png)
+![Demo](../../datacollection/dc1.2/images/pv11.png)
 
 Du har nu importerat data till Adobe Experience Platform och du har länkat dessa data till identifierare som ECID och e-postadresser. Målet med detta är att förstå affärssammanhanget för det ni ska göra. I nästa övning kommer du att börja konfigurera allt du behöver för att göra all den dataimporten möjlig.
 
@@ -105,21 +103,33 @@ Om du inte har installerat appen längre eller om du inte kommer ihåg hur du in
 
 När du har installerat appen enligt instruktionerna ser du landningssidan för appen med Citi Signal-märket inläst. Klicka på kontoikonen i skärmens övre vänstra del.
 
-![Demo](./images/app_hp1.png)
+![Demo](./images/app_hpz.png)
 
 På inloggningsskärmen loggar du in med den e-postadress som du använde på datorwebbplatsen. Klicka på **Logga in**.
 
 ![Demo](./images/app_acc.png)
 
-Gå till appens startskärm och klicka för att öppna valfri produkt.
+Du får då en bekräftelse på att du är inloggad.
 
-![Demo](./images/app_hp.png)
+![Demo](./images/app_acc1.png)
+
+Gå till appens startskärm och gå till sidan **Telefoner och enheter**.
+
+![Demo](./images/app_hp1.png)
+
+Klicka på en produkt på sidan.
+
+![Demo](./images/app_hp2.png)
 
 Då visas informationssidan för produkten.
 
 ![Demo](./images/app_galaxy.png)
 
-Gå till startskärmen i appen och svep åt vänster på skärmen för att visa panelen Profilvisningsprogram. Du kommer då att se produkten som du just visade i avsnittet **Experience Events**, tillsammans med alla produktvyer från webbplatssessionen tidigare.
+Gå till startskärmen i appen och klicka på ikonen Adobe för att visa profilvisningsprogrampanelen. Du kommer då att se vyn **Profilattribut**, som nu visar en kombinerad vy över din webb- och mobilappsaktivitet. Gå till **Händelser**
+
+![Demo](./images/app_hp3.png)
+
+Du kommer då att se produkten som du just visade i avsnittet **Experience Events**, tillsammans med alla produktvyer från webbplatssessionen tidigare.
 
 >[!NOTE]
 >

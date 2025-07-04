@@ -3,19 +3,27 @@ title: Konfigurera en resa med push-meddelanden
 description: Konfigurera en resa med push-meddelanden
 kt: 5342
 doc-type: tutorial
-source-git-commit: 203590e3289d2e5342085bf8b6b4e3cd11859539
+exl-id: 63d7ee24-b6b5-4503-b104-a345c2b26960
+source-git-commit: fb14ba45333bdd5834ff0c6c2dc48dda35cfe85f
 workflow-type: tm+mt
-source-wordcount: '622'
+source-wordcount: '770'
 ht-degree: 0%
 
 ---
 
 # 3.3.2 Konfigurera en resa med push-meddelanden
 
+Logga in på Adobe Journey Optimizer på [Adobe Experience Cloud](https://experience.adobe.com). Klicka på **Journey Optimizer**.
 
-## 3.4.4.6 Skapa en ny händelse
+![ACOP](./../../../../modules/delivery-activation/ajo-b2c/ajob2c-1/images/acophome.png)
 
-Gå till **Journey Optimizer**. Gå till **Konfigurationer** på den vänstra menyn och klicka på **Hantera** under **Händelser**.
+Du omdirigeras till vyn **Hem** i Journey Optimizer. Kontrollera först att du använder rätt sandlåda. Sandlådan som ska användas kallas `--aepSandboxName--`. Du kommer sedan att vara i vyn **Hem** i din sandlåda `--aepSandboxName--`.
+
+![ACOP](./../../../../modules/delivery-activation/ajo-b2c/ajob2c-1/images/acoptriglp.png)
+
+## 3.3.2.1 Skapa en ny händelse
+
+Gå till **Konfigurationer** på den vänstra menyn och klicka på **Hantera** under **Händelser**.
 
 ![ACOP](./images/acopmenu.png)
 
@@ -32,13 +40,13 @@ Nästa steg är **Typ av händelse-ID**. Välj **Systemgenererad**.
 
 Nästa steg är schemavalet. Ett schema förbereddes för den här övningen. Använd schemat `Demo System - Event Schema for Mobile App (Global v1.1) v.1`.
 
-När du har valt schemat visas ett antal fält som markeras i avsnittet **Nyttolast**. Din händelse är nu helt konfigurerad.
+När du har valt schemat visas ett antal fält som markeras i avsnittet **Nyttolast**. Kontrollera att fältet **Namespace** har värdet **ECID**. Din händelse är nu helt konfigurerad.
 
 Klicka på **Spara**.
 
 ![ACOP](./images/eventschema.png)
 
-Händelsen är nu konfigurerad och sparad. Klicka på aktiviteten igen för att öppna skärmen **Redigera händelse** igen.
+Din händelse är nu konfigurerad och sparad. Klicka på aktiviteten igen för att öppna skärmen **Redigera händelse** igen.
 
 ![ACOP](./images/eventdone.png)
 
@@ -50,20 +58,24 @@ Nu visas ett exempel på den förväntade nyttolasten.
 
 Händelsen har ett unikt ID för Orchestration-händelse som du kan hitta genom att rulla nedåt i nyttolasten tills du ser `_experience.campaign.orchestration.eventID`.
 
+Händelse-ID är det som måste skickas till Adobe Experience Platform för att utlösa den resa som du ska bygga i nästa steg. Skriv ned detta eventID, som du behöver det i nästa steg.
+`"eventID": "aa895251f76831e6440f169f1bb9d2a4388f0696d8e2782cfab192a275817dfa"`
+
+Klicka på **OK**.
+
 ![ACOP](./images/payloadeventID.png)
 
-Händelse-ID är det som måste skickas till Adobe Experience Platform för att utlösa den resa som du ska bygga i nästa steg. Skriv ned detta eventID, som du behöver det i nästa steg.
-`"eventID": "89acd341ec2b7d1130c9a73535029debf2ac35f486bc99236b1a5091d6f4bc68"`
+Klicka på **Avbryt**.
 
-Klicka på **OK**, följt av **Avbryt**.
+![ACOP](./images/payloadeventIDa.png)
 
-## 3.4.4.7 Skapa en resa
+## 3.3.2.2 Skapa en resa
 
-Gå till **Resor** på menyn och klicka på **Skapa resa**.
+Gå till **Resor** på den vänstra menyn och klicka på **Skapa resa**.
 
 ![DSN](./images/sjourney1.png)
 
-Då ser du det här. Ge resan ett namn. Använd `--aepUserLdap-- - Store Entry journey`. Klicka på **Spara**.
+Då ser du det här. Ge din resa ett namn: `--aepUserLdap-- - Store Entry journey`. Klicka på **Spara**.
 
 ![DSN](./images/sjourney3.png)
 
@@ -129,23 +141,61 @@ Din resa är nu publicerad.
 
 ![DSN](./images/sjourney11.png)
 
-## 3.4.4.8 Testa din resa och skicka ett push-meddelande
+## 3.3.2.3 Uppdatera din datainsamlingsegenskap för mobilen
 
-Gå till skärmen **Inställningar** i ditt DX Demo 2.0-mobilprogram. Klicka på knappen **Butikspost**.
+I **Getting Started** skapade Demo System sedan taggegenskaper åt dig: en för webbplatsen och en för mobilappen. Sök efter dem genom att söka efter `--aepUserLdap--` i rutan **Sök**. Klicka för att öppna egenskapen **Mobile**.
 
->[!NOTE]
->
->Knappen **Butikspost** implementeras. Du hittar det inte i appen än.
+![DSN](./images/pushpoi1.png)
 
-![DSN](./images/demo1b.png)
+Du borde se det här då.
 
-Stäng appen omedelbart efter att du klickat på ikonen **Store Entry** (Store-post), annars visas inte push-meddelandet.
+![DSN](./images/pushpoi2.png)
 
-Efter några sekunder visas meddelandet.
+Gå till **Regler** på den vänstra menyn och klicka för att öppna regeln **Platspost**.
 
-![DSN](./images/demo2.png)
+![DSN](./images/pushpoi3.png)
 
-Du har gjort klart den här övningen.
+Du borde se det här då. Klicka på åtgärden **Mobile Core - Attach Data**.
+
+![DSN](./images/pushpoi4.png)
+
+Du borde se det här då.
+
+![DSN](./images/pushpoi5.png)
+
+Klistra in eventID för din händelse `--aepUserLdap--StoreEntryEvent` i fönstret **JSON Payload**. Klicka på **Behåll ändringar**.
+
+![DSN](./images/pushpoi6.png)
+
+Klicka på **Spara** eller **Spara i bibliotek**.
+
+![DSN](./images/pushpoi7.png)
+
+Gå till **Publiceringsflöde** och klicka för att öppna biblioteket **Huvudsida**.
+
+![DSN](./images/pushpoi8.png)
+
+Klicka på **Lägg till alla ändrade resurser** och sedan på **Spara och skapa i utveckling**.
+
+![DSN](./images/pushpoi9.png)
+
+## 3.3.2.4 Testa din resa och skicka ett push-meddelande
+
+Öppna **DSN Mobile**-programmet.
+
+![DSN](./images/dxdemo1.png)
+
+Gå till sidan **Store Locator**.
+
+![DSN](./images/dxdemo2.png)
+
+Klicka på **Simulera POI-post**.
+
+![DSN](./images/dxdemo3.png)
+
+Efter några sekunder visas ett push-meddelande.
+
+![DSN](./images/dxdemo4.png)
 
 ## Nästa steg
 
