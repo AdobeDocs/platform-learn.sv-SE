@@ -4,9 +4,9 @@ description: I det här avsnittet konfigurerar du en utlösarbaserad resa - orde
 kt: 5342
 doc-type: tutorial
 exl-id: e8cf1274-2a18-4870-b1e3-378e1779fac1
-source-git-commit: 3d61d91111d8693ab031fbd7b26706c02818108c
+source-git-commit: 93b1708278435ae9851835ca5efbd93d9e260d70
 workflow-type: tm+mt
-source-wordcount: '1921'
+source-wordcount: '1894'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Du omdirigeras till vyn **Hem** i Journey Optimizer. Kontrollera först att du a
 
 ![ACOP](./../../../../modules/delivery-activation/ajo-b2c/ajob2c-1/images/acoptriglp.png)
 
-## 3.4.1.1 Skapa en händelse
+## 3.4.1.1 Skapa din aktivitet
 
 Gå till **Konfigurationer** på menyn och klicka på **Hantera** under **Händelser**.
 
@@ -40,7 +40,7 @@ Välj **System Generated** för **händelse-ID-typ**.
 
 ![Journey Optimizer](./images/eventidtype.png)
 
-Nästa steg är schemavalet. Ett schema förbereddes för den här övningen. Använd schemat `Demo System - Event Schema for Website (Global v1.1) v.1`.
+Nästa steg är valet av schema. Ett schema förbereddes för den här övningen. Använd schemat `Demo System - Event Schema for Website (Global v1.1) v.1`.
 
 När du har valt schemat visas ett antal fält som markeras i avsnittet **Nyttolast**. Klicka på ikonen **Redigera/Penna** om du vill lägga till fler fält i den här händelsen.
 
@@ -78,7 +78,7 @@ Nu visas ett exempel på den förväntade nyttolasten. Händelsen har ett unikt 
 ![Journey Optimizer](./images/oc42.png)
 
 Händelse-ID är det som måste skickas till Adobe Journey Optimizer för att utlösa den resa som du bygger i nästa steg. Skriv ned detta eventID, som du behöver i ett av de följande stegen.
-`"eventID": "1c8148a8ab1993537d0ba4e6ac293dd4f2a88d80b2ca7be6293c3b28d4ff5ae6"`
+`"eventID": "618da2a203c3392e43a538d40ff5deef0bd1e7c64f6b6bfe131d4a38a67193ae"`
 
 Klicka på **OK**, följt av **Avbryt**.
 
@@ -102,19 +102,15 @@ Under **Åtgärder** söker du sedan efter åtgärden **E-post** och lägger til
 
 ![Journey Optimizer](./images/oc47.png)
 
-Ange **kategorin** till **Marknadsföring** och välj en e-postyta som gör att du kan skicka e-post. I det här fallet är e-postytan som ska väljas **E-post**. Kontrollera att kryssrutorna för **klick på e-post** och **e-post** är aktiverade.
+Ange **kategorin** till **Marknadsföring** och välj en e-postyta som gör att du kan skicka e-post. I det här fallet är e-postytan som ska väljas **E-post**. Nästa steg är att skapa ett meddelande. Det gör du genom att klicka på **Redigera innehåll**.
 
 ![ACOP](./images/journeyactions1.png)
-
-Nästa steg är att skapa ett meddelande. Det gör du genom att klicka på **Redigera innehåll**.
-
-![ACOP](./images/journeyactions2.png)
 
 Nu ser du det här. Klicka på textfältet **Ämnesrad**.
 
 ![ACOP](./images/journeyactions3.png)
 
-Börja skriva **Tack för din beställning** i textområdet och klicka på ikonen **Personalization** .
+Börja skriva `Thanks for your order, ` i textområdet och klicka på ikonen **Personalization** .
 
 ![Journey Optimizer](./images/oc5.png)
 
@@ -345,7 +341,7 @@ Din resa är nu publicerad.
 
 ![Journey Optimizer](./images/oc513.png)
 
-## 3.4.1.5 Uppdatera klientegenskapen för Adobe Experience Platform Data Collection
+## 3.4.1.5 Uppdatera din klientegenskap för Adobe Experience Platform Data Collection
 
 Gå till [Adobe Experience Platform Data Collection](https://experience.adobe.com/launch/) och välj **Taggar**.
 
@@ -403,15 +399,11 @@ Ta en titt på panelen Profilvisningsprogram och kundprofilen i realtid med **Ex
 
 ![Demo](./../../../../modules/delivery-activation/datacollection/dc1.2/images/pv2.png)
 
-Gå till sidan Register/Login. Klicka på **SKAPA ETT KONTO**.
+Gå till sidan **Logga in**, klicka på **SKAPA ETT KONTO** och fyll i dessa fält. Klicka på **Registrera** och sedan omdirigeras du till föregående sida.
 
 ![Demo](./../../../../modules/delivery-activation/datacollection/dc1.2/images/pv9.png)
 
-Fyll i dina uppgifter och klicka på **Registrera**. Sedan dirigeras du om till föregående sida.
-
-![Demo](./../../../../modules/delivery-activation/datacollection/dc1.2/images/pv10.png)
-
-Lägg valfri produkt i kundvagnen
+Lägg valfri produkt i kundvagnen.
 
 ![Journey Optimizer](./images/cart1a.png)
 

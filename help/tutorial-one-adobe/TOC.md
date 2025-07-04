@@ -1,18 +1,18 @@
 ---
-user-guide-title: Omfattande teknisk självstudiekurs för Adobe-program, från Creative Cloud till Experience Cloud
-breadcrumb-title: Omfattande teknisk självstudiekurs för Adobe-program, från Creative Cloud till Experience Cloud
+user-guide-title: En teknisk självstudiekurs för Adobe
+breadcrumb-title: En teknisk självstudiekurs för Adobe
 hide: true
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-source-git-commit: decd2a5545cf3bb856d893d6af178b1f96ae20ae
+source-git-commit: 93b1708278435ae9851835ca5efbd93d9e260d70
 workflow-type: tm+mt
-source-wordcount: '1217'
+source-wordcount: '1200'
 ht-degree: 3%
 
 ---
 
 
-# Omfattande teknisk självstudiekurs - en Adobe {#tutorial-one-adobe}
+# En teknisk självstudiekurs för Adobe {#tutorial-one-adobe}
 
 + [Översikt över självstudiekursen](/help/tutorial-one-adobe/overview.md)
 + [Innehållsstatus](/help/tutorial-one-adobe/status.md)

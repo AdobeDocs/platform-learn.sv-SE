@@ -4,9 +4,9 @@ description: I det här avsnittet konfigurerar du en e-postgruppsresa för att s
 kt: 5342
 doc-type: tutorial
 exl-id: 40ca710d-63c8-41bd-bd4e-f02186509345
-source-git-commit: 3d61d91111d8693ab031fbd7b26706c02818108c
+source-git-commit: 93b1708278435ae9851835ca5efbd93d9e260d70
 workflow-type: tm+mt
-source-wordcount: '881'
+source-wordcount: '877'
 ht-degree: 0%
 
 ---
@@ -21,8 +21,7 @@ Du omdirigeras till vyn **Hem** i Journey Optimizer. Kontrollera först att du a
 
 ![ACOP](./../../../../modules/delivery-activation/ajo-b2c/ajob2c-1/images/acoptriglp.png)
 
-
-## 3.4.2.1 Skapa målgrupper
+## 3.4.2.1 Skapa målgrupp
 
 Innan ni skapar er kampanj bör ni definiera den målgrupp som ska ta emot kampanjen. Om du vill skapa en målgrupp går du till **Publiker** på den vänstra menyn. Där ser du alla tidigare målgrupper.
 
