@@ -4,7 +4,7 @@ description: Adobe Journey Optimizer Translation Services
 kt: 5342
 doc-type: tutorial
 exl-id: c0b3e37f-69f5-41e3-8663-0dcf736d1fc0
-source-git-commit: 3d61d91111d8693ab031fbd7b26706c02818108c
+source-git-commit: b407941266a3d6151363f07592bd445034d44909
 workflow-type: tm+mt
 source-wordcount: '154'
 ht-degree: 0%
