@@ -19,4 +19,4 @@ ht-degree: 0%
 Läs om hur AI Assistant i Adobe Experience Platform fungerar som en produktivitetshöjande partner som hjälper användare att felsöka, söka och optimera arbetsflöden.
 
 <!--  -->
->[!VIDEO](https://video.tv.adobe.com/v/3459306?learn=on&enablevpops=true)
+>[!VIDEO](https://video.tv.adobe.com/v/3462057?learn=on&enablevpops=true&captions=swe)
