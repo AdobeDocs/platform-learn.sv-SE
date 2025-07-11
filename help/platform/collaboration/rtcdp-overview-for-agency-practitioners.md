@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Den här videon är avsedd att ge er som arbetar med betalda medier en översikt på hög nivå över Real-Time CDP, vad den är, hur den fungerar och vad den gör med fokus på datakällor och målgrupper som driver deras Real-Time CDP Collaboration-användning och arbetsflöden.
 
->[!VIDEO](https://video.tv.adobe.com/v/3464657/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3464662/?learn=on&enablevpops&captions=swe)
