@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Få tips under genomgången av konfigurationen av ett filbaserat mål i Adobe Real-Time Customer Data Platform (CDP). Detta gäller [!UICONTROL cloud storage] mål (t.ex. S3 eller SFTP) och även [!UICONTROL email marketing] mål. Mer detaljerad produktdokumentation finns i:
 
-* [Aktivera målgruppsdata till exportmål för batchprofiler](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html) om du vill ha instruktioner om hur du aktiverar data till batch- eller e-postmarknadsföringsmål med hjälp av Experience Platform användargränssnitt
-* [Anslut till batchmål och aktivera data med API:t för Flow Service ](https://experienceleague.adobe.com/docs/experience-platform/destinations/api/connect-activate-batch-destinations.html) om du vill ha instruktioner om hur du aktiverar data till batch- eller e-postmarknadsföringsmål med API:t för Flow Service
+* [Aktivera målgruppsdata till exportmål för batchprofiler](https://experienceleague.adobe.com/docs/experience-platform/destinations/ui/activate/activate-batch-profile-destinations.html?lang=sv-SE) om du vill ha instruktioner om hur du aktiverar data till batch- eller e-postmarknadsföringsmål med hjälp av Experience Platform användargränssnitt
+* [Anslut till batchmål och aktivera data med API:t för Flow Service ](https://experienceleague.adobe.com/docs/experience-platform/destinations/api/connect-activate-batch-destinations.html?lang=sv-SE) om du vill ha instruktioner om hur du aktiverar data till batch- eller e-postmarknadsföringsmål med API:t för Flow Service
 
 >[!VIDEO](https://video.tv.adobe.com/v/328175/?learn=on&enablevpops)
