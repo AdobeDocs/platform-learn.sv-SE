@@ -4,9 +4,9 @@ description: Journey Optimizer Skapa ditt e-postmeddelande
 kt: 5342
 doc-type: tutorial
 exl-id: e264ab9e-e7f1-4a0b-b3b7-17003c40f17a
-source-git-commit: d19bd2e39c7ff5eb5c99fc7c747671fb80e125ee
+source-git-commit: ea8255de9869061cd21d2b5e7c8690f84be0a25b
 workflow-type: tm+mt
-source-wordcount: '1283'
+source-wordcount: '1284'
 ht-degree: 0%
 
 ---
@@ -216,7 +216,7 @@ Klicka på **Publicera** igen.
 
 ![ACOP](./images/publish1.png)
 
-Efter ett par minuter ändras statusen för din resa till **Live** och du ser en realtidsöversikt över hur din resa presterar.
+Efter ett par minuter ändras kundens status till **Live** och du ser en realtidskonsol över kundresan.
 
 ![ACOP](./images/published.png)
 
