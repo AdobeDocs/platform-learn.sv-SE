@@ -6,9 +6,9 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 6c0051e8-3dce-4b1f-a9fa-e86565a9fff4
-source-git-commit: b8f7b370a5aba82a0dcd6e7f4f0222fe209976f7
+source-git-commit: 8052d82b1b820a9077766d8966b331ad2a21b220
 workflow-type: tm+mt
-source-wordcount: '462'
+source-wordcount: '499'
 ht-degree: 1%
 
 ---
@@ -47,6 +47,10 @@ I den här övningen ska du konfigurera profiler, produkter och mallar i GenStud
 [1.3.3 Kampanjaktivering till Meta](./ex3.md){target="_blank"}
 
 I den här övningen ska ni skapa en Campaign. Du kommer också att konfigurera en anslutning till Meta och du kommer att gå igenom alla steg som behövs för att kunna skapa en annons, godkänna en annons med Adobe Workfront och publicera en annons på Meta.
+
+[1.3.4 Skapa e-postupplevelse för AJO](./ex4.md){target="_blank"}
+
+I den här övningen skapar du en e-postupplevelse med hjälp av en mall i GenStudio for Performance Marketing, och du delar den upplevelsen med Adobe Journey Optimizer för att skicka en e-postkampanj.
 
 [Sammanfattning och förmåner](./summary.md){target="_blank"}
 

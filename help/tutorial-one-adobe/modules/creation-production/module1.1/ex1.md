@@ -6,7 +6,7 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 52385c33-f316-4fd9-905f-72d2d346f8f5
-source-git-commit: a9f2e42d001e260f79439850bc5a364a64d1fc0e
+source-git-commit: 4d8952cdd136e9bf3a82fa864de4d51641bcbfd8
 workflow-type: tm+mt
 source-wordcount: '3788'
 ht-degree: 0%
@@ -76,7 +76,7 @@ Det första som krävs för att uppnå detta är en svartvit version av varumär
 
 ### 1.1.1.3.1 Skapa din kompositionsreferensbild
 
-Du kan använda [den här exempelbilden](./images/CitiSignal.jpg) eller skapa en egen text för att experimentera. Följ stegen nedan i Adobe Illustrator för att skapa en egen bildfil. Om du vill använda den fördefinierade bilden hoppar du över avsnittet nedan och går till steg **1.1.1.2.2 Generera bilden** direkt.
+Du kan använda [den här exempelbilden](./images/CitiSignal.jpg) eller skapa en egen text för att experimentera. Följ stegen nedan i Adobe Illustrator för att skapa en egen bildfil. Om du vill använda den fördefinierade bilden hoppar du över avsnittet nedan och går till steg **1.1.1.3.2 Generera bilden** direkt.
 
 Öppna **Adobe Illustrator**. Klicka på **Ny fil**.
 
@@ -451,7 +451,7 @@ Du bör då se en hyperrealistisk bild av **hästar i ett fält**.
 
 Gå tillbaka till begäran **POST - Firefly - T2I V4** från samlingen **FF - Firefly Services Tech Insiders** och gå till **Headers** för begäran.
 
-Ändra variabeln **x-model-version** till `image4_ultra`. I det här exemplet använder du `image4_standard`.
+Ändra variabeln **x-model-version** till `image4_ultra`. I det här exemplet använder du `image4_ultra`.
 
 ![Firefly](./images/ffim4_11.png)
 

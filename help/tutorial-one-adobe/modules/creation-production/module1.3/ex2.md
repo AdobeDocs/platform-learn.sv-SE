@@ -6,9 +6,9 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 181c1623-eb47-47e0-889b-6e9ebb6a143c
-source-git-commit: b8f7b370a5aba82a0dcd6e7f4f0222fe209976f7
+source-git-commit: 8052d82b1b820a9077766d8966b331ad2a21b220
 workflow-type: tm+mt
-source-wordcount: '961'
+source-wordcount: '1038'
 ht-degree: 0%
 
 ---
@@ -233,6 +233,8 @@ I föregående övning laddade du ned filen [CitiSignal-SGPeM-assets.zip](../../
 
 ![SGPeM](./images/gspem17.png)
 
+### Metamall
+
 Gå till **Innehåll** > **Mallar**. Klicka på **+ Lägg till mall**.
 
 ![SGPeM](./images/gspem125.png)
@@ -261,6 +263,8 @@ Använd detta för fältet **Mallnamn**:
 Mallen har nu sparats och är tillgänglig i mallbiblioteket.
 
 ![SGPeM](./images/gspem131.png)
+
+### Visa annonsmallar för banderoll
 
 Klicka på **+ Lägg till mall**.
 
@@ -348,6 +352,39 @@ Använd detta för fältet **Mallnamn**:
 Mallen har nu sparats och är tillgänglig i mallbiblioteket.
 
 ![SGPeM](./images/gspem152.png)
+
+### E-postmall
+
+Klicka på **+ Lägg till mall**.
+
+![SGPeM](./images/gspem153.png)
+
+Välj **E-post** och klicka sedan på **Bläddra**.
+
+![SGPeM](./images/gspem154.png)
+
+Navigera till mappen **templates** i mappen som innehåller de hämtade filerna **CitiSignal-SGPeM-assets**. Markera filen **citisign-email-template.html** och klicka på **Öppna**.
+
+![SGPeM](./images/gspem155.png)
+
+Du borde se det här då. Klicka på **Nästa**.
+
+![SGPeM](./images/gspem156.png)
+
+Klicka på **Nästa**.
+
+![SGPeM](./images/gspem157.png)
+
+Använd detta för fältet **Mallnamn**:
+`--aepUserLdap---citisignal-email-template`.
+
+Klicka på **Publicera mall**.
+
+![SGPeM](./images/gspem158.png)
+
+Mallen har nu sparats och är tillgänglig i mallbiblioteket.
+
+![SGPeM](./images/gspem159.png)
 
 Du har nu konfigurerat mallarna som du behöver för nästa övning.
 
