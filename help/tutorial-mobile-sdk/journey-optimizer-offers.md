@@ -134,6 +134,7 @@ Så här skapar du Mobile JSON-placeringen:
 1. I **[!UICONTROL Details]**-steget i **[!UICONTROL Create new personalized offer]**:
    1. Ange **[!UICONTROL Name]** som erbjudande, till exempel `Luma - Juno Jacket`, och ange **[!UICONTROL Start date and time]** och **[!UICONTROL End date and time]**. Utanför dessa datum väljs inte erbjudandet av beslutsmotorn.
    1. Välj **[!UICONTROL Next]**.
+
       ![Erbjudanden - information](assets/ajo-offers-details.png)
 
 1. I **[!UICONTROL Add representations]**-steget i **[!UICONTROL Create new personalized offer]**:
@@ -152,14 +153,17 @@ Så här skapar du Mobile JSON-placeringen:
          ```
 
       1. Välj **[!UICONTROL Save]**.
+
          ![Erbjudanden - anpassat innehåll](assets/ajo-offers-customcontent.png)
    1. Välj **[!UICONTROL Next]**.
+
       ![Erbjud representationer](assets/ajo-offers-representations.png)
 
 1. I **[!UICONTROL Add constraints]**-steget i **[!UICONTROL Create new personalized offer]**:
    1. Ange **[!UICONTROL Priority]** till `10`.
    1. Växla **[!UICONTROL Include capping]** av.
    1. Välj **[!UICONTROL Next]**.
+
       ![Erbjudanden - begränsningar](assets/ajo-offers-constraints.png)
 
 1. I **[!UICONTROL Review]**-steget av **[!UICONTROL Create new personalized]**-erbjudandet:
@@ -253,9 +257,11 @@ Se [Viktiga steg för att skapa och hantera erbjudanden](https://experienceleagu
    1. I rutan **[!UICONTROL Evaluation Criteria]** väljer du ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Add]**.
       1. Välj din erbjudandesamling i dialogrutan **[!UICONTROL Add Offer Collection]**. Exempel: **[!DNL Luma - Mobile App Collection]**.
       1. Välj **[!UICONTROL Add]**.
+
          ![Beslut - Välj samling](assets/ajo-decision-selectcollection.png)
    1. Kontrollera att **[!UICONTROL None]** är markerat för **[!UICONTROL Eligibility]** och att **[!UICONTROL Offer priority]** är markerat som **[!UICONTROL Ranking method]**.
    1. Välj **[!UICONTROL Next]**.
+
       ![Beslutsomfattningar](assets/ajo-decision-scopes.png).
 1. I **[!UICONTROL Add fallback offer]**-steget i **[!UICONTROL Create a new offer decision]**:
    1. Välj ditt reserverbjudande, till exempel **[!DNL Luma - Fallback offer]**.
