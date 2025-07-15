@@ -1,10 +1,10 @@
 ---
-title: Hämta Target-aktiviteter - Migrera Adobe Target-implementeringen i din mobilapp till Adobe Journey Optimizer - Beslutstillägg
-description: Lär dig hur du hämtar Adobe Target-aktiviteter när du migrerar från Adobe Target till Adobe Journey Optimizer - Decisioning Mobile-tillägget.
+title: Hämta Target-aktiviteter - Migrera Adobe Target-implementeringen i din mobilapp till Offer Decisioning- och Target-tillägget
+description: Lär dig hur du hämtar Adobe Target-aktiviteter när du migrerar från Adobe Target till Offer Decisioning och Target Mobile.
 exl-id: 39569088-a254-4e64-9956-0c6e1a8ed2a5
-source-git-commit: 2ebad2014d4c29a50af82328735258958893b42c
+source-git-commit: 876e664a213aec954105bf2d5547baab5d8a84ea
 workflow-type: tm+mt
-source-wordcount: '308'
+source-wordcount: '317'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ Innehållet som returneras av Target, som också kallas&quot;erbjudanden&quot;, 
 * Aktivera funktionsflaggor i programmet
 * Spara alternativ text eller bilder
 
-Om du har aktiviteter som måste köras i både Target-tillägg och Decisioning-tilläggsversioner av ditt program måste du testa noga. Om ni behöver olika erbjudanden för olika versioner av appen bör ni överväga att använda målinriktningsalternativen i gränssnittet för att leverera olika erbjudanden till olika versioner.
+Om du har aktiviteter som måste köras i både Target-tillägget och Offer Decisioning- och Target-tilläggsversionerna av ditt program måste du testa noga. Om ni behöver olika erbjudanden för olika versioner av appen bör ni överväga att använda målinriktningsalternativen i gränssnittet för att leverera olika erbjudanden till olika versioner.
 
 Se alltid till att ta med felhantering för att visa lämpliga upplevelser under felförhållanden.
 
@@ -143,8 +143,8 @@ Optimize.updatePropositions(for: [decisionScope1, decisionScope2]
 
 
 
-Lär dig sedan hur du [skickar Target-parametrar med hjälp av beslutstillägget](send-parameters.md).
+Läs sedan om hur du [skickar Target-parametrar med Offer Decisioning- och Target-tillägget](send-parameters.md).
 
 >[!NOTE]
 >
->Vi strävar efter att hjälpa dig att lyckas med din migrering av mobilmål från måltillägget till beslutstillägget. Om du stöter på problem med din migrering eller om du känner att det saknas viktig information i den här guiden kan du meddela oss genom att publicera [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-adobe-target-to-mobile-sdk-on-edge/m-p/747484#M625).
+>Vi vill hjälpa dig att lyckas med din migrering av mobilmål från Target-tillägget till Offer Decisioning- och Target-tillägget. Om du stöter på problem med din migrering eller om du känner att det saknas viktig information i den här guiden kan du meddela oss genom att publicera [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-adobe-target-to-mobile-sdk-on-edge/m-p/747484#M625).

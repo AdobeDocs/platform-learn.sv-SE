@@ -1,21 +1,21 @@
 ---
-title: Skicka parametrar - Migrera Adobe Target-implementeringen i din mobilapp till Adobe Journey Optimizer - Beslutstillägg
+title: Skicka parametrar - Migrera Adobe Target-implementeringen i din mobilapp till Offer Decisioning- och Target-tillägget
 description: Lär dig hur du skickar parametrar för mbox, profile och entity till Adobe Target med Experience Platform Web SDK.
 exl-id: 927d83f9-c019-4a6b-abef-21054ce0991b
-source-git-commit: e0359d1bade01f79d0f7aff6a6e69f3e4d0c3b62
+source-git-commit: 876e664a213aec954105bf2d5547baab5d8a84ea
 workflow-type: tm+mt
-source-wordcount: '774'
+source-wordcount: '786'
 ht-degree: 0%
 
 ---
 
-# Skicka parametrar till Target med beslutstillägget
+# Skicka parametrar till Target med Offer Decisioning- och Target-tillägget
 
 Målimplementeringarna skiljer sig åt mellan olika mobilprogram på grund av apparkitektur, företagskrav och funktioner som används. De flesta Target-implementeringar omfattar att skicka olika parametrar för sammanhangsberoende information, målgrupper och innehållsrekommendationer.
 
 Med måltillägget skickades alla Target-parametrar med funktionen `TargetParameters`.
 
-Med beslutets förlängning:
+Med Offer Decisioning- och Target-tillägget:
 
 * Parametrar avsedda för flera Adobe-program kan skickas i XDM-objektet
 * Parametrar som bara är avsedda för Target kan skickas i objektet `data.__adobe.target`
@@ -35,13 +35,13 @@ Profilparametrar lagrar data för en längre tidsperiod i användarens målprofi
 
 ## Enhetsparametrar
 
-[Entitetsparametrar](https://experienceleague.adobe.com/sv/docs/target/using/recommendations/entities/entity-attributes) används för att skicka beteendedata och kompletterande kataloginformation för målrekommendationer. Ungefär som profilparametrar ska de flesta enhetsparametrar skickas under objektet `data.__adobe.target`. Det enda undantaget är att `xdm.productListItems`-arrayen finns, och det första `SKU`-värdet används som `entity.id`.
+[Entitetsparametrar](https://experienceleague.adobe.com/en/docs/target/using/recommendations/entities/entity-attributes) används för att skicka beteendedata och kompletterande kataloginformation för målrekommendationer. Ungefär som profilparametrar ska de flesta enhetsparametrar skickas under objektet `data.__adobe.target`. Det enda undantaget är att `xdm.productListItems`-arrayen finns, och det första `SKU`-värdet används som `entity.id`.
 
 Entitetsparametrar för ett specifikt objekt måste ha prefixet `entity.` för korrekt datainhämtning. De reserverade parametrarna `cartIds` och `excludedIds` för rekommendationsalgoritmer ska inte prefixas och värdet för var och en måste innehålla en kommaavgränsad lista med entitets-ID:n.
 
 ## Inköpsparametrar
 
-Inköpsparametrar skickas till en orderbekräftelsesida efter en lyckad beställning och används för målkonverterings- och optimeringsmål. Med en Platform Mobile SDK-implementering som använder beslutstillägget mappas dessa parametrar automatiskt från XDM-data som skickas som en del av fältgruppen `commerce`.
+Inköpsparametrar skickas till en orderbekräftelsesida efter en lyckad beställning och används för målkonverterings- och optimeringsmål. Med en implementering av Platform Mobile SDK med tillägget Offer Decisioning och Target mappas dessa parametrar automatiskt från XDM-data som skickas som en del av fältgruppen `commerce`.
 
 Inköpsinformation skickas till mål när fältgruppen `commerce` har `purchases.value` inställt på `1`. Orderns ID och ordersumman mappas automatiskt från objektet `order`. Om `productListItems`-arrayen finns används `SKU`-värdena för `productPurchasedId`.
 
@@ -55,7 +55,7 @@ Target tillåter profilsynkronisering mellan enheter och system med ett enda kun
 
 | Exempel på parametern at.js | Platform Web SDK | Anteckningar |
 | --- | --- | --- |
-| `at_property` | N/A | Egenskapstoken har konfigurerats i [datastream](https://experienceleague.adobe.com/sv/docs/experience-platform/datastreams/configure#target) och kan inte anges i anropet `sendEvent`. |
+| `at_property` | N/A | Egenskapstoken har konfigurerats i [datastream](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/configure#target) och kan inte anges i anropet `sendEvent`. |
 | `pageName` | `xdm.web.webPageDetails.name` eller <br> `data.__adobe.target.pageName` | Parametrar för målmbox kan skickas antingen som en del av `xdm`-objektet eller som en del av `data.__adobe.target`-objektet. |
 | `profile.gender` | `data.__adobe.target.profile.gender` | Alla målprofilsparametrar måste skickas som en del av objektet `data` och prefixeras med `profile.` för att mappas korrekt. |
 | `user.categoryId` | `data.__adobe.target.user.categoryId` | Reserverad parameter används för målets kategoritillhörighetsfunktion som måste skickas som en del av objektet `data`. |
@@ -64,11 +64,11 @@ Target tillåter profilsynkronisering mellan enheter och system med ett enda kun
 | `entity.customEntity` | `data.__adobe.target.entity.customEntity` | Anpassade enhetsparametrar används för att uppdatera produktkatalogen Recommendations. Dessa anpassade parametrar måste skickas som en del av objektet `data`. |
 | `cartIds` | `data.__adobe.target.cartIds` | Används för Target-s kundvagnsbaserade rekommendationsalgoritmer. |
 | `excludedIds` | `data.__adobe.target.excludedIds` | Används för att förhindra att specifika enhets-ID returneras i en rekommendationsdesign. |
-| `mbox3rdPartyId` | Ange i objektet `xdm.identityMap` | Används för synkronisering av målprofiler mellan enheter och kundattribut. Namnområdet som ska användas för kund-ID:t måste anges i [målkonfigurationen för datastream](https://experienceleague.adobe.com/sv/docs/experience-platform/edge/personalization/adobe-target/using-mbox-3rdpartyid). |
+| `mbox3rdPartyId` | Ange i objektet `xdm.identityMap` | Används för synkronisering av målprofiler mellan enheter och kundattribut. Namnområdet som ska användas för kund-ID:t måste anges i [målkonfigurationen för datastream](https://experienceleague.adobe.com/en/docs/experience-platform/edge/personalization/adobe-target/using-mbox-3rdpartyid). |
 | `orderId` | `xdm.commerce.order.purchaseID`<br> (när `commerce.purchases.value` är inställd på `1`)<br> eller <br> `data.__adobe.target.orderId` | Används för att identifiera en unik order för målkonverteringsspårning. |
 | `orderTotal` | `xdm.commerce.order.priceTotal`<br> (när `commerce.purchases.value` är inställd på `1`)<br> eller <br> `data.__adobe.target.orderTotal` | Används för att spåra ordersummor för målkonverterings- och optimeringsmål. |
 | `productPurchasedId` | `xdm.productListItems[0-n].SKU`<br> (när `commerce.purchases.value` är inställd på `1`) <br>OR<br> `data.__adobe.target.productPurchasedId` | Används för spårning av målkonvertering och rekommendationer. |
-| `mboxPageValue` | `data.__adobe.target.mboxPageValue` | Används för aktivitetsmålet [för anpassad poängsättning](https://experienceleague.adobe.com/sv/docs/target/using/activities/success-metrics/capture-score). |
+| `mboxPageValue` | `data.__adobe.target.mboxPageValue` | Används för aktivitetsmålet [för anpassad poängsättning](https://experienceleague.adobe.com/en/docs/target/using/activities/success-metrics/capture-score). |
 
 {style="table-layout:auto"}
 
@@ -206,4 +206,4 @@ Läs sedan om hur du [spårar målkonverteringshändelser](track-events.md) med 
 
 >[!NOTE]
 >
->Vi strävar efter att hjälpa dig att lyckas med din migrering av mobilmål från måltillägget till beslutstillägget. Om du stöter på problem med din migrering eller om du känner att det saknas viktig information i den här guiden kan du meddela oss genom att publicera [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-adobe-target-to-mobile-sdk-on-edge/m-p/747484#M625).
+>Vi vill hjälpa dig att lyckas med din migrering av mobilmål från Target-tillägget till Offer Decisioning- och Target-tillägget. Om du stöter på problem med din migrering eller om du känner att det saknas viktig information i den här guiden kan du meddela oss genom att publicera [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-adobe-target-to-mobile-sdk-on-edge/m-p/747484#M625).

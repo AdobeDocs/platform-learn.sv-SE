@@ -6,18 +6,18 @@ feature-set: Target
 feature: A/B Tests
 jira: KT-14641
 exl-id: 87546baa-2d8a-4cce-b531-bec3782d2e90
-source-git-commit: 25f0df2ea09bb7383f45a698e75bd31be7541754
+source-git-commit: 876e664a213aec954105bf2d5547baab5d8a84ea
 workflow-type: tm+mt
-source-wordcount: '1611'
+source-wordcount: '1615'
 ht-degree: 0%
 
 ---
 
 # Optimera och personalisera med Adobe Target
 
-Lär dig optimera och personalisera upplevelserna i era mobilappar med Platform Mobile SDK och Adobe Target.
+Lär dig hur du optimerar och personaliserar upplevelserna i dina mobilappar med Platform Mobile SDK och Adobe Target.
 
-Target innehåller allt som ni behöver för att skräddarsy och personalisera kundernas upplevelser. Target hjälper er att maximera intäkterna från era webbplatser och mobilsajter, appar, sociala medier och andra digitala kanaler. Target kan utföra A/B-tester, multivariata tester, rekommendera produkter och innehåll, målinrikta innehåll, anpassa innehåll automatiskt med AI och mycket annat. Fokus i den här lektionen ligger på A/B-testfunktionen i Target. Mer information finns i [Översikt över A/B-tester](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=sv-SE).
+Target innehåller allt som ni behöver för att skräddarsy och personalisera kundernas upplevelser. Target hjälper er att maximera intäkterna från era webbplatser och mobilsajter, appar, sociala medier och andra digitala kanaler. Target kan utföra A/B-tester, multivariata tester, rekommendera produkter och innehåll, målinrikta innehåll, anpassa innehåll automatiskt med AI och mycket annat. Fokus i den här lektionen ligger på A/B-testfunktionen i Target. Mer information finns i [Översikt över A/B-tester](https://experienceleague.adobe.com/docs/target/using/activities/abtest/test-ab.html?lang=en).
 
 ![Arkitektur](assets/architecture-at.png)
 
@@ -31,7 +31,7 @@ Innan du kan utföra A/B-tester med Target måste du se till att rätt konfigura
 ## Förhandskrav
 
 * App med SDK:er har installerats och konfigurerats.
-* Åtkomst till Adobe Target med behörigheter, korrekt konfigurerade roller, arbetsytor och egenskaper enligt beskrivningen [här](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=sv-SE).
+* Åtkomst till Adobe Target med behörigheter, korrekt konfigurerade roller, arbetsytor och egenskaper enligt beskrivningen [här](https://experienceleague.adobe.com/docs/target/using/administer/manage-users/enterprise/property-channel.html?lang=en).
 
 
 ## Utbildningsmål
@@ -39,13 +39,13 @@ Innan du kan utföra A/B-tester med Target måste du se till att rätt konfigura
 I den här lektionen kommer du att:
 
 * Uppdatera ditt datastream för Target-integrering.
-* Uppdatera taggegenskapen med tillägget Journey Optimizer - Decisioning.
+* Uppdatera taggegenskaperna med Offer Decisioning- och Target-tilläggen.
 * Uppdatera ditt schema för att hämta förslagshändelser.
-* Validera inställningar i Assurance.
+* Validera konfigurationen i Assurance.
 * Skapa ett enkelt A/B-test i Target.
 * Uppdatera appen och registrera tillägget Optimizer.
 * Implementera A/B-testet i din app.
-* Validera implementering i Assurance.
+* Validera implementeringen i Assurance.
 
 
 ## Inställningar
@@ -62,13 +62,13 @@ Om du vill vara säker på att data som skickas från din mobilapp till Experien
 
 1. I användargränssnittet för datainsamling väljer du **[!UICONTROL Datastreams]** och markerar ditt datastream, till exempel **[!DNL Luma Mobile App]**.
 1. Välj **[!UICONTROL Add Service]** och välj **[!UICONTROL Adobe Target]** i listan **[!UICONTROL Service]**.
-1. Om du är en Target Premium-kund och vill använda egenskapstoken anger du det Target **[!UICONTROL Property Token]**-värde som du vill använda för den här integreringen. Target Standard-användare kan hoppa över det här steget.
+1. Om du är Target Premium-kund och vill använda egenskapstoken anger du det **[!UICONTROL Property Token]**-målvärde som du vill använda för den här integreringen. Target Standard-användare kan hoppa över det här steget.
 
    Du hittar dina egenskaper i målgränssnittet i **[!UICONTROL Administration]** > **[!UICONTROL Properties]**. Välj ![Kod](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Code_18_N.svg) för att visa egenskapstoken för den egenskap som du vill använda. Egenskapstoken har formatet `"at_property": "xxxxxxxx-xxxx-xxxxx-xxxx-xxxxxxxxxxxx"`. Du får bara ange värdet `xxxxxxxx-xxxx-xxxxx-xxxx-xxxxxxxxxxxx`.
 
-   Du kan också ange ett ID för målmiljö. Använd miljöer för att ordna era webbplatser och förproduktionsmiljöer för enkel hantering och separat rapportering. I förinställda miljöer ingår produktion, mellanlagring och utveckling. Mer information finns i [Miljö](https://experienceleague.adobe.com/docs/target/using/administer/environments.html?lang=sv-SE) och [Målmiljö-ID](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html?lang=sv-SE#target-environment-id).
+   Du kan också ange ett ID för målmiljö. Använd miljöer för att ordna era webbplatser och förproduktionsmiljöer för enkel hantering och separat rapportering. I förinställda miljöer ingår produktion, mellanlagring och utveckling. Mer information finns i [Miljö](https://experienceleague.adobe.com/docs/target/using/administer/environments.html?lang=en) och [Målmiljö-ID](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html?lang=en#target-environment-id).
 
-   Du kan också ange ett namnutrymme för ett tredjeparts-ID för mål som stöder profilsynkronisering i ett identitetsnamnområde (till exempel CRM-ID). Mer information finns i [Namnområde för tredje parts-ID för mål](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html?lang=sv-SE#target-third-party-id-namespace).
+   Du kan också ange ett namnutrymme för ett tredjeparts-ID för mål som stöder profilsynkronisering i ett identitetsnamnområde (till exempel CRM-ID). Mer information finns i [Namnområde för tredje parts-ID för mål](https://experienceleague.adobe.com/docs/platform-learn/implement-web-sdk/applications-setup/setup-target.html?lang=en#target-third-party-id-namespace).
 
 1. Välj **[!UICONTROL Save]**.
 
@@ -77,25 +77,25 @@ Om du vill vara säker på att data som skickas från din mobilapp till Experien
 
 #### Adobe Journey Optimizer
 
-För att säkerställa att data som skickas från din mobilapp till Edge Network vidarebefordras till Journey Optimizer - Beslutshantering, måste du uppdatera din datastream-konfiguration.
+För att säkerställa att data som skickas från din mobilapp till Edge Network vidarebefordras till Journey Optimizer - Beslutshantering uppdaterar du din datastream-konfiguration.
 
 1. I användargränssnittet för datainsamling väljer du **[!UICONTROL Datastreams]** och markerar ditt datastream, till exempel **[!DNL Luma Mobile App]**.
 1. Välj ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_MoreSmallList_18_N.svg) för **[!UICONTROL Experience Platform]** och välj ![Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) **[!UICONTROL Edit]** på snabbmenyn.
-1. Kontrollera att **[!UICONTROL Offer Decisioning]**, **[!UICONTROL Edge Segmentation]** och **[!UICONTROL Personalization Destinations]** är markerade på skärmen **[!UICONTROL Datastreams]** > ![Mapp](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Folder_18_N.svg) > **[!UICONTROL Adobe Experience Platform]**. Om du även följer lektionerna från Journey Optimizer väljer du **[!UICONTROL Adobe Journey Optimizer]**. Mer information finns i [Adobe Experience Platform-inställningar](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=sv-SE#aep).
+1. Kontrollera att **[!UICONTROL Datastreams]**, ![ och ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Folder_18_N.svg) är markerade på skärmen **[!UICONTROL Adobe Experience Platform]** > **[!UICONTROL Offer Decisioning]** Mapp **[!UICONTROL Edge Segmentation]** > **[!UICONTROL Personalization Destinations]**. Om du även följer lektionerna från Journey Optimizer väljer du **[!UICONTROL Adobe Journey Optimizer]**. Mer information finns i [Adobe Experience Platform-inställningar](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=en#aep).
 1. Välj **[!UICONTROL Save]** om du vill spara dataströmskonfigurationen.
 
-   ![AEP-datastream-konfiguration](assets/datastream-aep-configuration-target.png)
+   ![AEP datastream-konfiguration](assets/datastream-aep-configuration-target.png)
 
 
-### Installera Adobe Journey Optimizer - Decisioning-taggtillägg
+### Installera taggtillägget Offer Decisioning och Target
 
 1. Navigera till **[!UICONTROL Tags]**, hitta din mobila taggegenskap och öppna egenskapen.
 1. Välj **[!UICONTROL Extensions]**.
 1. Välj **[!UICONTROL Catalog]**.
-1. Sök efter tillägget **[!UICONTROL Adobe Journey Optimizer - Decisioning]**.
+1. Sök efter tillägget **[!UICONTROL Offer Decisioning and Target]**.
 1. Installera tillägget. Tillägget kräver ingen ytterligare konfiguration.
 
-   ![Lägg till beslutstillägg](assets/tag-add-decisioning-extension.png)
+   ![Lägg till Offer Decisioning- och måltillägg](assets/tag-add-decisioning-extension.png)
 
 
 ### Uppdatera ditt schema
@@ -111,12 +111,12 @@ För att säkerställa att data som skickas från din mobilapp till Edge Network
 
 ### Validera inställningar i Assurance
 
-Så här validerar du inställningarna i Assurance:
+Så här validerar du konfigurationen i Assurance:
 
-1. Gå till försäkringsgränssnittet.
+1. Gå till Assurance användargränssnitt.
 1. Markera **[!UICONTROL Configure]** i den vänstra listen och välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) intill **[!UICONTROL Validate Setup]** under **[!UICONTROL ADOBE JOURNEY OPTIMIZER DECISIONING]**.
 1. Välj **[!UICONTROL Save]**.
-1. Välj **[!UICONTROL Validate Setup]** i den vänstra listen. Både datastream-konfigurationen valideras och SDK-inställningen i ditt program.
+1. Välj **[!UICONTROL Validate Setup]** i den vänstra listen. Både datastream-konfigurationen valideras och SDK-konfigurationen i ditt program.
    ![Verifiering av AJO-beslut](assets/ajo-decisioning-validation.png)
 
 ## Skapa ett A/B-test
@@ -191,7 +191,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 >Om du har slutfört avsnittet [Installera SDK:er](install-sdks.md) är SDK redan installerat och du kan hoppa över det här steget.
 >
 
-1. Kontrollera att [AEP-optimering](https://github.com/adobe/aepsdk-messaging-ios) har lagts till i listan över paket i paketberoenden i Xcode. Se [Hanteraren för wift-paket](install-sdks.md#swift-package-manager).
+1. Kontrollera att [AEP Optimize](https://github.com/adobe/aepsdk-messaging-ios) har lagts till i listan över paket i paketberoenden i Xcode. Se [Hanteraren för wift-paket](install-sdks.md#swift-package-manager).
 1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL AppDelegate]** i Xcode Project-navigatorn.
 1. Se till att `AEPOptimize` ingår i din lista över importer.
 
@@ -276,10 +276,10 @@ Du kan skicka ytterligare Target-parametrar (som mbox-, profile-, product- eller
 
 Så här validerar du A/B-testet i Assurance:
 
-1. Granska avsnittet [Installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
+1. Granska avsnittet [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
 1. Markera **[!UICONTROL Configure]** i den vänstra listen och välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) intill **[!UICONTROL Review & Simulate]** under **[!UICONTROL ADOBE JOURNEY OPTIMIZER DECISIONING]**.
 1. Välj **[!UICONTROL Save]**.
-1. Välj **[!UICONTROL Review & Simulate]** i den vänstra listen. Både datastream-konfigurationen valideras och SDK-inställningen i ditt program.
+1. Välj **[!UICONTROL Review & Simulate]** i den vänstra listen. Både datastream-konfigurationen valideras och SDK-konfigurationen i ditt program.
 1. Välj **[!UICONTROL Requests]** i det övre fältet. Du ser dina **[!DNL Target]**-begäranden.
    ![Verifiering av AJO-beslut](assets/assurance-decisioning-requests.png)
 
@@ -291,8 +291,8 @@ Nu bör du ha alla verktyg du behöver för att börja lägga till fler A/B-test
 
 >[!SUCCESS]
 >
->Du har aktiverat appen för A/B-tester och visat resultatet av ett A/B-test med Adobe Target och tillägget Adobe Journey Optimizer - Decisioning för Adobe Experience Platform Mobile SDK.
+>Du har aktiverat appen för A/B-tester och visat resultatet av ett A/B-test med Adobe Target och Offer Decisioning- och Target-tillägget för Adobe Experience Platform Mobile SDK.
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
+>Tack för att du har lagt ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League Community-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 
 Nästa: **[Slutsats och nästa steg](conclusion.md)**

@@ -1,11 +1,11 @@
 ---
-title: Använd platser med plattformens mobila SDK
+title: Använd platser med Platform Mobile SDK
 description: Lär dig hur du använder platsens geopositioneringstjänst i din mobilapp.
 jira: KT-14635
 exl-id: adc2952f-cb01-4e06-9629-49fb95f22ca5
-source-git-commit: 3186788dfb834f980f743cef82942b3cf468a857
+source-git-commit: 876e664a213aec954105bf2d5547baab5d8a84ea
 workflow-type: tm+mt
-source-wordcount: '1383'
+source-wordcount: '1386'
 ht-degree: 1%
 
 ---
@@ -14,7 +14,7 @@ ht-degree: 1%
 
 Lär dig hur du använder platsens geopositioneringstjänst i din app.
 
-Tjänsten Adobe Experience Platform Data Collection Places är en geopositioneringstjänst som gör det möjligt för mobilappar med platsmedvetenhet att förstå platskontexten. Tjänsten använder avancerade och lättanvända SDK-gränssnitt tillsammans med en flexibel databas med intressepunkter (POI).
+Tjänsten Adobe Experience Platform Data Collection Places är en geopositioneringstjänst som gör det möjligt för mobilappar med platsmedvetenhet att förstå platskontexten. Tjänsten använder avancerade och lättanvända SDK-gränssnitt som åtföljs av en flexibel databas med intressepunkter (POI).
 
 ## Förhandskrav
 
@@ -31,7 +31,7 @@ I den här lektionen ska du
 * Lär dig hur du definierar intressepunkter i tjänsten Platser.
 * Uppdatera taggegenskapen med tillägget Platser.
 * Uppdatera ditt schema för att hämta geopositioneringshändelser.
-* Validera inställningar i Assurance.
+* Validera konfigurationen i Assurance.
 * Uppdatera programmet för att registrera Platser-tillägget.
 * Implementera geopositioneringsspårning från platstjänsten i appen.
 
@@ -48,7 +48,7 @@ Du definierar några intressepunkter i tjänsten Platser.
 1. Välj ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_MoreSmallList_18_N.svg).
 1. Välj **[!UICONTROL Manage Libraries]** på snabbmenyn.
    ![Hantera bibliotek](assets/places-manage-libraries.png)
-1. Välj **[!UICONTROL New]** i dialogrutan **[!UICONTROL Manage Libraries]**.
+1. Välj **[!UICONTROL Manage Libraries]** i dialogrutan **[!UICONTROL New]**.
 1. I dialogrutan **[!UICONTROL Create Library]** anger du **[!UICONTROL Name]**, till exempel `Luma`.
 1. Välj **[!UICONTROL Confirm]**.
    ![Skapa bibliotek](assets/places-create-library.png)
@@ -59,7 +59,7 @@ Du definierar några intressepunkter i tjänsten Platser.
 1. Välj **[!UICONTROL Next]**.
    ![Välj bibliotek](assets/places-import-select-library.png)
 1. Hämta [Luma POIs ZIP-filen](assets/luma_pois.csv.zip) och extrahera den till en plats på datorn.
-1. Dra och släpp den extraherade `luma_pois.csv`-filen på **[!UICONTROL Choose CSV File - Drag and Drop your File]** i dialogrutan **[!UICONTROL Import Places]**. Du bör se **[!UICONTROL Validation Success]** - **[!UICONTROL Successfully validated the CSV file]**.
+1. Dra och släpp den extraherade **[!UICONTROL Import Places]**-filen på `luma_pois.csv` i dialogrutan **[!UICONTROL Choose CSV File - Drag and Drop your File]**. Du bör se **[!UICONTROL Validation Success]** - **[!UICONTROL Successfully validated the CSV file]**.
 1. Välj **[!UICONTROL Begin Import]**.  Du bör se **[!UICONTROL Success]** - **[!UICONTROL Successfully added 6 new POIs]**.
 1. Välj **[!UICONTROL Done]**.
 1. I **[!UICONTROL POI Management]** bör du se att sex nya Luma-butiker har lagts till i listan. Du kan växla mellan ![listan](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ViewList_18_N.svg) och mappningsvyn ![Karta](https://spectrum.adobe.com/static/icons/workflow_18/Smock_MapView_18_N.svg).
@@ -74,13 +74,12 @@ Du definierar några intressepunkter i tjänsten Platser.
 1. Sök efter tillägget **[!UICONTROL Places]**.
 1. Installera tillägget.
 
-   ![Lägg till beslutstillägg](assets/tag-places-extension.png)
+   ![Lägg till Offer Decisioning- och måltillägg](assets/tag-places-extension.png)
 
 1. I dialogrutan **[!UICONTROL Install Extension]**:
    1. Välj **[!DNL Luma]** i listan **[!UICONTROL Select a Library]**.
    1. Kontrollera att du har valt ditt arbetsbibliotek, till exempel **[!UICONTROL Initial Build]**.
    1. Välj **[!UICONTROL Save to Library and Build]** från **[!UICONTROL Save to Library]**.
-
       ![Installera Platstillägg](assets/places-install-extension.png).
 
 1. Ditt bibliotek har byggts om.
@@ -140,7 +139,6 @@ Därefter ska du definiera regler som ska användas med dessa dataelement.
 1. Välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) under **[!UICONTROL EVENTS]**.
    1. Välj **[!UICONTROL Places]** i listan **[!UICONTROL Extension]** och välj **[!UICONTROL Enter POI]** i listan **[!UICONTROL Event Type]**.
    1. Välj **[!UICONTROL Keep Changes]**.
-
       ![Tagga händelse](assets/tags-event-mobile-core.png).
 1. Välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) under **[!UICONTROL ACTIONS]**.
    1. Välj **[!UICONTROL Mobile Core]** i listan **[!UICONTROL Extension]** och välj **[!UICONTROL Attach Data]** i listan **[!UICONTROL Action Type]**. Den här åtgärden kopplar nyttolastdata.
@@ -171,7 +169,6 @@ Därefter ska du definiera regler som ska användas med dessa dataelement.
       Du kan också infoga `{%% ... %%}` platshållarvärden för dataelement i JSON genom att markera ![Data](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Data_18_N.svg). I en popup-dialogruta kan du välja valfritt dataelement som du har skapat.
 
    1. Välj **[!UICONTROL Keep Changes]**.
-
       ![Tagg, åtgärd](assets/tags-action-mobile-core.png)
 
 1. Välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) bredvid åtgärden **[!UICONTROL Mobile Core - Attach Data]**.
@@ -236,9 +233,9 @@ För att säkerställa att alla ändringar i taggen publiceras
 
 ## Validera inställningar i Assurance
 
-Så här validerar du inställningarna i Assurance:
+Så här validerar du konfigurationen i Assurance:
 
-1. Gå till försäkringsgränssnittet.
+1. Gå till Assurance användargränssnitt.
 1. Om den inte redan är tillgänglig i den vänstra listen markerar du **[!UICONTROL Configure]** i den vänstra listen och väljer ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) bredvid **[!UICONTROL Events]** och **[!UICONTROL Map & Simulate]** under **[!UICONTROL PLACES SERVICE]**.
 1. Välj **[!UICONTROL Save]**.
 1. Välj **[!UICONTROL Map & Simulate]** i den vänstra listen.
@@ -253,14 +250,14 @@ Så här validerar du inställningarna i Assurance:
 
 ## Implementera platser i din app
 
-Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara konfigurationen. Därefter måste du installera och registrera Places SDK. Om de här stegen inte är tydliga går du igenom avsnittet [Installera SDK](install-sdks.md).
+Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara konfigurationen. Därefter måste du installera och registrera SDK Platser. Om de här stegen inte är tydliga går du igenom avsnittet [Installera SDK](install-sdks.md).
 
 >[!NOTE]
 >
->Om du har slutfört avsnittet [Installera SDK](install-sdks.md) är Platser SDK redan installerat och du kan hoppa över det här steget.
+>Om du har slutfört avsnittet [Installera SDK:er](install-sdks.md) är Platser SDK redan installerat och du kan hoppa över det här steget.
 >
 
-1. Kontrollera att [AEP-platser](https://github.com/adobe/aepsdk-places-ios) har lagts till i listan över paket i paketberoenden i Xcode. Se [Hanteraren för wift-paket](install-sdks.md#swift-package-manager).
+1. Kontrollera att [AEP Platser](https://github.com/adobe/aepsdk-places-ios) har lagts till i listan över paket i Paketberoenden i Xcode. Se [Hanteraren för wift-paket](install-sdks.md#swift-package-manager).
 1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL AppDelegate]** i Xcode Project-navigatorn.
 1. Se till att `AEPPlaces` ingår i din lista över importer.
 
@@ -333,7 +330,7 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 
    <img src="assets/appentryexit.png" width="300" />
 
-1. Du bör se händelserna i försäkringsgränssnittet.
+1. Du bör se händelserna i användargränssnittet för Assurance.
 
 
 
@@ -349,6 +346,6 @@ Du har sett en implementering av funktionalitet för din app, som till största 
 >
 >Du har nu aktiverat appen för geopositioneringstjänster med tillägget Platser i Experience Platform Mobile SDK.
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
+>Tack för att du har lagt ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League Community-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 
 Nästa: **[Mappa data till Adobe Analytics](analytics.md)**

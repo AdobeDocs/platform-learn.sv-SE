@@ -1,35 +1,35 @@
 ---
-title: Jämförelse mellan måltillägget och beslutets förlängning
-description: Lär dig mer om skillnaderna mellan Target-tillägg till beslutstillägget, inklusive funktioner, funktioner, inställningar och dataflöde.
+title: Jämförelse av Target-tillägget med Offer Decisioning- och Target-tillägget
+description: Lär dig mer om skillnaderna mellan Target-tillägget för Offer Decisioning och Target-tillägget, inklusive funktioner, funktioner, inställningar och dataflöde.
 exl-id: 6c854049-4126-45cf-8b2b-683cf29549f3
-source-git-commit: 2ebad2014d4c29a50af82328735258958893b42c
+source-git-commit: 876e664a213aec954105bf2d5547baab5d8a84ea
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: '833'
 ht-degree: 0%
 
 ---
 
-# Jämförelse mellan måltillägget och beslutets förlängning
+# Jämförelse av Target-tillägget med Offer Decisioning- och Target-tillägget
 
-Tillägget Adobe Journey Optimizer - Decisioning skiljer sig från Adobe Target-tillägget för mobilappar. Följande tabeller är en referens som hjälper dig att utvärdera områden av implementeringen som du kan behöva fokusera på under migreringsprocessen.
+Tillägget Offer Decisioning och Target skiljer sig från Adobe Target-tillägget för mobilappar. Följande tabeller är en referens som hjälper dig att utvärdera områden av implementeringen som du kan behöva fokusera på under migreringsprocessen.
 
 När du har granskat informationen nedan och utvärderat din nuvarande implementering av det tekniska måltillägget bör du förstå följande:
 
-- Vilka Target-funktioner som stöds av Adobe Journey Optimizer - Decisioning
-- Vilka Adobe Target-tilläggsfunktioner som har Adobe Journey Optimizer - Beslutsmotsvarigheter
-- Hur målinställningar används med Adobe Journey Optimizer - beslut
-- Hur data flödar med Adobe Journey Optimizer - Beslutstillägg
+- Vilka Target-funktioner som stöds av Offer Decisioning och Target
+- Vilka Adobe Target-tilläggsfunktioner som har motsvarigheter Offer Decisioning och Target
+- Hur målinställningarna tillämpas med Offer Decisioning och Target
+- Hur data flödar med Offer Decisioning- och Target-tillägget
 
 ## Operativa skillnader
 
-| | Måltillägg | Beslutstillägg |
+| | Måltillägg | Offer Decisioning och Target |
 |---|---|---|
-| Process | Ändringar i en Target-implementering kan följa en process som har en annan inriktning eller QA-krav än andra program som Analytics. | Ändringar av en implementering av ett beslutstillägg bör omfatta alla program i senare led och QA- och publiceringsprocessen bör anpassas i enlighet med detta. |
-| Collaboration | Data som är specifika för Target kan skickas direkt i Target-anropen. Om rapportkällan för Target är Adobe Analytics (A4T) kan data som är specifika för Target också skickas till Adobe Analytics när lämpliga spårningsmetoder i tillägget Target anropas för visning av målinnehåll och interaktion. | Data som skickas i anrop till beslutstillägg kan vidarebefordras till både Target och Analytics om Target-rapportkällan är Adobe Analytics (A4T), Adobe Analytics är aktiverat i dataströmmen och lämpliga spårningsmetoder i beslutningstillägget anropas när Target-innehåll visas och interagerar med det. |
+| Process | Ändringar i en Target-implementering kan följa en process som har en annan inriktning eller QA-krav än andra program som Analytics. | Ändringar av en implementering av Offer Decisioning- och Target-tillägg bör omfatta alla program längre fram i kedjan, och QA- och publiceringsprocessen bör anpassas därefter. |
+| Collaboration | Data som är specifika för Target kan skickas direkt i Target-anropen. Om rapportkällan för Target är Adobe Analytics (A4T) kan data som är specifika för Target också skickas till Adobe Analytics när lämpliga spårningsmetoder i tillägget Target anropas för visning av målinnehåll och interaktion. | Data som skickas i Offer Decisioning- och Target-tilläggsanrop kan vidarebefordras till både Target och Analytics om Target-rapportkällan är Adobe Analytics (A4T), Adobe Analytics är aktiverat i dataströmmen och lämpliga spårningsmetoder i Offer Decisioning- och Target-tillägget anropas när Target-innehåll visas och interagerar med det. |
 
 ## Grundläggande skillnader
 
-| | Måltillägg | Beslutstillägg |
+| | Måltillägg | Offer Decisioning och Target |
 |---|---|---|
 | Beroenden | Endast SDK med Mobile Core | Använder Mobile Core och Edge Network SDK |
 | Biblioteksfunktioner | Stöder endast hämtning av innehåll från Adobe Target | Stöd för hämtning av innehåll från Adobe Target och beslut om erbjudanden |
@@ -43,7 +43,7 @@ När du har granskat informationen nedan och utvärderat din nuvarande implement
 
 ## Jämförelse av funktioner
 
-| Funktion | Måltillägg | Beslutstillägg (mål via Edge) |
+| Funktion | Måltillägg | Offer Decisioning- och Target-tillägg (Target via Edge) |
 |---|---|---|
 | Förhämtningsläge | Stöds | Stöds |
 | Körningsläge | Stöds | Stöds inte |
@@ -69,9 +69,9 @@ När du har granskat informationen nedan och utvärderat din nuvarande implement
 
 >[!NOTE]
 >
->Ha konfigurationen och inställningarna för måltilläggets taggar på plats även efter att du har migrerat programkoden till beslutstillägget. Detta gör att Target fortsätter att fungera för kunder som ännu inte har uppdaterat appen till den nya versionen.
+>Ha konfigurationen och inställningarna för måltilläggets taggar på plats även efter att du har migrerat programkoden till Offer Decisioning- och måltilläggen. Detta gör att Target fortsätter att fungera för kunder som ännu inte har uppdaterat appen till den nya versionen.
 >
->Om du använder Analytics for Target-integrering (A4T) måste du också migrera din Analytics-implementering med Edge Bridge-tillägget samtidigt som du migrerar din Target-implementering till beslutstillägget.
+>Om du använder Analytics for Target-integrering (A4T) måste du också migrera din Analytics-implementering med Edge Bridge-tillägget samtidigt som du migrerar din Target-implementering till Offer Decisioning- och Target-tillägget.
 
 
 
@@ -79,15 +79,15 @@ När du har granskat informationen nedan och utvärderat din nuvarande implement
 
 >[!IMPORTANT]
 >
-> Låt inställningarna för måltillägget vara på plats även efter att du har migrerat programkoden till beslutstillägget. Detta gör att Target fortsätter att fungera för användare som ännu inte har uppdaterat sin app.
+> Ha inställningarna för måltillägget på plats även efter att du har migrerat programkoden till Offer Decisioning- och måltillägget. Detta gör att Target fortsätter att fungera för användare som ännu inte har uppdaterat sin app.
 
-## Fastställer tilläggssystemsdiagram
+## Systemdiagram för Offer Decisioning- och Target-tillägg
 
-Följande diagram bör hjälpa dig att förstå dataflödet med tillägget Adobe Journey Optimizer - Decisioning.
+Följande diagram bör hjälpa dig att förstå dataflödet med Offer Decisioning- och Target-tilläggen.
 
 ![Adobe Target Edge Decisioning with client-side Mobile SDK](assets/diagram.png)
 
 
 >[!NOTE]
 >
->Vi strävar efter att hjälpa dig att lyckas med din migrering av mobilmål från måltillägget till beslutstillägget. Om du stöter på problem med din migrering eller om du känner att det saknas viktig information i den här guiden kan du meddela oss genom att publicera [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-adobe-target-to-mobile-sdk-on-edge/m-p/747484#M625).
+>Vi vill hjälpa dig att lyckas med din migrering av mobilmål från Target-tillägget till Offer Decisioning- och Target-tillägget. Om du stöter på problem med din migrering eller om du känner att det saknas viktig information i den här guiden kan du meddela oss genom att publicera [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-adobe-target-to-mobile-sdk-on-edge/m-p/747484#M625).
