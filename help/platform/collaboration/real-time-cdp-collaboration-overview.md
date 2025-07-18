@@ -8,9 +8,9 @@ duration: 92
 last-substantial-update: 2025-07-07T00:00:00Z
 jira: KT-17316
 exl-id: 047839f3-ebf1-4c1d-a5bd-15ee55daf02e
-source-git-commit: 94742275a77a4d1f1c240ab5c01bdddf923dcd50
+source-git-commit: 26f0df1b3b62ac4687243f7c564dacc385b4ede4
 workflow-type: tm+mt
-source-wordcount: '577'
+source-wordcount: '647'
 ht-degree: 0%
 
 ---
@@ -21,9 +21,9 @@ Med Adobe Real-Time Customer Data Platform (CDP) Collaboration kan ni identifier
 
 Här nedan hittar du videor och andra resurser som hjälper dig att lära dig hur du konfigurerar, använder och får värde från Real-Time CDP Collaboration. Ytterligare resurser kommer att läggas till på den här sidan och webbplatsen, så försök igen ofta. Lär dig mycket!
 
-Mer information finns i Real-Time CDP Collaboration [dokumentation](https://experienceleague.adobe.com/sv/docs/real-time-cdp-collaboration/using/home){target="_blank"}.
+Mer information finns i Real-Time CDP Collaboration [dokumentation](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home){target="_blank"}.
 
-[![ExL LIVE 10 april 2025](../assets/exl-live-20250410-img.jpg)](https://experienceleague.adobe.com/sv/docs/events/experience-league-live-recordings/episodes/exl-live-episode-04-10-25)
+[![ExL LIVE 10 april 2025](../assets/exl-live-20250410-img.jpg)](https://experienceleague.adobe.com/en/docs/events/experience-league-live-recordings/episodes/exl-live-episode-04-10-25)
 
 ## Komma igång
 
@@ -41,7 +41,7 @@ Mer information finns i Real-Time CDP Collaboration [dokumentation](https://expe
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="real-time-cdp-collaboration-intro.md" title="Real-Time CDP Collaboration intro" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3446805/?format=jpeg&nocache=1751925455077&captions=swe" alt="Real-Time CDP Collaboration intro"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3446801/?format=jpeg&nocache=1752870045626" alt="Real-Time CDP Collaboration intro"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -64,7 +64,7 @@ Mer information finns i Real-Time CDP Collaboration [dokumentation](https://expe
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="rtcdp-overview-for-agency-practitioners.md" title="Real-Time CDP Overview for Agency Practisters" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3464662/?format=jpeg&nocache=1751925455060&captions=swe" alt="Real-Time CDP Overview for Agency Practisters"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3464657/?format=jpeg&nocache=1752870045622" alt="Real-Time CDP Overview for Agency Practisters"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -74,7 +74,7 @@ Mer information finns i Real-Time CDP Collaboration [dokumentation](https://expe
                     <p class="headline is-size-6 has-text-weight-bold">
                         <a href="rtcdp-overview-for-agency-practitioners.md" target="_blank" rel="referrer" title="Real-Time CDP Overview for Agency Practisters">Real-Time CDP Overview for Agency Practisters</a>
                     </p>
-                    <p class="is-size-6">Den här videon är avsedd att ge er som arbetar med betalda medier en översikt på hög nivå över Real-Time CDP, vad den är, hur den fungerar och vad den gör med fokus på datakällor och målgrupper som driver deras Real-Time CDP Collaboration-användning och arbetsflöden.</p>
+                    <p class="is-size-6">Byråer och betalda medieteam kan snabbt få en överblick över Real-Time CDP - vad det är, hur det fungerar och hur datakällor och målgrupper kan effektivisera arbetsflödena för samarbete.</p>
                 </div>
                 <a href="rtcdp-overview-for-agency-practitioners.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
                     <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Bevakning</span>
@@ -87,7 +87,7 @@ Mer information finns i Real-Time CDP Collaboration [dokumentation](https://expe
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="rtcdp-collaboration-process-and-people.md" title="Real-Time CDP Collaboration - Process och People" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3464673/?format=jpeg&nocache=1751925455067&captions=swe" alt="Real-Time CDP Collaboration - Process och People"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3464658/?format=jpeg&nocache=1752870045616" alt="Real-Time CDP Collaboration - Process och People"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -112,20 +112,46 @@ Mer information finns i Real-Time CDP Collaboration [dokumentation](https://expe
 
 ## Inställningar
 
+Kontakta din Adobe Experience Platform-administratör (AEP) för att kontrollera att du har behörighet att konfigurera Real-Time CDP Collaboration-behörigheter enligt instruktionerna i de följande självstudiekurserna. Om du inte kan identifiera din AEP-administratör kontaktar du ditt kontoteam på Adobe.
+
 <!-- CARDS
 {cta=Watch}
+* ../admin/add-product-administrators.md
 * set-permissions-for-collaboration.md
 * set-up-an-advertiser-account.md
 
 -->
 <!-- START CARDS HTML - DO NOT MODIFY BY HAND -->
 <div class="columns">
+    <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Add product administrators for Adobe Experience Platform-based applications">
+        <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
+            <div class="card-image">
+                <figure class="image x-is-16by9">
+                    <a href="../admin/add-product-administrators.md" title="Lägg till produktadministratörer för Adobe Experience Platform-baserade program" target="_blank" rel="referrer">
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/333860?format=jpeg&nocache=1752870046144" alt="Lägg till produktadministratörer för Adobe Experience Platform-baserade program"
+                             style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
+                    </a>
+                </figure>
+            </div>
+            <div class="card-content is-padded-small" style="display: flex; flex-direction: column; flex-grow: 1; justify-content: space-between;">
+                <div class="top-card-content">
+                    <p class="headline is-size-6 has-text-weight-bold">
+                        <a href="../admin/add-product-administrators.md" target="_blank" rel="referrer" title="Lägg till produktadministratörer för Adobe Experience Platform-baserade program">Lägg till produktadministratörer för Adobe Experience Platform-baserade program</a>
+                    </p>
+                    <p class="is-size-6">Lär dig hur du lägger till produktadministratörer för Adobe Experience Platform och plattformsbaserade program.</p>
+                </div>
+                <a href="../admin/add-product-administrators.md" target="_blank" rel="referrer" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeM" style="align-self: flex-start; margin-top: 1rem;">
+                    <span class="spectrum-Button-label has-no-wrap has-text-weight-bold">Bevakning</span>
+                </a>
+            </div>
+        </div>
+    </div>
     <div class="column is-half-tablet is-half-desktop is-one-third-widescreen" aria-label="Set permissions for Real-Time CDP Collaboration">
         <div class="card" style="height: 100%; display: flex; flex-direction: column; height: 100%;">
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="set-permissions-for-collaboration.md" title="Ange behörigheter för Real-Time CDP Collaboration" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3452234/?format=jpeg&nocache=1751925455752&captions=swe" alt="Ange behörigheter för Real-Time CDP Collaboration"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3452216/?format=jpeg&nocache=1752870046165" alt="Ange behörigheter för Real-Time CDP Collaboration"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -148,7 +174,7 @@ Mer information finns i Real-Time CDP Collaboration [dokumentation](https://expe
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="set-up-an-advertiser-account.md" title="Konfigurera ett Advertiser-konto i Real-Time CDP Collaboration" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3452264/?format=jpeg&nocache=1751925455767" alt="Konfigurera ett Advertiser-konto i Real-Time CDP Collaboration"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3452264/?format=jpeg&nocache=1752870046178" alt="Konfigurera ett Advertiser-konto i Real-Time CDP Collaboration"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -185,7 +211,7 @@ Mer information finns i Real-Time CDP Collaboration [dokumentation](https://expe
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="reference-audiences-as-an-advertiser.md" title="Referensgrupper som annonsörer i Real-Time CDP Collaboration" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3452217/?format=jpeg&nocache=1751925456102" alt="Referensgrupper som annonsörer i Real-Time CDP Collaboration"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3452217/?format=jpeg&nocache=1752870046706" alt="Referensgrupper som annonsörer i Real-Time CDP Collaboration"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -208,7 +234,7 @@ Mer information finns i Real-Time CDP Collaboration [dokumentation](https://expe
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="connect-with-publishers.md" title="Kommunicera med utgivare i Real-Time CDP Collaboration" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3452218/?format=jpeg&nocache=1751925456111" alt="Kommunicera med utgivare i Real-Time CDP Collaboration"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3452218/?format=jpeg&nocache=1752870046689" alt="Kommunicera med utgivare i Real-Time CDP Collaboration"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -231,7 +257,7 @@ Mer information finns i Real-Time CDP Collaboration [dokumentation](https://expe
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="create-a-project.md" title="Skapa ett projekt i Real-Time CDP Collaboration" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3464038/?format=jpeg&nocache=1751925456092&captions=swe" alt="Skapa ett projekt i Real-Time CDP Collaboration"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3464033/?format=jpeg&nocache=1752870046719" alt="Skapa ett projekt i Real-Time CDP Collaboration"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
