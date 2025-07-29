@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Den här videon ger vägledning för användare av Real-Time CDP Collaboration, både myndighetsutövare och marknadsföringsteam, om hur dessa funktionsövergripande team bör samverka mellan olika användningsfall, datakällor, målgrupper och mål för att säkerställa framgång och operativ effektivitet när de antar Real-Time CDP Collaboration.
 
->[!VIDEO](https://video.tv.adobe.com/v/3464658/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3464673/?learn=on&enablevpops&captions=swe)

@@ -20,5 +20,5 @@ ht-degree: 0%
 
 Lär dig hur du ställer in de behörigheter som krävs för att få tillgång till och använda Real-Time CDP Collaboration. Mer detaljerad dokumentation finns i [Översikt över åtkomstkontroll](https://experienceleague.adobe.com/sv/docs/real-time-cdp-collaboration/using/permissions/overview){target="_blank"}.
 
->[!VIDEO](https://video.tv.adobe.com/v/3452216/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3452234/?learn=on&enablevpops&captions=swe)
 
