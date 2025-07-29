@@ -21,9 +21,9 @@ Med Adobe Real-Time CDP Collaboration kan ni identifiera, aktivera och mäta vä
 
 Här nedan hittar du videor och andra resurser som hjälper dig att lära dig hur du konfigurerar, använder och får värde från Real-Time CDP Collaboration. Ytterligare resurser kommer att läggas till på den här sidan och webbplatsen, så försök igen ofta. Lär dig mycket!
 
-Mer information finns i Real-Time CDP Collaboration [dokumentation](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home){target="_blank"}.
+Mer information finns i Real-Time CDP Collaboration [dokumentation](https://experienceleague.adobe.com/sv/docs/real-time-cdp-collaboration/using/home){target="_blank"}.
 
-[![ExL LIVE 10 april 2025](../assets/exl-live-20250410-img.jpg)](https://experienceleague.adobe.com/en/docs/events/experience-league-live-recordings/episodes/exl-live-episode-04-10-25)
+[![ExL LIVE 10 april 2025](../assets/exl-live-20250410-img.jpg)](https://experienceleague.adobe.com/sv/docs/events/experience-league-live-recordings/episodes/exl-live-episode-04-10-25)
 
 ## Komma igång
 
