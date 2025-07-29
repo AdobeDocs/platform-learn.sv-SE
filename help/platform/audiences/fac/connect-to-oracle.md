@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Lär dig hur du ansluter Oracle-databaser inom Adobe Experience Platform för att hitta scheman, bygga datamodeller och använda data för att berika publiken. Videon går igenom steg för steg-processen med att lägga till en federerad Oracle-databas, från navigering till Federated Data-avsnittet till att ange anslutningsinformation.
 
->[!VIDEO](https://video.tv.adobe.com/v/3470069/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3470080/?learn=on&enablevpops&captions=swe)

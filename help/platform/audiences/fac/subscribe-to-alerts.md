@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Lär dig hur du prenumererar på aviseringar om federerad målgruppskomposition för att få meddelanden i appen eller e-post för både lyckade och misslyckade körningar. Om du vill aktivera detta konfigurerar du deras inställningar i Meddelandeinställningar under Experience Platform-produkten.
 
->[!VIDEO](https://video.tv.adobe.com/v/3470054/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3470058/?learn=on&enablevpops&captions=swe)
 
 
 ## Så här aktiverar du meddelanden
