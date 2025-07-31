@@ -4,9 +4,9 @@ description: Lär dig hur du validerar din Platform Web SDK-implementering med A
 feature: Web SDK,Tags,Debugger
 jira: KT-15405
 exl-id: 150bb1b1-4523-4b44-bd4e-6cabc468fc04
-source-git-commit: d73f9b3eafb327783d6bfacaf4d57cf8881479f7
+source-git-commit: 7ccbaaf4db43921f07c971c485e1460a1a7f0334
 workflow-type: tm+mt
-source-wordcount: '1131'
+source-wordcount: '1130'
 ht-degree: 0%
 
 ---
@@ -61,7 +61,7 @@ Experience Platform Debugger har en cool funktion som gör att du kan ersätta e
    ![Skärm för felsökningstagg](assets/validate-launch-screen.png)
 
 1. Välj fliken **[!UICONTROL Configuration]**
-1. Öppna listrutan **[!UICONTROL Actions]** till höger om den plats där **[!UICONTROL Page Embed Codes]** visas och välj **[!UICONTROL Replace]**
+1. Öppna listrutan **[!UICONTROL Page Embed Codes]** till höger om den plats där **[!UICONTROL Actions]** visas och välj **[!UICONTROL Replace]**
 
    ![Välj Åtgärder > Ersätt](assets/validate-switch-environment.png)
 
@@ -143,7 +143,7 @@ Den här typen av begärandeinformation visas också på fliken **Nätverk** i w
 
 Som du lär dig i lektionen [Konfigurera en datastream](configure-datastream.md) skickar Platform Web SDK först data från din digitala egenskap till Platform Edge Network. Sedan gör Platform Edge Network ytterligare serverförfrågningar till motsvarande tjänster som är aktiverade i din datastream. Du kan validera de serverförfrågningar som gjorts av Platform Edge Network med Edge Trace i felsökningsprogrammet.
 
-<!--Furthermore, you can also validate the fully processed payload after it reaches an Adobe application by using [Adobe Experience Platform Assurance](https://experienceleague.adobe.com/sv/docs/experience-platform/assurance/home). -->
+<!--Furthermore, you can also validate the fully processed payload after it reaches an Adobe application by using [Adobe Experience Platform Assurance](https://experienceleague.adobe.com/en/docs/experience-platform/assurance/home). -->
 
 
 ### Aktivera Edge Trace
@@ -164,8 +164,6 @@ Aktivera Edge Trace:
    ![Analysfyr för Edge Trace](assets/validate-edge-trace.png)
 
 För närvarande kan du inte visa några plattformsbegäranden från Edge Network som går till Adobe-program eftersom du inte har aktiverat några i datastream. I framtida lektioner använder du Edge Trace för att visa utgående begäranden på serversidan till Adobe-program och händelsevidarebefordran. Men först och främst vill vi veta mer om ett annat verktyg för att validera serverförfrågningar från Platform Edge Network - Adobe Experience Platform Assurance!
-
-[Nästa: ](validate-with-assurance.md)
 
 >[!NOTE]
 >

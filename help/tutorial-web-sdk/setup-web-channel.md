@@ -6,9 +6,9 @@ feature-set: Journey Optimizer
 feature: Web Channel,Web SDK
 jira: KT-15411
 exl-id: ab83ce56-7f54-4341-8750-b458d0db0239
-source-git-commit: e0359d1bade01f79d0f7aff6a6e69f3e4d0c3b62
+source-git-commit: 7ccbaaf4db43921f07c971c485e1460a1a7f0334
 workflow-type: tm+mt
-source-wordcount: '2436'
+source-wordcount: '2435'
 ht-degree: 0%
 
 ---
@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Konfigurera Journey Optimizer webbkanal med Web SDK
 
-Lär dig hur du implementerar Adobe Journey Optimizer [webbkanal](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/web/get-started-web) med Adobe Experience Platform Web SDK. Den här lektionen handlar om grundläggande krav för webbkanaler, detaljerade konfigurationssteg och en djupdykning i ett användningsexempel som fokuserar på lojalitetsstatus.
+Lär dig hur du implementerar Adobe Journey Optimizer [webbkanal](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/web/get-started-web) med Adobe Experience Platform Web SDK. Den här lektionen handlar om grundläggande krav för webbkanaler, detaljerade konfigurationssteg och en djupdykning i ett användningsexempel som fokuserar på lojalitetsstatus.
 
 När du följer den här lektionen är Journey Optimizer-användare utrustade att använda webbkanalen för avancerad onlineanpassning med Journey Optimizer webbdesigner.
 
@@ -52,7 +52,7 @@ För att slutföra lektionerna i det här avsnittet måste du först:
   > 1. Webbplatsen är inbäddad i en iframe.
   > 1. Kundens QA- eller stage-sajt är inte externt tillgänglig (det är en intern sajt).
 
-* När du skapar webbupplevelser och inkluderar innehåll från Adobe Experience Manager Assets Essentials-biblioteket måste du [konfigurera underdomänen för publicering av det här innehållet](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/web/configure-web-channel/web-delegated-subdomains).
+* När du skapar webbupplevelser och inkluderar innehåll från Adobe Experience Manager Assets Essentials-biblioteket måste du [konfigurera underdomänen för publicering av det här innehållet](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/web/configure-web-channel/web-delegated-subdomains).
 * Om du använder funktionen för innehållsexperimenterande ska du se till att din webbdatauppsättning också ingår i rapportkonfigurationen.
 * För närvarande finns det två typer av implementeringar som gör det möjligt att skapa och leverera webbkanalskampanjer på dina webbegenskaper:
    * Endast på klientsidan: Om du vill ändra webbplatsen måste du implementera Adobe Experience Platform Web SDK.
@@ -123,7 +123,7 @@ Så här konfigurerar du alternativet i sammanfogningsprincipen:
 
 Om du vill använda innehållsexperiment i webbkanalskampanjer måste du se till att den webbdatauppsättning som används också ingår i rapportkonfigurationen. Journey Optimizer rapporteringssystem använder datauppsättningen i skrivskyddat läge för att fylla i användningsklara innehållsexperimenteringsrapporter.
 
-[Att lägga till datauppsättningar för rapportering av innehållsexperiment beskrivs i det här avsnittet](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/reporting/channel-report/reporting-configuration#add-datasets).
+[Att lägga till datauppsättningar för rapportering av innehållsexperiment beskrivs i det här avsnittet](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/reporting/channel-report/reporting-configuration#add-datasets).
 
 ## Use Case Overview - Loyalty Rewards
 
@@ -151,7 +151,7 @@ Så här skapar du exempelkampanjen:
 
    ![Schemalagd kampanj](assets/web-channel-campaign-properties-scheduled.png)
 
-1. Välj **[!UICONTROL Web channel]** i avsnittet **[!UICONTROL Actions]**. Som **[!UICONTROL Web surface]** väljer du **[!UICONTROL Page URL]**.
+1. Välj **[!UICONTROL Actions]** i avsnittet **[!UICONTROL Web channel]**. Som **[!UICONTROL Web surface]** väljer du **[!UICONTROL Page URL]**.
 
    >[!NOTE]
    >
@@ -201,13 +201,13 @@ Så här skapar du innehållsexperimentet:
 
 1. Du kan också välja att **[!UICONTROL Distribute evenly]**. Markera det här alternativet för att se till att uppdelningarna alltid är jämnt fördelade.
 
-[Läs mer om innehållsexperiment i Adobe Journey Optimizer webbkanal](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/content-management/content-experiment/get-started-experiment).
+[Läs mer om innehållsexperiment i Adobe Journey Optimizer webbkanal](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/content-experiment/get-started-experiment).
 
 ### Redigera innehåll med hjälp av den visuella hjälpen
 
 Låt oss nu skapa webbkanalsupplevelsen. Använd Adobe Experience Cloud **[!UICONTROL Visual Helper]** om du vill göra det. Det här verktyget är ett webbläsartillägg som är kompatibelt med Google Chrome och Microsoft® Edge. Kontrollera att du har hämtat tillägget innan du försöker skapa dina upplevelser. Se även till att webbsidan innehåller Web SDK.
 
-1. Klicka på **[!UICONTROL Edit content]** på fliken **[!UICONTROL Action]** i kampanjen. Eftersom du angav en enda sidadress som yta bör du vara redo att börja arbeta i dispositionen.
+1. Klicka på **[!UICONTROL Action]** på fliken **[!UICONTROL Edit content]** i kampanjen. Eftersom du angav en enda sidadress som yta bör du vara redo att börja arbeta i dispositionen.
 
    ![Redigera innehåll](assets/web-channel-edit-content.png)
 
@@ -302,7 +302,7 @@ Adobe Experience Platform Debugger-tillägget, som finns för både Chrome och F
 
 Du kan använda felsökaren på Luma-webbplatsen för att validera webbkanalsupplevelsen i produktionen. Detta är en bra metod när Loyalty Rewards-användningsexemplet är öppet och körs för att säkerställa att allt är korrekt konfigurerat.
 
-[Lär dig hur du konfigurerar felsökaren i webbläsaren med hjälp av guiden här](https://experienceleague.adobe.com/sv/docs/platform-learn/data-collection/debugger/overview).
+[Lär dig hur du konfigurerar felsökaren i webbläsaren med hjälp av guiden här](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/debugger/overview).
 
 Så här börjar du valideringen med felsökaren:
 
@@ -326,7 +326,7 @@ Så här börjar du valideringen med felsökaren:
    <!--
     ![ADD SCREENSHOT](#)
     -->
-1. Växla på **[!UICONTROL Enable Debugging]** på fliken **Konfiguration**. Detta aktiverar loggning för sessionen i en **[!UICONTROL Adobe Experience Platform Assurance]**-session.
+1. Växla på **på fliken** Konfiguration **[!UICONTROL Enable Debugging]**. Detta aktiverar loggning för sessionen i en **[!UICONTROL Adobe Experience Platform Assurance]**-session.
    <!--
     ![ADD SCREENSHOT](#)
     -->
@@ -334,8 +334,6 @@ Så här börjar du valideringen med felsökaren:
 <!--
    ![ADD SCREENSHOT](#)
 -->
-
-[Nästa: ](setup-decision-management.md)
 
 >[!NOTE]
 >

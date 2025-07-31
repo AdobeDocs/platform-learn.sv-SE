@@ -1,19 +1,19 @@
 ---
 title: Konfigurera samtycke med Platform Web SDK
-description: Lär dig hur du konfigurerar sekretessinställningarna för taggtillägget Experience Platform Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
+description: Lär dig konfigurera sekretessinställningarna för taggtillägget Experience Platform Web SDK. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Tags,Consent
 jira: KT-15413
 exl-id: 502a7467-3699-4b2b-93bf-6b6069ea2090
-source-git-commit: 8602110d2b2ddc561e45f201e3bcce5e6a6f8261
+source-git-commit: 7ccbaaf4db43921f07c971c485e1460a1a7f0334
 workflow-type: tm+mt
-source-wordcount: '1535'
+source-wordcount: '1534'
 ht-degree: 0%
 
 ---
 
 # Konfigurera samtycke med Platform Web SDK
 
-Lär dig hur du konfigurerar sekretessinställningarna för taggtillägget Adobe Experience Platform Web SDK. Ange samtycke baserat på besökarens interaktion med en banderoll från en CMP (Consent Management Platform).
+Lär dig konfigurera sekretessinställningarna för taggtillägget Adobe Experience Platform Web SDK. Ange samtycke baserat på besökarens interaktion med en banderoll från en CMP (Consent Management Platform).
 
 >[!NOTE]
 > 
@@ -26,7 +26,7 @@ När lektionen är slut kan du:
 
 * Läsa in en CMP med taggar
 * Konfigurera sekretessinställningar i taggtillägget Experience Platform Web SDK
-* Ange medgivande för Experience Platform Web SDK baserat på besökarens åtgärd
+* Ange samtycke för Experience Platform Web SDK baserat på besökarens åtgärd
 
 ## Förhandskrav
 
@@ -106,10 +106,10 @@ Underförstådd anmälan innebär att företaget inte behöver få besökarens s
 
 Nu ska du konfigurera och implementera samtycke för det här scenariot:
 
-1. Kontrollera att **[!UICONTROL Default consent]** är inställd på **[!UICONTROL In]** i avsnittet **[!UICONTROL Privacy]** i Experience Platform Web SDK-taggtillägget:
+1. Kontrollera att **[!UICONTROL Privacy]** är inställt på **[!UICONTROL Default consent]** i avsnittet **[!UICONTROL In]** i taggtillägget Experience Platform Web SDK:
 
 
-   ![Integritetskonfiguration för AEP-tillägg för samtycke](assets/consent-web-sdk-privacy-in.png)
+   ![Integritetskonfiguration för AEP-tillägg för godkännande](assets/consent-web-sdk-privacy-in.png)
 
    >[!NOTE]
    > 
@@ -152,7 +152,7 @@ Om en besökare bestämmer sig för att avanmäla sig (avvisa spårningscookies)
 
 1. Skapa en regel som utlöses när besökaren klickar på **Jag avböjer**.  Ge den här regeln namnet: `all pages - click consent banner - set consent "out"`
 
-1. Använd **[!UICONTROL Click]** **[!UICONTROL Elements matching the CSS selector]** `#klaro .cn-decline` som **[!UICONTROL Event]**
+1. Använd **[!UICONTROL Event]** **[!UICONTROL Click]** **[!UICONTROL Elements matching the CSS selector]** som `#klaro .cn-decline`
 
    ![Användare av regelvillkor klickar på Jag avböjer](assets/consent-optOut-clickEvent.png)
 
@@ -164,14 +164,14 @@ Om en besökare bestämmer sig för att avanmäla sig (avvisa spårningscookies)
 
    ![Spara och skapa ditt bibliotek](assets/consent-rule-optout-saveAndBuild.png)
 
-När en besökare avanmäler sig utlöses regeln som konfigurerats på ovanstående sätt och Web SDK-medgivandet anges som **[!UICONTROL Out]**.
+När en besökare avanmäler sig utlöses regeln som konfigurerats på ovanstående sätt och webb-SDK-medgivandet anges som **[!UICONTROL Out]**.
 
-Validera genom att gå till webbplatsen Luma Demo, avvisa cookies och bekräfta att ingen Web SDK-begäran utlöses efter att du avanmält dig.
+Validera genom att gå till webbplatsen Luma Demo, avvisa cookies och bekräfta att ingen Web SDK-begäran aktiveras efter att du avanmält dig.
 
 ### Scenario 2: Underförstådd avanmälan
 
 
-Underförstådd avanmälan innebär att besökarna ska behandlas som avanmäld som standard och cookies bör inte anges. Web SDK-begäranden ska inte utlösas om inte besökarna bestämmer sig för att manuellt gå med genom att acceptera cookies via den medgivande bannern. Ni kanske måste hantera ett sådant användningsfall i den EU-region där GDPR gäller.
+Underförstådd avanmälan innebär att besökarna ska behandlas som avanmäld som standard och cookies bör inte anges. Begäranden från SDK på webben får inte utlösas om inte besökarna bestämmer sig för att manuellt gå med på att acceptera cookies via medgivandebanderollen. Ni kanske måste hantera ett sådant användningsfall i den EU-region där GDPR gäller.
 
 Så här kan du konfigurera konfigurationen för ett implicit avanmälningsscenario:
 
@@ -179,7 +179,7 @@ Så här kan du konfigurera konfigurationen för ett implicit avanmälningsscena
 
 1. I **[!UICONTROL Privacy]**-delen av Experience Platform Web SDK-tillägget anger du **[!UICONTROL Out]** eller **[!UICONTROL Pending]** som standardsamtycke.
 
-   ![Integritetskonfiguration för AEP-tillägg för samtycke](assets/consent-implied-opt-out.png)
+   ![Integritetskonfiguration för AEP-tillägg för godkännande](assets/consent-implied-opt-out.png)
 
 1. **Spara** den uppdaterade konfigurationen i ditt taggbibliotek och återskapa den.
 
@@ -196,7 +196,7 @@ Om en besökare bestämmer sig för att anmäla sig (acceptera spårningscookies
 
 1. Skapa en regel som utlöses när besökaren klickar på **Det är OK**.  Ge den här regeln namnet: `all pages - click consent banner - set consent "in"`
 
-1. Använd **[!UICONTROL Click]** **[!UICONTROL Elements matching the CSS selector]** `#klaro .cm-btn-success` som **[!UICONTROL Event]**
+1. Använd **[!UICONTROL Event]** **[!UICONTROL Click]** **[!UICONTROL Elements matching the CSS selector]** som `#klaro .cm-btn-success`
 
    ![Regelvillkorsanvändare klickar på &quot;Det är OK&quot;](assets/consent-optIn-clickEvent.png)
 
@@ -214,16 +214,14 @@ Om en besökare bestämmer sig för att anmäla sig (acceptera spårningscookies
 
 När du har den här regeln på plats, bör händelsesamlingen börja när en besökare väljer att delta.
 
-![Alternativ för godkännande av Post Visitor](assets/consent-post-user-optin.png)
+![Alternativ för samtycke efter besökare](assets/consent-post-user-optin.png)
 
 
-Mer information om samtycke i Web SDK finns i [Supporting customer medgivande preferences](https://experienceleague.adobe.com/sv/docs/experience-platform/edge/consent/supporting-consent).
+Mer information om samtycke i Web SDK finns i [Supporting customer medgivande preferences](https://experienceleague.adobe.com/en/docs/experience-platform/edge/consent/supporting-consent).
 
 
-Mer information om åtgärden [!UICONTROL Set consent] finns i [Ange medgivande](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/extensions/client/web-sdk/action-types#set-consent).
-
-[Nästa: ](setup-event-forwarding.md)
+Mer information om åtgärden [!UICONTROL Set consent] finns i [Ange medgivande](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/web-sdk/action-types#set-consent).
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du har lagt ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League diskussionsgruppsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

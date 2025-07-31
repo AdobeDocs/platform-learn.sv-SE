@@ -4,18 +4,18 @@ description: Lär dig hur du konfigurerar Adobe Analytics med Experience Platfor
 solution: Data Collection, Analytics
 jira: KT-15408
 exl-id: de86b936-0a47-4ade-8ca7-834c6ed0f041
-source-git-commit: 7c302bf9503e7a95162ab83af59d466bb4ff1f7e
+source-git-commit: 7ccbaaf4db43921f07c971c485e1460a1a7f0334
 workflow-type: tm+mt
-source-wordcount: '2771'
+source-wordcount: '2770'
 ht-degree: 0%
 
 ---
 
 # Konfigurera Adobe Analytics med Adobe Experience Platform Web SDK
 
-Lär dig hur du konfigurerar Adobe Analytics med [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/sv/docs/platform-learn/data-collection/web-sdk/overview), skapar taggregler för att skicka data till Adobe Analytics och validerar att Analytics hämtar data som förväntat.
+Lär dig hur du konfigurerar Adobe Analytics med [Adobe Experience Platform Web SDK](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/web-sdk/overview), skapar taggregler för att skicka data till Adobe Analytics och validerar att Analytics hämtar data som förväntat.
 
-[Adobe Analytics](https://experienceleague.adobe.com/sv/docs/analytics) är ett branschledande program som gör att du kan förstå dina kunder som människor och styra din verksamhet med kundanalys.
+[Adobe Analytics](https://experienceleague.adobe.com/en/docs/analytics) är ett branschledande program som gör att du kan förstå dina kunder som människor och styra din verksamhet med kundanalys.
 
 ![SDK för webben till Adobe Analytics](assets/dc-websdk-aa.png)
 
@@ -35,7 +35,7 @@ För att slutföra lektionen måste du först:
 
 * Bekanta dig med och få tillgång till Adobe Analytics.
 
-* Ha minst ett test-/dev-rapportpaket-ID. Om du inte har någon test-/dev-rapportsserie som du kan använda för den här självstudiekursen [skapar du en](https://experienceleague.adobe.com/sv/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite).
+* Ha minst ett test-/dev-rapportpaket-ID. Om du inte har någon test-/dev-rapportsserie som du kan använda för den här självstudiekursen [skapar du en](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite).
 
 * Slutför de tidigare lektionerna i avsnitten Inledande konfiguration och Tagginställningar i den här självstudien.
 
@@ -78,7 +78,7 @@ Från maj 2024 behöver du inte längre skapa ett XDM-schema för att implemente
 
 ### Automatiskt mappade fält
 
-Många XDM-fält mappas automatiskt till analysvariabler. Den senaste listan över mappningar finns i [Variabelmappning i Analytics i Adobe Experience Edge](https://experienceleague.adobe.com/sv/docs/experience-platform/edge/data-collection/adobe-analytics/automatically-mapped-vars).
+Många XDM-fält mappas automatiskt till analysvariabler. Den senaste listan över mappningar finns i [Variabelmappning i Analytics i Adobe Experience Edge](https://experienceleague.adobe.com/en/docs/experience-platform/edge/data-collection/adobe-analytics/automatically-mapped-vars).
 
 Detta inträffar om _även om du inte har definierat ett anpassat schema_. Experience Platform Web SDK samlar automatiskt in vissa data och skickar dem till Platform Edge Network som XDM-fält. Web SDK läser till exempel den aktuella sidans URL och skickar den som XDM-fält `web.webPageDetails.URL`. Det här fältet vidarebefordras till Adobe Analytics och fyller automatiskt i sidans URL-rapporter i Adobe Analytics.
 
@@ -106,8 +106,8 @@ De enskilda avsnitten i Analytics-produktsträngen ställs in via olika XDM-vari
 >[!NOTE]
 >
 >Från och med den 18 augusti 2022 prioriterar `productListItems[].SKU` mappning till produktnamnet i variabeln s.products.
->&#x200B;>Värdet `productListItems[].name` mappas bara till produktnamnet om `productListItems[].SKU` inte finns. Annars är den omappad och tillgänglig i kontextdata.
->&#x200B;>Ange inte en tom sträng eller null till `productListItems[].SKU`. Detta har den oönskade effekten av att mappa till produktnamnet i variabeln s.products.
+>>Värdet `productListItems[].name` mappas bara till produktnamnet om `productListItems[].SKU` inte finns. Annars är den omappad och tillgänglig i kontextdata.
+>>Ange inte en tom sträng eller null till `productListItems[].SKU`. Detta har den oönskade effekten av att mappa till produktnamnet i variabeln s.products.
 
 
 ### Ange variabler i dataobjektet
@@ -132,7 +132,7 @@ Nu ska vi se hur det här fungerar. Låt oss ange `eVar1` och `prop1` med vårt 
 1. Markera objektet **[!UICONTROL analytics]**
 1. Ange `eVar1` som `page.pageInfo.pageName`-dataelement
 1. Ange `prop1` för kopiering av värdet för `eVar1`
-1. Om du vill testa att XDM-mappade värden skrivs över anger du sidnamnet som ett statiskt värde `test` i avsnittet **[!UICONTROL Additional property]**.
+1. Om du vill testa att XDM-mappade värden skrivs över anger du sidnamnet som ett statiskt värde **[!UICONTROL Additional property]** i avsnittet `test`.
 1. Spara regeln
 
 
@@ -486,8 +486,6 @@ Fortsätt att validera implementeringen genom att granska kundvagnen, kassan och
 
 
 Grattis! Du lyckades! Det här är slutet av lektionen och nu är du redo att implementera Adobe Analytics med Platform Web SDK för din egen webbplats.
-
-[Nästa: ](setup-audience-manager.md)
 
 >[!NOTE]
 >

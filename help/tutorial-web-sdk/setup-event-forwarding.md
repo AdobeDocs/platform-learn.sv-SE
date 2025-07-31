@@ -1,43 +1,43 @@
 ---
-title: Konfigurera en händelsevidarebefordring med plattformsdata för Web SDK
-description: Lär dig hur du använder händelsevidarebefordringsegenskap med Experience Platform Web SDK-data. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
+title: Konfigurera en händelsevidarebefordring med plattformsdata för SDK
+description: Lär dig hur du använder händelsevidarebefordringsegenskap med Experience Platform Web SDK-data. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Tags,Event Forwarding
 jira: KT-15414
 exl-id: 5a306609-2c63-42c1-8beb-efa412b8efe4
-source-git-commit: 8602110d2b2ddc561e45f201e3bcce5e6a6f8261
+source-git-commit: 7ccbaaf4db43921f07c971c485e1460a1a7f0334
 workflow-type: tm+mt
-source-wordcount: '1786'
+source-wordcount: '1785'
 ht-degree: 0%
 
 ---
 
-# Konfigurera händelsevidarebefordran med plattformsdata för Web SDK
+# Konfigurera händelsevidarebefordran med plattformsdata för SDK
 
 Lär dig hur du använder händelsevidarebefordran med Adobe Experience Platform Web SDK-data.
 
-Vidarebefordran av händelser är en ny typ av egenskap som är tillgänglig i datainsamling. Med händelsevidarebefordran kan du skicka data till andra leverantörer än Adobe direkt från Adobe Experience Platform Edge Network istället för till den traditionella webbläsaren på klientsidan. Läs mer om fördelarna med vidarebefordran av händelser i [Översikt över vidarebefordran av händelser](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/event-forwarding/overview).
+Vidarebefordran av händelser är en ny typ av egenskap som är tillgänglig i datainsamling. Med händelsevidarebefordran kan du skicka data till andra leverantörer än Adobe direkt från Adobe Experience Platform Edge Network istället för till den traditionella webbläsaren på klientsidan. Läs mer om fördelarna med vidarebefordran av händelser i [Översikt över vidarebefordran av händelser](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/overview).
 
 
-![Web SDK och händelsevidarebefordringsdiagram](assets/dc-websdk-eventforwarding.png)
+![SDK för webben och händelsevidarebefordringsdiagram](assets/dc-websdk-eventforwarding.png)
 
 Om du vill använda händelsevidarebefordran i Adobe Experience Platform måste data skickas till Adobe Experience Platform Edge Network först med ett eller flera av följande tre alternativ:
 
 * [Webb-SDK för Adobe Experience Platform](overview.md)
 * [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/home/)
-  <!--* [Server-to-Server API](https://experienceleague.adobe.com/sv/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s)-->
+  <!--* [Server-to-Server API](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s)-->
 
 
 >[!NOTE]
 >Platform Web SDK och Platform Mobile SDK kräver inte distribution via taggar, men du bör använda taggar för att distribuera dessa SDK:er.
 
-När du är klar med de tidigare lektionerna i den här självstudiekursen bör du skicka data till Platform Edge Network med hjälp av Web SDK. När data finns i Platform Edge Network kan du aktivera vidarebefordran av händelser och använda en händelsevidarebefordringsegenskap för att skicka data till lösningar utanför Adobe.
+När du är klar med lektionerna i kursen ska du skicka data till Platform Edge Network via Web SDK. När data finns i Platform Edge Network kan du aktivera vidarebefordran av händelser och använda en händelsevidarebefordringsegenskap för att skicka data till lösningar som inte kommer från Adobe.
 
 ## Utbildningsmål
 
 I slutet av lektionen kan du:
 
 * Skapa en egenskap för vidarebefordring av händelser
-* Länka en händelsevidarebefordringsegenskap till ett Platform Web SDK-datalager
+* Länka en händelsevidarebefordringsegenskap till ett SDK-datalager för en plattformswebben
 * Förstå skillnaderna mellan taggegenskapens dataelement och regler och händelsevidarebefordringens egenskapselement och regler
 * Skapa ett dataelement för vidarebefordran av händelser
 * Konfigurera en regel för vidarebefordran av händelser
@@ -46,7 +46,7 @@ I slutet av lektionen kan du:
 
 ## Förhandskrav
 
-* En programlicens som innehåller vidarebefordran av händelser. Vidarebefordran av händelser är en betalfunktion i datainsamling. Kontakta kontoteamet på Adobe för mer information.
+* En programlicens som innehåller vidarebefordran av händelser. Vidarebefordran av händelser är en betalfunktion i datainsamling. Kontakta Adobe Account Team för mer information.
 * Vidarebefordran av händelser är aktiverat i din Experience Cloud-organisation.
 * Användarbehörighet för vidarebefordran av händelser. (I [Admin Console](https://adminconsole.adobe.com/), under Adobe Experience Platform Launch-produkten, behörighetsobjekt för [!UICONTROL Platforms] > [!UICONTROL Edge] och alla [!UICONTROL Property Rights]). När du har fått det ska du se [!UICONTROL Event Forwarding] i den vänstra navigeringen i gränssnittet för datainsamling:
   ![Egenskaper för vidarebefordran av händelser](assets/event-forwarding-menu.png)
@@ -92,7 +92,7 @@ Så här konfigurerar du Target i datastream:
 1. Välj **[!UICONTROL Datastreams]** i den vänstra navigeringen
 1. Markera den tidigare skapade `Luma Web SDK: Development Environment`-datastream
 
-   ![Välj Luma Web SDK-datastream](assets/datastream-luma-web-sdk-development.png)
+   ![Markera dataströmmen för Luma Web SDK](assets/datastream-luma-web-sdk-development.png)
 
 1. Välj **[!UICONTROL Add Service]**
    ![Lägg till en tjänst i datastream](assets/event-forwarding-datastream-addService.png)
@@ -122,7 +122,7 @@ I den här övningen får du lära dig hur du konfigurerar ett dataelement för 
 
 >[!IMPORTANT]
 >
->Du måste redan ha skapat och mappat dataelement till ett XDM-objekt, samt konfigurerade taggregler och byggt dessa ändringar i ett bibliotek till en taggmiljö för att kunna fortsätta. Om du inte har det läser du stegen **Tagskonfiguration** i avsnittet [Krav](setup-event-forwarding.md#prerequisites) . Dessa steg säkerställer att data skickas till Platform Edge Network, och därifrån kan du konfigurera en händelsevidarebefordringsegenskap för att vidarebefordra data till en icke-Adobe-lösning.
+>Du måste redan ha skapat och mappat dataelement till ett XDM-objekt, samt konfigurerade taggregler och byggt dessa ändringar i ett bibliotek till en taggmiljö för att kunna fortsätta. Om du inte har det läser du stegen **Tagskonfiguration** i avsnittet [Krav](setup-event-forwarding.md#prerequisites) . Dessa steg säkerställer att data skickas till Platform Edge Network, och därifrån kan du konfigurera en händelsevidarebefordringsegenskap för att vidarebefordra data till en lösning som inte kommer från Adobe.
 
 
 ### Skapa ett dataelement för vidarebefordran av händelser
@@ -143,7 +143,7 @@ I den här övningen vidarebefordrar du höjden på webbläsarens visningsruta o
 >[!TIP]
 >
 >Du kan också hitta XDM-objektsökvägen med hjälp av webbläsarens nätverksverktyg, filtrering efter `/ee`-begäranden, öppning av [!UICONTROL **nyttolasten**] och fördjupning av variabeln du söker efter. Högerklicka sedan med musen och välj Kopiera egenskapssökväg. Här är ett exempel på webbläsarvisningsportens höjd:
-> ![XDM-sökväg för händelsevidarebefordran ](assets/event-forwarding-xdm-path.png)
+>> ![XDM-sökväg för händelsevidarebefordran ](assets/event-forwarding-xdm-path.png)
 
 1. Gå till egenskapen **[!UICONTROL Event Forwarding]** som du nyss skapade
 
@@ -155,7 +155,7 @@ I den här övningen vidarebefordrar du höjden på webbläsarens visningsruta o
 
 1. **[!UICONTROL Name]** dataelementet `environment.browserDetails.viewportHeight`
 
-1. Lämna `CORE` under **[!UICONTROL Extension]**
+1. Lämna **[!UICONTROL Extension]** under `CORE`
 
 1. Under **[!UICONTROL Data Element Type]** väljer du `Path`
 
@@ -170,11 +170,11 @@ I den här övningen vidarebefordrar du höjden på webbläsarens visningsruta o
 
 1. **[!UICONTROL Name]** den `ecid`
 
-1. Lämna `CORE` under **[!UICONTROL Extension]**
+1. Lämna **[!UICONTROL Extension]** under `CORE`
 
 1. Under **[!UICONTROL Data Element Type]** väljer du `Path`
 
-1. Ange sökvägen till XDM-objektet som innehåller Experience Cloud-ID `arc.event.xdm.identityMap.ECID.0.id`
+1. Ange sökvägen till XDM-objektet som innehåller Experience Cloud-id:t `arc.event.xdm.identityMap.ECID.0.id`
 
 1. Välj **[!UICONTROL Save]**
 
@@ -211,7 +211,7 @@ Det finns några huvudsakliga skillnader mellan att konfigurera regler i en tagg
 * **[!UICONTROL Events]&amp;[!UICONTROL Conditions]**:
 
    * **Taggar**: Alla regler aktiveras av en händelse som måste anges i regeln, till exempel `Library Loaded - Page Top`. Villkoren är valfria.
-   * **Vidarebefordran av händelser**: Det antas att alla händelser som skickas till Platform Edge Network utlöser vidarebefordran av data. Det finns därför inga [!UICONTROL Events] som måste väljas i reglerna för vidarebefordran av händelser. Om du vill hantera vilka händelser som utlöser en regel för vidarebefordran av händelser måste du konfigurera villkoren.
+   * **Vidarebefordran av händelser**: Alla händelser som skickas till Platform Edge Network tolkas som en utlösare för att vidarebefordra data. Det finns därför inga [!UICONTROL Events] som måste väljas i reglerna för vidarebefordran av händelser. Om du vill hantera vilka händelser som utlöser en regel för vidarebefordran av händelser måste du konfigurera villkoren.
 
 * **Tokenisering av dataelement**:
 
@@ -290,11 +290,11 @@ Skapa ett bibliotek och bygg alla ändringar i utvecklingsmiljön för vidarebef
 
 Nu kan du validera din egenskap för vidarebefordran av händelser med hjälp av Platform Debugger och Webhook.site:
 
-1. Följ stegen för att [växla taggbiblioteket](validate-with-debugger.md#use-the-experience-platform-debugger-to-map-to-your-tag-property) på [Luma Demo-webbplatsen](https://luma.enablementadobe.com/content/luma/us/en/men.html) till taggegenskapen Web SDK som du mappade din händelsevidarebefordringsegenskap till i datastream.
+1. Följ stegen för att [växla taggbiblioteket](validate-with-debugger.md#use-the-experience-platform-debugger-to-map-to-your-tag-property) på [Luma Demo-webbplatsen](https://luma.enablementadobe.com/content/luma/us/en/men.html) till SDK-taggegenskapen för webben som du mappade din händelsevidarebefordringsegenskap till i datastream.
 
-1. Innan du läser in sidan igen öppnar du **[!UICONTROL Logs]** från den vänstra navigeringen i felsökaren i Experience Platform
+1. Innan du läser in sidan igen öppnar du **[!UICONTROL Logs]** från den vänstra navigeringen i Experience Platform Debugger
 
-1. Markera fliken **[!UICONTROL Edge]** och välj sedan **[!UICONTROL Connect]** för att visa begäran från Platform Edge Network
+1. Välj fliken **[!UICONTROL Edge]** och välj sedan **[!UICONTROL Connect]** för att visa förfrågningar från Edge Network för plattformen
 
    ![Nätverkssession för klientvidarebefordrare](assets/event-forwarding-edge-session.png)
 
@@ -321,8 +321,6 @@ Nu kan du validera din egenskap för vidarebefordran av händelser med hjälp av
 
 Grattis! Du har konfigurerat vidarebefordran av händelser!
 
-[Nästa: ](conclusion.md)
-
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du har lagt ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League diskussionsgruppsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

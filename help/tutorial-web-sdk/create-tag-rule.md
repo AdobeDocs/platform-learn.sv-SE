@@ -4,9 +4,9 @@ description: Lär dig hur du skickar en händelse till Platform Edge Network med
 feature: Tags
 jira: KT-15403
 exl-id: e06bad06-3ee3-475f-9b10-f0825a48a312
-source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
+source-git-commit: 7ccbaaf4db43921f07c971c485e1460a1a7f0334
 workflow-type: tm+mt
-source-wordcount: '1762'
+source-wordcount: '1761'
 ht-degree: 0%
 
 ---
@@ -70,7 +70,7 @@ Alla dessa regler kommer att ordnas korrekt med alternativet [!UICONTROL order].
 
 Den här videon ger en översikt över processen:
 
->[!VIDEO](https://video.tv.adobe.com/v/3454031/?learn=on&enablevpops&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/3427710/?learn=on&enablevpops)
 
 ### Globala konfigurationsfält
 
@@ -131,7 +131,7 @@ Mappa [!UICONTROL data elements] till [!UICONTROL schema] som används av XDM-ob
 
    >[!TIP]
    >
-   > XDM-fält inkluderas inte i nätverksbegäran om dataelementet är null. Därför skickas inte `identityMap`-objektet när användaren inte är autentiserad och dataelementet `identityMap.loginID` är null. Därför kan vi definiera den i vår&quot;globala konfiguration&quot;.
+   > XDM-fält inkluderas inte i nätverksbegäran om dataelementet är null. Därför skickas inte `identityMap.loginID`-objektet när användaren inte är autentiserad och dataelementet `identityMap` är null. Därför kan vi definiera den i vår&quot;globala konfiguration&quot;.
 
 1. Bläddra nedåt tills du når objektet **`web`**
 
@@ -238,7 +238,7 @@ Jämför dataelementet med `productListItems`-strukturen (tips, det ska matcha).
 >[!IMPORTANT]
 >
 >Observera hur numeriska variabler översätts, med strängvärden i datalagret som `price` och `qty` omformaterade till tal i dataelementet. Dessa formatkrav är viktiga för dataintegriteten i Platform och bestäms under steget [Konfigurera scheman](configure-schemas.md). I exemplet använder **[!UICONTROL quantity]** datatypen **[!UICONTROL Integer]**.
-> ![XDM-schemadatatyp ](assets/set-up-analytics-quantity-integer.png)
+>> ![XDM-schemadatatyp ](assets/set-up-analytics-quantity-integer.png)
 
 Låt oss mappa vår array till XDM-objektet:
 
@@ -373,7 +373,7 @@ Så här skapar du ett bibliotek:
 1. Välj **[!UICONTROL Add Library]**
 
    ![Välj Lägg till bibliotek](assets/rule-publish-library.png)
-1. Ange `Luma Web SDK Tutorial` för **[!UICONTROL Name]**
+1. Ange **[!UICONTROL Name]** för `Luma Web SDK Tutorial`
 1. För **[!UICONTROL Environment]** väljer du `Development`
 1. Välj **[!UICONTROL Add All Changed Resources]**
 
@@ -392,8 +392,6 @@ Det kan ta några minuter att skapa biblioteket och när det är klart visas en 
 Som du ser på skärmen [!UICONTROL Publishing Flow] finns det mycket mer i publiceringsprocessen, som ligger utanför den här självstudiekursen. I den här självstudiekursen används bara ett bibliotek i din utvecklingsmiljö.
 
 Nu kan du validera data i begäran med Adobe Experience Platform Debugger.
-
-[Nästa ](validate-with-debugger.md)
 
 >[!NOTE]
 >

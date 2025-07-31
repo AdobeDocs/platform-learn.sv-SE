@@ -1,12 +1,12 @@
 ---
 title: Skapa identiteter för Platform Web SDK
-description: Lär dig hur du skapar identiteter i XDM och använder dataelementet Identitetskarta för att hämta användar-ID:n. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
+description: Lär dig hur du skapar identiteter i XDM och använder dataelementet Identitetskarta för att hämta användar-ID:n. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK, Tags, Identities
 jira: KT-15402
 exl-id: 7ca32dc8-dd86-48e0-8931-692bcbb2f446
-source-git-commit: a8431137e0551d1135763138da3ca262cb4bc4ee
+source-git-commit: 7ccbaaf4db43921f07c971c485e1460a1a7f0334
 workflow-type: tm+mt
-source-wordcount: '849'
+source-wordcount: '848'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ När lektionen är slut kan du:
 
 ## Förhandskrav
 
-Du har en förståelse för vad ett datalager är, har lärt dig mer om datalagret [Luma demo ](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"} och vet hur du refererar till dataelement i taggar. Du måste ha slutfört föregående lektioner i självstudien:
+Du har en förståelse för vad ett datalager är, har lärt dig mer om datalagret [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"} och vet hur du refererar till dataelement i taggar. Du måste ha slutfört föregående lektioner i självstudien:
 
 * [Konfigurera ett XDM-schema](configure-schemas.md)
 * [Konfigurera ett identitetsnamnutrymme](configure-identities.md)
@@ -38,7 +38,7 @@ Du har en förståelse för vad ett datalager är, har lärt dig mer om datalagr
 
 ## EXPERIENCE CLOUD ID
 
-[Experience Cloud ID (ECID)](https://experienceleague.adobe.com/sv/docs/experience-platform/identity/features/ecid) är ett delat ID-namnområde som används i Adobe Experience Platform- och Adobe Experience Cloud-program. ECID utgör grunden för kundidentiteten och är standardidentitet för digitala resurser. ECID är den idealiska identifieraren för att spåra oautentiserade användarbeteenden eftersom det alltid finns.
+[Experience Cloud ID (ECID)](https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/ecid) är ett delat ID-namnområde som används i Adobe Experience Platform- och Adobe Experience Cloud-program. ECID utgör grunden för kundidentiteten och är standardidentitet för digitala resurser. ECID är den idealiska identifieraren för att spåra oautentiserade användarbeteenden eftersom det alltid finns.
 
 <!-- FYI I commented this out because it was breaking the build - Jack
 >[!TIP]
@@ -47,21 +47,21 @@ Du har en förståelse för vad ett datalager är, har lärt dig mer om datalagr
 >![View ECID](assets/validate-dev-console-ecid.png)
 -->
 
-Läs mer om hur [ECID:n spåras med Platform Web SDK](https://experienceleague.adobe.com/sv/docs/experience-platform/edge/identity/overview).
+Läs mer om hur [ECID:n spåras med Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/edge/identity/overview).
 
-ECID anges med en kombination av cookies från första part och Platform Edge Network. Som standard anges cookies för identitet från första part av Web SDK på klientsidan. Om du vill ta hänsyn till webbläsarbegränsningar för cookie-intervall kan du välja att ange egna cookies på serversidan för förstapartidentitet i stället. Dessa identitetscookies kallas för FPID (First-party device ID).
+ECID anges med en kombination av cookies från första part och Platform Edge Network. Som standard anges cookies för identitet från första part av Web SDK. Om du vill ta hänsyn till webbläsarbegränsningar för cookie-intervall kan du välja att ange egna cookies på serversidan för förstapartidentitet i stället. Dessa identitetscookies kallas för FPID (First-party device ID).
 
 >[!IMPORTANT]
 >
->Tjänsttillägget [Experience Cloud ID](https://exchange.adobe.com/apps/ec/100160/adobe-experience-cloud-id-launch-extension) behövs inte när Adobe Experience Platform Web SDK implementeras eftersom ID-tjänstfunktionen är inbyggd i Platform Web SDK.
+>[Experience Cloud ID-tjänsttillägget](https://exchange.adobe.com/apps/ec/100160/adobe-experience-cloud-id-launch-extension) behövs inte när Adobe Experience Platform Web SDK implementeras eftersom ID-tjänstfunktionen är inbyggd i Platform Web SDK.
 
 ## FPID (First Party Device ID)
 
-FPID är cookies från första part _du anger med dina egna webbservrar_ som Adobe sedan använder för att skapa ECID, i stället för att använda cookie-filen från första part som anges av Web SDK. Webbläsarstödet kan variera, men cookies från första part kan vara mer varaktiga när de anges av en server som använder en DNS A-post (för IPv4) eller en AAA-post (för IPv6), i motsats till när de anges av en DNS CNAME- eller JavaScript-kod.
+FPID är cookies från första part _du anger med dina egna webbservrar_ som Adobe sedan använder för att skapa ECID, i stället för att använda cookie-filen från första part som angetts av Web SDK. Webbläsarstödet kan variera, men cookies från första part kan vara mer varaktiga när de anges av en server som använder en DNS A-post (för IPv4) eller en AAA-post (för IPv6), i motsats till när de anges av en DNS CNAME- eller JavaScript-kod.
 
-När en FPID-cookie har angetts kan dess värde hämtas och skickas till Adobe när händelsedata samlas in. Insamlade FPID används som startvärde för att generera ECID på Platform Edge Network, som även fortsättningsvis är standardidentifierare i Adobe Experience Cloud-program.
+När en FPID-cookie har angetts kan dess värde hämtas och skickas till Adobe när händelsedata samlas in. Insamlade FPID används som startvärde för att generera ECID på Platform Edge Network, som även i fortsättningen är standardidentifierare i Adobe Experience Cloud-program.
 
-Även om FPID inte används i den här självstudiekursen bör du använda FPID i din egen Web SDK-implementering. Läs mer om [Första parts enhets-ID i plattformens webb-SDK](https://experienceleague.adobe.com/sv/docs/experience-platform/edge/identity/first-party-device-ids)
+Även om FPID inte används i den här självstudiekursen bör du använda FPID i din egen Web SDK-implementering. Läs mer om [Första parts enhets-ID i Platform Web SDK](https://experienceleague.adobe.com/en/docs/experience-platform/edge/identity/first-party-device-ids)
 
 >[!CAUTION]
 >
@@ -69,9 +69,9 @@ När en FPID-cookie har angetts kan dess värde hämtas och skickas till Adobe n
 
 ## Autentiserat ID
 
-Som nämnts ovan tilldelas alla besökare av dina digitala resurser ett ECID av Adobe när de använder Platform Web SDK. ECID är standardidentitet för att spåra oautentiserat digitalt beteende.
+Som vi nämnt ovan tilldelas alla besökare av dina digitala resurser ett ECID av Adobe när de använder Platform Web SDK. ECID är standardidentitet för att spåra oautentiserat digitalt beteende.
 
-Du kan också skicka ett autentiserat användar-ID så att plattformen kan skapa [identitetsdiagram](https://experienceleague.adobe.com/sv/docs/platform-learn/tutorials/identities/understanding-identity-and-identity-graphs) och mål kan ange sitt [tredjeparts-ID](https://experienceleague.adobe.com/sv/docs/target/using/audiences/visitor-profiles/3rd-party-id). Inställningen av det autentiserade ID:t görs med dataelementtypen [!UICONTROL Identity Map].
+Du kan också skicka ett autentiserat användar-ID så att plattformen kan skapa [identitetsdiagram](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/understanding-identity-and-identity-graphs) och mål kan ange sitt [tredjeparts-ID](https://experienceleague.adobe.com/en/docs/target/using/audiences/visitor-profiles/3rd-party-id). Inställningen av det autentiserade ID:t görs med dataelementtypen [!UICONTROL Identity Map].
 
 Så här skapar du dataelementet [!UICONTROL Identity Map]:
 
@@ -131,7 +131,7 @@ Så här skapar du dataelementet [!UICONTROL Identity Map]:
 
 I slutet av dessa steg bör du skapa följande dataelement:
 
-| Dataelement för kärntillägg | Dataelement för plattforms-SDK-tillägg |
+| Dataelement för kärntillägg | SDK Extension Data Elements för webben |
 -----------------------------|-------------------------------
 | `cart.orderId` | `data.variable` |
 | `cart.productInfo` | `identityMap.loginID` |
@@ -147,8 +147,6 @@ I slutet av dessa steg bör du skapa följande dataelement:
 
 Med dessa dataelement på plats kan du börja skicka data till Platform Edge Network genom att skapa en regel i taggar.
 
-[Nästa: ](create-tag-rule.md)
-
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du har lagt ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League diskussionsgruppsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

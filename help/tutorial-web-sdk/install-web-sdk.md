@@ -4,9 +4,9 @@ description: Lär dig hur du installerar och konfigurerar tillägget Platform We
 feature: Web SDK, Tags
 jira: KT-15404
 exl-id: f30a44bb-99d7-476e-873a-b7802a0fe6aa
-source-git-commit: e0359d1bade01f79d0f7aff6a6e69f3e4d0c3b62
+source-git-commit: 7ccbaaf4db43921f07c971c485e1460a1a7f0334
 workflow-type: tm+mt
-source-wordcount: '591'
+source-wordcount: '590'
 ht-degree: 0%
 
 ---
@@ -40,7 +40,7 @@ Skapa en ny taggegenskap för självstudiekursen:
 1. Markera knappen **[!UICONTROL New Property]**
    ![Lägg till en ny egenskap](assets/websdk-property-addNewProperty.png)
 1. Som **[!UICONTROL Name]** anger du `Web SDK Course` (lägg till ditt namn i slutet om flera personer från ditt företag använder den här självstudiekursen)
-1. Ange `enablementadobe.com` som **[!UICONTROL Domains]** (förklaras senare)
+1. Ange **[!UICONTROL Domains]** som `enablementadobe.com` (förklaras senare)
 1. Välj **[!UICONTROL Save]**
    ![Egenskapsinformation](assets/websdk-property-propertyDetails.png)
 
@@ -71,7 +71,7 @@ Lämna de flesta standardinställningarna och uppdatera dem senare efter behov. 
 
    ![Val av dataström](assets/extension-luma-web-sdk-datastream-extension.png)
 
-Mer information om de olika avsnitten i tillägget finns i [Konfigurera Adobe Experience Platform Web SDK-tillägget](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/extensions/client/web-sdk/web-sdk-extension-configuration).
+Mer information om de olika avsnitten i tillägget finns i [Konfigurera Adobe Experience Platform Web SDK-tillägget](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/web-sdk/web-sdk-extension-configuration).
 
 >[!NOTE]
 >
@@ -82,8 +82,6 @@ Mer information om de olika avsnitten i tillägget finns i [Konfigurera Adobe Ex
 >Under den här självstudiekursen konfigurerar du bara en datastream och associerar den med alla taggmiljöer (utveckling, scen och produktion). När du implementerar Platform Web SDK på din egen webbplats bör du konfigurera ett separat datastam för varje miljö och mappa dem därefter i tilläggskonfigurationen.
 
 Nu när du har installerat Platform Web SDK och kopplat det till datastream är du redo att börja samla in data.
-
-[Nästa: ](create-data-elements.md)
 
 >[!NOTE]
 >

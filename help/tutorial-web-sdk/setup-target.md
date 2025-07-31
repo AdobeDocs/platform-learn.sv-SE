@@ -4,9 +4,9 @@ description: Lär dig implementera Adobe Target med Platform Web SDK. Den här l
 solution: Data Collection, Target
 jira: KT-15410
 exl-id: 9084f572-5fec-4a26-8906-6d6dd1106d36
-source-git-commit: b10efcfdd1867c969e887bced7a6b08237a8032d
+source-git-commit: 7ccbaaf4db43921f07c971c485e1460a1a7f0334
 workflow-type: tm+mt
-source-wordcount: '4226'
+source-wordcount: '4225'
 ht-degree: 0%
 
 ---
@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Lär dig implementera Adobe Target med Adobe Experience Platform Web SDK. Lär dig hur du levererar upplevelser och hur du skickar ytterligare parametrar till Target.
 
-[Adobe Target](https://experienceleague.adobe.com/sv/docs/target/using/target-home) är ett Adobe Experience Cloud-program som innehåller allt du behöver för att skräddarsy och personalisera kundupplevelsen, så att du kan maximera intäkterna på dina webbplatser, mobilsajter, appar och andra digitala kanaler.
+[Adobe Target](https://experienceleague.adobe.com/en/docs/target/using/target-home) är ett Adobe Experience Cloud-program som innehåller allt du behöver för att skräddarsy och personalisera kundupplevelsen, så att du kan maximera intäkterna på dina webbplatser, mobilsajter, appar och andra digitala kanaler.
 
 ![Webb-SDK och Adobe Target](assets/dc-websdk-at.png)
 
@@ -42,13 +42,13 @@ I slutet av lektionen kan du göra följande med en Web SDK-implementering av Ta
 För att slutföra lektionerna i det här avsnittet måste du först:
 
 * Slutför alla lektioner för den första konfigurationen av Platform Web SDK, inklusive inställning av dataelement och regler.
-* Kontrollera att du har en [redigerings- eller godkännarroll](https://experienceleague.adobe.com/sv/docs/target/using/administer/manage-users/enterprise/properties-overview#section_8C425E43E5DD4111BBFC734A2B7ABC80) i Adobe Target.
-* Installera [hjälptillägget för Visual Experience Composer](https://experienceleague.adobe.com/sv/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension) om du använder webbläsaren Google Chrome.
+* Kontrollera att du har en [redigerings- eller godkännarroll](https://experienceleague.adobe.com/en/docs/target/using/administer/manage-users/enterprise/properties-overview#section_8C425E43E5DD4111BBFC734A2B7ABC80) i Adobe Target.
+* Installera [hjälptillägget för Visual Experience Composer](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension) om du använder webbläsaren Google Chrome.
 * Lär dig hur du ställer in aktiviteter i Target. Om du behöver en uppdaterare kan du använda följande självstudiekurser och guider för den här lektionen:
-   * [Använd hjälptillägget för Visual Experience Composer (VEC)](https://experienceleague.adobe.com/sv/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension)
-   * [Använd Visual Experience Composer](https://experienceleague.adobe.com/sv/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer)
-   * [Använd den formulärbaserade Experience Composer](https://experienceleague.adobe.com/sv/docs/target-learn/tutorials/experiences/use-the-form-based-experience-composer)
-   * [Skapa aktiviteter för målinriktning av upplevelser](https://experienceleague.adobe.com/sv/docs/target-learn/tutorials/activities/create-experience-targeting-activities)
+   * [Använd hjälptillägget för Visual Experience Composer (VEC)](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension)
+   * [Använd Visual Experience Composer](https://experienceleague.adobe.com/en/docs/target-learn/tutorials/experiences/use-the-visual-experience-composer)
+   * [Använd den formulärbaserade Experience Composer](https://experienceleague.adobe.com/en/docs/target-learn/tutorials/experiences/use-the-form-based-experience-composer)
+   * [Skapa aktiviteter för målinriktning av upplevelser](https://experienceleague.adobe.com/en/docs/target-learn/tutorials/activities/create-experience-targeting-activities)
 
 ## Lägg till flimmerhantering
 
@@ -117,7 +117,7 @@ Stilen för att dölja i förväg för synkrona implementeringar kan konfigurera
 >
 >Stilinställningen som döljs i förväg är bara avsedd att användas för synkrona implementeringar. Det här formatet ska vara tomt eller kommenteras ut om du använder en asynkron implementering av taggar.
 
-Om du vill veta mer om hur Platform Web SDK kan hantera flimmer kan du läsa hjälpavsnittet: [hantera flimmer för personaliserade upplevelser](https://experienceleague.adobe.com/sv/docs/experience-platform/edge/personalization/manage-flicker).
+Om du vill veta mer om hur Platform Web SDK kan hantera flimmer kan du läsa hjälpavsnittet: [hantera flimmer för personaliserade upplevelser](https://experienceleague.adobe.com/en/docs/experience-platform/edge/personalization/manage-flicker).
 
 
 ## Konfigurera datastream
@@ -142,7 +142,7 @@ Så här konfigurerar du Target i datastream:
 
 ### Egenskapstoken
 
-Target Premium-kunder kan hantera användarbehörigheter med egenskaper. Med målegenskaper kan du skapa gränser runt var användare kan köra Target-aktiviteter. Mer information finns i avsnittet [Företagsbehörigheter](https://experienceleague.adobe.com/sv/docs/target/using/administer/manage-users/enterprise/properties-overview) i måldokumentationen.
+Target Premium-kunder kan hantera användarbehörigheter med egenskaper. Med målegenskaper kan du skapa gränser runt var användare kan köra Target-aktiviteter. Mer information finns i avsnittet [Företagsbehörigheter](https://experienceleague.adobe.com/en/docs/target/using/administer/manage-users/enterprise/properties-overview) i måldokumentationen.
 
 Navigera till **Adobe Target** > **[!UICONTROL Administration]** > **[!UICONTROL Properties]** om du vill konfigurera eller söka efter egenskapstoken. Ikonen `</>` visar implementeringskoden. Värdet `at_property` är den egenskapstoken som du skulle använda i din datastream.
 
@@ -156,9 +156,9 @@ Endast en egenskapstoken kan anges per datastream, men med åsidosättningar av 
 
 ### Målmiljö-ID
 
-[Med miljöer](https://experienceleague.adobe.com/sv/docs/target/using/administer/environments) i Target kan du hantera implementeringen i alla utvecklingsfaser. Den här valfria inställningen anger vilken målmiljö du ska använda för varje datastream.
+[Med miljöer](https://experienceleague.adobe.com/en/docs/target/using/administer/environments) i Target kan du hantera implementeringen i alla utvecklingsfaser. Den här valfria inställningen anger vilken målmiljö du ska använda för varje datastream.
 
-Adobe rekommenderar att du ställer in målmiljö-ID på olika sätt för alla dina dataströmmar för utveckling, staging och produktion för att göra det enkelt. Du kan också ordna dina miljöer i målgränssnittet med funktionen [hosts](https://experienceleague.adobe.com/sv/docs/target/using/administer/hosts) .
+Adobe rekommenderar att du ställer in målmiljö-ID på olika sätt för alla dina dataströmmar för utveckling, staging och produktion för att göra det enkelt. Du kan också ordna dina miljöer i målgränssnittet med funktionen [hosts](https://experienceleague.adobe.com/en/docs/target/using/administer/hosts) .
 
 Navigera till **Adobe Target** > **[!UICONTROL Administration]** > **[!UICONTROL Environments]** för att konfigurera eller hitta miljö-ID:n.
 
@@ -170,7 +170,7 @@ Navigera till **Adobe Target** > **[!UICONTROL Administration]** > **[!UICONTROL
 
 ### Målnamnområde för tredjeparts-ID
 
-Med den här valfria inställningen kan du ange vilken identitetssymbol som ska användas för mål-ID:t för tredje part. Target stöder bara profilsynkronisering för en enskild identitetssymbol eller ett namnutrymme. Mer information finns i avsnittet [Synkronisering av realtidsprofiler för mbox3rdPartyId](https://experienceleague.adobe.com/sv/docs/target/using/audiences/visitor-profiles/3rd-party-id) i målguiden.
+Med den här valfria inställningen kan du ange vilken identitetssymbol som ska användas för mål-ID:t för tredje part. Target stöder bara profilsynkronisering för en enskild identitetssymbol eller ett namnutrymme. Mer information finns i avsnittet [Synkronisering av realtidsprofiler för mbox3rdPartyId](https://experienceleague.adobe.com/en/docs/target/using/audiences/visitor-profiles/3rd-party-id) i målguiden.
 
 Identitetssymbolerna finns i identitetslistan under **Datainsamling** > **[!UICONTROL Customer]** > **[!UICONTROL Identities]**.
 
@@ -216,16 +216,16 @@ Inställningen för beslut om visuell återgivning gör att Platform Web SDK aut
 >
 >Vanligtvis bör inställningen [!UICONTROL Render visual personalization decisions] endast aktiveras för en enda Skicka-händelse-åtgärd per helsidesinläsning. Om flera Send Event-åtgärder har den här inställningen aktiverad, ignoreras efterföljande återgivningsbegäranden.
 
-Om du föredrar att själv återge eller vidta åtgärder för de här besluten med egen kod kan du låta inställningen [!UICONTROL Render visual personalization decisions] vara inaktiverad. Platform Web SDK är flexibelt och ger dig full kontroll. Mer information om att [återge anpassat innehåll manuellt](https://experienceleague.adobe.com/sv/docs/experience-platform/edge/personalization/rendering-personalization-content) finns i handboken.
+Om du föredrar att själv återge eller vidta åtgärder för de här besluten med egen kod kan du låta inställningen [!UICONTROL Render visual personalization decisions] vara inaktiverad. Platform Web SDK är flexibelt och ger dig full kontroll. Mer information om att [återge anpassat innehåll manuellt](https://experienceleague.adobe.com/en/docs/experience-platform/edge/personalization/rendering-personalization-content) finns i handboken.
 
 
 ### Konfigurera en Target-aktivitet med Visual Experience Composer
 
-Nu när den grundläggande implementeringsdelen är klar skapar du en XT-aktivitet (Experience Targeting) i Target för att kontrollera att allt fungerar som det ska. Om du behöver hjälp kan du hänvisa till målsjälvstudiekursen för [att skapa aktiviteter för Experience Targeting](https://experienceleague.adobe.com/sv/docs/target-learn/tutorials/activities/create-experience-targeting-activities).
+Nu när den grundläggande implementeringsdelen är klar skapar du en XT-aktivitet (Experience Targeting) i Target för att kontrollera att allt fungerar som det ska. Om du behöver hjälp kan du hänvisa till målsjälvstudiekursen för [att skapa aktiviteter för Experience Targeting](https://experienceleague.adobe.com/en/docs/target-learn/tutorials/activities/create-experience-targeting-activities).
 
 >[!NOTE]
 >
->Om du använder Google Chrome som webbläsare krävs hjälptillägget [VEC (Visual Experience Composer)](https://experienceleague.adobe.com/sv/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension) för att webbplatsen ska kunna läsas in korrekt för redigering i VEC.
+>Om du använder Google Chrome som webbläsare krävs hjälptillägget [VEC (Visual Experience Composer)](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension) för att webbplatsen ska kunna läsas in korrekt för redigering i VEC.
 
 1. Navigera till Adobe Target
 1. Skapa en XT-aktivitet (Experience Targeting) med hjälp av Luma-startsidan för aktivitets-URL:en
@@ -249,9 +249,9 @@ Nu när den grundläggande implementeringsdelen är klar skapar du en XT-aktivit
    >Om du inte använder Adobe Analytics väljer du Mål som rapportkälla och väljer i stället ett annat mått, som **Engagement > Page Views**. Det krävs ett målmått för att spara och förhandsgranska aktiviteten.
 
 1. Spara aktiviteten
-1. Om du känner dig trygg med dina ändringar kan du aktivera din aktivitet. Om du vill förhandsgranska upplevelsen utan att aktivera kan du annars kopiera [QA-förhandsgransknings-URL:en](https://experienceleague.adobe.com/sv/docs/target/using/activities/activity-qa/activity-qa).
+1. Om du känner dig trygg med dina ändringar kan du aktivera din aktivitet. Om du vill förhandsgranska upplevelsen utan att aktivera kan du annars kopiera [QA-förhandsgransknings-URL:en](https://experienceleague.adobe.com/en/docs/target/using/activities/activity-qa/activity-qa).
 1. Läs in Lumas hemsida så bör du se hur ändringarna tillämpas
-1. Efter några timmar bör du kunna se aktivitetsdata och konverteringar för Target i Adobe Analytics. Mer information om [Analytics for Target-rapportering (A4T) ](https://experienceleague.adobe.com/sv/docs/target/using/integrate/a4t/reporting) finns i målguiden.
+1. Efter några timmar bör du kunna se aktivitetsdata och konverteringar för Target i Adobe Analytics. Mer information om [Analytics for Target-rapportering (A4T) ](https://experienceleague.adobe.com/en/docs/target/using/integrate/a4t/reporting) finns i målguiden.
 
 
 
@@ -261,7 +261,7 @@ Om du ställer in en aktivitet bör du se innehållet renderas på sidan. Men ä
 
 >[!CAUTION]
 >
->Om du använder Google Chrome och har hjälptillägget [VEC (Visual Experience Composer)](https://experienceleague.adobe.com/sv/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension) installerat kontrollerar du att inställningen **Inmatningsmålbibliotek** är inaktiverad. Om du aktiverar den här inställningen kommer det att resultera i extra Target-begäranden.
+>Om du använder Google Chrome och har hjälptillägget [VEC (Visual Experience Composer)](https://experienceleague.adobe.com/en/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension) installerat kontrollerar du att inställningen **Inmatningsmålbibliotek** är inaktiverad. Om du aktiverar den här inställningen kommer det att resultera i extra Target-begäranden.
 
 1. Öppna Adobe Experience Platform Debugger webbläsartillägg
 1. Gå till [demowebbplatsen för luma](https://luma.enablementadobe.com/content/luma/us/en.html) och använd felsökaren för att [växla taggegenskapen på webbplatsen till din egen utvecklingsegenskap](validate-with-debugger.md#use-the-experience-platform-debugger-to-map-to-your-tags-property)
@@ -405,7 +405,7 @@ Nu när du har en regel för att manuellt återge ett anpassat beslutsområde ka
 
 1. I steget [!UICONTROL Goals & Settings] väljer du Adobe Target som rapportkälla och [!UICONTROL Engagement] > [!UICONTROL Page Views] som mål
 1. Spara aktiviteten
-1. Om du känner dig trygg med dina ändringar kan du aktivera din aktivitet. Om du vill förhandsgranska upplevelsen utan att aktivera kan du annars kopiera [QA-förhandsgransknings-URL:en](https://experienceleague.adobe.com/sv/docs/target/using/activities/activity-qa/activity-qa).
+1. Om du känner dig trygg med dina ändringar kan du aktivera din aktivitet. Om du vill förhandsgranska upplevelsen utan att aktivera kan du annars kopiera [QA-förhandsgransknings-URL:en](https://experienceleague.adobe.com/en/docs/target/using/activities/activity-qa/activity-qa).
 1. Läs in Lumas hemsida så bör du se hur ändringarna tillämpas
 
 >[!NOTE]
@@ -440,7 +440,7 @@ I det här avsnittet skickar du Target-specifika data och tar en närmare titt p
 
 ### Sidparametrar (mbox) och XDM
 
-Alla XDM-fält skickas automatiskt till Target som [sidparametrar](https://experienceleague.adobe.com/sv/docs/target-dev/developer/implementation/methods/page-parameters) eller mbox-parametrar.
+Alla XDM-fält skickas automatiskt till Target som [sidparametrar](https://experienceleague.adobe.com/en/docs/target-dev/developer/implementation/methods/page-parameters) eller mbox-parametrar.
 
 Vissa av dessa XDM-fält mappas till specialobjekt i Target serverdel. `web.webPageDetails.URL` kommer till exempel automatiskt att vara tillgänglig för att skapa URL-baserade målinriktningsvillkor eller som objektet `page.url` när profilskript skapas.
 
@@ -450,10 +450,10 @@ Du kan också lägga till sidparametrar med dataobjektet.
 
 Det finns vissa datapunkter som kan vara användbara för Target som inte har mappats från XDM-objektet. Dessa speciella Target-parametrar inkluderar:
 
-* [Profilattribut](https://experienceleague.adobe.com/sv/docs/target-dev/developer/implementation/methods/in-page-profile-attributes)
-* [Rekommendationer för entitetsattribut](https://experienceleague.adobe.com/sv/docs/target/using/recommendations/entities/entity-attributes)
-* [Rekommendationer reserverade parametrar](https://experienceleague.adobe.com/sv/docs/target/using/recommendations/plan-implement#pass-behavioral)
-* Kategorivärden för [kategoritillhörighet](https://experienceleague.adobe.com/sv/docs/target/using/audiences/visitor-profiles/category-affinity)
+* [Profilattribut](https://experienceleague.adobe.com/en/docs/target-dev/developer/implementation/methods/in-page-profile-attributes)
+* [Rekommendationer för entitetsattribut](https://experienceleague.adobe.com/en/docs/target/using/recommendations/entities/entity-attributes)
+* [Rekommendationer reserverade parametrar](https://experienceleague.adobe.com/en/docs/target/using/recommendations/plan-implement#pass-behavioral)
+* Kategorivärden för [kategoritillhörighet](https://experienceleague.adobe.com/en/docs/target/using/audiences/visitor-profiles/category-affinity)
 
 Parametrarna måste skickas i objektet `data` i stället för i objektet `xdm`. Dessutom kan sidparametrar (eller mbox-parametrar) också inkluderas i objektet `data`.
 
@@ -594,8 +594,6 @@ Dessutom kan du använda Assurance där det är lämpligt för att bekräfta att
 Detta bekräftar att A4T-informationen som ställdes i kö för senare överföring när vi gjorde målbeslutsanropet skickades korrekt när analysspårningsanropet utlöstes senare på sidan.
 
 Nu när du är klar med lektionen bör du ha en fungerande implementering av Adobe Target med Platform Web SDK.
-
-[Nästa: ](setup-web-channel.md)
 
 >[!NOTE]
 >

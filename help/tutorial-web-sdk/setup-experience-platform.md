@@ -3,9 +3,9 @@ title: Strömma data till Adobe Experience Platform med Platform Web SDK
 description: Lär dig att strömma webbdata till Adobe Experience Platform med Web SDK. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 jira: KT-15407
 exl-id: 4d749ffa-e1c0-4498-9b12-12949807b369
-source-git-commit: 7c302bf9503e7a95162ab83af59d466bb4ff1f7e
+source-git-commit: 7ccbaaf4db43921f07c971c485e1460a1a7f0334
 workflow-type: tm+mt
-source-wordcount: '2172'
+source-wordcount: '2171'
 ht-degree: 1%
 
 ---
@@ -44,7 +44,7 @@ För att slutföra lektionen måste du först:
 
 ## Skapa en datauppsättning
 
-Alla data som har inhämtats till Adobe Experience Platform lagras i datasjön som datauppsättningar. En [datamängd](https://experienceleague.adobe.com/sv/docs/experience-platform/catalog/datasets/overview) är en lagrings- och hanteringskonstruktion för en datamängd, vanligtvis en tabell som innehåller ett schema (kolumner) och fält (rader). Datauppsättningar innehåller också metadata som beskriver olika aspekter av de data som lagras.
+Alla data som har inhämtats till Adobe Experience Platform lagras i datasjön som datauppsättningar. En [datamängd](https://experienceleague.adobe.com/en/docs/experience-platform/catalog/datasets/overview) är en lagrings- och hanteringskonstruktion för en datamängd, vanligtvis en tabell som innehåller ett schema (kolumner) och fält (rader). Datauppsättningar innehåller också metadata som beskriver olika aspekter av de data som lagras.
 
 Låt oss skapa en datauppsättning för dina webbhändelsedata för Luma:
 
@@ -160,7 +160,7 @@ För att bekräfta att data har landat i plattformens datalinje är ett snabbt a
 
 >[!INFO]
 >
->  Mer information om Adobe Experience Platform frågetjänst finns i [Utforska data](https://experienceleague.adobe.com/sv/docs/platform-learn/tutorials/queries/explore-data) i självstudiekurserna för plattformen.
+>  Mer information om Adobe Experience Platform frågetjänst finns i [Utforska data](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/queries/explore-data) i självstudiekurserna för plattformen.
 
 
 ## Aktivera datauppsättningen och schemat för kundprofil i realtid
@@ -337,8 +337,6 @@ Målgruppsprofiler samlas kring gemensamma egenskaper. Skapa en enkel målgrupp 
 
 Eftersom detta är en mycket enkel publik kan vi använda Edge utvärderingsmetod. Edge målgrupper utvärderas i det närmaste, så i samma begäran som Web SDK gör till Platform Edge Network kan vi utvärdera målgruppsdefinitionen och omedelbart bekräfta om användaren är berättigad.
 
-
-[Nästa: ](setup-analytics.md)
 
 >[!NOTE]
 >

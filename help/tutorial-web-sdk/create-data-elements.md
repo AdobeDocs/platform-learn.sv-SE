@@ -1,12 +1,12 @@
 ---
 title: Skapa dataelement för Platform Web SDK
-description: Lär dig hur du skapar ett XDM-objekt och mappar dataelement till det i taggar. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
+description: Lär dig hur du skapar ett XDM-objekt och mappar dataelement till det i taggar. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Tags
 jira: KT-15401
 exl-id: d662ec46-de9b-44ba-974a-f81dfc842e68
-source-git-commit: a8431137e0551d1135763138da3ca262cb4bc4ee
+source-git-commit: 7ccbaaf4db43921f07c971c485e1460a1a7f0334
 workflow-type: tm+mt
-source-wordcount: '1268'
+source-wordcount: '1267'
 ht-degree: 0%
 
 ---
@@ -54,9 +54,9 @@ Det finns flera sätt att mappa data från datalagret till XDM med taggfunktione
 
 ### Implementera XDM i datalagret
 
-Detta innebär att det fullständigt definierade XDM-objektet används som struktur för datalagret. Därefter mappar du hela datalagret till ett XDM-objektdataelement i -taggar. Om implementeringen inte använder en tagghanterare kan det här tillvägagångssättet vara idealiskt eftersom du kan skicka data till XDM direkt från programmet med kommandot [XDM sendEvent](https://experienceleague.adobe.com/sv/docs/experience-platform/edge/fundamentals/tracking-events#sending-xdm-data). Om du använder taggar kan du skapa ett anpassat kodelement som hämtar hela datalagret som ett genomströmningsJSON-objekt till XDM-filen. Därefter mappar du genomströmnings-JSON till XDM-objektfältet i åtgärden Skicka händelse.
+Detta innebär att det fullständigt definierade XDM-objektet används som struktur för datalagret. Därefter mappar du hela datalagret till ett XDM-objektdataelement i -taggar. Om implementeringen inte använder en tagghanterare kan det här tillvägagångssättet vara idealiskt eftersom du kan skicka data till XDM direkt från programmet med kommandot [XDM sendEvent](https://experienceleague.adobe.com/en/docs/experience-platform/edge/fundamentals/tracking-events#sending-xdm-data). Om du använder taggar kan du skapa ett anpassat kodelement som hämtar hela datalagret som ett genomströmningsJSON-objekt till XDM-filen. Därefter mappar du genomströmnings-JSON till XDM-objektfältet i åtgärden Skicka händelse.
 
-Nedan visas ett exempel på hur datalagret skulle se ut med formatet Adobe Client Data Layer:
+Nedan visas ett exempel på hur datalagret skulle se ut när formatet Adobe Client Data Layer används:
 
 +++XDM i datalagrets exempel
 
@@ -117,7 +117,7 @@ Detta innebär att mappa enskilda datalagervariabler ELLER datalagerobjekt till 
 #### Proffs
 
 * Den mest flexibla metoden eftersom du kan styra enskilda variabler och omvandla data innan det når XDM
-* Kan använda Adobe-taggar som utlöser och skrapningsfunktioner för att skicka data till XDM
+* Kan använda Adobe-taggar som utlöser och scraping-funktioner för att skicka data till XDM
 * Kan mappa dataelement till pixlar från tredje part på klientsidan
 
 #### Kon
@@ -129,17 +129,17 @@ Detta innebär att mappa enskilda datalagervariabler ELLER datalagerobjekt till 
 >
 > Google datalager
 > 
-> Om din organisation redan använder Google Analytics och har det traditionella Google dataLayer-objektet på din webbplats kan du använda [Google datalagertillägg](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/extensions/client/google-data-layer/overview) i taggar. På så sätt kan ni driftsätta Adobe-teknik snabbare utan att behöva be IT-avdelningen om support. Om datalagret för Google mappas till XDM följer du samma steg som ovan.
+> Om din organisation redan använder Google Analytics och har det traditionella Google dataLayer-objektet på din webbplats kan du använda [Google datalagertillägg](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/google-data-layer/overview) i taggar. På så sätt kan ni driftsätta Adobe-teknik snabbare utan att behöva be IT-avdelningen om support. Om datalagret för Google mappas till XDM följer du samma steg som ovan.
 
 ### Mappa till XDM i datastream
 
-Den här metoden använder inbyggda funktioner i datastream-konfigurationen [Data Prep för datainsamling](https://experienceleague.adobe.com/sv/docs/experience-platform/datastreams/data-prep) och hoppar över mappning av datalagervariabler till XDM i taggar.
+Den här metoden använder inbyggda funktioner i datastream-konfigurationen [Data Prep för datainsamling](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/data-prep) och hoppar över mappning av datalagervariabler till XDM i taggar.
 
 #### Proffs
 
 * Flexibelt eftersom du kan mappa enskilda variabler till XDM
-* Möjlighet att [beräkna nya värden](https://experienceleague.adobe.com/sv/docs/experience-platform/data-prep/functions) eller [omvandla datatyper](https://experienceleague.adobe.com/sv/docs/experience-platform/data-prep/data-handling) från ett datalager innan det går till XDM
-* Använd ett [mappningsgränssnitt](https://experienceleague.adobe.com/sv/docs/experience-platform/datastreams/data-prep#create-mapping) för att mappa fält i källdata till XDM med ett peka-och-klicka-gränssnitt
+* Möjlighet att [beräkna nya värden](https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/functions) eller [omvandla datatyper](https://experienceleague.adobe.com/en/docs/experience-platform/data-prep/data-handling) från ett datalager innan det går till XDM
+* Använd ett [mappningsgränssnitt](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/data-prep#create-mapping) för att mappa fält i källdata till XDM med ett peka-och-klicka-gränssnitt
 
 #### Kon
 
@@ -155,7 +155,7 @@ Den här metoden använder inbyggda funktioner i datastream-konfigurationen [Dat
 
 ## Skapa dataelement för att hämta datalagret
 
-Innan du skapar XDM-objektet skapar du följande dataelement för datalagret [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"}:
+Skapa följande dataelement för datalagret [Luma demo site](https://luma.enablementadobe.com/content/luma/us/en.html){target="_blank"} innan du skapar XDM-objektet:
 
 1. Gå till **[!UICONTROL Data Elements]** och markera **[!UICONTROL Add Data Element]** (eller **[!UICONTROL Create New Data Element]** om det inte finns några befintliga dataelement i taggegenskapen)
 
@@ -254,7 +254,7 @@ Skapa dessa ytterligare dataelement genom att följa samma steg:
 
 >[!CAUTION]
 >
->Dataelementtypen [!UICONTROL JavaScript variable] behandlar matrisreferenser som punkter i stället för hakparenteser, så att det inte fungerar att referera användarnamnselementet som `digitalData.user[0].profile[0].attributes.username` **&#x200B;**.
+>Dataelementtypen [!UICONTROL JavaScript variable] behandlar matrisreferenser som punkter i stället för hakparenteser, så att det inte fungerar att referera användarnamnselementet som `digitalData.user[0].profile[0].attributes.username` ****.
 
 ## Skapa variabla dataelement för XDM- och dataobjekt
 
@@ -280,7 +280,7 @@ Skapa sedan dataelementet Variable för dataobjektet:
 1. Välj **[!UICONTROL Adobe Experience Platform Web SDK]** som **[!UICONTROL Extension]**
 1. Välj **[!UICONTROL Variable]** som **[!UICONTROL Data Element Type]**
 1. Välj **[!UICONTROL data]** som **[!UICONTROL property]**
-1. Välj de Experience Cloud-lösningar du vill implementera som en del av den här självstudiekursen
+1. Välj de Experience Cloud-lösningar du vill implementera som en del av kursen
 1. Välj **[!UICONTROL Save]**
 
    ![Variabeldataelement för dataobjekt](assets/data-element-data-variable.png.png)
@@ -288,7 +288,7 @@ Skapa sedan dataelementet Variable för dataobjektet:
 
 I slutet av dessa steg bör du skapa följande dataelement:
 
-| Dataelement för kärntillägg | Dataelement för plattforms-SDK-tillägg |
+| Dataelement för kärntillägg | SDK Extension Data Elements för webben |
 -----------------------------|-------------------------------
 | `cart.orderId` | `data.variable` |
 | `cart.productInfo` | `xdm.variable.content` |
@@ -306,10 +306,8 @@ I slutet av dessa steg bör du skapa följande dataelement:
 >
 >I en framtida [Skapa taggregler](create-tag-rule.md)-lektion får du lära dig hur dataelementen i **[!UICONTROL Variable]** gör att du kan stapla flera regler i taggar med hjälp av **[!UICONTROL Update Variable Action type]**.
 
-Med dessa dataelement på plats är du redo att börja skicka data till Platform Edge Network med en taggregel. Men först lär du dig att samla in identiteter med Web SDK.
-
-[Nästa: ](create-identities.md)
+Med dessa dataelement på plats är du redo att börja skicka data till Platform Edge Network med en taggregel. Men först och främst: lär dig att samla in identiteter med Web SDK.
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du har lagt ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League diskussionsgruppsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

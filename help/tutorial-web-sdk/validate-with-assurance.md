@@ -1,19 +1,19 @@
 ---
 title: Validera Web SDK-implementeringar med Experience Platform Assurance
-description: Lär dig hur du validerar implementeringen av din Platform Web SDK med Adobe Experience Platform Assurance. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
+description: Lär dig hur du validerar din Platform Web SDK-implementering med Adobe Experience Platform Assurance. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 feature: Web SDK,Tags,Assurance
 jira: KT-15406
 exl-id: 31e381ea-fbaf-495f-a6e9-2ff6c0d36939
-source-git-commit: a8431137e0551d1135763138da3ca262cb4bc4ee
+source-git-commit: 7ccbaaf4db43921f07c971c485e1460a1a7f0334
 workflow-type: tm+mt
-source-wordcount: '596'
+source-wordcount: '595'
 ht-degree: 0%
 
 ---
 
 # Validera Web SDK-implementeringar med Experience Platform Assurance
 
-Adobe Experience Platform Assurance är en funktion som hjälper er att inspektera, bevisa, simulera och validera hur ni samlar in data eller levererar upplevelser. Läs mer om [Adobe Assurance](https://experienceleague.adobe.com/sv/docs/experience-platform/assurance/home).
+Adobe Experience Platform Assurance är en funktion som hjälper er att inspektera, bevisa, simulera och validera hur ni samlar in data eller levererar upplevelser. Läs mer om [Adobe Assurance](https://experienceleague.adobe.com/en/docs/experience-platform/assurance/home).
 
 
 ## Utbildningsmål
@@ -21,7 +21,7 @@ Adobe Experience Platform Assurance är en funktion som hjälper er att inspekte
 När lektionen är klar kan du:
 
 * Starta en Assurance-session
-* Visa begäranden som skickas till och från Platform Edge Network
+* Visa förfrågningar som skickats till och från Platform Edge Network
 
 ## Förhandskrav
 
@@ -41,7 +41,7 @@ Du är bekant med datainsamlingstaggar och [Luma demo-webbplatsen](https://luma.
 
 Det finns flera sätt att starta en Assurance-session.
 
-### Starta en kontrollsession i felsökaren
+### Starta en Assurance-session i Felsökning
 
 Varje gång du aktiverar Edge Trace i Adobe Experience Platform Debugger startas en Assurance-session i bakgrunden.
 
@@ -52,18 +52,18 @@ Se hur vi gjorde det här i felsökningslektionen:
 1. Välj fliken **[!UICONTROL Edge]** och välj **[!UICONTROL Connect]**
 
    ![Anslut Edge Trace](assets/analytics-debugger-edgeTrace.png)
-1. När Edge Trace är aktiverat visas en utgående länkikon högst upp. Välj ikonen för att öppna Assurance.
+1. När Edge Trace är aktiverat visas en utgående länkikon högst upp. Klicka på ikonen för att öppna Assurance.
 
-   ![Starta kontrollsession](assets/validate-debugger-start-assurnance.png)
+   ![Starta Assurance-session](assets/validate-debugger-start-assurnance.png)
 
-1. En ny flik i webbläsaren öppnas med gränssnittet Assurance.
+1. En ny flik i webbläsaren öppnas med Assurance gränssnitt.
 
-### Starta en Assurance-session från försäkringsgränssnittet
+### Starta en Assurance-session från Assurance gränssnitt
 
 1. Öppna [gränssnittet för datainsamling](https://experience.adobe.com/#/data-collection/home){target="_blank"}
 1. Välj Assurance i den vänstra navigeringen
 1. Välj Skapa session
-   ![Skapa en säkringssession](assets/assurance-create-session.png)
+   ![Skapa en Assurance-session](assets/assurance-create-session.png)
 1. Välj Start
 1. Ge sessionen ett namn, till exempel `Luma Web SDK validation`
 1. Som **[!UICONTROL Base URL]** anger du `https://luma.enablementadobe.com/`
@@ -72,28 +72,26 @@ Se hur vi gjorde det här i felsökningslektionen:
 1. Markera ikonen om du vill kopiera länken till Urklipp
 1. Klistra in URL:en i webbläsaren, som öppnar Luma-webbplatsen med den särskilda URL-parametern `adb_validation_sessionid` och startar sessionen
 1. I Assurance-gränssnittet bör du se ett meddelande som anger att du har anslutit till sessionen och du bör se händelser som har hämtats i Assurance-gränssnittet.
-   ![Assurance-sessionen har anslutit](assets/assurance-success.png)
+   ![Assurance-sessionen har anslutits](assets/assurance-success.png)
 
 ## Validera det aktuella läget för Web SDK-implementeringen
 
-Det finns begränsad information att visa i det här skedet av implementeringen. Ett värde som vi kan se är ditt Experience Cloud-ID (ECID) som genereras på Platform Edge Network:
+Det finns begränsad information att visa i det här skedet av implementeringen. Ett värde som vi kan se är ditt Experience Cloud ID (ECID) som genereras på Platform Edge Network:
 
 1. Markera raden med händelsen `Alloy Response Handle`.
 1. En meny visas till höger. Markera `+`-tecknet bredvid `[!UICONTROL ACPExtensionEventData]`
 1. Gå ned genom att välja `[!UICONTROL payload > 0 > payload > 0 > namespace]`. Det ID som visas under den sista `0` motsvarar `ECID`. Det vet du med det värde som visas under `namespace` matchande `ECID`
 
-   ![Verifiera ECID](assets/validate-assurance-ecid.png)
+   ![Assurance validate ECID](assets/validate-assurance-ecid.png)
 
    >[!CAUTION]
    >
    >Du kan se ett trunkerat ECID-värde på grund av fönstrets bredd. Markera bara handtagsfältet i gränssnittet och dra åt vänster för att visa hela ECID:t.
 
-I framtida lektioner använder du Assurance för att validera fullt bearbetade nyttolaster som når ett Adobe-program som är aktiverat i ditt datastream.
+I framtida lektioner använder du Assurance för att validera fullt bearbetade nyttolaster och nå ett Adobe-program som är aktiverat i din datastam.
 
-Med ett XDM-objekt som nu utlöses på en sida, och med kännedom om hur datainsamlingen ska valideras, är du redo att konfigurera Experience Platform och de enskilda Adobe-programmen med Platform Web SDK.
-
-[Nästa: ](setup-experience-platform.md)
+Med ett XDM-objekt som nu utlöses på en sida, och med kännedom om hur datainsamlingen ska valideras, är du redo att skapa Experience Platform och de enskilda Adobe-programmen med Platform Web SDK.
 
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du har lagt ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League diskussionsgruppsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)

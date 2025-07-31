@@ -1,14 +1,14 @@
 ---
 title: Konfigurera Journey Optimizer Decision Management med Platform Web SDK
-description: Lär dig implementera beslutshantering med hjälp av Platform Web SDK. Den här lektionen ingår i självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
+description: Lär dig hur du implementerar Beslutshantering med Platform Web SDK. Den här lektionen är en del av självstudiekursen Implementera Adobe Experience Cloud med Web SDK.
 solution: Data Collection,Experience Platform,Journey Optimizer
 feature-set: Journey Optimizer
 feature: Decision Management,Offers
 jira: KT-15412
 exl-id: f7852ef4-44b0-49df-aec8-cb211726247d
-source-git-commit: 901b90ca165a74bbc4f871469222064b70d0a20a
+source-git-commit: 7ccbaaf4db43921f07c971c485e1460a1a7f0334
 workflow-type: tm+mt
-source-wordcount: '2513'
+source-wordcount: '2511'
 ht-degree: 0%
 
 ---
@@ -20,15 +20,15 @@ Lär dig hur du implementerar Adobe Journey Optimizer beslutsstyrningsfunktion m
 Genom att följa den här självstudiekursen är Journey Optimizer-användare utrustade att använda funktioner för beslutshantering, vilket förbättrar personaliseringen och relevansen av deras kundinteraktioner.
 
 
-![Web SDK och Adobe Analytics-diagram](assets/dc-websdk-ajo.png)
+![Webb-SDK och Adobe Analytics](assets/dc-websdk-ajo.png)
 
 ## Utbildningsmål
 
 När lektionen är slut kan du:
 
-* Ta en titt på de centrala begreppen för beslutshantering inom Adobe Journey Optimizer och dess integrering med Adobe Experience Platform Web SDK.
+* Läs om de centrala begreppen för beslutshantering inom Adobe Journey Optimizer och hur den integreras med Adobe Experience Platform Web SDK.
 
-* Lär dig steg för steg hur du konfigurerar Web SDK för Offer decisioning och säkerställer smidig integrering med Journey Optimizer.
+* Lär dig steg för steg hur du konfigurerar Web SDK för Offer Decisioning och säkerställer smidig integrering med Journey Optimizer.
 
 * Utforska ett detaljerat användningsexempel som fokuserar på lojalitetserbjudanden och få insikter i hur ni effektivt kan skapa och hantera erbjudanden, beslut och placeringar.
 
@@ -42,9 +42,9 @@ När lektionen är slut kan du:
 
 För att slutföra lektionerna i det här avsnittet måste du först:
 
-* Se till att din organisation har tillgång till Adobe Journey Optimizer Ultimate (Journey Optimizer och Offer decisioning) eller Adobe Experience Platform och Offer decisioning-tillägget.
+* Se till att din organisation har tillgång till Adobe Journey Optimizer Ultimate (Journey Optimizer och Offer Decisioning) eller Adobe Experience Platform och Offer Decisioning-tillägget.
 
-* Slutför alla lektioner för den inledande konfigurationen av Platform Web SDK.
+* Slutför alla lektioner för den första konfigurationen av Platform Web SDK.
 
 * Aktivera er organisation för Edge-beslut.
 
@@ -56,19 +56,19 @@ Händelsebaserade erbjudanden stöds för närvarande inte i Adobe Journey Optim
 
 ## Bevilja åtkomst till beslutsledning
 
-Om du vill ge åtkomst till beslutshanteringsfunktionen måste du skapa en **produktprofil** och tilldela användarna motsvarande behörigheter. [Läs mer om hur du hanterar Journey Optimizer-användare och behörigheter i det här avsnittet](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/access-control/privacy/high-low-permissions#decisions-permissions).
+Om du vill ge åtkomst till beslutshanteringsfunktionen måste du skapa en **produktprofil** och tilldela användarna motsvarande behörigheter. [Läs mer om hur du hanterar Journey Optimizer-användare och behörigheter i det här avsnittet](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/privacy/high-low-permissions#decisions-permissions).
 
 ## Konfigurera datastream
 
-Offera decisioningen måste aktiveras i **datastream**-konfigurationen innan någon beslutshanteringsaktivitet kan levereras av Platform Web SDK.
+Offer Decisioning måste aktiveras i **datastream**-konfigurationen innan alla beslutshanteringsaktiviteter kan levereras av Platform Web SDK.
 
-Så här konfigurerar du Offer decisioning i datastream:
+Så här konfigurerar du Offer Decisioning i datastream:
 
 1. Gå till gränssnittet [Datainsamling](https://experience.adobe.com/#/data-collection).
 
 1. Välj **Datastreams** i den vänstra navigeringen.
 
-1. Markera tidigare skapade Luma Web SDK-dataström.
+1. Markera tidigare skapade data för Luma Web SDK.
 
    ![Välj datastream](assets/decisioning-datastream-select.png)
 
@@ -76,7 +76,7 @@ Så här konfigurerar du Offer decisioning i datastream:
 
    ![Redigera tjänst](assets/decisioning-edit-datastream.png)
 
-1. Markera rutan **Offer decisioning**.
+1. Markera rutan **Offer Decisioning**.
 
    ![LÄGG TILL SKÄRMBILD](assets/decisioning-check-offer-box.png)
 
@@ -88,7 +88,7 @@ Detta garanterar att inkommande händelser för Journey Optimizer hanteras korre
 
 Beslutshantering kräver ytterligare SDK-steg beroende på vilken implementeringstyp du har för Web SDK. Det finns två tillgängliga alternativ för att konfigurera SDK för beslutshantering.
 
-* fristående SDK-installation
+* Fristående installation av SDK
    1. Konfigurera åtgärden `sendEvent` med din `decisionScopes`.
 
       ```javascript
@@ -101,7 +101,7 @@ Beslutshantering kräver ytterligare SDK-steg beroende på vilken implementering
       })
       ```
 
-* Installation av SDK-taggar
+* Installation av SDK Tags
    1. Gå till gränssnittet Datainsamling.
 
    1. Välj **Taggar** i den vänstra navigeringen.
@@ -111,7 +111,7 @@ Beslutshantering kräver ytterligare SDK-steg beroende på vilken implementering
    1. Markera **taggegenskapen**.
 
    1. Skapa dina **regler**.
-      * Lägg till en Platform Web SDK **Skicka händelse** och lägg till relevant `decisionScopes` i åtgärdens konfiguration.
+      * Lägg till en plattformswebb-SDK **Skicka händelse** och lägg till relevant `decisionScopes` i åtgärdens konfiguration.
 
    1. Skapa och publicera ett **bibliotek** som innehåller alla relevanta **regler**, **dataelement** och **tillägg** som du har konfigurerat.
 
@@ -137,7 +137,7 @@ För det första bör du förstå den terminologi som används i gränssnittet f
 
 ## Use Case Overview - Loyalty Rewards
 
-I den här lektionen implementerar du ett exempel på Loyalty Rewards-användning för att förstå hur beslut hanteras med Web SDK.
+I den här lektionen implementerar du ett exempel på Loyalty Rewards-användning för att förstå hur man hanterar beslut med hjälp av Web SDK.
 
 Med detta exempel får ni en bättre förståelse för hur Journey Optimizer kan hjälpa er att leverera det bästa erbjudandet till era kunder genom att utnyttja det centraliserade erbjudandebiblioteket och beslutsmotorn.
 
@@ -166,7 +166,7 @@ Så här skapar du placeringen:
 1. Definiera placeringens egenskaper:
    * **Namn**: Placeringens namn. Vi kallar exempelplaceringen *&#39;Homepage Banner&#39;*.
    * **Kanaltyp**: Kanalen som placeringen används för. Låt oss använda *&#39;Webben&#39;*&#39; eftersom erbjudandena visas på Luma-webbplatsen.
-   * **Innehållstyp**: Den typ av innehåll som placeringen kan visa: Text, HTML, Bildlänk eller JSON. Du kan använda *&#39;HTML&#39;* för erbjudandet.
+   * **Innehållstyp**: Den typ av innehåll som placeringen kan visa: Text, HTML, Image Link eller JSON. Du kan använda *&#39;HTML&#39;* för erbjudandet.
    * **Beskrivning**: En beskrivning av placeringen (valfritt).
 
    ![Lägg till information](assets/decisioning-placement-details.png)
@@ -240,15 +240,15 @@ Så här skapar du det första **erbjudandet**:
 
    ![Lägg till erbjudandeinformation](assets/decisioning-add-offer-details.png)
 
-1. Nu måste du lägga till **representationer** för att definiera var erbjudandet ska visas. Vi väljer **webbkanalen**. Vi väljer också *startsidesbanderollen* **placeringen** som du konfigurerade tidigare. Den markerade **placeringen** är av HTML-typ, så du kan lägga till HTML, JSON eller TEXT-innehåll direkt i redigeraren för att skapa erbjudandet med alternativknappen **Egen** .
+1. Nu måste du lägga till **representationer** för att definiera var erbjudandet ska visas. Vi väljer **webbkanalen**. Vi väljer också *startsidesbanderollen* **placeringen** som du konfigurerade tidigare. Den markerade **placeringen** är av HTML-typ, så du kan lägga till HTML-, JSON- eller TEXT-innehåll direkt i redigeraren för att skapa erbjudandet med alternativknappen **Egen** .
 
    ![Lägg till representationsinformation](assets/decisioning-add-representation-details.png)
 
-1. Redigera erbjudandeinnehållet direkt med **uttrycksredigeraren**. Kom ihåg att du kan lägga till HTML, JSON eller TEXT i den här placeringen. Kontrollera att du har valt rätt **läge** längst ned i redigeraren, beroende på din innehållstyp. Du kan även trycka på **validate** för att kontrollera att det inte finns några fel.
+1. Redigera erbjudandeinnehållet direkt med **uttrycksredigeraren**. Kom ihåg att du kan lägga till HTML-, JSON- eller TEXT-innehåll på den här placeringen. Kontrollera att du har valt rätt **läge** längst ned i redigeraren, beroende på din innehållstyp. Du kan även trycka på **validate** för att kontrollera att det inte finns några fel.
 
    ![Lägg till erbjudande HTML](assets/decisioning-add-offer-html.png)
 
-1. Du kan också använda uttrycksredigeraren för att hämta attribut som lagras i Adobe Experience Platform. Låt oss lägga till en profils förnamn i erbjudandeinnehållet för att göra det mer personligt för lojalitetsmedlemmarna på 1:1-nivå.
+1. Du kan också använda uttrycksredigeraren för att hämta attribut som lagras i Adobe Experience Platform. Låt oss lägga till en profils förnamn i erbjudandeinnehållet för att göra det mer personligt för lojalitetsmedlemmarna på en :1-nivå.
 
    ![Lägg till personlig anpassning av erbjudanden](assets/decisioning-add-offer-personalization.png)
 
@@ -274,7 +274,7 @@ Så här skapar du ett reserverbjudande:
    <!--
       ![ADD SCREENSHOT](#)
    -->
-1. Lägg till reserverbjudandeinnehåll i **uttrycksredigeraren**. Kom ihåg att du kan lägga till HTML, JSON eller TEXT i den här placeringen. Kontrollera att du har valt rätt **läge** längst ned i redigeraren, beroende på din innehållstyp. Du kan även trycka på **validate** för att kontrollera att det inte finns några fel.
+1. Lägg till reserverbjudandeinnehåll i **uttrycksredigeraren**. Kom ihåg att du kan lägga till HTML-, JSON- eller TEXT-innehåll på den här placeringen. Kontrollera att du har valt rätt **läge** längst ned i redigeraren, beroende på din innehållstyp. Du kan även trycka på **validate** för att kontrollera att det inte finns några fel.
    <!--
       ![ADD SCREENSHOT](#)
    -->
@@ -339,7 +339,7 @@ Starta testningen genom att välja fliken **Simuleringar** på menyn **Erbjudand
 
 ### Testa lojalitetserbjudanden
 
-1. Välj en testprofil som ska användas för simuleringen. Klicka på **Hantera profil**. [Följ den här guiden](https://experienceleague.adobe.com/sv/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles#create-test-profiles-csv) om du vill skapa eller ange en ny testprofil för erbjudandetestning.
+1. Välj en testprofil som ska användas för simuleringen. Klicka på **Hantera profil**. [Följ den här guiden](https://experienceleague.adobe.com/en/docs/journeys/using/building-journeys/about-journey-building/creating-test-profiles#create-test-profiles-csv) om du vill skapa eller ange en ny testprofil för erbjudandetestning.
    <!--
       ![ADD SCREENSHOT](#)
    -->
@@ -367,11 +367,11 @@ Starta testningen genom att välja fliken **Simuleringar** på menyn **Erbjudand
 
 ## Beslutsstyrningsvalidering med Adobe Experience Platform Debugger
 
-Tillägget **Adobe Experience Platform Debugger**, som är tillgängligt för både Chrome och Firefox, analyserar dina webbsidor för att identifiera problem i implementeringen av Adobe Experience Cloud lösningar.
+Tillägget **Adobe Experience Platform Debugger**, som finns för både Chrome och Firefox, analyserar dina webbsidor för att identifiera problem i implementeringen av Adobe Experience Cloud lösningar.
 
 Du kan använda felsökaren på Luma-webbplatsen för att validera beslutslogiken i produktionen. Valideringen är bra att använda när Loyalty Rewards-användningsexemplet är öppet och körs för att säkerställa att allt är korrekt konfigurerat.
 
-[Lär dig hur du konfigurerar felsökaren i webbläsaren med hjälp av guiden här](https://experienceleague.adobe.com/sv/docs/platform-learn/data-collection/debugger/overview).
+[Lär dig hur du konfigurerar felsökaren i webbläsaren med hjälp av guiden här](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/debugger/overview).
 
 Så här börjar du valideringen med felsökaren:
 
@@ -383,7 +383,7 @@ Så här börjar du valideringen med felsökaren:
    <!--
       ![ADD SCREENSHOT](#)
    -->
-1. Navigera till **Sammanfattning**. Kontrollera att **DataStream ID** matchar **datastream** i **Adobe datainsamling** som du har aktiverat Offer decisioning för.
+1. Navigera till **Sammanfattning**. Kontrollera att **DataStream ID** matchar **datastream** i **Adobe Data Collection** som du har aktiverat Offer Decisioning för.
    <!--
       ![ADD SCREENSHOT](#)
    -->
@@ -391,17 +391,15 @@ Så här börjar du valideringen med felsökaren:
    <!--
       ![ADD SCREENSHOT](#)
    -->
-1. På fliken **Konfiguration** växlar du till **Aktivera felsökning**. Detta aktiverar loggning för sessionen i en **Adobe Experience Platform Assurance**-session.
+1. På fliken **Konfiguration** växlar du till **Aktivera felsökning**. Detta aktiverar loggning för sessionen i en **Adobe Experience Platform Assurance** -session.
    <!--
       ![ADD SCREENSHOT](#)
    -->
-1. Du kan sedan logga in på webbplatsen med olika Luma-förmånskonton och använda felsökaren för att validera begäranden som skickas till **Adobe Experience Platform Edge-nätverket**. Alla dessa förfrågningar ska hämtas i **Assurance** för loggspårning.
+1. Du kan sedan logga in på webbplatsen med olika Luma-förmånskonton och använda felsökaren för att validera begäranden som skickas till **Adobe Experience Platform Edge-nätverket**. Alla dessa förfrågningar bör hämtas i **Assurance** för loggspårning.
 <!--
    ![ADD SCREENSHOT](#)
 -->
 
-[Nästa: ](setup-consent.md)
-
 >[!NOTE]
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
+>Tack för att du har lagt ned din tid på att lära dig om Adobe Experience Platform Web SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League diskussionsgruppsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-with-web/td-p/444996)
