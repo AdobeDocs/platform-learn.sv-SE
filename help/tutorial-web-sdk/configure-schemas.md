@@ -113,7 +113,7 @@ När det är möjligt bör du använda befintliga fältgrupper och följa en pro
 
 >[!TIP]
 > 
->I den här övningen lägger du till de rekommenderade fördefinierade fältgrupperna för webbdatainsamling: _**[!UICONTROL AEP Web SDK ExperienceEvent]**_och_**[!UICONTROL Consumer Experience Event]**_.
+>I den här övningen lägger du till de rekommenderade fördefinierade fältgrupperna för webbdatainsamling: _&#x200B;**[!UICONTROL AEP Web SDK ExperienceEvent]**&#x200B;_och_&#x200B;**[!UICONTROL Consumer Experience Event]**&#x200B;_.
 >
 
 
@@ -151,7 +151,7 @@ Det är ett måste-ha-objekt för alla webbrelaterade datainsamlingar eftersom d
 >
 >
 >Den här inställningen beskrivs mer under lektionen [Konfigurera Experience Platform](setup-experience-platform.md).
->>![Profilschema ](assets/schema-profile.png)
+>&#x200B;>![Profilschema ](assets/schema-profile.png)
 
 Slutför den här lektionen genom att välja **[!UICONTROL Save]** överst till höger.
 

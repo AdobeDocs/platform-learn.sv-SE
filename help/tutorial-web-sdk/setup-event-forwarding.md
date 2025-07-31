@@ -143,7 +143,7 @@ I den här övningen vidarebefordrar du höjden på webbläsarens visningsruta o
 >[!TIP]
 >
 >Du kan också hitta XDM-objektsökvägen med hjälp av webbläsarens nätverksverktyg, filtrering efter `/ee`-begäranden, öppning av [!UICONTROL **nyttolasten**] och fördjupning av variabeln du söker efter. Högerklicka sedan med musen och välj Kopiera egenskapssökväg. Här är ett exempel på webbläsarvisningsportens höjd:
->> ![XDM-sökväg för händelsevidarebefordran ](assets/event-forwarding-xdm-path.png)
+>&#x200B;> ![XDM-sökväg för händelsevidarebefordran ](assets/event-forwarding-xdm-path.png)
 
 1. Gå till egenskapen **[!UICONTROL Event Forwarding]** som du nyss skapade
 

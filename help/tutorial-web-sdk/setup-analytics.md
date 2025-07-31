@@ -106,8 +106,8 @@ De enskilda avsnitten i Analytics-produktsträngen ställs in via olika XDM-vari
 >[!NOTE]
 >
 >Från och med den 18 augusti 2022 prioriterar `productListItems[].SKU` mappning till produktnamnet i variabeln s.products.
->>Värdet `productListItems[].name` mappas bara till produktnamnet om `productListItems[].SKU` inte finns. Annars är den omappad och tillgänglig i kontextdata.
->>Ange inte en tom sträng eller null till `productListItems[].SKU`. Detta har den oönskade effekten av att mappa till produktnamnet i variabeln s.products.
+>&#x200B;>Värdet `productListItems[].name` mappas bara till produktnamnet om `productListItems[].SKU` inte finns. Annars är den omappad och tillgänglig i kontextdata.
+>&#x200B;>Ange inte en tom sträng eller null till `productListItems[].SKU`. Detta har den oönskade effekten av att mappa till produktnamnet i variabeln s.products.
 
 
 ### Ange variabler i dataobjektet

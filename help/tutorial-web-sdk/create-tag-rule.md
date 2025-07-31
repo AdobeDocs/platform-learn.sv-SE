@@ -238,7 +238,7 @@ Jämför dataelementet med `productListItems`-strukturen (tips, det ska matcha).
 >[!IMPORTANT]
 >
 >Observera hur numeriska variabler översätts, med strängvärden i datalagret som `price` och `qty` omformaterade till tal i dataelementet. Dessa formatkrav är viktiga för dataintegriteten i Platform och bestäms under steget [Konfigurera scheman](configure-schemas.md). I exemplet använder **[!UICONTROL quantity]** datatypen **[!UICONTROL Integer]**.
->> ![XDM-schemadatatyp ](assets/set-up-analytics-quantity-integer.png)
+>&#x200B;> ![XDM-schemadatatyp ](assets/set-up-analytics-quantity-integer.png)
 
 Låt oss mappa vår array till XDM-objektet:
 
