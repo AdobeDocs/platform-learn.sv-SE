@@ -4,7 +4,7 @@ description: AEM CS - grundläggande anpassat block
 kt: 5342
 doc-type: tutorial
 exl-id: 57c08a88-d885-471b-ad78-1dba5992da9d
-source-git-commit: 457e7d0dec233edf75717fb9930585a3511bdc65
+source-git-commit: d583df79bff499b7605f77146d52e66bc02810b9
 workflow-type: tm+mt
 source-wordcount: '814'
 ht-degree: 1%
@@ -259,7 +259,7 @@ Lägg till ett menyalternativ på navigeringsmenyn med texten `Fiber`. Markera t
 
 ![AEMCS](./images/nav1.png){zoomable="yes"}
 
-Ange den här för **URL** `/us/en//citisignal-fiber` och klicka på ikonen **V** för att bekräfta.
+Ange den här för **URL** `/us/en/citisignal-fiber` och klicka på ikonen **V** för att bekräfta.
 
 ![AEMCS](./images/nav3.png){zoomable="yes"}
 

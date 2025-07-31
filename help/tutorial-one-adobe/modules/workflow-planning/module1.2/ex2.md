@@ -3,7 +3,6 @@ title: Korrektur med Workfront
 description: Korrektur med Workfront
 kt: 5342
 doc-type: tutorial
-exl-id: 1b5ca13b-2a32-44a1-a3ae-342bccc6baeb
 source-git-commit: d583df79bff499b7605f77146d52e66bc02810b9
 workflow-type: tm+mt
 source-wordcount: '656'

@@ -3,10 +3,10 @@ title: Översikt - Omfattande teknisk självstudiekurs - en Adobe
 description: Omfattande teknisk självstudiekurs - en Adobe
 doc-type: multipage-overview
 exl-id: 5bc0d621-0662-4d94-80a0-b6c173c0ac9e
-source-git-commit: 31466040336580e9e4b2308801347dc387be4da5
+source-git-commit: 23176cb4a07a52ec3500ee9922d851f658351c06
 workflow-type: tm+mt
-source-wordcount: '1069'
-ht-degree: 1%
+source-wordcount: '1120'
+ht-degree: 0%
 
 ---
 
@@ -19,11 +19,14 @@ ht-degree: 1%
 Självstudiekursen är mycket varierad och ger tydliga insikter i följande program:
 
 - Adobe Firefly Services, Adobe Photoshop, Adobe Frame I/O, Adobe Substance 3D Staging
-- Adobe Workfront &amp; Adobe Workfront Fusion
-- Adobe Experience Manager Cloud Service, Sites, Assets och Edge Delivery Services
+- Adobe Workfront, Adobe Workfront Planning &amp; Adobe Workfront Fusion
+- Adobe Experience Manager Cloud Service, Sites, Assets, Forms och Edge Delivery Services
+- AEM Assets Dynamic Media, Content Hub
 - Adobe Experience Platform
 - Adobe Real-Time CDP
 - Adobe Journey Optimizer
+- Adobe Customer Journey Analytics
+- Adobe Content Analytics
 
 Den här självstudiekursen fokuserar inte bara på Adobe-program utan tar hänsyn till det större ekosystem som varumärkena använder. I vissa lektioner fokuserar vi på hur andra program än Adobe kan integreras med Adobe-program. Därför får du en djupgående förståelse för hur följande program kommer att fungera tillsammans med Adobe Experience Platform:
 
@@ -57,6 +60,14 @@ I den här grundläggande modulen förbereder du allt så att du kan komma åt o
 
 ### &#x200B;1. Arbetsflöde och planering
 
+[1.1 Adobe Workfront Planning](./modules/workflow-planning/module1.1/wfplanning.md){target="_blank"}
+
+I den här modulen konfigurerar och använder du Adobe Workfront Planning för att skapa en ny arbetsyta, definiera posttyper, hantera poster, skapa ett nytt begärandeformulär och använda AI-assistenten.
+
+[1.2 Arbetsflödeshantering med Adobe Workfront](./modules/workflow-planning/module1.2/workfront.md){target="_blank"}
+
+I den här modulen ska du konfigurera och använda Adobe Workfront för att hantera godkännandeflöden och du ska använda integreringar med Adobe Experience Manager Assets, Universal Editor, Photoshop med flera.
+
 ### &#x200B;2. Skapa och producera
 
 [1.1 Översikt över Adobe Firefly Services](./modules/creation-production/module1.1/firefly-services.md){target="_blank"}
@@ -80,10 +91,6 @@ I den här grundläggande modulen kommer du att använda Adobe Express för att 
 [1.1 Adobe Experience Manager Cloud Service &amp; Edge Delivery Services](./modules/asset-mgmt/module2.1/aemcs.md){target="_blank"}
 
 I den här grundläggande modulen kommer du att konfigurera Adobe Experience Manager Cloud Service Program, Site och Assets.
-
-[1.2 Arbetsflödeshantering med Adobe Workfront](./modules/asset-mgmt/module2.2/workfront.md){target="_blank"}
-
-I den här grundläggande modulen kommer du att konfigurera och använda Adobe Workfront för att hantera godkännandeflöden och du kommer att använda integreringar med Adobe Experience Manager Assets, Universal Editor, Photoshop med flera.
 
 ### &#x200B;4. Leverans och aktivering
 

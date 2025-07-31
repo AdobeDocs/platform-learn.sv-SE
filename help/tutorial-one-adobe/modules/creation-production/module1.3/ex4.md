@@ -1,13 +1,14 @@
 ---
-title: GenStudio for Performance Marketing Campaign Activation to Meta
-description: GenStudio for Performance Marketing Campaign Activation to Meta
+title: GenStudio for Performance Marketing Create Email Experience for AJO
+description: GenStudio for Performance Marketing Create Email Experience for AJO
 role: Developer
 level: Beginner
 jira: KT-5342
 doc-type: Tutorial
-source-git-commit: 4d8952cdd136e9bf3a82fa864de4d51641bcbfd8
+exl-id: 9837c076-e6ca-47a0-96b9-5fa5fdba3fd2
+source-git-commit: 10f1f6a1f77c41e3c912b3d03b73da7b6c68670c
 workflow-type: tm+mt
-source-wordcount: '854'
+source-wordcount: '856'
 ht-degree: 0%
 
 ---
@@ -20,7 +21,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->För att kunna utföra alla steg i den här övningen måste du ha tillgång till en befintlig Adobe Workfront-miljö, och i den miljön måste du ha skapat ett projekt och ett arbetsflöde för godkännande. Om du följer övningen [Arbetsflödeshantering med Adobe Workfront](./../../../modules/asset-mgmt/module2.2/workfront.md){target="_blank"} har du tillgång till de nödvändiga inställningarna.
+>För att kunna utföra alla steg i den här övningen måste du ha tillgång till en befintlig Adobe Workfront-miljö, och i den miljön måste du ha skapat ett projekt och ett arbetsflöde för godkännande. Om du följer övningen [Arbetsflödeshantering med Adobe Workfront](./../../../modules/workflow-planning/module1.2/workfront.md){target="_blank"} har du tillgång till de nödvändiga inställningarna.
 
 ## 1.3.4.1 Skapa och godkänn e-postupplevelse
 
@@ -40,7 +41,7 @@ Välj följande alternativ under **Parametrar**:
 
 - **Varumärke**: `--aepUserLdap-- - CitiSignal`
 - **Språk**: `English (US)`
-- **Persona**: `--aepUserLdap-- - Smart Home Families`
+- **Persona**: `--aepUserLdap-- - Online Gamers`
 - **Produkt**: `--aepUserLdap-- - CitiSignal Fiber Max`
 
 Klicka på **Välj från innehåll**.

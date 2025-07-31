@@ -4,9 +4,9 @@ breadcrumb-title: En teknisk självstudiekurs för Adobe
 hide: true
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-source-git-commit: 4d8952cdd136e9bf3a82fa864de4d51641bcbfd8
+source-git-commit: d583df79bff499b7605f77146d52e66bc02810b9
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1222'
 ht-degree: 3%
 
 ---
@@ -31,7 +31,17 @@ ht-degree: 3%
       + [Alternativ 2: PostBuster-konfiguration](/help/tutorial-one-adobe/modules/getting-started/gettingstarted/ex8.md)
       + [Program som ska installeras](/help/tutorial-one-adobe/modules/getting-started/gettingstarted/ex9.md)
 
-+ Arbetsflöde och planering {#planning}
++ Arbetsflöde och planering {#wfplanning}
+   + 1.1 Workfront Planning {#wfpl1}
+      + [Översikt](/help/tutorial-one-adobe/modules/workflow-planning/module1.1/wfplanning.md)
+      + [1.1.1 Komma igång med Workfront Planning](/help/tutorial-one-adobe/modules/workflow-planning/module1.1/ex1.md)
+      + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/workflow-planning/module1.1/summary.md)
+   + 1.2 Workfront {#wfpl2}
+      + [Översikt](/help/tutorial-one-adobe/modules/workflow-planning/module1.2/workfront.md)
+      + [1.2.1 Komma igång med Workfront](/help/tutorial-one-adobe/modules/workflow-planning/module1.2/ex1.md)
+      + [1.2.2 Korrektur med Workfront](/help/tutorial-one-adobe/modules/workflow-planning/module1.2/ex2.md)
+      + [1.2.5 Integrering med Workfront och Photoshop](/help/tutorial-one-adobe/modules/workflow-planning/module1.2/ex5.md)
+      + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/workflow-planning/module1.2/summary.md)
 
 + Skapa och producera {#production}
    + 1.1 Översikt över Adobe Firefly Services {#crpr1}
@@ -74,12 +84,6 @@ ht-degree: 3%
       + [1.1.5 Avancerat anpassat block](/help/tutorial-one-adobe/modules/asset-mgmt/module2.1/ex5.md)
       + [1.1.6 AEM Edge Delivery Services MarTech-plugin](/help/tutorial-one-adobe/modules/asset-mgmt/module2.1/ex6.md)
       + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/asset-mgmt/module2.1/summary.md)
-   + 1.2 Workfront {#assetm2}
-      + [Översikt](/help/tutorial-one-adobe/modules/asset-mgmt/module2.2/workfront.md)
-      + [1.2.1 Komma igång med Workfront](/help/tutorial-one-adobe/modules/asset-mgmt/module2.2/ex1.md)
-      + [1.2.2 Korrektur med Workfront](/help/tutorial-one-adobe/modules/asset-mgmt/module2.2/ex2.md)
-      + [1.2.5 Integrering med Workfront och Photoshop](/help/tutorial-one-adobe/modules/asset-mgmt/module2.2/ex5.md)
-      + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/asset-mgmt/module2.2/summary.md)
 
 + Leverans och aktivering {#activation}
    + Datainsamling {#dc}
