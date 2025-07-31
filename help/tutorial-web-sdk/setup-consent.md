@@ -217,10 +217,10 @@ När du har den här regeln på plats, bör händelsesamlingen börja när en be
 ![Alternativ för samtycke efter besökare](assets/consent-post-user-optin.png)
 
 
-Mer information om samtycke i Web SDK finns i [Supporting customer medgivande preferences](https://experienceleague.adobe.com/en/docs/experience-platform/edge/consent/supporting-consent).
+Mer information om samtycke i Web SDK finns i [Supporting customer medgivande preferences](https://experienceleague.adobe.com/sv/docs/experience-platform/edge/consent/supporting-consent).
 
 
-Mer information om åtgärden [!UICONTROL Set consent] finns i [Ange medgivande](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/client/web-sdk/action-types#set-consent).
+Mer information om åtgärden [!UICONTROL Set consent] finns i [Ange medgivande](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/extensions/client/web-sdk/action-types#set-consent).
 
 >[!NOTE]
 >

@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Lär dig hur du konfigurerar ett datastream för Adobe Experience Platform Web SDK.
 
-[Datastreams](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview) anger för Adobe Experience Platform Edge Network var data som samlats in av Platform Web SDK ska skickas. I datastreams-konfigurationen aktiverar du dina Experience Cloud-program, ditt Experience Platform-konto och vidarebefordran av händelser.
+[Datastreams](https://experienceleague.adobe.com/sv/docs/experience-platform/datastreams/overview) anger för Adobe Experience Platform Edge Network var data som samlats in av Platform Web SDK ska skickas. I datastreams-konfigurationen aktiverar du dina Experience Cloud-program, ditt Experience Platform-konto och vidarebefordran av händelser.
 
 ![SDK, datastreams och Edge Network-diagram](assets/dc-websdk-datastreams.png)
 
@@ -65,7 +65,7 @@ På nästa skärm kan du lägga till tjänster som t.ex. Adobe-program i datastr
 
 ## Åsidosätta ett datastream
 
-Med [Datastream overrides](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overrides) kan du definiera ytterligare konfigurationer för din datastream och sedan åsidosätta din standardkonfiguration under vissa villkor.
+Med [Datastream overrides](https://experienceleague.adobe.com/sv/docs/experience-platform/datastreams/overrides) kan du definiera ytterligare konfigurationer för din datastream och sedan åsidosätta din standardkonfiguration under vissa villkor.
 
 Åsidosättning av dataströmskonfiguration är en tvåstegsprocess:
 

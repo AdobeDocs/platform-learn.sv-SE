@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Lär dig hur du använder händelsevidarebefordran med Adobe Experience Platform Web SDK-data.
 
-Vidarebefordran av händelser är en ny typ av egenskap som är tillgänglig i datainsamling. Med händelsevidarebefordran kan du skicka data till andra leverantörer än Adobe direkt från Adobe Experience Platform Edge Network istället för till den traditionella webbläsaren på klientsidan. Läs mer om fördelarna med vidarebefordran av händelser i [Översikt över vidarebefordran av händelser](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/overview).
+Vidarebefordran av händelser är en ny typ av egenskap som är tillgänglig i datainsamling. Med händelsevidarebefordran kan du skicka data till andra leverantörer än Adobe direkt från Adobe Experience Platform Edge Network istället för till den traditionella webbläsaren på klientsidan. Läs mer om fördelarna med vidarebefordran av händelser i [Översikt över vidarebefordran av händelser](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/event-forwarding/overview).
 
 
 ![SDK för webben och händelsevidarebefordringsdiagram](assets/dc-websdk-eventforwarding.png)
@@ -24,7 +24,7 @@ Om du vill använda händelsevidarebefordran i Adobe Experience Platform måste 
 
 * [Webb-SDK för Adobe Experience Platform](overview.md)
 * [Adobe Experience Platform Mobile SDK](https://developer.adobe.com/client-sdks/home/)
-  <!--* [Server-to-Server API](https://experienceleague.adobe.com/en/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s)-->
+  <!--* [Server-to-Server API](https://experienceleague.adobe.com/sv/docs/audience-manager/user-guide/api-and-sdk-code/dcs/dcs-apis/dcs-s2s)-->
 
 
 >[!NOTE]
