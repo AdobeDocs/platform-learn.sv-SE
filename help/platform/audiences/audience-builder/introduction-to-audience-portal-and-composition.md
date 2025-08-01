@@ -19,4 +19,4 @@ ht-degree: 0%
 
 Se hur Adobe förnyar målgrupper i Adobe Experience Platform, inklusive hur ni kan importera, bygga och hantera målgrupper. Mer information finns i [Segment Builder-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/segment-builder.html?lang=sv-SE).
 
->[!VIDEO](https://video.tv.adobe.com/v/3421713/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3432432/?learn=on&enablevpops&captions=swe)
