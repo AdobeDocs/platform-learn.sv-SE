@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Film om direktuppspelad segmentering
 
-Läs om hur funktionen för direktuppspelningssegmentering i Adobe Experience Platform gör det möjligt för varumärken att personalisera kundupplevelser baserat på realtidsdata. Se ett exempel på kundupplevelsen och få en snabb genomgång av gränssnittet. Mer information finns i [Segment Builder-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/segment-builder.html).
+Läs om hur funktionen för direktuppspelningssegmentering i Adobe Experience Platform gör det möjligt för varumärken att personalisera kundupplevelser baserat på realtidsdata. Se ett exempel på kundupplevelsen och få en snabb genomgång av gränssnittet. Mer information finns i [Segment Builder-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/segment-builder.html?lang=sv-SE).
 
 >[!NOTE]
 >

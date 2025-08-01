@@ -17,6 +17,6 @@ ht-degree: 0%
 
 # Introduktion till Audience Portal and Composition
 
-Se hur Adobe förnyar målgrupper i Adobe Experience Platform, inklusive hur ni kan importera, bygga och hantera målgrupper. Mer information finns i [Segment Builder-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/segment-builder.html).
+Se hur Adobe förnyar målgrupper i Adobe Experience Platform, inklusive hur ni kan importera, bygga och hantera målgrupper. Mer information finns i [Segment Builder-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/segmentation/ui/segment-builder.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3421713/?learn=on&enablevpops)
