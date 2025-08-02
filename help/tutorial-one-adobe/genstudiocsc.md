@@ -2,9 +2,10 @@
 title: GenStudio for Content Supply Chain Technical Enablement
 description: GenStudio for Content Supply Chain Technical Enablement
 doc-type: multipage-overview
-source-git-commit: 34f37a33e874f55eea37290b5626ab613f575764
+exl-id: be6284eb-60c8-49d7-bde1-d8dc148a07c2
+source-git-commit: 42f6d8a07baa03a9ab31cff0ef518ae2c5ad930e
 workflow-type: tm+mt
-source-wordcount: '409'
+source-wordcount: '439'
 ht-degree: 1%
 
 ---
@@ -57,6 +58,10 @@ I den här modulen kommer du att använda Adobe GenStudio for Performance Market
 
 I den här grundläggande modulen kommer du att använda Adobe Express för att skapa bilder och videor, och du kommer att dela dessa resurser med hela Adobe Experience Cloud ekosystem.
 
+[Effektivisera arbetsflödet med Frame.io](./modules/creation-production/module1.5/frameio.md){target="_blank"}
+
+I den här modulen använder du Adobe Frame.io i kombination med Adobe Premiere Pro för att samarbeta och granska bilder och videor.
+
 ### Resurshantering
 
 [Adobe Experience Manager Cloud Service &amp; Edge Delivery Services](./modules/asset-mgmt/module2.1/aemcs.md){target="_blank"}
@@ -67,9 +72,9 @@ I den här grundläggande modulen kommer du att konfigurera Adobe Experience Man
 
 #### Adobe Content Analytics
 
-[Content Analytics](./modules/reporting-insights/cja-b2c/cjab2c-1/customer-journey-analytics-build-a-dashboard.md)
+[Content Analytics](./modules/reporting-insights/content/module3.1/contentanalytics.md)
 
-I den här modulen ska du konfigurera och konfigurera Content Analytics.
+I den här modulen får du lära dig hur du implementerar och använder Adobe Content Analytics.
 
 ![Tech Insiders](./assets/images/techinsiders.png){width="50px" align="left"}
 

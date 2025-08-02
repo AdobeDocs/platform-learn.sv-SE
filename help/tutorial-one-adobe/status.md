@@ -3,9 +3,9 @@ title: Innehållsstatus
 description: Innehållsstatus
 doc-type: multipage-overview
 exl-id: 8f9ae0fa-48b2-4da5-ab21-a6cf16a0b522
-source-git-commit: 23176cb4a07a52ec3500ee9922d851f658351c06
+source-git-commit: 8ed0b38056c6e2db4937bfaa9cfb53f5878250ee
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '414'
 ht-degree: 2%
 
 ---
@@ -24,8 +24,8 @@ Nedan visas en översikt över statusen för innehållet i den här självstudie
 
 | Namn | Senaste uppdatering | Arbeta 100 % | Anmärkningar |
 | ---------------------- | ------------ | ------------ |------------ |
-| [1.1 Adobe Workfront Planning](./modules/workflow-planning/module1.1/wfplanning.md){target="_blank"} | 29/07/2025 | Nej | Innehållet är inte färdigt än |
-| [1.2 Arbetsflödeshantering med Adobe Workfront](./modules/workflow-planning/module1.2/workfront.md){target="_blank"} | 29/07/2025 | Nej | Innehållet är inte färdigt än |
+| [1.1 Adobe Workfront Planning](./modules/workflow-planning/module1.1/wfplanning.md){target="_blank"} | 02/08/2025 | Ja | – |
+| [1.2 Arbetsflödeshantering med Adobe Workfront](./modules/workflow-planning/module1.2/workfront.md){target="_blank"} | 02/08/2025 | Ja | Innehållet är inte färdigt än |
 
 ## &#x200B;2. Skapa och producera
 
@@ -35,6 +35,7 @@ Nedan visas en översikt över statusen för innehållet i den här självstudie
 | [1.2 Automatisering av Creative-arbetsflöden med Workfront Fusion](./modules/creation-production/module1.2/automation.md){target="_blank"} | 04/06/2025 | Ja | – |
 | [1.3 GenStudio for Performance Marketing](./modules/creation-production/module1.3/genstudio.md){target="_blank"} | 16/06/2025 | Ja | – |
 | [1.4 Adobe Express och Adobe Experience Cloud](./modules/creation-production/module1.4/express.md){target="_blank"} | 01/04/2025 | Ja | – |
+| [1.5 Effektivisera arbetsflödet med Frame.io](./modules/creation-production/module1.5/frameio.md){target="_blank"} | 02/08/2025 | Ja | – |
 
 
 ## &#x200B;3. Resurshantering
@@ -72,6 +73,7 @@ Nedan visas en översikt över statusen för innehållet i den här självstudie
 | [1.1 Customer Journey Analytics: Skapa en kontrollpanel med Analysis Workspace ovanpå Adobe Experience Platform](./modules/reporting-insights/cja-b2c/cjab2c-1/customer-journey-analytics-build-a-dashboard.md){target="_blank"} | 06/01/2025 | Ja | – |
 | [1.2 Customer Journey Analytics: Importera och analysera Google Analytics-data i Adobe Experience Platform med BigQuery Source Connector](./modules/reporting-insights/cja-b2c/cjab2c-2/customer-journey-analytics-bigquery-gcp.md){target="_blank"} | 07/01/2025 | Nej | Det har uppstått ett problem med modelleringen av dataförberedelser för källdata. Detta väntar på en korrigering. |
 | [2.1-frågetjänst](./modules/reporting-insights/datadistiller/dd-1/query-service.md){target="_blank"} | 04/12/2024 | Ja | – |
+| [3.1 Content Analytics](./modules/reporting-insights/content/module3.1/contentanalytics.md){target="_blank"} | 02/08/2025 | Nej | Innehåll som utvecklas |
 
 {style="table-layout:auto"}
 

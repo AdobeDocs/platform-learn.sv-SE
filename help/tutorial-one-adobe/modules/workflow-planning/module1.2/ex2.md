@@ -4,9 +4,9 @@ description: Korrektur med Workfront
 kt: 5342
 doc-type: tutorial
 exl-id: 5feb9486-bdb4-4d59-941c-09fc2e38163b
-source-git-commit: 19291afe2d8101fead734fa20212a3db76369522
+source-git-commit: 42f6d8a07baa03a9ab31cff0ef518ae2c5ad930e
 workflow-type: tm+mt
-source-wordcount: '810'
+source-wordcount: '825'
 ht-degree: 0%
 
 ---
@@ -224,6 +224,14 @@ Klicka på **Välj mapp**.
 Efter 1-2 minuter publiceras dokumentet nu i AEM Assets. En AEM-ikon visas bredvid dokumentnamnet.
 
 ![WF](./images/wfp37a.png)
+
+Klicka på **Markera som slutförd** om du vill slutföra den här uppgiften.
+
+![WF](./images/wfp37b.png)
+
+Du borde se det här då.
+
+![WF](./images/wfp37c.png)
 
 ## 1.2.2.5 Visa filen i AEM Assets
 

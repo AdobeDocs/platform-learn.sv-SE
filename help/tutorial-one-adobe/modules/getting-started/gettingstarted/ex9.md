@@ -3,9 +3,9 @@ title: Komma igång - Program som ska installeras
 description: Komma igång - Program som ska installeras
 doc-type: multipage-overview
 exl-id: 25f80da8-88c3-4273-962a-476675cf6047
-source-git-commit: a1da1c73cbddacde00211190a1ca3d36f7a2c329
+source-git-commit: efb4ecf90a27d00d256c1648e78c6e295199733e
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '274'
 ht-degree: 0%
 
 ---
@@ -31,6 +31,26 @@ Gå till [https://creativecloud.adobe.com/apps/download/creative-cloud](https://
 Öppna appen **Adobe Creative Cloud** och gå till **Appar**. Installera Illustrator på datorn.
 
 ![Adobe I/O Ny integrering](./images/psd.png)
+
+## Adobe Premiere Pro
+
+Installera Adobe Premiere Pro Beta-versionen på datorn från [https://helpx.adobe.com/premiere-pro/using/premiere-pro-beta.html](https://helpx.adobe.com/premiere-pro/using/premiere-pro-beta.html)
+
+![Adobe I/O Ny integrering](./images/prpro.png)
+
+Klicka på **Öppna Creative Cloud-datorprogrammet**.
+
+![Adobe I/O Ny integrering](./images/prpro1.png)
+
+Klicka på **Installera** på kortet för appen **Premiere Pro (Beta)**.
+
+![Adobe I/O Ny integrering](./images/prpro2.png)
+
+## App: Frame.io Transfer
+
+Gå till [https://frame.io/transfer](https://frame.io/transfer) och hämta datorversionen.
+
+![Frame.io](./images/frameio11.png)
 
 ## Visual Studio Code
 

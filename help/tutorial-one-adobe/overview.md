@@ -3,9 +3,9 @@ title: Översikt - Omfattande teknisk självstudiekurs - en Adobe
 description: Omfattande teknisk självstudiekurs - en Adobe
 doc-type: multipage-overview
 exl-id: 5bc0d621-0662-4d94-80a0-b6c173c0ac9e
-source-git-commit: 34f37a33e874f55eea37290b5626ab613f575764
+source-git-commit: 8ed0b38056c6e2db4937bfaa9cfb53f5878250ee
 workflow-type: tm+mt
-source-wordcount: '1122'
+source-wordcount: '1166'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,11 @@ I den här modulen kommer du att använda Adobe GenStudio for Performance Market
 
 [1.4 Adobe Express och Adobe Experience Cloud](./modules/creation-production/module1.4/express.md){target="_blank"}
 
-I den här grundläggande modulen kommer du att använda Adobe Express för att skapa bilder och videor, och du kommer att dela dessa resurser med hela Adobe Experience Cloud ekosystem.
+I den här modulen ska du använda Adobe Express för att skapa bilder och videor, och du kommer att dela dessa resurser med hela Adobe Experience Cloud ekosystem.
+
+[1.5 Effektivisera arbetsflödet med Frame.io](./modules/creation-production/module1.5/frameio.md){target="_blank"}
+
+I den här modulen använder du Adobe Frame.io i kombination med Adobe Premiere Pro för att samarbeta och granska bilder och videor.
 
 ### &#x200B;3. Resurshantering
 
@@ -185,6 +189,12 @@ I den här modulen ska du konfigurera en egen instans av Google Cloud Platform, 
 [2.1 Frågetjänst](./modules/reporting-insights/datadistiller/dd-1/query-service.md)
 
 I den här modulen får du lära dig hur du använder Adobe Experience Platform Query Service.
+
+#### Content Analytics
+
+[3.1 Content Analytics](./modules/reporting-insights/content/module3.1/contentanalytics.md)
+
+I den här modulen får du lära dig hur du implementerar och använder Adobe Content Analytics.
 
 ![Tech Insiders](./assets/images/techinsiders.png){width="50px" align="left"}
 
