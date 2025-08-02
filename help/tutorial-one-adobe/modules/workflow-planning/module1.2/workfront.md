@@ -3,14 +3,15 @@ title: Arbetsflödeshantering med Adobe Workfront
 description: Arbetsflödeshantering med Adobe Workfront
 kt: 5342
 doc-type: tutorial
-source-git-commit: d583df79bff499b7605f77146d52e66bc02810b9
+exl-id: 8cffcb71-63bd-41cb-b7cd-ab34a0c74499
+source-git-commit: 19291afe2d8101fead734fa20212a3db76369522
 workflow-type: tm+mt
-source-wordcount: '138'
+source-wordcount: '169'
 ht-degree: 0%
 
 ---
 
-# 1.2 Arbetsflödeshantering med Adobe Workfront
+# 1.2 Arbetsflödeshantering med Adobe Workfront Workflow
 
 ## Utbildningsmål
 
@@ -22,15 +23,19 @@ ht-degree: 0%
 
 ## Utövningar
 
-[1.2.1 Komma igång med Workfront](./ex1.md){target="_blank"}
+[1.2.1 Integrering av Workfront + AEM Assets CS-metadata](./ex1.md){target="_blank"}
 
-I den här övningen ska du ange ett antal grundläggande inställningar i Workfront.
+I den här övningen ska du skapa integreringen mellan Workfront och AEM Assets CS.
 
 [1.2.2 Korrektur med Workfront](./ex2.md)
 
 I den här övningen ska du konfigurera och använda ett arbetsflöde för korrekturgodkännande.
 
-[1.2.5 Integrering med Workfront + Photoshop](./ex5.md){target="_blank"}
+[1.2.4 Workfront + AEM Sites CS Integration](./ex4.md){target="_blank"}
+
+I den här övningen ska du konfigurera och börja använda plugin-programmet som ansluter Adobe Experience Manager Cloud Service Sites till Adobe Workfront.
+
+[1.2.5 Workfront + Photoshop-integrering](./ex5.md){target="_blank"}
 
 I den här övningen ska du konfigurera och börja använda det plugin-program som ansluter Adobe Photoshop till Adobe Workfront.
 

@@ -3,20 +3,23 @@ title: Korrektur med Workfront
 description: Korrektur med Workfront
 kt: 5342
 doc-type: tutorial
-source-git-commit: d583df79bff499b7605f77146d52e66bc02810b9
+exl-id: 5feb9486-bdb4-4d59-941c-09fc2e38163b
+source-git-commit: 19291afe2d8101fead734fa20212a3db76369522
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '810'
 ht-degree: 0%
 
 ---
 
 # 1.2.2 Korrektur med Workfront
 
+>[!IMPORTANT]
+>
+>Om du tidigare har konfigurerat ett AEM CS-program med en AEM Assets CS-miljö kan det bero på att din AEM CS-sandlåda är i viloläge. Eftersom det tar 10-15 minuter att dölja en sådan sandlåda, är det en bra idé att starta separationsprocessen nu så att du inte behöver vänta på den vid ett senare tillfälle.
+
 ## 1.2.2.1 Skapa ett nytt godkännandeflöde
 
-Gå till [https://experienceplatform.my.workfront.com/](https://experienceplatform.my.workfront.com/){target="_blank"}.
-
-Klicka på ikonen **hamburger** med nio punkter och välj **Korrektur**.
+Gå tillbaka till **Adobe Workfront**. Klicka på ikonen **menu** och välj **Korrektur**.
 
 ![WF](./images/wfp1.png)
 
@@ -28,7 +31,7 @@ Ange **mallnamnet** till `--aepUserLdap-- - Approval Workflow` och ställ in **m
 
 ![WF](./images/wfp3.png)
 
-Bläddra nedåt och under **Steg** > **Steg 1** lägger du till **Wouter Van Geluwe** med **rollen** för **Granskare och godkännare**.
+Bläddra nedåt och under **Steg** > **Steg 1** lägger du till dig själv med **rollen** i **Granskare och godkännare**.
 
 Klicka på **Skapa**.
 
@@ -40,13 +43,35 @@ Ditt grundläggande arbetsflöde för godkännande är nu klart att användas.
 
 ## 1.2.2.2 Skapa ett nytt projekt
 
-Klicka på **Nytt** på fliken **Mina projekt** på startsidan för Workfront. Välj **Tomt projekt**.
+Öppna **menyn** och gå till **Program**.
+
+![WF](./images/wfp6a.png)
+
+Klicka på det program du skapade tidigare, med namnet `--aepUserLdap-- CitiSignal Fiber Launch`.
+
+>[!NOTE]
+>
+>Du skapade ett program som en del av övningen på [Workfront Planning](./../module1.1/ex1.md) med den automatisering du skapade och körde. Om du inte har gjort det än kan du hitta instruktionerna där.
+
+![WF](./images/wfp6b.png)
+
+Gå till **Projekt** i ditt program. Klicka på **+ Nytt projekt** och välj sedan **Nytt projekt**.
 
 ![WF](./images/wfp6.png)
 
 Du borde se det här då. Ändra namnet till `--aepUserLdap-- - CitiSignal Fiber Launch`.
 
-![WF](./images/wfp6a.png)
+![WF](./images/wfp6c.png)
+
+Gå till **Projektinformation**. Klicka på **+Lägg till** under **Beskrivning**.
+
+![WF](./images/wfp6d.png)
+
+Ange beskrivningen till `The CitiSignal Fiber Launch project is used to plan the upcoming launch of CitiSignal Fiber.`
+
+Klicka på **Spara ändringar**.
+
+![WF](./images/wfp6e.png)
 
 Ditt projekt har skapats.
 
@@ -54,7 +79,15 @@ Ditt projekt har skapats.
 
 ## 1.2.2.3 Skapa en ny aktivitet
 
-Ange det här namnet för din aktivitet: **Skapa resurser för Fibre-kampanj**. Klicka på **Skapa uppgift**.
+Gå till **Åtgärder** och klicka på **+ Ny aktivitet**.
+
+![WF](./images/wfp7a.png)
+
+Ange det här namnet för din uppgift: `Create assets for Fiber campaign`.
+
+Ställ in fältet **Beskrivning** till: `This task is used to track the progress of the creation of the assets for the CitiSignal Fiber Launch Campaign.`
+
+Klicka på **Skapa uppgift**.
 
 ![WF](./images/wfp8.png)
 
@@ -62,9 +95,25 @@ Du borde se det här då.
 
 ![WF](./images/wfp9.png)
 
+Lägg till ditt namn i kolumnen **Tilldelning**.
+
+![WF](./images/wfp9a.png)
+
+Uppgiften tilldelas sedan till dig.
+
+![WF](./images/wfp9b.png)
+
 ## 1.2.2.4 Lägg till ett nytt dokument i din uppgift via godkännandeflödet
 
-Klicka på **+ Lägg till ny** och välj sedan **Dokument**.
+Klicka på **Workfront**-logotypen för att gå tillbaka till översiktssidan. Du bör då se projektet som du just skapade visas i översikten. Klicka på projektet för att öppna det.
+
+![WF](./images/wfp9c.png)
+
+Öppna uppgiften genom att klicka i **Aktiviteter**.
+
+![WF](./images/wfp9d.png)
+
+Gå till **Dokument**. Klicka på **+ Lägg till ny** och välj sedan **Dokument**.
 
 ![WF](./images/wfp10.png)
 
@@ -76,21 +125,13 @@ Markera filen **2048x2048.png** och klicka på **Öppna**.
 
 ![WF](./images/wfp12.png)
 
-Du borde ha den här då. Klicka på **Skapa korrektur** och välj sedan **Avancerat korrektur**.
+Du borde ha den här då. Håll muspekaren över det överförda dokumentet. Klicka på **Skapa korrektur** och välj sedan **Avancerat korrektur**.
 
 ![WF](./images/wfp13.png)
 
-I fönstret **nytt korrektur** väljer du den arbetsflödesmall som du skapade tidigare och som ska ha namnet `--aepUserLdap-- - Approval Workflow`. Klicka på **Skapa bevis**.
+Välj **Automatiserad** i fönstret **Nytt korrektur** och välj sedan den arbetsflödesmall som du skapade tidigare, som ska ha namnet `--aepUserLdap-- - Approval Workflow`. Klicka på **Skapa bevis**.
 
 ![WF](./images/wfp14.png)
-
-Du kommer sedan att vara tillbaka i din uppgift. Klicka på knappen **Tilldela till** och välj **Tilldela till mig**.
-
-![WF](./images/wfp15.png)
-
-Klicka på **Spara**.
-
-![WF](./images/wfp16.png)
 
 Klicka på **Arbeta med den**.
 
@@ -124,7 +165,7 @@ Välj **Ändringar krävs** och klicka på **Fatta beslut**.
 
 ![WF](./images/wfp24.png)
 
-Du borde vara tillbaka här. Nu måste du ladda upp en andra bild som tar hänsyn till de kommentarer som lämnats.
+Gå tillbaka till din **aktivitet** och **dokumentet**. Nu måste du ladda upp en andra bild som tar hänsyn till de kommentarer som lämnats.
 
 ![WF](./images/wfp25.png)
 
@@ -160,7 +201,7 @@ Klicka på **Fatta beslut**, välj **Godkänd** och klicka på **Fatta beslut** 
 
 ![WF](./images/wfp32.png)
 
-Stäng korrekturförhandsgranskningen.
+Klicka på **Aktivitetsnamnet** för att gå tillbaka till aktivitetsöversikten.
 
 ![WF](./images/wfp33.png)
 
@@ -168,11 +209,11 @@ Du kommer sedan tillbaka i aktivitetsvyn med en godkänd resurs. Materialet mås
 
 ![WF](./images/wfp34.png)
 
-Klicka på ikonen **Dela-pil** och välj den AEM Assets-integrering som ska ha namnet `--aepUserLdap-- - Citi Signal AEM`.
+Välj det godkända dokumentet. Klicka på ikonen **Dela-pil** och välj den AEM Assets-integrering som ska ha namnet `--aepUserLdap-- - CitiSignal AEM`.
 
 ![WF](./images/wfp35.png)
 
-Dubbelklicka på mappen som du skapade tidigare, som bör ha namnet `--aepUserLdap-- - Workfront Assets`.
+Dubbelklicka på mappen som du skapade tidigare, som bör ha namnet `--aepUserLdap-- - CitiSignal Fiber Launch Assets`.
 
 ![WF](./images/wfp36.png)
 
@@ -184,29 +225,13 @@ Efter 1-2 minuter publiceras dokumentet nu i AEM Assets. En AEM-ikon visas bredv
 
 ![WF](./images/wfp37a.png)
 
-Klicka på **Öppna sammanfattning**.
-
-![WF](./images/wfp38.png)
-
-Gå till **Metadata** och se följande:
-
-![WF](./images/wfp39.png)
-
-Gå till **Översikt** och klicka på **+ Lägg till** för att lägga till en beskrivning.
-
-![WF](./images/wfp40.png)
-
-Ange din beskrivning. Dina korrektur- och dokumentinställningar är nu klara.
-
-![WF](./images/wfp41.png)
-
 ## 1.2.2.5 Visa filen i AEM Assets
 
-Gå till din mapp i AEM Assets med namnet `--aepUserLdap-- - Workfront Assets`.
+Gå till din mapp i AEM Assets CS med namnet `--aepUserLdap-- - CitiSignal Fiber Launch Assets`.
 
 ![WF](./images/wfppaem1.png)
 
-Klicka på de tre punkterna under bilden och välj sedan **Detaljer**.
+Markera bilden och välj sedan **Detaljer**.
 
 ![WF](./images/wfppaem2.png)
 

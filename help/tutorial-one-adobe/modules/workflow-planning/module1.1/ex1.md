@@ -3,9 +3,10 @@ title: Komma igång med Workfront Planning
 description: Komma igång med Workfront Planning
 kt: 5342
 doc-type: tutorial
-source-git-commit: 23176cb4a07a52ec3500ee9922d851f658351c06
+exl-id: 26fa872b-c872-46b6-8f56-fa41696100da
+source-git-commit: 19291afe2d8101fead734fa20212a3db76369522
 workflow-type: tm+mt
-source-wordcount: '1083'
+source-wordcount: '1084'
 ht-degree: 0%
 
 ---
@@ -196,7 +197,7 @@ Du bör sedan se den senast skapade kampanjen i översikten.
 
 ![Workfront Planning](./images/wfpl35.png)
 
-## 1.1.1.7 Skapa en automatisering
+## 1.1.1.7 Skapa Portfolio &amp; anpassat formulär
 
 I nästa steg skapar du en automatisering som hämtar information från den kampanj du skapade i Workfront Planning och som kommer att använda informationen i Workfront för att skapa ett program. Innan du kan skapa automatiseringen finns det två saker att konfigurera i Workfront först: en portfölj och ett anpassat formulär.
 
@@ -224,7 +225,7 @@ Välj **Program** och klicka på **Fortsätt**.
 
 ![Workfront Planning](./images/wfplss6.png)
 
-Ändra formulärets namn till `--aepUserLdap-- Program Information`.
+Ändra formulärets namn till `--aepUserLdap-- - Program Information`.
 
 ![Workfront Planning](./images/wfplss7.png)
 

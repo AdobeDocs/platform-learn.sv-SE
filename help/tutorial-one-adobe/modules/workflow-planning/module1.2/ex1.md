@@ -3,16 +3,33 @@ title: Komma igång med Workfront
 description: Komma igång med Workfront
 kt: 5342
 doc-type: tutorial
-source-git-commit: d583df79bff499b7605f77146d52e66bc02810b9
+exl-id: 0867d7fd-4d12-46d8-a5ae-bb8db1575635
+source-git-commit: 19291afe2d8101fead734fa20212a3db76369522
 workflow-type: tm+mt
-source-wordcount: '764'
+source-wordcount: '824'
 ht-degree: 0%
 
 ---
 
-# 1.2.1 Komma igång med Workfront
+# 1.2.1 Integrering av Workfront + AEM Assets CS-metadata
 
-Logga in på Adobe Workfront på [https://experienceplatform.my.workfront.com/](https://experienceplatform.my.workfront.com/){target="_blank"}.
+>[!IMPORTANT]
+>
+>För att slutföra den här övningen måste du ha tillgång till en fungerande AEM Assets CS-redigeringsmiljö.
+>
+>Det finns två alternativ:
+>
+>- Om du deltar i GenStudio för CSC Technical Enablement har dina lärare skapat en AEM Assets CS Author-miljö åt dig. Kontrollera med dem vad namnet är och hur du fortsätter.
+>
+>- Om du följer den fullständiga sökvägen till en Adobe-självstudiekurs går du till [Adobe Experience Manager Cloud Service &amp; Edge Delivery Services](./../../../modules/asset-mgmt/module2.1/aemcs.md){target="_blank"}. Följ instruktionerna där så får du tillgång till en sådan miljö.
+
+>[!IMPORTANT]
+>
+>Om du tidigare har konfigurerat ett AEM CS-program med en AEM Assets CS-miljö kan det bero på att din AEM CS-sandlåda är i viloläge. Eftersom det tar 10-15 minuter att dölja en sådan sandlåda, är det en bra idé att starta separationsprocessen nu så att du inte behöver vänta på den vid ett senare tillfälle.
+
+Gå till [https://experience.adobe.com/](https://experience.adobe.com/){target="_blank"}. Klicka för att öppna **Workfront**.
+
+![Workfront Planning](./../module1.1/images/wfpl1.png)
 
 Då ser du det här.
 
@@ -20,21 +37,17 @@ Då ser du det här.
 
 ## 1.2.1.1 Konfigurera din AEM Assets-integrering
 
-Klicka på ikonen **hamburger** med nio punkter och välj sedan **Konfigurera**.
+Klicka på ikonen **menu** och välj sedan **Konfigurera**.
 
 ![WF](./images/wfb2.png)
 
-Bläddra nedåt till **Dokument** på den vänstra menyn och klicka sedan på **Experience Manager Assets**.
+Bläddra nedåt till **Dokument** på den vänstra menyn och klicka sedan på **Experience Manager Assets**. Klicka på **+ Lägg till Experience Manager-integrering**.
 
 ![WF](./images/wfb3.png)
 
-Klicka på **+ Lägg till Experience Manager-integrering**.
+Använd `--aepUserLdap-- - CitiSignal AEM` för integreringens namn.
 
-![WF](./images/wfb4.png)
-
-Använd `--aepUserLdap-- - Citi Signal AEM` för integreringens namn.
-
-Öppna listrutan **Experience Manager-databas** och välj din AEM CS-instans, som bör ha namnet `--aepUserLdap-- - Citi Signal`.
+Öppna listrutan **Experience Manager-databas** och välj din AEM CS-instans, som bör ha namnet `--aepUserLdap-- - CitiSignal`.
 
 ![WF](./images/wfb5.png)
 
@@ -43,9 +56,12 @@ Konfigurera följande mappning under **Metadata**:
 | Workfront Field | Experience Manager Assets |
 | --------------- | ------------------------------ | 
 | **Dokument** > **Namn** | **wm:documentName** |
+| **Projekt** > **Namn** | **wm:projectName** |
 | **Projekt** > **Beskrivning** | **wm:projectDescription** |
+| **Dokumentbegäran** > **Status** | **wm:wm:documentStatus** |
 | **Aktivitet** > **Namn** | **wm:taskName** |
 | **Aktivitet** > **Beskrivning** | **wm:taskDescription** |
+| **Projekt** > **ID** | **wm:projectId** |
 
 Aktivera växeln för **Synkronisera objektmetadata**.
 
@@ -59,21 +75,25 @@ Din integrering från Workfront till AEM Assets CS är nu konfigurerad.
 
 ## 1.2.1.2 Konfigurera metadataintegrering med AEM Assets
 
-Därefter måste du konfigurera AEM Assets så att metadatafälten från resursen i Workfront delas med AEM.
+Därefter måste du konfigurera AEM Assets CS så att metadatafälten från resursen i Workfront delas med AEM Assets CS.
 
 Gå till [https://experience.adobe.com/](https://experience.adobe.com/) om du vill göra det. Klicka på **Experience Manager Assets**.
 
 ![WF](./images/wfbaem1.png)
 
-Klicka för att välja din AEM Assets-miljö, som ska få namnet `--aepUserLdap-- - Citi Signal dev`.
+Klicka för att välja din AEM Assets-miljö, som ska få namnet `--aepUserLdap-- - CitiSignal dev`.
 
 ![WF](./images/wfbaem2.png)
 
-Du borde se det här då. Gå till **Assets** på den vänstra menyn och klicka på **Skapa mapp**.
+Du borde se det här då. Gå till **Assets** på den vänstra menyn.
 
 ![WF](./images/wfbaem3.png)
 
-Namnge mappen `--aepUserLdap-- - Workfront Assets` och klicka på **Skapa**.
+Klicka sedan på **Skapa mapp**.
+
+![WF](./images/wfbaem3a.png)
+
+Namnge mappen `--aepUserLdap-- - CitiSignal Fiber Launch Assets` och klicka på **Skapa**.
 
 ![WF](./images/wfbaem4.png)
 
@@ -85,19 +105,31 @@ Använd namnet `--aepUserLdap-- - Metadata Form` och klicka på **Skapa**.
 
 ![WF](./images/wfbaem6.png)
 
-Lägg till tre nya **enkelradiga textfält** i formuläret och markera det första fältet. Klicka sedan på ikonen **Schema** bredvid fältet **Metadata-egenskap** .
+Lägg till 7 nya **enkelradiga textfält** i formuläret och markera det första fältet. Klicka sedan på ikonen **Schema** bredvid fältet **Metadata-egenskap** för det första fältet.
 
 ![WF](./images/wfbaem7.png)
+
+Du kommer då att se den här popup-rutan. Ange `wm:project` i sökfältet och markera sedan fältet **Projektnamn**. Klicka på **Markera**.
+
+![WF](./images/wfbaem11.png)
+
+Ändra fältets etikett till `Project Name`. Klicka på **Spara**.
+
+![WF](./images/wfbaem12.png)
+
+Gå till det andra fältet och klicka på ikonen **Schema** bredvid fältet **Metadataegenskap** .
+
+![WF](./images/wfbaem12a.png)
 
 Ange `wm:project` i sökfältet och markera sedan fältet **Projektbeskrivning**. Klicka på **Markera**.
 
 ![WF](./images/wfbaem8.png)
 
-Ändra fältets etikett till **Projektbeskrivning**.
+Ändra fältets etikett till `Project Description`.
 
 ![WF](./images/wfbaem9.png)
 
-Markera sedan det andra **enkelradiga textfältet** och klicka på ikonen **Schema** bredvid fältet **Metadata-egenskap** igen.
+Markera sedan det tredje fältet och klicka på ikonen **Schema** bredvid fältet **Metadataegenskap** igen.
 
 ![WF](./images/wfbaem10b.png)
 
@@ -105,25 +137,65 @@ Du kommer då att se den här popup-rutan igen. Ange `wm:project` i sökfältet 
 
 ![WF](./images/wfbaem10.png)
 
-Ändra fältets etikett till **projekt-ID**.
+Ändra fältets etikett till `Project ID`.
 
 ![WF](./images/wfbaem10a.png)
 
-Markera det tredje fältet **Enkelradig text** och klicka på ikonen **Schema** bredvid fältet **Metadataegenskap** igen.
+Markera sedan det fjärde fältet och klicka på ikonen **Schema** bredvid fältet **Metadataegenskap** igen.
 
 ![WF](./images/wfbaem11a.png)
 
-Du kommer då att se den här popup-rutan igen. Ange `wm:project` i sökfältet och markera sedan fältet **Projektnamn**. Klicka på **Markera**.
+Du kommer då att se den här popup-rutan igen. Ange `wm:document` i sökfältet och markera sedan fältet **Projekt-ID**. Klicka på **Markera**.
 
-![WF](./images/wfbaem11.png)
+![WF](./images/wfbaem101.png)
 
-Ändra etiketten för fältet till **Projektnamn**. Klicka på **Spara**.
+Ändra fältets etikett till `Document Status`.
 
-![WF](./images/wfbaem12.png)
+![WF](./images/wfbaem102.png)
 
-Ändra **fliknamnet** i formuläret till `--aepUserLdap-- - Workfront Metadata`. Klicka på **Spara** och **Stäng**.
+Markera sedan det femte fältet och klicka på ikonen **Schema** bredvid fältet **Metadataegenskap** igen.
+
+![WF](./images/wfbaem103.png)
+
+Du kommer då att se den här popup-rutan igen. Ange `wm:document` i sökfältet och markera sedan fältet **Projekt-ID**. Klicka på **Markera**.
+
+![WF](./images/wfbaem104.png)
+
+Ändra fältets etikett till `Document Name`.
+
+![WF](./images/wfbaem105.png)
+
+Markera sedan det sjätte fältet och klicka på ikonen **Schema** bredvid fältet **Metadataegenskap** igen.
+
+![WF](./images/wfbaem106.png)
+
+Du kommer då att se den här popup-rutan igen. Ange `wm:task` i sökfältet och markera sedan fältet **Uppgiftsnamn**. Klicka på **Markera**.
+
+![WF](./images/wfbaem107.png)
+
+Ändra fältets etikett till `Task Name`.
+
+![WF](./images/wfbaem108.png)
+
+Markera sedan det sjunde fältet och klicka på ikonen **Schema** bredvid fältet **Metadataegenskap** igen.
+
+![WF](./images/wfbaem109.png)
+
+Du kommer då att se den här popup-rutan igen. Ange `wm:task` i sökfältet och markera sedan fältet **Aktivitetsbeskrivning**. Klicka på **Markera**.
+
+![WF](./images/wfbaem110.png)
+
+Ändra fältets etikett till `Task Description`.
+
+![WF](./images/wfbaem111.png)
+
+Ändra **fliknamnet** i formuläret till `--aepUserLdap-- - Workfront Metadata`.
 
 ![WF](./images/wfbaem13.png)
+
+Klicka på **Spara** och **Stäng**.
+
+![WF](./images/wfbaem13a.png)
 
 **Metadataformuläret** har konfigurerats.
 
@@ -133,111 +205,13 @@ Därefter måste du tilldela metadataformuläret till mappen som du skapade tidi
 
 ![WF](./images/wfbaem15.png)
 
-Välj din mapp som ska ha namnet `--aepUserLdap-- - Workfront Assets`. Klicka på **Tilldela**.
+Välj din mapp som ska ha namnet `--aepUserLdap-- - CitiSignal Fiber Launch Assets`. Klicka på **Tilldela**.
 
 ![WF](./images/wfbaem16.png)
 
 Metadataformuläret har nu tilldelats mappen.
 
 ![WF](./images/wfbaem17.png)
-
-## 1.2.1.2 Konfigurera din AEM Sites-integrering
-
->[!NOTE]
->
->Det här plugin-programmet är för närvarande i läget **Tidig åtkomst** och är inte allmänt tillgängligt än.
->
->Detta plugin-program kan redan vara installerat i den Workfront-instans som du använder. Om den redan är installerad kan du läsa instruktionerna nedan, men du behöver inte ändra något i konfigurationen då.
-
-Gå till [https://experience.adobe.com/#/@experienceplatform/aem/extension-manager/universal-editor](https://experience.adobe.com/#/@experienceplatform/aem/extension-manager/universal-editor){target="_blank"}.
-
-Kontrollera att **toggle** för det här plugin-programmet är inställt på **Enabled**. Klicka sedan på ikonen **kugghjulet** .
-
-![WF](./images/wfb8.png)
-
-En popup-meny för **tilläggskonfiguration** visas. Konfigurera följande fält för att använda det här plugin-programmet.
-
-| Nyckel | Värde |
-| --------------- | ------------------------------ | 
-| **`IMS_ENV`** | **PROD** |
-| **`WORKFRONT_INSTANCE_URL`** | **https://experienceplatform.my.workfront.com** |
-| **`SHOW_CUSTOM_FORMS`** | **&#39;{&quot;previewUrl&quot;: true, &quot;publishUrl&quot;: true}&#39;** |
-
-Klicka på **Spara**.
-
-![WF](./images/wfb8.png)
-
-Gå tillbaka till ditt Workfront-gränssnitt och klicka på ikonen **hamburger** med nio punkter. Välj **Konfigurera**.
-
-![WF](./images/wfb9.png)
-
-Gå till **Anpassad Forms** på den vänstra menyn och välj **Formulär**. Klicka på **+ Nytt anpassat formulär**.
-
-![WF](./images/wfb10.png)
-
-Välj **Aktivitet** och klicka på **Fortsätt**.
-
-![WF](./images/wfb11.png)
-
-Då visas ett tomt anpassat formulär. Ange formulärnamnet `Content Fragment & Integration ID`.
-
-![WF](./images/wfb12.png)
-
-Dra och släpp ett nytt **enkelradigt textfält** på arbetsytan.
-
-![WF](./images/wfb13.png)
-
-Konfigurera det nya fältet så här:
-
-- **Etikett**: **Innehållsfragment**
-- **Namn**: **`aem_workfront_integration_content_fragment`**
-
-![WF](./images/wfb14.png)
-
-Lägg till ett nytt **enradigt textfält** på arbetsytan och konfigurera det nya fältet så här:
-
-- **Etikett**: **Integrerings-ID**
-- **Namn**: **`aem_workfront_integration_id`**
-
-Klicka på **Använd**.
-
-![WF](./images/wfb15.png)
-
-Nu måste du konfigurera ett andra anpassat formulär. Klicka på **+ Nytt anpassat formulär**.
-
-![WF](./images/wfb10.png)
-
-Välj **Aktivitet** och klicka på **Fortsätt**.
-
-![WF](./images/wfb11.png)
-
-Då visas ett tomt anpassat formulär. Ange formulärnamnet `Preview & Publish URL`.
-
-![WF](./images/wfb16.png)
-
-Dra och släpp ett nytt **enkelradigt textfält** på arbetsytan.
-
-![WF](./images/wfb17.png)
-
-Konfigurera det nya fältet så här:
-
-- **Etikett**: **URL för förhandsgranskning**
-- **Namn**: **`aem_workfront_integration_preview_url`**
-
-![WF](./images/wfb18.png)
-
-Lägg till ett nytt **enradigt textfält** på arbetsytan och konfigurera det nya fältet så här:
-
-- **Etikett**: **Publicera URL**
-- **Namn**: **`aem_workfront_integration_publish_url`**
-
-Klicka på **Använd**.
-
-![WF](./images/wfb19.png)
-
-Du bör sedan ha 2 anpassade formulär tillgängliga.
-
-![WF](./images/wfb20.png)
 
 Nästa steg: [1.2.2 Korrektur med Workfront](./ex2.md){target="_blank"}
 

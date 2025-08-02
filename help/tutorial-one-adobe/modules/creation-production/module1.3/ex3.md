@@ -6,9 +6,9 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 2c7ef715-b8af-4a5b-8873-5409b43d7cb0
-source-git-commit: 10f1f6a1f77c41e3c912b3d03b73da7b6c68670c
+source-git-commit: 19291afe2d8101fead734fa20212a3db76369522
 workflow-type: tm+mt
-source-wordcount: '1273'
+source-wordcount: '1326'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,13 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->För att slutföra den här övningen måste du ha tillgång till en fungerande AEM Assets CS-redigeringsmiljö där AEM Content Hub är aktiverat. Om du följer övning [Adobe Experience Manager Cloud Service &amp; Edge Delivery Services](./../../../modules/asset-mgmt/module2.1/aemcs.md){target="_blank"} har du tillgång till en sådan miljö.
+>För att slutföra den här övningen måste du ha tillgång till en fungerande AEM Assets CS-redigeringsmiljö där AEM Assets Content Hub är aktiverat.
+>
+>Det finns två alternativ:
+>
+>- Om du deltar i GenStudio för CSC Technical Enablement har dina lärare skapat en AEM Assets CS Author-miljö åt dig. Kontrollera med dem vad namnet är och hur du fortsätter.
+>
+>- Om du följer den fullständiga sökvägen till en Adobe-självstudiekurs går du till [Adobe Experience Manager Cloud Service &amp; Edge Delivery Services](./../../../modules/asset-mgmt/module2.1/aemcs.md){target="_blank"}. Följ instruktionerna där så får du tillgång till en sådan miljö.
 
 >[!IMPORTANT]
 >

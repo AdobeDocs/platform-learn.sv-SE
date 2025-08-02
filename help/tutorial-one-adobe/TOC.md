@@ -4,9 +4,9 @@ breadcrumb-title: En teknisk självstudiekurs för Adobe
 hide: true
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-source-git-commit: d583df79bff499b7605f77146d52e66bc02810b9
+source-git-commit: 1fcb7b56cdf9ecf3520e3f293b120ddd0b67da74
 workflow-type: tm+mt
-source-wordcount: '1222'
+source-wordcount: '1239'
 ht-degree: 3%
 
 ---
@@ -15,6 +15,7 @@ ht-degree: 3%
 # En teknisk självstudiekurs för Adobe {#tutorial-one-adobe}
 
 + [Översikt över självstudiekursen](/help/tutorial-one-adobe/overview.md)
++ [GenStudio for Content Supply Chain Technical Enablement](/help/tutorial-one-adobe/genstudiocsc.md)
 + [Innehållsstatus](/help/tutorial-one-adobe/status.md)
 + [Slutförande](/help/tutorial-one-adobe/completion.md)
 
@@ -36,10 +37,11 @@ ht-degree: 3%
       + [Översikt](/help/tutorial-one-adobe/modules/workflow-planning/module1.1/wfplanning.md)
       + [1.1.1 Komma igång med Workfront Planning](/help/tutorial-one-adobe/modules/workflow-planning/module1.1/ex1.md)
       + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/workflow-planning/module1.1/summary.md)
-   + 1.2 Workfront {#wfpl2}
+   + 1.2 Workfront Workflow {#wfpl2}
       + [Översikt](/help/tutorial-one-adobe/modules/workflow-planning/module1.2/workfront.md)
-      + [1.2.1 Komma igång med Workfront](/help/tutorial-one-adobe/modules/workflow-planning/module1.2/ex1.md)
+      + [1.2.1 Integrering av Workfront + AEM Assets CS-metadata](/help/tutorial-one-adobe/modules/workflow-planning/module1.2/ex1.md)
       + [1.2.2 Korrektur med Workfront](/help/tutorial-one-adobe/modules/workflow-planning/module1.2/ex2.md)
+      + [1.2.4 Integrering med Workfront och AEM Sites CS](/help/tutorial-one-adobe/modules/workflow-planning/module1.2/ex4.md)
       + [1.2.5 Integrering med Workfront och Photoshop](/help/tutorial-one-adobe/modules/workflow-planning/module1.2/ex5.md)
       + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/workflow-planning/module1.2/summary.md)
 
