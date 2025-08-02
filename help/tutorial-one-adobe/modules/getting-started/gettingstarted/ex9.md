@@ -34,7 +34,7 @@ Gå till [https://creativecloud.adobe.com/apps/download/creative-cloud](https://
 
 ## Adobe Premiere Pro
 
-Installera Adobe Premiere Pro Beta-versionen på datorn från [https://helpx.adobe.com/premiere-pro/using/premiere-pro-beta.html](https://helpx.adobe.com/premiere-pro/using/premiere-pro-beta.html)
+Installera Adobe Premiere Pro Beta-versionen på datorn från [https://helpx.adobe.com/se/premiere-pro/using/premiere-pro-beta.html](https://helpx.adobe.com/se/premiere-pro/using/premiere-pro-beta.html)
 
 ![Adobe I/O Ny integrering](./images/prpro.png)
 
