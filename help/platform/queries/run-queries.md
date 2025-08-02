@@ -18,4 +18,4 @@ ht-degree: 0%
 
 Lär dig hur du använder Adobe Experience Platform Query Editor för att skapa, köra och hantera SQL-frågor på ett effektivt sätt. Tittarna får lära sig att använda funktioner som objektwebbläsaren, automatisk komplettering, parametriserade frågor och schemaläggningsverktyg för att effektivisera arbetsflödena och generera åtgärdbara insikter i hela organisationen. Mer information finns i [dokumentationen för frågetjänsten](https://experienceleague.adobe.com/sv/docs/experience-platform/query/home).
 
->[!VIDEO](https://video.tv.adobe.com/v/29796?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3470200?learn=on&enablevpops&captions=swe)

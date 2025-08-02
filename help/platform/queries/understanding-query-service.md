@@ -105,7 +105,7 @@ Med Adobe Experience Platform Query Service kan man utforska, validera och omvan
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="run-queries.md" title="Kör frågor med frågetjänsten" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/29796?format=jpeg&nocache=1740415310683" alt="Kör frågor med frågetjänsten"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3470200?format=jpeg&nocache=1740415310683&captions=swe" alt="Kör frågor med frågetjänsten"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
