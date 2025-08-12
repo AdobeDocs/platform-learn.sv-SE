@@ -69,7 +69,7 @@ I den här lektionen får du lära dig hur en federerad publik kan användas på
 
 11. Nu när personaliseringen av förnamnet har lagts till lägger du till `Hi, ` framför personaliseringsvariabeln. Klicka sedan på **Spara**.
 
-   ![resa-email-save](assets/journey-email-save.png)
+    ![resa-email-save](assets/journey-email-save.png)
 
 12. Klicka på knappen **Bakåt** två gånger för att återgå till arbetsytan. Klicka sedan på **Spara** på menyn **Åtgärd: E-post** till höger.
 
