@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # Översikt
 
-Federated Audience Composition är en kraftfull funktion för Adobe Real-Time Customer Data Platform (Real-Time CDP) och Adobe Journey Optimizer. Det gör det möjligt för dataarkitekter och datatekniker att skapa och berika målgrupper direkt från [stödda](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/access-prerequisites){target="_blank"} externa datalager utan att replikera data till Adobe Experience Platform. Den här självstudiekursen ger praktisk vägledning så att tekniska användare kan koppla samman informationslager på företagsnivå, skapa och berika målgrupper och aktivera dem för personaliserade marknadsföringsupplevelser.
+Federated Audience Composition är en kraftfull funktion för Adobe Real-Time Customer Data Platform (Real-Time CDP) och Adobe Journey Optimizer. Det gör det möjligt för dataarkitekter och datatekniker att skapa och berika målgrupper direkt från [stödda](https://experienceleague.adobe.com/sv/docs/federated-audience-composition/using/start/access-prerequisites){target="_blank"} externa datalager utan att replikera data till Adobe Experience Platform. Den här självstudiekursen ger praktisk vägledning så att tekniska användare kan koppla samman informationslager på företagsnivå, skapa och berika målgrupper och aktivera dem för personaliserade marknadsföringsupplevelser.
 
 ## Utbildningsmål
 
@@ -53,7 +53,7 @@ Se till att du har:
 
 - Tillgång till ett Adobe Experience Platform-konto som tillhandahålls med Real-Time CDP eller Journey Optimizer.
 - Behörigheter för systemadministratör eller möjlighet att konfigurera behörigheter.
-- Bekanta dig med Adobe Experience Platform-koncept, som scheman, datauppsättningar och målgrupper (rekommenderas: fyll i [Introduktion till Adobe Experience Platform-spellista](https://experienceleague.adobe.com/en/playlists/experience-platform-introduction?lang=en){target="_blank"} på Experience League).
+- Bekanta dig med Adobe Experience Platform-koncept, som scheman, datauppsättningar och målgrupper (rekommenderas: fyll i [Introduktion till Adobe Experience Platform-spellista](https://experienceleague.adobe.com/sv/playlists/experience-platform-introduction?lang=en){target="_blank"} på Experience League).
 - Tillgång till ett datalager för företag som stöds (t.ex. Amazon Redshift, Azure Synapse Analytics, Snowflake eller Google BigQuery).
 - Grundläggande kunskap i SQL för att fråga datalager.
 
@@ -64,6 +64,6 @@ Den här självstudiekursen är utformad för tekniska användare. Lektionerna b
 ## Tekniska anteckningar
 
 - **Sandlådemiljöer**: Skapa en sandlåda i din organisations Real-Time CDP-instans för att experimentera utan att påverka produktionsdata.
-- **Data Warehouse Connection**: I den här självstudien används en Snowflake-anslutning, men du kan använda vilket [molnlager](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/access-prerequisites) som helst.
+- **Data Warehouse Connection**: I den här självstudien används en Snowflake-anslutning, men du kan använda vilket [molnlager](https://experienceleague.adobe.com/sv/docs/federated-audience-composition/using/start/access-prerequisites) som helst.
 
 Börja med lektionen [Data Warehouse Connection](data-warehouse-connection.md) för att börja konfigurera din miljö.

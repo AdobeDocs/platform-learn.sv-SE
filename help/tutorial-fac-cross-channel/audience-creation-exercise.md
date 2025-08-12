@@ -63,6 +63,6 @@ Den här övningen vägleder dig genom att skapa en målgrupp från din Data War
 
 **Obs!** Vi använde produkt- och kreditinformation för att skapa vår målgrupp som inte flyttade känsliga data, som kreditpoäng, till efterföljande plattformar för aktivering.
 
-Mer information om målgruppssammansättning finns på [Experience League](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/compositions/create-composition/create-composition){target="_blank"}.
+Mer information om målgruppssammansättning finns på [Experience League](https://experienceleague.adobe.com/sv/docs/federated-audience-composition/using/compositions/create-composition/create-composition){target="_blank"}.
 
 Nu när vår externa målgrupp har skapats går vi vidare med att [mappa den till ett S3-konto](map-federated-audience-to-s3.md).
