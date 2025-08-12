@@ -7,9 +7,9 @@ role: Data Architect, Data Engineer
 jira: KT-18743
 thumbnail: 18743-create-an-audience.jpg
 hide: true
-source-git-commit: a5ae2695763bc3d6dce786861dcbc15f3422c035
+source-git-commit: b5611dccdba66d31f7dfcd96506e06d1bdd5fb3d
 workflow-type: tm+mt
-source-wordcount: '221'
+source-wordcount: '219'
 ht-degree: 0%
 
 ---
@@ -37,8 +37,7 @@ I den här övningen får du lära dig att utnyttja målgruppsattribut i ert dat
 
 5. Lämna alla standardinställningar i avsnittet **Schemaläggning** och klicka på **Nästa**.
 
-6. I steget **Mappning** kontrollerar du att följande är inkluderat och markerat som **dedupliceringsnyckel**. Klicka sedan på **Nästa**:
-   - `xdm: personalEmail.address`
+6. I steget **Mappning** kontrollerar du att `xdm: personalEmail.address` är inkluderad och markerad som **dedupliceringsnyckel**. Klicka sedan på **Nästa**:
 
    ![dedupliceringsnyckel](assets/deduplication-key.png)
 

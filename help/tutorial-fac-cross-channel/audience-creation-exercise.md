@@ -7,9 +7,9 @@ role: Data Architect, Data Engineer
 jira: KT-18743
 thumbnail: 18743-create-an-audience.jpg
 hide: true
-source-git-commit: a5ae2695763bc3d6dce786861dcbc15f3422c035
+source-git-commit: b5611dccdba66d31f7dfcd96506e06d1bdd5fb3d
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '300'
 ht-degree: 0%
 
 ---
@@ -26,19 +26,21 @@ Den här övningen vägleder dig genom att skapa en målgrupp från din Data War
 
    ![create-composition](assets/create-composition.png)
 
-3. Ange kompositionen som `SecurFinancial Customers - No Loans, Good Credit + [your lab user ID]`. Klicka på **Skapa**.
+3. Ange kompositionen som `SecurFinancial Customers - No Loans, Good Credit`. Klicka på **Skapa**.
 
 4. Klicka på knappen **+** på arbetsytan och välj **Skapa målgrupp**. Högerspåret ska visas.
 
 5. Klicka på **Välj ett schema** och välj **FSI_CRM**-schemat. Klicka sedan på **Bekräfta**.
 
 6. Klicka på **Fortsätt**. Klicka på knappen **+** och sedan på **Anpassat villkor** i fönstret för frågebyggaren. Skapa följande villkor:
-   - `CURRENTPRODUCTS does not contain loan`
-   - `AND`
-   - `CREDITSCORE greater than or equal to 650`
-   - Vi använder marknadsföringsdata för att segmentera kunder som har valt e-post som den kommunikationskanal de föredrar:
-   - `AND`
-   - `CONSENTSMARKETINGPREFERRED equal to email`
+
+   `CURRENTPRODUCTS does not contain loan`
+   `AND`
+   `CREDITSCORE greater than or equal to 650`
+   `AND`
+   `CONSENTSMARKETINGPREFERRED equal to email`
+
+   *Det sista villkoret garanterar att marknadsföringsinställningsdata används för att segmentera kunder som har valt e-post som den önskade kommunikationskanalen*.
 
    **Obs!** Värdefältet är skiftlägeskänsligt.
 
@@ -46,16 +48,16 @@ Den här övningen vägleder dig genom att skapa en målgrupp från din Data War
 
    ![query-builder](assets/query-builder.png)
 
-7. Klicka på nästa **+**-knapp och klicka sedan på **Spara målgrupp**.
-
-   Ge det här steget etiketten `SecurFinancial Customers - No Loans, Good Credit + [your lab user ID]`. Använd samma värde som målgruppsetiketten.
+7. Klicka på nästa **+**-knapp och klicka sedan på **Spara målgrupp**. Ge det här steget etiketten `SecurFinancial Customers - No Loans, Good Credit`. Använd samma värde som målgruppsetiketten.
 
 8. Lägg till följande målgruppsmappningar:
+
    - **Source målgruppsfält:** E-POST
    - **Source-målgruppsfält:** CURRENTPRODUCTS
    - **Source-målgruppsfält:** FÖRNAMN
 
 9. Välj den primära identiteten och namnutrymmet som ska användas för profiler:
+
    - **Primärt identitetsfält:** E-post
    - **Identitetsnamnrymd:** E-post
 
@@ -63,6 +65,6 @@ Den här övningen vägleder dig genom att skapa en målgrupp från din Data War
 
 **Obs!** Vi använde produkt- och kreditinformation för att skapa vår målgrupp som inte flyttade känsliga data, som kreditpoäng, till efterföljande plattformar för aktivering.
 
-Mer information om målgruppssammansättning finns på [Experience League](https://experienceleague.adobe.com/sv/docs/federated-audience-composition/using/compositions/create-composition/create-composition){target="_blank"}.
+Mer information om målgruppssammansättning finns på [Experience League](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/compositions/create-composition/create-composition){target="_blank"}.
 
 Nu när vår externa målgrupp har skapats går vi vidare med att [mappa den till ett S3-konto](map-federated-audience-to-s3.md).
