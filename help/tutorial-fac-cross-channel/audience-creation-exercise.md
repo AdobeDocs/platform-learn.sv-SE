@@ -6,9 +6,8 @@ description: I den här visuella övningen konfigurerar vi en anslutning mellan 
 role: Data Architect, Data Engineer
 jira: KT-18743
 thumbnail: 18743-create-an-audience.jpg
-hide: true
 exl-id: a507cab5-dba9-4bf7-a043-d7c967e9e07d
-source-git-commit: 0b596d45409b5033cec132edcb75d90b679f9c7d
+source-git-commit: 15619a8419f608da6a77745fabf72c356a2ac4b4
 workflow-type: tm+mt
 source-wordcount: '344'
 ht-degree: 0%
@@ -65,6 +64,6 @@ Sedan vägleder vi dig genom att skapa en målgrupp från Data Warehouse med Fed
 >
 > I det här exemplet användes produkt- och kreditinformation för att skapa en större publik genom direkt åtkomst av företagsdata från Snowflake, utan att man behöver göra en kopia av den i Adobe Experience Platform. När frågan bearbetas av det externa systemet kommer endast relevanta e-postadresser, aktuella produkter och förnamnsvärden att överföras till målgruppsdefinitionen för aktivering längre fram i kedjan. Detta gäller alla destinationer som RTCDP stöder.
 
-Mer information om målgruppssammansättning finns på [Experience League](https://experienceleague.adobe.com/sv/docs/federated-audience-composition/using/compositions/create-composition/create-composition){target="_blank"}.
+Mer information om målgruppssammansättning finns på [Experience League](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/compositions/create-composition/create-composition){target="_blank"}.
 
 Nu när vår federerade publik har skapats [mappar vi den till ett S3-konto](map-federated-audience-to-s3.md).

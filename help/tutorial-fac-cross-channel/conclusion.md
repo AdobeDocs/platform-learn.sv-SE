@@ -5,9 +5,8 @@ breadcrumb-title: Slutsats
 description: Sammanfattningsvis sammanfattar vi inlärningar och viktiga uppgifter.
 role: Data Architect, Data Engineer
 jira: KT-18743
-hide: true
 exl-id: 19f3065a-c439-44b6-9888-664c9a5cb33c
-source-git-commit: a3c8d8b03472d01f491bf787ed647a696d3a5524
+source-git-commit: 15619a8419f608da6a77745fabf72c356a2ac4b4
 workflow-type: tm+mt
 source-wordcount: '153'
 ht-degree: 0%

@@ -6,8 +6,7 @@ role: Data Architect, Data Engineer, Developer
 level: Beginner, Intermediate
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-hide: true
-source-git-commit: 0b596d45409b5033cec132edcb75d90b679f9c7d
+source-git-commit: 15619a8419f608da6a77745fabf72c356a2ac4b4
 workflow-type: tm+mt
 source-wordcount: '82'
 ht-degree: 3%

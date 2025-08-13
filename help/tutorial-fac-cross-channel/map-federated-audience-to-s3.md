@@ -6,9 +6,8 @@ description: I den här visuella övningen ska vi kartlägga en federerad målgr
 role: Data Architect, Data Engineer
 jira: KT-18743
 thumbnail: 18743-create-an-audience.jpg
-hide: true
 exl-id: a47b8f7b-7bd0-43a0-bc58-8b57d331b444
-source-git-commit: a3c8d8b03472d01f491bf787ed647a696d3a5524
+source-git-commit: 15619a8419f608da6a77745fabf72c356a2ac4b4
 workflow-type: tm+mt
 source-wordcount: '268'
 ht-degree: 0%

@@ -6,14 +6,13 @@ description: I den här visuella övningen utvärderas den federerade publiken p
 role: Data Architect, Data Engineer
 jira: KT-18743
 thumbnail: 18743-drive-in-the-moment-personalization.jpg
-hide: true
-source-git-commit: 0bbdc93969b4716407ecf51499d572cb50f5a0d3
+exl-id: 20bfafb1-1d1b-48d8-84eb-97d4c9e03b76
+source-git-commit: 3de9721332379f9fd3dd45768ba2ca2308e09357
 workflow-type: tm+mt
 source-wordcount: '178'
 ht-degree: 0%
 
 ---
-
 
 # Gör personalisering i nuet på Edge
 

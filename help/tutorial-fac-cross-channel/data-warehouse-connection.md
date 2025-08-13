@@ -6,9 +6,8 @@ description: I den här visuella övningen konfigurerar vi en anslutning mellan 
 role: Data Architect, Data Engineer
 jira: KT-18743
 thumbnail: 18743-configure-a-data-warehouse-connection.jpg
-hide: true
 exl-id: 3935f3ff-7728-4cd1-855e-2cd02c2ecc59
-source-git-commit: a3c8d8b03472d01f491bf787ed647a696d3a5524
+source-git-commit: 15619a8419f608da6a77745fabf72c356a2ac4b4
 workflow-type: tm+mt
 source-wordcount: '488'
 ht-degree: 0%
@@ -19,7 +18,7 @@ ht-degree: 0%
 
 Vi börjar med att konfigurera en anslutning mellan Adobe Experience Platform och ditt företags-Data Warehouse för att aktivera Federated Audience Composition. Detta gör att du kan fråga data direkt från de lagerställen som stöds utan replikering. Dessutom skapar vi scheman och datamodeller baserade på Data Warehouse-tabellerna.
 
-För att demonstrera ansluter vi till ett Snowflake-konto. Federated Audience Composition har stöd för en växande lista över anslutningar i molnlagerplatser. Se den [uppdaterade listan över integreringar](https://experienceleague.adobe.com/sv/docs/federated-audience-composition/using/start/access-prerequisites){target="_blank"}.
+För att demonstrera ansluter vi till ett Snowflake-konto. Federated Audience Composition har stöd för en växande lista över anslutningar i molnlagerplatser. Se den [uppdaterade listan över integreringar](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/access-prerequisites){target="_blank"}.
 
 ## Steg
 
