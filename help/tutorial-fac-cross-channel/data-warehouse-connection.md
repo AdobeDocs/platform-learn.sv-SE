@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Vi börjar med att konfigurera en anslutning mellan Adobe Experience Platform och ditt företags-Data Warehouse för att aktivera Federated Audience Composition. Detta gör att du kan fråga data direkt från de lagerställen som stöds utan replikering. Dessutom skapar vi scheman och datamodeller baserade på Data Warehouse-tabellerna.
 
-För att demonstrera ansluter vi till ett Snowflake-konto. Federated Audience Composition har stöd för en växande lista över anslutningar i molnlagerplatser. Se den [uppdaterade listan över integreringar](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/access-prerequisites){target="_blank"}.
+För att demonstrera ansluter vi till ett Snowflake-konto. Federated Audience Composition har stöd för en växande lista över anslutningar i molnlagerplatser. Se den [uppdaterade listan över integreringar](https://experienceleague.adobe.com/sv/docs/federated-audience-composition/using/start/access-prerequisites){target="_blank"}.
 
 ## Steg
 
