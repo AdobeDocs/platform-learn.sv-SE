@@ -2,29 +2,30 @@
 title: Slutsats
 seo-title: Conclusion | Unlock cross-channel insights with Federated Audience Composition
 breadcrumb-title: Slutsats
-description: I den här lektionen sammanfattar vi inlärningar och viktiga åtgärder.
+description: Sammanfattningsvis sammanfattar vi inlärningar och viktiga uppgifter.
 role: Data Architect, Data Engineer
 jira: KT-18743
 hide: true
-source-git-commit: a5ae2695763bc3d6dce786861dcbc15f3422c035
+exl-id: 19f3065a-c439-44b6-9888-664c9a5cb33c
+source-git-commit: a3c8d8b03472d01f491bf787ed647a696d3a5524
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '153'
 ht-degree: 0%
 
 ---
-
 
 # Slutsats
 
 Experience Platform Federated Audience Composition, ger nya vägar och utökad åtkomst för att skapa målgrupper från datalager till upplevelser som initierats av varumärket och just nu.
 
-I den här självstudiekursen introducerades Federated Audience Composition i Adobe Experience Platform. Du lärde dig att:
+Den här visuella guiden är en introduktion till Federated Audience Composition i Adobe Experience Platform. Du lärde dig att:
 
-- Anslut ett datalager till Adobe Experience Platform.
-- Skapa och berika målgrupper med lagerdata utan replikering.
-- Exportera målgrupper till Amazon S3 för användning längre fram i kedjan.
-- Skapa personaliserade kundresor med externa målgrupper.
-- Berika Experience Platform målgrupper med federerade data.
+- Koppla Adobe Experience Platform till ett datalager för företag.
+- Skapa och hantera målgrupper med Federated Audience Composition.
+- Mappa externa målgrupper till externa mål som Amazon S3.
+- Berika befintliga målgrupper med federerade data.
+- Skapa målgrupper för att driva personalisering i realtid.
+- Bygg kundresor med hjälp av externa målgruppsdata.
 
 ## Viktiga uppgifter
 
