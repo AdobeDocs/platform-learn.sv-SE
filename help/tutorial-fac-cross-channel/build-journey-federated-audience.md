@@ -71,7 +71,7 @@ För att fortsätta med SecurFinancial-berättelsen, särskilt när det gäller 
 
 11. Nu när personaliseringen av förnamnet har lagts till lägger du till `Hi, ` framför personaliseringsvariabeln. Klicka sedan på **Spara**.
 
-   ![resa-email-save](assets/journey-email-save.png)
+    ![resa-email-save](assets/journey-email-save.png)
 
 12. Klicka på knappen **Bakåt** två gånger för att återgå till arbetsytan. Klicka sedan på **Spara** på menyn **Åtgärd: E-post** till höger.
 
