@@ -7,9 +7,9 @@ role: Data Architect, Data Engineer
 jira: KT-18743
 thumbnail: 18743-configure-a-data-warehouse-connection.jpg
 exl-id: 3935f3ff-7728-4cd1-855e-2cd02c2ecc59
-source-git-commit: 93b787112134919444150974c7149dc10c2d0ca6
+source-git-commit: 7e2f7bbb392eba51c0d6b9ccc8224c2081a01c7c
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '478'
 ht-degree: 0%
 
 ---
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Vi börjar med att konfigurera en anslutning mellan Adobe Experience Platform och din Enterprise Data Warehouse. Vi använder scheman och datamodeller som bygger på hur data ligger i Data Warehouse för att stödja frågeskapande.
 
-För att demonstrera ansluter vi till ett Snowflake-konto. Federated Audience Composition har stöd för en växande lista över datalageranslutningar. Se den [uppdaterade listan över integreringar](https://experienceleague.adobe.com/sv/docs/federated-audience-composition/using/start/access-prerequisites){target="_blank"}.
+För att demonstrera ansluter vi till ett Snowflake-konto. Federated Audience Composition har stöd för en växande lista över datalageranslutningar. Se den [uppdaterade listan över integreringar](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/access-prerequisites){target="_blank"}.
 
 ## Steg
 
@@ -78,4 +78,4 @@ Nedan visas en förhandsgranskning av länken som skapats med ovanstående steg.
 
 ![preview-data-model](assets/preview-data-model.png)
 
-Nu är vi redo att [skapa och målgrupp](create-a-federated-audience.md).
+Nu kan vi [skapa en federerad publik](create-a-federated-audience.md).

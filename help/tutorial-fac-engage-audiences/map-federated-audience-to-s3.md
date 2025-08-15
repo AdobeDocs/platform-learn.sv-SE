@@ -7,9 +7,9 @@ role: Data Architect, Data Engineer
 jira: KT-18743
 thumbnail: 18743-create-an-audience.jpg
 exl-id: a47b8f7b-7bd0-43a0-bc58-8b57d331b444
-source-git-commit: 93b787112134919444150974c7149dc10c2d0ca6
+source-git-commit: 7e2f7bbb392eba51c0d6b9ccc8224c2081a01c7c
 workflow-type: tm+mt
-source-wordcount: '277'
+source-wordcount: '278'
 ht-degree: 0%
 
 ---
@@ -50,6 +50,7 @@ Ni kan utnyttja målgruppsattributen i ert datalager för att berika er målgrup
 
 >[**!SUMMARY**]
 >
-> Vi har skapat en publik och aktiverat den på en S3-destination med lätthet. Alla andra lösningar kan hämta denna publik och använda den direkt. Tack vare det användarvänliga gränssnittet kan marknadsföringsteamen snabbt skapa och aktivera målgrupper utan att flytta underliggande data. Kunder som använder den här metoden har använt LIVE för första gången på ungefär en månad.
+> Vi har skapat en publik och aktiverat den på en S3-destination med lätthet. Alla andra lösningar kan hämta denna publik och använda den direkt. Tack vare det användarvänliga gränssnittet kan marknadsföringsteamen snabbt skapa och aktivera målgrupper utan att flytta underliggande data. Kunder som använder den här metoden har LIVE med första användningsfallet på ungefär en månad.
+
 
 Nu ska vi [skapa en resa](build-journey-federated-audience.md).
