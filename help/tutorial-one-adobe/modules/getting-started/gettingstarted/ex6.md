@@ -4,9 +4,9 @@ description: Komma igång - Adobe I/O
 kt: 5342
 doc-type: tutorial
 exl-id: 00f17d4f-a2c8-4e8e-a1ff-556037a60629
-source-git-commit: 53b252df80801e521ad3df2fe4c158039adfa365
+source-git-commit: 947ce5880c88fcf0211c5d16270dfcf2d6416131
 workflow-type: tm+mt
-source-wordcount: '799'
+source-wordcount: '788'
 ht-degree: 0%
 
 ---
@@ -41,10 +41,6 @@ Du borde se det här då. Välj **+ Lägg till i projekt** och välj **API**.
 
 ![Adobe I/O Ny integrering](./images/adobe_io_access_api.png)
 
-Skärmen bör se ut så här.
-
-![Adobe I/O Ny integrering](./images/api1.png)
-
 Markera **Adobe Firefly Services** och välj **Firefly - Firefly Services**. Välj sedan **Nästa**.
 
 ![Adobe I/O Ny integrering](./images/api3.png)
@@ -67,7 +63,7 @@ Du borde se det här då.
 >
 >Beroende på vilken utbildningsväg du valt kanske du inte har tillgång till Photoshop Services API. Du har bara åtkomst till Photoshop Services API om du är på utbildningsvägen **Firefly**, **Workfront Fusion**, **ALL** eller när du deltar i ett **direktsänt, personligt seminarium**. Du kan hoppa över det här steget om du inte är på någon av dessa inlärningsvägar.
 >
->Välj **+ Lägg till i projekt** och välj sedan **API**.
+Välj **+ Lägg till i projekt** och välj sedan **API**.
 
 ![Azure Storage](./images/ps2.png)
 
