@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Vi börjar med att konfigurera en anslutning mellan Adobe Experience Platform och din Enterprise Data Warehouse. Vi använder scheman och datamodeller som bygger på hur data ligger i Data Warehouse för att stödja frågeskapande.
 
-För att demonstrera ansluter vi till ett Snowflake-konto. Federated Audience Composition har stöd för en växande lista över datalageranslutningar. Se den [uppdaterade listan över integreringar](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/access-prerequisites){target="_blank"}.
+För att demonstrera ansluter vi till ett Snowflake-konto. Federated Audience Composition har stöd för en växande lista över datalageranslutningar. Se den [uppdaterade listan över integreringar](https://experienceleague.adobe.com/sv/docs/federated-audience-composition/using/start/access-prerequisites){target="_blank"}.
 
 ## Steg
 
