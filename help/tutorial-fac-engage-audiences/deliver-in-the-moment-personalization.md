@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Leverera personalisering i ögonblicket med Edge Network
 
-Med Federated Audience Composition kan ni berika befintliga målgrupper i Adobe Experience Platform (AEP) genom att utnyttja sammansatta målgruppsdata som har federerats från företagets datalager. Dessa data kommer inte att sparas i Adobe Experience Platform, men du kan använda funktionerna för [vidarebefordran av händelser](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/overview){target="_blank"} för att skicka dessa data direkt till datalagret.
+Med Federated Audience Composition kan ni berika befintliga målgrupper i Adobe Experience Platform (AEP) genom att utnyttja sammansatta målgruppsdata som har federerats från företagets datalager. Dessa data kommer inte att sparas i Adobe Experience Platform, men du kan använda funktionerna för [vidarebefordran av händelser](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/event-forwarding/overview){target="_blank"} för att skicka dessa data direkt till datalagret.
 
 I den här övningen använder vi en federerad publik som frågas med kreditpoäng och låneaktivitet för att berika besökarna på webbsidan för låneansökningar.
 
