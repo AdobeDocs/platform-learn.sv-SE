@@ -1,22 +1,22 @@
 ---
 title: Skapa en federerad publik
-seo-title: Create a federated audience | Engage with Audiences from your Data Warehouse using Federated Audience Composition
+seo-title: Create a federated audience | Engage with audiences directly from your data warehouse using Federated Audience Composition
 breadcrumb-title: Skapa en federerad publik
-description: I den här övningen konfigurerar vi en anslutning mellan Adobe Experience Platform och ditt företag Data Warehouse för att aktivera Federated Audience Composition.
+description: I den här övningen skapar vi en målgrupp från Snowflake datalager med Federated Audience Composition.
 role: Data Architect, Data Engineer
 jira: KT-18743
 thumbnail: 18743-create-an-audience.jpg
 exl-id: a507cab5-dba9-4bf7-a043-d7c967e9e07d
-source-git-commit: dd5f594a54a9cab8ef78d36d2cf15a9b5f2b682a
+source-git-commit: 93b787112134919444150974c7149dc10c2d0ca6
 workflow-type: tm+mt
-source-wordcount: '343'
+source-wordcount: '339'
 ht-degree: 0%
 
 ---
 
 # Skapa en federerad publik
 
-Sedan vägleder vi dig genom att skapa en målgrupp från Data Warehouse med Federated Audience Composition. Publiken består av SecurFinancial-kunder som har en kreditpoäng på 650 eller högre och som för närvarande inte har något lån i sin SecurFinancial-portfölj.
+Sedan vägleder vi dig genom att skapa en målgrupp från Snowflake datalager med Federated Audience Composition. Publiken består av SecurFinancial-kunder som har en kreditpoäng på 650 eller högre och som för närvarande inte har något lån i sin SecurFinancial-portfölj.
 
 ## Steg
 
@@ -64,6 +64,6 @@ Sedan vägleder vi dig genom att skapa en målgrupp från Data Warehouse med Fed
 >
 > I det här exemplet användes produkt- och kreditinformation för att skapa en större publik genom direkt åtkomst av företagsdata från Snowflake, utan att man behöver göra en kopia av den i Adobe Experience Platform. När frågan bearbetas av det externa systemet kommer endast relevanta e-postadresser, aktuella produkter och förnamnsvärden att överföras till målgruppsdefinitionen för aktivering längre fram i kedjan. Detta gäller alla destinationer som RTCDP stöder.
 
-Mer information om målgruppssammansättning finns på [Experience League](https://experienceleague.adobe.com/sv/docs/federated-audience-composition/using/compositions/create-composition/create-composition){target="_blank"}.
+Mer information om målgruppssammansättning finns på [Experience League](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/compositions/create-composition/create-composition){target="_blank"}.
 
 Nu när vår federerade publik har skapats [mappar vi den till ett S3-konto](map-federated-audience-to-s3.md).

@@ -1,12 +1,13 @@
 ---
 title: Sammansättning av avancerad målgruppsarkitektur och högnivåflöde
-seo-title: Federated Audience Composition High-level Architecture & Flow | Engage with Audiences from your Data Warehouse using Federated Audience Composition
+seo-title: Federated Audience Composition high-level architecture & flow | Engage with audiences directly from your data warehouse using Federated Audience Composition
 breadcrumb-title: Sammansättning av avancerad målgruppsarkitektur och högnivåflöde
 description: Översikt över arkitekturen och flödet i Federated Audience Composition.
 role: Data Architect, Data Engineer
 jira: KT-18743
 thumbnail: 18743-high-level-architecture.jpg
-source-git-commit: dd5f594a54a9cab8ef78d36d2cf15a9b5f2b682a
+exl-id: 4cb0b730-4206-476b-93d9-776dfbd464ff
+source-git-commit: 0564f516cfba7ea09ac9da19d94f46d984e9e00a
 workflow-type: tm+mt
 source-wordcount: '193'
 ht-degree: 0%
@@ -27,4 +28,3 @@ Det gör att företag snabbt kan bearbeta information som lagras i ett eller fle
 ![fac-architecture](assets/fac-architecture.png)
 
 Nu går vi vidare till att skapa en [Data Warehouse-anslutning](data-warehouse-connection.md).
-

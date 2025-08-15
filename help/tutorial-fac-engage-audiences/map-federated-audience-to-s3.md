@@ -1,20 +1,20 @@
 ---
-title: Mappa en federerad publik till S3
-seo-title: Map a federated audience to S3 | Engage with Audiences from your Data Warehouse using Federated Audience Composition
+title: Mappa en federerad publik till ett S3-mål
+seo-title: Map a Federated Audience to an S3 Destination | Engage with audiences directly from your data warehouse using Federated Audience Composition
 breadcrumb-title: Mappa en federerad publik till S3
 description: I den här övningen ska vi kartlägga en federerad målgrupp till en Real-Time CDP-målgrupp längre fram i kedjan för att stödja en personaliserad offlineupplevelse.
 role: Data Architect, Data Engineer
 jira: KT-18743
 thumbnail: 18743-create-an-audience.jpg
 exl-id: a47b8f7b-7bd0-43a0-bc58-8b57d331b444
-source-git-commit: dd5f594a54a9cab8ef78d36d2cf15a9b5f2b682a
+source-git-commit: 93b787112134919444150974c7149dc10c2d0ca6
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '277'
 ht-degree: 0%
 
 ---
 
-# Mappa federerad publik till S3 för att utnyttja målgruppsattribut för berikning
+# Mappa en federerad publik till en S3-destination för att utnyttja målgruppsattributen för berikning
 
 Ni kan utnyttja målgruppsattributen i ert datalager för att berika er målgrupps upplevelse av aktiveringsarbetsflöden längre fram i kedjan med hjälp av RTCDP-destinationer. För SecurFinancial kan dessa federerade attribut användas för att förbättra kundens personaliseringsupplevelse offline. Nedan mappas den federerade målgruppen till ett förkonfigurerat Amazon S3-mål.
 
@@ -50,6 +50,6 @@ Ni kan utnyttja målgruppsattributen i ert datalager för att berika er målgrup
 
 >[**!SUMMARY**]
 >
-> Vi har skapat en publik och aktiverat den på en S3-destination med lätthet. Tack vare det användarvänliga gränssnittet kan marknadsföringsteamen snabbt skapa och aktivera målgrupper utan att flytta underliggande data.
+> Vi har skapat en publik och aktiverat den på en S3-destination med lätthet. Alla andra lösningar kan hämta denna publik och använda den direkt. Tack vare det användarvänliga gränssnittet kan marknadsföringsteamen snabbt skapa och aktivera målgrupper utan att flytta underliggande data. Kunder som använder den här metoden har använt LIVE för första gången på ungefär en månad.
 
 Nu ska vi [skapa en resa](build-journey-federated-audience.md).

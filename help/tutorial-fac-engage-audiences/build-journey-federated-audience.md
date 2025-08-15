@@ -1,13 +1,13 @@
 ---
 title: Bygg en resa med en federerad publik
-seo-title: Build a Journey with a Federated Audience | Engage with Audiences from your Data Warehouse using Federated Audience Composition
+seo-title: Build a journey with a Federated Audience | Engage with audiences directly from your data warehouse using Federated Audience Composition
 breadcrumb-title: Bygg en resa med en federerad publik
 description: I den här övningen används en federerad publik i en Journey Optimizer-resa.
 role: Data Architect, Data Engineer
 jira: KT-18743
 thumbnail: 18743-build-a-journey-with-federated-audience-data.jpg
 exl-id: a153667a-9b3a-4db7-9f58-b83e695009e0
-source-git-commit: dd5f594a54a9cab8ef78d36d2cf15a9b5f2b682a
+source-git-commit: 93b787112134919444150974c7149dc10c2d0ca6
 workflow-type: tm+mt
 source-wordcount: '420'
 ht-degree: 0%
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Federerade målgrupper kan användas på resor inom Adobe Journey Optimizer (AJO). Detta inkluderar att använda frågeattribut från Federated Audience Composition för att personalisera meddelanden.
 
-För att fortsätta med SecurFinancial-berättelsen, särskilt när det gäller återmarknadsföring och personalisering, ordnar vi en resa för kvalificerade kunder. Målet är att skicka ett personaliserat e-postmeddelande baserat på attribut som federerats från SecurFinancial&#39;s Data Warehouse.
+För att fortsätta med SecurFinancial-berättelsen, särskilt när det gäller återmarknadsföring och personalisering, ordnar vi en resa för kvalificerade kunder. Målet är att skicka ett personaliserat e-postmeddelande baserat på attribut som federerats från SecurFinals datalager.
 
 ## Steg
 
@@ -70,7 +70,7 @@ För att fortsätta med SecurFinancial-berättelsen, särskilt när det gäller 
 
 11. Nu när personaliseringen av förnamnet har lagts till lägger du till `Hi, ` framför personaliseringsvariabeln. Klicka sedan på **Spara**.
 
-    ![resa-email-save](assets/journey-email-save.png)
+   ![resa-email-save](assets/journey-email-save.png)
 
 12. Klicka på knappen **Bakåt** två gånger för att återgå till arbetsytan. Klicka sedan på **Spara** på menyn **Åtgärd: E-post** till höger.
 

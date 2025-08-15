@@ -1,12 +1,12 @@
 ---
 title: Slutsats
-seo-title: Conclusion | Engage with Audiences from your Data Warehouse using Federated Audience Composition
+seo-title: Conclusion | Engage with audiences directly from your data warehouse using Federated Audience Composition
 breadcrumb-title: Slutsats
 description: Sammanfattningsvis sammanfattar vi inlärningar och viktiga uppgifter.
 role: Data Architect, Data Engineer
 jira: KT-18743
 exl-id: 19f3065a-c439-44b6-9888-664c9a5cb33c
-source-git-commit: dd5f594a54a9cab8ef78d36d2cf15a9b5f2b682a
+source-git-commit: 93b787112134919444150974c7149dc10c2d0ca6
 workflow-type: tm+mt
 source-wordcount: '153'
 ht-degree: 0%
