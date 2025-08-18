@@ -4,9 +4,9 @@ description: Komma igång med Workfront Planning
 kt: 5342
 doc-type: tutorial
 exl-id: 26fa872b-c872-46b6-8f56-fa41696100da
-source-git-commit: 645d078b55b7126a692dedded71208e1f3c04971
+source-git-commit: 62651668752d5f711c102b763564d01c561f7eb4
 workflow-type: tm+mt
-source-wordcount: '1098'
+source-wordcount: '1234'
 ht-degree: 0%
 
 ---
@@ -85,7 +85,7 @@ Klicka för att öppna den nyligen skapade posttypen **Business Unit**.
 
 ![Workfront Planning](./images/wfpl10.png)
 
-Nu visas en tom tabellvy eftersom den posttyp som du nyss skapade inte har något definierat fält.
+Du kommer nu att se en tom tabellvy, eftersom din nyligen skapade posttyp ännu inte har några definierade affärsenhetsposter.
 
 ![Workfront Planning](./images/wfpl11.png)
 
@@ -115,7 +115,49 @@ Klicka på **Spara**.
 
 ![Workfront Planning](./images/wfpl17.png)
 
-Du har nu skapat en ny posttyp och du har både tagit bort och skapat fält. Gå tillbaka till översiktsskärmen i Workspace genom att klicka på pilen i det övre vänstra hörnet.
+Klicka på de 3 punkterna **..** på den första posten och välj **Visa**.
+
+![Workfront Planning](./images/wfpla1.png)
+
+Ange **Namn** till `Consumer Services`.
+
+Ange **Beskrivning** till `Handles residential offerings like mobile plans, internet packages, and customer support.`.
+
+Ange **affärsenhetens lead** till dig själv.
+
+När du är klar klickar du på pilen för att gå tillbaka till föregående skärm.
+
+![Workfront Planning](./images/wfpla2.png)
+
+Klicka på de 3 punkterna **..** på den andra posten och välj **Visa**.
+
+![Workfront Planning](./images/wfpla3.png)
+
+Ange **Namn** till `Enterprise & Business Solutions`
+
+Ange **Beskrivning** till `Provides connectivity, cloud, and managed services to corporate clients and government entities.`
+
+Ange **affärsenhetens lead** till dig själv.
+
+När du är klar klickar du på pilen för att gå tillbaka till föregående skärm.
+
+![Workfront Planning](./images/wfpla4.png)
+
+Klicka på de 3 punkterna **..** på den tredje posten och välj **Visa**.
+
+![Workfront Planning](./images/wfpla5.png)
+
+Ange **Namn** till `Sales & Marketing`
+
+Ange **Beskrivning** till `Drives customer acquisition, brand strategy, advertising, and market segmentation.`
+
+Ange **affärsenhetens lead** till dig själv.
+
+När du är klar klickar du på pilen för att gå tillbaka till föregående skärm.
+
+![Workfront Planning](./images/wfpla6.png)
+
+Du har nu skapat en ny posttyp, både du har tagit bort och skapat fält och du har skapat 3 affärsenheter. Gå tillbaka till översiktsskärmen i Workspace genom att klicka på pilen i det övre vänstra hörnet.
 
 ![Workfront Planning](./images/wfpl18.png)
 
@@ -129,7 +171,7 @@ Klicka för att öppna **kampanjer**.
 
 ![Workfront Planning](./images/wfpl20.png)
 
-Klicka på ikonen **+** för att skapa ett nytt fält. Välj **Ny anslutning** och sedan **Personas**.
+Klicka på ikonen **+** för att skapa ett nytt fält. Välj **Ny anslutning** och sedan **Affärsenhet**.
 
 ![Workfront Planning](./images/wfpl21.png)
 
@@ -151,7 +193,7 @@ Klicka på de tre punkterna **..** på skärmen Campaigns-översikt och välj se
 
 ![Workfront Planning](./images/wfpl25.png)
 
-Ändra namnet till `Campaign Request Form`. Klicka på **Spara**.
+Ändra namnet till `Campaign Request Form`. Klicka på **Skapa**.
 
 ![Workfront Planning](./images/wfpl26.png)
 
@@ -187,6 +229,8 @@ Ange **kampanjsammanfattningen** till:
 The CitiSignal Fiber Launch campaign introduces CitiSignal’s flagship fiber internet service—CitiSignal Fiber Max—to key residential markets. This campaign is designed to build awareness, drive sign-ups, and establish CitiSignal as the go-to provider for ultra-fast, reliable, and future-ready internet. The campaign will highlight the product’s benefits for remote professionals, online gamers, and smart home families, using persona-driven messaging across digital and physical channels.
 ```
 
+Fyll i de andra fälten som du vill.
+
 Klicka på **Skicka begäran**.
 
 ![Workfront Planning](./images/wfpl33.png)
@@ -195,7 +239,7 @@ Klicka på **X** för att stänga popup-fönstret.
 
 ![Workfront Planning](./images/wfpl34.png)
 
-Du bör sedan se den senast skapade kampanjen i översikten.
+Du bör sedan se den nya kampanjen i översikten.
 
 ![Workfront Planning](./images/wfpl35.png)
 
@@ -297,19 +341,15 @@ Efter några sekunder bör du se en bekräftelse på att automatiseringen har sl
 
 ![Workfront Planning](./images/wfpl47.png)
 
-Om du vill kontrollera programmet i Workfront öppnar du menyn och klickar på **Portföljer**.
+Om du vill kontrollera programmet i Workfront bläddrar du till höger och klickar på programmet i kolumnen **Anslutet program** .
 
 ![Workfront Planning](./images/wfpl48.png)
 
-Öppna din portfölj med namnet `--aepUserLdap-- - Marketing`.
-
-![Workfront Planning](./images/wfpl49.png)
-
-Gå till **Program** och se sedan det program som skapades av den automatisering du konfigurerade.
+Du bör då se det program som just har skapats med den automatisering du konfigurerade.
 
 ![Workfront Planning](./images/wfpl50.png)
 
-Nästa steg: [1.2.2 TBD](./ex1.md){target="_blank"}
+Nästa steg: [Sammanfattning och fördelar](./summary.md){target="_blank"}
 
 Gå tillbaka till [Introduktion till Workfront Planning](./wfplanning.md){target="_blank"}
 

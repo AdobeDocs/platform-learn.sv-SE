@@ -3,22 +3,31 @@ title: Adobe Workfront Planning
 description: Adobe Workfront Planning
 kt: 5342
 doc-type: tutorial
-source-git-commit: d583df79bff499b7605f77146d52e66bc02810b9
+exl-id: 08ed2cca-4670-4038-b2f0-aa7adb3fc2bf
+source-git-commit: 62651668752d5f711c102b763564d01c561f7eb4
 workflow-type: tm+mt
-source-wordcount: '90'
-ht-degree: 1%
+source-wordcount: '200'
+ht-degree: 0%
 
 ---
 
 # 1.1 Adobe Workfront Planning
 
+Den här övningen vägleder dig igenom de grundläggande aspekterna av Workfront Planning, som att skapa arbetsytor, definiera posttyper, hantera poster och använda AI Assistant för smidiga operationer. Genom att utföra det här labbet kommer du att lära dig den här kraftfulla lösningen och få en startpunkt för att utforska möjligheterna ytterligare längs vägen.
+
 ## Utbildningsmål
 
-- Lär dig använda Adobe Workfront Planning.
+När du är klar med labbet blir du bekant med följande:
+
+- Förstå huvudkomponenterna i Workfront Planning: Workspaces, Record Types och Records.
+- Skapa en ny Workspace som är skräddarsydd för en viss livscykel.
+- Definiera och anpassa posttyper i Workspace.
+- Hantera poster, inklusive att skapa, uppdatera och ta bort poster.
+- Utnyttja AI-assistenten för att utföra åtgärder effektivt.
 
 ## Förhandskrav
 
-- Tillgång till Workfront Planning.
+- Tillgång till Adobe Workfront-kontot med Workfront Planning-paketet.
 
 ## Utövningar
 
