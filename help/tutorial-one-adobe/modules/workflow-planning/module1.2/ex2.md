@@ -4,9 +4,9 @@ description: Korrektur med Workfront
 kt: 5342
 doc-type: tutorial
 exl-id: 5feb9486-bdb4-4d59-941c-09fc2e38163b
-source-git-commit: 42f6d8a07baa03a9ab31cff0ef518ae2c5ad930e
+source-git-commit: a63c01ebe81df39569981d62b85d0461119ecf66
 workflow-type: tm+mt
-source-wordcount: '825'
+source-wordcount: '1613'
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ Ange **mallnamnet** till `--aepUserLdap-- - Approval Workflow` och ställ in **m
 
 ![WF](./images/wfp3.png)
 
-Bläddra nedåt och under **Steg** > **Steg 1** lägger du till dig själv med **rollen** i **Granskare och godkännare**.
+Bläddra nedåt och ändra rollen **Korrekturskapare** till **Granskare och godkännare** under **Steg** > **Steg 1**. Du kan även lägga till andra, så som till exempel lägga till dig själv genom att markera användaren och ange **rollen** för **Granskare och godkännare**.
 
 Klicka på **Skapa**.
 
@@ -41,7 +41,37 @@ Ditt grundläggande arbetsflöde för godkännande är nu klart att användas.
 
 ![WF](./images/wfp5.png)
 
-## 1.2.2.2 Skapa ett nytt projekt
+## 1.2.2.2 Aktivera Workfront Blueprint
+
+I nästa steg skapar du ett nytt projekt med hjälp av en mall. Adobe Workfront tillhandahåller ett antal ritningar som bara behöver aktiveras.
+
+För CitiSignals användningsfall är den **integrerade kampanjkörningen** den du behöver använda.
+
+Om du vill installera den översikten öppnar du menyn och väljer **utkast**.
+
+![WF](./images/blueprint1.png)
+
+Välj filtret **Marknadsföring** och bläddra sedan nedåt för att hitta den **integrerade kampanjkörningen**. Klicka på **Installera**.
+
+![WF](./images/blueprint2.png)
+
+Klicka på **Fortsätt**.
+
+![WF](./images/blueprint3.png)
+
+Klicka på **Installera som..**.
+
+![WF](./images/blueprint4.png)
+
+Du borde se det här då. Installationen kan ta några minuter.
+
+![WF](./images/blueprint5.png)
+
+Efter några minuter installeras ritningen.
+
+![WF](./images/blueprint6.png)
+
+## 1.2.2.3 Skapa ett nytt projekt
 
 Öppna **menyn** och gå till **Program**.
 
@@ -55,15 +85,23 @@ Klicka på det program du skapade tidigare, med namnet `--aepUserLdap-- CitiSign
 
 ![WF](./images/wfp6b.png)
 
-Gå till **Projekt** i ditt program. Klicka på **+ Nytt projekt** och välj sedan **Nytt projekt**.
+Gå till **Projekt** i ditt program. Klicka på **+ Nytt projekt** och välj sedan **Nytt projekt från mall**.
 
 ![WF](./images/wfp6.png)
 
-Du borde se det här då. Ändra namnet till `--aepUserLdap-- - CitiSignal Fiber Launch`.
+Välj mallen **Integrerad kampanjkörning** och klicka på **Använd mall**.
+
+![WF](./images/wfp6g.png)
+
+Du borde se det här då. Ändra namnet till `--aepUserLdap-- - CitiSignal Fiber Launch Winter 2026` och klicka på **Skapa projekt**.
 
 ![WF](./images/wfp6c.png)
 
-Gå till **Projektinformation**. Klicka på **+Lägg till** under **Beskrivning**.
+Ditt projekt har skapats. Gå till **Projektinformation**.
+
+![WF](./images/wfp6h.png)
+
+Gå till **Projektinformation**. Klicka för att markera den aktuella texten under **Beskrivning**.
 
 ![WF](./images/wfp6d.png)
 
@@ -73,57 +111,164 @@ Klicka på **Spara ändringar**.
 
 ![WF](./images/wfp6e.png)
 
-Ditt projekt har skapats.
+Ditt projekt är nu klart att användas.
 
 ![WF](./images/wfp7.png)
 
-## 1.2.2.3 Skapa en ny aktivitet
+Aktiviteter och beroenden i projektet har skapats baserat på den mall du valde och du har angetts som. projektägare. Projektets status har angetts till **Planering**. Du kan ändra projektets status genom att välja ett annat värde i listan.
 
-Gå till **Åtgärder** och klicka på **+ Ny aktivitet**.
+![WF](./images/wfp7z.png)
+
+## 1.2.2.4 Skapa en ny aktivitet
+
+Hovra över aktiviteten **Börja skapa designmallar** och klicka på de tre punkterna **..**.
 
 ![WF](./images/wfp7a.png)
 
-Ange det här namnet för din uppgift: `Create assets for Fiber campaign`.
+Välj alternativet **Infoga aktivitet nedan**.
 
-Ställ in fältet **Beskrivning** till: `This task is used to track the progress of the creation of the assets for the CitiSignal Fiber Launch Campaign.`
+![WF](./images/wfp7x.png)
 
-Klicka på **Skapa uppgift**.
+Ange det här namnet för din uppgift: `Create layout using approved assets and copy`.
+
+Ställ in fältet **Uppdrag** till rollen **Designer**.
+Ange fältet **Varaktighet** till **5 dagar**.
+Ställ in fältets föregångare till **9**.
+Ange ett datum för fälten **Börja den** och **Förfaller den**.
+
+Klicka någon annanstans på skärmen för att spara den nya uppgiften.
 
 ![WF](./images/wfp8.png)
 
-Du borde se det här då.
+Du borde se det här då. Klicka på uppgiften för att öppna den.
 
 ![WF](./images/wfp9.png)
 
-Lägg till ditt namn i kolumnen **Tilldelning**.
+Gå till **aktivitetsinformation** och ställ in fältet **Beskrivning** på: `This task is used to track the progress of the creation of the assets for the CitiSignal Fiber Launch Campaign.`
+
+Klicka på **Spara ändringar**.
 
 ![WF](./images/wfp9a.png)
 
-Uppgiften tilldelas sedan till dig.
+Du borde se det här då. Klicka på fältet **Projekt** för att gå tillbaka till ditt projekt.
 
 ![WF](./images/wfp9b.png)
 
-## 1.2.2.4 Lägg till ett nytt dokument i din uppgift via godkännandeflödet
+Gå till **Utjämning av arbetsbelastning** i vyn **Projekt**.
 
-Klicka på **Workfront**-logotypen för att gå tillbaka till översiktssidan. Du bör då se projektet som du just skapade visas i översikten. Klicka på projektet för att öppna det.
+![WF](./images/wfpwlb1.png)
 
-![WF](./images/wfp9c.png)
+Klicka på **Gruppera tilldelningar**.
 
-Öppna uppgiften genom att klicka i **Aktiviteter**.
+![WF](./images/wfpwlb2.png)
 
-![WF](./images/wfp9d.png)
+Markera **rolltilldelningen** för **Designer** och klicka sedan i fältet **Användare för att tilldela**. Detta visar alla användare som har en **Designer**-roll i din Workfront-instans. I det här fallet väljer du den fiktiva användaren **Melissa Jenkins**.
 
-Gå till **Dokument**. Klicka på **+ Lägg till ny** och välj sedan **Dokument**.
+![WF](./images/wfpwlb3.png)
+
+Klicka på **Tilldela**. Användaren du valde tilldelas nu till aktiviteterna i projektet som är länkade till rollen **Designer**.
+
+![WF](./images/wfpwlb4.png)
+
+Uppgifterna har nu tilldelats. Klicka på **Åtgärder** för att gå tillbaka till översiktssidan för **Åtgärder**.
+
+![WF](./images/wfpwlb5.png)
+
+Klicka på den uppgift du skapade, med namnet
+**Skapa layout med godkända resurser och kopiera**.
+
+![WF](./images/wfpwlb6.png)
+
+Du kommer nu att börja arbeta med den här uppgiften som en del av den här övningen. Du ser att Melissa Jenkins är tilldelad den här uppgiften just nu. Om du vill ändra det för dig själv klickar du på fältet **Tilldelningar** och väljer **Tilldela mig**.
+
+![WF](./images/wfpwlb7.png)
+
+Klicka på **Spara**.
+
+![WF](./images/wfpwlb8.png)
+
+Klicka på **Arbeta med den**.
+
+![WF](./images/wfpwlb9.png)
+
+Du borde se det här då.
+
+![WF](./images/wfpwlb10.png)
+
+Som en del av detta måste du skapa en ny bild och sedan överföra den som ett dokument i Workfront. Nu kan du själv skapa resursen med Adobe Express.
+
+## 1.2.2.5 Skapa resurs med Adobe Firely Services och Adobe Express
+
+Gå till [https://firefly.adobe.com/](https://firefly.adobe.com/){target="_blank"}. Skriv uppmaningen `a neon rabbit running very fast through space` och klicka på **Generera**.
+
+![SGPeM](./images/gsasset1.png)
+
+Sedan visas flera bilder som genereras. Välj den bild du gillar mest, klicka på ikonen **Dela** på bilden och välj sedan **Öppna i Adobe Express**.
+
+![SGPeM](./images/gsasset2.png)
+
+Du ser då att den bild du just har skapat blir tillgänglig i Adobe Express för redigering. Nu måste du lägga till CitiSignal-logotypen på bilden. Gå till **Varumärken** om du vill göra det.
+
+![SGPeM](./images/gsasset3.png)
+
+Du bör då se en CitiSignal-varumärkesmall. som skapades i GenStudio for Performance Marketing visas i Adobe Express. Klicka för att välja en varumärkesmall med namnet `CitiSignal`.
+
+![SGPeM](./images/gsasset4.png)
+
+Gå till **Logos** och klicka på den **vita** Citisign-logotypen för att släppa den på bilden.
+
+![SGPeM](./images/gsasset5.png)
+
+Placera CitiSignal-logotypen högst upp i bilden, inte långt från mitten.
+
+![SGPeM](./images/gsasset6.png)
+
+Gå till **Text**.
+
+![SGPeM](./images/gsasset6a.png)
+
+Klicka på **Lägg till din text**.
+
+![SGPeM](./images/gsasset6b.png)
+
+Ange texten `Timetravel now!`, ändra teckensnittsfärg och teckensnittsstorlek, ställ in texten på **Fet** så att du har en bild som liknar den här.
+
+![SGPeM](./images/gsasset6c.png)
+
+Klicka sedan på **Dela**.
+
+![SGPeM](./images/gsasset7.png)
+
+Välj **AEM Assets**.
+
+![SGPeM](./images/gsasset8.png)
+
+Ändra filnamnet till `CitiSignal - Neon Rabbit - Timetravel now!`.
+Klicka på **Välj mapp**.
+
+![SGPeM](./images/gsasset9.png)
+
+Välj din AEM Assets CS-databas som ska ha namnet `--aepUserLdap-- - CitiSignal` och markera sedan mappen `--aepUserLdap-- - CitiSignal Fiber Campaign`. Klicka på **Markera**.
+
+![SGPeM](./images/gsasset11.png)
+
+Du borde se det här då. Klicka på **Överför 1 resurs**. Bilden överförs nu till AEM Assets CS.
+
+![SGPeM](./images/gsasset12.png)
+
+## 1.2.2.6 Lägg till ett nytt dokument i din uppgift och starta godkännandeflödet
+
+Gå tillbaka till skärmen **Uppgiftsinformation**. Gå till **Dokument**. Klicka på **+ Lägg till ny** och välj sedan din AEM Assets CS-databas, som ska ha namnet `--aepUserLdap-- - CitiSignal`.
 
 ![WF](./images/wfp10.png)
 
-Hämta [den här filen](./images/2048x2048.png) till skrivbordet.
+Dubbelklicka för att öppna mappen `--aepUserLdap-- CitiSignal Fiber Campaign`.
+
+![WF](./images/wfp10a.png)
+
+Markera filen som du skapade i föregående steg, som heter **CitiSignal - Neonkanin - Timeravel Now!.png**. Klicka på **Markera**.
 
 ![WF](./images/2048x2048.png){width="50px" align="left"}
-
-Markera filen **2048x2048.png** och klicka på **Öppna**.
-
-![WF](./images/wfp12.png)
 
 Du borde ha den här då. Håll muspekaren över det överförda dokumentet. Klicka på **Skapa korrektur** och välj sedan **Avancerat korrektur**.
 
@@ -133,10 +278,6 @@ Välj **Automatiserad** i fönstret **Nytt korrektur** och välj sedan den arbet
 
 ![WF](./images/wfp14.png)
 
-Klicka på **Arbeta med den**.
-
-![WF](./images/wfp17.png)
-
 Klicka på **Öppna korrektur**
 
 ![WF](./images/wfp18.png)
@@ -145,41 +286,57 @@ Nu kan du granska korrekturet. Välj **Lägg till kommentar** om du vill lägga 
 
 ![WF](./images/wfp19.png)
 
-Ange din kommentar och klicka på **Publicera**. Klicka på **Stäng**.
+Ange din kommentar och klicka på **Publicera**. Klicka sedan på **Fatta ett beslut**.
 
 ![WF](./images/wfp20.png)
-
-Därefter måste du ändra din roll från **Granskare** till **Granskare och godkännare**. Om du vill göra det går du tillbaka till din uppgift och klickar på **Korrektur**.
-
-![WF](./images/wfp21.png)
-
-Ändra din roll från **Granskare** till **Granskare och godkännare**.
-
-![WF](./images/wfp22.png)
-
-Gå tillbaka till Uppgiften och öppna korrekturet igen. Nu visas en ny knapp, **Fatta beslut**. Klicka på den.
-
-![WF](./images/wfp23.png)
 
 Välj **Ändringar krävs** och klicka på **Fatta beslut**.
 
 ![WF](./images/wfp24.png)
 
-Gå tillbaka till din **aktivitet** och **dokumentet**. Nu måste du ladda upp en andra bild som tar hänsyn till de kommentarer som lämnats.
+Gå tillbaka till din **aktivitet** och **dokumentet**. Texten **Ändringar som krävs** visas också där.
 
 ![WF](./images/wfp25.png)
 
-Hämta [den här filen](./images/2048x2048_buynow.png) till skrivbordet.
+Nu måste du göra designändringar, som du gör i Adobe Express.
 
-![den här filen](./images/2048x2048_buynow.png){width="50px" align="left"}
+## 1.2.2.7 Gör designändringar i Adobe Express
 
-Välj den gamla bildfilen som inte godkänts i aktivitetsvyn. Klicka sedan på **+ Lägg till ny**, markera **Version** och välj sedan **Dokument**.
+Gå till [https://new.express.adobe.com/your-stuff/files](https://new.express.adobe.com/your-stuff/files) och öppna bilden som du skapade tidigare igen.
+
+![WF](./images/wfp25a.png)
+
+Ändra CTA-texten till `Get On Board Now!`.
+
+![WF](./images/wfp25b.png)
+
+Klicka på **Dela** och välj sedan **AEM Assets**.
+
+![WF](./images/wfp25c.png)
+
+Ange namnet `CitiSignal - Neon Rabbit - Get On Board Now!` och klicka sedan på **Välj mapp** för att välja en målmapp.
+
+![WF](./images/wfp25d.png)
+
+Välj din AEM Assets CS-databas som ska ha namnet `--aepUserLdap-- - CitiSignal` och markera sedan mappen `--aepUserLdap-- - CitiSignal Fiber Campaign`. Klicka på **Markera**.
+
+![WF](./images/wfp25e.png)
+
+Klicka på **Överför 1 resurs**.
+
+![WF](./images/wfp25f.png)
+
+Din nya resurs skapas och lagras nu i AEM Assets.
+
+## 1.2.2.8 Lägg till en ny version av dokumentet i din uppgift
+
+I uppgiftsvyn i Adobe Workfront väljer du den gamla bildfilen som inte godkänts. Klicka sedan på **+ Lägg till ny**, markera **Version** och välj sedan din AEM Assets CS-databas, som ska ha namnet `--aepUserLdap-- - CitiSignal`.
 
 ![WF](./images/wfp26.png)
 
-Markera filen **2048x2048_buynow.png** och klicka på **Öppna**.
+Navigera till mappen `--aepUserLdap-- CitiSignal Fiber Campaign` och markera filen `CitiSignal - Neon Rabit - Get On Board Now!.png`. Klicka på **Markera**.
 
-![WF](./images/wfp27.png)
+![WF](./images/wfp26a.png)
 
 Du borde ha den här då. Klicka på **Skapa korrektur** och välj sedan **Avancerat korrektur** igen.
 
@@ -193,15 +350,19 @@ Välj **Öppna korrektur**.
 
 ![WF](./images/wfp30.png)
 
-Nu kan du se två versioner av filen bredvid varandra.
+Nu kan du se två versioner av filen bredvid varandra. Klicka på knappen **Jämför korrektur**.
 
 ![WF](./images/wfp31.png)
 
-Klicka på **Fatta beslut**, välj **Godkänd** och klicka på **Fatta beslut** igen.
+Du bör sedan se båda versionerna av bilden bredvid varandra. Klicka på **Fatta beslut**.
 
 ![WF](./images/wfp32.png)
 
-Klicka på **Aktivitetsnamnet** för att gå tillbaka till aktivitetsöversikten.
+Välj **Godkänd** och klicka på **Fatta beslut** igen.
+
+![WF](./images/wfp32a.png)
+
+Stäng vyn **Jämför korrektur** genom att stänga den vänstra versionen av bilden. Klicka på **Aktivitetsnamnet** för att gå tillbaka till aktivitetsöversikten.
 
 ![WF](./images/wfp33.png)
 
@@ -233,7 +394,7 @@ Du borde se det här då.
 
 ![WF](./images/wfp37c.png)
 
-## 1.2.2.5 Visa filen i AEM Assets
+## 1.2.2.9 Visa filen i AEM Assets
 
 Gå till din mapp i AEM Assets CS med namnet `--aepUserLdap-- - CitiSignal Fiber Launch Assets`.
 

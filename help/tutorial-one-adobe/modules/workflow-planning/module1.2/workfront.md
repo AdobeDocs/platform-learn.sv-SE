@@ -4,9 +4,9 @@ description: Arbetsflödeshantering med Adobe Workfront
 kt: 5342
 doc-type: tutorial
 exl-id: 8cffcb71-63bd-41cb-b7cd-ab34a0c74499
-source-git-commit: 19291afe2d8101fead734fa20212a3db76369522
+source-git-commit: a63c01ebe81df39569981d62b85d0461119ecf66
 workflow-type: tm+mt
-source-wordcount: '169'
+source-wordcount: '225'
 ht-degree: 0%
 
 ---
@@ -15,11 +15,17 @@ ht-degree: 0%
 
 ## Utbildningsmål
 
-- Lär dig använda Adobe Workfront på olika sätt.
+När du är klar med labbet blir du bekant med följande:
+
+- Förstå hierarkin med Workfront-objekt som portföljer, program, projekt och uppgifter
+- Skapa ett nytt projekt med en mall som är anpassad för en marknadsföringskampanj.
+- Tilldela resurser uppgifter efter roll och tillgänglighet.
+- Överför ett dokument och begär godkännande
+- Skicka det godkända dokumentet till AEM Assets CS med inbyggd integrering
 
 ## Förhandskrav
 
-- Tillgång till Workfront och Workfront Fusion
+- Tillgång till Adobe Workfront med en Workfront standard-/planerlicens.
 
 ## Utövningar
 

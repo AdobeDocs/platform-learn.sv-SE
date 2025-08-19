@@ -4,9 +4,9 @@ description: Komma igång med Workfront
 kt: 5342
 doc-type: tutorial
 exl-id: 0867d7fd-4d12-46d8-a5ae-bb8db1575635
-source-git-commit: 19291afe2d8101fead734fa20212a3db76369522
+source-git-commit: a63c01ebe81df39569981d62b85d0461119ecf66
 workflow-type: tm+mt
-source-wordcount: '824'
+source-wordcount: '1099'
 ht-degree: 0%
 
 ---
@@ -26,6 +26,22 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >Om du tidigare har konfigurerat ett AEM CS-program med en AEM Assets CS-miljö kan det bero på att din AEM CS-sandlåda är i viloläge. Eftersom det tar 10-15 minuter att dölja en sådan sandlåda, är det en bra idé att starta separationsprocessen nu så att du inte behöver vänta på den vid ett senare tillfälle.
+
+## 1.2.1.1 Workfront Workflow Terminology
+
+Följande är de viktigaste Workfront-objekten och -begreppen:
+
+| Namn | Senaste uppdatering |
+| ---------------------- | ------------ | 
+| Portfolio | En samling projekt som har enhetliga egenskaper. Dessa projekt konkurrerar vanligtvis om samma resurser, budget eller tidskortplats. |
+| Program | En delmängd inom en portfölj, där liknande projekt kan grupperas tillsammans för att uppnå en väldefinierad fördel. |
+| Projekt | En stor mängd arbete som måste slutföras inom en viss tidsram och som måste använda en viss budget och ett visst antal resurser. För att projektet ska bli hanterbart delar du upp det i en serie uppgifter. När du slutför alla uppgifter slutförs projektet. |
+| Projektmall | Du kan använda projektmallar för att hämta in de flesta repeterbara processer, information och inställningar som är kopplade till projekten i organisationen. När du har skapat mallar kan du bifoga dem till befintliga projekt eller använda dem för att skapa nya projekt. |
+| Uppgift | En aktivitet som måste utföras som ett steg mot att uppnå ett slutligt mål (att slutföra projektet). Aktiviteter kan aldrig finnas oberoende. De ingår alltid i ett projekt. |
+| Tilldelning | En användare, en jobbroll eller ett team som har tilldelats ett ärende eller en uppgift. Projekt, portföljer eller program kan inte ha tilldelningar. |
+| Dokument/version | Alla filer som är kopplade till ett objekt i Workfront. Varje gång samma dokument överförs till samma objekt tilldelas det ett versionsnummer. Användare kan visa och ändra flera alternativ för en tidigare version av ett dokument. |
+| Godkännande | En viss arbetsuppgift, till exempel en uppgift, ett dokument eller en tidrapport, kan kräva att en ansvarig eller annan användare signerar arbetsposten. Den här processen med att signera kallas för godkännande. |
+
 
 Gå till [https://experience.adobe.com/](https://experience.adobe.com/){target="_blank"}. Klicka för att öppna **Workfront**.
 
