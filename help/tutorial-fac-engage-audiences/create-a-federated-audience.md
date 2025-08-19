@@ -64,6 +64,6 @@ Sedan vägleder vi dig genom att skapa en målgrupp från Snowflake datalager me
 
 I det här exemplet användes produkt- och kreditinformation för att skapa en större publik genom direkt åtkomst av företagsdata från Snowflake, utan att man behöver göra en kopia av den i Adobe Experience Platform. När frågan bearbetas av det externa systemet kommer endast relevanta e-postadresser, aktuella produkter och förnamnsvärden att överföras till målgruppsdefinitionen för aktivering längre fram i kedjan. Detta gäller alla destinationer som RTCDP stöder.
 
-Mer information om målgruppssammansättning finns på [Experience League](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/compositions/create-composition/create-composition){target="_blank"}.
+Mer information om målgruppssammansättning finns på [Experience League](https://experienceleague.adobe.com/sv/docs/federated-audience-composition/using/compositions/create-composition/create-composition){target="_blank"}.
 
 Nu när vår federerade publik har skapats [mappar vi den till ett S3-mål i Experience Platform](map-federated-audience-to-s3.md).
