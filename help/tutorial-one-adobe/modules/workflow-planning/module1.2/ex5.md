@@ -3,16 +3,17 @@ title: Konfigurera plugin-programmet Photoshop + Workfront
 description: Konfigurera plugin-programmet Photoshop + Workfront
 kt: 5342
 doc-type: tutorial
-source-git-commit: d583df79bff499b7605f77146d52e66bc02810b9
+exl-id: 0695845e-d18e-416d-a8f4-34464618995a
+source-git-commit: 917ebcd2dd5d8316413a183bd2c1a048c090428c
 workflow-type: tm+mt
 source-wordcount: '192'
 ht-degree: 0%
 
 ---
 
-# 2.2.5 Konfigurera Photoshop + Workfront plugin
+# 1.2.5 Konfigurera Photoshop + Workfront plugin
 
-## 2.2.5.1 Installera Workfront för Photoshop-plugin
+## 1.2.5.1 Installera Workfront för Photoshop-plugin
 
 Installera Creative Cloud-programmet på datorn om du vill konfigurera integreringen mellan Workfront och Photoshop. Logga in med din Adobe ID.
 
@@ -42,7 +43,7 @@ Då ser du det här.
 
 ![WF](./images/wf7.png)
 
-## 2.2.5.2 Konfigurera plugin-programmet i Photoshop
+## 1.2.5.2 Konfigurera plugin-programmet i Photoshop
 
 Öppna Photoshop. Gå till **Plugin-program** > **Workfront för Adobe Photoshop** > klicka på **Adobe Workfront** i aktivitetsfältet.
 

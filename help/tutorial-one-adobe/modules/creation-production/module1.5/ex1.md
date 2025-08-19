@@ -5,9 +5,10 @@ role: Developer
 level: Beginner
 jira: KT-5342
 doc-type: Tutorial
-source-git-commit: efb4ecf90a27d00d256c1648e78c6e295199733e
+exl-id: 09e8fdfd-e02f-43ff-a4f4-fa92eb3f01a3
+source-git-commit: 917ebcd2dd5d8316413a183bd2c1a048c090428c
 workflow-type: tm+mt
-source-wordcount: '580'
+source-wordcount: '466'
 ht-degree: 0%
 
 ---
@@ -114,37 +115,9 @@ När du har överfört den visas den nya mappen i Frame.io.
 
 ![Frame.io](./images/frameio21.png)
 
-## 1.5.1.3 Konfigurera Adobe Premiere Pro Beta
-
-Du har redan installerat Adobe Premiere Pro Beta som en del av modulen Komma igång. Om du vill använda Frame.io i kombination med Adobe Premiere Pro Beta kan du använda det plugin-program som har utvecklats för den här integreringen.
-
-Öppna Creative Cloud-appen och sök efter `frame.io`.
-
-![Frame.io](./images/frameio23.png)
-
-Bläddra nedåt i sökresultaten för att hitta plugin-programmet **Frame.io V4 Comments**. Klicka på den.
-
-![Frame.io](./images/frameio24.png)
-
-Du borde se det här då. Klicka på **Installera**.
-
-![Frame.io](./images/frameio25.png)
-
-Om Adobe Premiere Pro Beta är öppet måste du **Stäng** det innan du kan installera plugin-programmet.
-
-![Frame.io](./images/frameio26.png)
-
-Klicka på **OK**. Plugin-programmet installeras nu.
-
-![Frame.io](./images/frameio27.png)
-
-När plugin-programmet är installerat öppnar du Adobe Premiere Pro Beta på datorn.
-
-![Frame.io](./images/frameio22.png)
-
 ## Nästa steg
 
-Gå till [-](./ex1.md){target="_blank"}
+Gå till [1.5.2-godkännanden med Frame.io](./ex2.md){target="_blank"}
 
 Gå tillbaka till [Effektivisera arbetsflödet med Frame.io](./frameio.md){target="_blank"}
 

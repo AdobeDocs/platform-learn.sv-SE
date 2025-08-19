@@ -4,7 +4,7 @@ description: Korrektur med Workfront
 kt: 5342
 doc-type: tutorial
 exl-id: 5feb9486-bdb4-4d59-941c-09fc2e38163b
-source-git-commit: a63c01ebe81df39569981d62b85d0461119ecf66
+source-git-commit: 917ebcd2dd5d8316413a183bd2c1a048c090428c
 workflow-type: tm+mt
 source-wordcount: '1613'
 ht-degree: 0%
@@ -197,7 +197,7 @@ Du borde se det här då.
 
 Som en del av detta måste du skapa en ny bild och sedan överföra den som ett dokument i Workfront. Nu kan du själv skapa resursen med Adobe Express.
 
-## 1.2.2.5 Skapa resurs med Adobe Firely Services och Adobe Express
+## 1.2.2.5 Skapa resurs med Adobe Firefly Services och Adobe Express
 
 Gå till [https://firefly.adobe.com/](https://firefly.adobe.com/){target="_blank"}. Skriv uppmaningen `a neon rabbit running very fast through space` och klicka på **Generera**.
 

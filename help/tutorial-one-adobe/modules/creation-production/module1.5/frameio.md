@@ -5,10 +5,11 @@ role: Developer
 level: Beginner
 jira: KT-5342
 doc-type: Tutorial
-source-git-commit: 8ed0b38056c6e2db4937bfaa9cfb53f5878250ee
+exl-id: 2b22fc2b-ce95-4860-8ba6-71163bacf5e7
+source-git-commit: 917ebcd2dd5d8316413a183bd2c1a048c090428c
 workflow-type: tm+mt
-source-wordcount: '90'
-ht-degree: 1%
+source-wordcount: '126'
+ht-degree: 0%
 
 ---
 
@@ -25,6 +26,14 @@ ht-degree: 1%
 [1.5.1 Komma igång med Frame.io](./ex1.md){target="_blank"}
 
 Utforska Frame.io i den här övningen och få en förståelse för dess funktioner.
+
+[1.5.2 Godkännanden med Frame.io](./ex2.md){target="_blank"}
+
+I den här övningen får du ett standardgodkännandeflöde med Frame.io.
+
+[1.5.3 Frame.io och Premiere Pro](./ex3.md){target="_blank"}
+
+I den här övningen kommer du att upptäcka integreringen mellan Frame.io och Adobe Premiere Pro.
 
 [Sammanfattning och förmåner](./summary.md){target="_blank"}
 
