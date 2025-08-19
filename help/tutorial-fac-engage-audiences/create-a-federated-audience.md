@@ -7,7 +7,7 @@ role: Data Architect, Data Engineer
 jira: KT-18743
 thumbnail: 18743-create-an-audience.jpg
 exl-id: a507cab5-dba9-4bf7-a043-d7c967e9e07d
-source-git-commit: 7e2f7bbb392eba51c0d6b9ccc8224c2081a01c7c
+source-git-commit: 41298ea7c79a5b540c546be93dcb14201ce27ce3
 workflow-type: tm+mt
 source-wordcount: '342'
 ht-degree: 0%
@@ -60,10 +60,10 @@ Sedan vägleder vi dig genom att skapa en målgrupp från Snowflake datalager me
 
 10. Klicka på **Spara** och sedan på **Start** för att köra frågan om kompositionen.
 
->[**SAMMANFATTNING**]
->
-> I det här exemplet användes produkt- och kreditinformation för att skapa en större publik genom direkt åtkomst av företagsdata från Snowflake, utan att man behöver göra en kopia av den i Adobe Experience Platform. När frågan bearbetas av det externa systemet kommer endast relevanta e-postadresser, aktuella produkter och förnamnsvärden att överföras till målgruppsdefinitionen för aktivering längre fram i kedjan. Detta gäller alla destinationer som RTCDP stöder.
+### SAMMANFATTNING
 
-Mer information om målgruppssammansättning finns på [Experience League](https://experienceleague.adobe.com/sv/docs/federated-audience-composition/using/compositions/create-composition/create-composition){target="_blank"}.
+I det här exemplet användes produkt- och kreditinformation för att skapa en större publik genom direkt åtkomst av företagsdata från Snowflake, utan att man behöver göra en kopia av den i Adobe Experience Platform. När frågan bearbetas av det externa systemet kommer endast relevanta e-postadresser, aktuella produkter och förnamnsvärden att överföras till målgruppsdefinitionen för aktivering längre fram i kedjan. Detta gäller alla destinationer som RTCDP stöder.
+
+Mer information om målgruppssammansättning finns på [Experience League](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/compositions/create-composition/create-composition){target="_blank"}.
 
 Nu när vår federerade publik har skapats [mappar vi den till ett S3-mål i Experience Platform](map-federated-audience-to-s3.md).
