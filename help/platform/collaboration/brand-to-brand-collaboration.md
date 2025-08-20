@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Läs om användningsfall som stöds av varumärkessamarbete och specifika funktioner som introducerats för att stödja dessa arbetsflöden.
 
->[!VIDEO](https://video.tv.adobe.com/v/3470936/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3470940/?learn=on&enablevpops&captions=swe)
