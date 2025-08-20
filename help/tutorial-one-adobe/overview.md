@@ -3,9 +3,9 @@ title: Översikt - Omfattande teknisk självstudiekurs - en Adobe
 description: Omfattande teknisk självstudiekurs - en Adobe
 doc-type: multipage-overview
 exl-id: 5bc0d621-0662-4d94-80a0-b6c173c0ac9e
-source-git-commit: 8ed0b38056c6e2db4937bfaa9cfb53f5878250ee
+source-git-commit: 8e0356921360017fa00d59fb323839b6ac1cd2c1
 workflow-type: tm+mt
-source-wordcount: '1166'
+source-wordcount: '1207'
 ht-degree: 0%
 
 ---
@@ -90,11 +90,19 @@ I den här modulen ska du använda Adobe Express för att skapa bilder och video
 
 I den här modulen använder du Adobe Frame.io i kombination med Adobe Premiere Pro för att samarbeta och granska bilder och videor.
 
+[1.6 GenStudio for Performance Marketing - Utbyggbarhet](./modules/creation-production/module1.6/genstudioext.md){target="_blank"}
+
+I den här modulen ska du skapa ett anpassat program för att utöka funktionerna i GenStudio for Performance Marketing med Adobe IO och App Builder.
+
 ### &#x200B;3. Resurshantering
 
 [1.1 Adobe Experience Manager Cloud Service &amp; Edge Delivery Services](./modules/asset-mgmt/module2.1/aemcs.md){target="_blank"}
 
-I den här grundläggande modulen kommer du att konfigurera Adobe Experience Manager Cloud Service Program, Site och Assets.
+I den här modulen kommer du att konfigurera Adobe Experience Manager Cloud Service Program, Site och Assets.
+
+[1.2 Adobe Experience Manager Assets](./modules/asset-mgmt/module2.2/aemassets.md){target="_blank"}
+
+I den här modulen kommer du att utforska AEM Assets.
 
 ### &#x200B;4. Leverans och aktivering
 
