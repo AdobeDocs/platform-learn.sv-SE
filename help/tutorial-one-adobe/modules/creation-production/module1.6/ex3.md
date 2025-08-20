@@ -5,14 +5,15 @@ role: Developer
 level: Beginner
 jira: KT-5342
 doc-type: Tutorial
-source-git-commit: 1dd8b487cbd16e438e9c006c34e458ddb82cce64
+exl-id: 6823e8a0-dde7-460a-a48a-6787e65e4104
+source-git-commit: fe162f285d67cc2a37736f80715a5c5717835e95
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '832'
 ht-degree: 0%
 
 ---
 
-# 1.6.3 Skapa en extern DAM-app
+# 1.6.3 Skapa och distribuera din externa DAM-app
 
 ## 1.6.3.1 Hämta exempelprogramfiler
 
@@ -131,15 +132,15 @@ AWS_REGION=
 AWS_BUCKET_NAME=
 ```
 
-Fälten **AWS_ACCESS_KEY_ID** och **AWS_SECRET_ACCESS_KEY** var tillgängliga efter att IAM-användaren skapades i föregående övning. Du har ombetts att skriva ned dem och du kan nu kopiera värdena.
+Fältet **`AWS_ACCESS_KEY_ID`** och **`AWS_SECRET_ACCESS_KEY`** var tillgängliga efter att IAM-användaren skapades i föregående övning. Du har ombetts att skriva ned dem och du kan nu kopiera värdena.
 
 ![ETL](./images/cred1.png)
 
-Fältet **AWS_REGION** kan hämtas från hemvyn i AWS S3, bredvid ditt bucketnamn. I det här exemplet är regionen **us-west-2**.
+Fältet **`AWS_REGION`** kan hämtas från hemvyn i AWS S3, bredvid ditt bucketnamn. I det här exemplet är regionen **us-west-2**.
 
 ![ETL](./images/bucket2.png)
 
-Fältet **AWS_BUCKET_NAME** ska vara `--aepUserLdap---gspem-dam`.
+Fältet **`AWS_BUCKET_NAME`** ska vara `--aepUserLdap---gspem-dam`.
 
 Med den här informationen kan du uppdatera värdena för var och en av dessa variabler.
 
@@ -169,9 +170,53 @@ Kör kommandot `aio app run` i terminalfönstret. Du bör se det här efter 1-2 
 
 ![Ext DAM](./images/extdam24.png)
 
+Du har nu bekräftat att din app körs. Nästa steg är att distribuera den.
+
+Tryck först på **CTRL+C** för att stoppa programmet från att köras. Ange sedan kommandot `aio app deploy`. Detta kommando distribuerar koden till Adobe IO.
+
+Därför får du en liknande URL för att komma åt ditt distribuerade program:
+
+`https://133309-201burgundyguan.adobeio-static.net/index.html`
+
+![Ext DAM](./images/extdam27.png)
+
+I testsyfte kan du nu använda den URL:en som frågesträngsparameter genom att lägga till `?ext=` som ett prefix till ovanstående URL. Detta resulterar i den här frågesträngsparametern:
+
+`?ext=https://133309-201burgundyguan.adobeio-static.net/index.html`
+
+Gå till [https://experience.adobe.com/genstudio/create](https://experience.adobe.com/genstudio/create).
+
+![Ext DAM](./images/extdam25.png)
+
+Lägg sedan till frågesträngsparametern precis före **#**. Din nya URL bör se ut så här:
+
+`https://experience.adobe.com/?ext=https://133309-201burgundyguan.adobeio-static.net/index.html#/@experienceplatform/genstudio/create`
+
+Sidan läses in som vanligt. Klicka på **Banners** för att börja skapa en ny banderoll.
+
+![Ext DAM](./images/extdam26.png)
+
+Välj en mall och klicka på **Använd**.
+
+![Ext DAM](./images/extdam28.png)
+
+Klicka på **Välj från innehåll**.
+
+![Ext DAM](./images/extdam29.png)
+
+Du bör sedan kunna välja din externa DAM i listrutan.
+
+![Ext DAM](./images/extdam30.png)
+
+När du ändrar koden på den lokala datorn måste du distribuera om programmet. När du distribuerar igen använder du det här terminalkommandot:
+
+`aio app deploy --force-build --force-deploy`
+
+Din app är nu klar att publiceras.
+
 ## Nästa steg
 
-Gå till [Distribuera koden och publicera appen privat](./ex4.md){target="_blank"}
+Gå till [Publicera din app privat](./ex4.md){target="_blank"}
 
 Gå tillbaka till [GenStudio for Performance Marketing - utökningsbarhet](./genstudioext.md){target="_blank"}
 

@@ -4,9 +4,9 @@ breadcrumb-title: En teknisk självstudiekurs för Adobe
 hide: true
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-source-git-commit: cc45eefc9042d27ae38fc9bb2dd9b6c1af9a9e4b
+source-git-commit: 10c3f0a3ae1540562f0f46a5936b1556e37a251b
 workflow-type: tm+mt
-source-wordcount: '1339'
+source-wordcount: '1337'
 ht-degree: 3%
 
 ---
@@ -85,8 +85,8 @@ ht-degree: 3%
       + [Översikt](/help/tutorial-one-adobe/modules/creation-production/module1.6/genstudioext.md)
       + [1.6.1 Adobe IO och App Builder](/help/tutorial-one-adobe/modules/creation-production/module1.6/ex1.md)
       + [1.6.2 Skapa din AWS S3-bucket](/help/tutorial-one-adobe/modules/creation-production/module1.6/ex2.md)
-      + [1.6.3 Skapa en extern DAM-app](/help/tutorial-one-adobe/modules/creation-production/module1.6/ex3.md)
-      + [1.6.4 Distribuera koden och publicera appen privat](/help/tutorial-one-adobe/modules/creation-production/module1.6/ex4.md)
+      + [1.6.3 Skapa och distribuera din externa DAM-app](/help/tutorial-one-adobe/modules/creation-production/module1.6/ex3.md)
+      + [1.6.4 Publicera din app privat](/help/tutorial-one-adobe/modules/creation-production/module1.6/ex4.md)
       + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/creation-production/module1.6/summary.md)
 
 + Resurshantering {#assetmgmt}

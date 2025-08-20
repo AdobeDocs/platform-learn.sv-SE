@@ -1,14 +1,15 @@
 ---
-title: GenStudio för prestationsbaserad marknadsföring
-description: GenStudio för prestationsbaserad marknadsföring
+title: GenStudio for Performance Marketing - utbyggbarhet
+description: GenStudio for Performance Marketing - utbyggbarhet
 role: Developer
 level: Beginner
 jira: KT-5342
 doc-type: Tutorial
-source-git-commit: 8e0356921360017fa00d59fb323839b6ac1cd2c1
+exl-id: 2860dcb7-4f7a-4b48-93d4-141cd7f4899e
+source-git-commit: fe162f285d67cc2a37736f80715a5c5717835e95
 workflow-type: tm+mt
-source-wordcount: '317'
-ht-degree: 2%
+source-wordcount: '306'
+ht-degree: 0%
 
 ---
 
@@ -36,13 +37,13 @@ I den här övningen ska du skapa ett Adobe IO-projekt med App Builder.
 
 I den här övningen skapar du en Amazon AWS 3-bucket och en IAM-användare.
 
-[1.6.3 Skapa din externa DAM-app](./ex3.md){target="_blank"}
+[1.6.3 Skapa och distribuera din externa DAM-app](./ex3.md){target="_blank"}
 
 I den här övningen skapar du en extern DAM-app med en fördefinierad mall.
 
-[1.6.4 Distribuera koden och publicera appen privat](./ex4.md){target="_blank"}
+[1.6.4 Publicera din app privat](./ex4.md){target="_blank"}
 
-I den här övningen distribuerar du koden till Adobe IO och App Builder och publicerar appen privat.
+I den här övningen publicerar du din app privat.
 
 [Sammanfattning och förmåner](./summary.md){target="_blank"}
 
