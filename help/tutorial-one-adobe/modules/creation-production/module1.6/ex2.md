@@ -5,9 +5,10 @@ role: Developer
 level: Beginner
 jira: KT-5342
 doc-type: Tutorial
-source-git-commit: 1dd8b487cbd16e438e9c006c34e458ddb82cce64
+exl-id: 044677e4-7ca3-4dfe-9067-640983681ea7
+source-git-commit: 1f9a868c5e4ef4aa0e09d7f5d73a951006ee6c5a
 workflow-type: tm+mt
-source-wordcount: '483'
+source-wordcount: '502'
 ht-degree: 0%
 
 ---
@@ -139,19 +140,39 @@ Du borde se det här då.
 
 ![ETL](./images/bucket4.png)
 
-Du kan hämta CitiSignal-bildfiler [här](./../../asset-mgmt/module2.2/images/CitiSignal_Neon_Rabbit.zip){target="_blank"}.
+Du kan hämta CitiSignal-bildfiler [här](./images/package.zip){target="_blank"}.
 
 Exportera filerna till skrivbordet.
 
 ![ETL](./images/bucket5.png)
 
-Ta de två bildfilerna i mappen och släpp dem i S3 bucket-överföringsfönstret. Klicka på **Överför**.
+Klicka på **Lägg till mapp**.
 
 ![ETL](./images/bucket6.png)
 
-Du borde se det här då. Din S3-bucket, dina bildfiler och din IAM-användare är nu klara att användas av din externa DAM-app.
+Välj mappen **assets** i hämtningsmappen **package**. Klicka på **Överför**.
 
 ![ETL](./images/bucket7.png)
+
+Du borde se det här då. Klicka på **Lägg till mapp** igen.
+
+![ETL](./images/bucket8.png)
+
+Välj mappen **miniatyrbilder** i hämtningsmappen **package**. Klicka på **Överför**.
+
+![ETL](./images/bucket9.png)
+
+Du borde se det här då. Klicka på **Överför**.
+
+![ETL](./images/bucket10.png)
+
+Överföringen är nu klar. Klicka på **Stäng**.
+
+![ETL](./images/bucket11.png)
+
+Nu bör du ha den här mappstrukturen i din S3-bucket.
+
+![ETL](./images/bucket12.png)
 
 ## Nästa steg
 
