@@ -6,9 +6,9 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 5a77ccdd-4000-4fb7-b696-dec40d01b41b
-source-git-commit: fe162f285d67cc2a37736f80715a5c5717835e95
+source-git-commit: 8219f3bd33448f90b87bf9ccb15738f1294e5965
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
@@ -58,6 +58,10 @@ Klicka på **Skicka**.
 ![SGPeM-utökningsbarhet](./images/gspemextpub6.png)
 
 ## 1.6.4.2 Godkänn din app
+
+>[!IMPORTANT]
+>
+>Det här steget kan bara utföras av systemadministratörer i Adobe Admin Console. Om du inte är systemadministratör kan du inte köra det här. Kontakta systemadministratören om du vill godkänna din app istället.
 
 När en utvecklare skickar in en ny app för publicering meddelas systemadministratörerna för din organisation och ombeds granska och godkänna den.
 
