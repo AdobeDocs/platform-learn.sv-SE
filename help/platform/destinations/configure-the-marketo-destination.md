@@ -25,5 +25,5 @@ Lär dig hur målplatsen [!DNL Marketo Engage] möjliggör smidig synkronisering
 
 Mer information finns i [dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-platform/destinations/catalog/adobe/marketo-engage-connection).
 
->[!VIDEO](https://video.tv.adobe.com/v/338248?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3440162?learn=on&enablevpops&captions=swe)
 
