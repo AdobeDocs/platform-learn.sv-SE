@@ -23,7 +23,7 @@ ht-degree: 1%
 
 Lär dig hur målplatsen [!DNL Marketo Engage] möjliggör smidig synkronisering i realtid av målgruppsdata och profilattribut, vilket möjliggör enhetlig marknadsföring i hela er teknologi. Med flexibla synkroniseringsalternativ och smidig konfiguration stöder det användningsfall som omengagerande leads, uppdatering av profiler och utökad räckvidd för personaliserade B2B-resor.
 
-Mer information finns i [dokumentationen](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/adobe/marketo-engage-connection).
+Mer information finns i [dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-platform/destinations/catalog/adobe/marketo-engage-connection).
 
 >[!VIDEO](https://video.tv.adobe.com/v/338248?learn=on&enablevpops)
 
