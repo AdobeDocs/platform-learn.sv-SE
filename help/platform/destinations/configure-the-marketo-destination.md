@@ -1,6 +1,6 @@
 ---
-title: Konfigurera Marketo-målet
-description: Lär dig hur du konfigurerar Marketo-målet i Adobe Experience Platform så att du kan aktivera dina plattformssegment i din Marketo Engage-instans.
+title: Konfigurera Marketo Engage-målet
+description: Läs om hur Marketo Engage destination möjliggör smidig synkronisering i realtid av målgruppsdata och profilattribut, vilket möjliggör enhetlig marknadsföring i hela er teknologi.
 solution: Real-Time Customer Data Platform
 feature: Destinations
 topic: Integrations
@@ -9,17 +9,21 @@ role: User, Admin
 level: Intermediate
 jira: KT-9262
 thumbnail: 338248.jpg
+last-substantial-update: 2025-09-02T00:00:00Z
+duration: 338
 exl-id: 7e7e2647-0eb8-4f37-8a91-a506c9c2abb9
-source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
+source-git-commit: 5fc95a79e545bc4b6f5b92967f9a55a2ccc663b3
 workflow-type: tm+mt
-source-wordcount: '64'
+source-wordcount: '83'
 ht-degree: 1%
 
 ---
 
-# Konfigurera Marketo-målet
+# Konfigurera målet [!DNL Marketo Engage]
 
-Lär dig hur du konfigurerar Marketo-målet i Adobe Experience Platform så att du kan aktivera dina plattformssegment i din Marketo Engage-instans. Mer information finns i [dokumentationen för profiler](https://experienceleague.adobe.com/docs/experience-platform/rtcdp/profile/profile-browse.html?lang=sv-SE).
+Lär dig hur målplatsen [!DNL Marketo Engage] möjliggör smidig synkronisering i realtid av målgruppsdata och profilattribut, vilket möjliggör enhetlig marknadsföring i hela er teknologi. Med flexibla synkroniseringsalternativ och smidig konfiguration stöder det användningsfall som omengagerande leads, uppdatering av profiler och utökad räckvidd för personaliserade B2B-resor.
 
->[!VIDEO](https://video.tv.adobe.com/v/3440162?learn=on&enablevpops&captions=swe)
+Mer information finns i [dokumentationen](https://experienceleague.adobe.com/en/docs/experience-platform/destinations/catalog/adobe/marketo-engage-connection).
+
+>[!VIDEO](https://video.tv.adobe.com/v/338248?learn=on&enablevpops)
 
