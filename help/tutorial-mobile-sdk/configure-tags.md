@@ -15,7 +15,7 @@ ht-degree: 1%
 
 Lär dig hur du konfigurerar en taggegenskap i [!UICONTROL Data Collection]-gränssnittet.
 
-Taggar i Adobe Experience Platform är nästa generation av tagghanteringsfunktioner från Adobe. Taggar ger kunderna ett enkelt sätt att driftsätta och hantera de analyser, marknadsförings- och annonstaggar som behövs för att skapa relevanta kundupplevelser. Läs mer om [Taggar](https://experienceleague.adobe.com/en/docs/experience-platform/tags/home) i produktdokumentationen.
+Taggar i Adobe Experience Platform är nästa generation av tagghanteringsfunktioner från Adobe. Taggar ger kunderna ett enkelt sätt att driftsätta och hantera de analyser, marknadsförings- och annonstaggar som behövs för att skapa relevanta kundupplevelser. Läs mer om [Taggar](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/home) i produktdokumentationen.
 
 ## Förhandskrav
 
@@ -23,7 +23,7 @@ Du måste ha behörighet att skapa en taggegenskap för att kunna slutföra lekt
 
 >[!NOTE]
 >
-> Platform Launch (klientsidan) är nu [Taggar](https://experienceleague.adobe.com/en/docs/experience-platform/tags/home)
+> Platform Launch (klientsidan) är nu [Taggar](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/home)
 
 ## Utbildningsmål
 

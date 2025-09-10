@@ -18,7 +18,7 @@ Händelsedata för mobilappar, som du samlade in och skickade till Platform Edge
 
 I motsats till Adobe Analytics använder Customer Journey Analytics ** data från datauppsättningar som skapats i Experience Platform. Data skickas inte direkt till Customer Journey Analytics via Adobe Experience Platform Mobile SDK, utan data skickas till datauppsättningar. Anslutningar konfigureras sedan i Customer Journey Analytics för att välja de datauppsättningar du vill använda i dina rapporterings- och analysprojekt.
 
-Den här lektionen i självstudiekursen fokuserar på att rapportera och analysera data som hämtats in från Luma-självstudieversionen. En av de unika funktionerna i Customer Journey Analytics är att kombinera data från olika källor (CRM, butiksadress, lojalitetsprogram, callcenter) och kanaler (webb, mobil, offline) för att få djupgående insikter om kundresor. Denna möjlighet ligger utanför den här lektionens räckvidd. Mer information finns i [Customer Journey Analytics - översikt](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-overview).
+Den här lektionen i självstudiekursen fokuserar på att rapportera och analysera data som hämtats in från Luma-självstudieversionen. En av de unika funktionerna i Customer Journey Analytics är att kombinera data från olika källor (CRM, butiksadress, lojalitetsprogram, callcenter) och kanaler (webb, mobil, offline) för att få djupgående insikter om kundresor. Denna möjlighet ligger utanför den här lektionens räckvidd. Mer information finns i [Customer Journey Analytics - översikt](https://experienceleague.adobe.com/sv/docs/analytics-platform/using/cja-overview/cja-overview).
 
 
 ## Förhandskrav
@@ -113,7 +113,7 @@ När posterna har lagts till från datauppsättningarna till Customer Journey An
 
 En datavy är en behållare som är specifik för Customer Journey Analytics och som gör att du kan avgöra hur data från en anslutning ska tolkas. Du kan konfigurera standard- och schemafält från alla datauppsättningar som du har definierat i din anslutning som komponenter (mått, mått) i Analysis Workspace.
 
-Datavyn i Customer Journey Analytics är mycket flexibel när det gäller att konfigurera och definiera data från anslutningen. I den här självstudiekursen använder du bara de funktioner som krävs för din rapportering och analys. Mer information finns i [Datavyer](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-dataviews/data-views).
+Datavyn i Customer Journey Analytics är mycket flexibel när det gäller att konfigurera och definiera data från anslutningen. I den här självstudiekursen använder du bara de funktioner som krävs för din rapportering och analys. Mer information finns i [Datavyer](https://experienceleague.adobe.com/sv/docs/analytics-platform/using/cja-dataviews/data-views).
 
 
 Så här skapar du en datavy:
@@ -213,7 +213,7 @@ Du har definierat datavyn och allt finns på plats för att börja skapa rapport
 
 ## Skapa ett projekt
 
-Workspace-projekt används i Customer Journey Analytics för att skapa rapporter och visualiseringar. Det finns många möjligheter att skapa omfattande rapporter och engagerande visualiseringar, men detta ligger utanför kursens räckvidd. Mer information finns i [Workspace-översikt](https://experienceleague.adobe.com/en/docs/customer-journey-analytics-learn/tutorials/analysis-workspace/workspace-projects/analysis-workspace-overview) och [Skapa ett nytt projekt](https://experienceleague.adobe.com/en/docs/customer-journey-analytics-learn/tutorials/analysis-workspace/workspace-projects/build-a-new-project).
+Workspace-projekt används i Customer Journey Analytics för att skapa rapporter och visualiseringar. Det finns många möjligheter att skapa omfattande rapporter och engagerande visualiseringar, men detta ligger utanför kursens räckvidd. Mer information finns i [Workspace-översikt](https://experienceleague.adobe.com/sv/docs/customer-journey-analytics-learn/tutorials/analysis-workspace/workspace-projects/analysis-workspace-overview) och [Skapa ett nytt projekt](https://experienceleague.adobe.com/sv/docs/customer-journey-analytics-learn/tutorials/analysis-workspace/workspace-projects/build-a-new-project).
 
 I det här avsnittet av lektionen skapar du ett projekt som visar rapporter och visualiseringar om:
 

@@ -21,7 +21,7 @@ Med Journey Optimizer kan ni skapa kampanjer för att skicka meddelanden i appen
 
 ![Arkitektur](assets/architecture-ajo.png){zoomable="yes"}
 
-Innan du skickar meddelanden i appen med Journey Optimizer måste du se till att rätt konfigurationer och integreringar finns på plats. Mer information om dataflödet för meddelanden i programmet i Journey Optimizer finns i [dokumentationen](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/in-app/inapp-configuration).
+Innan du skickar meddelanden i appen med Journey Optimizer måste du se till att rätt konfigurationer och integreringar finns på plats. Mer information om dataflödet för meddelanden i programmet i Journey Optimizer finns i [dokumentationen](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/in-app/inapp-configuration).
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ Innan du skickar meddelanden i appen med Journey Optimizer måste du se till att
 
 * App med SDK:er har installerats och konfigurerats.
 * Konfigurera appen för Adobe Experience Platform.
-* Åtkomst till Journey Optimizer och [tillräcklig behörighet för push-meddelanden](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/push/push-config/push-configuration). Du behöver även tillräcklig behörighet för följande Journey Optimizer-funktioner.
+* Åtkomst till Journey Optimizer och [tillräcklig behörighet för push-meddelanden](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/push/push-config/push-configuration). Du behöver även tillräcklig behörighet för följande Journey Optimizer-funktioner.
    * Hantera kampanjer.
 * Fysisk iOS-enhet eller simulator för testning.
 
@@ -67,11 +67,11 @@ Till att börja med måste du skapa en kanalkonfiguration som gör att du kan sk
    >
    > Namn måste börja med en bokstav (A-Z). Det får bara innehålla alfanumeriska tecken. Du kan också använda understreck `_`, punkt `.` och bindestreck `-`.
 
-1. Om du vill tilldela anpassade eller grundläggande dataanvändningsetiketter till konfigurationen kan du välja **[!UICONTROL Manage access]**. [Läs mer om OLAC (Object Level Access Control)](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access).
+1. Om du vill tilldela anpassade eller grundläggande dataanvändningsetiketter till konfigurationen kan du välja **[!UICONTROL Manage access]**. [Läs mer om OLAC (Object Level Access Control)](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/access-control/object-based-access).
 
 1. Välj kanalen **Meddelanden i appen**.
 
-1. Välj **[!UICONTROL Marketing action]** om du vill associera medgivandeprinciper med de meddelanden som använder den här konfigurationen. Alla profiler för samtycke som är kopplade till marknadsföringsåtgärden används för att ta hänsyn till kundernas önskemål. [Läs mer om marknadsföringsåtgärder](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/privacy/consent/consent#surface-marketing-actions). Till exempel: Push Targeting.
+1. Välj **[!UICONTROL Marketing action]** om du vill associera medgivandeprinciper med de meddelanden som använder den här konfigurationen. Alla profiler för samtycke som är kopplade till marknadsföringsåtgärden används för att ta hänsyn till kundernas önskemål. [Läs mer om marknadsföringsåtgärder](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/privacy/consent/consent#surface-marketing-actions). Till exempel: Push Targeting.
 
 1. Välj den plattform som du vill definiera inställningarna för. Med den här inställningen kan du ange målappen för varje plattform och säkerställa enhetlig innehållsleverans på flera plattformar.
 
@@ -93,7 +93,7 @@ Uppdatera Experience Edge-konfigurationen för att se till att data som skickas 
 
 1. I användargränssnittet för datainsamling väljer du **[!UICONTROL Datastreams]** och markerar ditt datastream, till exempel **[!DNL Luma Mobile App]**.
 1. Välj ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_MoreSmallList_18_N.svg) för **[!UICONTROL Experience Platform]** och välj ![Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) **[!UICONTROL Edit]** på snabbmenyn.
-1. Kontrollera att **[!UICONTROL Datastreams]** är markerat på skärmen ![ > ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Folder_18_N.svg)Mapp **[!UICONTROL Adobe Experience Platform]** > **[!UICONTROL Adobe Journey Optimizer]**. Mer information finns i [Adobe Experience Platform-inställningar](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/configure).
+1. Kontrollera att **[!UICONTROL Datastreams]** är markerat på skärmen ![ > ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Folder_18_N.svg)Mapp **[!UICONTROL Adobe Experience Platform]** > **[!UICONTROL Adobe Journey Optimizer]**. Mer information finns i [Adobe Experience Platform-inställningar](https://experienceleague.adobe.com/sv/docs/experience-platform/datastreams/configure).
 1. Välj **[!UICONTROL Save]** om du vill spara dataströmskonfigurationen.
 
 

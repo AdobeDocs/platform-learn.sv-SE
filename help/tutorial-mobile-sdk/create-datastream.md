@@ -15,7 +15,7 @@ ht-degree: 0%
 
 Lär dig hur du skapar ett datastam i Experience Platform.
 
-En datastream är en konfiguration på serversidan på Platform Edge Network. Datastream säkerställer att inkommande data till Platform Edge Network dirigeras till Adobe Experience Cloud-program och -tjänster på rätt sätt. Mer information finns i [dokumentationen](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview) eller den här [videon](https://experienceleague.adobe.com/en/docs/platform-learn/data-collection/edge-network/configure-datastreams).
+En datastream är en konfiguration på serversidan på Platform Edge Network. Datastream säkerställer att inkommande data till Platform Edge Network dirigeras till Adobe Experience Cloud-program och -tjänster på rätt sätt. Mer information finns i [dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-platform/datastreams/overview) eller den här [videon](https://experienceleague.adobe.com/sv/docs/platform-learn/data-collection/edge-network/configure-datastreams).
 
 ![Arkitektur](assets/architecture.png){zoomable="yes"}
 
@@ -102,7 +102,7 @@ You might also want to enable the Adobe Experience Platform service.
 
 >[!NOTE]
 >
->Genom att aktivera varje tjänst som din organisation använder ser du till att data som samlas in i mobilappen kan användas överallt. Mer information finns i [datastream-inställningar](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overview).
+>Genom att aktivera varje tjänst som din organisation använder ser du till att data som samlas in i mobilappen kan användas överallt. Mer information finns i [datastream-inställningar](https://experienceleague.adobe.com/sv/docs/experience-platform/datastreams/overview).
 
 När du implementerar Platform Mobile SDK i din egen app bör du skapa tre datastreams som kan kopplas till dina tre taggmiljöer (utveckling, scen och produktion). Om du använder Platform Mobile SDK med plattformsbaserade program, som Adobe Real-Time Customer Data Platform eller Adobe Journey Optimizer, måste du se till att skapa dessa datastölar i rätt sandlåda.
 

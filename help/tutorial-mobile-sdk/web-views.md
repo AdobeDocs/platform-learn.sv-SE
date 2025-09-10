@@ -27,7 +27,7 @@ I den här lektionen kommer du att:
 
 ## Potentiella spårningsproblem
 
-Separata (Experience Cloud Identity) ECID:n genereras när du skickar data från den inbyggda delen av programmet och från en WebView i programmet. Dessa separata ECID:n resulterar i frånkopplade träffar och uppblåsta besöksdata. Mer information om ECID finns i [ECID-översikten](https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/ecid).
+Separata (Experience Cloud Identity) ECID:n genereras när du skickar data från den inbyggda delen av programmet och från en WebView i programmet. Dessa separata ECID:n resulterar i frånkopplade träffar och uppblåsta besöksdata. Mer information om ECID finns i [ECID-översikten](https://experienceleague.adobe.com/sv/docs/experience-platform/identity/features/ecid).
 
 Om du vill lösa problem med uppkopplade träffar och uppblåsta data måste du skicka användarens ECID från den inbyggda delen av appen till en WebView som du kanske vill använda i appen.
 

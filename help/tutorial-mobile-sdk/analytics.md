@@ -54,11 +54,11 @@ Om du vill skicka XDM-data från Edge Network till Adobe Analytics konfigurerar 
 
 ## Automatisk mappning
 
-Många av XDM-standardfälten mappas automatiskt till analysvariabler. Se den [fullständiga listan](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/xdm-var-mapping).
+Många av XDM-standardfälten mappas automatiskt till analysvariabler. Se den [fullständiga listan](https://experienceleague.adobe.com/sv/docs/analytics/implementation/aep-edge/xdm-var-mapping).
 
 ### Exempel 1 - s.products
 
-Ett bra exempel är variabeln [products](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/page-vars/products) som inte kan fyllas med bearbetningsregler. Med en XDM-implementering skickas alla nödvändiga data i `productListItems` och `s.products` fylls i automatiskt via Analytics-mappning.
+Ett bra exempel är variabeln [products](https://experienceleague.adobe.com/sv/docs/analytics/implementation/vars/page-vars/products) som inte kan fyllas med bearbetningsregler. Med en XDM-implementering skickas alla nödvändiga data i `productListItems` och `s.products` fylls i automatiskt via Analytics-mappning.
 
 Det här objektet:
 
@@ -87,7 +87,7 @@ s.products = ";5829;1;49.99,9841;3;30.00"
 
 >[!NOTE]
 >
->Om både `productListItems[].SKU` och `productListItems[].name` innehåller data används värdet i `productListItems[].SKU`. Mer information finns i [Variabelmappning för analys i Adobe Experience Edge](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/xdm-var-mapping).
+>Om både `productListItems[].SKU` och `productListItems[].name` innehåller data används värdet i `productListItems[].SKU`. Mer information finns i [Variabelmappning för analys i Adobe Experience Edge](https://experienceleague.adobe.com/sv/docs/analytics/implementation/aep-edge/xdm-var-mapping).
 
 
 ### Exempel 2 - scAdd
@@ -211,7 +211,7 @@ Om du vill mappa dessa XDM-kontextdata till analysdata i rapportsviten kan du:
 
 ### Merchandising eVars
 
-Om du använder [marknadsföringsvariabler](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/merchandising-evars) i Analytics-konfigurationen måste du utöka din XDM-nyttolast som du definierade i [Spåra händelsedata](events.md) för att kunna hämta försäljningsinformationen. Exempel på en försäljningsvariabel är `evar1` där du vill fånga färgerna för produkter, som `&&products = ...;evar1=red;event10=50,...;evar1=blue;event10=60`
+Om du använder [marknadsföringsvariabler](https://experienceleague.adobe.com/sv/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/merchandising-evars) i Analytics-konfigurationen måste du utöka din XDM-nyttolast som du definierade i [Spåra händelsedata](events.md) för att kunna hämta försäljningsinformationen. Exempel på en försäljningsvariabel är `evar1` där du vill fånga färgerna för produkter, som `&&products = ...;evar1=red;event10=50,...;evar1=blue;event10=60`
 
 * I JSON:
 
@@ -301,7 +301,7 @@ Så här ser en bearbetningsregel ut när den här informationen används:
 >Första gången du mappar till en bearbetningsregel visas inte kontextdatavariablerna från XDM-objektet. Om du vill åtgärda det väljer du ett värde, Spara och återgå till att redigera. Alla XDM-variabler ska nu visas.
 
 
-Se [Mappa contextData-variabler till utkast och eVars med bearbetningsregler](https://experienceleague.adobe.com/en/docs/analytics-learn/tutorials/implementation/implementation-basics/map-contextdata-variables-into-props-and-evars-with-processing-rules).
+Se [Mappa contextData-variabler till utkast och eVars med bearbetningsregler](https://experienceleague.adobe.com/sv/docs/analytics-learn/tutorials/implementation/implementation-basics/map-contextdata-variables-into-props-and-evars-with-processing-rules).
 
 >[!TIP]
 >

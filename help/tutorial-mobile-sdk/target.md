@@ -17,7 +17,7 @@ ht-degree: 1%
 
 Lär dig hur du optimerar och personaliserar upplevelserna i dina mobilappar med Platform Mobile SDK och Adobe Target.
 
-Target innehåller allt som ni behöver för att skräddarsy och personalisera kundernas upplevelser. Target hjälper er att maximera intäkterna från era webbplatser och mobilsajter, appar, sociala medier och andra digitala kanaler. Target kan utföra A/B-tester, multivariata tester, rekommendera produkter och innehåll, målinrikta innehåll, anpassa innehåll automatiskt med AI och mycket annat. Fokus i den här lektionen ligger på A/B-testfunktionen i Target. Mer information finns i [Översikt över A/B-tester](https://experienceleague.adobe.com/en/docs/target/using/activities/abtest/test-ab).
+Target innehåller allt som ni behöver för att skräddarsy och personalisera kundernas upplevelser. Target hjälper er att maximera intäkterna från era webbplatser och mobilsajter, appar, sociala medier och andra digitala kanaler. Target kan utföra A/B-tester, multivariata tester, rekommendera produkter och innehåll, målinrikta innehåll, anpassa innehåll automatiskt med AI och mycket annat. Fokus i den här lektionen ligger på A/B-testfunktionen i Target. Mer information finns i [Översikt över A/B-tester](https://experienceleague.adobe.com/sv/docs/target/using/activities/abtest/test-ab).
 
 ![Arkitektur](assets/architecture-at.png){zoomable="yes"}
 
@@ -31,7 +31,7 @@ Innan du kan utföra A/B-tester med Target måste du se till att rätt konfigura
 ## Förhandskrav
 
 * App med SDK:er har installerats och konfigurerats.
-* Åtkomst till Adobe Target med [behörigheter, korrekt konfigurerade roller, arbetsytor och egenskaper](https://experienceleague.adobe.com/en/docs/target/using/administer/manage-users/enterprise/property-channel).
+* Åtkomst till Adobe Target med [behörigheter, korrekt konfigurerade roller, arbetsytor och egenskaper](https://experienceleague.adobe.com/sv/docs/target/using/administer/manage-users/enterprise/property-channel).
 
 
 ## Utbildningsmål
@@ -66,9 +66,9 @@ Om du vill vara säker på att data som skickas från din mobilapp till Experien
 
    Du hittar dina egenskaper i målgränssnittet i **[!UICONTROL Administration]** > **[!UICONTROL Properties]**. Välj ![Kod](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Code_18_N.svg) för att visa egenskapstoken för den egenskap som du vill använda. Egenskapstoken har formatet `"at_property": "xxxxxxxx-xxxx-xxxxx-xxxx-xxxxxxxxxxxx"`. Du får bara ange värdet `xxxxxxxx-xxxx-xxxxx-xxxx-xxxxxxxxxxxx`.
 
-   Du kan också ange ett ID för målmiljö. Använd miljöer för att ordna era webbplatser och förproduktionsmiljöer för enkel hantering och separat rapportering. I förinställda miljöer ingår produktion, mellanlagring och utveckling. Mer information finns i [Miljö](https://experienceleague.adobe.com/en/docs/target/using/administer/environments) och [Målmiljö-ID](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/applications-setup/setup-target).
+   Du kan också ange ett ID för målmiljö. Använd miljöer för att ordna era webbplatser och förproduktionsmiljöer för enkel hantering och separat rapportering. I förinställda miljöer ingår produktion, mellanlagring och utveckling. Mer information finns i [Miljö](https://experienceleague.adobe.com/sv/docs/target/using/administer/environments) och [Målmiljö-ID](https://experienceleague.adobe.com/sv/docs/platform-learn/implement-web-sdk/applications-setup/setup-target).
 
-   Du kan också ange ett namnutrymme för ett tredjeparts-ID för mål som stöder profilsynkronisering i ett identitetsnamnområde (till exempel CRM-ID). Mer information finns i [Namnområde för tredje parts-ID för mål](https://experienceleague.adobe.com/en/docs/platform-learn/implement-web-sdk/applications-setup/setup-target).
+   Du kan också ange ett namnutrymme för ett tredjeparts-ID för mål som stöder profilsynkronisering i ett identitetsnamnområde (till exempel CRM-ID). Mer information finns i [Namnområde för tredje parts-ID för mål](https://experienceleague.adobe.com/sv/docs/platform-learn/implement-web-sdk/applications-setup/setup-target).
 
 1. Välj **[!UICONTROL Save]**.
 
@@ -81,7 +81,7 @@ För att säkerställa att data som skickas från din mobilapp till Edge Network
 
 1. I användargränssnittet för datainsamling väljer du **[!UICONTROL Datastreams]** och markerar ditt datastream, till exempel **[!DNL Luma Mobile App]**.
 1. Välj ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_MoreSmallList_18_N.svg) för **[!UICONTROL Experience Platform]** och välj ![Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) **[!UICONTROL Edit]** på snabbmenyn.
-1. Kontrollera att **[!UICONTROL Datastreams]**, ![ och ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Folder_18_N.svg) är markerade på skärmen **[!UICONTROL Adobe Experience Platform]** > **[!UICONTROL Offer Decisioning]** Mapp **[!UICONTROL Edge Segmentation]** > **[!UICONTROL Personalization Destinations]**. Om du även följer lektionerna från Journey Optimizer väljer du **[!UICONTROL Adobe Journey Optimizer]**. Mer information finns i [Adobe Experience Platform-inställningar](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/configure).
+1. Kontrollera att **[!UICONTROL Datastreams]**, ![ och ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Folder_18_N.svg) är markerade på skärmen **[!UICONTROL Adobe Experience Platform]** > **[!UICONTROL Offer Decisioning]** Mapp **[!UICONTROL Edge Segmentation]** > **[!UICONTROL Personalization Destinations]**. Om du även följer lektionerna från Journey Optimizer väljer du **[!UICONTROL Adobe Journey Optimizer]**. Mer information finns i [Adobe Experience Platform-inställningar](https://experienceleague.adobe.com/sv/docs/experience-platform/datastreams/configure).
 1. Välj **[!UICONTROL Save]** om du vill spara dataströmskonfigurationen.
 
    ![AEP datastream-konfiguration](assets/datastream-aep-configuration-target.png){zoomable="yes"}
