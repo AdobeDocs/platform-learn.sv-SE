@@ -6,9 +6,9 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 52385c33-f316-4fd9-905f-72d2d346f8f5
-source-git-commit: 4d8952cdd136e9bf3a82fa864de4d51641bcbfd8
+source-git-commit: ceb8d1ca1efdd94d608eca41ec60b6d96cb207ff
 workflow-type: tm+mt
-source-wordcount: '3788'
+source-wordcount: '3787'
 ht-degree: 0%
 
 ---
@@ -68,7 +68,7 @@ Här är ett exempel på vanliga svarskoder som du kan förvänta dig:
 
 ## 1.1.1.3 Utforska firefly.adobe.com - steg 1
 
-Låt oss börja utforska Adobe Firefly Services. Om du vill ta reda på mer kan du börja med ett exempel på hur CitiSignal-bilder genereras. Designteamet på CitiSignal vill generera en ny version av varumärket CitiSignal. De skulle vilja använda Adobe Firefly Services för att göra det.
+Låt oss börja utforska Adobe Firefly Services. För att kunna utforska kan du börja med ett CitiSignal-exempel för bildgenerering. Designteamet på CitiSignal vill generera en ny version av varumärket CitiSignal. De skulle vilja använda Adobe Firefly Services för att göra det.
 
 Det första som krävs för att uppnå detta är en svartvit version av varumärket CitiSignal som ser ut så här:
 
@@ -166,7 +166,7 @@ Gå till [https://firefly.adobe.com/generate/image](https://firefly.adobe.com/ge
 
 >[!NOTE]
 >
->Firefly Image 3 och Image 4 är tillgängliga för alla som använder Adobe Firefly Services, medan Firefly Image 4 Ultra kräver en Firefly Pro-licens.
+>Firefly Image 3 och bild 4 är tillgängliga för alla som använder Adobe Firefly Services, medan Firefly Image 4 Ultra kräver en Firefly Pro-licens.
 
 Klicka för att välja **Firefly Image 3** för den här övningen.
 
@@ -403,11 +403,11 @@ Du bör då se att originalbilden används på en annan plats, vilket påverkar 
 
 ## 1.1.1.8 Firefly Services API, Text 2 Image, Image 4 &amp; Image 4 Ultra
 
-I den senaste versionen av Firefly Image Model 4 har flera förbättringar gjorts:
+I den senaste utgåvan av Firefly Image Model 4 har flera förbättringar gjorts:
 
-- Firefly Image Model 4 har 2 000 utskrifter med förbättrad definition och detaljrikedom.
+- Firefly Image Model 4 erbjuder 2K-upplösning med förbättrad definition och detaljrikedom.
 - Firefly Image Model 4 ger avsevärda förbättringar vad gäller textåtergivning, människor, djur och arkitektur.
-- Firefly Image Model 4 står för Adobe engagemang för IP-vänlig och kommersiellt säker generativ AI.
+- Firefly Image Model 4 håller Adobe fast vid IP-vänlig och kommersiellt säker generativ AI.
 
 Firefly Image Model 4 ger enastående bilder på människor, djur och detaljerade scener och du kan använda Image Model 4 Ultra för att generera bilder med hyperrealistiska interaktioner mellan människor, arkitektoniska element och komplexa landskap. &#x200B;
 
