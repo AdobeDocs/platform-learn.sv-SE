@@ -1695,6 +1695,14 @@
 		],
 		"description": "DataSetting"
 	},
+	"Datastreams-S2": {
+		"scope": " markdown",
+		"prefix": "Spectrum Icons",
+		"body": [
+			"![Datastreams-S2](/help/assets/icons/Datastreams-S2.svg)"
+		],
+		"description": "Datastreams-S2"
+	},
 	"DataUnavailable": {
 		"scope": " markdown",
 		"prefix": "Spectrum Icons",
