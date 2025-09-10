@@ -193,7 +193,7 @@ a.x._techmarketingdemos.appinformation.appstatedetails.screenname
 >
 >Anpassade fält placeras under din Experience Cloud Org-identifierare.
 >
-Klientorganisationens namn `_techmarketingdemos` har ersatts med din organisations unika värde.
+>Klientorganisationens namn `_techmarketingdemos` har ersatts med din organisations unika värde.
 
 
 

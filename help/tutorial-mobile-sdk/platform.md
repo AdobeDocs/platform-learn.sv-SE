@@ -144,7 +144,7 @@ I plattformsgränssnittet
 
 ![slå upp ett identitetsvärde](assets/platform-profile-lookup.png){zoomable="yes"}
 
-På skärmen **[!UICONTROL Detail]** kan du se grundläggande information om användaren, inklusive **[!UICONTROL ** länkade identiteter **]**:
+På skärmen **[!UICONTROL Detail]** kan du se grundläggande information om användaren, inklusive **[!UICONTROL **&#x200B; länkade identiteter &#x200B;**]**:
 ![profilinformation](assets/platform-profile-details.png){zoomable="yes"}
 
 På **[!UICONTROL Events]** kan du se händelser som samlats in från din mobilappsimplementering för den här användaren:
