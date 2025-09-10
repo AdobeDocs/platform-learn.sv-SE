@@ -1,12 +1,12 @@
 ---
-title: Skapa ett XDM-schema för plattformens SDK-implementeringar
+title: Skapa ett XDM-schema för plattformens SDK-implementeringar för mobiler
 description: Lär dig hur du skapar ett XDM-schema för mobilappshändelser.
 feature: Mobile SDK,Schemas
 jira: KT-14624
 exl-id: c6b0d030-437a-4afe-b7d5-5a7831877983
-source-git-commit: 63987fb652a653283a05a5f35f7ce670127ae905
+source-git-commit: 008d3ee066861ea9101fe9fe99ccd0a088b63f23
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1335'
 ht-degree: 1%
 
 ---
@@ -25,11 +25,11 @@ Experience Platform använder scheman för att beskriva datastrukturen på ett k
 
 Innan data kan hämtas in till Platform måste ett schema sättas samman för att beskriva datastrukturen och tillhandahålla begränsningar för den typ av data som kan finnas i varje fält. Scheman består av en basklass och noll eller flera schemafältgrupper.
 
-Mer information om schemakompositionsmodellen, inklusive designprinciper och bästa praxis, finns i [grunderna för schemakomposition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=sv-SE) eller i spellistan [Modellera dina kundupplevelsedata med XDM](https://experienceleague.adobe.com/sv/playlists/experience-platform-model-your-customer-experience-data-with-xdm).
+Mer information om schemakompositionsmodellen, inklusive designprinciper och bästa praxis, finns i [grunderna för schemakomposition](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/schema/composition) eller i spellistan [Modellera dina kundupplevelsedata med XDM](https://experienceleague.adobe.com/en/playlists/experience-platform-model-your-customer-experience-data-with-xdm).
 
 >[!TIP]
 >
->Om du känner till SDR (Analytics Solution Design Reference) kan du se ett schema som en mer robust SDR. Mer information finns i [Skapa och underhåll ett SDR-dokument ](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr.html?lang=sv-SE).
+>Om du känner till SDR (Analytics Solution Design Reference) kan du se ett schema som en mer robust SDR. Mer information finns i [Skapa och underhåll ett SDR-dokument ](https://experienceleague.adobe.com/en/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr).
 
 ## Förhandskrav
 
@@ -47,22 +47,22 @@ I den här lektionen kommer du att:
 
 1. Logga in på Adobe Experience Cloud.
 
-1. Se till att du är i sandlådan Experience Platform som du använder för den här självstudiekursen.
+1. Se till att du är i den sandlåda för Experience Platform som du använder för den här självstudiekursen.
 
 1. Öppna appväljaren ![App Switcher](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Apps_18_N.svg) (längst upp till höger),
 
 1. Välj **[!UICONTROL Data Collection]** på menyn.
 
-   ![Logga in på Experience Cloud](assets/experiencecloud-login.png)
+   ![Logga in på Experience Cloud](assets/experiencecloud-login.png){zoomable="yes"}
 
    >[!NOTE]
    >
    > Kunder som använder plattformsbaserade program som Real-Time CDP bör använda en utvecklingssandlåda för den här självstudiekursen. Andra kunder använder standardproduktionssandlådan.
 
 
-1. Välj **[!UICONTROL Schemas]** under **[!UICONTROL Data Management]** i den vänstra listen.
+1. Välj ![Scheman](/help/assets/icons/Schemas.svg) **[!UICONTROL Schemas]** under **[!UICONTROL Data management]** i den vänstra listen.
 
-   ![taggar, startskärm](assets/mobile-schema-navigate.png)
+   ![taggar, startskärm](assets/mobile-schema-navigate.png){zoomable="yes"}
 
 Du finns nu på huvudschemasidan och visas med en lista över befintliga scheman. Du kan även se flikar som motsvarar grundstenarna i ett schema:
 
@@ -70,13 +70,13 @@ Du finns nu på huvudschemasidan och visas med en lista över befintliga scheman
 * **Klasser** definierar beteendeaspekterna för de data som schemat innehåller. Till exempel: `XDM ExperienceEvent` hämtar tidsserier, händelsedata och `XDM Individual Profile` hämtar attributdata om en individ.
 * **Datatyper** används som referensfälttyper i klasser eller fältgrupper på samma sätt som grundläggande litteralfält.
 
-Ovanstående beskrivningar är en översikt på hög nivå. Mer information finns i videon [Schemabyggande block](https://experienceleague.adobe.com/docs/platform-learn/tutorials/schemas/schema-building-blocks.html?lang=sv-SE) eller i [Grundläggande om schemakomposition](https://experienceleague.adobe.com/docs/experience-platform/xdm/schema/composition.html?lang=sv-SE) i produktdokumentationen.
+Ovanstående beskrivningar är en översikt på hög nivå. Mer information finns i videon [Schemabyggande block](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/schemas/schema-building-blocks) eller i [Grundläggande om schemakomposition](https://experienceleague.adobe.com/en/docs/experience-platform/xdm/schema/composition) i produktdokumentationen.
 
 I den här självstudiekursen använder du fältgruppen Consumer Experience Event och skapar en anpassad som demonstrerar processen.
 
 >[!NOTE]
 >
->Adobe fortsätter att lägga till fler standardfältgrupper och de bör användas när det är möjligt, eftersom dessa fält är underförstådda av Experience Platform tjänster och ger större enhetlighet när de används i olika plattformskomponenter. Att använda standardfältgrupper ger påtagliga fördelar som automatisk mappning i Analytics och AI-funktioner i Platform.
+>Adobe fortsätter att lägga till fler standardfältgrupper och de bör användas när det är möjligt. Dessa fält tolkas implicit av Experience Platform tjänster och ger större enhetlighet när de används i olika plattformskomponenter. Användning av standardfältgrupper ger påtagliga fördelar som automatisk mappning i Analytics och AI-funktioner i Platform.
 
 ## Luma app schema architecture
 
@@ -95,28 +95,32 @@ I utbildningssyfte använder du fördefinierade och anpassade fältgrupper.
 
 ## Skapa ett schema
 
-1. Välj **[!UICONTROL Create Schema]**.
+1. Välj ![AddCircle](/help/assets/icons/AddCircle.svg) **[!UICONTROL Create Schema]**.
 
-1. Välj **[!UICONTROL Experience Event]** under **[!UICONTROL Select a base class for this schema]** i steget **[!UICONTROL Select a class]** i guiden **[!UICONTROL Create schema]**.
+1. Välj **[!UICONTROL Create a schema]** i dialogrutan **[!UICONTROL Manual]**. Använd **[!UICONTROL Select]** för att fortsätta.
+
+   ![Användarhandbok för schema](assets/schema-manual.png){zoomable="yes"}
+
+1. Välj **[!UICONTROL Select a class]** under **[!UICONTROL Create schema]** i steget **[!UICONTROL Experience Event]** i guiden **[!UICONTROL Select a base class for this schema]**.
 
 1. Välj **[!UICONTROL Next]**.
 
-   ![Grundklass för schemaguiden](assets/schema-wizard-base-class.png)
+   ![Grundklass för schemaguiden](assets/schema-wizard-base-class.png){zoomable="yes"}
 
 1. I steget **[!UICONTROL Name and review]** i guiden **[!UICONTROL Create schema]** anger du en **[!UICONTROL Schema display name]**, till exempel `Luma Mobile Event Schema` och en [!UICONTROL Description], till exempel `Schema for Luma mobile app experience events`.
 
    >[!NOTE]
    >
-   >Om du går igenom den här självstudiekursen med flera personer i en och samma sandlåda, eller om du använder ett delat konto, bör du överväga att lägga till eller föregå en identifiering som en del av namnkonventionen. Använd till exempel `Luma Mobile App Event Schema - Joe Smith` i stället för `Luma Mobile App Event Schema`. Se även anteckningen i [Översikt](overview.md).
+   >Om du går igenom den här självstudiekursen med flera personer i en och samma sandlåda, eller om du använder ett delat konto, bör du överväga att lägga till eller föregå en identifiering som en del av namnkonventionen. Använd till exempel `Luma Mobile App Event Schema` i stället för `Luma Mobile App Event Schema - Joe Smith`. Se även anteckningen i [Översikt](overview.md).
 
 1. Välj **[!UICONTROL Finish]** om du vill avsluta guiden.
 
-   ![Schemanamn och granskning](assets/schema-wizard-name-and-review.png)
+   ![Schemanamn och granskning](assets/schema-wizard-name-and-review.png){zoomable="yes"}
 
 
 1. Välj ![Plus](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **Lägg till** intill **[!UICONTROL Field groups]**.
 
-   ![Lägg till fältgrupp](assets/add-field-group.png)
+   ![Lägg till fältgrupp](assets/add-field-group.png){zoomable="yes"}
 
 1. Sök efter `Consumer Experience Event`.
 
@@ -126,11 +130,12 @@ I utbildningssyfte använder du fördefinierade och anpassade fältgrupper.
 
 1. Välj **[!UICONTROL Add field groups]**.
 
-   ![Markerar fältgrupp](assets/schema-select-field-groups.png)
+   ![Markerar fältgrupp](assets/schema-select-field-groups.png){zoomable="yes"}
 
    Du kommer tillbaka till huvudfönstret för schemakomposition där du kan se alla tillgängliga fält.
 
 1. Välj **[!UICONTROL Save]**.
+1. Välj ![Scheman](/help/assets/icons/Schemas.svg) **[!UICONTROL Schemas]** under **[!UICONTROL Data management]** för att återgå till huvudgränssnittet **[!UICONTROL Schemas]**.
 
 >[!NOTE]
 >
@@ -139,6 +144,7 @@ I utbildningssyfte använder du fördefinierade och anpassade fältgrupper.
 Fältgruppen [!UICONTROL Consumer Experience Event] har datatypen [!UICONTROL Web information] som beskriver händelser som sidvy och länkklick. Just nu finns det ingen paritet för mobilappar med den här funktionen, så du kommer att skapa en egen.
 
 ## Skapa en anpassad datatyp
+
 
 Börja med att skapa en anpassad datatyp som beskriver de två händelserna:
 
@@ -149,15 +155,15 @@ Börja med att skapa en anpassad datatyp som beskriver de två händelserna:
 
 1. Välj **[!UICONTROL Create data type]**.
 
-   ![Markerar datatypmenyn](assets/schema-datatype-create.png)
+   ![Markerar datatypmenyn](assets/schema-datatype-create.png){zoomable="yes"}
 
 1. Ange **[!UICONTROL Display name]** och **[!UICONTROL Description]**, till exempel `App Information` och `Custom data type describing "Screen Views" & "App Actions"`
 
-   ![Ange namn och beskrivning](assets/schema-datatype-name.png)
+   ![Ange namn och beskrivning](assets/schema-datatype-name.png){zoomable="yes"}
 
    >[!TIP]
    >
-   > Använd alltid läsbara, beskrivande [!UICONTROL display names] för dina anpassade fält, eftersom detta gör dem mer tillgängliga för marknadsförare när fälten visas i underordnade tjänster som segmentbyggaren.
+   > Använd alltid läsbara, beskrivande [!UICONTROL display names] för dina anpassade fält. Detta gör anpassade fält mer tillgängliga för marknadsförare när fälten visas i underordnade tjänster som segmentbyggaren.
 
 
 1. Om du vill lägga till ett fält väljer du knappen ![Plus](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) .
@@ -167,7 +173,7 @@ Börja med att skapa en anpassad datatyp som beskriver de två händelserna:
 
 1. Välj **[!UICONTROL Apply]**.
 
-   ![Lägger till en ny programåtgärdshändelse](assets/schema-datatype-app-action.png)
+   ![Lägger till en ny programåtgärdshändelse](assets/schema-datatype-app-action.png){zoomable="yes"}
 
 1. Om du vill mäta hur ofta en åtgärd har inträffat lägger du till ett fält genom att markera knappen ![Plus](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) bredvid det **[!UICONTROL appInteraction]** objekt du skapade.
 
@@ -177,7 +183,7 @@ Börja med att skapa en anpassad datatyp som beskriver de två händelserna:
 
 1. Välj **[!UICONTROL Apply]**.
 
-   ![Lägger till åtgärdsnamnfält](assets/schema-datatype-action-name.png)
+   ![Lägger till åtgärdsnamnfält](assets/schema-datatype-action-name.png){zoomable="yes"}
 
 1. Lägg till ett fält som beskriver typen av interaktion genom att markera knappen ![Plus](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) bredvid objektet **[!UICONTROL appInteraction]**.
 
@@ -185,7 +191,7 @@ Börja med att skapa en anpassad datatyp som beskriver de två händelserna:
 
    Det här steget motsvarar en dimension i Adobe Analytics.
 
-   ![Markeringen gäller](assets/schema-datatype-apply.png)
+   ![Markeringen gäller](assets/schema-datatype-apply.png){zoomable="yes"}
 
 1. Rulla till nederkanten av den högra listen och välj **[!UICONTROL Apply]**.
 
@@ -193,7 +199,7 @@ Börja med att skapa en anpassad datatyp som beskriver de två händelserna:
 
 1. Välj **[!UICONTROL Save]**.
 
-   ![Slutligt tillstånd för datatypen](assets/schema-datatype-final.png)
+   ![Slutligt tillstånd för datatypen](assets/schema-datatype-final.png){zoomable="yes"}
 
 ## Lägga till en anpassad fältgrupp
 
@@ -203,7 +209,7 @@ Lägg nu till en anpassad fältgrupp med din anpassade datatyp:
 
 1. Välj ![Plus](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Add]** bredvid **[!UICONTROL Field groups]**.
 
-   ![Lägger till ny fältgrupp](assets/schema-fieldgroup-add.png)
+   ![Lägger till ny fältgrupp](assets/schema-fieldgroup-add.png){zoomable="yes"}
 
 1. Välj **[!UICONTROL Create new field group]**.
 
@@ -211,7 +217,7 @@ Lägg nu till en anpassad fältgrupp med din anpassade datatyp:
 
 1. Välj **Lägg till fältgrupper**.
 
-   ![Ange namn och beskrivning](assets/schema-fieldgroup-name.png)
+   ![Ange namn och beskrivning](assets/schema-fieldgroup-name.png){zoomable="yes"}
 
 1. Välj **[!UICONTROL App Interactions**] på dispositionsskärmen.
 
@@ -225,17 +231,17 @@ Lägg nu till en anpassad fältgrupp med din anpassade datatyp:
 
 1. Välj **[!UICONTROL Save]**.
 
-   ![Markeringen gäller](assets/schema-fieldgroup-apply.png)
+   ![Markeringen gäller](assets/schema-fieldgroup-apply.png){zoomable="yes"}
 
 >[!NOTE]
 >
->Anpassade fältgrupper placeras alltid under din Experience Cloud-organisationsidentifierare.
+>Anpassade fältgrupper placeras alltid under din Experience Cloud Org-identifierare.
 
 
 >[!SUCCESS]
 >
 >Nu har du ett schema att använda för resten av självstudiekursen.
 >
->Tack för att du lade ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
+>Tack för att du har lagt ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League Community-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 
 Nästa: **[Skapa en[!UICONTROL datastream]](create-datastream.md)**

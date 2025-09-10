@@ -3,9 +3,9 @@ title: Använd platser med Platform Mobile SDK
 description: Lär dig hur du använder platsens geopositioneringstjänst i din mobilapp.
 jira: KT-14635
 exl-id: adc2952f-cb01-4e06-9629-49fb95f22ca5
-source-git-commit: 876e664a213aec954105bf2d5547baab5d8a84ea
+source-git-commit: 008d3ee066861ea9101fe9fe99ccd0a088b63f23
 workflow-type: tm+mt
-source-wordcount: '1386'
+source-wordcount: '1596'
 ht-degree: 1%
 
 ---
@@ -47,23 +47,23 @@ Du definierar några intressepunkter i tjänsten Platser.
 1. Välj **[!UICONTROL Places]** i användargränssnittet för datainsamling.
 1. Välj ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_MoreSmallList_18_N.svg).
 1. Välj **[!UICONTROL Manage Libraries]** på snabbmenyn.
-   ![Hantera bibliotek](assets/places-manage-libraries.png)
+   ![Hantera bibliotek](assets/places-manage-libraries.png){zoomable="yes"}
 1. Välj **[!UICONTROL Manage Libraries]** i dialogrutan **[!UICONTROL New]**.
 1. I dialogrutan **[!UICONTROL Create Library]** anger du **[!UICONTROL Name]**, till exempel `Luma`.
 1. Välj **[!UICONTROL Confirm]**.
-   ![Skapa bibliotek](assets/places-create-library.png)
+   ![Skapa bibliotek](assets/places-create-library.png){zoomable="yes"}
 1. Om du vill stänga dialogrutan **[!UICONTROL Manage Libraries]** väljer du **[!UICONTROL Close]**.
 1. Gå tillbaka i **[!UICONTROL POI Management]**, välj **[!UICONTROL Import POIs]**.
 1. Välj **[!UICONTROL Start]** i dialogrutan **[!UICONTROL Import Places]**.
 1. Välj **[!DNL Luma]** i listan över bibliotek,
 1. Välj **[!UICONTROL Next]**.
-   ![Välj bibliotek](assets/places-import-select-library.png)
+   ![Välj bibliotek](assets/places-import-select-library.png){zoomable="yes"}
 1. Hämta [Luma POIs ZIP-filen](assets/luma_pois.csv.zip) och extrahera den till en plats på datorn.
 1. Dra och släpp den extraherade **[!UICONTROL Import Places]**-filen på `luma_pois.csv` i dialogrutan **[!UICONTROL Choose CSV File - Drag and Drop your File]**. Du bör se **[!UICONTROL Validation Success]** - **[!UICONTROL Successfully validated the CSV file]**.
 1. Välj **[!UICONTROL Begin Import]**.  Du bör se **[!UICONTROL Success]** - **[!UICONTROL Successfully added 6 new POIs]**.
 1. Välj **[!UICONTROL Done]**.
 1. I **[!UICONTROL POI Management]** bör du se att sex nya Luma-butiker har lagts till i listan. Du kan växla mellan ![listan](https://spectrum.adobe.com/static/icons/workflow_18/Smock_ViewList_18_N.svg) och mappningsvyn ![Karta](https://spectrum.adobe.com/static/icons/workflow_18/Smock_MapView_18_N.svg).
-   ![Platslista](assets/places-list.png).
+   ![Platslista](assets/places-list.png){zoomable="yes"}.
 
 
 ### Tillägg för Installera platser
@@ -74,14 +74,13 @@ Du definierar några intressepunkter i tjänsten Platser.
 1. Sök efter tillägget **[!UICONTROL Places]**.
 1. Installera tillägget.
 
-   ![Lägg till Offer Decisioning- och måltillägg](assets/tag-places-extension.png)
+   ![Lägg till platser](assets/tag-places-extension.png)
 
 1. I dialogrutan **[!UICONTROL Install Extension]**:
    1. Välj **[!DNL Luma]** i listan **[!UICONTROL Select a Library]**.
    1. Kontrollera att du har valt ditt arbetsbibliotek, till exempel **[!UICONTROL Initial Build]**.
    1. Välj **[!UICONTROL Save to Library and Build]** från **[!UICONTROL Save to Library]**.
-
-      ![Installera Platstillägg](assets/places-install-extension.png).
+      ![Installera Platstillägg](assets/places-install-extension.png){zoomable="yes"}.
 
 1. Ditt bibliotek har byggts om.
 
@@ -95,7 +94,7 @@ Kontrollera om schemat, enligt definitionen i [Skapa schema](create-schema.md), 
 1. Välj ditt schema för att öppna det.
 1. Välj **[!UICONTROL Consumer Experience Event]** i schemaredigeraren.
 1. Du ser ett **[!UICONTROL placeContext]**-objekt med objekt och fält för att hämta POI-interaktion och geopositioneringsdata.
-   ![Schemaplatser](assets/schema-places-context.png).
+   ![Schemaplatser](assets/schema-places-context.png){zoomable="yes"}.
 
 
 ### Uppdatera taggegenskapen
@@ -114,7 +113,7 @@ Först skapar du flera dataelement.
 1. Välj **[!UICONTROL Name]** i listan **[!UICONTROL Data Element Type]**.
 1. Välj **[!UICONTROL Current POI]** under **[!UICONTROL TARGET]**.
 1. Välj **[!UICONTROL Save to Library]**.
-   ![Dataelement](assets/tags-create-data-element.png)
+   ![Dataelement](assets/tags-create-data-element.png){zoomable="yes"}
 
 1. Upprepa steg 4-8 med hjälp av informationen från tabellen nedan för att skapa ytterligare dataelement.
 
@@ -128,7 +127,7 @@ Först skapar du flera dataelement.
 
    Du bör ha följande lista över dataelement.
 
-   ![Lista över dataelement](assets/tags-data-elements-list.png)
+   ![Lista över dataelement](assets/tags-data-elements-list.png){zoomable="yes"}
 
 **Regler**
 
@@ -140,7 +139,6 @@ Därefter ska du definiera regler som ska användas med dessa dataelement.
 1. Välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) under **[!UICONTROL EVENTS]**.
    1. Välj **[!UICONTROL Places]** i listan **[!UICONTROL Extension]** och välj **[!UICONTROL Enter POI]** i listan **[!UICONTROL Event Type]**.
    1. Välj **[!UICONTROL Keep Changes]**.
-
       ![Tagga händelse](assets/tags-event-mobile-core.png).
 1. Välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) under **[!UICONTROL ACTIONS]**.
    1. Välj **[!UICONTROL Mobile Core]** i listan **[!UICONTROL Extension]** och välj **[!UICONTROL Attach Data]** i listan **[!UICONTROL Action Type]**. Den här åtgärden kopplar nyttolastdata.
@@ -171,8 +169,7 @@ Därefter ska du definiera regler som ska användas med dessa dataelement.
       Du kan också infoga `{%% ... %%}` platshållarvärden för dataelement i JSON genom att markera ![Data](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Data_18_N.svg). I en popup-dialogruta kan du välja valfritt dataelement som du har skapat.
 
    1. Välj **[!UICONTROL Keep Changes]**.
-
-      ![Tagg, åtgärd](assets/tags-action-mobile-core.png)
+      ![Tagg, åtgärd](assets/tags-action-mobile-core.png){zoomable="yes"}
 
 1. Välj ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) bredvid åtgärden **[!UICONTROL Mobile Core - Attach Data]**.
    1. Välj **[!UICONTROL Adobe Experience Platform Edge Network]** i listan **[!UICONTROL Extension]** och välj **[!UICONTROL Forward event to Edge Network]**. Den här åtgärden ser till att händelser och ytterligare nyttolastdata vidarebefordras till Platform Edge Network.
@@ -180,7 +177,7 @@ Därefter ska du definiera regler som ska användas med dessa dataelement.
 
 1. Spara regeln genom att välja **[!UICONTROL Save to Library]**.
 
-   ![Regel](assets/tags-rule-poi-entry.png)
+   ![Regel](assets/tags-rule-poi-entry.png){zoomable="yes"}
 
 Låt oss skapa en annan regel
 
@@ -222,14 +219,14 @@ Låt oss skapa en annan regel
 
 1. Spara regeln genom att välja **[!UICONTROL Save to Library]**.
 
-   ![Regel](assets/tags-rule-poi-exit.png)
+   ![Regel](assets/tags-rule-poi-exit.png){zoomable="yes"}
 
 
 För att säkerställa att alla ändringar i taggen publiceras
 
 1. Välj **[!UICONTROL Initial Build]** som bibliotek att bygga.
 1. Välj **[!UICONTROL Build]**.
-   ![Skapa bibliotek](assets/tags-build-library.png)
+   ![Skapa bibliotek](assets/tags-build-library.png){zoomable="yes"}
 
 
 
@@ -242,13 +239,16 @@ Så här validerar du konfigurationen i Assurance:
 1. Om den inte redan är tillgänglig i den vänstra listen markerar du **[!UICONTROL Configure]** i den vänstra listen och väljer ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) bredvid **[!UICONTROL Events]** och **[!UICONTROL Map & Simulate]** under **[!UICONTROL PLACES SERVICE]**.
 1. Välj **[!UICONTROL Save]**.
 1. Välj **[!UICONTROL Map & Simulate]** i den vänstra listen.
-1. Flytta kartan till en plats för en av dina POI:n.
+1. Flytta kartan till en plats för en av dina POI:er.
 1. Välj ![Kugga](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Gears_18_N.svg) för att simulera inläsning av POI. Din POI identifieras med en cirkel och ett stift.
 1. Välj POI.
 1. Välj ![Kugga](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Gears_18_N.svg) **[!UICONTROL Simulate Entry Event]** på popup-menyn.
-   ![Simulera transaktionshändelse](assets/places-simulate.png)
+
+   ![Simulera transaktionshändelse](assets/places-simulate.png){zoomable="yes"}
+
 1. Välj **[!UICONTROL Events]** i den vänstra listen så ser du händelserna som du simulerade.
-   ![Verifiering av AJO-beslut](assets/places-events.png)
+
+   ![Verifiering av AJO-beslut](assets/places-events.png){zoomable="yes"}
 
 
 ## Implementera platser i din app
@@ -259,6 +259,14 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 >
 >Om du har slutfört avsnittet [Installera SDK:er](install-sdks.md) är Platser SDK redan installerat och du kan hoppa över det här steget.
 >
+
+>[!IMPORTANT]
+>
+>När du konfigurerar Maps SDK for Android i din app måste du ställa in fakturering som dina oväntade kostnader med användningen. Du kan begränsa kostnaderna med ditt unika program-ID och en SHA-1-nyckel. Mer information finns i [Mappa SDK för Android](https://developers.google.com/maps/documentation/android-sdk/overview). Hoppa över den här lektionen om du inte vill ställa in fakturering eller ådra dig kostnader.
+
+>[!BEGINTABS]
+
+>[!TAB iOS]
 
 1. Kontrollera att [AEP Platser](https://github.com/adobe/aepsdk-places-ios) har lagts till i listan över paket i Paketberoenden i Xcode. Se [Hanteraren för wift-paket](install-sdks.md#swift-package-manager).
 1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL AppDelegate]** i Xcode Project-navigatorn.
@@ -297,25 +305,94 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 
 1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Views]** > **[!DNL Location]** > **[!DNL GeofenceSheet]** i Xcodes projektnavigerare.
 
-   1. Ange följande kod för anmälningsknappen
+   1. Ange följande kod för anmälningsknappen:
 
-   ```swift
-   // Simulate geofence entry event
-   Task {
-       await MobileSDK.shared.processRegionEvent(regionEvent: .entry, forRegion: region)
-   }
-   ```
+      ```swift
+      // Simulate geofence entry event
+      Task {
+          await MobileSDK.shared.processRegionEvent(regionEvent: .entry, forRegion: region)
+      }
+      ```
 
    1. Ange följande kod för knappen Avsluta:
 
-   ```swift
-   // Simulate geofence exit event
-   Task {
-       await MobileSDK.shared.processRegionEvent(regionEvent: .exit, forRegion: region)
-   }
+      ```swift
+      // Simulate geofence exit event
+      Task {
+          await MobileSDK.shared.processRegionEvent(regionEvent: .exit, forRegion: region)
+      }
+      ```
+
+>[!TAB Android]
+
+1. I Android Studio kontrollerar du att [aepsdk-places-android](https://github.com/adobe/aepsdk-places-android) är en del av beroendena i **[!UICONTROL build.gradle.kts (Module :app)]** i **[!UICONTROL Android]** ![ChevronDown](/help/assets/icons/ChevronDown.svg) **[!UICONTROL Gradle Scripts]** . Se [Gradle](install-sdks.md#gradle).
+1. Navigera till **[!UICONTROL Android]** ![ChevronDown](/help/assets/icons/ChevronDown.svg) > **[!DNL app]** > **[!DNL kotlin+java]** > **[!UICONTROL com.adobe.luma.tutorial.android]** > **[!UICONTROL LumaApplication]** i projektnavigeraren i Android Studio.
+1. Se till att `com.adobe.marketing.mobile.Messaging` ingår i din lista över importer.
+
+   `import import com.adobe.marketing.mobile.Places`
+
+1. Kontrollera att `Places.EXTENSION` är en del av den array med tillägg som du registrerar.
+
+   ```kotlin
+   val extensions = listOf(
+       Identity.EXTENSION,
+       Lifecycle.EXTENSION,
+       Signal.EXTENSION,
+       Edge.EXTENSION,
+       Consent.EXTENSION,
+       UserProfile.EXTENSION,
+       Places.EXTENSION,
+       Messaging.EXTENSION,
+       Optimize.EXTENSION,
+       Assurance.EXTENSION
+   )
    ```
 
+1. Navigera till **[!UICONTROL Android]** ![ChevronDown](/help/assets/icons/ChevronDown.svg) > **[!DNL app]** > **[!DNL kotlin+java]** > **[!UICONTROL com.adobe.luma.tutorial.android]** > **[!UICONTROL models]** > **[!UICONTROL MobileSDK]** i projektnavigeraren i Android Studio. Hitta funktionen `suspend fun processGeofence(geofence: Geofence?, transitionType: Int)`. Lägg till följande kod:
+
+   ```kotlin
+   // Process geolocation event
+   Places.processGeofence(geofence, transitionType)
+   ```
+
+   Detta [`Places.processRegionEvent`](https://developer.adobe.com/client-sdks/documentation/places/api-reference/#processregionevent)-API kommunicerar geopositioneringsinformationen med platstjänsten.
+
+
+1. Navigera till **[!UICONTROL Android]** ![ChevronDown](/help/assets/icons/ChevronDown.svg) > **[!DNL app]** > **[!DNL kotlin+java]** > **[!UICONTROL com.adobe.luma.tutorial.android]** > **[!UICONTROL views]** > **[!UICONTROL LocationView.k]** i projektnavigeraren i Android Studio.
+
+   1. Ange följande kod för anmälningsknappen:
+
+      ```kotlin
+      // Simulate geofence entry event
+      coroutineScope.launch {
+          MobileSDK.shared.processGeofence(
+             region,
+             Geofence.GEOFENCE_TRANSITION_ENTER
+          )
+      }
+      ```
+
+   1. Ange följande kod för knappen Avsluta:
+
+      ```kotlin
+      // Simulate geofence entry event
+      coroutineScope.launch {
+          MobileSDK.shared.processGeofence(
+              region,
+              Geofence.GEOFENCE_TRANSITION_EXIT
+          )
+      }
+      ```
+
+>[!ENDTABS]
+
 ## Validera med din app
+
+Så här validerar du geopositioneringsfunktionerna i din app:
+
+>[!BEGINTABS]
+
+>[!TAB iOS]
 
 1. Öppna appen på en enhet eller i simulatorn.
 
@@ -333,7 +410,27 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 
    <img src="assets/appentryexit.png" width="300" />
 
+1. Du bör se händelserna i användargränssnittet för Assurance. Både i Händelser och i Platstjänsthändelser.
+
+>[!TAB Android]
+
+1. Gå till fliken **[!UICONTROL Location]**.
+
+1. Välj **[!UICONTROL Use and/or Simulate Geofences]**.
+
+1. Tryck någonstans i den röda cirkeln som visas.
+
+   <img src="assets/appgeolocation-android.png" width="300" />
+
+
+1. Tryck på knapparna **[!UICONTROL Entry]** eller **[!UICONTROL Exit]** för att simulera händelser för geostaktion och geostaktionsavslutning i appen.
+
+   <img src="assets/appentryexit-android.png" width="300" />
+
 1. Du bör se händelserna i användargränssnittet för Assurance.
+
+
+>[!ENDTABS]
 
 
 
@@ -343,7 +440,7 @@ Nu bör du ha alla verktyg som behövs för att börja lägga till fler funktion
 
 I Journey Optimizer-delen av den här självstudien ser du att upplevelsehändelser kan användas för att utlösa resor (se [push-meddelanden](journey-optimizer-inapp.md) och [meddelanden i appen](journey-optimizer-push.md) med Journey Optimizer). Det vanliga exemplet med att skicka ett push-meddelande till en appanvändare med en produktbefordran när den användaren fyller i en fysisk butik.
 
-Du har sett en implementering av funktionalitet för din app, som till största delen styrs av tjänsten Platser samt dataelement och regler som du har definierat i taggegenskapen. Därför bör du minimera koden i appen. Du kan också implementera samma funktioner direkt i appen med API:t [`Edge.sendEvent`](https://developer.adobe.com/client-sdks/documentation/edge-network/api-reference/#sendevent) (se [Händelser](events.md) för mer information) med en XDM-nyttolast som innehåller ett fyllt `placeContext` -objekt.
+Den här implementeringen av geopositioneringsfunktioner för appen minimerar koden. Platstjänsten, dataelement och regler som du definierade i taggegenskapen ger de flesta funktioner. Du kan också implementera samma funktioner direkt i appen med API:t [`Edge.sendEvent`](https://developer.adobe.com/client-sdks/documentation/edge-network/api-reference/#sendevent) (se [Händelser](events.md) för mer information) med en XDM-nyttolast som innehåller ett fyllt `placeContext` -objekt.
 
 >[!SUCCESS]
 >

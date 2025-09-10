@@ -4,9 +4,9 @@ description: Lär dig hur du samlar in och mappar data för Adobe Analytics i en
 solution: Data Collection,Experience Platform,Analytics
 jira: KT-14636
 exl-id: 406dc687-643f-4f7b-a8e7-9aad1d0d481d
-source-git-commit: 7dfa14081e87489f908084e93722f67643fd5984
+source-git-commit: 008d3ee066861ea9101fe9fe99ccd0a088b63f23
 workflow-type: tm+mt
-source-wordcount: '973'
+source-wordcount: '983'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,9 @@ ht-degree: 0%
 
 Lär dig hur du mappar mobildata till Adobe Analytics.
 
-[Händelsens](events.md)-data som du har samlat in och skickat till Platform Edge Network i tidigare lektioner vidarebefordras till de tjänster som konfigurerats i ditt datastam, inklusive Adobe Analytics. Du mappar data till rätt variabler i rapportsviten.
+[Händelsens](events.md)-data som du har samlat in och skickat till Platform Edge Network i tidigare lektioner vidarebefordras till de tjänster som har konfigurerats i ditt datalager, inklusive Adobe Analytics. Du mappar data till rätt variabler i rapportsviten.
 
-![Arkitektur](assets/architecture-aa.png)
+![Arkitektur](assets/architecture-aa.png){zoomable="yes"}
 
 ## Förhandskrav
 
@@ -49,16 +49,16 @@ Om du vill skicka XDM-data från Edge Network till Adobe Analytics konfigurerar 
 
 1. Välj **[!UICONTROL Save]**.
 
-   ![Lägg till Adobe Analytics som datastream-tjänst](assets/datastream-service-aa.png)
+   ![Lägg till Adobe Analytics som datastream-tjänst](assets/datastream-service-aa.png){zoomable="yes"}
 
 
 ## Automatisk mappning
 
-Många av XDM-standardfälten mappas automatiskt till analysvariabler. Se den fullständiga listan [här](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html?lang=sv-SE).
+Många av XDM-standardfälten mappas automatiskt till analysvariabler. Se den [fullständiga listan](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/xdm-var-mapping).
 
 ### Exempel 1 - s.products
 
-Ett bra exempel är variabeln [products](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/products.html?lang=sv-SE) som inte kan fyllas med bearbetningsregler. Med en XDM-implementering skickas alla nödvändiga data i `productListItems` och `s.products` fylls i automatiskt via Analytics-mappning.
+Ett bra exempel är variabeln [products](https://experienceleague.adobe.com/en/docs/analytics/implementation/vars/page-vars/products) som inte kan fyllas med bearbetningsregler. Med en XDM-implementering skickas alla nödvändiga data i `productListItems` och `s.products` fylls i automatiskt via Analytics-mappning.
 
 Det här objektet:
 
@@ -87,12 +87,12 @@ s.products = ";5829;1;49.99,9841;3;30.00"
 
 >[!NOTE]
 >
->Om både `productListItems[].SKU` och `productListItems[].name` innehåller data används värdet i `productListItems[].SKU`. Mer information finns i [Variabelmappning för analys i Adobe Experience Edge](https://experienceleague.adobe.com/docs/analytics/implementation/aep-edge/variable-mapping.html?lang=sv-SE).
+>Om både `productListItems[].SKU` och `productListItems[].name` innehåller data används värdet i `productListItems[].SKU`. Mer information finns i [Variabelmappning för analys i Adobe Experience Edge](https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/xdm-var-mapping).
 
 
 ### Exempel 2 - scAdd
 
-Om du tittar närmare på alla händelser har två fält `value` (obligatoriskt) och `id` (valfritt). Fältet `value` används för att öka antalet händelser. Fältet `id` används för serialisering.
+Om du tittar närmare på alla händelser finns det två fält: `value` (obligatoriskt) och `id` (valfritt). Fältet `value` används för att öka antalet händelser. Fältet `id` används för serialisering.
 
 Det här objektet:
 
@@ -137,7 +137,7 @@ Med [Assurance](assurance.md) kan du bekräfta att du skickar en upplevelsehänd
 
 1. Visa ExperienceEvent-träffen.
 
-   ![xdm-träff för analys](assets/analytics-assurance-experiencevent.png)
+   ![xdm-träff för analys](assets/analytics-assurance-experiencevent.png){zoomable="yes"}
 
 1. Granska XDM-delen av JSON.
 
@@ -160,7 +160,7 @@ Med [Assurance](assurance.md) kan du bekräfta att du skickar en upplevelsehänd
 
 1. Granska **[!UICONTROL analytics.mapping]**-händelsen.
 
-   ![xdm-träff för analys](assets/analytics-assurance-mapping.png)
+   ![xdm-träff för analys](assets/analytics-assurance-mapping.png){zoomable="yes"}
 
 Observera följande i Analytics-mappningen:
 
@@ -171,7 +171,7 @@ Observera följande i Analytics-mappningen:
 
 ## Mappa med kontextdata
 
-XDM-data som vidarebefordras till Analytics konverteras till [kontextdata](https://experienceleague.adobe.com/docs/mobile-services/ios/getting-started-ios/proc-rules.html?lang=sv-SE), inklusive både standardfält och anpassade fält.
+XDM-data som vidarebefordras till Analytics konverteras till [kontextdata](https://github.com/Adobe-Marketing-Cloud/mobile-services/blob/master/docs/ios/getting-started/proc-rules.md?lang=en), inklusive både standardfält och anpassade fält.
 
 Kontextens datanyckel konstrueras enligt den här syntaxen:
 
@@ -191,9 +191,9 @@ a.x._techmarketingdemos.appinformation.appstatedetails.screenname
 
 >[!NOTE]
 >
->Anpassade fält placeras under din Experience Cloud-organisationsidentifierare.
+>Anpassade fält placeras under din Experience Cloud Org-identifierare.
 >
->`_techmarketingdemos` ersätts med din organisations unika värde.
+Klientorganisationens namn `_techmarketingdemos` har ersatts med din organisations unika värde.
 
 
 
@@ -203,15 +203,15 @@ Om du vill mappa dessa XDM-kontextdata till analysdata i rapportsviten kan du:
 
 * Lägg till fältgruppen **[!UICONTROL Adobe Analytics ExperienceEvent Full Extension]** i ditt schema.
 
-  ![Fältgruppen FullExtension för Analytics ExperienceEvent](assets/schema-analytics-extension.png)
+  ![Fältgruppen FullExtension för Analytics ExperienceEvent](assets/schema-analytics-extension.png){zoomable="yes"}
 
 * Bygg XDM-nyttolaster i appen, i enlighet med fältgruppen Adobe Analytics ExperienceEvent Full Extension, i likhet med vad du har gjort i lektionen [Spåra händelsedata](events.md) , eller
-* Skapa regler i taggegenskapen som använder regelåtgärder för att bifoga eller ändra data till fältgruppen Adobe Analytics ExperienceEvent Full Extension. Mer information finns i [Koppla data till SDK-händelser](https://developer.adobe.com/client-sdks/documentation/user-guides/attach-data/) eller [Ändra data i SDK-händelser](https://developer.adobe.com/client-sdks/documentation/user-guides/attach-data/).
+* Skapa regler i taggegenskapen som använder regelåtgärder för att bifoga eller ändra data till fältgruppen Adobe Analytics ExperienceEvent Full Extension. Mer information finns i [Bifoga data till SDK-händelser](https://developer.adobe.com/client-sdks/documentation/user-guides/attach-data/) eller [Ändra data i SDK-händelser](https://developer.adobe.com/client-sdks/documentation/user-guides/attach-data/).
 
 
 ### Merchandising eVars
 
-Om du använder [Varor](https://experienceleague.adobe.com/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/merchandising-evars.html?lang=sv-SE) för marknadsföring i Analytics-konfigurationen, till exempel för att hämta färgen för produkter, som `&&products = ...;evar1=red;event10=50,...;evar1=blue;event10=60`, måste du utöka din XDM-nyttolast som du definierade i [Spåra händelsedata](events.md) för att kunna hämta försäljningsinformationen.
+Om du använder [marknadsföringsvariabler](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/edit-report-suite/conversion-variables/merchandising-evars) i Analytics-konfigurationen måste du utöka din XDM-nyttolast som du definierade i [Spåra händelsedata](events.md) för att kunna hämta försäljningsinformationen. Exempel på en försäljningsvariabel är `evar1` där du vill fånga färgerna för produkter, som `&&products = ...;evar1=red;event10=50,...;evar1=blue;event10=60`
 
 * I JSON:
 
@@ -290,7 +290,7 @@ Så här ser en bearbetningsregel ut när den här informationen används:
 
 * Du **[!UICONTROL Set event]** (6) **[!UICONTROL Add to Wishlist (Event 3)]** (7) till **[!UICONTROL a.x.commerce.saveForLaters.value(Context)]** (8) om **[!UICONTROL a.x.commerce.saveForLaters.value(Context)]** (9) **[!UICONTROL is set]** (10).
 
-![regler för analysbearbetning](assets/analytics-processing-rules.png)
+![regler för analysbearbetning](assets/analytics-processing-rules.png){zoomable="yes"}
 
 >[!IMPORTANT]
 >
@@ -301,7 +301,7 @@ Så här ser en bearbetningsregel ut när den här informationen används:
 >Första gången du mappar till en bearbetningsregel visas inte kontextdatavariablerna från XDM-objektet. Om du vill åtgärda det väljer du ett värde, Spara och återgå till att redigera. Alla XDM-variabler ska nu visas.
 
 
-Ytterligare information om bearbetning av regler och kontextdata finns [här](https://experienceleague.adobe.com/docs/analytics-learn/tutorials/implementation/implementation-basics/map-contextdata-variables-into-props-and-evars-with-processing-rules.html?lang=sv-SE).
+Se [Mappa contextData-variabler till utkast och eVars med bearbetningsregler](https://experienceleague.adobe.com/en/docs/analytics-learn/tutorials/implementation/implementation-basics/map-contextdata-variables-into-props-and-evars-with-processing-rules).
 
 >[!TIP]
 >
@@ -309,9 +309,9 @@ Ytterligare information om bearbetning av regler och kontextdata finns [här](ht
 
 ## Migrera från mobiltillägget Analytics
 
-Om du har utvecklat ditt mobilprogram med [Adobe Analytics-mobiltillägget](https://developer.adobe.com/client-sdks/solution/adobe-analytics/#add-analytics-to-your-application) har du troligen använt [`MobileCore.trackAction`](https://developer.adobe.com/client-sdks/home/base/mobile-core/api-reference/#trackaction) - och [`MobileCore.trackState`](https://developer.adobe.com/client-sdks/home/base/mobile-core/api-reference/#trackstate) API-anrop.
+Om du har utvecklat ditt mobilprogram med [Adobe Analytics-mobiltillägget](https://developer.adobe.com/client-sdks/solution/adobe-analytics/#add-analytics-to-your-application) har du troligen använt API-anropen [`MobileCore.trackAction`](https://developer.adobe.com/client-sdks/home/base/mobile-core/api-reference/#trackaction) och [`MobileCore.trackState`](https://developer.adobe.com/client-sdks/home/base/mobile-core/api-reference/#trackstate) .
 
-Om du väljer att migrera för att använda den rekommenderade Edge Network finns det alternativ:
+Om du bestämmer dig för att migrera för att använda den rekommenderade Edge Network finns det alternativ:
 
 * Implementera [Edge Network-tillägget](configure-tags.md#extension-configuration) och använd [`Edge.sendEvent`](https://developer.adobe.com/client-sdks/edge/edge-network/api-reference/#sendevent)-API:erna, som i lektionen om hur du [spårar händelsedata](events.md). Den här självstudiekursen fokuserar på den här implementeringen.
 * Implementera [Edge Bridge-tillägget](https://developer.adobe.com/client-sdks/solution/adobe-analytics/migrate-to-edge-network/#implement-the-edge-bridge-extension) och fortsätt använda dina [`MobileCore.trackAction`](https://developer.adobe.com/client-sdks/home/base/mobile-core/api-reference/#trackaction) - och [`MobileCore.trackState`](https://developer.adobe.com/client-sdks/home/base/mobile-core/api-reference/#trackstate) API-anrop. Se [Implementera Edge Bridge-tillägget](https://developer.adobe.com/client-sdks/solution/adobe-analytics/migrate-to-edge-network/#implement-the-edge-bridge-extension) om du vill ha mer information och en separat självstudiekurs.
@@ -321,6 +321,6 @@ Om du väljer att migrera för att använda den rekommenderade Edge Network finn
 
 >[!SUCCESS]
 >
->Du har konfigurerat din app för att mappa dina Experience Edge XDM-objekt till Adobe Analytics-variabler som aktiverar Adobe Analytics-tjänsten i ditt datastam och som använder bearbetningsregler där det är tillämpligt.<br/> Tack för att du har lagt ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League-diskussionsinlägget](https://experienceleaguecommunities.adobe.com:443/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
+>Du har konfigurerat din app för att mappa dina Experience Edge XDM-objekt till Adobe Analytics-variabler genom att aktivera Adobe Analytics-tjänsten i din datastam. Och med bearbetningsregler där det är tillämpligt.<br/> Tack för att du har lagt ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League Community-diskussionsinlägget](https://experienceleaguecommunities.adobe.com:443/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
 
 Nästa: **[Skicka data till Experience Platform](platform.md)**

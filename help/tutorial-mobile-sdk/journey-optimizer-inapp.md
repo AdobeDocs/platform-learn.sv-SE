@@ -6,10 +6,10 @@ feature-set: Journey Optimizer
 feature: In App
 jira: KT-14639
 exl-id: 6cb4d031-6172-4a84-b717-e3a1f5dc7d5d
-source-git-commit: f73f0fc345fc605e60b19be1abe2e328795898aa
+source-git-commit: 008d3ee066861ea9101fe9fe99ccd0a088b63f23
 workflow-type: tm+mt
-source-wordcount: '1470'
-ht-degree: 0%
+source-wordcount: '1628'
+ht-degree: 1%
 
 ---
 
@@ -19,9 +19,9 @@ Lär dig skapa meddelanden i appen för mobilappar med Experience Platform Mobil
 
 Med Journey Optimizer kan ni skapa kampanjer för att skicka meddelanden i appen till riktade målgrupper. Kampanjer i Journey Optimizer används för att leverera engångsinnehåll till en viss målgrupp via olika kanaler. Med kampanjer utförs åtgärder samtidigt, antingen omedelbart eller baserat på ett angivet schema. När du använder resor (se lektionen [Journey Optimizer push-meddelanden](journey-optimizer-push.md)) utförs åtgärder i sekvens.
 
-![Arkitektur](assets/architecture-ajo.png)
+![Arkitektur](assets/architecture-ajo.png){zoomable="yes"}
 
-Innan du skickar meddelanden i appen med Journey Optimizer måste du se till att rätt konfigurationer och integreringar finns på plats. Mer information om dataflödet för meddelanden i programmet i Journey Optimizer finns i [dokumentationen](https://experienceleague.adobe.com/docs/journey-optimizer/using/in-app/inapp-configuration.html?lang=sv-SE).
+Innan du skickar meddelanden i appen med Journey Optimizer måste du se till att rätt konfigurationer och integreringar finns på plats. Mer information om dataflödet för meddelanden i programmet i Journey Optimizer finns i [dokumentationen](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/in-app/inapp-configuration).
 
 >[!NOTE]
 >
@@ -32,7 +32,7 @@ Innan du skickar meddelanden i appen med Journey Optimizer måste du se till att
 
 * App med SDK:er har installerats och konfigurerats.
 * Konfigurera appen för Adobe Experience Platform.
-* Åtkomst till Journey Optimizer och tillräcklig behörighet enligt beskrivningen [här](https://experienceleague.adobe.com/docs/journey-optimizer/using/push/push-config/push-configuration.html?lang=sv-SE). Du behöver även tillräcklig behörighet för följande Journey Optimizer-funktioner.
+* Åtkomst till Journey Optimizer och [tillräcklig behörighet för push-meddelanden](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/push/push-config/push-configuration). Du behöver även tillräcklig behörighet för följande Journey Optimizer-funktioner.
    * Hantera kampanjer.
 * Fysisk iOS-enhet eller simulator för testning.
 
@@ -41,7 +41,7 @@ Innan du skickar meddelanden i appen med Journey Optimizer måste du se till att
 
 I den här lektionen ska du
 
-* Skapa en appyta i AJO.
+* Skapa en kanalkonfiguration i Journey Optimizer.
 * Installera och konfigurera taggtillägget för Journey Optimizer.
 * Uppdatera appen för att registrera Journey Optimizer-taggtillägget.
 * Validera konfigurationen i Assurance.
@@ -55,36 +55,35 @@ I den här lektionen ska du
 >Om du redan har konfigurerat din miljö som en del av [Journey Optimizer push messaging](journey-optimizer-push.md) -lektionen kanske du redan har utfört några av stegen i det här installationsavsnittet.
 
 
-### Skapa en kanalkonfiguration i Journey Optimizer
+### Skapa en kanalkonfiguration
 
 Till att börja med måste du skapa en kanalkonfiguration som gör att du kan skicka meddelanden från Journey Optimizer i appmeddelanden.
 
-1. I Journey Optimizer-gränssnittet öppnar du menyn **[!UICONTROL Channels]** > **[!UICONTROL General settings]** > **[!UICONTROL Channel configurations]** och väljer sedan **[!UICONTROL Create channel configuration]**.
+1. Öppna menyn **[!UICONTROL Channels]** > **[!UICONTROL General settings]** > **[!UICONTROL Channel configurations]** i Journey Optimizer-gränssnittet och välj sedan **[!UICONTROL Create channel configuration]**.
 
-   ![Skapa en kanalkonfiguration](assets/push-config-9.png)
-
-1. Ange ett namn och en beskrivning (valfritt) för konfigurationen.
+1. Ange ett namn och en beskrivning (valfritt) för konfigurationen. Till exempel `LumaInAppMessaging` och `Channel for in-app messaging`.
 
    >[!NOTE]
    >
    > Namn måste börja med en bokstav (A-Z). Det får bara innehålla alfanumeriska tecken. Du kan också använda understreck `_`, punkt `.` och bindestreck `-`.
 
-
-1. Om du vill tilldela anpassade eller grundläggande dataanvändningsetiketter till konfigurationen kan du välja **[!UICONTROL Manage access]**. [Läs mer om OLAC (Object Level Access Control)](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/access-control/object-based-access).
+1. Om du vill tilldela anpassade eller grundläggande dataanvändningsetiketter till konfigurationen kan du välja **[!UICONTROL Manage access]**. [Läs mer om OLAC (Object Level Access Control)](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access).
 
 1. Välj kanalen **Meddelanden i appen**.
 
-1. Välj **[!UICONTROL Marketing action]** om du vill associera medgivandeprinciper till meddelanden som använder den här konfigurationen. Alla policyer för samtycke som är kopplade till marknadsföringsåtgärden utnyttjas för att ta hänsyn till kundernas preferenser. [Läs mer om marknadsföringsåtgärder](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/privacy/consent/consent#surface-marketing-actions).
+1. Välj **[!UICONTROL Marketing action]** om du vill associera medgivandeprinciper med de meddelanden som använder den här konfigurationen. Alla profiler för samtycke som är kopplade till marknadsföringsåtgärden används för att ta hänsyn till kundernas önskemål. [Läs mer om marknadsföringsåtgärder](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/privacy/consent/consent#surface-marketing-actions). Till exempel: Push Targeting.
 
-1. Välj den plattform som du vill definiera inställningarna för. På så sätt kan ni ange målappen för varje plattform och säkerställa enhetlig innehållsleverans på flera plattformar.
+1. Välj den plattform som du vill definiera inställningarna för. Med den här inställningen kan du ange målappen för varje plattform och säkerställa enhetlig innehållsleverans på flera plattformar.
 
    >[!NOTE]
    >
    >För iOS- och Android-plattformar baseras leveransen enbart på program-ID:t. Om båda apparna har samma program-ID levereras innehåll till båda, oavsett vilken plattform som valts i **[!UICONTROL Channel configuration]**.
 
-1. Välj **[!UICONTROL Submit]** om du vill spara ändringarna.
+1. Ange app-id:n för den plattform som du vill ha stöd för.
 
-   ![Konfigurera appkanalen](assets/inapp_config_10.png)
+   ![Skapa en kanalkonfiguration](assets/in-app-messaging-config.png){zoomable="yes"}
+
+1. Välj **[!UICONTROL Submit]** om du vill spara ändringarna.
 
 ### Uppdatera datastream-konfiguration
 
@@ -94,11 +93,11 @@ Uppdatera Experience Edge-konfigurationen för att se till att data som skickas 
 
 1. I användargränssnittet för datainsamling väljer du **[!UICONTROL Datastreams]** och markerar ditt datastream, till exempel **[!DNL Luma Mobile App]**.
 1. Välj ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_MoreSmallList_18_N.svg) för **[!UICONTROL Experience Platform]** och välj ![Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) **[!UICONTROL Edit]** på snabbmenyn.
-1. Kontrollera att **[!UICONTROL Adobe Journey Optimizer]** är markerat på skärmen **[!UICONTROL Datastreams]** > ![Mapp](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Folder_18_N.svg) > **[!UICONTROL Adobe Experience Platform]**. Mer information finns i [Adobe Experience Platform-inställningar](https://experienceleague.adobe.com/docs/experience-platform/datastreams/configure.html?lang=sv-SE#aep).
+1. Kontrollera att **[!UICONTROL Datastreams]** är markerat på skärmen ![ > ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Folder_18_N.svg)Mapp **[!UICONTROL Adobe Experience Platform]** > **[!UICONTROL Adobe Journey Optimizer]**. Mer information finns i [Adobe Experience Platform-inställningar](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/configure).
 1. Välj **[!UICONTROL Save]** om du vill spara dataströmskonfigurationen.
 
 
-   ![AEP datastream-konfiguration](assets/datastream-ajo-inapp-configuration.png)
+   ![AEP datastream-konfiguration](assets/datastream-ajo-inapp-configuration.png){zoomable="yes"}
 
 
 ### Installera tillägget Journey Optimizer-taggar
@@ -111,7 +110,7 @@ För att din app ska fungera med Journey Optimizer måste du uppdatera din tagge
 1. Sök efter tillägget **[!UICONTROL Adobe Journey Optimizer]**.
 1. Installera tillägget.
 
-När *endast* använder meddelanden i appen i **[!UICONTROL Install Extension]** eller **[!UICONTROL Configure Extension]** behöver du inte konfigurera någonting. Om du redan har följt lektionen [Push-meddelanden](journey-optimizer-push.md) i självstudiekursen kommer du att se att **[!UICONTROL AJO Push Tracking Experience Event Dataset]**-datauppsättningen är vald i **[!UICONTROL Event Dataset]** -listan för **[!UICONTROL Development]** -miljön.
+När *endast* använder meddelanden i appen i **[!UICONTROL Install Extension]** eller **[!UICONTROL Configure Extension]** behöver du inte konfigurera någonting. Om du redan har följt lektionen [Push-meddelanden](journey-optimizer-push.md) i självstudiekursen ser du att **[!UICONTROL Development]**-datauppsättningen har valts i listan **[!UICONTROL AJO Push Tracking Experience Event Dataset]** för **[!UICONTROL Event Dataset]** -miljön.
 
 
 ### Implementera Journey Optimizer i appen
@@ -122,6 +121,10 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
 >
 >Om du har slutfört avsnittet [Installera SDK:er](install-sdks.md) är SDK redan installerat och du kan hoppa över det här steget.
 >
+
+>[!BEGINTABS]
+
+>[!TAB iOS]
 
 1. Kontrollera att [AEP Messaging](https://github.com/adobe/aepsdk-messaging-ios) har lagts till i listan över paket i paketberoenden i Xcode. Se [Hanteraren för wift-paket](install-sdks.md#swift-package-manager).
 1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!UICONTROL AppDelegate]** i Xcode Project-navigatorn.
@@ -147,19 +150,45 @@ Som tidigare nämnts tillhandahåller installation av ett mobiltaggtillägg bara
    ]
    ```
 
+>[!TAB Android]
+
+1. I Android Studio kontrollerar du att [aepsdk-messaging-android](https://github.com/adobe/aepsdk-messaging-android) är en del av beroendena i **[!UICONTROL build.gradle.kts]** i **[!UICONTROL Android]** ![ChevronDown](/help/assets/icons/ChevronDown.svg) > **[!UICONTROL Gradle Scripts]**. Se [Gradle](install-sdks.md#gradle).
+1. Navigera till **[!UICONTROL Android]** ![ChevronDown](/help/assets/icons/ChevronDown.svg) **[!DNL app]** > **[!DNL kotlin+java]** > **[!UICONTROL com.adobe.luma.tutorial.android]** > **[!UICONTROL LumaApplication]** i projektnavigeraren i Android Studio.
+1. Se till att `com.adobe.marketing.mobile.Messaging` ingår i din lista över importer.
+
+   `import import com.adobe.marketing.mobile.Messaging`
+
+1. Kontrollera att `Messaging.EXTENSION` är en del av den array med tillägg som du registrerar.
+
+   ```kotlin
+   val extensions = listOf(
+       Identity.EXTENSION,
+       Lifecycle.EXTENSION,
+       Signal.EXTENSION,
+       Edge.EXTENSION,
+       Consent.EXTENSION,
+       UserProfile.EXTENSION,
+       Places.EXTENSION,
+       Messaging.EXTENSION,
+       Optimize.EXTENSION,
+       Assurance.EXTENSION
+   )
+   ```
+
+>[!ENDTABS]
 
 ## Validera installationen med Assurance
 
 1. Granska avsnittet [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
 1. I Assurance-gränssnittet väljer du **[!UICONTROL Configure]**.
-   ![konfigurera klicka](assets/push-validate-config.png)
+   ![konfigurera klicka](assets/push-validate-config.png){zoomable="yes"}
 1. Välj knappen ![Plus](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) bredvid **[!UICONTROL In-App Messaging]**.
 1. Välj **[!UICONTROL Save]**.
-   ![spara](assets/assurance-in-app-config.png)
+   ![spara](assets/assurance-in-app-config.png){zoomable="yes"}
 1. Välj **[!UICONTROL In-App Messaging]** i den vänstra navigeringen.
 1. Klicka på fliken **[!UICONTROL Validation]**.  Bekräfta att inga fel visas.
 
-   ![Validering i appen](assets/assurance-in-app-validate.png)
+   ![Validering i appen](assets/assurance-in-app-validate.png){zoomable="yes"}
 
 
 ## Skapa ett eget meddelande i appen
@@ -171,50 +200,69 @@ Om du vill skapa ett eget meddelande i appen måste du definiera en kampanj i Jo
 * livscykelhändelser, som start, installation, uppgradering, stängning eller krasch,
 * geopositioneringshändelser, som att ange eller avsluta en intressepunkt.
 
-I den här självstudiekursen ska du använda de generiska och tilläggsoberoende API:erna för Mobile Core (se [Generiska API:er för Mobile Core](https://developer.adobe.com/client-sdks/documentation/mobile-core/#mobile-core-generic-apis)) för att underlätta händelsespårning av användarskärmar, åtgärder och PII-data. Händelser som genereras av dessa API:er publiceras till händelsehubben i SDK och kan användas av tillägg. SDK händelsehubb tillhandahåller den grundläggande datastruktur som är knuten till alla SDK-tillägg för Mobile Platform, med en lista över registrerade tillägg och interna moduler, en lista över registrerade händelseavlyssnare och en delad tillståndsdatabas.
+I den här självstudiekursen ska du använda de generiska och tilläggsoberoende API:erna för Mobile Core (se [Generiska API:er för Mobile Core](https://developer.adobe.com/client-sdks/documentation/mobile-core/#mobile-core-generic-apis)) för att underlätta händelsespårning av användarskärmar, åtgärder och PII-data. Händelser som genereras av dessa API:er publiceras till händelsehubben i SDK och kan användas av tillägg. SDK händelsehubb tillhandahåller den grundläggande datastruktur som är knuten till alla SDK-tillägg för mobilplattformen. Händelsehubben upprätthåller en lista över registrerade tillägg och interna moduler, en lista över registrerade händelseavlyssnare och en delad tillståndsdatabas.
 
-SDK händelsehubb publicerar och tar emot händelsedata från registrerade tillägg för att förenkla integreringen med Adobe och tredjepartslösningar. När tillägget Optimera installeras hanteras till exempel alla förfrågningar och interaktioner med erbjudandemotorn Journey Optimizer - Beslutshantering av händelsehubben.
+SDK händelsehubb publicerar och tar emot händelsedata från registrerade tillägg för att förenkla integreringen med Adobe och tredjepartslösningar. När tillägget Optimera är installerat hanterar händelsehubben alla förfrågningar och interaktioner med erbjudandemotorn Journey Optimizer - Beslutshantering.
 
 1. I Journey Optimizer-gränssnittet väljer du **[!UICONTROL Campaigns]** i den vänstra listen.
 1. Välj **[!UICONTROL Create Campaign]**.
-1. På skärmen **[!UICONTROL Create Campaign]**:
-   1. Välj **[!UICONTROL In-app message]** och välj en appyta i listan **[!UICONTROL App surface]**, till exempel **[!DNL Luma Mobile App]**.
-   1. Välj **[!UICONTROL Create]**
+1. I dialogrutan **[!UICONTROL Create your campaign]** väljer du ![Klocka](/help/assets/icons/Clock.svg) **[!UICONTROL Scheduled - Marketing]** och sedan **[!UICONTROL Confirm]**.
+1. På skärmen **[!UICONTROL Campaign - *ÅÅÅ-MM-DD HH:MM:SS UTC+XX:XX*]**:
 
-      ![Kampanjegenskaper](assets/ajo-campaign-properties.png)
-1. På skärmen för Campaign-definitionen, på **[!UICONTROL Properties]**, anger du ett **[!UICONTROL Name]** för kampanjen, till exempel `Luma - In-App Messaging Campaign`, och ett **[!UICONTROL Description]**, till exempel `In-app messaging campaign for Luma app`.
-   ![Kampanjnamn](assets/ajo-campaign-properties-name.png)
-1. Bläddra ned till **[!UICONTROL Action]** och välj **[!UICONTROL Edit Content]**.
-1. På skärmen **[!UICONTROL In-App Message]**:
-   1. Välj **[!UICONTROL Modal]** som **[!UICONTROL Message Layout]**.
-   2. Ange `https://luma.enablementadobe.com/content/dam/luma/en/logos/Luma_Logo.png` som **[!UICONTROL Media URL]**.
-   3. Ange en **[!UICONTROL Header]**, till exempel `Welcome to this Luma In-App Message`, och ange en **[!UICONTROL Body]**, till exempel `Triggered by pushing that button in the app...`.
-   4. Ange **[!UICONTROL Dismiss]** som **[!UICONTROL Button #1 text (primary)]**.
-   5. Observera hur förhandsgranskningen uppdateras.
-   6. Välj **[!UICONTROL Review to activate]**.
+   1. På fliken **[!UICONTROL Properties]**:
 
-      ![Redigerare i appen](assets/ajo-in-app-editor.png)
-1. På skärmen **[!UICONTROL Review to activate (Luma - In-App Messaging Campaign)]** väljer du ![Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) i rutan **[!UICONTROL Schedule]**.
-   ![Välj Schema](assets/ajo-review-select-schedule.png) för granskning av schema
-1. Gå tillbaka till skärmen **[!DNL Luma - In-App Messaging Campaign]** och välj ![Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) **[!UICONTROL Edit triggers]**.
-1. I dialogrutan **[!UICONTROL In-app message trigger]** konfigurerar du information om spårningsåtgärden som utlöser meddelandet i appen:
-   1. Om du vill ta bort **[!UICONTROL Application launch event]** väljer du ![Stäng](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Close_18_N.svg) .
-   1. Använd ![Lägg till](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) **[!UICONTROL Add condition]** upprepade gånger för att skapa följande logik för **[!UICONTROL Show message if]**.
-   1. Klicka på **[!UICONTROL Done]**.
+      1. Ange ett namn för kampanjen, till exempel `Luma Mobile In-App Campaign`.
+      1. Du kan också lägga till en beskrivning.
 
-      ![Utlösarlogik](assets/ajo-trigger-logic.png)
 
-   Du har definierat en spårningsåtgärd där **[!UICONTROL Action]** är lika med `in-app` och **[!UICONTROL Context data]** med åtgärden är ett nyckelvärdepar på `"showMessage" : "true"`.
+   1. Klicka på fliken **[!UICONTROL Action]**.  
 
-1. Välj **[!UICONTROL Review to activate]** på skärmen **[!DNL Luma - In-App Messaging Campaign]**.
-1. Välj **[!UICONTROL Activate]** på skärmen **[!UICONTROL Review to activate (Luma - In-App Messaging Campaign)]**.
-1. Du ser din **[!DNL Luma - In-App Messaging Campaign]** med status **[!UICONTROL Live]** i listan **[!UICONTROL Campaigns]**.
-   ![Kampanjlista](assets/ajo-campaign-list.png)
+      1. Under **[!UICONTROL Show message if]** väljer du ![Lägg till](/help/assets/icons/Add.svg) **[!UICONTROL Add action]**. Välj **[!UICONTROL In-app message]** i listrutan.
+      1. Välj din konfiguration i listrutan **[!UICONTROL In-app message configuration]**. Exempel: **[!UICONTROL LumaInAppMessaging]**.
+      1. Välj ![Redigera](/help/assets/icons/Edit.svg) **[!UICONTROL Edit triggers]**.
+      1. I dialogrutan **[!UICONTROL In-app message trigger]**:
+
+         1. Välj **[!UICONTROL Application launch]** och välj **[!UICONTROL Track action]** i listrutan.
+         1. Välj ![AddCircle](/help/assets/icons/AddCircle.svg) **[!UICONTROL Add condition]**.
+         1. Välj **[!UICONTROL Action]** och **[!UICONTROL equals]** i listrutorna.
+         1. Ange `in-app`.
+         1. Välj ![AddCircle](/help/assets/icons/AddCircle.svg) **[!UICONTROL Add condition]**.
+         1. Välj **[!UICONTROL Context data]** i listrutan och ange `showMessage`.
+         1. Välj **[!UICONTROL equals]** i listrutan och ange `true`.
+
+            ![Redigera utlösare](assets/edit-triggers.png){zoomable="yes"}
+         1. Välj **[!UICONTROL Done]**.
+
+   1. Gå tillbaka till huvudskärmen för kampanjdefinition och välj fliken **[!UICONTROL Content]**.
+
+      1. Aktivera **[!UICONTROL Advanced formatting]**.
+      1. Välj **[!UICONTROL Modal]** som **[!UICONTROL Messaging layout]**. Välj **[!UICONTROL Switch layout]** i dialogrutan **[!UICONTROL Change layout]**.
+      1. På fliken **[!UICONTROL Content]**.
+         1. Ange `https://luma.enablementadobe.com/content/dam/luma/en/logos/Luma_Logo.png` som **[!UICONTROL Media URL]**.
+         1. Ange en **[!UICONTROL Header]**, till exempel `Welcome to this Luma In-App Message`, och ange en **[!UICONTROL Body]**, till exempel `Triggered by pushing that button in the app...`.
+
+         ![Meddelandeinnehåll i appen](assets/in-app-message-content.png){zoomable="yes"}
+
+      1. Välj fliken **[!UICONTROL Settings]**.
+         1. Välj **[!UICONTROL Customize size]** i **[!UICONTROL Message]**.
+         1. Inaktivera **[!UICONTROL Fit to content]**.
+         1. Ange **[!UICONTROL Height]** till **[!UICONTROL 75%]**.
+
+         ![Meddelandeinställningar i appen](assets/in-app-message-settings.png){zoomable="yes"}
+
+1. Välj **[!UICONTROL Review to activate]**.  Om du vill redigera någon av konfigurationerna för **[!UICONTROL Content]**, **[!UICONTROL Properties]**, **[!UICONTROL Actions]** eller mer väljer du ![Redigera](/help/assets/icons/Edit.svg).
+1. Välj **[!UICONTROL Review to activate (*på skärmen *kampanjnamn]**)**[!UICONTROL Activate]**.
+1. Efter ett tag visas ditt **_kampanjnamn_** med status **[!UICONTROL Live]** i listan **[!UICONTROL Campaigns]**.
+   ![Kampanjlista](assets/ajo-campaign-list.png){zoomable="yes"}
 
 
 ## Utlös meddelandet i appen
 
 Du har alla ingredienser på plats för att skicka ett meddelande i appen. Det som återstår är hur du utlöser det här meddelandet i appen i din app.
+
+>[!BEGINTABS]
+
+>[!TAB iOS]
 
 1. Gå till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Utils]** > **[!UICONTROL MobileSDK]** i Xcode Project-navigatorn. Hitta funktionen `func sendTrackAction(action: String, data: [String: Any]?)` och lägg till följande kod som anropar funktionen [`MobileCore.track`](https://developer.adobe.com/client-sdks/documentation/mobile-core/api-reference/#trackaction) baserat på parametrarna `action` och `data`.
 
@@ -233,7 +281,35 @@ Du har alla ingredienser på plats för att skicka ett meddelande i appen. Det s
    }
    ```
 
+>[!TAB Android]
+
+1. Gå till **[!UICONTROL Android]** ![ChevronDown](/help/assets/icons/ChevronDown.svg) > **[!DNL app]** > **[!DNL kotlin+java]** > **[!DNL com.adobe.luma.tutorial.android]** > **[!DNL models]** > **[!UICONTROL MobileSDK]** i Android Studio-navigatorn. Hitta funktionen `fun sendTrackAction(action: String, data: Map<String, String>?)` och lägg till följande kod som anropar funktionen [`MobileCore.track`](https://developer.adobe.com/client-sdks/documentation/mobile-core/api-reference/#trackaction) baserat på parametrarna `action` och `data`.
+
+
+   ```kotlin
+   // Send trackAction event
+   MobileCore.track(action, data)
+   ```
+
+1. Gå till **[!UICONTROL Android]** ![ChevronDown](/help/assets/icons/ChevronDown.svg) > **[!DNL app]** > **[!DNL kotlin+java]** > **[!DNL com.adobe.luma.tutorial.androi]** > **[!DNL views]** > **[!UICONTROL ConfigView.kt]** i Android Studio-navigatorn. Hitta koden för hanterarknappen `onInAppMessageClick` och lägg till följande kod:
+
+   ```kotlin
+   // Setting parameters and calling function to send in-app message
+   MobileSDK.shared.sendTrackAction(
+       "in-app",
+       mapOf("showMessage" to "true")
+   )
+   ```
+
+>[!ENDTABS]
+
 ## Validera med din app
+
+Du kan validera meddelandena i appen inifrån själva appen.
+
+>[!BEGINTABS]
+
+>[!TAB iOS]
 
 1. Återskapa och kör appen i simulatorn eller på en fysisk enhet från Xcode med ![Play](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Play_18_N.svg).
 
@@ -242,6 +318,20 @@ Du har alla ingredienser på plats för att skicka ett meddelande i appen. Det s
 1. Tryck på **[!UICONTROL In-App Message]**. Meddelandet visas i appen.
 
    <img src="assets/ajo-in-app-message.png" width="300" />
+
+
+>[!TAB Android]
+
+1. Återskapa och kör appen i simulatorn eller på en fysisk enhet från Android Studio med ![Play](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Play_18_N.svg).
+
+1. Gå till fliken **[!UICONTROL Settings]**.
+
+1. Tryck på **[!UICONTROL In-App Message]**. Meddelandet visas i appen.
+
+   <img src="assets/ajo-in-app-message-android.png" width="300" />
+
+
+>[!ENDTABS]
 
 
 ## Validera implementering i Assurance
@@ -253,7 +343,7 @@ Du kan validera dina meddelanden i appen i Assurance-gränssnittet.
 1. Välj **[!UICONTROL Event List]**.
 1. Välj en **[!UICONTROL Display message]**-post.
 1. Granska raw-händelsen, särskilt `html`, som innehåller den fullständiga layouten och innehållet i meddelandet i appen.
-   ![Assurance-meddelande i appen](assets/assurance-in-app-display-message.png)
+   ![Assurance-meddelande i appen](assets/assurance-in-app-display-message.png){zoomable="yes"}
 
 
 ## Nästa steg
