@@ -8,10 +8,10 @@ role: Developer
 level: Beginner,Intermediate
 jira: KT-6987
 recommendations: noDisplay,noCatalog
-source-git-commit: 6a6d8dcceead2421c79a0727e18bec97dfe3d9cb
+source-git-commit: 323702d37425b22b0a5270d410e8b000aa0d5434
 workflow-type: tm+mt
-source-wordcount: '78'
-ht-degree: 55%
+source-wordcount: '79'
+ht-degree: 58%
 
 ---
 
@@ -25,7 +25,7 @@ ht-degree: 55%
    + [Konfigurera taggar](configure-tags.md)
 + Appimplementering{#app-implementation}
    + [Installera SDK:er](install-sdks.md)
-   + [Säkerhet](assurance.md)
+   + [Assurance](assurance.md)
    + [Godkännande](consent.md)
    + [Livscykeldata](lifecycle-data.md)
    + [Händelsedata](events.md)
@@ -42,5 +42,6 @@ ht-degree: 55%
       + [Beslutshantering](journey-optimizer-offers.md)
    + [Target](target.md)
    + [Customer Journey Analytics](customer-journey-analytics.md)
+   + [Test](test.md)
 + [Slutsats](conclusion.md)
 
