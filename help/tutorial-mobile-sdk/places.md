@@ -3,7 +3,7 @@ title: Använd platser med Platform Mobile SDK
 description: Lär dig hur du använder platsens geopositioneringstjänst i din mobilapp.
 jira: KT-14635
 exl-id: adc2952f-cb01-4e06-9629-49fb95f22ca5
-source-git-commit: 008d3ee066861ea9101fe9fe99ccd0a088b63f23
+source-git-commit: 49d8c53d2ba2f9dcecf2470d855ad22f44763f6f
 workflow-type: tm+mt
 source-wordcount: '1596'
 ht-degree: 1%
@@ -400,15 +400,15 @@ Så här validerar du geopositioneringsfunktionerna i din app:
 
 1. Flytta (dra) runt kartan för att se till att den blå mittre cirkeln är ovanför en av dina POI:er, till exempel London.
 
-1. Tryck <img src="assets/geobutton.png" width="20" /> tills du ser kategorin och namnet visas i etiketten på den röda platsen med stiftet.
+1. Tryck <img src="assets/geobutton.png" width="20"> tills du ser kategorin och namnet visas i etiketten på den röda platsen med stiftet.
 
 1. Tryck på etiketten för POI, som öppnar bladet **[!UICONTROL Nearby POI]**.
 
-   <img src="assets/appgeolocation.png" width="300" />
+   <img src="assets/appgeolocation.png" width="300">
 
 1. Tryck på knapparna **[!UICONTROL Entry]** eller **[!UICONTROL Exit]** för att simulera händelser för geostaktion och geostaktionsavslutning i appen.
 
-   <img src="assets/appentryexit.png" width="300" />
+   <img src="assets/appentryexit.png" width="300">
 
 1. Du bör se händelserna i användargränssnittet för Assurance. Både i Händelser och i Platstjänsthändelser.
 
@@ -420,12 +420,12 @@ Så här validerar du geopositioneringsfunktionerna i din app:
 
 1. Tryck någonstans i den röda cirkeln som visas.
 
-   <img src="assets/appgeolocation-android.png" width="300" />
+   <img src="assets/appgeolocation-android.png" width="300">
 
 
 1. Tryck på knapparna **[!UICONTROL Entry]** eller **[!UICONTROL Exit]** för att simulera händelser för geostaktion och geostaktionsavslutning i appen.
 
-   <img src="assets/appentryexit-android.png" width="300" />
+   <img src="assets/appentryexit-android.png" width="300">
 
 1. Du bör se händelserna i användargränssnittet för Assurance.
 

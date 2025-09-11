@@ -3,7 +3,7 @@ title: Samla in profildata med Platform Mobile SDK
 description: Lär dig hur du samlar in profildata i en mobilapp.
 jira: KT-14634
 exl-id: 97717611-04d9-45e3-a443-ea220a13b57c
-source-git-commit: 008d3ee066861ea9101fe9fe99ccd0a088b63f23
+source-git-commit: 49d8c53d2ba2f9dcecf2470d855ad22f44763f6f
 workflow-type: tm+mt
 source-wordcount: '760'
 ht-degree: 0%
@@ -123,7 +123,7 @@ När du har uppdaterat en användares attribut är det tillgängligt för andra 
    Den här koden:
 
    1. Anropar [`UserProfile.getUserAttributes`](https://developer.adobe.com/client-sdks/documentation/profile/api-reference/#getuserattributes)-API:t med attributnamnet `isPaidUser` som ett element i arrayen `attributeNames`.
-   1. Kontrollerar sedan värdet för attributet `isPaidUser` och placerar ett märke på`yes` ikonen <img src="assets/paiduser.png" width="20" /> i verktygsfältet längst upp till höger.
+   1. Kontrollerar sedan värdet för attributet `isPaidUser` och placerar ett märke på`yes` ikonen <img src="assets/paiduser.png" width="20"> i verktygsfältet längst upp till höger.
 
 >[!TAB Android]
 
@@ -139,7 +139,7 @@ När du har uppdaterat en användares attribut är det tillgängligt för andra 
    Den här koden:
 
    1. Anropar [`UserProfile.getUserAttributes`](https://developer.adobe.com/client-sdks/documentation/profile/api-reference/#getuserattributes)-API:t med attributnamnet `isPaidUser` som ett element i arrayen `attributeNames`.
-   1. Söker sedan efter värdet för attributet `isPaidUser`. När `yes` används ersätter koden personikonen med ett märke på ikonen <img src="assets/paiduser.png" width="20" /> i verktygsfältet längst upp till höger.
+   1. Söker sedan efter värdet för attributet `isPaidUser`. När `yes` används ersätter koden personikonen med ett märke på ikonen <img src="assets/paiduser.png" width="20"> i verktygsfältet längst upp till höger.
 
 >[!ENDTABS]
 
@@ -168,7 +168,7 @@ Mer information finns i [API-referensen](https://developer.adobe.com/client-sdks
 1. Välj **[!DNL Products]** i flikfältet.
 1. Välj en produkt.
 1. Välj <img src="assets/saveforlater.png" width="15" />.
-1. Välj <img src="assets/addtocart.png" width="20" />.
+1. Välj <img src="assets/addtocart.png" width="20">.
 1. Välj <img src="assets/purchase.png" width="15" />.
 
    <img src="./assets/mobile-app-events-3.png" width="300">
@@ -193,8 +193,8 @@ Mer information finns i [API-referensen](https://developer.adobe.com/client-sdks
 
 1. Välj **[!DNL Products]** i flikfältet.
 1. Välj en produkt.
-1. Välj<img src="assets/heart.png" width="25" />.
-1. Välj <img src="assets/addtocart.png" width="20" />.
+1. Välj<img src="assets/heart.png" width="25">.
+1. Välj <img src="assets/addtocart.png" width="20">.
 1. Välj <img src="assets/purchase.png" width="15" />.
 
    <img src="./assets/mobile-app-events-3-android.png" width="300">

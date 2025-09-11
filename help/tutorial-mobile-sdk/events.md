@@ -3,7 +3,7 @@ title: Spåra händelsedata i mobilappar med Experience Platform Mobile SDK
 description: Lär dig spåra händelsedata i en mobilapp.
 jira: KT-14631
 exl-id: 4779cf80-c143-437b-8819-1ebc11a26852
-source-git-commit: 7e7c7600457b361c2ba9616c067b9fe33fd70c5c
+source-git-commit: 49d8c53d2ba2f9dcecf2470d855ad22f44763f6f
 workflow-type: tm+mt
 source-wordcount: '1636'
 ht-degree: 0%
@@ -200,9 +200,9 @@ Du kommer nu att implementera den här koden i ditt projekt.
 Du har olika affärsproduktrelaterade åtgärder i din app och du vill skicka händelser baserat på de åtgärder som användaren har utfört:
 
 * vy: inträffar när en användare tittar på en viss produkt,
-* lägg till i kundvagn: när en användare trycker <img src="assets/addtocart.png" width="20" /> i en produktinformationsskärm,
-* spara för senare: när en användare trycker <img src="assets/saveforlater.png" width="15" /> / <img src="assets/heart.png" width="25" /> i en produktinformationsskärm,
-* köp: när en användare trycker <img src="assets/purchase.png" width="20" /> i en produktinformationsskärm.
+* lägg till i kundvagn: när en användare trycker <img src="assets/addtocart.png" width="20"> i en produktinformationsskärm,
+* spara för senare: när en användare trycker <img src="assets/saveforlater.png" width="15" /> / <img src="assets/heart.png" width="25"> i en produktinformationsskärm,
+* köp: när en användare trycker <img src="assets/purchase.png" width="20"> i en produktinformationsskärm.
 
 Om du vill implementera sändning av e-handelsrelaterade upplevelsehändelser på ett återanvändbart sätt använder du en dedikerad funktion:
 
@@ -249,7 +249,7 @@ Om du vill implementera sändning av e-handelsrelaterade upplevelsehändelser p�
       MobileSDK.shared.sendCommerceExperienceEvent(commerceEventType: "productViews", product: product)
       ```
 
-   1. För varje knapp (<img src="assets/saveforlater.png" width="15" />, <img src="assets/addtocart.png" width="20" /> och <img src="assets/purchase.png" width="20" />) i verktygsfältet lägger du till det relevanta samtalet i `ATTrackingManager.trackingAuthorizationStatus == .authorized`-stängningen:
+   1. För varje knapp (<img src="assets/saveforlater.png" width="15" />, <img src="assets/addtocart.png" width="20"> och <img src="assets/purchase.png" width="20">) i verktygsfältet lägger du till det relevanta samtalet i `ATTrackingManager.trackingAuthorizationStatus == .authorized`-stängningen:
 
       1. För <img src="assets/saveforlater.png" width="15" />:
 
@@ -258,14 +258,14 @@ Om du vill implementera sändning av e-handelsrelaterade upplevelsehändelser p�
          MobileSDK.shared.sendCommerceExperienceEvent(commerceEventType: "saveForLaters", product: product)
          ```
 
-      1. För <img src="assets/addtocart.png" width="20" />:
+      1. För <img src="assets/addtocart.png" width="20">:
 
          ```swift
          // Send productListAdds commerce experience event
          MobileSDK.shared.sendCommerceExperienceEvent(commerceEventType: "productListAdds", product: product)
          ```
 
-      1. För <img src="assets/purchase.png" width="20" />:
+      1. För <img src="assets/purchase.png" width="20">:
 
          ```swift
          // Send purchase commerce experience event
@@ -308,23 +308,23 @@ Om du vill implementera sändning av e-handelsrelaterade upplevelsehändelser p�
       MobileSDK.shared.sendCommerceExperienceEvent("productViews", product)
       ```
 
-   1. För varje knapp (<img src="assets/heart.png" width="25" />, <img src="assets/addtocart.png" width="20" /> och <img src="assets/purchase.png" width="20" />) i verktygsfältet lägger du till det relevanta anropet i `scope.launch` i `if (MobileSDK.shared.trackingEnabled == TrackingStatus.AUTHORIZED)  statement`:
+   1. För varje knapp (<img src="assets/heart.png" width="25">, <img src="assets/addtocart.png" width="20"> och <img src="assets/purchase.png" width="20">) i verktygsfältet lägger du till det relevanta anropet i `scope.launch` i `if (MobileSDK.shared.trackingEnabled == TrackingStatus.AUTHORIZED)  statement`:
 
-      1. För <img src="assets/heart.png" width="25" />:
+      1. För <img src="assets/heart.png" width="25">:
 
          ```kotlin
          // Send saveForLater commerce experience event
          MobileSDK.shared.sendCommerceExperienceEvent("saveForLaters", product)
          ```
 
-      1. För <img src="assets/addtocart.png" width="20" />:
+      1. För <img src="assets/addtocart.png" width="20">:
 
          ```kotlin
          // Send productListAdds commerce experience event
          MobileSDK.shared.sendCommerceExperienceEvent("productListAdds", product)
          ```
 
-      1. För <img src="assets/purchase.png" width="20" />:
+      1. För <img src="assets/purchase.png" width="20">:
 
          ```kotlin
          // Send purchase commerce experience event
@@ -638,9 +638,9 @@ Implementera koden i projektet igen.
    1. Välj **[!UICONTROL Home]** i flikfältet och kontrollera att du ser en **[!UICONTROL ECID]**, **[!UICONTROL Email]** och **[!UICONTROL CRM ID]** på hemskärmen.
    1. Välj **[!DNL Products]** i flikfältet.
    1. Välj en produkt.
-   1. Välj <img src="assets/saveforlater.png" width="15" /> (iOS) eller <img src="assets/heart.png" width="25" /> (Android).
-   1. Välj <img src="assets/addtocart.png" width="20" />.
-   1. Välj <img src="assets/purchase.png" width="15" />.
+   1. Välj <img src="assets/saveforlater.png" width="15"> (iOS) eller <img src="assets/heart.png" width="25"> (Android).
+   1. Välj <img src="assets/addtocart.png" width="20">.
+   1. Välj <img src="assets/purchase.png" width="15">.
 
 >[!BEGINTABS]
 

@@ -3,7 +3,7 @@ title: Hantera WebViews med Platform Mobile SDK
 description: Lär dig hur du hanterar datainsamling med WebViews i en mobilapp.
 jira: KT-14632
 exl-id: 9b3c96fa-a1b8-49d2-83fc-ece390b9231c
-source-git-commit: 008d3ee066861ea9101fe9fe99ccd0a088b63f23
+source-git-commit: 49d8c53d2ba2f9dcecf2470d855ad22f44763f6f
 workflow-type: tm+mt
 source-wordcount: '554'
 ht-degree: 0%
@@ -27,7 +27,7 @@ I den här lektionen kommer du att:
 
 ## Potentiella spårningsproblem
 
-Separata (Experience Cloud Identity) ECID:n genereras när du skickar data från den inbyggda delen av programmet och från en WebView i programmet. Dessa separata ECID:n resulterar i frånkopplade träffar och uppblåsta besöksdata. Mer information om ECID finns i [ECID-översikten](https://experienceleague.adobe.com/sv/docs/experience-platform/identity/features/ecid).
+Separata (Experience Cloud Identity) ECID:n genereras när du skickar data från den inbyggda delen av programmet och från en WebView i programmet. Dessa separata ECID:n resulterar i frånkopplade träffar och uppblåsta besöksdata. Mer information om ECID finns i [ECID-översikten](https://experienceleague.adobe.com/en/docs/experience-platform/identity/features/ecid).
 
 Om du vill lösa problem med uppkopplade träffar och uppblåsta data måste du skicka användarens ECID från den inbyggda delen av appen till en WebView som du kanske vill använda i appen.
 
@@ -110,11 +110,11 @@ Så här kör du koden:
 
 >[!TAB iOS]
 
-<img src="./assets/tou1.png" width="300" /> <img src="./assets/tou2.png" width="300" />
+<img src="./assets/tou1.png" width="300"> <img src="./assets/tou2.png" width="300">
 
 >[!TAB Android]
 
-<img src="./assets/tou1-android.png" width="300" /> <img src="./assets/tou2-android.png" width="300" />
+<img src="./assets/tou1-android.png" width="300"> <img src="./assets/tou2-android.png" width="300">
 
 >[!ENDTABS]
 

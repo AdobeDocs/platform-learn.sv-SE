@@ -6,7 +6,7 @@ feature-set: Journey Optimizer
 feature: Push
 jira: KT-14638
 exl-id: e8e920d5-fd36-48b7-9185-a34231c0d336
-source-git-commit: 008d3ee066861ea9101fe9fe99ccd0a088b63f23
+source-git-commit: 49d8c53d2ba2f9dcecf2470d855ad22f44763f6f
 workflow-type: tm+mt
 source-wordcount: '3282'
 ht-degree: 1%
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 Lär dig skapa push-meddelanden för mobilappar med Experience Platform Mobile SDK och Journey Optimizer.
 
-Med Journey Optimizer kan ni skapa resor och skicka meddelanden till utvalda målgrupper. Innan du skickar push-meddelanden med Journey Optimizer måste du se till att rätt konfigurationer och integreringar finns på plats. Mer information om dataflödet för push-meddelanden i Journey Optimizer finns i [dokumentationen](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/channels/push/push-config/push-gs).
+Med Journey Optimizer kan ni skapa resor och skicka meddelanden till utvalda målgrupper. Innan du skickar push-meddelanden med Journey Optimizer måste du se till att rätt konfigurationer och integreringar finns på plats. Mer information om dataflödet för push-meddelanden i Journey Optimizer finns i [dokumentationen](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/channels/push/push-config/push-gs).
 
 ![Arkitektur](assets/architecture-ajo.png){zoomable="yes"}
 
@@ -30,7 +30,7 @@ Med Journey Optimizer kan ni skapa resor och skicka meddelanden till utvalda må
 
 * Programmet har skapats och körts med SDK:er installerade och konfigurerade.
 * Konfigurera appen för Adobe Experience Platform.
-* Åtkomst till Journey Optimizer och [tillräckliga behörigheter](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/channels/push/push-config/push-configuration). Du behöver även tillräcklig behörighet för följande Journey Optimizer-funktioner.
+* Åtkomst till Journey Optimizer och [tillräckliga behörigheter](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/channels/push/push-config/push-configuration). Du behöver även tillräcklig behörighet för följande Journey Optimizer-funktioner.
    * Skapa en push-autentiseringsuppgift.
    * Skapa en push-kanalskonfiguration.
    * Skapa en resa.
@@ -77,7 +77,7 @@ Följande steg är inte Adobe Experience Cloud-specifika och har utformats för 
    ![skapa ny nyckel](assets/mobile-push-apple-dev-new-key.png){zoomable="yes"}
 
 1. Ange en **[!UICONTROL Key Name]**.
-1. Välj **[!UICONTROL Apple Push Notification service] (APN:er)** och välj **[!UICONTROL Configure]**.
+1. Välj **[!UICONTROL Apple Push Notification service](APN:er)** och välj **[!UICONTROL Configure]**.
    1. Välj **[!UICONTROL Configure Key]** i listrutan **[!UICONTROL Sandbox & Production]** på skärmen **[!UICONTROL Environment]**.
    1. Välj **[!UICONTROL Save]**.
 1. Välj **[!UICONTROL Continue]**.
@@ -174,12 +174,12 @@ När du har skapat en konfiguration för push-autentiseringsuppgifter måste du 
    > Namn måste börja med en bokstav (A-Z). Det får bara innehålla alfanumeriska tecken. Du kan också använda understreck `_`, punkt `.` och bindestreck `-`.
 
 
-1. Om du vill tilldela anpassade eller grundläggande dataanvändningsetiketter till konfigurationen kan du välja **[!UICONTROL Manage access]**. [Läs mer om OLAC (Object Level Access Control)](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/access-control/object-based-access).
+1. Om du vill tilldela anpassade eller grundläggande dataanvändningsetiketter till konfigurationen kan du välja **[!UICONTROL Manage access]**. [Läs mer om OLAC (Object Level Access Control)](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/object-based-access).
 
 1. Välj kanalen **Push**.
 
 
-1. Välj **[!UICONTROL Marketing action(s)]** om du vill associera medgivandeprinciper med de meddelanden som använder den här konfigurationen. Alla profiler för samtycke som är kopplade till marknadsföringsåtgärderna utnyttjas för att ta hänsyn till kundernas önskemål. [Läs mer om marknadsföringsåtgärder](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/privacy/consent/consent#surface-marketing-actions).
+1. Välj **[!UICONTROL Marketing action(s)]** om du vill associera medgivandeprinciper med de meddelanden som använder den här konfigurationen. Alla profiler för samtycke som är kopplade till marknadsföringsåtgärderna utnyttjas för att ta hänsyn till kundernas önskemål. [Läs mer om marknadsföringsåtgärder](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/privacy/consent/consent#surface-marketing-actions).
 
 1. Välj din **[!UICONTROL Platform]**. Du kan konfigurera både **[!UICONTROL iOS]** och **[!UICONTROL Android]** för en kanalkonfiguration.
 
@@ -203,7 +203,7 @@ Uppdatera Experience Edge-konfigurationen för att se till att data som skickas 
 
    1. Om det inte redan är markerat väljer du **[!UICONTROL AJO Push Profile Dataset]** från **[!UICONTROL Profile Dataset]**. Den här profildatauppsättningen krävs när du använder API-anropet `MobileCore.setPushIdentifier` (se [Registrera enhetstoken för push-meddelanden](#register-device-token-for-push-notifications)). Detta val säkerställer också att den unika identifieraren för push-meddelanden (alias push-identifierare) lagras som en del av användarens profil.
 
-   1. **[!UICONTROL Adobe Journey Optimizer]** har valts. Mer information finns i [Adobe Experience Platform-inställningar](https://experienceleague.adobe.com/sv/docs/experience-platform/datastreams/configure).
+   1. **[!UICONTROL Adobe Journey Optimizer]** har valts. Mer information finns i [Adobe Experience Platform-inställningar](https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/configure).
 
    1. Välj **[!UICONTROL Save]** om du vill spara dataströmskonfigurationen.
 
@@ -256,11 +256,11 @@ För att din app ska fungera med Journey Optimizer måste du uppdatera din tagge
 
 >[!TAB iOS]
 
-<img src="assets/luma-app-push.png" width="300" />
+<img src="assets/luma-app-push.png" width="300">
 
 >[!TAB Android]
 
-<img src="assets/luma-app-push-android.png" width="300" />
+<img src="assets/luma-app-push-android.png" width="300">
 
 >[!ENDTABS]
 
@@ -419,7 +419,7 @@ Du måste registrera enhetstoken för push-meddelanden.
 >[!IMPORTANT]
 >
 >**För endast iOS**: `MobileCore.updateConfigurationWith(configDict: ["messaging.useSandbox": true])` avgör om push-meddelanden använder en APN-sandlåda eller produktionsserver för att skicka push-meddelanden. Kontrollera att `messaging.useSandbox` är inställt på `true` när du testar din app i simulatorn eller på en enhet så att du får push-meddelanden. När du distribuerar din app för produktion för att testa med Apple Testflight måste du ställa in `messaging.useSandbox` på `false`, annars kan din produktionsapp inte ta emot push-meddelanden.<br/><br/>
->&#x200B;>Firebase Cloud Messaging (FCM) stöder **inte** konceptet med sandlådor för push-meddelanden.
+>>Firebase Cloud Messaging (FCM) stöder **inte** konceptet med sandlådor för push-meddelanden.
 
 
 ## Skapa ett eget push-meddelande
@@ -443,7 +443,7 @@ Du ska definiera en ny händelsetyp som ännu inte är tillgänglig som en del a
 
 ### Definiera en händelse
 
-Med händelser i Journey Optimizer kan du utlösa resor för att skicka meddelanden, till exempel push-meddelanden. Mer information finns i [Om händelser](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/configure-journeys/events-journeys/about-events).
+Med händelser i Journey Optimizer kan du utlösa resor för att skicka meddelanden, till exempel push-meddelanden. Mer information finns i [Om händelser](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/configure-journeys/events-journeys/about-events).
 
 1. I Journey Optimizer-gränssnittet väljer du **[!UICONTROL Configurations]** i den vänstra listen.
 
@@ -682,7 +682,7 @@ Så här validerar du händelsen och resan för push-meddelanden:
 
    Push-meddelandet visas ovanpå appen.
 
-   <img src="assets/ajo-test-push.png" width="300" />
+   <img src="assets/ajo-test-push.png" width="300">
 
 >[!TAB Android]
 
@@ -694,7 +694,7 @@ Så här validerar du händelsen och resan för push-meddelanden:
 
    Push-meddelandet visas ovanpå appen.
 
-   <img src="assets/ajo-test-push-android.png" width="300" />
+   <img src="assets/ajo-test-push-android.png" width="300">
 
 >[!ENDTABS]
 
