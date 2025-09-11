@@ -77,7 +77,7 @@ Följande steg är inte Adobe Experience Cloud-specifika och har utformats för 
    ![skapa ny nyckel](assets/mobile-push-apple-dev-new-key.png){zoomable="yes"}
 
 1. Ange en **[!UICONTROL Key Name]**.
-1. Välj **[!UICONTROL Apple Push Notification service](APN:er)** och välj **[!UICONTROL Configure]**.
+1. Välj **[!UICONTROL Apple Push Notification service] (APN:er)** och välj **[!UICONTROL Configure]**.
    1. Välj **[!UICONTROL Configure Key]** i listrutan **[!UICONTROL Sandbox & Production]** på skärmen **[!UICONTROL Environment]**.
    1. Välj **[!UICONTROL Save]**.
 1. Välj **[!UICONTROL Continue]**.
@@ -419,7 +419,7 @@ Du måste registrera enhetstoken för push-meddelanden.
 >[!IMPORTANT]
 >
 >**För endast iOS**: `MobileCore.updateConfigurationWith(configDict: ["messaging.useSandbox": true])` avgör om push-meddelanden använder en APN-sandlåda eller produktionsserver för att skicka push-meddelanden. Kontrollera att `messaging.useSandbox` är inställt på `true` när du testar din app i simulatorn eller på en enhet så att du får push-meddelanden. När du distribuerar din app för produktion för att testa med Apple Testflight måste du ställa in `messaging.useSandbox` på `false`, annars kan din produktionsapp inte ta emot push-meddelanden.<br/><br/>
->>Firebase Cloud Messaging (FCM) stöder **inte** konceptet med sandlådor för push-meddelanden.
+>&#x200B;>Firebase Cloud Messaging (FCM) stöder **inte** konceptet med sandlådor för push-meddelanden.
 
 
 ## Skapa ett eget push-meddelande
