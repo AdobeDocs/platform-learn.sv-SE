@@ -4,9 +4,9 @@ description: Lär dig hur du samlar in identitetsdata i en mobilapp.
 feature: Mobile SDK,Identities
 jira: KT-14633
 exl-id: cbcd1708-29e6-4d74-be7a-f75c917ba2fa
-source-git-commit: 008d3ee066861ea9101fe9fe99ccd0a088b63f23
+source-git-commit: 4a0fa85c76c00fd505118692ea4b6cbe410f5839
 workflow-type: tm+mt
-source-wordcount: '908'
+source-wordcount: '909'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Lär dig hur du samlar in identitetsdata i en mobilapp.
 
 Adobe Experience Platform identitetstjänst hjälper er att få en bättre bild av era kunder och deras beteenden. Tjänsterna överbryggar identiteterna mellan olika enheter och system och gör att ni kan leverera slagkraftiga, personliga digitala upplevelser i realtid. Identitetsfält och namnutrymmen är den kombination som förenar olika datakällor för att skapa en 360-graders kundprofil i realtid.
 
-Läs mer om [identitetstillägget](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/) och [identitetstjänsten](https://experienceleague.adobe.com/sv/docs/experience-platform/identity/home) i dokumentationen.
+Läs mer om [identitetstillägget](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/) och [identitetstjänsten](https://experienceleague.adobe.com/en/docs/experience-platform/identity/home) i dokumentationen.
 
 ## Förhandskrav
 
@@ -35,7 +35,7 @@ I den här lektionen kommer du att:
 
 ## Konfigurera ett anpassat ID-namnutrymme
 
-Identitetsnamnutrymmen är komponenter i [identitetstjänsten](https://experienceleague.adobe.com/sv/docs/experience-platform/identity/home) som fungerar som indikatorer för det sammanhang som en identitet relateras till. De särskiljer till exempel värdet `name@email.com` som en e-postadress eller `443522` som ett numeriskt CRM-ID.
+Identitetsnamnutrymmen är komponenter i [identitetstjänsten](https://experienceleague.adobe.com/en/docs/experience-platform/identity/home) som fungerar som indikatorer för det sammanhang som en identitet relateras till. De särskiljer till exempel värdet `name@email.com` som en e-postadress eller `443522` som ett numeriskt CRM-ID.
 
 >[!NOTE]
 >
@@ -179,7 +179,7 @@ Du vill uppdatera både standardidentiteten (e-post) och den anpassade identitet
 
 ## Ta bort en identitet
 
-Du kan använda API:t [`Identity.removeIdentity`](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#removeidentity) för att ta bort identiteten från den lagrade identitetskartan på klientsidan. Identitetstillägget slutar skicka identifieraren till Edge Network. Om du använder detta API tas inte identifieraren bort från serversidans identitetsdiagram. Mer information om identitetsdiagram finns i [Visa identitetsdiagram](https://experienceleague.adobe.com/sv/docs/platform-learn/tutorials/identities/view-identity-graphs).
+Du kan använda API:t [`Identity.removeIdentity`](https://developer.adobe.com/client-sdks/documentation/identity-for-edge-network/api-reference/#removeidentity) för att ta bort identiteten från den lagrade identitetskartan på klientsidan. Identitetstillägget slutar skicka identifieraren till Edge Network. Om du använder detta API tas inte identifieraren bort från serversidans identitetsdiagram. Mer information om identitetsdiagram finns i [Visa identitetsdiagram](https://experienceleague.adobe.com/en/docs/platform-learn/tutorials/identities/view-identity-graphs).
 
 
 >[!BEGINTABS]
@@ -233,7 +233,7 @@ MobileSDK.shared.removeIdentities(
 1. Granska avsnittet [installationsanvisningar](assurance.md#connecting-to-a-session) för att ansluta simulatorn eller enheten till Assurance.
 1. I Luma-appen
    1. Markera fliken **[!UICONTROL Home]** och flytta Assurance-ikonen åt vänster.
-   1. Välj Ikonen <img src="assets/login.png" width="15" /> uppifrån till höger.
+   1. Välj ikonen ![Användare](/help/assets/icons/User.svg) i det övre högra hörnet.
 
 >[!BEGINTABS]
 
@@ -248,7 +248,7 @@ MobileSDK.shared.removeIdentities(
 >[!ENDTABS]
 
 1. Ange en e-postadress och ett CRM-ID, eller
-1. Välj <img src="assets/insert.png" width="15" /> (iOS) eller **[!UICONTROL Generate Random Email]** (Android) för att generera en **[!UICONTROL Email]** och **[!UICONTROL CRM ID]** slumpmässigt.
+1. Välj **[!UICONTROL A |]** (iOS) eller **[!UICONTROL Generate Random Email]** (Android) om du vill generera en slumpmässig **[!UICONTROL Email]** och **[!UICONTROL CRM ID]**.
 1. Välj **[!UICONTROL Login]**.
 
 >[!BEGINTABS]

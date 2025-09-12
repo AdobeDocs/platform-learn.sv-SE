@@ -3,9 +3,9 @@ title: Samla in profildata med Platform Mobile SDK
 description: Lär dig hur du samlar in profildata i en mobilapp.
 jira: KT-14634
 exl-id: 97717611-04d9-45e3-a443-ea220a13b57c
-source-git-commit: 49d8c53d2ba2f9dcecf2470d855ad22f44763f6f
+source-git-commit: 4a0fa85c76c00fd505118692ea4b6cbe410f5839
 workflow-type: tm+mt
-source-wordcount: '760'
+source-wordcount: '768'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ Det skulle vara praktiskt för målgruppsanpassning och personalisering i appen 
 
    1. Använder `profileMap`-ordlistan som ett värde för parametern `attributeDict` i API-anropet [`UserProfile.updateUserAttributes`](https://developer.adobe.com/client-sdks/documentation/profile/api-reference/#updateuserattributes).
 
-1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Views]** > **[!DNL Products]** > **[!DNL ProductView]** i Xcode Project navigator och hitta anropet till `updateUserAttributes` (i koden för inköp) <img src="assets/purchase.png" width="15" />). Lägg till följande kod:
+1. Navigera till **[!DNL Luma]** > **[!DNL Luma]** > **[!DNL Views]** > **[!DNL Products]** > **[!DNL ProductView]** i Xcode-projektnavigeraren och sök efter anropet till `updateUserAttributes` (i koden för knappen ![CreditCard](/help/assets/icons/CreditCard.svg) ). Lägg till följande kod:
 
    ```swift
    // Update attributes
@@ -87,7 +87,7 @@ Det skulle vara praktiskt för målgruppsanpassning och personalisering i appen 
 
    1. Använder kartan `profileMap` som ett värde för parametern `attributeDict` i API-anropet [`UserProfile.updateUserAttributes`](https://developer.adobe.com/client-sdks/documentation/profile/api-reference/#updateuserattributes).
 
-1. Navigera till **[!UICONTROL Android]** ![ChevronDown](/help/assets/icons/ChevronDown.svg) > **[!DNL app]** > **[!DNL kotlin+java]** > **[!DNL com.adobe.luma.tutorial.android]** > **[!UICONTROL views]** > **[!UICONTROL ProductView.kt]** och hitta anropet till `updateUserAttributes` (i koden för köpet) <img src="assets/purchase.png" width="15" />). Lägg till följande kod:
+1. Navigera till **[!UICONTROL Android]** ![ChevronDown](/help/assets/icons/ChevronDown.svg) > **[!DNL app]** > **[!DNL kotlin+java]** > **[!DNL com.adobe.luma.tutorial.android]** > **[!UICONTROL views]** > **[!UICONTROL ProductView.kt]** och hitta anropet till `updateUserAttributes` (i koden för knappen Köp ![CreditCard](/help/assets/icons/CreditCard.svg) ). Lägg till följande kod:
 
    ```kotlin
    // Update attributes
@@ -123,7 +123,7 @@ När du har uppdaterat en användares attribut är det tillgängligt för andra 
    Den här koden:
 
    1. Anropar [`UserProfile.getUserAttributes`](https://developer.adobe.com/client-sdks/documentation/profile/api-reference/#getuserattributes)-API:t med attributnamnet `isPaidUser` som ett element i arrayen `attributeNames`.
-   1. Kontrollerar sedan värdet för attributet `isPaidUser` och placerar ett märke på`yes` ikonen <img src="assets/paiduser.png" width="20"> i verktygsfältet längst upp till höger.
+   1. Kontrollerar sedan värdet för attributet `isPaidUser` och placerar ett märke på ikonen `yes`UserCheckedOut![ i verktygsfältet längst upp till höger när ](/help/assets/icons/UserCheckedOut.svg) används.
 
 >[!TAB Android]
 
@@ -139,7 +139,7 @@ När du har uppdaterat en användares attribut är det tillgängligt för andra 
    Den här koden:
 
    1. Anropar [`UserProfile.getUserAttributes`](https://developer.adobe.com/client-sdks/documentation/profile/api-reference/#getuserattributes)-API:t med attributnamnet `isPaidUser` som ett element i arrayen `attributeNames`.
-   1. Söker sedan efter värdet för attributet `isPaidUser`. När `yes` används ersätter koden personikonen med ett märke på ikonen <img src="assets/paiduser.png" width="20"> i verktygsfältet längst upp till höger.
+   1. Söker sedan efter värdet för attributet `isPaidUser`. När `yes` används ersätter koden personikonen med en ikon i verktygsfältet högst upp till höger.
 
 >[!ENDTABS]
 
@@ -156,24 +156,24 @@ Mer information finns i [API-referensen](https://developer.adobe.com/client-sdks
 
 1. Välj **[!UICONTROL Home]** i flikfältet.
 1. Flytta ikonen Assurance åt vänster.
-1. Om du vill öppna inloggningsbladet väljer du knappen <img src="assets/login.png" width="15" />.
+1. Om du vill öppna inloggningsbladet klickar du på knappen ![Användare](/help/assets/icons/User.svg) .
 
    <img src="./assets/mobile-app-events-1.png" width="300">
 
-1. Välj <img src="assets/insert.png" width="15" />-knapp .
+1. Om du vill infoga ett slumpmässigt e-postmeddelande och ett kund-id väljer du knappen > .
 1. Välj **[!UICONTROL Login]**.
 
    <img src="./assets/mobile-app-events-2.png" width="300">
 
 1. Välj **[!DNL Products]** i flikfältet.
 1. Välj en produkt.
-1. Välj <img src="assets/saveforlater.png" width="15" />.
-1. Välj <img src="assets/addtocart.png" width="20">.
-1. Välj <img src="assets/purchase.png" width="15" />.
+1. Välj ![Hjärta](/help/assets/icons/Heart.svg).
+1. Välj ![Kundvagn](/help/assets/icons/ShoppingCart.svg).
+1. Välj ![Kreditkort](/help/assets/icons/CreditCard.svg).
 
    <img src="./assets/mobile-app-events-3.png" width="300">
 
-1. Återgå till skärmen **[!UICONTROL Home]**. Du bör se att ett märke har lagts till <img src="assets/person-badge-icon.png" width="15" />.
+1. Återgå till skärmen **[!UICONTROL Home]**. Du bör se att ett märke har lagts till ![UserCheckedOut](/help/assets/icons/UserCheckedOut.svg).
 
    <img src="./assets/personbadges.png" width="300">
 
@@ -182,20 +182,20 @@ Mer information finns i [API-referensen](https://developer.adobe.com/client-sdks
 
 1. Välj **[!UICONTROL Home]** i flikfältet.
 1. Flytta ikonen Assurance åt vänster.
-1. Om du vill öppna inloggningsbladet väljer du knappen <img src="assets/login.png" width="15" />.
+1. Om du vill öppna inloggningsbladet klickar du på knappen ![Användare](/help/assets/icons/User.svg) .
 
    <img src="./assets/mobile-app-events-1-android.png" width="300">
 
-1. Välj <img src="assets/insert.png" width="15" />-knapp .
+1. Välj **[!UICONTROL Generate Random Email]** om du vill infoga ett slumpmässigt e-postmeddelande och ett kund-ID.
 1. Välj **[!UICONTROL Login]**.
 
    <img src="./assets/mobile-app-events-2-android.png" width="300">
 
 1. Välj **[!DNL Products]** i flikfältet.
 1. Välj en produkt.
-1. Välj<img src="assets/heart.png" width="25">.
-1. Välj <img src="assets/addtocart.png" width="20">.
-1. Välj <img src="assets/purchase.png" width="15" />.
+1. Välj ![ThumbUp](/help/assets/icons/ThumbUp.svg)
+1. Välj ![Kundvagn](/help/assets/icons/ShoppingCart.svg).
+1. Välj ![Kreditkort](/help/assets/icons/CreditCard.svg).
 
    <img src="./assets/mobile-app-events-3-android.png" width="300">
 
