@@ -6,7 +6,7 @@ feature-set: Target
 feature: A/B Tests
 hide: true
 hidefromtoc: true
-source-git-commit: 4a0fa85c76c00fd505118692ea4b6cbe410f5839
+source-git-commit: 2b2267e84b26f8c2571e40d7f4c0e08281d36c6c
 workflow-type: tm+mt
 source-wordcount: '373'
 ht-degree: 0%
@@ -93,6 +93,6 @@ Granska avsnittet [installationsanvisningar](assurance.md#connecting-to-a-sessio
 1. Välj **[!UICONTROL Home]** i flikfältet och kontrollera att du ser en **[!UICONTROL ECID]**, **[!UICONTROL Email]** och **[!UICONTROL CRM ID]** på hemskärmen.
 1. Välj **[!DNL Products]** i flikfältet.
 1. Välj en produkt.
-1. Välj ![Spara för senare](assets/saveforlater.png) (iOS) eller ![Spara för senare](assets/heart.png){width=25} (Android).
+1. Välj ![Spara för senare](assets/saveforlater.png) (iOS) eller ![Spara för senare](assets/heart.png) (Android).
 1. Välj ![Lägg till i kundvagnen](assets/addtocart.png).
 1. Välj ![Köp](assets/purchase.png).
