@@ -3,7 +3,7 @@ title: Samla in profildata med Platform Mobile SDK
 description: Lär dig hur du samlar in profildata i en mobilapp.
 jira: KT-14634
 exl-id: 97717611-04d9-45e3-a443-ea220a13b57c
-source-git-commit: 4a0fa85c76c00fd505118692ea4b6cbe410f5839
+source-git-commit: 456c5437cec745f667435e97d21edfba1700750a
 workflow-type: tm+mt
 source-wordcount: '768'
 ht-degree: 0%
@@ -160,7 +160,7 @@ Mer information finns i [API-referensen](https://developer.adobe.com/client-sdks
 
    <img src="./assets/mobile-app-events-1.png" width="300">
 
-1. Om du vill infoga ett slumpmässigt e-postmeddelande och ett kund-id väljer du knappen > .
+1. Om du vill infoga ett slumpmässigt e-postmeddelande och ett kund-ID väljer du knappen **[!UICONTROL A |]** .
 1. Välj **[!UICONTROL Login]**.
 
    <img src="./assets/mobile-app-events-2.png" width="300">

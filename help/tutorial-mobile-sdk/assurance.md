@@ -4,7 +4,7 @@ description: Lär dig hur du implementerar Assurance-tillägget i en mobilapp.
 feature: Mobile SDK,Assurance
 jira: KT-14628
 exl-id: e15774b2-2f52-400f-9313-bb4338a88918
-source-git-commit: 008d3ee066861ea9101fe9fe99ccd0a088b63f23
+source-git-commit: 456c5437cec745f667435e97d21edfba1700750a
 workflow-type: tm+mt
 source-wordcount: '1506'
 ht-degree: 0%
@@ -17,7 +17,7 @@ Lär dig konfigurera Adobe Experience Platform Assurance i en mobilapp.
 
 Assurance, som formellt kallas Project Griffon, är utformat för att hjälpa er att inspektera, verifiera, simulera och validera hur ni samlar in data eller levererar upplevelser i er mobilapp.
 
-Med Assurance kan du inspektera SDK råa-händelser som genererats av Adobe Experience Platform Mobile SDK. Alla evenemang som samlas in av SDK kan granskas. SDK-händelser läses in i en listvy, sorterade efter tid. Varje händelse har en detaljerad vy som ger mer information. Det finns även ytterligare vyer för att bläddra bland SDK-konfigurationer, dataelement, delade lägen och SDK-tilläggsversioner. Läs mer om [Assurance](https://experienceleague.adobe.com/sv/docs/experience-platform/assurance/home) i produktdokumentationen.
+Med Assurance kan du inspektera SDK råa-händelser som genererats av Adobe Experience Platform Mobile SDK. Alla evenemang som samlas in av SDK kan granskas. SDK-händelser läses in i en listvy, sorterade efter tid. Varje händelse har en detaljerad vy som ger mer information. Det finns även ytterligare vyer för att bläddra bland SDK-konfigurationer, dataelement, delade lägen och SDK-tilläggsversioner. Läs mer om [Assurance](https://experienceleague.adobe.com/en/docs/experience-platform/assurance/home) i produktdokumentationen.
 
 
 ## Förhandskrav
@@ -35,7 +35,7 @@ I den här lektionen kommer du att:
 
 ## Bekräfta åtkomst
 
-Bekräfta att din organisation har tillgång till Assurance. Som användare bör du läggas till i profilen för Adobe Experience Platform. Mer information finns i [Användaråtkomst](https://experienceleague.adobe.com/sv/docs/experience-platform/assurance/user-access) i handboken för Assurance.
+Bekräfta att din organisation har tillgång till Assurance. Som användare bör du läggas till i profilen för Adobe Experience Platform. Mer information finns i [Användaråtkomst](https://experienceleague.adobe.com/en/docs/experience-platform/assurance/user-access) i handboken för Assurance.
 
 ## Implementera
 
@@ -105,7 +105,7 @@ Du måste ange en unik källidentifierare för ditt program.
 
 Se till att du använder en _unik_-paketidentifierare och ersätt `com.adobe.luma.tutorial.swiftui`-paketidentifieraren, eftersom varje paketidentifierare måste vara unik. Vanligtvis använder du ett omvänt DNS-format för paket-ID-strängar, som `com.organization.brand.uniqueidentifier`. I den färdiga versionen av den här självstudien används till exempel `com.adobe.luma.tutorial.swiftui`.
 
-![Xcode-signeringsfunktioner](assets/xcode-signing-capabilities.png){zoomable="yes"}{zoomable="yes"}
+![Xcode-signeringsfunktioner](assets/xcode-signing-capabilities.png){zoomable="yes"}
 
 >[!TAB Android]
 
@@ -341,7 +341,7 @@ I webbläsaren:
 
 >[!ENDTABS]
 
-Om du stöter på några problem kan du läsa den [tekniska](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/){target="_blank"} och [allmänna dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-platform/assurance/home){target="_blank"}.
+Om du stöter på några problem kan du läsa den [tekniska](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/){target="_blank"} och [allmänna dokumentationen](https://experienceleague.adobe.com/en/docs/experience-platform/assurance/home){target="_blank"}.
 
 
 ## Verifiera tillägg
