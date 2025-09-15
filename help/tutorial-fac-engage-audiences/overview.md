@@ -1,6 +1,6 @@
 ---
-title: Engagera med målgrupper direkt från ert datalager med en översikt över federerad målgruppskomposition
-description: Federated Audience Composition är en kraftfull funktion som gör det möjligt för dataarkitekter och datatekniker att strukturera och aktivera värdefulla målgrupper direkt från datalager som stöds.
+title: Engagera med målgrupper med federerad målgruppskomposition
+description: Lär dig mer om FFAC (Federated Audience Composition) och hur det gör det möjligt för dataarkitekter och datatekniker att strukturera och aktivera värdefulla målgrupper direkt från datalager som stöds.
 breadcrumb-title: Översikt
 role: Data Architect, Data Engineer
 jira: KT-18743
@@ -8,20 +8,20 @@ thumbnail: 18743-overview.jpg
 recommendations: catalog, noDisplay
 last-substantial-update: 2025-08-11T00:00:00Z
 exl-id: 9d5a2e40-6cda-4164-87db-1bfffe3438e3
-source-git-commit: ab9563d1ac4a0b97f45de0fd18186b34c98e2a36
+source-git-commit: e7484bcb8fa643a5c86b7d97da8c45d333e2e0ae
 workflow-type: tm+mt
-source-wordcount: '575'
+source-wordcount: '566'
 ht-degree: 0%
 
 ---
 
-# Engagera med målgrupper direkt från ert datalager med en översikt över federerad målgruppskomposition
+# Engagera med målgrupper från datalagret med Federated Audience Composition
 
-FAC (Federated Audience Composition) är en modul för Adobe Real-Time Customer Data Platform (Real-Time CDP) och Adobe Journey Optimizer. Det finns också med Adobe Real-Time CDP Composable Audiences (en skräddarsydd lösning för kunder som Composable CDP). Det ger dataarkitekter och datatekniker möjlighet att strukturera och aktivera värdefulla målgrupper direkt från [supportade datalager](https://experienceleague.adobe.com/sv/docs/federated-audience-composition/using/start/access-prerequisites){target="_blank"}, utan att behöva kopiera eller flytta kunddata till Adobe Experience Platform (AEP). Den här sammanställningsbara CDP-metoden (en skräddarsydd lösning för kunder) är anpassad efter branschtrender, vilket gör att företag kan utnyttja sin datainfrastruktur för personaliserade digitala upplevelser samtidigt som datastyrningen upprätthålls.
+FAC (Federated Audience Composition) är en modul för Adobe Real-Time Customer Data Platform (Real-Time CDP) och Adobe Journey Optimizer. Det finns också för Adobe Real-Time CDP Composable Audiences (en skräddarsydd lösning för kunder som Composable CDP). Det ger dataarkitekter och datatekniker möjlighet att strukturera och aktivera värdefulla målgrupper direkt från [supportade datalager](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/access-prerequisites){target="_blank"}, utan att behöva kopiera eller flytta kunddata till Adobe Experience Platform (AEP). Den här sammanställningsbara CDP-metoden (en skräddarsydd lösning för kunder) är anpassad efter branschtrender, vilket gör att företag kan utnyttja sin datainfrastruktur för personaliserade digitala upplevelser samtidigt som datastyrningen upprätthålls.
 
 ## Affärskontext
 
-SecurFinancial är ett ledande finansföretag. Det utnyttjar sin stora mängd kunddata från olika källor för att personalisera erbjudanden och kampanjer för ett stort antal segment. De planerar att använda Adobe Real-Time CDP Federated Audience Composition Module som gör att företag kan använda sitt datalager för datahantering samtidigt som de använder Adobe Experience Platform för att leverera personaliserade kundupplevelser. Några viktiga fördelar:
+SecurFinancial är ett ledande finansföretag. Det utnyttjar sin stora mängd kunddata från olika källor för att personalisera erbjudanden och kampanjer för ett stort antal segment. De planerar att använda modulen Adobe Real-Time CDP Federated Audience Composition, som gör det möjligt för företag att använda sitt datalager för datahantering samtidigt som de använder Experience Platform för att leverera personaliserade kundupplevelser. Några viktiga fördelar:
 
 - **Åtkomst till lagerdata**: Skapa värdefulla målgrupper från datauppsättningar i datalager som stöds utan datareplikering.
 - **Minimerad datarörelse**: Fråga data direkt i lagerstället, utan duplicering och bibehållen datastyrning.
@@ -51,10 +51,10 @@ Om du vill utföra liknande aktiviteter i din miljö måste du ha:
 
 - Tillgång till ett Adobe Experience Platform-konto som tillhandahålls med Real-Time CDP eller Journey Optimizer.
 - Behörigheter för systemadministratör eller möjlighet att konfigurera behörigheter.
-- Bekanta dig med Adobe Experience Platform-koncept, som scheman, datauppsättningar och målgrupper (rekommenderas: fyll i [Introduktion till Adobe Experience Platform-spellista](https://experienceleague.adobe.com/sv/playlists/experience-platform-introduction?lang=en){target="_blank"} på Experience League).
-- Åtkomst till ett [Enterprise-datalager](https://experienceleague.adobe.com/sv/docs/federated-audience-composition/using/start/access-prerequisites){target="_blank"} som stöds.
+- Bekanta dig med Adobe Experience Platform-koncept, som scheman, datauppsättningar och målgrupper (rekommenderas: fyll i [Introduktion till Adobe Experience Platform-spellista](https://experienceleague.adobe.com/en/playlists/experience-platform-introduction?lang=en){target="_blank"} på Experience League).
+- Åtkomst till ett [Enterprise-datalager](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/access-prerequisites){target="_blank"} som stöds.
 - Grundläggande kunskap i SQL för att fråga datalager.
 - **Sandlådemiljöer**: Skapa en sandlåda i din organisations instans för att experimentera utan att påverka produktionsdata.
-- **Data Warehouse Connection**: I den här självstudien används en Snowflake-anslutning, men du kan använda vilket [datalager](https://experienceleague.adobe.com/sv/docs/federated-audience-composition/using/start/access-prerequisites) som helst som stöds.
+- **Data Warehouse Connection**: I den här självstudien används en Snowflake-anslutning, men du kan använda vilket [datalager](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/access-prerequisites) som helst som stöds.
 
 Först ska vi granska [High-level Architecture &amp; Flow for Federated Audience Composition](fac-architecture-and-flow.md).
