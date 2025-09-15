@@ -4,9 +4,9 @@ description: Lär dig hur du implementerar Adobe Experience Cloud mobilappar. De
 recommendations: noDisplay,catalog
 last-substantial-update: 2023-11-29T00:00:00Z
 exl-id: daff4214-d515-4fad-a224-f7589b685b55
-source-git-commit: 008d3ee066861ea9101fe9fe99ccd0a088b63f23
+source-git-commit: 9129d7ab2ac33626240b0375e6424c0f6943290f
 workflow-type: tm+mt
-source-wordcount: '993'
+source-wordcount: '995'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ Experience Platform Mobile SDK är en SDK på klientsidan som gör det möjligt 
 ![Arkitektur](assets/architecture.png){zoomable="yes"}
 
 
-Den här självstudiekursen vägleder dig genom implementeringen av Platform Mobile SDK i en exempelapp som kallas Luma. [Luma-appen](https://github.com/Adobe-Marketing-Cloud/Luma-iOS-Mobile-App) har funktioner som gör att du kan skapa en realistisk implementering. När du är klar med den här självstudiekursen bör du vara redo att börja implementera alla era marknadsföringslösningar via Experience Platform Mobile SDK i dina egna mobilappar.
+Den här självstudiekursen vägleder dig genom implementeringen av Platform Mobile SDK i en exempelapp som kallas Luma. Luma-appen har funktioner som gör att du kan skapa en realistisk implementering. När du är klar med den här självstudiekursen bör du vara redo att börja implementera alla era marknadsföringslösningar via Experience Platform Mobile SDK i dina egna mobilappar.
 
 Lektionerna är utformade för:
 
@@ -64,7 +64,7 @@ I den här lektionen antas du ha ett Adobe ID och de användarbehörigheter som 
    * **[!UICONTROL Property Rights]** - behörighet till objekt i **[!UICONTROL Develop]**, **[!UICONTROL Approve]**, **[!UICONTROL Publish]**, **[!UICONTROL Manage Extensions]** och **[!UICONTROL Manage Environments]**.
    * **[!UICONTROL Company Rights]** - behörighet till objekt i **[!UICONTROL Manage Properties]**
 
-     Mer information om taggbehörigheter finns i [Användarbehörigheter för taggar](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/admin/user-permissions){target="_blank"} i produktdokumentationen.
+     Mer information om taggbehörigheter finns i [Användarbehörigheter för taggar](https://experienceleague.adobe.com/en/docs/experience-platform/tags/admin/user-permissions){target="_blank"} i produktdokumentationen.
 * I Experience Platform måste du ha:
    * **[!UICONTROL Data Modeling]** - behörighet att hantera och visa scheman.
    * **[!UICONTROL Identity Management]** - behörighet att hantera och visa identitetsnamnutrymmen.
@@ -74,7 +74,7 @@ I den här lektionen antas du ha ett Adobe ID och de användarbehörigheter som 
       * **[!UICONTROL Data Management]** - behörighet att hantera och visa datauppsättningar.
       * En **utvecklingssandlåda** som du kan använda för den här självstudiekursen.
 
-   * För Journey Optimizer lektioner behöver du behörighet att konfigurera **push-meddelandetjänsten** och att skapa en **appyta**, en **resa**, ett **meddelande** och **meddelandeförinställningar**. För Beslutshantering behöver du dessutom tillräcklig behörighet för att **hantera erbjudanden** och **beslut**, vilket beskrivs i [Behörighetsnivåer](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/access-control/high-low-permissions).
+   * För Journey Optimizer lektioner behöver du behörighet att konfigurera **push-meddelandetjänsten** och att skapa en **appyta**, en **resa**, ett **meddelande** och **meddelandeförinställningar**. För Beslutshantering behöver du dessutom tillräcklig behörighet för att **hantera erbjudanden** och **beslut**, vilket beskrivs i [Behörighetsnivåer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/high-low-permissions).
 
 * För Adobe Analytics måste du veta vilka **rapportsviter** du kan använda för att slutföra kursen.
 
@@ -119,9 +119,8 @@ Det finns två versioner av exempelappen att hämta. Båda versionerna kan hämt
 
 Du använder Android som plattform, [!DNL Kotlin]+[!DNL Java] som programmeringsspråk, [!DNL JetPack Compose] som gränssnittsramverk och [!DNL Android Studio] som integrerad utvecklingsmiljö (IDE). Många av de implementeringskoncept som beskrivs liknar dock andra utvecklingsplattformar. Många har redan slutfört den här självstudiekursen med lite eller ingen tidigare erfarenhet av Android/Kotlin+Java/JetPack Compose. Du behöver inte vara expert för att slutföra lektionerna, men du får ut mer av lektionerna om du enkelt kan läsa och förstå koden.
 
-Du kan hämta en slutgiltig testversion av appen från Google Play.
+Om du vill kan du [testa en produktversion](https://play.google.com/apps/internaltest/4700642199234438150) av appen från Google Play.
 
-[![Hämta](assets/download-app-android.svg)](https://play.google.com/store/apps/details?id=com.adobe.luma.tutorial.android)
 
 >[!ENDTABS]
 
