@@ -17,7 +17,7 @@ ht-degree: 0%
 
 # Engagera med målgrupper från datalagret med Federated Audience Composition
 
-FAC (Federated Audience Composition) är en modul för Adobe Real-Time Customer Data Platform (Real-Time CDP) och Adobe Journey Optimizer. Det finns också för Adobe Real-Time CDP Composable Audiences (en skräddarsydd lösning för kunder som Composable CDP). Det ger dataarkitekter och datatekniker möjlighet att strukturera och aktivera värdefulla målgrupper direkt från [supportade datalager](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/access-prerequisites){target="_blank"}, utan att behöva kopiera eller flytta kunddata till Adobe Experience Platform (AEP). Den här sammanställningsbara CDP-metoden (en skräddarsydd lösning för kunder) är anpassad efter branschtrender, vilket gör att företag kan utnyttja sin datainfrastruktur för personaliserade digitala upplevelser samtidigt som datastyrningen upprätthålls.
+FAC (Federated Audience Composition) är en modul för Adobe Real-Time Customer Data Platform (Real-Time CDP) och Adobe Journey Optimizer. Det finns också för Adobe Real-Time CDP Composable Audiences (en skräddarsydd lösning för kunder som Composable CDP). Det ger dataarkitekter och datatekniker möjlighet att strukturera och aktivera värdefulla målgrupper direkt från [supportade datalager](https://experienceleague.adobe.com/sv/docs/federated-audience-composition/using/start/access-prerequisites){target="_blank"}, utan att behöva kopiera eller flytta kunddata till Adobe Experience Platform (AEP). Den här sammanställningsbara CDP-metoden (en skräddarsydd lösning för kunder) är anpassad efter branschtrender, vilket gör att företag kan utnyttja sin datainfrastruktur för personaliserade digitala upplevelser samtidigt som datastyrningen upprätthålls.
 
 ## Affärskontext
 
@@ -51,10 +51,10 @@ Om du vill utföra liknande aktiviteter i din miljö måste du ha:
 
 - Tillgång till ett Adobe Experience Platform-konto som tillhandahålls med Real-Time CDP eller Journey Optimizer.
 - Behörigheter för systemadministratör eller möjlighet att konfigurera behörigheter.
-- Bekanta dig med Adobe Experience Platform-koncept, som scheman, datauppsättningar och målgrupper (rekommenderas: fyll i [Introduktion till Adobe Experience Platform-spellista](https://experienceleague.adobe.com/en/playlists/experience-platform-introduction?lang=en){target="_blank"} på Experience League).
-- Åtkomst till ett [Enterprise-datalager](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/access-prerequisites){target="_blank"} som stöds.
+- Bekanta dig med Adobe Experience Platform-koncept, som scheman, datauppsättningar och målgrupper (rekommenderas: fyll i [Introduktion till Adobe Experience Platform-spellista](https://experienceleague.adobe.com/sv/playlists/experience-platform-introduction?lang=en){target="_blank"} på Experience League).
+- Åtkomst till ett [Enterprise-datalager](https://experienceleague.adobe.com/sv/docs/federated-audience-composition/using/start/access-prerequisites){target="_blank"} som stöds.
 - Grundläggande kunskap i SQL för att fråga datalager.
 - **Sandlådemiljöer**: Skapa en sandlåda i din organisations instans för att experimentera utan att påverka produktionsdata.
-- **Data Warehouse Connection**: I den här självstudien används en Snowflake-anslutning, men du kan använda vilket [datalager](https://experienceleague.adobe.com/en/docs/federated-audience-composition/using/start/access-prerequisites) som helst som stöds.
+- **Data Warehouse Connection**: I den här självstudien används en Snowflake-anslutning, men du kan använda vilket [datalager](https://experienceleague.adobe.com/sv/docs/federated-audience-composition/using/start/access-prerequisites) som helst som stöds.
 
 Först ska vi granska [High-level Architecture &amp; Flow for Federated Audience Composition](fac-architecture-and-flow.md).
