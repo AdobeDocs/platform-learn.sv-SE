@@ -64,7 +64,7 @@ I den här lektionen antas du ha ett Adobe ID och de användarbehörigheter som 
    * **[!UICONTROL Property Rights]** - behörighet till objekt i **[!UICONTROL Develop]**, **[!UICONTROL Approve]**, **[!UICONTROL Publish]**, **[!UICONTROL Manage Extensions]** och **[!UICONTROL Manage Environments]**.
    * **[!UICONTROL Company Rights]** - behörighet till objekt i **[!UICONTROL Manage Properties]**
 
-     Mer information om taggbehörigheter finns i [Användarbehörigheter för taggar](https://experienceleague.adobe.com/en/docs/experience-platform/tags/admin/user-permissions){target="_blank"} i produktdokumentationen.
+     Mer information om taggbehörigheter finns i [Användarbehörigheter för taggar](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/admin/user-permissions){target="_blank"} i produktdokumentationen.
 * I Experience Platform måste du ha:
    * **[!UICONTROL Data Modeling]** - behörighet att hantera och visa scheman.
    * **[!UICONTROL Identity Management]** - behörighet att hantera och visa identitetsnamnutrymmen.
@@ -74,7 +74,7 @@ I den här lektionen antas du ha ett Adobe ID och de användarbehörigheter som 
       * **[!UICONTROL Data Management]** - behörighet att hantera och visa datauppsättningar.
       * En **utvecklingssandlåda** som du kan använda för den här självstudiekursen.
 
-   * För Journey Optimizer lektioner behöver du behörighet att konfigurera **push-meddelandetjänsten** och att skapa en **appyta**, en **resa**, ett **meddelande** och **meddelandeförinställningar**. För Beslutshantering behöver du dessutom tillräcklig behörighet för att **hantera erbjudanden** och **beslut**, vilket beskrivs i [Behörighetsnivåer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/high-low-permissions).
+   * För Journey Optimizer lektioner behöver du behörighet att konfigurera **push-meddelandetjänsten** och att skapa en **appyta**, en **resa**, ett **meddelande** och **meddelandeförinställningar**. För Beslutshantering behöver du dessutom tillräcklig behörighet för att **hantera erbjudanden** och **beslut**, vilket beskrivs i [Behörighetsnivåer](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/access-control/high-low-permissions).
 
 * För Adobe Analytics måste du veta vilka **rapportsviter** du kan använda för att slutföra kursen.
 
