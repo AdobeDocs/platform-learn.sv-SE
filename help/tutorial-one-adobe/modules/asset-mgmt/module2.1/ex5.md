@@ -4,14 +4,14 @@ description: AEM CS - Avancerat anpassat block
 kt: 5342
 doc-type: tutorial
 exl-id: 31fd1dea-70c9-4f82-87ad-16276ffa7f5b
-source-git-commit: 457e7d0dec233edf75717fb9930585a3511bdc65
+source-git-commit: 490bc79332bb84520ba084ec784ea3ef48a68fb5
 workflow-type: tm+mt
-source-wordcount: '1000'
+source-wordcount: '998'
 ht-degree: 0%
 
 ---
 
-# 1.1.5 Avancerat anpassat block
+# 1.1.4 Avancerat anpassat block
 
 I föregående övning konfigurerade du ett enkelt anpassat block med namnet **Fibre Offer** som visar fält som **Erbjud text**, **Erbjud CTA** och **Erbjud bild** på din webbplats.
 
@@ -19,7 +19,7 @@ Du kan nu fortsätta arbeta med det här blocket.
 
 ![AEMCS](./images/nav7.png){zoomable="yes"}
 
-## 1.1.5.1 Formatera blocket
+## 1.1.4.1 Formatera blocket
 
 Nu när du har ett fungerande **fiberoffer** -block kan du formatera det.
 
@@ -115,7 +115,7 @@ Du bör då se det här med formateringen tillämpad på sidan.
 
 ![Blockera](./images/blockadv13.png){zoomable="yes"}
 
-## 1.1.5.2 Lägg till logik och läsa in data från en extern slutpunkt
+## 1.1.4.2 Lägg till logik och läsa in data från en extern slutpunkt
 
 I den här övningen kommer du att göra en&quot;raw&quot;-konfiguration av Adobe Web SDK och du kommer att begära nästa bästa erbjudande från Adobe Journey Optimizer Offer Decisioning.
 
@@ -345,7 +345,7 @@ Du borde se det här då.
 
 ![Blockera](./images/blockadv20.png){zoomable="yes"}
 
-Nästa steg: [1.1.6 AEM Edge Delivery Services SmartTech-plugin](./ex6.md){target="_blank"}
+Nästa steg: [AEM Edge Delivery Services MarTech-plugin](./ex6.md){target="_blank"}
 
 Gå tillbaka till [Adobe Experience Manager Cloud Service &amp; Edge Delivery Services](./aemcs.md){target="_blank"}
 

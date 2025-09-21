@@ -4,9 +4,9 @@ description: Skapa ett Cloud Manager-program
 kt: 5342
 doc-type: tutorial
 exl-id: fda247eb-1865-4936-b46e-84128ccab357
-source-git-commit: 7b9df90424c1d8c2fbe7672f00e9b2ce0ec66d19
+source-git-commit: 490bc79332bb84520ba084ec784ea3ef48a68fb5
 workflow-type: tm+mt
-source-wordcount: '360'
+source-wordcount: '344'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ Gå till [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com){
 
 ![AEMCS](./images/aemcs1.png)
 
-Använd `--aepUserLdap-- - CitiSignal` för **programnamnet**. Välj alternativet **Konfigurera en sandlåda**. Klicka på **Fortsätt**.
+Använd **för** programnamnet`--aepUserLdap-- - CitiSignal AEM+ACCS`. Välj alternativet **Konfigurera en sandlåda**. Klicka på **Fortsätt**.
 
 ![AEMCS](./images/aemcs2.png)
 
@@ -51,8 +51,6 @@ Klicka på **Skapa**.
 Det kan ta 10-20 minuter att skapa miljön.
 
 ![AEMCS](./images/aemcs4.png)
-
-Under tiden du väntar kan du redan börja med övning [1.1.2 Skapa din dokumentbaserade webbplats](./ex2.md){target="_blank"}.
 
 När miljöerna har skapats och är klara att användas får du en bekräftelse via e-post, varefter du kan komma tillbaka hit.
 
@@ -107,7 +105,7 @@ Efter cirka 10 minuter aktiveras **Dynamic Media**.
 
 När din pipeline är klar kan du fortsätta med nästa övning.
 
-Nästa steg: [1.1.2 Skapa en dokumentbaserad webbplats](./ex2.md){target="_blank"}
+Nästa steg: [Konfigurera AEM CS-miljön](./ex3.md){target="_blank"}
 
 Gå tillbaka till [Adobe Experience Manager Cloud Service &amp; Edge Delivery Services](./aemcs.md){target="_blank"}
 

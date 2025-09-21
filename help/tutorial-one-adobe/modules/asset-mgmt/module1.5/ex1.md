@@ -3,9 +3,9 @@ title: Komma igång med Adobe Commerce as a Cloud Service
 description: Komma igång med Adobe Commerce as a Cloud Service
 kt: 5342
 doc-type: tutorial
-source-git-commit: 28553f8042be7bfc0b553272a6c72e6677fe1cb3
+source-git-commit: 490bc79332bb84520ba084ec784ea3ef48a68fb5
 workflow-type: tm+mt
-source-wordcount: '656'
+source-wordcount: '688'
 ht-degree: 14%
 
 ---
@@ -100,6 +100,16 @@ Klicka på **Spara butiksvy**.
 Du bör då se det här meddelandet. Klicka på **OK**.
 
 ![AEM Assets](./images/accs15.png)
+
+Du borde vara tillbaka här. Klicka på webbplatsen **CitiSignal** för att öppna den.
+
+![AEM Assets](./images/accs16.png)
+
+Markera kryssrutan för att ange den här webbplatsen som standardwebbplats.
+
+Klicka på **Spara webbplats**.
+
+![AEM Assets](./images/accs16a.png)
 
 Du borde vara tillbaka här.
 

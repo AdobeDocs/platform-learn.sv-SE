@@ -4,14 +4,14 @@ description: AEM CS - MarTech plugin
 kt: 5342
 doc-type: tutorial
 exl-id: 77dc780b-ce6c-403f-847d-8eb64cbe2a97
-source-git-commit: 457e7d0dec233edf75717fb9930585a3511bdc65
+source-git-commit: 490bc79332bb84520ba084ec784ea3ef48a68fb5
 workflow-type: tm+mt
 source-wordcount: '1063'
 ht-degree: 0%
 
 ---
 
-# 1.1.6 AEM Edge Delivery Services MarTech-plugin
+# 1.1.5 AEM Edge Delivery Services MarTech-plugin
 
 Med pluginen AEM MarTech kan du snabbt skapa en komplett MarTech-hög för ditt AEM-projekt.
 
@@ -19,7 +19,7 @@ Med pluginen AEM MarTech kan du snabbt skapa en komplett MarTech-hög för ditt 
 >
 >Denna plugin är tillgänglig för kunder i samarbete med AEM Engineering via projekt för saminnovation. Mer information finns på [https://github.com/adobe-rnd/aem-martech](https://github.com/adobe-rnd/aem-martech).
 
-## 1.1.6.1 Lägg till plugin-programmet i ditt svar
+## 1.1.5.1 Lägg till plugin-programmet i ditt svar
 
 Navigera till mappen som du använder för din **citisign** GitHub-databas. Högerklicka på mappnamnet och välj sedan **Ny terminal i mappen**.
 
@@ -39,7 +39,7 @@ Navigera till mappen som du använder för din **citisign** GitHub-databas och �
 
 ![AEMCS](./images/mtplugin4.png){zoomable="yes"}
 
-## 1.1.6.2 head.html
+## 1.1.5.2 head.html
 
 Öppna filen **head.html** i Visual Studio-koden. Kopiera koden nedan och klistra in den i filen **head.html**.
 
@@ -54,7 +54,7 @@ Spara ändringarna.
 
 ![AEMCS](./images/mtplugin5.png){zoomable="yes"}
 
-## 1.1.6.3 scripts.js
+## 1.1.5.3 scripts.js
 
 I Visual Studio Code går du till mappen **scripts** och öppnar filen **scripts.js**. Kopiera koden nedan och klistra in den i filen **scripts.js**, under de befintliga importskripten.
 
@@ -88,25 +88,25 @@ Under **const AUDIENCES = {...};** klistrar du in nedanstående kod:
   const isConsentGiven = true;
   const martechLoadedPromise = initMartech(
     // The WebSDK config
-    // Documentation: https://experienceleague.adobe.com/sv/docs/experience-platform/web-sdk/commands/configure/overview#configure-js
+    // Documentation: https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/configure/overview#configure-js
     {
       datastreamId: "XXX",
       orgId: "XXX",
       defaultConsent: 'in',
       onBeforeEventSend: (payload) => {
         // set custom Target params 
-        // see doc at https://experienceleague.adobe.com/sv/docs/platform-learn/migrate-target-to-websdk/send-parameters#parameter-mapping-summary
+        // see doc at https://experienceleague.adobe.com/en/docs/platform-learn/migrate-target-to-websdk/send-parameters#parameter-mapping-summary
         payload.data.__adobe.target ||= {};
 
         // set custom Analytics params
-        // see doc at https://experienceleague.adobe.com/sv/docs/analytics/implementation/aep-edge/data-var-mapping
+        // see doc at https://experienceleague.adobe.com/en/docs/analytics/implementation/aep-edge/data-var-mapping
         payload.data.__adobe.analytics ||= {};
       },
 
       // set custom datastream overrides
       // see doc at:
-      // - https://experienceleague.adobe.com/sv/docs/experience-platform/web-sdk/commands/datastream-overrides
-      // - https://experienceleague.adobe.com/sv/docs/experience-platform/datastreams/overrides
+      // - https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/commands/datastream-overrides
+      // - https://experienceleague.adobe.com/en/docs/experience-platform/datastreams/overrides
       edgeConfigOverrides: {
         // Override the datastream id
         // datastreamId: '...'
@@ -175,7 +175,7 @@ Du hittar sedan den URL du behöver, men den finns inuti en HTML `<script></scri
 
 ![AEMCS](./images/scriptsvar5.png){zoomable="yes"}
 
-URL:en ser ut så här: `https://assets.adobedtm.com/b754ed1bed61/b9f7c7c484de/launch-5fcd90e5b482-development.min.js`. Se till att ingen annan text kopieras eftersom det skulle orsaka fel. I Visual Studio Code ersätter du platshållarvärdet `XXX` i arrayen `launchUrls:` i filen **scripts.js**.
+URL:en ser ut så här: `https://assets.adobedtm.com/b754ed1bed61/b9f7c7c484de/launch-5fcd90e5b482-development.min.js`. Se till att ingen annan text kopieras eftersom det skulle orsaka fel. I Visual Studio Code ersätter du platshållarvärdet **i arrayen** i filen `XXX`scripts.js`launchUrls:`.
 
 Du har nu de tre variabler du behöver. Filen `scripts.js` ska nu se ut så här:
 
@@ -315,7 +315,7 @@ Klicka på **Push origin** om du vill överföra dina ändringar till GitHub-dat
 
 ![AEMCS](./images/mtplugin13.png){zoomable="yes"}
 
-## 1.1.6.4 ACDL-tillägg i taggegenskap
+## 1.1.5.4 ACDL-tillägg i taggegenskap
 
 För att AEM Edge Delivery Services MarTech-pluginprogrammet ska fungera på rätt sätt måste du lägga till tillägget för
 
@@ -341,7 +341,7 @@ Gå till **Publiceringsflöde** och öppna ditt **huvudbibliotek**. Klicka på *
 
 Ändringarna är nu distribuerade.
 
-## 1.1.6.5 Skicka data till Adobe Experience Platform Edge Network
+## 1.1.5.5 Skicka data till Adobe Experience Platform Edge Network
 
 Du kan nu visa ändringarna av din webbplats genom att gå till `main--citisignal--XXX.aem.page/us/en/` och/eller `main--citisignal--XXX.aem.live/us/en/` efter att du ersatt XXX med ditt GitHub-användarkonto, som i det här exemplet är `woutervangeluwe`.
 
@@ -366,7 +366,7 @@ I vyn **Konsol** visas ett antal rader som börjar med `[alloy]`. Ta en titt på
 
 ![AEMCS](./images/plweb3.png){zoomable="yes"}
 
-## 1.1.6.6 Visa kundprofil i Adobe Experience Platform
+## 1.1.5.6 Visa kundprofil i Adobe Experience Platform
 
 Logga in på Adobe Experience Platform via följande URL: [https://experience.adobe.com/platform](https://experience.adobe.com/platform).
 

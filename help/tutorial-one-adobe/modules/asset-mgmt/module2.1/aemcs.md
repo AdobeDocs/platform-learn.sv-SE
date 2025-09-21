@@ -4,9 +4,9 @@ description: ADOBE EXPERIENCE MANAGER CLOUD SERVICE & EDGE DELIVERY SERVICES
 kt: 5342
 doc-type: tutorial
 exl-id: 52efb52c-103f-4171-a69e-0cddb142a0ed
-source-git-commit: dd075b0296c6ba06d72b229145635060c2c6abb1
+source-git-commit: b39cc993120ba6feecbfc044d40e066f9d8f91de
 workflow-type: tm+mt
-source-wordcount: '233'
+source-wordcount: '209'
 ht-degree: 0%
 
 ---
@@ -27,23 +27,19 @@ ht-degree: 0%
 
 I den här övningen skapar du ett Cloud Manager-program som skapar Sites, Assets och Edge Delivery Services-produkter åt dig.
 
-[1.1.2 Skapa din dokumentbaserade webbplats](./ex2.md){target="_blank"}
-
-I den här övningen kommer du att skapa en egen dokumentbaserad webbplats genom att kopiera en befintlig webbplatsmall.
-
-[1.1.3 Konfigurera AEM CS-miljön](./ex3.md){target="_blank"}
+[1.1.2 Konfigurera AEM CS-miljön](./ex3.md){target="_blank"}
 
 I den här övningen ska du konfigurera din AEM CS-miljö och gå till din CitiSignal-webbplats.
 
-[1.1.4 Grundläggande anpassat block](./ex4.md){target="_blank"}
+[1.1.3 Grundläggande anpassat block](./ex4.md){target="_blank"}
 
 I den här övningen ska du skapa ett grundläggande anpassat block för din webbplats.
 
-[1.1.5 Avancerat anpassat block](./ex5.md){target="_blank"}
+[1.1.4 Avancerat anpassat block](./ex5.md){target="_blank"}
 
 I den här övningen kommer du att utveckla ett avancerat anpassat block för din webbplats.
 
-[1.1.6 AEM Edge Delivery Services MarTech-plugin](./ex6.md){target="_blank"}
+[1.1.5 AEM Edge Delivery Services MarTech-plugin](./ex6.md){target="_blank"}
 
 I den här övningen ska du implementera pluginmodulen AEM MarTech. Med pluginen AEM MarTech kan du snabbt skapa en komplett MarTech-hög för ditt AEM-projekt.
 

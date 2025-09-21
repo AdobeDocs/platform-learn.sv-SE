@@ -4,16 +4,16 @@ description: AEM CS - grundläggande anpassat block
 kt: 5342
 doc-type: tutorial
 exl-id: 57c08a88-d885-471b-ad78-1dba5992da9d
-source-git-commit: d583df79bff499b7605f77146d52e66bc02810b9
+source-git-commit: 490bc79332bb84520ba084ec784ea3ef48a68fb5
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '812'
 ht-degree: 1%
 
 ---
 
-# 1.1.4 Utveckla ett enkelt anpassat block
+# 1.1.3 Utveckla ett enkelt anpassat block
 
-## 1.1.4.1 Konfigurera din lokala utvecklingsmiljö
+## 1.1.3.1 Konfigurera din lokala utvecklingsmiljö
 
 Gå till [https://desktop.github.com/download/](https://desktop.github.com/download/){target="_blank"}, hämta och installera **Github Desktop**.
 
@@ -43,7 +43,7 @@ Nu ser du att mappen är öppen i Visual Studio Code. Nu kan du skapa ett nytt b
 
 ![Blockera](./images/block7.png){zoomable="yes"}
 
-## 1.1.4.2 Skapa ett enkelt anpassat block
+## 1.1.3.2 Skapa ett enkelt anpassat block
 
 Adobe rekommenderar att du utvecklar block i tre faser:
 
@@ -145,7 +145,7 @@ Spara ändringarna.
 
 ![Blockera](./images/block15.png){zoomable="yes"}
 
-## 1.1.4.3 Genomför dina ändringar
+## 1.1.3.3 Genomför dina ändringar
 
 Du har nu gjort flera ändringar i ditt projekt som behöver implementeras i GitHub-databasen igen. Öppna **GitHub Desktop** om du vill göra det.
 
@@ -169,7 +169,7 @@ Gå till ditt GitHub-konto i webbläsaren och till databasen som du skapade för
 
 ![Blockera](./images/block20.png){zoomable="yes"}
 
-## 1.1.4.4 Lägg till blocket på en sida
+## 1.1.3.4 Lägg till blocket på en sida
 
 Nu när ditt grundläggande offertblock har definierats och implementerats i CitiSignal-projektet kan du lägga till ett **fiberoffer** -block på en befintlig sida.
 
@@ -249,7 +249,7 @@ Klicka på **Publicera** igen.
 
 Din nya sida har publicerats.
 
-## 1.1.4.5 Lägg till din nya sida på navigeringsmenyn
+## 1.1.3.5 Lägg till din nya sida på navigeringsmenyn
 
 Gå till **CitiSignal** > **Fragment** i AEM Sites-översikten och markera kryssrutan för **Header**. Klicka på **Redigera**.
 
@@ -284,7 +284,7 @@ Här är ditt grundläggande anpassade block, men det återges nu på webbplatse
 
 ![AEMCS](./images/nav7.png){zoomable="yes"}
 
-Nästa steg: [1.1.5 Avancerat anpassat block](./ex5.md){target="_blank"}
+Nästa steg: [Avancerat anpassat block](./ex5.md){target="_blank"}
 
 Gå tillbaka till [Adobe Experience Manager Cloud Service &amp; Edge Delivery Services](./aemcs.md){target="_blank"}
 

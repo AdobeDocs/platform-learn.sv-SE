@@ -3,9 +3,9 @@ title: Översikt - Omfattande teknisk självstudiekurs - en Adobe
 description: Omfattande teknisk självstudiekurs - en Adobe
 doc-type: multipage-overview
 exl-id: 5bc0d621-0662-4d94-80a0-b6c173c0ac9e
-source-git-commit: 8e0356921360017fa00d59fb323839b6ac1cd2c1
+source-git-commit: 490bc79332bb84520ba084ec784ea3ef48a68fb5
 workflow-type: tm+mt
-source-wordcount: '1207'
+source-wordcount: '1246'
 ht-degree: 0%
 
 ---
@@ -94,7 +94,7 @@ I den här modulen använder du Adobe Frame.io i kombination med Adobe Premiere 
 
 I den här modulen ska du skapa ett anpassat program för att utöka funktionerna i GenStudio for Performance Marketing med Adobe IO och App Builder.
 
-### &#x200B;3. Resurshantering
+### &#x200B;3. Resurshantering och webbplatser
 
 [1.1 Adobe Experience Manager Cloud Service &amp; Edge Delivery Services](./modules/asset-mgmt/module2.1/aemcs.md){target="_blank"}
 
@@ -103,6 +103,10 @@ I den här modulen kommer du att konfigurera Adobe Experience Manager Cloud Serv
 [1.2 Adobe Experience Manager Assets](./modules/asset-mgmt/module2.2/aemassets.md){target="_blank"}
 
 I den här modulen kommer du att utforska AEM Assets.
+
+[1.5 Adobe Commerce as a Cloud Service](./modules/asset-mgmt/module1.5/accs.md){target="_blank"}
+
+I den här modulen skapar du en Adobe Commerce as a Cloud Service-instans. Du kopplar din Commerce-instans till AEM Sites CS Storefront och din AEM Assets CS-miljö.
 
 ### &#x200B;4. Leverans och aktivering
 
