@@ -3,9 +3,9 @@ title: Ansluta ACCS till AEM Assets CS
 description: Ansluta ACCS till AEM Assets CS
 kt: 5342
 doc-type: tutorial
-source-git-commit: ca895385f5c1f318a7c4d0b338dcfa4e91763005
+source-git-commit: 58448049d54ee6124985159577df0e307896a312
 workflow-type: tm+mt
-source-wordcount: '1255'
+source-wordcount: '1651'
 ht-degree: 0%
 
 ---
@@ -21,6 +21,10 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 >Om du tidigare har konfigurerat ett AEM CS-program med en AEM Sites- och Assets CS-miljö kan det bero på att din AEM CS-sandlåda är i viloläge. Eftersom det tar 10-15 minuter att dölja en sådan sandlåda, är det en bra idé att starta separationsprocessen nu så att du inte behöver vänta på den vid ett senare tillfälle.
+
+När du är klar med den föregående övningen kunde du se en produkt som ACCS returnerade till din webbplats, men den hade ingen bild än. När du är klar med övningen bör du också se en bild som returneras.
+
+![ACCS+AEM Sites](./images/accsaemsites11.png)
 
 ## 1.5.3.1 Uppdatera pipeline-konfiguration
 
@@ -172,6 +176,10 @@ Klicka på **Spara konfiguration**.
 
 ![ACCS+AEM Assets](./images/accsaemassets51.png)
 
+Du borde se det här då.
+
+![ACCS+AEM Assets](./images/accsaemassets52.png)
+
 ## 1.5.3.3 Uppdatera config.json
 
 Gå till GitHub-databasen som skapades när du konfigurerade din AEM Sites CS/EDS-miljö. Databasen skapades i övningen [1.1.2 Konfigurera din AEM CS-miljö](./../../../modules/asset-mgmt/module2.1/ex3.md){target="_blank"} och bör ha namnet **citisign-aem-accs**.
@@ -252,37 +260,139 @@ Klicka på **Överför**.
 
 ![ACCS+AEM Assets](./images/accsaemassets41.png)
 
-Dina bilder kommer då att vara tillgängliga i din mapp.
+Dina bilder kommer då att vara tillgängliga i din mapp. Håll pekaren över produkten **iPhone-Air-Light-Gold.png** och klicka på ikonen **Egenskaper** .
 
 ![ACCS+AEM Assets](./images/accsaemassets42.png)
 
-Klicka på den första produktbilden för att öppna den.
-
-![ACCS+AEM Assets](./images/accsaemassets43.png)
-
-Ange status för produktavbildningen till **Godkänd**. Integreringen av AEM Assets CS - ACCS fungerar bara för godkända bilder.
+Bläddra nedåt och ange fältet **Granskningsstatus** till **Godkänd**. Integreringen av AEM Assets CS - ACCS fungerar bara för godkända bilder.
 
 ![ACCS+AEM Assets](./images/accsaemassets44.png)
 
-Gå till fliken **Commerce** och klicka sedan på **Lägg till** under **Produktskus**.
+Bläddra uppåt, gå till fliken **Commerce** och klicka sedan på **Lägg till** under **Produktskus**.
 
 ![ACCS+AEM Assets](./images/accsaemassets45.png)
 
-Ta SKU:n från bildfilens namn, öka värdet till 1 och välj alla alternativ i listrutan **usage**.
+Lägg till följande SKU:er för den här produkten:
 
-![ACCS+AEM Assets](./images/accsaemassets46.png)
+| Nyckel | Värde | Användning |
+|:-------------:| :---------------:| :---------------:| 
+| `iPhone-Air-Light-Gold` | `1` | `thumbnail, image, swatch_image, small_image` |
+| `iPhone-Air-Light-Gold-256GB` | `1` | `thumbnail, image, swatch_image, small_image` |
+| `iPhone-Air-Light-Gold-512GB` | `1` | `thumbnail, image, swatch_image, small_image` |
+| `iPhone-Air-Light-Gold-1TB` | `1` | `thumbnail, image, swatch_image, small_image` |
 
 Du borde ha den här då. Klicka på **Spara och stäng**.
 
+![ACCS+AEM Assets](./images/accsaemassets46.png)
+
+Håll pekaren över produkten **iPhone-Air-Space-Black.png** och klicka på ikonen **Egenskaper** .
+
 ![ACCS+AEM Assets](./images/accsaemassets47.png)
 
-Upprepa den här åtgärden för att godkänna en resurs och ange fliken Commerce för alla bilder som du har importerat i den här mappen. När du är klar bör varje bild ha en **grön tumme uppåt**, vilket anger att resursen har godkänts.
+Bläddra nedåt och ange fältet **Granskningsstatus** till **Godkänd**. Integreringen av AEM Assets CS - ACCS fungerar bara för godkända bilder.
 
 ![ACCS+AEM Assets](./images/accsaemassets48.png)
 
+Bläddra uppåt, gå till fliken **Commerce** och klicka sedan på **Lägg till** under **Produktskus**.
+
+![ACCS+AEM Assets](./images/accsaemassets201.png)
+
+Lägg till följande SKU:er för den här produkten:
+
+| Nyckel | Värde | Användning |
+|:-------------:| :---------------:| :---------------:| 
+| `iPhone-Air-Space-Black` | `1` | `thumbnail, image, swatch_image, small_image` |
+| `iPhone-Air-Space-Black-256GB` | `1` | `thumbnail, image, swatch_image, small_image` |
+| `iPhone-Air-Space-Black-512GB` | `1` | `thumbnail, image, swatch_image, small_image` |
+| `iPhone-Air-Space-Black-1TB` | `1` | `thumbnail, image, swatch_image, small_image` |
+| `iPhone-Air` | `1` | `thumbnail, image, swatch_image, small_image` |
+
+Du borde ha den här då. Klicka på **Spara och stäng**.
+
+![ACCS+AEM Assets](./images/accsaemassets202.png)
+
+Håll pekaren över produkten **iPhone-Air-Sky-Blue.png** och klicka på ikonen **Egenskaper** .
+
+![ACCS+AEM Assets](./images/accsaemassets203.png)
+
+Bläddra nedåt och ange fältet **Granskningsstatus** till **Godkänd**. Integreringen av AEM Assets CS - ACCS fungerar bara för godkända bilder.
+
+![ACCS+AEM Assets](./images/accsaemassets204.png)
+
+Bläddra uppåt, gå till fliken **Commerce** och klicka sedan på **Lägg till** under **Produktskus**.
+
+![ACCS+AEM Assets](./images/accsaemassets205.png)
+
+Lägg till följande SKU:er för den här produkten:
+
+| Nyckel | Värde | Användning |
+|:-------------:| :---------------:| :---------------:| 
+| `iPhone-Air-Sky-Blue` | `1` | `thumbnail, image, swatch_image, small_image` |
+| `iPhone-Air-Sky-Blue-256GB` | `1` | `thumbnail, image, swatch_image, small_image` |
+| `iPhone-Air-Sky-Blue-512GB` | `1` | `thumbnail, image, swatch_image, small_image` |
+| `iPhone-Air-Sky-Blue-1TB` | `1` | `thumbnail, image, swatch_image, small_image` |
+
+Du borde ha den här då. Klicka på **Spara och stäng**.
+
+![ACCS+AEM Assets](./images/accsaemassets206.png)
+
+Hovra över produkten **iPhone-Air-Cloud-White.png** och klicka på ikonen **Egenskaper** .
+
+![ACCS+AEM Assets](./images/accsaemassets207.png)
+
+Bläddra nedåt och ange fältet **Granskningsstatus** till **Godkänd**. Integreringen av AEM Assets CS - ACCS fungerar bara för godkända bilder.
+
+![ACCS+AEM Assets](./images/accsaemassets208.png)
+
+Bläddra uppåt, gå till fliken **Commerce** och klicka sedan på **Lägg till** under **Produktskus**.
+
+![ACCS+AEM Assets](./images/accsaemassets209.png)
+
+Lägg till följande SKU:er för den här produkten:
+
+| Nyckel | Värde | Användning |
+|:-------------:| :---------------:| :---------------:| 
+| `iPhone-Air-Cloud-White` | `1` | `thumbnail, image, swatch_image, small_image` |
+| `iPhone-Air-Cloud-White-256GB` | `1` | `thumbnail, image, swatch_image, small_image` |
+| `iPhone-Air-Cloud-White-512GB` | `1` | `thumbnail, image, swatch_image, small_image` |
+| `iPhone-Air-Cloud-White-1TB` | `1` | `thumbnail, image, swatch_image, small_image` |
+
+Du borde ha den här då. Klicka på **Spara och stäng**.
+
+![ACCS+AEM Assets](./images/accsaemassets210.png)
+
+Varje **iPhone Air**-bild bör nu ha en **grön tumme uppåt**, vilket anger att resursen har godkänts.
+
+![ACCS+AEM Assets](./images/accsaemassets250.png)
+
 ## 1.5.3.5 Verifiera produktbilder på AEM Sites CS/EDS Storefront
 
+>[!NOTE]
+>
+>Det kan ta upp till 15 minuter innan ändringarna som du gjorde ovan har distribuerats. Om du inte ser bilden som visas ännu, vänta 15 minuter och försök sedan igen.
 
+För att bekräfta att integreringen fungerar måste du öppna din CitiSignal-webbplats.
+
+Om du vill komma åt din webbplats går du till `main--citisignal-aem-accs--XXX.aem.page` och/eller `main--citisignal-aem-accs--XXX.aem.live` efter att du har ersatt XXX med ditt GitHub-användarkonto, som i det här exemplet är `woutervangeluwe`.
+
+I det här exemplet blir den fullständiga URL:en:
+`https://main--citisignal-aem-accs--woutervangeluwe.aem.page` och/eller `https://main--citisignal-aem-accs--woutervangeluwe.aem.live`.
+
+Du borde se det här då. Gå till **Telefoner**.
+
+![ACCS+AEM Assets](./images/accsaemassets150.png)
+
+Du bör då se en produktbild som visas för **iPhone Air**. Klicka på **iPhone Air**.
+
+![ACCS+AEM Assets](./images/accsaemassets151.png)
+
+Du borde se det här då. Ändra färg och lagringsalternativ så ser du bilderna ändras dynamiskt baserat på de val du har gjort.
+
+![ACCS+AEM Assets](./images/accsaemassets152.png)
+
+Här är ett exempel på hur du ändrar färgen till **Light-Gold** och lagringsstorleken till **256 GB**.
+
+![ACCS+AEM Assets](./images/accsaemassets153.png)
 
 Nästa steg: [Sammanfattning och fördelar](./summary.md){target="_blank"}
 
