@@ -20,5 +20,5 @@ ht-degree: 0%
 
 Experimentationsagenten snabbar upp den digitala optimeringen med insikter, guidad konfiguration och automatiserad analys för marknadsförare, analytiker och administratörer.
 
-<!-- For more information, see the [AI Assistant UI guide](https://experienceleague.adobe.com/en/docs/experience-platform/ai-assistant/ui-guide#use-discoverability).-->
+<!-- For more information, see the [AI Assistant UI guide](https://experienceleague.adobe.com/sv/docs/experience-platform/ai-assistant/ui-guide#use-discoverability).-->
 

@@ -19,7 +19,7 @@ ht-degree: 0%
 
 Audience Agent effektiviserar målgruppshanteringen med konversationsskapande, optimering, insikter och säker integrering mellan B2B/B2C-appar.
 
-<!-- For more information, see the [AI Assistant UI guide](https://experienceleague.adobe.com/en/docs/experience-platform/ai-assistant/ui-guide#use-discoverability).-->
+<!-- For more information, see the [AI Assistant UI guide](https://experienceleague.adobe.com/sv/docs/experience-platform/ai-assistant/ui-guide#use-discoverability).-->
 
 >[!SLIDE](audience-agent-overview)
 

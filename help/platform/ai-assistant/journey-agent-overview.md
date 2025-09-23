@@ -20,7 +20,7 @@ ht-degree: 0%
 
 Journey Agent använder AI för att skapa, analysera och optimera B2B/B2C-resor via ett konversationsgränssnitt.
 
-<!-- For more information, see the [AI Assistant UI guide](https://experienceleague.adobe.com/en/docs/experience-platform/ai-assistant/ui-guide#use-discoverability).-->
+<!-- For more information, see the [AI Assistant UI guide](https://experienceleague.adobe.com/sv/docs/experience-platform/ai-assistant/ui-guide#use-discoverability).-->
 
 
 
