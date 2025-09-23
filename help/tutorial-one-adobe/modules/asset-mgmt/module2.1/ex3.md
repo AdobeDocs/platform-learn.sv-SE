@@ -1,370 +1,290 @@
 ---
-title: Konfigurera AEM CS-miljön
-description: Konfigurera AEM CS-miljön
+title: AEM CS - grundläggande anpassat block
+description: AEM CS - grundläggande anpassat block
 kt: 5342
 doc-type: tutorial
-exl-id: 62715072-0257-4d07-af1a-8becbb793459
-source-git-commit: 490bc79332bb84520ba084ec784ea3ef48a68fb5
+exl-id: 57c08a88-d885-471b-ad78-1dba5992da9d
+source-git-commit: 7537cd4d4ca6bc25afcb8f61a736498b0c297850
 workflow-type: tm+mt
-source-wordcount: '1045'
-ht-degree: 0%
+source-wordcount: '812'
+ht-degree: 1%
 
 ---
 
-# 1.1.2 Konfigurera AEM CS-miljön
+# 1.1.3 Utveckla ett enkelt anpassat block
 
-## 1.1.2.1 Konfigurera GitHub-repo
+## 1.1.3.1 Konfigurera din lokala utvecklingsmiljö
 
-Gå till [https://github.com](https://github.com){target="_blank"}. Klicka på **Logga in**.
+Gå till [https://desktop.github.com/download/](https://desktop.github.com/download/){target="_blank"}, hämta och installera **Github Desktop**.
 
-![AEMCS](./images/aemcssetup1.png)
+![Blockera](./images/block1.png){zoomable="yes"}
 
-Ange dina inloggningsuppgifter. Klicka på **Logga in**.
+När du har installerat Github Desktop går du till GitHub-versionen som du skapade i föregående övning. Klicka på **&lt;> Kod** och sedan på **Öppna med GitHub Desktop**.
 
-![AEMCS](./images/aemcssetup2.png)
+![Blockera](./images/block2.png){zoomable="yes"}
 
-När du har loggat in visas din GitHub-instrumentpanel.
+Din GitHub-repo öppnas sedan i GitHub Desktop. Du kan ändra den **lokala sökvägen**. Klicka på **Klona**.
 
-![AEMCS](./images/aemcssetup3.png)
+![Blockera](./images/block3.png){zoomable="yes"}
 
-Gå till [https://github.com/adobe-rnd/aem-boilerplate-xcom](https://github.com/adobe-rnd/aem-boilerplate-xcom){target="_blank"}. Då ser du det här. Klicka på **Använd den här mallen** och sedan på **Skapa en ny databas**.
+En lokal mapp kommer nu att skapas.
 
-![AEMCS](./images/aemcssetup4.png)
+![Blockera](./images/block4.png){zoomable="yes"}
 
-Använd **som** databasnamn`citisignal-aem-accs`. Ange synligheten till **Privat**. Klicka på **Skapa databas**.
+Öppna Visual Studio-kod. Gå till **Arkiv** > **Öppna mapp**.
 
-![AEMCS](./images/aemcssetup5.png)
+![Blockera](./images/block5.png){zoomable="yes"}
 
-Efter några sekunder har du skapat databasen.
+Välj den mapp som används av GitHub-konfigurationen för **citisignal**.
 
-![AEMCS](./images/aemcssetup6.png)
+![Blockera](./images/block6.png){zoomable="yes"}
 
-Gå sedan till [https://github.com/apps/aem-code-sync](https://github.com/apps/aem-code-sync){target="_blank"}. Klicka på **Installera** eller **Konfigurera**.
+Nu ser du att mappen är öppen i Visual Studio Code. Nu kan du skapa ett nytt block.
 
-![AEMCS](./images/aemcssetup7.png)
+![Blockera](./images/block7.png){zoomable="yes"}
 
-Klicka på knappen **Fortsätt** bredvid ditt GitHub-användarkonto.
+## 1.1.3.2 Skapa ett enkelt anpassat block
 
-![AEMCS](./images/aemcssetup8.png)
+Adobe rekommenderar att du utvecklar block i tre faser:
 
-Klicka på **Konfigurera** bredvid ditt GitHub-användarkonto.
+- Skapa definitionen och modellen för blocket, granska det och ta det till produktion.
+- Skapa innehåll med det nya blocket.
+- Implementera dekoration och stilar för det nya blocket.
 
-![AEMCS](./images/aemcssetup8a.png)
+### component-definition.json
 
-Klicka på **Välj bara databaser** och lägg sedan till databasen som du just har skapat.
+Öppna filen **component-definition.json** i Visual Studio Code.
 
-![AEMCS](./images/aemcssetup9.png)
+![Blockera](./images/block8.png){zoomable="yes"}
 
-Bläddra nedåt och klicka på **Spara**.
+Bläddra nedåt tills du ser komponenten **Quote**. Placera markören bredvid den sista komponentens avslutande parentes.
 
-![AEMCS](./images/aemcssetup9a.png)
+![Blockera](./images/block9.png){zoomable="yes"}
 
-Du får då den här bekräftelsen.
+Klistra in den här koden och ange ett kommatecken **,** efter kodblocket:
 
-![AEMCS](./images/aemcssetup10.png)
+```json
+{
+  "title": "FiberOffer",
+  "id": "fiberoffer",
+  "plugins": {
+    "xwalk": {
+      "page": {
+        "resourceType": "core/franklin/components/block/v1/block",
+        "template": {
+          "name": "FiberOffer",
+          "model": "fiberoffer",
+          "offerText": "<p>Fiber will soon be available in your region!</p>",
+          "offerCallToAction": "Get your offer now!",
+          "offerImage": ""
+        }
+      }
+    }
+  }
+}
+```
 
-## 1.1.2.2 Uppdatera filen fstab.yaml
+Spara ändringarna.
 
-Öppna filen `fstab.yaml` genom att klicka på den i GitHub-repon.
+![Blockera](./images/block10.png){zoomable="yes"}
 
-![AEMCS](./images/aemcssetup11.png)
+### component-models.json
 
-Klicka på ikonen **redigera** .
+Öppna filen **component-models.json** i Visual Studio Code.
 
-![AEMCS](./images/aemcssetup12.png)
+![Blockera](./images/block11.png){zoomable="yes"}
 
-Du måste nu uppdatera värdet för fältet **url** på rad 3.
+Bläddra nedåt tills du ser det sista objektet. Placera markören bredvid den sista komponentens avslutande parentes.
 
-![AEMCS](./images/aemcssetup13.png)
+![Blockera](./images/block12.png){zoomable="yes"}
 
-Du måste ersätta det aktuella värdet med URL:en för din specifika AEM Sites CS-miljö i kombination med inställningarna för GitHub-repon.
+Ange ett kommatecken **,**, tryck sedan på Retur och klistra in koden på nästa rad:
 
-Detta är det aktuella värdet för URL:en: `https://author-p130360-e1272151.adobeaemcloud.com/bin/franklin.delivery/adobe-rnd/aem-boilerplate-xcom/main`.
+```json
+{
+  "id": "fiberoffer",
+  "fields": [
+     {
+       "component": "richtext",
+       "name": "offerText",
+       "value": "",
+       "label": "Offer Text",
+       "valueType": "string"
+     },
+     {
+       "component": "richtext",
+       "valueType": "string",
+       "name": "offerCallToAction",
+       "label": "Offer CTA",
+       "value": ""
+     },
+     {
+       "component": "reference",
+       "valueType": "string",
+       "name": "offerImage",
+       "label": "Offer Image",
+        "multi": false
+     }
+   ]
+}
+```
 
-Det finns tre delar av URL:en som behöver uppdateras
+Spara ändringarna.
 
-`https://XXX/bin/franklin.delivery/YYY/ZZZ/main`
+![Blockera](./images/block13.png){zoomable="yes"}
 
-XXX bör ersättas av URL:en till AEM CS Author environment.
+### component-filters.json
 
-YYY ska ersättas med ditt GitHub-användarkonto.
+Öppna filen **component-filters.json** i Visual Studio-koden.
 
-ZZZ ska ersättas med namnet på GitHub-databasen som du använde i föregående övning.
+![Blockera](./images/block14.png){zoomable="yes"}
 
-Du kan hitta URL:en till din AEM CS-redigeringsmiljö genom att gå till [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com){target="_blank"}. Klicka på ditt **program** för att öppna det.
+Under **section** anger du ett kommatecken **,** och ID:t för din komponent, **defiffer**, efter den aktuella sista raden.
 
-![AEMCS](./images/aemcs6.png)
+Spara ändringarna.
+
+![Blockera](./images/block15.png){zoomable="yes"}
+
+## 1.1.3.3 Genomför dina ändringar
+
+Du har nu gjort flera ändringar i ditt projekt som behöver implementeras i GitHub-databasen igen. Öppna **GitHub Desktop** om du vill göra det.
+
+Du bör sedan se de 3 filer som du just redigerade under **Ändringar**. Granska ändringarna.
+
+![Blockera](./images/block16.png){zoomable="yes"}
+
+Ange ett namn för din PR, `Fiber Offer custom block`. Klicka på **Verkställ för huvudsidan**.
+
+![Blockera](./images/block17.png){zoomable="yes"}
+
+Du borde se det här då. Klicka på **Push origin**.
+
+![Blockera](./images/block18.png){zoomable="yes"}
+
+Efter några sekunder har dina ändringar överförts till din GitHub-databas.
+
+![Blockera](./images/block19.png){zoomable="yes"}
+
+Gå till ditt GitHub-konto i webbläsaren och till databasen som du skapade för CitiSignal. Du bör då se något liknande och visa att dina ändringar har tagits emot.
+
+![Blockera](./images/block20.png){zoomable="yes"}
+
+## 1.1.3.4 Lägg till blocket på en sida
+
+Nu när ditt grundläggande offertblock har definierats och implementerats i CitiSignal-projektet kan du lägga till ett **fiberoffer** -block på en befintlig sida.
+
+Gå till [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com){target="_blank"}. Klicka på ditt **program** för att öppna det.
+
+![AEMCS](./images/aemcs6.png){zoomable="yes"}
 
 Klicka sedan på de 3 punkterna **..** på fliken **Miljö** och klicka på **Visa detaljer**.
 
-![AEMCS](./images/aemcs9.png)
+![AEMCS](./images/aemcs9.png){zoomable="yes"}
 
-Du kommer då att se din miljöinformation, inklusive URL:en för din **författarmiljö** . Kopiera URL-adressen.
+Du kommer då att se din miljöinformation. Klicka på URL:en för din **författarmiljö**.
 
-![AEMCS](./images/aemcs10.png)
+>[!NOTE]
+>
+>Det är möjligt att din miljö är i viloläge. Om så är fallet måste du avviloera din miljö först.
 
-XXX = `author-p166717-e1786231.adobeaemcloud.com`
+![AEMCS](./images/aemcs10.png){zoomable="yes"}
 
-För GitHub-användarkontonamnet hittar du det enkelt i webbläsarens URL. I det här exemplet är användarkontonamnet `woutervangeluwe`.
+Du bör då se din AEM Author-miljö. Gå till **Webbplatser**.
 
-YYY = `woutervangeluwe`
+![AEMCS](./images/block21.png){zoomable="yes"}
 
-![AEMCS](./images/aemcs11.png)
+Gå till **CitiSignal** > **us** > **en**.
 
-För GitHub-databasnamnet kan du även hitta det i webbläsarfönstret som du har öppnat i GitHub. I det här fallet är databasnamnet `citisignal`.
+![AEMCS](./images/block22.png){zoomable="yes"}
 
-ZZZ = `citisignal-aem-accs`
+Klicka på **Skapa** och välj **Sida**.
 
-![AEMCS](./images/aemcs12.png)
+![AEMCS](./images/block23.png){zoomable="yes"}
 
-Dessa tre värden tillsammans leder till den nya URL-adressen som måste konfigureras i filen `fstab.yaml`.
+Välj **Sida** och klicka på **Nästa**.
 
-`https://author-p166717-e1786231.adobeaemcloud.com/bin/franklin.delivery/woutervangeluwe/citisignal-aem-accs/main`
+![AEMCS](./images/block24.png){zoomable="yes"}
 
-Klicka på **Verkställ ändringar..**.
+Ange följande värden:
 
-![AEMCS](./images/aemcs13.png)
+- Titel: **CitiSignal Fiber**
+- Namn: **citisign-fiber**
+- Sidrubrik: **CitiSignal Fiber**
 
-Klicka på **Verkställ ändringar**.
+Klicka på **Skapa**.
 
-![AEMCS](./images/aemcs14.png)
+![AEMCS](./images/block25.png){zoomable="yes"}
 
-Filen `fstab.yaml` har uppdaterats.
+Du borde se det här då.
 
-## 1.1.2.3 Överför CitiSignal-resurser
+![AEMCS](./images/block26.png){zoomable="yes"}
 
-Gå till [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com){target="_blank"}. Klicka på ditt **program** för att öppna det.
+Klicka i det tomma området för att markera komponenten **section**. Klicka sedan på plusikonen **+** på den högra menyn.
 
-![AEMCS](./images/aemcs6.png)
+![AEMCS](./images/block27.png){zoomable="yes"}
 
-Klicka sedan på URL:en till din författarmiljö.
+Du bör sedan se ditt anpassade block visas i listan med tillgängliga block. Klicka för att markera den.
 
-![AEMCS](./images/aemcssetup18.png)
+![AEMCS](./images/block28.png){zoomable="yes"}
 
-Klicka på **Logga in med Adobe**.
+Då visas fält som **Erbjud text**, **Erbjud CTA** och **Erbjud bild** som läggs till i redigeraren. Klicka på **+ Lägg till** i fältet **Erbjud bild** för att välja en bild.
 
-![AEMCS](./images/aemcssetup19.png)
+![AEMCS](./images/block29.png){zoomable="yes"}
 
-Därefter visas din författarmiljö.
+Du borde se det här då. Klicka för att öppna mappen **citisign**.
 
-![AEMCS](./images/aemcssetup20.png)
+![AEMCS](./images/blockpub1.png){zoomable="yes"}
 
-URL:en ser ut så här: `https://author-p166717-e1786231.adobeaemcloud.com/ui#/aem/aem/start.html?appId=aemshell`
+Välj bilden **product-enrichment-1.png**. Klicka på **Markera**.
 
-Du måste nu komma åt **CRX Package Manager**-miljön i AEM. Det gör du genom att ta bort `ui#/aem/aem/start.html?appId=aemshell` från URL:en och ersätta den med `crx/packmgr`, vilket innebär att URL:en ska se ut så här nu:
-`https://author-p166717-e1786231.adobeaemcloud.com/crx/packmgr`.
-Tryck på **Enter** för att läsa in pakethanterarmiljön
+![AEMCS](./images/blockpub2.png){zoomable="yes"}
 
-![AEMCS](./images/aemcssetup22.png)
+Du borde ha den här då. Klicka på **Publicera**.
 
-Klicka sedan på **Överför paket**.
+![AEMCS](./images/blockpub3.png){zoomable="yes"}
 
-![AEMCS](./images/aemcssetup21.png)
+Klicka på **Publicera** igen.
 
-Klicka på **Bläddra** för att hitta det paket som ska överföras.
+![AEMCS](./images/blockpub4.png){zoomable="yes"}
 
-Paketet som ska överföras kallas **citisign-assets.zip** och kan hämtas här: [https://tech-insiders.s3.us-west-2.amazonaws.com/one-adobe/citisignal-assets.zip](https://tech-insiders.s3.us-west-2.amazonaws.com/one-adobe/citisignal-assets.zip){target="_blank"}.
+Din nya sida har publicerats.
 
-![AEMCS](./images/aemcssetup23.png)
+## 1.1.3.5 Lägg till din nya sida på navigeringsmenyn
 
-Markera paketet och klicka på **Öppna**.
+Gå till **CitiSignal** > **Fragment** i AEM Sites-översikten och markera kryssrutan för **Header**. Klicka på **Redigera**.
 
-![AEMCS](./images/aemcssetup24.png)
+![AEMCS](./images/nav0.png){zoomable="yes"}
 
-Klicka sedan på **OK**.
+Lägg till ett menyalternativ på navigeringsmenyn med texten `Fiber`. Markera texten **Fiber** och klicka på ikonen **link** .
 
-![AEMCS](./images/aemcssetup25.png)
+![AEMCS](./images/nav1.png){zoomable="yes"}
 
-Paketet kommer sedan att överföras.
+Ange den här för **URL** `/us/en/citisignal-fiber` och klicka på ikonen **V** för att bekräfta.
 
-![AEMCS](./images/aemcssetup26.png)
+![AEMCS](./images/nav3.png){zoomable="yes"}
 
-Klicka sedan på **Installera** på det paket som du just överförde.
+Du borde ha den här då. Klicka på **Publicera**.
 
-![AEMCS](./images/aemcssetup27.png)
+![AEMCS](./images/nav4.png){zoomable="yes"}
 
-Klicka på **Installera**.
+Klicka på **Publicera** igen.
 
-![AEMCS](./images/aemcssetup28.png)
+![AEMCS](./images/nav5.png){zoomable="yes"}
 
-Efter några minuter installeras ditt paket.
-
-![AEMCS](./images/aemcssetup29.png)
-
-Du kan nu stänga det här fönstret.
-
-## 1.1.2.4 Publicera CitiSignal-resurser
-
-Gå till [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com){target="_blank"}. Klicka på ditt **program** för att öppna det.
-
-![AEMCS](./images/aemcs6.png)
-
-Klicka sedan på URL:en till din författarmiljö.
-
-![AEMCS](./images/aemcssetup18.png)
-
-Klicka på **Logga in med Adobe**.
-
-![AEMCS](./images/aemcssetup19.png)
-
-Därefter visas din författarmiljö. Klicka på **Assets**.
-
-![AEMCS](./images/aemcsassets1.png)
-
-Klicka på **Filer**.
-
-![AEMCS](./images/aemcsassets2.png)
-
-Klicka för att markera mappen **CitiSignal** och klicka sedan på **Hantera publikation**.
-
-![AEMCS](./images/aemcsassets3.png)
-
-Klicka på **Nästa**.
-
-![AEMCS](./images/aemcsassets4.png)
-
-Klicka på **Publicera**.
-
-![AEMCS](./images/aemcsassets5.png)
-
-Dina resurser har nu publicerats.
-
-## 1.1.2.5 Skapa CitiSignal-webbplats
-
-Gå till [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com){target="_blank"}. Klicka på ditt **program** för att öppna det.
-
-![AEMCS](./images/aemcs6.png)
-
-Klicka sedan på URL:en till din författarmiljö.
-
-![AEMCS](./images/aemcssetup18.png)
-
-Klicka på **Logga in med Adobe**.
-
-![AEMCS](./images/aemcssetup19.png)
-
-Därefter visas din författarmiljö. Klicka på **Webbplatser**.
-
-![AEMCS](./images/aemcssetup30.png)
-
-Klicka på **Skapa** och sedan på **Plats från mall**.
-
-![AEMCS](./images/aemcssetup31.png)
-
-Klicka på **Importera**.
-
-![AEMCS](./images/aemcssetup32.png)
-
-Nu måste du importera en förkonfigurerad mall för platsen. Du kan hämta mallen [här](./../../../assets/aem/citisignal-aem-sites-commerce-with-edge-delivery-services-template-0.4.0.zip){target="_blank"}. Spara filen på skrivbordet.
-
-Markera sedan filen `citisignal-aem-sites-commerce-with-edge-delivery-services-template-0.4.0.zip` och klicka på **Öppna**.
-
-![AEMCS](./images/aemcssetup33.png)
-
-Då ser du det här. Klicka för att välja mallen som du just överförde och klicka sedan på **Nästa**.
-
-![AEMCS](./images/aemcssetup34.png)
-
-Nu måste du fylla i några detaljer.
-
-- Platstitel: använd **CitiSignal**
-- Platsnamn: använd **CitiSignal**
-- GitHub-URL: kopiera URL:en för GitHub-repo som du använde tidigare
-
-![AEMCS](./images/aemcssetup35.png)
-
-Du får den här då. Klicka på **Skapa**.
-
-![AEMCS](./images/aemcssetup36.png)
-
-Webbplatsen håller på att skapas. Det här kan ta några minuter. Klicka på **OK**.
-
-![AEMCS](./images/aemcssetup37.png)
-
-Uppdatera skärmen efter några minuter så ser du din nya CitiSignal-webbplats.
-
-![AEMCS](./images/aemcssetup38.png)
-
-## 1.1.2.6 Uppdatera filsökvägar.json
-
-Öppna filen `paths.json` genom att klicka på den i GitHub-repon.
-
-![AEMCS](./images/aemcssetupjson1.png)
-
-Klicka på ikonen **redigera** .
-
-![AEMCS](./images/aemcssetupjson2.png)
-
-Du måste nu uppdatera ersättningstexten `aem-boilerplate-commerce` med `CitiSignal` på raderna 3, 4, 5, 6, 7 och 10.
-
-Klicka på **Verkställ ändringar**.
-
-![AEMCS](./images/aemcssetupjson3.png)
-
-Klicka på **Verkställ ändringar**.
-
-![AEMCS](./images/aemcssetupjson4.png)
-
-Filen `paths.json` har uppdaterats.
-
-## 1.1.2.7 Publicera CitiSignal-webbplats
-
-Klicka sedan på kryssrutan framför **CitiSignal**. Klicka sedan på **Hantera publikation**.
-
-![AEMCS](./images/aemcssetup39.png)
-
-Klicka på **Nästa**.
-
-![AEMCS](./images/aemcssetup40.png)
-
-Klicka på **Inkludera underordnade inställningar**.
-
-![AEMCS](./images/aemcssetup41.png)
-
-Klicka för att markera kryssrutan **Inkludera underordnade** och klicka sedan för att avmarkera de andra kryssrutorna. Klicka på **OK**.
-
-![AEMCS](./images/aemcssetup42.png)
-
-Klicka på **Publicera**.
-
-![AEMCS](./images/aemcssetup43.png)
-
-Du kommer då att skickas tillbaka hit. Klicka på **CitiSignal**, markera kryssrutan framför **index** och klicka sedan på **Redigera**.
-
-![AEMCS](./images/aemcssetup44.png)
-
-Din webbplats öppnas sedan i **Universal Editor**.
-
-![AEMCS](./images/aemcssetup45.png)
-
-Du kan nu komma åt din webbplats genom att gå till `main--citisignal-aem-accs--XXX.aem.page` och/eller `main--citisignal-aem-accs--XXX.aem.live` efter att du ersatt XXX med ditt GitHub-användarkonto, som i det här exemplet är `woutervangeluwe`.
+Du kan nu visa ändringarna av din webbplats genom att gå till `main--citisignal--XXX.aem.page/us/en/` och/eller `main--citisignal--XXX.aem.live/us/en/` efter att du ersatt XXX med ditt GitHub-användarkonto, som i det här exemplet är `woutervangeluwe`.
 
 I det här exemplet blir den fullständiga URL:en följande:
-`https://main--citisignal-aem-accs--woutervangeluwe.aem.page` och/eller `https://main--citisignal-aem-accs--woutervangeluwe.aem.live`.
+`https://main--citisignal--woutervangeluwe.aem.page/us/en/` och/eller `https://main--citisignal--woutervangeluwe.aem.live/us/en/`.
 
-Det kan ta en stund innan alla resurser visas korrekt, eftersom de måste publiceras först.
+Du borde se det här då. Klicka på **Fiber**.
 
-Då ser du det här:
+![AEMCS](./images/nav6.png){zoomable="yes"}
 
-![AEMCS](./images/aemcssetup46.png)
+Här är ditt grundläggande anpassade block, men det återges nu på webbplatsen.
 
-## 1.1.2.8 Testa sidprestanda
+![AEMCS](./images/nav7.png){zoomable="yes"}
 
-Gå till [https://pagespeed.web.dev/](https://pagespeed.web.dev/){target="_blank"}. Ange din URL och klicka på **Analysera**.
-
-![AEMCS](./images/aemcssetup48.png)
-
-Då ser du att er webbplats, både i mobilvisualisering och i datorvisualisering, får högsta poäng:
-
-**Mobil**:
-
-![AEMCS](./images/aemcssetup49.png)
-
-**Skrivbord**:
-
-![AEMCS](./images/aemcssetup50.png)
-
-Nästa steg: [Utveckla ett anpassat block](./ex4.md){target="_blank"}
+Nästa steg: [Avancerat anpassat block](./ex5.md){target="_blank"}
 
 Gå tillbaka till [Adobe Experience Manager Cloud Service &amp; Edge Delivery Services](./aemcs.md){target="_blank"}
 

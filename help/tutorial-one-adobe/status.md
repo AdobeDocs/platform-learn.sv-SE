@@ -3,9 +3,9 @@ title: Innehållsstatus
 description: Innehållsstatus
 doc-type: multipage-overview
 exl-id: 8f9ae0fa-48b2-4da5-ab21-a6cf16a0b522
-source-git-commit: 28553f8042be7bfc0b553272a6c72e6677fe1cb3
+source-git-commit: 179b83b733f3314280d307e5eee0db9600a173b0
 workflow-type: tm+mt
-source-wordcount: '444'
+source-wordcount: '467'
 ht-degree: 2%
 
 ---
@@ -77,6 +77,13 @@ Nedan visas en översikt över statusen för innehållet i den här självstudie
 | [1.2 Customer Journey Analytics: Importera och analysera Google Analytics-data i Adobe Experience Platform med BigQuery Source Connector](./modules/reporting-insights/cja-b2c/cjab2c-2/customer-journey-analytics-bigquery-gcp.md){target="_blank"} | 07/01/2025 | Nej | Det har uppstått ett problem med modelleringen av dataförberedelser för källdata. Detta väntar på en korrigering. |
 | [2.1-frågetjänst](./modules/reporting-insights/datadistiller/dd-1/query-service.md){target="_blank"} | 04/12/2024 | Ja | – |
 | [3.1 Content Analytics](./modules/reporting-insights/content/module3.1/contentanalytics.md){target="_blank"} | 02/08/2025 | Nej | Innehåll som utvecklas |
+
+## &#x200B;6. AI
+
+| Namn | Senaste uppdatering | Arbeta 100 % | Anmärkningar |
+| ---------------------- | ------------ | ------------ |------------ |
+| [1.1 Aktiv AI](./modules/agentic-ai/module1.1/agenticai.md){target="_blank"} | 23/09/2025 | NEJ | – |
+| [1.2 AI](./modules/agentic-ai/module1.1/agenticai.md){target="_blank"} | 23/09/2025 | NEJ | – |
 
 {style="table-layout:auto"}
 
