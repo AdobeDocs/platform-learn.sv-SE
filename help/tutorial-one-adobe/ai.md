@@ -2,7 +2,8 @@
 title: Översikt AI Tech Labs
 description: Översikt AI Tech Labs
 doc-type: multipage-overview
-source-git-commit: 7537cd4d4ca6bc25afcb8f61a736498b0c297850
+exl-id: 49515d00-05f6-4a28-96e0-dbdf66d8436b
+source-git-commit: 252ca08d13fbb7bc966a777003da1dd9e3df20a0
 workflow-type: tm+mt
 source-wordcount: '235'
 ht-degree: 0%
@@ -17,7 +18,7 @@ ht-degree: 0%
 
 Agentic AI Tech Labs är ett pågående arbete och kommer att släppas i november/december 2025.
 
-## 1.1 Komma igång med agenter och AI
+[1.1 Komma igång med agenter och AI](./modules/agentic-ai/module1.1/agenticai.md)
 
 **Mål**
 
@@ -37,7 +38,7 @@ Tekniska element:
 - MCP-server, Python Notebook
 - Adobe API:er
 
-## 1.2 Agent Collaboration
+[1.2 Agent Collaboration](./modules/agentic-ai/module1.2/agentcollaboration.md)
 
 **Mål**
 

@@ -4,7 +4,7 @@ description: Customer AI - Data Preparation (Ingest)
 kt: 5342
 doc-type: tutorial
 exl-id: 2b49d86a-af75-4ecd-ab3f-0182f3b8da2f
-source-git-commit: 3d61d91111d8693ab031fbd7b26706c02818108c
+source-git-commit: 15adbf950115f0b6bb6613e69a60b310f25de058
 workflow-type: tm+mt
 source-wordcount: '687'
 ht-degree: 0%
@@ -112,7 +112,7 @@ När **schemat** och **datauppsättningen** har konfigurerats är du nu redo att
 
 De data som har förberetts för upplevelsehändelserna i den här övningen måste uppfylla kraven och schemat för [Consumer Experience Event XDM Field Group](https://github.com/adobe/xdm/blob/797cf4930d5a80799a095256302675b1362c9a15/docs/reference/context/experienceevent-consumer.schema.md).
 
-Hämta zip-filen med demodata från den här platsen: [https://tech-insiders.s3.us-west-2.amazonaws.com/CUSTOM-CAI-EVENTS-WEB.zip](https://tech-insiders.s3.us-west-2.amazonaws.com/CUSTOM-CAI-EVENTS-WEB.zip).
+Hämta zip-filen med demodata från den här platsen: [https://one-adobe-tech-insiders.s3.us-west-2.amazonaws.com/CUSTOM-CAI-EVENTS-WEB.zip](https://one-adobe-tech-insiders.s3.us-west-2.amazonaws.com/CUSTOM-CAI-EVENTS-WEB.zip).
 
 Du har nu laddat ned en fil med namnet **CUSTOM-CAI-EVENTS-WEB.zip**. Placera filen på datorns skrivbord och zippa upp den. Därefter visas en mapp med namnet **CUSTOM-CAI-EVENTS-WEB**.
 

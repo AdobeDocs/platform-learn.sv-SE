@@ -4,9 +4,9 @@ description: Konfigurera AEM CS-miljön
 kt: 5342
 doc-type: tutorial
 exl-id: 62715072-0257-4d07-af1a-8becbb793459
-source-git-commit: 7537cd4d4ca6bc25afcb8f61a736498b0c297850
+source-git-commit: 15adbf950115f0b6bb6613e69a60b310f25de058
 workflow-type: tm+mt
-source-wordcount: '1045'
+source-wordcount: '1178'
 ht-degree: 0%
 
 ---
@@ -131,7 +131,7 @@ Klicka på **Verkställ ändringar**.
 
 Filen `fstab.yaml` har uppdaterats.
 
-## 1.1.2.3 Överför CitiSignal-resurser
+## 1.1.2.3 Överför CitiSignal-resurser och -plats
 
 Gå till [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com){target="_blank"}. Klicka på ditt **program** för att öppna det.
 
@@ -163,11 +163,11 @@ Klicka sedan på **Överför paket**.
 
 Klicka på **Bläddra** för att hitta det paket som ska överföras.
 
-Paketet som ska överföras kallas **citisign-assets.zip** och kan hämtas här: [https://tech-insiders.s3.us-west-2.amazonaws.com/one-adobe/citisignal-assets.zip](https://tech-insiders.s3.us-west-2.amazonaws.com/one-adobe/citisignal-assets.zip){target="_blank"}.
+Paketet som ska överföras kallas **citisign-assets.zip** och kan hämtas här: [https://one-adobe-tech-insiders.s3.us-west-2.amazonaws.com/one-adobe/citisignal_aem_accs.zip](https://one-adobe-tech-insiders.s3.us-west-2.amazonaws.com/one-adobe/citisignal_aem_accs.zip){target="_blank"}.
 
 ![AEMCS](./images/aemcssetup23.png)
 
-Markera paketet och klicka på **Öppna**.
+Markera paketet `citisignal_aem_accs.zip` och klicka på **Öppna**.
 
 ![AEMCS](./images/aemcssetup24.png)
 
@@ -175,11 +175,7 @@ Klicka sedan på **OK**.
 
 ![AEMCS](./images/aemcssetup25.png)
 
-Paketet kommer sedan att överföras.
-
-![AEMCS](./images/aemcssetup26.png)
-
-Klicka sedan på **Installera** på det paket som du just överförde.
+Paketet kommer sedan att överföras. Klicka sedan på **Installera** på det paket som du just överförde.
 
 ![AEMCS](./images/aemcssetup27.png)
 
@@ -229,61 +225,66 @@ Klicka på **Publicera**.
 
 Dina resurser har nu publicerats.
 
-## 1.1.2.5 Skapa CitiSignal-webbplats
+## 1.1.2.5 Publicera CitiSignal-webbplats
 
-Gå till [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com){target="_blank"}. Klicka på ditt **program** för att öppna det.
+Klicka på produktnamnet **Adobe Experience Manager** i det övre vänstra hörnet av skärmen och klicka sedan på **pilen** bredvid **Assets**.
 
-![AEMCS](./images/aemcs6.png)
+![AEMCS](./images/aemcssetup30a.png)
 
-Klicka sedan på URL:en till din författarmiljö.
-
-![AEMCS](./images/aemcssetup18.png)
-
-Klicka på **Logga in med Adobe**.
-
-![AEMCS](./images/aemcssetup19.png)
-
-Därefter visas din författarmiljö. Klicka på **Webbplatser**.
+Klicka sedan på **Webbplatser**.
 
 ![AEMCS](./images/aemcssetup30.png)
 
-Klicka på **Skapa** och sedan på **Plats från mall**.
+Du bör sedan se webbplatsen **CitiSignal** som skapades när paketet installerades tidigare.
 
 ![AEMCS](./images/aemcssetup31.png)
 
-Klicka på **Importera**.
+Om du vill länka din plats till GitHub-databasen som du skapade tidigare måste du skapa en **Edge Delivery Services-konfiguration**.
+
+Det första steget att göra det är att skapa en **molnkonfiguration**.
+
+Det gör du genom att klicka på **Adobe Experience Manager**-produktnamnet i det övre vänstra hörnet av skärmen, klicka på **verktygsikonen** och sedan på **Allmänt** . Klicka för att öppna **Konfigurationsläsaren**.
+
+![AEMCS](./images/aemcssetup31a.png)
+
+Du borde se det här då. Klicka på **Skapa**
+
+![AEMCS](./images/aemcssetup31b.png)
+
+Ställ in fälten **Titel** och **Namn** på `CitiSignal`. Aktivera kryssrutan för **molnkonfigurationer**.
+
+Klicka på **Skapa**.
+
+![AEMCS](./images/aemcssetup31c.png)
+
+Du borde ha den här då.
+
+![AEMCS](./images/aemcssetup31d.png)
+
+Därefter måste du uppdatera några fält i den **molnkonfiguration** som du nyss skapade.
+
+Det gör du genom att klicka på produktnamnet **Adobe Experience Manager** i det övre vänstra hörnet på skärmen, klicka på ikonen **tools** och sedan välja **molntjänster** . Klicka för att öppna **Edge Delivery Services Configuration**.
 
 ![AEMCS](./images/aemcssetup32.png)
 
-Nu måste du importera en förkonfigurerad mall för platsen. Du kan hämta mallen [här](./../../../assets/aem/citisignal-aem-sites-commerce-with-edge-delivery-services-template-0.4.0.zip){target="_blank"}. Spara filen på skrivbordet.
+Välj **CitiSignal**, klicka på **Skapa** och välj **Konfiguration**.
 
-Markera sedan filen `citisignal-aem-sites-commerce-with-edge-delivery-services-template-0.4.0.zip` och klicka på **Öppna**.
+![AEMCS](./images/aemcssetup31e.png)
+
+Du måste nu fylla i fälten **Organisation** och **Platsnamn**. Om du vill göra det måste du först ha en sökväg till URL:en för din GitHub-databas.
+
+![AEMCS](./images/aemcssetup31f.png)
+
+- **Organisation**: använd namnet på din GitHub-organisation, i det här exemplet är det `woutervangeluwe`
+- **Platsnamn**: använd namnet på GitHub-databasen som ska vara `citisignal-aem-accs`.
+
+Klicka på **Spara och stäng**.
 
 ![AEMCS](./images/aemcssetup33.png)
 
-Då ser du det här. Klicka för att välja mallen som du just överförde och klicka sedan på **Nästa**.
+Du borde ha den här då. Markera kryssrutan framför din nya Edge Cloud-konfiguration och klicka på **Publicera**.
 
 ![AEMCS](./images/aemcssetup34.png)
-
-Nu måste du fylla i några detaljer.
-
-- Platstitel: använd **CitiSignal**
-- Platsnamn: använd **CitiSignal**
-- GitHub-URL: kopiera URL:en för GitHub-repo som du använde tidigare
-
-![AEMCS](./images/aemcssetup35.png)
-
-Du får den här då. Klicka på **Skapa**.
-
-![AEMCS](./images/aemcssetup36.png)
-
-Webbplatsen håller på att skapas. Det här kan ta några minuter. Klicka på **OK**.
-
-![AEMCS](./images/aemcssetup37.png)
-
-Uppdatera skärmen efter några minuter så ser du din nya CitiSignal-webbplats.
-
-![AEMCS](./images/aemcssetup38.png)
 
 ## 1.1.2.6 Uppdatera filsökvägar.json
 
@@ -308,6 +309,10 @@ Klicka på **Verkställ ändringar**.
 Filen `paths.json` har uppdaterats.
 
 ## 1.1.2.7 Publicera CitiSignal-webbplats
+
+Klicka på **Adobe Experience Manager**-produktnamnet i skärmens övre vänstra hörn och välj sedan **Webbplatser**.
+
+![AEMCS](./images/aemcssetup38.png)
 
 Klicka sedan på kryssrutan framför **CitiSignal**. Klicka sedan på **Hantera publikation**.
 
@@ -364,7 +369,7 @@ Då ser du att er webbplats, både i mobilvisualisering och i datorvisualisering
 
 ![AEMCS](./images/aemcssetup50.png)
 
-Nästa steg: [Utveckla ett anpassat block](./ex4.md){target="_blank"}
+Nästa steg: [Utveckla ett anpassat block](./ex3.md){target="_blank"}
 
 Gå tillbaka till [Adobe Experience Manager Cloud Service &amp; Edge Delivery Services](./aemcs.md){target="_blank"}
 

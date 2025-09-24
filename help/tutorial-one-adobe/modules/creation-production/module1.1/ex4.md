@@ -6,7 +6,7 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 330f4492-d0df-4298-9edc-4174b0065c9a
-source-git-commit: a1da1c73cbddacde00211190a1ca3d36f7a2c329
+source-git-commit: 15adbf950115f0b6bb6613e69a60b310f25de058
 workflow-type: tm+mt
 source-wordcount: '1253'
 ht-degree: 0%
@@ -87,7 +87,7 @@ Du måste nu ange referensbilderna för den anpassade modellen som ska tränas. 
 
 ![Anpassade Firefly-modeller](./images/ffcm7.png){zoomable="yes"}
 
-Hämta referensbilderna [här](https://tech-insiders.s3.us-west-2.amazonaws.com/CitiSignal_router.zip). Zippa upp den nedladdade filen så får du den här.
+Hämta referensbilderna [här](https://one-adobe-tech-insiders.s3.us-west-2.amazonaws.com/CitiSignal_router.zip). Zippa upp den nedladdade filen så får du den här.
 
 ![Anpassade Firefly-modeller](./images/ffcm8.png){zoomable="yes"}
 
@@ -151,7 +151,7 @@ Klicka på de tre punkterna **..** och sedan på **Dela**.
 
 Om du vill komma åt en anpassad Firefly-modell måste den anpassade modellen delas med e-postadressen **för det tekniska kontot** i ditt Adobe I/O-projekt.
 
-Gå till [https://developer.adobe.com/console/projects](https://developer.adobe.com/console/projects) om du vill hämta e-postadressen för ditt **tekniska konto**. Klicka för att öppna projektet med namnet `--aepUserLdap-- One Adobe tutorial`.
+Gå till **https://developer.adobe.com/console/projects** om du vill hämta e-postadressen för ditt [tekniska konto](https://developer.adobe.com/console/projects). Klicka för att öppna projektet med namnet `--aepUserLdap-- One Adobe tutorial`.
 
 ![Anpassade Firefly-modeller](./images/ffcm24.png){zoomable="yes"}
 

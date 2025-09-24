@@ -3,9 +3,10 @@ title: Agent Collaboration
 description: Agent Collaboration
 kt: 5342
 doc-type: tutorial
-source-git-commit: 7537cd4d4ca6bc25afcb8f61a736498b0c297850
+exl-id: 96f8490e-a7f4-4b81-8e7a-1ae2cab158fe
+source-git-commit: 252ca08d13fbb7bc966a777003da1dd9e3df20a0
 workflow-type: tm+mt
-source-wordcount: '54'
+source-wordcount: '71'
 ht-degree: 1%
 
 ---
@@ -14,7 +15,7 @@ ht-degree: 1%
 
 ## Utbildningsmål
 
-- ...
+I den här modulen kommer agenten du skapade tidigare att börja arbeta tillsammans med olika Adobe-agenter.
 
 ## Förhandskrav
 
