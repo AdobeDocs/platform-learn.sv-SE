@@ -10,7 +10,7 @@ jira: KT-19109
 hide: true
 hidefromtoc: true
 exl-id: 46a251ce-4de2-4c35-800d-fdc6c3a162d4
-source-git-commit: 12a056d6489d5673b65adc38444f66631506d6c2
+source-git-commit: 4c0fdd180d52c5c92f306ee1a40864505ee8102d
 workflow-type: tm+mt
 source-wordcount: '47'
 ht-degree: 0%
@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Journey Agent - översikt
 
-Journey Agent använder AI för att skapa, analysera och optimera B2B/B2C-resor via ett konversationsgränssnitt. Mer information finns i [Journey Agent-dokumentationen](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ajo-agent).
+Journey Agent använder AI för att skapa, analysera och optimera B2B/B2C-resor via ett konversationsgränssnitt. Mer information finns i [Journey Agent-dokumentationen](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ajo-agent-analyze).
 
 >[!SLIDE](journey-agent-overview)
