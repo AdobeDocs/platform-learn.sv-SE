@@ -19,6 +19,6 @@ ht-degree: 0%
 
 # Journey Agent - översikt
 
-Journey Agent använder AI för att skapa, analysera och optimera B2B/B2C-resor via ett konversationsgränssnitt. Mer information finns i [Journey Agent-dokumentationen](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/ajo-agent-analyze).
+Journey Agent använder AI för att skapa, analysera och optimera B2B/B2C-resor via ett konversationsgränssnitt. Mer information finns i [Journey Agent-dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-cloud-ai/experience-cloud-ai/agents/ajo-agent-analyze).
 
 >[!SLIDE](journey-agent-overview)
