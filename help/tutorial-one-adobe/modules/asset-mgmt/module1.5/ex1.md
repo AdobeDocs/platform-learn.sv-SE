@@ -3,10 +3,11 @@ title: Komma igång med Adobe Commerce as a Cloud Service
 description: Komma igång med Adobe Commerce as a Cloud Service
 kt: 5342
 doc-type: tutorial
-source-git-commit: 490bc79332bb84520ba084ec784ea3ef48a68fb5
+exl-id: 8603c8e2-c3ba-4976-9703-cef9e63924b8
+source-git-commit: 7280f6b7d3579226f2d8c7f94e75ca8d3f2941cc
 workflow-type: tm+mt
-source-wordcount: '688'
-ht-degree: 14%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
 
@@ -181,7 +182,7 @@ Konfigurera det andra alternativet med namnet `512GB` i alla tre kolumnerna och 
 
 ![AEM Assets](./images/accs30.png)
 
-Konfigurera det tredje alternativet med namnet `1TB` i alla tre kolumnerna och klicka sedan på **Lägg till alternativ** igen.
+Konfigurera det tredje alternativet med namnet `1TB` i alla tre kolumnerna.
 
 ![AEM Assets](./images/accs31.png)
 
@@ -234,7 +235,7 @@ Du borde se det här då. Klicka på **Skapa produkter**.
 
 ![AEM Assets](./images/accs42.png)
 
-Klicka på **Spara**.
+Ange **Kvantitet** för varje produkt till `10000`. Klicka på **Spara**.
 
 ![AEM Assets](./images/accs43.png)
 
@@ -255,7 +256,6 @@ Du borde se det här då. Klicka på **Bakåt**.
 Du ser nu produkten **iPhone Air** och dess varianter i produktkatalogen.
 
 ![AEM Assets](./images/accs47.png)
-
 
 Nästa steg: [Anslut ACCS till AEM Sites CS/EDS Storefront](./ex2.md){target="_blank"}
 

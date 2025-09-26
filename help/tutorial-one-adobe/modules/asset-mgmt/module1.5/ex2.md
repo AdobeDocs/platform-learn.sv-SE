@@ -3,9 +3,10 @@ title: Anslut ACCS till AEM Sites CS/EDS Storefront
 description: Anslut ACCS till AEM Sites CS/EDS Storefront
 kt: 5342
 doc-type: tutorial
-source-git-commit: b39cc993120ba6feecbfc044d40e066f9d8f91de
+exl-id: 81d826a8-c9f0-4e2a-9107-d6e06a4b8427
+source-git-commit: 7280f6b7d3579226f2d8c7f94e75ca8d3f2941cc
 workflow-type: tm+mt
-source-wordcount: '520'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -75,6 +76,11 @@ Klicka på **Genomför ändringar**.
 ![ACCS+AEM Sites](./images/accsaemsites10.png)
 
 Filen **config.json** har uppdaterats. Du bör se ändringarna på webbplatsen inom några minuter. Du kan kontrollera om ändringarna har plockats upp korrekt genom att gå till produktsidan **Telefoner**. Nu bör du se **iPhone Air** visas på sidan.
+
+Om du vill komma åt din webbplats måste du gå till `main--citisignal-aem-accs--XXX.aem.page` och/eller `main--citisignal-aem-accs--XXX.aem.live` efter att du har ersatt XXX med ditt GitHub-användarkonto, som i det här exemplet är `woutervangeluwe`.
+
+I det här exemplet blir den fullständiga URL:en följande:
+`https://main--citisignal-aem-accs--woutervangeluwe.aem.page` och/eller `https://main--citisignal-aem-accs--woutervangeluwe.aem.live`.
 
 ![ACCS+AEM Sites](./images/accsaemsites11.png)
 

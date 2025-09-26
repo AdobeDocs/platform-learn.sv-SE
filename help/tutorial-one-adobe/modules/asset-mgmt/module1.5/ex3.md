@@ -3,9 +3,10 @@ title: Ansluta ACCS till AEM Assets CS
 description: Ansluta ACCS till AEM Assets CS
 kt: 5342
 doc-type: tutorial
-source-git-commit: 58448049d54ee6124985159577df0e307896a312
+exl-id: 2b944efe-3997-46a0-9eb0-61dfda67f5b9
+source-git-commit: 7280f6b7d3579226f2d8c7f94e75ca8d3f2941cc
 workflow-type: tm+mt
-source-wordcount: '1651'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -90,7 +91,9 @@ Kontrollera att katalogen är tom.
 
 ![ACCS+AEM Assets](./images/accsaemassets15.png)
 
-Gå till [https://github.com/ankumalh/assets-commerce](https://github.com/ankumalh/assets-commerce).
+Gå till [https://github.com/ankumalh/assets-commerce](https://github.com/ankumalh/assets-commerce). Klicka på **&lt;> Kod** och välj sedan **Hämta ZIP**. Hämta filen och släpp den på skrivbordet.
+
+![ACCS+AEM Assets](./images/accsaemassets15a.png)
 
 Kopiera sedan filen **assets-commerce-main.zip** till skrivbordet och zippa upp den. Öppna mappen **assets-commerce-main**.
 
