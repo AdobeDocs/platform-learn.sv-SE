@@ -61,7 +61,7 @@ Kom igång med AI Assistant och lär dig grunderna.
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="discoverability-panel.md" title="Använda identifieringspanelen i AI Assistant" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440962/?format=jpeg&nocache=1748392732984" alt="Använda identifieringspanelen i AI Assistant"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3440966/?format=jpeg&nocache=1748392732984&captions=swe" alt="Använda identifieringspanelen i AI Assistant"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -84,7 +84,7 @@ Kom igång med AI Assistant och lär dig grunderna.
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="validate-responses.md" title="Validera svar från AI Assistant" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441738/?format=jpeg&nocache=1748392733006" alt="Validera svar från AI Assistant"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441742/?format=jpeg&nocache=1748392733006&captions=swe" alt="Validera svar från AI Assistant"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -122,7 +122,7 @@ Det finns många andra användningsområden där AI Assistant kan hjälpa dig at
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="operational-insights.md" title="Få operativa insikter med AI Assistant" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444031/?format=jpeg&nocache=1748392734347" alt="Få operativa insikter med AI Assistant"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3444036/?format=jpeg&nocache=1748392734347&captions=swe" alt="Få operativa insikter med AI Assistant"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -145,7 +145,7 @@ Det finns många andra användningsområden där AI Assistant kan hjälpa dig at
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="find-unused-audiences.md" title="AI Assistant - Användningsexempel vid rensning av målgrupper" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3435532/?format=jpeg&nocache=1748392734324" alt="AI Assistant - Användningsexempel vid rensning av målgrupper"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441991/?format=jpeg&nocache=1748392734324&captions=swe" alt="AI Assistant - Användningsexempel vid rensning av målgrupper"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -168,7 +168,7 @@ Det finns många andra användningsområden där AI Assistant kan hjälpa dig at
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="impact-analysis.md" title="Effektanalys med AI Assistant" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441680/?format=jpeg&nocache=1748392734336" alt="Effektanalys med AI Assistant"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441684/?format=jpeg&nocache=1748392734336&captions=swe" alt="Effektanalys med AI Assistant"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -204,7 +204,7 @@ AI Assistant är ett användbart verktyg för att lära sig nya produkter eller 
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="product-knowledge.md" title="Lär dig Experience Platform-program med AI Assistant" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441024/?format=jpeg&nocache=1748392735046" alt="Lär dig Experience Platform-program med AI Assistant"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441028/?format=jpeg&nocache=1748392735046&captions=swe" alt="Lär dig Experience Platform-program med AI Assistant"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -262,7 +262,7 @@ Felsök och öppna kundvårdsbiljetter.
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="product-support-agent.md" title="Produktsupportagent" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443183/?format=jpeg&nocache=1748392735554" alt="Produktsupportagent"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443187/?format=jpeg&nocache=1748392735554&captions=swe" alt="Produktsupportagent"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -297,7 +297,7 @@ Läs mer om säkerhetsfunktionerna i AI Assistant.
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="security-overview.md" title="Säkerhetsöversikt för AI Assistant" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441066/?format=jpeg&nocache=1748392736016" alt="Säkerhetsöversikt för AI Assistant"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3441084/?format=jpeg&nocache=1748392736016&captions=swe" alt="Säkerhetsöversikt för AI Assistant"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
