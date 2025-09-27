@@ -221,7 +221,7 @@ Med Adobe Experience Platform Query Service kan man utforska, validera och omvan
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="prepare-data.md" title="Förbered data" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/333699?format=jpeg&nocache=1740415313086" alt="Förbered data"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475296?format=jpeg&nocache=1740415313086&captions=swe" alt="Förbered data"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

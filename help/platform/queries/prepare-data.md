@@ -18,4 +18,4 @@ ht-degree: 1%
 
 Lär dig hur du rensar, förbereder och kombinerar data från flera datauppsättningar för att skapa en ny datauppsättning med hjälp av funktionerna CTAS (Create Table AS) och Spark SQL för rapportering och instrumentpaneler. Mer information finns i [dokumentationen för frågetjänsten](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=sv).
 
->[!VIDEO](https://video.tv.adobe.com/v/333699?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475296?learn=on&enablevpops&captions=swe)

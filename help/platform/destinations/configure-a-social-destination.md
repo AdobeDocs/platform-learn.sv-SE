@@ -21,5 +21,5 @@ ht-degree: 0%
 
 Lär dig koppla samman och aktivera målgrupper till en social destination. I den här videon visas arbetsflödet med hjälp av ett LinkedIn Matched Audiences-mål i Adobe Real-Time Customer Data Platform.  Mer information finns i [dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-platform/destinations/catalog/social/overview).
 
->[!VIDEO](https://video.tv.adobe.com/v/332599/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475117/?learn=on&enablevpops&captions=swe)
 
