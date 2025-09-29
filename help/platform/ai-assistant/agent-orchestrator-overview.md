@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Adobe Experience Platform Agent Orchestrator - översikt
 
-Agent Orchestrator är det autentiska skiktet i Adobe Experience Platform som driver kundupplevelsesamordning med specialbyggda agenter, en avancerad resonansmotor och ett kraftfullt konversationsgränssnitt. Mer information finns i [Agent Orchestrator-dokumentationen](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
+Agent Orchestrator är det autentiska skiktet i Adobe Experience Platform som driver kundupplevelsesamordning med specialbyggda agenter, en avancerad resonansmotor och ett kraftfullt konversationsgränssnitt. Mer information finns i [Agent Orchestrator-dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator).
 
 >[!SLIDE](agent-orchestrator-overview)
