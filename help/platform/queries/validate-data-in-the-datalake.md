@@ -19,4 +19,4 @@ ht-degree: 1%
 
 Lär dig hur du validerar om data har importerats till datalagret med hjälp av Adobe Experience Platform Query Service. Detaljerad produktdokumentation finns i [Användargränssnittsguiden för frågeredigeraren](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=sv).
 
->[!VIDEO](https://video.tv.adobe.com/v/3416130?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3445681?learn=on&enablevpops&captions=swe)

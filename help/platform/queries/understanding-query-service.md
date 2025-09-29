@@ -18,7 +18,7 @@ ht-degree: 0%
 
 Med Adobe Experience Platform Query Service kan man utforska, validera och omvandla kundupplevelsedata som lagras i datasjön med hjälp av SQL, med utökade funktioner som data och schemaläggning som är tillgängliga via Data Distiller-tillägget. Den här videon ger en översikt över viktiga funktioner som hjälper användarna att förstå hur de kan utnyttja frågetjänsten i olika plattformsbaserade program. Mer information finns i [dokumentationen för frågetjänsten](https://experienceleague.adobe.com/sv/docs/experience-platform/query/home).
 
->[!VIDEO](https://video.tv.adobe.com/v/29795?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3464265?learn=on&enablevpops&captions=swe)
 
 ## Grundläggande användning
 
@@ -35,7 +35,7 @@ Med Adobe Experience Platform Query Service kan man utforska, validera och omvan
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="run-queries.md" title="Kör frågor med frågetjänsten" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/29796?format=jpeg&nocache=1759180596408" alt="Kör frågor med frågetjänsten"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3470200?format=jpeg&nocache=1759180596408&captions=swe" alt="Kör frågor med frågetjänsten"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -81,7 +81,7 @@ Med Adobe Experience Platform Query Service kan man utforska, validera och omvan
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="prepare-data.md" title="Ta fram data med Data Distiller" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/333699?format=jpeg&nocache=1759180596403" alt="Ta fram data med Data Distiller"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475296?format=jpeg&nocache=1759180596403&captions=swe" alt="Ta fram data med Data Distiller"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -163,7 +163,7 @@ Med Adobe Experience Platform Query Service kan man utforska, validera och omvan
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="recharge-your-customer-data.md" title="Använd era kunddata för att leverera strömmande upplevelser" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/342533?format=jpeg&nocache=1759180596865" alt="Använd era kunddata för att leverera strömmande upplevelser"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3454942?format=jpeg&nocache=1759180596865&captions=swe" alt="Använd era kunddata för att leverera strömmande upplevelser"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
