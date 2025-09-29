@@ -6,9 +6,10 @@ role: Data Engineer, Developer
 level: Beginner
 jira: KT-7680
 thumbnail: 333403.jpg
+hide: true
 hidefromtoc: true
 exl-id: 63de8b83-5da2-4f24-a47d-70c14bdfe437
-source-git-commit: 38c013fab2f464aefb7836935198ed5de2926331
+source-git-commit: f5f3dcc655fffc056fe95c33a3cd7abba24d7f3a
 workflow-type: tm+mt
 source-wordcount: '72'
 ht-degree: 1%

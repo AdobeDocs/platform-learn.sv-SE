@@ -1,21 +1,21 @@
 ---
-title: Utforska data
-description: Lär dig hur du validerar inkapslade data, förhandsgranskar data och utforskar statistiska och analytiska egenskaper för data med hjälp av SQL-funktioner.
+title: Validera data med frågetjänsten
+description: Lär dig hur du validerar inkapslade data med hjälp av SQL-funktioner.
 feature: Queries
 role: Data Engineer, Developer
 level: Beginner
 jira: KT-7684
-thumbnail: 333415.jpg
+last-substantial-update: 2025-09-23T00:00:00Z
 exl-id: 7288da8f-4646-4519-81cc-dae33d79b86e
-source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
+source-git-commit: 5e4a5bca092813aa92274f8f630a345f27aac7ec
 workflow-type: tm+mt
-source-wordcount: '52'
-ht-degree: 1%
+source-wordcount: '38'
+ht-degree: 0%
 
 ---
 
-# Utforska data
+# Validera data med frågetjänsten
 
-Lär dig hur du validerar inkapslade data, förhandsgranskar data och utforskar statistiska och analytiska egenskaper för data med hjälp av SQL-funktioner. Mer information finns i [dokumentationen för frågetjänsten](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=sv).
+Lär dig hur du validerar inkapslade data med hjälp av SQL-funktioner. Mer information finns i [dokumentationen för frågetjänsten](https://experienceleague.adobe.com/en/docs/experience-platform/query/home).
 
 >[!VIDEO](https://video.tv.adobe.com/v/333415?learn=on&enablevpops)
