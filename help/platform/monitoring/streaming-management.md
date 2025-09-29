@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Kontrollpanelerna för kapacitet och direktuppspelning ger företag insyn och kontroll över plattformsanvändningen. De hjälper till att allokera genomströmning, upptäcka toppar eller underanvändning och ger realtidsinsikter i prestanda, vilket möjliggör proaktiva beslut och varningar för att förhindra överbelastning och säkerställa att viktiga tjänster förblir stabila.
 
->[!VIDEO](https://video.tv.adobe.com/v/3475272/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475277/?learn=on&enablevpops&captions=swe)

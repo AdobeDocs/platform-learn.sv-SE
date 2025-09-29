@@ -18,4 +18,4 @@ ht-degree: 0%
 
 Lär dig hur datatekniker kan använda frågetjänster för att omvandla data och skapa nya datauppsättningar. Kör dessa frågor enligt ett schema för att automatisera instrumentpaneler och segmentering. Mer information finns i [dokumentationen för frågetjänsten](https://experienceleague.adobe.com/sv/docs/experience-platform/query/home).
 
->[!VIDEO](https://video.tv.adobe.com/v/333699?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475296?learn=on&enablevpops&captions=swe)
