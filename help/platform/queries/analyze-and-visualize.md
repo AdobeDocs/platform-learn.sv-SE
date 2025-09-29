@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Analysera och visualisera flerkanalsinsikter i Tableau med hjälp av frågetjänsten
 
-Lär dig hur du kan använda Adobe Experience Platform Query Service med externa datavisualiseringsverktyg med hjälp av ett exempel på bortfallsanalys. Mer information finns i [dokumentationen för frågetjänsten](https://experienceleague.adobe.com/en/docs/experience-platform/query/home).
+Lär dig hur du kan använda Adobe Experience Platform Query Service med externa datavisualiseringsverktyg med hjälp av ett exempel på bortfallsanalys. Mer information finns i [dokumentationen för frågetjänsten](https://experienceleague.adobe.com/sv/docs/experience-platform/query/home).
 
 >[!VIDEO](https://video.tv.adobe.com/v/342115?learn=on&enablevpops)

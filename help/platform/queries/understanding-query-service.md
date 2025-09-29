@@ -16,7 +16,7 @@ ht-degree: 0%
 
 # Query Service och Data Distiller - översikt
 
-Med Adobe Experience Platform Query Service kan man utforska, validera och omvandla kundupplevelsedata som lagras i datasjön med hjälp av SQL, med utökade funktioner som data och schemaläggning som är tillgängliga via Data Distiller-tillägget. Den här videon ger en översikt över viktiga funktioner som hjälper användarna att förstå hur de kan utnyttja frågetjänsten i olika plattformsbaserade program. Mer information finns i [dokumentationen för frågetjänsten](https://experienceleague.adobe.com/en/docs/experience-platform/query/home).
+Med Adobe Experience Platform Query Service kan man utforska, validera och omvandla kundupplevelsedata som lagras i datasjön med hjälp av SQL, med utökade funktioner som data och schemaläggning som är tillgängliga via Data Distiller-tillägget. Den här videon ger en översikt över viktiga funktioner som hjälper användarna att förstå hur de kan utnyttja frågetjänsten i olika plattformsbaserade program. Mer information finns i [dokumentationen för frågetjänsten](https://experienceleague.adobe.com/sv/docs/experience-platform/query/home).
 
 >[!VIDEO](https://video.tv.adobe.com/v/29795?learn=on&enablevpops)
 

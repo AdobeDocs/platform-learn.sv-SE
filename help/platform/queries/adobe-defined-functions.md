@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Adobe-definierade funktioner
 
-Lär dig hur du använder Adobe-definierade funktioner i Adobe Experience Platform Query Service för att utföra vanliga affärsrelaterade uppgifter på Experience Event-data. Mer information finns på [Adobe-definierade SQL-funktioner i frågetjänsten](https://experienceleague.adobe.com/en/docs/experience-platform/query/sql/adobe-defined-functions).
+Lär dig hur du använder Adobe-definierade funktioner i Adobe Experience Platform Query Service för att utföra vanliga affärsrelaterade uppgifter på Experience Event-data. Mer information finns på [Adobe-definierade SQL-funktioner i frågetjänsten](https://experienceleague.adobe.com/sv/docs/experience-platform/query/sql/adobe-defined-functions).
 
 >[!VIDEO](https://video.tv.adobe.com/v/333701?learn=on&enablevpops)

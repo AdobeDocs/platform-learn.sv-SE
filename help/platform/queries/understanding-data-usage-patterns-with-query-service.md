@@ -17,6 +17,6 @@ ht-degree: 0%
 
 # Förstå dataanvändningsmönster med frågetjänsten
 
-I den här videon får du tips och tips om hur du kan köra frågor i frågeredigeringsgränssnittet, PSQL-klienter, Business Intelligence-lösningar (BI) och HTTP API. Mer information finns i [dokumentationen för frågetjänsten](https://experienceleague.adobe.com/en/docs/experience-platform/query/home).
+I den här videon får du tips och tips om hur du kan köra frågor i frågeredigeringsgränssnittet, PSQL-klienter, Business Intelligence-lösningar (BI) och HTTP API. Mer information finns i [dokumentationen för frågetjänsten](https://experienceleague.adobe.com/sv/docs/experience-platform/query/home).
 
 >[!VIDEO](https://video.tv.adobe.com/v/29811?learn=on&enablevpops)

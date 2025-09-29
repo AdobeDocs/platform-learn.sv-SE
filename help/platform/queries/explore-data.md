@@ -16,6 +16,6 @@ ht-degree: 0%
 
 # Validera data med frågetjänsten
 
-Lär dig hur du validerar inkapslade data med hjälp av SQL-funktioner. Mer information finns i [dokumentationen för frågetjänsten](https://experienceleague.adobe.com/en/docs/experience-platform/query/home).
+Lär dig hur du validerar inkapslade data med hjälp av SQL-funktioner. Mer information finns i [dokumentationen för frågetjänsten](https://experienceleague.adobe.com/sv/docs/experience-platform/query/home).
 
 >[!VIDEO](https://video.tv.adobe.com/v/333415?learn=on&enablevpops)
