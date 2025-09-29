@@ -1,21 +1,21 @@
 ---
-title: Förbered data
-description: Lär dig hur du rensar, förbereder och kombinerar data från flera datauppsättningar för att skapa en ny datauppsättning med hjälp av funktionerna CTAS (Create Table AS) och Spark SQL för rapportering och instrumentpaneler.
+title: Ta fram data med Data Distiller
+description: Lär dig hur datatekniker kan använda frågetjänster för att omvandla data och skapa nya datauppsättningar. Kör dessa frågor enligt ett schema för att automatisera instrumentpaneler och segmentering.
 feature: Queries
 role: Data Engineer, Developer
 level: Beginner
 jira: KT-8005
-thumbnail: 333699.jpg
+last-substantial-update: 2025-09-23T00:00:00Z
 exl-id: c4f36725-19dd-47da-aaa8-a925b7baca24
-source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
+source-git-commit: 1712f2b22b8042e0cf96e619ca1a2e99e5368a18
 workflow-type: tm+mt
-source-wordcount: '72'
-ht-degree: 1%
+source-wordcount: '76'
+ht-degree: 0%
 
 ---
 
-# Förbered data
+# Ta fram data med Data Distiller
 
-Lär dig hur du rensar, förbereder och kombinerar data från flera datauppsättningar för att skapa en ny datauppsättning med hjälp av funktionerna CTAS (Create Table AS) och Spark SQL för rapportering och instrumentpaneler. Mer information finns i [dokumentationen för frågetjänsten](https://experienceleague.adobe.com/docs/experience-platform/query/home.html?lang=sv).
+Lär dig hur datatekniker kan använda frågetjänster för att omvandla data och skapa nya datauppsättningar. Kör dessa frågor enligt ett schema för att automatisera instrumentpaneler och segmentering. Mer information finns i [dokumentationen för frågetjänsten](https://experienceleague.adobe.com/en/docs/experience-platform/query/home).
 
->[!VIDEO](https://video.tv.adobe.com/v/3475296?learn=on&enablevpops&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/333699?learn=on&enablevpops)
