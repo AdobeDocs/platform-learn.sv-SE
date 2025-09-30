@@ -46,7 +46,7 @@ Om du inte har använt Platform Web SDK tidigare behöver du inte bekymra dig - 
 | Beslut på enheten | Stöds | Stöds inte för närvarande |
 | Förhämta kartonger | Stöds för anpassade omfattningar och SPA VEC | Förhämtning är standardläge för Web SDK |
 | Anpassade händelser | Stöds | Stöds inte. Aktuell status finns i den [offentliga färdplanen](https://github.com/orgs/adobe/projects/18/views/1?pane=item&itemId=17372355{target="_blank"}). |
-| Svarstoken | Stöds | Stöds. Se [dokumentationen för dedikerade svarstoken](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html) för kodexempel och skillnader mellan at.js och Platform Web SDK |
+| Svarstoken | Stöds | Stöds. Se [dokumentationen för dedikerade svarstoken](https://experienceleague.adobe.com/docs/target/using/administer/response-tokens.html?lang=sv-SE) för kodexempel och skillnader mellan at.js och Platform Web SDK |
 | Dataleverantörer | Stöds | Stöds inte. Anpassad kod kan användas för att utlösa ett SDK `sendEvent`-kommando för plattformen när data har hämtats från en annan provider. |
 
 
@@ -66,7 +66,7 @@ Om du inte har använt Platform Web SDK tidigare behöver du inte bekymra dig - 
 >
 >Det går inte att migrera Target till Platform Web SDK samtidigt som en befintlig AppMeasurement Adobe Analytics-implementering för en viss sida behålls.
 >
-> Du kan migrera din at.js-implementering (och AppMeasurement.js) till Platform Web SDK en sida i taget. Om du väljer det här sättet är det bäst att ange alternativen [`idMigrationEnabled`](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#id-migration-enabled) och [`targetMigrationEnabled`](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#targetMigrationEnabled) till `true` med kommandot `configure`.
+> Du kan migrera din at.js-implementering (och AppMeasurement.js) till Platform Web SDK en sida i taget. Om du väljer det här sättet är det bäst att ange alternativen [`idMigrationEnabled`](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=sv-SE#id-migration-enabled) och [`targetMigrationEnabled`](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=sv-SE#targetMigrationEnabled) till `true` med kommandot `configure`.
 
 ## at.js-funktioner och motsvarigheter till Platform Web SDK
 
@@ -74,13 +74,13 @@ Många at.js-funktioner har en likvärdig metod med Platform Web SDK som beskriv
 
 | funktionen at.js 2.x | SDK-motsvarighet för plattformar |
 | --- | --- | 
-| `getOffer()` och `getOffers()` | Om du vill begära och [automatiskt återge](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html#automatically-rendering-content) VEC-baserade målupplevelser använder du kommandot `sendEvent` och anger alternativet `renderDecisions` till true.<br><br>Om du vill begära formulärbaserade upplevelser eller [återge](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html#manually-rendering-content) innehåll manuellt anger du en array med `decisionScopes` (rutor) med kommandot `sendEvent`. |
-| `applyOffer()` och `applyOffers()` | Använd kommandot [`applyPropositions`](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html#applypropositions) för att tillämpa innehåll. Du kan välja att ställa in, ersätta eller lägga till HTML i en specifik väljare. |
-| `triggerView()` | Platform Web SDK utlöser automatiskt en [vyändring](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/web-sdk-atjs-comparison.html#how-to-trigger-a-view-change-in-a-single-page-application) för SPA VEC om egenskapen `web.webPageDetails.viewName` anges under alternativet `xdm` för kommandot `sendEvent` . |
-| `trackEvent()` och `sendNotifications()` | Använd kommandot `sendEvent` med en [specifik `eventType`](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/web-sdk-atjs-comparison.html#how-to-track-events) uppsättning:<br><br>`decisioning.propositionDisplay` signalerar återgivningen av en aktivitet <br><br>`decisioning.propositionInteract` som signalerar en användarinteraktion med en aktivitet, till exempel ett musklick. |
+| `getOffer()` och `getOffers()` | Om du vill begära och [automatiskt återge](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=sv-SE#automatically-rendering-content) VEC-baserade målupplevelser använder du kommandot `sendEvent` och anger alternativet `renderDecisions` till true.<br><br>Om du vill begära formulärbaserade upplevelser eller [återge](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=sv-SE#manually-rendering-content) innehåll manuellt anger du en array med `decisionScopes` (rutor) med kommandot `sendEvent`. |
+| `applyOffer()` och `applyOffers()` | Använd kommandot [`applyPropositions`](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=sv-SE#applypropositions) för att tillämpa innehåll. Du kan välja att ställa in, ersätta eller lägga till HTML i en specifik väljare. |
+| `triggerView()` | Platform Web SDK utlöser automatiskt en [vyändring](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/web-sdk-atjs-comparison.html?lang=sv-SE#how-to-trigger-a-view-change-in-a-single-page-application) för SPA VEC om egenskapen `web.webPageDetails.viewName` anges under alternativet `xdm` för kommandot `sendEvent` . |
+| `trackEvent()` och `sendNotifications()` | Använd kommandot `sendEvent` med en [specifik `eventType`](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/web-sdk-atjs-comparison.html?lang=sv-SE#how-to-track-events) uppsättning:<br><br>`decisioning.propositionDisplay` signalerar återgivningen av en aktivitet <br><br>`decisioning.propositionInteract` som signalerar en användarinteraktion med en aktivitet, till exempel ett musklick. |
 | `targetGlobalSettings()` | Ingen direkt motsvarighet. Mer information finns i [målinställningsjämförelsen](detailed-comparison.md). |
-| `targetPageParams()` och `targetPageParamsAll()` | Alla data som skickas i alternativet `xdm` för kommandot `sendEvent` mappas till Target-parametrar för mbox. Eftersom mbox-parametrar namnges med serialiserad punktnotation kan du behöva uppdatera befintliga målgrupper och aktiviteter för att kunna använda de nya mbox-parameternamnen när du migrerar till Platform Web SDK. <br><br>Data som skickas som en del av `data.__adobe.target` av kommandot `sendEvent` mappas till [Målprofil och Rekommendationer som är specifika parametrar](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html#single-profile-update). |
-| at.js, anpassade händelser | Stöds inte. Aktuell status finns i den [offentliga färdplanen](https://github.com/orgs/adobe/projects/18/views/1?pane=item&itemId=17372355{target="_blank"}). [Svarstoken](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html) visas som en del av `propositions` i svaret från anropet `sendEvent`. |
+| `targetPageParams()` och `targetPageParamsAll()` | Alla data som skickas i alternativet `xdm` för kommandot `sendEvent` mappas till Target-parametrar för mbox. Eftersom mbox-parametrar namnges med serialiserad punktnotation kan du behöva uppdatera befintliga målgrupper och aktiviteter för att kunna använda de nya mbox-parameternamnen när du migrerar till Platform Web SDK. <br><br>Data som skickas som en del av `data.__adobe.target` av kommandot `sendEvent` mappas till [Målprofil och Rekommendationer som är specifika parametrar](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/target-overview.html?lang=sv-SE#single-profile-update). |
+| at.js, anpassade händelser | Stöds inte. Aktuell status finns i den [offentliga färdplanen](https://github.com/orgs/adobe/projects/18/views/1?pane=item&itemId=17372355{target="_blank"}). [Svarstoken](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/accessing-response-tokens.html?lang=sv-SE) visas som en del av `propositions` i svaret från anropet `sendEvent`. |
 
 ## at.js-inställningar och motsvarigheter till Platform Web SDK
 
@@ -88,12 +88,12 @@ At.js-biblioteket kan konfigureras och laddas ned med olika inställningar i må
 
 | at.js, inställning | SDK-motsvarighet för plattformar |
 | --- | --- |
-| `bodyHiddenStyle` | Ange [`prehidingStyle`](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html#prehidingStyle) med kommandot `configure` |
+| `bodyHiddenStyle` | Ange [`prehidingStyle`](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-the-sdk.html?lang=sv-SE#prehidingStyle) med kommandot `configure` |
 | `bodyHidingEnabled` | Om `prehidingStyle` definieras med kommandot `configure` aktiveras den här funktionen. Om inget format definieras försöker inte Platform Web SDK att dölja något innehåll. |
 | `clientCode` | Automatiskt konfigurerad |
 | `cookieDomain` | Ej tillämpligt |
 | `crossDomain` | Ange alternativet `thirdPartyCookiesEnabled` till `true` med kommandot `configure` för att aktivera cookies från första och tredje part för korsdomänsanvändning |
-| `cspScriptNonce` och `cspStyleNonce` | Läs dokumentationen om hur du konfigurerar en CSP[ i ](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-a-csp.html)konfigurationen. |
+| `cspScriptNonce` och `cspStyleNonce` | Läs dokumentationen om hur du konfigurerar en CSP[ i ](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-a-csp.html?lang=sv-SE)konfigurationen. |
 | `dataProviders` | Stöds inte |
 | `decisioningMethod` | Alla plattformswebbkommandon för SDK `sendEvent` använder beslut på serversidan. Hybrid- och enhetsbeslut stöds inte. |
 | `defaultContentHiddenStyle` och `defaultContentVisibleStyle` | Gäller endast med at.js 1.x. Precis som i at.js 2.x kan du använda anpassad kod för att reducera eventuella flimmer för formulärbaserade upplevelser. |
@@ -101,7 +101,7 @@ At.js-biblioteket kan konfigureras och laddas ned med olika inställningar i må
 | `enabled` | Målfunktionen är aktiverad eller inaktiverad med dataströmskonfigurationen |
 | `globalMboxAutoCreate` | Ange alternativet `renderDecisions` till `true` med kommandot `sendEvent` för att automatiskt hämta och återge VEC-baserade upplevelser.<br><br>Begär en `decisionScope` för `__view__` om du föredrar att manuellt återge VEC-baserade upplevelser. |
 | `imsOrgId` | Ange `orgId` med kommandot `configure` |
-| `optinEnabled` och `optoutEnabled` | Se [sekretessalternativen](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html) för Platform Web SDK. Alternativet `defaultConsent` gäller alla Adobe-lösningar som Platform Web SDK stöder. |
+| `optinEnabled` och `optoutEnabled` | Se [sekretessalternativen](https://experienceleague.adobe.com/docs/experience-platform/edge/consent/supporting-consent.html?lang=sv-SE) för Platform Web SDK. Alternativet `defaultConsent` gäller alla Adobe-lösningar som Platform Web SDK stöder. |
 | `overrideMboxEdgeServer` och `overrideMboxEdgeServerTimeout` | Ej tillämpligt. Alla förfrågningar från Platform Web SDK använder Adobe Experience Platform Edge-nätverket. |
 | `pageLoadEnabled` | Ange alternativet `renderDecisions` till `true` med kommandot `sendEvent` |
 | `secureOnly` | Stöds inte. SDK för plattformen ställer in alla cookies med attributen `secure` och `sameSite="none"`. |
@@ -148,7 +148,7 @@ Mer information om hur du [implementerar Target med at.js för enkelsidiga progr
 | 6 | a. Edge-nätverket skickar personaliseringssvaret tillbaka till sidan, eventuellt inklusive profilvärden för ytterligare personalisering. Personaliserat innehåll på den aktuella sidan visas så snabbt som möjligt utan att man behöver flimra standardinnehållet.<br><br>b. Personaliserat innehåll för vyer som visas som ett resultat av användaråtgärder i ett SPA-program (Single Page Application) cachas för direktåtergivning utan ytterligare serveranrop.<br><br>c. Edge-nätverket skickar besökar-ID och andra värden i cookies (till exempel samtycke, sessions-ID, identitet, cookie-kontroll, personalisering och så vidare). |
 | 7 | Edge Network Forwards Analytics for Target (A4T)-information (aktivitet, upplevelse och konverteringsmetadata) till Analytics-kanten. |
 
-Mer information om hur du [implementerar Target med Platform Web SDK for Single-page applications finns i utvecklarhandboken](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/spa-implementation.html).
+Mer information om hur du [implementerar Target med Platform Web SDK for Single-page applications finns i utvecklarhandboken](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/adobe-target/spa-implementation.html?lang=sv-SE).
 
 När du har en god teknisk förståelse för den aktuella målinstallationen och de funktioner du använder är nästa steg att utföra den [inledande konfigurationen](initial-setup.md).
 
