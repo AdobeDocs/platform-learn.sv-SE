@@ -15,6 +15,6 @@ ht-degree: 0%
 
 # Data Insights Agent - översikt
 
-Data Insight Agent utnyttjar händelser, profiler, resor och offlinedata och förenklar identifiering och möjliggör direkt personaliserade instrumentpaneler. Mer information finns i [Data Insights Agent-dokumentationen](https://experienceleague.adobe.com/en/docs/analytics-platform/using/cja-overview/cja-b2c-overview/data-analysis-ai).
+Data Insight Agent utnyttjar händelser, profiler, resor och offlinedata och förenklar identifiering och möjliggör direkt personaliserade instrumentpaneler. Mer information finns i [Data Insights Agent-dokumentationen](https://experienceleague.adobe.com/sv/docs/analytics-platform/using/cja-overview/cja-b2c-overview/data-analysis-ai).
 
 >[!SLIDE](data-insights-agent-overview)
