@@ -18,6 +18,6 @@ ht-degree: 0%
 
 # Översikt över experimenteringsagenten
 
-Experimentationsagenten snabbar upp den digitala optimeringen med insikter, guidad konfiguration och automatiserad analys för marknadsförare, analytiker och administratörer. Mer information finns i [dokumentationen för Experiment Accelerator](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/content-management/content-experiment/experiment/experiment-accelerator).
+Experimentationsagenten snabbar upp den digitala optimeringen med insikter, guidad konfiguration och automatiserad analys för marknadsförare, analytiker och administratörer. Mer information finns i [dokumentationen för Experiment Accelerator](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/content-management/content-experiment/experiment/experiment-accelerator).
 
 >[!SLIDE](experimentation-agent-overview)

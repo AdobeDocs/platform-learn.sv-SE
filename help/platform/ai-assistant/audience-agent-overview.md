@@ -17,6 +17,6 @@ ht-degree: 0%
 
 # Audience Agent - översikt
 
-Audience Agent effektiviserar målgruppshanteringen med konversationsskapande, optimering, insikter och säker integrering mellan B2B/B2C-appar. Mer information finns i [Audience Agent-dokumentationen](https://experienceleague.adobe.com/en/docs/experience-cloud-ai/experience-cloud-ai/agents/audience).
+Audience Agent effektiviserar målgruppshanteringen med konversationsskapande, optimering, insikter och säker integrering mellan B2B/B2C-appar. Mer information finns i [Audience Agent-dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-cloud-ai/experience-cloud-ai/agents/audience).
 
 >[!SLIDE](audience-agent-overview)
