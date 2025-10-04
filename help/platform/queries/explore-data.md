@@ -18,4 +18,4 @@ ht-degree: 0%
 
 Lär dig hur du validerar inkapslade data med hjälp av SQL-funktioner. Mer information finns i [dokumentationen för frågetjänsten](https://experienceleague.adobe.com/sv/docs/experience-platform/query/home).
 
->[!VIDEO](https://video.tv.adobe.com/v/333415?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475329?learn=on&enablevpops&captions=swe)

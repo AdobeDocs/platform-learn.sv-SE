@@ -58,7 +58,7 @@ Med Adobe Experience Platform Query Service kan man utforska, validera och omvan
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="explore-data.md" title="Validera data med frågetjänsten" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/333415?format=jpeg&nocache=1759180596397" alt="Validera data med frågetjänsten"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475329?format=jpeg&nocache=1759180596397&captions=swe" alt="Validera data med frågetjänsten"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
