@@ -181,7 +181,7 @@ Exempeldata har utformats så att kundprofiler i realtid som kombinerar data fr�
 ![Öppnar en profil](../assets/data-generator/images/validation-profile-open.png)
 
 Genom att bläddra igenom data på flikarna **[!UICONTROL Attributes]** och **[!UICONTROL Events]** bör du se att profilen innehåller data från de olika datafilerna:
-![Händelsedata från offlineinköpshändelsefilen ](../assets/data-generator/images/validation-profile-events.png)
+![Händelsedata från offlineinköpshändelsefilen &#x200B;](../assets/data-generator/images/validation-profile-events.png)
 
 ## Nästa steg
 

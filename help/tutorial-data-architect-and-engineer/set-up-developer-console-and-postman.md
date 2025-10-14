@@ -89,7 +89,7 @@ Om du vill använda API-autentiseringsuppgifterna för att interagera med Experi
 1. [!UICONTROL Name] för dina API-autentiseringsuppgifter (`Credential in Luma Tutorial API Project`)
 1. [!UICONTROL Technical Account Email] av dina autentiseringsuppgifter (detta hjälper systemadministratören att hitta autentiseringsuppgifterna)
 
-   ![[!UICONTROL Name] och [!UICONTROL Technical Account Email] av dina autentiseringsuppgifter ](assets/postman-credentialDetails.png)
+   ![[!UICONTROL Name] och [!UICONTROL Technical Account Email] av dina autentiseringsuppgifter &#x200B;](assets/postman-credentialDetails.png)
 
 Här följer instruktionerna för systemadministratören:
 

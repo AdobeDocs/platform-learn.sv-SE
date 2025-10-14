@@ -104,7 +104,7 @@ Nu när du har skapat en datauppsättning och uppdaterat datauppsättningen för
 ![validera datamängdsbatchar för datalandningsplattform](assets/platform-dataset-batches.png){zoomable="yes"}
 
 Du bör även se exempelposter och -fält med funktionen **[!UICONTROL Preview dataset]**:
-![validera livscykeln som skickas till plattformsdatauppsättningen ](assets/lifecycle-platform-dataset.png){zoomable="yes"}
+![validera livscykeln som skickas till plattformsdatauppsättningen &#x200B;](assets/lifecycle-platform-dataset.png){zoomable="yes"}
 
 Ett robustare verktyg för datavalidering är plattformens [frågetjänst](https://experienceleague.adobe.com/sv/docs/platform-learn/tutorials/queries/explore-data).
 

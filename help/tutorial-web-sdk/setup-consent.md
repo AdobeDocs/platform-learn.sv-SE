@@ -124,7 +124,7 @@ Nu ska du konfigurera och implementera samtycke för det här scenariot:
 4. Aktivera taggfelsökning på Luma-webbplatsen och läs in sidan igen. I webbläsarens utvecklarkonsol ser du att defaultConsent är lika med **[!UICONTROL In]**
 5. Med den här konfigurationen fortsätter tillägget Experience Platform Web SDK att göra nätverksbegäranden, såvida inte en besökare bestämmer sig för att avvisa cookies och avanmäla sig:
 
-   ![Medgivande av inkluderat deltagande ](assets/consent-Implied-optin-default.png)
+   ![Medgivande av inkluderat deltagande &#x200B;](assets/consent-Implied-optin-default.png)
 
 
 

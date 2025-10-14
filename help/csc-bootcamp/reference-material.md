@@ -16,7 +16,7 @@ ht-degree: 0%
 
 ## Glid däck
 
-Denna dokumentation kan hjälpa er att bekanta er med konceptet med detta bootläger, liksom en innehållsleveranskedja. Men det finns alltid några saker som vi ville visa men inte kunde inkludera längre. Den här informationen finns i [följande bildspel](https://adobe.sharepoint.com/:p:/r/sites/SWEnterpriseMarketingTeam/Shared%20Documents/Bootcamps/Content%20Supply%20Chain%20Bootcamp/Experience%20Makers%20Content%20Supply%20Chain%20Slide%20Deck.pptx?d=w1a3787d39c3a43ab941cfd0069f8383a&amp;csf=1&amp;web=1&amp;e=57aFUU) och i [Art of the Possible Demo](https://xd.adobe.com/view/45ea642f-69fb-4bbe-bba6-6915a3709a6d-10b9/?fullscreen).
+Denna dokumentation kan hjälpa er att bekanta er med konceptet med detta bootläger, liksom en innehållsleveranskedja. Men det finns alltid några saker som vi ville visa men inte kunde inkludera längre. Den här informationen finns i [följande bildspel](https://adobe.sharepoint.com/:p:/r/sites/SWEnterpriseMarketingTeam/Shared%20Documents/Bootcamps/Content%20Supply%20Chain%20Bootcamp/Experience%20Makers%20Content%20Supply%20Chain%20Slide%20Deck.pptx?d=w1a3787d39c3a43ab941cfd0069f8383a&csf=1&web=1&e=57aFUU) och i [Art of the Possible Demo](https://xd.adobe.com/view/45ea642f-69fb-4bbe-bba6-6915a3709a6d-10b9/?fullscreen).
 
 ## Möt Adobe
 

@@ -251,7 +251,7 @@ Nu när den grundläggande implementeringsdelen är klar skapar du en XT-aktivit
 1. Spara aktiviteten
 1. Om du känner dig trygg med dina ändringar kan du aktivera din aktivitet. Om du vill förhandsgranska upplevelsen utan att aktivera kan du annars kopiera [QA-förhandsgransknings-URL:en](https://experienceleague.adobe.com/sv/docs/target/using/activities/activity-qa/activity-qa).
 1. Läs in Lumas hemsida så bör du se hur ändringarna tillämpas
-1. Efter några timmar bör du kunna se aktivitetsdata och konverteringar för Target i Adobe Analytics. Mer information om [Analytics for Target-rapportering (A4T) ](https://experienceleague.adobe.com/sv/docs/target/using/integrate/a4t/reporting) finns i målguiden.
+1. Efter några timmar bör du kunna se aktivitetsdata och konverteringar för Target i Adobe Analytics. Mer information om [Analytics for Target-rapportering (A4T) &#x200B;](https://experienceleague.adobe.com/sv/docs/target/using/integrate/a4t/reporting) finns i målguiden.
 
 
 

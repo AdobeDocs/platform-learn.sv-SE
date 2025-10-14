@@ -113,7 +113,7 @@ Låt oss skapa identitetsnamnområdet `Luma CRM Id`:
    ![Identitetsnamnområde](assets/identity-createUsingApi.png)
 
 Om du återgår till användargränssnittet bör du nu se dina tre nya anpassade namnutrymmen:
-![Identitetsnamnområde ](assets/identity-newIdentities.png)
+![Identitetsnamnområde &#x200B;](assets/identity-newIdentities.png)
 
 
 ## Etikettera identitetsfält i scheman
@@ -136,7 +136,7 @@ Låt oss lägga till en primär identitet för `Luma Loyalty Schema`:
 1. Välj **[!UICONTROL Apply]**
 1. Välj **[!UICONTROL Save]**
 
-   ![Primär identitet ](assets/identity-loyalty-primary.png)
+   ![Primär identitet &#x200B;](assets/identity-loyalty-primary.png)
 
 Upprepa processen för ett annat schema:
 

@@ -151,6 +151,6 @@ Gå till **CALL STACK** i VSC, klicka på pilen i det projekt som körs och klic
 
 ## Nästa steg
 
-Gå till [2.4.7 från början till slut ](./ex7.md){target="_blank"}
+Gå till [2.4.7 från början till slut &#x200B;](./ex7.md){target="_blank"}
 Gå tillbaka till [Real-Time CDP: Audience Activation till Microsoft Azure Event Hub](./segment-activation-microsoft-azure-eventhub.md){target="_blank"}
 Gå tillbaka till [Alla moduler](./../../../../overview.md){target="_blank"}

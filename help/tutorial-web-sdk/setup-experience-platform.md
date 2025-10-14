@@ -66,7 +66,7 @@ Låt oss skapa en datauppsättning för dina webbhändelsedata för Luma:
 
 1. Ange ett **[!UICONTROL Name]** och valfritt **[!UICONTROL Description]** för datauppsättningen. Använd `Luma Web Event Data` för den här övningen och välj sedan **[!UICONTROL Finish]**
 
-   ![Datauppsättningsnamn ](assets/experience-platform-create-dataset-schema-name.png)
+   ![Datauppsättningsnamn &#x200B;](assets/experience-platform-create-dataset-schema-name.png)
 
 En datauppsättning har nu konfigurerats för att börja samla in data från din Platform Web SDK-implementering.
 

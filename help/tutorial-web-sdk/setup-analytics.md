@@ -445,10 +445,10 @@ I **[!UICONTROL "Web SDK Tutorial 3"]** Assurance Session anger du **[!UICONTROL
 ### Experience Cloud ID-validering
 
 Om du vill validera att Adobe Analytics hämtar ECID-numret markerar du en fyr och öppnar nyttolasten.  Leverantören för denna fyr bör vara **[!UICONTROL com.adobe.analytics.hitdebugger]**
-![ Adobe Analytics-validering med Assurance ](assets/assurance-hitdebugger-payload.png)
+![&#x200B; Adobe Analytics-validering med Assurance &#x200B;](assets/assurance-hitdebugger-payload.png)
 
 Bläddra sedan nedåt till **[!UICONTROL mcvisId]** för att verifiera att ECID:t har hämtats korrekt
-![ Experience Cloud ID-validering med Assurance ](assets/assurance-hitdebugger-mcvisId.png)
+![&#x200B; Experience Cloud ID-validering med Assurance &#x200B;](assets/assurance-hitdebugger-mcvisId.png)
 
 ### Validering av vyer av innehållssidor
 

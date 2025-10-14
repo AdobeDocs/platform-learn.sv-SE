@@ -151,7 +151,7 @@ Det är ett måste-ha-objekt för alla webbrelaterade datainsamlingar eftersom d
 >
 >
 >Den här inställningen beskrivs mer under lektionen [Konfigurera Experience Platform](setup-experience-platform.md).
->&#x200B;>![Profilschema ](assets/schema-profile.png)
+>&#x200B;>![Profilschema &#x200B;](assets/schema-profile.png)
 
 Slutför den här lektionen genom att välja **[!UICONTROL Save]** överst till höger.
 

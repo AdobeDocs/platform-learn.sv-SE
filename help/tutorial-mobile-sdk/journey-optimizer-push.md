@@ -498,7 +498,7 @@ Nästa steg är att skapa den resa som utlöser sändningen av push-meddelandet 
    1. Välj **[!UICONTROL Ok]**.
       ![Resans egenskaper](assets/ajo-journey-properties.png){zoomable="yes"}
 
-1. Tillbaka på arbetsytan på resan, från **[!UICONTROL EVENTS]**, dra och släpp ![ Event](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Globe_18_N.svg) **[!DNL LumaTestEvent]** på arbetsytan där den visas **[!UICONTROL Select an entry event or a read audience activity]**.
+1. Tillbaka på arbetsytan på resan, från **[!UICONTROL EVENTS]**, dra och släpp ![&#x200B; Event](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Globe_18_N.svg) **[!DNL LumaTestEvent]** på arbetsytan där den visas **[!UICONTROL Select an entry event or a read audience activity]**.
 
    * Ange **[!UICONTROL Events: LumaTestEvent]**, till exempel **[!UICONTROL Label]**, på panelen `Luma Test Event`.
 

@@ -179,7 +179,7 @@ Huvuddelen av affärslogiken kräver att man samlar kontaktytorna för en kund o
 
 ### Funktioner som definieras av Adobe
 
-Adobe har lagt till en uppsättning **Adobe-definierade funktioner** i SQL-standardsyntaxen som gör att du bättre kan förstå dina upplevelsedata. I de följande frågorna får du lära dig mer om dessa ADF-funktioner. Du hittar mer information och den fullständiga listan [ i dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/query/sql/adobe-defined-functions.html?lang=sv-SE).
+Adobe har lagt till en uppsättning **Adobe-definierade funktioner** i SQL-standardsyntaxen som gör att du bättre kan förstå dina upplevelsedata. I de följande frågorna får du lära dig mer om dessa ADF-funktioner. Du hittar mer information och den fullständiga listan [&#x200B; i dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/query/sql/adobe-defined-functions.html?lang=sv-SE).
 
 ### Vad gör folk på webbplatsen innan de kommer till sidan&quot;Avbryt tjänst&quot; som den tredje sidan i en session?
 

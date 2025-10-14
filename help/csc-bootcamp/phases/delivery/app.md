@@ -51,7 +51,7 @@ Eftersom detta inte är en officiellt distribuerad app är iOS-konfigurationen n
 
 - Då öppnas en webbsida där du kan öppna appen på din iPhone. Klicka på knappen &quot;Expo Go&quot; för att öppna den i det program du just laddat ned.
 
-![Klicka på knappen för att exportera ](./images/delivery-app-ios-open-expo.png)
+![Klicka på knappen för att exportera &#x200B;](./images/delivery-app-ios-open-expo.png)
 
 - I den dialogruta som öppnas väljer du&quot;Öppna&quot; så att programmet Expo Go kan läsas in med rätt information.
 

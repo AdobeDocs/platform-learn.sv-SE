@@ -114,7 +114,7 @@ Nu när vi har meta:altId för schemat kan vi aktivera det för profilen:
    ![Aktivera CRM-schemat för profilen med din anpassade meta:altIid som används som SCHEMA_ID-parameter](assets/profile-crm-enableProfile.png)
 
 Du bör kunna se i användargränssnittet att alla fem scheman är aktiverade för profilen (du kan behöva SKIFT-läsa in igen för att se att `Luma CRM Schema` är aktiverat):
-![ Alla scheman är aktiverade ](assets/profile-allSchemasEnabled.png)
+![&#x200B; Alla scheman är aktiverade &#x200B;](assets/profile-allSchemasEnabled.png)
 
 
 ## Aktivera datauppsättningar för kundprofil i realtid med hjälp av användargränssnittet i plattformen
@@ -125,7 +125,7 @@ Datauppsättningarna måste även aktiveras för profilen, och processen är än
 1. Växla **[!UICONTROL Profile]**
 1. Bekräfta genom att trycka på knappen **[!UICONTROL Enable]** i bekräftelsemodal
 
-   ![ Profilväxling ](assets/profile-loyalty-enableDataset.png)
+   ![&#x200B; Profilväxling &#x200B;](assets/profile-loyalty-enableDataset.png)
 
 Upprepa stegen ovan för dessa andra datauppsättningar:
 

@@ -70,7 +70,7 @@ Om du inte har använt Platform Web SDK tidigare behöver du inte bekymra dig - 
 
 ## at.js-funktioner och motsvarigheter till Platform Web SDK
 
-Många at.js-funktioner har en likvärdig metod med Platform Web SDK som beskrivs i tabellen nedan. Mer information om funktionerna [ at.js](https://developer.adobe.com/target/implement/client-side/atjs/atjs-functions/atjs-functions/) finns i Adobe Target Developer Guide.
+Många at.js-funktioner har en likvärdig metod med Platform Web SDK som beskrivs i tabellen nedan. Mer information om funktionerna [&#x200B; at.js](https://developer.adobe.com/target/implement/client-side/atjs/atjs-functions/atjs-functions/) finns i Adobe Target Developer Guide.
 
 | funktionen at.js 2.x | SDK-motsvarighet för plattformar |
 | --- | --- | 
@@ -93,7 +93,7 @@ At.js-biblioteket kan konfigureras och laddas ned med olika inställningar i må
 | `clientCode` | Automatiskt konfigurerad |
 | `cookieDomain` | Ej tillämpligt |
 | `crossDomain` | Ange alternativet `thirdPartyCookiesEnabled` till `true` med kommandot `configure` för att aktivera cookies från första och tredje part för korsdomänsanvändning |
-| `cspScriptNonce` och `cspStyleNonce` | Läs dokumentationen om hur du konfigurerar en CSP[ i ](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-a-csp.html?lang=sv-SE)konfigurationen. |
+| `cspScriptNonce` och `cspStyleNonce` | Läs dokumentationen om hur du konfigurerar en CSP[&#x200B; i &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/configuring-a-csp.html?lang=sv-SE)konfigurationen. |
 | `dataProviders` | Stöds inte |
 | `decisioningMethod` | Alla plattformswebbkommandon för SDK `sendEvent` använder beslut på serversidan. Hybrid- och enhetsbeslut stöds inte. |
 | `defaultContentHiddenStyle` och `defaultContentVisibleStyle` | Gäller endast med at.js 1.x. Precis som i at.js 2.x kan du använda anpassad kod för att reducera eventuella flimmer för formulärbaserade upplevelser. |

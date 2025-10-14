@@ -98,7 +98,7 @@ Du kan hitta identifierarna genom att öppna ett schema och titta på objektet `
 
 ![demo](./images/commerce.png)
 
-- Förhandsgranska alla [datauppsättningar](https://experience.adobe.com/platform/dataset/browse?limit=50&amp;page=1&amp;sortDescending=1&amp;sortField=created) och titta på data
+- Förhandsgranska alla [datauppsättningar](https://experience.adobe.com/platform/dataset/browse?limit=50&page=1&sortDescending=1&sortField=created) och titta på data
 
 Nu kan du börja använda användargränssnittet i Customer Journey Analytics.
 

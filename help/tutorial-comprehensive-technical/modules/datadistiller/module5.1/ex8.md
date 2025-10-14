@@ -34,7 +34,7 @@ Icke-interaktiv innebär att en begäran om att köra en fråga inte resulterar 
 
 ## Exempelfråga
 
-Som en exempelfråga använder du den första frågan som listas i [ 4.3 - Frågor, frågor, frågor... och segmentanalys](./ex3.md):
+Som en exempelfråga använder du den första frågan som listas i [&#x200B; 4.3 - Frågor, frågor, frågor... och segmentanalys](./ex3.md):
 
 Hur många produktvisningar har vi dagligen?
 

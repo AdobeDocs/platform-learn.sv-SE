@@ -610,7 +610,7 @@ Implementera koden i projektet igen.
       * ställer in en upplevelsehändelse med hjälp av kartan,
       * skickar upplevelsehändelsen med API:t [`Edge.sendEvent`](https://developer.adobe.com/client-sdks/documentation/edge-network/api-reference/#sendevent).
 
-1. Navigera till **[!UICONTROL Android]** ![ ](/help/assets/icons/ChevronDown.svg)**[!DNL app]**>**[!DNL kotlin+java]**>**[!DNL com.adobe.luma.tutorial.android]**>**[!UICONTROL views]**>**[!UICONTROL LoginSheet.kt]**
+1. Navigera till **[!UICONTROL Android]** ![&#x200B; &#x200B;](/help/assets/icons/ChevronDown.svg)**[!DNL app]**>**[!DNL kotlin+java]**>**[!DNL com.adobe.luma.tutorial.android]**>**[!UICONTROL views]**>**[!UICONTROL LoginSheet.kt]**
 
    1. Lägg till följande markerade kod i händelsen **[!UICONTROL Button]** **[!UICONTROL onClick]**:
 

@@ -57,7 +57,7 @@ I verkligheten är nästa steg i processen vanligtvis att låta QA-teamet valide
 
 1. Öppna sidan [!UICONTROL Environments] i taggegenskapen
 
-1. Klicka på ikonen ![Installera ](images/launch-installIcon.png) på raden [!UICONTROL Staging] för att öppna den modala
+1. Klicka på ikonen ![Installera &#x200B;](images/launch-installIcon.png) på raden [!UICONTROL Staging] för att öppna den modala
 
    ![Gå till sidan för miljöer och klicka för att öppna modala](images/publishing-getStagingCode.png)
 

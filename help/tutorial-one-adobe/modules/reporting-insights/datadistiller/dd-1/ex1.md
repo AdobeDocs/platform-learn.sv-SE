@@ -36,7 +36,7 @@ Kontrollera att du har installerat den exakta versionen av **npgsql** som anges 
 
 För Windows- och Mac-användare
 
-[Installera skrivbordet ](https://experienceleague.adobe.com/docs/experience-platform/query/clients/tableau.html?lang=sv-SE) enligt dokumentationen.
+[Installera skrivbordet &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/query/clients/tableau.html?lang=sv-SE) enligt dokumentationen.
 
 En 14-dagars testperiod automatiskt.
 

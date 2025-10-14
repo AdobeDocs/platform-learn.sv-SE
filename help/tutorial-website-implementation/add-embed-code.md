@@ -46,7 +46,7 @@ Det här är de enda miljöer som vi behöver för att slutföra självstudiekur
 
 Nu kopierar vi inbäddningskoden:
 
-1. Klicka på ikonen ![Installera ](images/launch-installIcon.png) på raden **[!UICONTROL Development]** för att öppna modalen.
+1. Klicka på ikonen ![Installera &#x200B;](images/launch-installIcon.png) på raden **[!UICONTROL Development]** för att öppna modalen.
 
 1. Observera att taggar som standard använder asynkrona inbäddningskoder
 

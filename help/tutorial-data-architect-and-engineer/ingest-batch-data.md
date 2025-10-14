@@ -180,7 +180,7 @@ Nu kan vi överföra data till gruppen:
    ![Data överförda](assets/ingestion-crm-uploadFile.png)
 
 Om du nu tittar på din batch i användargränssnittet för plattformen ser du att den har statusen [!UICONTROL Loading]:
-![ Gruppinläsning ](assets/ingestion-crm-loading.png)
+![&#x200B; Gruppinläsning &#x200B;](assets/ingestion-crm-loading.png)
 
 Eftersom API:t för batch ofta används för att överföra flera filer måste du ange för Platform när en batch är slutförd, vilket vi gör i nästa steg.
 
@@ -218,7 +218,7 @@ Det finns en intressant sak som just hände som jag vill understryka. Öppna den
 
 Grattis, du har just sammanfogat profiler!
 
-![Profilen sammanfogad ](assets/ingestion-crm-profileLinkedIdentities.png)
+![Profilen sammanfogad &#x200B;](assets/ingestion-crm-profileLinkedIdentities.png)
 
 #### Validera med dataöverföringshändelser
 

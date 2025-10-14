@@ -29,7 +29,7 @@ Mer information om schemakompositionsmodellen, inklusive designprinciper och bä
 
 >[!TIP]
 >
->Om du känner till SDR (Analytics Solution Design Reference) kan du se ett schema som en mer robust SDR. Mer information finns i [Skapa och underhåll ett SDR-dokument ](https://experienceleague.adobe.com/sv/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr).
+>Om du känner till SDR (Analytics Solution Design Reference) kan du se ett schema som en mer robust SDR. Mer information finns i [Skapa och underhåll ett SDR-dokument &#x200B;](https://experienceleague.adobe.com/sv/docs/analytics-learn/tutorials/implementation/implementation-basics/creating-and-maintaining-an-sdr).
 
 ## Förhandskrav
 

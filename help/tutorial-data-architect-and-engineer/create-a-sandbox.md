@@ -58,7 +58,7 @@ Låt oss skapa en sandlåda:
    >Även om du kan använda valfria godtyckliga värden för ditt sandlådenamn och din titel, rekommenderas att du följer de föreslagna värdena eftersom vi kommer att referera till dessa etiketter genom hela självstudiekursen. Om det finns flera personer i organisationen som slutför den här självstudiekursen kan du lägga till ditt namn i slutet av sandlådetiteln och namnet, till exempel luma-tutorial-igatiusjreilly.
 
 Det tar cirka 30 sekunder att skapa sandlådor. Under den tiden visas statusen [!UICONTROL Creating]. När sandlådan är helt skapad visas den som [!UICONTROL Active]:
-![ Aktiv status ](assets/sandbox-active.png)
+![&#x200B; Aktiv status &#x200B;](assets/sandbox-active.png)
 
 Vänta tills din sandlåda är [!UICONTROL Active] innan du fortsätter med nästa övning.
 

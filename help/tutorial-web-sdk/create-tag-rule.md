@@ -168,7 +168,7 @@ Börja med att spåra produktvyer på Lumas produktinformationssida:
 
 1. Välj **[!UICONTROL Add Rule]**
 1. Ge den namnet [!UICONTROL `ecommerce - library loaded - set product details variables - 20`]
-1. Välj symbolen ![+ ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) under Händelse för att lägga till en ny utlösare
+1. Välj symbolen ![+ &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) under Händelse för att lägga till en ny utlösare
 1. Under **[!UICONTROL Extension]** väljer du **[!UICONTROL Core]**
 1. Under **[!UICONTROL Event Type]** väljer du **[!UICONTROL Library Loaded (Page Top)]**
 1. Välj att öppna **[!UICONTROL Advanced Options]**, skriv in `20`. Det här ordningsvärdet garanterar att regeln körs _efter_ `all pages - library loaded - set global variables - 1` som anger den globala konfigurationen.
@@ -238,13 +238,13 @@ Jämför dataelementet med `productListItems`-strukturen (tips, det ska matcha).
 >[!IMPORTANT]
 >
 >Observera hur numeriska variabler översätts, med strängvärden i datalagret som `price` och `qty` omformaterade till tal i dataelementet. Dessa formatkrav är viktiga för dataintegriteten i Platform och bestäms under steget [Konfigurera scheman](configure-schemas.md). I exemplet använder **[!UICONTROL quantity]** datatypen **[!UICONTROL Integer]**.
->&#x200B;> ![XDM-schemadatatyp ](assets/set-up-analytics-quantity-integer.png)
+>&#x200B;> ![XDM-schemadatatyp &#x200B;](assets/set-up-analytics-quantity-integer.png)
 
 Låt oss mappa vår array till XDM-objektet:
 
 
 1. Skapa en ny regel med namnet `ecommerce - library loaded - set shopping cart variables - 20`
-1. Välj symbolen ![+ ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) under Händelse för att lägga till en ny utlösare
+1. Välj symbolen ![+ &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_AddCircle_18_N.svg) under Händelse för att lägga till en ny utlösare
 1. Under **[!UICONTROL Extension]** väljer du **[!UICONTROL Core]**
 1. Under **[!UICONTROL Event Type]** väljer du **[!UICONTROL Library Loaded (Page Top)]**
 1. Välj att öppna **[!UICONTROL Advanced Options]**, skriv in `20`

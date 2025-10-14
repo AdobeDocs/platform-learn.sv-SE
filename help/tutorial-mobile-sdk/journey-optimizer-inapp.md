@@ -93,7 +93,7 @@ Uppdatera Experience Edge-konfigurationen för att se till att data som skickas 
 
 1. I användargränssnittet för datainsamling väljer du **[!UICONTROL Datastreams]** och markerar ditt datastream, till exempel **[!DNL Luma Mobile App]**.
 1. Välj ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_MoreSmallList_18_N.svg) för **[!UICONTROL Experience Platform]** och välj ![Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) **[!UICONTROL Edit]** på snabbmenyn.
-1. Kontrollera att **[!UICONTROL Datastreams]** är markerat på skärmen ![ > ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Folder_18_N.svg)Mapp **[!UICONTROL Adobe Experience Platform]** > **[!UICONTROL Adobe Journey Optimizer]**. Mer information finns i [Adobe Experience Platform-inställningar](https://experienceleague.adobe.com/sv/docs/experience-platform/datastreams/configure).
+1. Kontrollera att **[!UICONTROL Datastreams]** är markerat på skärmen ![&#x200B; > &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Folder_18_N.svg)Mapp **[!UICONTROL Adobe Experience Platform]** > **[!UICONTROL Adobe Journey Optimizer]**. Mer information finns i [Adobe Experience Platform-inställningar](https://experienceleague.adobe.com/sv/docs/experience-platform/datastreams/configure).
 1. Välj **[!UICONTROL Save]** om du vill spara dataströmskonfigurationen.
 
 

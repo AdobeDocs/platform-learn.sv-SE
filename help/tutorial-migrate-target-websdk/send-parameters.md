@@ -412,17 +412,17 @@ alloy("sendEvent", {
 >[!TAB Taggar]
 
 [!UICONTROL ID]-värdet, [!UICONTROL Authenticated state] och [!UICONTROL Namespace] hämtas i ett [!UICONTROL Identity map]-dataelement:
-![Identitetskarta - dataelement som hämtar kund-ID:t ](assets/params-tags-customerIdDataElement.png){zoomable="yes"}
+![Identitetskarta - dataelement som hämtar kund-ID:t &#x200B;](assets/params-tags-customerIdDataElement.png){zoomable="yes"}
 
 Dataelementet [!UICONTROL Identity map] används sedan för att ställa in fältet [!UICONTROL identityMap] i dataelementet [!UICONTROL XDM object]:
-![ Identitetskarta, dataelement som används i XDM-objektdataelement ](assets/params-tags-customerIdInXDMObject.png){zoomable="yes"}
+![&#x200B; Identitetskarta, dataelement som används i XDM-objektdataelement &#x200B;](assets/params-tags-customerIdInXDMObject.png){zoomable="yes"}
 
 [!UICONTROL XDM object] ingår sedan i åtgärden [!UICONTROL Send event] för en regel:
 
 ![Inkludera ett XDM-objektdataelement i en Send-händelse](assets/params-tags-sendEvent-xdm.png){zoomable="yes"}
 
 I datastreams Adobe Target-tjänst måste du ange [!UICONTROL Target Third Party ID Namespace] till samma namnområde som används i dataelementet [!UICONTROL Identity map]:
-![Ange namnutrymmet för mål-ID för tredje part i datastream ](assets/params-tags-customerIdNamespaceInDatastream.png){zoomable="yes"}
+![Ange namnutrymmet för mål-ID för tredje part i datastream &#x200B;](assets/params-tags-customerIdNamespaceInDatastream.png){zoomable="yes"}
 
 >[!ENDTABS]
 

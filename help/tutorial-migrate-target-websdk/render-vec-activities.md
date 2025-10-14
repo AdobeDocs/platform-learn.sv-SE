@@ -28,7 +28,7 @@ Webbläsartillägget Visuell redigeringshjälp fungerar med webbplatser som anv�
 1. Navigera till webbläsartillägget [Adobe Experience Cloud Visual Editing Helper i Chrome Web Store](https://chrome.google.com/webstore/detail/adobe-experience-cloud-vi/kgmjjkfjacffaebgpkpcllakjifppnca).
 1. Klicka på Lägg till i **Chrome** > **Lägg till tillägg**.
 1. Öppna VEC i Target.
-1. Om du vill använda tillägget klickar du på ikonen för tillägget för visuell redigeringshjälp i webbläsaren ![Visual Editing Extension ](assets/VEC-Helper.png){zoomable="yes"} i Chrome webbläsares verktygsfält när du är i VEC- eller QA-läge.
+1. Om du vill använda tillägget klickar du på ikonen för tillägget för visuell redigeringshjälp i webbläsaren ![Visual Editing Extension &#x200B;](assets/VEC-Helper.png){zoomable="yes"} i Chrome webbläsares verktygsfält när du är i VEC- eller QA-läge.
 
 Hjälpprogrammet för visuell redigering aktiveras automatiskt när en webbplats öppnas i Target VEC för att underlätta redigeringen. Tillägget har inga villkorsinställningar. Tillägget hanterar alla inställningar automatiskt, inklusive inställningarna för cookies för samma plats.
 
@@ -36,7 +36,7 @@ Mer information om tillägget [Hjälp för visuell redigering](https://experienc
 
 >[!IMPORTANT]
 >
->Det nya [hjälptillägget ](https://chrome.google.com/webstore/detail/adobe-experience-cloud-vi/kgmjjkfjacffaebgpkpcllakjifppnca) för visuell redigering ersätter det tidigare [målwebbläsartillägget för VEC-hjälp](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html?lang=sv-SE). Om det äldre VEC Helper-tillägget är installerat bör det tas bort eller inaktiveras innan tillägget Visuell redigeringshjälp används.
+>Det nya [hjälptillägget &#x200B;](https://chrome.google.com/webstore/detail/adobe-experience-cloud-vi/kgmjjkfjacffaebgpkpcllakjifppnca) för visuell redigering ersätter det tidigare [målwebbläsartillägget för VEC-hjälp](https://experienceleague.adobe.com/docs/target/using/experiences/vec/troubleshoot-composer/vec-helper-browser-extension.html?lang=sv-SE). Om det äldre VEC Helper-tillägget är installerat bör det tas bort eller inaktiveras innan tillägget Visuell redigeringshjälp används.
 
 ## Begär och tillämpa innehåll automatiskt
 
@@ -128,7 +128,7 @@ alloy("sendEvent", {
 
 >[!NOTE]
 >
->Det går att [manuellt återge ändringar som gjorts ](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=sv-SE#manually-rendering-content) i Visual Experience Composer. Manuell återgivning av VEC-baserade ändringar är inte vanligt. Kontrollera om din at.js-implementering använder funktionen `getOffers()` för att manuellt köra en `pageLoad` Target-begäran utan att använda `applyOffers()` för att tillämpa innehållet på sidan.
+>Det går att [manuellt återge ändringar som gjorts &#x200B;](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=sv-SE#manually-rendering-content) i Visual Experience Composer. Manuell återgivning av VEC-baserade ändringar är inte vanligt. Kontrollera om din at.js-implementering använder funktionen `getOffers()` för att manuellt köra en `pageLoad` Target-begäran utan att använda `applyOffers()` för att tillämpa innehållet på sidan.
 
 Med Platform Web SDK får utvecklarna stor flexibilitet när det gäller att begära och återge innehåll. Mer information och mer information finns i [dedikerad dokumentation om återgivning av anpassat innehåll](https://experienceleague.adobe.com/docs/experience-platform/edge/personalization/rendering-personalization-content.html?lang=sv-SE).
 
@@ -255,7 +255,7 @@ Lägg till önskade konfigurationer:
 ![konfigurerar migreringsalternativen för Web SDK-taggtillägg](assets/tags-config-migration.png){zoomable="yes"}
 
 Skapa en regel med en [!UICONTROL Send event]-åtgärd och [!UICONTROL Render visual personalization decisions] vald:
-![Skicka en händelse med återgivningsanpassningar markerade i taggar ](assets/vec-sendEvent-renderTrue.png){zoomable="yes"}
+![Skicka en händelse med återgivningsanpassningar markerade i taggar &#x200B;](assets/vec-sendEvent-renderTrue.png){zoomable="yes"}
 
 >[!ENDTABS]
 

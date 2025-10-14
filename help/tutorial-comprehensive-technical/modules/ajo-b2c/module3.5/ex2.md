@@ -266,7 +266,7 @@ Bläddra upp till **målgrupp**. Klicka på **Välj målgrupp**.
 
 ![Journey Optimizer](./images/campaign2b.png)
 
-För **målgruppen** väljer du målgruppen som du skapade i [ 1.3.3 Skapa en federerad komposition ](./../../datacollection/module1.3/ex3.md) som har namnet `--aepUserLdap-- - CitiSignal Eligible for Fiber`. Klicka på **Spara**.
+För **målgruppen** väljer du målgruppen som du skapade i [&#x200B; 1.3.3 Skapa en federerad komposition &#x200B;](./../../datacollection/module1.3/ex3.md) som har namnet `--aepUserLdap-- - CitiSignal Eligible for Fiber`. Klicka på **Spara**.
 
 ![Journey Optimizer](./images/campaign2a.png)
 

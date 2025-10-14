@@ -123,7 +123,7 @@ När du har uppdaterat en användares attribut är det tillgängligt för andra 
    Den här koden:
 
    1. Anropar [`UserProfile.getUserAttributes`](https://developer.adobe.com/client-sdks/documentation/profile/api-reference/#getuserattributes)-API:t med attributnamnet `isPaidUser` som ett element i arrayen `attributeNames`.
-   1. Kontrollerar sedan värdet för attributet `isPaidUser` och placerar ett märke på ikonen `yes`UserCheckedOut![ i verktygsfältet längst upp till höger när ](/help/assets/icons/UserCheckedOut.svg) används.
+   1. Kontrollerar sedan värdet för attributet `isPaidUser` och placerar ett märke på ikonen `yes`UserCheckedOut![&#x200B; i verktygsfältet längst upp till höger när &#x200B;](/help/assets/icons/UserCheckedOut.svg) används.
 
 >[!TAB Android]
 

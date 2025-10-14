@@ -41,7 +41,7 @@ När lektionen är klar kan du:
 
 1. Logga in på [Adobe Experience Cloud](https://experiencecloud.adobe.com)
 
-1. Klicka på ikonen ![Solution Switcher ](images/launch-solutionSwitcher.png) för att öppna appväljaren
+1. Klicka på ikonen ![Solution Switcher &#x200B;](images/launch-solutionSwitcher.png) för att öppna appväljaren
 
 1. Välj **[!UICONTROL Launch/Data Collection]** på menyn ![Öppna lösningsväljaren med hjälp av ikonen och klicka på Starta/Datainsamling](images/launch-solutionSwitcherActivation.png)
 

@@ -175,7 +175,7 @@ Så här skapar du placeringen:
 1. När placeringen har skapats visas den i placeringslistan.
 1. Markera raden som innehåller din nya placering och notera placerings-ID, eftersom detta kan behövas för konfigurationen inom ditt beslutsomfång.
 
-   ![Se Placement-ID ](assets/decisioning-placement-id.png)
+   ![Se Placement-ID &#x200B;](assets/decisioning-placement-id.png)
 
 ### Beslutsregler för lojalitetsstatus
 

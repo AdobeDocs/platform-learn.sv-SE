@@ -34,7 +34,7 @@ När lektionen är klar kan du:
 
 1. Öppna sidan `Environments` i taggegenskapen
 
-1. Klicka på ikonen ![Installera ](images/launch-installIcon.png) på raden **[!UICONTROL Development]** för att öppna den modala
+1. Klicka på ikonen ![Installera &#x200B;](images/launch-installIcon.png) på raden **[!UICONTROL Development]** för att öppna den modala
 
 1. Klicka på ikonen Kopiera ![Kopiera](images/launch-copyIcon.png) för att kopiera inbäddningskoden till Urklipp
 

@@ -63,7 +63,7 @@ För att säkerställa att data som skickas från din mobilapp till Platform Edg
 
 1. I användargränssnittet för datainsamling väljer du **[!UICONTROL Datastreams]** och markerar ditt datastream, till exempel **[!DNL Luma Mobile App]**.
 1. Välj ![Mer](https://spectrum.adobe.com/static/icons/workflow_18/Smock_MoreSmallList_18_N.svg) för **[!UICONTROL Experience Platform]** och välj ![Redigera](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Edit_18_N.svg) **[!UICONTROL Edit]** på snabbmenyn.
-1. Kontrollera att **[!UICONTROL Datastreams]**, ![ och ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Folder_18_N.svg) är markerade på skärmen **[!UICONTROL Adobe Experience Platform]** > **[!UICONTROL Offer Decisioning]** Mapp **[!UICONTROL Edge Segmentation]** > **[!UICONTROL Adobe Journey Optimizer]**. Om du gör mållektionen väljer du också **[!UICONTROL Personalization Destinations]**. Mer information finns i [Adobe Experience Platform-inställningar](https://experienceleague.adobe.com/sv/docs/experience-platform/datastreams/configure).
+1. Kontrollera att **[!UICONTROL Datastreams]**, ![&#x200B; och &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Folder_18_N.svg) är markerade på skärmen **[!UICONTROL Adobe Experience Platform]** > **[!UICONTROL Offer Decisioning]** Mapp **[!UICONTROL Edge Segmentation]** > **[!UICONTROL Adobe Journey Optimizer]**. Om du gör mållektionen väljer du också **[!UICONTROL Personalization Destinations]**. Mer information finns i [Adobe Experience Platform-inställningar](https://experienceleague.adobe.com/sv/docs/experience-platform/datastreams/configure).
 1. Välj **[!UICONTROL Save]** om du vill spara dataströmskonfigurationen.
 
    ![AEP datastream-konfiguration](assets/datastream-aep-configuration-offers.png){zoomable="yes"}
@@ -272,7 +272,7 @@ Ditt beslut om erbjudandet, som består av en uppsättning erbjudanden, är nu k
 1. I Journey Optimizer-gränssnittet väljer du **[!UICONTROL Offers]**.
 1. Välj **[!UICONTROL Decisions]** i det övre fältet.
 1. Välj ditt beslut, till exempel **[!DNL Luma - Mobile App Decision]**.
-1. Välj **[!UICONTROL Decision scopes]** Kopiera![ ](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) i rutan **[!UICONTROL Copy]**.
+1. Välj **[!UICONTROL Decision scopes]** Kopiera![&#x200B; &#x200B;](https://spectrum.adobe.com/static/icons/workflow_18/Smock_Copy_18_N.svg) i rutan **[!UICONTROL Copy]**.
 1. Välj **[!UICONTROL Decision scope]** på snabbmenyn.
 
    ![Kopiera beslutsomfattning](assets/ajo-copy-decisionscope.png){zoomable="yes"}

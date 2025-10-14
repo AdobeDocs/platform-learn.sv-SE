@@ -113,7 +113,7 @@ Börja med att skapa två dataelement:
 1. Klicka på **[!UICONTROL Data Elements]** i den vänstra navigeringen
 1. Klicka på knappen **[!UICONTROL Add Data Element]**
 
-   ![Klicka på Lägg till dataelement ](images/idservice-addDataElement1.png)
+   ![Klicka på Lägg till dataelement &#x200B;](images/idservice-addDataElement1.png)
 
 1. Namnge dataelementet `Authentication State`
 1. För **[!UICONTROL Data Element Type]** väljer du **[!UICONTROL Custom Code]**
