@@ -47,7 +47,7 @@ När användaren klickar på en länk skickar webbläsaren en begäran till en s
 
 De flesta webbläsare har ett adressfält som visar en del av eller hela adressen för en webbsida. När webbläsaren&quot;hämtar&quot; sidan för länken som vi klickade på visas&quot;adressen&quot; för sidan i det här adressfältet. Så vad är &quot;adressen&quot; för en webbsida?
 
-`https://business.adobe.com/products/experience-platform/adobe-experience-platform.html` ovan är adressen till en sida på webben och kallas URL eller Uniform Resource Locator. URL-adresser kan referera till en sida som den här, en bildfil, en video eller andra filtyper.
+`https://business.adobe.com/se/products/experience-platform/adobe-experience-platform.html` ovan är adressen till en sida på webben och kallas URL eller Uniform Resource Locator. URL-adresser kan referera till en sida som den här, en bildfil, en video eller andra filtyper.
 
 ![Delar av en URL](../assets/api101-url-parts.jpg)
 
@@ -69,7 +69,7 @@ Det är mycket vanligt att termen _host_ refererar till ett fullständigt domän
 
 **Ursprung**
 
-Origin är en annan term som du bör vara medveten om att den är närbesläktad med delar av en URL. På en grundläggande nivå är en origo ungefär `scheme` plus `host` plus `domain` som `https://business.adobe.com`. Olika värden representerar ofta olika ursprung som `https://business.adobe.com` och `http://business.adobe.com` är inte samma ursprung eftersom de har olika scheman. `https://www.adobe.com` och `https://business.adobe.com` är inte heller samma ursprung i många användningsområden på grund av de olika underdomänerna.
+Origin är en annan term som du bör vara medveten om att den är närbesläktad med delar av en URL. På en grundläggande nivå är en origo ungefär `scheme` plus `host` plus `domain` som `https://business.adobe.com/se`. Olika värden representerar ofta olika ursprung som `https://business.adobe.com/se` och `http://business.adobe.com/se` är inte samma ursprung eftersom de har olika scheman. `https://www.adobe.com` och `https://business.adobe.com/se` är inte heller samma ursprung i många användningsområden på grund av de olika underdomänerna.
 
 **Sökväg**
 
@@ -133,13 +133,13 @@ Det finns flera andra, men det här är en lista över de vanligaste metoderna n
 
 Nu när du har de grundläggande villkoren, begreppen och stegen som ingår i API:erna kan vi titta på en exempelbegäran om API i praktiken.
 
-Sidan från webbläsarexemplet har URL:en `https://business.adobe.com/products/experience-platform/adobe-experience-platform.html`. När du klickar på länken Adobe Experience Platform gör webbläsaren en `GET`-begäran för den här sidan. Eftersom vi har webbläsaren att göra jobbet åt oss behöver vi bara klicka, men om en programmerare vill att det ska ske i ett programvaruprogram måste de ange all information som krävs för att API-begäran ska lyckas.
+Sidan från webbläsarexemplet har URL:en `https://business.adobe.com/se/products/experience-platform/adobe-experience-platform.html`. När du klickar på länken Adobe Experience Platform gör webbläsaren en `GET`-begäran för den här sidan. Eftersom vi har webbläsaren att göra jobbet åt oss behöver vi bara klicka, men om en programmerare vill att det ska ske i ett programvaruprogram måste de ange all information som krävs för att API-begäran ska lyckas.
 
 Så här kan det se ut i koden:
 
 ```js
 fetch(
-  "https://business.adobe.com/products/experience-platform/adobe-experience-platform.html",
+  "https://business.adobe.com/se/products/experience-platform/adobe-experience-platform.html",
   {
     headers: {
       accept:

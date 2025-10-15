@@ -52,7 +52,7 @@ Som med allt som råkar ut för felsteg och felkommunikation finns det alltid et
 
 Helst bör marknadsföringsteamet använda en lösning för hantering av arbete som möjliggör samarbete mellan olika funktioner och kopplar projekt till planerade, datadrivna resultat. Det bör också ge marknadsföringsteamet möjlighet att prioritera arbetet strategiskt och presentera dessa prioriteringar för ert kreativa team. Därifrån bör det kreativa informationsmaterialet, innehållsversionerna och feedback knytas ihop i varje projekt så att teamet inte behöver söka i gamla e-postmeddelanden för att hitta det de letar efter.
 
-Det kreativa teamet bör vara konfigurerat med [en bra DAM](https://business.adobe.com/products/experience-manager/assets/digital-asset-management.html) [(DAM)](https://business.adobe.com/products/experience-manager/assets/digital-asset-management.html) [system](https://business.adobe.com/products/experience-manager/assets/digital-asset-management.html) som är integrerad med dina kreativa verktyg och verktyg. På så sätt är det enkelt för dem att hitta, använda, uppdatera eller återanvända relevanta resurser. Genom att göra allt detta kan ni förbättra er hastighet på marknaden och förenkla interna rutiner och processer.
+Det kreativa teamet bör vara konfigurerat med [en bra DAM](https://business.adobe.com/se/products/experience-manager/assets/digital-asset-management.html) [(DAM)](https://business.adobe.com/se/products/experience-manager/assets/digital-asset-management.html) [system](https://business.adobe.com/se/products/experience-manager/assets/digital-asset-management.html) som är integrerad med dina kreativa verktyg och verktyg. På så sätt är det enkelt för dem att hitta, använda, uppdatera eller återanvända relevanta resurser. Genom att göra allt detta kan ni förbättra er hastighet på marknaden och förenkla interna rutiner och processer.
 
 ### Öka effektiviteten i produktionen med smidiga arbetsflöden
 
@@ -70,9 +70,9 @@ Dessutom använder en riktigt bra innehållsleveranskedja ett DAM som automatisk
 
 ## På Adobe skapar vi en ledande innehållsleveranskedja
 
-Vår egen [Adobe Experience Cloud-verksamhet](https://business.adobe.com/) fokuserar på att följa de steg som beskrivs ovan för att ge liv åt våra kampanjer och stödja flera segment. Vår vision har varit att leverera övertygande innehåll globalt som är anpassat till vårt kampanjramverk och vårt budskap.
+Vår egen [Adobe Experience Cloud-verksamhet](https://business.adobe.com/se/) fokuserar på att följa de steg som beskrivs ovan för att ge liv åt våra kampanjer och stödja flera segment. Vår vision har varit att leverera övertygande innehåll globalt som är anpassat till vårt kampanjramverk och vårt budskap.
 
-Nyckeln till vår process för att skapa allt innehåll är att [Adobe Workfront](https://business.adobe.com/products/workfront/main.html) och [Adobe Experience Manager Assets](https://business.adobe.com/products/experience-manager/assets/aem-assets.html) kopplas ihop. Låt oss ta en titt på hur vi har närmat vår process med samma tre högnivåfaser.
+Nyckeln till vår process för att skapa allt innehåll är att [Adobe Workfront](https://business.adobe.com/se/products/workfront/main.html) och [Adobe Experience Manager Assets](https://business.adobe.com/se/products/experience-manager/assets/aem-assets.html) kopplas ihop. Låt oss ta en titt på hur vi har närmat vår process med samma tre högnivåfaser.
 
 Vi börjar med **planering**, där vi tar emot hundratals innehållsförfrågningar från hela företaget och sedan prioriterar dem mot våra kvartalsvisa prioriteringar. Vi använder sedan en kontrollpanel för innehållsförslag i Workfront för att skapa transparens, så att vi kan anpassa oss till våra intressenter och snabbt få en sign-off för våra marknadsförings-, kreativa, webb- och säljteam. Genom att göra detta skapar vi ett register över vad vi åtagit oss för kvarteret, och vi ger även våra kreativa team och webbteam insyn i den totala ordervolymen så att de kan planera för resurser. Dessutom kan chefer enkelt övervaka arbetsbelastningen för sina team.
 

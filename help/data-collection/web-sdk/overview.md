@@ -24,7 +24,7 @@ Lär dig om hur webb-SDK för Adobe Experience Platform och Edge Network gör de
 
 >[!NOTE]
 >
->Den här videon är ett utdrag från Adobe Summit 2020-sessionen *[Möt Alloy.js och Aldrig tagga för en eVar eller Mbox Igen](https://business.adobe.com/summit/2020/with-alloy-js-never-tag-for-an-evar-or-mbox-again.html)*.
+>Den här videon är ett utdrag från Adobe Summit 2020-sessionen *[Möt Alloy.js och Aldrig tagga för en eVar eller Mbox Igen](https://business.adobe.com/se/summit/2020/with-alloy-js-never-tag-for-an-evar-or-mbox-again.html)*.
 >
 >Vidarebefordringsfunktionen på serversidan som beskrivs i den här videon är nu allmänt tillgänglig för alla licensierade kunder. Se [dokumentationen för vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=sv-SE)
 

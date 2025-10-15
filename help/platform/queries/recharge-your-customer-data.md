@@ -49,4 +49,4 @@ order by price desc)D;
 
 >[!NOTE]
 >
->Den här videon är ett utdrag från Adobe Summit 2020-sessionen *[Återvinning av flerkanalsdata för elupplevelser](https://business.adobe.com/summit/2022/sessions/recharging-omnichannel-data-for-electrifying-exper-s409.html)*.
+>Den här videon är ett utdrag från Adobe Summit 2020-sessionen *[Återvinning av flerkanalsdata för elupplevelser](https://business.adobe.com/se/summit/2022/sessions/recharging-omnichannel-data-for-electrifying-exper-s409.html)*.
