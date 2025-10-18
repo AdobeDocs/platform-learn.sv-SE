@@ -34,7 +34,7 @@ Lär dig hur du hanterar användarbehörigheter.
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="add-users.md" title="Lägg till användare" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/336081?format=jpeg&nocache=1740173302150" alt="Lägg till användare"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475977?captions=swe&format=jpeg&nocache=1740173302150" alt="Lägg till användare"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -80,7 +80,7 @@ Lär dig hur du hanterar användarbehörigheter.
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="add-product-administrators.md" title="Lägg till administratörer" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/333860?format=jpeg&nocache=1740173302208" alt="Lägg till administratörer"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475945?captions=swe&format=jpeg&nocache=1740173302208" alt="Lägg till administratörer"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

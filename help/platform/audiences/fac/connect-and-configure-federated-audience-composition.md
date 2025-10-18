@@ -20,4 +20,4 @@ ht-degree: 1%
 
 Lär dig hur du ansluter till ditt datalager och konfigurerar anslutningen för Federated Audience Composition. Mer information finns i [Dokumentation för sammanställning av externa målgrupper](https://experienceleague.adobe.com/sv/docs/federated-audience-composition/using/home){target="_blank"}.
 
->[!VIDEO](https://video.tv.adobe.com/v/3433246/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3451560/?captions=swe&learn=on&enablevpops)

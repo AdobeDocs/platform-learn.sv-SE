@@ -290,7 +290,7 @@ Läs om målgrupper i Adobe Experience Platform.
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="fac/overview-of-federated-audience-composition.md" title="Översikt över sammanställning av federerad publik" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3432261/?format=jpeg&nocache=1740173579477" alt="Översikt över sammanställning av federerad publik"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3450886/?captions=swe&format=jpeg&nocache=1740173579477" alt="Översikt över sammanställning av federerad publik"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -313,7 +313,7 @@ Läs om målgrupper i Adobe Experience Platform.
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="fac/connect-and-configure-federated-audience-composition.md" title="Anslut och konfigurera sammanställning av federerad publik" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3433246/?format=jpeg&nocache=1740173579488" alt="Anslut och konfigurera sammanställning av federerad publik"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3451560/?captions=swe&format=jpeg&nocache=1740173579488" alt="Anslut och konfigurera sammanställning av federerad publik"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

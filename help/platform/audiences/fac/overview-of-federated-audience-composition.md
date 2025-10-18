@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Experience Platform Federated Audience Composition ger Adobe Real-Time CDP- och Adobe Journey Optimizer-användare flexibel och effektiv datahantering. Med Federated Audience Composition kan ni få tillgång till ert Enterprise-datalager med ett marknadsföringsvänligt gränssnitt för att skapa målgrupper och utnyttja datauppsättningar i Adobe Experience Platform arbetsflöden utan att behöva importera alla data från ert datalager till Experience Platform.
 
->[!VIDEO](https://video.tv.adobe.com/v/3432261/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3450886/?captions=swe&learn=on&enablevpops)

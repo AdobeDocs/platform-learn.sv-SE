@@ -128,7 +128,7 @@ Kom igång genom att kontakta Adobe Experience Platform-administratören för at
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="../admin/add-product-administrators.md" title="Lägg till produktadministratörer för Adobe Experience Platform-baserade program" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/333860?format=jpeg&nocache=1756504085478" alt="Lägg till produktadministratörer för Adobe Experience Platform-baserade program"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475945?captions=swe&format=jpeg&nocache=1756504085478" alt="Lägg till produktadministratörer för Adobe Experience Platform-baserade program"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>

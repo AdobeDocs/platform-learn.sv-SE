@@ -18,4 +18,4 @@ ht-degree: 1%
 
 Lär dig hur du lägger till dataintegritetsetiketter i analysvariabler, inklusive en beskrivning av vad varje etiketttyp betyder och när de ska användas. Mer information finns i [dokumentationen för sekretesstjänster](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=sv).
 
->[!VIDEO](https://video.tv.adobe.com/v/336077?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3450666?captions=swe&learn=on&enablevpops)

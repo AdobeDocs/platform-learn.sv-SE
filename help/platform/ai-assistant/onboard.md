@@ -20,4 +20,4 @@ ht-degree: 0%
 
 Lär dig hur du använder AI Assistant för att snabbt komma igång med nya funktioner och minska starttiden. Mer information finns i [Frågekursen för AI Assistant](https://experienceleague.adobe.com/sv/docs/experience-platform/ai-assistant/questions).
 
->[!VIDEO](https://video.tv.adobe.com/v/3438032/?learn=on&enablevpops)
+>[!VIDEO](https://video.tv.adobe.com/v/3475934/?captions=swe&learn=on&enablevpops)
