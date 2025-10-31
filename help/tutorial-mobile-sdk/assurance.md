@@ -4,9 +4,9 @@ description: Lär dig hur du implementerar Assurance-tillägget i en mobilapp.
 feature: Mobile SDK,Assurance
 jira: KT-14628
 exl-id: e15774b2-2f52-400f-9313-bb4338a88918
-source-git-commit: 456c5437cec745f667435e97d21edfba1700750a
+source-git-commit: 2784282b91692832786aa478363374f5f4066662
 workflow-type: tm+mt
-source-wordcount: '1506'
+source-wordcount: '1507'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ Lär dig konfigurera Adobe Experience Platform Assurance i en mobilapp.
 
 Assurance, som formellt kallas Project Griffon, är utformat för att hjälpa er att inspektera, verifiera, simulera och validera hur ni samlar in data eller levererar upplevelser i er mobilapp.
 
-Med Assurance kan du inspektera SDK råa-händelser som genererats av Adobe Experience Platform Mobile SDK. Alla evenemang som samlas in av SDK kan granskas. SDK-händelser läses in i en listvy, sorterade efter tid. Varje händelse har en detaljerad vy som ger mer information. Det finns även ytterligare vyer för att bläddra bland SDK-konfigurationer, dataelement, delade lägen och SDK-tilläggsversioner. Läs mer om [Assurance](https://experienceleague.adobe.com/sv/docs/experience-platform/assurance/home) i produktdokumentationen.
+Med Assurance kan du inspektera SDK råa-händelser som genererats av Adobe Experience Platform Mobile SDK. Alla evenemang som samlas in av SDK kan granskas. SDK-händelser läses in i en listvy, sorterade efter tid. Varje händelse har en detaljerad vy som ger mer information. Det finns även ytterligare vyer för att bläddra bland SDK-konfigurationer, dataelement, delade lägen och SDK-tilläggsversioner. Läs mer om [Assurance](https://experienceleague.adobe.com/en/docs/experience-platform/assurance/home) i produktdokumentationen.
 
 
 ## Förhandskrav
@@ -35,7 +35,7 @@ I den här lektionen kommer du att:
 
 ## Bekräfta åtkomst
 
-Bekräfta att din organisation har tillgång till Assurance. Som användare bör du läggas till i profilen för Adobe Experience Platform. Mer information finns i [Användaråtkomst](https://experienceleague.adobe.com/sv/docs/experience-platform/assurance/user-access) i handboken för Assurance.
+Bekräfta att din organisation har tillgång till Assurance. Som användare bör du läggas till i profilen för Adobe Experience Platform. Mer information finns i [Användaråtkomst](https://experienceleague.adobe.com/en/docs/experience-platform/assurance/user-access) i handboken för Assurance.
 
 ## Implementera
 
@@ -172,7 +172,7 @@ Assurance fungerar genom att öppna en URL-adress, antingen via en webbläsare e
 
 Se till att du anger `android:scheme` (till exempel. `lumatutorialandroid`) och `android:host` (till exempel `default`) för att definiera bas-URL:en.
 
-Mer information om djupa länkar i Android finns i [Skapa djupa länkar till appinnehåll](https://developer.apple.com/documentation/xcode/defining-a-custom-url-scheme-for-your-app){target="_blank"}.
+Mer information om djupa länkar i Android finns i [Skapa djupa länkar](https://developer.android.com/training/app-links/create-deeplinks){target="_blank"} i Android-dokumentationen.
 
 Assurance fungerar genom att öppna en URL-adress, antingen via en webbläsare eller QR-kod. Den URL:en börjar med bas-URL:en, som öppnar programmet och innehåller ytterligare parametrar. Dessa unika parametrar används för att ansluta sessionen.  I exempelappen är den djupa länken `lumatutorialandroid://default`.
 
@@ -341,7 +341,7 @@ I webbläsaren:
 
 >[!ENDTABS]
 
-Om du stöter på några problem kan du läsa den [tekniska](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/){target="_blank"} och [allmänna dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-platform/assurance/home){target="_blank"}.
+Om du stöter på några problem kan du läsa den [tekniska](https://developer.adobe.com/client-sdks/documentation/platform-assurance-sdk/){target="_blank"} och [allmänna dokumentationen](https://experienceleague.adobe.com/en/docs/experience-platform/assurance/home){target="_blank"}.
 
 
 ## Verifiera tillägg
