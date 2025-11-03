@@ -4,14 +4,20 @@ description: Komma igång - Adobe I/O
 kt: 5342
 doc-type: tutorial
 exl-id: 00f17d4f-a2c8-4e8e-a1ff-556037a60629
-source-git-commit: 947ce5880c88fcf0211c5d16270dfcf2d6416131
+source-git-commit: 899cb9b17702929105926f216382afcde667a1b6
 workflow-type: tm+mt
-source-wordcount: '788'
+source-wordcount: '806'
 ht-degree: 0%
 
 ---
 
 # Konfigurera ditt Adobe I/O-projekt
+
+## Video
+
+I den här videon får du en förklaring och demonstration av alla steg som ingår i övningen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3476494?quality=12&learn=on)
 
 ## Skapa ett Adobe I/O-projekt
 
@@ -63,7 +69,7 @@ Du borde se det här då.
 >
 >Beroende på vilken utbildningsväg du valt kanske du inte har tillgång till Photoshop Services API. Du har bara åtkomst till Photoshop Services API om du är på utbildningsvägen **Firefly**, **Workfront Fusion**, **ALL** eller när du deltar i ett **direktsänt, personligt seminarium**. Du kan hoppa över det här steget om du inte är på någon av dessa inlärningsvägar.
 >
->Välj **+ Lägg till i projekt** och välj sedan **API**.
+Välj **+ Lägg till i projekt** och välj sedan **API**.
 
 ![Azure Storage](./images/ps2.png)
 

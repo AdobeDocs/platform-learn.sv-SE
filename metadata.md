@@ -3,9 +3,9 @@ cloud: Experience Platform
 product: experience platform
 solution: Experience Platform
 solution-title: Documentation
-solution-hub-url: https://experienceleague.adobe.com/docs/experience-platform/landing/home.html?lang=sv-SE
+solution-hub-url: https://experienceleague.adobe.com/docs/experience-platform/landing/home.html
 getting-started-title: Experience League
-getting-started-url: https://experienceleague.adobe.com/sv#recommended/solutions/experience-platform
+getting-started-url: https://experienceleague.adobe.com/#recommended/solutions/experience-platform
 tutorials-title: Tutorials
 tutorials-url: /content/help/en/platform-learn/tutorials/overview.html
 git-repo: https://github.com/AdobeDocs/platform-learn.sv-SE
@@ -13,10 +13,10 @@ feature-set: Experience Platform
 index: true
 mini-toc-levels: 2
 type: Tutorial
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: 9a7c318668181178f37c67e59600fc3684d25861
 workflow-type: tm+mt
-source-wordcount: '111'
-ht-degree: 96%
+source-wordcount: '109'
+ht-degree: 99%
 
 ---
 

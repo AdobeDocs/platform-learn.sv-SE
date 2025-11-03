@@ -4,9 +4,9 @@ description: Komma igång - Postman-konfiguration
 kt: 5342
 doc-type: tutorial
 exl-id: fc1ee238-cce8-40a9-aba7-3605019a0077
-source-git-commit: a1da1c73cbddacde00211190a1ca3d36f7a2c329
+source-git-commit: 899cb9b17702929105926f216382afcde667a1b6
 workflow-type: tm+mt
-source-wordcount: '440'
+source-wordcount: '458'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,15 @@ ht-degree: 0%
 >
 >Om du inte är Adobe-anställd följer du instruktionerna för att [installera Postman](./ex7.md){target="_blank"}. Instruktionerna nedan är endast avsedda för Adobe-anställda.
 
+## Video
+
+I den här videon får du en förklaring och demonstration av alla steg som ingår i övningen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3476496?quality=12&learn=on)
+
 ## Installera PostBuster
 
-Gå till [https://adobe.service-now.com/esc?id=adb_esc_kb_article&sysparm_article=KB0020542](https://adobe.service-now.com/esc?id=adb_esc_kb_article&sysparm_article=KB0020542){target="_blank"}.
+Gå till [https://adobe.service-now.com/esc?id=adb_esc_kb_article&amp;sysparm_article=KB0020542](https://adobe.service-now.com/esc?id=adb_esc_kb_article&sysparm_article=KB0020542){target="_blank"}.
 
 Klicka för att hämta den senaste versionen av **PostBuster**.
 

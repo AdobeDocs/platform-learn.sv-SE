@@ -6,9 +6,9 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 6c0051e8-3dce-4b1f-a9fa-e86565a9fff4
-source-git-commit: 8052d82b1b820a9077766d8966b331ad2a21b220
+source-git-commit: 6b93c7ed76ef38dda8903d63f4800a98f4e46e1d
 workflow-type: tm+mt
-source-wordcount: '499'
+source-wordcount: '533'
 ht-degree: 1%
 
 ---
@@ -34,6 +34,16 @@ I den här modulen får du lära dig hur du utför alla ovanstående steg själv
 - Tillgång till Adobe Workfront och Adobe Workfront Planning
 - Åtkomst till en Adobe Experience Manager Cloud Service-sandlåda med Content Hub aktiverat
 
+## Video
+
+I den här videon får du en förklaring och demonstration av alla steg som ingår i övningen.
+
+>[!NOTE]
+>
+>Den här videon har inget ljud än. När ljudet är tillgängligt laddas en ny version upp.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3476497?quality=12&learn=on)
+
 ## Utövningar
 
 [1.3.1 Konfiguration: Varumärken](./ex1.md){target="_blank"}
@@ -46,7 +56,7 @@ I den här övningen ska du konfigurera profiler, produkter och mallar i GenStud
 
 [1.3.3 Kampanjaktivering till Meta](./ex3.md){target="_blank"}
 
-I den här övningen ska ni skapa en Campaign. Du kommer också att konfigurera en anslutning till Meta och du kommer att gå igenom alla steg som behövs för att kunna skapa en annons, godkänna en annons med Adobe Workfront och publicera en annons på Meta.
+I den här övningen ska ni skapa en Campaign. Du kommer också att konfigurera en anslutning till Meta och du kommer att gå igenom alla steg som behövs för att kunna skapa en annons, godkänna en annons med Adobe Workfront och publicera en annons till Meta.
 
 [1.3.4 Skapa e-postupplevelse för AJO](./ex4.md){target="_blank"}
 

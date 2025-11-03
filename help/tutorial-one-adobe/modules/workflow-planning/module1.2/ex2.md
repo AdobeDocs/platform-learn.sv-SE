@@ -4,9 +4,9 @@ description: Korrektur med Workfront
 kt: 5342
 doc-type: tutorial
 exl-id: 5feb9486-bdb4-4d59-941c-09fc2e38163b
-source-git-commit: 917ebcd2dd5d8316413a183bd2c1a048c090428c
+source-git-commit: 6b93c7ed76ef38dda8903d63f4800a98f4e46e1d
 workflow-type: tm+mt
-source-wordcount: '1613'
+source-wordcount: '1319'
 ht-degree: 0%
 
 ---
@@ -197,66 +197,11 @@ Du borde se det här då.
 
 Som en del av detta måste du skapa en ny bild och sedan överföra den som ett dokument i Workfront. Nu kan du själv skapa resursen med Adobe Express.
 
-## 1.2.2.5 Skapa resurs med Adobe Firefly Services och Adobe Express
+## 1.2.2.5 Lägg till ett nytt dokument i din uppgift och starta godkännandeflödet
 
-Gå till [https://firefly.adobe.com/](https://firefly.adobe.com/){target="_blank"}. Skriv uppmaningen `a neon rabbit running very fast through space` och klicka på **Generera**.
+För den här övningen måste du hämta och använda den här resursen: [tidslinjen.png](./images/timetravelnow.png)
 
-![SGPeM](./images/gsasset1.png)
-
-Sedan visas flera bilder som genereras. Välj den bild du gillar mest, klicka på ikonen **Dela** på bilden och välj sedan **Öppna i Adobe Express**.
-
-![SGPeM](./images/gsasset2.png)
-
-Du ser då att den bild du just har skapat blir tillgänglig i Adobe Express för redigering. Nu måste du lägga till CitiSignal-logotypen på bilden. Gå till **Varumärken** om du vill göra det.
-
-![SGPeM](./images/gsasset3.png)
-
-Du bör då se en CitiSignal-varumärkesmall. som skapades i GenStudio for Performance Marketing visas i Adobe Express. Klicka för att välja en varumärkesmall med namnet `CitiSignal`.
-
-![SGPeM](./images/gsasset4.png)
-
-Gå till **Logos** och klicka på den **vita** Citisign-logotypen för att släppa den på bilden.
-
-![SGPeM](./images/gsasset5.png)
-
-Placera CitiSignal-logotypen högst upp i bilden, inte långt från mitten.
-
-![SGPeM](./images/gsasset6.png)
-
-Gå till **Text**.
-
-![SGPeM](./images/gsasset6a.png)
-
-Klicka på **Lägg till din text**.
-
-![SGPeM](./images/gsasset6b.png)
-
-Ange texten `Timetravel now!`, ändra teckensnittsfärg och teckensnittsstorlek, ställ in texten på **Fet** så att du har en bild som liknar den här.
-
-![SGPeM](./images/gsasset6c.png)
-
-Klicka sedan på **Dela**.
-
-![SGPeM](./images/gsasset7.png)
-
-Välj **AEM Assets**.
-
-![SGPeM](./images/gsasset8.png)
-
-Ändra filnamnet till `CitiSignal - Neon Rabbit - Timetravel now!`.
-Klicka på **Välj mapp**.
-
-![SGPeM](./images/gsasset9.png)
-
-Välj din AEM Assets CS-databas som ska ha namnet `--aepUserLdap-- - CitiSignal` och markera sedan mappen `--aepUserLdap-- - CitiSignal Fiber Campaign`. Klicka på **Markera**.
-
-![SGPeM](./images/gsasset11.png)
-
-Du borde se det här då. Klicka på **Överför 1 resurs**. Bilden överförs nu till AEM Assets CS.
-
-![SGPeM](./images/gsasset12.png)
-
-## 1.2.2.6 Lägg till ett nytt dokument i din uppgift och starta godkännandeflödet
+![WF](./images/timetravelnow.png)
 
 Gå tillbaka till skärmen **Uppgiftsinformation**. Gå till **Dokument**. Klicka på **+ Lägg till ny** och välj sedan din AEM Assets CS-databas, som ska ha namnet `--aepUserLdap-- - CitiSignal`.
 
@@ -300,35 +245,11 @@ Gå tillbaka till din **aktivitet** och **dokumentet**. Texten **Ändringar som 
 
 Nu måste du göra designändringar, som du gör i Adobe Express.
 
-## 1.2.2.7 Gör designändringar i Adobe Express
+## 1.2.2.6 Lägg till en ny version av dokumentet i din uppgift
 
-Gå till [https://new.express.adobe.com/your-stuff/files](https://new.express.adobe.com/your-stuff/files) och öppna bilden som du skapade tidigare igen.
+För den här övningen måste du hämta och använda resursen: [getonboard.png](./images/getonboard.png)
 
-![WF](./images/wfp25a.png)
-
-Ändra CTA-texten till `Get On Board Now!`.
-
-![WF](./images/wfp25b.png)
-
-Klicka på **Dela** och välj sedan **AEM Assets**.
-
-![WF](./images/wfp25c.png)
-
-Ange namnet `CitiSignal - Neon Rabbit - Get On Board Now!` och klicka sedan på **Välj mapp** för att välja en målmapp.
-
-![WF](./images/wfp25d.png)
-
-Välj din AEM Assets CS-databas som ska ha namnet `--aepUserLdap-- - CitiSignal` och markera sedan mappen `--aepUserLdap-- - CitiSignal Fiber Campaign`. Klicka på **Markera**.
-
-![WF](./images/wfp25e.png)
-
-Klicka på **Överför 1 resurs**.
-
-![WF](./images/wfp25f.png)
-
-Din nya resurs skapas och lagras nu i AEM Assets.
-
-## 1.2.2.8 Lägg till en ny version av dokumentet i din uppgift
+![WF](./images/getonboard.png)
 
 I uppgiftsvyn i Adobe Workfront väljer du den gamla bildfilen som inte godkänts. Klicka sedan på **+ Lägg till ny**, markera **Version** och välj sedan din AEM Assets CS-databas, som ska ha namnet `--aepUserLdap-- - CitiSignal`.
 
@@ -394,7 +315,7 @@ Du borde se det här då.
 
 ![WF](./images/wfp37c.png)
 
-## 1.2.2.9 Visa filen i AEM Assets
+## 1.2.2.7 Visa filen i AEM Assets
 
 Gå till din mapp i AEM Assets CS med namnet `--aepUserLdap-- - CitiSignal Fiber Launch Assets`.
 

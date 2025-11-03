@@ -6,20 +6,26 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: cbc34bda-64e6-42bc-b2f0-90aed5bfeb97
-source-git-commit: b083a817700320e8e45645702c2868423c1fae99
+source-git-commit: 899cb9b17702929105926f216382afcde667a1b6
 workflow-type: tm+mt
-source-wordcount: '158'
-ht-degree: 0%
+source-wordcount: '176'
+ht-degree: 1%
 
 ---
 
-# 1.1 Översikt över Adobe Firefly tjänster
+# 1.1 Översikt över Adobe Firefly Services
 
 Lär dig olika sätt att använda Adobe Firefly Services.
 
 ## Förhandskrav
 
 Åtkomst till Adobe Firefly [https://firefly.adobe.com/](https://firefly.adobe.com/)
+
+## Video
+
+I den här videon får du en förklaring och demonstration av alla steg som ingår i övningen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3476493?quality=12&learn=on)
 
 ## Utövningar
 
@@ -33,7 +39,7 @@ Här kan du utforska Firefly Services och få en förståelse för dess funktion
 
 [1.1.3 Arbeta med Photoshop API:er](./ex3.md){target="_blank"}
 
-Lär dig använda Firefly Services tillsammans med Adobe Photoshop i den här övningen.
+Lär dig använda Firefly Services tillsammans med Adobe Photoshop.
 
 [1.1.4 Firefly API för anpassade modeller](./ex4.md){target="_blank"}
 
