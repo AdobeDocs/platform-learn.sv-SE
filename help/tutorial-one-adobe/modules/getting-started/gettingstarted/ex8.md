@@ -25,7 +25,7 @@ I den här videon får du en förklaring och demonstration av alla steg som ing�
 
 ## Installera PostBuster
 
-Gå till [https://adobe.service-now.com/esc?id=adb_esc_kb_article&amp;sysparm_article=KB0020542](https://adobe.service-now.com/esc?id=adb_esc_kb_article&sysparm_article=KB0020542){target="_blank"}.
+Gå till [https://adobe.service-now.com/esc?id=adb_esc_kb_article&sysparm_article=KB0020542](https://adobe.service-now.com/esc?id=adb_esc_kb_article&sysparm_article=KB0020542){target="_blank"}.
 
 Klicka för att hämta den senaste versionen av **PostBuster**.
 
