@@ -4,9 +4,9 @@ description: Korrektur med Workfront
 kt: 5342
 doc-type: tutorial
 exl-id: 5feb9486-bdb4-4d59-941c-09fc2e38163b
-source-git-commit: 919bfdb5f047669f670482695edfa7820e0aad93
+source-git-commit: da966703aed5342000c19732b6b48682c3958c7f
 workflow-type: tm+mt
-source-wordcount: '1293'
+source-wordcount: '1279'
 ht-degree: 0%
 
 ---
@@ -203,7 +203,7 @@ För den här övningen måste du hämta och använda den här resursen: [tidsli
 
 ![WF](./images/timetravelnow.png)
 
-Gå tillbaka till skärmen **Projektinformation**. Gå till **Dokument**. Klicka på **+ Lägg till ny** och välj sedan **Dokument**.
+Gå till **Dokument** för din uppgift. Klicka på **+ Lägg till ny** och välj sedan **Dokument**.
 
 ![WF](./images/wfp10.png)
 
@@ -243,7 +243,7 @@ Gå tillbaka till din **aktivitet** och **dokumentet**. Texten **Ändringar som 
 
 ![WF](./images/wfp25.png)
 
-Nu måste du göra designändringar, som du gör i Adobe Express.
+Nu måste du göra designändringar och överföra en ny version av bilden.
 
 ## 1.2.2.6 Lägg till en ny version av dokumentet i din uppgift
 
@@ -251,11 +251,11 @@ För den här övningen måste du hämta och använda resursen: [getonboard.png]
 
 ![WF](./images/getonboard.png)
 
-I uppgiftsvyn i Adobe Workfront väljer du den gamla bildfilen som inte godkänts. Klicka sedan på **+ Lägg till ny**, markera **Version** och välj sedan din AEM Assets CS-databas, som ska ha namnet `--aepUserLdap-- - CitiSignal`.
+I uppgiftsvyn i Adobe Workfront väljer du den gamla bildfilen som inte godkänts. Klicka sedan på **+ Lägg till ny**, markera **Version** och välj sedan **Dokument**.
 
 ![WF](./images/wfp26.png)
 
-Navigera till mappen `--aepUserLdap-- CitiSignal Fiber Campaign` och markera filen `CitiSignal - Neon Rabit - Get On Board Now!.png`. Klicka på **Markera**.
+Klicka för att markera filen `getonboardnow.png`. Klicka på **Öppna**.
 
 ![WF](./images/wfp26a.png)
 
@@ -291,11 +291,11 @@ Du kommer sedan tillbaka i aktivitetsvyn med en godkänd resurs. Materialet mås
 
 ![WF](./images/wfp34.png)
 
-Välj det godkända dokumentet. Klicka på ikonen **Dela-pil** och välj den AEM Assets-integrering som ska ha namnet `--aepUserLdap-- - CitiSignal AEM`.
+Välj det godkända dokumentet. Klicka på ikonen **Dela-pil** och välj den AEM Assets-integrering som ska ha namnet `--aepUserLdap-- - CitiSignal AEM+ACCS`.
 
 ![WF](./images/wfp35.png)
 
-Dubbelklicka på mappen som du skapade tidigare, som bör ha namnet `--aepUserLdap-- - CitiSignal Fiber Launch Assets`.
+Dubbelklicka på mappen som du skapade tidigare, som bör ha namnet `--aepUserLdap-- - CitiSignal Fiber Campaign`.
 
 ![WF](./images/wfp36.png)
 
@@ -317,7 +317,7 @@ Du borde se det här då.
 
 ## 1.2.2.7 Visa filen i AEM Assets
 
-Gå till din mapp i AEM Assets CS med namnet `--aepUserLdap-- - CitiSignal Fiber Launch Assets`.
+Gå till din mapp i AEM Assets CS med namnet `--aepUserLdap-- - CitiSignal Fiber Campaign`.
 
 ![WF](./images/wfppaem1.png)
 

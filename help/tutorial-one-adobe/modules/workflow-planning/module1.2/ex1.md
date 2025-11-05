@@ -4,7 +4,7 @@ description: Komma igång med Workfront
 kt: 5342
 doc-type: tutorial
 exl-id: 0867d7fd-4d12-46d8-a5ae-bb8db1575635
-source-git-commit: a63c01ebe81df39569981d62b85d0461119ecf66
+source-git-commit: da966703aed5342000c19732b6b48682c3958c7f
 workflow-type: tm+mt
 source-wordcount: '1099'
 ht-degree: 0%
@@ -109,7 +109,7 @@ Klicka sedan på **Skapa mapp**.
 
 ![WF](./images/wfbaem3a.png)
 
-Namnge mappen `--aepUserLdap-- - CitiSignal Fiber Launch Assets` och klicka på **Skapa**.
+Namnge mappen `--aepUserLdap-- - CitiSignal Fiber Campaign` och klicka på **Skapa**.
 
 ![WF](./images/wfbaem4.png)
 
@@ -161,7 +161,7 @@ Markera sedan det fjärde fältet och klicka på ikonen **Schema** bredvid fält
 
 ![WF](./images/wfbaem11a.png)
 
-Du kommer då att se den här popup-rutan igen. Ange `wm:document` i sökfältet och markera sedan fältet **Projekt-ID**. Klicka på **Markera**.
+Du kommer då att se den här popup-rutan igen. Ange `wm:document` i sökfältet och markera sedan fältet **Dokumentstatus**. Klicka på **Markera**.
 
 ![WF](./images/wfbaem101.png)
 
@@ -173,7 +173,7 @@ Markera sedan det femte fältet och klicka på ikonen **Schema** bredvid fältet
 
 ![WF](./images/wfbaem103.png)
 
-Du kommer då att se den här popup-rutan igen. Ange `wm:document` i sökfältet och markera sedan fältet **Projekt-ID**. Klicka på **Markera**.
+Du kommer då att se den här popup-rutan igen. Ange `wm:document` i sökfältet och markera sedan fältet **Dokumentnamn**. Klicka på **Markera**.
 
 ![WF](./images/wfbaem104.png)
 
@@ -221,7 +221,7 @@ Därefter måste du tilldela metadataformuläret till mappen som du skapade tidi
 
 ![WF](./images/wfbaem15.png)
 
-Välj din mapp som ska ha namnet `--aepUserLdap-- - CitiSignal Fiber Launch Assets`. Klicka på **Tilldela**.
+Välj din mapp som ska ha namnet `--aepUserLdap-- - CitiSignal Fiber Campaign`. Klicka på **Tilldela**.
 
 ![WF](./images/wfbaem16.png)
 
