@@ -6,14 +6,14 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: f02ecbe4-f1d7-4907-9bbc-04e037546091
-source-git-commit: 1d1ee3462bd890556037c8e24ba2fe94c3423187
+source-git-commit: 843140d3befd415a1879410f34c2b60c6adf18d0
 workflow-type: tm+mt
-source-wordcount: '1981'
+source-wordcount: '1983'
 ht-degree: 0%
 
 ---
 
-# 1.2.6 Bildruta I/O till Workfront Fusion till AEM Assets
+# 1.2.4 Bildruta I/O till Workfront Fusion till AEM Assets
 
 >[!IMPORTANT]
 >
@@ -27,7 +27,7 @@ I föregående övning konfigurerade du ett scenario som automatiskt genererar v
 
 Affärsteamen behöver dock inte ha någon PSD-fil, de behöver en PNG-fil eller en JPG-fil. I den här övningen ska du konfigurera en ny automatisering som resulterar i att en PNG-fil genereras när resursen i bildruta-I/O har godkänts och att PNG-filen lagras i AEM Assets automatiskt.
 
-## 1.2.6.1 Skapa ett nytt scenario
+## 1.2.4.1 Skapa ett nytt scenario
 
 Gå till [https://experience.adobe.com/](https://experience.adobe.com/){target="_blank"}. Öppna **Workfront Fusion**.
 
@@ -57,7 +57,7 @@ Du borde se det här då. Klicka på **Kopiera adress till Urklipp**.
 
 ![Bildruta-I/O](./images/aemf6.png)
 
-## 1.2.6.2 Konfigurera webkrok i Frame.io
+## 1.2.4.2 Konfigurera webkrok i Frame.io
 
 Gå till Postman och öppna begäran **POST - Get Access Token** i samlingen **Adobe IO - OAuth**. Klicka sedan på **Skicka** för att begära en ny **access_token**.
 
@@ -101,7 +101,7 @@ Detaljerad vy av bubblan visar data som tagits emot från Frame.io. Du bör se o
 
 ![Bildruta-I/O](./images/aemf16.png)
 
-## 1.2.6.3 Hämta resursinformation från Frame.io
+## 1.2.4.3 Hämta resursinformation från Frame.io
 
 Nu när kommunikationen mellan Frame.io och Workfront Fusion har upprättats via en anpassad webkrok bör du få mer information om resursen som statusetiketten uppdaterades för. För att göra detta använder du återigen kontakten Frame.io i Workfront Fusion, som i föregående övning.
 
@@ -125,7 +125,7 @@ Kontrollera att anslutningen är inställd på samma anslutning som du skapade i
 
 ![Bildruta-I/O](./images/aemf21.png)
 
-Använd URL:en `/v4/accounts/{{1.account.id}}/files/{{1.resource.id}}` för konfigurationen av modulen **Frame.io - gör ett anpassat API-anrop**.
+Använd URL:en **för konfigurationen av modulen** Frame.io - gör ett anpassat API-anrop`/v4/accounts/{{1.account.id}}/files/{{1.resource.id}}`.
 
 >[!NOTE]
 >
@@ -178,7 +178,7 @@ Du borde ha den här då. Klicka på **Spara** för att spara ändringarna.
 
 ![Bildruta-I/O](./images/aemf35a.png)
 
-## 1.2.6.4 Konvertera till PNG
+## 1.2.4.4 Konvertera till PNG
 
 Hovra över modulen **Frame.io - Gör ett anpassat API-anrop** och klicka på ikonen **+** .
 
@@ -224,7 +224,7 @@ I informationen om körningen av modulen **Adobe Photoshop - Konvertera bildform
 
 ![Bildruta-I/O](./images/aemf39.png)
 
-## 1.2.6.5 Lagra PNG i AEM Assets CS
+## 1.2.4.5 Lagra PNG i AEM Assets CS
 
 Håll pekaren över modulen **Adobe Photoshop - Konvertera bildformat** och klicka på ikonen **+** .
 
@@ -315,9 +315,9 @@ Gå tillbaka till Workfront Fusion, välj **Klicka här för att välja mapp** o
 
 Kontrollera att målet är inställt på `--aepUserLdap-- - CitiSignal Fiber Campaign`. Välj sedan **Karta** under **Source-fil**.
 
-Välj variabeln `{{3.filenames[1]}}` under **Filnamn**.
+Välj variabeln **under** Filnamn`{{3.filenames[1]}}`.
 
-Välj variabeln `{{3.files[1]}}` under **Data**.
+Välj variabeln **under** Data`{{3.files[1]}}`.
 
 >[!NOTE]
 >
@@ -390,3 +390,4 @@ Gå till [Sammanfattning och fördelar med Creative Workflow Automation med Work
 Gå tillbaka till [Creative Workflow Automation med Workfront Fusion](./automation.md){target="_blank"}
 
 Gå tillbaka till [Alla moduler](./../../../overview.md){target="_blank"}
+1.2.4

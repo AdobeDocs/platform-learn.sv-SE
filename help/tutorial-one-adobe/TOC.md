@@ -4,9 +4,9 @@ breadcrumb-title: En teknisk självstudiekurs för Adobe
 hide: true
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-source-git-commit: 7537cd4d4ca6bc25afcb8f61a736498b0c297850
+source-git-commit: 843140d3befd415a1879410f34c2b60c6adf18d0
 workflow-type: tm+mt
-source-wordcount: '1403'
+source-wordcount: '1388'
 ht-degree: 3%
 
 ---
@@ -56,17 +56,15 @@ ht-degree: 3%
    + 1.2 Creative Workflow Automation med Workfront Fusion {#crpr2}
       + [Översikt](/help/tutorial-one-adobe/modules/creation-production/module1.2/automation.md)
       + [1.2.1 Komma igång med Workfront Fusion](/help/tutorial-one-adobe/modules/creation-production/module1.2/ex1.md)
-      + [1.2.2 Använda Adobe API:er i Workfront Fusion](/help/tutorial-one-adobe/modules/creation-production/module1.2/ex2.md)
-      + [1.2.3 Processautomatisering med Workfront Fusion](/help/tutorial-one-adobe/modules/creation-production/module1.2/ex3.md)
-      + [1.2.4 Automatisering med kontakter](/help/tutorial-one-adobe/modules/creation-production/module1.2/ex4.md)
-      + [1.2.5 Frame.io och Workfront Fusion](/help/tutorial-one-adobe/modules/creation-production/module1.2/ex5.md)
-      + [1.2.6 Frame.io till Workfront Fusion to AEM Assets](/help/tutorial-one-adobe/modules/creation-production/module1.2/ex6.md)
+      + [1.2.2 Automatisering med kontakter](/help/tutorial-one-adobe/modules/creation-production/module1.2/ex4.md)
+      + [1.2.3 Frame.io och Workfront Fusion](/help/tutorial-one-adobe/modules/creation-production/module1.2/ex5.md)
+      + [1.2.4 Frame.io till Workfront Fusion to AEM Assets](/help/tutorial-one-adobe/modules/creation-production/module1.2/ex6.md)
       + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/creation-production/module1.2/summary.md)
    + 1.3 GenStudio for Performance Marketing {#crpr3}
       + [Översikt](/help/tutorial-one-adobe/modules/creation-production/module1.3/genstudio.md)
       + [1.3.1 Konfiguration: Varumärken](/help/tutorial-one-adobe/modules/creation-production/module1.3/ex1.md)
       + [1.3.2 Konfiguration: Personas, Produkter och mallar](/help/tutorial-one-adobe/modules/creation-production/module1.3/ex2.md)
-      + [1.3.3 Kampanjaktivering till Meta](/help/tutorial-one-adobe/modules/creation-production/module1.3/ex3.md)
+      + [1.3.3 Kampanjaktivering för Meta](/help/tutorial-one-adobe/modules/creation-production/module1.3/ex3.md)
       + [1.3.4 Skapa e-postupplevelse för AJO](/help/tutorial-one-adobe/modules/creation-production/module1.3/ex4.md)
       + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/creation-production/module1.3/summary.md)
    + 1.4 Adobe Express och Adobe Experience Cloud {#crpr4}

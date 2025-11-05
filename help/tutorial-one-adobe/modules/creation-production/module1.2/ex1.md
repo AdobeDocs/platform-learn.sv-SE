@@ -6,9 +6,9 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 42e260e0-8af0-4d71-b634-48c1966bd912
-source-git-commit: 4b38b40c47b5c373f74a85261adce46f291303a8
+source-git-commit: 843140d3befd415a1879410f34c2b60c6adf18d0
 workflow-type: tm+mt
-source-wordcount: '705'
+source-wordcount: '699'
 ht-degree: 0%
 
 ---
@@ -83,7 +83,7 @@ Med tangenterna och värdena ovan kan du konfigurera objektet **Set multiple var
 
 ![WF Fusion](./images/wffusion11.png)
 
-Ange **variabelnamnet**: **CONST_client_id** och dess **variabelvärde**, välj **Lägg till**.
+Ange **variabelnamnet**: **`CONST_client_id`** och dess **variabelvärde** och välj **Lägg till**.
 
 ![WF Fusion](./images/wffusion12.png)
 
@@ -91,7 +91,7 @@ Välj **Lägg till objekt**.
 
 ![WF Fusion](./images/wffusion13.png)
 
-Ange **Variabelnamn**: **CONST_client_secrets** och dess **variabelvärde**, välj **Lägg till**.
+Ange **Variabelnamn**: **`CONST_client_secret`** och dess **variabelvärde**, välj **Lägg till**.
 
 ![WF Fusion](./images/wffusion14.png)
 
@@ -99,7 +99,7 @@ Välj **Lägg till objekt**.
 
 ![WF Fusion](./images/wffusion15.png)
 
-Ange **Variabelnamn**: **CONST_scope** och dess **Variabelvärde**, välj **Lägg till**.
+Ange **Variabelnamn**: **`CONST_scope`** och dess **variabelvärde**, välj **Lägg till**.
 
 ![WF Fusion](./images/wffusion16.png)
 
@@ -230,7 +230,7 @@ Skärmen bör se ut så här:
 
 ![WF Fusion](./images/wffusion45.png)
 
-Ändra sedan namnet på ditt scenario till `--aepUserLdap-- - Adobe I/O Authentication`.
+Ändra sedan namnet på ditt scenario till `--aepUserLdap-- - Firefly + Photoshop`.
 
 ![WF Fusion](./images/wffusion46.png)
 
@@ -240,7 +240,7 @@ Välj **Spara**.
 
 ## Nästa steg
 
-Gå till [Använd Adobe API:er i Workfront Fusion](./ex2.md){target="_blank"}
+Gå till [Automatisering med anslutningar](./ex4.md){target="_blank"}
 
 Gå tillbaka till [Creative Workflow Automation med Workfront Fusion](./automation.md){target="_blank"}
 

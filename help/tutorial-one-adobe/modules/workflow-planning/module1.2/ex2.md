@@ -4,9 +4,9 @@ description: Korrektur med Workfront
 kt: 5342
 doc-type: tutorial
 exl-id: 5feb9486-bdb4-4d59-941c-09fc2e38163b
-source-git-commit: 6b93c7ed76ef38dda8903d63f4800a98f4e46e1d
+source-git-commit: 919bfdb5f047669f670482695edfa7820e0aad93
 workflow-type: tm+mt
-source-wordcount: '1319'
+source-wordcount: '1293'
 ht-degree: 0%
 
 ---
@@ -197,25 +197,25 @@ Du borde se det här då.
 
 Som en del av detta måste du skapa en ny bild och sedan överföra den som ett dokument i Workfront. Nu kan du själv skapa resursen med Adobe Express.
 
-## 1.2.2.5 Lägg till ett nytt dokument i din uppgift och starta godkännandeflödet
+## 1.2.2.5 Lägg till ett nytt dokument i projektet och starta godkännandeflödet
 
 För den här övningen måste du hämta och använda den här resursen: [tidslinjen.png](./images/timetravelnow.png)
 
 ![WF](./images/timetravelnow.png)
 
-Gå tillbaka till skärmen **Uppgiftsinformation**. Gå till **Dokument**. Klicka på **+ Lägg till ny** och välj sedan din AEM Assets CS-databas, som ska ha namnet `--aepUserLdap-- - CitiSignal`.
+Gå tillbaka till skärmen **Projektinformation**. Gå till **Dokument**. Klicka på **+ Lägg till ny** och välj sedan **Dokument**.
 
 ![WF](./images/wfp10.png)
 
-Dubbelklicka för att öppna mappen `--aepUserLdap-- CitiSignal Fiber Campaign`.
+Klicka för att markera filen `timetravelnow.png`. Klicka på **Öppna**.
 
 ![WF](./images/wfp10a.png)
 
-Markera filen som du skapade i föregående steg, som heter **CitiSignal - Neonkanin - Timeravel Now!.png**. Klicka på **Markera**.
+Du borde ha den här då.
 
-![WF](./images/2048x2048.png){width="50px" align="left"}
+![WF](./images/wfp10b.png)
 
-Du borde ha den här då. Håll muspekaren över det överförda dokumentet. Klicka på **Skapa korrektur** och välj sedan **Avancerat korrektur**.
+Håll muspekaren över det överförda dokumentet. Klicka på **Skapa korrektur** och välj sedan **Avancerat korrektur**.
 
 ![WF](./images/wfp13.png)
 

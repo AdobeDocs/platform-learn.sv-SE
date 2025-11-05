@@ -6,14 +6,14 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 37de6ceb-833e-4e75-9201-88bddd38a817
-source-git-commit: 31ff3c9764b07f29d1235ac146d1631529b6038f
+source-git-commit: 843140d3befd415a1879410f34c2b60c6adf18d0
 workflow-type: tm+mt
 source-wordcount: '3352'
 ht-degree: 0%
 
 ---
 
-# 1.2.5 Frame.io och Workfront Fusion
+# 1.2.3 Frame.io och Workfront Fusion
 
 I den föregående övningen konfigurerade du scenariot `--aepUserLdap-- - Firefly + Photoshop` och konfigurerade en inkommande webkrok för att utlösa scenariot och ett webkrossvar när scenariot slutfördes. Sedan använde du Postman för att utlösa det scenariot. Postman är ett bra verktyg för testning, men i ett verkligt affärsscenario skulle företagsanvändare inte använda Postman för att utlösa ett scenario. De använder istället ett annat program och förväntar sig att ett annat program ska aktivera ett scenario i Workfront Fusion. I den här övningen är det precis vad du kommer att göra med Frame.io.
 
@@ -21,11 +21,11 @@ I den föregående övningen konfigurerade du scenariot `--aepUserLdap-- - Firef
 >
 >Den här övningen skapades för Frame.io V4. Vissa av funktionerna nedan som används i övningen är för närvarande alfabetiska och är inte allmänt tillgängliga än.
 
-## Förutsättningar för 1.2.5.1
+## Förutsättningar för 1.2.3.1
 
 Innan du fortsätter med den här övningen måste du ha slutfört installationen av [ditt Adobe I/O-projekt](./../../../modules/getting-started/gettingstarted/ex6.md), inklusive att lägga till **Frame.io-API:t** i ditt Adobe I/O-projekt, och du måste också ha konfigurerat ett program för interaktion med API:er som [Postman](./../../../modules/getting-started/gettingstarted/ex7.md) eller [PostBuster](./../../../modules/getting-started/gettingstarted/ex8.md).
 
-## 1.2.5.2 använder Frame.io
+## 1.2.3.2 använder Frame.io
 
 Gå till [https://next.frame.io/](https://next.frame.io/){target="_blank"}.
 
@@ -61,7 +61,7 @@ Filen **citisign-fiber.psd** kommer sedan att vara tillgänglig i den mapp som d
 
 ![Bildruta-I/O](./images/framev4_7.png)
 
-## 1.2.5.3 Workfront Fusion och Frame.io
+## 1.2.3.3 Workfront Fusion och Frame.io
 
 I den föregående övningen skapade du scenariot `--aepUserLdap-- - Firefly + Photoshop`, som började med en anpassad webkrok och som slutade med ett webkrossvar. Användningen av webbhookar testades sedan med Postman, men självklart ska poängen med ett sådant scenario anropas av ett externt program. Som tidigare nämnts är Frame.io den övningen, men mellan Frame.io och `--aepUserLdap-- - Firefly + Photoshop` behövs ett annat Workfront Fusion-scenario. du kommer nu att konfigurera det scenariot.
 
@@ -89,7 +89,7 @@ Klicka på **Lägg till** för att skapa en ny webkrok-URL.
 
 ![Bildruta-I/O](./images/frame8.png)
 
-Använd `--aepUserLdap-- - Frame IO Custom Action Webhook` för **Webkrok-namnet**. Klicka på **Spara**.
+Använd **för** Webkrok-namnet`--aepUserLdap-- - Frame IO Custom Action Webhook`. Klicka på **Spara**.
 
 ![Bildruta-I/O](./images/frame9.png)
 
@@ -97,7 +97,7 @@ Du borde se det här då. Lämna den här skärmen öppen och orörd så som du 
 
 ![Bildruta-I/O](./images/frame10.png)
 
-## 1.2.5.4 API för anpassade åtgärder för Frame.io V4
+## 1.2.3.4 API för anpassade åtgärder för Frame.io V4
 
 Gå till Postman och öppna begäran **POST - Get Access Token** i samlingen **Adobe IO - OAuth**. Verifiera fältet **scope** under **Params**. Fältet **scope** ska innehålla scope `frame.s2s.all`. Om den saknas, lägg till den. Klicka sedan på **Skicka** för att begära en ny **access_token**.
 
@@ -177,7 +177,7 @@ Detaljerad vy av bubblan visar data som tagits emot från Frame.io. Du bör se o
 
 Nu när kommunikationen mellan Frame.io och Workfront Fusion har upprättats kan du fortsätta med konfigurationen.
 
-## 1.2.5.5 Tillhandahåller ett anpassat formulärsvar till Frame.io
+## 1.2.3.5 Tillhandahåller ett anpassat formulärsvar till Frame.io
 
 När den anpassade åtgärden anropas i Frame.io förväntar sig Frame.io att få ett svar från Workfront Fusion. Om du tänker tillbaka till det scenario du skapade i den tidigare övningen behövs ett antal variabler för att uppdatera Photoshop PSD-standardfilen. Variablerna definieras i nyttolasten som du använde:
 
@@ -321,7 +321,7 @@ Växla tillbaka till Workfront Fusion och klicka på bubblan i modulen **Anpassa
 
 ![Bildruta-I/O](./images/frame43.png)
 
-## 1.2.5.6 Hämta filplats från Frame.io
+## 1.2.3.6 Hämta filplats från Frame.io
 
 Som tidigare nämnts behövs fält som **prompt**, **cta**, **button** och **psdTemplate** för att det här scenariot ska fungera. De första tre fälten är nu redan tillgängliga, men **psdTemplate** som ska användas saknas fortfarande. **psdTemplate** refererar nu till en Frame.io-plats eftersom filen **citisign-fiber.psd** finns i Frame.io. För att kunna hämta platsen för filen måste du konfigurera och använda anslutningen Frame.io i Workfront Fusion.
 
@@ -359,7 +359,7 @@ Om anslutningen har testats visas den automatiskt under **Anslutning**. Du har n
 
 Fältet **Resurs-ID** delas av Frame.io till Workfront Fusion som en del av den inledande **anpassade webkrockkommunikationen** och finns under fältet **resource.id**.
 
-Använd URL:en `/v4/accounts/{{1.account_id}}/files/{{1.resource.id}}` för konfigurationen av modulen **Frame.io - gör ett anpassat API-anrop**.
+Använd URL:en **för konfigurationen av modulen** Frame.io - gör ett anpassat API-anrop`/v4/accounts/{{1.account_id}}/files/{{1.resource.id}}`.
 
 >[!NOTE]
 >
@@ -437,7 +437,7 @@ Den specifika information som behövs för det här användningsfallet är plats
 
 Du har nu all information (**prompt**, **cta**, **button** och **psdTemplate**) tillgänglig som behövs för att det här användningsfallet ska fungera.
 
-## 1.2.5.7 Anropa Workfront-scenario
+## 1.2.3.7 Anropa Workfront-scenario
 
 I föregående övning konfigurerade du scenariot `--aepUserLdap-- - Firefly + Photoshop`. Nu behöver du göra en mindre ändring i det scenariot.
 
@@ -486,7 +486,7 @@ Du har nu konfigurerat en statisk nyttolast, men den måste bli dynamisk med de 
 
 ![Bildruta-I/O](./images/frame70.png)
 
-Ersätt den statiska variabeln **citisign-fiber.psd** med variabeln **`Body > data > media_links > original > download_url`** för fältet **psdTemplate**.
+Ersätt den statiska variabeln **citisign-fiber.psd** med variabeln **för fältet** psdTemplate **`Body > data > media_links > original > download_url`**.
 
 ![Bildruta-I/O](./images/frame71.png)
 
@@ -502,7 +502,7 @@ Klicka på **Spara** för att spara ändringarna.
 
 ![Bildruta-I/O](./images/frame73.png)
 
-## 1.2.5.8 Spara ny resurs i Frame.io
+## 1.2.3.8 Spara ny resurs i Frame.io
 
 När det andra Workfront Fusion-scenariot har anropats blir resultatet en ny Photoshop PSD-mall som är tillgänglig. Den PSD-filen måste sparas tillbaka i Frame.io, som är det sista steget i det här scenariot.
 
@@ -522,14 +522,14 @@ Din Frame.io-anslutning väljs automatiskt.
 
 ![Bildruta-I/O](./images/frame77.png)
 
-Använd URL:en `/v4/accounts/{{1.account_id}}/folders/{{4.body.data.parent_id}}/files/remote_upload` för konfigurationen av modulen **Frame.io - gör ett anpassat API-anrop**.
+Använd URL:en **för konfigurationen av modulen** Frame.io - gör ett anpassat API-anrop`/v4/accounts/{{1.account_id}}/folders/{{4.body.data.parent_id}}/files/remote_upload`.
 
 >[!NOTE]
 >
 >Som tidigare nämnts kan variabler i Workfront Fusion anges manuellt med följande syntax: `{{1.account_id}}` och `{{4.body.data.parent_id}}`. Talet i variabeln refererar till modulen i scenariot.
->&#x200B;>I det här exemplet ser du att den första modulen i scenariot kallas **Webhooks** och har sekvensnumret **1**. Det innebär att variabeln `{{1.account_id}}` kommer åt det fältet från modulen med sekvensnummer 1.
->&#x200B;>I det här exemplet ser du att den fjärde modulen i scenariot kallas **Frame.io - gör ett anpassat API-anrop** och har sekvensnumret **4**. Det innebär att variabeln `{{4.body.data.parent_id}}` kommer åt det fältet från modulen med sekvensnummer 4.
->&#x200B;>Om serienumren för modulerna är olika måste du uppdatera variablerna i ovanstående URL för att kunna länkas till rätt modul.
+>I det här exemplet ser du att den första modulen i scenariot kallas **Webhooks** och har sekvensnumret **1**. Det innebär att variabeln `{{1.account_id}}` kommer åt det fältet från modulen med sekvensnummer 1.
+>I det här exemplet ser du att den fjärde modulen i scenariot kallas **Frame.io - gör ett anpassat API-anrop** och har sekvensnumret **4**. Det innebär att variabeln `{{4.body.data.parent_id}}` kommer åt det fältet från modulen med sekvensnummer 4.
+>Om serienumren för modulerna är olika måste du uppdatera variablerna i ovanstående URL för att kunna länkas till rätt modul.
 
 ![Bildruta-I/O](./images/frame78.png)
 
@@ -548,8 +548,8 @@ Kopiera och klistra in nedanstående JSON-kodfragment i fältet **Body**.
 
 >[!NOTE]
 >
->Variabler i Workfront Fusion kan anges manuellt med följande syntax: `{{6.data.newPsdTemplate}}`. Talet i variabeln refererar till modulen i scenariot. I det här exemplet ser du att den sjätte modulen i scenariot kallas **HTTP - Gör en begäran** och har sekvensnumret **&#x200B;**. Det innebär att variabeln `{{6.data.newPsdTemplate}}` kommer åt fältet **data.newPsdTemplate** från modulen med sekvensnummer 6.
->&#x200B;>Om modulens sekvensnummer är olika måste du uppdatera variabeln i ovanstående URL för att kunna länkas till rätt modul.
+>Variabler i Workfront Fusion kan anges manuellt med följande syntax: `{{6.data.newPsdTemplate}}`. Talet i variabeln refererar till modulen i scenariot. I det här exemplet ser du att den sjätte modulen i scenariot kallas **HTTP - Gör en begäran** och har sekvensnumret ****. Det innebär att variabeln `{{6.data.newPsdTemplate}}` kommer åt fältet **data.newPsdTemplate** från modulen med sekvensnummer 6.
+>Om modulens sekvensnummer är olika måste du uppdatera variabeln i ovanstående URL för att kunna länkas till rätt modul.
 
 Klicka på **OK**.
 
@@ -559,7 +559,7 @@ Klicka på **Spara** för att spara ändringarna.
 
 ![Bildruta-I/O](./images/frame81.png)
 
-## 1.2.5.9 Testa ditt fall av användning från början till slut
+## 1.2.3.9 Testa ditt fall av användning från början till slut
 
 Klicka på **Kör en gång** i ditt scenario `--aepUserLdap-- - Frame IO Custom Action`.
 
