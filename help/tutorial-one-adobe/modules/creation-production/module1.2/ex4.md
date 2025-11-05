@@ -1,448 +1,393 @@
 ---
-title: Automatisering med kopplingar
-description: Automatisering med kopplingar
+title: Bildruta I/O till Workfront Fusion till AEM Assets
+description: Bildruta I/O till Workfront Fusion till AEM Assets
 role: Developer
 level: Beginner
 jira: KT-5342
 doc-type: Tutorial
-exl-id: 0b20ba91-28d4-4f4d-8abe-074f802c389e
-source-git-commit: 843140d3befd415a1879410f34c2b60c6adf18d0
+exl-id: f02ecbe4-f1d7-4907-9bbc-04e037546091
+source-git-commit: 5af7b64e88dc0f260be030bca73d9fe9219ba255
 workflow-type: tm+mt
-source-wordcount: '1991'
+source-wordcount: '1983'
 ht-degree: 0%
 
 ---
 
-# 1.2.4 Automatisering med kontakter
+# 1.2.4 Bildruta I/O till Workfront Fusion till AEM Assets
 
-Du kommer nu att börja använda de färdiga anslutningarna i Workfront Fusion för Photoshop och du kopplar ihop Firefly Text-2-Image-begäran och Photoshop-förfrågningarna till ett enda scenario.
+>[!IMPORTANT]
+>
+>För att slutföra den här övningen måste du ha tillgång till en fungerande AEM Assets CS-redigeringsmiljö. Om du följer övning [Adobe Experience Manager Cloud Service &amp; Edge Delivery Services](./../../../modules/asset-mgmt/module2.1/aemcs.md){target="_blank"} har du tillgång till en sådan miljö.
 
-## 1.2.4.1 Uppdatera variabler
+>[!IMPORTANT]
+>
+>Om du tidigare har konfigurerat ett AEM Assets CS-program med en redigeringsmiljö kan det bero på att din AEM CS-sandlåda har tagits i viloläge. Eftersom det tar 10-15 minuter att dölja en sådan sandlåda, är det en bra idé att börja denavigeringsprocessen nu så att du inte fastnar vid ett senare tillfälle.
 
-Innan du fortsätter med anslutningskonfigurationen måste följande variabler läggas till i modulen **Initiera konstanter**.
+I föregående övning konfigurerade du ett scenario som automatiskt genererar varianter av en Adobe Photoshop PSD-fil med Adobe Firefly, Photoshop API:er och Workfront Fusion. Resultatet av det scenariot var en ny Photoshop PSD-fil.
 
-- `AZURE_STORAGE_URL`
-- `AZURE_STORAGE_CONTAINER`
-- `AZURE_STORAGE_SAS_READ`
-- `AZURE_STORAGE_SAS_WRITE`
+Affärsteamen behöver dock inte ha någon PSD-fil, de behöver en PNG-fil eller en JPG-fil. I den här övningen ska du konfigurera en ny automatisering som resulterar i att en PNG-fil genereras när resursen i bildruta-I/O har godkänts och att PNG-filen lagras i AEM Assets automatiskt.
 
-Gå tillbaka till din första nod, välj **Initiera konstanter** och välj sedan **Lägg till objekt** för var och en av dessa variabler.
+## 1.2.4.1 Skapa ett nytt scenario
 
-![WF Fusion](./images/wffusion69.png)
+Gå till [https://experience.adobe.com/](https://experience.adobe.com/){target="_blank"}. Öppna **Workfront Fusion**.
 
-| Nyckel | Exempelvärde |
+![WF Fusion](./images/wffusion1.png)
+
+Gå till **Scenarier** på den vänstra menyn och markera mappen `--aepUserLdap--`. Klicka på **Skapa ett nytt scenario**.
+
+![Bildruta-I/O](./images/aemf1.png)
+
+Använd namnet `--aepUserLdap-- - Asset Approved PNG AEM Assets`. Klicka sedan på **?**, ange söktermen `webhook` och klicka sedan på **Webbhooks**.
+
+![Bildruta-I/O](./images/aemf2.png)
+
+Klicka på **Anpassad webkrok**.
+
+![Bildruta-I/O](./images/aemf3.png)
+
+Klicka på **Lägg till** om du vill skapa en ny webkrok.
+
+![Bildruta-I/O](./images/aemf4.png)
+
+Använd namnet `--aepUserLdap-- - Frame.io Webhook`. Klicka på **Spara**.
+
+![Bildruta-I/O](./images/aemf5.png)
+
+Du borde se det här då. Klicka på **Kopiera adress till Urklipp**.
+
+![Bildruta-I/O](./images/aemf6.png)
+
+## 1.2.4.2 Konfigurera webkrok i Frame.io
+
+Gå till Postman och öppna begäran **POST - Get Access Token** i samlingen **Adobe IO - OAuth**. Klicka sedan på **Skicka** för att begära en ny **access_token**.
+
+![Bildruta-I/O](./images/frameV4api2.png)
+
+Gå tillbaka till **Samlingar** på den vänstra menyn. Öppna förfrågan **POST - Create Webkroks** i samlingen **Frame.io V4 - Tech Insiders** i mappen **Webhooks**.
+
+Gå till **brödtexten** för begäran. Ändra fältet **name** till `--aepUserLdap--  - Fusion to AEM Assets` och ändra sedan fältet **url** till värdet för den webkrok-URL som du kopierade från Workfront Fusion.
+
+Klicka på **Skicka**.
+
+![Bildruta-I/O](./images/framewh1.png)
+
+Den anpassade åtgärden Frame.io V4 har skapats.
+
+![Bildruta-I/O](./images/framewh2.png)
+
+Gå till [https://next.frame.io/project](https://next.frame.io/project){target="_blank"} och gå till det projekt som du skapade tidigare, som bör ha namnet `--aepUserLdap--` och öppna mappen **CitiSignal Fibre Campaign**. Du bör nu se resurserna som skapades i den föregående övningen.
+
+![Bildruta-I/O](./images/aemf11a.png)
+
+Klicka på fältet **Status** och ändra statusen till **Pågår**.
+
+![Bildruta-I/O](./images/aemf12.png)
+
+Byt tillbaka till Workfront Fusion. Du bör nu se att anslutningen **har identifierats**.
+
+![Bildruta-I/O](./images/aemf13.png)
+
+Klicka på **Spara** för att spara ändringarna och klicka sedan på **Kör en gång** för att göra ett snabbtest.
+
+![Bildruta-I/O](./images/aemf14.png)
+
+Växla tillbaka till Frame.io och klicka på fältet **Pågår** och ändra statusen till **Behöver granskas**.
+
+![Bildruta-I/O](./images/aemf15.png)
+
+Växla tillbaka till Workfront Fusion och klicka på bubblan i modulen **Anpassad webkrok** .
+
+Detaljerad vy av bubblan visar data som tagits emot från Frame.io. Du bör se olika ID:n. Fältet **resource.id** visar till exempel det unika ID:t i Frame.io för resursen **citisign-fiber.psd**.
+
+![Bildruta-I/O](./images/aemf16.png)
+
+## 1.2.4.3 Hämta resursinformation från Frame.io
+
+Nu när kommunikationen mellan Frame.io och Workfront Fusion har upprättats via en anpassad webkrok bör du få mer information om resursen som statusetiketten uppdaterades för. För att göra detta använder du återigen kontakten Frame.io i Workfront Fusion, som i föregående övning.
+
+Håll pekaren över det **anpassade webkrokobjektet** och klicka på ikonen **+** för att lägga till en annan modul.
+
+![Bildruta-I/O](./images/aemf18a.png)
+
+Ange söktermen `frame`. Klicka på **Frame.io**.
+
+![Bildruta-I/O](./images/aemf18.png)
+
+Klicka på **Frame.io**.
+
+![Bildruta-I/O](./images/aemf19.png)
+
+Klicka på **Gör ett anpassat API-anrop**.
+
+![Bildruta-I/O](./images/aemf20.png)
+
+Kontrollera att anslutningen är inställd på samma anslutning som du skapade i den tidigare övningen, som bör ha namnet `--aepUserLdap-- - Adobe I/O - Frame.io S2S`.
+
+![Bildruta-I/O](./images/aemf21.png)
+
+Använd URL:en **för konfigurationen av modulen** Frame.io - gör ett anpassat API-anrop`/v4/accounts/{{1.account.id}}/files/{{1.resource.id}}`.
+
+>[!NOTE]
+>
+>Variabler i Workfront Fusion kan anges manuellt med följande syntax: `{{1.account.id}}` och `{{1.resource.id}}`. Talet i variabeln refererar till modulen i scenariot. I det här exemplet ser du att den första modulen i scenariot kallas **Webhooks** och har sekvensnumret **1**. Det innebär att variablerna `{{1.account.id}}` och `{{1.resource.id}}` kommer åt fältet från modulen med sekvensnummer 1. Sekvensnummer kan ibland vara olika, så var uppmärksam när du kopierar/klistrar in sådana variabler och kontrollera alltid att det sekvensnummer som används är det rätta.
+
+Klicka sedan på **+ Lägg till objekt** under **Frågesträng**.
+
+![Bildruta-I/O](./images/aemf21a.png)
+
+Ange dessa värden och klicka på **Lägg till**.
+
+| Nyckel | Värde |
 |:-------------:| :---------------:| 
-| `AZURE_STORAGE_URL` | `https://vangeluw.blob.core.windows.net` |
-| `AZURE_STORAGE_CONTAINER` | `vangeluw` |
-| `AZURE_STORAGE_SAS_READ` | `?sv=2023-01-03&st=2025-01-13T07%3A36%3A35Z&se=2026-01-14T07%3A36%3A00Z&sr=c&sp=rl&sig=4r%2FcSJLlt%2BSt9HdFdN0VzWURxRK6UqhB8TEvbWkmAag%3D` |
-| `AZURE_STORAGE_SAS_WRITE` | `?sv=2023-01-03&st=2025-01-13T17%3A21%3A09Z&se=2025-01-14T17%3A21%3A09Z&sr=c&sp=racwl&sig=FD4m0YyyqUj%2B5T8YyTFJDi55RiTDC9xKtLTgW0CShps%3D` |
+| `include` | `media_links.original` |
 
-Du kan hitta dina variabler genom att gå tillbaka till Postman och öppna dina **miljövariabler**.
+![Bildruta-I/O](./images/aemf21b.png)
 
-![Azure Storage](./../module1.1/images/az105.png)
+Du borde ha den här nu. Klicka på **OK**.
 
-Kopiera dessa värden till Workfront Fusion och lägg till ett nytt objekt för var och en av dessa fyra variabler.
-
-Skärmen bör se ut så här. Välj **OK**.
-
-![WF Fusion](./images/wffusion68.png)
-
-## 1.2.4.2 Aktivera ditt scenario med en webkrok
-
-Hittills har du kört ditt scenario manuellt för att testa. Nu uppdaterar vi ditt scenario med en webkrok, så att det kan aktiveras från en extern miljö.
-
-Välj **+**, sök efter **webkrok** och välj sedan **Webhooks**.
-
-![WF Fusion](./images/wffusion216.png)
-
-Välj **Anpassad webkrok**.
-
-![WF Fusion](./images/wffusion217.png)
-
-Dra modulen **Anpassad webkrok** till början av ditt scenario. Välj sedan ikonen **klocka** och dra den till modulen **Anpassad webkrok** .
-
-![WF Fusion](./images/wffusion217a.png)
-
-Du borde se det här då. Dra sedan den röda punkten i den första modulen mot den lila punkten i den andra modulen.
-
-![WF Fusion](./images/wffusion217b.png)
-
-Du borde se det här då. Klicka på modulen **Anpassad webkrok**.
-
-![WF Fusion](./images/wffusion217c.png)
-
-Klicka på **Lägg till**.
-
-![WF Fusion](./images/wffusion218.png)
-
-Ange **Webkrok-namnet** till `--aepUserLdap-- - Firefly + Photoshop Webhook`. Klicka på **Spara**.
-
-![WF Fusion](./images/wffusion219.png)
-
-Din webkroks-URL är nu tillgänglig. Klicka på **Kopiera adress till Urklipp** för att kopiera URL:en.
-
-![WF Fusion](./images/wffusion221.png)
-
-Öppna Postman och lägg till en ny mapp i samlingen **FF - Firefly Services Tech Insiders**.
-
-![WF Fusion](./images/wffusion222.png)
-
-Namnge mappen `--aepUserLdap-- - Workfront Fusion`.
-
-![WF Fusion](./images/wffusion223.png)
-
-Markera de tre punkterna **..** i mappen som du just skapade och välj **Lägg till begäran**.
-
-![WF Fusion](./images/wffusion224.png)
-
-Ange **Metodtypen** till **POST** och klistra in URL:en för din webkrok i adressfältet.
-
-![WF Fusion](./images/wffusion225.png)
-
-Du måste skicka en anpassad brödtext så att variabelelementen kan tillhandahållas från en extern källa till ditt Workfront Fusion-scenario.
-
-Gå till **Brödtext** och välj **Raw**.
-
-![WF Fusion](./images/wffusion226.png)
-
-Klistra in texten nedan i texten i din begäran. Välj **Skicka**.
-
-```json
-{
-    "psdTemplate": "citisignal-fiber.psd",
-    "xlsFile": "placeholder",
-    "prompt":"misty meadows",
-    "cta": "Buy this now!",
-    "button": "Click here to buy!"
-}
-```
-
-![WF Fusion](./images/wffusion229.png)
-
-I Workfront Fusion visas ett meddelande på din anpassade webkrok som säger: **Klart fastställt**.
-
-![WF Fusion](./images/wffusion227.png)
-
-## 1.2.4.3 Adobe Firefly Connector
-
-Klicka på ikonen **+** för att lägga till en ny modul.
-
-![WF Fusion](./images/wffcff2.png)
-
-Ange söktermen `Adobe Firefly` och välj sedan **Adobe Firefly**.
-
-![WF Fusion](./images/wffcff2a.png)
-
-Välj **Generera en bild**.
-
-![WF Fusion](./images/wffcff3.png)
-
-Klicka på modulen **Adobe Firefly** för att öppna den och klicka sedan på **Lägg till** för att skapa en ny anslutning.
-
-![WF Fusion](./images/wffcff5.png)
-
-Fyll i följande fält:
-
-- **Anslutningsnamn**: använd `--aepUserLdap-- - Firefly connection`.
-- **Miljö**: använd **Produktion**.
-- **Typ**: använd **Personligt konto**.
-- **Klient-ID**: kopiera **klient-ID** från ditt Adobe I/O-projekt med namnet `--aepUserLdap-- - One Adobe tutorial`.
-- **Klienthemlighet**: kopiera **Klienthemlighet** från ditt Adobe I/O-projekt med namnet `--aepUserLdap-- - One Adobe tutorial`.
-
-Du hittar **klient-ID** och **Klienthemlighet** för ditt Adobe I/O-projekt [här](https://developer.adobe.com/console/projects.){target="_blank"}.
-
-![WF Fusion](./images/wffc20.png)
-
-När du har fyllt i alla fält klickar du på **Fortsätt**. Anslutningen valideras sedan automatiskt.
-
-![WF Fusion](./images/wffcff6.png)
-
-Välj sedan variabeln **prompt** som tillhandahålls till scenariot av den inkommande **anpassade webkroken**.
-
-![WF Fusion](./images/wffcff7.png)
-
-Ange **modellversion** **prompt** till **image4-standard**. Klicka på **OK**.
-
-![WF Fusion](./images/wffcff7b.png)
+![Bildruta-I/O](./images/aemf22.png)
 
 Klicka på **Spara** för att spara ändringarna och klicka sedan på **Kör en gång** för att testa konfigurationen.
 
-![WF Fusion](./images/wffcff8.png)
+![Bildruta-I/O](./images/aemf23.png)
 
-Gå till Postman, verifiera frågan i din begäran och klicka sedan på **Skicka**.
+Växla tillbaka till Frame.io och ändra status till **Pågår**.
 
-![WF Fusion](./images/wffcff8a.png)
+![Bildruta-I/O](./images/aemf24.png)
 
-När du klickat på Skicka går du tillbaka till Workfront Fusion och klickar på bubbleikonen i modulen **Adobe Firefly** för att verifiera informationen.
+Gå tillbaka till Workfront Fusion och klicka på bubblan i **Frame.io - Gör ett anpassat API-anrop** . Du bör då se en liknande översikt.
 
-![WF Fusion](./images/wffcff9.png)
+![Bildruta-I/O](./images/aemf25.png)
 
-Gå till **OUTPUT** till **Detaljer** > **url** för att hitta URL:en för bilden som genererades av **Adobe Firefly**.
+Därefter bör du konfigurera ett filter så att bara en PNG-fil återges för resurser som har statusen **Godkänd**. Det gör du genom att klicka på ikonen **Förnya** mellan modulerna **Anpassad webkrok** och **Frame.io - Gör ett anpassat API-anrop** och sedan välja **Konfigurera ett filter** .
 
-![WF Fusion](./images/wffcff10.png)
+![Bildruta-I/O](./images/aemf25a.png)
 
-Kopiera URL-adressen och skicka den till webbläsaren. Nu bör du se en bild som representerar den fråga du skickade från Postman-begäran, i det här fallet **mister meadows**.
+Konfigurera följande fält:
 
-![WF Fusion](./images/wffcff11.png)
+- **Etikett**: använd `Status = Approved`.
+- **Villkor**: `{{1.metadata.value[]}}`.
+- **Grundläggande operatorer**: välj **Lika med**.
+- **Värde**: `Approved`.
 
-## 1.2.4.2 Ändra bakgrund för PSD-filen
+Klicka på **OK**.
 
-Du kommer nu att uppdatera ditt scenario så att det blir smartare med fler färdiga anslutningar. Du kommer också att ansluta utdata från Firefly till Photoshop så att bakgrundsbilden av PSD-filen ändras dynamiskt med hjälp av utdata från Firefly Generate Image-åtgärden.
+![Bildruta-I/O](./images/aemf35.png)
 
-Du borde se det här då. Håll sedan pekaren över modulen **Adobe Firefly** och klicka på ikonen **+** .
+Du borde ha den här då. Klicka på **Spara** för att spara ändringarna.
 
-![WF Fusion](./images/wffc15.png)
+![Bildruta-I/O](./images/aemf35a.png)
 
-Ange `Photoshop` på sökmenyn och klicka sedan på åtgärden **Adobe Photoshop** .
+## 1.2.4.4 Konvertera till PNG
 
-![WF Fusion](./images/wffc16.png)
+Hovra över modulen **Frame.io - Gör ett anpassat API-anrop** och klicka på ikonen **+** .
 
-Välj **Använd PSD-redigeringar**.
+![Bildruta-I/O](./images/aemf27.png)
 
-![WF Fusion](./images/wffc17.png)
+Ange söktermen `photoshop` och klicka sedan på **Adobe Photoshop**.
 
-Du borde se det här då. Klicka på **Lägg till** för att lägga till en ny anslutning till Adobe Photoshop.
+![Bildruta-I/O](./images/aemf28.png)
 
-![WF Fusion](./images/wffc18.png)
+Klicka på **Konvertera bildformat**.
 
-Konfigurera anslutningen enligt följande:
+![Bildruta-I/O](./images/aemf29.png)
 
-- Anslutningstyp: välj **Adobe Photoshop (Server-till-server)**
-- Anslutningsnamn: ange `--aepUserLdap-- - Adobe I/O`
-- Klient-ID: klistra in klient-ID
-- Klienthemlighet: klistra in din klienthemlighet
+Kontrollera att fältet **Connection** använder din tidigare skapade anslutning, som har namnet `--aepUserLdap-- - Adobe IO`.
 
-Klicka på **Fortsätt**.
+Under **Indata** ställer du in fältet **Lagring** till **Extern** och ställer in **Filplats** till att använda variabeln **Original** som returneras av modulen **Frame.io - gör ett anpassat API-anrop**.
 
-![WF Fusion](./images/wffc19.png)
+Klicka sedan på **Lägg till objekt** under **Utdata**.
 
-Om du vill hitta ditt **klient-ID** och **klienthemlighet** går du till [https://developer.adobe.com/console/home](https://developer.adobe.com/console/home){target="_blank"} och öppnar ditt Adobe I/O-projekt, som har namnet `--aepUserLdap-- One Adobe tutorial`. Gå till **OAuth Server-to-Server** för att hitta ditt klient-ID och din klienthemlighet. Kopiera dessa värden och klistra in dem i anslutningsinställningarna i Workfront Fusion.
+![Bildruta-I/O](./images/aemf30.png)
 
-![WF Fusion](./images/wffc20.png)
+För konfigurationen **Utdata** anger du **Lagring** till **Fusion internal storage** och **Type** till **image/png**. Klicka på **Lägg till**.
 
-När du har klickat på **Fortsätt** visas ett popup-fönster under tiden som dina autentiseringsuppgifter verifieras. När du är klar, borde du se det här.
+![Bildruta-I/O](./images/aemf31.png)
 
-![WF Fusion](./images/wffc21.png)
+Klicka på **OK**.
 
-Nu måste du ange filplatsen för den PSD-fil som du vill att Fusion ska arbeta med. För **Lagring** väljer du **Azure** och för **Filplats** anger du `{{1.AZURE_STORAGE_URL}}/{{1.AZURE_STORAGE_CONTAINER}}/{{1.AZURE_STORAGE_SAS_READ}}`. Placera markören bredvid den andra `/`. Titta sedan på de tillgängliga variablerna och bläddra nedåt för att hitta variabeln **psdTemplate**. Klicka på variabeln **psdTemplate** för att markera den.
-
-![WF Fusion](./images/wffc22.png)
-
-Du borde se det här då.
-
-![WF Fusion](./images/wffc23.png)
-
-Bläddra ända ned till **Lager**. Klicka på **Lägg till objekt**.
-
-![WF Fusion](./images/wffc24.png)
-
-Du borde se det här då. Nu måste du ange namnet på det lager i Photoshop PSD-mallen som används för filens bakgrund.
-
-![WF Fusion](./images/wffc25.png)
-
-I filen **citisign-fiber.psd** hittar du det lager som användes för bakgrunden. I det här exemplet heter det lagret **2048x2048-background**.
-
-![WF Fusion](./images/wffc26.png)
-
-Klistra in namnet **2048x2048-background** i dialogrutan Workfront Fusion.
-
-![WF Fusion](./images/wffc27.png)
-
-Bläddra nedåt tills du ser **indata**. Nu måste du definiera vad som ska infogas i bakgrundslagret. I det här fallet måste du välja utdata från modulen **Adobe Firefly** som innehåller den dynamiskt genererade bilden.
-
-För **Lagring** väljer du **Extern**. För **filplats** måste du kopiera och klistra in variabeln `{{XX.details[].url}}` från utdata från **Adobe Firefly**-modulen, men du måste ersätta **XX** i variabeln med sekvensnumret för **Adobe Firefly**-modulen, som i det här exemplet är **5**.
-
-![WF Fusion](./images/wffc28.png)
-
-Bläddra sedan nedåt tills du ser **Redigera**. Ange **Redigera** till **Ja** och ange **Typ** till **Lager**. Klicka på **Lägg till**.
-
-![WF Fusion](./images/wffc29.png)
-
-Du borde se det här då. Därefter måste du definiera åtgärdens utdata. Klicka på **Lägg till objekt** under **utdata**.
-
-![WF Fusion](./images/wffc30.png)
-
-Välj **Azure** för **Lagring**, klistra in `{{1.AZURE_STORAGE_URL}}/{{1.AZURE_STORAGE_CONTAINER}}/citisignal-fiber-replacedbg.psd{{1.AZURE_STORAGE_SAS_WRITE}}` under **Filplats** och välj **vnd.adobe.photoshop** under **Typ**. Klicka för att aktivera **Visa avancerade inställningar**.
-
-![WF Fusion](./images/wffc31.png)
-
-Under **Avancerade inställningar** väljer du **Ja** om du vill skriva över filer med samma namn.
-Klicka på **Lägg till**.
-
-![WF Fusion](./images/wffc32.png)
-
-Du borde ha den här då. Klicka på **OK**.
-
-![WF Fusion](./images/wffc33.png)
+![Bildruta-I/O](./images/aemf33.png)
 
 Klicka på **Spara** för att spara ändringarna och klicka sedan på **Kör en gång** för att testa konfigurationen.
 
-![WF Fusion](./images/wffc33a.png)
+![Bildruta-I/O](./images/aemf32.png)
 
-Gå till Postman, verifiera frågan i din begäran och klicka sedan på **Skicka**.
+Växla tillbaka till Frame.io och klicka på fältet **Pågår** och ändra statusen till **Godkänd**.
 
-![WF Fusion](./images/wffcff8a.png)
+![Bildruta-I/O](./images/aemf37.png)
 
-Du borde se det här då. Klicka på bubblan i modulen **Adobe Photoshop - Tillämpa PSD-redigeringar** .
+Gå tillbaka till Workfront Fusion. Nu bör du se att alla moduler i ditt scenario har körts korrekt. Klicka på bubblan i modulen **Adobe Photoshop - Konvertera bildformat** .
 
-![WF Fusion](./images/wffc33b.png)
+![Bildruta-I/O](./images/aemf38.png)
 
-Du kan nu se att en ny PSD-fil har skapats och sparats i ditt Microsoft Azure Storage-konto.
+I informationen om körningen av modulen **Adobe Photoshop - Konvertera bildformat** kan du se att en PNG-fil nu har genererats. Nästa steg är att sedan lagra filen i AEM Assets CS.
 
-![WF Fusion](./images/wffc33c.png)
+![Bildruta-I/O](./images/aemf39.png)
 
-## 1.2.4.3 Ändra textlager i PSD-filen
+## 1.2.4.5 Lagra PNG i AEM Assets CS
 
-Håll sedan pekaren över modulen **Adobe Photoshop - Tillämpa PSD-redigeringar** och klicka på ikonen **+** .
+Håll pekaren över modulen **Adobe Photoshop - Konvertera bildformat** och klicka på ikonen **+** .
 
-![WF Fusion](./images/wffc34.png)
+![Bildruta-I/O](./images/aemf40.png)
 
-Välj **Adobe Photoshop**.
+Ange söktermen `aem` och välj **AEM Assets**.
 
-![WF Fusion](./images/wffc35.png)
+![Bildruta-I/O](./images/aemf41.png)
 
-Välj **Redigera textlager**.
+Klicka på **Överför en resurs**.
 
-![WF Fusion](./images/wffc36.png)
+![Bildruta-I/O](./images/aemf42.png)
 
-Du borde se det här då. Välj först din tidigare konfigurerade Adobe Photoshop-anslutning, som ska heta `--aepUserLdap-- Adobe I/O`.
+Nu måste du konfigurera anslutningen till AEM Assets CS. Klicka på **Lägg till**.
 
-![WF Fusion](./images/wffc37.png)
+![Bildruta-I/O](./images/aemf43.png)
 
-För **indatafilen** väljer du **Azure** för **indatafilens lagringsutrymme** och ser till att du väljer utdata från den tidigare begäran, **Adobe Photoshop - Tillämpa PSD-redigeringar**, som du kan definiera så här: ``{{XX.data[].`_links`.renditions[].href}}`` (ersätt XX med sekvensnumret för den tidigare modulen Adobe Photoshop - Tillämpa PSD-redigeringar).
+Använd följande inställningar:
 
-Klicka sedan på **+Lägg till objekt** under **Lager** för att börja lägga till de textlager som behöver uppdateras.
+- **Anslutningstyp**: **AEM Assets as a Cloud Service**.
+- **Anslutningsnamn**: `--aepUserLdap-- AEM Assets CS`.
+- **Instans-URL**: kopiera instans-URL:en för AEM Assets CS-redigeringsmiljön, som ska se ut så här: `https://author-pXXXXX-eXXXXXXX.adobeaemcloud.com`.
+- **Fyllningsalternativ för åtkomstinformation**: välj **Tillhandahåll JSON**.
 
-![WF Fusion](./images/wffc37a.png)
+Du måste nu ange autentiseringsuppgifterna för **det tekniska kontot i JSON-format**. För att göra detta finns det ett antal steg som du måste utföra när du använder AEM Cloud Manager. Låt skärmen vara öppen medan du gör det.
 
-Det finns två ändringar att göra, CTA-texten och knapptexten i filen **citisign-fiber.psd** måste uppdateras.
+![Bildruta-I/O](./images/aemf44.png)
 
-Om du vill hitta lagernamnen öppnar du filen **citisign-fiber.psd**. I filen kommer du att märka att lagret som innehåller call to action har namnet **2048x2048-cta**.
+Gå till [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com){target="_blank"}. Organisationen som du bör välja är `--aepImsOrgName--`. Då ser du något sådant här. Klicka för att öppna programmet, som bör ha namnet `--aepUserLdap-- - Citi Signal`.
 
-![WF Fusion](./images/wffc38.png)
+![Bildruta-I/O](./images/aemf45.png)
 
-I filen **citisign-fiber.psd** kommer du också att märka att lagret som innehåller call to action har namnet **2048x2048-button-text**.
+Klicka på de tre punkterna **..** och välj **Developer Console**.
 
-![WF Fusion](./images/wffc44.png)
+![Bildruta-I/O](./images/aemf46.png)
 
-Du måste först konfigurera de ändringar som ska göras i lagret **2048x2048-cta**. Ange namnet **2048x2048-cta** under **Namn** i dialogrutan.
+Klicka på **Logga in med Adobe**.
 
-![WF Fusion](./images/wffc39.png)
+![Bildruta-I/O](./images/aemf47.png)
 
-Bläddra nedåt tills du ser **Text** > **Innehåll**. Välj variabeln **cta** från Webkroks nyttolast. Klicka på **Lägg till**.
+Gå till **Verktyg** > **Integreringar**.
 
-![WF Fusion](./images/wffc40.png)
+![Bildruta-I/O](./images/aemf47a.png)
 
-Du borde se det här då. Klicka på **+Lägg till objekt** under **Lager** för att börja lägga till nästa textlager som behöver uppdateras.
+Klicka på **Skapa nytt tekniskt konto**.
 
-![WF Fusion](./images/wffc40a.png)
+![Bildruta-I/O](./images/aemf48.png)
 
-Ange namnet **2048x2048-button-text** under **Namn** i dialogrutan.
+Då borde du se något sådant här. Öppna det nya tekniska kontot. Klicka på de tre punkterna **..** och välj sedan **Visa**.
 
-![WF Fusion](./images/wffc40b.png)
+![Bildruta-I/O](./images/aemf48a.png)
 
-Bläddra nedåt tills du ser **Text** > **Innehåll**. Välj variabeln **button** från Webkroks nyttolast. Klicka på **Lägg till**.
+Du bör då se en liknande nyttolast för token för tekniskt konto. Kopiera den fullständiga JSON-nyttolasten till Urklipp.
 
-![WF Fusion](./images/wffc40c.png)
+![Bildruta-I/O](./images/aemf50.png)
 
-Du borde se det här då.
+Gå tillbaka till Workfront Fusion och klistra in den fullständiga JSON-nyttolasten i fältet **för det tekniska kontot i JSON-format**. Klicka på **Fortsätt**.
 
-![WF Fusion](./images/wffc40d.png)
+![Bildruta-I/O](./images/aemf49.png)
 
-Bläddra nedåt tills du ser **Utdata**. För **Lagring** väljer du **Azure**. Ange platsen nedan för **filplatsen**. Observera att variabeln `{{timestamp}}` har lagts till i filnamnet, som används för att säkerställa att alla filer som genereras har ett unikt namn. Ange även **Type** som **vnd.adobe.photoshop**.
+Anslutningen valideras sedan och när den lyckas väljs anslutningen automatiskt i AEM Assets-modulen. Nästa steg är att konfigurera en mapp. Som en del av övningen bör du skapa en ny dedikerad mapp.
 
-`{{1.AZURE_STORAGE_URL}}/{{1.AZURE_STORAGE_CONTAINER}}/citisignal-fiber-changed-text-{{timestamp}}.psd{{1.AZURE_STORAGE_SAS_WRITE}}`
+![Bildruta-I/O](./images/aemf51.png)
 
-Ange **Type** till **vnd.adobe.photoshop**. Klicka på **OK**.
+Om du vill skapa en ny dedikerad mapp går du till [https://experience.adobe.com](https://experience.adobe.com/){target="_blank"}. Kontrollera att rätt Experience Cloud-instans är markerad, som ska vara `--aepImsOrgName--`. Klicka sedan på **Experience Manager Assets**.
 
-![WF Fusion](./images/wffc41.png)
+![Bildruta-I/O](./images/aemf52.png)
+
+Klicka på **Markera** i din AEM Assets CS-miljö, som bör ha namnet `--aepUserLdap-- - Citi Signal dev`.
+
+![Bildruta-I/O](./images/aemf53.png)
+
+Gå till **Resurser** och klicka på **Skapa mapp**.
+
+![Bildruta-I/O](./images/aemf54.png)
+
+Ange namnet `--aepUserLdap-- - CitiSignal Fiber Campaign` och klicka på **Skapa**.
+
+![Bildruta-I/O](./images/aemf55.png)
+
+Mappen skapas sedan.
+
+![Bildruta-I/O](./images/aemf56.png)
+
+Gå tillbaka till Workfront Fusion, välj **Klicka här för att välja mapp** och välj sedan mappen `--aepUserLdap-- - CitiSignal Fiber Campaign`.
+
+![Bildruta-I/O](./images/aemf57.png)
+
+Kontrollera att målet är inställt på `--aepUserLdap-- - CitiSignal Fiber Campaign`. Välj sedan **Karta** under **Source-fil**.
+
+Välj variabeln **under** Filnamn`{{3.filenames[1]}}`.
+
+Välj variabeln **under** Data`{{3.files[1]}}`.
+
+>[!NOTE]
+>
+>Variabler i Workfront Fusion kan anges manuellt med följande syntax: `{{3.filenames[1]}}`. Talet i variabeln refererar till modulen i scenariot. I det här exemplet ser du att den tredje modulen i scenariot heter **Adobe Photoshop - Konvertera bildformat** och har sekvensnumret **3**. Det innebär att variabeln `{{3.filenames[1]}}` kommer åt fältet **filnamn[]** från modulen med sekvensnummer 3. Sekvensnummer kan ibland vara olika, så var uppmärksam när du kopierar/klistrar in sådana variabler och kontrollera alltid att det sekvensnummer som används är det rätta.
+
+Klicka på **OK**.
+
+![Bildruta-I/O](./images/aemf58.png)
 
 Klicka på **Spara** för att spara ändringarna.
 
-![WF Fusion](./images/wffc47.png)
+![Bildruta-I/O](./images/aemf59.png)
 
-## 1.2.4.4 Webkrok-svar
+Därefter måste du ange specifika behörigheter för det tekniska konto som du nyss skapade. När kontot skapades i **Developer Console** i **Cloud Manager** fick det **läsbehörighet**, men i det här fallet krävs **skrivbehörighet**. Det gör du genom att gå till AEM CS Author.
 
-När du har tillämpat dessa ändringar i din Photoshop-fil måste du nu konfigurera ett **Webkrok-svar** som skickas tillbaka till det program som aktiverat det här scenariot.
+Gå till [https://my.cloudmanager.adobe.com](https://my.cloudmanager.adobe.com){target="_blank"}. Organisationen som du bör välja är `--aepImsOrgName--`. Klicka för att öppna programmet, som bör ha namnet `--aepUserLdap-- - Citi Signal`. Då ser du något sådant här. Klicka på författarens URL.
 
-Håll pekaren över modulen **Adobe Photoshop - Redigera textlager** och klicka på ikonen **+** .
+![Bildruta-I/O](./images/aemf60.png)
 
-![WF Fusion](./images/wffc48.png)
+Klicka på **Logga in med Adobe**.
 
-Sök efter `webhooks` och välj **Webkrok**.
+![Bildruta-I/O](./images/aemf61.png)
 
-![WF Fusion](./images/wffc49.png)
+Gå till **Inställningar** > **Säkerhet** > **Användare**.
 
-Välj **Webkrok-svar**.
+![Bildruta-I/O](./images/aemf62.png)
 
-![WF Fusion](./images/wffc50.png)
+Klicka för att öppna användarkontot för det tekniska kontot.
 
-Du borde se det här då. Klistra in nyttolasten nedan i **Body**.
+![Bildruta-I/O](./images/aemf63.png)
 
-```json
-{
-    "newPsdTemplate": ""
-}
-```
+Gå till **Grupper** och lägg till den här tekniska kontoanvändaren i gruppen **DAM-Users**.
 
-![WF Fusion](./images/wffc51.png)
+![Bildruta-I/O](./images/aemf64.png)
 
-Kopiera och klistra in variabeln `{{XX.data[]._links.renditions[].href}}` och ersätt **XX** med sekvensnumret för den sista **Adobe Photoshop - Redigera textlager** -modulen, som i det här fallet är **7**.
+Klicka på **Spara och stäng**.
 
-![WF Fusion](./images/wffc52.png)
+![Bildruta-I/O](./images/aemf65.png)
 
-Aktivera kryssrutan för **Visa avancerade inställningar** och klicka sedan på **Lägg till objekt**.
+Gå tillbaka till Workfront Fusion. Klicka på **Kör en gång** för att testa ditt scenario.
 
-![WF Fusion](./images/wffc52b.png)
+![Bildruta-I/O](./images/aemf66.png)
 
-Ange **i fältet** Nyckel`Content-Type`. Ange **i fältet** Värde`application/json`. Klicka på **Lägg till**.
+Växla tillbaka till Frame.io och se till att resursens status ändras till **Godkänd** igen.
 
-![WF Fusion](./images/wffc52a.png)
+>[!NOTE]
+>
+>Du kan behöva ändra den först till **Pågår** eller **Behöver granskas** för att sedan ändra tillbaka den till **Godkänd**.
 
-Du borde ha den här då. Klicka på **OK**.
+![Bildruta-I/O](./images/aemf15.png)
 
-![WF Fusion](./images/wffc53.png)
+Ditt Workfront Fusion-scenario aktiveras sedan och slutförs. Genom att visa informationen i bubblan i modulen **AEM Assets** kan du redan se att PNG-filen sparades korrekt i AEM Assets CS.
 
-Klicka på **Autojustera**.
+![Bildruta-I/O](./images/aemf67.png)
 
-![WF Fusion](./images/wffc54.png)
+Gå tillbaka till AEM Assets CS och öppna mappen `--aepUserLdap-- - Frame.io PNG`. Nu bör du se PNG-filen som skapades som en del av Workfront Fusion-scenariot. Dubbelklicka på filen för att öppna den.
 
-Du borde se det här då. Klicka på **Spara** för att spara ändringarna och klicka sedan på **Kör en gång** för att testa scenariot.
+![Bildruta-I/O](./images/aemf68.png)
 
-![WF Fusion](./images/wffc55.png)
+Nu kan du se mer information om metadata för PNG-filen som genererades.
 
-Gå tillbaka till Postman och klicka på **Skicka**. Uppmaningen som används här är **mister-metadata**.
+![Bildruta-I/O](./images/aemf69.png)
 
-![WF Fusion](./images/wffc56.png)
-
-Scenariot aktiveras sedan och efter en stund visas ett svar i Postman som innehåller URL:en för den nyligen skapade PSD-filen.
-
-![WF Fusion](./images/wffc58.png)
-
-Som en påminnelse: när scenariot har körts i Workfront Fusion kan du visa information om varje modul genom att klicka på bubblan ovanför varje modul.
-
-![WF Fusion](./images/wffc59.png)
-
-Med Azure Storage Explorer kan du sedan hitta och öppna den nya PSD-filen genom att dubbelklicka på den i Azure Storage Explorer.
-
-![WF Fusion](./images/wffc60.png)
-
-Filen bör sedan se ut så här, med bakgrunden som ersätts av en bakgrund med **mister-metadata**.
-
-![WF Fusion](./images/wffc61.png)
-
-Om du kör ditt scenario en gång till och sedan skickar en ny begäran från Postman via en annan uppmaning, kommer du att se hur enkelt och återanvändbart ditt scenario har blivit. I det här exemplet används den nya uppmaningen **solöde**.
-
-![WF Fusion](./images/wffc62.png)
-
-Några minuter senare har en ny PSD-fil skapats med en ny bakgrund.
-
-![WF Fusion](./images/wffc63.png)
+Du har nu slutfört den här övningen.
 
 ## Nästa steg
 
-Gå till [1.2.5 Frame.io och Workfront Fusion](./ex5.md){target="_blank"}
+Gå till [Sammanfattning och fördelar med Creative Workflow Automation med Workfront Fusion](./summary.md){target="_blank"}
 
 Gå tillbaka till [Creative Workflow Automation med Workfront Fusion](./automation.md){target="_blank"}
 
 Gå tillbaka till [Alla moduler](./../../../overview.md){target="_blank"}
+1.2.4
