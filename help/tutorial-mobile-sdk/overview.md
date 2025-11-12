@@ -43,7 +43,7 @@ När du är klar med självstudiekursen kan du:
    * [Identitet](identity.md)
    * [Profil](profile.md)
    * [Platser](places.md)
-   * [Analytics ](analytics.md)
+   * [Analytics &#x200B;](analytics.md)
    * [Experience Platform](platform.md)
    * [Skicka meddelanden med Journey Optimizer](journey-optimizer-push.md)
    * [Meddelanden i appen med Journey Optimizer](journey-optimizer-inapp.md)
