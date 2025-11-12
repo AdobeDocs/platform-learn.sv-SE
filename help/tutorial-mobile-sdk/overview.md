@@ -1,12 +1,12 @@
 ---
-title: Implementera Adobe Experience Cloud i självstudiekursen om mobilappar
-description: Lär dig hur du implementerar Adobe Experience Cloud mobilappar. Den här självstudiekursen vägleder dig genom en implementering av Experience Cloud-program i ett exempel på en Swift-app.
+title: Implementera Adobe Experience Cloud i mobilappar, genomgång
+description: Lär dig hur du implementerar Adobe Experience Cloud mobilappar. Den här självstudiekursen vägleder dig genom en implementering av Experience Cloud-program i ett exempel på ett Swift- eller Android-program.
 recommendations: noDisplay,catalog
 last-substantial-update: 2023-11-29T00:00:00Z
 exl-id: daff4214-d515-4fad-a224-f7589b685b55
-source-git-commit: 9129d7ab2ac33626240b0375e6424c0f6943290f
+source-git-commit: 342bb7efbe868622c4bc08e02568bce948fed61c
 workflow-type: tm+mt
-source-wordcount: '995'
+source-wordcount: '996'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ När du är klar med självstudiekursen kan du:
    * [Identitet](identity.md)
    * [Profil](profile.md)
    * [Platser](places.md)
-   * [Analytics &#x200B;](analytics.md)
+   * [Analytics ](analytics.md)
    * [Experience Platform](platform.md)
    * [Skicka meddelanden med Journey Optimizer](journey-optimizer-push.md)
    * [Meddelanden i appen med Journey Optimizer](journey-optimizer-inapp.md)
@@ -64,7 +64,7 @@ I den här lektionen antas du ha ett Adobe ID och de användarbehörigheter som 
    * **[!UICONTROL Property Rights]** - behörighet till objekt i **[!UICONTROL Develop]**, **[!UICONTROL Approve]**, **[!UICONTROL Publish]**, **[!UICONTROL Manage Extensions]** och **[!UICONTROL Manage Environments]**.
    * **[!UICONTROL Company Rights]** - behörighet till objekt i **[!UICONTROL Manage Properties]**
 
-     Mer information om taggbehörigheter finns i [Användarbehörigheter för taggar](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/admin/user-permissions){target="_blank"} i produktdokumentationen.
+     Mer information om taggbehörigheter finns i [Användarbehörigheter för taggar](https://experienceleague.adobe.com/en/docs/experience-platform/tags/admin/user-permissions){target="_blank"} i produktdokumentationen.
 * I Experience Platform måste du ha:
    * **[!UICONTROL Data Modeling]** - behörighet att hantera och visa scheman.
    * **[!UICONTROL Identity Management]** - behörighet att hantera och visa identitetsnamnutrymmen.
@@ -74,7 +74,7 @@ I den här lektionen antas du ha ett Adobe ID och de användarbehörigheter som 
       * **[!UICONTROL Data Management]** - behörighet att hantera och visa datauppsättningar.
       * En **utvecklingssandlåda** som du kan använda för den här självstudiekursen.
 
-   * För Journey Optimizer lektioner behöver du behörighet att konfigurera **push-meddelandetjänsten** och att skapa en **appyta**, en **resa**, ett **meddelande** och **meddelandeförinställningar**. För Beslutshantering behöver du dessutom tillräcklig behörighet för att **hantera erbjudanden** och **beslut**, vilket beskrivs i [Behörighetsnivåer](https://experienceleague.adobe.com/sv/docs/journey-optimizer/using/access-control/high-low-permissions).
+   * För Journey Optimizer lektioner behöver du behörighet att konfigurera **push-meddelandetjänsten** och att skapa en **appyta**, en **resa**, ett **meddelande** och **meddelandeförinställningar**. För Beslutshantering behöver du dessutom tillräcklig behörighet för att **hantera erbjudanden** och **beslut**, vilket beskrivs i [Behörighetsnivåer](https://experienceleague.adobe.com/en/docs/journey-optimizer/using/access-control/high-low-permissions).
 
 * För Adobe Analytics måste du veta vilka **rapportsviter** du kan använda för att slutföra kursen.
 
