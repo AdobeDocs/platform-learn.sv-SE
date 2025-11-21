@@ -4,7 +4,7 @@ description: AEM CS - Avancerat anpassat block
 kt: 5342
 doc-type: tutorial
 exl-id: 31fd1dea-70c9-4f82-87ad-16276ffa7f5b
-source-git-commit: 179b83b733f3314280d307e5eee0db9600a173b0
+source-git-commit: d4cb1ff51c9367fd0d249806e50b676d8a83c557
 workflow-type: tm+mt
 source-wordcount: '998'
 ht-degree: 0%
@@ -106,10 +106,10 @@ Gå till ditt GitHub-konto i webbläsaren och till databasen som du skapade för
 
 ![Blockera](./images/blockadv12.png){zoomable="yes"}
 
-Du kan nu visa ändringarna av din webbplats genom att gå till `main--citisignal--XXX.aem.page/us/en/` och/eller `main--citisignal--XXX.aem.live/us/en/` efter att du ersatt XXX med ditt GitHub-användarkonto, som i det här exemplet är `woutervangeluwe`.
+Du kan nu visa ändringarna av din webbplats genom att gå till `main--citisignal-aem-accs--XXX.aem.page` och/eller `main--citisignal-aem-accs--XXX.aem.live` efter att du ersatt XXX med ditt GitHub-användarkonto, som i det här exemplet är `woutervangeluwe`.
 
 I det här exemplet blir den fullständiga URL:en följande:
-`https://main--citisignal--woutervangeluwe.aem.page/us/en/` och/eller `https://main--citisignal--woutervangeluwe.aem.live/us/en/`.
+`https://main--citisignal-aem-accs--woutervangeluwe.aem.page` och/eller `https://main--citisignal-aem-accs--woutervangeluwe.aem.live`.
 
 Du bör då se det här med formateringen tillämpad på sidan.
 
@@ -336,10 +336,10 @@ Klicka sedan på **Push origin**.
 
 ![Blockera](./images/blockadv19.png){zoomable="yes"}
 
-Du kan nu visa ändringarna av din webbplats genom att gå till `main--citisignal--XXX.aem.page/us/en/` och/eller `main--citisignal--XXX.aem.live/us/en/` efter att du ersatt XXX med ditt GitHub-användarkonto, som i det här exemplet är `woutervangeluwe`.
+Du kan nu visa ändringarna av din webbplats genom att gå till `main--citisignal-aem-accs--XXX.aem.page` och/eller `main--citisignal-aem-accs--XXX.aem.live` efter att du ersatt XXX med ditt GitHub-användarkonto, som i det här exemplet är `woutervangeluwe`.
 
 I det här exemplet blir den fullständiga URL:en följande:
-`https://main--citisignal--woutervangeluwe.aem.page/us/en/` och/eller `https://main--citisignal--woutervangeluwe.aem.live/us/en/`.
+`https://main--citisignal-aem-accs--woutervangeluwe.aem.page` och/eller `https://main--citisignal-aem-accs--woutervangeluwe.aem.live`.
 
 Du borde se det här då.
 

@@ -6,7 +6,7 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 42e260e0-8af0-4d71-b634-48c1966bd912
-source-git-commit: 843140d3befd415a1879410f34c2b60c6adf18d0
+source-git-commit: d4cb1ff51c9367fd0d249806e50b676d8a83c557
 workflow-type: tm+mt
 source-wordcount: '699'
 ht-degree: 0%
@@ -170,11 +170,11 @@ När scenariot har körts bör skärmen se ut så här:
 
 ![WF Fusion](./images/wffusion30.png)
 
-Markera ikonen **frågetecken** på objektet **Ange flera variabler** för att se vad som hände när objektet kördes.
+Välj ikonen **förstoringsglas** på objektet **Ange flera variabler** för att se vad som hände när objektet kördes.
 
 ![WF Fusion](./images/wffusion31.png)
 
-Välj ikonen **frågetecken** på **HTTP - Gör en begäran** om du vill se vad som hände när objektet kördes. I **OUTPUT** ser du **access_token** som returneras av Adobe I/O.
+Välj ikonen **förstoringsglas** på **HTTP - Gör en begäran** om du vill se vad som hände när objektet kördes. I **OUTPUT** ser du **access_token** som returneras av Adobe I/O.
 
 ![WF Fusion](./images/wffusion32.png)
 
@@ -206,7 +206,7 @@ Välj **Kör en gång** igen.
 
 ![WF Fusion](./images/wffusion39.png)
 
-När scenariot körs väljer du ikonen **frågetecken** på det sista **Ange flera variabler** -objektet. Du bör se att access_token lagras i variabeln `bearer_token`.
+När scenariot körs väljer du ikonen **förstoringsglas** på det sista **Set multiple variables** -objektet. Du bör se att access_token lagras i variabeln `bearer_token`.
 
 ![WF Fusion](./images/wffusion40.png)
 

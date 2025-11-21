@@ -1,19 +1,19 @@
 ---
-title: GenStudio for Performance Marketing Campaign Activation to Meta
-description: GenStudio for Performance Marketing Campaign Activation to Meta
+title: Aktivera GenStudio for Performance Marketing Campaign till Meta
+description: Aktivera GenStudio for Performance Marketing Campaign till Meta
 role: Developer
 level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 2c7ef715-b8af-4a5b-8873-5409b43d7cb0
-source-git-commit: 19291afe2d8101fead734fa20212a3db76369522
+source-git-commit: 9af7cc3e221ddacd8b6ddc02a2215b7d9c134d0a
 workflow-type: tm+mt
-source-wordcount: '1326'
+source-wordcount: '1333'
 ht-degree: 0%
 
 ---
 
-# 1.3.3 Kampanjaktivering till Meta
+# 1.3.3 Kampanjaktivering för Meta
 
 >[!IMPORTANT]
 >
@@ -137,7 +137,7 @@ Om du vill konfigurera anslutningen till Meta klickar du på de 3 punkterna **..
 
 ![SGPeM](./images/gsconnection1.png)
 
-Klicka på **Anslut** för **Meta Ads**.
+Klicka på **Connect** för **Meta Ads**.
 
 ![SGPeM](./images/gsconnection2.png)
 
@@ -191,7 +191,7 @@ Välj **AEM Assets**.
 
 ![SGPeM](./images/gsasset8.png)
 
-Klicka på **Välj mapp**.
+Klicka på **Välj mapp**. Ändra resursens namn till `--aepUserLdap-- - neon rabbit`.
 
 ![SGPeM](./images/gsasset9.png)
 
@@ -231,13 +231,13 @@ Byt tillbaka till GenStudio for Performance Marketing. På den vänstra menyn g�
 
 ![SGPeM](./images/gsasset18.png)
 
-## 1.3.3.4 Skapa och godkänn metaannons
+## 1.3.3.4 Skapa och godkänn Meta-annons
 
 Gå till **Skapa** på den vänstra menyn. Välj **Meta**.
 
 ![SGPeM](./images/gsad1.png)
 
-Välj mallen **Meta ad** som du importerade tidigare, med namnet `--aepUserLdap---citisignal-meta-ad`. Klicka på **Använd**.
+Välj mallen **Meta och** som du importerade tidigare, med namnet `--aepUserLdap---citisignal-meta-ad`. Klicka på **Använd**.
 
 ![SGPeM](./images/gsad2.png)
 
@@ -302,7 +302,7 @@ De fyra Meta-annonserna är nu tillgängliga under **Innehåll** > **Erfarenhete
 
 ![SGPeM](./images/gsad15.png)
 
-## 1.3.3.5 Publicera annonser på metadata
+## 1.3.3.5 Publicera annonser i Meta
 
 Välj en av annonserna och klicka sedan på **Aktivera**.
 
@@ -312,7 +312,7 @@ Välj en **Call to action** i listan och ange en exempel-URL. Klicka på **Näst
 
 ![SGPeM](./images/gsmetaad3.png)
 
-Välj Meta-kontot, den länkade Facebook-sidan, Meta Campaign och Meta Ad Set.
+Markera Meta-kontot, den länkade Facebook-sidan, Meta Campaign och Meta Ad Set.
 
 Ge din add ett namn, använd `--aepUserLdap-- Fiber Max Ad`.
 
@@ -332,7 +332,7 @@ Din annons status är nu inställd på **Publicering**, vilket kan ta några min
 
 ![SGPeM](./images/gsmetaad7.png)
 
-Efter några minuter ändras annonsens status till **Publicerad**. Det innebär att annonsen har skickats från GenStudio for Performance Marketing till Meta. Det betyder inte att annonsen redan är publicerad i Meta! Det finns fortfarande ett antal steg att ta i Meta Business Account för att ta annonsen och publicera den så att den kan ses av användare på olika Meta-plattformar.
+Efter några minuter ändras annonsens status till **Publicerad**. Det innebär att annonsen har skickats från GenStudio for Performance Marketing till Meta. Det betyder inte att annonsen redan är publicerad i Meta! Det finns fortfarande ett antal steg att ta med Meta Business Account för att ta annonsen och publicera den så att den kan ses av användare på olika Meta-plattformar.
 
 Klicka på **Visa information**.
 
@@ -346,7 +346,7 @@ Klicka på **Öppna**, som tar dig till ditt Meta Business-konto.
 
 ![SGPeM](./images/gsmetaad9.png)
 
-Här är en översikt över den annons du just skapade, men nu i Meta.
+Här är en översikt över den annons du just har skapat, men nu i Meta.
 
 ![SGPeM](./images/gsmetaad10.png)
 

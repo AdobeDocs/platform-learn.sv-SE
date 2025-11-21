@@ -4,7 +4,7 @@ breadcrumb-title: En teknisk självstudiekurs för Adobe
 hide: true
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-source-git-commit: 5af7b64e88dc0f260be030bca73d9fe9219ba255
+source-git-commit: d295b93f2370b2f464d4e52714029ca70880d71d
 workflow-type: tm+mt
 source-wordcount: '1388'
 ht-degree: 3%
@@ -17,7 +17,7 @@ ht-degree: 3%
 + [Översikt över självstudiekursen](/help/tutorial-one-adobe/overview.md)
 + [GenStudio for Content Supply Chain Technical Enablement](/help/tutorial-one-adobe/genstudiocsc.md)
 + [Innehållsstatus](/help/tutorial-one-adobe/status.md)
-+ [Slutförande](/help/tutorial-one-adobe/completion.md)
++ [Arkitektur](/help/tutorial-one-adobe/architecture.md)
 
 + Komma igång {#gettingstarted}
    + Komma igång {#gettingstarted}
@@ -268,8 +268,8 @@ ht-degree: 3%
          + [Översikt](/help/tutorial-one-adobe/modules/reporting-insights/content/module3.1/contentanalytics.md)
          + [3.1.1 Komma igång med Content Analytics](/help/tutorial-one-adobe/modules/reporting-insights/content/module3.1/ex1.md)
          + [Sammanfattning och fördelar](/help/tutorial-one-adobe/modules/reporting-insights/content/module3.1/summary.md)
-+ [PIA - AI](/help/tutorial-one-adobe/ai.md)
-+ PIA - AI {#agenticai}
++ (PIA) AI {#agenticai}
+   + [AI - översikt](/help/tutorial-one-adobe/ai.md)
    + 1.1 Komma igång med agenter och AI {#agenticai1}
       + [Översikt](/help/tutorial-one-adobe/modules/agentic-ai/module1.1/agenticai.md)
       + [1.1.1 Komma igång med AI](/help/tutorial-one-adobe/modules/agentic-ai/module1.1/ex1.md)

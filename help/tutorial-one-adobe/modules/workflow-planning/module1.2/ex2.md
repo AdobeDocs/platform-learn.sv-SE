@@ -4,9 +4,9 @@ description: Korrektur med Workfront
 kt: 5342
 doc-type: tutorial
 exl-id: 5feb9486-bdb4-4d59-941c-09fc2e38163b
-source-git-commit: da966703aed5342000c19732b6b48682c3958c7f
+source-git-commit: 9af7cc3e221ddacd8b6ddc02a2215b7d9c134d0a
 workflow-type: tm+mt
-source-wordcount: '1279'
+source-wordcount: '1282'
 ht-degree: 0%
 
 ---
@@ -59,6 +59,8 @@ Klicka på **Fortsätt**.
 
 ![WF](./images/blueprint3.png)
 
+Ändra **projektmallsnamnet** till `--aepUserLdap-- - Integrated Campaign Execution`.
+
 Klicka på **Installera som..**.
 
 ![WF](./images/blueprint4.png)
@@ -89,7 +91,7 @@ Gå till **Projekt** i ditt program. Klicka på **+ Nytt projekt** och välj sed
 
 ![WF](./images/wfp6.png)
 
-Välj mallen **Integrerad kampanjkörning** och klicka på **Använd mall**.
+Markera mallen `--aepUserLdap-- - Integrated Campaign Execution` och klicka på **Använd mall**.
 
 ![WF](./images/wfp6g.png)
 

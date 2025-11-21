@@ -6,7 +6,7 @@ level: Beginner
 jira: KT-5342
 doc-type: Tutorial
 exl-id: 0b20ba91-28d4-4f4d-8abe-074f802c389e
-source-git-commit: c9807ef0787f4390d12bc7285cfe71260aa3eabf
+source-git-commit: d4cb1ff51c9367fd0d249806e50b676d8a83c557
 workflow-type: tm+mt
 source-wordcount: '1991'
 ht-degree: 0%
@@ -67,7 +67,7 @@ Du borde se det här då. Dra sedan den röda punkten i den första modulen mot 
 
 ![WF Fusion](./images/wffusion217b.png)
 
-Du borde se det här då. Klicka på modulen **Anpassad webkrok**.
+Du borde se det här då. Klicka sedan på modulen **Anpassad webkrok**.
 
 ![WF Fusion](./images/wffusion217c.png)
 

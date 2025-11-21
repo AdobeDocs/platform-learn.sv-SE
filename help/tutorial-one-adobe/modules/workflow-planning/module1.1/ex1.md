@@ -4,7 +4,7 @@ description: Komma igång med Workfront Planning
 kt: 5342
 doc-type: tutorial
 exl-id: 26fa872b-c872-46b6-8f56-fa41696100da
-source-git-commit: 42c9c3bbf0958794d5a65c37d4771345c6ff584c
+source-git-commit: 9af7cc3e221ddacd8b6ddc02a2215b7d9c134d0a
 workflow-type: tm+mt
 source-wordcount: '1258'
 ht-degree: 0%
@@ -77,7 +77,7 @@ Du bör sedan se popup-fönstret **Lägg till posttyp**.
 
 Uppdatera följande information på fliken **Utseende**:
 
-- Ersätt posttypen **Namnlös** med `Business Unit`.
+- Ersätt **posttypen utan namn** med `Business Unit`.
 - Beskrivning: `Defines which BU is leading campaign planning.`.
 - Välj en färg och form för den ikon du vill använda
 
@@ -115,7 +115,7 @@ Klicka sedan på ikonen **+** för att lägga till ett nytt fält. Bläddra ned�
 
 Ange fältets **namn** till `Business Unit Lead` och ange fältets beskrivning till `Business Unit Lead responsible for budget and resources (VP, Head).`
 
-Klicka på **Spara**.
+Klicka på **Skapa**.
 
 ![Workfront Planning](./images/wfpl17.png)
 
