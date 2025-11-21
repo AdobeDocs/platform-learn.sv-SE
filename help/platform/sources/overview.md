@@ -84,7 +84,7 @@ Lär dig hur du använder källor, eller källanslutningar, i Adobe Experience P
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="ingest-data-from-databases.md" title="Infoga data med hjälp av en datakällkoppling" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/329317?format=jpeg&nocache=1740415500936" alt="Infoga data med hjälp av en datakällkoppling"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3475988?captions=swe&format=jpeg&nocache=1740415500936" alt="Infoga data med hjälp av en datakällkoppling"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -165,7 +165,7 @@ Lär dig hur du använder källor, eller källanslutningar, i Adobe Experience P
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="ingest-data-from-adobe-analytics.md" title="Infoga data med Adobe Analytics källanslutning" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/29687?format=jpeg&nocache=1740415502122" alt="Infoga data med Adobe Analytics källanslutning"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3430253?captions=swe&format=jpeg&nocache=1740415502122" alt="Infoga data med Adobe Analytics källanslutning"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -188,7 +188,7 @@ Lär dig hur du använder källor, eller källanslutningar, i Adobe Experience P
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="ingest-data-from-marketo.md" title="Importera data från Marketo Engage" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3419550?format=jpeg&nocache=1740415502109" alt="Importera data från Marketo Engage"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3451864?captions=swe&format=jpeg&nocache=1740415502109" alt="Importera data från Marketo Engage"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
@@ -244,7 +244,7 @@ Lär dig hur du använder källor, eller källanslutningar, i Adobe Experience P
             <div class="card-image">
                 <figure class="image x-is-16by9">
                     <a href="troubleshoot-sftp-connector.md" title="Felsökning - Det går inte att ansluta till SFTP-källkopplingen" target="_blank" rel="referrer">
-                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3416134?format=jpeg&nocache=1740415502267" alt="Felsökning - Det går inte att ansluta till SFTP-källkopplingen"
+                        <img class="is-bordered-r-small" src="https://video.tv.adobe.com/v/3443473?captions=swe&format=jpeg&nocache=1740415502267" alt="Felsökning - Det går inte att ansluta till SFTP-källkopplingen"
                              style="width: 100%; aspect-ratio: 16 / 9; object-fit: cover; overflow: hidden; display: block; margin: auto;">
                     </a>
                 </figure>
