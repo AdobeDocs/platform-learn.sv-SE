@@ -21,6 +21,6 @@ Lär dig hur du skapar en instans av Kund-AI för att förutsäga kundbeteende.
 
 >[!TIP]
 >
->Kundens AI stöder både Adobe Analytics- och Adobe Audience Manager-datauppsättningar utan att ni behöver ETL era data för att följa CEE-schemat (Consumer Experience Event). Mer information finns i [Förberedelseguiden för intelligenta tjänster](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html?lang=sv-SE).
+>Kundens AI stöder både Adobe Analytics- och Adobe Audience Manager-datauppsättningar utan att ni behöver ETL era data för att följa CEE-schemat (Consumer Experience Event). Mer information finns i [Förberedelseguiden för intelligenta tjänster](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/data-preparation.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/32665?learn=on&enablevpops)

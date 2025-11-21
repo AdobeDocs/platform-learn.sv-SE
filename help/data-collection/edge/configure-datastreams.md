@@ -15,6 +15,6 @@ ht-degree: 33%
 
 # Konfigurera dataströmmar
 
-Lär dig hur du skapar och konfigurerar dataströmmar för SDK-implementeringar för webb och mobiler. Mer information finns i [datastreams-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=sv-SE).
+Lär dig hur du skapar och konfigurerar dataströmmar för SDK-implementeringar för webb och mobiler. Mer information finns i [datastreams-dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/340825?learn=on&enablevpops)

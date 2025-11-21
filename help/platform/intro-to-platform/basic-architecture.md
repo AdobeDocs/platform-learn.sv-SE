@@ -18,6 +18,6 @@ ht-degree: 80%
 
 Lär dig om arkitekturen på hög nivå i Adobe Experience Platform genom en genomgång av ett översiktsdiagram.
 
->[!VIDEO](https://video.tv.adobe.com/v/3432346?learn=on&enablevpops&captions=swe)
+>[!VIDEO](https://video.tv.adobe.com/v/32456?learn=on&enablevpops)
 
 

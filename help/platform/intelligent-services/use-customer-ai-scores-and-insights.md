@@ -17,7 +17,7 @@ ht-degree: 51%
 
 # Använd poäng och insikter från AI för kundbenägenhet
 
-Lär dig hur ni använder AI-poängen och insikterna för att konvertera och behålla kunder. Mer information finns i [Kundens AI-dokumentation](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/customer-ai/overview.html?lang=sv-SE).
+Lär dig hur ni använder AI-poängen och insikterna för att konvertera och behålla kunder. Mer information finns i [Kundens AI-dokumentation](https://experienceleague.adobe.com/docs/experience-platform/intelligent-services/customer-ai/overview.html).
 
 >[!VIDEO](https://video.tv.adobe.com/v/32666?learn=on&enablevpops)
 
