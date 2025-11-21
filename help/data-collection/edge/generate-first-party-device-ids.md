@@ -21,7 +21,7 @@ Adobe Experience Cloud-program har traditionellt genererat cookies för att lagr
 1. cookies från första part som anges av en Adobe-server med hjälp av domännamnets CNAME-konfiguration
 1. cookies från första part som anges av JavaScript
 
-De senaste ändringarna i webbläsaren begränsar varaktigheten för dessa typer av cookies. Första parts-cookies är mest effektiva när de ställs in med en kundägd server som använder en DNS A/AAA-post i motsats till en DNS CNAME. Funktionen [FPID (First-party device ID)](https://experienceleague.adobe.com/en/docs/experience-platform/web-sdk/identity/first-party-device-ids) gör att kunder som implementerar Adobe Experience Platform Web SDK kan använda enhets-ID i cookies från servrar som använder DNS A/AAAA-poster. Dessa ID:n kan sedan skickas till Adobe och användas som frön för att generera Experience Cloud ID:n (ECID), som förblir den primära identifieraren i Adobe Experience Cloud-program.
+De senaste ändringarna i webbläsaren begränsar varaktigheten för dessa typer av cookies. Första parts-cookies är mest effektiva när de ställs in med en kundägd server som använder en DNS A/AAA-post i motsats till en DNS CNAME. Funktionen [FPID (First-party device ID)](https://experienceleague.adobe.com/sv/docs/experience-platform/web-sdk/identity/first-party-device-ids) gör att kunder som implementerar Adobe Experience Platform Web SDK kan använda enhets-ID i cookies från servrar som använder DNS A/AAAA-poster. Dessa ID:n kan sedan skickas till Adobe och användas som frön för att generera Experience Cloud ID:n (ECID), som förblir den primära identifieraren i Adobe Experience Cloud-program.
 
 Här är ett kort exempel på hur funktionen fungerar:
 
@@ -152,4 +152,4 @@ Validera implementeringen genom att bekräfta att samma ECID genereras från dit
 1. Skicka ytterligare en förfrågan till Platform Edge Network.
 1. Bekräfta att värdet i cookien `AMCV_<IMSORGID@AdobeOrg>` har samma `ECID`-värde som i cookien `AMCV_` som togs bort. Om cookie-värdet är samma för en viss FPID har sederingsprocessen för ECID slutförts.
 
-Mer information om den här funktionen finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html).
+Mer information om den här funktionen finns i [dokumentationen](https://experienceleague.adobe.com/docs/experience-platform/edge/identity/first-party-device-ids.html?lang=sv-SE).

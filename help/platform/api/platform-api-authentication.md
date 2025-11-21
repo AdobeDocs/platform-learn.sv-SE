@@ -26,7 +26,7 @@ Med funktionen [Adobe Developer Console](https://developer.adobe.com/console/hom
 
 >[!IMPORTANT]
 >
->För att få åtkomst till [Adobe Developer Console](https://developer.adobe.com/console/home) måste du vara en [systemadministratör](https://helpx.adobe.com/enterprise/using/admin-roles.html) eller en [utvecklare](https://helpx.adobe.com/enterprise/using/manage-developers.html#:~:text=Add%20developers%20to%20a%20single%20product%20profile&text=In%20the%20Admin%20Console%2C%20navigate,in%20the%20upper%2Dright%20corner.) i [Adobe Admin Console](https://adminconsole.adobe.com) .
+>För att få åtkomst till [Adobe Developer Console](https://developer.adobe.com/console/home) måste du vara en [systemadministratör](https://helpx.adobe.com/se/enterprise/using/admin-roles.html) eller en [utvecklare](https://helpx.adobe.com/se/enterprise/using/manage-developers.html#:~:text=Add%20developers%20to%20a%20single%20product%20profile&text=In%20the%20Admin%20Console%2C%20navigate,in%20the%20upper%2Dright%20corner.) i [Adobe Admin Console](https://adminconsole.adobe.com) .
 >
 > När du har skapat API-autentiseringsuppgifterna måste systemadministratören associera dem med en roll i Experience Platform.
 >

@@ -16,7 +16,7 @@ ht-degree: 31%
 
 # Skapa en taggegenskap
 
-Lär dig hur du skapar taggegenskaper för att hantera marknadsföringstaggarna på din webbplats. Mer information finns i dokumentationen för [egenskaper](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html).
+Lär dig hur du skapar taggegenskaper för att hantera marknadsföringstaggarna på din webbplats. Mer information finns i dokumentationen för [egenskaper](https://experienceleague.adobe.com/docs/experience-platform/tags/admin/companies-and-properties.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/28727/?learn=on&enablevpops)
 
