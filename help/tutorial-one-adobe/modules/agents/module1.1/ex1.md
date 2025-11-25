@@ -3,9 +3,9 @@ title: Komma igång med Agent Orchestrator
 description: Komma igång med Agent Orchestrator
 kt: 5342
 doc-type: tutorial
-source-git-commit: 9011c4093b5fd6612426baf7003cd7b99523b6e8
+source-git-commit: ffdc6b34a82c945c142f433f65a4f2f8d5cdcd18
 workflow-type: tm+mt
-source-wordcount: '1296'
+source-wordcount: '1514'
 ht-degree: 0%
 
 ---
@@ -373,15 +373,13 @@ Undertryck om det finns en Fibre-prenumerant eller en biljett för installation.
 
 Uppfyll inställningarna för alternativ.
 
-Måttplan (CJA):
+**Måttplan (CJA)**:
 
 Spåra: Leverans, öppna, klicka, PDP-vy, utcheckningsstart, orderslutförande.
 
 KPI:er: Konverteringsgrad till Fiber Max, uplift vs control, timetoinstall.
 
 Diagnostik: Utfallsrapport per enhet/genre-segment.
-
-Form
 
 Hur allt passar ihop (marknadsförarens mentala modell)
 
@@ -395,11 +393,103 @@ Validera friktionspunkter (CJA-utfall på SciFi-resa).
 
 Aktivera mot högprioritetssegment (stora hämtningsprogram ∩ SciFi).
 
+Gå till [https://experience.adobe.com/#/@experienceplatform/ai-assistant/chat](https://experience.adobe.com/#/@experienceplatform/ai-assistant/chat).
+
+Du borde se det här då. Kontrollera att du är i organisationen **Experience Platform International**.
+
+Klicka på fönstret **context**.
+
+![Agent Orchestrator](./images/ao2.png)
+
+Ställ in kontexten på:
+
+- **Dokumentation för Source**: **Journey Optimizer**
+- **Sandbox**: **Accelerate**
+- **Datavy**: **Accelerate 2026 B2C**
+
+Klicka på **Ange kontext**.
+
+![Agent Orchestrator](./images/aoea3.png)
+
 Ange följande **Fråga** och klicka på knappen **generera**.
 
 ```javascript
 Create a  journey towards the audience Heavy Downloaders - Sci-Fi Preference_kbaa_5207bf. The journey is for the rollout of fiber broadband. There will 2 versions of an email  based on  a split of the audience based on who is in the "Eligble for Fiber upgrade" audience.  After 3 days, profiles from both email treatments who have not purchased fibre max will be sent a follow up email. 
 ```
+
+![Agent Orchestrator](./images/aocj1.png)
+
+Du borde se det här då. Ange `yes` och klicka på generera.
+
+![Agent Orchestrator](./images/aocj2.png)
+
+Du borde se det här då. Ange `yes` och klicka på generera.
+
+![Agent Orchestrator](./images/aocj3.png)
+
+Du borde se det här då. Ange `The first one` och klicka på generera.
+
+![Agent Orchestrator](./images/aocj4.png)
+
+Du borde se det här då. Ange `yes` och klicka på generera.
+
+![Agent Orchestrator](./images/aocj5.png)
+
+Granska svaret. Ange `yes` och klicka på generera.
+
+![Agent Orchestrator](./images/aocj6.png)
+
+Klicka på **Granska**.
+
+![Agent Orchestrator](./images/aocj7.png)
+
+Uppdatera resenamnet med din LDAP för att göra det unikt. Klicka på **Spara**.
+
+![Agent Orchestrator](./images/aocj8.png)
+
+Din resa har nu skapats i utkastläge.
+
+![Agent Orchestrator](./images/aocj9.png)
+
+## 1.1.1.10 experiment
+
+Gå till [https://experience.adobe.com/#/@experienceplatform/ai-assistant/chat](https://experience.adobe.com/#/@experienceplatform/ai-assistant/chat).
+
+Du borde se det här då. Kontrollera att du är i organisationen **Experience Platform International**.
+
+Klicka på fönstret **context**.
+
+![Agent Orchestrator](./images/ao2.png)
+
+Ställ in kontexten på:
+
+- **Dokumentation för Source**: **Journey Optimizer**
+- **Sandbox**: **Accelerate**
+- **Datavy**: **Accelerate 2026 B2C**
+
+Klicka på **Ange kontext**.
+
+![Agent Orchestrator](./images/aoea3.png)
+
+Ange följande **Fråga** och klicka på knappen **generera**.
+
+```javascript
+How are the experiments performing for the journey named 'CitiSignal - Fiber Max Launch Promotion'?
+```
+
+![Agent Orchestrator](./images/aoea0.png)
+
+Du bör då se det här:
+
+![Agent Orchestrator](./images/aoea1.png)
+
+Klicka på förslaget för att jämföra konverteringsgraden för varje behandling och klicka sedan på **generera**.
+
+![Agent Orchestrator](./images/aoea2.png)
+
+Du bör då se en detaljerad jämförelse som den här:
+
+![Agent Orchestrator](./images/aoea4.png)
 
 Gå tillbaka till [Agent Orchestrator](./agentorchestrator.md){target="_blank"}
 
