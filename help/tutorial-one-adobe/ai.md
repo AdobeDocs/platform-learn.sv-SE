@@ -3,9 +3,9 @@ title: Översikt AI Tech Labs
 description: Översikt AI Tech Labs
 doc-type: multipage-overview
 exl-id: 49515d00-05f6-4a28-96e0-dbdf66d8436b
-source-git-commit: 252ca08d13fbb7bc966a777003da1dd9e3df20a0
+source-git-commit: 350292be24f19462abe3c5ea1a795b4bd93b613f
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '265'
 ht-degree: 0%
 
 ---
@@ -16,9 +16,22 @@ ht-degree: 0%
 
 ## Översikt - pågående arbete
 
-Agentic AI Tech Labs är ett pågående arbete och kommer att släppas i november/december 2025.
+[1.1 Agent Orchestrator](./modules/agents/module1.1/agentorchestrator.md)
 
-[1.1 Komma igång med agenter och AI](./modules/agentic-ai/module1.1/agenticai.md)
+**Mål**
+
+Lär dig använda Adobe Experience Platform Agents och Agent Orchestrator för att:
+
+- Analysera inköpstrender
+- Identifiera målgrupper med hög benägenhet
+- Validera reseprestanda
+- Skapa en ny resa för introduktionen av maximal CitiSignal Fiber
+
+[1.2 Komma igång med agenter och AI](./modules/agents/module1.2/agenticai.md)
+
+>[!NOTE]
+>
+>Den här modulen har inte släppts än.
 
 **Mål**
 
@@ -38,7 +51,11 @@ Tekniska element:
 - MCP-server, Python Notebook
 - Adobe API:er
 
-[1.2 Agent Collaboration](./modules/agentic-ai/module1.2/agentcollaboration.md)
+[1.3 Agent Collaboration](./modules/agents/module1.3/agentcollaboration.md)
+
+>[!NOTE]
+>
+>Den här modulen har inte släppts än.
 
 **Mål**
 
