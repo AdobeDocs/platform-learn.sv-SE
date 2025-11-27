@@ -3,9 +3,9 @@ title: Komma igång med Agent Orchestrator
 description: Komma igång med Agent Orchestrator
 kt: 5342
 doc-type: tutorial
-source-git-commit: dee5b0855eeeb455bf22f511d11cd13f7e904889
+source-git-commit: bb31fe8a36f1c9ee9d212500e2e58e01be1129b8
 workflow-type: tm+mt
-source-wordcount: '1112'
+source-wordcount: '1375'
 ht-degree: 0%
 
 ---
@@ -26,9 +26,17 @@ Klicka på fönstret **context**.
 
 Ställ in kontexten på:
 
-- **Dokumentation för Source**: **Customer Journey Analytics**
-- **Sandbox**: **Accelerate**
+- **Dokumentation för Source**: **Journey Optimizer**
+
+Inställningen Documentation Source hjälper dig att ge preferenser till vilka upplevelselektionsdokument som ska söka efter frågor som rör produktkunskap/Experience League.
+
+- **Sandbox**: **Prod - Accelerate (VA7)**
+
+Inställningen Sandlåda hjälper dig att identifiera vilken AI-assistent för sandlådan som ska titta på när du ställer frågor.
+
 - **Datavy**: **Accelerate 2026 B2C**
+
+Inställningen Datavy hjälper dig att identifiera vilken AI-assistent för datavyer som ska titta på när du ställer frågor.
 
 Klicka på **Ange kontext**.
 
@@ -60,15 +68,29 @@ Ange följande **Fråga** och klicka på knappen **Skicka**.
 
 Du borde se det här, som fördjupar dig i fiberspecifika trender.
 
-**Åtgärd**: Observera tillväxtkurvan och regionala toppar.
-
 ![Agent Orchestrator](./images/ao7.png)
 
 ## 1.1.1.3 Korrelera order med innehållsinställningar
 
 **Återgivning**
 
-Testa hypotesen om att innehållsinställningen (t.ex. SciFi, Sport, Drama) förutser hur bredbandsuppgraderingen fungerar - särskilt för behov med hög bandbredd.
+Testa hypotesen om att en inställning för en viss genre (t.ex. SciFi, Sport, Drama) förutsäger hur bredbandsuppgraderingen fungerar - särskilt för behov med hög bandbredd.
+
+Först måste du ta reda på vilket fält som används för att lagra genre-inställningen.
+
+Ange följande **Fråga** och klicka på knappen **Skicka**.
+
+```javascript
+Which field is used to store the preferred genre?
+```
+
+![Agent Orchestrator](./images/ao7a.png)
+
+Du bör då se det här, som visar att fältet som används för genren är **_experiencePlatform.individualCharacpropertics.preferences.preferredGenre**.
+
+![Agent Orchestrator](./images/ao7b.png)
+
+Med den informationen kan du börja detaljgranska köpdata.
 
 Ange följande **Fråga** och klicka på knappen **Skicka**.
 
@@ -78,9 +100,13 @@ Show me ordersYTD by preferredGenre for the last 2 months
 
 ![Agent Orchestrator](./images/ao8.png)
 
-Du bör då se det här:
+Du borde se det här då. Klicka på ikonen i blocket **Reasoning klar** för att förstå vad som händer i Agent Orchestrator bakom kulisserna.
 
 ![Agent Orchestrator](./images/ao9.png)
+
+Du bör då se en liknande förklaring.
+
+![Agent Orchestrator](./images/ao10.png)
 
 ## 1.1.1.4 Identifiera befintliga Fibre Journeys
 
@@ -96,15 +122,19 @@ What journeys exist?
 
 ![Agent Orchestrator](./images/ao12.png)
 
-Du bör då se det här:
+Du borde se det här då. Klicka på **Visa mer**.
 
 ![Agent Orchestrator](./images/ao13.png)
 
-Visa aktiva eller tidigare resor med Fibre Messaging.
+Du bör då se en större lista över aktiva eller tidigare resor. Klicka på ikonen **download** om du vill hämta en lista över de här resorna.
 
-Åtgärd: Kortlista högpresterande resor för kloning.
+![Agent Orchestrator](./images/ao13a.png)
 
-Ange följande **Fråga** och klicka på knappen **Skicka**.
+Då skapas en CSV-fil som innehåller alla utdata från AI-assistenten.
+
+![Agent Orchestrator](./images/ao13b.png)
+
+Klicka för att stänga den högra rutan. Ange följande **Fråga** och klicka på knappen **Skicka**.
 
 ```javascript
 Which of these journeys has 'Fiber' in its name?
@@ -112,21 +142,27 @@ Which of these journeys has 'Fiber' in its name?
 
 ![Agent Orchestrator](./images/ao14.png)
 
-Du bör då se det här:
+Du borde se det här då. Klicka på länken på en av resorna och välj **Reseinformation**.
 
 ![Agent Orchestrator](./images/ao15.png)
 
-## 1.1.1.5 Kontrollera startvärdet
+Ett nytt fönster öppnas och du kommer direkt till översikten över reseinformation.
+
+![Agent Orchestrator](./images/ao15a.png)
+
+## 1.1.1.5 Kontrollera vilken målgrupp som används
 
 **Återgivning**:
 
 Förstå startvärdesdefinitionen för resan&quot;CitiSignal - Fiber Max Launch Promotion&quot; - vilka egenskaper som driver målsättningen (t.ex.&quot;SciFi Genre Preference&quot;,&quot;4+ enheter&quot;,&quot;ström ≥ 300 GB/månad&quot;).
 
-Ange följande **Fråga** och ange sedan fib **+CitiSignal** för att aktivera automatisk komplettering. Välj resan **CitiSignal - maximal startkampanj för Fibre**.
+Ange följande **Fråga**:
 
 ```javascript
 What was the initial audience in the journey named 
 ```
+
+Ange sedan manuellt i `+CitiSignal fib` för att aktivera automatisk komplettering. Välj resan **CitiSignal - maximal startkampanj för Fibre**.
 
 ![Agent Orchestrator](./images/ao16.png)
 
@@ -142,11 +178,7 @@ Du borde se det här då.
 
 **Återgivning**
 
-Bygg en stegvis funnel i Customer Journey Analytics
-
-Levererad → Öppen → Klickad → Lanserad → Produktvy → Lägg till i kundvagn → Kassa → Beställning slutförd
-
-Inkludera fiberrelaterade SKU-vyer som en gren.
+Du vill förstå hur väl resan fungerar och veta om det finns några noder eller villkor under resan som har en stor andel profiler som tas bort. Detta är till hjälp när det gäller att förstå om ytterligare justeringar behövs under resan.
 
 Ange följande **Fråga** och klicka på knappen **Skicka**.
 
@@ -156,19 +188,29 @@ Create a fall-out report on the "CitiSignal - Fiber Max Launch Promotion" journe
 
 ![Agent Orchestrator](./images/ao19.png)
 
+Du borde se det här då.
+
+![Agent Orchestrator](./images/ao20.png)
+
+Rulla ner lite. Du kan nu granska tabellen genom att granska varje nod och dess respektive nummer, bortfallsnummer och utfallsfrekvens.
+
+AI Assistant ger dig observationer och rekommendationer.
+
+Klicka på meningen **Så här fick jag resultaten**.
+
+![Agent Orchestrator](./images/ao21.png)
+
+Du kan sedan se de steg som AI Assistant följer för att nå resultaten.
+
+![Agent Orchestrator](./images/ao22.png)
+
 ## 1.1.1.7 Skapa en ny publik
 
 **Återgivning**
 
-Baserat på ovanstående resultat finns det en korrelation mellan kunder som konsumerar mycket data och som har en föredragen genre av sci-fi eller fantasi. Du kommer nu att kombinera dessa attribut i en målgrupp.
-
-Gå till [https://experience.adobe.com/#/@experienceplatform/ai-assistant/chat](https://experience.adobe.com/#/@experienceplatform/ai-assistant/chat).
+Baserat på ovanstående resultat och undersökningar finns det en korrelation mellan kunder som konsumerar mycket data och som har en föredragen genre av sci-fi eller fantasi. Du kommer nu att kombinera dessa attribut i en målgrupp.
 
 Ange följande **Fråga** och klicka på knappen **Skicka**.
-
->[!NOTE]
->
->Verifiera att assistentens kontext pekar på sandlådan **Accelerate** och datavyn **Accelerate 2026 B2C**
 
 ```javascript
 Create an audience that combines people with an average download per month of over 2000 GB and a preferred genre of sci-fi or fantasy.
@@ -177,6 +219,10 @@ Create an audience that combines people with an average download per month of ov
 ![Agent Orchestrator](./images/ao32.png)
 
 Granska planen. Ange `yes` och klicka på **send**.
+
+>[!NOTE]
+>
+>Planen genereras baserat på en referenshandbok i systemet. Kunderna kommer till slut att kunna anpassa planer och lägga till egna planer, men för tillfället är de statiska.
 
 ![Agent Orchestrator](./images/ao33.png)
 
@@ -202,7 +248,7 @@ Din målgrupp har nu skapats.
 
 >[!NOTE]
 >
->När du skapar en ny målgrupp tar det 24 timmar innan målgruppen är tillgänglig för assistenten för vidare användning.
+>När du skapar en ny målgrupp tar det 24 timmar innan målgruppen är tillgänglig för AI Assistant för ytterligare användning.
 
 ## 1.1.1.8 Hitta befintliga målgrupper som är anpassade till hög användning och kontrollera om de används
 
@@ -212,17 +258,9 @@ Hitta en målgrupp som heter&quot;tung nedladdning&quot;, som definieras av trö
 
 >[!NOTE]
 >
->I föregående steg skapade du en ny målgrupp, kom ihåg att det kommer att ta 24 timmar innan målgruppen är tillgänglig för assistenten för ytterligare användning. Nu bör ni använda en annan befintlig målgrupp istället.
-
-Gå till [https://experience.adobe.com/#/@experienceplatform/ai-assistant/chat](https://experience.adobe.com/#/@experienceplatform/ai-assistant/chat).
-
-Du borde se det här då. Kontrollera att du är i organisationen **Experience Platform International**.
+>I det föregående steget skapade du en ny målgrupp, kom ihåg att det kommer att ta 24 timmar innan målgruppen är tillgänglig för AI Assistant för ytterligare användning. Nu bör ni använda en annan befintlig målgrupp istället.
 
 Ange följande **Fråga** och klicka på knappen **Skicka**.
-
->[!NOTE]
->
->Verifiera att assistentens kontext pekar på sandlådan **Accelerate** och datavyn **Accelerate 2026 B2C**
 
 ```javascript
 Is there an audience that has "heavy downloaders" in the title?
@@ -230,9 +268,27 @@ Is there an audience that has "heavy downloaders" in the title?
 
 ![Agent Orchestrator](./images/ao30.png)
 
-Du borde se det här då.
+Du borde se det här då. Nu vill ni se alla era målgrupper och hur mycket de har förändrats de senaste dagarna.
+
+Ange följande **Fråga** och klicka på knappen **Skicka**.
+
+```javascript
+List how much these audiences changed over the last few days.
+```
 
 ![Agent Orchestrator](./images/ao31.png)
+
+Du borde se det här då. Klicka på **Visa mer**.
+
+![Agent Orchestrator](./images/ao31a.png)
+
+Du borde se det här då. Klicka för att stänga den högra rutan.
+
+![Agent Orchestrator](./images/ao31b.png)
+
+Bläddra nedåt lite för att se hur AI Assistant fungerar.
+
+![Agent Orchestrator](./images/ao31c.png)
 
 Det finns redan en del befintliga målgrupper för&quot;tunga nedladdare&quot;. Låt oss se om de redan används.
 
@@ -251,12 +307,12 @@ Du borde se något liknande.
 Nu bör du verifiera om resan är aktiv. Ange följande **Fråga** och klicka på knappen **Skicka**.
 
 ```javascript
-Which of the above are used in a journey? 
+Are these journeys active? 
 ```
 
 ![Agent Orchestrator](./images/ao52.png)
 
-Du borde se något liknande. Den resan går inte just nu.
+Du borde se något liknande. Ingen av dessa resor är igång just nu.
 
 ![Agent Orchestrator](./images/ao53.png)
 
@@ -268,17 +324,9 @@ För den kommande lanseringen av Fiber Max bör du nu skapa en ny resa.
 
 Bygg en ny resa för den sammansatta målgruppen:
 
-Stora hämtare ∩ SciFi-inställningar (kbaa_5207bf målgruppsnyckel).
-
-Gå till [https://experience.adobe.com/#/@experienceplatform/ai-assistant/chat](https://experience.adobe.com/#/@experienceplatform/ai-assistant/chat).
-
-Du borde se det här då. Kontrollera att du är i organisationen **Experience Platform International**.
+Stora hämtare ∩ SciFi-inställningar.
 
 Ange följande **Fråga** och klicka på knappen **Skicka**.
-
->[!NOTE]
->
->Verifiera att assistentens kontext pekar på sandlådan **Accelerate** och datavyn **Accelerate 2026 B2C**
 
 ```javascript
 Create a  journey towards the audience Heavy Downloaders - Sci-Fi Preference_kbaa_5207bf. The journey is for the rollout of fiber broadband. There will 2 versions of an email  based on  a split of the audience based on who is in the "Eligble for Fiber upgrade" audience.  After 3 days, profiles from both email treatments who have not purchased fibre max will be sent a follow up email. 
@@ -294,15 +342,15 @@ Du borde se det här då. Ange `yes` och klicka på generera.
 
 ![Agent Orchestrator](./images/aocj3.png)
 
-Du borde se det här då. Ange `The first one` och klicka på generera.
+Du borde se det här då. Ange `The first one` och klicka på Skicka.
 
 ![Agent Orchestrator](./images/aocj4.png)
 
-Du borde se det här då. Ange `yes` och klicka på generera.
+Du borde se det här då. Ange `yes` och klicka på Skicka.
 
 ![Agent Orchestrator](./images/aocj5.png)
 
-Granska svaret. Ange `yes` och klicka på generera.
+Granska svaret. Ange `yes` och klicka på Skicka.
 
 ![Agent Orchestrator](./images/aocj6.png)
 
@@ -320,15 +368,7 @@ Din resa har nu skapats i utkastläge.
 
 ## Hantering av 1.1.1.10-resekonflikter
 
-Gå till [https://experience.adobe.com/#/@experienceplatform/ai-assistant/chat](https://experience.adobe.com/#/@experienceplatform/ai-assistant/chat).
-
-Du borde se det här då. Kontrollera att du är i organisationen **Experience Platform International**.
-
 Ange följande **Fråga** och klicka på knappen **Skicka**.
-
->[!NOTE]
->
->Kontrollera att hjälpens sammanhang pekar mot dokumentationskällan **Journey Optimizer**, sandlådan **Accelerate** och datavyn **Accelerate 2026 B2C**
 
 ```javascript
 How can I manage journey conflicts?
@@ -347,10 +387,16 @@ Bläddra nedåt och välj **Källor** för att hitta informationen som kommer fr
 Ange följande **Fråga** och klicka på knappen **Skicka**.
 
 ```javascript
-List any conflicts for "CitiSignal - Fiber Max Launch Promotion" journey
+List any conflicts for the journey +CitiSignal Fiber Max
 ```
 
+Välj sedan manuellt resan **CitiSignal - maximal startkampanj för Fibre** i listan.
+
 ![Agent Orchestrator](./images/aocj70.png)
+
+Du borde se det här då. Klicka på **skicka**.
+
+![Agent Orchestrator](./images/aocj70a.png)
 
 Granska information om resekonflikter.
 
@@ -362,15 +408,7 @@ Bläddra nedåt för att hitta fler detaljer om resekonflikter.
 
 ## 1.1.1.11 experiment
 
-Gå till [https://experience.adobe.com/#/@experienceplatform/ai-assistant/chat](https://experience.adobe.com/#/@experienceplatform/ai-assistant/chat).
-
-Du borde se det här då. Kontrollera att du är i organisationen **Experience Platform International**.
-
 Ange följande **Fråga** och klicka på knappen **Skicka**.
-
->[!NOTE]
->
->Verifiera att assistentens kontext pekar på sandlådan **Accelerate** och datavyn **Accelerate 2026 B2C**
 
 ```javascript
 How are the experiments performing for the journey named 'CitiSignal - Fiber Max Launch Promotion'?
@@ -382,13 +420,19 @@ Du bör då se det här:
 
 ![Agent Orchestrator](./images/aoea1.png)
 
-Klicka på förslaget för att jämföra konverteringsgraden för varje behandling och klicka sedan på **send**.
+Bläddra nedåt och klicka på något av förslagen. Klicka på **skicka**.
+
+>[!NOTE]
+>
+>Förslagen är dynamiska så att du kan förvänta dig olika förslag varje gång ett svar genereras. Dina förslag kommer troligtvis att skilja sig från de förslag som visas i den här skärmbilden.
 
 ![Agent Orchestrator](./images/aoea2.png)
 
-Du bör då se en detaljerad jämförelse som den här:
+Du bör då se ett detaljerat svar om det förslag som valdes.
 
 ![Agent Orchestrator](./images/aoea4.png)
+
+Du har nu slutfört det här labbet.
 
 Gå tillbaka till [Agent Orchestrator](./agentorchestrator.md){target="_blank"}
 
