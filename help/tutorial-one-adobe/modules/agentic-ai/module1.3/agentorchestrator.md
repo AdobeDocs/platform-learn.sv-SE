@@ -3,10 +3,10 @@ title: Agent Orchestrator
 description: Agent Orchestrator
 kt: 5342
 doc-type: tutorial
-source-git-commit: e90dee164dfe098c9fc56a04c481a733c0843858
+source-git-commit: 69a0bdd4d8150f3e0a9a294a409eab958211388e
 workflow-type: tm+mt
-source-wordcount: '125'
-ht-degree: 4%
+source-wordcount: '96'
+ht-degree: 6%
 
 ---
 
@@ -26,14 +26,6 @@ Lär dig använda Adobe Experience Platform Agents och Agent Orchestrator för a
 - Tillgång till Adobe Journey Optimizer och Customer Journey Analytics
 - Förtrogenhet med [Agent Orchestrator-koncept](https://experienceleague.adobe.com/sv/docs/experience-cloud-ai/experience-cloud-ai/agents/agent-orchestrator)
 - Tillgång till CitiSignal-demodata: Inköp, Beställningar, Publiker, Journeys
-
-## Utövningar
-
-[1.1.1 Komma igång med Agent Orchestrator](./ex1.md){target="_blank"}
-
-I den här övningen utforskar du Agent Orchestrator förmågor mot bakgrund av startkampanjen för CitiSignal för Fiber Max.
-
-![Tech Insiders](./../../../assets/images/techinsiders.png){width="50px" align="left"}
 
 >[!NOTE]
 >
