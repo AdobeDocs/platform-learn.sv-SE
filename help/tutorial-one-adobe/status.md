@@ -3,9 +3,9 @@ title: Innehållsstatus
 description: Innehållsstatus
 doc-type: multipage-overview
 exl-id: 8f9ae0fa-48b2-4da5-ab21-a6cf16a0b522
-source-git-commit: 8b05c619c8101e4ba8e5c301954d15b27fe395cf
+source-git-commit: 6642acb3fdce2c9d3a9b919d5c9457191e4780a6
 workflow-type: tm+mt
-source-wordcount: '540'
+source-wordcount: '548'
 ht-degree: 1%
 
 ---
@@ -82,9 +82,10 @@ Nedan visas en översikt över statusen för innehållet i den här självstudie
 
 | Namn | Senaste uppdatering | Arbeta 100 % | Anmärkningar | Tidsinvestering |
 | ---------------------- | ------------ | ------------ |------------ | ------------ |
-| [1.1 Agent Orchestrator](./modules/agents/module1.1/agentorchestrator.md){target="_blank"} | 25/11/2025 | Nej | Pågående arbete | TBD |
+| [1.1 Agent Orchestrator](./modules/agents/module1.1/agentorchestrator.md){target="_blank"} | 25/11/2025 | Ja | – | 30 min |
 | [1.2 AI](./modules/agents/module1.2/agenticai.md){target="_blank"} | 25/11/2025 | Nej | Pågående arbete | TBD |
 | [1.3 Agent Collaboration](./modules/agents/module1.3/agentcollaboration.md){target="_blank"} | 25/11/2025 | Nej | Pågående arbete | TBD |
+| [1.4 Brand Concierge](./modules/agents/module1.4/brandconcierge.md){target="_blank"} | 25/11/2025 | Nej | Pågående arbete | TBD |
 
 {style="table-layout:auto"}
 
