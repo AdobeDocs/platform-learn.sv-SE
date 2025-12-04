@@ -21,7 +21,7 @@ Lär dig använda Adobe Experience Platform Agents och Brand Concierge för att:
 ## Förhandskrav
 
 - Tillgång till Adobe Journey Optimizer och Customer Journey Analytics
-- Förtrogenhet med [Brand Concierge-koncept](https://experienceleague.adobe.com/en/docs/brand-concierge/content/home)
+- Förtrogenhet med [Brand Concierge-koncept](https://experienceleague.adobe.com/sv/docs/brand-concierge/content/home)
 - Tillgång till CitiSignal-demodata: Inköp, Beställningar, Publiker, Journeys
 
 ## Utövningar
