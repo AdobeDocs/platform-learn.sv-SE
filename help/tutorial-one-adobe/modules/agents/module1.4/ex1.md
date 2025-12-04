@@ -3,18 +3,14 @@ title: Komma igång med Brand Concierge
 description: Komma igång med Brand Concierge
 kt: 5342
 doc-type: tutorial
-source-git-commit: 75b76978c2ec2f5b89900dea75083932af608bf4
+source-git-commit: ea5fa4694205a94f63d277fdcf2018951fa31fbc
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '988'
 ht-degree: 0%
 
 ---
 
 # 1.4.1 Komma igång med Brand Concierge
-
->[!IMPORTANT]
->
->Den här övningen är under arbete och är inte färdig än.
 
 ## Video
 
@@ -211,6 +207,34 @@ Du kommer då tillbaka hit.
 
 ![Brand Concierge](./images/bc25.png)
 
+Efter 10-20 minuter ska **Status** för båda kunskapskällorna vara **Slutförd**. Klicka på **Hem**.
+
+![Brand Concierge](./images/bc27.png)
+
+Du borde se det här då. Klicka på **+ Connect** på kortet för **webbplatslänkar**.
+
+![Brand Concierge](./images/bc28.png)
+
+Välj kunskapskällan **CitiSignal-webbplats** och klicka på **Spara**.
+
+![Brand Concierge](./images/bc29.png)
+
+Du borde se det här då. Klicka på **+ Connect** på kortet för **produktkatalog**.
+
+![Brand Concierge](./images/bc30.png)
+
+Välj kunskapskällan **CitiSignal-produkter** och klicka på **Spara**.
+
+![Brand Concierge](./images/bc31.png)
+
+Du borde se det här då. Klicka på **Förhandsgranska** för att börja interagera med din Brand Concierge.
+
+![Brand Concierge](./images/bc32.png)
+
+Nu kan du börja ställa frågor som är relaterade till de angivna kunskapskällorna.
+
+![Brand Concierge](./images/bc33.png)
+
 ## 1.4.1.3 steg för AEP-introduktion
 
 Brand Concierge använder Adobe Experience Platform för att lagra interaktionsdata från konversationer. Anslutningen mellan Brand Concierge och Experience Platform kräver att ett datastream konfigureras och används av Brand Concierge.
@@ -242,6 +266,10 @@ Din datastream är nu konfigurerad. Kopiera datastream-namnet och datastream-ID:
 ### Brand Concierge Configuration Management API
 
 Nästa steg är att aktivera API:t för konfigurationshantering i Brand Concierge för att konfigurera datastream som du nyss skapade. Detta krävs för att lösa saker som IMS Org ID och sandlådedetaljer under bearbetningen av begäran.
+
+Detta är för närvarande ett internt Adobe-steg som måste utföras. I annat fall måste du utföra det här steget eftersom datastream inte är korrekt konfigurerat för Brand Concierge.
+
+Nästa steg: [Implementera Brand Concierge på din webbplats](./ex2.md){target="_blank"}
 
 Gå tillbaka till [Brand Concierge](./brandconcierge.md){target="_blank"}
 
