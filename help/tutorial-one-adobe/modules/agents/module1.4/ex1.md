@@ -3,14 +3,18 @@ title: Komma igång med Brand Concierge
 description: Komma igång med Brand Concierge
 kt: 5342
 doc-type: tutorial
-source-git-commit: 6642acb3fdce2c9d3a9b919d5c9457191e4780a6
+source-git-commit: 75b76978c2ec2f5b89900dea75083932af608bf4
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '864'
 ht-degree: 0%
 
 ---
 
 # 1.4.1 Komma igång med Brand Concierge
+
+>[!IMPORTANT]
+>
+>Den här övningen är under arbete och är inte färdig än.
 
 ## Video
 
@@ -73,7 +77,7 @@ Du borde se det här då. Klicka på menyn **markering av sandlåda**.
 
 ![Brand Concierge](./images/bc2.png)
 
-Välj den sandlåda som du har tilldelats. Den sandlådan ska ha namnet `--aepUserLdap--`.
+Välj den sandlåda som du har tilldelats. Den sandlådan ska ha namnet `--aepUserLdap-- - bc`.
 
 ![Brand Concierge](./images/bc3.png)
 
@@ -129,15 +133,21 @@ Du borde se det här då. Klicka på **Kom igång** på **produktrådgivningen f
 
 ![Brand Concierge](./images/bc12.png)
 
+Du borde se det här då. Fyll i följande fält med texten nedan.
 
+**Vad bör koncierge känna till om produkten eller publiken innan de ger rekommendationer?**
 
 ```
 CitiSignal is a telecommunications company that sells devices such as phones and watches and that sells internet services such as their lead product CitiSignal Fiber Max. On top of that, CitiSignal sells entertainment services that offer premium streaming services at a discounted price. CitiSignal is targeting these 3 personas primarily: Smart Home Families, Online Gamers and Remote Professionals.
 ```
 
+**Finns det några affärsregler eller begränsningar som koncierge ska följa när den gör rekommendationer?**
+
 ```
 Prioritize positioning the CitiSignal Fiber Max offering.
 ```
+
+**Finns det några specifika nyckelord eller fraser som koncierge ska följa eller undvika?**
 
 ```
 Competitor pricing, competitor products
@@ -151,7 +161,7 @@ Du borde se det här då. Klicka på **Kom igång** för att anpassa ditt varum�
 
 ![Brand Concierge](./images/bc14.png)
 
-Du kan göra egna val på sidan **Varumärkesuttryck**.
+Du kan göra egna val på sidan **Varumärkesuttryck** och se till att ett alternativ är valt för varje fråga.
 
 ![Brand Concierge](./images/bc15.png)
 
@@ -165,6 +175,73 @@ Rulla uppåt och klicka på **pilen** för att gå tillbaka till föregående sk
 
 ![Brand Concierge](./images/bc17.png)
 
+Du kommer då tillbaka hit. Klicka på **Kunskapskällor**.
+
+![Brand Concierge](./images/bc18.png)
+
+Klicka på **Skapa dina kunskapskällor**.
+
+![Brand Concierge](./images/bc19.png)
+
+Välj **Produktkatalog** och klicka på **Fortsätt**.
+
+![Brand Concierge](./images/bc20.png)
+
+Du borde se det här då. Ange `CitiSignal Products` som namn för din kunskapskälla.
+
+![Brand Concierge](./images/bc21.png)
+
+Nu måste du överföra en CSV-fil som innehåller länkarna till din webbplats. Hämta [CitiSignal-produktkatalog](./assets/CitiSignal-catalog.json.zip) till skrivbordet och zippa upp den.
+
+![Brand Concierge](./images/bc26.png)
+
+Klicka på **Bläddra bland filer** och välj sedan **Bläddra på enheten**.
+
+![Brand Concierge](./images/bc22.png)
+
+Markera filen **CitiSignal-catalog.json** och klicka på **Öppna**.
+
+![Brand Concierge](./images/bc23.png)
+
+Du borde se det här då. Klicka på **Lägg till**.
+
+![Brand Concierge](./images/bc24.png)
+
+Du kommer då tillbaka hit.
+
+![Brand Concierge](./images/bc25.png)
+
+## 1.4.1.3 steg för AEP-introduktion
+
+Brand Concierge använder Adobe Experience Platform för att lagra interaktionsdata från konversationer. Anslutningen mellan Brand Concierge och Experience Platform kräver att ett datastream konfigureras och används av Brand Concierge.
+
+### Datastream
+
+Gå till [https://experience.adobe.com/](https://experience.adobe.com/){target="_blank"}. Öppna **Experience Platform**.
+
+![Brand Concierge](./images/aep1.png)
+
+Kontrollera att du har markerat rätt sandlåda, som ska heta `--aepUserLdap-- - bc`. Bläddra nedåt i den vänstra menyn och välj **Datastreams**.
+
+![Brand Concierge](./images/aep2.png)
+
+Klicka på **Ny dataström**.
+
+![Brand Concierge](./images/aep3.png)
+
+Ange **Datastream-namnet** `--aepUserLdap-- - Brand Concierge` och välj sedan **Mappningsschema** `cja-brand-concierge-sb-XXX`.
+
+Klicka på **Spara**.
+
+![Brand Concierge](./images/aep4.png)
+
+Din datastream är nu konfigurerad. Kopiera datastream-namnet och datastream-ID:t och skriv ned dem i en textfil på datorn.
+
+![Brand Concierge](./images/aep5.png)
+
+### Brand Concierge Configuration Management API
+
+Nästa steg är att aktivera API:t för konfigurationshantering i Brand Concierge för att konfigurera datastream som du nyss skapade. Detta krävs för att lösa saker som IMS Org ID och sandlådedetaljer under bearbetningen av begäran.
 
 Gå tillbaka till [Brand Concierge](./brandconcierge.md){target="_blank"}
 
