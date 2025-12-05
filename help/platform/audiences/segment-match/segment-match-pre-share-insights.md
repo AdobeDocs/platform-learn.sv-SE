@@ -16,13 +16,13 @@ ht-degree: 0%
 
 # Segmentmatchning - insikter före delning
 
-När ni bestämmer er för en strategisk partner att dela data med är det viktigt att ni vet hur era kunder matchar varandra, så att ni vet hur användbar den datadelningen blir. Med segmentmatchning kan ni se överlappningen med potentiella datapartners innan ni delar data. Mer information finns i [dokumentationen](https://experienceleague.adobe.com/en/docs/experience-platform/segmentation/ui/segment-match/overview){target="_blank"}.
+När ni bestämmer er för en strategisk partner att dela data med är det viktigt att ni vet hur era kunder matchar varandra, så att ni vet hur användbar den datadelningen blir. Med segmentmatchning kan ni se överlappningen med potentiella datapartners innan ni delar data. Mer information finns i [dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-platform/segmentation/ui/segment-match/overview){target="_blank"}.
 
 >[!IMPORTANT]
 >
 >Adobe introducerade segmentmatchning 2021 för kunder som vill samarbeta och utbyta målgrupper. I början av 2025 lanserade Adobe Real-Time CDP Collaboration, som är det långsiktiga tillvägagångssättet för att hantera detta användningsfall.
 >
-> * För kunder i USA, Kanada, EMEA, Australien och Nya Zeeland: Adobe rekommenderar Real-Time CDP Prime- och Ultimate-kunder att övergå till datasamarbete från Segment Match till Real-Time CDP Collaboration. Läs [dokumentationen](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/home){target="_blank"} och [snabbstartsguiden](https://experienceleague.adobe.com/en/docs/real-time-cdp-collaboration/using/quick-start-guide){target="_blank"} för Real-Time CDP Collaboration och kontakta ditt Adobe-kontoteam om du vill veta mer.
+> * För kunder i USA, Kanada, EMEA, Australien och Nya Zeeland: Adobe rekommenderar Real-Time CDP Prime- och Ultimate-kunder att övergå till datasamarbete från Segment Match till Real-Time CDP Collaboration. Läs [dokumentationen](https://experienceleague.adobe.com/sv/docs/real-time-cdp-collaboration/using/home){target="_blank"} och [snabbstartsguiden](https://experienceleague.adobe.com/sv/docs/real-time-cdp-collaboration/using/quick-start-guide){target="_blank"} för Real-Time CDP Collaboration och kontakta ditt Adobe-kontoteam om du vill veta mer.
 > * För kunder i alla andra länder: Segmentmatchning rekommenderas tills Real-Time CDP Collaboration släpps i dessa länder 2026.
 
 >[!VIDEO](https://video.tv.adobe.com/v/342378/?learn=on&enablevpops)
