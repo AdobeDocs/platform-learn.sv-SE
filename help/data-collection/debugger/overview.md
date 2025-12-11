@@ -26,4 +26,4 @@ Lär dig hur Adobe Experience Platform Debugger [Chrome-tillägget](https://chro
 * [Hämta Firefox-tillägget](https://addons.mozilla.org/sv-SE/firefox/addon/adobe-experience-platform-dbg/)
 * [Hämta Chrome-tillägget](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 * [Experience Platform Debugger-dokumentation](https://experienceleague.adobe.com/docs/debugger/using-v2/experience-cloud-debugger.html?lang=sv)
-* [Felsöka en taggimplementering](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/debug-launch-implementation.html)
+* [Felsöka en taggimplementering](https://experienceleague.adobe.com/docs/experience-manager-learn/sites/integrations/experience-platform-launch/debug-launch-implementation.html?lang=sv-SE)
