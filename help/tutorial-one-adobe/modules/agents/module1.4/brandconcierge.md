@@ -3,9 +3,9 @@ title: Brand Concierge
 description: Brand Concierge
 kt: 5342
 doc-type: tutorial
-source-git-commit: b384842ce17731e241a1404a1d5c41cc70b434ff
+source-git-commit: fb1fc5c72723cc4e1ede87f90410feb0cc314eea
 workflow-type: tm+mt
-source-wordcount: '193'
+source-wordcount: '211'
 ht-degree: 0%
 
 ---
@@ -18,10 +18,16 @@ Brand Concierge är en AI-driven digital partner som förändrar hur varumärken
 
 Lär dig använda Adobe Experience Platform Agents och Brand Concierge för att:
 
+## Video
+
+I den här videon får du en förklaring och demonstration av alla steg som ingår i övningen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3478139?quality=12&learn=on)
+
 ## Förhandskrav
 
 - Tillgång till Adobe Journey Optimizer och Customer Journey Analytics
-- Förtrogenhet med [Brand Concierge-koncept](https://experienceleague.adobe.com/sv/docs/brand-concierge/content/home)
+- Förtrogenhet med [Brand Concierge-koncept](https://experienceleague.adobe.com/en/docs/brand-concierge/content/home)
 - Tillgång till CitiSignal-demodata: Inköp, Beställningar, Publiker, Journeys
 
 ## Utövningar

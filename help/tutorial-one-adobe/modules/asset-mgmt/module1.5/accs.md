@@ -3,10 +3,11 @@ title: Adobe Commerce as a Cloud Service
 description: Adobe Commerce as a Cloud Service
 kt: 5342
 doc-type: tutorial
-source-git-commit: 28553f8042be7bfc0b553272a6c72e6677fe1cb3
+exl-id: f4a448ae-d867-4aa9-970c-7da5c77f48c5
+source-git-commit: fb1fc5c72723cc4e1ede87f90410feb0cc314eea
 workflow-type: tm+mt
-source-wordcount: '163'
-ht-degree: 0%
+source-wordcount: '181'
+ht-degree: 1%
 
 ---
 
@@ -15,6 +16,12 @@ ht-degree: 0%
 ## Utbildningsmål
 
 - Lär dig använda Adobe Commerce as a Cloud Service på olika sätt.
+
+## Video
+
+I den här videon får du en förklaring och demonstration av alla steg som ingår i övningen.
+
+>[!VIDEO](https://video.tv.adobe.com/v/3478140?quality=12&learn=on)
 
 ## Förhandskrav
 
