@@ -1,6 +1,6 @@
 window.styleConfiguration = {
   metadata: {
-    brandName: "Business Adobe.com",
+    brandName: "CitiSignal",
     version: "1.0.0",
     language: "en-US",
     namespace: "brand-concierge",
@@ -106,7 +106,7 @@ window.styleConfiguration = {
     ],
   },
   text: {
-    "welcome.heading": "Explore what you can do with Adobe apps.",
+    "welcome.heading": "Explore what you can do with CitiSignal",
     "welcome.subheading":
       "Choose an option or tell us what interests you and we'll point you in the right direction.",
     "input.placeholder": "Tell us what you'd like to do or create",
@@ -137,30 +137,30 @@ window.styleConfiguration = {
   },
   arrays: {
     "welcome.examples": [
-      {
-        text: "Personalization at scale",
-        image:
-          "https://business.adobe.com/media_1f9cb9d59cf341dfdf53ce12ac34c02075253e9f7.png?width=2000&format=webply&optimize=medium",
-        backgroundColor: "#FFFFFF",
-      },
-      {
-        text: "Unified customer experience",
-        image:
-          "https://business.adobe.com/media_13b8aa5dca19cdd998cecb707db107f22e52f4474.png?width=2000&format=webply&optimize=medium",
-        backgroundColor: "#FFFFFF",
-      },
-      {
-        text: "B2B GTM Orchestration",
-        image:
-          "https://business.adobe.com/solutions/content-supply-chain/media_147fbf4920e6251287ef939d4d8bc8b1ba0ff9371.png?width=2000&format=webply&optimize=medium",
-        backgroundColor: "#FFFFFF",
-      },
-      {
-        text: "Marketo engage",
-        image:
-          "https://main--milo--adobecom.aem.page/drafts/methomas/assets/media_16c2ca834ea8f2977296082ae6f55f305a96674ac.png",
-        backgroundColor: "#FFFFFF",
-      },
+      //{
+      //  text: "Personalization at scale",
+      //  image:
+      //    "https://business.adobe.com/media_1f9cb9d59cf341dfdf53ce12ac34c02075253e9f7.png?width=2000&format=webply&optimize=medium",
+      //  backgroundColor: "#FFFFFF",
+      //},
+      //{
+      //  text: "Unified customer experience",
+      //  image:
+      //    "https://business.adobe.com/media_13b8aa5dca19cdd998cecb707db107f22e52f4474.png?width=2000&format=webply&optimize=medium",
+      //  backgroundColor: "#FFFFFF",
+      //},
+      //{
+      //  text: "B2B GTM Orchestration",
+      //  image:
+      //    "https://business.adobe.com/solutions/content-supply-chain/media_147fbf4920e6251287ef939d4d8bc8b1ba0ff9371.png?width=2000&format=webply&optimize=medium",
+      //  backgroundColor: "#FFFFFF",
+      //},
+      //{
+      //  text: "Marketo engage",
+      //  image:
+      //    "https://main--milo--adobecom.aem.page/drafts/methomas/assets/media_16c2ca834ea8f2977296082ae6f55f305a96674ac.png",
+      //  backgroundColor: "#FFFFFF",
+      //},
     ],
     "feedback.positive.options": [
       "Helpful and relevant recommendations",
