@@ -11,9 +11,9 @@ doc-type: tutorial
 activity: implement
 thumbnail: 4348-create-merge-policies.jpg
 exl-id: ec862bb2-7aa2-4157-94eb-f5af3a94295f
-source-git-commit: d73f9b3eafb327783d6bfacaf4d57cf8881479f7
+source-git-commit: 10d36ee194c8da937f667c1ba438681959c5fc68
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '920'
 ht-degree: 0%
 
 ---
@@ -66,7 +66,7 @@ Och om du inte gillar den standardprincipen för sammanslagning? Tänk om Luma b
 ## Skapa en kopplingsprofil i användargränssnittet
 
 1. Välj knappen **[!UICONTROL Create Merge Policy]** i det övre högra hörnet på skärmen Sammanfogningsprofiler
-1. Ange `Loyalty Prioritized` som **[!UICONTROL Name]**
+1. Ange **[!UICONTROL Name]** som `Loyalty Prioritized`
 1. Som **[!UICONTROL Schema]** väljer du **[!UICONTROL XDM Profile]** (observera att din anpassade klass - eftersom den är postdata - också är tillgänglig för sammanfogningsprinciper)
 1. För **[!UICONTROL Id Stitching]** väljer du **[!UICONTROL Private Graph]**
 1. För **[!UICONTROL Attribute Merge]** väljer du **[!UICONTROL Dataset precedence]**
@@ -82,7 +82,7 @@ Låt oss se om sammanfogningspolicyn gör vad vi kan förvänta oss:
 
 1. Gå till fliken **[!UICONTROL Browse]**
 1. Ändra **[!UICONTROL Merge policy]** till din nya `Loyalty Prioritized`-princip
-1. Använd din `Luma CRM Id` som **[!UICONTROL Identity namespace]**
+1. Använd din **[!UICONTROL Identity namespace]** som `Luma CRM Id`
 1. Som **[!UICONTROL Identity value]** använder du `b642b4217b34b1e8d3bd915fc65c4452`
 1. Markera knappen **[!UICONTROL Show profile]**
 1. `Daniel` är tillbaka!
@@ -94,7 +94,7 @@ Låt oss se om sammanfogningspolicyn gör vad vi kan förvänta oss:
 När du skapar sammanfogningsprinciper med datauppsättningsprioritet, inkluderas bara datauppsättningar i samma basklass som du inkluderar till höger i profilen. Låt oss skapa en annan sammanfogningspolicy
 
 1. Välj knappen **[!UICONTROL Create Merge Policy]** i det övre högra hörnet på skärmen Sammanfogningsprofiler
-1. Ange `Loyalty Only` som **[!UICONTROL Name]**
+1. Ange **[!UICONTROL Name]** som `Loyalty Only`
 1. Som **[!UICONTROL Schema]** väljer du **[!UICONTROL XDM Profile]**
 1. För **[!UICONTROL Id Stitching]** väljer du **[!UICONTROL None]**
 1. För **[!UICONTROL Attribute Merge]** väljer du **[!UICONTROL Dataset precedence]**
@@ -109,7 +109,7 @@ Nu ska vi titta på vad den här sammanfogningspolicyn gör:
 
 1. Gå till fliken **[!UICONTROL Browse]**
 1. Ändra **[!UICONTROL Merge policy]** till din nya `Loyalty Only`-princip
-1. Använd din `Luma CRM Id` som **[!UICONTROL Identity namespace]**
+1. Använd din **[!UICONTROL Identity namespace]** som `Luma CRM Id`
 1. Som **[!UICONTROL Identity value]** använder du `b642b4217b34b1e8d3bd915fc65c4452`
 1. Markera knappen **[!UICONTROL Show profile]**
 1. Bekräfta att inga profiler hittas:
@@ -122,7 +122,7 @@ CRM-ID är ett identitetsfält i `Luma Loyalty Dataset`, men bara primära ident
 1. Markera knappen **[!UICONTROL Show profile]**
 1. Välj profil-ID för att öppna profilen
 1. Gå till fliken **[!UICONTROL Attributes]**
-1. Observera att annan profilinformation från CRM-datauppsättningen, som mobiltelefonnumret och e-postadressen, inte är tillgänglig eftersom endast vi
+1. Observera att annan profilinformation från CRM-datauppsättningen, som mobiltelefonnumret och e-postadressen, inte är tillgänglig eftersom CRM-datauppsättningen inte ingår i vår `Loyalty Only`-sammanslagningsprincip.
    ![CRM-data kan inte visas i principen Endast lojalitet](assets/mergepolicies-loyaltyOnly-attributes.png)
 1. Gå till fliken **[!UICONTROL Events]**
 1. ExperienceEvent-data är tillgängliga trots att de inte uttryckligen ingår i dataset för sammanfogningsprinciper:
@@ -140,7 +140,7 @@ Ett viktigt användningsexempel för sammanfogningsprinciper är datastyrning. E
 
 ## Ytterligare resurser
 
-* [Dokumentation för kopplingsprofiler](https://experienceleague.adobe.com/docs/experience-platform/profile/merge-policies/overview.html?lang=sv-SE)
+* [Dokumentation för kopplingsprofiler](https://experienceleague.adobe.com/docs/experience-platform/profile/merge-policies/overview.html)
 * [API-referens för sammanslagningsprinciper (ingår i kundprofils-API:t i realtid)](https://www.adobe.io/experience-platform-apis/references/profile/#tag/Merge-policies)
 
 Låt oss nu gå vidare till [ramverket för datastyrning](apply-data-governance-framework.md).
