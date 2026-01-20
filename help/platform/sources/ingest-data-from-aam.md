@@ -18,7 +18,7 @@ ht-degree: 0%
 
 # Infoga data med Adobe Audience Manager dataanslutning
 
-I den här integreringsvideon får du lära dig hur du använder Audience Manager dataanslutning för att plocka in egenskaper och segment från AAM i plattformen och kombinera dem med andra avancerade data. Mer information finns i [dokumentationen för Audience Manager-källanslutningen](https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/adobe-applications/audience-manager.html).
+I den här integreringsvideon får du lära dig hur du använder Audience Manager dataanslutning för att plocka in egenskaper och segment från AAM i plattformen och kombinera dem med andra avancerade data. Mer information finns i [dokumentationen för Audience Manager-källanslutningen](https://experienceleague.adobe.com/docs/experience-platform/sources/connectors/adobe-applications/audience-manager.html?lang=sv-SE).
 
 >[!VIDEO](https://video.tv.adobe.com/v/331214/?learn=on&enablevpops)
 

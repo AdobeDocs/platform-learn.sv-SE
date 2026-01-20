@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Konfigurera ett datastream för vidarebefordran av händelser
 
-Lär dig hur du konfigurerar ett datastream för vidarebefordran av händelser. Mer information finns i [dokumentationen för vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/getting-started.html#create-a-datastream)
+Lär dig hur du konfigurerar ett datastream för vidarebefordran av händelser. Mer information finns i [dokumentationen för vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/getting-started.html?lang=sv-SE#create-a-datastream)
 
 
 >[!NOTE]

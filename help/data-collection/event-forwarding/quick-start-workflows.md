@@ -22,6 +22,6 @@ I den här videon får du hjälp med att få ut det mesta av arbetsflödena för
 1. Skapa referensobjekt med hjälp av arbetsflödet. 
 1. Kopiera referensobjekten till en befintlig implementering.
 
-Mer information om snabbstartsarbetsflödet för Meta Conversions API finns i [dokumentationen](https://experienceleague.adobe.com/en/docs/experience-platform/tags/extensions/server/meta/overview#quick-start).
+Mer information om snabbstartsarbetsflödet för Meta Conversions API finns i [dokumentationen](https://experienceleague.adobe.com/sv/docs/experience-platform/tags/extensions/server/meta/overview#quick-start).
 
 >[!VIDEO](https://video.tv.adobe.com/v/3424501?learn=on&enablevpops)

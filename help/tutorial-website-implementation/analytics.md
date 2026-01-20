@@ -12,17 +12,17 @@ ht-degree: 0%
 
 # Lägg till Adobe Analytics
 
-I den här lektionen implementerar du [Adobe Analytics-tillägget](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html) och skapar regler för att skicka data till Adobe Analytics.
+I den här lektionen implementerar du [Adobe Analytics-tillägget](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html?lang=sv-SE) och skapar regler för att skicka data till Adobe Analytics.
 
-[Adobe Analytics](https://experienceleague.adobe.com/docs/analytics.html) är en branschledande lösning som gör att du kan förstå dina kunder som människor och styra din verksamhet med kundanalys.
+[Adobe Analytics](https://experienceleague.adobe.com/docs/analytics.html?lang=sv-SE) är en branschledande lösning som gör att du kan förstå dina kunder som människor och styra din verksamhet med kundanalys.
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch håller på att integreras i Adobe Experience Platform som en serie datainsamlingstekniker. Flera terminologiska förändringar har introducerats i gränssnittet som du bör vara medveten om när du använder det här innehållet:
 >
 > * Platform Launch (klientsidan) är nu **[[!DNL tags]](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv)**
-> * Platform Launch Server Side is now **[[!DNL event forwarding]](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)**
-> * Edge-konfigurationer är nu **[[!DNL datastreams]](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html)**
+> * Platform Launch Server Side is now **[[!DNL event forwarding]](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=sv-SE)**
+> * Edge-konfigurationer är nu **[[!DNL datastreams]](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=sv-SE)**
 
 ## Utbildningsmål
 
@@ -41,7 +41,7 @@ Det finns mycket som kan implementeras för Analytics i taggar. Den här lektion
 
 Du bör redan ha slutfört lektionerna i [Konfigurera taggar](create-a-property.md) och [Lägg till identitetstjänsten](id-service.md).
 
-Dessutom behöver du minst ett ID för rapportsviten och en spårningsserver. Om du inte har någon test-/dev-rapportsserie som du kan använda för den här självstudiekursen skapar du en. Om du är osäker på hur du gör det läser du [dokumentationen](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite). Du kan hämta din spårningsserver från din nuvarande implementering, Adobe Consultant eller kundtjänstrepresentant.
+Dessutom behöver du minst ett ID för rapportsviten och en spårningsserver. Om du inte har någon test-/dev-rapportsserie som du kan använda för den här självstudiekursen skapar du en. Om du är osäker på hur du gör det läser du [dokumentationen](https://experienceleague.adobe.com/sv/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite). Du kan hämta din spårningsserver från din nuvarande implementering, Adobe Consultant eller kundtjänstrepresentant.
 
 ## Lägg till analystillägget
 
@@ -196,7 +196,7 @@ Därefter samlar du in produkt-id:t för den aktuella produktinformationssidan m
 
 ### Lägg till Adobe Analytics produktsträngstillägg
 
-Om du redan är bekant med Adobe Analytics-implementeringar är du antagligen bekant med variabeln [products](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/products.html). Variabeln products har en mycket specifik syntax och används på något olika sätt beroende på sammanhanget. För att göra populationen av produkterna lättare i taggar har ytterligare tre tillägg redan skapats på tagg-tilläggets marknadsplats! I det här avsnittet ska du lägga till ett tillägg som har skapats av Adobe Consulting och som ska användas på produktinformationssidan.
+Om du redan är bekant med Adobe Analytics-implementeringar är du antagligen bekant med variabeln [products](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/products.html?lang=sv-SE). Variabeln products har en mycket specifik syntax och används på något olika sätt beroende på sammanhanget. För att göra populationen av produkterna lättare i taggar har ytterligare tre tillägg redan skapats på tagg-tilläggets marknadsplats! I det här avsnittet ska du lägga till ett tillägg som har skapats av Adobe Consulting och som ska användas på produktinformationssidan.
 
 **Lägg till tillägget `Adobe Analytics Product String`**
 
@@ -426,7 +426,7 @@ Du kommer egentligen att anropa två plugin-program i den här koden, men en av 
 
 Syftet med det här plugin-programmet är att förhindra att värden dupliceras felaktigt i koden när en besökare uppdaterar en sida eller använder webbläsarens bakåtknapp för att gå tillbaka till en sida där ett värde angavs. I den här lektionen använder du den för att förhindra att händelsen `clickthrough` dupliceras.
 
-Koden för det här plugin-programmet finns i [Analytics Documentation](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvalonce.html), men finns här för att underlätta kopiering/inklistring.
+Koden för det här plugin-programmet finns i [Analytics Documentation](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvalonce.html?lang=sv-SE), men finns här för att underlätta kopiering/inklistring.
 
 1. Kopiera följande kod
 

@@ -39,7 +39,7 @@ Adobe Experience Platform Debugger kan installeras i Google Chrome. Följ lämpl
 
 När du har installerat tillägget Chrome eller tillägget Firefox läggs en ikon (![](assets/start-icon.jpg)) till i tilläggsfältet. Med den här ikonen öppnar du tillägget.
 
-Mer information om [Adobe Experience Platform Debugger-tillägget](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html) och hur du felsöker alla Adobe webbprogram finns i den dedikerade guiden.
+Mer information om [Adobe Experience Platform Debugger-tillägget](https://experienceleague.adobe.com/docs/experience-platform/debugger/home.html?lang=sv-SE) och hur du felsöker alla Adobe webbprogram finns i den dedikerade guiden.
 
 ## Förhandsgranska målaktiviteter med QA-URL:er
 
@@ -51,7 +51,7 @@ Ange QA-URL:er som ska arbeta genom att instruera på.js eller Platform Web SDK 
 >
 >Funktionen för mål-QA-läge stöds av Platform Web SDK version 2.13.0 eller senare. Mål-QA-läget är aktiverat baserat på det `xdm.web.webPageDetails.URL`-värde som skickades i `sendEvent`-anropet. Om du ändrar det här värdet, till exempel tar bort alla tecken, kan det medföra att mål-QA-läget inte fungerar som det ska.
 
-Mer information om [Målaktivitet QA](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html) finns i den dedikerade guiden.
+Mer information om [Målaktivitet QA](https://experienceleague.adobe.com/docs/target/using/activities/activity-qa/activity-qa.html?lang=sv-SE) finns i den dedikerade guiden.
 
 ## Implementering av felsökningsmål
 
@@ -129,7 +129,7 @@ När du har valt **[!UICONTROL View]** visas en övertäckning som gör att du k
 - Information om förfrågan
 - Ögonblicksbild av profil
 
-Mer information om målspår finns i den dedikerade guiden om [felsökning av leverans av målinnehåll](https://experienceleague.adobe.com/docs/target/using/activities/troubleshoot-activities/content-trouble.html).
+Mer information om målspår finns i den dedikerade guiden om [felsökning av leverans av målinnehåll](https://experienceleague.adobe.com/docs/target/using/activities/troubleshoot-activities/content-trouble.html?lang=sv-SE).
 
 ### Felsök med Assurance
 
@@ -180,4 +180,4 @@ Grattis, du har kommit till slutet av självstudiekursen! Lycka till med att mig
 
 >[!NOTE]
 >
->Vi vill hjälpa dig att lyckas med din Target-migrering från at.js till Web SDK. Om du stöter på problem med din migrering eller om du känner att det saknas viktig information i den här guiden kan du meddela oss genom att publicera [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-target-from-at-js-to-web-sdk/m-p/575587#M463).
+>Vi vill hjälpa dig att lyckas med din Target-migrering från at.js till Web SDK. Om du stöter på problem med din migrering eller om du känner att det saknas viktig information i den här guiden kan du meddela oss genom att publicera [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-target-from-at-js-to-web-sdk/m-p/575587?profile.language=sv#M463).

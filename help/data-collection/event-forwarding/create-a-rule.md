@@ -14,7 +14,7 @@ ht-degree: 0%
 
 # Skapa en regel för vidarebefordran av händelser
 
-Lär dig hur du skapar en regel för vidarebefordran av händelser i datainsamling. Mer information finns i [dokumentationen för vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html).
+Lär dig hur du skapar en regel för vidarebefordran av händelser i datainsamling. Mer information finns i [dokumentationen för vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=sv-SE).
 
 >[!NOTE]
 >
