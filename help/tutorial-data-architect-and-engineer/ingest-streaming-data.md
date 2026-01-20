@@ -347,7 +347,7 @@ Nu ska vi mappa vårt sidnamn till Web SDK.
 >[!IMPORTANT]
 >
 >För att kunna utföra den här uppgiften måste vi se till att din användare först har tillgång till sandlådan Prod. Om du inte redan har åtkomst till Prod-sandlådan från en annan produktprofil öppnar du snabbt din `Luma Tutorial Platform`-profil och lägger till behörighetsobjektet **[!UICONTROL Sandboxes]** > **[!UICONTROL Prod]**. När du har gjort det kan du göra en SKIFT-omläsning på dataelementsidan för att rensa cachen
->![Lägg till Prod-sandlådan ](assets/websdk-property-permissionToLoadSchema.png)
+>![Lägg till Prod-sandlådan &#x200B;](assets/websdk-property-permissionToLoadSchema.png)
 
 På sidan **[!UICONTROL Data Elements]**:
 

@@ -228,7 +228,7 @@ Nu ska du använda dina nya dataelement och tillägg för att skapa regeln för 
 1. Klicka på **[!UICONTROL Keep Changes]**
    ![Konfigurera händelsen](images/analytics-configDOMReadyEvent.png)
 
-1. Under **[!UICONTROL Conditions]** klickar du på plustecknet ![ ](images/icon-plus.png) för att öppna skärmen `Condition Configuration`
+1. Under **[!UICONTROL Conditions]** klickar du på plustecknet ![&#x200B; &#x200B;](images/icon-plus.png) för att öppna skärmen `Condition Configuration`
    ![Klicka på plusikonen för att lägga till ett nytt villkor](images/analytics-PDPRuleAddCondition.png)
 
    1. Välj **[!UICONTROL Condition Type > Value Comparison]**
@@ -322,7 +322,7 @@ I det här fallet vill du veta om folk rullar ned på Lumas hemsida tillräcklig
 1. Klicka på **[!UICONTROL Keep Changes]**
    ![Konfigurera händelse för visningsruta för partners](images/analytics-configEntersViewportEvent.png)
 
-1. Klicka på plustecknet ![under Villkor ](images/icon-plus.png) för att lägga till ett nytt villkor
+1. Klicka på plustecknet ![under Villkor &#x200B;](images/icon-plus.png) för att lägga till ett nytt villkor
 1. Välj **[!UICONTROL Condition Type > Value Comparison]**
 1. Använd dataelementväljaren och välj `Page Name` i det första fältet
 1. Välj **[!UICONTROL Equals]** i listrutan för jämförelseoperatorer
