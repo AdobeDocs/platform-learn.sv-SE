@@ -4,9 +4,8 @@ description: Lär dig hur vidarebefordran av händelser centraliserar datainsaml
 feature: Event Forwarding
 level: Beginner
 jira: KT-6419
-thumbnail: 331937.jpeg
 exl-id: bd1a7414-b232-4ae3-98e8-b0ec1c60361b
-source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
+source-git-commit: fe848fe7376fbeb54fb53ee0947a9f8284fcef61
 workflow-type: tm+mt
 source-wordcount: '131'
 ht-degree: 23%
@@ -15,7 +14,7 @@ ht-degree: 23%
 
 # Översikt över vidarebefordran av händelser
 
-Läs om hur händelsevidarebefordran centraliserar datainsamlingen, minskar mängden kod som krävs i dina webb- och mobilappar och strömmar data till lösningar från andra företag via Adobe Experience Platform Edge Network. Mer information finns i [dokumentationen för vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=sv-SE).
+Läs om hur händelsevidarebefordran centraliserar datainsamlingen, minskar mängden kod som krävs i dina webb- och mobilappar och strömmar data till lösningar från andra företag via Adobe Experience Platform Edge Network. Mer information finns i [dokumentationen för vidarebefordran av händelser](https://experienceleague.adobe.com/en/docs/experience-platform/tags/event-forwarding/overview).
 
 >[!NOTE]
 >

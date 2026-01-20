@@ -6,7 +6,7 @@ role: User, Developer, Admin
 level: Beginner
 last-substantial-update: 2025-10-17T00:00:00Z
 jira: KT-19105
-source-git-commit: ac2df6787c20b1e9220c9408942e905b33d961ea
+source-git-commit: fe848fe7376fbeb54fb53ee0947a9f8284fcef61
 workflow-type: tm+mt
 source-wordcount: '86'
 ht-degree: 1%

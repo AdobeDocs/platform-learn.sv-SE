@@ -4,9 +4,8 @@ description: Lär dig hur du konfigurerar ett datastream för vidarebefordran av
 feature: Event Forwarding, Datastreams
 level: Intermediate
 jira: KT-6421
-thumbnail: 331939.jpeg
 exl-id: 20e30a36-3d56-4d15-acb7-b1bd560bb94d
-source-git-commit: 286c85aa88d44574f00ded67f0de8e0c945a153e
+source-git-commit: fe848fe7376fbeb54fb53ee0947a9f8284fcef61
 workflow-type: tm+mt
 source-wordcount: '97'
 ht-degree: 0%
@@ -15,7 +14,7 @@ ht-degree: 0%
 
 # Konfigurera ett datastream för vidarebefordran av händelser
 
-Lär dig hur du konfigurerar ett datastream för vidarebefordran av händelser. Mer information finns i [dokumentationen för vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/getting-started.html?lang=sv-SE#create-a-datastream)
+Lär dig hur du konfigurerar ett datastream för vidarebefordran av händelser. Mer information finns i [dokumentationen för vidarebefordran av händelser](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/getting-started.html#create-a-datastream)
 
 
 >[!NOTE]

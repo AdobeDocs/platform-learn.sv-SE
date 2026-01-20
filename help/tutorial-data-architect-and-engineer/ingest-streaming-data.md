@@ -8,9 +8,9 @@ feature: Data Ingestion
 jira: KT-4348
 thumbnail: 4348-ingest-streaming-data.jpg
 exl-id: 09c24673-af8b-40ab-b894-b4d76ea5b112
-source-git-commit: d73f9b3eafb327783d6bfacaf4d57cf8881479f7
+source-git-commit: d70d5df8b11c8500dbe4764b08e2627893f436f0
 workflow-type: tm+mt
-source-wordcount: '3042'
+source-wordcount: '3036'
 ht-degree: 0%
 
 ---
@@ -91,7 +91,7 @@ Så här skapar du din [!UICONTROL datastream]:
    ![Välj datastreams i den vänstra navigeringen](assets/websdk-edgeConfig-clickNav.png)
 
 
-1. Ange `Luma Platform Tutorial` för **[!UICONTROL Friendly Name]** (lägg till ditt namn i slutet om flera personer från ditt företag använder den här självstudiekursen)
+1. Ange **[!UICONTROL Friendly Name]** för `Luma Platform Tutorial` (lägg till ditt namn i slutet om flera personer från ditt företag använder den här självstudiekursen)
 1. Markera knappen **[!UICONTROL Save]**
 
    ![Namnge datastrammet och spara](assets/websdk-edgeConfig-name.png)
@@ -121,7 +121,7 @@ Skapa en egenskap:
 1. Markera knappen **[!UICONTROL New Property]**
    ![Lägg till en ny egenskap](assets/websdk-property-addNewProperty.png)
 1. Som **[!UICONTROL Name]** anger du `Luma Platform Tutorial` (lägg till ditt namn i slutet om flera personer från ditt företag använder den här självstudiekursen)
-1. Ange `enablementadobe.com` som **[!UICONTROL Domains]** (förklaras senare)
+1. Ange **[!UICONTROL Domains]** som `enablementadobe.com` (förklaras senare)
 1. Välj **[!UICONTROL Save]**
    ![Egenskapsinformation](assets/websdk-property-propertyDetails.png)
 
@@ -155,7 +155,7 @@ Nu när du har en egenskap kan du lägga till Web SDK med ett tillägg. Ett till
 1. Gå till **[!UICONTROL Extensions]** i den vänstra navigeringen
 1. Gå till fliken **[!UICONTROL Catalog]**
 1. Det finns många tillägg för taggar. Filtrera katalogen med termen `Web SDK`
-1. Välj knappen **[!UICONTROL Install]** i tillägget **[!UICONTROL Adobe Experience Platform Web SDK]**
+1. Välj knappen **[!UICONTROL Adobe Experience Platform Web SDK]** i tillägget **[!UICONTROL Install]**
    ![Installera Adobe Experience Platform Web SDK-tillägget](assets/websdk-property-addExtension.png)
 1. Det finns flera konfigurationer tillgängliga för Web SDK-tillägget, men det finns bara två som vi kommer att konfigurera för den här självstudiekursen. Uppdatera **[!UICONTROL Edge Domain]** till `data.enablementadobe.com`. Med den här inställningen kan du ange cookies från första part med din Web SDK-implementering, vilket rekommenderas. Senare i den här lektionen mappar du en webbplats på domänen `enablementadobe.com` till din taggegenskap. CNAME för domänen `enablementadobe.com` har redan konfigurerats så att `data.enablementadobe.com` kan vidarebefordra till Adobe-servrar. När du implementerar Web SDK på din egen webbplats måste du skapa en CNAME för dina egna datainsamlingssyften, till exempel `data.YOUR_DOMAIN.com`
 1. I listrutan **[!UICONTROL Datastream]** väljer du `Luma Platform Tutorial`-datastream.
@@ -233,7 +233,7 @@ Så här skapar du ett bibliotek:
 1. Gå till **[!UICONTROL Publishing Flow]** i den vänstra navigeringen
 1. Välj **[!UICONTROL Add Library]**
    ![Välj Lägg till bibliotek](assets/websdk-property-pubAddNewLib.png)
-1. Ange `Luma Platform Tutorial` för **[!UICONTROL Name]**
+1. Ange **[!UICONTROL Name]** för `Luma Platform Tutorial`
 1. För **[!UICONTROL Environment]** väljer du `Development`
 1. Välj knappen **[!UICONTROL Add All Changed Resources]**. (Förutom tillägget [!UICONTROL Adobe Experience Platform Web SDK] och regeln `All Pages - Library Loaded` visas även tillägget [!UICONTROL Core] som innehåller den bas-JavaScript som krävs för alla webbegenskaper för Launch.)
 1. Markera knappen **[!UICONTROL Save & Build for Development]**
@@ -248,9 +248,8 @@ Som du ser på skärmen [!UICONTROL Publishing Flow] finns det mycket mer i publ
 
 ### Lägg till Adobe Experience Platform Debugger
 
-Experience Platform Debugger är ett tillägg för Chrome- och Firefox-webbläsare som hjälper dig att se Adobe-tekniken som är implementerad på dina webbsidor. Ladda ned den version du föredrar:
+Experience Platform Debugger är ett tillägg för Chrome som hjälper dig att se Adobe-tekniken som används på dina webbsidor. Ladda ned den version du föredrar:
 
-* [Firefox-tillägg](https://addons.mozilla.org/sv-SE/firefox/addon/adobe-experience-platform-dbg/)
 * [Chrome-tillägg](https://chrome.google.com/webstore/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
 Om du aldrig har använt Felsökning tidigare - och den här är en annan än den tidigare Adobe Experience Cloud Debugger - kan du titta på den här översiktsvideon med fem minuter:
@@ -278,7 +277,7 @@ Experience Platform Debugger har en cool funktion som gör att du kan ersätta e
 1. Välj knappen **[!UICONTROL Sign In]** längst upp till höger för att autentisera.
 1. Gå nu till **[!UICONTROL Launch]** i den vänstra navigeringen
 1. Välj fliken Konfiguration
-1. Öppna listrutan **[!UICONTROL Actions]** till höger om den plats där **[!UICONTROL Page Embed Codes]** visas och välj **[!UICONTROL Replace]**
+1. Öppna listrutan **[!UICONTROL Page Embed Codes]** till höger om den plats där **[!UICONTROL Actions]** visas och välj **[!UICONTROL Replace]**
    ![Välj Åtgärder > Ersätt](assets/websdk-debugger-replaceLibrary.png)
 1. Eftersom du är autentiserad kommer felsökaren att hämta in de tillgängliga egenskaperna och miljöerna för Launch. Välj din `Luma Platform Tutorial`-egenskap
 1. Välj din `Development`-miljö
@@ -333,9 +332,9 @@ Du kan också bekräfta att den nya profilen visas:
 1. Markera knappen **[!UICONTROL Create New Data Element]**
 
    ![Skapa ett nytt dataelement](assets/websdk-property-createNewDataElement.png)
-1. Ange `Page Name` som **[!UICONTROL Name]**
+1. Ange **[!UICONTROL Name]** som `Page Name`
 1. Som **[!UICONTROL Data Element Type]** väljer du `JavaScript Variable`
-1. Ange `digitalData.page.pageInfo.pageName` som **[!UICONTROL JavaScript variable name]**
+1. Ange **[!UICONTROL JavaScript variable name]** som `digitalData.page.pageInfo.pageName`
 1. Markera rutorna för **[!UICONTROL Force lowercase value]** och **[!UICONTROL Clean text]** om du vill standardisera värdeformatet.
 1. Kontrollera att `Luma Platform Tutorial` är markerat som arbetsbibliotek
 1. Välj **[!UICONTROL Save to Library]**
@@ -348,12 +347,12 @@ Nu ska vi mappa vårt sidnamn till Web SDK.
 >[!IMPORTANT]
 >
 >För att kunna utföra den här uppgiften måste vi se till att din användare först har tillgång till sandlådan Prod. Om du inte redan har åtkomst till Prod-sandlådan från en annan produktprofil öppnar du snabbt din `Luma Tutorial Platform`-profil och lägger till behörighetsobjektet **[!UICONTROL Sandboxes]** > **[!UICONTROL Prod]**. När du har gjort det kan du göra en SKIFT-omläsning på dataelementsidan för att rensa cachen
->&#x200B;>![Lägg till Prod-sandlådan &#x200B;](assets/websdk-property-permissionToLoadSchema.png)
+>![Lägg till Prod-sandlådan ](assets/websdk-property-permissionToLoadSchema.png)
 
 På sidan **[!UICONTROL Data Elements]**:
 
 1. Skapa ett nytt dataelement
-1. Ange `XDM Object` som **[!UICONTROL Name]**
+1. Ange **[!UICONTROL Name]** som `XDM Object`
 1. Som **[!UICONTROL Extension]** väljer du `Adobe Experience Platform Web SDK`
 1. Som **[!UICONTROL Data Element Type]** väljer du `XDM object`
 1. Som **[!UICONTROL Sandbox]** väljer du din `Luma Tutorial`-sandlåda
@@ -399,7 +398,7 @@ Först lagrar vi CRM-ID:t i ett dataelement:
 
 1. Lägg till ett dataelement med namnet `CRM Id` i tagggränssnittet
 1. Som **[!UICONTROL Data Element Type]** väljer du **[!UICONTROL JavaScript Variable]**
-1. Ange `digitalData.user.0.profile.0.attributes.username` som **[!UICONTROL JavaScript variable name]**
+1. Ange **[!UICONTROL JavaScript variable name]** som `digitalData.user.0.profile.0.attributes.username`
 1. Välj knappen **[!UICONTROL Save to Library]** (`Luma Platform Tutorial` bör fortfarande vara ditt arbetsbibliotek)
    ![Lägg till dataelement för CRM-ID](assets/websdk-property-dataElement-crmId.png)
 

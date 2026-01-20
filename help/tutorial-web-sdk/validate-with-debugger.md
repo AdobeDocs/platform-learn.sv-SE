@@ -4,9 +4,9 @@ description: Lär dig hur du validerar din Platform Web SDK-implementering med A
 feature: Web SDK,Tags,Debugger
 jira: KT-15405
 exl-id: 150bb1b1-4523-4b44-bd4e-6cabc468fc04
-source-git-commit: 7ccbaaf4db43921f07c971c485e1460a1a7f0334
+source-git-commit: d70d5df8b11c8500dbe4764b08e2627893f436f0
 workflow-type: tm+mt
-source-wordcount: '1130'
+source-wordcount: '1117'
 ht-degree: 0%
 
 ---
@@ -15,9 +15,8 @@ ht-degree: 0%
 
 Lär dig validera Adobe Experience Platform Web SDK-implementeringen med Adobe Experience Platform Debugger.
 
-Experience Platform Debugger är ett tillägg för Chrome- och Firefox-webbläsare som hjälper dig att se hur Adobe-tekniken som används på dina webbsidor fungerar. Ladda ned den version du föredrar:
+Experience Platform Debugger är ett tillägg för Chrome som hjälper dig att se Adobe-tekniken som implementeras på dina webbsidor:
 
-* [Firefox-tillägg](https://addons.mozilla.org/sv-SE/firefox/addon/adobe-experience-platform-dbg/)
 * [Chrome-tillägg](https://chromewebstore.google.com/detail/adobe-experience-platform/bfnnokhpnncpkdmbokanobigaccjkpob)
 
 Om du aldrig har använt felsökaren tidigare kanske du vill titta på den här översiktsvideon på fem minuter:
@@ -143,7 +142,7 @@ Den här typen av begärandeinformation visas också på fliken **Nätverk** i w
 
 Som du lär dig i lektionen [Konfigurera en datastream](configure-datastream.md) skickar Platform Web SDK först data från din digitala egenskap till Platform Edge Network. Sedan gör Platform Edge Network ytterligare serverförfrågningar till motsvarande tjänster som är aktiverade i din datastream. Du kan validera de serverförfrågningar som gjorts av Platform Edge Network med Edge Trace i felsökningsprogrammet.
 
-<!--Furthermore, you can also validate the fully processed payload after it reaches an Adobe application by using [Adobe Experience Platform Assurance](https://experienceleague.adobe.com/sv/docs/experience-platform/assurance/home). -->
+<!--Furthermore, you can also validate the fully processed payload after it reaches an Adobe application by using [Adobe Experience Platform Assurance](https://experienceleague.adobe.com/en/docs/experience-platform/assurance/home). -->
 
 
 ### Aktivera Edge Trace

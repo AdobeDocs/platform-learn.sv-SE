@@ -3,7 +3,7 @@ title: Lägg till Adobe Analytics
 description: Lär dig hur du implementerar Adobe Analytics med taggtillägget Adobe Analytics, skickar sidvyfyren, lägger till variabler, spårar händelser och lägger till plugin-program. Den här lektionen är en del av självstudiekursen Implementera Experience Cloud på webbplatser.
 solution: Data Collection, Analytics
 exl-id: dababaf2-ff8f-4178-8eaf-04a707b4ab05
-source-git-commit: cc7a77c4dd380ae1bc23dc75608e8e2224dfe78c
+source-git-commit: d70d5df8b11c8500dbe4764b08e2627893f436f0
 workflow-type: tm+mt
 source-wordcount: '3586'
 ht-degree: 0%
@@ -12,17 +12,17 @@ ht-degree: 0%
 
 # Lägg till Adobe Analytics
 
-I den här lektionen implementerar du [Adobe Analytics-tillägget](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html?lang=sv-SE) och skapar regler för att skicka data till Adobe Analytics.
+I den här lektionen implementerar du [Adobe Analytics-tillägget](https://experienceleague.adobe.com/docs/experience-platform/tags/extensions/adobe/analytics/overview.html) och skapar regler för att skicka data till Adobe Analytics.
 
-[Adobe Analytics](https://experienceleague.adobe.com/docs/analytics.html?lang=sv-SE) är en branschledande lösning som gör att du kan förstå dina kunder som människor och styra din verksamhet med kundanalys.
+[Adobe Analytics](https://experienceleague.adobe.com/docs/analytics.html) är en branschledande lösning som gör att du kan förstå dina kunder som människor och styra din verksamhet med kundanalys.
 
 >[!NOTE]
 >
 >Adobe Experience Platform Launch håller på att integreras i Adobe Experience Platform som en serie datainsamlingstekniker. Flera terminologiska förändringar har introducerats i gränssnittet som du bör vara medveten om när du använder det här innehållet:
 >
-> * Platforma launchen (klientsidan) är nu **[[!DNL tags]](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv)**
-> * Platforma launchens serversida är nu **[[!DNL event forwarding]](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html?lang=sv-SE)**
-> * Edge-konfigurationer är nu **[[!DNL datastreams]](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html?lang=sv-SE)**
+> * Platform Launch (klientsidan) är nu **[[!DNL tags]](https://experienceleague.adobe.com/docs/experience-platform/tags/home.html?lang=sv)**
+> * Platform Launch Server Side is now **[[!DNL event forwarding]](https://experienceleague.adobe.com/docs/experience-platform/tags/event-forwarding/overview.html)**
+> * Edge-konfigurationer är nu **[[!DNL datastreams]](https://experienceleague.adobe.com/docs/experience-platform/edge/fundamentals/datastreams.html)**
 
 ## Utbildningsmål
 
@@ -41,13 +41,13 @@ Det finns mycket som kan implementeras för Analytics i taggar. Den här lektion
 
 Du bör redan ha slutfört lektionerna i [Konfigurera taggar](create-a-property.md) och [Lägg till identitetstjänsten](id-service.md).
 
-Dessutom behöver du minst ett ID för rapportsviten och en spårningsserver. Om du inte har någon test-/dev-rapportsserie som du kan använda för den här självstudiekursen skapar du en. Om du är osäker på hur du gör det läser du [dokumentationen](https://experienceleague.adobe.com/docs/analytics/admin/manage-report-suites/new-report-suite/new-report-suite.html?lang=sv-SE). Du kan hämta spårningsservern från din nuvarande implementering, Adobe Consultant eller Customer Care-representant.
+Dessutom behöver du minst ett ID för rapportsviten och en spårningsserver. Om du inte har någon test-/dev-rapportsserie som du kan använda för den här självstudiekursen skapar du en. Om du är osäker på hur du gör det läser du [dokumentationen](https://experienceleague.adobe.com/en/docs/analytics/admin/admin-tools/manage-report-suites/c-new-report-suite/t-create-a-report-suite). Du kan hämta din spårningsserver från din nuvarande implementering, Adobe Consultant eller kundtjänstrepresentant.
 
 ## Lägg till analystillägget
 
 Tillägget Analytics består av två huvuddelar:
 
-1. Tilläggskonfigurationen, som hanterar huvudbiblioteksinställningarna för AppMeasurement.js och kan ange globala variabler
+1. Tilläggskonfigurationen, som hanterar huvudinställningarna för AppMeasurement.js-biblioteket och kan ange globala variabler
 1. Regelåtgärder för att göra följande:
    1. Ange variabler
    1. Rensa variabler
@@ -196,7 +196,7 @@ Därefter samlar du in produkt-id:t för den aktuella produktinformationssidan m
 
 ### Lägg till Adobe Analytics produktsträngstillägg
 
-Om du redan är bekant med Adobe Analytics-implementeringar är du antagligen bekant med variabeln [products](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/products.html?lang=sv-SE). Variabeln products har en mycket specifik syntax och används på något olika sätt beroende på sammanhanget. För att göra populationen av produkterna lättare i taggar har ytterligare tre tillägg redan skapats på tagg-tilläggets marknadsplats! I det här avsnittet ska du lägga till ett tillägg som har skapats av Adobe Consulting och som ska användas på produktinformationssidan.
+Om du redan är bekant med Adobe Analytics-implementeringar är du antagligen bekant med variabeln [products](https://experienceleague.adobe.com/docs/analytics/implementation/vars/page-vars/products.html). Variabeln products har en mycket specifik syntax och används på något olika sätt beroende på sammanhanget. För att göra populationen av produkterna lättare i taggar har ytterligare tre tillägg redan skapats på tagg-tilläggets marknadsplats! I det här avsnittet ska du lägga till ett tillägg som har skapats av Adobe Consulting och som ska användas på produktinformationssidan.
 
 **Lägg till tillägget `Adobe Analytics Product String`**
 
@@ -228,7 +228,7 @@ Nu ska du använda dina nya dataelement och tillägg för att skapa regeln för 
 1. Klicka på **[!UICONTROL Keep Changes]**
    ![Konfigurera händelsen](images/analytics-configDOMReadyEvent.png)
 
-1. Under **[!UICONTROL Conditions]** klickar du på plustecknet ![&#x200B; &#x200B;](images/icon-plus.png) för att öppna skärmen `Condition Configuration`
+1. Under **[!UICONTROL Conditions]** klickar du på plustecknet ![ ](images/icon-plus.png) för att öppna skärmen `Condition Configuration`
    ![Klicka på plusikonen för att lägga till ett nytt villkor](images/analytics-PDPRuleAddCondition.png)
 
    1. Välj **[!UICONTROL Condition Type > Value Comparison]**
@@ -275,7 +275,7 @@ Nu ska du använda dina nya dataelement och tillägg för att skapa regeln för 
 
 ### Validera produktinformationssidans data
 
-Du har just skapat en regel som ställer in variabler innan beacon skickas. Nu bör du kunna se nya data i träffen i Experience Cloud Debugger.
+Du har just skapat en regel som ställer in variabler innan beacon skickas. Nu bör du kunna se de nya data som kommer ut i träffen i Experience Cloud Debugger.
 
 **Så här validerar du produktinformationssidans data**
 
@@ -322,7 +322,7 @@ I det här fallet vill du veta om folk rullar ned på Lumas hemsida tillräcklig
 1. Klicka på **[!UICONTROL Keep Changes]**
    ![Konfigurera händelse för visningsruta för partners](images/analytics-configEntersViewportEvent.png)
 
-1. Klicka på plustecknet ![under Villkor &#x200B;](images/icon-plus.png) för att lägga till ett nytt villkor
+1. Klicka på plustecknet ![under Villkor ](images/icon-plus.png) för att lägga till ett nytt villkor
 1. Välj **[!UICONTROL Condition Type > Value Comparison]**
 1. Använd dataelementväljaren och välj `Page Name` i det första fältet
 1. Välj **[!UICONTROL Equals]** i listrutan för jämförelseoperatorer
@@ -346,7 +346,7 @@ I det här fallet vill du veta om folk rullar ned på Lumas hemsida tillräcklig
 1. Välj **[!UICONTROL Extension > Adobe Analytics]**
 1. Välj **[!UICONTROL Action Type > Send Beacon]**
 1. Välj spårningsalternativet **[!UICONTROL `s.tl()`]**
-1. Ange `Scrolled down to Featured Products` i fältet **[!UICONTROL Link Name]**. Det här värdet placeras i rapporten Anpassade länkar i Analytics.
+1. Ange **[!UICONTROL Link Name]** i fältet `Scrolled down to Featured Products`. Det här värdet placeras i rapporten Anpassade länkar i Analytics.
 1. Klicka på **[!UICONTROL Keep Changes]**
 
    ![Konfigurera aktuella produkter - fyr](images/analytics-configEntersViewportBeacon.png)
@@ -379,7 +379,7 @@ Nu ska du se till att den här träffen visas när du bläddrar till avsnittet A
 
 ## Lägga till ett plugin-program
 
-Ett plugin-program är en del av JavaScript-koden som du kan lägga till i implementeringen för att utföra en specifik funktion som inte är inbyggd i produkten. Plugin-program kan skapas av dig, av andra Adobe-kunder/partners eller av Adobe Consulting.
+Ett plugin-program är en del av JavaScript-koden som du kan lägga till i implementeringen för att utföra en specifik funktion som inte är inbyggd i produkten. Du kan bygga plugin-program av andra Adobe-kunder/partners eller av Adobe Consulting.
 
 För att implementera plugin-program finns det i stort sett tre steg:
 
@@ -402,7 +402,7 @@ Om du ska lägga till funktionen doPlugins (nedan) och använda plugin-program m
 
 ### Inkludera funktionen doPlugins
 
-Om du vill lägga till plugin-program måste du lägga till funktionen doPlugins. Den här funktionen läggs inte till som standard, men när den har lagts till hanteras den av AppMeasurementet och anropas sist när en träff skickas till Adobe Analytics. Du kan därför använda den här funktionen för att köra vissa JavaScript-program för att ange variabler som är enklare att ställa in på det här sättet.
+Om du vill lägga till plugin-program måste du lägga till funktionen doPlugins. Den här funktionen läggs inte till som standard, men när den har lagts till hanteras den av AppMeasurement-biblioteket och anropas sist när en träff skickas till Adobe Analytics. Du kan därför använda den här funktionen för att köra vissa JavaScript-program för att ange variabler som är enklare att ställa in på det här sättet.
 
 1. Bläddra nedåt och expandera avsnittet `Configure Tracker Using Custom Code.` medan du fortfarande är i Analytics-tillägget.
 1. Klicka på **[!UICONTROL Open Editor]**
@@ -420,13 +420,13 @@ Om du vill lägga till plugin-program måste du lägga till funktionen doPlugins
 
 ### Lägg till funktionskod för plugin-programmet
 
-Du kommer egentligen att anropa två plugin-program i den här koden, men en av dem är inbyggd i AppMeasurementets bibliotek, så för det behöver du inte lägga till funktionen som ska anropas. Men för den andra måste du också lägga till funktionskoden. Den här funktionen kallas getValOnce().
+Du kommer egentligen att anropa två plugin-program i den här koden, men en av dem är inbyggd i AppMeasurement-biblioteket, så för det behöver du inte lägga till funktionen som ska anropas. Men för den andra måste du också lägga till funktionskoden. Den här funktionen kallas getValOnce().
 
 ### Plugin-programmet getValOnce()
 
 Syftet med det här plugin-programmet är att förhindra att värden dupliceras felaktigt i koden när en besökare uppdaterar en sida eller använder webbläsarens bakåtknapp för att gå tillbaka till en sida där ett värde angavs. I den här lektionen använder du den för att förhindra att händelsen `clickthrough` dupliceras.
 
-Koden för det här plugin-programmet finns i [Analytics Documentation](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvalonce.html?lang=sv-SE), men finns här för att underlätta kopiering/inklistring.
+Koden för det här plugin-programmet finns i [Analytics Documentation](https://experienceleague.adobe.com/docs/analytics/implementation/vars/plugins/getvalonce.html), men finns här för att underlätta kopiering/inklistring.
 
 1. Kopiera följande kod
 
@@ -445,7 +445,7 @@ Du kan nu anropa det här plugin-programmet inifrån doPlugins.
 
 Nu när koden finns där och kan refereras kan du anropa plugin-program i funktionen doPlugins.
 
-Först anropar vi ett plugin-program som är inbyggt i AppMeasurementets bibliotek, så det kallas ett&quot;verktyg&quot;. Det kallas `s.Util.getQueryParam` eftersom det är en del av objektet, är ett inbyggt verktyg och hämtar värden (baserat på en parameter) från frågesträngen i URL:en.
+Först kallar vi ett plugin-program som är inbyggt i AppMeasurement-biblioteket, så det kallas ett &quot;verktyg&quot;. Det kallas `s.Util.getQueryParam` eftersom det är en del av objektet, är ett inbyggt verktyg och hämtar värden (baserat på en parameter) från frågesträngen i URL:en.
 
 1. Kopiera följande kod:
 
