@@ -196,6 +196,6 @@ Förhoppningsvis har du fått ett `200 OK`-svar som innehåller en lista över t
 
 ![Första API-anrop i Postman](assets/postman-firstAPICall.png)
 
-Om samtalet inte lyckades kan du felsöka med hjälp av felsvarsinformationen för API-anropet och granska stegen ovan. Om du fastnar ber du om hjälp i [Community-forumet](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform/ct-p/adobe-experience-platform-community) eller använder länken till höger på den här sidan för att logga ett problem.
+Om samtalet inte lyckades kan du felsöka med hjälp av felsvarsinformationen för API-anropet och granska stegen ovan. Om du fastnar ber du om hjälp i [Community-forumet](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform/ct-p/adobe-experience-platform-community?profile.language=sv) eller använder länken till höger på den här sidan för att logga ett problem.
 
 Med din plattformsbehörighet, sandlåda och [!DNL Postman] konfigurerad är du redo att [modellera data i scheman](model-data-in-schemas.md)!

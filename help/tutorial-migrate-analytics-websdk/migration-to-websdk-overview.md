@@ -61,7 +61,7 @@ Det finns förmodligen många sätt att göra migreringsprocessen, men vi måste
 När du går igenom stegen finns det några viktiga saker att tänka på:
 
 1. Först kanske du behöver alla dessa steg. Det finns till exempel en lektion om hur du migrerar anpassad kod. Om du har en taggimplementering som inte använder anpassad kod (inklusive plugin-program) behöver du inte den här lektionen. Vi försökte inkludera de lektioner som skulle behövas av de flesta, så läs åtminstone igenom lektionerna för att se om du behöver göra några justeringar av din webbplats under migreringen.
-1. Dessutom finns det inget sätt för oss att skapa en migreringstips som täcker 100 % av de användningsfall som alla använder. Som tidigare nämnts försökte vi inkludera de lektioner som de flesta människor kommer att behöva, och som kommer att omfatta de flesta av de viktigaste användningsområdena. Det kommer dock utan tvekan att finnas användningsfall som inte omfattas av den här självstudiekursen. I det här fallet bör du kontrollera om de inkluderade lektionerna ger dig en bra uppfattning om hur du bör migrera för ditt användningsfall. Du kan även fråga dina peer-datorer i [Experience League-communityn om datainsamling](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community).
+1. Dessutom finns det inget sätt för oss att skapa en migreringstips som täcker 100 % av de användningsfall som alla använder. Som tidigare nämnts försökte vi inkludera de lektioner som de flesta människor kommer att behöva, och som kommer att omfatta de flesta av de viktigaste användningsområdena. Det kommer dock utan tvekan att finnas användningsfall som inte omfattas av den här självstudiekursen. I det här fallet bör du kontrollera om de inkluderade lektionerna ger dig en bra uppfattning om hur du bör migrera för ditt användningsfall. Du kan även fråga dina peer-datorer i [Experience League-communityn om datainsamling](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/ct-p/adobe-launch-community?profile.language=sv).
 
 Migreringsprocessen omfattar följande viktiga steg:
 
@@ -81,5 +81,5 @@ Migreringsprocessen omfattar följande viktiga steg:
 
 >[!NOTE]
 >
->Vi vill hjälpa dig att lyckas med din Analytics-migrering till Web SDK. Om du stöter på problem med din migrering eller om du känner att det saknas viktig information i den här guiden kan du meddela oss genom att publicera [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-adobe-analytics-to-web-sdk-using/m-p/732308#M604){target="_blank"}.
+>Vi vill hjälpa dig att lyckas med din Analytics-migrering till Web SDK. Om du stöter på problem med din migrering eller om du känner att det saknas viktig information i den här guiden kan du meddela oss genom att publicera [den här communitydiskussionen](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-migrate-adobe-analytics-to-web-sdk-using/m-p/732308?profile.language=sv#M604){target="_blank"}.
 

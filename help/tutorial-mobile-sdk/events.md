@@ -681,6 +681,6 @@ Nu när du har samlat in händelserna och skickat dem till Platform Edge Network
 >
 >Du har nu konfigurerat din app för att spåra händelser inom handel, appinteraktion och skärmspårning till Adobe Experience Platform Edge Network. Och till alla tjänster som du har definierat i din datastream.
 >
->Tack för att du har lagt ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League Community-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796).
+>Tack för att du har lagt ned din tid på att lära dig om Adobe Experience Platform Mobile SDK. Om du har frågor, vill dela allmän feedback eller har förslag på framtida innehåll kan du dela dem i det här [Experience League Community-diskussionsinlägget](https://experienceleaguecommunities.adobe.com/t5/adobe-experience-platform-data/tutorial-discussion-implement-adobe-experience-cloud-in-mobile/td-p/443796?profile.language=sv).
 
 Nästa: **[Hantera WebViews](web-views.md)**
