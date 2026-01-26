@@ -4,9 +4,9 @@ breadcrumb-title: En teknisk självstudiekurs för Adobe
 hide: true
 doc-type: multipage
 recommendations: noDisplay,noCatalog
-source-git-commit: f3a0f2d0b06d93f51ee2ed4904eb4a8e1f42beb4
+source-git-commit: 44d0e98ae4c7568411cb0e01ed8eff38b4a34137
 workflow-type: tm+mt
-source-wordcount: '1446'
+source-wordcount: '1448'
 ht-degree: 3%
 
 ---
@@ -273,8 +273,8 @@ ht-degree: 3%
    + 1.1 Agent Orchestrator {#agents1}
       + [Översikt](/help/tutorial-one-adobe/modules/agents/module1.1/agentorchestrator.md)
       + [1.1.1 Komma igång med Agent Orchestrator](/help/tutorial-one-adobe/modules/agents/module1.1/ex1.md)
-      + [1.1.2 Adobe Marketing Agent med ChatGPT](/help/tutorial-one-adobe/modules/agents/module1.1/ex2.md)
-      + [1.1.3 Adobe Marketing Agent med Microsoft Copilot](/help/tutorial-one-adobe/modules/agents/module1.1/ex3.md)
+      + [1.1.2 Adobe Marketing Agent for ChatGPT Enterprise](/help/tutorial-one-adobe/modules/agents/module1.1/ex2.md)
+      + [1.1.3 Adobe Marketing Agent for Microsoft 365 Copilot](/help/tutorial-one-adobe/modules/agents/module1.1/ex3.md)
    + 1.2 Komma igång med agenter och AI {#agents2}
       + [Översikt](/help/tutorial-one-adobe/modules/agents/module1.2/agenticai.md)
       + [1.2.1 Komma igång med AI](/help/tutorial-one-adobe/modules/agents/module1.2/ex1.md)

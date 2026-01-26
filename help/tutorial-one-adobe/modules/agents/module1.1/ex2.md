@@ -1,27 +1,27 @@
 ---
-title: Adobe Marketing Agent med ChatGPT
-description: Adobe Marketing Agent med ChatGPT
+title: Adobe Marketing Agent for ChatGPT Enterprise
+description: Adobe Marketing Agent for ChatGPT Enterprise
 kt: 5342
 doc-type: tutorial
-source-git-commit: 1eafbf27de93b45288bec8cb3cd70f04e8cc715e
+source-git-commit: 44d0e98ae4c7568411cb0e01ed8eff38b4a34137
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '1012'
 ht-degree: 0%
 
 ---
 
-# 1.1.2 Adobe Marketing Agent med ChatGPT
-
-[!BADGE Beta]
-
-+++Se detaljer
-Genom att använda Adobe Marketing Agent med ChatGPT Beta bekräftar du härmed att Beta tillhandahålls i befintligt skick utan någon garanti av något slag. Adobe har ingen skyldighet att upprätthålla, korrigera, uppdatera, ändra, modifiera eller på annat sätt stödja Beta. Du rekommenderas att vara försiktig och inte på något sätt förlita dig på att sådana Beta och/eller medföljande material fungerar korrekt eller fungerar korrekt. Beta betraktas som Konfidentiell information om Adobe.  All &quot;Feedback&quot; (information om Beta, inklusive men inte begränsad till problem eller defekter som du stöter på när du använder Beta, förslag, förbättringar och rekommendationer) som du ger Adobe tilldelas härmed till Adobe, inklusive alla rättigheter, titlar och intressen i och för sådan feedback.
-
-+++
+# 1.1.2 Adobe Marketing Agent for ChatGPT Enterprise
 
 >[!IMPORTANT]
 >
 >Det här labbet använder en funktion som inte har släppts än. Funktionen är fortfarande under utveckling så den är inte allmänt tillgänglig än.
+
+[!BADGE Under utveckling]
+
++++Information om utveckling
+Genom att använda Adobe Marketing Agent for ChatGPT Enterprise Beta bekräftar du härmed att Beta tillhandahålls i befintligt skick utan någon garanti av något slag. Adobe har ingen skyldighet att upprätthålla, korrigera, uppdatera, ändra, modifiera eller på annat sätt stödja Beta. Du rekommenderas att vara försiktig och inte på något sätt förlita dig på att sådana Beta och/eller medföljande material fungerar korrekt eller fungerar korrekt. Beta betraktas som Konfidentiell information om Adobe.  All &quot;Feedback&quot; (information om Beta, inklusive men inte begränsad till problem eller defekter som du stöter på när du använder Beta, förslag, förbättringar och rekommendationer) som du ger Adobe tilldelas härmed till Adobe, inklusive alla rättigheter, titlar och intressen i och för sådan feedback.
+
++++
 
 ## Video
 
@@ -29,13 +29,13 @@ I den här videon får du en förklaring och demonstration av alla steg som ing�
 
 >[!VIDEO](https://video.tv.adobe.com/v/3478410?quality=12&learn=on)
 
-## 1.1.2.1 Skapa en anpassad app i ChatGPT för Adobe Marketing Agent
+## 1.1.2.1 Skapa en anpassad app i ChatGPT Enterprise för Adobe Marketing Agent
 
 >[!NOTE]
 >
 >För att använda Adobe Marketing Agent i ChatGPT krävs följande:
->- en betald version av OpenAI&#39;s ChatGPT
->- med ChatGPT-webbklienten
+>- en betald version av OpenAI&#39;s ChatGPT Enterprise
+>- med webbklienten ChatGPT Enterprise
 
 Gå till [https://chatgpt.com/](https://chatgpt.com/){target="_blank"} och logga in med din kontoinformation. När du är inloggad bör du se det här. Klicka på ditt användarnamn.
 
