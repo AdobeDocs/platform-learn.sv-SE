@@ -3,9 +3,9 @@ title: Översikt AI Tech Labs
 description: Översikt AI Tech Labs
 doc-type: multipage-overview
 exl-id: 49515d00-05f6-4a28-96e0-dbdf66d8436b
-source-git-commit: 350292be24f19462abe3c5ea1a795b4bd93b613f
+source-git-commit: 58c89444d36f92d8df7546964eb4b2b5cea8c82c
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '318'
 ht-degree: 0%
 
 ---
@@ -51,25 +51,16 @@ Tekniska element:
 - MCP-server, Python Notebook
 - Adobe API:er
 
-[1.3 Agent Collaboration](./modules/agents/module1.3/agentcollaboration.md)
-
->[!NOTE]
->
->Den här modulen har inte släppts än.
+[1.3 Brand Concierge](./modules/agents/module1.4/brandconcierge.md)
 
 **Mål**
 
-Koppla upp din egen agent till Adobe. Eleverna kommer att konfigurera Agent2Agent-protokollet (A2A) för att ansluta agenterna till AEP Agent Orchestrator.
+Brand Concierge är en AI-driven digital partner som förändrar hur varumärken interagerar med sina webbplatsbesökare. Till skillnad från generiska chattbotar levererar Brand Concierge personaliserade, konversationsupplevelser som är skräddarsydda efter varje besökares avsikter. Det hjälper besökarna att identifiera produkter, jämföra alternativ, få svar direkt och få guidade rekommendationer i realtid. Plattformen fungerar både för B2C och B2B och fungerar som ett intelligent tillägg till ert varumärke i alla digitala kanaler, samtidigt som ert varumärkestrotal, ert innehålls integritet och era regelkrav bevaras.
 
-- Agentkedja
-- Agent Collaboration
+I den här övningen får du lära dig att:
 
-Vilken arkitektur ligger bakom en Adobe-agent?
-Vilken är arkitekturen bakom A2A?
-
-Tekniska element:
-
-- Agentsamverkan med Google A2A-protokoll
+- Konfigurera din Brand Concierge-instans i din Adobe Experience Platform-sandlåda
+- Implementera din Brand Concierge på din AEM CS/EDS-webbplats
 
 ![Tech Insiders](./assets/images/techinsiders.png){width="50px" align="left"}
 

@@ -4,9 +4,9 @@ description: Customer Journey Analytics - Ansluta Adobe Experience Platform-data
 kt: 5342
 doc-type: tutorial
 exl-id: 0f8dbf05-c96f-4cb9-b038-7576a4a91bcb
-source-git-commit: 1e3a8d585503eddad4c642a3b13d2b5f7ddc9943
+source-git-commit: 58c89444d36f92d8df7546964eb4b2b5cea8c82c
 workflow-type: tm+mt
-source-wordcount: '718'
+source-wordcount: '714'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,7 @@ ht-degree: 0%
 - Förstå person-ID och datasammanfogning
 - Lär dig mer om dataströmning i Customer Journey Analytics
 
-## 1.1.2.1 Anslutning
+## 1.1.2.1-anslutning
 
 Gå till [analytics.adobe.com](https://analytics.adobe.com) om du vill komma åt Customer Journey Analytics.
 
@@ -50,7 +50,7 @@ När du har valt sandlådan kan du börja lägga till datauppsättningar. Klicka
 
 ![demo](./images/cjasb1.png)
 
-## 1.1.2.2 Markera Adobe Experience Platform-datauppsättningar
+## 1.1.2.2 Välj Adobe Experience Platform-datauppsättningar
 
 Sök efter datauppsättningen `Demo System - Event Dataset for Website (Global v1.1)`. Aktivera rutan för den här datauppsättningen för att lägga till den i anslutningen.
 
@@ -62,7 +62,7 @@ Du får den här då. Klicka på **Nästa**.
 
 ![demo](./images/cja9.png)
 
-## 1.1.2.3 Person-ID och datatitlar
+## 1.1.2.3 person-ID och datatitlar
 
 ### Person-ID
 
@@ -78,11 +78,11 @@ Du kan dock fortfarande påverka vilken identifierare som ska användas för att
 
 ![demo](./images/cja14.png)
 
-Som vi nämnt kan du ange olika person-ID:n för varje datauppsättning. På så sätt kan du samla olika datauppsättningar från flera ursprung i CJA. Tänk dig att ta in NPS-data eller enkätdata som skulle vara mycket intressant och till hjälp för att förstå sammanhanget och varför något har hänt.
+Som vi nämnt kan du ange olika person-ID:n för varje datauppsättning. På så sätt kan du sammanföra olika datauppsättningar från olika ursprung i CJA. Tänk dig att ta in NPS-data eller enkätdata som skulle vara mycket intressant och till hjälp för att förstå sammanhanget och varför något har hänt.
 
 Namnet på fältet för person-ID är inte viktigt, så länge som värdet i fälten för person-ID motsvarar det. Säg att vi har `email` i en datauppsättning och `emailAddress` i en annan datauppsättning definierad som person-ID. Om `delaigle@adobe.com` är samma värde för person-ID-fältet på båda datauppsättningarna kan CJA sammanfoga data.
 
-Granska de vanliga frågorna för CJA här för att förstå nyanserna med identitetssammanfogning: [Vanliga frågor](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-faq.html?lang=sv-SE).
+Läs CJA FAQs här för att förstå nyanserna med identitetssammanfogning: [FAQ](https://experienceleague.adobe.com/docs/analytics-platform/using/cja-overview/cja-faq.html).
 
 ### Ställa in data med användar-ID
 
@@ -128,7 +128,7 @@ När du har skapat din **anslutning** kan det ta några timmar innan dina data �
 
 ## Nästa steg
 
-Gå till [1.1.3 Skapa en datavy](./ex3.md)(./ex2.md){target="_blank"}
+Gå till [1.1.3 Skapa en datavy](./ex3.md){target="_blank"}
 
 Gå tillbaka till [Customer Journey Analytics](./customer-journey-analytics-build-a-dashboard.md){target="_blank"}
 

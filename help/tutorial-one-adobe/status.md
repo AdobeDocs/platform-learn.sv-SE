@@ -3,9 +3,9 @@ title: Innehållsstatus
 description: Innehållsstatus
 doc-type: multipage-overview
 exl-id: 8f9ae0fa-48b2-4da5-ab21-a6cf16a0b522
-source-git-commit: 6642acb3fdce2c9d3a9b919d5c9457191e4780a6
+source-git-commit: 72fbe8d1dfddd83b85bcb423167cdf4f6e44886d
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '545'
 ht-degree: 1%
 
 ---
@@ -82,10 +82,10 @@ Nedan visas en översikt över statusen för innehållet i den här självstudie
 
 | Namn | Senaste uppdatering | Arbeta 100 % | Anmärkningar | Tidsinvestering |
 | ---------------------- | ------------ | ------------ |------------ | ------------ |
-| [1.1 Agent Orchestrator](./modules/agents/module1.1/agentorchestrator.md){target="_blank"} | 25/11/2025 | Ja | – | 30 min |
-| [1.2 AI](./modules/agents/module1.2/agenticai.md){target="_blank"} | 25/11/2025 | Nej | Pågående arbete | TBD |
-| [1.3 Agent Collaboration](./modules/agents/module1.3/agentcollaboration.md){target="_blank"} | 25/11/2025 | Nej | Pågående arbete | TBD |
-| [1.4 Brand Concierge](./modules/agents/module1.4/brandconcierge.md){target="_blank"} | 25/11/2025 | Nej | Pågående arbete | TBD |
+| [1.1 Agent Orchestrator](./modules/agents/module1.1/agentorchestrator.md){target="_blank"} | 23/01/2026 | Ja | – | 90 min |
+| [1.2 AI](./modules/agents/module1.2/agenticai.md){target="_blank"} | 23/01/2026 | Nej | Innehåll som utvecklas | TBD |
+| [1.4 Brand Concierge](./modules/agents/module1.4/brandconcierge.md){target="_blank"} | 23/01/2026 | Ja | – | 90 min |
+| [1.5 Analytics &amp; Agents](./modules/agents/module1.5/analyticsagents.md){target="_blank"} | 23/01/2026 | Nej | Innehåll som utvecklas | TBD |
 
 {style="table-layout:auto"}
 

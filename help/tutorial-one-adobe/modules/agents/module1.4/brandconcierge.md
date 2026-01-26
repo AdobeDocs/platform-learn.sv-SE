@@ -3,7 +3,7 @@ title: Brand Concierge
 description: Brand Concierge
 kt: 5342
 doc-type: tutorial
-source-git-commit: 0bbc806a4eb41ac8e51a10f6418cfa4795543316
+source-git-commit: f3a0f2d0b06d93f51ee2ed4904eb4a8e1f42beb4
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 0%
@@ -30,7 +30,7 @@ I den här videon får du en förklaring och demonstration av alla steg som ing�
 ## Förhandskrav
 
 - Tillgång till Adobe Journey Optimizer och Customer Journey Analytics
-- Förtrogenhet med [Brand Concierge-koncept](https://experienceleague.adobe.com/sv/docs/brand-concierge/content/home)
+- Förtrogenhet med [Brand Concierge-koncept](https://experienceleague.adobe.com/en/docs/brand-concierge/content/home)
 - Tillgång till CitiSignal-demodata: Inköp, Beställningar, Publiker, Journeys
 
 ## Utövningar
@@ -39,7 +39,7 @@ I den här videon får du en förklaring och demonstration av alla steg som ing�
 
 I den här övningen ska du utforska Brand Concierge förmåga.
 
-[1.4.2 Implementera Brand Concierge på din webbplats](./ex1.md){target="_blank"}
+[1.4.2 Implementera Brand Concierge på din webbplats](./ex2.md){target="_blank"}
 
 I den här övningen implementerar du din Brand Concierge-instans på din webbplats.
 

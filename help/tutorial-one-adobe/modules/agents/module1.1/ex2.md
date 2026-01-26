@@ -3,14 +3,21 @@ title: Adobe Marketing Agent med ChatGPT
 description: Adobe Marketing Agent med ChatGPT
 kt: 5342
 doc-type: tutorial
-source-git-commit: 9663ef2838024e293acc72c203b1e3578911d57f
+source-git-commit: 1eafbf27de93b45288bec8cb3cd70f04e8cc715e
 workflow-type: tm+mt
-source-wordcount: '894'
+source-wordcount: '1003'
 ht-degree: 0%
 
 ---
 
 # 1.1.2 Adobe Marketing Agent med ChatGPT
+
+[!BADGE Beta]
+
++++Se detaljer
+Genom att använda Adobe Marketing Agent med ChatGPT Beta bekräftar du härmed att Beta tillhandahålls i befintligt skick utan någon garanti av något slag. Adobe har ingen skyldighet att upprätthålla, korrigera, uppdatera, ändra, modifiera eller på annat sätt stödja Beta. Du rekommenderas att vara försiktig och inte på något sätt förlita dig på att sådana Beta och/eller medföljande material fungerar korrekt eller fungerar korrekt. Beta betraktas som Konfidentiell information om Adobe.  All &quot;Feedback&quot; (information om Beta, inklusive men inte begränsad till problem eller defekter som du stöter på när du använder Beta, förslag, förbättringar och rekommendationer) som du ger Adobe tilldelas härmed till Adobe, inklusive alla rättigheter, titlar och intressen i och för sådan feedback.
+
++++
 
 >[!IMPORTANT]
 >
@@ -30,7 +37,7 @@ I den här videon får du en förklaring och demonstration av alla steg som ing�
 >- en betald version av OpenAI&#39;s ChatGPT
 >- med ChatGPT-webbklienten
 
-Gå till https://chatgpt.com/ och logga in med din kontoinformation. När du är inloggad bör du se det här. Klicka på ditt användarnamn.
+Gå till [https://chatgpt.com/](https://chatgpt.com/){target="_blank"} och logga in med din kontoinformation. När du är inloggad bör du se det här. Klicka på ditt användarnamn.
 
 ![ChatGPT](./images/chatgpt1.png)
 
@@ -86,11 +93,11 @@ För den här övningen måste kontexten ställas in så att den används:
 
 - **Sandbox**: **Prod - Accelerate (VA7)**
 
-Inställningen Sandlåda hjälper dig att identifiera vilken AI-assistent för sandlådan som ska titta på när du ställer frågor.
+Inställningen Sandbox hjälper till att identifiera vilken sandlåda som ChatGPT ska titta på när frågor ställs.
 
 - **Datavy**: **Accelerate 2026 B2C**
 
-Inställningen Datavy hjälper dig att identifiera vilken AI-assistent för datavyer som ska titta på när du ställer frågor.
+Inställningen Datavy hjälper dig att identifiera vilka dataView ChatGPT ska titta på när du ställer frågor.
 
 Ange följande **Fråga** och klicka på knappen **Skicka**.
 
@@ -122,9 +129,9 @@ list dataviews
 
 ![Agent Orchestrator](./images/chatgpt14.png)
 
-Du bör då se en liknande lista över tillgängliga sandlådor. Den aktuella sandlådan i det här exemplet är inställd på **prod**.
+Du bör då se en liknande lista över tillgängliga datavyer.
 
-Om du vill ändra det till den sandlåda som ska användas anger du följande **Fråga** och klickar på knappen **Skicka** .
+Om du vill ange vilken datavy som ska användas anger du följande **Fråga** och klickar på knappen **Skicka**.
 
 ```javascript
 switch to Accelerate 2026 B2C
